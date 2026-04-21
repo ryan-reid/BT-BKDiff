@@ -45,8 +45,10 @@ def normalize_text(s):
     s = s.replace('•', '').replace('**', '')
     
     # Handle phrasing differences: "Physical Damage Received Reduced by 15%" -> "Damage Reduced by 15%"
-    # Only if followed by a number and a % to be safe, but generally this phrasing change is specific to the % stat.
     s = s.replace("Physical Damage Received Reduced by", "Damage Reduced by")
+
+    # Treat "Original Class" and "Random Class" as the same to avoid noisy diffs
+    s = re.sub(r'(Original|Random) Class', 'Random Class', s, flags=re.IGNORECASE)
     
     # Normalize whitespace
     s = re.sub(r'\s+', ' ', s)

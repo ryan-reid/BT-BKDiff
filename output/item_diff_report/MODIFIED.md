@@ -18,19 +18,6 @@
 | <span style="color: #999999;">+100</span> to Life | **<span style="color: #3366cc;">+10</span>** to Life |
 |  | **<span style="color: #3366cc;">Poison Resist +25%</span>** |
 
-**Saracen's Chance** (Saracen's Chance)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Amulet | **Base Item:** Amulet |
-| **Level Requirement:** 47 | **Level Requirement:** 47 |
-| **Properties:** | **Properties:** |
-| All Resistances +35-40 | All Resistances +35-40 |
-| 24-20% Chance to cast level 24-20 Lower Resist when struck | 24-20% Chance to cast level 24-20 Lower Resist when struck |
-| +20-30 to all Attributes | +20-30 to all Attributes |
-| <span style="color: #999999;">+1 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+1 to Random Class Skill Levels</span>** |
-
 ### accessories\charms.md
 
 **Game Modifers** (Charm Modifiers)
@@ -55,12 +42,11 @@
 | **Base Item:** Large ÿc1Charmÿc3 | **Base Item:** Large Charm |
 | **Level Requirement:** 75 | **Level Requirement:** 75 |
 | **Properties:** | **Properties:** |
+| +3 to Original Class Skill Levels | +3 to Random Class Skill Levels |
 | +8 to Light Radius | +8 to Light Radius |
 | Level 10-30 Hydra (10-30/10-30 Charges) | Level 10-30 Hydra (10-30/10-30 Charges) |
 | <span style="color: #999999;">+10-25</span> to all Attributes | **<span style="color: #3366cc;">+10-20</span>** to all Attributes |
 | All Resistances <span style="color: #999999;">+10-25</span> | All Resistances **<span style="color: #3366cc;">+10-20</span>** |
-| <span style="color: #999999;">+3 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+3 to Random Class Skill Levels</span>** |
 
 ### accessories\small_charm.md
 
@@ -77,58 +63,6 @@
 | <span style="color: #999999;">+10-25%</span> to Experience Gained | **<span style="color: #3366cc;">+10-15%</span>** to Experience Gained |
 
 ### armor\armor.md
-
-**Skin of the Flayed One** (Skin of the Flayerd One)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Demonhide Armor | **Base Item:** Demonhide Armor |
-| **Level Requirement:** 31 | **Level Requirement:** 31 |
-| **Properties:** | **Properties:** |
-| --100 to Monster Defense Per Hit | --100 to Monster Defense Per Hit |
-| Prevent Monster Heal | Prevent Monster Heal |
-| Adds 50-75-50-75 Damage | Adds 50-75-50-75 Damage |
-| 8-12% Life stolen per hit | 8-12% Life stolen per hit |
-| +160-200% Enhanced Defense | +160-200% Enhanced Defense |
-| +50-75 to Life | +50-75 to Life |
-| +20% Increased Attack Speed | +20% Increased Attack Speed |
-| +14% Faster Hit Recovery | +14% Faster Hit Recovery |
-| <span style="color: #999999;">+1 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+1 to Random Class Skill Levels</span>** |
-
-**Guardian Angel** (Guardian Angel)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Templar Coat | **Base Item:** Templar Coat |
-| **Level Requirement:** 45 | **Level Requirement:** 45 |
-| **Properties:** | **Properties:** |
-| +1 to All Skills | +1 to All Skills |
-| +200-220% Enhanced Defense | +200-220% Enhanced Defense |
-| +35% Faster Block Rate | +35% Faster Block Rate |
-| +15% to Maximum Fire Resist | +15% to Maximum Fire Resist |
-| - to Monster Defense Per Hit | - to Monster Defense Per Hit |
-| +30% Faster Block Rate | +30% Faster Block Rate |
-| +10% Increased Attack Speed | +10% Increased Attack Speed |
-| Requirements --40--30% | Requirements --40--30% |
-| <span style="color: #999999;">+1 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+1 to Random Class Skill Levels</span>** |
-
-**Arkaine's Valor** (Arkaine's Valor)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Balrog Skin | **Base Item:** Balrog Skin |
-| **Level Requirement:** 85 | **Level Requirement:** 85 |
-| **Properties:** | **Properties:** |
-| +150-180% Enhanced Defense | +150-180% Enhanced Defense |
-| +30% Faster Hit Recovery | +30% Faster Hit Recovery |
-| +2 to All Skills | +2 to All Skills |
-| Damage Reduced by 10-15 | Damage Reduced by 10-15 |
-| + to Vitality (Based on Character Level) | + to Vitality (Based on Character Level) |
-| Requirements --20% | Requirements --20% |
-| <span style="color: #999999;">+1 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+1 to Random Class Skill Levels</span>** |
 
 **Tyrael's Might** (Tyrael's Might)
 
@@ -169,76 +103,7 @@
 |  | **<span style="color: #3366cc;">+1-2 to All Skills</span>** |
 |  | **<span style="color: #3366cc;">Requirements --50%</span>** |
 
-**Manawyrm** (Manawyrm)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Wyrmhide | **Base Item:** Wyrmhide |
-| **Level Requirement:** 77 | **Level Requirement:** 77 |
-| **Properties:** | **Properties:** |
-| Level 3-5 Magic Conviction Aura When Equipped | Level 3-5 Magic Conviction Aura When Equipped |
-| +3-7 to Find Potion | +3-7 to Find Potion |
-| +15-25% Faster Cast Rate | +15-25% Faster Cast Rate |
-| Increase Maximum Mana 5-8% | Increase Maximum Mana 5-8% |
-| +20-55% Energy | +20-55% Energy |
-| Magic Damage Reduced by 10 | Magic Damage Reduced by 10 |
-| +4 to Mana (Based on Character Level) | +4 to Mana (Based on Character Level) |
-| +5-15% to Magic Skill Damage | +5-15% to Magic Skill Damage |
-| <span style="color: #999999;">+2 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+2 to Random Class Skill Levels</span>** |
-
-### armor\belt.md
-
-**Giant's Protection** (Giant's Protection)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Colossus Girdle | **Base Item:** Colossus Girdle |
-| **Level Requirement:** 93 | **Level Requirement:** 93 |
-| **Properties:** | **Properties:** |
-| Damage Reduced by 25-35 | Damage Reduced by 25-35 |
-| Magic Damage Reduced by 25-35 | Magic Damage Reduced by 25-35 |
-| +5 to Cyclone Armor | +5 to Cyclone Armor |
-| +100-150 to Life | +100-150 to Life |
-| +10-15 to Strength | +10-15 to Strength |
-| +-15% Faster Run/Walk | +-15% Faster Run/Walk |
-| +80-100% Enhanced Defense | +80-100% Enhanced Defense |
-| <span style="color: #999999;">+1 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+1 to Random Class Skill Levels</span>** |
-
 ### armor\boots.md
-
-**Shadow Dancer** (Shadowdancer)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Myrmidon Greaves | **Base Item:** Myrmidon Greaves |
-| **Level Requirement:** 71 | **Level Requirement:** 71 |
-| **Properties:** | **Properties:** |
-| +70-100% Enhanced Defense | +70-100% Enhanced Defense |
-| +40% Faster Run/Walk | +40% Faster Run/Walk |
-| +30% Faster Hit Recovery | +30% Faster Hit Recovery |
-| +15-25 to Dexterity | +15-25 to Dexterity |
-| Requirements --20% | Requirements --20% |
-| <span style="color: #999999;">+2 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+2 to Random Class Skill Levels</span>** |
-
-**Meshif's Travellers** (Meshif's Travellers)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Mirrored Boots | **Base Item:** Mirrored Boots |
-| **Level Requirement:** 92 | **Level Requirement:** 92 |
-| **Properties:** | **Properties:** |
-| +50% Faster Run/Walk | +50% Faster Run/Walk |
-| 10% Deadly Strike | 10% Deadly Strike |
-| +100-150 Defense | +100-150 Defense |
-| +75-100 to Life | +75-100 to Life |
-| Level 3 Resist Cold Aura When Equipped | Level 3 Resist Cold Aura When Equipped |
-| +10% Faster Hit Recovery | +10% Faster Hit Recovery |
-| +80-100% Enhanced Defense | +80-100% Enhanced Defense |
-| <span style="color: #999999;">+1 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+1 to Random Class Skill Levels</span>** |
 
 **Static Accumulator** (Static Accumulator)
 
@@ -268,38 +133,6 @@
 | -8-15% to Enemy Lightning Resistance | -8-15% to Enemy Lightning Resistance |
 |  | **<span style="color: #3366cc;">+7 to Thunder Storm</span>** |
 
-**Kira's Guardian** (Kira's Guardian)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Tiara | **Base Item:** Tiara |
-| **Level Requirement:** 84 | **Level Requirement:** 84 |
-| **Properties:** | **Properties:** |
-| +50-120 Defense | +50-120 Defense |
-| All Resistances +50-70 | All Resistances +50-70 |
-| Cannot Be Frozen | Cannot Be Frozen |
-| +20% Faster Hit Recovery | +20% Faster Hit Recovery |
-| -8-15% to Enemy Fire Resistance | -8-15% to Enemy Fire Resistance |
-| +1-5% to Maximum Fire Resist | +1-5% to Maximum Fire Resist |
-| <span style="color: #999999;">+2 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+2 to Random Class Skill Levels</span>** |
-
-**King's Absolution** (King's Absolution)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Coronet | **Base Item:** Coronet |
-| **Level Requirement:** 90 | **Level Requirement:** 90 |
-| **Properties:** | **Properties:** |
-| +1 to All Skills | +1 to All Skills |
-| 20-1% Chance to cast level 20-1 Lower Resist when you Kill an Enemy | 20-1% Chance to cast level 20-1 Lower Resist when you Kill an Enemy |
-| +10-15 to Mana after each Kill | +10-15 to Mana after each Kill |
-| +10-15 Life after each Kill | +10-15 Life after each Kill |
-| +5-10% to Experience Gained | +5-10% to Experience Gained |
-| +66-99 Defense | +66-99 Defense |
-| <span style="color: #999999;">+1 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+1 to Random Class Skill Levels</span>** |
-
 ### armor\gloves.md
 
 **Amazon's Teaching** (Amazon's Teaching)
@@ -318,23 +151,6 @@
 |  | **<span style="color: #3366cc;">-4-5% to Enemy Physical Resistance</span>** |
 
 ### armor\merc_equip.md
-
-**Stealskull** (Stealskull)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Casque | **Base Item:** Casque |
-| **Level Requirement:** 35 | **Level Requirement:** 35 |
-| **Properties:** | **Properties:** |
-| 5% Mana stolen per hit | 5% Mana stolen per hit |
-| 5% Life stolen per hit | 5% Life stolen per hit |
-| +10% Faster Hit Recovery | +10% Faster Hit Recovery |
-| +10% Increased Attack Speed | +10% Increased Attack Speed |
-| +200-240% Enhanced Defense | +200-240% Enhanced Defense |
-| 30-50% Better Chance of Getting Magic Items | 30-50% Better Chance of Getting Magic Items |
-| +1 to All Skills | +1 to All Skills |
-| <span style="color: #999999;">+1 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+1 to Random Class Skill Levels</span>** |
 
 **Nightwing's Veil** (Nightwing's Veil)
 
@@ -370,24 +186,6 @@
 | <span style="color: #999999;">+7-9</span> Life after each Kill | **<span style="color: #3366cc;">+5-9</span>** Life after each Kill |
 |  | **<span style="color: #3366cc;">+5-9 to Mana after each Kill</span>** |
 
-**Sigurds Staunching Helm** (Sigurds Staunching Helm)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Hydraskull | **Base Item:** Hydraskull |
-| **Level Requirement:** 62 | **Level Requirement:** 62 |
-| **Properties:** | **Properties:** |
-| +150% Enhanced Defense | +150% Enhanced Defense |
-| +10% Faster Cast Rate | +10% Faster Cast Rate |
-| +1 to All Skills | +1 to All Skills |
-| +50 to Mana | +50 to Mana |
-| +50 to Life | +50 to Life |
-| Damage Reduced by 5 | Damage Reduced by 5 |
-| Magic Damage Reduced by 5 | Magic Damage Reduced by 5 |
-| +55% Faster Hit Recovery | +55% Faster Hit Recovery |
-| <span style="color: #999999;">+1 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+1 to Random Class Skill Levels</span>** |
-
 ### armor\primal_helm.md
 
 **Bul Katho's Mind** (Bul Katho's Mind)
@@ -421,44 +219,6 @@
 | +10 to Energy | +10 to Energy |
 | Increase Maximum Mana 10% | Increase Maximum Mana 10% |
 | <span style="color: #999999;">+20-30%</span> Faster Cast Rate | **<span style="color: #3366cc;">+20%</span>** Faster Cast Rate |
-
-**Medusa's Gaze** (Medusa's Gaze)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Aegis | **Base Item:** Aegis |
-| **Level Requirement:** 76 | **Level Requirement:** 76 |
-| **Properties:** | **Properties:** |
-| +150-180% Enhanced Defense | +150-180% Enhanced Defense |
-| Slows Target by 40% | Slows Target by 40% |
-| 33-20% Chance to cast level 33-20 Decrepify when struck | 33-20% Chance to cast level 33-20 Decrepify when struck |
-| 5-9% Life stolen per hit | 5-9% Life stolen per hit |
-| 100-44% Chance to cast level 100-44 Nova when you Die | 100-44% Chance to cast level 100-44 Nova when you Die |
-| Cold Resist +40-80% | Cold Resist +40-80% |
-| Requirements --30% | Requirements --30% |
-| Damage Reduced by 20-30% | Damage Reduced by 20-30% |
-| +1 to All Skills | +1 to All Skills |
-| 33-40% Chance to cast level 33-40 Frost Nova when struck | 33-40% Chance to cast level 33-40 Frost Nova when struck |
-| <span style="color: #999999;">+2 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+2 to Random Class Skill Levels</span>** |
-
-**Spirit Ward** (Spirit Ward)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Ward | **Base Item:** Ward |
-| **Level Requirement:** 68 | **Level Requirement:** 68 |
-| **Properties:** | **Properties:** |
-| +130-180% Enhanced Defense | +130-180% Enhanced Defense |
-| Cold Absorb 6-11% | Cold Absorb 6-11% |
-| All Resistances +30-40 | All Resistances +30-40 |
-| +20-30% Faster Block Rate | +20-30% Faster Block Rate |
-| +25% Faster Block Rate | +25% Faster Block Rate |
-| 35-8% Chance to cast level 35-8 Fade when struck | 35-8% Chance to cast level 35-8 Fade when struck |
-| Requirements --30% | Requirements --30% |
-| +25% Faster Cast Rate | +25% Faster Cast Rate |
-| <span style="color: #999999;">+2 to Original Class Skill Levels</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+2 to Random Class Skill Levels</span>** |
 
 ### class_specific\hand_to_hand_2.md
 
