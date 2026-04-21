@@ -1,490 +1,25 @@
 # Differences for runes.txt
 
-*Key column used: `Name`*
+*Key column used: `*Rune Name`*
 
 ## Added Columns in BK (New)
 `disallowCraftingInLadder, disallowCraftingInNonLadder`  
 
-## Added Rows in BK (New) (2)
-- runeword184
-- runeword185
+## Added Rows in BK (New) (4)
+- coven
+- ritual
+- serendipity
+- vigilance
 
-## Modified Rows (111)
-### runeword1
+## Removed Rows in BK (New) (2)
+- serenedipity
+- soul
+
+## Modified Rows (108)
+### ancients' pledge
 - `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 
-### runeword10
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword102
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
-
-### runeword103
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword106
-- `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
-- `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
-
-### runeword109
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword11
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword110
-- `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
-
-### runeword112
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword116
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword117
-- `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
-
-### runeword119
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
-
-### runeword12
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
-
-### runeword120
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword121
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-- `T1Code2`: `Kick` (Old) &rarr; **`kick` (New)**
-
-### runeword122
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword123
-- `*Rune Name`: `Serenedipity` (Old) &rarr; **`Serendipity` (New)**
-
-### runeword126
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword128
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword13
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword130
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword131
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword133
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword134
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword137
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword139
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword14
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword140
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
-- `T1Code6`: `Mag%` (Old) &rarr; **`mag%` (New)**
-
-### runeword141
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
-
-### runeword148
-- `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
-
-### runeword149
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`BTDIABLO` (New)**
-
-### runeword151
-- `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
-- `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
-
-### runeword154
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword16
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword160
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword161
-- `firstLadderSeason`: `Magic Conviction` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `*empty*` (Old) &rarr; **`BTDIABLO` (New)**
-
-### runeword162
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword163
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword165
-- `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
-- `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
-
-### runeword168
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword17
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword170
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword171
-- `*Rune Name`: `Soul` (Old) &rarr; **`Hustle (armor)` (New)**
-- `complete`: `*empty*` (Old) &rarr; **`1` (New)**
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-- `itype1`: `swor` (Old) &rarr; **`tors` (New)**
-- `*RunesUsed`: `TalThulOrtAmn` (Old) &rarr; **`ShaelKoEld` (New)**
-- `Rune1`: `r07` (Old) &rarr; **`r13` (New)**
-- `Rune2`: `r10` (Old) &rarr; **`r18` (New)**
-- `Rune3`: `r09` (Old) &rarr; **`r02` (New)**
-- `Rune4`: `r11` (Old) &rarr; **`*empty*` (New)**
-- `T1Code1`: `balance3` (Old) &rarr; **`move2` (New)**
-- `T1Min1`: `25` (Old) &rarr; **`65` (New)**
-- `T1Max1`: `25` (Old) &rarr; **`65` (New)**
-- `T1Code2`: `mana` (Old) &rarr; **`stamdrain` (New)**
-- `T1Min2`: `89` (Old) &rarr; **`35` (New)**
-- `T1Max2`: `112` (Old) &rarr; **`35` (New)**
-- `T1Code3`: `ac-miss` (Old) &rarr; **`swing2` (New)**
-- `T1Min3`: `250` (Old) &rarr; **`40` (New)**
-- `T1Max3`: `250` (Old) &rarr; **`40` (New)**
-- `T1Code4`: `vit` (Old) &rarr; **`res-all` (New)**
-- `T1Min4`: `22` (Old) &rarr; **`10` (New)**
-- `T1Max4`: `22` (Old) &rarr; **`10` (New)**
-- `T1Code5`: `cast3` (Old) &rarr; **`oskill` (New)**
-- `T1Param5`: `*empty*` (Old) &rarr; **`Evade` (New)**
-- `T1Min5`: `30` (Old) &rarr; **`6` (New)**
-- `T1Max5`: `30` (Old) &rarr; **`6` (New)**
-- `T1Code6`: `abs-mag` (Old) &rarr; **`*empty*` (New)**
-- `T1Min6`: `3` (Old) &rarr; **`*empty*` (New)**
-- `T1Max6`: `8` (Old) &rarr; **`*empty*` (New)**
-- `T1Code7`: `allskills` (Old) &rarr; **`*empty*` (New)**
-- `T1Min7`: `1` (Old) &rarr; **`*empty*` (New)**
-- `T1Max7`: `1` (Old) &rarr; **`*empty*` (New)**
-
-### runeword172
-- `*Rune Name`: `Hustle (armor)` (Old) &rarr; **`Hustle (weapon)` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
-- `itype1`: `tors` (Old) &rarr; **`weap` (New)**
-- `T1Code1`: `move2` (Old) &rarr; **`hit-skill` (New)**
-- `T1Param1`: `*empty*` (Old) &rarr; **`Quickness` (New)**
-- `T1Min1`: `65` (Old) &rarr; **`5` (New)**
-- `T1Max1`: `65` (Old) &rarr; **`1` (New)**
-- `T1Code2`: `stamdrain` (Old) &rarr; **`swing2` (New)**
-- `T1Min2`: `35` (Old) &rarr; **`10` (New)**
-- `T1Max2`: `35` (Old) &rarr; **`10` (New)**
-- `T1Code3`: `swing2` (Old) &rarr; **`dmg%` (New)**
-- `T1Min3`: `40` (Old) &rarr; **`180` (New)**
-- `T1Max3`: `40` (Old) &rarr; **`200` (New)**
-- `T1Code4`: `res-all` (Old) &rarr; **`aura` (New)**
-- `T1Param4`: `*empty*` (Old) &rarr; **`Fanaticism` (New)**
-- `T1Min4`: `10` (Old) &rarr; **`1` (New)**
-- `T1Max4`: `10` (Old) &rarr; **`1` (New)**
-- `T1Code5`: `oskill` (Old) &rarr; **`*empty*` (New)**
-- `T1Param5`: `Evade` (Old) &rarr; **`*empty*` (New)**
-- `T1Min5`: `6` (Old) &rarr; **`*empty*` (New)**
-- `T1Max5`: `6` (Old) &rarr; **`*empty*` (New)**
-
-### runeword173
-- `*Rune Name`: `Hustle (weapon)` (Old) &rarr; **`Mosaic` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
-- `*RunesUsed`: `ShaelKoEld` (Old) &rarr; **`MalSurAmn` (New)**
-- `Rune1`: `r13` (Old) &rarr; **`r23` (New)**
-- `Rune2`: `r18` (Old) &rarr; **`r29` (New)**
-- `Rune3`: `r02` (Old) &rarr; **`r11` (New)**
-- `T1Code1`: `hit-skill` (Old) &rarr; **`allskills` (New)**
-- `T1Param1`: `Quickness` (Old) &rarr; **`*empty*` (New)**
-- `T1Min1`: `5` (Old) &rarr; **`2` (New)**
-- `T1Max1`: `1` (Old) &rarr; **`2` (New)**
-- `T1Code2`: `swing2` (Old) &rarr; **`pierce-fire` (New)**
-- `T1Min2`: `10` (Old) &rarr; **`5` (New)**
-- `T1Max2`: `10` (Old) &rarr; **`12` (New)**
-- `T1Code3`: `dmg%` (Old) &rarr; **`pierce-cold` (New)**
-- `T1Min3`: `180` (Old) &rarr; **`5` (New)**
-- `T1Max3`: `200` (Old) &rarr; **`12` (New)**
-- `T1Code4`: `aura` (Old) &rarr; **`pierce-ltng` (New)**
-- `T1Param4`: `Fanaticism` (Old) &rarr; **`*empty*` (New)**
-- `T1Min4`: `1` (Old) &rarr; **`5` (New)**
-- `T1Max4`: `1` (Old) &rarr; **`12` (New)**
-- `T1Code5`: `*empty*` (Old) &rarr; **`extra-fire` (New)**
-- `T1Min5`: `*empty*` (Old) &rarr; **`8` (New)**
-- `T1Max5`: `*empty*` (Old) &rarr; **`15` (New)**
-- `T1Code6`: `*empty*` (Old) &rarr; **`extra-cold` (New)**
-- `T1Min6`: `*empty*` (Old) &rarr; **`8` (New)**
-- `T1Max6`: `*empty*` (Old) &rarr; **`15` (New)**
-- `T1Code7`: `*empty*` (Old) &rarr; **`extra-ltng` (New)**
-- `T1Min7`: `*empty*` (Old) &rarr; **`8` (New)**
-- `T1Max7`: `*empty*` (Old) &rarr; **`15` (New)**
-
-### runeword174
-- `*Rune Name`: `Mosaic` (Old) &rarr; **`Metamorphosis` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
-- `itype1`: `weap` (Old) &rarr; **`helm` (New)**
-- `*RunesUsed`: `MalSurAmn` (Old) &rarr; **`IoChamFal` (New)**
-- `Rune1`: `r23` (Old) &rarr; **`r16` (New)**
-- `Rune2`: `r29` (Old) &rarr; **`r32` (New)**
-- `Rune3`: `r11` (Old) &rarr; **`r19` (New)**
-- `T1Code1`: `allskills` (Old) &rarr; **`hit-skill` (New)**
-- `T1Param1`: `*empty*` (Old) &rarr; **`Mark of the Bear` (New)**
-- `T1Min1`: `2` (Old) &rarr; **`100` (New)**
-- `T1Max1`: `2` (Old) &rarr; **`1` (New)**
-- `T1Code2`: `pierce-fire` (Old) &rarr; **`hit-skill` (New)**
-- `T1Param2`: `*empty*` (Old) &rarr; **`Mark of the Wolf` (New)**
-- `T1Min2`: `5` (Old) &rarr; **`100` (New)**
-- `T1Max2`: `12` (Old) &rarr; **`1` (New)**
-- `T1Code3`: `pierce-cold` (Old) &rarr; **`skilltab` (New)**
-- `T1Param3`: `*empty*` (Old) &rarr; **`16` (New)**
-- `T1Max3`: `12` (Old) &rarr; **`5` (New)**
-- `T1Code4`: `pierce-ltng` (Old) &rarr; **`ac%` (New)**
-- `T1Min4`: `5` (Old) &rarr; **`50` (New)**
-- `T1Max4`: `12` (Old) &rarr; **`80` (New)**
-- `T1Code5`: `extra-fire` (Old) &rarr; **`res-all` (New)**
-- `T1Min5`: `8` (Old) &rarr; **`10` (New)**
-- `T1Max5`: `15` (Old) &rarr; **`10` (New)**
-- `T1Code6`: `extra-cold` (Old) &rarr; **`crush` (New)**
-- `T1Min6`: `8` (Old) &rarr; **`25` (New)**
-- `T1Max6`: `15` (Old) &rarr; **`25` (New)**
-- `T1Code7`: `extra-ltng` (Old) &rarr; **`*empty*` (New)**
-- `T1Min7`: `8` (Old) &rarr; **`*empty*` (New)**
-- `T1Max7`: `15` (Old) &rarr; **`*empty*` (New)**
-
-### runeword175
-- `*Rune Name`: `Metamorphosis` (Old) &rarr; **`Ground` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
-- `*RunesUsed`: `IoChamFal` (Old) &rarr; **`ShaelIoOrt` (New)**
-- `Rune1`: `r16` (Old) &rarr; **`r13` (New)**
-- `Rune2`: `r32` (Old) &rarr; **`r16` (New)**
-- `Rune3`: `r19` (Old) &rarr; **`r09` (New)**
-- `T1Code1`: `hit-skill` (Old) &rarr; **`hp%` (New)**
-- `T1Param1`: `Mark of the Bear` (Old) &rarr; **`*empty*` (New)**
-- `T1Min1`: `100` (Old) &rarr; **`5` (New)**
-- `T1Max1`: `1` (Old) &rarr; **`5` (New)**
-- `T1Code2`: `hit-skill` (Old) &rarr; **`ac%` (New)**
-- `T1Param2`: `Mark of the Wolf` (Old) &rarr; **`*empty*` (New)**
-- `T1Min2`: `100` (Old) &rarr; **`75` (New)**
-- `T1Max2`: `1` (Old) &rarr; **`100` (New)**
-- `T1Code3`: `skilltab` (Old) &rarr; **`res-ltng` (New)**
-- `T1Param3`: `16` (Old) &rarr; **`*empty*` (New)**
-- `T1Min3`: `5` (Old) &rarr; **`10` (New)**
-- `T1Max3`: `5` (Old) &rarr; **`30` (New)**
-- `T1Code4`: `ac%` (Old) &rarr; **`abs-ltng%` (New)**
-- `T1Min4`: `50` (Old) &rarr; **`10` (New)**
-- `T1Max4`: `80` (Old) &rarr; **`15` (New)**
-- `T1Code5`: `res-all` (Old) &rarr; **`*empty*` (New)**
-- `T1Min5`: `10` (Old) &rarr; **`*empty*` (New)**
-- `T1Max5`: `10` (Old) &rarr; **`*empty*` (New)**
-- `T1Code6`: `crush` (Old) &rarr; **`*empty*` (New)**
-- `T1Min6`: `25` (Old) &rarr; **`*empty*` (New)**
-- `T1Max6`: `25` (Old) &rarr; **`*empty*` (New)**
-
-### runeword176
-- `*Rune Name`: `Ground` (Old) &rarr; **`Temper` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
-- `*RunesUsed`: `ShaelIoOrt` (Old) &rarr; **`ShaelIoRal` (New)**
-- `Rune3`: `r09` (Old) &rarr; **`r08` (New)**
-- `T1Code3`: `res-ltng` (Old) &rarr; **`res-fire` (New)**
-- `T1Code4`: `abs-ltng%` (Old) &rarr; **`abs-fire%` (New)**
-
-### runeword177
-- `*Rune Name`: `Temper` (Old) &rarr; **`Hearth` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
-- `*RunesUsed`: `ShaelIoRal` (Old) &rarr; **`ShaelIoThul` (New)**
-- `Rune3`: `r08` (Old) &rarr; **`r10` (New)**
-- `T1Code3`: `res-fire` (Old) &rarr; **`res-cold` (New)**
-- `T1Code4`: `abs-fire%` (Old) &rarr; **`abs-cold%` (New)**
-- `T1Code5`: `*empty*` (Old) &rarr; **`nofreeze` (New)**
-- `T1Min5`: `*empty*` (Old) &rarr; **`1` (New)**
-- `T1Max5`: `*empty*` (Old) &rarr; **`1` (New)**
-
-### runeword178
-- `*Rune Name`: `Hearth` (Old) &rarr; **`Cure` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
-- `*RunesUsed`: `ShaelIoThul` (Old) &rarr; **`ShaelIoTal` (New)**
-- `Rune3`: `r10` (Old) &rarr; **`r07` (New)**
-- `T1Code3`: `res-cold` (Old) &rarr; **`res-pois` (New)**
-- `T1Code4`: `abs-cold%` (Old) &rarr; **`res-pois-len` (New)**
-- `T1Min4`: `10` (Old) &rarr; **`50` (New)**
-- `T1Max4`: `15` (Old) &rarr; **`50` (New)**
-- `T1Code5`: `nofreeze` (Old) &rarr; **`aura` (New)**
-- `T1Param5`: `*empty*` (Old) &rarr; **`Cleansing` (New)**
-
-### runeword179
-- `*Rune Name`: `Cure` (Old) &rarr; **`Bulwark` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
-- `*RunesUsed`: `ShaelIoTal` (Old) &rarr; **`ShaelIoSol` (New)**
-- `Rune3`: `r07` (Old) &rarr; **`r12` (New)**
-- `T1Code3`: `res-pois` (Old) &rarr; **`red-dmg%` (New)**
-- `T1Max3`: `30` (Old) &rarr; **`10` (New)**
-- `T1Code4`: `res-pois-len` (Old) &rarr; **`regen` (New)**
-- `T1Min4`: `50` (Old) &rarr; **`30` (New)**
-- `T1Max4`: `50` (Old) &rarr; **`30` (New)**
-- `T1Code5`: `aura` (Old) &rarr; **`lifesteal` (New)**
-- `T1Param5`: `Cleansing` (Old) &rarr; **`*empty*` (New)**
-- `T1Min5`: `1` (Old) &rarr; **`4` (New)**
-- `T1Max5`: `1` (Old) &rarr; **`6` (New)**
-
-### runeword180
-- `*Rune Name`: `Bulwark` (Old) &rarr; **`Coven` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
-- `*RunesUsed`: `ShaelIoSol` (Old) &rarr; **`IstRalIo` (New)**
-- `Rune1`: `r13` (Old) &rarr; **`r24` (New)**
-- `Rune2`: `r16` (Old) &rarr; **`r08` (New)**
-- `Rune3`: `r12` (Old) &rarr; **`r16` (New)**
-- `T1Code1`: `hp%` (Old) &rarr; **`gethit-skill` (New)**
-- `T1Param1`: `*empty*` (Old) &rarr; **`Sigil Lethargy` (New)**
-- `T1Max1`: `5` (Old) &rarr; **`10` (New)**
-- `T1Code2`: `ac%` (Old) &rarr; **`allskills` (New)**
-- `T1Min2`: `75` (Old) &rarr; **`1` (New)**
-- `T1Max2`: `100` (Old) &rarr; **`1` (New)**
-- `T1Code3`: `red-dmg%` (Old) &rarr; **`cast1` (New)**
-- `T1Min3`: `10` (Old) &rarr; **`20` (New)**
-- `T1Max3`: `10` (Old) &rarr; **`20` (New)**
-- `T1Code4`: `regen` (Old) &rarr; **`ac%` (New)**
-- `T1Max4`: `30` (Old) &rarr; **`50` (New)**
-- `T1Code5`: `lifesteal` (Old) &rarr; **`mag%` (New)**
-- `T1Min5`: `4` (Old) &rarr; **`1` (New)**
-- `T1Max5`: `6` (Old) &rarr; **`15` (New)**
-- `T1Code6`: `*empty*` (Old) &rarr; **`heal-kill` (New)**
-- `T1Min6`: `*empty*` (Old) &rarr; **`1` (New)**
-- `T1Max6`: `*empty*` (Old) &rarr; **`5` (New)**
-
-### runeword181
-- `*Rune Name`: `Dilemma` (Old) &rarr; **`Vigilance` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `itype1`: `tors` (Old) &rarr; **`grim` (New)**
-- `itype2`: `*empty*` (Old) &rarr; **`shld` (New)**
-- `itype3`: `*empty*` (Old) &rarr; **`head` (New)**
-- `itype4`: `*empty*` (Old) &rarr; **`ashd` (New)**
-- `*RunesUsed`: `DolLemMal` (Old) &rarr; **`DolGul` (New)**
-- `Rune2`: `r20` (Old) &rarr; **`r25` (New)**
-- `Rune3`: `r23` (Old) &rarr; **`*empty*` (New)**
-- `T1Code1`: `oskill` (Old) &rarr; **`gethit-skill` (New)**
-- `T1Param1`: `Teleport` (Old) &rarr; **`Ring of Fire` (New)**
-- `T1Min1`: `1` (Old) &rarr; **`5` (New)**
-- `T1Max1`: `1` (Old) &rarr; **`10` (New)**
-- `T1Code2`: `regen` (Old) &rarr; **`move2` (New)**
-- `T1Min2`: `-40` (Old) &rarr; **`10` (New)**
-- `T1Max2`: `-20` (Old) &rarr; **`10` (New)**
-- `T1Code3`: `heal-kill` (Old) &rarr; **`block2` (New)**
-- `T1Min3`: `-35` (Old) &rarr; **`30` (New)**
-- `T1Max3`: `-25` (Old) &rarr; **`30` (New)**
-- `T1Code4`: `mag%` (Old) &rarr; **`hp` (New)**
-- `T1Min4`: `35` (Old) &rarr; **`20` (New)**
-- `T1Max4`: `50` (Old) &rarr; **`40` (New)**
-- `T1Code5`: `*empty*` (Old) &rarr; **`mana` (New)**
-- `T1Min5`: `*empty*` (Old) &rarr; **`20` (New)**
-- `T1Max5`: `*empty*` (Old) &rarr; **`40` (New)**
-- `T1Code6`: `*empty*` (Old) &rarr; **`res-all` (New)**
-- `T1Min6`: `*empty*` (Old) &rarr; **`25` (New)**
-- `T1Max6`: `*empty*` (Old) &rarr; **`35` (New)**
-- `T1Code7`: `*empty*` (Old) &rarr; **`ac%` (New)**
-- `T1Min7`: `*empty*` (Old) &rarr; **`75` (New)**
-- `T1Max7`: `*empty*` (Old) &rarr; **`100` (New)**
-
-### runeword182
-- `*Rune Name`: `Shadows` (Old) &rarr; **`Ritual` (New)**
-- `*Patch Release`: `2.7` (Old) &rarr; **`*empty*` (New)**
-- `itype1`: `tors` (Old) &rarr; **`knif` (New)**
-- `*RunesUsed`: `ShealSolKo` (Old) &rarr; **`AmnShaelOhm` (New)**
-- `Rune1`: `r13` (Old) &rarr; **`r11` (New)**
-- `Rune2`: `r12` (Old) &rarr; **`r13` (New)**
-- `Rune3`: `r18` (Old) &rarr; **`r27` (New)**
-- `T1Code1`: `swing1` (Old) &rarr; **`gethit-skill` (New)**
-- `T1Param1`: `*empty*` (Old) &rarr; **`Sigil Death` (New)**
-- `T1Min1`: `45` (Old) &rarr; **`13` (New)**
-- `T1Max1`: `45` (Old) &rarr; **`1` (New)**
-- `T1Code2`: `kick` (Old) &rarr; **`swing1` (New)**
-- `T1Min2`: `100` (Old) &rarr; **`20` (New)**
-- `T1Max2`: `150` (Old) &rarr; **`20` (New)**
-- `T1Code3`: `mana` (Old) &rarr; **`dmg%` (New)**
-- `T1Min3`: `100` (Old) &rarr; **`200` (New)**
-- `T1Max3`: `150` (Old) &rarr; **`270` (New)**
-- `T1Code4`: `ass` (Old) &rarr; **`dmg-demon` (New)**
-- `T1Min4`: `2` (Old) &rarr; **`150` (New)**
-- `T1Max4`: `2` (Old) &rarr; **`250` (New)**
-- `T1Code5`: `deadly` (Old) &rarr; **`att%` (New)**
-- `T1Min5`: `5` (Old) &rarr; **`200` (New)**
-- `T1Max5`: `5` (Old) &rarr; **`260` (New)**
-- `T1Code6`: `res-cold` (Old) &rarr; **`heal-kill` (New)**
-- `T1Min6`: `30` (Old) &rarr; **`3` (New)**
-- `T1Max6`: `30` (Old) &rarr; **`5` (New)**
-- `T1Code7`: `*empty*` (Old) &rarr; **`rip` (New)**
-- `T1Min7`: `*empty*` (Old) &rarr; **`1` (New)**
-- `T1Max7`: `*empty*` (Old) &rarr; **`1` (New)**
-
-### runeword183
-- `*Rune Name`: `Revenge` (Old) &rarr; **`Dilemma` (New)**
-- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `*empty*` (Old) &rarr; **`BTDIABLO` (New)**
-- `itype1`: `mace` (Old) &rarr; **`tors` (New)**
-- `itype2`: `club` (Old) &rarr; **`*empty*` (New)**
-- `itype3`: `hamm` (Old) &rarr; **`*empty*` (New)**
-- `*RunesUsed`: `ThulOrtRal` (Old) &rarr; **`DolLemMal` (New)**
-- `Rune1`: `r10` (Old) &rarr; **`r14` (New)**
-- `Rune2`: `r09` (Old) &rarr; **`r20` (New)**
-- `Rune3`: `r08` (Old) &rarr; **`r23` (New)**
-- `T1Code1`: `swing2` (Old) &rarr; **`oskill` (New)**
-- `T1Param1`: `*empty*` (Old) &rarr; **`Teleport` (New)**
-- `T1Min1`: `20` (Old) &rarr; **`1` (New)**
-- `T1Max1`: `20` (Old) &rarr; **`1` (New)**
-- `T1Code2`: `hit-skill` (Old) &rarr; **`regen` (New)**
-- `T1Param2`: `Nova` (Old) &rarr; **`*empty*` (New)**
-- `T1Min2`: `33` (Old) &rarr; **`-40` (New)**
-- `T1Max2`: `8` (Old) &rarr; **`-20` (New)**
-- `T1Code3`: `hit-skill` (Old) &rarr; **`heal-kill` (New)**
-- `T1Param3`: `Fireball` (Old) &rarr; **`*empty*` (New)**
-- `T1Min3`: `33` (Old) &rarr; **`-35` (New)**
-- `T1Max3`: `8` (Old) &rarr; **`-25` (New)**
-- `T1Code4`: `hit-skill` (Old) &rarr; **`mag%` (New)**
-- `T1Param4`: `Frost Nova` (Old) &rarr; **`*empty*` (New)**
-- `T1Min4`: `33` (Old) &rarr; **`35` (New)**
-- `T1Max4`: `8` (Old) &rarr; **`50` (New)**
-
-### runeword20
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword22
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword25
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword26
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword27
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword29
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword3
+### authority
 - `complete`: `*empty*` (Old) &rarr; **`1` (New)**
 - `itype1`: `*empty*` (Old) &rarr; **`tors` (New)**
 - `*RunesUsed`: `*empty*` (Old) &rarr; **`HelShaelRal` (New)**
@@ -506,159 +41,363 @@
 - `T1Min4`: `*empty*` (Old) &rarr; **`40` (New)**
 - `T1Max4`: `*empty*` (Old) &rarr; **`60` (New)**
 
-### runeword30
+### beast
 - `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
 
-### runeword31
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+### black
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 
-### runeword33
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword34
+### bone
 - `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
 
-### runeword36
+### bramble
 - `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
 
-### runeword37
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword38
-- `*Patch Release`: `"110, Previously Ladder Only"` (Old) &rarr; **`*empty*` (New)**
-
-### runeword4
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword40
-- `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
-- `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
-
-### runeword41
+### brand
 - `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
 
-### runeword42
+### breath of the dying
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### broken promise
 - `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
 
-### runeword44
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+### bulwark
+- `Name`: `Runeword180` (Old) &rarr; **`Runeword179` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
 
-### runeword45
+### call to arms
 - `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
 
-### runeword47
+### chains of honor
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### chaos
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### crescent moon
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### cure
+- `Name`: `Runeword179` (Old) &rarr; **`Runeword178` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
+
+### death
 - `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
 
-### runeword48
+### delirium
 - `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
 
-### runeword49
+### destruction
 - `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
 
-### runeword51
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword54
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword55
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword56
-- `complete`: `*empty*` (Old) &rarr; **`1` (New)**
+### dilemma
+- `Name`: `Runeword181` (Old) &rarr; **`Runeword183` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
 - `*Patch Release`: `*empty*` (Old) &rarr; **`BTDIABLO` (New)**
 
-### runeword57
+### doom
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### dragon
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### dream
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### duress
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### edge
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### enigma
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### enlightenment
+- `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
+
+### eternity
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### exile
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### faith
+- `*Patch Release`: `"110, Previously Ladder Only"` (Old) &rarr; **`*empty*` (New)**
+
+### flickering flame
+- `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
+- `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
+
+### fortitude
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### fortune
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
+
+### fury
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### gloom
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### grief
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### ground
+- `Name`: `Runeword176` (Old) &rarr; **`Runeword175` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
+
+### hand of justice
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### harmony
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### heart of the oak
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### hearth
+- `Name`: `Runeword178` (Old) &rarr; **`Runeword177` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
+
+### holy thunder
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### honor
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### humility
 - `complete`: `1` (Old) &rarr; **`*empty*` (New)**
 
-### runeword59
+### hustle (armor)
+- `Name`: `Runeword172` (Old) &rarr; **`Runeword171` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
+
+### hustle (weapon)
+- `Name`: `Runeword173` (Old) &rarr; **`Runeword172` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
+
+### ice
 - `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
 
-### runeword6
+### infinity
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### insight
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### king's grace
 - `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 
-### runeword60
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword62
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword65
-- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
-
-### runeword66
+### kingslayer
 - `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
 
-### runeword67
+### knight's vigil
 - `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
 
-### runeword68
+### knowledge
 - `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
 
-### runeword69
+### last wish
 - `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
 
-### runeword71
+### lawbringer
 - `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
 
-### runeword72
+### leaf
 - `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 
-### runeword74
+### lionheart
 - `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 
-### runeword75
+### lore
 - `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 
-### runeword8
-- `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
-
-### runeword81
+### malice
 - `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 
-### runeword82
+### melody
 - `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 
-### runeword83
+### memory
 - `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 
-### runeword84
+### metamorphosis
+- `Name`: `Runeword175` (Old) &rarr; **`Runeword174` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
+
+### mist
 - `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
 - `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
 - `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
 
-### runeword87
+### mosaic
+- `Name`: `Runeword174` (Old) &rarr; **`Runeword173` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
+
+### myth
 - `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
 
-### runeword88
+### nadir
 - `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 
-### runeword9
+### oath
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### obedience
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### obsession
+- `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
+- `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
+
+### passion
 - `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
 
-### runeword91
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword92
-- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
-
-### runeword94
+### pattern
 - `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
 - `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
 - `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
 
-### runeword95
-- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
-
-### runeword97
-- `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
-- `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
-- `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
-
-### runeword98
+### peace
 - `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
 
-### runeword99
+### pestilence
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
+
+### phoenix
 - `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### plague
+- `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
+- `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
+
+### pride
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### principle
+- `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
+
+### prudence
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### radiance
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### rain
+- `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
+
+### red
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
+
+### revenge
+- `Name`: `Runeword183` (Old) &rarr; **`Runeword185` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `*empty*` (Old) &rarr; **`BTDIABLO` (New)**
+- `T1Param3`: `Fireball` (Old) &rarr; **`Fire Ball` (New)**
+
+### rhyme
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### rift
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+- `T1Code2`: `Kick` (Old) &rarr; **`kick` (New)**
+
+### sanctuary
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### shadows
+- `Name`: `Runeword182` (Old) &rarr; **`Runeword184` (New)**
+- `*Patch Release`: `2.7` (Old) &rarr; **`BTDIABLO` (New)**
+
+### silence
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### smoke
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### spirit
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### splendor
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### stealth
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### steel
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### stone
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### strength
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### temper
+- `Name`: `Runeword177` (Old) &rarr; **`Runeword176` (New)**
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`*empty*` (New)**
+
+### tempest
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
+- `T1Code6`: `Mag%` (Old) &rarr; **`mag%` (New)**
+
+### temptation
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`BTDIABLO` (New)**
+
+### treachery
+- `*Patch Release`: `111` (Old) &rarr; **`*empty*` (New)**
+
+### trust
+- `firstLadderSeason`: `3` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 3` (Old) &rarr; **`BTDIABLO` (New)**
+
+### unbending will
+- `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
+- `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
+
+### venom
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### voice of reason
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### wealth
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### whisper
+- `firstLadderSeason`: `Magic Conviction` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `*empty*` (Old) &rarr; **`BTDIABLO` (New)**
+
+### white
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
+
+### wind
+- `*Patch Release`: `110` (Old) &rarr; **`*empty*` (New)**
+
+### wisdom
+- `firstLadderSeason`: `1` (Old) &rarr; **`*empty*` (New)**
+- `lastLadderSeason`: `2` (Old) &rarr; **`*empty*` (New)**
+- `*Patch Release`: `D2R Ladder 1` (Old) &rarr; **`*empty*` (New)**
+
+### wrath
+- `*Patch Release`: `Previously Ladder Only` (Old) &rarr; **`*empty*` (New)**
+
+### zephyr
+- `*Patch Release`: `109` (Old) &rarr; **`*empty*` (New)**
 

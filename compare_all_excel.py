@@ -35,7 +35,7 @@ def get_key_column(filename):
         'objects.txt': 'Name',
         'overlay.txt': 'overlay',
         'properties.txt': 'code',
-        'runes.txt': 'Name',
+        'runes.txt': '*Rune Name',
         'setitems.txt': 'index',
         'sets.txt': 'index',
         'shrines.txt': 'Name',

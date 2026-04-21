@@ -38,7 +38,7 @@ This report treats **BKDiablo** as the target (New) version and **BTDiablo** as 
 | overlay.txt | 3 | 0 | 41 | 0 | 105 | [overlay.txt](overlay.md) |
 | properties.txt | 2 | 0 | 6 | 7 | 8 | [properties.txt](properties.md) |
 | qualityitems.txt | 0 | 0 | 0 | 0 | 0 | No changes |
-| runes.txt | 2 | 0 | 2 | 0 | 111 | [runes.txt](runes.md) |
+| runes.txt | 2 | 0 | 4 | 2 | 108 | [runes.txt](runes.md) |
 | setitems.txt | 6 | 0 | 26 | 1 | 96 | [setitems.txt](setitems.md) |
 | sets.txt | 1 | 0 | 6 | 0 | 0 | [sets.txt](sets.md) |
 | shrines.txt | 0 | 0 | 0 | 0 | 0 | No changes |
