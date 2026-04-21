@@ -58,6 +58,7 @@
     * Prevent Monster Heal
     * dmg%: 200 (param: )
     * +30% Increased Attack Speed
+    * Level 12-17 Meditation Aura When Equipped
 
 ### The Grim Reaper (The Grim Reaper)
 * **Base Item:** War Scythe
@@ -157,7 +158,7 @@
     * +30% Increased Attack Speed
     * Repairs  durability per second
     * +1-237 to Minimum Lightning Damage
-    * Unknown Prop: 91 (91, 30-10)
+    * 30% Chance to cast Level 10 Lower Resist when struck
     * 8-10% Life stolen per hit
     * 150% Bonus to Attack Rating
 
@@ -179,8 +180,8 @@
 * **Base Item:** Thresher
 * **Level Requirement:** 75
 * **Properties:**
-    * dmg%: 190-240 (param: )
-    * 33% Chance to cast Level 1 Decrepify on striking
+    * dmg%: 200-300 (param: )
+    * 33% Chance to cast Level 15 Decrepify on striking
     * Ignore Target's Defense
     * 11-15% Life stolen per hit
     * Requirements -25%

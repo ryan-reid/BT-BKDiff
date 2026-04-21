@@ -35,9 +35,9 @@
 - summon goatman
 - summon tainted
 
-## Modified Rows (15)
+## Modified Rows (10)
 ### bone spear
-- `desccalca3`: `min(3,1+skill('Bone Spear'.blvl)/10` (Old) &rarr; **`min(3, 1 + skill('Bone Spear'.blvl)/10) + ((skill('Bone Spear'.lvl) - skill('Bone Spear'.blvl)) / 5)` (New)**
+- `desccalca3`: `min(3,1+lvl/10)` (Old) &rarr; **`min(3, 1 + skill('Bone Spear'.blvl)/10) + ((skill('Bone Spear'.lvl) - skill('Bone Spear'.blvl)) / 5)` (New)**
 - `dsc3line3`: `76` (Old) &rarr; **`*empty*` (New)**
 - `dsc3texta3`: `Magdplev` (Old) &rarr; **`*empty*` (New)**
 - `dsc3textb3`: `skillname` (Old) &rarr; **`*empty*` (New)**
@@ -57,40 +57,14 @@
 - `dsc3textb5`: `skillname` (Old) &rarr; **`*empty*` (New)**
 - `dsc3calca5`: `par8` (Old) &rarr; **`*empty*` (New)**
 
-### double swing
-- `dsc3textb2`: `skillname126` (Old) &rarr; **`skillname147` (New)**
-
-### fire wall
-- `dsc3textb3`: `skillname41` (Old) &rarr; **`skillname46` (New)**
+### fire ball
+- `desccalca3`: `min(3,1+lvl/10)` (Old) &rarr; **`min(3,1+skill('Fire Ball'.blvl)/10` (New)**
 
 ### frenzy
 - `dsc2calca2`: `par7+skill('Increased Stamina'.blvl)*10` (Old) &rarr; **`par7+skill('Increased Endurance'.blvl)*10` (New)**
 
-### frozen orb
-- `dsc3textb4`: `skillname55` (Old) &rarr; **`skillname44` (New)**
-
-### glacial spike
-- `dsc3textb5`: `skillname64` (Old) &rarr; **`skillname59` (New)**
-
-### hurricane
-- `descline2`: `74` (Old) &rarr; **`*empty*` (New)**
-- `desctexta2`: `StrSkill20` (Old) &rarr; **`*empty*` (New)**
-- `desccalca2`: `par1` (Old) &rarr; **`*empty*` (New)**
-- `dsc3line3`: `*empty*` (Old) &rarr; **`76` (New)**
-- `dsc3texta3`: `*empty*` (Old) &rarr; **`Damplev` (New)**
-- `dsc3textb3`: `*empty*` (Old) &rarr; **`Skillname227` (New)**
-- `dsc3calca3`: `*empty*` (Old) &rarr; **`par8` (New)**
-- `dsc3line4`: `*empty*` (Old) &rarr; **`76` (New)**
-- `dsc3texta4`: `*empty*` (Old) &rarr; **`Damplev` (New)**
-- `dsc3textb4`: `*empty*` (Old) &rarr; **`Skillname241` (New)**
-- `dsc3calca4`: `*empty*` (Old) &rarr; **`par8` (New)**
-- `dsc3line5`: `*empty*` (Old) &rarr; **`76` (New)**
-- `dsc3texta5`: `*empty*` (Old) &rarr; **`Damplev` (New)**
-- `dsc3textb5`: `*empty*` (Old) &rarr; **`Skillname246` (New)**
-- `dsc3calca5`: `*empty*` (Old) &rarr; **`par8` (New)**
-
-### ice blast
-- `dsc3textb5`: `skillname64` (Old) &rarr; **`skillname55` (New)**
+### holy bolt
+- `desccalca5`: `min(3,1+lvl/10)` (Old) &rarr; **`min(5,1+skill('Holy Bolt'.blvl)/5` (New)**
 
 ### multiple shot
 - `ddam calc1`: `skill('Guided Arrow'.blvl) * par4` (Old) &rarr; **`*empty*` (New)**
@@ -114,9 +88,6 @@
 - `dsc3texta4`: `Magdplev` (Old) &rarr; **`*empty*` (New)**
 - `dsc3textb4`: `skillname` (Old) &rarr; **`*empty*` (New)**
 - `dsc3calca4`: `par8` (Old) &rarr; **`*empty*` (New)**
-
-### war cry
-- `dsc3textb2`: `skillname130` (Old) &rarr; **`skillname149` (New)**
 
 ### wearwolf
 - `dsc2calca3`: `par2+skill('shape shifting'.ln34)` (Old) &rarr; **`par2+skill('Shape Shifting'.ln34)` (New)**

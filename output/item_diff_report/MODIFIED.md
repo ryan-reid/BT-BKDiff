@@ -7,6 +7,17 @@
 
 ### accessories\amulet.md
 
+**Amulet of the Viper** (Amulet of the Viper)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| **Base Item:** Top of the Horadric Staff | **Base Item:** Top of the Horadric Staff |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
+| **Properties:** | **Properties:** |
+| <span style="color: #999999;">+100</span> to Mana | **<span style="color: #3366cc;">+10</span>** to Mana |
+| <span style="color: #999999;">+100</span> to Life | **<span style="color: #3366cc;">+10</span>** to Life |
+|  | **<span style="color: #3366cc;">Poison Resist +25%</span>** |
+
 **Saracen's Chance** (Saracen's Chance)
 
 | BT Diablo (Old) | BK Diablo (New) |
@@ -32,45 +43,7 @@
 | -199% Better Chance of Getting Magic Items | -199% Better Chance of Getting Magic Items |
 | % Better Chance of Getting Magic Items (Based on Character Level) | % Better Chance of Getting Magic Items (Based on Character Level) |
 | <span style="color: #999999;">Level 1 Magic Pierce Aura When Equipped</span> | <span style="color: #3366cc;">(removed)</span> |
-
-### accessories\jewel.md
-
-**Killing Intent** (Killing Intent)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** •• Jewel •• | **Base Item:** Jewel |
-| **Level Requirement:** 29 | **Level Requirement:** 29 |
-| **Properties:** | **Properties:** |
-| 10% Chance to cast Level 10 Amplify Damage on striking | 10% Chance to cast Level 10 Amplify Damage on striking |
-| +1 to Amplify Damage | +1 to Amplify Damage |
-| +5-10% Increased Attack Speed | +5-10% Increased Attack Speed |
-|  | **<span style="color: #3366cc;">+2% to Experience Gained</span>** |
-
-**Elemental Exposure** (Elemental Exposure)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** •• Jewel •• | **Base Item:** Jewel |
-| **Level Requirement:** 29 | **Level Requirement:** 29 |
-| **Properties:** | **Properties:** |
-| 10% Chance to cast Level 10 Lower Resist when you Kill an Enemy | 10% Chance to cast Level 10 Lower Resist when you Kill an Enemy |
-| +1 to Lower Resist | +1 to Lower Resist |
-| +3-5% Faster Cast Rate | +3-5% Faster Cast Rate |
-|  | **<span style="color: #3366cc;">+2% to Experience Gained</span>** |
-
-### accessories\large_charm.md
-
-**Gheed's Fortune** (Gheed's Fortune)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Grand ÿc1Charmÿc3 | **Base Item:** Grand Charm |
-| **Level Requirement:** 62 | **Level Requirement:** 62 |
-| **Properties:** | **Properties:** |
-| 80-160% Extra Gold from Monsters | 80-160% Extra Gold from Monsters |
-| Reduces all Vendor Prices 10-15% | Reduces all Vendor Prices 10-15% |
-| <span style="color: #999999;">20-40%</span> Better Chance of Getting Magic Items | **<span style="color: #3366cc;">20-50%</span>** Better Chance of Getting Magic Items |
+| <span style="color: #999999;">-50% to Experience Gained</span> | <span style="color: #3366cc;">(removed)</span> |
 
 ### accessories\medium_charm.md
 
@@ -81,11 +54,25 @@
 | **Base Item:** Large ÿc1Charmÿc3 | **Base Item:** Large Charm |
 | **Level Requirement:** 75 | **Level Requirement:** 75 |
 | **Properties:** | **Properties:** |
-| +10-20 to Strength | +10-20 to Strength |
-| Fire Resist +10-20% | Fire Resist +10-20% |
 | +8 to Light Radius | +8 to Light Radius |
 | Level 10-30 %s (10-30/10-30 Charges) | Level 10-30 %s (10-30/10-30 Charges) |
 | <span style="color: #999999;">+0-6</span> to Amazon Skill Levels | **<span style="color: #3366cc;">+0-7</span>** to Amazon Skill Levels |
+| <span style="color: #999999;">+10-25</span> to Strength | **<span style="color: #3366cc;">+10-20</span>** to Strength |
+| Fire Resist <span style="color: #999999;">+10-25%</span> | Fire Resist **<span style="color: #3366cc;">+10-20%</span>** |
+
+### accessories\small_charm.md
+
+**Annihilus** (Annihilus)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| **Base Item:** Small ÿc1Charmÿc3 | **Base Item:** Small Charm |
+| **Level Requirement:** 70 | **Level Requirement:** 70 |
+| **Properties:** | **Properties:** |
+| +1 to All Skills | +1 to All Skills |
+| <span style="color: #999999;">+10-25</span> to Strength | **<span style="color: #3366cc;">+10-20</span>** to Strength |
+| Fire Resist <span style="color: #999999;">+10-25%</span> | Fire Resist **<span style="color: #3366cc;">+10-20%</span>** |
+| <span style="color: #999999;">+10-25%</span> to Experience Gained | **<span style="color: #3366cc;">+10-15%</span>** to Experience Gained |
 
 ### armor\armor.md
 
@@ -153,11 +140,10 @@
 | Cannot Be Frozen | Cannot Be Frozen |
 | +45% Faster Run/Walk | +45% Faster Run/Walk |
 | Fire Resist +20-30% | Fire Resist +20-30% |
+| +30% Increased Attack Speed | +30% Increased Attack Speed |
 | +1 to Teleport | +1 to Teleport |
 | +2 to All Skills | +2 to All Skills |
-| <span style="color: #999999;">+20-30 to Strength</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">+30% Increased Attack Speed</span>** |
-|  | **<span style="color: #3366cc;">+30% Faster Cast Rate</span>** |
+| +30% Faster Cast Rate | +30% Faster Cast Rate |
 
 **Steel Carapace** (Steel Carapice)
 
@@ -172,28 +158,11 @@
 | Repairs  durability per second | Repairs  durability per second |
 | Damage Reduced by 30-40% | Physical Damage Received Reduced by 30-40% |
 | +15% Faster Run/Walk | +15% Faster Run/Walk |
+| Level 8-10 Defiance Aura When Equipped | Level 8-10 Defiance Aura When Equipped |
 | <span style="color: #999999;">+20%</span> Faster Hit Recovery | **<span style="color: #3366cc;">+20-40%</span>** Faster Hit Recovery |
 | Regenerate Mana <span style="color: #999999;">10-15%</span> | Regenerate Mana **<span style="color: #3366cc;">50-100%</span>** |
-|  | **<span style="color: #3366cc;">Level 8-10 Defiance Aura When Equipped</span>** |
 |  | **<span style="color: #3366cc;">+1-2 to All Skills</span>** |
 |  | **<span style="color: #3366cc;">Requirements -50%</span>** |
-
-**Templar's Might** (Templar's Might)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Sacred Armor | **Base Item:** Sacred Armor |
-| **Level Requirement:** 74 | **Level Requirement:** 74 |
-| **Properties:** | **Properties:** |
-| +180-230% Enhanced Defense | +180-230% Enhanced Defense |
-| +24-30% Faster Hit Recovery | +24-30% Faster Hit Recovery |
-| +250-300 Defense vs. Missile | +250-300 Defense vs. Missile |
-| +20-30 to Strength | +20-30 to Strength |
-| +4-6 to Javelin and Spear Skills | +4-6 to Javelin and Spear Skills |
-| Requirements -50% | Requirements -50% |
-| Poison Length Reduced by 75% | Poison Length Reduced by 75% |
-| <span style="color: #999999;">+30-40</span> to Life | **<span style="color: #3366cc;">+100</span>** to Life |
-| Level <span style="color: #999999;">6</span> Conviction Aura When Equipped | Level **<span style="color: #3366cc;">6-12</span>** Conviction Aura When Equipped |
 
 **Baal's Heart** (Baal's Heart)
 
@@ -231,25 +200,6 @@
 | <span style="color: #999999;">+0-6</span> to Amazon Skill Levels | **<span style="color: #3366cc;">+0-7</span>** to Amazon Skill Levels |
 
 ### armor\auric_shields.md
-
-**Dragonscale** (Dragonscale)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Zakarum Shield | **Base Item:** Zakarum Shield |
-| **Level Requirement:** 80 | **Level Requirement:** 80 |
-| **Properties:** | **Properties:** |
-| +170-200% Enhanced Defense | +170-200% Enhanced Defense |
-| Fire Absorb +10-20% | Fire Absorb +10-20% |
-| +5% to Maximum Fire Resist | +5% to Maximum Fire Resist |
-| +15-25 to Strength | +15-25 to Strength |
-| Level 15-20 Holy Fire Aura When Equipped | Level 15-20 Holy Fire Aura When Equipped |
-| +10 to Hydra | +10 to Hydra |
-| +30% Faster Cast Rate | +30% Faster Cast Rate |
-| +1 to Fire Mastery | +1 to Fire Mastery |
-| +20% Faster Block Rate | +20% Faster Block Rate |
-| +20% Faster Block Rate | +20% Faster Block Rate |
-| <span style="color: #999999;">+15% to Fire Skill Damage</span> | <span style="color: #3366cc;">(removed)</span> |
 
 **Elemental Union** (Elemental Union)
 
@@ -305,25 +255,6 @@
 | Requirements -20% | Requirements -20% |
 | <span style="color: #999999;">+0-6</span> to Amazon Skill Levels | **<span style="color: #3366cc;">+0-7</span>** to Amazon Skill Levels |
 
-**Sandstorm Trek** (Sandstorm Trek)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Scarabshell Boots | **Base Item:** Scarabshell Boots |
-| **Level Requirement:** 64 | **Level Requirement:** 64 |
-| **Properties:** | **Properties:** |
-| +140-170% Enhanced Defense | +140-170% Enhanced Defense |
-| +40% Faster Run/Walk | +40% Faster Run/Walk |
-| +20% Faster Hit Recovery | +20% Faster Hit Recovery |
-| Poison Resist +40-70% | Poison Resist +40-70% |
-| Repairs  durability per second | Repairs  durability per second |
-| +10-15 to Strength | +10-15 to Strength |
-| Replenish Life +15 | Replenish Life +15 |
-| Attacker Takes Damage of 100 | Attacker Takes Damage of 100 |
-| <span style="color: #999999;">+10-15 to Vitality</span> | <span style="color: #3366cc;">(removed)</span> |
-| <span style="color: #999999;">Poison Length Reduced by 75%</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">Level 1 Cleansing Aura When Equipped</span>** |
-
 **Meshif's Travellers** (Meshif's Travellers)
 
 | BT Diablo (Old) | BK Diablo (New) |
@@ -351,7 +282,7 @@
 | item_numsockets: 1 (param: ) | item_numsockets: 1 (param: ) |
 | +1-10% Energy | +1-10% Energy |
 | 5% Chance to cast Level 20 Static Field when struck | 5% Chance to cast Level 20 Static Field when struck |
-| +10% Faster Run/Walk | +10% Faster Run/Walk |
+| <span style="color: #999999;">+5-10%</span> Faster Run/Walk | **<span style="color: #3366cc;">+10%</span>** Faster Run/Walk |
 
 ### armor\circlet.md
 
@@ -366,7 +297,7 @@
 | +25% Faster Cast Rate | +25% Faster Cast Rate |
 | +1 to All Skills | +1 to All Skills |
 | +10-15% to Lightning Skill Damage | +10-15% to Lightning Skill Damage |
-| <span style="color: #999999;">-15-20%</span> to Enemy Lightning Resistance | **<span style="color: #3366cc;">-8-15%</span>** to Enemy Lightning Resistance |
+| -8-15% to Enemy Lightning Resistance | -8-15% to Enemy Lightning Resistance |
 |  | **<span style="color: #3366cc;">+7 to Thunder Storm</span>** |
 
 **Kira's Guardian** (Kira's Guardian)
@@ -380,9 +311,9 @@
 | Fire Resist +50-70% | Fire Resist +50-70% |
 | Cannot Be Frozen | Cannot Be Frozen |
 | +20% Faster Hit Recovery | +20% Faster Hit Recovery |
+| -8-15% to Enemy Fire Resistance | -8-15% to Enemy Fire Resistance |
 | +1-5% to Maximum Fire Resist | +1-5% to Maximum Fire Resist |
 | <span style="color: #999999;">+0-6</span> to Amazon Skill Levels | **<span style="color: #3366cc;">+0-7</span>** to Amazon Skill Levels |
-| <span style="color: #999999;">-10-20%</span> to Enemy Fire Resistance | **<span style="color: #3366cc;">-8-15%</span>** to Enemy Fire Resistance |
 
 **King's Absolution** (King's Absolution)
 
@@ -400,36 +331,6 @@
 | <span style="color: #999999;">+0-6</span> to Amazon Skill Levels | **<span style="color: #3366cc;">+0-7</span>** to Amazon Skill Levels |
 
 ### armor\gloves.md
-
-**Soul Drainer** (Souldrain)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Vambraces | **Base Item:** Vambraces |
-| **Level Requirement:** 74 | **Level Requirement:** 74 |
-| **Properties:** | **Properties:** |
-| +90-120% Enhanced Defense | +90-120% Enhanced Defense |
-| 4-7% Mana stolen per hit | 4-7% Mana stolen per hit |
-| 4-7% Life stolen per hit | 4-7% Life stolen per hit |
-| -50 to Monster Defense Per Hit | -50 to Monster Defense Per Hit |
-| Slows Target by 15% | Slows Target by 15% |
-| <span style="color: #999999;">25% Chance to cast Level 18 Weaken on striking</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">25% Chance to cast Level 18 Decrepify on striking</span>** |
-
-**Dracul's Grasp** (Dracul's Grasp)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Vampirebone Gloves | **Base Item:** Vampirebone Gloves |
-| **Level Requirement:** 76 | **Level Requirement:** 76 |
-| **Properties:** | **Properties:** |
-| +90-120% Enhanced Defense | +90-120% Enhanced Defense |
-| 7-10% Life stolen per hit | 7-10% Life stolen per hit |
-| +25% Chance of Open Wounds | +25% Chance of Open Wounds |
-| 10% Chance to cast Level 15 Life Tap on striking | 10% Chance to cast Level 15 Life Tap on striking |
-| +5-10 Life after each Kill | +5-10 Life after each Kill |
-| +10-15 to Strength | +10-15 to Strength |
-|  | **<span style="color: #3366cc;">Ignore Target's Defense</span>** |
 
 **Amazon's Teaching** (Amazon's Teaching)
 
@@ -477,8 +378,8 @@
 | +5-9 Cold Absorb | +5-9 Cold Absorb |
 | Half Freeze Duration | Half Freeze Duration |
 | Requirements -50% | Requirements -50% |
+| -8-15% to Enemy Cold Resistance | -8-15% to Enemy Cold Resistance |
 | <span style="color: #999999;">+8-12%</span> to Cold Skill Damage | **<span style="color: #3366cc;">+8-15%</span>** to Cold Skill Damage |
-| <span style="color: #999999;">-10-20%</span> to Enemy Cold Resistance | **<span style="color: #3366cc;">-8-15%</span>** to Enemy Cold Resistance |
 
 **Crown of Ages** (Crown of Ages)
 
@@ -489,29 +390,14 @@
 | **Properties:** | **Properties:** |
 | +30% Faster Hit Recovery | +30% Faster Hit Recovery |
 | Fire Resist +20-30% | Fire Resist +20-30% |
+| +1-3 to All Skills | +1-3 to All Skills |
 | Repairs  durability per second | Repairs  durability per second |
-| <span style="color: #999999;">+1-2</span> to All Skills | **<span style="color: #3366cc;">+1-3</span>** to All Skills |
 | <span style="color: #999999;">+100-150</span> Defense | **<span style="color: #3366cc;">+100-200</span>** Defense |
 | Damage Reduced by <span style="color: #999999;">10-15%</span> | **<span style="color: #3366cc;">Physical </span>**Damage**<span style="color: #3366cc;"> Received</span>** Reduced by **<span style="color: #3366cc;">10-20%</span>** |
 | <span style="color: #999999;">+50%</span> Enhanced Defense | **<span style="color: #3366cc;">+50-100%</span>** Enhanced Defense |
 | Magic Damage Reduced by <span style="color: #999999;">12-15</span> | Magic Damage Reduced by **<span style="color: #3366cc;">10-30</span>** |
 | <span style="color: #999999;">+7-9</span> Life after each Kill | **<span style="color: #3366cc;">+5-9</span>** Life after each Kill |
 |  | **<span style="color: #3366cc;">+5-9 to Mana after each Kill</span>** |
-
-**Giant Skull** (Giantskull)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Bone Visage | **Base Item:** Bone Visage |
-| **Level Requirement:** 65 | **Level Requirement:** 65 |
-| **Properties:** | **Properties:** |
-| +250-320 Defense | +250-320 Defense |
-| +25-35 to Strength | +25-35 to Strength |
-| +25% Chance of Crushing Blow | +25% Chance of Crushing Blow |
-| Damage Reduced by 12-21 | Damage Reduced by 12-21 |
-| dmg%: 30-60 (param: ) | dmg%: 30-60 (param: ) |
-| +25-35 to Dexterity | +25-35 to Dexterity |
-|  | **<span style="color: #3366cc;">Ignore Target's Defense</span>** |
 
 **Sigurds Staunching Helm** (Sigurds Staunching Helm)
 
@@ -550,6 +436,20 @@
 
 ### armor\shield.md
 
+**Lidless Wall** (Lidless Wall)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| **Base Item:** Grim Shield | **Base Item:** Grim Shield |
+| **Level Requirement:** 41 | **Level Requirement:** 41 |
+| **Properties:** | **Properties:** |
+| +1-2 to All Skills | +1-2 to All Skills |
+| +3-5 to Mana after each Kill | +3-5 to Mana after each Kill |
+| +80-130% Enhanced Defense | +80-130% Enhanced Defense |
+| +10 to Energy | +10 to Energy |
+| Increase Maximum Mana 10% | Increase Maximum Mana 10% |
+| <span style="color: #999999;">+20-30%</span> Faster Cast Rate | **<span style="color: #3366cc;">+20%</span>** Faster Cast Rate |
+
 **Medusa's Gaze** (Medusa's Gaze)
 
 | BT Diablo (Old) | BK Diablo (New) |
@@ -566,8 +466,8 @@
 | Requirements -30% | Requirements -30% |
 | Damage Reduced by 20-30% | Physical Damage Received Reduced by 20-30% |
 | +1 to All Skills | +1 to All Skills |
+| 33% Chance to cast Level 40 Frost Nova when struck | 33% Chance to cast Level 40 Frost Nova when struck |
 | <span style="color: #999999;">+0-6</span> to Amazon Skill Levels | **<span style="color: #3366cc;">+0-7</span>** to Amazon Skill Levels |
-|  | **<span style="color: #3366cc;">33% Chance to cast Level 40 Frost Nova when struck</span>** |
 
 **Spirit Ward** (Spirit Ward)
 
@@ -583,26 +483,8 @@
 | +25% Faster Block Rate | +25% Faster Block Rate |
 | 35% Chance to cast Level 8 Fade when struck | 35% Chance to cast Level 8 Fade when struck |
 | Requirements -30% | Requirements -30% |
+| +25% Faster Cast Rate | +25% Faster Cast Rate |
 | <span style="color: #999999;">+0-6</span> to Amazon Skill Levels | **<span style="color: #3366cc;">+0-7</span>** to Amazon Skill Levels |
-|  | **<span style="color: #3366cc;">+25% Faster Cast Rate</span>** |
-
-**Spike Thorn** (Spike Thorn)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Blade Barrier | **Base Item:** Blade Barrier |
-| **Level Requirement:** 70 | **Level Requirement:** 70 |
-| **Properties:** | **Properties:** |
-| +120-150% Enhanced Defense | +120-150% Enhanced Defense |
-| Attacker Takes Damage of  (Based on Character Level) | Attacker Takes Damage of  (Based on Character Level) |
-| maxdurability: 250 (param: ) | maxdurability: 250 (param: ) |
-| +30% Faster Hit Recovery | +30% Faster Hit Recovery |
-| Damage Reduced by 15-20% | Physical Damage Received Reduced by 15-20% |
-| Requirements -30% | Requirements -30% |
-| +25% Faster Block Rate | +25% Faster Block Rate |
-| +30% Faster Block Rate | +30% Faster Block Rate |
-| Damage +40-65 | Damage +40-65 |
-|  | **<span style="color: #3366cc;">Level 20 Thorns Aura When Equipped</span>** |
 
 ### class_specific\hand_to_hand_2.md
 
@@ -634,28 +516,9 @@
 | +130-140% Enhanced Defense | +130-140% Enhanced Defense |
 | +4-6 to Javelin and Spear Skills | +4-6 to Javelin and Spear Skills |
 | 7-10% Life stolen per hit | 7-10% Life stolen per hit |
+| Level 6-12 Fanaticism Aura When Equipped | Level 6-12 Fanaticism Aura When Equipped |
 | +33% Chance of Open Wounds | +33% Chance of Open Wounds |
-| <span style="color: #999999;">60-120% Bonus to Attack Rating</span> | <span style="color: #3366cc;">(removed)</span> |
-| <span style="color: #999999;">+1-2 to Feral Rage</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">Level 6-12 Fanaticism Aura When Equipped</span>** |
 |  | **<span style="color: #3366cc;">-5-10% to Enemy Physical Damage Resistance</span>** |
-
-### weapons\amazon_bow.md
-
-**Blood Raven's Charge** (Bloodraven's Charge)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Matriarchal Bow | **Base Item:** Matriarchal Bow |
-| **Level Requirement:** 71 | **Level Requirement:** 71 |
-| **Properties:** | **Properties:** |
-| 200-300% Bonus to Attack Rating | 200-300% Bonus to Attack Rating |
-| Fires Explosive Arrows or Bolts | Fires Explosive Arrows or Bolts |
-| +4-6 to Javelin and Spear Skills | +4-6 to Javelin and Spear Skills |
-| +5 to Revive | +5 to Revive |
-| +30% Increased Attack Speed | +30% Increased Attack Speed |
-| dmg%: <span style="color: #999999;">180-230</span> (param: ) | dmg%: **<span style="color: #3366cc;">200-300</span>** (param: ) |
-|  | **<span style="color: #3366cc;">+50% Faster Run/Walk</span>** |
 
 ### weapons\amazon_spear.md
 
@@ -679,18 +542,20 @@
 
 ### weapons\axe.md
 
-**Rune Master** (Runemaster)
+**The Gnasher** (The Gnasher)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** Ettin Axe | **Base Item:** Ettin Axe |
-| **Level Requirement:** 72 | **Level Requirement:** 72 |
+| **Base Item:** Hand Axe | **Base Item:** Hand Axe |
+| **Level Requirement:** 5 | **Level Requirement:** 5 |
 | **Properties:** | **Properties:** |
-| +5% to Maximum Cold Resist | +5% to Maximum Cold Resist |
-| Cannot Be Frozen | Cannot Be Frozen |
-| Ignore Target's Defense | Ignore Target's Defense |
-| dmg%: <span style="color: #999999;">270-320</span> (param: ) | dmg%: **<span style="color: #3366cc;">350</span>** (param: ) |
-| <span style="color: #999999;">+20%</span> Increased Attack Speed | **<span style="color: #3366cc;">+40%</span>** Increased Attack Speed |
+| +15 to Strength | +15 to Strength |
+| +50% Chance of Open Wounds | +50% Chance of Open Wounds |
+| +20% Chance of Crushing Blow | +20% Chance of Crushing Blow |
+| dmg%: 180-200 (param: ) | dmg%: 180-200 (param: ) |
+| +25% Increased Attack Speed | +25% Increased Attack Speed |
+| +10% Deadly Strike | +10% Deadly Strike |
+| <span style="color: #999999;">+20 to Minimum Damage</span> | <span style="color: #3366cc;">(removed)</span> |
 
 **Death Cleaver** (Deathcleaver)
 
@@ -705,27 +570,24 @@
 | +40% Increased Attack Speed | +40% Increased Attack Speed |
 | +6-9 Life after each Kill | +6-9 Life after each Kill |
 | +10-15% Chance of Crushing Blow | +10-15% Chance of Crushing Blow |
+| <span style="color: #999999;">+100 to Minimum Damage</span> | <span style="color: #3366cc;">(removed)</span> |
 |  | **<span style="color: #3366cc;">Damage +50-100</span>** |
 |  | **<span style="color: #3366cc;">-10-20% to Enemy Physical Damage Resistance</span>** |
 
-**Ethereal Edge** (Ethereal Edge)
+### weapons\hammer.md
+
+**Hell Forge Hammer** (Hell Forge Hammer)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** Silver-edged Axe | **Base Item:** Silver-edged Axe |
-| **Level Requirement:** 74 | **Level Requirement:** 74 |
+| **Base Item:** Hell Forge Hammer | **Base Item:** Hell Forge Hammer |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
-| dmg%: 200-240 (param: ) | dmg%: 200-240 (param: ) |
-| +25% Increased Attack Speed | +25% Increased Attack Speed |
-| +10-12 Fire Absorb | +10-12 Fire Absorb |
-| +150-200% Damage to Demons | +150-200% Damage to Demons |
-| +5-10 Life after each Kill | +5-10 Life after each Kill |
-| ethereal: 1 (param: ) | ethereal: 1 (param: ) |
-| indestruct: 1 (param: ) | indestruct: 1 (param: ) |
-| +150-200% Damage to Undead | +150-200% Damage to Undead |
-|  | **<span style="color: #3366cc;">5% Chance to cast Level 10 Fade when you Kill an Enemy</span>** |
-
-### weapons\hammer.md
+| +5 to Minimum Fire Damage | +5 to Minimum Fire Damage |
+| +20 to Maximum Fire Damage | +20 to Maximum Fire Damage |
+| Fire Resist +40% | Fire Resist +40% |
+| <span style="color: #999999;">+66</span> Defense | **<span style="color: #3366cc;">+35</span>** Defense |
+| <span style="color: #999999;">+66 to Minimum Damage</span> | <span style="color: #3366cc;">(removed)</span> |
 
 **Schaefer's Hammer** (Schaefer's Hammer)
 
@@ -734,14 +596,14 @@
 | **Base Item:** Legendary Mallet | **Base Item:** Legendary Mallet |
 | **Level Requirement:** 79 | **Level Requirement:** 79 |
 | **Properties:** | **Properties:** |
+| +100 to Life | +100 to Life |
 | + to Attack Rating (Based on Character Level) | + to Attack Rating (Based on Character Level) |
 | Lightning Resist +75% | Lightning Resist +75% |
 | +60% Increased Attack Speed | +60% Increased Attack Speed |
 | + to Maximum Damage (Based on Character Level) | + to Maximum Damage (Based on Character Level) |
 | Repairs  durability per second | Repairs  durability per second |
+| dmg%: 350 (param: ) | dmg%: 350 (param: ) |
 | 20% Chance to cast Level <span style="color: #999999;">20</span> Static Field on striking | 20% Chance to cast Level **<span style="color: #3366cc;">50</span>** Static Field on striking |
-| <span style="color: #999999;">+50</span> to Life | **<span style="color: #3366cc;">+100</span>** to Life |
-| dmg%: <span style="color: #999999;">200-230</span> (param: ) | dmg%: **<span style="color: #3366cc;">350</span>** (param: ) |
 | <span style="color: #999999;">+50-200 to Minimum Lightning Damage</span> | <span style="color: #3366cc;">(removed)</span> |
 |  | **<span style="color: #3366cc;">-10-15% to Enemy Physical Damage Resistance</span>** |
 
@@ -757,8 +619,8 @@
 | +40% Chance of Crushing Blow | +40% Chance of Crushing Blow |
 | -50% Target Defense | -50% Target Defense |
 | -100 to Monster Defense Per Hit | -100 to Monster Defense Per Hit |
+| Damage +50-85 | Damage +50-85 |
 | +40% Increased Attack Speed | +40% Increased Attack Speed |
-| Damage <span style="color: #999999;">+42-69</span> | Damage **<span style="color: #3366cc;">+50-85</span>** |
 |  | **<span style="color: #3366cc;">-5-10% to Enemy Physical Damage Resistance</span>** |
 
 **Windhammer** (Windhammer)
@@ -768,13 +630,44 @@
 | **Base Item:** Ogre Maul | **Base Item:** Ogre Maul |
 | **Level Requirement:** 68 | **Level Requirement:** 68 |
 | **Properties:** | **Properties:** |
+| dmg%: 200-300 (param: ) | dmg%: 200-300 (param: ) |
 | +50% Chance of Crushing Blow | +50% Chance of Crushing Blow |
 | +60% Increased Attack Speed | +60% Increased Attack Speed |
 | 40% Chance to cast Level 44 Twister on striking | 40% Chance to cast Level 44 Twister on striking |
 | +30% Faster Run/Walk | +30% Faster Run/Walk |
-| dmg%: <span style="color: #999999;">180-230</span> (param: ) | dmg%: **<span style="color: #3366cc;">200-300</span>** (param: ) |
-|  | **<span style="color: #3366cc;">50% Chance to cast Level 40 Tornado when you Kill an Enemy</span>** |
+| 50% Chance to cast Level 40 Tornado when you Kill an Enemy | 50% Chance to cast Level 40 Tornado when you Kill an Enemy |
 |  | **<span style="color: #3366cc;">-5-15% to Enemy Physical Damage Resistance</span>** |
+
+### weapons\javelin.md
+
+**Wraith Flight** (Wraithflight)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| **Base Item:** Ghost Glaive | **Base Item:** Ghost Glaive |
+| **Level Requirement:** 76 | **Level Requirement:** 76 |
+| **Properties:** | **Properties:** |
+| Replenishes quantity | Replenishes quantity |
+| 8-12% Life stolen per hit | 8-12% Life stolen per hit |
+| +15 to Mana after each Kill | +15 to Mana after each Kill |
+| ethereal: 1 (param: ) | ethereal: 1 (param: ) |
+| +35% Increased Attack Speed | +35% Increased Attack Speed |
+| +10% Chance of Crushing Blow | +10% Chance of Crushing Blow |
+| Slows Target by 15% | Slows Target by 15% |
+| dmg%: <span style="color: #999999;">150-250</span> (param: ) | dmg%: **<span style="color: #3366cc;">150-240</span>** (param: ) |
+
+**Skorn** (Skorn)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| **Base Item:** Ghost Glaive | **Base Item:** Ghost Glaive |
+| **Level Requirement:** 80 | **Level Requirement:** 80 |
+| **Properties:** | **Properties:** |
+| +8-50% Strength | +8-50% Strength |
+| +80% Increased Attack Speed | +80% Increased Attack Speed |
+| 5% Life stolen per hit | 5% Life stolen per hit |
+| +3 to Double Throw | +3 to Double Throw |
+| dmg%: <span style="color: #999999;">250-300</span> (param: ) | dmg%: **<span style="color: #3366cc;">180-250</span>** (param: ) |
 
 ### weapons\knife.md
 
@@ -814,38 +707,60 @@
 
 ### weapons\mace.md
 
-**Stormlash** (Stormlash)
+**Khalim's Will** (SuperKhalimFlail)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** Scourge | **Base Item:** Scourge |
-| **Level Requirement:** 82 | **Level Requirement:** 82 |
+| **Base Item:** Khalim's Will | **Base Item:** Khalim's Will |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
-| dmg%: 269-300 (param: ) | dmg%: 269-300 (param: ) |
-| +30% Increased Attack Speed | +30% Increased Attack Speed |
-| 20% Chance to cast Level 20 Static Field on striking | 20% Chance to cast Level 20 Static Field on striking |
-| +1-473 to Minimum Lightning Damage | +1-473 to Minimum Lightning Damage |
-| Attacker Takes Lightning Damage of 30 | Attacker Takes Lightning Damage of 30 |
-| +33% Chance of Crushing Blow | +33% Chance of Crushing Blow |
-| +3-9 Lightning Absorb | +3-9 Lightning Absorb |
-| 20% Chance to cast Level <span style="color: #999999;">30</span> Lightning on striking | 20% Chance to cast Level **<span style="color: #3366cc;">44</span>** Lightning on striking |
+| +1 to Minimum Lightning Damage | +1 to Minimum Lightning Damage |
+| +40 to Maximum Lightning Damage | +40 to Maximum Lightning Damage |
+| +50% Increased Attack Speed | +50% Increased Attack Speed |
+| 6% Mana stolen per hit | 6% Mana stolen per hit |
+| 6% Life stolen per hit | 6% Life stolen per hit |
+| <span style="color: #999999;">200% Bonus to Attack Rating</span> | <span style="color: #3366cc;">(removed)</span> |
+| <span style="color: #999999;">+50 to Minimum Damage</span> | <span style="color: #3366cc;">(removed)</span> |
+|  | **<span style="color: #3366cc;">+40 to Attack Rating</span>** |
 
 ### weapons\polearm.md
 
-**The Reaper's Toll** (The Reaper's Toll)
+**Woestave** (Woestave)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** Thresher | **Base Item:** Thresher |
-| **Level Requirement:** 75 | **Level Requirement:** 75 |
+| **Base Item:** Halberd | **Base Item:** Halberd |
+| **Level Requirement:** 28 | **Level Requirement:** 28 |
 | **Properties:** | **Properties:** |
-| Ignore Target's Defense | Ignore Target's Defense |
-| 11-15% Life stolen per hit | 11-15% Life stolen per hit |
-| Requirements -25% | Requirements -25% |
-| +33% Deadly Strike | +33% Deadly Strike |
-| Cannot Be Frozen | Cannot Be Frozen |
-| dmg%: <span style="color: #999999;">190-240</span> (param: ) | dmg%: **<span style="color: #3366cc;">200-300</span>** (param: ) |
-| 33% Chance to cast Level <span style="color: #999999;">1</span> Decrepify on striking | 33% Chance to cast Level **<span style="color: #3366cc;">15</span>** Decrepify on striking |
+| Slows Target by 50% | Slows Target by 50% |
+| +50% Chance of Open Wounds | +50% Chance of Open Wounds |
+| Hit Blinds Target | Hit Blinds Target |
+| -50 to Monster Defense Per Hit | -50 to Monster Defense Per Hit |
+| Freezes target | Freezes target |
+| Prevent Monster Heal | Prevent Monster Heal |
+| dmg%: 200 (param: ) | dmg%: 200 (param: ) |
+| +30% Increased Attack Speed | +30% Increased Attack Speed |
+| <span style="color: #999999;">Level 12-17 Meditation Aura When Equipped</span> | <span style="color: #3366cc;">(removed)</span> |
+
+**Stormspire** (Stormspire)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| **Base Item:** Giant Thresher | **Base Item:** Giant Thresher |
+| **Level Requirement:** 70 | **Level Requirement:** 70 |
+| **Properties:** | **Properties:** |
+| Lightning Resist +50% | Lightning Resist +50% |
+| 30% Chance to cast Level 20 Static Field when struck | 30% Chance to cast Level 20 Static Field when struck |
+| dmg%: 200-300 (param: ) | dmg%: 200-300 (param: ) |
+| +20 to Strength | +20 to Strength |
+| 30% Chance to cast Level 10 Lower Resist on striking | 30% Chance to cast Level 10 Lower Resist on striking |
+| +30% Increased Attack Speed | +30% Increased Attack Speed |
+| Repairs  durability per second | Repairs  durability per second |
+| +1-237 to Minimum Lightning Damage | +1-237 to Minimum Lightning Damage |
+| 8-10% Life stolen per hit | 8-10% Life stolen per hit |
+| 150% Bonus to Attack Rating | 150% Bonus to Attack Rating |
+| <span style="color: #999999;">30% Chance to cast Level 10 Lower Resist when struck</span> | <span style="color: #3366cc;">(removed)</span> |
+|  | **<span style="color: #3366cc;">Unknown Prop: 91 (91, 30-10)</span>** |
 
 ### weapons\spear.md
 
@@ -857,10 +772,10 @@
 | **Level Requirement:** 71 | **Level Requirement:** 71 |
 | **Properties:** | **Properties:** |
 | dmg%: 190-240 (param: ) | dmg%: 190-240 (param: ) |
+| 66% Chance to cast Level 5 Lower Resist on striking | 66% Chance to cast Level 5 Lower Resist on striking |
 | +50% Increased Attack Speed | +50% Increased Attack Speed |
 | 25% Chance to cast Level 60 Poison Nova on striking | 25% Chance to cast Level 60 Poison Nova on striking |
 | Poison Resist +75% | Poison Resist +75% |
-| <span style="color: #999999;">15%</span> Chance to cast Level 5 Lower Resist on striking | **<span style="color: #3366cc;">66%</span>** Chance to cast Level 5 Lower Resist on striking |
 | <span style="color: #999999;">33-60% Chance to cast level 33-60 %s when struck</span> | <span style="color: #3366cc;">(removed)</span> |
 |  | **<span style="color: #3366cc;">33% Chance to cast Level 60 Poison Nova when struck</span>** |
 
@@ -879,9 +794,36 @@
 | +44% Chance of Crushing Blow | +44% Chance of Crushing Blow |
 | 7-12% Life stolen per hit | 7-12% Life stolen per hit |
 | 15% Chance to cast Level 33 Amplify Damage on striking | 15% Chance to cast Level 33 Amplify Damage on striking |
-|  | **<span style="color: #3366cc;">+1-3 to Iron Skin</span>** |
+| <span style="color: #999999;">+1</span> to Iron Skin | **<span style="color: #3366cc;">+1-3</span>** to Iron Skin |
 
 ### weapons\staff.md
+
+**Staff of Kings** (Staff of Kings)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| **Base Item:** Shaft of the Horadric Staff | **Base Item:** Shaft of the Horadric Staff |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
+| **Properties:** | **Properties:** |
+| +50% Increased Attack Speed | +50% Increased Attack Speed |
+| Fire Resist <span style="color: #999999;">+30%</span> | Fire Resist **<span style="color: #3366cc;">+10%</span>** |
+| <span style="color: #999999;">+30% Faster Cast Rate</span> | <span style="color: #3366cc;">(removed)</span> |
+| <span style="color: #999999;">+30 to Minimum Damage</span> | <span style="color: #3366cc;">(removed)</span> |
+
+**Horadric Staff** (Horadric Staff)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| **Base Item:** Horadric Staff | **Base Item:** Horadric Staff |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
+| **Properties:** | **Properties:** |
+| +50% Increased Attack Speed | +50% Increased Attack Speed |
+| <span style="color: #999999;">+100</span> to Mana | **<span style="color: #3366cc;">+10</span>** to Mana |
+| Fire Resist <span style="color: #999999;">+30%</span> | Fire Resist **<span style="color: #3366cc;">+10%</span>** |
+| <span style="color: #999999;">+100</span> to Life | **<span style="color: #3366cc;">+10</span>** to Life |
+| <span style="color: #999999;">+30% Faster Cast Rate</span> | <span style="color: #3366cc;">(removed)</span> |
+| <span style="color: #999999;">+30 to Minimum Damage</span> | <span style="color: #3366cc;">(removed)</span> |
+|  | **<span style="color: #3366cc;">Poison Resist +25%</span>** |
 
 **Mang Song's Lesson** (Mang Song's Lesson)
 
@@ -892,13 +834,10 @@
 | **Properties:** | **Properties:** |
 | Fire Resist +40-50% | Fire Resist +40-50% |
 | <span style="color: #999999;">+6</span> to All Skills | **<span style="color: #3366cc;">+7</span>** to All Skills |
+| Level <span style="color: #999999;">1</span> Conviction Aura When Equipped | Level **<span style="color: #3366cc;">5-10</span>** Conviction Aura When Equipped |
 | Regenerate Mana <span style="color: #999999;">30%</span> | Regenerate Mana **<span style="color: #3366cc;">30-80%</span>** |
 | <span style="color: #999999;">+85%</span> Faster Cast Rate | **<span style="color: #3366cc;">+115%</span>** Faster Cast Rate |
 | Increase Maximum Mana <span style="color: #999999;">40%</span> | Increase Maximum Mana **<span style="color: #3366cc;">40-50%</span>** |
-| <span style="color: #999999;">-20-25% to Enemy Fire Resistance</span> | <span style="color: #3366cc;">(removed)</span> |
-| <span style="color: #999999;">-20-25% to Enemy Lightning Resistance</span> | <span style="color: #3366cc;">(removed)</span> |
-| <span style="color: #999999;">-20-25% to Enemy Cold Resistance</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">Level 5-10 Conviction Aura When Equipped</span>** |
 |  | **<span style="color: #3366cc;">Increase Maximum Life 40-50%</span>** |
 
 ### weapons\sword.md
@@ -912,16 +851,14 @@
 | **Properties:** | **Properties:** |
 | -10% to Enemy Cold Resistance | -10% to Enemy Cold Resistance |
 | dmg%: 230-270 (param: ) | dmg%: 230-270 (param: ) |
+| Level 10-18 Holy Freeze Aura When Equipped | Level 10-18 Holy Freeze Aura When Equipped |
 | +30% Increased Attack Speed | +30% Increased Attack Speed |
 | +5-10 to Strength | +5-10 to Strength |
 | +2 to All Skills | +2 to All Skills |
 | +25 Cold Absorb | +25 Cold Absorb |
 | 40% Chance to cast Level 40 Blizzard on striking | 40% Chance to cast Level 40 Blizzard on striking |
 | +250-500 magic damage | +250-500 magic damage |
-| <span style="color: #999999;">+1 to Holy Freeze</span> | <span style="color: #3366cc;">(removed)</span> |
-| <span style="color: #999999;">+1 to Resist Cold</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">Level 10-18 Holy Freeze Aura When Equipped</span>** |
-|  | **<span style="color: #3366cc;">+250-500 to Minimum Cold Damage</span>** |
+| <span style="color: #999999;">+500</span> to Minimum Cold Damage | **<span style="color: #3366cc;">+250-500</span>** to Minimum Cold Damage |
 
 **Shadowfang** (Shadowfang)
 
@@ -947,47 +884,11 @@
 | **Properties:** | **Properties:** |
 | + to Maximum Damage (Based on Character Level) | + to Maximum Damage (Based on Character Level) |
 | Repairs  durability per second | Repairs  durability per second |
+| dmg%: 450 (param: ) | dmg%: 450 (param: ) |
 | <span style="color: #999999;">+20</span> to Strength | **<span style="color: #3366cc;">+20-30</span>** to Strength |
 | <span style="color: #999999;">+80</span> to Life | **<span style="color: #3366cc;">+100</span>** to Life |
-| dmg%: <span style="color: #999999;">200-300</span> (param: ) | dmg%: **<span style="color: #3366cc;">450</span>** (param: ) |
 | <span style="color: #999999;">50% Bonus to Attack Rating</span> | <span style="color: #3366cc;">(removed)</span> |
 |  | **<span style="color: #3366cc;">-10-20% to Enemy Physical Damage Resistance</span>** |
-
-**Flamebellow** (Flamebellow)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Balrog Blade | **Base Item:** Balrog Blade |
-| **Level Requirement:** 71 | **Level Requirement:** 71 |
-| **Properties:** | **Properties:** |
-| dmg%: 170-240 (param: ) | dmg%: 170-240 (param: ) |
-| 100% Chance to cast Level 60 Molten Boulder when you Kill an Enemy | 100% Chance to cast Level 60 Molten Boulder when you Kill an Enemy |
-| Fire Absorb +20-30% | Fire Absorb +20-30% |
-| 20% Chance to cast Level 60 Firestorm on striking | 20% Chance to cast Level 60 Firestorm on striking |
-| +1 to Fire Mastery | +1 to Fire Mastery |
-| +15-20 to Strength | +15-20 to Strength |
-| +12-18 to Inferno | +12-18 to Inferno |
-| +30% Increased Attack Speed | +30% Increased Attack Speed |
-| <span style="color: #999999;">+3</span> to Fire Skills | **<span style="color: #3366cc;">+1-3</span>** to Fire Skills |
-|  | **<span style="color: #3366cc;">Level 5-10 Conviction Aura When Equipped</span>** |
-
-**Frostwind** (Frostwind)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Cryptic Sword | **Base Item:** Cryptic Sword |
-| **Level Requirement:** 70 | **Level Requirement:** 70 |
-| **Properties:** | **Properties:** |
-| dmg%: 180-230 (param: ) | dmg%: 180-230 (param: ) |
-| Freezes target | Freezes target |
-| +237-486 to Minimum Cold Damage | +237-486 to Minimum Cold Damage |
-| +25% Increased Attack Speed | +25% Increased Attack Speed |
-| Cold Absorb +7-15% | Cold Absorb +7-15% |
-| -25-40% to Enemy Cold Resistance | -25-40% to Enemy Cold Resistance |
-| <span style="color: #999999;">20%</span> Chance to cast Level 10 Lower Resist on striking | **<span style="color: #3366cc;">25%</span>** Chance to cast Level 10 Lower Resist on striking |
-| <span style="color: #999999;">20%</span> Chance to cast Level <span style="color: #999999;">20</span> Frozen Orb on striking | **<span style="color: #3366cc;">25%</span>** Chance to cast Level **<span style="color: #3366cc;">30</span>** Frozen Orb on striking |
-| <span style="color: #999999;">Half Freeze Duration</span> | <span style="color: #3366cc;">(removed)</span> |
-|  | **<span style="color: #3366cc;">Cannot Be Frozen</span>** |
 
 **Mistiltein** (Mistiltein)
 
@@ -1023,6 +924,21 @@
 | Increase Maximum Life <span style="color: #999999;">25%</span> | Increase Maximum Life **<span style="color: #3366cc;">40-50%</span>** |
 |  | **<span style="color: #3366cc;">-15-30% to Enemy Physical Damage Resistance</span>** |
 
+**Corrupted Azurewrath** (Corrupted Azurewrath)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| **Base Item:** Crystal Sword | **Base Item:** Crystal Sword |
+| **Level Requirement:** 13 | **Level Requirement:** 13 |
+| **Properties:** | **Properties:** |
+| +50% Deadly Strike | +50% Deadly Strike |
+| 25% Better Chance of Getting Magic Items | 25% Better Chance of Getting Magic Items |
+| +30-60 to Minimum Cold Damage | +30-60 to Minimum Cold Damage |
+| dmg%: 100-200 (param: ) | dmg%: 100-200 (param: ) |
+| maxdurability: 25 (param: ) | maxdurability: 25 (param: ) |
+| +50-100 magic damage | +50-100 magic damage |
+| <span style="color: #999999;">10-15% Better Chance of Getting Magic Items</span> | <span style="color: #3366cc;">(removed)</span> |
+
 ### weapons\throwing_axe.md
 
 **Gimmershred** (Gimmershred)
@@ -1035,27 +951,12 @@
 | dmg%: 200-230 (param: ) | dmg%: 200-230 (param: ) |
 | +250-500 to Minimum Fire Damage | +250-500 to Minimum Fire Damage |
 | +250-500 to Minimum Cold Damage | +250-500 to Minimum Cold Damage |
-| +61-501 to Minimum Lightning Damage | +61-501 to Minimum Lightning Damage |
 | Increased Stack Size | Increased Stack Size |
 | +30% Increased Attack Speed | +30% Increased Attack Speed |
-| 20% Chance to cast Level <span style="color: #999999;">6</span> Lower Resist on striking | 20% Chance to cast Level **<span style="color: #3366cc;">20</span>** Lower Resist on striking |
+| 20% Chance to cast Level 20 Lower Resist on striking | 20% Chance to cast Level 20 Lower Resist on striking |
+| <span style="color: #999999;">+61-511</span> to Minimum Lightning Damage | **<span style="color: #3366cc;">+61-501</span>** to Minimum Lightning Damage |
 
 ### weapons\wand.md
-
-**Death's Web** (Deaths's Web)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Unearthed Wand | **Base Item:** Unearthed Wand |
-| **Level Requirement:** 66 | **Level Requirement:** 66 |
-| **Properties:** | **Properties:** |
-| +2 to All Skills | +2 to All Skills |
-| -40-50% to Enemy Poison Resistance | -40-50% to Enemy Poison Resistance |
-| +7-12 Life after each Kill | +7-12 Life after each Kill |
-| +7-12 to Mana after each Kill | +7-12 to Mana after each Kill |
-| +1-2 to Javelin and Spear Skills | +1-2 to Javelin and Spear Skills |
-| +20% Faster Cast Rate | +20% Faster Cast Rate |
-|  | **<span style="color: #3366cc;">50% Chance to cast Level 10 Lower Resist when you Kill an Enemy</span>** |
 
 **Arcbane** (Arcbane)
 

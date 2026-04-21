@@ -431,9 +431,10 @@
     * Cannot Be Frozen
     * +45% Faster Run/Walk
     * Fire Resist +20-30%
-    * +20-30 to Strength
+    * +30% Increased Attack Speed
     * +1 to Teleport
     * +2 to All Skills
+    * +30% Faster Cast Rate
 
 ### Leviathan (Leviathan)
 * **Base Item:** Kraken Shell
@@ -462,6 +463,7 @@
     * Repairs  durability per second
     * Damage Reduced by 30-40%
     * +15% Faster Run/Walk
+    * Level 8-10 Defiance Aura When Equipped
 
 ### Ormus' Robes (Ormus' Robes)
 * **Base Item:** Dusk Shroud
@@ -485,9 +487,9 @@
     * +24-30% Faster Hit Recovery
     * +250-300 Defense vs. Missile
     * +20-30 to Strength
-    * +30-40 to Life
+    * +100 to Life
     * +4-6 to Javelin and Spear Skills
-    * Level 6 Conviction Aura When Equipped
+    * Level 6-12 Conviction Aura When Equipped
     * Requirements -50%
     * Poison Length Reduced by 75%
 

@@ -110,6 +110,7 @@
     * +7-12 to Mana after each Kill
     * +1-2 to Javelin and Spear Skills
     * +20% Faster Cast Rate
+    * 50% Chance to cast Level 10 Lower Resist when you Kill an Enemy
 
 ### Boneshade (Boneshade)
 * **Base Item:** Lich Wand

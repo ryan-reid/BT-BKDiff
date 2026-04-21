@@ -38,7 +38,6 @@
     * +15-25 to Strength
     * Level 15-20 Holy Fire Aura When Equipped
     * +10 to Hydra
-    * +15% to Fire Skill Damage
     * +30% Faster Cast Rate
     * +1 to Fire Mastery
     * +20% Faster Block Rate

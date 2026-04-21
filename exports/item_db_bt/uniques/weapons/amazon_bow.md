@@ -19,9 +19,10 @@
 * **Base Item:** Matriarchal Bow
 * **Level Requirement:** 71
 * **Properties:**
-    * dmg%: 180-230 (param: )
+    * dmg%: 200-300 (param: )
     * 200-300% Bonus to Attack Rating
     * Fires Explosive Arrows or Bolts
     * +4-6 to Javelin and Spear Skills
     * +5 to Revive
     * +30% Increased Attack Speed
+    * +50% Faster Run/Walk

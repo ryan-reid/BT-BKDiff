@@ -144,10 +144,9 @@
     * Poison Resist +40-70%
     * Repairs  durability per second
     * +10-15 to Strength
-    * +10-15 to Vitality
+    * Level 1 Cleansing Aura When Equipped
     * Replenish Life +15
     * Attacker Takes Damage of 100
-    * Poison Length Reduced by 75%
 
 ### Marrowwalk (Marrowwalk)
 * **Base Item:** Boneweave Boots
@@ -195,4 +194,4 @@
     * item_numsockets: 1 (param: )
     * +1-10% Energy
     * 5% Chance to cast Level 20 Static Field when struck
-    * +10% Faster Run/Walk
+    * +5-10% Faster Run/Walk

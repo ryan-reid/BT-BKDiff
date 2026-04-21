@@ -32,7 +32,7 @@
     * dmg%: 200-230 (param: )
     * +250-500 to Minimum Fire Damage
     * +250-500 to Minimum Cold Damage
-    * +61-501 to Minimum Lightning Damage
+    * +61-511 to Minimum Lightning Damage
     * Increased Stack Size
     * +30% Increased Attack Speed
-    * 20% Chance to cast Level 6 Lower Resist on striking
+    * 20% Chance to cast Level 20 Lower Resist on striking

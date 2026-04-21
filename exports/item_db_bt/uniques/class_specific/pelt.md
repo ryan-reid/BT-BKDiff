@@ -21,9 +21,8 @@
     * +130-140% Enhanced Defense
     * +4-6 to Javelin and Spear Skills
     * 7-10% Life stolen per hit
-    * 60-120% Bonus to Attack Rating
+    * Level 6-12 Fanaticism Aura When Equipped
     * +33% Chance of Open Wounds
-    * +1-2 to Feral Rage
 
 ### Spirit Keeper (Spiritkeeper)
 * **Base Item:** Earth Spirit

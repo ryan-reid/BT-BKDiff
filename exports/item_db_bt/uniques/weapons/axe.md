@@ -10,6 +10,7 @@
     * dmg%: 180-200 (param: )
     * +25% Increased Attack Speed
     * +10% Deadly Strike
+    * +20 to Minimum Damage
 
 ### Deathspade (Deathspade)
 * **Base Item:** Axe
@@ -281,8 +282,8 @@
 * **Base Item:** Ettin Axe
 * **Level Requirement:** 72
 * **Properties:**
-    * dmg%: 270-320 (param: )
-    * +20% Increased Attack Speed
+    * dmg%: 350 (param: )
+    * +40% Increased Attack Speed
     * +5% to Maximum Cold Resist
     * Cannot Be Frozen
     * Ignore Target's Defense
@@ -297,6 +298,7 @@
     * +40% Increased Attack Speed
     * +6-9 Life after each Kill
     * +10-15% Chance of Crushing Blow
+    * +100 to Minimum Damage
 
 ### Executioner's Justice (Executioner's Justice)
 * **Base Item:** Glorious Axe
@@ -322,6 +324,7 @@
     * +10-12 Fire Absorb
     * +150-200% Damage to Demons
     * +5-10 Life after each Kill
+    * 5% Chance to cast Level 10 Fade when you Kill an Enemy
     * ethereal: 1 (param: )
     * indestruct: 1 (param: )
     * +150-200% Damage to Undead

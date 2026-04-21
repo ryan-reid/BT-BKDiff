@@ -8,13 +8,14 @@
 ## Removed Columns in BK (New)
 `enabled`  
 
-## Added Rows in BK (New) (39)
+## Added Rows in BK (New) (40)
 - ars al'diablolos
 - ars dul'mephistos
 - ars tor'baalos
 - black cleft
 - bloodpact shard
 - bone break
+- charm blank
 - cirilkas guidance
 - cold rupture
 - crack of the heavens
@@ -44,17 +45,35 @@
 - protector's stone
 - rotting fissure
 - sling
-- trophy of the lichking toudi
+- titan's echo
 - unique warlock helm
 - warlock class pack
 - wraithstep
 
-## Modified Rows (94)
+## Removed Rows in BK (New) (2)
+- ciris's guidance
+- ravaging t1
+
+## Modified Rows (91)
 ### amazon's teaching
 - `*ID`: `421` (Old) &rarr; **`459` (New)**
 - `prop7`: `*empty*` (Old) &rarr; **`pierce-dmg` (New)**
 - `min7`: `*empty*` (Old) &rarr; **`4` (New)**
 - `max7`: `*empty*` (Old) &rarr; **`5` (New)**
+
+### amulet of the viper
+- `min1`: `100` (Old) &rarr; **`10` (New)**
+- `max1`: `100` (Old) &rarr; **`10` (New)**
+- `prop2`: `*empty*` (Old) &rarr; **`res-pois` (New)**
+- `min2`: `*empty*` (Old) &rarr; **`25` (New)**
+- `max2`: `*empty*` (Old) &rarr; **`25` (New)**
+- `min3`: `100` (Old) &rarr; **`10` (New)**
+- `max3`: `100` (Old) &rarr; **`10` (New)**
+
+### annihilus
+- `max2`: `25` (Old) &rarr; **`20` (New)**
+- `max3`: `25` (Old) &rarr; **`20` (New)**
+- `max4`: `25` (Old) &rarr; **`15` (New)**
 
 ### arcbane
 - `*ID`: `448` (Old) &rarr; **`486` (New)**
@@ -66,26 +85,15 @@
 - `max7`: `6` (Old) &rarr; **`7` (New)**
 
 ### azurewrath
-- `prop3`: `oskill` (Old) &rarr; **`aura` (New)**
-- `min3`: `1` (Old) &rarr; **`10` (New)**
-- `max3`: `1` (Old) &rarr; **`18` (New)**
-- `prop4`: `oskill` (Old) &rarr; **`dmg-cold` (New)**
-- `par4`: `Resist Cold` (Old) &rarr; **`*empty*` (New)**
-- `min4`: `1` (Old) &rarr; **`250` (New)**
-- `max4`: `1` (Old) &rarr; **`500` (New)**
+- `min4`: `500` (Old) &rarr; **`250` (New)**
 
 ### baal's heart
 - `*ID`: `409` (Old) &rarr; **`447` (New)**
 - `prop2`: `Aura` (Old) &rarr; **`aura` (New)**
 
 ### bloodraven's charge
-- `min1`: `180` (Old) &rarr; **`200` (New)**
-- `max1`: `230` (Old) &rarr; **`300` (New)**
 - `min3`: `13` (Old) &rarr; **`30` (New)**
 - `max3`: `13` (Old) &rarr; **`30` (New)**
-- `prop7`: `*empty*` (Old) &rarr; **`move2` (New)**
-- `min7`: `*empty*` (Old) &rarr; **`50` (New)**
-- `max7`: `*empty*` (Old) &rarr; **`50` (New)**
 
 ### bul katho's mind
 - `*ID`: `410` (Old) &rarr; **`448` (New)**
@@ -97,35 +105,38 @@
 - `*ID`: `440` (Old) &rarr; **`478` (New)**
 
 ### cerebus
-- `prop4`: `att%` (Old) &rarr; **`aura` (New)**
-- `par4`: `*empty*` (Old) &rarr; **`Fanaticism` (New)**
-- `min4`: `60` (Old) &rarr; **`6` (New)**
-- `max4`: `120` (Old) &rarr; **`12` (New)**
-- `prop6`: `skill` (Old) &rarr; **`pierce-dmg` (New)**
-- `par6`: `feral rage` (Old) &rarr; **`*empty*` (New)**
-- `min6`: `1` (Old) &rarr; **`5` (New)**
-- `max6`: `2` (Old) &rarr; **`10` (New)**
-
-### charm blank
-- `*ID`: `452` (Old) &rarr; **`440` (New)**
+- `prop6`: `*empty*` (Old) &rarr; **`pierce-dmg` (New)**
+- `min6`: `*empty*` (Old) &rarr; **`5` (New)**
+- `max6`: `*empty*` (Old) &rarr; **`10` (New)**
 
 ### charm level reward
 - `*ID`: `405` (Old) &rarr; **`439` (New)**
 - `carry1`: `1` (Old) &rarr; **`*empty*` (New)**
+- `cost mult`: `3` (Old) &rarr; **`1` (New)**
+- `cost add`: `5000` (Old) &rarr; **`1` (New)**
 
 ### charm modifiers
 - `*ID`: `401` (Old) &rarr; **`438` (New)**
 - `carry1`: `1` (Old) &rarr; **`*empty*` (New)**
+- `cost mult`: `3` (Old) &rarr; **`1` (New)**
+- `cost add`: `5000` (Old) &rarr; **`1` (New)**
+- `par3`: `16` (Old) &rarr; **`4` (New)**
 - `prop4`: `aura` (Old) &rarr; **`*empty*` (New)**
 - `par4`: `377` (Old) &rarr; **`*empty*` (New)**
 - `min4`: `1` (Old) &rarr; **`*empty*` (New)**
 - `max4`: `1` (Old) &rarr; **`*empty*` (New)**
+- `prop5`: `addxp` (Old) &rarr; **`*empty*` (New)**
+- `min5`: `-50` (Old) &rarr; **`*empty*` (New)**
+- `max5`: `-50` (Old) &rarr; **`*empty*` (New)**
 
 ### corrupted arkaine's valor
 - `*ID`: `427` (Old) &rarr; **`465` (New)**
 
 ### corrupted azurewrath
 - `*ID`: `430` (Old) &rarr; **`468` (New)**
+- `prop7`: `mag%` (Old) &rarr; **`*empty*` (New)**
+- `min7`: `10` (Old) &rarr; **`*empty*` (New)**
+- `max7`: `15` (Old) &rarr; **`*empty*` (New)**
 
 ### corrupted bartuc's cut-throat
 - `*ID`: `429` (Old) &rarr; **`467` (New)**
@@ -140,7 +151,6 @@
 - `*ID`: `425` (Old) &rarr; **`463` (New)**
 
 ### crown of ages
-- `max3`: `2` (Old) &rarr; **`3` (New)**
 - `max4`: `150` (Old) &rarr; **`200` (New)**
 - `max6`: `15` (Old) &rarr; **`20` (New)**
 - `max7`: `50` (Old) &rarr; **`100` (New)**
@@ -152,18 +162,11 @@
 - `max10`: `*empty*` (Old) &rarr; **`9` (New)**
 
 ### deathcleaver
-- `prop7`: `*empty*` (Old) &rarr; **`dmg` (New)**
-- `min7`: `*empty*` (Old) &rarr; **`50` (New)**
-- `max7`: `*empty*` (Old) &rarr; **`100` (New)**
+- `prop7`: `dmg-norm` (Old) &rarr; **`dmg` (New)**
+- `min7`: `100` (Old) &rarr; **`50` (New)**
 - `prop8`: `*empty*` (Old) &rarr; **`pierce-dmg` (New)**
 - `min8`: `*empty*` (Old) &rarr; **`10` (New)**
 - `max8`: `*empty*` (Old) &rarr; **`20` (New)**
-
-### deaths's web
-- `prop7`: `*empty*` (Old) &rarr; **`kill-skill` (New)**
-- `par7`: `*empty*` (Old) &rarr; **`Lower Resist` (New)**
-- `min7`: `*empty*` (Old) &rarr; **`50` (New)**
-- `max7`: `*empty*` (Old) &rarr; **`10` (New)**
 
 ### destiny
 - `*ID`: `445` (Old) &rarr; **`483` (New)**
@@ -171,46 +174,12 @@
 ### dimoaks hew
 - `prop7`: `Vit` (Old) &rarr; **`vit` (New)**
 
-### dracul's grasp
-- `prop7`: `*empty*` (Old) &rarr; **`ignore-ac` (New)**
-- `min7`: `*empty*` (Old) &rarr; **`1` (New)**
-- `max7`: `*empty*` (Old) &rarr; **`1` (New)**
-
-### dragonscale
-- `prop7`: `extra-fire` (Old) &rarr; **`*empty*` (New)**
-- `min7`: `15` (Old) &rarr; **`*empty*` (New)**
-- `max7`: `15` (Old) &rarr; **`*empty*` (New)**
-
 ### elemental exposure
 - `*ID`: `437` (Old) &rarr; **`475` (New)**
-- `prop4`: `*empty*` (Old) &rarr; **`addxp` (New)**
-- `min4`: `*empty*` (Old) &rarr; **`2` (New)**
-- `max4`: `*empty*` (Old) &rarr; **`2` (New)**
 
 ### elemental union
 - `*ID`: `417` (Old) &rarr; **`455` (New)**
 - `prop1`: `Aura` (Old) &rarr; **`aura` (New)**
-
-### ethereal edge
-- `prop6`: `*empty*` (Old) &rarr; **`kill-skill` (New)**
-- `par6`: `*empty*` (Old) &rarr; **`Fade` (New)**
-- `min6`: `*empty*` (Old) &rarr; **`5` (New)**
-- `max6`: `*empty*` (Old) &rarr; **`10` (New)**
-
-### flamebellow
-- `min3`: `3` (Old) &rarr; **`1` (New)**
-- `prop10`: `*empty*` (Old) &rarr; **`aura` (New)**
-- `par10`: `*empty*` (Old) &rarr; **`conviction` (New)**
-- `min10`: `*empty*` (Old) &rarr; **`5` (New)**
-- `max10`: `*empty*` (Old) &rarr; **`10` (New)**
-
-### frostwind
-- `prop3`: `half-freeze` (Old) &rarr; **`nofreeze` (New)**
-- `prop7`: `hit-skill` (Old) &rarr; **`att-skill` (New)**
-- `min7`: `20` (Old) &rarr; **`25` (New)**
-- `prop8`: `hit-skill` (Old) &rarr; **`att-skill` (New)**
-- `min8`: `20` (Old) &rarr; **`25` (New)**
-- `max8`: `20` (Old) &rarr; **`30` (New)**
 
 ### gaia's precision
 - `*ID`: `413` (Old) &rarr; **`451` (New)**
@@ -226,24 +195,14 @@
 - `min9`: `*empty*` (Old) &rarr; **`20` (New)**
 - `max9`: `*empty*` (Old) &rarr; **`40` (New)**
 
-### gheed's fortune
-- `max1`: `40` (Old) &rarr; **`50` (New)**
-
 ### giant's protection
 - `*ID`: `412` (Old) &rarr; **`450` (New)**
 - `max1`: `6` (Old) &rarr; **`7` (New)**
 
-### giantskull
-- `prop7`: `*empty*` (Old) &rarr; **`ignore-ac` (New)**
-- `min7`: `*empty*` (Old) &rarr; **`1` (New)**
-- `max7`: `*empty*` (Old) &rarr; **`1` (New)**
-
 ### gimmershred
-- `max7`: `6` (Old) &rarr; **`20` (New)**
+- `max4`: `511` (Old) &rarr; **`501` (New)**
 
 ### griffon's eye
-- `min5`: `15` (Old) &rarr; **`8` (New)**
-- `max5`: `20` (Old) &rarr; **`15` (New)**
 - `prop6`: `*empty*` (Old) &rarr; **`oskill` (New)**
 - `par6`: `*empty*` (Old) &rarr; **`Thunder Storm` (New)**
 - `min6`: `*empty*` (Old) &rarr; **`7` (New)**
@@ -255,29 +214,55 @@
 ### gungnir's almighty
 - `*ID`: `411` (Old) &rarr; **`449` (New)**
 
+### hell forge hammer
+- `min4`: `66` (Old) &rarr; **`35` (New)**
+- `max4`: `66` (Old) &rarr; **`35` (New)**
+- `prop5`: `dmg-norm` (Old) &rarr; **`*empty*` (New)**
+- `min5`: `66` (Old) &rarr; **`0` (New)**
+- `max5`: `66` (Old) &rarr; **`0` (New)**
+
 ### hellfire torch
 - `max1`: `6` (Old) &rarr; **`7` (New)**
+- `max2`: `25` (Old) &rarr; **`20` (New)**
+- `max3`: `25` (Old) &rarr; **`20` (New)**
+
+### homunculus
+- `rarity`: `50` (Old) &rarr; **`1` (New)**
 
 ### honor
 - `*ID`: `444` (Old) &rarr; **`482` (New)**
+
+### horadric staff
+- `min1`: `100` (Old) &rarr; **`10` (New)**
+- `max1`: `100` (Old) &rarr; **`10` (New)**
+- `prop2`: `res-all` (Old) &rarr; **`res-pois` (New)**
+- `min2`: `30` (Old) &rarr; **`25` (New)**
+- `max2`: `30` (Old) &rarr; **`25` (New)**
+- `min3`: `100` (Old) &rarr; **`10` (New)**
+- `max3`: `100` (Old) &rarr; **`10` (New)**
+- `prop4`: `cast3` (Old) &rarr; **`res-all` (New)**
+- `min4`: `30` (Old) &rarr; **`10` (New)**
+- `max4`: `30` (Old) &rarr; **`10` (New)**
+- `prop6`: `dmg-norm` (Old) &rarr; **`*empty*` (New)**
+- `min6`: `30` (Old) &rarr; **`0` (New)**
+- `max6`: `30` (Old) &rarr; **`0` (New)**
 
 ### jym's swift journey
 - `*ID`: `431` (Old) &rarr; **`469` (New)**
 
 ### killing intent
 - `*ID`: `436` (Old) &rarr; **`474` (New)**
-- `prop4`: `*empty*` (Old) &rarr; **`addxp` (New)**
-- `min4`: `*empty*` (Old) &rarr; **`2` (New)**
-- `max4`: `*empty*` (Old) &rarr; **`2` (New)**
 
 ### king's absolution
 - `*ID`: `418` (Old) &rarr; **`456` (New)**
 - `max2`: `6` (Old) &rarr; **`7` (New)**
 
 ### kira's guardian
+- `rarity`: `50` (Old) &rarr; **`1` (New)**
 - `max5`: `6` (Old) &rarr; **`7` (New)**
-- `min6`: `10` (Old) &rarr; **`8` (New)**
-- `max6`: `20` (Old) &rarr; **`15` (New)**
+
+### lidless wall
+- `max2`: `30` (Old) &rarr; **`20` (New)**
 
 ### mad dog
 - `*ID`: `446` (Old) &rarr; **`484` (New)**
@@ -292,16 +277,11 @@
 ### mang song's lesson
 - `min1`: `6` (Old) &rarr; **`7` (New)**
 - `max1`: `6` (Old) &rarr; **`7` (New)**
-- `prop2`: `pierce-fire` (Old) &rarr; **`aura` (New)**
-- `par2`: `*empty*` (Old) &rarr; **`conviction` (New)**
-- `min2`: `20` (Old) &rarr; **`5` (New)**
-- `max2`: `25` (Old) &rarr; **`10` (New)**
-- `prop3`: `pierce-ltng` (Old) &rarr; **`hp%` (New)**
-- `min3`: `20` (Old) &rarr; **`40` (New)**
-- `max3`: `25` (Old) &rarr; **`50` (New)**
-- `prop4`: `pierce-cold` (Old) &rarr; **`*empty*` (New)**
-- `min4`: `20` (Old) &rarr; **`*empty*` (New)**
-- `max4`: `25` (Old) &rarr; **`*empty*` (New)**
+- `min2`: `1` (Old) &rarr; **`5` (New)**
+- `max2`: `1` (Old) &rarr; **`10` (New)**
+- `prop3`: `*empty*` (Old) &rarr; **`hp%` (New)**
+- `min3`: `*empty*` (Old) &rarr; **`40` (New)**
+- `max3`: `*empty*` (Old) &rarr; **`50` (New)**
 - `max5`: `30` (Old) &rarr; **`80` (New)**
 - `min6`: `85` (Old) &rarr; **`115` (New)**
 - `max6`: `85` (Old) &rarr; **`115` (New)**
@@ -309,10 +289,7 @@
 
 ### medusa's gaze
 - `max10`: `6` (Old) &rarr; **`7` (New)**
-- `prop11`: `*empty*` (Old) &rarr; **`gethit-skill` (New)**
-- `par11`: `*empty*` (Old) &rarr; **`Frost Nova` (New)**
-- `min11`: `*empty*` (Old) &rarr; **`33` (New)**
-- `max11`: `*empty*` (Old) &rarr; **`40` (New)**
+- `par11`: `frost nova` (Old) &rarr; **`Frost Nova` (New)**
 
 ### meshif's travellers
 - `*ID`: `408` (Old) &rarr; **`446` (New)**
@@ -334,8 +311,6 @@
 
 ### nightwing's veil
 - `max6`: `12` (Old) &rarr; **`15` (New)**
-- `min8`: `10` (Old) &rarr; **`8` (New)**
-- `max8`: `20` (Old) &rarr; **`15` (New)**
 
 ### numbness
 - `*ID`: `442` (Old) &rarr; **`480` (New)**
@@ -354,35 +329,15 @@
 ### robe of the horadrim
 - `*ID`: `438` (Old) &rarr; **`476` (New)**
 
-### runemaster
-- `min1`: `270` (Old) &rarr; **`350` (New)**
-- `max1`: `320` (Old) &rarr; **`350` (New)**
-- `min2`: `20` (Old) &rarr; **`40` (New)**
-- `max2`: `20` (Old) &rarr; **`40` (New)**
-
 ### saboteurs blade
 - `*ID`: `414` (Old) &rarr; **`452` (New)**
 - `min2`: `1` (Old) &rarr; **`2` (New)**
-
-### sandstorm trek
-- `prop6`: `str` (Old) &rarr; **`all-stats` (New)**
-- `prop7`: `vit` (Old) &rarr; **`aura` (New)**
-- `par7`: `*empty*` (Old) &rarr; **`cleansing` (New)**
-- `min7`: `10` (Old) &rarr; **`1` (New)**
-- `max7`: `15` (Old) &rarr; **`1` (New)**
-- `prop10`: `res-pois-len` (Old) &rarr; **`*empty*` (New)**
-- `min10`: `75` (Old) &rarr; **`*empty*` (New)**
-- `max10`: `75` (Old) &rarr; **`*empty*` (New)**
 
 ### saracen's chance
 - `max4`: `6` (Old) &rarr; **`7` (New)**
 
 ### schaefer's hammer
 - `max1`: `20` (Old) &rarr; **`50` (New)**
-- `min2`: `50` (Old) &rarr; **`100` (New)**
-- `max2`: `50` (Old) &rarr; **`100` (New)**
-- `min8`: `200` (Old) &rarr; **`350` (New)**
-- `max8`: `230` (Old) &rarr; **`350` (New)**
 - `prop9`: `dmg-ltng` (Old) &rarr; **`pierce-dmg` (New)**
 - `min9`: `50` (Old) &rarr; **`10` (New)**
 - `max9`: `200` (Old) &rarr; **`15` (New)**
@@ -403,6 +358,8 @@
 
 ### skorn
 - `*ID`: `439` (Old) &rarr; **`477` (New)**
+- `min3`: `250` (Old) &rarr; **`180` (New)**
+- `max3`: `300` (Old) &rarr; **`250` (New)**
 
 ### slanderer
 - `*ID`: `441` (Old) &rarr; **`479` (New)**
@@ -410,20 +367,21 @@
 ### slayer's edge
 - `*ID`: `420` (Old) &rarr; **`458` (New)**
 
-### souldrain
-- `par4`: `Weaken` (Old) &rarr; **`Decrepify` (New)**
-
 ### spike thorn
-- `prop10`: `*empty*` (Old) &rarr; **`aura` (New)**
-- `par10`: `*empty*` (Old) &rarr; **`thorns` (New)**
-- `min10`: `*empty*` (Old) &rarr; **`20` (New)**
-- `max10`: `*empty*` (Old) &rarr; **`20` (New)**
+- `par10`: `Thorns` (Old) &rarr; **`thorns` (New)**
 
 ### spirit ward
 - `max8`: `6` (Old) &rarr; **`7` (New)**
-- `prop9`: `*empty*` (Old) &rarr; **`cast2` (New)**
-- `min9`: `*empty*` (Old) &rarr; **`25` (New)**
-- `max9`: `*empty*` (Old) &rarr; **`25` (New)**
+
+### staff of kings
+- `min1`: `30` (Old) &rarr; **`10` (New)**
+- `max1`: `30` (Old) &rarr; **`10` (New)**
+- `prop3`: `cast3` (Old) &rarr; **`*empty*` (New)**
+- `min3`: `30` (Old) &rarr; **`0` (New)**
+- `max3`: `30` (Old) &rarr; **`0` (New)**
+- `prop4`: `dmg-norm` (Old) &rarr; **`*empty*` (New)**
+- `min4`: `30` (Old) &rarr; **`0` (New)**
+- `max4`: `30` (Old) &rarr; **`0` (New)**
 
 ### static accumulator
 - `*ID`: `433` (Old) &rarr; **`471` (New)**
@@ -438,7 +396,7 @@
 - `min3`: `5` (Old) &rarr; **`1` (New)**
 - `max3`: `20` (Old) &rarr; **`1` (New)**
 - `prop4`: `move1` (Old) &rarr; **`enr%` (New)**
-- `min4`: `10` (Old) &rarr; **`1` (New)**
+- `min4`: `5` (Old) &rarr; **`1` (New)**
 
 ### stealskull
 - `max8`: `6` (Old) &rarr; **`7` (New)**
@@ -447,10 +405,6 @@
 - `max2`: `20` (Old) &rarr; **`40` (New)**
 - `min5`: `10` (Old) &rarr; **`50` (New)**
 - `max5`: `15` (Old) &rarr; **`100` (New)**
-- `prop9`: `*empty*` (Old) &rarr; **`aura` (New)**
-- `par9`: `*empty*` (Old) &rarr; **`defiance` (New)**
-- `min9`: `*empty*` (Old) &rarr; **`8` (New)**
-- `max9`: `*empty*` (Old) &rarr; **`10` (New)**
 - `prop10`: `*empty*` (Old) &rarr; **`allskills` (New)**
 - `min10`: `*empty*` (Old) &rarr; **`1` (New)**
 - `max10`: `*empty*` (Old) &rarr; **`2` (New)**
@@ -459,25 +413,23 @@
 - `max11`: `*empty*` (Old) &rarr; **`-50` (New)**
 
 ### steelpillar
-- `prop9`: `*empty*` (Old) &rarr; **`oskill` (New)**
-- `par9`: `*empty*` (Old) &rarr; **`iron skin` (New)**
-- `min9`: `*empty*` (Old) &rarr; **`1` (New)**
-- `max9`: `*empty*` (Old) &rarr; **`3` (New)**
+- `max9`: `1` (Old) &rarr; **`3` (New)**
 
 ### stone crusher
-- `min6`: `42` (Old) &rarr; **`50` (New)**
-- `max6`: `69` (Old) &rarr; **`85` (New)**
 - `prop8`: `*empty*` (Old) &rarr; **`pierce-dmg` (New)**
 - `min8`: `*empty*` (Old) &rarr; **`5` (New)**
 - `max8`: `*empty*` (Old) &rarr; **`10` (New)**
 
-### stormlash
-- `max4`: `30` (Old) &rarr; **`44` (New)**
+### stormspire
+- `prop9`: `gethit-skill` (Old) &rarr; **`91` (New)**
 
-### templar's might
-- `min5`: `30` (Old) &rarr; **`100` (New)**
-- `max5`: `40` (Old) &rarr; **`100` (New)**
-- `max7`: `6` (Old) &rarr; **`12` (New)**
+### superkhalimflail
+- `prop4`: `att%` (Old) &rarr; **`att` (New)**
+- `min4`: `200` (Old) &rarr; **`40` (New)**
+- `max4`: `200` (Old) &rarr; **`40` (New)**
+- `prop7`: `dmg-norm` (Old) &rarr; **`*empty*` (New)**
+- `min7`: `50` (Old) &rarr; **`0` (New)**
+- `max7`: `50` (Old) &rarr; **`0` (New)**
 
 ### the corrupted grandfather
 - `*ID`: `426` (Old) &rarr; **`464` (New)**
@@ -495,6 +447,11 @@
 - `min10`: `*empty*` (Old) &rarr; **`15` (New)**
 - `max10`: `*empty*` (Old) &rarr; **`30` (New)**
 
+### the gnasher
+- `prop7`: `dmg-norm` (Old) &rarr; **`*empty*` (New)**
+- `min7`: `20` (Old) &rarr; **`*empty*` (New)**
+- `max7`: `20` (Old) &rarr; **`*empty*` (New)**
+
 ### the grandfather
 - `max1`: `20` (Old) &rarr; **`30` (New)**
 - `prop2`: `att%` (Old) &rarr; **`pierce-dmg` (New)**
@@ -502,13 +459,6 @@
 - `max2`: `50` (Old) &rarr; **`20` (New)**
 - `min3`: `80` (Old) &rarr; **`100` (New)**
 - `max3`: `80` (Old) &rarr; **`100` (New)**
-- `min6`: `200` (Old) &rarr; **`450` (New)**
-- `max6`: `300` (Old) &rarr; **`450` (New)**
-
-### the reaper's toll
-- `min1`: `190` (Old) &rarr; **`200` (New)**
-- `max1`: `240` (Old) &rarr; **`300` (New)**
-- `max2`: `1` (Old) &rarr; **`15` (New)**
 
 ### thunderfury
 - `*ID`: `416` (Old) &rarr; **`454` (New)**
@@ -516,16 +466,13 @@
 ### thunderlords overcharge
 - `*ID`: `432` (Old) &rarr; **`470` (New)**
 
-### titan's echo
-- `*ID`: `435` (Old) &rarr; **`473` (New)**
-- `lvl`: `1` (Old) &rarr; **`99` (New)**
-- `prop1`: `Splash` (Old) &rarr; **`splash` (New)**
-- `par1`: `375` (Old) &rarr; **`430` (New)**
+### trophy of the lichking toudi
+- `*ID`: `453` (Old) &rarr; **`491` (New)**
 
 ### tyrael's might
-- `prop9`: `str` (Old) &rarr; **`oskill` (New)**
+- `prop9`: `swing2` (Old) &rarr; **`oskill` (New)**
 - `par9`: `*empty*` (Old) &rarr; **`Teleport` (New)**
-- `min9`: `20` (Old) &rarr; **`1` (New)**
+- `min9`: `30` (Old) &rarr; **`1` (New)**
 - `max9`: `30` (Old) &rarr; **`1` (New)**
 - `prop10`: `oskill` (Old) &rarr; **`allskills` (New)**
 - `par10`: `Teleport` (Old) &rarr; **`*empty*` (New)**
@@ -534,9 +481,6 @@
 - `prop11`: `allskills` (Old) &rarr; **`swing2` (New)**
 - `min11`: `2` (Old) &rarr; **`30` (New)**
 - `max11`: `2` (Old) &rarr; **`30` (New)**
-- `prop12`: `*empty*` (Old) &rarr; **`cast2` (New)**
-- `min12`: `*empty*` (Old) &rarr; **`30` (New)**
-- `max12`: `*empty*` (Old) &rarr; **`30` (New)**
 
 ### undeniable
 - `*ID`: `450` (Old) &rarr; **`488` (New)**
@@ -550,22 +494,25 @@
 - `*ID`: `407` (Old) &rarr; **`445` (New)**
 
 ### viperfork
-- `min2`: `15` (Old) &rarr; **`66` (New)**
 - `prop4`: `get-hit-skill` (Old) &rarr; **`gethit-skill` (New)**
 
 ### wind god fist
 - `*ID`: `434` (Old) &rarr; **`472` (New)**
 
 ### windhammer
-- `min1`: `180` (Old) &rarr; **`200` (New)**
-- `max1`: `230` (Old) &rarr; **`300` (New)**
-- `prop6`: `*empty*` (Old) &rarr; **`kill-skill` (New)**
-- `par6`: `*empty*` (Old) &rarr; **`Tornado` (New)**
-- `min6`: `*empty*` (Old) &rarr; **`50` (New)**
-- `max6`: `*empty*` (Old) &rarr; **`40` (New)**
+- `par6`: `tornado` (Old) &rarr; **`Tornado` (New)**
 - `prop7`: `*empty*` (Old) &rarr; **`pierce-dmg` (New)**
 - `min7`: `*empty*` (Old) &rarr; **`5` (New)**
 - `max7`: `*empty*` (Old) &rarr; **`15` (New)**
+
+### woestave
+- `prop9`: `aura` (Old) &rarr; **`*empty*` (New)**
+- `par9`: `Meditation` (Old) &rarr; **`*empty*` (New)**
+- `min9`: `12` (Old) &rarr; **`*empty*` (New)**
+- `max9`: `17` (Old) &rarr; **`*empty*` (New)**
+
+### wraithflight
+- `max1`: `250` (Old) &rarr; **`240` (New)**
 
 ### wrath of the high heavens
 - `*ID`: `423` (Old) &rarr; **`461` (New)**

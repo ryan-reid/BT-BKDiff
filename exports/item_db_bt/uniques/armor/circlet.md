@@ -8,7 +8,7 @@
     * +25% Faster Cast Rate
     * +1 to All Skills
     * +10-15% to Lightning Skill Damage
-    * -15-20% to Enemy Lightning Resistance
+    * -8-15% to Enemy Lightning Resistance
 
 ### Kira's Guardian (Kira's Guardian)
 * **Base Item:** Tiara
@@ -19,7 +19,7 @@
     * Cannot Be Frozen
     * +20% Faster Hit Recovery
     * +0-6 to Amazon Skill Levels
-    * -10-20% to Enemy Fire Resistance
+    * -8-15% to Enemy Fire Resistance
     * +1-5% to Maximum Fire Resist
 
 ### King's Absolution (King's Absolution)
@@ -33,3 +33,18 @@
     * +10-15 Life after each Kill
     * +5-10% to Experience Gained
     * +66-99 Defense
+
+### Ciris's Guidance (Ciris's Guidance)
+* **Base Item:** Tiara
+* **Level Requirement:** 80
+* **Properties:**
+    * +1 to Teleport
+    * +1-2 to All Skills
+    * Increase Maximum Life 10%
+    * Increase Maximum Mana 10%
+    * +0-6 to Amazon Skill Levels
+    * +98% chance for finishing moves to not consume charges
+    * Reduces all Vendor Prices 15%
+    * +10-25% Faster Cast Rate
+    * +10-25% Increased Attack Speed
+    * +200-300% Enhanced Defense

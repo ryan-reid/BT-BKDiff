@@ -5,7 +5,7 @@
 ## Added Columns in BK (New)
 `vfxweaponstate`  
 
-## Added Rows in BK (New) (40)
+## Added Rows in BK (New) (39)
 - advancedstash
 - apocalypse
 - bind_demon
@@ -42,7 +42,6 @@
 - sigillethargy
 - sigilrancor
 - skill_channeling
-- splashdamage
 - talicfirepierce
 - warlockdemonground
 - warlockdemontorso
@@ -79,7 +78,7 @@
 - increasedstamina
 - magicpierce
 
-## Modified Rows (20)
+## Modified Rows (21)
 ### bonearmor
 - `group`: `*empty*` (Old) &rarr; **`1` (New)**
 
@@ -145,4 +144,7 @@
 
 ### special_aura
 - `*ID`: `191` (Old) &rarr; **`231` (New)**
+
+### splashdamage
+- `*ID`: `232` (Old) &rarr; **`241` (New)**
 

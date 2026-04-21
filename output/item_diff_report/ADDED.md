@@ -21,6 +21,16 @@
 | | **<span style="color: #3366cc;">Increase Maximum Mana 10-15%</span>** |
 | | **<span style="color: #3366cc;">Magic Damage Reduced by 8-12</span>** |
 
+### accessories\charms.md
+
+**Blank Charm** (Charm Blank)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| | **<span style="color: #3366cc;">**Base Item:** Small Charm</span>** |
+| | **<span style="color: #3366cc;">**Level Requirement:** 1</span>** |
+| | **<span style="color: #3366cc;">**Properties:**</span>** |
+
 ### accessories\colossal_jewel.md
 
 **Defender's Bile** (Defender's Bile)
@@ -205,6 +215,17 @@
 | | **<span style="color: #3366cc;"> (Random: +10-65 to Life OR +10-75 to Mana)</span>** |
 | | **<span style="color: #3366cc;"> (Random: +5-10% Faster Run/Walk OR +12-24% Faster Hit Recovery OR +3-8 to Strength)</span>** |
 | | **<span style="color: #3366cc;"> (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)</span>** |
+
+### accessories\jewel.md
+
+**Titan's Echo** (Titan's Echo)
+
+| BT Diablo (Old) | BK Diablo (New) |
+| :--- | :--- |
+| | **<span style="color: #3366cc;">**Base Item:** Jewel</span>** |
+| | **<span style="color: #3366cc;">**Level Requirement:** 1</span>** |
+| | **<span style="color: #3366cc;">**Properties:**</span>** |
+| | **<span style="color: #3366cc;">Melee Splash Damage</span>** |
 
 ### accessories\large_charm.md
 
@@ -502,26 +523,6 @@
 | | **<span style="color: #3366cc;">+10-20 to Vitality</span>** |
 | | **<span style="color: #3366cc;">+3-5 Life after each Kill</span>** |
 | | **<span style="color: #3366cc;">Fire Resist +20-30%</span>** |
-
-### class_specific\voodoo_heads.md
-
-**Trophy of the Lich King Toudi** (Trophy of the Lichking Toudi)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| | **<span style="color: #3366cc;">**Base Item:** Hierophant Trophy</span>** |
-| | **<span style="color: #3366cc;">**Level Requirement:** 80</span>** |
-| | **<span style="color: #3366cc;">**Properties:**</span>** |
-| | **<span style="color: #3366cc;">+3 to Amazon Skill Levels</span>** |
-| | **<span style="color: #3366cc;">+30% Faster Cast Rate</span>** |
-| | **<span style="color: #3366cc;">Physical Damage Received Reduced by 10-20%</span>** |
-| | **<span style="color: #3366cc;">Level 5-10 Vigor Aura When Equipped</span>** |
-| | **<span style="color: #3366cc;">Increase Maximum Life 10-15%</span>** |
-| | **<span style="color: #3366cc;">Increase Maximum Mana 10-15%</span>** |
-| | **<span style="color: #3366cc;">Fire Resist +10-25%</span>** |
-| | **<span style="color: #3366cc;">+50% Faster Block Rate</span>** |
-| | **<span style="color: #3366cc;">+50% Faster Block Rate</span>** |
-| | **<span style="color: #3366cc;">+200-300% Enhanced Defense</span>** |
 
 ### weapons\knife.md
 

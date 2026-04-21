@@ -5,6 +5,12 @@
 * **Level Requirement:** 70
 * **Properties:**
     * +1 to All Skills
-    * +10-20 to Strength
-    * Fire Resist +10-20%
-    * +10-15% to Experience Gained
+    * +10-25 to Strength
+    * Fire Resist +10-25%
+    * +10-25% to Experience Gained
+
+### Ravaging T1 (Ravaging T1)
+* **Base Item:** Small ÿc1Charmÿc3
+* **Level Requirement:** 1
+* **Properties:**
+    * Melee Splash Damage

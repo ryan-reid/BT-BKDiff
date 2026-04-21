@@ -238,7 +238,7 @@
     * Half Freeze Duration
     * +8-12% to Cold Skill Damage
     * Requirements -50%
-    * -10-20% to Enemy Cold Resistance
+    * -8-15% to Enemy Cold Resistance
 
 ### Crown of Ages (Crown of Ages)
 * **Base Item:** Corona
@@ -246,7 +246,7 @@
 * **Properties:**
     * +30% Faster Hit Recovery
     * Fire Resist +20-30%
-    * +1-2 to All Skills
+    * +1-3 to All Skills
     * +100-150 Defense
     * Repairs  durability per second
     * Damage Reduced by 10-15%
@@ -284,6 +284,7 @@
     * Damage Reduced by 12-21
     * dmg%: 30-60 (param: )
     * +25-35 to Dexterity
+    * Ignore Target's Defense
 
 ### Sigurds Staunching Helm (Sigurds Staunching Helm)
 * **Base Item:** Hydraskull

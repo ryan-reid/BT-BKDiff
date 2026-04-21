@@ -35,7 +35,7 @@
 * **Base Item:** Ghost Glaive
 * **Level Requirement:** 76
 * **Properties:**
-    * dmg%: 150-240 (param: )
+    * dmg%: 150-250 (param: )
     * Replenishes quantity
     * 8-12% Life stolen per hit
     * +15 to Mana after each Kill
@@ -50,6 +50,6 @@
 * **Properties:**
     * +8-50% Strength
     * +80% Increased Attack Speed
-    * dmg%: 180-250 (param: )
+    * dmg%: 250-300 (param: )
     * 5% Life stolen per hit
     * +3 to Double Throw

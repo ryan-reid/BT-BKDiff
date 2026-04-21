@@ -198,7 +198,7 @@
 * **Level Requirement:** 41
 * **Properties:**
     * +1-2 to All Skills
-    * +20% Faster Cast Rate
+    * +20-30% Faster Cast Rate
     * +3-5 to Mana after each Kill
     * +80-130% Enhanced Defense
     * +10 to Energy
@@ -262,6 +262,7 @@
     * Damage Reduced by 20-30%
     * +1 to All Skills
     * +0-6 to Amazon Skill Levels
+    * 33% Chance to cast Level 40 Frost Nova when struck
 
 ### Spirit Ward (Spirit Ward)
 * **Base Item:** Ward
@@ -275,6 +276,7 @@
     * 35% Chance to cast Level 8 Fade when struck
     * Requirements -30%
     * +0-6 to Amazon Skill Levels
+    * +25% Faster Cast Rate
 
 ### Spike Thorn (Spike Thorn)
 * **Base Item:** Blade Barrier
@@ -289,6 +291,7 @@
     * +25% Faster Block Rate
     * +30% Faster Block Rate
     * Damage +40-65
+    * Level 20 Thorns Aura When Equipped
 
 ### Head Hunter's Glory (Headhunter's Glory)
 * **Base Item:** Troll Nest

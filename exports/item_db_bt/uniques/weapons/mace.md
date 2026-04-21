@@ -49,9 +49,10 @@
     * +1 to Minimum Lightning Damage
     * +40 to Maximum Lightning Damage
     * +50% Increased Attack Speed
-    * +40 to Attack Rating
+    * 200% Bonus to Attack Rating
     * 6% Mana stolen per hit
     * 6% Life stolen per hit
+    * +50 to Minimum Damage
 
 ### Sureshrill Frost (Sureshrill Frost)
 * **Base Item:** Flanged Mace
@@ -119,7 +120,7 @@
     * dmg%: 269-300 (param: )
     * +30% Increased Attack Speed
     * 20% Chance to cast Level 20 Static Field on striking
-    * 20% Chance to cast Level 30 Lightning on striking
+    * 20% Chance to cast Level 44 Lightning on striking
     * +1-473 to Minimum Lightning Damage
     * Attacker Takes Lightning Damage of 30
     * +33% Chance of Crushing Blow

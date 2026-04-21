@@ -62,18 +62,21 @@
 * **Base Item:** Shaft of the Horadric Staff
 * **Level Requirement:** 0
 * **Properties:**
-    * Fire Resist +10%
+    * Fire Resist +30%
     * +50% Increased Attack Speed
+    * +30% Faster Cast Rate
+    * +30 to Minimum Damage
 
 ### Horadric Staff (Horadric Staff)
 * **Base Item:** Horadric Staff
 * **Level Requirement:** 0
 * **Properties:**
-    * +10 to Mana
-    * Poison Resist +25%
-    * +10 to Life
-    * Fire Resist +10%
+    * +100 to Mana
+    * Fire Resist +30%
+    * +100 to Life
+    * +30% Faster Cast Rate
     * +50% Increased Attack Speed
+    * +30 to Minimum Damage
 
 ### Razorswitch (Razorswitch)
 * **Base Item:** Jo Staff
@@ -140,9 +143,7 @@
 * **Level Requirement:** 82
 * **Properties:**
     * +6 to All Skills
-    * -20-25% to Enemy Fire Resistance
-    * -20-25% to Enemy Lightning Resistance
-    * -20-25% to Enemy Cold Resistance
+    * Level 1 Conviction Aura When Equipped
     * Regenerate Mana 30%
     * +85% Faster Cast Rate
     * Increase Maximum Mana 40%

@@ -41,7 +41,8 @@
     * +5 to Minimum Fire Damage
     * +20 to Maximum Fire Damage
     * Fire Resist +40%
-    * +35 Defense
+    * +66 Defense
+    * +66 to Minimum Damage
 
 ### Earthshaker (Earthshaker)
 * **Base Item:** Battle Hammer
@@ -85,13 +86,13 @@
 * **Level Requirement:** 79
 * **Properties:**
     * 20% Chance to cast Level 20 Static Field on striking
-    * +50 to Life
+    * +100 to Life
     * + to Attack Rating (Based on Character Level)
     * Lightning Resist +75%
     * +60% Increased Attack Speed
     * + to Maximum Damage (Based on Character Level)
     * Repairs  durability per second
-    * dmg%: 200-230 (param: )
+    * dmg%: 350 (param: )
     * +50-200 to Minimum Lightning Damage
 
 ### The Cranium Basher (The Cranium Basher)
@@ -118,18 +119,19 @@
     * +40% Chance of Crushing Blow
     * -50% Target Defense
     * -100 to Monster Defense Per Hit
-    * Damage +42-69
+    * Damage +50-85
     * +40% Increased Attack Speed
 
 ### Windhammer (Windhammer)
 * **Base Item:** Ogre Maul
 * **Level Requirement:** 68
 * **Properties:**
-    * dmg%: 180-230 (param: )
+    * dmg%: 200-300 (param: )
     * +50% Chance of Crushing Blow
     * +60% Increased Attack Speed
     * 40% Chance to cast Level 44 Twister on striking
     * +30% Faster Run/Walk
+    * 50% Chance to cast Level 40 Tornado when you Kill an Enemy
 
 ### Earth Shifter (Earthshifter)
 * **Base Item:** Thunder Maul

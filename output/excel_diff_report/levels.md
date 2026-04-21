@@ -8,47 +8,7 @@
 ## Added Rows in BK (New) (1)
 - act 5 - colossal summit
 
-## Modified Rows (47)
-### act 1 - cave 2
-- `MonDen`: `850` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1200` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1800` (Old) &rarr; **`5000` (New)**
-
-### act 1 - cave 2 treasure
-- `MonDen`: `900` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1400` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2000` (Old) &rarr; **`5000` (New)**
-
-### act 1 - cave 4
-- `MonDen`: `850` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1200` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1500` (Old) &rarr; **`5000` (New)**
-
-### act 1 - cave 4 treasure
-- `MonDen`: `900` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1400` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2000` (Old) &rarr; **`5000` (New)**
-
-### act 1 - cave 5
-- `MonDen`: `600` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `800` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1000` (Old) &rarr; **`5000` (New)**
-
-### act 1 - cave 5 treasure
-- `MonDen`: `600` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `800` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1000` (Old) &rarr; **`5000` (New)**
-
-### act 1 - crypt 1 a
-- `MonDen`: `1200` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1500` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2000` (Old) &rarr; **`5000` (New)**
-
-### act 1 - crypt 2 a
-- `MonDen`: `1200` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1500` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2000` (Old) &rarr; **`5000` (New)**
-
+## Modified Rows (23)
 ### act 1 - crypt 3 a
 - `SizeX`: `400` (Old) &rarr; **`200` (New)**
 - `SizeY`: `400` (Old) &rarr; **`200` (New)**
@@ -62,16 +22,6 @@
 - `nmon3`: `reanimatedhorde5` (Old) &rarr; **`*empty*` (New)**
 - `umon3`: `reanimatedhorde5` (Old) &rarr; **`*empty*` (New)**
 
-### act 1 - moo moo farm
-- `MonDen`: `800` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `840` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1100` (Old) &rarr; **`5000` (New)**
-
-### act 1 - tristram
-- `MonDen`: `600` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `650` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `800` (Old) &rarr; **`5000` (New)**
-
 ### act 1 - wilderness 1
 - `mon1`: `fallen1` (Old) &rarr; **`zombie1` (New)**
 - `mon2`: `zombie1` (Old) &rarr; **`fallen1` (New)**
@@ -79,34 +29,6 @@
 - `nmon2`: `zombie1` (Old) &rarr; **`fallen1` (New)**
 - `umon1`: `fallen1` (Old) &rarr; **`zombie1` (New)**
 - `umon2`: `zombie1` (Old) &rarr; **`fallen1` (New)**
-
-### act 2 - sewer 2 a
-- `MonDen`: `680` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1000` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2000` (Old) &rarr; **`5000` (New)**
-
-### act 2 - tomb 1 a
-- `MonDen(N)`: `2310` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2750` (Old) &rarr; **`5000` (New)**
-
-### act 2 - tomb 1 treasure
-- `MonDen(N)`: `2310` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2750` (Old) &rarr; **`5000` (New)**
-
-### act 3 - dungeon 1 a
-- `MonDen`: `700` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1400` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2000` (Old) &rarr; **`5000` (New)**
-
-### act 3 - dungeon 1 b
-- `MonDen`: `700` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1400` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2000` (Old) &rarr; **`5000` (New)**
-
-### act 3 - dungeon 1 treasure
-- `MonDen`: `700` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1400` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2000` (Old) &rarr; **`5000` (New)**
 
 ### act 3 - jungle 2
 - `NumMon`: `4` (Old) &rarr; **`3` (New)**
@@ -147,40 +69,10 @@
 - `nmon1`: `sandraider4` (Old) &rarr; **`councilmember1` (New)**
 - `umon1`: `sandraider4` (Old) &rarr; **`councilmember2` (New)**
 
-### act 3 - spider 1
-- `MonDen`: `700` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1000` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1500` (Old) &rarr; **`5000` (New)**
-
-### act 3 - temple 2
-- `MonDen`: `990` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1040` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1500` (Old) &rarr; **`5000` (New)**
-
-### act 3 - temple 3
-- `MonDen`: `990` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1040` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1500` (Old) &rarr; **`5000` (New)**
-
-### act 3 - temple 4
-- `MonDen`: `990` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1040` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1500` (Old) &rarr; **`5000` (New)**
-
-### act 3 - temple 5
-- `MonDen`: `990` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1040` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1500` (Old) &rarr; **`5000` (New)**
-
-### act 3 - temple 6
-- `MonDen`: `990` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `1040` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `1500` (Old) &rarr; **`5000` (New)**
-
 ### act 3 - travincal
-- `MonDen`: `325` (Old) &rarr; **`700` (New)**
-- `MonDen(N)`: `342` (Old) &rarr; **`1400` (New)**
-- `MonDen(H)`: `407` (Old) &rarr; **`2000` (New)**
+- `MonDen`: `400` (Old) &rarr; **`700` (New)**
+- `MonDen(N)`: `700` (Old) &rarr; **`1400` (New)**
+- `MonDen(H)`: `1000` (Old) &rarr; **`2000` (New)**
 - `mon1`: `cantor3` (Old) &rarr; **`councilmember1` (New)**
 - `mon2`: `cantor3` (Old) &rarr; **`councilmember1` (New)**
 - `mon3`: `vampire2` (Old) &rarr; **`councilmember1` (New)**
@@ -294,16 +186,6 @@
 - `umon9`: `cr_lancer9` (Old) &rarr; **`*empty*` (New)**
 - `umon10`: `doomknight2` (Old) &rarr; **`*empty*` (New)**
 
-### act 5 - ice cave 2a
-- `MonDen`: `600` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `950` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2000` (Old) &rarr; **`5000` (New)**
-
-### act 5 - ice cave 3a
-- `MonDen`: `650` (Old) &rarr; **`1250` (New)**
-- `MonDen(N)`: `900` (Old) &rarr; **`2500` (New)**
-- `MonDen(H)`: `2000` (Old) &rarr; **`5000` (New)**
-
 ### act 5 - pandemonium 1
 - `NumMon`: `5` (Old) &rarr; **`3` (New)**
 
@@ -345,6 +227,7 @@
 ### rift 3a
 - `Id`: `140` (Old) &rarr; **`141` (New)**
 - `Vis0`: `139` (Old) &rarr; **`150` (New)**
+- `MonLvlEx(H)`: `85` (Old) &rarr; **`96` (New)**
 - `MonDen(H)`: `2250` (Old) &rarr; **`875` (New)**
 - `MonUMin(H)`: `15` (Old) &rarr; **`25` (New)**
 - `MonUMax(H)`: `15` (Old) &rarr; **`25` (New)**
@@ -376,6 +259,7 @@
 ### rift 6a
 - `Id`: `144` (Old) &rarr; **`145` (New)**
 - `Vis0`: `143` (Old) &rarr; **`144` (New)**
+- `MonLvlEx(H)`: `85` (Old) &rarr; **`96` (New)**
 - `MonDen(H)`: `2250` (Old) &rarr; **`875` (New)**
 - `MonUMin(H)`: `15` (Old) &rarr; **`25` (New)**
 - `MonUMax(H)`: `15` (Old) &rarr; **`25` (New)**

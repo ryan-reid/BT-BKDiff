@@ -52,3 +52,18 @@
     * +15% Faster Run/Walk
     * Damage Reduced by 3-5
     * -4% to Enemy Poison Resistance
+
+### Trophy of the Lichking Toudi (Trophy of the Lichking Toudi)
+* **Base Item:** Hierophant Trophy
+* **Level Requirement:** 80
+* **Properties:**
+    * +3 to Amazon Skill Levels
+    * +30% Faster Cast Rate
+    * Damage Reduced by 10-20%
+    * Level 5-10 Vigor Aura When Equipped
+    * Increase Maximum Life 10-15%
+    * Increase Maximum Mana 10-15%
+    * Fire Resist +10-25%
+    * +50% Faster Block Rate
+    * +50% Faster Block Rate
+    * +200-300% Enhanced Defense

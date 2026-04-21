@@ -202,6 +202,7 @@
 
 ### charm blank
 - `levelreq`: `0` (Old) &rarr; **`1` (New)**
+- `rarity`: `12` (Old) &rarr; **`1` (New)**
 - `cost`: `600` (Old) &rarr; **`666` (New)**
 - `type2`: `*empty*` (Old) &rarr; **`jwly` (New)**
 - `unique`: `0` (Old) &rarr; **`1` (New)**
@@ -210,6 +211,7 @@
 
 ### charm level reward
 - `levelreq`: `0` (Old) &rarr; **`90` (New)**
+- `rarity`: `12` (Old) &rarr; **`1` (New)**
 - `cost`: `600` (Old) &rarr; **`666` (New)**
 - `type2`: `*empty*` (Old) &rarr; **`jwly` (New)**
 - `unique`: `0` (Old) &rarr; **`1` (New)**
@@ -218,6 +220,7 @@
 
 ### charm modifiers
 - `levelreq`: `0` (Old) &rarr; **`1` (New)**
+- `rarity`: `12` (Old) &rarr; **`1` (New)**
 - `cost`: `600` (Old) &rarr; **`666` (New)**
 - `type2`: `*empty*` (Old) &rarr; **`jwly` (New)**
 - `unique`: `0` (Old) &rarr; **`1` (New)**
@@ -407,22 +410,11 @@
 - `spelldescstr2`: `*empty*` (Old) &rarr; **`rtrDesc` (New)**
 
 ### full rejuvenation potion
-- `spawnable`: `1` (Old) &rarr; **`0` (New)**
-- `cost`: `7000` (Old) &rarr; **`1500` (New)**
-- `LysanderMin`: `1` (Old) &rarr; **`*empty*` (New)**
-- `LysanderMax`: `2` (Old) &rarr; **`*empty*` (New)**
-- `DrognanMin`: `1` (Old) &rarr; **`*empty*` (New)**
-- `DrognanMax`: `2` (Old) &rarr; **`*empty*` (New)**
-- `AlkorMin`: `1` (Old) &rarr; **`*empty*` (New)**
-- `AlkorMax`: `2` (Old) &rarr; **`*empty*` (New)**
-- `OrmusMin`: `1` (Old) &rarr; **`*empty*` (New)**
-- `OrmusMax`: `2` (Old) &rarr; **`*empty*` (New)**
-- `MalahMin`: `1` (Old) &rarr; **`*empty*` (New)**
-- `MalahMax`: `2` (Old) &rarr; **`*empty*` (New)**
-- `JamellaMin`: `1` (Old) &rarr; **`*empty*` (New)**
-- `JamellaMax`: `2` (Old) &rarr; **`*empty*` (New)**
-- `PermStoreItem`: `1` (Old) &rarr; **`*empty*` (New)**
-- `multibuy`: `1` (Old) &rarr; **`*empty*` (New)**
+- `transtbl`: `5` (Old) &rarr; **`0` (New)**
+- `lightradius`: `0` (Old) &rarr; **`5` (New)**
+- `belt`: `1` (Old) &rarr; **`0` (New)**
+- `stackable`: `0` (Old) &rarr; **`1` (New)**
+- `quest`: `*empty*` (Old) &rarr; **`0` (New)**
 
 ### grand charm
 - `uniqueinvfile`: `invsst` (Old) &rarr; **`*empty*` (New)**
@@ -804,9 +796,12 @@
 - `spawnable`: `1` (Old) &rarr; **`0` (New)**
 
 ### token of absolution
+- `level`: `0` (Old) &rarr; **`1` (New)**
+- `levelreq`: `0` (Old) &rarr; **`1` (New)**
 - `rarity`: `1` (Old) &rarr; **`999` (New)**
-- `spawnable`: `1` (Old) &rarr; **`0` (New)**
-- `cost`: `500000` (Old) &rarr; **`399999` (New)**
+- `cost`: `250000` (Old) &rarr; **`250256` (New)**
+- `AkaraMagicMin`: `*empty*` (Old) &rarr; **`1` (New)**
+- `AkaraMagicMax`: `*empty*` (Old) &rarr; **`2` (New)**
 
 ### tome of identify
 - `Nameable`: `1` (Old) &rarr; **`*empty*` (New)**

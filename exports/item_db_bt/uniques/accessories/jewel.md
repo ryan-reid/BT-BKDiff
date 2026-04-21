@@ -109,12 +109,6 @@
     * 100% Chance to cast Level 60 Blessed Hammer when you Die
     * +2% to Experience Gained
 
-### Titan's Echo (Titan's Echo)
-* **Base Item:** •• Jewel ••
-* **Level Requirement:** 1
-* **Properties:**
-    * Melee Splash Damage
-
 ### Killing Intent (Killing Intent)
 * **Base Item:** •• Jewel ••
 * **Level Requirement:** 29
@@ -122,6 +116,7 @@
     * 10% Chance to cast Level 10 Amplify Damage on striking
     * +1 to Amplify Damage
     * +5-10% Increased Attack Speed
+    * +2% to Experience Gained
 
 ### Elemental Exposure (Elemental Exposure)
 * **Base Item:** •• Jewel ••
@@ -130,3 +125,4 @@
     * 10% Chance to cast Level 10 Lower Resist when you Kill an Enemy
     * +1 to Lower Resist
     * +3-5% Faster Cast Rate
+    * +2% to Experience Gained

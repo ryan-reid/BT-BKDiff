@@ -373,7 +373,7 @@
     * +80 to Life
     * + to Maximum Damage (Based on Character Level)
     * Repairs  durability per second
-    * dmg%: 200-300 (param: )
+    * dmg%: 450 (param: )
 
 ### Bloodmoon (Bloodmoon)
 * **Base Item:** Elegant Blade
@@ -403,8 +403,8 @@
 * **Properties:**
     * -10% to Enemy Cold Resistance
     * dmg%: 230-270 (param: )
-    * +1 to Holy Freeze
-    * +1 to Resist Cold
+    * Level 10-18 Holy Freeze Aura When Equipped
+    * +500 to Minimum Cold Damage
     * +30% Increased Attack Speed
     * +5-10 to Strength
     * +2 to All Skills
@@ -418,13 +418,14 @@
 * **Properties:**
     * dmg%: 170-240 (param: )
     * 100% Chance to cast Level 60 Molten Boulder when you Kill an Enemy
-    * +3 to Fire Skills
+    * +1-3 to Fire Skills
     * Fire Absorb +20-30%
     * 20% Chance to cast Level 60 Firestorm on striking
     * +1 to Fire Mastery
     * +15-20 to Strength
     * +12-18 to Inferno
     * +30% Increased Attack Speed
+    * Level 5-10 Conviction Aura When Equipped
 
 ### Frostwind (Frostwind)
 * **Base Item:** Cryptic Sword
@@ -432,12 +433,12 @@
 * **Properties:**
     * dmg%: 180-230 (param: )
     * Freezes target
-    * Half Freeze Duration
+    * Cannot Be Frozen
     * +237-486 to Minimum Cold Damage
     * +25% Increased Attack Speed
     * Cold Absorb +7-15%
-    * 20% Chance to cast Level 10 Lower Resist on striking
-    * 20% Chance to cast Level 20 Frozen Orb on striking
+    * 25% Chance to cast Level 10 Lower Resist on striking
+    * 25% Chance to cast Level 30 Frozen Orb on striking
     * -25-40% to Enemy Cold Resistance
 
 ### Mistiltein (Mistiltein)
@@ -502,3 +503,4 @@
     * dmg%: 100-200 (param: )
     * maxdurability: 25 (param: )
     * +50-100 magic damage
+    * 10-15% Better Chance of Getting Magic Items
