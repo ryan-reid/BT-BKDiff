@@ -64,26 +64,6 @@
 
 ### armor\armor.md
 
-**Tyrael's Might** (Tyrael's Might)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| **Base Item:** Sacred Armor | **Base Item:** Sacred Armor |
-| **Level Requirement:** 1 | **Level Requirement:** 1 |
-| **Properties:** | **Properties:** |
-| Requirements --100% | Requirements --100% |
-| Repairs 1 durability in  seconds | Repairs 1 durability in  seconds |
-| +200-250% Enhanced Defense | +200-250% Enhanced Defense |
-| +200-250% Damage to Undead | +200-250% Damage to Undead |
-| +200-250% Damage to Demons | +200-250% Damage to Demons |
-| Cannot Be Frozen | Cannot Be Frozen |
-| +45% Faster Run/Walk | +45% Faster Run/Walk |
-| All Resistances +20-30 | All Resistances +20-30 |
-| +30% Increased Attack Speed | +30% Increased Attack Speed |
-| +1 to Teleport | +1 to Teleport |
-| +2 to All Skills | +2 to All Skills |
-| +30% Faster Cast Rate | +30% Faster Cast Rate |
-
 **Steel Carapace** (Steel Carapice)
 
 | BT Diablo (Old) | BK Diablo (New) |

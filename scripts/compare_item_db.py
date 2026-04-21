@@ -202,8 +202,8 @@ def compare_databases(bk_dir, bt_dir, out_dir):
                     header_diff = (normalize_text(bk_item['base_item']) != normalize_text(bt_item['base_item']) or 
                                    normalize_text(bk_item['lvl_req']) != normalize_text(bt_item['lvl_req']))
                     
-                    bk_norm = [normalize_text(p) for p in bk_item['properties']]
-                    bt_norm = [normalize_text(p) for p in bt_item['properties']]
+                    bk_norm = sorted([normalize_text(p) for p in bk_item['properties']])
+                    bt_norm = sorted([normalize_text(p) for p in bt_item['properties']])
                     
                     if header_diff or bk_norm != bt_norm:
                         modified[k] = {
