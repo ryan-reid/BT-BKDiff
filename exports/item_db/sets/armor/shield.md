@@ -60,7 +60,7 @@
     * +100 to Mana
     * Lightning Resist +30%
     * Attacker Takes Damage of 30
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * +25% Faster Block Rate
     * +30% Faster Block Rate
     * +40% Faster Cast Rate
@@ -83,7 +83,7 @@
     * +50% Faster Block Rate
     * +50% Faster Block Rate
     * Cannot Be Frozen
-    * Physical Damage Received Reduced by 5-20%
+    * Damage Reduced by 5-20%
     * +100-150% Enhanced Defense
     * Level 1 Salvation Aura When Equipped
 
@@ -92,7 +92,7 @@
 * **Base Item:** Troll Nest
 * **Properties:**
     * +1 to All Skills
-    * Fire Resist -40--10%
+    * All Resistances +-40--10
     * Increase Maximum Life 15-40%
     * Increase Maximum Mana 15-40%
     * Level 1-3 Conviction Aura When Equipped
@@ -102,11 +102,11 @@
 * **Set:** Royal Guard
 * **Base Item:** Aegis
 * **Properties:**
-    * Physical Damage Received Reduced by 20-30%
+    * Damage Reduced by 20-30%
     * +200% Enhanced Defense
     * +10-30 to Dexterity
     * Cold Resist +40%
     * Cannot Be Frozen
     * -3-5% to Enemy Cold Resistance
-    * Requirements -50%
+    * Requirements --50%
     * Level 12-15 Holy Freeze Aura When Equipped

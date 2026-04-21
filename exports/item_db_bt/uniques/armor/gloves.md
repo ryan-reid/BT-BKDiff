@@ -61,7 +61,7 @@
 * **Properties:**
     * Poison Resist +30%
     * +10% to Maximum Poison Resist
-    * +153 to Minimum Poison Damage
+    * Adds 153-153 Poison Damage Over 153 Seconds
     * +1 to Poison Skills
     * 5% Life stolen per hit
     * +15-25 Defense
@@ -79,7 +79,7 @@
     * +140-180% Enhanced Defense
     * 20% Extra Gold from Monsters (Based on Character Level)
     * Prevent Monster Heal
-    * +1 to Javelin and Spear Skills
+    * +1 to Poison and Bone Skills
     * +1 to Zeal
 
 ### Ghoulhide (Ghoulhide)
@@ -92,7 +92,7 @@
     * +40-60 to Life
     * +150-190% Enhanced Defense
     * +10 to Dexterity
-    * +1 to Javelin and Spear Skills
+    * +1 to Summoning Skills
 
 ### Lava Gout (Lavagout)
 * **Base Item:** Battle Gauntlets
@@ -100,22 +100,22 @@
 * **Properties:**
     * Fire Resist +35-40%
     * Cannot Be Frozen
-    * 20% Chance to cast Level 10 Enchant on striking
+    * 20-10% Chance to cast level 20-10 Enchant on striking
     * +20% Increased Attack Speed
     * +150-200% Enhanced Defense
-    * +13-46 to Minimum Fire Damage
-    * maxdurability: 20 (param: )
+    * Adds 13-46-13-46 Fire Damage
+    * Durability: 20 of 20
 
 ### Hellmouth (Hellmouth)
 * **Base Item:** War Gauntlets
 * **Level Requirement:** 47
 * **Properties:**
-    * +15-72 to Minimum Fire Damage
-    * +15 Fire Absorb
+    * Adds 15-72-15-72 Fire Damage
+    * Fire Absorb 15%
     * +150-200% Enhanced Defense
-    * maxdurability: 15 (param: )
-    * 25% Chance to cast Level 25 Meteor on striking
-    * 20% Chance to cast Level 20 Firestorm on striking
+    * Durability: 15 of 15
+    * 25% Chance to cast level 25 Meteor on striking
+    * 20% Chance to cast level 20 Firestorm on striking
     * +10% Faster Cast Rate
     * +30 to Fire Golem
     * Lightning Resist +25%
@@ -127,8 +127,8 @@
     * +90-120% Enhanced Defense
     * 4-7% Mana stolen per hit
     * 4-7% Life stolen per hit
-    * 25% Chance to cast Level 18 Decrepify on striking
-    * -50 to Monster Defense Per Hit
+    * 25-18% Chance to cast level 25-18 Decrepify on striking
+    * --50 to Monster Defense Per Hit
     * Slows Target by 15%
 
 ### Dracul's Grasp (Dracul's Grasp)
@@ -137,8 +137,8 @@
 * **Properties:**
     * +90-120% Enhanced Defense
     * 7-10% Life stolen per hit
-    * +25% Chance of Open Wounds
-    * 10% Chance to cast Level 15 Life Tap on striking
+    * 25% Chance of Open Wounds
+    * 10-15% Chance to cast level 10-15 Life Tap on striking
     * +5-10 Life after each Kill
     * +10-15 to Strength
     * Ignore Target's Defense
@@ -149,17 +149,17 @@
 * **Properties:**
     * +100-150% Enhanced Defense
     * +25-50 to Strength
-    * dmg%: 80-100 (param: )
-    * +15% Chance of Crushing Blow
-    * +15-25% Deadly Strike
-    * Requirements -40--30%
+    * +80-100% Enhanced Damage
+    * 15% Chance of Crushing Blow
+    * 15-25% Deadly Strike
+    * Requirements --40--30%
     * +40-50% Strength
 
 ### Amazon's Teaching (Amazon's Teaching)
 * **Base Item:** Crusader Gauntlets
 * **Level Requirement:** 85
 * **Properties:**
-    * +20% Piercing Attack
+    * Piercing Attack
     * +10% Increased Attack Speed
     * +10% Faster Run/Walk
     * +1 to Multiple Shot

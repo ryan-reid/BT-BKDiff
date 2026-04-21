@@ -7,18 +7,18 @@
     * +15 to Strength
     * +50% Increased Attack Speed
     * Fire Resist +50%
-    * +10% Chance of Open Wounds
-    * +33% Chance of Crushing Blow
-    * dmg-min: 50 (param: )
-    * dmg-max: 50 (param: )
+    * 10% Chance of Open Wounds
+    * 33% Chance of Crushing Blow
+    * +50 to Minimum Damage
+    * +50 to Maximum Damage
 
 ### Bloodrise (Bloodrise)
 * **Base Item:** Morning Star
 * **Level Requirement:** 15
 * **Properties:**
-    * dmg%: 220 (param: )
+    * +220% Enhanced Damage
     * +1 to Corpse Explosion
-    * +25% Chance of Open Wounds
+    * 25% Chance of Open Wounds
     * +20% Increased Attack Speed
     * 5% Life stolen per hit
 
@@ -26,11 +26,11 @@
 * **Base Item:** Flail
 * **Level Requirement:** 21
 * **Properties:**
-    * +10 to Strength
-    * dmg-min: 30 (param: )
+    * +10 to all Attributes
+    * +30 to Minimum Damage
     * Slows Target by 50%
     * 5% Mana stolen per hit
-    * dmg%: 150-170 (param: )
+    * +150-170% Enhanced Damage
     * +30% Increased Attack Speed
 
 ### Khalim's Flail (KhalimFlail)
@@ -52,13 +52,13 @@
     * 200% Bonus to Attack Rating
     * 6% Mana stolen per hit
     * 6% Life stolen per hit
-    * +50 to Minimum Damage
+    * Adds 50-50 Damage
 
 ### Sureshrill Frost (Sureshrill Frost)
 * **Base Item:** Flanged Mace
 * **Level Requirement:** 39
 * **Properties:**
-    * +255-400 to Minimum Cold Damage
+    * Adds 255-400-255-400 Cold Damage
     * Cannot Be Frozen
     * +20% Increased Attack Speed
     * -10-15% to Enemy Cold Resistance
@@ -68,10 +68,10 @@
 * **Base Item:** Jagged Star
 * **Level Requirement:** 42
 * **Properties:**
-    * 40% Chance to cast Level 30 Meteor on striking
-    * +300 to Minimum Fire Damage
+    * 40-30% Chance to cast level 40-30 Meteor on striking
+    * Adds 300-300 Fire Damage
     * Magic Damage Reduced by 9-12
-    * dmg%: 180-200 (param: )
+    * +180-200% Enhanced Damage
     * +11 to Meteor
     * +20% Increased Attack Speed
 
@@ -79,11 +79,11 @@
 * **Base Item:** Knout
 * **Level Requirement:** 45
 * **Properties:**
-    * 20% Chance to cast Level 30 Nova on striking
-    * +1-300 to Minimum Lightning Damage
+    * 20-30% Chance to cast level 20-30 Nova on striking
+    * Adds 1-300-1-300 Lightning Damage
     * +100 to Mana
     * Lightning Resist +25%
-    * dmg%: 200 (param: )
+    * +200% Enhanced Damage
     * +20% Increased Attack Speed
     * +15 to Nova
 
@@ -92,36 +92,36 @@
 * **Level Requirement:** 65
 * **Properties:**
     * 200% Bonus to Attack Rating
-    * dmg%: 200 (param: )
-    * +15-20 to Strength
+    * +200% Enhanced Damage
+    * +15-20 to all Attributes
     * +50% Increased Attack Speed
-    * maxdurability: 100 (param: )
-    * +1-500 to Minimum Lightning Damage
-    * +1-500 to Minimum Fire Damage
-    * +1-500 to Minimum Cold Damage
-    * 10% Chance to cast Level 1 Lower Resist on striking
+    * Durability: 100 of 100
+    * Adds 1-500-1-500 Lightning Damage
+    * Adds 1-500-1-500 Fire Damage
+    * Adds 1-500-1-500 Cold Damage
+    * 10-1% Chance to cast level 10-1 Lower Resist on attack
 
 ### Horizon's Tornado (Horizon's Tornado)
 * **Base Item:** Scourge
 * **Level Requirement:** 64
 * **Properties:**
-    * dmg%: 230-280 (param: )
+    * +230-280% Enhanced Damage
     * +50% Increased Attack Speed
     * Slows Target by 20%
-    * 20% Chance to cast Level 30 Tornado on striking
-    * Requirements -20%
-    * +33% Deadly Strike
+    * 20-30% Chance to cast level 20-30 Tornado on striking
+    * Requirements --20%
+    * 33% Deadly Strike
     * +30 to Tornado
 
 ### Stormlash (Stormlash)
 * **Base Item:** Scourge
 * **Level Requirement:** 82
 * **Properties:**
-    * dmg%: 269-300 (param: )
+    * +269-300% Enhanced Damage
     * +30% Increased Attack Speed
-    * 20% Chance to cast Level 20 Static Field on striking
-    * 20% Chance to cast Level 44 Lightning on striking
-    * +1-473 to Minimum Lightning Damage
+    * 20% Chance to cast level 20 Static Field on striking
+    * 20-44% Chance to cast level 20-44 Lightning on striking
+    * Adds 1-473-1-473 Lightning Damage
     * Attacker Takes Lightning Damage of 30
-    * +33% Chance of Crushing Blow
-    * +3-9 Lightning Absorb
+    * 33% Chance of Crushing Blow
+    * Lightning Absorb 3-9%

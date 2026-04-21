@@ -7,7 +7,7 @@
     * +15% to Maximum Fire Resist
     * +30 to Life
     * +25% Faster Run/Walk
-    * +15 Fire Absorb
+    * Fire Absorb 15%
     * Level 3 Resist Fire Aura When Equipped
     * +10-20% Enhanced Defense
 
@@ -21,7 +21,7 @@
     * Cold Resist +20%
     * +12 Defense
     * +20-30% Enhanced Defense
-    * +2 to Leap Attack
+    * +2 to Leap Attack (Class 143 only)
     * +5-10% to Maximum Cold Resist
 
 ### Treads of Cthon (Treads of Cthon)
@@ -41,7 +41,7 @@
 * **Base Item:** Light Plated Boots
 * **Level Requirement:** 22
 * **Properties:**
-    * +25% Chance of Crushing Blow
+    * 25% Chance of Crushing Blow
     * Damage Reduced by 7
     * Magic Damage Reduced by 7
     * +15 Defense
@@ -56,7 +56,7 @@
     * +5 to Strength
     * +5 to Dexterity
     * +30% Faster Run/Walk
-    * Fire Resist +10-20%
+    * All Resistances +10-20
     * +60-80% Enhanced Defense
     * Level 6 Sanctuary Aura When Equipped
 
@@ -64,14 +64,14 @@
 * **Base Item:** Demonhide Boots
 * **Level Requirement:** 29
 * **Properties:**
-    * +12-33 to Minimum Fire Damage
+    * Adds 12-33-12-33 Fire Damage
     * +20% Faster Run/Walk
     * +10% to Maximum Fire Resist
     * Fire Resist +30%
     * +120-150% Enhanced Defense
     * 60-100% Extra Gold from Monsters
     * +15 Defense
-    * 75% Chance to cast Level 25 Blaze when struck
+    * 75-25% Chance to cast level 75-25 Blaze when struck
     * +20% Faster Hit Recovery
 
 ### Waterwalk (Waterwalk)
@@ -105,23 +105,23 @@
     * +10 to Vitality
     * +10 to Strength
     * 30-50% Better Chance of Getting Magic Items
-    * maxdurability: 30 (param: )
+    * Durability: 30 of 30
     * +35% Faster Run/Walk
     * +150-190% Enhanced Defense
-    * +15-25 to Minimum Damage
+    * Adds 15-25-15-25 Damage
     * Attacker Takes Damage of 5-10
 
 ### Gore Rider (Gorerider)
 * **Base Item:** War Boots
 * **Level Requirement:** 47
 * **Properties:**
-    * Requirements -25%
-    * +15% Deadly Strike
+    * Requirements --25%
+    * 15% Deadly Strike
     * +30% Faster Run/Walk
-    * +15% Chance of Crushing Blow
-    * +10% Chance of Open Wounds
+    * 15% Chance of Crushing Blow
+    * 10% Chance of Open Wounds
     * +160-200% Enhanced Defense
-    * maxdurability: 10 (param: )
+    * Durability: 10 of 10
 
 ### Shadow Dancer (Shadowdancer)
 * **Base Item:** Myrmidon Greaves
@@ -131,8 +131,8 @@
     * +40% Faster Run/Walk
     * +30% Faster Hit Recovery
     * +15-25 to Dexterity
-    * +0-6 to Amazon Skill Levels
-    * Requirements -20%
+    * +2 to Original Class Skill Levels
+    * Requirements --20%
 
 ### Sandstorm Trek (Sandstorm Trek)
 * **Base Item:** Scarabshell Boots
@@ -142,8 +142,8 @@
     * +40% Faster Run/Walk
     * +20% Faster Hit Recovery
     * Poison Resist +40-70%
-    * Repairs  durability per second
-    * +10-15 to Strength
+    * Repairs 1 durability in  seconds
+    * +10-15 to all Attributes
     * Level 1 Cleansing Aura When Equipped
     * Replenish Life +15
     * Attacker Takes Damage of 100
@@ -160,7 +160,7 @@
     * Cannot Be Frozen
     * +10-20 to Strength
     * +17 to Dexterity
-    * +1-2 to Skeleton Mastery
+    * +1-2 to Skeleton Mastery (Class Skeleton Mastery only)
     * Magic Damage Reduced by 20
 
 ### Meshif's Travellers (Meshif's Travellers)
@@ -168,13 +168,13 @@
 * **Level Requirement:** 92
 * **Properties:**
     * +50% Faster Run/Walk
-    * +10% Deadly Strike
+    * 10% Deadly Strike
     * +100-150 Defense
     * +75-100 to Life
-    * Level 3 %s Aura When Equipped
+    * Level 3 Resist Cold Aura When Equipped
     * +10% Faster Hit Recovery
     * +80-100% Enhanced Defense
-    * +0-6 to Amazon Skill Levels
+    * +1 to Original Class Skill Levels
 
 ### Jym's Swift Journey (Jym's Swift Journey)
 * **Base Item:** Wyrmhide Boots
@@ -183,7 +183,7 @@
     * Level 3-14 Vigor Aura When Equipped
     * +30% Faster Hit Recovery
     * +10 to Strength
-    * Requirements -100%
+    * Requirements --100%
     * 80% Extra Gold from Monsters
     * Increase Maximum Life 5%
 
@@ -191,7 +191,7 @@
 * **Base Item:** Boots
 * **Level Requirement:** 10
 * **Properties:**
-    * item_numsockets: 1 (param: )
+    * Socketed (1)
     * +1-10% Energy
-    * 5% Chance to cast Level 20 Static Field when struck
+    * 5-20% Chance to cast level 5-20 Static Field when struck
     * +5-10% Faster Run/Walk

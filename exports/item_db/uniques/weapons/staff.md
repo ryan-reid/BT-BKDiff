@@ -9,17 +9,17 @@
     * Fire Resist +50%
     * +70 to Mana
     * +30% Increased Attack Speed
-    * dmg%: 150-160 (param: )
+    * +150-160% Enhanced Damage
     * +40% Faster Cast Rate
 
 ### Serpent Lord (Serpent Lord)
 * **Base Item:** Long Staff
 * **Level Requirement:** 9
 * **Properties:**
-    * +100 to Minimum Poison Damage
+    * Adds 100-100 Poison Damage Over 100 Seconds
     * Poison Resist +50%
     * +60 to Life
-    * dmg%: 100-200 (param: )
+    * +100-200% Enhanced Damage
     * 100% Mana stolen per hit
     * -50% Target Defense
     * +40% Increased Attack Speed
@@ -31,11 +31,11 @@
     * Lightning Resist +75%
     * Damage Reduced by 7-14
     * +30 to Energy
-    * +2-3 to Chain Lightning
-    * +2-3 to Lightning
+    * +2-3 to Chain Lightning (Class 53 only)
+    * +2-3 to Lightning (Class 49 only)
     * Regenerate Mana 43%
     * +60% Faster Cast Rate
-    * +2-3 to Amazon Skill Levels
+    * +2-3 to Sorceress Skill Levels
 
 ### The Salamander (The Salamander)
 * **Base Item:** Battle Staff
@@ -43,8 +43,8 @@
 * **Properties:**
     * +30% Faster Cast Rate
     * Fire Resist +30%
-    * +3 to Fire Wall
-    * +3 to Fire Ball
+    * +3 to Fire Wall (Class 51 only)
+    * +3 to Fire Ball (Class 47 only)
     * +60 to Mana
     * +3 to Fire Skills
 
@@ -52,17 +52,17 @@
 * **Base Item:** War Staff
 * **Level Requirement:** 28
 * **Properties:**
-    * +2-4 to Amazon Skill Levels
+    * +2-4 to Sorceress Skill Levels
     * +69% Faster Cast Rate
     * Replenish Life +20
-    * +2-4 to Blaze
+    * +2-4 to Blaze (Class 46 only)
     * +220 to Mana
 
 ### Staff of Kings (Staff of Kings)
 * **Base Item:** Shaft of the Horadric Staff
 * **Level Requirement:** 0
 * **Properties:**
-    * Fire Resist +10%
+    * All Resistances +10
     * +50% Increased Attack Speed
 
 ### Horadric Staff (Horadric Staff)
@@ -72,7 +72,7 @@
     * +10 to Mana
     * Poison Resist +25%
     * +10 to Life
-    * Fire Resist +10%
+    * All Resistances +10
     * +50% Increased Attack Speed
 
 ### Razorswitch (Razorswitch)
@@ -83,44 +83,44 @@
     * +175 to Mana
     * +100 to Life
     * Magic Damage Reduced by 15
-    * Fire Resist +50%
+    * All Resistances +50
     * +2 to All Skills
 
 ### Ribcracker (Ribcracker)
 * **Base Item:** Quarterstaff
 * **Level Requirement:** 31
 * **Properties:**
-    * +30-65 to Minimum Damage
-    * dmg%: 200-300 (param: )
-    * +50% Chance of Crushing Blow
+    * Adds 30-65-30-65 Damage
+    * +200-300% Enhanced Damage
+    * 50% Chance of Crushing Blow
     * +15 to Dexterity
     * +150 Defense vs. Melee
     * +150 Defense vs. Missile
     * +50% Faster Hit Recovery
     * +50% Increased Attack Speed
-    * maxdurability: 100 (param: )
+    * Durability: 100 of 100
 
 ### Chromatic Ire (Chromatic Ire)
 * **Base Item:** Cedar Staff
 * **Level Requirement:** 35
 * **Properties:**
-    * +3 to Amazon Skill Levels
-    * Fire Resist +40%
+    * +3 to Sorceress Skill Levels
+    * All Resistances +40
     * +50% Faster Cast Rate
     * Increase Maximum Life 20-25%
-    * +3 to Blizzard
-    * +3 to Meteor
-    * +3-5 to Chain Lightning
+    * +3 to Blizzard (Class 59 only)
+    * +3 to Meteor (Class 56 only)
+    * +3-5 to Chain Lightning (Class 53 only)
 
 ### Warpspear (Warpspear)
 * **Base Item:** Gothic Staff
 * **Level Requirement:** 39
 * **Properties:**
-    * +3 to Amazon Skill Levels
+    * +3 to Sorceress Skill Levels
     * +55% Faster Hit Recovery
-    * +3 to Teleport
-    * +3 to Telekinesis
-    * +3 to Meteor
+    * +3 to Teleport (Class 54 only)
+    * +3 to Telekinesis (Class 43 only)
+    * +3 to Meteor (Class 56 only)
     * +250 Defense vs. Missile
     * +40% Faster Cast Rate
     * +150 to Mana
@@ -145,7 +145,7 @@
     * Regenerate Mana 30-80%
     * +115% Faster Cast Rate
     * Increase Maximum Mana 40-50%
-    * Fire Resist +40-50%
+    * All Resistances +40-50
 
 ### Ondal's Wisdom (Ondal's Wisdom)
 * **Base Item:** Elder Staff

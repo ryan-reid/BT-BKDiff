@@ -33,7 +33,7 @@
     * +50 to Mana
     * Regenerate Mana 25%
     * Replenish Life +10
-    * Physical Damage Received Reduced by 10%
+    * Damage Reduced by 10%
 
 ### Twitchthroe (Twitchthroe)
 * **Base Item:** Studded Leather
@@ -46,7 +46,7 @@
     * +10-20 to Strength
     * +20% Faster Hit Recovery
     * Magic Damage Reduced by 6-9
-    * +25-35% Piercing Attack
+    * Piercing Attack
 
 ### Darkglow (Darkglow)
 * **Base Item:** Ring Mail
@@ -55,7 +55,7 @@
     * +20-30 to Life
     * +5-10% to Maximum Fire Resist
     * +100 Defense vs. Melee
-    * Fire Resist +10-15%
+    * All Resistances +10-15
     * +100-150% Enhanced Defense
     * Damage Reduced by 6-10
 
@@ -76,12 +76,12 @@
 * **Level Requirement:** 17
 * **Properties:**
     * +100-120% Enhanced Defense
-    * +1-69 to Minimum Lightning Damage
-    * +10-15 Lightning Absorb
+    * Adds 1-69-1-69 Lightning Damage
+    * Lightning Absorb 10-15%
     * Lightning Resist +50%
     * 100% Extra Gold from Monsters
     * +30-40 to Mana
-    * Requirements -20%
+    * Requirements --20%
     * +1-2 to Lightning Skills
 
 ### Venom Ward (Venomsward)
@@ -104,10 +104,10 @@
     * Cold Resist +30-50%
     * Magic Damage Reduced by 6-9
     * +100-130% Enhanced Defense
-    * +25-50 to Minimum Cold Damage
+    * Adds 25-50-25-50 Cold Damage
     * +50 to Mana
-    * Requirements -25%
-    * +10-20 Cold Absorb
+    * Requirements --25%
+    * Cold Absorb 10-20%
     * +10% Faster Run/Walk
     * +1-2 to Cold Skills
 
@@ -118,21 +118,21 @@
     * 6-9% Life stolen per hit
     * +100-150% Enhanced Defense
     * +50 to Life
-    * +30-40% Chance of Open Wounds
+    * 30-40% Chance of Open Wounds
     * +8-12 to Vitality
     * +20% Increased Attack Speed
     * +15% Faster Run/Walk
-    * Requirements -20--30%
-    * dmg%: 30-40 (param: )
-    * +20-30% Piercing Attack
+    * Requirements --20--30%
+    * +30-40% Enhanced Damage
+    * Piercing Attack
 
 ### Rockfleece (Rockfleece)
 * **Base Item:** Field Plate
 * **Level Requirement:** 28
 * **Properties:**
-    * Requirements -20%
+    * Requirements --20%
     * +100-169% Enhanced Defense
-    * Physical Damage Received Reduced by 15-20%
+    * Damage Reduced by 15-20%
     * Damage Reduced by 12-15
     * +15-20 to Strength
     * +20% Faster Hit Recovery
@@ -144,10 +144,10 @@
 * **Level Requirement:** 29
 * **Properties:**
     * +20% Faster Hit Recovery
-    * +35-40% Chance of Crushing Blow
+    * 35-40% Chance of Crushing Blow
     * +200% Enhanced Defense
-    * Requirements -40%
-    * +15-20% Deadly Strike
+    * Requirements --40%
+    * 15-20% Deadly Strike
     * +10-15 to Strength
     * Level 10 Blessed Aim Aura When Equipped
 
@@ -156,12 +156,12 @@
 * **Level Requirement:** 28
 * **Properties:**
     * +150-200% Enhanced Defense
-    * Fire Resist +35-45%
+    * All Resistances +35-45
     * Magic Damage Reduced by 7-12
     * 200-250% Extra Gold from Monsters
     * 20-40% Better Chance of Getting Magic Items
-    * -20--10% Faster Run/Walk
-    * Requirements -40--20%
+    * +-20--10% Faster Run/Walk
+    * Requirements --40--20%
     * +12-24% Faster Hit Recovery
 
 ### Silks of the Victor (Victors Silk)
@@ -178,14 +178,14 @@
     * +1 to Fire Skills
     * +1 to Lightning Skills
     * +1 to Poison Skills
-    * Requirements -50--40%
+    * Requirements --50--40%
 
 ### Heavenly Garb (Heavenly Garb)
 * **Base Item:** Light Plate
 * **Level Requirement:** 29
 * **Properties:**
     * +150% Enhanced Defense
-    * Fire Resist +15-30%
+    * All Resistances +15-30
     * +20 to Energy
     * +125-150% Damage to Undead
     * +125-150% Damage to Demons
@@ -211,7 +211,7 @@
 * **Level Requirement:** 29
 * **Properties:**
     * +120% Enhanced Defense
-    * Fire Resist +20-35%
+    * All Resistances +20-35
     * +30% Faster Cast Rate
     * Magic Damage Reduced by 9-13
     * +1 to All Skills
@@ -221,15 +221,15 @@
 * **Base Item:** Demonhide Armor
 * **Level Requirement:** 31
 * **Properties:**
-    * -100 to Monster Defense Per Hit
+    * --100 to Monster Defense Per Hit
     * Prevent Monster Heal
-    * +50-75 to Minimum Damage
+    * Adds 50-75-50-75 Damage
     * 8-12% Life stolen per hit
     * +160-200% Enhanced Defense
     * +50-75 to Life
     * +20% Increased Attack Speed
     * +14% Faster Hit Recovery
-    * +0-7 to Amazon Skill Levels
+    * +1 to Random Class Skill Levels
 
 ### Iron Pelt (Ironpelt)
 * **Base Item:** Trellised Armor
@@ -252,20 +252,20 @@
     * Fire Resist +30%
     * +120-160% Enhanced Defense
     * +15-20 to Strength
-    * Requirements -30%
+    * Requirements --30%
     * Damage Reduced by 15
 
 ### Crow Caw (Crow Caw)
 * **Base Item:** Tigulated Mail
 * **Level Requirement:** 37
 * **Properties:**
-    * +50% Chance of Open Wounds
+    * 50% Chance of Open Wounds
     * +150-200% Enhanced Defense
     * +15-25 to Dexterity
     * +20% Faster Hit Recovery
     * +30% Increased Attack Speed
     * +5 to Raven
-    * +20% Chance of Crushing Blow
+    * 20% Chance of Crushing Blow
     * 4-8% Life stolen per hit
 
 ### Shaftstop (Shaftstop)
@@ -273,7 +273,7 @@
 * **Level Requirement:** 38
 * **Properties:**
     * +250 Defense vs. Missile
-    * Physical Damage Received Reduced by 25-30%
+    * Damage Reduced by 25-30%
     * +85-140 to Life
     * +200-250% Enhanced Defense
     * Damage Reduced by 6-12
@@ -294,7 +294,7 @@
     * Poison Resist +40%
     * Cold Resist +60%
     * Cannot Be Frozen
-    * maxdurability: 100 (param: )
+    * Durability: 100 of 100
 
 ### Skullder's Ire (Skullder's Ire)
 * **Base Item:** Russet Armor
@@ -303,9 +303,9 @@
     * +1 to All Skills
     * % Better Chance of Getting Magic Items (Based on Character Level)
     * +160-200% Enhanced Defense
-    * maxdurability: 60 (param: )
+    * Durability: 60 of 60
     * Magic Damage Reduced by 10
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * Damage Reduced by 10
 
 ### Guardian Angel (Guardian Angel)
@@ -316,23 +316,23 @@
     * +200-220% Enhanced Defense
     * +35% Faster Block Rate
     * +15% to Maximum Fire Resist
-    *  to Monster Defense Per Hit
+    * - to Monster Defense Per Hit
     * +30% Faster Block Rate
     * +10% Increased Attack Speed
-    * Requirements -40--30%
-    * +0-7 to Amazon Skill Levels
+    * Requirements --40--30%
+    * +1 to Random Class Skill Levels
 
 ### Toothrow (Toothrow)
 * **Base Item:** Sharktooth Armor
 * **Level Requirement:** 48
 * **Properties:**
     * +200-240% Enhanced Defense
-    * +10% Deadly Strike
+    * 10% Deadly Strike
     * +10-20 to Strength
-    * +40-50% Chance of Open Wounds
+    * 40-50% Chance of Open Wounds
     * Fire Resist +30-40%
     * +40 to Life
-    * dmg%: 90-120 (param: )
+    * +90-120% Enhanced Damage
     * +30% Faster Hit Recovery
 
 ### Atma's Wail (Atma's Wail)
@@ -347,7 +347,7 @@
     * +25% Faster Cast Rate
     * +150-180% Enhanced Defense
     * % Better Chance of Getting Magic Items (Based on Character Level)
-    * Requirements -30%
+    * Requirements --30%
     * +15 to Telekinesis
 
 ### Black Hades (Black Hades)
@@ -362,8 +362,8 @@
     * +30% Faster Run/Walk
     * +15% Increased Attack Speed
     * 50-100% Extra Gold from Monsters
-    * +10-15 to Strength
-    * Requirements -30--20%
+    * +10-15 to all Attributes
+    * Requirements --30--20%
 
 ### Corpsemourn (Corpsemourn)
 * **Base Item:** Ornate Plate
@@ -375,7 +375,7 @@
     * +150-180% Enhanced Defense
     * +5 to Corpse Explosion
     * +50% Faster Hit Recovery
-    * 35% Chance to cast Level 10 Amplify Damage when you Kill an Enemy
+    * 35-10% Chance to cast level 35-10 Amplify Damage when you Kill an Enemy
 
 ### Que-Hegan's Wisdom (Que-Hegan's Wisdon)
 * **Base Item:** Mage Plate
@@ -399,9 +399,9 @@
     * +150% Enhanced Defense
     * Magic Damage Reduced by 20-30
     * Damage Reduced by 20-30
-    * Physical Damage Received Reduced by 10-15%
+    * Damage Reduced by 10-15%
     * Poison Length Reduced by 125%
-    * ethereal: 1 (param: )
+    * Ethereal
     * +50% Faster Hit Recovery
     * +40-50 to Life
     * Cannot Be Frozen
@@ -416,21 +416,21 @@
     * +2 to All Skills
     * Damage Reduced by 10-15
     * + to Vitality (Based on Character Level)
-    * Requirements -20%
-    * +0-7 to Amazon Skill Levels
+    * Requirements --20%
+    * +1 to Random Class Skill Levels
 
 ### Tyrael's Might (Tyrael's Might)
 * **Base Item:** Sacred Armor
 * **Level Requirement:** 1
 * **Properties:**
-    * Requirements -100%
-    * Repairs  durability per second
+    * Requirements --100%
+    * Repairs 1 durability in  seconds
     * +200-250% Enhanced Defense
     * +200-250% Damage to Undead
     * +200-250% Damage to Demons
     * Cannot Be Frozen
     * +45% Faster Run/Walk
-    * Fire Resist +20-30%
+    * All Resistances +20-30
     * +1 to Teleport
     * +2 to All Skills
     * +30% Increased Attack Speed
@@ -442,14 +442,14 @@
 * **Properties:**
     * +200-220% Enhanced Defense
     * +169 Defense
-    * Physical Damage Received Reduced by 20-25%
+    * Damage Reduced by 20-25%
     * +40-50 to Strength
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * +20% Faster Run/Walk
     * +30% Faster Hit Recovery
     * Poison Length Reduced by 100%
     * Increase Maximum Life 5-10%
-    * +20-30% Deadly Strike
+    * 20-30% Deadly Strike
 
 ### Steel Carapace (Steel Carapice)
 * **Base Item:** Shadow Plate
@@ -460,12 +460,12 @@
     * Damage Reduced by 9-14
     * Cold Resist +40-60%
     * Regenerate Mana 50-100%
-    * Repairs  durability per second
-    * Physical Damage Received Reduced by 30-40%
+    * Repairs 1 durability in  seconds
+    * Damage Reduced by 30-40%
     * +15% Faster Run/Walk
     * Level 8-10 Defiance Aura When Equipped
     * +1-2 to All Skills
-    * Requirements -50%
+    * Requirements --50%
 
 ### Ormus' Robes (Ormus' Robes)
 * **Base Item:** Dusk Shroud
@@ -477,7 +477,7 @@
     * -10-15% to Enemy Cold Resistance
     * -10-15% to Enemy Lightning Resistance
     * +5-8 to Mana after each Kill
-    * +36-60 to %s %s
+    * +36-60 to Unsummon (Paladin only)
     * Increase Maximum Mana 5-8%
     * +40-69 to Life
 
@@ -490,9 +490,9 @@
     * +250-300 Defense vs. Missile
     * +20-30 to Strength
     * +100 to Life
-    * +4-6 to Javelin and Spear Skills
+    * +4-6 to Offensive Auras Skills
     * Level 6-12 Conviction Aura When Equipped
-    * Requirements -50%
+    * Requirements --50%
     * Poison Length Reduced by 75%
 
 ### Unsullied's Glory (Unsullied's Glory)
@@ -500,12 +500,12 @@
 * **Level Requirement:** 95
 * **Properties:**
     * +2 to All Skills
-    * dmg%: 200 (param: )
+    * +200% Enhanced Damage
     * +10% to Maximum Fire Resist
     * +40% Faster Hit Recovery
     * +25% Faster Run/Walk
     * +30% Increased Attack Speed
-    * 15% Chance to cast Level 25 Amplify Damage on striking
+    * 15-25% Chance to cast level 15-25 Amplify Damage on striking
     * +300-400 Defense
 
 ### Unsullied's Legacy (Unsullied's Legacy)
@@ -517,7 +517,7 @@
     * +10% to Maximum Fire Resist
     * +40% Faster Hit Recovery
     * +25% Faster Run/Walk
-    * +20-30 to Strength
+    * +20-30 to all Attributes
     * +300-400 Defense
 
 ### Baal's Heart (Baal's Heart)
@@ -538,7 +538,7 @@
 * **Base Item:** Balrog Skin
 * **Level Requirement:** 85
 * **Properties:**
-    * indestruct: 1 (param: )
+    * Indestructible
     * +2 to All Skills
     * +30% Faster Hit Recovery
     * +200% Enhanced Defense
@@ -566,7 +566,7 @@
     * +15-25% Faster Cast Rate
     * Increase Maximum Mana 5-8%
     * +20-55% Energy
-    * +0-7 to Amazon Skill Levels
+    * +2 to Random Class Skill Levels
     * Magic Damage Reduced by 10
     * +4 to Mana (Based on Character Level)
     * +5-15% to Magic Skill Damage

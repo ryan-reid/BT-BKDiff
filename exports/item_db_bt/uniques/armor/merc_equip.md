@@ -4,9 +4,9 @@
 * **Base Item:** Cap
 * **Level Requirement:** 3
 * **Properties:**
-    * +15 to Strength
+    * +15 to all Attributes
     * % Better Chance of Getting Magic Items (Based on Character Level)
-    * dmg%: 80 (param: )
+    * +80% Enhanced Damage
     * +15 to Mana
     * +15 to Life
 
@@ -24,7 +24,7 @@
 * **Level Requirement:** 14
 * **Properties:**
     * +30% Faster Hit Recovery
-    * Hit Blinds Target
+    * Hit Blinds Target +1
     * Lightning Resist +30%
     * +100 Defense vs. Missile
     * +50 to Life
@@ -35,9 +35,9 @@
 * **Base Item:** Full Helm
 * **Level Requirement:** 17
 * **Properties:**
-    * Fire Resist +15%
+    * All Resistances +15
     * Damage Reduced by 7
-    * dmg-max: 20 (param: )
+    * +20 to Maximum Damage
     * Magic Damage Reduced by 7
     * +30-50% Enhanced Defense
     * +15 to Dexterity
@@ -47,11 +47,11 @@
 * **Base Item:** Bone Helm
 * **Level Requirement:** 21
 * **Properties:**
-    * +1-2 to Amazon Skill Levels
+    * +1-2 to Necromancer Skill Levels
     * 6-9% Life stolen per hit
     * +70 to Mana
     * Poison Resist +50%
-    * +102 to Minimum Poison Damage
+    * Adds 102-102 Poison Damage Over 102 Seconds
     * +30% Faster Hit Recovery
     * +10 to Strength
 
@@ -62,10 +62,10 @@
     * Magic Damage Reduced by 12
     * +10 to Howl
     * +80% Enhanced Defense
-    * +35% Damage Taken Goes To Mana
+    * 35% Damage Taken Goes To Mana
     * Damage Reduced by 12
     * +50 to Mana
-    * Requirements -40%
+    * Requirements --40%
     * +20% Faster Hit Recovery
 
 ### Undead Crown (Undead Crown)
@@ -84,9 +84,9 @@
 * **Base Item:** Mask
 * **Level Requirement:** 20
 * **Properties:**
-    * Hit Causes Monster to Flee +64%
+    * Hit Causes Monster to Flee 64%
     * +20 to Strength
-    * Fire Resist +10-25%
+    * All Resistances +10-25
     * +40% Faster Hit Recovery
     * +30% Faster Run/Walk
     * +9 Life after each Kill
@@ -127,7 +127,7 @@
     * +200-240% Enhanced Defense
     * 30-50% Better Chance of Getting Magic Items
     * +1 to All Skills
-    * +0-6 to Amazon Skill Levels
+    * +1 to Original Class Skill Levels
 
 ### Darksight Helm (Darksight Helm)
 * **Base Item:** Basinet
@@ -136,7 +136,7 @@
     * Increase Maximum Life 5-8%
     * Cannot Be Frozen
     * 5% Mana stolen per hit
-    * 33% Chance to cast Level 30 Dim Vision when struck
+    * 33-30% Chance to cast level 33-30 Dim Vision when struck
     * +5 to Cloak of Shadows
     * Fire Resist +20-40%
     * Lightning Resist +20-40%
@@ -172,7 +172,7 @@
     * + Kick Damage (Based on Character Level)
     * Slows Target by 20%
     * Prevent Monster Heal
-    * +20-30 Lightning Absorb
+    * Lightning Absorb 20-30%
     * Lightning Resist +50%
     * +180-220% Enhanced Defense
     * +20% Faster Block Rate
@@ -206,21 +206,21 @@
 * **Base Item:** Spired Helm
 * **Level Requirement:** 73
 * **Properties:**
-    * Fire Resist +50%
+    * All Resistances +50
     * +60% Enhanced Defense
     * +15 to Strength
     * +15 to Vitality
-    * maxdurability: 20 (param: )
+    * Durability: 20 of 20
     * +140 Defense
     * +1 to All Skills
-    * dmg%: 40-80 (param: )
+    * +40-80% Enhanced Damage
 
 ### Steel Shade (Steelshade)
 * **Base Item:** Armet
 * **Level Requirement:** 62
 * **Properties:**
     * +100-130% Enhanced Defense
-    * +5-11 Fire Absorb
+    * Fire Absorb 5-11%
     * 4-8% Mana stolen per hit
     * Replenish Life +30-50
     * +2 to All Skills
@@ -234,10 +234,10 @@
     * +90-120% Enhanced Defense
     * +2 to All Skills
     * +10-20 to Dexterity
-    * +5-9 Cold Absorb
+    * Cold Absorb 5-9%
     * Half Freeze Duration
     * +8-12% to Cold Skill Damage
-    * Requirements -50%
+    * Requirements --50%
     * -8-15% to Enemy Cold Resistance
 
 ### Crown of Ages (Crown of Ages)
@@ -245,10 +245,10 @@
 * **Level Requirement:** 82
 * **Properties:**
     * +30% Faster Hit Recovery
-    * Fire Resist +20-30%
+    * All Resistances +20-30
     * +1-3 to All Skills
     * +100-150 Defense
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * Damage Reduced by 10-15%
     * +50% Enhanced Defense
     * Magic Damage Reduced by 12-15
@@ -264,10 +264,10 @@
     * +10% to Maximum Poison Resist
     * +20% Increased Attack Speed
     * +25-30 to Strength
-    * 15% Chance to cast Level 15 Poison Nova when struck
+    * 15% Chance to cast level 15 Poison Nova when struck
     * +3 to Venom
     * 8-10% Life stolen per hit
-    * Fire Resist -30%
+    * Fire Resist +-30%
 
 ### Darkfear (Darkfear)
 * **Base Item:** Armet
@@ -280,9 +280,9 @@
 * **Properties:**
     * +250-320 Defense
     * +25-35 to Strength
-    * +25% Chance of Crushing Blow
+    * 25% Chance of Crushing Blow
     * Damage Reduced by 12-21
-    * dmg%: 30-60 (param: )
+    * +30-60% Enhanced Damage
     * +25-35 to Dexterity
     * Ignore Target's Defense
 
@@ -293,7 +293,7 @@
     * +150% Enhanced Defense
     * +10% Faster Cast Rate
     * +1 to All Skills
-    * +0-6 to Amazon Skill Levels
+    * +1 to Original Class Skill Levels
     * +50 to Mana
     * +50 to Life
     * Damage Reduced by 5
@@ -304,7 +304,7 @@
 * **Base Item:** Shako
 * **Level Requirement:** 62
 * **Properties:**
-    * indestruct: 1 (param: )
+    * Indestructible
     * +2 to All Skills
     * +100% Enhanced Defense
     * Increase Maximum Life 40%
@@ -330,6 +330,6 @@
     * +75-125 to Mana
     * Cold Resist +10%
     * +15% Increased Attack Speed
-    * dmg%: 40 (param: )
-    * Magic Resist -25%
-    * -10-15% to Enemy Magic Resistance
+    * +40% Enhanced Damage
+    * Magic Resist +-25%
+    * -10-15% to Enemy Magic  Resistance

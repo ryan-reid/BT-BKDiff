@@ -13,81 +13,81 @@
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Cold Immunity is Sundered
-    * Cold Resist -90--70%
+    * Cold Resist +-90--70%
 
 ### Flame Rift (Flame Rift)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Fire Immunity is Sundered
-    * Fire Resist -90--70%
+    * Fire Resist +-90--70%
 
 ### Crack of the Heavens (Crack of the Heavens)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Lightning Immunity is Sundered
-    * Lightning Resist -90--70%
+    * Lightning Resist +-90--70%
 
 ### Rotting Fissure (Rotting Fissure)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Poison Immunity is Sundered
-    * Poison Resist -90--70%
+    * Poison Resist +-90--70%
 
 ### Bone Break (Bone Break)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Physical Immunity is Sundered
-    * Physical Damage Received Increased by -20--10%
+    * Damage Reduced by -20--10%
 
 ### Black Cleft (Black Cleft)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Magic Immunity is Sundered
-    * Magic Resist -65--45%
+    * Magic Resist +-65--45%
 
 ### Latent Cold Rupture (PreCrafted Cold Rupture)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Cold Immunity is Sundered
-    * Cold Resist -90%
+    * Cold Resist +-90%
 
 ### Latent Flame Rift (PreCrafted Flame Rift)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Fire Immunity is Sundered
-    * Fire Resist -90%
+    * Fire Resist +-90%
 
 ### Latent Crack of the Heavens (PreCrafted Crack of the Heavens)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Lightning Immunity is Sundered
-    * Lightning Resist -90%
+    * Lightning Resist +-90%
 
 ### Latent Rotting Fissure (PreCrafted Rotting Fissure)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Poison Immunity is Sundered
-    * Poison Resist -90%
+    * Poison Resist +-90%
 
 ### Latent Bone Break (PreCrafted Bone Break)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Physical Immunity is Sundered
-    * Physical Damage Received Increased by -20%
+    * Damage Reduced by -20%
 
 ### Latent Black Cleft (PreCrafted Black Cleft)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Magic Immunity is Sundered
-    * Magic Resist -65%
+    * Magic Resist +-65%

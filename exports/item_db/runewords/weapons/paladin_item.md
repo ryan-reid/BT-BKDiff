@@ -5,9 +5,9 @@
 * **Base Items:** pala
 * **Properties:**
     * +30% Faster Block Rate
-    * Freezes target
+    * Freezes Target +1
     * +220-260% Enhanced Defense
     * Level 13-16 Defiance Aura When Equipped
-    * +2 to Javelin and Spear Skills
-    * 15% Chance to cast Level 5 Life Tap on striking
-    * Repairs  durability per second
+    * +2 to Offensive Auras Skills
+    * 15-5% Chance to cast level 15-5 Life Tap on striking
+    * Repairs 1 durability in  seconds

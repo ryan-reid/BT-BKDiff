@@ -4,8 +4,8 @@
 * **Base Item:** Large ÿc1Charmÿc3
 * **Level Requirement:** 75
 * **Properties:**
-    * +0-6 to Amazon Skill Levels
-    * +10-25 to Strength
-    * Fire Resist +10-25%
+    * +3 to Original Class Skill Levels
+    * +10-25 to all Attributes
+    * All Resistances +10-25
     * +8 to Light Radius
-    * Level 10-30 %s (10-30/10-30 Charges)
+    * Level 10-30 Hydra (10-30/10-30 Charges)

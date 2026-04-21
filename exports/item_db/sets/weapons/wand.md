@@ -5,16 +5,16 @@
 * **Base Item:** Grim Wand
 * **Properties:**
     * +20% Faster Cast Rate
-    * +2 to Amazon Skill Levels
+    * +2 to Necromancer Skill Levels
 
 ### Sander's Superstition (McAuley's Superstition)
 * **Set:** McAuley's Folly
 * **Base Item:** Bone Wand
 * **Properties:**
     * +45% Faster Cast Rate
-    * +2 to Bone Wall
-    * +2 to Bone Spear
-    * +2 to Bone Prison
+    * +2 to Bone Wall (Class 78 only)
+    * +2 to Bone Spear (Class 84 only)
+    * +2 to Bone Prison (Class 88 only)
     * +50 to Mana
 
 ### Hellfire Death (Hellfire Death)
@@ -24,5 +24,5 @@
     * +1-2 to All Skills
     * +30% Faster Cast Rate
     * Cannot Be Frozen
-    * Reduces curse duration by 20%
+    * Curse Resist +20%
     * 100% Extra Gold from Monsters

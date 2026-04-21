@@ -4,9 +4,9 @@
 * **Base Item:** Jewel
 * **Level Requirement:** 75
 * **Properties:**
-    * 10% Chance to cast Level 25 Bone Armor when struck
+    * 10-25% Chance to cast level 10-25 Bone Armor when struck
     * +5-10% to Poison Skill Damage
-    * +975 to Minimum Poison Damage
+    * Adds 975-975 Poison Damage Over 975 Seconds
     * -5-10% to Enemy Poison Resistance
     * +3-5% to Experience Gained
     * 15-35% Better Chance of Getting Magic Items
@@ -16,9 +16,9 @@
 * **Base Item:** Jewel
 * **Level Requirement:** 75
 * **Properties:**
-    * 10% Chance to cast Level 25 Cyclone Armor when struck
+    * 10-25% Chance to cast level 10-25 Cyclone Armor when struck
     * +5-10% to Lightning Skill Damage
-    * +1-200 to Minimum Lightning Damage
+    * Adds 1-200-1-200 Lightning Damage
     * -5-10% to Enemy Lightning Resistance
     * +3-5% to Experience Gained
     * 15-35% Better Chance of Getting Magic Items
@@ -28,9 +28,9 @@
 * **Base Item:** Jewel
 * **Level Requirement:** 75
 * **Properties:**
-    * 10% Chance to cast Level 25 Frozen Armor when struck
+    * 10-25% Chance to cast level 10-25 Frozen Armor when struck
     * +5-10% to Cold Skill Damage
-    * +50-150 to Minimum Cold Damage
+    * Adds 50-150-50-150 Cold Damage
     * -5-10% to Enemy Cold Resistance
     * +3-5% to Experience Gained
     * 15-35% Better Chance of Getting Magic Items
@@ -40,9 +40,9 @@
 * **Base Item:** Jewel
 * **Level Requirement:** 75
 * **Properties:**
-    * 10% Chance to cast Level 25 Blaze when struck
+    * 10-25% Chance to cast level 10-25 Blaze when struck
     * +5-10% to Fire Skill Damage
-    * +100-250 to Minimum Fire Damage
+    * Adds 100-250-100-250 Fire Damage
     * -5-10% to Enemy Fire Resistance
     * +3-5% to Experience Gained
     * 15-35% Better Chance of Getting Magic Items
@@ -52,10 +52,10 @@
 * **Base Item:** Jewel
 * **Level Requirement:** 75
 * **Properties:**
-    * 10% Chance to cast Level 15 Fade when struck
-    * dmg%: 30-50 (param: )
-    * +20-50 to Minimum Damage
-    * -5-10% to Enemy Physical Damage Resistance
+    * 10-15% Chance to cast level 10-15 Fade when struck
+    * +30-50% Enhanced Damage
+    * Adds 20-50-20-50 Damage
+    * -5-10% to Enemy Physical Resistance
     * +3-5% to Experience Gained
     * 15-35% Better Chance of Getting Magic Items
     * 25-50% Extra Gold from Monsters
@@ -64,9 +64,9 @@
 * **Base Item:** Jewel
 * **Level Requirement:** 75
 * **Properties:**
-    * 10% Chance to cast Level 25 Psychic Ward when struck
+    * 10-25% Chance to cast level 10-25 Psychic Ward when struck
     * +5-10% to Magic Skill Damage
-    * +100-200 magic damage
+    * Adds 100-200-100-200 Magic Damage
     * -5-10% to Enemy Magic Resistance
     * +3-5% to Experience Gained
     * 15-35% Better Chance of Getting Magic Items

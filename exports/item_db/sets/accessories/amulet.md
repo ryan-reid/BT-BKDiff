@@ -38,13 +38,13 @@
 * **Properties:**
     * Damage Reduced by 5
     * Magic Damage Reduced by 5
-    * +20 to Minimum Lightning Damage
+    * Adds 20-20 Lightning Damage
 
 ### Angelic Wings (Angelic Wings)
 * **Set:** Angelical Raiment
 * **Base Item:** Amulet
 * **Properties:**
-    * +20% Damage Taken Goes To Mana
+    * 20% Damage Taken Goes To Mana
     * +30 to Mana
     * +10% Faster Cast Rate
 
@@ -61,9 +61,9 @@
 * **Base Item:** Amulet
 * **Properties:**
     * Lightning Resist +33%
-    * +2 to Amazon Skill Levels
+    * +2 to Sorceress Skill Levels
     * +50 to Life
-    * +3-32 to Minimum Lightning Damage
+    * Adds 3-32-3-32 Lightning Damage
     * +42 to Mana
 
 ### Telling of Beads (Telling of Beads)
@@ -79,9 +79,9 @@
 * **Set:** Nadin's Winning Strategy
 * **Base Item:** Amulet
 * **Properties:**
-    * +0-6 to Amazon Skill Levels
+    * +1 to Original Class Skill Levels
     * +10% Faster Cast Rate
-    * Fire Resist +10%
+    * All Resistances +10
     * +3 to Mana after each Kill
 
 ### Equilibrium Caster (Equilibrium Caster)
@@ -90,9 +90,9 @@
 * **Properties:**
     * +1-2 to All Skills
     * Magic Resist +25%
-    * +10-20 to Strength
+    * +10-20 to all Attributes
     * +15% Faster Cast Rate
-    * Fire Resist -20%
+    * All Resistances +-20
 
 ### Equilibrium Melee (Equilibrium Melee)
 * **Set:** Sanctuary's Blessing Melee
@@ -100,9 +100,9 @@
 * **Properties:**
     * +1-2 to All Skills
     * Magic Resist +25%
-    * +10-20 to Strength
+    * +10-20 to all Attributes
     * +15% Faster Cast Rate
-    * Fire Resist -20%
+    * All Resistances +-20
 
 ### Inner Peace (Inner Peace)
 * **Set:** The Ascension
@@ -116,11 +116,11 @@
 * **Set:** Tal Rasha's Elements
 * **Base Item:** Amulet
 * **Properties:**
-    * +2-3 to Amazon Skill Levels
+    * +2-3 to Sorceress Skill Levels
     * +60-90 to Mana
     * +1-3% to Maximum Fire Resist
     * +3-7 to Mana after each Kill
-    * Fire Resist +10-20%
+    * All Resistances +10-20
     * +10-15% Faster Cast Rate
 
 ### Witcher's Medallion (Witcher's Medallion)
@@ -130,8 +130,8 @@
     * +1 to All Skills
     * +50-125 to Mana
     * +10-20 to Energy
-    * +50% Damage Taken Goes To Mana
+    * 50% Damage Taken Goes To Mana
     * 3-6% Mana stolen per hit
     * +2 to Mana after each Kill
     * Regenerate Mana 20%
-    * +5-15 Cold Absorb
+    * Cold Absorb 5-15%

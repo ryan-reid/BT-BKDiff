@@ -4,8 +4,8 @@
 * **Set:** M'avina's Battle Hymn
 * **Base Item:** Grand Matron Bow
 * **Properties:**
-    * dmg%: 188 (param: )
+    * +188% Enhanced Damage
     * +40% Increased Attack Speed
-    * +4-5 to Javelin and Spear Skills
+    * +4-5 to Bow and Crossbow Skills
     * +50 to Attack Rating
-    * +34% Piercing Attack
+    * Piercing Attack

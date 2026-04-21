@@ -4,9 +4,9 @@
 * **Base Item:** Swirling Crystal
 * **Level Requirement:** 42
 * **Properties:**
-    * +3 to Amazon Skill Levels
-    * 5% Chance to cast Level 1 Teleport when struck
-    * Fire Resist +20%
+    * +3 to Sorceress Skill Levels
+    * 5-1% Chance to cast level 5-1 Teleport when struck
+    * All Resistances +20
     * +30% Faster Cast Rate
     * +20% Enhanced Defense
     * +20 to Vitality
@@ -18,7 +18,7 @@
 * **Base Item:** Dimensional Shard
 * **Level Requirement:** 73
 * **Properties:**
-    * +3 to Amazon Skill Levels
+    * +3 to Sorceress Skill Levels
     * +15-30% to Cold Skill Damage
     * +40% Faster Cast Rate
     * Fire Resist +25-40%
@@ -29,7 +29,7 @@
 * **Base Item:** Eldritch Orb
 * **Level Requirement:** 72
 * **Properties:**
-    * +2-3 to Amazon Skill Levels
+    * +2-3 to Sorceress Skill Levels
     * +40% Faster Cast Rate
     * -8-20% to Enemy Fire Resistance
     * -10% to Enemy Lightning Resistance
@@ -41,8 +41,8 @@
 * **Base Item:** Dimensional Shard
 * **Level Requirement:** 85
 * **Properties:**
-    * +3 to Amazon Skill Levels
-    * +7 to Thunder Storm
+    * +3 to Sorceress Skill Levels
+    * +7 to Thunder Storm (Class Thunder Storm only)
     * +30% Faster Cast Rate
     * -10-20% to Enemy Lightning Resistance
     * +20% to Lightning Skill Damage

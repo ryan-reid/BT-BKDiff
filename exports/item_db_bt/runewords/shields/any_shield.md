@@ -5,9 +5,9 @@
 * **Base Items:** shld
 * **Properties:**
     * Cold Resist +30%
-    * Fire Resist +13%
+    * All Resistances +13
     * +50% Enhanced Defense
-    * +10% Damage Taken Goes To Mana
+    * 10% Damage Taken Goes To Mana
 
 ### Knight's Vigil
 * **Runes:** Sol Rune + Dol Rune
@@ -19,7 +19,7 @@
     * +50 to Life
     * +5-10% to Maximum Cold Resist
     * +50% Faster Block Rate
-    * Fire Resist +15%
+    * All Resistances +15
 
 ### Rhyme
 * **Runes:** Shael Rune + Eth Rune
@@ -27,7 +27,7 @@
 * **Properties:**
     * +20% Faster Block Rate
     * +20% Faster Block Rate
-    * Fire Resist +25%
+    * All Resistances +25
     * Cannot Be Frozen
     * 50% Extra Gold from Monsters
     * 25% Better Chance of Getting Magic Items
@@ -40,7 +40,7 @@
     * +20% Faster Block Rate
     * +130-160% Enhanced Defense
     * +10-15% to Magic Skill Damage
-    * Fire Resist +50-70%
+    * All Resistances +50-70
     * +20% Faster Hit Recovery
     * Level 10 Sanctuary Aura When Equipped
 
@@ -53,7 +53,7 @@
     * +250 Defense vs. Missile
     * +22 to Vitality
     * +30% Faster Cast Rate
-    * +3-8 Magic Absorb
+    * Magic Absorb 3-8%
     * +1 to All Skills
 
 ### Splendor

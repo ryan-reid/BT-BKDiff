@@ -45,10 +45,10 @@
 * **Set:** Aldur's Watchtower
 * **Base Item:** Mirrored Boots
 * **Properties:**
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * Regenerate Mana 10%
     * +50 to Life
-    * +10% Damage Taken Goes To Mana
+    * 10% Damage Taken Goes To Mana
     * +40% Faster Run/Walk
     * Replenish Life +10
     * Fire Resist +40-50%
@@ -60,7 +60,7 @@
     * +75 Defense
     * +40% Faster Run/Walk
     * +110 to Attack Rating
-    * Physical Damage Received Reduced by 3-5%
+    * Damage Reduced by 3-5%
     * Magic Resist +30-40%
     * +10% Faster Cast Rate
     * +10-15 to Vitality
@@ -82,7 +82,7 @@
     * +30% Faster Run/Walk
     * 25% Better Chance of Getting Magic Items
     * +20 to Dexterity
-    * +1-450 to Minimum Lightning Damage
+    * Adds 1-450-1-450 Lightning Damage
 
 ### Sander's Riprap (McAuley's Riprap)
 * **Set:** McAuley's Folly
@@ -109,7 +109,7 @@
     * +10-15 to Dexterity
     * Magic Resist +20-30%
     * Cannot Be Frozen
-    * Requirements -30%
+    * Requirements --30%
 
 ### Journey's End (Journey's End)
 * **Set:** Royal Guard
@@ -120,7 +120,7 @@
     * Magic Resist +30-55%
     * +1 to All Skills
     * -5-8% to Enemy Magic Resistance
-    * 25% Chance to cast Level 55 Blessed Hammer on striking
+    * 25-55% Chance to cast level 25-55 Blessed Hammer on striking
 
 ### Natalya's Footprints (Natalya's Footprints)
 * **Set:** Natalya's Vengeance
@@ -128,21 +128,21 @@
 * **Properties:**
     * +40% Faster Run/Walk
     * +35% Faster Hit Recovery
-    * +10-20 to Strength
-    * Fire Resist +10-20%
+    * +10-20 to all Attributes
+    * All Resistances +10-20
     * -3-5% to Enemy Poison Resistance
     * +5% to Poison Skill Damage
-    * +7 to Venom
+    * +7 to Venom (Class venom only)
 
 ### Aldur's Momentum (Aldur's Momentum)
 * **Set:** Aldur's Beacon
 * **Base Item:** Mirrored Boots
 * **Properties:**
     * +50% Faster Run/Walk
-    * +1 to Amazon Skill Levels
-    * dmg%: 25-50 (param: )
+    * +1 to Druid Skill Levels
+    * +25-50% Enhanced Damage
     * Increase Maximum Life 5%
-    * Fire Resist +10-20%
+    * All Resistances +10-20
     * Increase Maximum Mana 5%
 
 ### Immortal King's Statue (Immortal King's Statue)
@@ -151,9 +151,9 @@
 * **Properties:**
     * +40% Faster Run/Walk
     * +1-3% to Maximum Fire Resist
-    * Fire Resist +10-20%
+    * All Resistances +10-20
     * Magic Resist +25%
-    * Physical Damage Received Reduced by 10-15%
+    * Damage Reduced by 10-15%
     * +40% Faster Hit Recovery
 
 ### Elder Blood Boots (Elder Blood Boots)
@@ -164,8 +164,8 @@
     * +100-150 Defense
     * +100-150% Enhanced Defense
     * +10-20 to Strength
-    * +5-15 Magic Absorb
-    * Reduces curse duration by 30-40%
+    * Magic Absorb 5-15%
+    * Curse Resist +30-40%
 
 ### Horazon's Stone (Horazon's Stone)
 * **Set:** Horazon's Heirloom
@@ -176,5 +176,5 @@
     * +10-20 to Dexterity
     * Magic Resist +75%
     * Cannot Be Frozen
-    * Requirements -50%
+    * Requirements --50%
     * +100-300% Enhanced Defense

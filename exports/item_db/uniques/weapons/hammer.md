@@ -5,7 +5,7 @@
 * **Level Requirement:** 27
 * **Properties:**
     * +40% Increased Attack Speed
-    * dmg%: 200 (param: )
+    * +200% Enhanced Damage
     * +100% Damage to Undead
     * +150% Damage to Demons
     * +10 to Strength
@@ -15,23 +15,23 @@
 * **Base Item:** Maul
 * **Level Requirement:** 24
 * **Properties:**
-    * dmg%: 200-300 (param: )
-    * +40% Chance of Crushing Blow
+    * +200-300% Enhanced Damage
+    * 40% Chance of Crushing Blow
     * Fire Resist +30%
     * Cold Resist +30%
     * +50% Damage to Undead
-    * ethereal: 1 (param: )
+    * Ethereal
     * +1-3 to Bone Armor
 
 ### Steeldriver (Steeldriver)
 * **Base Item:** Great Maul
 * **Level Requirement:** 29
 * **Properties:**
-    * Requirements -50%
+    * Requirements --50%
     * +40% Increased Attack Speed
     * +25 to Life
-    * dmg%: 250 (param: )
-    * Physical Damage Received Reduced by 5%
+    * +250% Enhanced Damage
+    * Damage Reduced by 5%
     * Increase Maximum Life 10%
 
 ### Hell Forge Hammer (Hell Forge Hammer)
@@ -47,104 +47,104 @@
 * **Base Item:** Battle Hammer
 * **Level Requirement:** 43
 * **Properties:**
-    * 50% Chance to cast Level 20 Fissure on striking
+    * 50-20% Chance to cast level 50-20 Fissure on striking
     * Knockback
     * +30% Increased Attack Speed
-    * dmg%: 180 (param: )
-    * Hit Blinds Target
-    * +3-4 to Javelin and Spear Skills
-    * maxdurability: 50 (param: )
+    * +180% Enhanced Damage
+    * Hit Blinds Target +1
+    * +3-4 to Elemental Skills
+    * Durability: 50 of 50
     * +30% Faster Cast Rate
 
 ### Bloodtree Stump (Bloodtree Stump)
 * **Base Item:** War Club
 * **Level Requirement:** 48
 * **Properties:**
-    * +50% Chance of Crushing Blow
-    * dmg%: 180-220 (param: )
-    * Fire Resist +20%
+    * 50% Chance of Crushing Blow
+    * +180-220% Enhanced Damage
+    * All Resistances +20
     * +50 to Life
-    * +4-6 to Javelin and Spear Skills
+    * +4-6 to Combat Masteries Skills
     * 5% Life stolen per hit
-    * maxdurability: 40 (param: )
+    * Durability: 40 of 40
     * +50% Increased Attack Speed
 
 ### The Gavel of Pain (The Gavel of Pain)
 * **Base Item:** Martel de Fer
 * **Level Requirement:** 45
 * **Properties:**
-    * 20% Chance to cast Level 22 Amplify Damage on striking
+    * 20-22% Chance to cast level 20-22 Amplify Damage on striking
     * Attacker Takes Damage of 26
-    * Repairs  durability per second
-    * +12-30 to Minimum Damage
-    * dmg%: 200-250 (param: )
+    * Repairs 1 durability in  seconds
+    * Adds 12-30-12-30 Damage
+    * +200-250% Enhanced Damage
     * +8 to Amplify Damage
 
 ### Schaefer's Hammer (Schaefer's Hammer)
 * **Base Item:** Legendary Mallet
 * **Level Requirement:** 79
 * **Properties:**
-    * 20% Chance to cast Level 50 Static Field on striking
+    * 20-50% Chance to cast level 20-50 Static Field on striking
     * +100 to Life
     * + to Attack Rating (Based on Character Level)
     * Lightning Resist +75%
     * +60% Increased Attack Speed
     * + to Maximum Damage (Based on Character Level)
-    * Repairs  durability per second
-    * dmg%: 350 (param: )
-    * -10-15% to Enemy Physical Damage Resistance
+    * Repairs 1 durability in  seconds
+    * +350% Enhanced Damage
+    * -10-15% to Enemy Physical Resistance
 
 ### The Cranium Basher (The Cranium Basher)
 * **Base Item:** Thunder Maul
 * **Level Requirement:** 87
 * **Properties:**
     * +60% Increased Attack Speed
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * +25-30 to Strength
-    * Fire Resist +25-35%
-    * +75% Chance of Crushing Blow
-    * 100% Chance to cast Level 50 Twister when you Kill an Enemy
-    * dmg%: 250-300 (param: )
-    * 30% Chance to cast Level 22 Amplify Damage on striking
-    * Requirements -50--20%
+    * All Resistances +25-35
+    * 75% Chance of Crushing Blow
+    * 100-50% Chance to cast level 100-50 Twister when you Kill an Enemy
+    * +250-300% Enhanced Damage
+    * 30-22% Chance to cast level 30-22 Amplify Damage on striking
+    * Requirements --50--20%
     * 4-6% Life stolen per hit
 
 ### Stone Crusher (Stone Crusher)
 * **Base Item:** Legendary Mallet
 * **Level Requirement:** 68
 * **Properties:**
-    * dmg%: 300-320 (param: )
+    * +300-320% Enhanced Damage
     * +20-30 to Strength
-    * +40% Chance of Crushing Blow
+    * 40% Chance of Crushing Blow
     * -50% Target Defense
-    * -100 to Monster Defense Per Hit
+    * --100 to Monster Defense Per Hit
     * Damage +50-85
     * +40% Increased Attack Speed
-    * -5-10% to Enemy Physical Damage Resistance
+    * -5-10% to Enemy Physical Resistance
 
 ### Windhammer (Windhammer)
 * **Base Item:** Ogre Maul
 * **Level Requirement:** 68
 * **Properties:**
-    * dmg%: 200-300 (param: )
-    * +50% Chance of Crushing Blow
+    * +200-300% Enhanced Damage
+    * 50% Chance of Crushing Blow
     * +60% Increased Attack Speed
-    * 40% Chance to cast Level 44 Twister on striking
+    * 40-44% Chance to cast level 40-44 Twister on striking
     * +30% Faster Run/Walk
-    * 50% Chance to cast Level 40 Tornado when you Kill an Enemy
-    * -5-15% to Enemy Physical Damage Resistance
+    * 50-40% Chance to cast level 50-40 Tornado when you Kill an Enemy
+    * -5-15% to Enemy Physical Resistance
 
 ### Earth Shifter (Earthshifter)
 * **Base Item:** Thunder Maul
 * **Level Requirement:** 69
 * **Properties:**
-    * dmg%: 250-300 (param: )
-    * 50% Chance to cast Level 50 Volcano on striking
-    * +35% Chance of Crushing Blow
+    * +250-300% Enhanced Damage
+    * 50% Chance to cast level 50 Volcano on striking
+    * 35% Chance of Crushing Blow
     * +60% Increased Attack Speed
     * +14 to Volcano
-    * +7 to Javelin and Spear Skills
+    * +7 to Elemental Skills
     * +60% Faster Cast Rate
-    * 10% Chance to cast Level 5 Lower Resist on striking
-    * Requirements -50--30%
+    * 10-5% Chance to cast level 10-5 Lower Resist on striking
+    * Requirements --50--30%
     * 6% Mana stolen per hit

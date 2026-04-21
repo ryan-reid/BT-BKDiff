@@ -6,21 +6,21 @@
 * **Properties:**
     * +20 to Dexterity
     * +60 to Life
-    * dmg%: 210 (param: )
+    * +210% Enhanced Damage
     * Poison Resist +30%
-    * +25% Deadly Strike
+    * 25% Deadly Strike
     * +60% Increased Attack Speed
-    * +34% Piercing Attack
+    * Piercing Attack
 
 ### Ichorsting (Ichorsting)
 * **Base Item:** Crossbow
 * **Level Requirement:** 18
 * **Properties:**
-    * +150 to Minimum Poison Damage
+    * Adds 150-150 Poison Damage Over 150 Seconds
     * +20 to Dexterity
-    * +50% Piercing Attack
+    * Piercing Attack
     * +20 to Strength
-    * dmg%: 200 (param: )
+    * +200% Enhanced Damage
     * +50% Increased Attack Speed
 
 ### Hellcast (Hellcast)
@@ -31,62 +31,62 @@
     * +15% to Maximum Fire Resist
     * Fire Resist +15%
     * +60% Increased Attack Speed
-    * dmg%: 170-180 (param: )
-    * +100-150 to Minimum Fire Damage
-    * +34% Piercing Attack
+    * +170-180% Enhanced Damage
+    * Adds 100-150-100-150 Fire Damage
+    * Piercing Attack
 
 ### Doomslinger (Doomspittle)
 * **Base Item:** Repeating Crossbow
 * **Level Requirement:** 28
 * **Properties:**
     * +1 to Amazon Skill Levels
-    * +35% Piercing Attack
+    * Piercing Attack
     * +40% Increased Attack Speed
     * +50 to Life
-    * dmg%: 150 (param: )
+    * +150% Enhanced Damage
     * +50 to Mana
     * +30% Faster Run/Walk
-    * +1 to Javelin and Spear Skills
+    * +1 to Bow and Crossbow Skills
 
 ### Langer Briser (Langer Briser)
 * **Base Item:** Arbalest
 * **Level Requirement:** 32
 * **Properties:**
     * +60% Increased Attack Speed
-    * dmg%: 200 (param: )
+    * +200% Enhanced Damage
     * 50-75% Better Chance of Getting Magic Items
     * +30 to Life
-    * dmg-max: 10-30 (param: )
-    * +33% Chance of Open Wounds
-    * +1-212 to Minimum Lightning Damage
-    * +33% Piercing Attack
+    * +10-30 to Maximum Damage
+    * 33% Chance of Open Wounds
+    * Adds 1-212-1-212 Lightning Damage
+    * Piercing Attack
 
 ### Pus Spitter (Pus Spiter)
 * **Base Item:** Siege Crossbow
 * **Level Requirement:** 36
 * **Properties:**
-    * +192 to Minimum Poison Damage
-    * 30% Chance to cast Level 10 Lower Resist on striking
+    * Adds 192-192 Poison Damage Over 192 Seconds
+    * 30-10% Chance to cast level 30-10 Lower Resist on striking
     * +2 to All Skills
-    * Requirements -60%
-    * 40% Chance to cast Level 30 Poison Nova when struck
+    * Requirements --60%
+    * 40-30% Chance to cast level 40-30 Poison Nova when struck
     * +20% Increased Attack Speed
-    * dmg%: 150-220 (param: )
+    * +150-220% Enhanced Damage
     * + to Attack Rating (Based on Character Level)
-    * +34% Piercing Attack
+    * Piercing Attack
 
 ### Buriza-Do Kyanon (Buriza-Do Kyanon)
 * **Base Item:** Ballista
 * **Level Requirement:** 41
 * **Properties:**
-    * +100% Piercing Attack
+    * Piercing Attack
     * +35 to Dexterity
     * +75-150 Defense
     * + to Maximum Damage (Based on Character Level)
     * +100% Increased Attack Speed
-    * dmg%: 180-280 (param: )
-    * Freezes target
-    * +32-196 to Minimum Cold Damage
+    * +180-280% Enhanced Damage
+    * Freezes Target +3
+    * Adds 32-196-32-196 Cold Damage
 
 ### Demon Machine (Demon Machine)
 * **Base Item:** Chu-Ko-Nu
@@ -94,10 +94,10 @@
 * **Properties:**
     * +321 Defense
     * +36 to Mana
-    * +66% Piercing Attack
+    * Piercing Attack
     * Fires Explosive Arrows or Bolts
-    * dmg-max: 66 (param: )
-    * dmg%: 123 (param: )
+    * +66 to Maximum Damage
+    * +123% Enhanced Damage
     * +632 to Attack Rating
     * +30% Increased Attack Speed
 
@@ -105,24 +105,24 @@
 * **Base Item:** Demon Crossbow
 * **Level Requirement:** 71
 * **Properties:**
-    * dmg%: 160-220 (param: )
-    * +100% Piercing Attack
+    * +160-220% Enhanced Damage
+    * Piercing Attack
     * 12-18% Life stolen per hit
     * Slows Target by 25%
-    * +33% Chance of Open Wounds
+    * 33% Chance of Open Wounds
     * Fires Explosive Arrows or Bolts
     * +80% Increased Attack Speed
-    * Requirements +50%
+    * Requirements -50%
     * -20-35% to Enemy Fire Resistance
 
 ### Hellrack (Hellrack)
 * **Base Item:** Colossus Crossbow
 * **Level Requirement:** 76
 * **Properties:**
-    * dmg%: 180-230 (param: )
-    * +400 to Minimum Fire Damage
+    * +180-230% Enhanced Damage
+    * Adds 400-400 Fire/Lightning/Cold Damage
     * +30% Increased Attack Speed
     * 100-150% Bonus to Attack Rating
-    * 20% Chance to cast Level 10 Lower Resist on striking
+    * 20-10% Chance to cast level 20-10 Lower Resist on striking
     * +18 to Immolation Arrow
-    * +34% Piercing Attack
+    * Piercing Attack

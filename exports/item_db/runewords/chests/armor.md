@@ -4,20 +4,20 @@
 * **Runes:** Hel Rune + Shael Rune + Ral Rune
 * **Base Items:** tors
 * **Properties:**
-    * 2% Chance to cast Level 10 Psychic Ward when struck
-    * 10% Chance to cast Level 15 Miasma Chain on striking
-    * +2 to Amazon Skill Levels
-    * dmg%: 40-60 (param: )
+    * 2-10% Chance to cast level 2-10 Psychic Ward when struck
+    * 10-15% Chance to cast level 10-15 Miasma Chain on striking
+    * +2 to Warlock Skill Levels
+    * +40-60% Enhanced Damage
 
 ### Bone
 * **Runes:** Sol Rune + Amn Rune + Amn Rune
 * **Base Items:** tors
 * **Properties:**
     * +15-20% Faster Cast Rate
-    * 15% Chance to cast Level 10 Bone Armor when struck
-    * +2 to Amazon Skill Levels
+    * 15-10% Chance to cast level 15-10 Bone Armor when struck
+    * +2 to Necromancer Skill Levels
     * +100-150 to Mana
-    * Fire Resist +15%
+    * All Resistances +15
 
 ### Bramble
 * **Runes:** Ral Rune + Ohm Rune + Sur Rune + Eth Rune
@@ -29,7 +29,7 @@
     * +13 Life after each Kill
     * +25-50% to Poison Skill Damage
     * Poison Resist +100%
-    * Level 33-13 %s (33-13/33-13 Charges)
+    * Level 33-13 Spirit of Barbs (33-13/33-13 Charges)
 
 ### Broken Promise
 * **Runes:** Io Rune + Lum Rune + Fal Rune + Ko Rune
@@ -37,7 +37,7 @@
 * **Properties:**
     * +20% Faster Hit Recovery
     * +20% Faster Run/Walk
-    * +10 to Strength
+    * +10 to all Attributes
     * +20% Faster Cast Rate
     * Cannot Be Frozen
     * +20% Increased Attack Speed
@@ -47,7 +47,7 @@
 * **Runes:** Dol Rune + Um Rune + Ber Rune + Ist Rune
 * **Base Items:** tors
 * **Properties:**
-    * Fire Resist +50%
+    * All Resistances +50
     * +70% Enhanced Defense
     * +200% Damage to Demons
     * +100% Damage to Undead
@@ -62,21 +62,21 @@
     * +360 Defense
     * +230 Defense vs. Missile
     * + to Strength (Based on Character Level)
-    * 12% Chance to cast Level 15 Hydra on striking
-    * 20% Chance to cast Level 18 Venom when struck
+    * 12-15% Chance to cast level 12-15 Hydra on striking
+    * 20-18% Chance to cast level 20-18 Venom when struck
     * Level 16-21 Holy Fire Aura When Equipped
-    * +5-10 to Strength
+    * +5-10 to all Attributes
 
 ### Duress
 * **Runes:** Shael Rune + Um Rune + Thul Rune
 * **Base Items:** tors
 * **Properties:**
     * +15-20 to Mana after each Kill
-    * dmg%: 80-100 (param: )
+    * +80-100% Enhanced Damage
     * +150-200% Enhanced Defense
     * +20% Faster Hit Recovery
-    * +33% Chance of Open Wounds
-    * +15% Chance of Crushing Blow
+    * 33% Chance of Open Wounds
+    * 15% Chance of Crushing Blow
     * +9-15 Life after each Kill
 
 ### Enigma
@@ -95,8 +95,8 @@
 * **Base Items:** tors
 * **Properties:**
     * +15-20% Faster Cast Rate
-    * 5% Chance to cast Level 15 Blaze when struck
-    * +2 to Amazon Skill Levels
+    * 5-15% Chance to cast level 5-15 Blaze when struck
+    * +2 to Sorceress Skill Levels
     * +1 to Warmth
     * +20% Faster Hit Recovery
 
@@ -105,11 +105,11 @@
 * **Base Items:** tors
 * **Properties:**
     * +170-230% Enhanced Defense
-    * Fire Resist +30%
-    * 15% Chance to cast Level 6 Dim Vision when struck
+    * All Resistances +30
+    * 15-6% Chance to cast level 15-6 Dim Vision when struck
     * +23% Faster Hit Recovery
-    * +5% Damage Taken Goes To Mana
-    * 100% Chance to cast Level 55 Meteor when you Die
+    * 5% Damage Taken Goes To Mana
+    * 100-55% Chance to cast level 100-55 Meteor when you Die
     * Half Freeze Duration
 
 ### Lionheart
@@ -119,25 +119,25 @@
     * +15 to Strength
     * +20 to Vitality
     * +15 to Dexterity
-    * dmg%: 90-110 (param: )
+    * +90-110% Enhanced Damage
     * +50 to Life
-    * Fire Resist +30%
+    * All Resistances +30
 
 ### Myth
 * **Runes:** Hel Rune + Amn Rune + Nef Rune
 * **Base Items:** tors
 * **Properties:**
-    * 10% Chance to cast Level 1 Taunt on striking
+    * 10-1% Chance to cast level 10-1 Taunt on striking
     * +20% Faster Run/Walk
-    * +2 to Amazon Skill Levels
+    * +2  to Barbarian Skill Levels
     * Replenish Life +10
 
 ### Peace
 * **Runes:** Shael Rune + Thul Rune + Amn Rune
 * **Base Items:** tors
 * **Properties:**
-    * 2% Chance to cast Level 15 Valkyrie on striking
-    * 4% Chance to cast Level 5 Slow Missiles when struck
+    * 2-15% Chance to cast level 2-15 Valkyrie on striking
+    * 4-5% Chance to cast level 4-5 Slow Missiles when struck
     * +2 to Amazon Skill Levels
     * +2 to Critical Strike
 
@@ -149,7 +149,7 @@
     * -40-50% to Enemy Poison Resistance
     * Prevent Monster Heal
     * +400-500 Defense
-    * 50% Chance to cast Level 50 Lower Resist when struck
+    * 50% Chance to cast level 50 Lower Resist when struck
     * Level 15 Cleansing Aura When Equipped
     * Magic Resist +50%
 
@@ -157,8 +157,8 @@
 * **Runes:** Ral Rune + Ko Rune + Eld Rune
 * **Base Items:** tors
 * **Properties:**
-    * 100% Chance to cast Level 5 Holy Bolt on striking
-    * +2 to Amazon Skill Levels
+    * 100-5% Chance to cast level 100-5 Holy Bolt on striking
+    * +2 to Paladin Skill Levels
     * +100-150 to Life
     * +50% Damage to Undead
 
@@ -169,9 +169,9 @@
     * +140-170% Enhanced Defense
     * Magic Damage Reduced by 17
     * Damage Reduced by 24
-    * Fire Resist +25-35%
+    * All Resistances +25-35
     * +25% Faster Hit Recovery
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * Cannot Be Frozen
 
 ### Rain
@@ -179,8 +179,8 @@
 * **Base Items:** tors
 * **Properties:**
     * +15-20% Faster Cast Rate
-    * 5% Chance to cast Level 15 Cyclone Armor when struck
-    * +2 to Amazon Skill Levels
+    * 5-15% Chance to cast level 5-15 Cyclone Armor when struck
+    * +2 to Druid Skill Levels
     * +100-150 to Mana
 
 ### Red
@@ -192,7 +192,7 @@
     * 9% Life stolen per hit
     * +5-10 Life after each Kill
     * Fire Resist +75%
-    * Fire Absorb +20%
+    * +20 Fire Absorb
     * +50-80% Enhanced Defense
 
 ### Smoke
@@ -201,10 +201,10 @@
 * **Properties:**
     * +250 Defense vs. Missile
     * +75% Enhanced Defense
-    * Fire Resist +50%
+    * All Resistances +50
     * +20% Faster Hit Recovery
     * +3-5 to Strength (Based on Character Level)
-    * 20% Chance to cast Level 13 Cloak of Shadows when you Kill an Enemy
+    * 20-13% Chance to cast level 20-13 Cloak of Shadows when you Kill an Enemy
 
 ### Stealth
 * **Runes:** Tal Rune + Eth Rune
@@ -233,9 +233,9 @@
 * **Runes:** Shael Rune + Thul Rune + Lem Rune
 * **Base Items:** tors
 * **Properties:**
-    * 25% Chance to cast Level 15 Venom on striking
-    * 50% Chance to cast Level 15 Fade when struck
-    * +2 to Amazon Skill Levels
+    * 25-15% Chance to cast level 25-15 Venom on striking
+    * 50-15% Chance to cast level 50-15 Fade when struck
+    * +2 to Assassin Skill Levels
     * +45% Increased Attack Speed
 
 ### Wealth
@@ -254,7 +254,7 @@
     * +65% Faster Run/Walk
     * 35% Slower Stamina Drain
     * +40% Increased Attack Speed
-    * Fire Resist +10%
+    * All Resistances +10
     * +6 to Evade
 
 ### Dilemma
@@ -262,8 +262,8 @@
 * **Base Items:** tors
 * **Properties:**
     * +1 to Teleport
-    * Drain Life -40--20
-    * -35--25 Life after each Kill
+    * Replenish Life +-40--20
+    * +-35--25 Life after each Kill
     * 35-50% Better Chance of Getting Magic Items
 
 ### Shadows
@@ -273,6 +273,6 @@
     * +45% Increased Attack Speed
     * +100-150 Kick Damage
     * +100-150 to Mana
-    * +2 to Amazon Skill Levels
-    * +5% Deadly Strike
+    * +2 to Assassin Skill Levels
+    * 5% Deadly Strike
     * Cold Resist +30%

@@ -15,7 +15,7 @@
     * Fire Resist +20%
     * +15 to Dexterity
     * Lightning Resist +20%
-    * 12% Chance to cast Level 1 Poison Nova when struck
+    * 12-1% Chance to cast level 12-1 Poison Nova when struck
 
 ### Milabrega's Robe (Milabrega's Robe)
 * **Set:** Milabrega's Regalia
@@ -25,16 +25,16 @@
     * Damage Reduced by 5
     * Magic Damage Reduced by 5
     * +10% Faster Cast Rate
-    * Requirements -45%
+    * Requirements --45%
 
 ### Cathan's Mesh (Cathan's Mesh)
 * **Set:** Cathan's Traps
 * **Base Item:** Chain Mail
 * **Properties:**
     * +50 Defense
-    * Fire Resist +15%
+    * All Resistances +15
     * +15% Faster Run/Walk
-    * Requirements -50%
+    * Requirements --50%
 
 ### Tancred's Spine (Tancred's Spine)
 * **Set:** Tancred's Battlegear
@@ -43,7 +43,7 @@
     * +50 to Life
     * +20 to Strength
     * +27% Faster Hit Recovery
-    * Reduces curse duration by 25-34%
+    * Curse Resist +25-34%
 
 ### Sigon's Shelter (Sigon's Shelter)
 * **Set:** Sigon's Complete Steel
@@ -58,7 +58,7 @@
 * **Base Item:** Splint Mail
 * **Properties:**
     * Magic Damage Reduced by 8
-    * +1 to Amazon Skill Levels
+    * +1  to Barbarian Skill Levels
     * Damage Reduced by 8
     * +15% Faster Run/Walk
 
@@ -68,7 +68,7 @@
 * **Properties:**
     * Damage Reduced by 5
     * +65% Enhanced Defense
-    * Physical Damage Received Reduced by 6%
+    * Damage Reduced by 6%
     * +15% Faster Run/Walk
 
 ### Arctic Furs (Arctic Furs)
@@ -76,7 +76,7 @@
 * **Base Item:** Quilted Armor
 * **Properties:**
     * +300% Enhanced Defense
-    * Fire Resist +20%
+    * All Resistances +20
     * +1 to All Skills
 
 ### Arcanna's Flesh (Arcanna's Flesh)
@@ -93,41 +93,41 @@
 * **Properties:**
     * +500-600 Defense
     * +8-12 to Life (Based on Character Level)
-    * +2-3 to Javelin and Spear Skills
+    * +2-3 to Traps Skills
     * Poison Length Reduced by 75-150%
     * Poison Resist +25%
-    * +2-3 to Javelin and Spear Skills
-    * +2-3 to Javelin and Spear Skills
+    * +2-3 to Shadow Disciplines Skills
+    * +2-3 to Martial Arts Skills
 
 ### Aldur's Deception (Aldur's Deception)
 * **Set:** Aldur's Watchtower
 * **Base Item:** Shadow Plate
 * **Properties:**
     * +300 Defense
-    * +2-3 to Javelin and Spear Skills
+    * +2-3 to Summoning Skills
     * +20-30 to Strength
     * +15-25 to Dexterity
-    * Requirements -50%
+    * Requirements --50%
     * +50 to Life
-    * +2-3 to Javelin and Spear Skills
-    * +2-3 to Javelin and Spear Skills
+    * +2-3 to Shape Shifting Skills
+    * +2-3 to Elemental Skills
 
 ### Immortal King's Soul Cage (Immortal King's Soul Cage)
 * **Set:** Immortal King
 * **Base Item:** Sacred Armor
 * **Properties:**
     * +400 Defense
-    * 20% Chance to cast Level 5 Enchant when struck
-    * +2-3 to Amazon Skill Levels
+    * 20-5% Chance to cast level 20-5 Enchant when struck
+    * +2-3  to Barbarian Skill Levels
     * Poison Resist +50%
-    * Requirements -30--50%
+    * Requirements --30--50%
     * +40% Faster Cast Rate
 
 ### Tal Rasha's Guardianship (Tal Rasha's Howling Wind)
 * **Set:** Tal Rasha's Wrappings
 * **Base Item:** Lacquered Plate
 * **Properties:**
-    * Requirements -60%
+    * Requirements --60%
     * Magic Damage Reduced by 15
     * 88% Better Chance of Getting Magic Items
     * Cold Resist +40%
@@ -140,37 +140,37 @@
 * **Base Item:** Sacred Armor
 * **Properties:**
     * +600 Defense
-    * +1-3 to Javelin and Spear Skills
+    * +1-3 to Combat Skills
     * +20-30 to Strength
-    * Requirements -40%
-    * +1-3 to Javelin and Spear Skills
-    * +1-3 to Javelin and Spear Skills
+    * Requirements --40%
+    * +1-3 to Offensive Auras Skills
+    * +1-3 to Defensive Auras Skills
     * +6-9 to Mana after each Kill
 
 ### Trang-Oul's Scales (Trang-Oul's Scales)
 * **Set:** Trang-Oul's Avatar
 * **Base Item:** Chaos Armor
 * **Properties:**
-    * Requirements -40%
+    * Requirements --40%
     * +30% Faster Hit Recovery
     * Poison Resist +40%
-    * +1-3 to Javelin and Spear Skills
+    * +1-3 to Curses Skills
     * +40% Faster Run/Walk
     * +150% Enhanced Defense
-    * +1-3 to Javelin and Spear Skills
-    * +1-3 to Javelin and Spear Skills
+    * +1-3 to Poison and Bone Skills
+    * +1-3 to Summoning Skills
 
 ### M'avina's Embrace (M'avina's Embrace)
 * **Set:** M'avina's Battle Hymn
 * **Base Item:** Kraken Shell
 * **Properties:**
-    * 10% Chance to cast Level 3 Glacial Spike when struck
-    * Requirements -30%
+    * 10-3% Chance to cast level 10-3 Glacial Spike when struck
+    * Requirements --30%
     * Magic Damage Reduced by 5-12
-    * +2-3 to Javelin and Spear Skills
+    * +2-3 to Bow and Crossbow Skills
     * +500-600 Defense
     * +30 to Life
-    * +2-3 to Javelin and Spear Skills
+    * +2-3 to Passive and Magic Skills
     * +2-3 to Javelin and Spear Skills
 
 ### Dark Adherent (Spiritual Custodian)
@@ -179,7 +179,7 @@
 * **Properties:**
     * +305-415 Defense
     * Lightning Resist +50%
-    * 25% Chance to cast Level 20 Nova when struck
+    * 25-20% Chance to cast level 25-20 Nova when struck
     * +1-2 to All Skills
     * +20% Faster Cast Rate
 
@@ -191,8 +191,8 @@
     * +250 Defense vs. Missile
     * +200 to Life
     * +300 Defense vs. Melee
-    * Requirements -20%
-    * Fire Resist +45%
+    * Requirements --20%
+    * All Resistances +45
 
 ### Hwanin's Refuge (Hwanin's Refuge)
 * **Set:** Hwanin's Majesty
@@ -201,8 +201,8 @@
     * +450 Defense
     * Poison Resist +60%
     * +175 to Life
-    * 10% Chance to cast Level 7 Static Field when struck
-    * Physical Damage Received Reduced by 10%
+    * 10-7% Chance to cast level 10-7 Static Field when struck
+    * Damage Reduced by 10%
 
 ### Sazabi's Ghost Liberator (Sazabi's Ghost Liberator)
 * **Set:** Sazabi's Grand Tribute
@@ -214,7 +214,7 @@
     * +300 to Attack Rating against Demons
     * +150 to Life
     * Cold Resist +20-25%
-    * Physical Damage Received Reduced by 10%
+    * Damage Reduced by 10%
 
 ### Cow King's Hide (Cow King's Hide)
 * **Set:** Cow King's Leathers
@@ -223,19 +223,19 @@
     * Lightning Resist +75%
     * +200% Enhanced Defense
     * +100 to Life
-    * 100% Chance to cast Level 20 Charged Bolt when struck
+    * 100-20% Chance to cast level 100-20 Charged Bolt when struck
     * +20% Faster Run/Walk
-    * Physical Damage Received Reduced by 10%
+    * Damage Reduced by 10%
 
 ### Naj's Light Plate (Naj's Light Plate)
 * **Set:** Naj's Ancient Set
 * **Base Item:** Hellforge Plate
 * **Properties:**
-    * Requirements -60%
+    * Requirements --60%
     * +65 to Life
-    * Fire Resist +25%
-    * +45% Damage Taken Goes To Mana
-    * +0-6 to Amazon Skill Levels
+    * All Resistances +25
+    * 45% Damage Taken Goes To Mana
+    * +2 to Original Class Skill Levels
     * +300 Defense
     * +30% Faster Cast Rate
 
@@ -257,7 +257,7 @@
 * **Set:** Horazon's Splendor
 * **Base Item:** Balrog Skin
 * **Properties:**
-    * +2 to Amazon Skill Levels
+    * +2 to Warlock Skill Levels
     * +150-200% Enhanced Defense
     * +75-100 to Mana
     * Cold Resist +15-25%
@@ -272,7 +272,7 @@
     * +10-30 to Vitality
     * Fire Resist +40%
     * 75% Better Chance of Getting Magic Items
-    * +0-6 to Amazon Skill Levels
+    * +3 to Original Class Skill Levels
     * +50% Faster Hit Recovery
     * -3-5% to Enemy Fire Resistance
     * Level 10-15 Holy Fire Aura When Equipped
@@ -281,12 +281,12 @@
 * **Set:** Natalya's Vengeance
 * **Base Item:** Loricated Mail
 * **Properties:**
-    * +3 to Amazon Skill Levels
+    * +3 to Assassin Skill Levels
     * +30% Faster Run/Walk
     * +700-800 Defense
     * Increase Maximum Life 10-20%
     * +2-5% to Maximum Fire Resist
-    * Fire Resist +15-30%
+    * All Resistances +15-30
     * +10-15% to Fire Skill Damage
     * +10-15% to Lightning Skill Damage
     * +10-15% to Cold Skill Damage
@@ -295,15 +295,15 @@
 * **Set:** Aldur's Beacon
 * **Base Item:** Shadow Plate
 * **Properties:**
-    * +3 to Amazon Skill Levels
+    * +3 to Druid Skill Levels
     * +20% Increased Attack Speed
     * +20% Faster Cast Rate
     * +10-15% to Fire Skill Damage
     * -3-5% to Enemy Fire Resistance
     * +10-15% to Cold Skill Damage
     * -3-5% to Enemy Cold Resistance
-    * Requirements -60%
-    * Fire Resist +20-40%
+    * Requirements --60%
+    * All Resistances +20-40
 
 ### Immortal King's Eternal Reign (Immortal King's Eternal Reign)
 * **Set:** Bul Katho's Embodiment
@@ -311,52 +311,52 @@
 * **Properties:**
     * +3 to All Skills
     * Level 10 Defiance Aura When Equipped
-    * Fire Resist +30-40%
+    * All Resistances +30-40
     * Cannot Be Frozen
     * +35% Vitality
     * 10% Mana stolen per hit
     * +350% Enhanced Defense
-    * dmg%: 300 (param: )
+    * +300% Enhanced Damage
 
 ### Tal Rasha's Exquisite Clothing (Tal Rasha's Exquisite Clothing)
 * **Set:** Tal Rasha's Elements
 * **Base Item:** Lacquered Plate
 * **Properties:**
-    * +3 to Amazon Skill Levels
+    * +3 to Sorceress Skill Levels
     * +25-35% Faster Cast Rate
     * +777 Defense
     * -10-15% to Enemy Lightning Resistance
     * Damage Reduced by 15-30
     * Magic Damage Reduced by 15-30
-    * Fire Resist +30-50%
+    * All Resistances +30-50
     * 100-150% Better Chance of Getting Magic Items
-    * Requirements -60%
+    * Requirements --60%
 
 ### Griswold's Heroism (Griswold's Heroism)
 * **Set:** Griswold's Masterwork
 * **Base Item:** Sacred Armor
 * **Properties:**
-    * +3 to Amazon Skill Levels
+    * +3 to Paladin Skill Levels
     * Level 12-17 Meditation Aura When Equipped
     * +150-300% Enhanced Defense
     * +5 to Evade
-    * Fire Resist +15-30%
+    * All Resistances +15-30
     * +5-10% Strength
     * +5-10% Energy
-    * Requirements -70%
+    * Requirements --70%
 
 ### Trang-Oul's Heart (Trang-Oul's Heart)
 * **Set:** Trang-Oul's Incarnation
 * **Base Item:** Chaos Armor
 * **Properties:**
-    * +3 to Amazon Skill Levels
+    * +3 to Necromancer Skill Levels
     * -5-10% to Enemy Poison Resistance
     * -5-10% to Enemy Magic Resistance
     * +10-15% to Poison Skill Damage
     * +10-15% to Magic Skill Damage
     * +20-40 to Vitality
     * +20-40 to Energy
-    * Fire Resist +15-30%
+    * All Resistances +15-30
     * +333% Enhanced Defense
 
 ### M'avina's Mobility (M'avina's Mobility)
@@ -366,11 +366,11 @@
     * +3 to Amazon Skill Levels
     * +50% Faster Run/Walk
     * +50% Increased Attack Speed
-    * dmg%: 200 (param: )
+    * +200% Enhanced Damage
     * +250-300% Enhanced Defense
-    * Fire Resist +15-30%
-    * Physical Damage Received Reduced by 15-25%
-    * Requirements -50%
+    * All Resistances +15-30
+    * Damage Reduced by 15-25%
+    * Requirements --50%
 
 ### Reaper's Cloak (Reaper's Cloak)
 * **Set:** Death's Embreace
@@ -390,10 +390,10 @@
 * **Set:** Horazon's Heirloom
 * **Base Item:** Balrog Skin
 * **Properties:**
-    * +2-3 to Amazon Skill Levels
+    * +2-3 to Warlock Skill Levels
     * +200-300% Enhanced Defense
     * +75-100 to Mana
     * Cold Resist +25-50%
     * Fire Resist +25-50%
     * Lightning Resist +25-50%
-    * Requirements -50%
+    * Requirements --50%

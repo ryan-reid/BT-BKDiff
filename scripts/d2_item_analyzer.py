@@ -149,6 +149,42 @@ class PropertyResolver:
             if sd_key:
                 self.skill_desc[sd_key] = row
 
+        self.class_names = {
+            '0': 'Amazon',
+            '1': 'Sorceress',
+            '2': 'Necromancer',
+            '3': 'Paladin',
+            '4': 'Barbarian',
+            '5': 'Druid',
+            '6': 'Assassin',
+            '7': 'Warlock'
+        }
+
+        self.skill_tab_names = {
+            '0': 'Bow and Crossbow',
+            '1': 'Passive and Magic',
+            '2': 'Javelin and Spear',
+            '3': 'Fire',
+            '4': 'Lightning',
+            '5': 'Cold',
+            '6': 'Curses',
+            '7': 'Poison and Bone',
+            '8': 'Summoning',
+            '9': 'Combat',
+            '10': 'Offensive Auras',
+            '11': 'Defensive Auras',
+            '12': 'Combat',
+            '13': 'Combat Masteries',
+            '14': 'Warcries',
+            '15': 'Summoning',
+            '16': 'Shape Shifting',
+            '17': 'Elemental',
+            '18': 'Traps',
+            '19': 'Shadow Disciplines',
+            '20': 'Martial Arts',
+            '21': 'Warlock'
+        }
+
     def resolve_skill_name(self, skill_name_or_id: str) -> str:
         skill_name_or_id = str(skill_name_or_id).strip()
         if not skill_name_or_id or skill_name_or_id == '0':
@@ -242,7 +278,47 @@ class PropertyResolver:
         
         range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
 
-        # Skill-related codes
+        # 1. Try *Tooltip from properties.txt (modded files often have this)
+        tooltip = prop.get('*Tooltip', '').strip()
+        if tooltip and tooltip != '0':
+            func = prop.get('func1', '0').strip()
+            val1 = prop.get('val1', '0').strip()
+            res_text = tooltip
+            
+            # Handle # placeholder
+            if func == '36': # Random class skill function
+                res_text = res_text.replace('#', val1)
+            else:
+                res_text = res_text.replace('#', range_str)
+            
+            # Handle [Class Skill Tab] placeholder
+            if '[Class Skill Tab]' in res_text:
+                res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(param, f"Tab {param}"))
+
+            # Handle [Class] placeholder
+            if '[Class]' in res_text:
+                if func == '36':
+                    if min_val == '0' and max_val == '7':
+                        res_text = res_text.replace('[Class]', 'Random Class')
+                    elif min_val == '0' and max_val == '6':
+                        res_text = res_text.replace('[Class]', 'Original Class')
+                    elif min_val == max_val:
+                        res_text = res_text.replace('[Class]', self.class_names.get(min_val, f"Class {min_val}"))
+                    else:
+                        res_text = res_text.replace('[Class]', 'Random Class')
+                else:
+                    set1 = prop.get('set1', '').strip()
+                    class_id = set1 if set1 and set1 != '0' else param
+                    res_text = res_text.replace('[Class]', self.class_names.get(class_id, f"Class {class_id}"))
+
+            # Handle [Skill] placeholder
+            if '[Skill]' in res_text or '%s' in res_text:
+                skill_name = self.resolve_skill_name(param)
+                res_text = res_text.replace('[Skill]', skill_name).replace('%s', skill_name)
+            
+            return res_text
+
+        # 2. Skill-related codes (fallback)
         skill_codes = ['oskill', 'skill', 'att-skill', 'hit-skill', 'gethit-skill', 'kill-skill', 'death-skill', 'level-skill', 'aura']
         if code in skill_codes:
             skill_name = self.resolve_skill_name(param)

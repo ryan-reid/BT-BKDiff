@@ -12,7 +12,7 @@
 * **Base Item:** Heavy Belt
 * **Properties:**
     * +20 to Life
-    * dmg-min: 8 (param: )
+    * +8 to Minimum Damage
     * +15 to Dexterity
 
 ### Sigon's Wrap (Sigon's Wrap)
@@ -57,10 +57,10 @@
 * **Set:** Tal Rasha's Wrappings
 * **Base Item:** Mithril Coil
 * **Properties:**
-    * Requirements -20%
+    * Requirements --20%
     * +30 to Mana
     * +20 to Dexterity
-    * +37% Damage Taken Goes To Mana
+    * 37% Damage Taken Goes To Mana
     * 10-15% Better Chance of Getting Magic Items
 
 ### Trang-Oul's Girth (Trang-Oul's Girth)
@@ -71,7 +71,7 @@
     * Replenish Life +25
     * +66 to Life
     * Cannot Be Frozen
-    * Requirements -40%
+    * Requirements --40%
     * +25-50 to Mana
     * +20% Faster Cast Rate
 
@@ -82,17 +82,17 @@
     * +50 Defense
     * +30% Faster Run/Walk
     * 5% Mana stolen per hit
-    * Fire Resist +10-15%
+    * All Resistances +10-15
     * +3-5 to Mana after each Kill
 
 ### Credendum (Credendum)
 * **Set:** The Disciple
 * **Base Item:** Mithril Coil
 * **Properties:**
-    * Physical Damage Received Reduced by 5-10%
+    * Damage Reduced by 5-10%
     * +10 to Strength
     * +10 to Dexterity
-    * Fire Resist +15%
+    * All Resistances +15
 
 ### Wilhelm's Pride (Wilhelm's Pride)
 * **Set:** Orphan's Call
@@ -108,10 +108,10 @@
 * **Set:** Hwanin's Majesty
 * **Base Item:** Belt
 * **Properties:**
-    * +1-300 to Minimum Lightning Damage
+    * Adds 1-300-1-300 Lightning Damage
     * Prevent Monster Heal
     * + Defense (Based on Character Level)
-    * Physical Damage Received Reduced by 7%
+    * Damage Reduced by 7%
 
 ### Warlord's Authority (Warlord's Authority)
 * **Set:** Warlord's Glory
@@ -133,9 +133,9 @@
 * **Properties:**
     * +1 to All Skills
     * +20-26% Faster Cast Rate
-    * +10-15 to Strength
-    * Physical Damage Received Reduced by 10-15%
-    * Requirements -100%
+    * +10-15 to all Attributes
+    * Damage Reduced by 10-15%
+    * Requirements --100%
     * +100-150 Defense
 
 ### Demigod Replica (Demigod Replica)
@@ -144,19 +144,19 @@
 * **Properties:**
     * +1 to All Skills
     * +10% Faster Cast Rate
-    * +5 to Strength
-    * Physical Damage Received Reduced by 5%
-    * Requirements -100%
+    * +5 to all Attributes
+    * Damage Reduced by 5%
+    * Requirements --100%
     * +200-300 Defense
 
 ### Sigurd's Saveguard (Sigurd's Saveguard)
 * **Set:** Sigurds Nobility
 * **Base Item:** Mithril Coil
 * **Properties:**
-    * Physical Damage Received Reduced by 10-20%
+    * Damage Reduced by 10-20%
     * +24-42% Faster Hit Recovery
     * +50% Energy
-    * +10-15% Damage Taken Goes To Mana
+    * 10-15% Damage Taken Goes To Mana
     * +150-250 Defense
 
 ### Wicked Seduction (Wicked Seduction)
@@ -164,7 +164,7 @@
 * **Base Item:** Troll Belt
 * **Properties:**
     * +20% Faster Cast Rate
-    * Fire Resist -30%
+    * All Resistances +-30
     * +20-30 to Mana after each Kill
     * +20-30 Life after each Kill
     * Poison Length Reduced by 50%
@@ -174,11 +174,11 @@
 * **Set:** Bul Katho's Embodiment
 * **Base Item:** Colossus Girdle
 * **Properties:**
-    * Physical Damage Received Reduced by 10-20%
+    * Damage Reduced by 10-20%
     * +20% Increased Attack Speed
     * +20% Faster Cast Rate
-    * dmg%: 40-75 (param: )
-    * Fire Resist +10-20%
+    * +40-75% Enhanced Damage
+    * All Resistances +10-20
     * +3-5% Vitality
     * +3-5% Strength
     * +3-5% Dexterity
@@ -188,13 +188,13 @@
 * **Set:** Tal Rasha's Elements
 * **Base Item:** Mithril Coil
 * **Properties:**
-    * Physical Damage Received Reduced by 5-10%
-    * +1 to Amazon Skill Levels
-    * +1-3 to Meteor
+    * Damage Reduced by 5-10%
+    * +1 to Sorceress Skill Levels
+    * +1-3 to Meteor (Class meteor only)
     * +20% Faster Cast Rate
     * -3-5% to Enemy Fire Resistance
     * Increase Maximum Mana 3-8%
-    * +5-10 to Strength
+    * +5-10 to all Attributes
     * 25-50% Better Chance of Getting Magic Items
     * +3-7 to Mana after each Kill
 
@@ -202,9 +202,9 @@
 * **Set:** Trang-Oul's Incarnation
 * **Base Item:** Troll Belt
 * **Properties:**
-    * Physical Damage Received Reduced by 5-10%
+    * Damage Reduced by 5-10%
     * Cannot Be Frozen
-    * +1 to Amazon Skill Levels
+    * +1 to Necromancer Skill Levels
     * +20% Increased Attack Speed
     * +20% Faster Cast Rate
     * -5% to Enemy Magic Resistance
@@ -217,9 +217,9 @@
 * **Properties:**
     * +25% Faster Run/Walk
     * +1 to Amazon Skill Levels
-    * +3-8 to Strength
+    * +3-8 to all Attributes
     * 5% Mana stolen per hit
     * 5% Life stolen per hit
     * +25% Increased Attack Speed
-    * Physical Damage Received Reduced by 5-10%
-    * Fire Resist +10-20%
+    * Damage Reduced by 5-10%
+    * All Resistances +10-20

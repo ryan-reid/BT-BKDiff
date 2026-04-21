@@ -8,16 +8,16 @@
     * +125% Damage to Undead
     * 12-15% Life stolen per hit
     * +200% Damage to Demons
-    * 66% Chance to cast Level 45 Poison Nova when you Kill an Enemy
-    * dmg%: 350-400 (param: )
-    * +30 to Strength
+    * 66-45% Chance to cast level 66-45 Poison Nova when you Kill an Enemy
+    * +350-400% Enhanced Damage
+    * +30 to all Attributes
 
 ### Call to Arms
 * **Runes:** Amn Rune + Ral Rune + Mal Rune + Ist Rune + Ohm Rune
 * **Base Items:** weap
 * **Properties:**
     * +40% Increased Attack Speed
-    * dmg%: 200-240 (param: )
+    * +200-240% Enhanced Damage
     * +1 to All Skills
     * +1 to Battle Command
     * +1 to Battle Orders
@@ -30,68 +30,68 @@
 * **Properties:**
     * -15% to Enemy Lightning Resistance
     * Ignore Target's Defense
-    * dmg%: 180-220 (param: )
-    * +12-18 Magic Absorb
+    * +180-220% Enhanced Damage
+    * Magic Absorb 12-18%
     * Level 14-16 Holy Shock Aura When Equipped
-    * 25% Chance to cast Level 25 Static Field on striking
-    * 34% Chance to cast Level 34 Chain Lightning on striking
+    * 25% Chance to cast level 25 Static Field on striking
+    * 34% Chance to cast level 34 Chain Lightning on striking
 
 ### Destruction
 * **Runes:** Vex Rune + Lo Rune + Ber Rune + Jah Rune + Ko Rune
 * **Base Items:** weap
 * **Properties:**
-    * dmg%: 350 (param: )
-    * +500 magic damage
+    * +350% Enhanced Damage
+    * Adds 500-500 Magic Damage
     * + to Strength (Based on Character Level)
-    * 100% Chance to cast Level 45 Meteor when you Die
-    * 15% Chance to cast Level 35 Nova on striking
-    * 23% Chance to cast Level 35 Volcano on striking
+    * 100-45% Chance to cast level 100-45 Meteor when you Die
+    * 15-35% Chance to cast level 15-35 Nova on attack
+    * 23-35% Chance to cast level 23-35 Volcano on striking
     * Prevent Monster Heal
 
 ### Famine
 * **Runes:** Fal Rune + Ohm Rune + Ort Rune + Jah Rune
 * **Base Items:** weap
 * **Properties:**
-    * dmg%: 270-320 (param: )
+    * +270-320% Enhanced Damage
     * 12% Life stolen per hit
     * +30% Increased Attack Speed
-    * +50% Deadly Strike
-    * +200-300 magic damage
-    * +200-210 to Minimum Fire Damage
-    * +10-20 to Strength
+    * 50% Deadly Strike
+    * Adds 200-300-200-300 Magic Damage
+    * Adds 200-210-200-210 Fire/Lightning/Cold Damage
+    * +10-20 to all Attributes
 
 ### Fortitude
 * **Runes:** El Rune + Sol Rune + Dol Rune + Lo Rune
 * **Base Items:** weap
 * **Properties:**
     * +200% Enhanced Defense
-    * dmg%: 300 (param: )
+    * +300% Enhanced Damage
     * +25% Faster Cast Rate
-    * 20% Chance to cast Level 15 Chilling Armor when struck
-    * +12% Damage Taken Goes To Mana
+    * 20-15% Chance to cast level 20-15 Chilling Armor when struck
+    * 12% Damage Taken Goes To Mana
     * +8-12 to Life (Based on Character Level)
-    * Fire Resist +25-30%
+    * All Resistances +25-30
 
 ### Fury
 * **Runes:** Jah Rune + Gul Rune + Eth Rune
 * **Base Items:** weap
 * **Properties:**
-    * dmg%: 280 (param: )
+    * +280% Enhanced Damage
     * +40% Increased Attack Speed
     * Prevent Monster Heal
-    * +66% Chance of Open Wounds
+    * 66% Chance of Open Wounds
     * 6% Life stolen per hit
-    * +33% Deadly Strike
+    * 33% Deadly Strike
 
 ### Hand of Justice
 * **Runes:** Sur Rune + Cham Rune + Amn Rune + Lo Rune
 * **Base Items:** weap
 * **Properties:**
     * +33% Increased Attack Speed
-    * dmg%: 280-330 (param: )
+    * +280-330% Enhanced Damage
     * Level 16 Holy Fire Aura When Equipped
-    * 100-36% Chance to cast level 100-36 %s when you Level-Up
-    * 100% Chance to cast Level 48 Meteor when you Die
+    * 100-36% Chance to cast level 100-36 Blaze when you Level-Up
+    * 100-48% Chance to cast level 100-48 Meteor when you Die
     * Ignore Target's Defense
     * -20-25% to Enemy Fire Resistance
 
@@ -99,7 +99,7 @@
 * **Runes:** Amn Rune + Ral Rune + Thul Rune
 * **Base Items:** weap
 * **Properties:**
-    * dmg%: 130-180 (param: )
+    * +130-180% Enhanced Damage
     * 150% Bonus to Attack Rating
     * +150% Damage to Demons
     * +150% Damage to Undead
@@ -109,13 +109,13 @@
 * **Runes:** Dol Rune + Ort Rune + Eld Rune + Lem Rune
 * **Base Items:** weap
 * **Properties:**
-    * dmg%: 160-210 (param: )
+    * +160-210% Enhanced Damage
     * +1 to Zeal
     * 50-80% Bonus to Attack Rating
     * +1 to Berserk
     * +25% Increased Attack Speed
-    * Level 50-3 %s (50-3/50-3 Charges)
-    * Hit Blinds Target
+    * Level 50-3 Heart of Wolverine (50-3/50-3 Charges)
+    * Hit Blinds Target +10
 
 ### Voice of Reason
 * **Runes:** Lem Rune + Ko Rune + El Rune + Eld Rune
@@ -125,21 +125,21 @@
     * +280-300% Damage to Undead
     * +1-2 to Cold Skills
     * -24-36% to Enemy Cold Resistance
-    * 20% Chance to cast Level 50 Ice Blast on striking
-    * 15% Chance to cast Level 36 Frozen Orb on striking
+    * 20-50% Chance to cast level 20-50 Ice Blast on striking
+    * 15-36% Chance to cast level 15-36 Frozen Orb on attack
     * Cannot Be Frozen
 
 ### Phoenix
 * **Runes:** Vex Rune + Vex Rune + Lo Rune + Jah Rune
 * **Base Items:** weap
 * **Properties:**
-    * dmg%: 350-400 (param: )
+    * +350-400% Enhanced Damage
     * +350-400 Defense vs. Missile
-    * 40% Chance to cast Level 22 Firestorm on striking
-    * 100-40% Chance to cast level 100-40 %s when you Level-Up
+    * 40-22% Chance to cast level 40-22 Firestorm on striking
+    * 100-40% Chance to cast level 100-40 Blaze when you Level-Up
     * -28-30% to Enemy Fire Resistance
     * Level 10-15 Redemption Aura When Equipped
-    * +15-21 Fire Absorb
+    * Fire Absorb 15-21%
 
 ### Pride
 * **Runes:** Cham Rune + Sur Rune + Io Rune + Lo Rune
@@ -147,9 +147,9 @@
 * **Properties:**
     * +% Damage to Demons (Based on Character Level)
     * +% Damage to Undead (Based on Character Level)
-    * dmg%: 260-300 (param: )
+    * +260-300% Enhanced Damage
     * Level 18-20 Concentration Aura When Equipped
-    * 25% Chance to cast Level 50 Fire Wall on striking
+    * 25-50% Chance to cast level 25-50 Fire Wall on striking
     * +20% Increased Attack Speed
     * % Extra Gold from Monsters (Based on Character Level)
 
@@ -157,24 +157,24 @@
 * **Runes:** Hel Rune + Ko Rune + Lem Rune + Gul Rune
 * **Base Items:** weap
 * **Properties:**
-    * +250-400 magic damage
+    * Adds 250-400-250-400 Magic Damage
     * +50-100 Kick Damage
-    * +38% Damage Taken Goes To Mana
-    * 20% Chance to cast Level 30 Tornado on striking
-    * 16% Chance to cast Level 30 Frozen Orb on striking
+    * 38% Damage Taken Goes To Mana
+    * 20-30% Chance to cast level 20-30 Tornado on striking
+    * 16-30% Chance to cast level 16-30 Frozen Orb on attack
     * +15% Increased Attack Speed
-    * +5-10 to Strength
+    * +5-10 to all Attributes
 
 ### Silence
 * **Runes:** Shael Rune + Eld Rune + Hel Rune + Ist Rune + Tir Rune + Vex Rune
 * **Base Items:** weap
 * **Properties:**
     * 4% Mana stolen per hit
-    * dmg%: 200 (param: )
+    * +200% Enhanced Damage
     * +20% Increased Attack Speed
-    * Fire Resist +75%
+    * All Resistances +75
     * +2-3 to All Skills
-    * 22% Chance to cast Level 25 Amplify Damage on striking
+    * 22-25% Chance to cast level 22-25 Amplify Damage on striking
 
 ### Tempest
 * **Runes:** Ber Rune + Tir Rune
@@ -191,19 +191,19 @@
 * **Runes:** Hel Rune + Shael Rune + Amn Rune + Gul Rune
 * **Base Items:** weap
 * **Properties:**
-    * dmg%: 200-280 (param: )
+    * +200-280% Enhanced Damage
     * +20% Increased Attack Speed
     * +8-15 to Vitality
     * 25-40% Better Chance of Getting Magic Items
-    * Repairs  durability per second
-    * +20% Deadly Strike
-    * 10% Chance to cast Level 25 Attract on striking
+    * Repairs 1 durability in  seconds
+    * 20% Deadly Strike
+    * 10-25% Chance to cast level 10-25 Attract on striking
 
 ### Venom
 * **Runes:** Tal Rune + Shael Rune + Mal Rune
 * **Base Items:** weap
 * **Properties:**
-    * dmg%: 190-240 (param: )
+    * +190-240% Enhanced Damage
     * Ignore Target's Defense
     * +3 to Poison Skills
     * +30 to Venom
@@ -215,21 +215,21 @@
 * **Runes:** Sur Rune + Mal Rune
 * **Base Items:** weap
 * **Properties:**
-    * dmg%: 260-280 (param: )
+    * +260-280% Enhanced Damage
     * +40% Increased Attack Speed
     * +40% Faster Run/Walk
     * -50% Target Defense
-    * 33% Chance to cast Level 30 Tornado on striking
-    * 25% Chance to cast Level 35 Twister on striking
+    * 33-30% Chance to cast level 33-30 Tornado on striking
+    * 25-35% Chance to cast level 25-35 Twister on striking
     * +30% Faster Hit Recovery
 
 ### Hustle (weapon)
 * **Runes:** Shael Rune + Ko Rune + Eld Rune
 * **Base Items:** weap
 * **Properties:**
-    * 5% Chance to cast Level 1 Burst of Speed on striking
+    * 5-1% Chance to cast level 5-1 Burst of Speed on striking
     * +10% Increased Attack Speed
-    * dmg%: 180-200 (param: )
+    * +180-200% Enhanced Damage
     * Level 1 Fanaticism Aura When Equipped
 
 ### Mosaic

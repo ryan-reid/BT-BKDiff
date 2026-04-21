@@ -2,9 +2,9 @@
 
 | Category | [Added](ADDED.md) | [Removed](REMOVED.md) | [Modified](MODIFIED.md) |
 | :--- | :---: | :---: | :---: |
-| Uniques | 39 | 2 | 58 |
+| Uniques | 39 | 2 | 54 |
 | Sets | 26 | 0 | 33 |
 | Runewords | 4 | 0 | 2 |
-| **Total** | **69** | **2** | **93** |
+| **Total** | **69** | **2** | **89** |
 
 Click the links in the header to see detailed breakdowns.

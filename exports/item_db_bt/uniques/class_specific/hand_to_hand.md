@@ -4,13 +4,13 @@
 * **Base Item:** Blade Talons
 * **Level Requirement:** 28
 * **Properties:**
-    * +1 to Javelin and Spear Skills
-    * +2 to Amazon Skill Levels
+    * +1 to Shadow Disciplines Skills
+    * +2 to Assassin Skill Levels
     * +50% Increased Attack Speed
-    * dmg%: 100-200 (param: )
+    * +100-200% Enhanced Damage
     * -35% Target Defense
-    * +25% Deadly Strike
-    * Hit Blinds Target
+    * 25% Deadly Strike
+    * Hit Blinds Target +50
     * +10 to Dexterity
     * +25 to Mana
 

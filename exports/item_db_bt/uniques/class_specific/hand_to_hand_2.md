@@ -4,15 +4,15 @@
 * **Base Item:** Greater Talons
 * **Level Requirement:** 42
 * **Properties:**
-    * +1-3 to Amazon Skill Levels
-    * +1-3 to Javelin and Spear Skills
-    * dmg%: 200-250 (param: )
+    * +1-3 to Assassin Skill Levels
+    * +1-3 to Martial Arts Skills
+    * +200-250% Enhanced Damage
     * +30% Faster Hit Recovery
     * -5-10% to Enemy Lightning Resistance
     * +20 to Strength
     * +20 to Dexterity
     * 5-9% Life stolen per hit
-    * +25-50 to Minimum Damage
+    * Adds 25-50-25-50 Damage
     * +30% Increased Attack Speed
     * -5-10% to Enemy Cold Resistance
     * -5-10% to Enemy Fire Resistance
@@ -21,25 +21,25 @@
 * **Base Item:** Wrist Sword
 * **Level Requirement:** 66
 * **Properties:**
-    * dmg%: 190-240 (param: )
+    * +190-240% Enhanced Damage
     * 10-15% Mana stolen per hit
-    * Fire Resist +40-50%
+    * All Resistances +40-50
     * +30% Faster Hit Recovery
-    * +3-4 to Javelin and Spear Skills
-    * +3-4 to Javelin and Spear Skills
-    * +3 to Dragon Flight
+    * +3-4 to Shadow Disciplines Skills
+    * +3-4 to Martial Arts Skills
+    * +3 to Dragon Flight (Class Dragon Flight only)
 
 ### Shadow Killer (Shadowkiller)
 * **Base Item:** Battle Cestus
 * **Level Requirement:** 78
 * **Properties:**
-    * dmg%: 250-290 (param: )
+    * +250-290% Enhanced Damage
     * -25% Target Defense
     * +30% Increased Attack Speed
     * 6-9% Mana stolen per hit
-    * +4-5 to Javelin and Spear Skills
-    * ethereal: 1 (param: )
-    * indestruct: 1 (param: )
+    * +4-5 to Shadow Disciplines Skills
+    * Ethereal
+    * Indestructible
     * +1 to Berserk
     * Ignore Target's Defense
 
@@ -47,36 +47,36 @@
 * **Base Item:** Feral Claws
 * **Level Requirement:** 67
 * **Properties:**
-    * dmg%: 250-290 (param: )
+    * +250-290% Enhanced Damage
     * +20% Increased Attack Speed
-    * +3 to Javelin and Spear Skills
-    * +236-480 to Minimum Fire Damage
+    * +3 to Martial Arts Skills
+    * Adds 236-480-236-480 Fire Damage
     * -8-10% to Enemy Fire Resistance
-    * +4 to Wake of Fire
-    * +4 to Wake of Inferno
-    * +3 to Death Sentry
+    * +4 to Wake of Fire (Class Wake of Fire Sentry only)
+    * +4 to Wake of Inferno (Class Inferno Sentry only)
+    * +3 to Death Sentry (Class Death Sentry only)
 
 ### Saboteurs Blade (Saboteurs Blade)
 * **Base Item:** Scissors Suwayyah
 * **Level Requirement:** 95
 * **Properties:**
-    * +2 to Javelin and Spear Skills
-    * +1-2 to Amazon Skill Levels
+    * +2 to Traps Skills
+    * +1-2 to Assassin Skill Levels
     * -20-30% to Enemy Lightning Resistance
     * -20-30% to Enemy Fire Resistance
     * +30% Increased Attack Speed
-    * dmg%: 250-300 (param: )
+    * +250-300% Enhanced Damage
     * Level 5 Vigor Aura When Equipped
-    * +3 to Weapon Block
+    * +3 to Weapon Block (Class Weapon Block only)
 
 ### Wind God Fist (Wind God Fist)
 * **Base Item:** War Fist
 * **Level Requirement:** 90
 * **Properties:**
-    * +5% Deadly Strike (Based on Character Level)
+    * 5% Deadly Strike (Based on Character Level)
     * +40-50 to Hurricane
-    * dmg%: 290-355 (param: )
-    * indestruct: 1 (param: )
+    * +290-355% Enhanced Damage
+    * Indestructible
     * +20% Dexterity
     * +20% Strength
     * +35-50% Faster Hit Recovery

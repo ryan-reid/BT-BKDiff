@@ -20,11 +20,11 @@
 * **Set:** Nadin's Winning Strategy
 * **Base Item:** Ring
 * **Properties:**
-    * +0-6 to Amazon Skill Levels
+    * +1 to Original Class Skill Levels
     * 5% Mana stolen per hit
     * 5% Life stolen per hit
     * +3 Life after each Kill
-    * +5 to Strength
+    * +5 to all Attributes
 
 ### Hope Caster (Hope Caster)
 * **Set:** Sanctuary's Blessing Caster
@@ -72,7 +72,7 @@
 * **Set:** The Ascension
 * **Base Item:** Ring
 * **Properties:**
-    * Fire Resist +10-20%
+    * All Resistances +10-20
     * +1-10% Strength
     * +1-10% Dexterity
 

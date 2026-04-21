@@ -5,18 +5,18 @@
 * **Base Item:** Bill
 * **Properties:**
     * +330 to Attack Rating
-    * Repairs  durability per second
-    * 10% Chance to cast Level 14 Nova on striking
+    * Repairs 1 durability in  seconds
+    * 10-14% Chance to cast level 10-14 Nova on striking
     * +40% Increased Attack Speed
-    * dmg%: 200 (param: )
-    * +1-300 to Minimum Lightning Damage
+    * +200% Enhanced Damage
+    * Adds 1-300-1-300 Lightning Damage
 
 ### Astral Bond (Astral Bond)
 * **Set:** Sanctuary's Blessing Caster
 * **Base Item:** Thresher
 * **Properties:**
     * +3-4 to All Skills
-    * Requirements -100%
+    * Requirements --100%
     * +65-75% Faster Cast Rate
     * Poison Length Reduced by 100%
     * Level 15-20 Meditation Aura When Equipped
@@ -31,8 +31,8 @@
     * +3-4 to All Skills
     * +50% Increased Attack Speed
     * +25-35% Faster Hit Recovery
-    * Physical Damage Received Reduced by 3-10%
-    * dmg%: 220-280 (param: )
+    * Damage Reduced by 3-10%
+    * +220-280% Enhanced Damage
     * Level 10-15 Concentration Aura When Equipped
     * Increase Maximum Life 5-20%
-    * 22% Chance to cast Level 20 Amplify Damage on striking
+    * 22-20% Chance to cast level 22-20 Amplify Damage on attack

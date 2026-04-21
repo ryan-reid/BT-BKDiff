@@ -45,10 +45,10 @@
 * **Set:** Aldur's Watchtower
 * **Base Item:** Battle Boots
 * **Properties:**
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * Regenerate Mana 10%
     * +50 to Life
-    * +10% Damage Taken Goes To Mana
+    * 10% Damage Taken Goes To Mana
     * +40% Faster Run/Walk
     * Replenish Life +10
     * Fire Resist +40-50%
@@ -82,7 +82,7 @@
     * +30% Faster Run/Walk
     * 25% Better Chance of Getting Magic Items
     * +20 to Dexterity
-    * +1-450 to Minimum Lightning Damage
+    * Adds 1-450-1-450 Lightning Damage
 
 ### Sander's Riprap (McAuley's Riprap)
 * **Set:** McAuley's Folly
@@ -101,8 +101,8 @@
     * +30-40% Faster Run/Walk
     * Magic Resist +30-55%
     * +1 to All Skills
-    * -5-8% to Enemy Magic Resistance
-    * 25% Chance to cast Level 55 Blessed Hammer on striking
+    * -5-8% to Enemy Magic  Resistance
+    * 25-55% Chance to cast level 25-55 Blessed Hammer on striking
 
 ### Natalya's Footprints (Natalya's Footprints)
 * **Set:** Natalya's Vengeance
@@ -110,21 +110,21 @@
 * **Properties:**
     * +40% Faster Run/Walk
     * +35% Faster Hit Recovery
-    * +10-20 to Strength
-    * Fire Resist +10-20%
+    * +10-20 to all Attributes
+    * All Resistances +10-20
     * -3-5% to Enemy Poison Resistance
     * +5% to Poison Skill Damage
-    * +7 to Venom
+    * +7 to Venom (Class venom only)
 
 ### Aldur's Momentum (Aldur's Momentum)
 * **Set:** Aldur's Beacon
 * **Base Item:** Battle Boots
 * **Properties:**
     * +50% Faster Run/Walk
-    * +1 to Amazon Skill Levels
-    * dmg%: 25-50 (param: )
+    * +1 to Druid Skill Levels
+    * +25-50% Enhanced Damage
     * Increase Maximum Life 5%
-    * Fire Resist +10-20%
+    * All Resistances +10-20
     * Increase Maximum Mana 5%
 
 ### Immortal King's Statue (Immortal King's Statue)
@@ -133,7 +133,7 @@
 * **Properties:**
     * +40% Faster Run/Walk
     * +1-3% to Maximum Fire Resist
-    * Fire Resist +10-20%
+    * All Resistances +10-20
     * Magic Resist +25%
     * Damage Reduced by 10-15%
     * +40% Faster Hit Recovery

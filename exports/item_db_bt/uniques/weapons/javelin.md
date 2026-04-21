@@ -4,44 +4,44 @@
 * **Base Item:** Winged Harpoon
 * **Level Requirement:** 70
 * **Properties:**
-    * dmg%: 250-350 (param: )
+    * +250-350% Enhanced Damage
     * Replenishes quantity
-    * +300 to Minimum Poison Damage
+    * Adds 300-300 Poison Damage Over 300 Seconds
     * 11-15% Life stolen per hit
-    * +3 to Plague Javelin
-    * +3 to Poison Javelin
+    * +3 to Plague Javelin (Class Plague Javelin only)
+    * +3 to Poison Javelin (Class Poison Javelin only)
     * -20-25% to Enemy Poison Resistance
     * +2-3 to Poison Skills
     * +30% Increased Attack Speed
-    * item_levelreq: 10 (param: )
+    * Required Level: 10
 
 ### Demon's Arch (Demon's Arch)
 * **Base Item:** Balrog Spear
 * **Level Requirement:** 68
 * **Properties:**
-    * dmg%: 200-230 (param: )
-    * +300-420 to Minimum Fire Damage
+    * +200-230% Enhanced Damage
+    * Adds 300-420-300-420 Fire Damage
     * +9-12 Life after each Kill
     * Replenishes quantity
     * +30% Increased Attack Speed
-    * +69-420 to Minimum Lightning Damage
-    * +300-420 to Minimum Cold Damage
+    * Adds 69-420-69-420 Lightning Damage
+    * Adds 300-420-300-420 Cold Damage
     * -8-15% to Enemy Fire Resistance
     * -8-15% to Enemy Lightning Resistance
     * -8-15% to Enemy Cold Resistance
-    * Requirements -20%
+    * Requirements --20%
 
 ### Wraith Flight (Wraithflight)
 * **Base Item:** Ghost Glaive
 * **Level Requirement:** 76
 * **Properties:**
-    * dmg%: 150-250 (param: )
+    * +150-250% Enhanced Damage
     * Replenishes quantity
     * 8-12% Life stolen per hit
     * +15 to Mana after each Kill
-    * ethereal: 1 (param: )
+    * Ethereal
     * +35% Increased Attack Speed
-    * +10% Chance of Crushing Blow
+    * 10% Chance of Crushing Blow
     * Slows Target by 15%
 
 ### Skorn (Skorn)
@@ -50,6 +50,6 @@
 * **Properties:**
     * +8-50% Strength
     * +80% Increased Attack Speed
-    * dmg%: 250-300 (param: )
+    * +250-300% Enhanced Damage
     * 5% Life stolen per hit
-    * +3 to Double Throw
+    * +3 to Double Throw (Class 140 only)

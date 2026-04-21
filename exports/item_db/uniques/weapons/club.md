@@ -8,15 +8,15 @@
     * Fire Resist +20%
     * +20% Increased Attack Speed
     * +20 to Vitality
-    * +100 to Minimum Fire Damage
-    * dmg%: 190 (param: )
+    * Adds 100-100 Fire Damage
+    * +190% Enhanced Damage
 
 ### Stoutnail (Stoutnail)
 * **Base Item:** Spiked Club
 * **Level Requirement:** 5
 * **Properties:**
     * Attacker Takes Damage of 50
-    * dmg%: 150 (param: )
+    * +150% Enhanced Damage
     * +20 to Vitality
     * Magic Damage Reduced by 7
     * Damage Reduced by 7
@@ -29,8 +29,8 @@
 * **Properties:**
     * +1 to All Skills
     * +200% Damage to Demons
-    * dmg-min: 30 (param: )
-    * dmg%: 195 (param: )
+    * +30 to Minimum Damage
+    * +195% Enhanced Damage
     * 20-25% Bonus to Attack Rating
     * +15 Life after each Kill
     * +20% Increased Attack Speed
@@ -39,26 +39,26 @@
 * **Base Item:** Barbed Club
 * **Level Requirement:** 38
 * **Properties:**
-    * +25% Chance of Open Wounds
+    * 25% Chance of Open Wounds
     * Prevent Monster Heal
-    * +20% Chance of Crushing Blow
-    * +20% Deadly Strike
-    * +35-50 to Minimum Damage
-    * dmg%: 130-200 (param: )
-    * +1 to Amazon Skill Levels
-    * +2 to Javelin and Spear Skills
-    * maxdurability: 20 (param: )
+    * 20% Chance of Crushing Blow
+    * 20% Deadly Strike
+    * Adds 35-50-35-50 Damage
+    * +130-200% Enhanced Damage
+    * +1 to Druid Skill Levels
+    * +2 to Shape Shifting Skills
+    * Durability: 20 of 20
     * +20% Increased Attack Speed
 
 ### Demon Limb (Demonlimb)
 * **Base Item:** Tyrant Club
 * **Level Requirement:** 63
 * **Properties:**
-    * dmg%: 180-230 (param: )
-    * +222-333 to Minimum Fire Damage
+    * +180-230% Enhanced Damage
+    * Adds 222-333-222-333 Fire Damage
     * 7-13% Life stolen per hit
     * +23 to Enchant
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * +123% Damage to Demons
     * Fire Resist +15-20%
 
@@ -66,10 +66,10 @@
 * **Base Item:** Truncheon
 * **Level Requirement:** 68
 * **Properties:**
-    * dmg%: 270-330 (param: )
-    * Freezes target
+    * +270-330% Enhanced Damage
+    * Freezes Target +2-4
     * +25% Increased Attack Speed
     * +16 to Blizzard
     * 150-180% Bonus to Attack Rating
-    * Cold Absorb +5-15%
-    * +205-455 to Minimum Cold Damage
+    * +5-15 Cold Absorb
+    * Adds 205-455-205-455 Cold Damage

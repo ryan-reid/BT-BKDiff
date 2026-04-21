@@ -15,11 +15,11 @@
 * **Set:** Aldur's Beacon
 * **Base Item:** Hunter's Guise
 * **Properties:**
-    * +2 to Amazon Skill Levels
-    * dmg%: 45-90 (param: )
+    * +2 to Druid Skill Levels
+    * +45-90% Enhanced Damage
     * +500 Defense
-    * Fire Resist +15-25%
-    * +7 to Cyclone Armor
+    * All Resistances +15-25
+    * +7 to Cyclone Armor (Class cyclone armor only)
     * +5-10% to Fire Skill Damage
     * -3-5% to Enemy Fire Resistance
     * +5-10% to Cold Skill Damage

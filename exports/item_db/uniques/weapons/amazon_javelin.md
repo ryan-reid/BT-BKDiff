@@ -6,25 +6,25 @@
 * **Properties:**
     * +2 to Amazon Skill Levels
     * +2 to Javelin and Spear Skills
-    * dmg%: 150-200 (param: )
+    * +150-200% Enhanced Damage
     * +30% Faster Run/Walk
     * Replenishes quantity
     * +20 to Strength
     * +20 to Dexterity
     * 5-9% Life stolen per hit
-    * +25-50 to Minimum Damage
+    * Adds 25-50-25-50 Damage
     * Increased Stack Size
 
 ### Thunderstroke (Thunderstroke)
 * **Base Item:** Matriarchal Javelin
 * **Level Requirement:** 69
 * **Properties:**
-    * dmg%: 150-200 (param: )
-    * +1-511 to Minimum Lightning Damage
-    * 20% Chance to cast Level 14 Lightning on striking
+    * +150-200% Enhanced Damage
+    * Adds 1-511-1-511 Lightning Damage
+    * 20-14% Chance to cast level 20-14 Lightning on striking
     * +15% Increased Attack Speed
     * -15% to Enemy Lightning Resistance
-    * +3 to Lightning Bolt
+    * +3 to Lightning Bolt (Class Lightning Bolt only)
     * +2-4 to Javelin and Spear Skills
 
 ### Calamity (Calamity)

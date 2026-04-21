@@ -4,15 +4,15 @@
 * **Base Item:** Gilded Shield
 * **Level Requirement:** 42
 * **Properties:**
-    * +2 to Amazon Skill Levels
-    * +2 to Javelin and Spear Skills
+    * +2 to Paladin Skill Levels
+    * +2 to Combat Skills
     * +150-200% Enhanced Defense
     * +30% Faster Block Rate
     * +30% Faster Block Rate
     * +20 to Strength
     * +20 to Vitality
     * 20% Bonus to Attack Rating
-    * Fire Resist +50%
+    * All Resistances +50
 
 ### Alma Negra (Alma Negra)
 * **Base Item:** Sacred Rondache
@@ -20,20 +20,20 @@
 * **Properties:**
     * +180-210% Enhanced Defense
     * +30% Faster Block Rate
-    * +2-3 to Amazon Skill Levels
+    * +2-3 to Paladin Skill Levels
     * +20% Faster Block Rate
     * Magic Damage Reduced by 7-13
     * 75-150% Bonus to Attack Rating
-    * dmg%: 180-300 (param: )
+    * +180-300% Enhanced Damage
     * Level 1-3 Salvation Aura When Equipped
-    * Freezes target
+    * Freezes Target +1
 
 ### Dragonscale (Dragonscale)
 * **Base Item:** Zakarum Shield
 * **Level Requirement:** 80
 * **Properties:**
     * +170-200% Enhanced Defense
-    * Fire Absorb +10-20%
+    * +10-20 Fire Absorb
     * +5% to Maximum Fire Resist
     * +15-25 to Strength
     * Level 15-20 Holy Fire Aura When Equipped
@@ -48,16 +48,16 @@
 * **Level Requirement:** 90
 * **Properties:**
     * Level 15-20 Holy Freeze Aura When Equipped
-    * 85% Chance to cast Level 55 Nova on striking
-    * 25% Chance to cast Level 50 Enchant when you Kill an Enemy
+    * 85-55% Chance to cast level 85-55 Nova on striking
+    * 25-50% Chance to cast level 25-50 Enchant when you Kill an Enemy
     * +20% Faster Block Rate
     * +20% Faster Block Rate
-    * +2 to Amazon Skill Levels
-    * +4-5 to Vengeance
-    * Fire Resist +25-45%
-    * +300 to Minimum Fire Damage
-    * +300 to Minimum Cold Damage
-    * +300 to Minimum Lightning Damage
+    * +2 to Paladin Skill Levels
+    * +4-5 to Vengeance (Class Vengeance only)
+    * All Resistances +25-45
+    * Adds 300-300 Fire Damage
+    * Adds 300-300 Cold Damage
+    * Adds 300-300 Lightning Damage
 
 ### Honor (Honor)
 * **Base Item:** Rondache

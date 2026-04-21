@@ -4,9 +4,9 @@
 * **Base Item:** Sash
 * **Level Requirement:** 7
 * **Properties:**
-    * +5 to Strength
+    * +5 to all Attributes
     * Regenerate Mana 50%
-    * Fire Resist +20%
+    * All Resistances +20
     * +30% Faster Hit Recovery
     * +30-50 Defense
 
@@ -14,7 +14,7 @@
 * **Base Item:** Light Belt
 * **Level Requirement:** 12
 * **Properties:**
-    * +40 to Minimum Poison Damage
+    * Adds 40-40 Poison Damage Over 40 Seconds
     * Poison Resist +25%
     * +25 to Life
     * +20-30% Enhanced Defense
@@ -27,8 +27,8 @@
 * **Base Item:** Belt
 * **Level Requirement:** 20
 * **Properties:**
-    * Fire Resist +10-15%
-    * +50% Damage Taken Goes To Mana
+    * All Resistances +10-15
+    * 50% Damage Taken Goes To Mana
     * +100 to Mana
     * Damage Reduced by 6
     * +30-50% Enhanced Defense
@@ -54,18 +54,18 @@
     * +10 to Dexterity
     * +80-100% Enhanced Defense
     * +30% Faster Hit Recovery
-    * Requirements -10%
+    * Requirements --10%
 
 ### String of Ears (String of Ears)
 * **Base Item:** Demonhide Sash
 * **Level Requirement:** 29
 * **Properties:**
     * Magic Damage Reduced by 10-15
-    * Physical Damage Received Reduced by 10-15%
+    * Damage Reduced by 10-15%
     * 6-8% Life stolen per hit
     * +150-180% Enhanced Defense
     * +100 Defense
-    * maxdurability: 10 (param: )
+    * Durability: 10 of 10
 
 ### Razortail (Razortail)
 * **Base Item:** Sharkskin Belt
@@ -73,11 +73,11 @@
 * **Properties:**
     * Attacker Takes Damage of  (Based on Character Level)
     * +15 to Dexterity
-    * +33% Piercing Attack
+    * Piercing Attack
     * +50 Defense
     * +120-150% Enhanced Defense
-    * dmg-max: 20 (param: )
-    * dmg-min: 20 (param: )
+    * +20 to Maximum Damage
+    * +20 to Minimum Damage
 
 ### Gloom's Trap (Gloomstrap)
 * **Base Item:** Mesh Belt
@@ -95,8 +95,8 @@
 * **Base Item:** Battle Belt
 * **Level Requirement:** 42
 * **Properties:**
-    * 50% Chance to cast Level 40 Blizzard when struck
-    * +15 Cold Absorb
+    * 50-40% Chance to cast level 50-40 Blizzard when struck
+    * Cold Absorb 15%
     * +15% to Maximum Cold Resist
     * +2 to Cold Skills
     * +130-170% Enhanced Defense
@@ -105,10 +105,10 @@
 * **Base Item:** War Belt
 * **Level Requirement:** 47
 * **Properties:**
-    * 20% Chance to cast Level 25 Fist of the Heavens when struck
-    * +1-50 to Minimum Lightning Damage
+    * 20-25% Chance to cast level 20-25 Fist of the Heavens when struck
+    * Adds 1-50-1-50 Lightning Damage
     * +10% to Maximum Lightning Resist
-    * +20 Lightning Absorb
+    * Lightning Absorb 20%
     * +160-200% Enhanced Defense
     * +20 to Vitality
     * +20 to Strength
@@ -143,9 +143,9 @@
     * +90-140% Enhanced Defense
     * +50-80 to Life
     * +24% Faster Hit Recovery
-    * Physical Damage Received Reduced by 10-15%
+    * Damage Reduced by 10-15%
     * Replenish Life +10-13
-    * dmg%: 30-40 (param: )
+    * +30-40% Enhanced Damage
 
 ### Gheed's Wager (Gheed's Wager)
 * **Base Item:** Troll Belt
@@ -156,18 +156,18 @@
     * +10-20% Faster Run/Walk
     * +90-150% Enhanced Defense
     * -4-10% to Enemy Magic Resistance
-    * Fire Resist +5-15%
+    * All Resistances +5-15
     * 50-150% Extra Gold from Monsters
 
 ### Giant's Protection (Giant's Protection)
 * **Base Item:** Colossus Girdle
 * **Level Requirement:** 93
 * **Properties:**
-    * +0-7 to Amazon Skill Levels
+    * +1 to Random Class Skill Levels
     * Damage Reduced by 25-35
     * Magic Damage Reduced by 25-35
     * +5 to Cyclone Armor
     * +100-150 to Life
     * +10-15 to Strength
-    * -15% Faster Run/Walk
+    * +-15% Faster Run/Walk
     * +80-100% Enhanced Defense

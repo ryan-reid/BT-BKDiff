@@ -11,7 +11,7 @@
     * +30-40% Enhanced Defense
     * +20% Faster Block Rate
     * +40% Faster Block Rate
-    * maxdurability: 8-12 (param: )
+    * Durability: 8-12 of 8-12
     * Damage Reduced by 6-8
     * Replenish Life +15
 
@@ -19,13 +19,13 @@
 * **Base Item:** Small Shield
 * **Level Requirement:** 9
 * **Properties:**
-    * Hit Blinds Target
+    * Hit Blinds Target +1
     * +20 to Dexterity
     * +30 to Mana
     * +30 to Life
     * +40-50% Enhanced Defense
     * +30% Faster Block Rate
-    * maxdurability: 10-15 (param: )
+    * Durability: 10-15 of 10-15
     * Damage Reduced by 15%
     * + Defense (Based on Character Level)
 
@@ -36,11 +36,11 @@
     * Magic Damage Reduced by 7
     * Level 3 Resist Lightning Aura When Equipped
     * +100 Defense
-    * +1-150 to Minimum Lightning Damage
+    * Adds 1-150-1-150 Lightning Damage
     * +50-60% Enhanced Defense
     * +30% Faster Block Rate
     * Attacker Takes Damage of 100
-    * maxdurability: 10-15 (param: )
+    * Durability: 10-15 of 10-15
     * Increase Maximum Life 5%
 
 ### Wall of the Eyeless (Wall of the Eyeless)
@@ -62,8 +62,8 @@
 * **Properties:**
     * Attacker Takes Damage of 50
     * +30% Faster Block Rate
-    * +50% Chance of Open Wounds
-    * +5% Chance of Crushing Blow
+    * 50% Chance of Open Wounds
+    * 5% Chance of Crushing Blow
     * +30-60% Enhanced Defense
     * Damage Reduced by 12
     * +10 Defense
@@ -79,9 +79,9 @@
     * Damage Reduced by 7-9
     * +60-100% Enhanced Defense
     * +20% Faster Block Rate
-    * Fire Resist +25-35%
+    * All Resistances +25-35
     * +50-75 Defense
-    * maxdurability: 15-20 (param: )
+    * Durability: 15-20 of 15-20
     * Increase Maximum Life 3-5%
 
 ### Bverrit Keep (Bverrit Keep)
@@ -94,9 +94,9 @@
     * Magic Damage Reduced by 10
     * +80-120% Enhanced Defense
     * +30% Faster Block Rate
-    * maxdurability: 80-100 (param: )
+    * Durability: 80-100 of 80-100
     * Damage Reduced by 10
-    * Requirements -20%
+    * Requirements --20%
 
 ### The Ward (The Ward)
 * **Base Item:** Gothic Shield
@@ -104,11 +104,11 @@
 * **Properties:**
     * +150 Defense
     * Magic Damage Reduced by 7-14
-    * +10 to Strength
+    * +10 to all Attributes
     * +50% Faster Block Rate
     * +100% Enhanced Defense
-    * Fire Resist +30-50%
-    * Requirements -20%
+    * All Resistances +30-50
+    * Requirements --20%
 
 ### Visceratuant (Visceratuant)
 * **Base Item:** Defender
@@ -128,7 +128,7 @@
 * **Base Item:** Round Shield
 * **Level Requirement:** 31
 * **Properties:**
-    * Fire Resist +40-55%
+    * All Resistances +40-55
     * +55% Faster Block Rate
     * +60% Faster Block Rate
     * +180-220% Enhanced Defense
@@ -139,15 +139,15 @@
 * **Base Item:** Scutum
 * **Level Requirement:** 35
 * **Properties:**
-    * +1-501 to Minimum Lightning Damage
+    * Adds 1-501-1-501 Lightning Damage
     * +20% Faster Block Rate
     * Cannot Be Frozen
     * Lightning Resist +50%
     * 150% Bonus to Attack Rating
     * +160-220% Enhanced Defense
     * +10% Faster Block Rate
-    * 75% Chance to cast Level 30 Blizzard when struck
-    * 50% Chance to cast Level 40 Twister when struck
+    * 75-30% Chance to cast level 75-30 Blizzard when struck
+    * 50-40% Chance to cast level 50-40 Twister when struck
     * +60% Faster Run/Walk
     * +25 to Vitality
 
@@ -155,15 +155,15 @@
 * **Base Item:** Dragon Shield
 * **Level Requirement:** 38
 * **Properties:**
-    * +200-250 to Minimum Cold Damage
-    * +200-250 to Minimum Fire Damage
-    * +1-301 to Minimum Lightning Damage
-    * Fire Resist +35-45%
+    * Adds 200-250-200-250 Cold Damage
+    * Adds 200-250-200-250 Fire Damage
+    * Adds 1-301-1-301 Lightning Damage
+    * All Resistances +35-45
     * +140-200% Enhanced Defense
-    * 50% Chance to cast Level 50 Frost Nova when struck
-    * 50% Chance to cast Level 40 Nova when struck
-    * 33% Chance to cast Level 63 Hydra when struck
-    * maxdurability: 40 (param: )
+    * 50% Chance to cast level 50 Frost Nova when struck
+    * 50-40% Chance to cast level 50-40 Nova when struck
+    * 33-63% Chance to cast level 33-63 Hydra when struck
+    * Durability: 40 of 40
     * +55% Faster Hit Recovery
     * Damage Reduced by 12-16
 
@@ -175,23 +175,23 @@
     * Magic Damage Reduced by 14-18
     * Replenish Life +15
     * +180-240% Enhanced Defense
-    * maxdurability: 100 (param: )
+    * Durability: 100 of 100
     * +30% Faster Block Rate
-    * Fire Resist +20-30%
+    * All Resistances +20-30
     * +20% Faster Block Rate
-    * Requirements -50%
+    * Requirements --50%
 
 ### Radament's Sphere (Radimant's Sphere)
 * **Base Item:** Ancient Shield
 * **Level Requirement:** 50
 * **Properties:**
-    * 25% Chance to cast Level 30 Poison Nova when you Kill an Enemy
+    * 25-30% Chance to cast level 25-30 Poison Nova when you Kill an Enemy
     * Poison Resist +75%
     * +160-200% Enhanced Defense
     * +20% Faster Block Rate
     * +20% Faster Block Rate
     * +6 to Poison Nova
-    * maxdurability: 20 (param: )
+    * Durability: 20 of 20
 
 ### Lidless Wall (Lidless Wall)
 * **Base Item:** Grim Shield
@@ -210,10 +210,10 @@
 * **Properties:**
     * +75-100 to Life
     * +40% Faster Hit Recovery
-    * +15% Damage Taken Goes To Mana
+    * 15% Damage Taken Goes To Mana
     * Attacker Takes Damage of 127
     * +70-120% Enhanced Defense
-    * +20% Deadly Strike
+    * 20% Deadly Strike
     * +30% Faster Block Rate
     * +25% Faster Block Rate
     * +50 to Vitality
@@ -225,9 +225,9 @@
 * **Properties:**
     * + to Dexterity (Based on Character Level)
     * +160-200% Enhanced Defense
-    * + Absorbs Cold Damage (Based on Character Level)
+    * Absorbs Cold Damage (Based on Character Level)
     * +1 to Weaken
-    * maxdurability: 45 (param: )
+    * Durability: 45 of 45
     * + to Life (Based on Character Level)
     * +50% Faster Block Rate
     * Cannot Be Frozen
@@ -240,13 +240,13 @@
     * + Defense (Based on Character Level)
     * Damage Reduced by 35%
     * +30 to Strength
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * +40% Faster Block Rate
     * Lightning Resist +40-60%
     * +30% Faster Block Rate
     * Cold Resist +60%
     * Attacker Takes Damage of 100
-    * Requirements -20%
+    * Requirements --20%
 
 ### Medusa's Gaze (Medusa's Gaze)
 * **Base Item:** Aegis
@@ -254,28 +254,28 @@
 * **Properties:**
     * +150-180% Enhanced Defense
     * Slows Target by 40%
-    * 33% Chance to cast Level 20 Decrepify when struck
+    * 33-20% Chance to cast level 33-20 Decrepify when struck
     * 5-9% Life stolen per hit
-    * 100% Chance to cast Level 44 Nova when you Die
+    * 100-44% Chance to cast level 100-44 Nova when you Die
     * Cold Resist +40-80%
-    * Requirements -30%
+    * Requirements --30%
     * Damage Reduced by 20-30%
     * +1 to All Skills
-    * +0-6 to Amazon Skill Levels
-    * 33% Chance to cast Level 40 Frost Nova when struck
+    * +2 to Original Class Skill Levels
+    * 33-40% Chance to cast level 33-40 Frost Nova when struck
 
 ### Spirit Ward (Spirit Ward)
 * **Base Item:** Ward
 * **Level Requirement:** 68
 * **Properties:**
     * +130-180% Enhanced Defense
-    * +6-11 Cold Absorb
-    * Fire Resist +30-40%
+    * Cold Absorb 6-11%
+    * All Resistances +30-40
     * +20-30% Faster Block Rate
     * +25% Faster Block Rate
-    * 35% Chance to cast Level 8 Fade when struck
-    * Requirements -30%
-    * +0-6 to Amazon Skill Levels
+    * 35-8% Chance to cast level 35-8 Fade when struck
+    * Requirements --30%
+    * +2 to Original Class Skill Levels
     * +25% Faster Cast Rate
 
 ### Spike Thorn (Spike Thorn)
@@ -284,10 +284,10 @@
 * **Properties:**
     * +120-150% Enhanced Defense
     * Attacker Takes Damage of  (Based on Character Level)
-    * maxdurability: 250 (param: )
+    * Durability: 250 of 250
     * +30% Faster Hit Recovery
     * Damage Reduced by 15-20%
-    * Requirements -30%
+    * Requirements --30%
     * +25% Faster Block Rate
     * +30% Faster Block Rate
     * Damage +40-65
@@ -299,9 +299,9 @@
 * **Properties:**
     * +320-420 Defense
     * +300-350 Defense vs. Missile
-    * Fire Resist +15-25%
+    * All Resistances +15-25
     * +40% Increased Attack Speed
     * +10-15 Life after each Kill
     * Cannot Be Frozen
-    * Hit Blinds Target
+    * Hit Blinds Target +1
     * +50% Faster Run/Walk

@@ -4,7 +4,7 @@
 * **Set:** Horazon's Splendor
 * **Base Item:** Blasphemous Grimoire
 * **Properties:**
-    * +1-2 to Amazon Skill Levels
+    * +1-2 to Warlock Skill Levels
     * +30% Faster Hit Recovery
     * +20% Faster Block Rate
     * +20-30 to Vitality
@@ -16,7 +16,7 @@
 * **Set:** Horazon's Heirloom
 * **Base Item:** Blasphemous Grimoire
 * **Properties:**
-    * +1-3 to Amazon Skill Levels
+    * +1-3 to Warlock Skill Levels
     * +30% Faster Hit Recovery
     * +50% Faster Block Rate
     * +25-50 to Vitality

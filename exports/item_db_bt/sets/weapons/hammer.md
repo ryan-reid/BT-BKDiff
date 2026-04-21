@@ -4,11 +4,11 @@
 * **Set:** Immortal King
 * **Base Item:** Ogre Maul
 * **Properties:**
-    * Repairs  durability per second
+    * Repairs 1 durability in  seconds
     * +40% Increased Attack Speed
-    * dmg%: 250-300 (param: )
+    * +250-300% Enhanced Damage
     * +250% Damage to Undead
-    * +35-40% Chance of Crushing Blow
+    * 35-40% Chance of Crushing Blow
     * +250% Damage to Demons
-    * Requirements -40%
-    * +2 to Javelin and Spear Skills
+    * Requirements --40%
+    * +2 to Combat Masteries Skills

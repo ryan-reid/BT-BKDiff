@@ -14,7 +14,7 @@
 * **Base Item:** Circlet
 * **Properties:**
     * +75 to Mana
-    * +0-6 to Amazon Skill Levels
+    * +1 to Original Class Skill Levels
     * +15 to Strength
     * +30% Faster Cast Rate
 
@@ -28,6 +28,6 @@
     * +20-25% Faster Cast Rate
     * +20-25% Increased Attack Speed
     * -5-10% to Enemy Lightning Resistance
-    * +5 to Dodge
-    * +5 to Avoid
-    * +5 to Evade
+    * +5 to Dodge (Class Dodge only)
+    * +5 to Avoid (Class Avoid only)
+    * +5 to Evade (Class Evade only)

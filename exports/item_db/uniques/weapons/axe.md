@@ -5,32 +5,32 @@
 * **Level Requirement:** 5
 * **Properties:**
     * +15 to Strength
-    * +50% Chance of Open Wounds
-    * +20% Chance of Crushing Blow
-    * dmg%: 180-200 (param: )
+    * 50% Chance of Open Wounds
+    * 20% Chance of Crushing Blow
+    * +180-200% Enhanced Damage
     * +25% Increased Attack Speed
-    * +10% Deadly Strike
+    * 10% Deadly Strike
 
 ### Deathspade (Deathspade)
 * **Base Item:** Axe
 * **Level Requirement:** 9
 * **Properties:**
-    * Hit Blinds Target
-    * dmg-min: 8 (param: )
+    * Hit Blinds Target +1
+    * +8 to Minimum Damage
     * 15% Bonus to Attack Rating
     * +4 to Mana after each Kill
-    * dmg%: 250 (param: )
+    * +250% Enhanced Damage
     * +40% Increased Attack Speed
-    * +40% Deadly Strike
+    * 40% Deadly Strike
 
 ### Bladebone (Bladebone)
 * **Base Item:** Double Axe
 * **Level Requirement:** 15
 * **Properties:**
-    * dmg%: 150-180 (param: )
+    * +150-180% Enhanced Damage
     * +20% Faster Cast Rate
     * +20% Increased Attack Speed
-    * +10% Chance of Open Wounds
+    * 10% Chance of Open Wounds
     * +3 to Blade Shield
     * +3 to Blade Fury
 
@@ -38,12 +38,12 @@
 * **Base Item:** Military Pick
 * **Level Requirement:** 21
 * **Properties:**
-    * Hit Blinds Target
+    * Hit Blinds Target +2
     * Regenerate Mana 20%
-    * +15% Chance of Crushing Blow
-    * +50% Deadly Strike
+    * 15% Chance of Crushing Blow
+    * 50% Deadly Strike
     * +20% Increased Attack Speed
-    * dmg%: 180-200 (param: )
+    * +180-200% Enhanced Damage
 
 ### Rakescar (Rakescar)
 * **Base Item:** War Axe
@@ -53,19 +53,19 @@
     * +20% Faster Hit Recovery
     * +20% Faster Run/Walk
     * Poison Resist +50%
-    * dmg%: 200-250 (param: )
+    * +200-250% Enhanced Damage
     * +30% Increased Attack Speed
 
 ### Axe of Fechmar (Fechmars Axe)
 * **Base Item:** Large Axe
 * **Level Requirement:** 8
 * **Properties:**
-    * dmg%: 200 (param: )
+    * +200% Enhanced Damage
     * +1 to Frozen Armor
     * Cold Resist +50%
     * +50% Increased Attack Speed
     * +50% Faster Hit Recovery
-    * dmg-max: 20 (param: )
+    * +20 to Maximum Damage
 
 ### Goreshovel (Goreshovel)
 * **Base Item:** Broad Axe
@@ -73,29 +73,29 @@
 * **Properties:**
     * +30% Increased Attack Speed
     * +25 to Strength
-    * +60% Chance of Open Wounds
-    * dmg%: 180 (param: )
-    * dmg-max: 20 (param: )
-    * dmg-min: 20 (param: )
+    * 60% Chance of Open Wounds
+    * +180% Enhanced Damage
+    * +20 to Maximum Damage
+    * +20 to Minimum Damage
 
 ### The Chieftain (The Chieftan)
 * **Base Item:** Battle Axe
 * **Level Requirement:** 19
 * **Properties:**
-    * dmg%: 200 (param: )
-    * Fire Resist +30%
+    * +200% Enhanced Damage
+    * All Resistances +30
     * +6 to Mana after each Kill
     * +40% Increased Attack Speed
-    * +1-250 to Minimum Lightning Damage
+    * Adds 1-250-1-250 Lightning Damage
 
 ### Brainhew (Brainhew)
 * **Base Item:** Great Axe
 * **Level Requirement:** 25
 * **Properties:**
-    * dmg-min: 30 (param: )
+    * +30 to Minimum Damage
     * +25 to Mana
     * 10-13% Mana stolen per hit
-    * dmg%: 180 (param: )
+    * +180% Enhanced Damage
     * +50% Increased Attack Speed
 
 ### Humongous (The Humongous)
@@ -103,35 +103,35 @@
 * **Level Requirement:** 29
 * **Properties:**
     * +20-30 to Strength
-    * dmg-min: 40 (param: )
-    * dmg-max: 40 (param: )
-    * +33% Chance of Crushing Blow
-    * Requirements -50%
-    * dmg%: 200-230 (param: )
+    * +40 to Minimum Damage
+    * +40 to Maximum Damage
+    * 33% Chance of Crushing Blow
+    * Requirements --50%
+    * +200-230% Enhanced Damage
     * +40% Increased Attack Speed
 
 ### Coldkill (Coldkill)
 * **Base Item:** Hatchet
 * **Level Requirement:** 36
 * **Properties:**
-    * +250 to Minimum Cold Damage
+    * Adds 250-250 Cold Damage
     * Cold Resist +15%
     * +15% to Maximum Cold Resist
     * +30% Increased Attack Speed
-    * 25% Chance to cast Level 10 Glacial Spike on striking
-    * 25% Chance to cast Level 40 Frost Nova when struck
-    * dmg%: 200 (param: )
+    * 25-10% Chance to cast level 25-10 Glacial Spike on striking
+    * 25-40% Chance to cast level 25-40 Frost Nova when struck
+    * +200% Enhanced Damage
 
 ### Butcher's Pupil (Butcher's Pupil)
 * **Base Item:** Cleaver
 * **Level Requirement:** 39
 * **Properties:**
-    * +35% Deadly Strike
-    * +25% Chance of Open Wounds
-    * dmg%: 200 (param: )
-    * Repairs  durability per second
+    * 35% Deadly Strike
+    * 25% Chance of Open Wounds
+    * +200% Enhanced Damage
+    * Repairs 1 durability in  seconds
     * +30% Increased Attack Speed
-    * +30-50 to Minimum Damage
+    * Adds 30-50-30-50 Damage
     * +8 to Mana after each Kill
 
 ### Islestrike (Islestrike)
@@ -144,31 +144,31 @@
     * +10 to Vitality
     * +10 to Energy
     * +50 Defense vs. Missile
-    * +25% Chance of Crushing Blow
-    * dmg%: 200 (param: )
+    * 25% Chance of Crushing Blow
+    * +200% Enhanced Damage
     * +40% Increased Attack Speed
 
 ### Pompeii's Wrath (Pompe's Wrath)
 * **Base Item:** Crowbill
 * **Level Requirement:** 45
 * **Properties:**
-    * 35% Chance to cast Level 10 Fissure on striking
+    * 35-10% Chance to cast level 35-10 Fissure on striking
     * Slows Target by 50%
-    * +35-150 to Minimum Fire Damage
+    * Adds 35-150-35-150 Fire Damage
     * -10% to Enemy Fire Resistance
-    * dmg%: 180-190 (param: )
+    * +180-190% Enhanced Damage
     * +30% Increased Attack Speed
 
 ### Guardian Naga (Guardian Naga)
 * **Base Item:** Naga
 * **Level Requirement:** 48
 * **Properties:**
-    * 33% Chance to cast Level 10 Poison Nova on striking
+    * 33-10% Chance to cast level 33-10 Poison Nova on striking
     * 7% Life stolen per hit
     * Poison Resist +30%
-    * dmg%: 180-200 (param: )
-    * +256 to Minimum Poison Damage
-    * dmg-max: 20 (param: )
+    * +180-200% Enhanced Damage
+    * Adds 256-256 Poison Damage Over 256 Seconds
+    * +20 to Maximum Damage
     * +20% Increased Attack Speed
     * -10-20% to Enemy Poison Resistance
 
@@ -179,23 +179,23 @@
     * +50% Increased Attack Speed
     * Replenish Life +20
     * + to Vitality (Based on Character Level)
-    * Fire Resist +25%
-    * Repairs  durability per second
-    * dmg%: 200 (param: )
+    * All Resistances +25
+    * Repairs 1 durability in  seconds
+    * +200% Enhanced Damage
     * +150 Defense vs. Melee
     * +30-40% Faster Hit Recovery
-    * dmg-min: 40 (param: )
-    * dmg-max: 40 (param: )
+    * +40 to Minimum Damage
+    * +40 to Maximum Damage
 
 ### Spellsteel (Spellsteel)
 * **Base Item:** Bearded Axe
 * **Level Requirement:** 39
 * **Properties:**
-    * Requirements -60%
+    * Requirements --60%
     * +100 to Mana
     * Magic Damage Reduced by 12-15
     * +10% Faster Cast Rate
-    * dmg%: 165 (param: )
+    * +165% Enhanced Damage
     * Regenerate Mana 25%
     * +1 to Teleport
     * +3 to Decrepify
@@ -206,37 +206,37 @@
 * **Base Item:** Tabar
 * **Level Requirement:** 41
 * **Properties:**
-    * 45% Chance to cast Level 30 Chain Lightning on striking
-    * 40% Chance to cast Level 30 Nova on striking
-    * +1-200 to Minimum Lightning Damage
+    * 45-30% Chance to cast level 45-30 Chain Lightning on striking
+    * 40-30% Chance to cast level 40-30 Nova on striking
+    * Adds 1-200-1-200 Lightning Damage
     * +30% Increased Attack Speed
-    * maxdurability: 50 (param: )
+    * Durability: 50 of 50
     * +20 to Thunder Storm
-    * 15% Chance to cast Level 10 Lower Resist when struck
+    * 15-10% Chance to cast level 15-10 Lower Resist when struck
 
 ### Boneslayer Blade (Boneslayer Blade)
 * **Base Item:** Gothic Axe
 * **Level Requirement:** 42
 * **Properties:**
-    * Requirements -50%
+    * Requirements --50%
     * +% Damage to Undead (Based on Character Level)
     * +20 to Strength
     * +60% Increased Attack Speed
     * 35% Bonus to Attack Rating
-    * dmg%: 180-220 (param: )
-    * 75% Chance to cast Level 20 Holy Bolt on striking
+    * +180-220% Enhanced Damage
+    * 75-20% Chance to cast level 75-20 Holy Bolt on striking
 
 ### The Minotaur (The Minataur)
 * **Base Item:** Ancient Axe
 * **Level Requirement:** 45
 * **Properties:**
-    * Hit Blinds Target
+    * Hit Blinds Target +2
     * Cannot Be Frozen
     * +15-20 to Strength
     * Slows Target by 50%
-    * +30% Chance of Crushing Blow
-    * +20-30 to Minimum Damage
-    * dmg%: 200-250 (param: )
+    * 30% Chance of Crushing Blow
+    * Adds 20-30-20-30 Damage
+    * +200-250% Enhanced Damage
     * +50% Increased Attack Speed
 
 ### Hellslayer (Hellslayer)
@@ -247,8 +247,8 @@
     * + to Vitality (Based on Character Level)
     * +% Enhanced Maximum Damage (Based on Character Level)
     * +100 to Life
-    * dmg%: 200 (param: )
-    * 50% Chance to cast Level 40 Fire Ball on striking
+    * +200% Enhanced Damage
+    * 50-40% Chance to cast level 50-40 Fire Ball on attack
     * Level 30 Holy Fire Aura When Equipped
     * +30% Increased Attack Speed
 
@@ -257,13 +257,13 @@
 * **Level Requirement:** 70
 * **Properties:**
     * +% Enhanced Maximum Damage (Based on Character Level)
-    * dmg%: 200-300 (param: )
-    * +15-30 to Strength
+    * +200-300% Enhanced Damage
+    * +15-30 to all Attributes
     * Level 8-10 Might Aura When Equipped
-    * +% Deadly Strike (Based on Character Level)
-    * + Absorbs Fire Damage (Based on Character Level)
-    * +200-500 to Minimum Fire Damage
-    * maxdurability: 25 (param: )
+    * % Deadly Strike (Based on Character Level)
+    * Absorbs Fire Damage (Based on Character Level)
+    * Adds 200-500-200-500 Fire Damage
+    * Durability: 25 of 25
     * 100% Bonus to Attack Rating
     * Prevent Monster Heal
 
@@ -271,17 +271,17 @@
 * **Base Item:** Tomahawk
 * **Level Requirement:** 67
 * **Properties:**
-    * dmg%: 175-225 (param: )
+    * +175-225% Enhanced Damage
     * +40% Increased Attack Speed
     * -33% Target Defense
-    * +50% Deadly Strike
-    * +50% Chance of Open Wounds
+    * 50% Deadly Strike
+    * 50% Chance of Open Wounds
 
 ### Rune Master (Runemaster)
 * **Base Item:** Ettin Axe
 * **Level Requirement:** 72
 * **Properties:**
-    * dmg%: 350 (param: )
+    * +350% Enhanced Damage
     * +40% Increased Attack Speed
     * +5% to Maximum Cold Resist
     * Cannot Be Frozen
@@ -291,27 +291,27 @@
 * **Base Item:** Berserker Axe
 * **Level Requirement:** 70
 * **Properties:**
-    * dmg%: 250-330 (param: )
-    * +66% Deadly Strike
+    * +250-330% Enhanced Damage
+    * 66% Deadly Strike
     * -50% Target Defense
     * +40% Increased Attack Speed
     * +6-9 Life after each Kill
-    * +10-15% Chance of Crushing Blow
+    * 10-15% Chance of Crushing Blow
     * Damage +50-100
-    * -10-20% to Enemy Physical Damage Resistance
+    * -10-20% to Enemy Physical Resistance
 
 ### Executioner's Justice (Executioner's Justice)
 * **Base Item:** Glorious Axe
 * **Level Requirement:** 75
 * **Properties:**
-    * dmg%: 280-340 (param: )
-    * +50% Chance of Crushing Blow
+    * +280-340% Enhanced Damage
+    * 50% Chance of Crushing Blow
     * -50% Target Defense
-    * 35% Chance to cast Level 8 Decrepify on striking
+    * 35-8% Chance to cast level 35-8 Decrepify on striking
     * +50% Increased Attack Speed
-    * +50% Deadly Strike
+    * 50% Deadly Strike
     * 4-6% Mana stolen per hit
-    * 60% Chance to cast Level 40 Fist of the Heavens on striking
+    * 60-40% Chance to cast level 60-40 Fist of the Heavens on attack
     * +3 to Zeal
     * Slows Target by 20%
 
@@ -319,25 +319,25 @@
 * **Base Item:** Silver-edged Axe
 * **Level Requirement:** 74
 * **Properties:**
-    * dmg%: 200-240 (param: )
+    * +200-240% Enhanced Damage
     * +25% Increased Attack Speed
-    * +10-12 Fire Absorb
+    * Fire Absorb 10-12%
     * +150-200% Damage to Demons
     * +5-10 Life after each Kill
-    * 5% Chance to cast Level 10 Fade when you Kill an Enemy
-    * ethereal: 1 (param: )
-    * indestruct: 1 (param: )
+    * 5-10% Chance to cast level 5-10 Fade when you Kill an Enemy
+    * Ethereal
+    * Indestructible
     * +150-200% Damage to Undead
 
 ### Cranebeak (Cranebeak)
 * **Base Item:** War Spike
 * **Level Requirement:** 63
 * **Properties:**
-    * dmg%: 240-300 (param: )
+    * +240-300% Enhanced Damage
     * +40% Increased Attack Speed
     * -25% Target Defense
     * 30-65% Better Chance of Getting Magic Items
     * +20 to Raven
     * + to Maximum Damage (Based on Character Level)
-    * dmg-min: 50 (param: )
+    * +50 to Minimum Damage
     * +1 to Lightning Mastery

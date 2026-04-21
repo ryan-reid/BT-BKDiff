@@ -8,7 +8,7 @@
     * +3 to All Skills
     * +65% Faster Block Rate
     * +60% Faster Block Rate
-    * Fire Resist +45%
+    * All Resistances +45
     * Magic Damage Reduced by 20-30
     * +45% Faster Cast Rate
     * +150-200% Enhanced Defense
@@ -17,7 +17,7 @@
 * **Set:** Griswold's Masterwork
 * **Base Item:** Vortex Shield
 * **Properties:**
-    * +3 to Amazon Skill Levels
+    * +3 to Paladin Skill Levels
     * Level 15-18 Holy Freeze Aura When Equipped
     * +300% Enhanced Defense
     * +30% Increased Attack Speed
