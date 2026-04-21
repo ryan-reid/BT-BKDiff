@@ -63,7 +63,7 @@
     * Lightning Resist +33%
     * +2 to Sorceress Skill Levels
     * +50 to Life
-    * Adds 3-32-3-32 Lightning Damage
+    * Adds 3-32 Lightning Damage
     * +42 to Mana
 
 ### Telling of Beads (Telling of Beads)

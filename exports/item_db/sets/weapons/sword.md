@@ -14,7 +14,7 @@
 * **Properties:**
     * +10 to Minimum Damage
     * +20% Increased Attack Speed
-    * Adds 13-15-13-15 Fire Damage
+    * Adds 13-15 Fire Damage
     * +100% Damage to Undead
 
 ### Death's Touch (Death's Touch)
@@ -64,7 +64,7 @@
 * **Base Item:** Colossus Sword
 * **Properties:**
     * All Resistances +10-20
-    * 20-10% Chance to cast level 20-10 Poison Nova on striking
+    * 20% Chance to cast level 10 Poison Nova on striking
     * +20% Increased Attack Speed
     * +20-30 to Strength
     * +200-250% Enhanced Damage

@@ -49,6 +49,22 @@ def get_key_column(filename):
     }
     return mapping.get(filename, 'code')
 
+def escape_latex(s):
+    """Escapes special LaTeX characters for GitHub MathJax."""
+    if not s: return s
+    chars = {
+        '%': r'\%',
+        '$': r'\$',
+        '#': r'\#',
+        '_': r'\_',
+        '{': r'\{',
+        '}': r'\}',
+        '&': r'\&',
+    }
+    for char, escaped in chars.items():
+        s = s.replace(char, escaped)
+    return s
+
 def write_detail_markdown(report, output_path):
     name = report['filename']
     with open(output_path, 'w', encoding='utf-8') as f:
@@ -83,8 +99,10 @@ def write_detail_markdown(report, output_path):
                 for col, vals in report['rows']['modified'][key].items():
                     v_new = vals['bk_new'] if vals['bk_new'] != '' else '*empty*'
                     v_old = vals['bt_old'] if vals['bt_old'] != '' else '*empty*'
-                    # Use LaTeX for coloring
-                    f.write(f"- `{col}`: $\\color{{gray}}{{\\text{{{v_old}}}}}$ (Old) &rarr; $\\color{{blue}}{{\\text{{{v_new}}}}}$ (New)\n")
+                    # Use LaTeX for coloring and escape characters
+                    e_new = escape_latex(str(v_new))
+                    e_old = escape_latex(str(v_old))
+                    f.write(f"- `{col}`: $\\color{{gray}}{{\\text{{{e_old}}}}}$ (Old) &rarr; $\\color{{blue}}{{\\text{{{e_new}}}}}$ (New)\n")
                 f.write("\n")
 
 def generate_summary(all_reports, report_dir):

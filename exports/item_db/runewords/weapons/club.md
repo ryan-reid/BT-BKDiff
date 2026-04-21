@@ -9,4 +9,4 @@
     * +15% Increased Attack Speed
     * Magic Damage Reduced by 7
     * +200 to Attack Rating
-    * Level 12-4 Corpse Explosion (12-4/12-4 Charges)
+    * Level 12 Corpse Explosion (4/# Charges)

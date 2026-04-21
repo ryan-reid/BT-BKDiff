@@ -136,7 +136,7 @@
     * Increase Maximum Life 5-8%
     * Cannot Be Frozen
     * 5% Mana stolen per hit
-    * 33-30% Chance to cast level 33-30 Dim Vision when struck
+    * 33% Chance to cast level 30 Dim Vision when struck
     * +5 to Cloak of Shadows
     * Fire Resist +20-40%
     * Lightning Resist +20-40%

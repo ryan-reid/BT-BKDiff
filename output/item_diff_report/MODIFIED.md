@@ -1,7 +1,7 @@
 # Modified Items
 
-- <span style="color: #999999;">Gray text</span>: Removed/Old Value
-- <span style="color: #3366cc;">Blue text</span>: Added/New Value
+- $\color{gray}{\text{Gray text}}$: Removed/Old Value
+- $\color{blue}{\text{Blue text}}$: Added/New Value
 
 ## Uniques
 
@@ -16,7 +16,7 @@
 | **Properties:** | **Properties:** |
 | $\color{gray}{\text{+100}}$ to Mana | $\color{blue}{\text{+10}}$ to Mana |
 | $\color{gray}{\text{+100}}$ to Life | $\color{blue}{\text{+10}}$ to Life |
-|  | $\color{blue}{\text{Poison Resist +25%}}$ |
+|  | $\color{blue}{\text{Poison Resist +25\%}}$ |
 
 ### accessories\charms.md
 
@@ -31,7 +31,7 @@
 | -199% Better Chance of Getting Magic Items | -199% Better Chance of Getting Magic Items |
 | % Better Chance of Getting Magic Items (Based on Character Level) | % Better Chance of Getting Magic Items (Based on Character Level) |
 | $\color{gray}{\text{Level 1 Magic Pierce Aura When Equipped}}$ | $\color{blue}{\text{(removed)}}$ |
-| $\color{gray}{\text{+-50% to Experience Gained}}$ | $\color{blue}{\text{(removed)}}$ |
+| $\color{gray}{\text{+-50\% to Experience Gained}}$ | $\color{blue}{\text{(removed)}}$ |
 
 ### accessories\medium_charm.md
 
@@ -44,7 +44,7 @@
 | **Properties:** | **Properties:** |
 | +3 to Original Class Skill Levels | +3 to Random Class Skill Levels |
 | +8 to Light Radius | +8 to Light Radius |
-| Level 10-30 Hydra (10-30/10-30 Charges) | Level 10-30 Hydra (10-30/10-30 Charges) |
+| Level 10 Hydra (30/# Charges) | Level 10 Hydra (30/# Charges) |
 | $\color{gray}{\text{+10-25}}$ to all Attributes | $\color{blue}{\text{+10-20}}$ to all Attributes |
 | All Resistances $\color{gray}{\text{+10-25}}$ | All Resistances $\color{blue}{\text{+10-20}}$ |
 
@@ -60,7 +60,7 @@
 | +1 to All Skills | +1 to All Skills |
 | $\color{gray}{\text{+10-25}}$ to all Attributes | $\color{blue}{\text{+10-20}}$ to all Attributes |
 | All Resistances $\color{gray}{\text{+10-25}}$ | All Resistances $\color{blue}{\text{+10-20}}$ |
-| $\color{gray}{\text{+10-25%}}$ to Experience Gained | $\color{blue}{\text{+10-15%}}$ to Experience Gained |
+| $\color{gray}{\text{+10-25\%}}$ to Experience Gained | $\color{blue}{\text{+10-15\%}}$ to Experience Gained |
 
 ### armor\armor.md
 
@@ -98,10 +98,10 @@
 | Damage Reduced by 30-40% | Damage Reduced by 30-40% |
 | +15% Faster Run/Walk | +15% Faster Run/Walk |
 | Level 8-10 Defiance Aura When Equipped | Level 8-10 Defiance Aura When Equipped |
-| $\color{gray}{\text{+20%}}$ Faster Hit Recovery | $\color{blue}{\text{+20-40%}}$ Faster Hit Recovery |
-| Regenerate Mana $\color{gray}{\text{10-15%}}$ | Regenerate Mana $\color{blue}{\text{50-100%}}$ |
+| $\color{gray}{\text{+20\%}}$ Faster Hit Recovery | $\color{blue}{\text{+20-40\%}}$ Faster Hit Recovery |
+| Regenerate Mana $\color{gray}{\text{10-15\%}}$ | Regenerate Mana $\color{blue}{\text{50-100\%}}$ |
 |  | $\color{blue}{\text{+1-2 to All Skills}}$ |
-|  | $\color{blue}{\text{Requirements --50%}}$ |
+|  | $\color{blue}{\text{Requirements --50\%}}$ |
 
 ### armor\boots.md
 
@@ -114,8 +114,8 @@
 | **Properties:** | **Properties:** |
 | Socketed (1) | Socketed (1) |
 | +1-10% Energy | +1-10% Energy |
-| 5-20% Chance to cast level 5-20 Static Field when struck | 5-20% Chance to cast level 5-20 Static Field when struck |
-| $\color{gray}{\text{+5-10%}}$ Faster Run/Walk | $\color{blue}{\text{+10%}}$ Faster Run/Walk |
+| 5% Chance to cast level 20 Static Field when struck | 5% Chance to cast level 20 Static Field when struck |
+| $\color{gray}{\text{+5-10\%}}$ Faster Run/Walk | $\color{blue}{\text{+10\%}}$ Faster Run/Walk |
 
 ### armor\circlet.md
 
@@ -148,7 +148,7 @@
 | +1 to Multiple Shot | +1 to Multiple Shot |
 | +24% Faster Hit Recovery | +24% Faster Hit Recovery |
 | +10 to Dexterity | +10 to Dexterity |
-|  | $\color{blue}{\text{-4-5% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-4-5\% to Enemy Physical Resistance}}$ |
 
 ### armor\merc_equip.md
 
@@ -166,7 +166,7 @@
 | Half Freeze Duration | Half Freeze Duration |
 | Requirements --50% | Requirements --50% |
 | -8-15% to Enemy Cold Resistance | -8-15% to Enemy Cold Resistance |
-| $\color{gray}{\text{+8-12%}}$ to Cold Skill Damage | $\color{blue}{\text{+8-15%}}$ to Cold Skill Damage |
+| $\color{gray}{\text{+8-12\%}}$ to Cold Skill Damage | $\color{blue}{\text{+8-15\%}}$ to Cold Skill Damage |
 
 **Crown of Ages** (Crown of Ages)
 
@@ -180,8 +180,8 @@
 | +1-3 to All Skills | +1-3 to All Skills |
 | Repairs 1 durability in  seconds | Repairs 1 durability in  seconds |
 | $\color{gray}{\text{+100-150}}$ Defense | $\color{blue}{\text{+100-200}}$ Defense |
-| Damage Reduced by $\color{gray}{\text{10-15%}}$ | Damage Reduced by $\color{blue}{\text{10-20%}}$ |
-| $\color{gray}{\text{+50%}}$ Enhanced Defense | $\color{blue}{\text{+50-100%}}$ Enhanced Defense |
+| Damage Reduced by $\color{gray}{\text{10-15\%}}$ | Damage Reduced by $\color{blue}{\text{10-20\%}}$ |
+| $\color{gray}{\text{+50\%}}$ Enhanced Defense | $\color{blue}{\text{+50-100\%}}$ Enhanced Defense |
 | Magic Damage Reduced by $\color{gray}{\text{12-15}}$ | Magic Damage Reduced by $\color{blue}{\text{10-30}}$ |
 | $\color{gray}{\text{+7-9}}$ Life after each Kill | $\color{blue}{\text{+5-9}}$ Life after each Kill |
 |  | $\color{blue}{\text{+5-9 to Mana after each Kill}}$ |
@@ -202,7 +202,7 @@
 | +20% Faster Hit Recovery | +20% Faster Hit Recovery |
 | % Better Chance of Getting Magic Items (Based on Character Level) | % Better Chance of Getting Magic Items (Based on Character Level) |
 | +150-200% Enhanced Defense | +150-200% Enhanced Defense |
-|  | $\color{blue}{\text{-5-10% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-5-10\% to Enemy Physical Resistance}}$ |
 
 ### armor\shield.md
 
@@ -218,7 +218,7 @@
 | +80-130% Enhanced Defense | +80-130% Enhanced Defense |
 | +10 to Energy | +10 to Energy |
 | Increase Maximum Mana 10% | Increase Maximum Mana 10% |
-| $\color{gray}{\text{+20-30%}}$ Faster Cast Rate | $\color{blue}{\text{+20%}}$ Faster Cast Rate |
+| $\color{gray}{\text{+20-30\%}}$ Faster Cast Rate | $\color{blue}{\text{+20\%}}$ Faster Cast Rate |
 
 ### class_specific\hand_to_hand_2.md
 
@@ -252,7 +252,7 @@
 | 7-10% Life stolen per hit | 7-10% Life stolen per hit |
 | Level 6-12 Fanaticism Aura When Equipped | Level 6-12 Fanaticism Aura When Equipped |
 | 33% Chance of Open Wounds | 33% Chance of Open Wounds |
-|  | $\color{blue}{\text{-5-10% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-5-10\% to Enemy Physical Resistance}}$ |
 
 ### weapons\amazon_spear.md
 
@@ -271,8 +271,8 @@
 | Level $\color{gray}{\text{3-6}}$ Conviction Aura When Equipped | Level $\color{blue}{\text{6-10}}$ Conviction Aura When Equipped |
 | $\color{gray}{\text{+200-300}}$ Defense | $\color{blue}{\text{+1000}}$ Defense |
 | $\color{gray}{\text{Damage Reduced by 15-20}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{Increase Maximum Life 5-15%}}$ |
-|  | $\color{blue}{\text{20-40% Chance to cast level 20-40 Lightning Strike on striking}}$ |
+|  | $\color{blue}{\text{Increase Maximum Life 5-15\%}}$ |
+|  | $\color{blue}{\text{20\% Chance to cast level 40 Lightning Strike on striking}}$ |
 
 ### weapons\axe.md
 
@@ -306,7 +306,7 @@
 | 10-15% Chance of Crushing Blow | 10-15% Chance of Crushing Blow |
 | $\color{gray}{\text{Adds 100-100 Damage}}$ | $\color{blue}{\text{(removed)}}$ |
 |  | $\color{blue}{\text{Damage +50-100}}$ |
-|  | $\color{blue}{\text{-10-20% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-10-20\% to Enemy Physical Resistance}}$ |
 
 ### weapons\hammer.md
 
@@ -337,9 +337,9 @@
 | + to Maximum Damage (Based on Character Level) | + to Maximum Damage (Based on Character Level) |
 | Repairs 1 durability in  seconds | Repairs 1 durability in  seconds |
 | +350% Enhanced Damage | +350% Enhanced Damage |
-| $\color{gray}{\text{20%}}$ Chance to cast level $\color{gray}{\text{20}}$ Static Field on striking | $\color{blue}{\text{20-50%}}$ Chance to cast level $\color{blue}{\text{20-50}}$ Static Field on striking |
-| $\color{gray}{\text{Adds 50-200-50-200 Lightning Damage}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{-10-15% to Enemy Physical Resistance}}$ |
+| 20% Chance to cast level $\color{gray}{\text{20}}$ Static Field on striking | 20% Chance to cast level $\color{blue}{\text{50}}$ Static Field on striking |
+| $\color{gray}{\text{Adds 50-200 Lightning Damage}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{-10-15\% to Enemy Physical Resistance}}$ |
 
 **Stone Crusher** (Stone Crusher)
 
@@ -355,7 +355,7 @@
 | --100 to Monster Defense Per Hit | --100 to Monster Defense Per Hit |
 | Damage +50-85 | Damage +50-85 |
 | +40% Increased Attack Speed | +40% Increased Attack Speed |
-|  | $\color{blue}{\text{-5-10% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-5-10\% to Enemy Physical Resistance}}$ |
 
 **Windhammer** (Windhammer)
 
@@ -367,10 +367,10 @@
 | +200-300% Enhanced Damage | +200-300% Enhanced Damage |
 | 50% Chance of Crushing Blow | 50% Chance of Crushing Blow |
 | +60% Increased Attack Speed | +60% Increased Attack Speed |
-| 40-44% Chance to cast level 40-44 Twister on striking | 40-44% Chance to cast level 40-44 Twister on striking |
+| 40% Chance to cast level 44 Twister on striking | 40% Chance to cast level 44 Twister on striking |
 | +30% Faster Run/Walk | +30% Faster Run/Walk |
-| 50-40% Chance to cast level 50-40 Tornado when you Kill an Enemy | 50-40% Chance to cast level 50-40 Tornado when you Kill an Enemy |
-|  | $\color{blue}{\text{-5-15% to Enemy Physical Resistance}}$ |
+| 50% Chance to cast level 40 Tornado when you Kill an Enemy | 50% Chance to cast level 40 Tornado when you Kill an Enemy |
+|  | $\color{blue}{\text{-5-15\% to Enemy Physical Resistance}}$ |
 
 ### weapons\javelin.md
 
@@ -388,7 +388,7 @@
 | +35% Increased Attack Speed | +35% Increased Attack Speed |
 | 10% Chance of Crushing Blow | 10% Chance of Crushing Blow |
 | Slows Target by 15% | Slows Target by 15% |
-| $\color{gray}{\text{+150-250%}}$ Enhanced Damage | $\color{blue}{\text{+150-240%}}$ Enhanced Damage |
+| $\color{gray}{\text{+150-250\%}}$ Enhanced Damage | $\color{blue}{\text{+150-240\%}}$ Enhanced Damage |
 
 **Skorn** (Skorn)
 
@@ -401,7 +401,7 @@
 | +80% Increased Attack Speed | +80% Increased Attack Speed |
 | 5% Life stolen per hit | 5% Life stolen per hit |
 | +3 to Double Throw (Class 140 only) | +3 to Double Throw (Class 140 only) |
-| $\color{gray}{\text{+250-300%}}$ Enhanced Damage | $\color{blue}{\text{+180-250%}}$ Enhanced Damage |
+| $\color{gray}{\text{+250-300\%}}$ Enhanced Damage | $\color{blue}{\text{+180-250\%}}$ Enhanced Damage |
 
 ### weapons\knife.md
 
@@ -418,7 +418,7 @@
 | +30% Increased Attack Speed | +30% Increased Attack Speed |
 | +30 to Dexterity | +30 to Dexterity |
 | +250% Enhanced Damage | +250% Enhanced Damage |
-| Adds 30-54-30-54 Damage | Adds 30-54-30-54 Damage |
+| Adds 30-54 Damage | Adds 30-54 Damage |
 | +2 to Necromancer Skill Levels | +2 to Necromancer Skill Levels |
 | $\color{gray}{\text{+3 to Poison Dagger}}$ | $\color{blue}{\text{(removed)}}$ |
 |  | $\color{blue}{\text{+3 to Poison Strike}}$ |
@@ -453,7 +453,7 @@
 | +50% Increased Attack Speed | +50% Increased Attack Speed |
 | 6% Mana stolen per hit | 6% Mana stolen per hit |
 | 6% Life stolen per hit | 6% Life stolen per hit |
-| $\color{gray}{\text{200% Bonus to Attack Rating}}$ | $\color{blue}{\text{(removed)}}$ |
+| $\color{gray}{\text{200\% Bonus to Attack Rating}}$ | $\color{blue}{\text{(removed)}}$ |
 | $\color{gray}{\text{Adds 50-50 Damage}}$ | $\color{blue}{\text{(removed)}}$ |
 |  | $\color{blue}{\text{+40 to Attack Rating}}$ |
 
@@ -484,16 +484,16 @@
 | **Level Requirement:** 70 | **Level Requirement:** 70 |
 | **Properties:** | **Properties:** |
 | Lightning Resist +50% | Lightning Resist +50% |
-| 30-20% Chance to cast level 30-20 Static Field when struck | 30-20% Chance to cast level 30-20 Static Field when struck |
+| 30% Chance to cast level 20 Static Field when struck | 30% Chance to cast level 20 Static Field when struck |
 | +200-300% Enhanced Damage | +200-300% Enhanced Damage |
 | +20 to Strength | +20 to Strength |
-| 30-10% Chance to cast level 30-10 Lower Resist on striking | 30-10% Chance to cast level 30-10 Lower Resist on striking |
+| 30% Chance to cast level 10 Lower Resist on striking | 30% Chance to cast level 10 Lower Resist on striking |
 | +30% Increased Attack Speed | +30% Increased Attack Speed |
 | Repairs 1 durability in  seconds | Repairs 1 durability in  seconds |
-| Adds 1-237-1-237 Lightning Damage | Adds 1-237-1-237 Lightning Damage |
+| Adds 1-237 Lightning Damage | Adds 1-237 Lightning Damage |
 | 8-10% Life stolen per hit | 8-10% Life stolen per hit |
 | 150% Bonus to Attack Rating | 150% Bonus to Attack Rating |
-| $\color{gray}{\text{30-10% Chance to cast level 30-10 Lower Resist when struck}}$ | $\color{blue}{\text{(removed)}}$ |
+| $\color{gray}{\text{30\% Chance to cast level 10 Lower Resist when struck}}$ | $\color{blue}{\text{(removed)}}$ |
 |  | $\color{blue}{\text{Unknown Prop: 91 (91, 30-10)}}$ |
 
 ### weapons\spear.md
@@ -512,7 +512,7 @@
 | Repairs 1 durability in  seconds | Repairs 1 durability in  seconds |
 | 44% Chance of Crushing Blow | 44% Chance of Crushing Blow |
 | 7-12% Life stolen per hit | 7-12% Life stolen per hit |
-| 15-33% Chance to cast level 15-33 Amplify Damage on striking | 15-33% Chance to cast level 15-33 Amplify Damage on striking |
+| 15% Chance to cast level 33 Amplify Damage on striking | 15% Chance to cast level 33 Amplify Damage on striking |
 | $\color{gray}{\text{+1}}$ to Iron Skin | $\color{blue}{\text{+1-3}}$ to Iron Skin |
 
 ### weapons\staff.md
@@ -526,7 +526,7 @@
 | **Properties:** | **Properties:** |
 | +50% Increased Attack Speed | +50% Increased Attack Speed |
 | All Resistances $\color{gray}{\text{+30}}$ | All Resistances $\color{blue}{\text{+10}}$ |
-| $\color{gray}{\text{+30% Faster Cast Rate}}$ | $\color{blue}{\text{(removed)}}$ |
+| $\color{gray}{\text{+30\% Faster Cast Rate}}$ | $\color{blue}{\text{(removed)}}$ |
 | $\color{gray}{\text{Adds 30-30 Damage}}$ | $\color{blue}{\text{(removed)}}$ |
 
 **Horadric Staff** (Horadric Staff)
@@ -540,9 +540,9 @@
 | $\color{gray}{\text{+100}}$ to Mana | $\color{blue}{\text{+10}}$ to Mana |
 | All Resistances $\color{gray}{\text{+30}}$ | All Resistances $\color{blue}{\text{+10}}$ |
 | $\color{gray}{\text{+100}}$ to Life | $\color{blue}{\text{+10}}$ to Life |
-| $\color{gray}{\text{+30% Faster Cast Rate}}$ | $\color{blue}{\text{(removed)}}$ |
+| $\color{gray}{\text{+30\% Faster Cast Rate}}$ | $\color{blue}{\text{(removed)}}$ |
 | $\color{gray}{\text{Adds 30-30 Damage}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{Poison Resist +25%}}$ |
+|  | $\color{blue}{\text{Poison Resist +25\%}}$ |
 
 **Mang Song's Lesson** (Mang Song's Lesson)
 
@@ -554,10 +554,10 @@
 | All Resistances +40-50 | All Resistances +40-50 |
 | $\color{gray}{\text{+6}}$ to All Skills | $\color{blue}{\text{+7}}$ to All Skills |
 | Level $\color{gray}{\text{1}}$ Conviction Aura When Equipped | Level $\color{blue}{\text{5-10}}$ Conviction Aura When Equipped |
-| Regenerate Mana $\color{gray}{\text{30%}}$ | Regenerate Mana $\color{blue}{\text{30-80%}}$ |
-| $\color{gray}{\text{+85%}}$ Faster Cast Rate | $\color{blue}{\text{+115%}}$ Faster Cast Rate |
-| Increase Maximum Mana $\color{gray}{\text{40%}}$ | Increase Maximum Mana $\color{blue}{\text{40-50%}}$ |
-|  | $\color{blue}{\text{Increase Maximum Life 40-50%}}$ |
+| Regenerate Mana $\color{gray}{\text{30\%}}$ | Regenerate Mana $\color{blue}{\text{30-80\%}}$ |
+| $\color{gray}{\text{+85\%}}$ Faster Cast Rate | $\color{blue}{\text{+115\%}}$ Faster Cast Rate |
+| Increase Maximum Mana $\color{gray}{\text{40\%}}$ | Increase Maximum Mana $\color{blue}{\text{40-50\%}}$ |
+|  | $\color{blue}{\text{Increase Maximum Life 40-50\%}}$ |
 
 ### weapons\sword.md
 
@@ -576,13 +576,14 @@
 | +2 to All Skills | +2 to All Skills |
 | Cold Absorb 25% | Cold Absorb 25% |
 | 40% Chance to cast level 40 Blizzard on attack | 40% Chance to cast level 40 Blizzard on attack |
-| Adds 250-500-250-500 Magic Damage | Adds 250-500-250-500 Magic Damage |
-| Adds $\color{gray}{\text{500-500}}$ Cold Damage | Adds $\color{blue}{\text{250-500-250-500}}$ Cold Damage |
+| Adds 250-500 Magic Damage | Adds 250-500 Magic Damage |
+| Adds $\color{gray}{\text{500-500}}$ Cold Damage | Adds $\color{blue}{\text{250-500}}$ Cold Damage |
 
 **Shadowfang** (Shadowfang)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
+| **Base Item:** $\color{gray}{\text{Two-Handed}}$ Sword | **Base Item:** $\color{blue}{\text{2H}}$ Sword |
 | **Level Requirement:** 12 | **Level Requirement:** 12 |
 | **Properties:** | **Properties:** |
 | 9% Mana stolen per hit | 9% Mana stolen per hit |
@@ -591,8 +592,6 @@
 | +200% Enhanced Damage | +200% Enhanced Damage |
 | 9% Life stolen per hit | 9% Life stolen per hit |
 | +40% Increased Attack Speed | +40% Increased Attack Speed |
-| $\color{gray}{\text{**Base Item:** Two-Handed Sword}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** 2H Sword}}$ |
 
 **The Grandfather** (The Grandfather)
 
@@ -606,8 +605,8 @@
 | +450% Enhanced Damage | +450% Enhanced Damage |
 | $\color{gray}{\text{+20}}$ to all Attributes | $\color{blue}{\text{+20-30}}$ to all Attributes |
 | $\color{gray}{\text{+80}}$ to Life | $\color{blue}{\text{+100}}$ to Life |
-| $\color{gray}{\text{50% Bonus to Attack Rating}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{-10-20% to Enemy Physical Resistance}}$ |
+| $\color{gray}{\text{50\% Bonus to Attack Rating}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{-10-20\% to Enemy Physical Resistance}}$ |
 
 **The Corrupted Grandfather** (The Corrupted Grandfather)
 
@@ -620,12 +619,12 @@
 | + to Maximum Damage (Based on Character Level) | + to Maximum Damage (Based on Character Level) |
 | +20 to Strength | +20 to Strength |
 | +20 to Dexterity | +20 to Dexterity |
-| $\color{gray}{\text{+250%}}$ Enhanced Damage | $\color{blue}{\text{+300-350%}}$ Enhanced Damage |
-| $\color{gray}{\text{150%}}$ Bonus to Attack Rating | $\color{blue}{\text{250%}}$ Bonus to Attack Rating |
+| $\color{gray}{\text{+250\%}}$ Enhanced Damage | $\color{blue}{\text{+300-350\%}}$ Enhanced Damage |
+| $\color{gray}{\text{150\%}}$ Bonus to Attack Rating | $\color{blue}{\text{250\%}}$ Bonus to Attack Rating |
 | $\color{gray}{\text{+175}}$ to Life | $\color{blue}{\text{+200}}$ to Life |
-| Increase Maximum Mana $\color{gray}{\text{25%}}$ | Increase Maximum Mana $\color{blue}{\text{40-50%}}$ |
-| Increase Maximum Life $\color{gray}{\text{25%}}$ | Increase Maximum Life $\color{blue}{\text{40-50%}}$ |
-|  | $\color{blue}{\text{-15-30% to Enemy Physical Resistance}}$ |
+| Increase Maximum Mana $\color{gray}{\text{25\%}}$ | Increase Maximum Mana $\color{blue}{\text{40-50\%}}$ |
+| Increase Maximum Life $\color{gray}{\text{25\%}}$ | Increase Maximum Life $\color{blue}{\text{40-50\%}}$ |
+|  | $\color{blue}{\text{-15-30\% to Enemy Physical Resistance}}$ |
 
 **Corrupted Azurewrath** (Corrupted Azurewrath)
 
@@ -636,11 +635,11 @@
 | **Properties:** | **Properties:** |
 | 50% Deadly Strike | 50% Deadly Strike |
 | 25% Better Chance of Getting Magic Items | 25% Better Chance of Getting Magic Items |
-| Adds 30-60-30-60 Cold Damage | Adds 30-60-30-60 Cold Damage |
+| Adds 30-60 Cold Damage | Adds 30-60 Cold Damage |
 | +100-200% Enhanced Damage | +100-200% Enhanced Damage |
 | Durability: 25 of 25 | Durability: 25 of 25 |
-| Adds 50-100-50-100 Magic Damage | Adds 50-100-50-100 Magic Damage |
-| $\color{gray}{\text{10-15% Better Chance of Getting Magic Items}}$ | $\color{blue}{\text{(removed)}}$ |
+| Adds 50-100 Magic Damage | Adds 50-100 Magic Damage |
+| $\color{gray}{\text{10-15\% Better Chance of Getting Magic Items}}$ | $\color{blue}{\text{(removed)}}$ |
 
 ### weapons\throwing_axe.md
 
@@ -652,12 +651,12 @@
 | **Level Requirement:** 70 | **Level Requirement:** 70 |
 | **Properties:** | **Properties:** |
 | +200-230% Enhanced Damage | +200-230% Enhanced Damage |
-| Adds 250-500-250-500 Fire Damage | Adds 250-500-250-500 Fire Damage |
-| Adds 250-500-250-500 Cold Damage | Adds 250-500-250-500 Cold Damage |
+| Adds 250-500 Fire Damage | Adds 250-500 Fire Damage |
+| Adds 250-500 Cold Damage | Adds 250-500 Cold Damage |
 | Increased Stack Size | Increased Stack Size |
 | +30% Increased Attack Speed | +30% Increased Attack Speed |
 | 20% Chance to cast level 20 Lower Resist on striking | 20% Chance to cast level 20 Lower Resist on striking |
-| Adds $\color{gray}{\text{61-511-61-511}}$ Lightning Damage | Adds $\color{blue}{\text{61-501-61-501}}$ Lightning Damage |
+| Adds $\color{gray}{\text{61-511}}$ Lightning Damage | Adds $\color{blue}{\text{61-501}}$ Lightning Damage |
 
 ### weapons\wand.md
 
@@ -685,7 +684,8 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Griswold's Legacy | **Set:** Griswold's Legacy |
+| **Base Item:** $\color{gray}{\text{Ornate}}$ $\color{gray}{\text{Plate}}$ | **Base Item:** $\color{blue}{\text{Sacred}}$ $\color{blue}{\text{Armor}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +600 Defense | +600 Defense |
 | +1-3 to Combat Skills | +1-3 to Combat Skills |
@@ -694,8 +694,6 @@
 | +1-3 to Offensive Auras Skills | +1-3 to Offensive Auras Skills |
 | +1-3 to Defensive Auras Skills | +1-3 to Defensive Auras Skills |
 | +6-9 to Mana after each Kill | +6-9 to Mana after each Kill |
-| $\color{gray}{\text{**Base Item:** Ornate Plate}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Sacred Armor}}$ |
 
 ### armor\belt.md
 
@@ -703,48 +701,46 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Immortal King | **Set:** Immortal King |
+| **Base Item:** $\color{gray}{\text{War}}$ $\color{gray}{\text{Belt}}$ | **Base Item:** $\color{blue}{\text{Colossus}}$ $\color{blue}{\text{Girdle}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +36 Defense | +36 Defense |
 | Fire Resist +28% | Fire Resist +28% |
 | Lightning Resist +31% | Lightning Resist +31% |
 | +25 to Strength | +25 to Strength |
-| $\color{gray}{\text{**Base Item:** War Belt}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Colossus Girdle}}$ |
 
 **Tal Rasha's Fine-Spun Cloth** (Tal Rasha's Fire-Spun Cloth)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Tal Rasha's Wrappings | **Set:** Tal Rasha's Wrappings |
+| **Base Item:** $\color{gray}{\text{Mesh}}$ $\color{gray}{\text{Belt}}$ | **Base Item:** $\color{blue}{\text{Mithril}}$ $\color{blue}{\text{Coil}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | Requirements --20% | Requirements --20% |
 | +30 to Mana | +30 to Mana |
 | +20 to Dexterity | +20 to Dexterity |
 | 37% Damage Taken Goes To Mana | 37% Damage Taken Goes To Mana |
 | 10-15% Better Chance of Getting Magic Items | 10-15% Better Chance of Getting Magic Items |
-| $\color{gray}{\text{**Base Item:** Mesh Belt}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Mithril Coil}}$ |
 
 **M'avina's Tenet** (M'avina's Tenet)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** M'avina's Battle Hymn | **Set:** M'avina's Battle Hymn |
+| **Base Item:** $\color{gray}{\text{Sharkskin}}$ Belt | **Base Item:** $\color{blue}{\text{Vampirefang}}$ Belt |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +50 Defense | +50 Defense |
 | +30% Faster Run/Walk | +30% Faster Run/Walk |
 | 5% Mana stolen per hit | 5% Mana stolen per hit |
 | All Resistances +10-15 | All Resistances +10-15 |
 | +3-5 to Mana after each Kill | +3-5 to Mana after each Kill |
-| $\color{gray}{\text{**Base Item:** Sharkskin Belt}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Vampirefang Belt}}$ |
 
 **Immortal King's Tribal Binding** (Immortal King's Tribal Binding)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Bul Katho's Embodiment | **Set:** Bul Katho's Embodiment |
+| **Base Item:** $\color{gray}{\text{War}}$ $\color{gray}{\text{Belt}}$ | **Base Item:** $\color{blue}{\text{Colossus}}$ $\color{blue}{\text{Girdle}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | Damage Reduced by 10-20% | Damage Reduced by 10-20% |
 | +20% Increased Attack Speed | +20% Increased Attack Speed |
@@ -755,14 +751,13 @@
 | +3-5% Strength | +3-5% Strength |
 | +3-5% Dexterity | +3-5% Dexterity |
 | +3-5% Energy | +3-5% Energy |
-| $\color{gray}{\text{**Base Item:** War Belt}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Colossus Girdle}}$ |
 
 **Tal Rasha's Brace** (Tal Rasha's Brace)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Tal Rasha's Elements | **Set:** Tal Rasha's Elements |
+| **Base Item:** $\color{gray}{\text{Mesh}}$ $\color{gray}{\text{Belt}}$ | **Base Item:** $\color{blue}{\text{Mithril}}$ $\color{blue}{\text{Coil}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | Damage Reduced by 5-10% | Damage Reduced by 5-10% |
 | +1 to Sorceress Skill Levels | +1 to Sorceress Skill Levels |
@@ -773,14 +768,13 @@
 | +5-10 to all Attributes | +5-10 to all Attributes |
 | 25-50% Better Chance of Getting Magic Items | 25-50% Better Chance of Getting Magic Items |
 | +3-7 to Mana after each Kill | +3-7 to Mana after each Kill |
-| $\color{gray}{\text{**Base Item:** Mesh Belt}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Mithril Coil}}$ |
 
 **M'avina's Principle** (M'avina's Principle)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** God of War M'avina | **Set:** God of War M'avina |
+| **Base Item:** $\color{gray}{\text{Sharkskin}}$ Belt | **Base Item:** $\color{blue}{\text{Vampirefang}}$ Belt |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +25% Faster Run/Walk | +25% Faster Run/Walk |
 | +1 to Amazon Skill Levels | +1 to Amazon Skill Levels |
@@ -790,8 +784,6 @@
 | +25% Increased Attack Speed | +25% Increased Attack Speed |
 | Damage Reduced by 5-10% | Damage Reduced by 5-10% |
 | All Resistances +10-20 | All Resistances +10-20 |
-| $\color{gray}{\text{**Base Item:** Sharkskin Belt}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Vampirefang Belt}}$ |
 
 ### armor\boots.md
 
@@ -799,7 +791,8 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Natalya's Odium | **Set:** Natalya's Odium |
+| **Base Item:** $\color{gray}{\text{Mesh}}$ Boots | **Base Item:** $\color{blue}{\text{Boneweave}}$ Boots |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +75-125 Defense | +75-125 Defense |
 | +40% Faster Run/Walk | +40% Faster Run/Walk |
@@ -809,14 +802,13 @@
 | Lightning Resist +15-25% | Lightning Resist +15-25% |
 | -3-5% to Enemy Cold Resistance | -3-5% to Enemy Cold Resistance |
 | -3-5% to Enemy Poison Resistance | -3-5% to Enemy Poison Resistance |
-| $\color{gray}{\text{**Base Item:** Mesh Boots}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Boneweave Boots}}$ |
 
 **Aldur's Advance** (Aldur's Advance)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Aldur's Watchtower | **Set:** Aldur's Watchtower |
+| **Base Item:** $\color{gray}{\text{Battle}}$ Boots | **Base Item:** $\color{blue}{\text{Mirrored}}$ Boots |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | Repairs 1 durability in  seconds | Repairs 1 durability in  seconds |
 | Regenerate Mana 10% | Regenerate Mana 10% |
@@ -825,14 +817,13 @@
 | +40% Faster Run/Walk | +40% Faster Run/Walk |
 | Replenish Life +10 | Replenish Life +10 |
 | Fire Resist +40-50% | Fire Resist +40-50% |
-| $\color{gray}{\text{**Base Item:** Battle Boots}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Mirrored Boots}}$ |
 
 **Immortal King's Pillar** (Immortal King's Pillar)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Immortal King | **Set:** Immortal King |
+| **Base Item:** $\color{gray}{\text{War}}$ $\color{gray}{\text{Boots}}$ | **Base Item:** $\color{blue}{\text{Myrmidon}}$ $\color{blue}{\text{Greaves}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +75 Defense | +75 Defense |
 | +40% Faster Run/Walk | +40% Faster Run/Walk |
@@ -841,14 +832,13 @@
 | Magic Resist +30-40% | Magic Resist +30-40% |
 | +10% Faster Cast Rate | +10% Faster Cast Rate |
 | +10-15 to Vitality | +10-15 to Vitality |
-| $\color{gray}{\text{**Base Item:** War Boots}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Myrmidon Greaves}}$ |
 
 **Natalya's Footprints** (Natalya's Footprints)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Natalya's Vengeance | **Set:** Natalya's Vengeance |
+| **Base Item:** $\color{gray}{\text{Mesh}}$ Boots | **Base Item:** $\color{blue}{\text{Boneweave}}$ Boots |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +40% Faster Run/Walk | +40% Faster Run/Walk |
 | +35% Faster Hit Recovery | +35% Faster Hit Recovery |
@@ -857,14 +847,13 @@
 | -3-5% to Enemy Poison Resistance | -3-5% to Enemy Poison Resistance |
 | +5% to Poison Skill Damage | +5% to Poison Skill Damage |
 | +7 to Venom (Class venom only) | +7 to Venom (Class venom only) |
-| $\color{gray}{\text{**Base Item:** Mesh Boots}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Boneweave Boots}}$ |
 
 **Aldur's Momentum** (Aldur's Momentum)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Aldur's Beacon | **Set:** Aldur's Beacon |
+| **Base Item:** $\color{gray}{\text{Battle}}$ Boots | **Base Item:** $\color{blue}{\text{Mirrored}}$ Boots |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +50% Faster Run/Walk | +50% Faster Run/Walk |
 | +1 to Druid Skill Levels | +1 to Druid Skill Levels |
@@ -872,14 +861,13 @@
 | Increase Maximum Life 5% | Increase Maximum Life 5% |
 | All Resistances +10-20 | All Resistances +10-20 |
 | Increase Maximum Mana 5% | Increase Maximum Mana 5% |
-| $\color{gray}{\text{**Base Item:** Battle Boots}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Mirrored Boots}}$ |
 
 **Immortal King's Statue** (Immortal King's Statue)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Bul Katho's Embodiment | **Set:** Bul Katho's Embodiment |
+| **Base Item:** $\color{gray}{\text{War}}$ $\color{gray}{\text{Boots}}$ | **Base Item:** $\color{blue}{\text{Myrmidon}}$ $\color{blue}{\text{Greaves}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +40% Faster Run/Walk | +40% Faster Run/Walk |
 | +1-3% to Maximum Fire Resist | +1-3% to Maximum Fire Resist |
@@ -887,8 +875,6 @@
 | Magic Resist +25% | Magic Resist +25% |
 | Damage Reduced by 10-15% | Damage Reduced by 10-15% |
 | +40% Faster Hit Recovery | +40% Faster Hit Recovery |
-| $\color{gray}{\text{**Base Item:** War Boots}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Myrmidon Greaves}}$ |
 
 ### armor\gloves.md
 
@@ -896,34 +882,33 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Immortal King | **Set:** Immortal King |
+| **Base Item:** $\color{gray}{\text{War}}$ Gauntlets | **Base Item:** $\color{blue}{\text{Ogre}}$ Gauntlets |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +65 Defense | +65 Defense |
 | +20-30 to Strength | +20-30 to Strength |
 | +20-30 to Dexterity | +20-30 to Dexterity |
-| 12-20% Chance to cast level 12-20 Static Field when struck | 12-20% Chance to cast level 12-20 Static Field when struck |
+| 12% Chance to cast level 20 Static Field when struck | 12% Chance to cast level 20 Static Field when struck |
 | +40 to Life | +40 to Life |
-| $\color{gray}{\text{**Base Item:** War Gauntlets}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Ogre Gauntlets}}$ |
 
 **Trang-Oul's Claws** (Trang-Oul's Claws)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Trang-Oul's Avatar | **Set:** Trang-Oul's Avatar |
+| **Base Item:** $\color{gray}{\text{Heavy Bracers}}$ | **Base Item:** $\color{blue}{\text{Vambraces}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +30 Defense | +30 Defense |
 | +20% Faster Cast Rate | +20% Faster Cast Rate |
 | Cold Resist +30% | Cold Resist +30% |
 | +2 to Curses Skills | +2 to Curses Skills |
-| $\color{gray}{\text{**Base Item:** Heavy Bracers}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Vambraces}}$ |
 
 **M'avina's Icy Clutch** (M'avina's Icy Clutch)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** M'avina's Battle Hymn | **Set:** M'avina's Battle Hymn |
+| **Base Item:** $\color{gray}{\text{Battle}}$ Gauntlets | **Base Item:** $\color{blue}{\text{Crusader}}$ Gauntlets |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +45-50 Defense | +45-50 Defense |
 | Adds 100-100 Cold Damage | Adds 100-100 Cold Damage |
@@ -931,14 +916,13 @@
 | 100-150% Extra Gold from Monsters | 100-150% Extra Gold from Monsters |
 | +20-30 to Strength | +20-30 to Strength |
 | +20-30 to Dexterity | +20-30 to Dexterity |
-| $\color{gray}{\text{**Base Item:** Battle Gauntlets}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Crusader Gauntlets}}$ |
 
 **Immortal King's Irons** (Immortal King's Irons)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Bul Katho's Embodiment | **Set:** Bul Katho's Embodiment |
+| **Base Item:** $\color{gray}{\text{War}}$ Gauntlets | **Base Item:** $\color{blue}{\text{Ogre}}$ Gauntlets |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +20% Increased Attack Speed | +20% Increased Attack Speed |
 | +1-3  to Barbarian Skill Levels | +1-3  to Barbarian Skill Levels |
@@ -948,31 +932,29 @@
 | +400 Defense | +400 Defense |
 | Damage Reduced by 10-20% | Damage Reduced by 10-20% |
 | +3-5% Strength | +3-5% Strength |
-| $\color{gray}{\text{**Base Item:** War Gauntlets}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Ogre Gauntlets}}$ |
 
 **Trang-Oul's Sharp Claws** (Trang-Oul's Sharp Claws)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Trang-Oul's Incarnation | **Set:** Trang-Oul's Incarnation |
+| **Base Item:** $\color{gray}{\text{Heavy Bracers}}$ | **Base Item:** $\color{blue}{\text{Vambraces}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +1-3 to Necromancer Skill Levels | +1-3 to Necromancer Skill Levels |
 | -10% to Enemy Poison Resistance | -10% to Enemy Poison Resistance |
-| 15-55% Chance to cast level 15-55 Poison Nova when you Kill an Enemy | 15-55% Chance to cast level 15-55 Poison Nova when you Kill an Enemy |
+| 15% Chance to cast level 55 Poison Nova when you Kill an Enemy | 15% Chance to cast level 55 Poison Nova when you Kill an Enemy |
 | +20% Faster Cast Rate | +20% Faster Cast Rate |
 | +20% Increased Attack Speed | +20% Increased Attack Speed |
 | Damage Reduced by 10-15 | Damage Reduced by 10-15 |
-| 33-55% Chance to cast level 33-55 Bone Spear on striking | 33-55% Chance to cast level 33-55 Bone Spear on striking |
+| 33% Chance to cast level 55 Bone Spear on striking | 33% Chance to cast level 55 Bone Spear on striking |
 | +3-7 to Mana after each Kill | +3-7 to Mana after each Kill |
-| $\color{gray}{\text{**Base Item:** Heavy Bracers}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Vambraces}}$ |
 
 **M'avina's Guidance** (M'avina's Guidance)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** God of War M'avina | **Set:** God of War M'avina |
+| **Base Item:** $\color{gray}{\text{Battle}}$ Gauntlets | **Base Item:** $\color{blue}{\text{Crusader}}$ Gauntlets |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +25% Increased Attack Speed | +25% Increased Attack Speed |
 | +50-75% Enhanced Damage | +50-75% Enhanced Damage |
@@ -980,10 +962,8 @@
 | +50-150% Enhanced Defense | +50-150% Enhanced Defense |
 | +5-10% Dexterity | +5-10% Dexterity |
 | +5-10% Strength | +5-10% Strength |
-| 20-50% Chance to cast level 20-50 Slow Missiles when struck | 20-50% Chance to cast level 20-50 Slow Missiles when struck |
+| 20% Chance to cast level 50 Slow Missiles when struck | 20% Chance to cast level 50 Slow Missiles when struck |
 | Increase Maximum Life 5-10% | Increase Maximum Life 5-10% |
-| $\color{gray}{\text{**Base Item:** Battle Gauntlets}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Crusader Gauntlets}}$ |
 
 ### armor\merc_equip.md
 
@@ -991,7 +971,8 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Natalya's Odium | **Set:** Natalya's Odium |
+| **Base Item:** $\color{gray}{\text{Grim}}$ $\color{gray}{\text{Helm}}$ | **Base Item:** $\color{blue}{\text{Bone}}$ $\color{blue}{\text{Visage}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +135-175 Defense | +135-175 Defense |
 | +20-30 to Dexterity | +20-30 to Dexterity |
@@ -999,14 +980,13 @@
 | All Resistances +10-20 | All Resistances +10-20 |
 | Magic Damage Reduced by 6-9 | Magic Damage Reduced by 6-9 |
 | +1-2 to All Skills | +1-2 to All Skills |
-| $\color{gray}{\text{**Base Item:** Grim Helm}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Bone Visage}}$ |
 
 **Tal Rasha's Horadric Crest** (Tal Rasha's Horadric Crest)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Tal Rasha's Wrappings | **Set:** Tal Rasha's Wrappings |
+| **Base Item:** $\color{gray}{\text{Death Mask}}$ | **Base Item:** $\color{blue}{\text{Demonhead}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +30 to Mana | +30 to Mana |
 | +60 to Life | +60 to Life |
@@ -1014,14 +994,13 @@
 | All Resistances +15 | All Resistances +15 |
 | 10% Life stolen per hit | 10% Life stolen per hit |
 | 10% Mana stolen per hit | 10% Mana stolen per hit |
-| $\color{gray}{\text{**Base Item:** Death Mask}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Demonhead}}$ |
 
 **Natalya's Visage** (Natalya's Visage)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Natalya's Vengeance | **Set:** Natalya's Vengeance |
+| **Base Item:** $\color{gray}{\text{Grim}}$ $\color{gray}{\text{Helm}}$ | **Base Item:** $\color{blue}{\text{Bone}}$ $\color{blue}{\text{Visage}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +2 to Assassin Skill Levels | +2 to Assassin Skill Levels |
 | +25% Increased Attack Speed | +25% Increased Attack Speed |
@@ -1029,14 +1008,13 @@
 | All Resistances +20-30 | All Resistances +20-30 |
 | +30-40 to all Attributes | +30-40 to all Attributes |
 | +270-350 Defense | +270-350 Defense |
-| $\color{gray}{\text{**Base Item:** Grim Helm}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Bone Visage}}$ |
 
 **Tal Rasha's Wisdom** (Tal Rasha's Wisdom)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Tal Rasha's Elements | **Set:** Tal Rasha's Elements |
+| **Base Item:** $\color{gray}{\text{Death Mask}}$ | **Base Item:** $\color{blue}{\text{Demonhead}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +1-2 to Sorceress Skill Levels | +1-2 to Sorceress Skill Levels |
 | +5-10% Vitality | +5-10% Vitality |
@@ -1044,8 +1022,6 @@
 | +20-25% Faster Cast Rate | +20-25% Faster Cast Rate |
 | -3-5% to Enemy Cold Resistance | -3-5% to Enemy Cold Resistance |
 | +1-3 to Blizzard (Class blizzard only) | +1-3 to Blizzard (Class blizzard only) |
-| $\color{gray}{\text{**Base Item:** Death Mask}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Demonhead}}$ |
 
 ### armor\primal_helm.md
 
@@ -1053,21 +1029,21 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Immortal King | **Set:** Immortal King |
+| **Base Item:** $\color{gray}{\text{Avenger}}$ $\color{gray}{\text{Guard}}$ | **Base Item:** $\color{blue}{\text{Guardian}}$ $\color{blue}{\text{Crown}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +125 Defense | +125 Defense |
 | 40-50% Extra Gold from Monsters | 40-50% Extra Gold from Monsters |
 | +1-3 to Warcries Skills | +1-3 to Warcries Skills |
 | 30-45% Better Chance of Getting Magic Items | 30-45% Better Chance of Getting Magic Items |
 | Fire Resist +30% | Fire Resist +30% |
-| $\color{gray}{\text{**Base Item:** Avenger Guard}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Guardian Crown}}$ |
 
 **Immortal King's Triumph** (Immortal King's Triumph)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Bul Katho's Embodiment | **Set:** Bul Katho's Embodiment |
+| **Base Item:** $\color{gray}{\text{Avenger}}$ $\color{gray}{\text{Guard}}$ | **Base Item:** $\color{blue}{\text{Guardian}}$ $\color{blue}{\text{Crown}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +2  to Barbarian Skill Levels | +2  to Barbarian Skill Levels |
 | +25% Increased Attack Speed | +25% Increased Attack Speed |
@@ -1075,8 +1051,6 @@
 | +750 Defense | +750 Defense |
 | +20-30 to all Attributes | +20-30 to all Attributes |
 | 50-75% Better Chance of Getting Magic Items | 50-75% Better Chance of Getting Magic Items |
-| $\color{gray}{\text{**Base Item:** Avenger Guard}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Guardian Crown}}$ |
 
 ### class_specific\orb.md
 
@@ -1084,21 +1058,21 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Tal Rasha's Wrappings | **Set:** Tal Rasha's Wrappings |
+| **Base Item:** $\color{gray}{\text{Swirling}}$ $\color{gray}{\text{Crystal}}$ | **Base Item:** $\color{blue}{\text{Dimensional}}$ $\color{blue}{\text{Shard}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +57 to Life | +57 to Life |
 | +77 to Mana | +77 to Mana |
 | +10 to Energy | +10 to Energy |
 | +20% Faster Cast Rate | +20% Faster Cast Rate |
 | +2-3 to Sorceress Skill Levels | +2-3 to Sorceress Skill Levels |
-| $\color{gray}{\text{**Base Item:** Swirling Crystal}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Dimensional Shard}}$ |
 
 **Tal Rasha's Omniscience** (Tal Rasha's Omniscience)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Tal Rasha's Elements | **Set:** Tal Rasha's Elements |
+| **Base Item:** $\color{gray}{\text{Swirling}}$ $\color{gray}{\text{Crystal}}$ | **Base Item:** $\color{blue}{\text{Dimensional}}$ $\color{blue}{\text{Shard}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +3 to Sorceress Skill Levels | +3 to Sorceress Skill Levels |
 | +40% Faster Cast Rate | +40% Faster Cast Rate |
@@ -1108,8 +1082,6 @@
 | +50 to Life | +50 to Life |
 | +50 to Mana | +50 to Mana |
 | +5 to Evade | +5 to Evade |
-| $\color{gray}{\text{**Base Item:** Swirling Crystal}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Dimensional Shard}}$ |
 
 ### class_specific\pelt.md
 
@@ -1117,7 +1089,8 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Aldur's Watchtower | **Set:** Aldur's Watchtower |
+| **Base Item:** $\color{gray}{\text{Hunter's}}$ $\color{gray}{\text{Guise}}$ | **Base Item:** $\color{blue}{\text{Earth}}$ $\color{blue}{\text{Spirit}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +90 Defense | +90 Defense |
 | +75 to Mana | +75 to Mana |
@@ -1125,14 +1098,13 @@
 | Lightning Resist +40-50% | Lightning Resist +40-50% |
 | +1-2 to All Skills | +1-2 to All Skills |
 | Cold Resist +40-50% | Cold Resist +40-50% |
-| $\color{gray}{\text{**Base Item:** Hunter's Guise}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Earth Spirit}}$ |
 
 **Aldur's Icy Gaze** (Aldur's Icy Gaze)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Aldur's Beacon | **Set:** Aldur's Beacon |
+| **Base Item:** $\color{gray}{\text{Hunter's}}$ $\color{gray}{\text{Guise}}$ | **Base Item:** $\color{blue}{\text{Earth}}$ $\color{blue}{\text{Spirit}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +2 to Druid Skill Levels | +2 to Druid Skill Levels |
 | +45-90% Enhanced Damage | +45-90% Enhanced Damage |
@@ -1143,8 +1115,6 @@
 | -3-5% to Enemy Fire Resistance | -3-5% to Enemy Fire Resistance |
 | +5-10% to Cold Skill Damage | +5-10% to Cold Skill Damage |
 | -3-5% to Enemy Cold Resistance | -3-5% to Enemy Cold Resistance |
-| $\color{gray}{\text{**Base Item:** Hunter's Guise}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Earth Spirit}}$ |
 
 ### class_specific\voodoo_heads.md
 
@@ -1152,7 +1122,8 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Trang-Oul's Avatar | **Set:** Trang-Oul's Avatar |
+| **Base Item:** $\color{gray}{\text{Cantor}}$ $\color{gray}{\text{Trophy}}$ | **Base Item:** $\color{blue}{\text{Succubus}}$ $\color{blue}{\text{Skull}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +125 Defense | +125 Defense |
 | +20-30 to Strength | +20-30 to Strength |
@@ -1162,26 +1133,23 @@
 | Poison Resist +40% | Poison Resist +40% |
 | +2 to Poison and Bone Skills | +2 to Poison and Bone Skills |
 | +35% Faster Cast Rate | +35% Faster Cast Rate |
-| $\color{gray}{\text{**Base Item:** Cantor Trophy}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Succubus Skull}}$ |
 
 **Trang-Oul's Appendage** (Trang-Oul's Appendage)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Trang-Oul's Incarnation | **Set:** Trang-Oul's Incarnation |
+| **Base Item:** $\color{gray}{\text{Cantor}}$ $\color{gray}{\text{Trophy}}$ | **Base Item:** $\color{blue}{\text{Succubus}}$ $\color{blue}{\text{Skull}}$ |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +3 to Necromancer Skill Levels | +3 to Necromancer Skill Levels |
 | +7 to Teeth (Class teeth only) | +7 to Teeth (Class teeth only) |
-| 35-60% Chance to cast level 35-60 Teeth when you Kill an Enemy | 35-60% Chance to cast level 35-60 Teeth when you Kill an Enemy |
+| 35% Chance to cast level 60 Teeth when you Kill an Enemy | 35% Chance to cast level 60 Teeth when you Kill an Enemy |
 | -10-15% to Enemy Magic  Resistance | -10-15% to Enemy Magic Resistance |
 | +35% Faster Block Rate | +35% Faster Block Rate |
 | +35% Faster Block Rate | +35% Faster Block Rate |
 | +35% Faster Cast Rate | +35% Faster Cast Rate |
 | +5-10% Energy | +5-10% Energy |
 | Magic Resist +15-25% | Magic Resist +15-25% |
-| $\color{gray}{\text{**Base Item:** Cantor Trophy}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Succubus Skull}}$ |
 
 ### weapons\mace.md
 
@@ -1189,23 +1157,23 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Aldur's Watchtower | **Set:** Aldur's Watchtower |
+| **Base Item:** $\color{gray}{\text{Jagged}}$ Star | **Base Item:** $\color{blue}{\text{Devil}}$ Star |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
-| Adds 50-100-50-100 Damage | Adds 50-100-50-100 Damage |
+| Adds 50-100 Damage | Adds 50-100 Damage |
 | Damage +50-75 | Damage +50-75 |
 | 10% Life stolen per hit | 10% Life stolen per hit |
 | +45% Increased Attack Speed | +45% Increased Attack Speed |
 | +300% Enhanced Damage | +300% Enhanced Damage |
 | 5% Mana stolen per hit | 5% Mana stolen per hit |
 | +30% Faster Cast Rate | +30% Faster Cast Rate |
-| $\color{gray}{\text{**Base Item:** Jagged Star}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Devil Star}}$ |
 
 **Aldur's Onslaught** (Aldur's Onslaught)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Set:** Aldur's Beacon | **Set:** Aldur's Beacon |
+| **Base Item:** $\color{gray}{\text{Jagged}}$ Star | **Base Item:** $\color{blue}{\text{Devil}}$ Star |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +2-3 to Druid Skill Levels | +2-3 to Druid Skill Levels |
 | +40-50% Increased Attack Speed | +40-50% Increased Attack Speed |
@@ -1215,8 +1183,6 @@
 | 50% Bonus to Attack Rating | 50% Bonus to Attack Rating |
 | 10% Life stolen per hit | 10% Life stolen per hit |
 | 35% Chance of Crushing Blow | 35% Chance of Crushing Blow |
-| $\color{gray}{\text{**Base Item:** Jagged Star}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{**Base Item:** Devil Star}}$ |
 
 ---
 
@@ -1228,14 +1194,14 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Runes:** Thul Rune + Ort Rune + Ral Rune | **Runes:** Thul Rune + Ort Rune + Ral Rune |
-| **Base Items:** mace | **Base Items:** mace |
+| **Base Item:** Unknown | **Base Item:** Unknown |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +20% Increased Attack Speed | +20% Increased Attack Speed |
-| 33-8% Chance to cast level 33-8 Nova on striking | 33-8% Chance to cast level 33-8 Nova on striking |
-| 33-8% Chance to cast level 33-8 Frost Nova on striking | 33-8% Chance to cast level 33-8 Frost Nova on striking |
-| $\color{gray}{\text{33-8% Chance to cast level 33-8 Fireball on striking}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{33-8% Chance to cast level 33-8 Fire Ball on striking}}$ |
+| 33% Chance to cast level 8 Nova on striking | 33% Chance to cast level 8 Nova on striking |
+| 33% Chance to cast level 8 Frost Nova on striking | 33% Chance to cast level 8 Frost Nova on striking |
+| $\color{gray}{\text{33\% Chance to cast level 8 Fireball on striking}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{33\% Chance to cast level 8 Fire Ball on striking}}$ |
 
 ### weapons\polearm.md
 
@@ -1243,15 +1209,15 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Runes:** Ber Rune + Ber Rune + Ist Rune + Mal Rune | **Runes:** Ber Rune + Ber Rune + Ist Rune + Mal Rune |
-| **Base Items:** pole | **Base Items:** pole |
+| **Base Item:** Unknown | **Base Item:** Unknown |
+| **Level Requirement:** 0 | **Level Requirement:** 0 |
 | **Properties:** | **Properties:** |
 | +255-325% Enhanced Damage | +255-325% Enhanced Damage |
 | +35% Faster Run/Walk | +35% Faster Run/Walk |
 | + to Vitality (Based on Character Level) | + to Vitality (Based on Character Level) |
-| 50-20% Chance to cast level 50-20 Bone Spear when you Kill an Enemy | 50-20% Chance to cast level 50-20 Bone Spear when you Kill an Enemy |
+| 50% Chance to cast level 20 Bone Spear when you Kill an Enemy | 50% Chance to cast level 20 Bone Spear when you Kill an Enemy |
 | -45-55% to Enemy Magic  Resistance | -45-55% to Enemy Magic Resistance |
-| Level 30-21 Cyclone Armor (30-21/30-21 Charges) | Level 30-21 Cyclone Armor (30-21/30-21 Charges) |
+| Level 30 Cyclone Armor (21/# Charges) | Level 30 Cyclone Armor (21/# Charges) |
 | $\color{gray}{\text{Level 12 Magic Conviction Aura When Equipped}}$ | $\color{blue}{\text{(removed)}}$ |
 |  | $\color{blue}{\text{Level 12 Summon Tainted Aura When Equipped}}$ |
 

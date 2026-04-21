@@ -6,10 +6,10 @@
 * **Properties:**
     * +15 Life after each Demon Kill
     * +240-290% Enhanced Damage
-    * Adds 216-471-216-471 Magic Damage
+    * Adds 216-471 Magic Damage
     * +5 to Whirlwind
     * +35-40% Increased Attack Speed
-    * 25-26% Chance to cast level 25-26 Frozen Orb when struck
+    * 25% Chance to cast level 26 Frozen Orb when struck
     * Repairs 1 durability in  seconds
 
 ### Pattern

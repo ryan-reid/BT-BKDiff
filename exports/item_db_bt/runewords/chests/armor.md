@@ -5,7 +5,7 @@
 * **Base Items:** tors
 * **Properties:**
     * +15-20% Faster Cast Rate
-    * 15-10% Chance to cast level 15-10 Bone Armor when struck
+    * 15% Chance to cast level 10 Bone Armor when struck
     * +2 to Necromancer Skill Levels
     * +100-150 to Mana
     * All Resistances +15
@@ -20,7 +20,7 @@
     * +13 Life after each Kill
     * +25-50% to Poison Skill Damage
     * Poison Resist +100%
-    * Level 33-13 Spirit of Barbs (33-13/33-13 Charges)
+    * Level 33 Spirit of Barbs (13/# Charges)
 
 ### Broken Promise
 * **Runes:** Io Rune + Lum Rune + Fal Rune + Ko Rune
@@ -53,8 +53,8 @@
     * +360 Defense
     * +230 Defense vs. Missile
     * + to Strength (Based on Character Level)
-    * 12-15% Chance to cast level 12-15 Hydra on striking
-    * 20-18% Chance to cast level 20-18 Venom when struck
+    * 12% Chance to cast level 15 Hydra on striking
+    * 20% Chance to cast level 18 Venom when struck
     * Level 16-21 Holy Fire Aura When Equipped
     * +5-10 to all Attributes
 
@@ -86,7 +86,7 @@
 * **Base Items:** tors
 * **Properties:**
     * +15-20% Faster Cast Rate
-    * 5-15% Chance to cast level 5-15 Blaze when struck
+    * 5% Chance to cast level 15 Blaze when struck
     * +2 to Sorceress Skill Levels
     * +1 to Warmth
     * +20% Faster Hit Recovery
@@ -97,10 +97,10 @@
 * **Properties:**
     * +170-230% Enhanced Defense
     * All Resistances +30
-    * 15-6% Chance to cast level 15-6 Dim Vision when struck
+    * 15% Chance to cast level 6 Dim Vision when struck
     * +23% Faster Hit Recovery
     * 5% Damage Taken Goes To Mana
-    * 100-55% Chance to cast level 100-55 Meteor when you Die
+    * 100% Chance to cast level 55 Meteor when you Die
     * Half Freeze Duration
 
 ### Lionheart
@@ -118,7 +118,7 @@
 * **Runes:** Hel Rune + Amn Rune + Nef Rune
 * **Base Items:** tors
 * **Properties:**
-    * 10-1% Chance to cast level 10-1 Taunt on striking
+    * 10% Chance to cast level 1 Taunt on striking
     * +20% Faster Run/Walk
     * +2  to Barbarian Skill Levels
     * Replenish Life +10
@@ -127,8 +127,8 @@
 * **Runes:** Shael Rune + Thul Rune + Amn Rune
 * **Base Items:** tors
 * **Properties:**
-    * 2-15% Chance to cast level 2-15 Valkyrie on striking
-    * 4-5% Chance to cast level 4-5 Slow Missiles when struck
+    * 2% Chance to cast level 15 Valkyrie on striking
+    * 4% Chance to cast level 5 Slow Missiles when struck
     * +2 to Amazon Skill Levels
     * +2 to Critical Strike
 
@@ -148,7 +148,7 @@
 * **Runes:** Ral Rune + Ko Rune + Eld Rune
 * **Base Items:** tors
 * **Properties:**
-    * 100-5% Chance to cast level 100-5 Holy Bolt on striking
+    * 100% Chance to cast level 5 Holy Bolt on striking
     * +2 to Paladin Skill Levels
     * +100-150 to Life
     * +50% Damage to Undead
@@ -170,7 +170,7 @@
 * **Base Items:** tors
 * **Properties:**
     * +15-20% Faster Cast Rate
-    * 5-15% Chance to cast level 5-15 Cyclone Armor when struck
+    * 5% Chance to cast level 15 Cyclone Armor when struck
     * +2 to Druid Skill Levels
     * +100-150 to Mana
 
@@ -195,7 +195,7 @@
     * All Resistances +50
     * +20% Faster Hit Recovery
     * +3-5 to Strength (Based on Character Level)
-    * 20-13% Chance to cast level 20-13 Cloak of Shadows when you Kill an Enemy
+    * 20% Chance to cast level 13 Cloak of Shadows when you Kill an Enemy
 
 ### Stealth
 * **Runes:** Tal Rune + Eth Rune
@@ -224,8 +224,8 @@
 * **Runes:** Shael Rune + Thul Rune + Lem Rune
 * **Base Items:** tors
 * **Properties:**
-    * 25-15% Chance to cast level 25-15 Venom on striking
-    * 50-15% Chance to cast level 50-15 Fade when struck
+    * 25% Chance to cast level 15 Venom on striking
+    * 50% Chance to cast level 15 Fade when struck
     * +2 to Assassin Skill Levels
     * +45% Increased Attack Speed
 

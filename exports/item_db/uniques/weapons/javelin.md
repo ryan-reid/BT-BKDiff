@@ -20,12 +20,12 @@
 * **Level Requirement:** 68
 * **Properties:**
     * +200-230% Enhanced Damage
-    * Adds 300-420-300-420 Fire Damage
+    * Adds 300-420 Fire Damage
     * +9-12 Life after each Kill
     * Replenishes quantity
     * +30% Increased Attack Speed
-    * Adds 69-420-69-420 Lightning Damage
-    * Adds 300-420-300-420 Cold Damage
+    * Adds 69-420 Lightning Damage
+    * Adds 300-420 Cold Damage
     * -8-15% to Enemy Fire Resistance
     * -8-15% to Enemy Lightning Resistance
     * -8-15% to Enemy Cold Resistance

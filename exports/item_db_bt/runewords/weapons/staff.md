@@ -9,7 +9,7 @@
     * +3 to All Skills
     * Replenish Life +20
     * All Resistances +30-40
-    * Level 60-14 Raven (60-14/60-14 Charges)
+    * Level 60 Raven (14/# Charges)
 
 ### Leaf
 * **Runes:** Tir Rune + Ral Rune
@@ -39,7 +39,7 @@
 * **Base Items:** staf
 * **Properties:**
     * +4 to All Skills
-    * 24-10% Chance to cast level 24-10 Weaken when struck
+    * 24% Chance to cast level 10 Weaken when struck
     * +100% Faster Cast Rate
     * +60% Faster Hit Recovery
     * All Resistances +60-70

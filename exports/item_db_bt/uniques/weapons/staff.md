@@ -93,7 +93,7 @@
 * **Base Item:** Quarterstaff
 * **Level Requirement:** 31
 * **Properties:**
-    * Adds 30-65-30-65 Damage
+    * Adds 30-65 Damage
     * +200-300% Enhanced Damage
     * 50% Chance of Crushing Blow
     * +15 to Dexterity

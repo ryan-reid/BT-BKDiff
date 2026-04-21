@@ -129,8 +129,8 @@
 
 ### baal's eye
 - `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
-- `dropsound`: $\color{gray}{\text{item_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item_baals_eye_hd}}$ (New)
-- `usesound`: $\color{gray}{\text{item_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item_baals_eye_hd}}$ (New)
+- `dropsound`: $\color{gray}{\text{item\_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item\_baals\_eye\_hd}}$ (New)
+- `usesound`: $\color{gray}{\text{item\_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item\_baals\_eye\_hd}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -263,9 +263,9 @@
 - `flippyfile`: $\color{gray}{\text{flpear}}$ (Old) &rarr; $\color{blue}{\text{flpfang}}$ (New)
 - `invfile`: $\color{gray}{\text{invear}}$ (Old) &rarr; $\color{blue}{\text{invfang}}$ (New)
 - `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
-- `dropsound`: $\color{gray}{\text{item_monsterguts}}$ (Old) &rarr; $\color{blue}{\text{item_diablos_horn_hd}}$ (New)
+- `dropsound`: $\color{gray}{\text{item\_monsterguts}}$ (Old) &rarr; $\color{blue}{\text{item\_diablos\_horn\_hd}}$ (New)
 - `dropsfxframe`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `usesound`: $\color{gray}{\text{item_monsterguts}}$ (Old) &rarr; $\color{blue}{\text{item_diablos_horn_hd}}$ (New)
+- `usesound`: $\color{gray}{\text{item\_monsterguts}}$ (Old) &rarr; $\color{blue}{\text{item\_diablos\_horn\_hd}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -601,8 +601,8 @@
 
 ### mephisto's brain
 - `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
-- `dropsound`: $\color{gray}{\text{item_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item_mephistos_brain_hd}}$ (New)
-- `usesound`: $\color{gray}{\text{item_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item_mephistos_brain_hd}}$ (New)
+- `dropsound`: $\color{gray}{\text{item\_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item\_mephistos\_brain\_hd}}$ (New)
+- `usesound`: $\color{gray}{\text{item\_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item\_mephistos\_brain\_hd}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)

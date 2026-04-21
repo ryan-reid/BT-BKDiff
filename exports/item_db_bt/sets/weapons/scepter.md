@@ -6,7 +6,7 @@
 * **Properties:**
     * +16 to Attack Rating (Based on Character Level)
     * +23 to Maximum Damage
-    * Adds 1-20-1-20 Lightning Damage
+    * Adds 1-20 Lightning Damage
 
 ### Milabrega's Rod (Milabrega's Rod)
 * **Set:** Milabrega's Regalia
@@ -24,7 +24,7 @@
     * Damage +190-250
     * Requirements --20%
     * -50% Target Defense
-    * 15-5% Chance to cast level 15-5 Frost Nova on striking
+    * 15% Chance to cast level 5 Frost Nova on striking
 
 ### Griswolds's Vindication (Griswolds's Vindication)
 * **Set:** Griswold's Masterwork
@@ -38,4 +38,4 @@
     * +30% Faster Cast Rate
     * +30% Increased Attack Speed
     * +10-20 to all Attributes
-    * 25-55% Chance to cast level 25-55 Fist of the Heavens on striking
+    * 25% Chance to cast level 55 Fist of the Heavens on striking

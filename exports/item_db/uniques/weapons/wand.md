@@ -78,9 +78,9 @@
 * **Level Requirement:** 36
 * **Properties:**
     * +1-4 to Summoning Skills
-    * 15-40% Chance to cast level 15-40 Bone Spirit when struck
+    * 15% Chance to cast level 40 Bone Spirit when struck
     * + to Mana (Based on Character Level)
-    * 15-30% Chance to cast level 15-30 Bone Armor when struck
+    * 15% Chance to cast level 30 Bone Armor when struck
     * +30% Faster Cast Rate
     * +1-2 to Poison and Bone Skills
     * +2 to Corpse Explosion (Class 74 only)
@@ -110,7 +110,7 @@
     * +7-12 to Mana after each Kill
     * +1-2 to Poison and Bone Skills
     * +20% Faster Cast Rate
-    * 50-10% Chance to cast level 50-10 Lower Resist when you Kill an Enemy
+    * 50% Chance to cast level 10 Lower Resist when you Kill an Enemy
 
 ### Boneshade (Boneshade)
 * **Base Item:** Lich Wand

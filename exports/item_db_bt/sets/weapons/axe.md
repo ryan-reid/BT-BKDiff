@@ -13,7 +13,7 @@
 * **Set:** Berserker's Garb
 * **Base Item:** Double Axe
 * **Properties:**
-    * Adds 10-20-10-20 Damage
+    * Adds 10-20 Damage
     * 5% Mana stolen per hit
     * 5% Life stolen per hit
     * 10% Chance of Open Wounds

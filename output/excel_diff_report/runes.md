@@ -37,7 +37,7 @@
 - `T1Code3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{war}}$ (New)
 - `T1Min3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 - `T1Max3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-- `T1Code4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{dmg%}}$ (New)
+- `T1Code4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{dmg\%}}$ (New)
 - `T1Min4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `T1Max4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{60}}$ (New)
 
@@ -354,7 +354,7 @@
 
 ### tempest
 - `*Patch Release`: $\color{gray}{\text{Previously Ladder Only}}$ (Old) &rarr; $\color{blue}{\text{BTDIABLO}}$ (New)
-- `T1Code6`: $\color{gray}{\text{Mag%}}$ (Old) &rarr; $\color{blue}{\text{mag%}}$ (New)
+- `T1Code6`: $\color{gray}{\text{Mag\%}}$ (Old) &rarr; $\color{blue}{\text{mag\%}}$ (New)
 
 ### temptation
 - `*Patch Release`: $\color{gray}{\text{Previously Ladder Only}}$ (Old) &rarr; $\color{blue}{\text{BTDIABLO}}$ (New)

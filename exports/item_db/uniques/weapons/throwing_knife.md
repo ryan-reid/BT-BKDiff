@@ -22,4 +22,4 @@
     * +30% Increased Attack Speed
     * 50% Deadly Strike
     * Replenishes quantity
-    * 40-20% Chance to cast level 40-20 Nova on striking
+    * 40% Chance to cast level 20 Nova on striking

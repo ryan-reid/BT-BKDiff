@@ -165,7 +165,7 @@
 
 ### of guarding
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `mod1code`: $\color{gray}{\text{red-dmg%}}$ (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
+- `mod1code`: $\color{gray}{\text{red-dmg\%}}$ (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
 
 ### of joyfulness
 - `mod1min`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
@@ -216,7 +216,7 @@
 
 ### of negation
 - `rare`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
-- `mod1code`: $\color{gray}{\text{red-dmg%}}$ (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
+- `mod1code`: $\color{gray}{\text{red-dmg\%}}$ (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
 
 ### of nova shield
 - `level`: $\color{gray}{\text{40}}$ (Old) &rarr; $\color{blue}{\text{45}}$ (New)
@@ -310,7 +310,7 @@
 
 ### of the sentinel
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `mod1code`: $\color{gray}{\text{red-dmg%}}$ (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
+- `mod1code`: $\color{gray}{\text{red-dmg\%}}$ (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
 
 ### of thunder
 - `level`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{33}}$ (New)

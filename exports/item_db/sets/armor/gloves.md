@@ -13,7 +13,7 @@
 * **Base Item:** Light Gauntlets
 * **Properties:**
     * Cold Resist +30%
-    * Adds 1-20-1-20 Lightning Damage
+    * Adds 1-20 Lightning Damage
     * +15 to Life
 
 ### Sigon's Gage (Sigon's Gage)
@@ -44,7 +44,7 @@
     * +65 Defense
     * +20-30 to Strength
     * +20-30 to Dexterity
-    * 12-20% Chance to cast level 12-20 Static Field when struck
+    * 12% Chance to cast level 20 Static Field when struck
     * +40 to Life
 
 ### Trang-Oul's Claws (Trang-Oul's Claws)
@@ -75,7 +75,7 @@
     * +20% Increased Attack Speed
     * Fire Resist +50%
     * +150-200% Damage to Demons
-    * 10-16% Chance to cast level 10-16 Holy Bolt on striking
+    * 10% Chance to cast level 16 Holy Bolt on striking
 
 ### Magnus' Skin (Magnus' Skin)
 * **Set:** Orphan's Call
@@ -109,7 +109,7 @@
     * 10% Chance of Crushing Blow
     * +10% Increased Attack Speed
     * +10-15 to Dexterity
-    * Adds 250-500-250-500 Fire Damage
+    * Adds 250-500 Fire Damage
     * +25-50 to Life
     * +10% Faster Cast Rate
 
@@ -123,7 +123,7 @@
     * 35-50% Bonus to Attack Rating
     * Poison Resist +35-50%
     * +100 Defense
-    * Adds 75-100-75-100 Damage
+    * Adds 75-100 Damage
     * Requirements -20%
 
 ### Comfortable Mittens (Comfortable Mittens)
@@ -158,11 +158,11 @@
 * **Properties:**
     * +1-3 to Necromancer Skill Levels
     * -10% to Enemy Poison Resistance
-    * 15-55% Chance to cast level 15-55 Poison Nova when you Kill an Enemy
+    * 15% Chance to cast level 55 Poison Nova when you Kill an Enemy
     * +20% Faster Cast Rate
     * +20% Increased Attack Speed
     * Damage Reduced by 10-15
-    * 33-55% Chance to cast level 33-55 Bone Spear on striking
+    * 33% Chance to cast level 55 Bone Spear on striking
     * +3-7 to Mana after each Kill
 
 ### M'avina's Guidance (M'avina's Guidance)
@@ -175,7 +175,7 @@
     * +50-150% Enhanced Defense
     * +5-10% Dexterity
     * +5-10% Strength
-    * 20-50% Chance to cast level 20-50 Slow Missiles when struck
+    * 20% Chance to cast level 50 Slow Missiles when struck
     * Increase Maximum Life 5-10%
 
 ### Horazon's Arcane (Horazon's Arcane)

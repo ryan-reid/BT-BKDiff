@@ -9,5 +9,5 @@
     * +220-260% Enhanced Defense
     * Level 13-16 Defiance Aura When Equipped
     * +2 to Offensive Auras Skills
-    * 15-5% Chance to cast level 15-5 Life Tap on striking
+    * 15% Chance to cast level 5 Life Tap on striking
     * Repairs 1 durability in  seconds

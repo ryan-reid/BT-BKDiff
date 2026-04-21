@@ -6,7 +6,7 @@
 * **Properties:**
     * +2 to Fire Skills
     * +15% Faster Cast Rate
-    * Adds 10-15-10-15 Fire Damage
+    * Adds 10-15 Fire Damage
 
 ### Arcanna's Deathwand (Arcanna's Deathwand)
 * **Set:** Arcanna's Tricks
@@ -23,6 +23,6 @@
     * +150% Enhanced Damage
     * +1 to Teleport
     * +30% Faster Cast Rate
-    * Adds 6-45-6-45 Lightning Damage
+    * Adds 6-45 Lightning Damage
     * +70 to Mana
     * +1 to All Skills

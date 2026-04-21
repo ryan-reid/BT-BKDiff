@@ -5,7 +5,7 @@
 * **Level Requirement:** 80
 * **Properties:**
     * +2 to Warlock Skill Levels
-    * 15-1% Chance to cast level 15-1 Terror when struck
+    * 15% Chance to cast level 1 Terror when struck
     * +30% Faster Cast Rate
     * +170-200% Enhanced Defense
     * +15-25% to Fire Skill Damage
@@ -21,7 +21,7 @@
 * **Level Requirement:** 73
 * **Properties:**
     * +4 to Warlock Skills
-    * 15-1% Chance to cast level 15-1 Decrepify when struck
+    * 15% Chance to cast level 1 Decrepify when struck
     * +1-2 to Demonic Mastery (Class Demonic Mastery only)
     * +1-2 to Blood Boil (Class Blood Boil only)
     * +1-2 to Engorge (Class Engorge only)
@@ -36,7 +36,7 @@
 * **Level Requirement:** 78
 * **Properties:**
     * +2 to Warlock Skill Levels
-    * 15-40% Chance to cast level 15-40 Blizzard when struck
+    * 15% Chance to cast level 40 Blizzard when struck
     * +25-35% Faster Cast Rate
     * +30% Faster Hit Recovery
     * +100-200% Enhanced Damage
@@ -50,7 +50,7 @@
 * **Level Requirement:** 52
 * **Properties:**
     * +1-2 to Warlock Skill Levels
-    * 30-25% Chance to cast level 30-25 Ring of Fire when struck
+    * 30% Chance to cast level 25 Ring of Fire when struck
     * +25-30% Faster Cast Rate
     * +130-180% Enhanced Defense
     * +1-3 to Summon Tainted (Class Summon Tainted only)

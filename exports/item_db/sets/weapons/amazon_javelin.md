@@ -11,7 +11,7 @@
     * +10-20% Dexterity
     * Damage +200-300
     * +100 to Maximum Damage
-    * 10-60% Chance to cast level 10-60 Lower Resist when you Kill an Enemy
+    * 10% Chance to cast level 60 Lower Resist when you Kill an Enemy
 
 ### M'avina's Broken Weapon (M'avina's Broken Weapon)
 * **Set:** M'avina's Disappointment
@@ -23,5 +23,5 @@
     * +100-200% Enhanced Damage
     * Damage +100
     * +100 to Maximum Damage
-    * 50-25% Chance to cast level 50-25 Amplify Damage when you Kill an Enemy
+    * 50% Chance to cast level 25 Amplify Damage when you Kill an Enemy
     * 5% Mana stolen per hit

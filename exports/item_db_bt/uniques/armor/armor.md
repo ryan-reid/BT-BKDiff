@@ -76,7 +76,7 @@
 * **Level Requirement:** 17
 * **Properties:**
     * +100-120% Enhanced Defense
-    * Adds 1-69-1-69 Lightning Damage
+    * Adds 1-69 Lightning Damage
     * Lightning Absorb 10-15%
     * Lightning Resist +50%
     * 100% Extra Gold from Monsters
@@ -104,7 +104,7 @@
     * Cold Resist +30-50%
     * Magic Damage Reduced by 6-9
     * +100-130% Enhanced Defense
-    * Adds 25-50-25-50 Cold Damage
+    * Adds 25-50 Cold Damage
     * +50 to Mana
     * Requirements --25%
     * Cold Absorb 10-20%
@@ -223,7 +223,7 @@
 * **Properties:**
     * --100 to Monster Defense Per Hit
     * Prevent Monster Heal
-    * Adds 50-75-50-75 Damage
+    * Adds 50-75 Damage
     * 8-12% Life stolen per hit
     * +160-200% Enhanced Defense
     * +50-75 to Life
@@ -375,7 +375,7 @@
     * +150-180% Enhanced Defense
     * +5 to Corpse Explosion
     * +50% Faster Hit Recovery
-    * 35-10% Chance to cast level 35-10 Amplify Damage when you Kill an Enemy
+    * 35% Chance to cast level 10 Amplify Damage when you Kill an Enemy
 
 ### Que-Hegan's Wisdom (Que-Hegan's Wisdon)
 * **Base Item:** Mage Plate
@@ -503,7 +503,7 @@
     * +40% Faster Hit Recovery
     * +25% Faster Run/Walk
     * +30% Increased Attack Speed
-    * 15-25% Chance to cast level 15-25 Amplify Damage on striking
+    * 15% Chance to cast level 25 Amplify Damage on striking
     * +300-400 Defense
 
 ### Unsullied's Legacy (Unsullied's Legacy)

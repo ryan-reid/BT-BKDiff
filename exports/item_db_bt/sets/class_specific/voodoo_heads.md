@@ -19,7 +19,7 @@
 * **Properties:**
     * +3 to Necromancer Skill Levels
     * +7 to Teeth (Class teeth only)
-    * 35-60% Chance to cast level 35-60 Teeth when you Kill an Enemy
+    * 35% Chance to cast level 60 Teeth when you Kill an Enemy
     * -10-15% to Enemy Magic  Resistance
     * +35% Faster Block Rate
     * +35% Faster Block Rate

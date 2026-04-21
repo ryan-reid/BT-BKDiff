@@ -4,11 +4,11 @@
 * **Runes:** Lem Rune + Ist Rune + Io Rune
 * **Base Items:** helm
 * **Properties:**
-    * 11-18% Chance to cast level 11-18 Confuse on striking
-    * Level 60-17 Attract (60-17/60-17 Charges)
-    * 14-13% Chance to cast level 14-13 Terror when struck
+    * 11% Chance to cast level 18 Confuse on striking
+    * Level 60 Attract (17/# Charges)
+    * 14% Chance to cast level 13 Terror when struck
     * +261 Defense
-    * 6-14% Chance to cast level 6-14 Mind Blast when struck
+    * 6% Chance to cast level 14 Mind Blast when struck
     * +2 to All Skills
 
 ### Dream
@@ -16,7 +16,7 @@
 * **Base Items:** helm
 * **Properties:**
     * +150-220 Defense
-    * 10-15% Chance to cast level 10-15 Confuse when struck
+    * 10% Chance to cast level 15 Confuse when struck
     * + to Mana (Based on Character Level)
     * All Resistances +14-20
     * +20-30% Faster Hit Recovery
@@ -70,7 +70,7 @@
     * +50% Enhanced Defense
     * +25 Defense
     * +-3 to Light Radius
-    * Level 9-13 Cloak of Shadows (9-13/9-13 Charges)
+    * Level 9 Cloak of Shadows (13/# Charges)
     * +5 to Strength
     * Magic Damage Reduced by 4
     * Damage Reduced by 4
@@ -102,8 +102,8 @@
 * **Runes:** Io Rune + Cham Rune + Fal Rune
 * **Base Items:** helm
 * **Properties:**
-    * 100-1% Chance to cast level 100-1 Mark of the Bear on striking
-    * 100-1% Chance to cast level 100-1 Mark of the Wolf on striking
+    * 100% Chance to cast level 1 Mark of the Bear on striking
+    * 100% Chance to cast level 1 Mark of the Wolf on striking
     * +5 to Shape Shifting Skills
     * +50-80% Enhanced Defense
     * All Resistances +10

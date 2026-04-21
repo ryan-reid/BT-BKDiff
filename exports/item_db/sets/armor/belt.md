@@ -108,7 +108,7 @@
 * **Set:** Hwanin's Majesty
 * **Base Item:** Belt
 * **Properties:**
-    * Adds 1-300-1-300 Lightning Damage
+    * Adds 1-300 Lightning Damage
     * Prevent Monster Heal
     * + Defense (Based on Character Level)
     * Damage Reduced by 7%

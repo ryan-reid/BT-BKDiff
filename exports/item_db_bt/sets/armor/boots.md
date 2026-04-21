@@ -82,7 +82,7 @@
     * +30% Faster Run/Walk
     * 25% Better Chance of Getting Magic Items
     * +20 to Dexterity
-    * Adds 1-450-1-450 Lightning Damage
+    * Adds 1-450 Lightning Damage
 
 ### Sander's Riprap (McAuley's Riprap)
 * **Set:** McAuley's Folly
@@ -102,7 +102,7 @@
     * Magic Resist +30-55%
     * +1 to All Skills
     * -5-8% to Enemy Magic  Resistance
-    * 25-55% Chance to cast level 25-55 Blessed Hammer on striking
+    * 25% Chance to cast level 55 Blessed Hammer on striking
 
 ### Natalya's Footprints (Natalya's Footprints)
 * **Set:** Natalya's Vengeance

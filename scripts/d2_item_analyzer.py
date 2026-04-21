@@ -289,7 +289,14 @@ class PropertyResolver:
             if func == '36': # Random class skill function
                 res_text = res_text.replace('#', val1)
             else:
-                res_text = res_text.replace('#', range_str)
+                if res_text.count('#') > 1 and '-' in range_str:
+                    # e.g., "Adds #-# Damage" with "10-20" should be "Adds 10-20 Damage"
+                    # But often it's meant to be "Adds 10-20 Damage" where the first # is 10 and second is 20
+                    parts = range_str.split('-')
+                    for part in parts:
+                        res_text = res_text.replace('#', part, 1)
+                else:
+                    res_text = res_text.replace('#', range_str)
             
             # Handle [Class Skill Tab] placeholder
             if '[Class Skill Tab]' in res_text:

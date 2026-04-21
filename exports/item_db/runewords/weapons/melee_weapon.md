@@ -19,8 +19,8 @@
     * +300-385% Enhanced Damage
     * % Deadly Strike (Based on Character Level)
     * +25% Increased Attack Speed
-    * 25-18% Chance to cast level 25-18 Glacial Spike on attack
-    * 100-44% Chance to cast level 100-44 Chain Lightning when you Die
+    * 25% Chance to cast level 18 Glacial Spike on attack
+    * 100% Chance to cast level 44 Chain Lightning when you Die
     * 50% Chance of Crushing Blow
     * Indestructible
 
@@ -34,7 +34,7 @@
     * Prevent Monster Heal
     * -50-75% to Enemy Cold Resistance
     * +2 to All Skills
-    * 20-40% Chance to cast level 20-40 Blizzard on striking
+    * 20% Chance to cast level 40 Blizzard on striking
 
 ### Eternity
 * **Runes:** Amn Rune + Ber Rune + Ist Rune + Sol Rune + Sur Rune
@@ -43,7 +43,7 @@
     * +260-310% Enhanced Damage
     * Indestructible
     * Slows Target by 33%
-    * Level 88-8 Revive (88-8/88-8 Charges)
+    * Level 88 Revive (8/# Charges)
     * +30% Increased Attack Speed
     * +9% to Experience Gained
     * Cannot Be Frozen
@@ -53,7 +53,7 @@
 * **Base Items:** mele
 * **Properties:**
     * +100% Enhanced Damage
-    * Adds 20-60-20-60 Lightning Damage
+    * Adds 20-60 Lightning Damage
     * +15 to Maximum Damage
     * Lightning Resist +60%
     * +5% to Maximum Lightning Resist

@@ -23,18 +23,47 @@ def parse_markdown_items(file_path):
             item_id = name_line
             
         item_props = []
+        base_item = "Unknown"
+        lvl_req = "0"
+        
         for line in lines[1:]:
+            original_line = line
             line = line.strip()
-            if line.startswith('* '):
+            if line.startswith('* **Base Item:** '):
+                base_item = line.replace('* **Base Item:** ', '').strip()
+            elif line.startswith('* **Level Requirement:** '):
+                lvl_req = line.replace('* **Level Requirement:** ', '').strip()
+            elif original_line.startswith('    * '):
                 item_props.append(line[2:])
-            elif line.startswith('    * '):
-                item_props.append(line[6:])
+            elif line.startswith('* '):
+                # Header lines or unindented properties
+                if '**' not in line: # Avoid bold headers like **Properties:**
+                    item_props.append(line[2:])
         
         items[item_id] = {
-            'display_name': display_name, 
+            'display_name': display_name,
+            'base_item': base_item,
+            'lvl_req': lvl_req,
             'properties': item_props
         }
     return items
+
+def escape_latex(s):
+    """Escapes special LaTeX characters for GitHub MathJax."""
+    if not s: return s
+    # Map of characters to escape
+    chars = {
+        '%': r'\%',
+        '$': r'\$',
+        '#': r'\#',
+        '_': r'\_',
+        '{': r'\{',
+        '}': r'\}',
+        '&': r'\&',
+    }
+    for char, escaped in chars.items():
+        s = s.replace(char, escaped)
+    return s
 
 def normalize_text(s):
     """Strips color codes, bullets, and other fluff to compare content fairly."""
@@ -57,9 +86,9 @@ def normalize_text(s):
 def get_styled_diffs(old_s, new_s):
     """Surgically highlights differences between two strings using token-based diff and LaTeX for GitHub."""
     if not old_s: 
-        return "", f'$\\color{{blue}}{{\\text{{{new_s}}}}}$'
+        return "", f'$\\color{{blue}}{{\\text{{{escape_latex(new_s)}}}}}$'
     if not new_s or new_s == "(removed)": 
-        return f'$\\color{{gray}}{{\\text{{{old_s}}}}}$', f'$\\color{{blue}}{{\\text{{(removed)}}}}$'
+        return f'$\\color{{gray}}{{\\text{{{escape_latex(old_s)}}}}}$', f'$\\color{{blue}}{{\\text{{(removed)}}}}$'
     
     if normalize_text(old_s) == normalize_text(new_s):
         return old_s, new_s
@@ -98,10 +127,11 @@ def get_styled_diffs(old_s, new_s):
         def flush():
             nonlocal res, current_text, last_type
             if not current_text: return
+            esc_text = escape_latex(current_text)
             if last_type == 'added':
-                res += f'$\\color{{blue}}{{\\text{{{current_text}}}}}$'
+                res += f'$\\color{{blue}}{{\\text{{{esc_text}}}}}$'
             elif last_type == 'removed':
-                res += f'$\\color{{gray}}{{\\text{{{current_text}}}}}$'
+                res += f'$\\color{{gray}}{{\\text{{{esc_text}}}}}$'
             else:
                 res += current_text
             current_text = ""
@@ -182,13 +212,32 @@ def compare_databases(bk_dir, bt_dir, out_dir):
                 modified = {}
                 common = [k for k in bk_items if k in bt_items]
                 for k in common:
-                    bk_norm = [normalize_text(p) for p in bk_items[k]['properties']]
-                    bt_norm = [normalize_text(p) for p in bt_items[k]['properties']]
-                    if bk_norm != bt_norm:
-                        modified[k] = {'name': bk_items[k]['display_name'], 'bk_props': bk_items[k]['properties'], 'bt_props': bt_items[k]['properties']}
+                    bk_item = bk_items[k]
+                    bt_item = bt_items[k]
+                    
+                    header_diff = (normalize_text(bk_item['base_item']) != normalize_text(bt_item['base_item']) or 
+                                   normalize_text(bk_item['lvl_req']) != normalize_text(bt_item['lvl_req']))
+                    
+                    bk_norm = [normalize_text(p) for p in bk_item['properties']]
+                    bt_norm = [normalize_text(p) for p in bt_item['properties']]
+                    
+                    if header_diff or bk_norm != bt_norm:
+                        modified[k] = {
+                            'name': bk_item['display_name'],
+                            'bk_base': bk_item['base_item'],
+                            'bt_base': bt_item['base_item'],
+                            'bk_lvl': bk_item['lvl_req'],
+                            'bt_lvl': bt_item['lvl_req'],
+                            'bk_props': bk_item['properties'],
+                            'bt_props': bt_item['properties']
+                        }
                 
                 if added or removed or modified:
-                    all_diffs[t][os.path.join(rel_path, file)] = {'added': {k: bk_items[k] for k in added}, 'removed': {k: bt_items[k] for k in removed}, 'modified': modified}
+                    all_diffs[t][os.path.join(rel_path, file)] = {
+                        'added': {k: bk_items[k] for k in added},
+                        'removed': {k: bt_items[k] for k in removed},
+                        'modified': modified
+                    }
 
     # Generate Summary File
     summary_path = os.path.join(out_dir, "SUMMARY.md")
@@ -218,8 +267,8 @@ def compare_databases(bk_dir, bt_dir, out_dir):
         path = os.path.join(out_dir, filename)
         with open(path, 'w', encoding='utf-8') as f:
             f.write(f"# {title}\n\n")
-            f.write("- <span style=\"color: #999999;\">Gray text</span>: Removed/Old Value\n")
-            f.write("- <span style=\"color: #3366cc;\">Blue text</span>: Added/New Value\n\n")
+            f.write("- $\\color{gray}{\\text{Gray text}}$: Removed/Old Value\n")
+            f.write("- $\\color{blue}{\\text{Blue text}}$: Added/New Value\n\n")
             
             has_content = False
             for t in types:
@@ -234,6 +283,9 @@ def compare_databases(bk_dir, bt_dir, out_dir):
                             type_content += f"**{item['display_name']}** ({k})\n\n"
                             type_content += "| BT Diablo (Old) | BK Diablo (New) |\n"
                             type_content += "| :--- | :--- |\n"
+                            type_content += f"| | **Base Item:** {item['base_item']} |\n"
+                            type_content += f"| | **Level Requirement:** {item['lvl_req']} |\n"
+                            type_content += "| | **Properties:** |\n"
                             for prop in item['properties']:
                                 _, new_fmt = get_styled_diffs("", prop)
                                 type_content += f"| | {new_fmt} |\n"
@@ -247,6 +299,21 @@ def compare_databases(bk_dir, bt_dir, out_dir):
                             type_content += f"**{mod['name']}** ({k})\n\n"
                             type_content += "| BT Diablo (Old) | BK Diablo (New) |\n"
                             type_content += "| :--- | :--- |\n"
+                            
+                            # Header fields
+                            if normalize_text(mod['bt_base']) != normalize_text(mod['bk_base']):
+                                b_old, b_new = get_styled_diffs(mod['bt_base'], mod['bk_base'])
+                                type_content += f"| **Base Item:** {b_old} | **Base Item:** {b_new} |\n"
+                            else:
+                                type_content += f"| **Base Item:** {mod['bt_base']} | **Base Item:** {mod['bk_base']} |\n"
+                                
+                            if normalize_text(mod['bt_lvl']) != normalize_text(mod['bk_lvl']):
+                                l_old, l_new = get_styled_diffs(mod['bt_lvl'], mod['bk_lvl'])
+                                type_content += f"| **Level Requirement:** {l_old} | **Level Requirement:** {l_new} |\n"
+                            else:
+                                type_content += f"| **Level Requirement:** {mod['bt_lvl']} | **Level Requirement:** {mod['bk_lvl']} |\n"
+                            
+                            type_content += "| **Properties:** | **Properties:** |\n"
                             aligned = align_properties(mod['bt_props'], mod['bk_props'])
                             for old_s, new_s in aligned:
                                 if normalize_text(old_s) == normalize_text(new_s):

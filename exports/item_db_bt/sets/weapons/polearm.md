@@ -6,10 +6,10 @@
 * **Properties:**
     * +330 to Attack Rating
     * Repairs 1 durability in  seconds
-    * 10-14% Chance to cast level 10-14 Nova on striking
+    * 10% Chance to cast level 14 Nova on striking
     * +40% Increased Attack Speed
     * +200% Enhanced Damage
-    * Adds 1-300-1-300 Lightning Damage
+    * Adds 1-300 Lightning Damage
 
 ### Astral Bond (Astral Bond)
 * **Set:** Sanctuary's Blessing Caster
@@ -35,4 +35,4 @@
     * +220-280% Enhanced Damage
     * Level 10-15 Concentration Aura When Equipped
     * Increase Maximum Life 5-20%
-    * 22-20% Chance to cast level 22-20 Amplify Damage on attack
+    * 22% Chance to cast level 20 Amplify Damage on attack

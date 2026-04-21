@@ -1,7 +1,7 @@
 # Removed Items
 
-- <span style="color: #999999;">Gray text</span>: Removed/Old Value
-- <span style="color: #3366cc;">Blue text</span>: Added/New Value
+- $\color{gray}{\text{Gray text}}$: Removed/Old Value
+- $\color{blue}{\text{Blue text}}$: Added/New Value
 
 ## Uniques
 

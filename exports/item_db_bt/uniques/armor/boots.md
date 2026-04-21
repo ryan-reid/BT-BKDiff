@@ -64,14 +64,14 @@
 * **Base Item:** Demonhide Boots
 * **Level Requirement:** 29
 * **Properties:**
-    * Adds 12-33-12-33 Fire Damage
+    * Adds 12-33 Fire Damage
     * +20% Faster Run/Walk
     * +10% to Maximum Fire Resist
     * Fire Resist +30%
     * +120-150% Enhanced Defense
     * 60-100% Extra Gold from Monsters
     * +15 Defense
-    * 75-25% Chance to cast level 75-25 Blaze when struck
+    * 75% Chance to cast level 25 Blaze when struck
     * +20% Faster Hit Recovery
 
 ### Waterwalk (Waterwalk)
@@ -108,7 +108,7 @@
     * Durability: 30 of 30
     * +35% Faster Run/Walk
     * +150-190% Enhanced Defense
-    * Adds 15-25-15-25 Damage
+    * Adds 15-25 Damage
     * Attacker Takes Damage of 5-10
 
 ### Gore Rider (Gorerider)
@@ -193,5 +193,5 @@
 * **Properties:**
     * Socketed (1)
     * +1-10% Energy
-    * 5-20% Chance to cast level 5-20 Static Field when struck
+    * 5% Chance to cast level 20 Static Field when struck
     * +5-10% Faster Run/Walk

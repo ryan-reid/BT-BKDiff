@@ -53,7 +53,7 @@
     * +30% Increased Attack Speed
     * +30 to Dexterity
     * +250% Enhanced Damage
-    * Adds 30-54-30-54 Damage
+    * Adds 30-54 Damage
     * +2 to Necromancer Skill Levels
     * +3 to Poison Strike
 
@@ -63,7 +63,7 @@
 * **Properties:**
     * 35% Deadly Strike
     * Ignore Target's Defense
-    * Adds 15-35-15-35 Damage
+    * Adds 15-35 Damage
     * +190-240% Enhanced Damage
     * +1-3 to Find Potion
     * +1-3 to Find Item
@@ -87,8 +87,8 @@
 * **Base Item:** Stiletto
 * **Level Requirement:** 41
 * **Properties:**
-    * Adds 1-120-1-120 Lightning Damage
-    * 25-50% Chance to cast level 25-50 Lightning when struck
+    * Adds 1-120 Lightning Damage
+    * 25% Chance to cast level 50 Lightning when struck
     * +30% Increased Attack Speed
     * Lightning Resist +% (Based on Character Level)
     * -5-10% to Enemy Lightning Resistance

@@ -6,8 +6,8 @@
 * **Properties:**
     * +260-340% Enhanced Damage
     * +280-330% Damage to Demons
-    * 100-18% Chance to cast level 100-18 Bone Spear on striking
-    * 35-14% Chance to cast level 35-14 Amplify Damage when struck
+    * 100% Chance to cast level 18 Bone Spear on striking
+    * 35% Chance to cast level 14 Amplify Damage when struck
     * Knockback
     * +30% Increased Attack Speed
     * Fires Explosive Arrows or Bolts
@@ -30,7 +30,7 @@
 * **Properties:**
     * +280% Enhanced Damage
     * 300% Bonus to Attack Rating
-    * Adds 50-100-50-100 Damage
+    * Adds 50-100 Damage
     * All Resistances +15
     * Level 12-15 Fanaticism Aura When Equipped
     * Reanimate As: [Returned]
@@ -41,8 +41,8 @@
 * **Base Items:** miss
 * **Properties:**
     * +275-325% Enhanced Damage
-    * Adds 55-160-55-160 Fire/Lightning/Cold Damage
-    * Level 25-20 Revive (25-20/25-20 Charges)
+    * Adds 55-160 Fire/Lightning/Cold Damage
+    * Level 25 Revive (20/# Charges)
     * Level 10 Vigor Aura When Equipped
     * +2-6 to Valkyrie
     * Regenerate Mana 20%
@@ -55,8 +55,8 @@
     * +140-210% Enhanced Damage
     * Level 18 Holy Freeze Aura When Equipped
     * +25-30% to Cold Skill Damage
-    * 25-35% Chance to cast level 25-35 Frost Nova on striking
-    * 100-40% Chance to cast level 100-40 Blizzard when you Level-Up
+    * 25% Chance to cast level 35 Frost Nova on striking
+    * 100% Chance to cast level 40 Blizzard when you Level-Up
     * -25-30% to Enemy Cold Resistance
     * % Extra Gold from Monsters (Based on Character Level)
 
@@ -88,10 +88,10 @@
 * **Properties:**
     * +300-375% Enhanced Damage
     * +30% Increased Attack Speed
-    * Adds 50-300-50-300 Lightning Damage
-    * Adds 200-300-200-300 Magic Damage
+    * Adds 50-300 Lightning Damage
+    * Adds 200-300 Magic Damage
     * 10-20% Deadly Strike
-    * 30-7% Chance to cast level 30-7 Decrepify on striking
+    * 30% Chance to cast level 7 Decrepify on striking
     * Cannot Be Frozen
 
 ### Zephyr
@@ -102,6 +102,6 @@
     * +25% Increased Attack Speed
     * +100% Enhanced Damage
     * 20% Bonus to Attack Rating
-    * 14-2% Chance to cast level 14-2 Twister on striking
+    * 14% Chance to cast level 2 Twister on striking
     * Piercing Attack
     * +30 to Mana

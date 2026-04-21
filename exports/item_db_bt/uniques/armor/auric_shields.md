@@ -48,8 +48,8 @@
 * **Level Requirement:** 90
 * **Properties:**
     * Level 15-20 Holy Freeze Aura When Equipped
-    * 85-55% Chance to cast level 85-55 Nova on striking
-    * 25-50% Chance to cast level 25-50 Enchant when you Kill an Enemy
+    * 85% Chance to cast level 55 Nova on striking
+    * 25% Chance to cast level 50 Enchant when you Kill an Enemy
     * +20% Faster Block Rate
     * +20% Faster Block Rate
     * +2 to Paladin Skill Levels

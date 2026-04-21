@@ -4,7 +4,7 @@
 * **Set:** Aldur's Watchtower
 * **Base Item:** Jagged Star
 * **Properties:**
-    * Adds 50-100-50-100 Damage
+    * Adds 50-100 Damage
     * Damage +50-75
     * 10% Life stolen per hit
     * +45% Increased Attack Speed
@@ -18,8 +18,8 @@
 * **Properties:**
     * + to Maximum Damage (Based on Character Level)
     * +40% Increased Attack Speed
-    * 10-20% Chance to cast level 10-20 Meteor on striking
-    * Adds 20-30-20-30 Fire Damage
+    * 10% Chance to cast level 20 Meteor on striking
+    * Adds 20-30 Fire Damage
     * 25% Chance of Crushing Blow
     * +1 to Zeal
     * +200% Enhanced Damage

@@ -15,7 +15,7 @@
     * Fire Resist +20%
     * +15 to Dexterity
     * Lightning Resist +20%
-    * 12-1% Chance to cast level 12-1 Poison Nova when struck
+    * 12% Chance to cast level 1 Poison Nova when struck
 
 ### Milabrega's Robe (Milabrega's Robe)
 * **Set:** Milabrega's Regalia
@@ -117,7 +117,7 @@
 * **Base Item:** Sacred Armor
 * **Properties:**
     * +400 Defense
-    * 20-5% Chance to cast level 20-5 Enchant when struck
+    * 20% Chance to cast level 5 Enchant when struck
     * +2-3  to Barbarian Skill Levels
     * Poison Resist +50%
     * Requirements --30--50%
@@ -164,7 +164,7 @@
 * **Set:** M'avina's Battle Hymn
 * **Base Item:** Kraken Shell
 * **Properties:**
-    * 10-3% Chance to cast level 10-3 Glacial Spike when struck
+    * 10% Chance to cast level 3 Glacial Spike when struck
     * Requirements --30%
     * Magic Damage Reduced by 5-12
     * +2-3 to Bow and Crossbow Skills
@@ -179,7 +179,7 @@
 * **Properties:**
     * +305-415 Defense
     * Lightning Resist +50%
-    * 25-20% Chance to cast level 25-20 Nova when struck
+    * 25% Chance to cast level 20 Nova when struck
     * +1-2 to All Skills
     * +20% Faster Cast Rate
 
@@ -201,7 +201,7 @@
     * +450 Defense
     * Poison Resist +60%
     * +175 to Life
-    * 10-7% Chance to cast level 10-7 Static Field when struck
+    * 10% Chance to cast level 7 Static Field when struck
     * Damage Reduced by 10%
 
 ### Sazabi's Ghost Liberator (Sazabi's Ghost Liberator)
@@ -223,7 +223,7 @@
     * Lightning Resist +75%
     * +200% Enhanced Defense
     * +100 to Life
-    * 100-20% Chance to cast level 100-20 Charged Bolt when struck
+    * 100% Chance to cast level 20 Charged Bolt when struck
     * +20% Faster Run/Walk
     * Damage Reduced by 10%
 

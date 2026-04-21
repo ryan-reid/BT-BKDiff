@@ -226,7 +226,7 @@
 * **Properties:**
     * +2 to Paladin Skill Levels
     * Level 15-18 Holy Fire Aura When Equipped
-    * 25-55% Chance to cast level 25-55 Blessed Hammer on striking
+    * 25% Chance to cast level 55 Blessed Hammer on striking
     * +20-25% Increased Attack Speed
     * +20-25% Faster Cast Rate
     * Damage Reduced by 5-10%

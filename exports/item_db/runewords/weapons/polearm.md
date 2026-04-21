@@ -8,9 +8,9 @@
     * +35% Faster Run/Walk
     * + to Vitality (Based on Character Level)
     * Level 12 Conviction Aura When Equipped
-    * 50-20% Chance to cast level 50-20 Chain Lightning when you Kill an Enemy
+    * 50% Chance to cast level 20 Chain Lightning when you Kill an Enemy
     * -45-55% to Enemy Lightning Resistance
-    * Level 30-21 Cyclone Armor (30-21/30-21 Charges)
+    * Level 30 Cyclone Armor (21/# Charges)
 
 ### Insight
 * **Runes:** Ral Rune + Tir Rune + Tal Rune + Sol Rune
@@ -30,7 +30,7 @@
 * **Properties:**
     * +370% Enhanced Damage
     * 40% Chance of Crushing Blow
-    * 30-21% Chance to cast level 30-21 Enchant when you Kill an Enemy
+    * 30% Chance to cast level 21 Enchant when you Kill an Enemy
     * -25% to Enemy Fire Resistance
     * +25% Increased Attack Speed
     * +40% Faster Hit Recovery
@@ -44,6 +44,6 @@
     * +35% Faster Run/Walk
     * + to Vitality (Based on Character Level)
     * Level 12 Summon Tainted Aura When Equipped
-    * 50-20% Chance to cast level 50-20 Bone Spear when you Kill an Enemy
+    * 50% Chance to cast level 20 Bone Spear when you Kill an Enemy
     * -45-55% to Enemy Magic Resistance
-    * Level 30-21 Cyclone Armor (30-21/30-21 Charges)
+    * Level 30 Cyclone Armor (21/# Charges)
