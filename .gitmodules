@@ -2,3 +2,7 @@
 	path = BKDiablo
 	url = https://github.com/BaronBeefStick/BKDiablo-Ascenstion
 	branch = BKDiablo-Ascension
+[submodule "BTDiablo"]
+	path = BTDiablo
+	url = https://github.com/BTNeandertha1/BTDiablo
+	branch = BTD-Brutality-Sets+Runeword-ON
