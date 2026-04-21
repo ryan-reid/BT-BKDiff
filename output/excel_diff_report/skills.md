@@ -72,11 +72,11 @@
 - `Param1`: $\color{gray}{\text{500}}$ (Old) &rarr; $\color{blue}{\text{150}}$ (New)
 
 ### blade sentinel
-- `passivecalc6`: $\color{gray}{\text{stat('item\_pierce\_cold\_immunity'.accr}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_cold\_immunity'.accr)}}$ (New)
+- `passivecalc6`: $\color{gray}{\text{stat('item\\_pierce\\_cold\\_immunity'.accr}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_cold\\_immunity'.accr)}}$ (New)
 
 ### bloodgolem
-- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_damage\_immunity}}$ (New)
-- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_damage\_immunity'.accr)}}$ (New)
+- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_damage\\_immunity}}$ (New)
+- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_damage\\_immunity'.accr)}}$ (New)
 
 ### bloodlordfrenzy
 - `srvstfunc`: $\color{gray}{\text{64}}$ (Old) &rarr; $\color{blue}{\text{67}}$ (New)
@@ -86,14 +86,14 @@
 - `calc1`: $\color{gray}{\text{min(3,1+skill('Bone Spear'.blvl)/10}}$ (Old) &rarr; $\color{blue}{\text{min(3, 1 + skill('Bone Spear'.blvl)/10) + ((skill('Bone Spear'.lvl) - skill('Bone Spear'.blvl)) / 5)}}$ (New)
 
 ### clay golem
-- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_damage\_immunity}}$ (New)
-- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_damage\_immunity'.accr)}}$ (New)
+- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_damage\\_immunity}}$ (New)
+- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_damage\\_immunity'.accr)}}$ (New)
 
 ### death sentry
-- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{passive\_ltng\_mastery}}$ (New)
-- `passivecalc6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('passive\_ltng\_mastery'.accr)}}$ (New)
-- `passivestat7`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{passive\_fire\_mastery}}$ (New)
-- `passivecalc7`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('passive\_fire\_mastery'.accr)}}$ (New)
+- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{passive\\_ltng\\_mastery}}$ (New)
+- `passivecalc6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('passive\\_ltng\\_mastery'.accr)}}$ (New)
+- `passivestat7`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{passive\\_fire\\_mastery}}$ (New)
+- `passivecalc7`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('passive\\_fire\\_mastery'.accr)}}$ (New)
 
 ### double swing
 - `calc1`: $\color{gray}{\text{skill('Frenzy'.blvl)*par8}}$ (Old) &rarr; $\color{blue}{\text{skill('Bash'.blvl)*par8}}$ (New)
@@ -110,8 +110,8 @@
 - `Param8`: $\color{gray}{\text{18}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 
 ### firegolem
-- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_fire\_immunity}}$ (New)
-- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_fire\_immunity'.accr)}}$ (New)
+- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
+- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_fire\\_immunity'.accr)}}$ (New)
 
 ### frenzy
 - `auralencalc`: $\color{gray}{\text{par7+skill('Increased Stamina'.blvl)*10}}$ (Old) &rarr; $\color{blue}{\text{par7+skill('Increased Endurance'.blvl)*10}}$ (New)
@@ -120,8 +120,8 @@
 - `calc1`: $\color{gray}{\text{min(3,1+skill('Holy Bolt'.blvl)/10}}$ (Old) &rarr; $\color{blue}{\text{min(5,1+skill('Holy Bolt'.blvl)/5}}$ (New)
 
 ### hydra
-- `passivestat3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_fire\_immunity}}$ (New)
-- `passivecalc3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_fire\_immunity'.accr)}}$ (New)
+- `passivestat3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
+- `passivecalc3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_fire\\_immunity'.accr)}}$ (New)
 - `Param1`: $\color{gray}{\text{250}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `Param2`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
@@ -132,13 +132,13 @@
 - `reqskill1`: $\color{gray}{\text{Increased Stamina}}$ (Old) &rarr; $\color{blue}{\text{Increased Endurance}}$ (New)
 
 ### irongolem
-- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_cold\_immunity}}$ (New)
-- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_cold\_immunity'.accr)}}$ (New)
-- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_fire\_immunity}}$ (New)
+- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_cold\\_immunity}}$ (New)
+- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_cold\\_immunity'.accr)}}$ (New)
+- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
 
 ### magic conviction
 - `*Id`: $\color{gray}{\text{376}}$ (Old) &rarr; $\color{blue}{\text{431}}$ (New)
-- `aurastatcalc1`: $\color{gray}{\text{-(lvl*5+15)-stat('passive\_mag\_pierce'.accr)}}$ (Old) &rarr; $\color{blue}{\text{-min(ln34,150)}}$ (New)
+- `aurastatcalc1`: $\color{gray}{\text{-(lvl*5+15)-stat('passive\\_mag\\_pierce'.accr)}}$ (Old) &rarr; $\color{blue}{\text{-min(ln34,150)}}$ (New)
 - `Param3`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 - `Param4`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 
@@ -147,8 +147,8 @@
 - `srvdofunc`: $\color{gray}{\text{109}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
 
 ### plague poppy
-- `passivestat1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_poison\_immunity}}$ (New)
-- `passivecalc1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_poison\_immunity'.accr)}}$ (New)
+- `passivestat1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_poison\\_immunity}}$ (New)
+- `passivecalc1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_poison\\_immunity'.accr)}}$ (New)
 
 ### poison dagger
 - `manashift`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
@@ -156,58 +156,58 @@
 - `lvlmana`: $\color{gray}{\text{-1}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 
 ### raise skeletal mage
-- `passivestat2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_cold\_immunity}}$ (New)
-- `passivecalc2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_cold\_immunity'.accr)}}$ (New)
-- `passivestat3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_fire\_immunity}}$ (New)
-- `passivecalc3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_fire\_immunity'.accr)}}$ (New)
-- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_light\_immunity}}$ (New)
-- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_light\_immunity'.accr)}}$ (New)
-- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_poison\_immunity}}$ (New)
-- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_poison\_immunity'.accr)}}$ (New)
+- `passivestat2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_cold\\_immunity}}$ (New)
+- `passivecalc2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_cold\\_immunity'.accr)}}$ (New)
+- `passivestat3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
+- `passivecalc3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_fire\\_immunity'.accr)}}$ (New)
+- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_light\\_immunity}}$ (New)
+- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_light\\_immunity'.accr)}}$ (New)
+- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_poison\\_immunity}}$ (New)
+- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_poison\\_immunity'.accr)}}$ (New)
 
 ### raise skeleton
-- `passivestat2`: $\color{gray}{\text{mindamage}}$ (Old) &rarr; $\color{blue}{\text{item\_normaldamage}}$ (New)
-- `passivestat3`: $\color{gray}{\text{maxdamage}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_damage\_immunity}}$ (New)
-- `passivecalc3`: $\color{gray}{\text{skill('Skeleton Mastery'.lvl) * skill('Skeleton Mastery'.par2) + edmn}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_damage\_immunity'.accr)}}$ (New)
+- `passivestat2`: $\color{gray}{\text{mindamage}}$ (Old) &rarr; $\color{blue}{\text{item\\_normaldamage}}$ (New)
+- `passivestat3`: $\color{gray}{\text{maxdamage}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_damage\\_immunity}}$ (New)
+- `passivecalc3`: $\color{gray}{\text{skill('Skeleton Mastery'.lvl) * skill('Skeleton Mastery'.par2) + edmn}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_damage\\_immunity'.accr)}}$ (New)
 
 ### raven
-- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_cold\_immunity}}$ (New)
+- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_cold\\_immunity}}$ (New)
 
 ### revive
-- `passivestat2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_cold\_immunity}}$ (New)
-- `passivecalc2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_cold\_immunity'.accr)}}$ (New)
-- `passivestat3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_fire\_immunity}}$ (New)
-- `passivecalc3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_fire\_immunity'.accr)}}$ (New)
-- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_light\_immunity}}$ (New)
-- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_light\_immunity'.accr)}}$ (New)
-- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_poison\_immunity}}$ (New)
-- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_poison\_immunity'.accr)}}$ (New)
-- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_damage\_immunity}}$ (New)
+- `passivestat2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_cold\\_immunity}}$ (New)
+- `passivecalc2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_cold\\_immunity'.accr)}}$ (New)
+- `passivestat3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
+- `passivecalc3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_fire\\_immunity'.accr)}}$ (New)
+- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_light\\_immunity}}$ (New)
+- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_light\\_immunity'.accr)}}$ (New)
+- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_poison\\_immunity}}$ (New)
+- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_poison\\_immunity'.accr)}}$ (New)
+- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_damage\\_immunity}}$ (New)
 
 ### shadow master
-- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_cold\_immunity}}$ (New)
-- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_cold\_immunity'.accr)}}$ (New)
-- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_fire\_immunity}}$ (New)
+- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_cold\\_immunity}}$ (New)
+- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_cold\\_immunity'.accr)}}$ (New)
+- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
 
 ### shadow warrior
-- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_cold\_immunity}}$ (New)
-- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_cold\_immunity'.accr)}}$ (New)
-- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_fire\_immunity}}$ (New)
+- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_cold\\_immunity}}$ (New)
+- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_cold\\_immunity'.accr)}}$ (New)
+- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
 
 ### splash
 - `*Id`: $\color{gray}{\text{375}}$ (Old) &rarr; $\color{blue}{\text{430}}$ (New)
 - `itypea2`: $\color{gray}{\text{miss}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### summon fenris
-- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_damage\_immunity}}$ (New)
-- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_damage\_immunity'.accr)}}$ (New)
+- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_damage\\_immunity}}$ (New)
+- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_damage\\_immunity'.accr)}}$ (New)
 
 ### summon grizzly
-- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_damage\_immunity}}$ (New)
-- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_damage\_immunity'.accr)}}$ (New)
+- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_damage\\_immunity}}$ (New)
+- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_damage\\_immunity'.accr)}}$ (New)
 
 ### summon spirit wolf
-- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_cold\_immunity}}$ (New)
+- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_cold\\_immunity}}$ (New)
 
 ### summon splash
 - `*Id`: $\color{gray}{\text{378}}$ (Old) &rarr; $\color{blue}{\text{432}}$ (New)
@@ -216,13 +216,13 @@
 - `*Id`: $\color{gray}{\text{374}}$ (Old) &rarr; $\color{blue}{\text{429}}$ (New)
 
 ### valkyrie
-- `passivestat3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_cold\_immunity}}$ (New)
-- `passivecalc3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_cold\_immunity'.accr)}}$ (New)
-- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_fire\_immunity}}$ (New)
-- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_fire\_immunity'.accr)}}$ (New)
-- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_light\_immunity}}$ (New)
-- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\_pierce\_light\_immunity'.accr)}}$ (New)
-- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\_pierce\_poison\_immunity}}$ (New)
+- `passivestat3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_cold\\_immunity}}$ (New)
+- `passivecalc3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_cold\\_immunity'.accr)}}$ (New)
+- `passivestat4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
+- `passivecalc4`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_fire\\_immunity'.accr)}}$ (New)
+- `passivestat5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_light\\_immunity}}$ (New)
+- `passivecalc5`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_light\\_immunity'.accr)}}$ (New)
+- `passivestat6`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_poison\\_immunity}}$ (New)
 
 ### vengeance
 - `Param1`: $\color{gray}{\text{500}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)

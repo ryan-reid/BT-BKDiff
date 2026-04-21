@@ -50,16 +50,16 @@ def get_key_column(filename):
     return mapping.get(filename, 'code')
 
 def escape_latex(s):
-    """Escapes special LaTeX characters for GitHub MathJax."""
+    """Escapes special LaTeX characters for GitHub MathJax. Uses double backslashes to survive Markdown pass."""
     if not s: return s
     chars = {
-        '%': r'\%',
-        '$': r'\$',
-        '#': r'\#',
-        '_': r'\_',
-        '{': r'\{',
-        '}': r'\}',
-        '&': r'\&',
+        '%': r'\\%',
+        '$': r'\\$',
+        '#': r'\\#',
+        '_': r'\\_',
+        '{': r'\\{',
+        '}': r'\\}',
+        '&': r'\\&',
     }
     for char, escaped in chars.items():
         s = s.replace(char, escaped)

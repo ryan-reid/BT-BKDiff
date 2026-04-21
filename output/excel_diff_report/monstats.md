@@ -38,9 +38,9 @@
 
 ### druidbear
 - `Skill1`: $\color{gray}{\text{BearSmite}}$ (Old) &rarr; $\color{blue}{\text{Summon Splash}}$ (New)
-- `Sk1mode`: $\color{gray}{\text{seq\_bearsmite}}$ (Old) &rarr; $\color{blue}{\text{A1}}$ (New)
+- `Sk1mode`: $\color{gray}{\text{seq\\_bearsmite}}$ (Old) &rarr; $\color{blue}{\text{A1}}$ (New)
 - `Skill2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{BearSmite}}$ (New)
-- `Sk2mode`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{seq\_bearsmite}}$ (New)
+- `Sk2mode`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{seq\\_bearsmite}}$ (New)
 - `Sk2lvl`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### druidhawk

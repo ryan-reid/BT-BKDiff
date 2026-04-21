@@ -7,19 +7,19 @@
 - `Token`: $\color{gray}{\text{S1}}$ (Old) &rarr; $\color{blue}{\text{SS}}$ (New)
 
 ### ancient statue 1
-- `Class`: $\color{gray}{\text{Curly}}$ (Old) &rarr; $\color{blue}{\text{colossal\_statue\_1}}$ (New)
+- `Class`: $\color{gray}{\text{Curly}}$ (Old) &rarr; $\color{blue}{\text{colossal\\_statue\\_1}}$ (New)
 - `*ID`: $\color{gray}{\text{475}}$ (Old) &rarr; $\color{blue}{\text{574}}$ (New)
 - `OperateFn`: $\color{gray}{\text{63}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `InitFn`: $\color{gray}{\text{64}}$ (Old) &rarr; $\color{blue}{\text{80}}$ (New)
 
 ### ancient statue 2
-- `Class`: $\color{gray}{\text{Larry}}$ (Old) &rarr; $\color{blue}{\text{colossal\_statue\_2}}$ (New)
+- `Class`: $\color{gray}{\text{Larry}}$ (Old) &rarr; $\color{blue}{\text{colossal\\_statue\\_2}}$ (New)
 - `*ID`: $\color{gray}{\text{476}}$ (Old) &rarr; $\color{blue}{\text{575}}$ (New)
 - `OperateFn`: $\color{gray}{\text{64}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `InitFn`: $\color{gray}{\text{65}}$ (Old) &rarr; $\color{blue}{\text{80}}$ (New)
 
 ### ancient statue 3
-- `Class`: $\color{gray}{\text{Moe}}$ (Old) &rarr; $\color{blue}{\text{colossal\_statue\_3}}$ (New)
+- `Class`: $\color{gray}{\text{Moe}}$ (Old) &rarr; $\color{blue}{\text{colossal\\_statue\\_3}}$ (New)
 - `*ID`: $\color{gray}{\text{474}}$ (Old) &rarr; $\color{blue}{\text{576}}$ (New)
 - `OperateFn`: $\color{gray}{\text{62}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `InitFn`: $\color{gray}{\text{63}}$ (Old) &rarr; $\color{blue}{\text{80}}$ (New)

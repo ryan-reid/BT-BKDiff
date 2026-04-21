@@ -14,11 +14,11 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 54 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\% Chance to cast level 25 Miasma Chain on striking}}$ |
-| | $\color{blue}{\text{+5-10\% to Magic Skill Damage}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{Lightning Resist +25-40\%}}$ |
-| | $\color{blue}{\text{Increase Maximum Mana 10-15\%}}$ |
+| | $\color{blue}{\text{20\\% Chance to cast level 25 Miasma Chain on striking}}$ |
+| | $\color{blue}{\text{+5-10\\% to Magic Skill Damage}}$ |
+| | $\color{blue}{\text{+10\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{Lightning Resist +25-40\\%}}$ |
+| | $\color{blue}{\text{Increase Maximum Mana 10-15\\%}}$ |
 | | $\color{blue}{\text{Magic Damage Reduced by 8-12}}$ |
 
 ### accessories\charms.md
@@ -40,13 +40,13 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\% Chance to cast level 25 Bone Armor when struck}}$ |
-| | $\color{blue}{\text{+5-10\% to Poison Skill Damage}}$ |
+| | $\color{blue}{\text{10\\% Chance to cast level 25 Bone Armor when struck}}$ |
+| | $\color{blue}{\text{+5-10\\% to Poison Skill Damage}}$ |
 | | $\color{blue}{\text{Adds 975-975 Poison Damage Over 975 Seconds}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Poison Resistance}}$ |
-| | $\color{blue}{\text{+3-5\% to Experience Gained}}$ |
-| | $\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{25-50\% Extra Gold from Monsters}}$ |
+| | $\color{blue}{\text{-5-10\\% to Enemy Poison Resistance}}$ |
+| | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
+| | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{25-50\\% Extra Gold from Monsters}}$ |
 
 **Guardian's Thunder** (Guardian's Thunder)
 
@@ -55,13 +55,13 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\% Chance to cast level 25 Cyclone Armor when struck}}$ |
-| | $\color{blue}{\text{+5-10\% to Lightning Skill Damage}}$ |
+| | $\color{blue}{\text{10\\% Chance to cast level 25 Cyclone Armor when struck}}$ |
+| | $\color{blue}{\text{+5-10\\% to Lightning Skill Damage}}$ |
 | | $\color{blue}{\text{Adds 1-200 Lightning Damage}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Lightning Resistance}}$ |
-| | $\color{blue}{\text{+3-5\% to Experience Gained}}$ |
-| | $\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{25-50\% Extra Gold from Monsters}}$ |
+| | $\color{blue}{\text{-5-10\\% to Enemy Lightning Resistance}}$ |
+| | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
+| | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{25-50\\% Extra Gold from Monsters}}$ |
 
 **Protector's Frost** (Protector's Frost)
 
@@ -70,13 +70,13 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\% Chance to cast level 25 Frozen Armor when struck}}$ |
-| | $\color{blue}{\text{+5-10\% to Cold Skill Damage}}$ |
+| | $\color{blue}{\text{10\\% Chance to cast level 25 Frozen Armor when struck}}$ |
+| | $\color{blue}{\text{+5-10\\% to Cold Skill Damage}}$ |
 | | $\color{blue}{\text{Adds 50-150 Cold Damage}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Cold Resistance}}$ |
-| | $\color{blue}{\text{+3-5\% to Experience Gained}}$ |
-| | $\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{25-50\% Extra Gold from Monsters}}$ |
+| | $\color{blue}{\text{-5-10\\% to Enemy Cold Resistance}}$ |
+| | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
+| | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{25-50\\% Extra Gold from Monsters}}$ |
 
 **Defender's Fire** (Defender's Fire)
 
@@ -85,13 +85,13 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\% Chance to cast level 25 Blaze when struck}}$ |
-| | $\color{blue}{\text{+5-10\% to Fire Skill Damage}}$ |
+| | $\color{blue}{\text{10\\% Chance to cast level 25 Blaze when struck}}$ |
+| | $\color{blue}{\text{+5-10\\% to Fire Skill Damage}}$ |
 | | $\color{blue}{\text{Adds 100-250 Fire Damage}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Fire Resistance}}$ |
-| | $\color{blue}{\text{+3-5\% to Experience Gained}}$ |
-| | $\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{25-50\% Extra Gold from Monsters}}$ |
+| | $\color{blue}{\text{-5-10\\% to Enemy Fire Resistance}}$ |
+| | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
+| | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{25-50\\% Extra Gold from Monsters}}$ |
 
 **Protector's Stone** (Protector's Stone)
 
@@ -100,13 +100,13 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\% Chance to cast level 15 Fade when struck}}$ |
-| | $\color{blue}{\text{+30-50\% Enhanced Damage}}$ |
+| | $\color{blue}{\text{10\\% Chance to cast level 15 Fade when struck}}$ |
+| | $\color{blue}{\text{+30-50\\% Enhanced Damage}}$ |
 | | $\color{blue}{\text{Adds 20-50 Damage}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Physical Resistance}}$ |
-| | $\color{blue}{\text{+3-5\% to Experience Gained}}$ |
-| | $\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{25-50\% Extra Gold from Monsters}}$ |
+| | $\color{blue}{\text{-5-10\\% to Enemy Physical Resistance}}$ |
+| | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
+| | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{25-50\\% Extra Gold from Monsters}}$ |
 
 **Guardian's Light** (Guardian's Light)
 
@@ -115,13 +115,13 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\% Chance to cast level 25 Psychic Ward when struck}}$ |
-| | $\color{blue}{\text{+5-10\% to Magic Skill Damage}}$ |
+| | $\color{blue}{\text{10\\% Chance to cast level 25 Psychic Ward when struck}}$ |
+| | $\color{blue}{\text{+5-10\\% to Magic Skill Damage}}$ |
 | | $\color{blue}{\text{Adds 100-200 Magic Damage}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Magic Resistance}}$ |
-| | $\color{blue}{\text{+3-5\% to Experience Gained}}$ |
-| | $\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{25-50\% Extra Gold from Monsters}}$ |
+| | $\color{blue}{\text{-5-10\\% to Enemy Magic Resistance}}$ |
+| | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
+| | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{25-50\\% Extra Gold from Monsters}}$ |
 
 ### accessories\crafted_sunder_charm.md
 
@@ -133,11 +133,11 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Cold Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Cold Resist +-90--70\%}}$ |
-| | $\color{blue}{\text{ (Random: +5-15\% to Cold Skill Damage OR -5-10\% to Enemy Cold Resistance)}}$ |
-| | $\color{blue}{\text{ (Random: 14-25\% Better Chance of Getting Magic Items OR 20-55\% Extra Gold from Monsters)}}$ |
+| | $\color{blue}{\text{Cold Resist +-90--70\\%}}$ |
+| | $\color{blue}{\text{ (Random: +5-15\\% to Cold Skill Damage OR -5-10\\% to Enemy Cold Resistance)}}$ |
+| | $\color{blue}{\text{ (Random: 14-25\\% Better Chance of Getting Magic Items OR 20-55\\% Extra Gold from Monsters)}}$ |
 | | $\color{blue}{\text{ (Random: +10-65 to Life OR +10-75 to Mana)}}$ |
-| | $\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
+| | $\color{blue}{\text{ (Random: +5-10\\% Faster Run/Walk OR +12-24\\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
 | | $\color{blue}{\text{Unknown Prop: Gelid-Affix5 (, 1-1)}}$ |
 | | $\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}$ |
 
@@ -149,11 +149,11 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Fire Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Fire Resist +-90--75\%}}$ |
-| | $\color{blue}{\text{ (Random: +5-15\% to Fire Skill Damage OR -5-10\% to Enemy Fire Resistance)}}$ |
-| | $\color{blue}{\text{ (Random: 14-25\% Better Chance of Getting Magic Items OR 20-55\% Extra Gold from Monsters)}}$ |
+| | $\color{blue}{\text{Fire Resist +-90--75\\%}}$ |
+| | $\color{blue}{\text{ (Random: +5-15\\% to Fire Skill Damage OR -5-10\\% to Enemy Fire Resistance)}}$ |
+| | $\color{blue}{\text{ (Random: 14-25\\% Better Chance of Getting Magic Items OR 20-55\\% Extra Gold from Monsters)}}$ |
 | | $\color{blue}{\text{ (Random: +10-65 to Life OR +10-75 to Mana)}}$ |
-| | $\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
+| | $\color{blue}{\text{ (Random: +5-10\\% Faster Run/Walk OR +12-24\\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
 | | $\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}$ |
 
 **Renewed Crack of the Heavens** (Crafted Crack of the Heavens)
@@ -164,11 +164,11 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Lightning Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Lightning Resist +-90--75\%}}$ |
-| | $\color{blue}{\text{ (Random: +5-15\% to Lightning Skill Damage OR -5-10\% to Enemy Lightning Resistance)}}$ |
-| | $\color{blue}{\text{ (Random: 14-25\% Better Chance of Getting Magic Items OR 20-55\% Extra Gold from Monsters)}}$ |
+| | $\color{blue}{\text{Lightning Resist +-90--75\\%}}$ |
+| | $\color{blue}{\text{ (Random: +5-15\\% to Lightning Skill Damage OR -5-10\\% to Enemy Lightning Resistance)}}$ |
+| | $\color{blue}{\text{ (Random: 14-25\\% Better Chance of Getting Magic Items OR 20-55\\% Extra Gold from Monsters)}}$ |
 | | $\color{blue}{\text{ (Random: +10-65 to Life OR +10-75 to Mana)}}$ |
-| | $\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
+| | $\color{blue}{\text{ (Random: +5-10\\% Faster Run/Walk OR +12-24\\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
 | | $\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}$ |
 
 **Renewed Rotting Fissure** (Crafted Rotting Fissure)
@@ -179,11 +179,11 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Poison Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Poison Resist +-90--75\%}}$ |
-| | $\color{blue}{\text{ (Random: +5-15\% to Poison Skill Damage OR -5-10\% to Enemy Poison Resistance)}}$ |
-| | $\color{blue}{\text{ (Random: 14-25\% Better Chance of Getting Magic Items OR 20-55\% Extra Gold from Monsters)}}$ |
+| | $\color{blue}{\text{Poison Resist +-90--75\\%}}$ |
+| | $\color{blue}{\text{ (Random: +5-15\\% to Poison Skill Damage OR -5-10\\% to Enemy Poison Resistance)}}$ |
+| | $\color{blue}{\text{ (Random: 14-25\\% Better Chance of Getting Magic Items OR 20-55\\% Extra Gold from Monsters)}}$ |
 | | $\color{blue}{\text{ (Random: +10-65 to Life OR +10-75 to Mana)}}$ |
-| | $\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
+| | $\color{blue}{\text{ (Random: +5-10\\% Faster Run/Walk OR +12-24\\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
 | | $\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}$ |
 
 **Renewed Bone Break** (Crafted Bone Break)
@@ -194,11 +194,11 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Physical Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Damage Reduced by -10--5\%}}$ |
-| | $\color{blue}{\text{ (Random: +75-100\% Enhanced Damage OR -5-10\% to Enemy Physical Resistance)}}$ |
-| | $\color{blue}{\text{ (Random: 14-25\% Better Chance of Getting Magic Items OR 20-55\% Extra Gold from Monsters)}}$ |
+| | $\color{blue}{\text{Damage Reduced by -10--5\\%}}$ |
+| | $\color{blue}{\text{ (Random: +75-100\\% Enhanced Damage OR -5-10\\% to Enemy Physical Resistance)}}$ |
+| | $\color{blue}{\text{ (Random: 14-25\\% Better Chance of Getting Magic Items OR 20-55\\% Extra Gold from Monsters)}}$ |
 | | $\color{blue}{\text{ (Random: +10-65 to Life OR +10-75 to Mana)}}$ |
-| | $\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
+| | $\color{blue}{\text{ (Random: +5-10\\% Faster Run/Walk OR +12-24\\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
 | | $\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}$ |
 
 **Renewed Black Cleft** (Crafted Black Cleft)
@@ -209,11 +209,11 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Magic Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Magic Resist +-50--35\%}}$ |
-| | $\color{blue}{\text{ (Random: +10-15\% to Magic Skill Damage OR -5-10\% to Enemy Magic Resistance)}}$ |
-| | $\color{blue}{\text{ (Random: 14-25\% Better Chance of Getting Magic Items OR 20-55\% Extra Gold from Monsters)}}$ |
+| | $\color{blue}{\text{Magic Resist +-50--35\\%}}$ |
+| | $\color{blue}{\text{ (Random: +10-15\\% to Magic Skill Damage OR -5-10\\% to Enemy Magic Resistance)}}$ |
+| | $\color{blue}{\text{ (Random: 14-25\\% Better Chance of Getting Magic Items OR 20-55\\% Extra Gold from Monsters)}}$ |
 | | $\color{blue}{\text{ (Random: +10-65 to Life OR +10-75 to Mana)}}$ |
-| | $\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
+| | $\color{blue}{\text{ (Random: +5-10\\% Faster Run/Walk OR +12-24\\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
 | | $\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}$ |
 
 ### accessories\jewel.md
@@ -237,7 +237,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Cold Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Cold Resist +-90--70\%}}$ |
+| | $\color{blue}{\text{Cold Resist +-90--70\\%}}$ |
 
 **Flame Rift** (Flame Rift)
 
@@ -247,7 +247,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Fire Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Fire Resist +-90--70\%}}$ |
+| | $\color{blue}{\text{Fire Resist +-90--70\\%}}$ |
 
 **Crack of the Heavens** (Crack of the Heavens)
 
@@ -257,7 +257,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Lightning Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Lightning Resist +-90--70\%}}$ |
+| | $\color{blue}{\text{Lightning Resist +-90--70\\%}}$ |
 
 **Rotting Fissure** (Rotting Fissure)
 
@@ -267,7 +267,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Poison Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Poison Resist +-90--70\%}}$ |
+| | $\color{blue}{\text{Poison Resist +-90--70\\%}}$ |
 
 **Bone Break** (Bone Break)
 
@@ -277,7 +277,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Physical Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Damage Reduced by -20--10\%}}$ |
+| | $\color{blue}{\text{Damage Reduced by -20--10\\%}}$ |
 
 **Black Cleft** (Black Cleft)
 
@@ -287,7 +287,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Magic Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Magic Resist +-65--45\%}}$ |
+| | $\color{blue}{\text{Magic Resist +-65--45\\%}}$ |
 
 **Latent Cold Rupture** (PreCrafted Cold Rupture)
 
@@ -297,7 +297,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Cold Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Cold Resist +-90\%}}$ |
+| | $\color{blue}{\text{Cold Resist +-90\\%}}$ |
 
 **Latent Flame Rift** (PreCrafted Flame Rift)
 
@@ -307,7 +307,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Fire Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Fire Resist +-90\%}}$ |
+| | $\color{blue}{\text{Fire Resist +-90\\%}}$ |
 
 **Latent Crack of the Heavens** (PreCrafted Crack of the Heavens)
 
@@ -317,7 +317,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Lightning Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Lightning Resist +-90\%}}$ |
+| | $\color{blue}{\text{Lightning Resist +-90\\%}}$ |
 
 **Latent Rotting Fissure** (PreCrafted Rotting Fissure)
 
@@ -327,7 +327,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Poison Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Poison Resist +-90\%}}$ |
+| | $\color{blue}{\text{Poison Resist +-90\\%}}$ |
 
 **Latent Bone Break** (PreCrafted Bone Break)
 
@@ -337,7 +337,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Physical Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Damage Reduced by -20\%}}$ |
+| | $\color{blue}{\text{Damage Reduced by -20\\%}}$ |
 
 **Latent Black Cleft** (PreCrafted Black Cleft)
 
@@ -347,7 +347,7 @@
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $\color{blue}{\text{Monster Magic Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Magic Resist +-65\%}}$ |
+| | $\color{blue}{\text{Magic Resist +-65\\%}}$ |
 
 ### accessories\ring.md
 
@@ -359,11 +359,11 @@
 | | **Level Requirement:** 50 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1 to Town Portal}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{-4-5\% to Enemy Magic Resistance}}$ |
+| | $\color{blue}{\text{+10\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{-4-5\\% to Enemy Magic Resistance}}$ |
 | | $\color{blue}{\text{+10-20 to Energy}}$ |
-| | $\color{blue}{\text{Slows Target by 15\%}}$ |
-| | $\color{blue}{\text{10-20\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{Slows Target by 15\\%}}$ |
+| | $\color{blue}{\text{10-20\\% Better Chance of Getting Magic Items}}$ |
 
 **Opalvein** (Opalvein)
 
@@ -372,9 +372,9 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 50 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\% Chance to cast level 30 Flame Wave on attack}}$ |
-| | $\color{blue}{\text{+3-5\% to Magic Skill Damage / +20-40\% Enhanced Damage / +3-5\% to Fire Skill Damage / +3-5\% to Cold Skill Damage / +3-5\% to Lightning Skill Damage / +3-5\% to Poison Skill Damage}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{20\\% Chance to cast level 30 Flame Wave on attack}}$ |
+| | $\color{blue}{\text{+3-5\\% to Magic Skill Damage / +20-40\\% Enhanced Damage / +3-5\\% to Fire Skill Damage / +3-5\\% to Cold Skill Damage / +3-5\\% to Lightning Skill Damage / +3-5\\% to Poison Skill Damage}}$ |
+| | $\color{blue}{\text{+10\\% Faster Cast Rate}}$ |
 | | $\color{blue}{\text{All Resistances +6-11}}$ |
 | | $\color{blue}{\text{+1-3 Life after each Kill}}$ |
 | | $\color{blue}{\text{+1-3 to Mana after each Kill}}$ |
@@ -388,13 +388,13 @@
 | | **Base Item:** Troll Belt |
 | | **Level Requirement:** 71 |
 | | **Properties:** |
-| | $\color{blue}{\text{+10-20\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+10-20\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+10-20\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+90-150\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{-4-10\% to Enemy Magic Resistance}}$ |
+| | $\color{blue}{\text{+10-20\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+10-20\\% Faster Hit Recovery}}$ |
+| | $\color{blue}{\text{+10-20\\% Faster Run/Walk}}$ |
+| | $\color{blue}{\text{+90-150\\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{-4-10\\% to Enemy Magic Resistance}}$ |
 | | $\color{blue}{\text{All Resistances +5-15}}$ |
-| | $\color{blue}{\text{50-150\% Extra Gold from Monsters}}$ |
+| | $\color{blue}{\text{50-150\\% Extra Gold from Monsters}}$ |
 
 ### armor\boots.md
 
@@ -406,12 +406,12 @@
 | | **Level Requirement:** 67 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1 to Warlock Skills}}$ |
-| | $\color{blue}{\text{+30\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+20\% Faster Hit Recovery}}$ |
+| | $\color{blue}{\text{+30\\% Faster Run/Walk}}$ |
+| | $\color{blue}{\text{+20\\% Faster Hit Recovery}}$ |
 | | $\color{blue}{\text{+50-100 Defense}}$ |
 | | $\color{blue}{\text{+10-20 to Dexterity}}$ |
 | | $\color{blue}{\text{+10-20 to Energy}}$ |
-| | $\color{blue}{\text{Requirements --20\%}}$ |
+| | $\color{blue}{\text{Requirements --20\\%}}$ |
 
 ### armor\circlet.md
 
@@ -422,16 +422,16 @@
 | | **Base Item:** Tiara |
 | | **Level Requirement:** 80 |
 | | **Properties:** |
-| | $\color{blue}{\text{+10-24\% Faster Hit Recovery}}$ |
+| | $\color{blue}{\text{+10-24\\% Faster Hit Recovery}}$ |
 | | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 5\%}}$ |
-| | $\color{blue}{\text{Increase Maximum Mana 5\%}}$ |
+| | $\color{blue}{\text{Increase Maximum Life 5\\%}}$ |
+| | $\color{blue}{\text{Increase Maximum Mana 5\\%}}$ |
 | | $\color{blue}{\text{+1 to Random Class Skill Levels}}$ |
-| | $\color{blue}{\text{+90\% chance for finishing moves to not consume charges}}$ |
+| | $\color{blue}{\text{+90\\% chance for finishing moves to not consume charges}}$ |
 | | $\color{blue}{\text{+100-150 Defense}}$ |
-| | $\color{blue}{\text{+10-25\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+10-25\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+200-300\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{+10-25\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+10-25\\% Increased Attack Speed}}$ |
+| | $\color{blue}{\text{+200-300\\% Enhanced Defense}}$ |
 
 ### armor\merc_equip.md
 
@@ -443,11 +443,11 @@
 | | **Level Requirement:** 50 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Fire Resistance}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Magic Resistance}}$ |
-| | $\color{blue}{\text{+20\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+150-250\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{-5-10\\% to Enemy Fire Resistance}}$ |
+| | $\color{blue}{\text{-5-10\\% to Enemy Magic Resistance}}$ |
+| | $\color{blue}{\text{+20\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+20\\% Increased Attack Speed}}$ |
+| | $\color{blue}{\text{+150-250\\% Enhanced Defense}}$ |
 | | $\color{blue}{\text{+4-6 to Mana after each Kill}}$ |
 
 ### class_specific\grimoire.md
@@ -460,16 +460,16 @@
 | | **Level Requirement:** 80 |
 | | **Properties:** |
 | | $\color{blue}{\text{+2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{15\% Chance to cast level 1 Terror when struck}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+170-200\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+15-25\% to Fire Skill Damage}}$ |
+| | $\color{blue}{\text{15\\% Chance to cast level 1 Terror when struck}}$ |
+| | $\color{blue}{\text{+30\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+170-200\\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{+15-25\\% to Fire Skill Damage}}$ |
 | | $\color{blue}{\text{+5-10 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{Fire Resist +10-50\%}}$ |
+| | $\color{blue}{\text{Fire Resist +10-50\\%}}$ |
 | | $\color{blue}{\text{+3-5 to Apocalypse (Class Apocalypse only)}}$ |
 | | $\color{blue}{\text{+1-2 to Flame Wave (Class Flame Wave only)}}$ |
 | | $\color{blue}{\text{+1-2 to Ring of Fire (Class Ring of Fire only)}}$ |
-| | $\color{blue}{\text{10-25\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{10-25\\% Better Chance of Getting Magic Items}}$ |
 
 **Ars Tor'Baalos** (Ars Tor'Baalos)
 
@@ -479,15 +479,15 @@
 | | **Level Requirement:** 73 |
 | | **Properties:** |
 | | $\color{blue}{\text{+4 to Warlock Skills}}$ |
-| | $\color{blue}{\text{15\% Chance to cast level 1 Decrepify when struck}}$ |
+| | $\color{blue}{\text{15\\% Chance to cast level 1 Decrepify when struck}}$ |
 | | $\color{blue}{\text{+1-2 to Demonic Mastery (Class Demonic Mastery only)}}$ |
 | | $\color{blue}{\text{+1-2 to Blood Boil (Class Blood Boil only)}}$ |
 | | $\color{blue}{\text{+1-2 to Engorge (Class Engorge only)}}$ |
 | | $\color{blue}{\text{+1-2 to Consume (Class Consume only)}}$ |
-| | $\color{blue}{\text{+120-150\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{+120-150\\% Enhanced Defense}}$ |
 | | $\color{blue}{\text{+80-150 to Life}}$ |
-| | $\color{blue}{\text{Damage Reduced by 5-15\%}}$ |
-| | $\color{blue}{\text{10-25\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{Damage Reduced by 5-15\\%}}$ |
+| | $\color{blue}{\text{10-25\\% Better Chance of Getting Magic Items}}$ |
 
 **Ars Dul'Mephistos** (Ars Dul'Mephistos)
 
@@ -497,14 +497,14 @@
 | | **Level Requirement:** 78 |
 | | **Properties:** |
 | | $\color{blue}{\text{+2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{15\% Chance to cast level 40 Blizzard when struck}}$ |
-| | $\color{blue}{\text{+25-35\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+30\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+100-200\% Enhanced Damage}}$ |
+| | $\color{blue}{\text{15\\% Chance to cast level 40 Blizzard when struck}}$ |
+| | $\color{blue}{\text{+25-35\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+30\\% Faster Hit Recovery}}$ |
+| | $\color{blue}{\text{+100-200\\% Enhanced Damage}}$ |
 | | $\color{blue}{\text{+1-3 to Psychic Ward (Class Psychic Ward only)}}$ |
-| | $\color{blue}{\text{+140-200\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{-10-20\% to Enemy Magic Resistance}}$ |
-| | $\color{blue}{\text{10-25\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{+140-200\\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{-10-20\\% to Enemy Magic Resistance}}$ |
+| | $\color{blue}{\text{10-25\\% Better Chance of Getting Magic Items}}$ |
 
 **Measured Wrath** (Measured Wrath)
 
@@ -514,9 +514,9 @@
 | | **Level Requirement:** 52 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1-2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{30\% Chance to cast level 25 Ring of Fire when struck}}$ |
-| | $\color{blue}{\text{+25-30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+130-180\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{30\\% Chance to cast level 25 Ring of Fire when struck}}$ |
+| | $\color{blue}{\text{+25-30\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+130-180\\% Enhanced Defense}}$ |
 | | $\color{blue}{\text{+1-3 to Summon Tainted (Class Summon Tainted only)}}$ |
 | | $\color{blue}{\text{+1-3 to Ring of Fire (Class Ring of Fire only)}}$ |
 | | $\color{blue}{\text{+1-3 to Flame Wave (Class Flame Wave only)}}$ |
@@ -534,13 +534,13 @@
 | | **Level Requirement:** 67 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 10-15\%}}$ |
+| | $\color{blue}{\text{+30\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{Increase Maximum Life 10-15\\%}}$ |
 | | $\color{blue}{\text{+2-3 to Blood Oath (Class Blood Oath only)}}$ |
 | | $\color{blue}{\text{+2-3 to Blood Boil (Class Blood Boil only)}}$ |
 | | $\color{blue}{\text{+1-3 to Bind Demon (Class Bind Demon only)}}$ |
-| | $\color{blue}{\text{20-35\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{Slows Target by 25\%}}$ |
+| | $\color{blue}{\text{20-35\\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{Slows Target by 25\\%}}$ |
 
 ### weapons\sword.md
 
@@ -551,14 +551,14 @@
 | | **Base Item:** Legend Sword |
 | | **Level Requirement:** 61 |
 | | **Properties:** |
-| | $\color{blue}{\text{33\% Chance to cast level 22 Amplify Damage on striking}}$ |
-| | $\color{blue}{\text{+33\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+150-280\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{3-6\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{33\% Deadly Strike}}$ |
+| | $\color{blue}{\text{33\\% Chance to cast level 22 Amplify Damage on striking}}$ |
+| | $\color{blue}{\text{+33\\% Increased Attack Speed}}$ |
+| | $\color{blue}{\text{+150-280\\% Enhanced Damage}}$ |
+| | $\color{blue}{\text{3-6\\% Mana stolen per hit}}$ |
+| | $\color{blue}{\text{33\\% Deadly Strike}}$ |
 | | $\color{blue}{\text{+3 to Mirrored Blades (Class Mirrored Blades only)}}$ |
-| | $\color{blue}{\text{33\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{Requirements --33\%}}$ |
+| | $\color{blue}{\text{33\\% Bonus to Attack Rating}}$ |
+| | $\color{blue}{\text{Requirements --33\\%}}$ |
 
 ---
 
@@ -576,11 +576,11 @@
 | | $\color{blue}{\text{+1 to All Skills}}$ |
 | | $\color{blue}{\text{+50-125 to Mana}}$ |
 | | $\color{blue}{\text{+10-20 to Energy}}$ |
-| | $\color{blue}{\text{50\% Damage Taken Goes To Mana}}$ |
-| | $\color{blue}{\text{3-6\% Mana stolen per hit}}$ |
+| | $\color{blue}{\text{50\\% Damage Taken Goes To Mana}}$ |
+| | $\color{blue}{\text{3-6\\% Mana stolen per hit}}$ |
 | | $\color{blue}{\text{+2 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{Regenerate Mana 20\%}}$ |
-| | $\color{blue}{\text{Cold Absorb 5-15\%}}$ |
+| | $\color{blue}{\text{Regenerate Mana 20\\%}}$ |
+| | $\color{blue}{\text{Cold Absorb 5-15\\%}}$ |
 
 ### accessories\ring.md
 
@@ -591,10 +591,10 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+15\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+15\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+15\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+15\% Faster Hit Recovery}}$ |
+| | $\color{blue}{\text{+15\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+15\\% Increased Attack Speed}}$ |
+| | $\color{blue}{\text{+15\\% Faster Run/Walk}}$ |
+| | $\color{blue}{\text{+15\\% Faster Hit Recovery}}$ |
 
 ### armor\armor.md
 
@@ -605,8 +605,8 @@
 | | **Base Item:** Full Plate Mail |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+25\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{Cold Resist +30\%}}$ |
+| | $\color{blue}{\text{+25\\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{Cold Resist +30\\%}}$ |
 
 **Bane's Wraithskin** (Bane's Wraithskin)
 
@@ -616,7 +616,7 @@
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $\color{blue}{\text{+50 Defense}}$ |
-| | $\color{blue}{\text{Magic Resist +30\%}}$ |
+| | $\color{blue}{\text{Magic Resist +30\\%}}$ |
 
 **Horazon's Dominion** (Horazon's Dominion)
 
@@ -626,11 +626,11 @@
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $\color{blue}{\text{+2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{+150-200\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{+150-200\\% Enhanced Defense}}$ |
 | | $\color{blue}{\text{+75-100 to Mana}}$ |
-| | $\color{blue}{\text{Cold Resist +15-25\%}}$ |
-| | $\color{blue}{\text{Fire Resist +15-25\%}}$ |
-| | $\color{blue}{\text{Lightning Resist +15-25\%}}$ |
+| | $\color{blue}{\text{Cold Resist +15-25\\%}}$ |
+| | $\color{blue}{\text{Fire Resist +15-25\\%}}$ |
+| | $\color{blue}{\text{Lightning Resist +15-25\\%}}$ |
 
 **Reaper's Cloak** (Reaper's Cloak)
 
@@ -640,11 +640,11 @@
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 5-10\%}}$ |
-| | $\color{blue}{\text{Increase Maximum Mana 5-10\%}}$ |
-| | $\color{blue}{\text{5\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{5\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{Regenerate Mana 20\%}}$ |
+| | $\color{blue}{\text{Increase Maximum Life 5-10\\%}}$ |
+| | $\color{blue}{\text{Increase Maximum Mana 5-10\\%}}$ |
+| | $\color{blue}{\text{5\\% Mana stolen per hit}}$ |
+| | $\color{blue}{\text{5\\% Life stolen per hit}}$ |
+| | $\color{blue}{\text{Regenerate Mana 20\\%}}$ |
 | | $\color{blue}{\text{Replenish Life +20}}$ |
 | | $\color{blue}{\text{+5 to Mana after each Kill}}$ |
 | | $\color{blue}{\text{+5 Life after each Kill}}$ |
@@ -657,12 +657,12 @@
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $\color{blue}{\text{+2-3 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{+200-300\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{+200-300\\% Enhanced Defense}}$ |
 | | $\color{blue}{\text{+75-100 to Mana}}$ |
-| | $\color{blue}{\text{Cold Resist +25-50\%}}$ |
-| | $\color{blue}{\text{Fire Resist +25-50\%}}$ |
-| | $\color{blue}{\text{Lightning Resist +25-50\%}}$ |
-| | $\color{blue}{\text{Requirements --50\%}}$ |
+| | $\color{blue}{\text{Cold Resist +25-50\\%}}$ |
+| | $\color{blue}{\text{Fire Resist +25-50\\%}}$ |
+| | $\color{blue}{\text{Lightning Resist +25-50\\%}}$ |
+| | $\color{blue}{\text{Requirements --50\\%}}$ |
 
 ### armor\belt.md
 
@@ -673,7 +673,7 @@
 | | **Base Item:** Plated Belt |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{Lightning Resist +20\%}}$ |
+| | $\color{blue}{\text{Lightning Resist +20\\%}}$ |
 | | $\color{blue}{\text{+25 to Life}}$ |
 
 **Bane's Authority** (Bane's Authority)
@@ -683,7 +683,7 @@
 | | **Base Item:** Light Belt |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+10\\% Faster Cast Rate}}$ |
 | | $\color{blue}{\text{+20 to Life}}$ |
 
 ### armor\boots.md
@@ -695,8 +695,8 @@
 | | **Base Item:** Greaves |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+20\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{Fire Resist +20\%}}$ |
+| | $\color{blue}{\text{+20\\% Faster Run/Walk}}$ |
+| | $\color{blue}{\text{Fire Resist +20\\%}}$ |
 
 **Horazon's Legacy** (Horazon's Legacy)
 
@@ -705,12 +705,12 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+30\% Faster Run/Walk}}$ |
+| | $\color{blue}{\text{+30\\% Faster Run/Walk}}$ |
 | | $\color{blue}{\text{+10-15 to Strength}}$ |
 | | $\color{blue}{\text{+10-15 to Dexterity}}$ |
-| | $\color{blue}{\text{Magic Resist +20-30\%}}$ |
+| | $\color{blue}{\text{Magic Resist +20-30\\%}}$ |
 | | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Requirements --30\%}}$ |
+| | $\color{blue}{\text{Requirements --30\\%}}$ |
 
 **Elder Blood Boots** (Elder Blood Boots)
 
@@ -719,12 +719,12 @@
 | | **Base Item:** Scarabshell Boots |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+40\% Faster Run/Walk}}$ |
+| | $\color{blue}{\text{+40\\% Faster Run/Walk}}$ |
 | | $\color{blue}{\text{+100-150 Defense}}$ |
-| | $\color{blue}{\text{+100-150\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{+100-150\\% Enhanced Defense}}$ |
 | | $\color{blue}{\text{+10-20 to Strength}}$ |
-| | $\color{blue}{\text{Magic Absorb 5-15\%}}$ |
-| | $\color{blue}{\text{Curse Resist +30-40\%}}$ |
+| | $\color{blue}{\text{Magic Absorb 5-15\\%}}$ |
+| | $\color{blue}{\text{Curse Resist +30-40\\%}}$ |
 
 **Horazon's Stone** (Horazon's Stone)
 
@@ -733,13 +733,13 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+50\% Faster Run/Walk}}$ |
+| | $\color{blue}{\text{+50\\% Faster Run/Walk}}$ |
 | | $\color{blue}{\text{+10-20 to Strength}}$ |
 | | $\color{blue}{\text{+10-20 to Dexterity}}$ |
-| | $\color{blue}{\text{Magic Resist +75\%}}$ |
+| | $\color{blue}{\text{Magic Resist +75\\%}}$ |
 | | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Requirements --50\%}}$ |
-| | $\color{blue}{\text{+100-300\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{Requirements --50\\%}}$ |
+| | $\color{blue}{\text{+100-300\\% Enhanced Defense}}$ |
 
 ### armor\circlet.md
 
@@ -752,11 +752,11 @@
 | | **Properties:** |
 | | $\color{blue}{\text{+2 to All Skills}}$ |
 | | $\color{blue}{\text{+50-125 to Life}}$ |
-| | $\color{blue}{\text{+12-24\% Faster Hit Recovery}}$ |
+| | $\color{blue}{\text{+12-24\\% Faster Hit Recovery}}$ |
 | | $\color{blue}{\text{+10-20 to Vitality}}$ |
 | | $\color{blue}{\text{Replenish Life +30}}$ |
-| | $\color{blue}{\text{3-6\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{Lightning Absorb 5-15\%}}$ |
+| | $\color{blue}{\text{3-6\\% Life stolen per hit}}$ |
+| | $\color{blue}{\text{Lightning Absorb 5-15\\%}}$ |
 | | $\color{blue}{\text{+2 Life after each Kill}}$ |
 | | $\color{blue}{\text{+100-200 Defense}}$ |
 
@@ -779,12 +779,12 @@
 | | **Base Item:** Bramble Mitts |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{+10\% Increased Attack Speed}}$ |
+| | $\color{blue}{\text{10\\% Chance of Crushing Blow}}$ |
+| | $\color{blue}{\text{+10\\% Increased Attack Speed}}$ |
 | | $\color{blue}{\text{+10-15 to Dexterity}}$ |
 | | $\color{blue}{\text{Adds 250-500 Fire Damage}}$ |
 | | $\color{blue}{\text{+25-50 to Life}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+10\\% Faster Cast Rate}}$ |
 
 **Horazon's Arcane** (Horazon's Arcane)
 
@@ -793,13 +793,13 @@
 | | **Base Item:** Bramble Mitts |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{+20-30\% Increased Attack Speed}}$ |
+| | $\color{blue}{\text{20\\% Chance of Crushing Blow}}$ |
+| | $\color{blue}{\text{+20-30\\% Increased Attack Speed}}$ |
 | | $\color{blue}{\text{+25-50 to Vitality}}$ |
-| | $\color{blue}{\text{-20\% to Enemy Magic Resistance}}$ |
+| | $\color{blue}{\text{-20\\% to Enemy Magic Resistance}}$ |
 | | $\color{blue}{\text{+100 to Life}}$ |
-| | $\color{blue}{\text{+20-30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+100-300\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{+20-30\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+100-300\\% Enhanced Defense}}$ |
 
 ### armor\merc_equip.md
 
@@ -820,11 +820,11 @@
 | | **Base Item:** Demonhead |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{\% Bonus to Attack Rating (Based on Character Level)}}$ |
+| | $\color{blue}{\text{\\% Bonus to Attack Rating (Based on Character Level)}}$ |
 | | $\color{blue}{\text{+1 to Warlock Skill Levels}}$ |
 | | $\color{blue}{\text{+10-20 to Strength}}$ |
 | | $\color{blue}{\text{Magic Damage Reduced by 7-10}}$ |
-| | $\color{blue}{\text{+10\% Faster Hit Recovery}}$ |
+| | $\color{blue}{\text{+10\\% Faster Hit Recovery}}$ |
 | | $\color{blue}{\text{+25-50 to Life}}$ |
 
 **Horazon's Madness** (Horazon's Madness)
@@ -834,13 +834,13 @@
 | | **Base Item:** Demonhead |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{Damage Reduced by 10-15\%}}$ |
+| | $\color{blue}{\text{Damage Reduced by 10-15\\%}}$ |
 | | $\color{blue}{\text{+2-3 to Warlock Skill Levels}}$ |
 | | $\color{blue}{\text{+15-30 to Strength}}$ |
 | | $\color{blue}{\text{Magic Damage Reduced by 20}}$ |
-| | $\color{blue}{\text{+24\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 10-20\%}}$ |
-| | $\color{blue}{\text{+100-300\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{+24\\% Faster Hit Recovery}}$ |
+| | $\color{blue}{\text{Increase Maximum Life 10-20\\%}}$ |
+| | $\color{blue}{\text{+100-300\\% Enhanced Defense}}$ |
 
 ### class_specific\grimoire.md
 
@@ -852,12 +852,12 @@
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1-2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{+30\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+20\% Faster Block Rate}}$ |
+| | $\color{blue}{\text{+30\\% Faster Hit Recovery}}$ |
+| | $\color{blue}{\text{+20\\% Faster Block Rate}}$ |
 | | $\color{blue}{\text{+20-30 to Vitality}}$ |
 | | $\color{blue}{\text{+25-50 to Life}}$ |
-| | $\color{blue}{\text{+15\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+15\% Increased Attack Speed}}$ |
+| | $\color{blue}{\text{+15\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+15\\% Increased Attack Speed}}$ |
 
 **Horazon's Sanctuary** (Horazon's Sanctuary)
 
@@ -867,13 +867,13 @@
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1-3 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{+30\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+50\% Faster Block Rate}}$ |
+| | $\color{blue}{\text{+30\\% Faster Hit Recovery}}$ |
+| | $\color{blue}{\text{+50\\% Faster Block Rate}}$ |
 | | $\color{blue}{\text{+25-50 to Vitality}}$ |
 | | $\color{blue}{\text{+100 to Life}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+100-300\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{+30\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+30\\% Increased Attack Speed}}$ |
+| | $\color{blue}{\text{+100-300\\% Enhanced Defense}}$ |
 
 ### class_specific\voodoo_heads.md
 
@@ -885,10 +885,10 @@
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{+50\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+1-3\% to Maximum Fire Resist}}$ |
+| | $\color{blue}{\text{+50\\% Faster Block Rate}}$ |
+| | $\color{blue}{\text{+1-3\\% to Maximum Fire Resist}}$ |
 | | $\color{blue}{\text{Replenish Life +30}}$ |
-| | $\color{blue}{\text{Poison Length Reduced by 75\%}}$ |
+| | $\color{blue}{\text{Poison Length Reduced by 75\\%}}$ |
 | | $\color{blue}{\text{Damage Reduced by 5-10}}$ |
 | | $\color{blue}{\text{Magic Damage Reduced by 5-10}}$ |
 | | $\color{blue}{\text{+250-500 Defense}}$ |
@@ -902,7 +902,7 @@
 | | **Base Item:** Kris |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+20\% Faster Run/Walk}}$ |
+| | $\color{blue}{\text{+20\\% Faster Run/Walk}}$ |
 | | $\color{blue}{\text{+ to Maximum Damage (Based on Character Level)}}$ |
 
 ### weapons\sword.md
@@ -915,13 +915,13 @@
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{+20-30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+20-30\% Increased Attack Speed}}$ |
+| | $\color{blue}{\text{+20-30\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+20-30\\% Increased Attack Speed}}$ |
 | | $\color{blue}{\text{+100-200 Defense vs. Missile}}$ |
 | | $\color{blue}{\text{+100-200 Defense vs. Melee}}$ |
 | | $\color{blue}{\text{+10-20 to Dexterity}}$ |
-| | $\color{blue}{\text{Fire Absorb 5-15\%}}$ |
-| | $\color{blue}{\text{+100-400\% Enhanced Damage}}$ |
+| | $\color{blue}{\text{Fire Absorb 5-15\\%}}$ |
+| | $\color{blue}{\text{+100-400\\% Enhanced Damage}}$ |
 | | $\color{blue}{\text{Damage +50}}$ |
 
 ### weapons\wand.md
@@ -934,10 +934,10 @@
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+30\\% Faster Cast Rate}}$ |
 | | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Curse Resist +20\%}}$ |
-| | $\color{blue}{\text{100\% Extra Gold from Monsters}}$ |
+| | $\color{blue}{\text{Curse Resist +20\\%}}$ |
+| | $\color{blue}{\text{100\\% Extra Gold from Monsters}}$ |
 
 ---
 
@@ -952,10 +952,10 @@
 | | **Base Item:** Unknown |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{2\% Chance to cast level 10 Psychic Ward when struck}}$ |
-| | $\color{blue}{\text{10\% Chance to cast level 15 Miasma Chain on striking}}$ |
+| | $\color{blue}{\text{2\\% Chance to cast level 10 Psychic Ward when struck}}$ |
+| | $\color{blue}{\text{10\\% Chance to cast level 15 Miasma Chain on striking}}$ |
 | | $\color{blue}{\text{+2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{+40-60\% Enhanced Damage}}$ |
+| | $\color{blue}{\text{+40-60\\% Enhanced Damage}}$ |
 
 ### weapons\grimoire.md
 
@@ -966,13 +966,13 @@
 | | **Base Item:** Unknown |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{5\% Chance to cast level 10 Ring of Fire when struck}}$ |
-| | $\color{blue}{\text{+10\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
+| | $\color{blue}{\text{5\\% Chance to cast level 10 Ring of Fire when struck}}$ |
+| | $\color{blue}{\text{+10\\% Faster Run/Walk}}$ |
+| | $\color{blue}{\text{+30\\% Faster Block Rate}}$ |
 | | $\color{blue}{\text{+20-40 to Life}}$ |
 | | $\color{blue}{\text{+20-40 to Mana}}$ |
 | | $\color{blue}{\text{All Resistances +25-35}}$ |
-| | $\color{blue}{\text{+75-100\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{+75-100\\% Enhanced Defense}}$ |
 
 ### weapons\knife.md
 
@@ -983,11 +983,11 @@
 | | **Base Item:** Unknown |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{13\% Chance to cast level 1 Sigil: Death when struck}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+200-270\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+150-250\% Damage to Demons}}$ |
-| | $\color{blue}{\text{200-260\% Bonus to Attack Rating}}$ |
+| | $\color{blue}{\text{13\\% Chance to cast level 1 Sigil: Death when struck}}$ |
+| | $\color{blue}{\text{+20\\% Increased Attack Speed}}$ |
+| | $\color{blue}{\text{+200-270\\% Enhanced Damage}}$ |
+| | $\color{blue}{\text{+150-250\\% Damage to Demons}}$ |
+| | $\color{blue}{\text{200-260\\% Bonus to Attack Rating}}$ |
 | | $\color{blue}{\text{+3-5 Life after each Kill}}$ |
 | | $\color{blue}{\text{Slain Monsters Rest in Peace}}$ |
 
@@ -1000,11 +1000,11 @@
 | | **Base Item:** Unknown |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{5\% Chance to cast level 10 Sigil: Lethargy when struck}}$ |
+| | $\color{blue}{\text{5\\% Chance to cast level 10 Sigil: Lethargy when struck}}$ |
 | | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{+20\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+30-50\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{1-15\% Better Chance of Getting Magic Items}}$ |
+| | $\color{blue}{\text{+20\\% Faster Cast Rate}}$ |
+| | $\color{blue}{\text{+30-50\\% Enhanced Defense}}$ |
+| | $\color{blue}{\text{1-15\\% Better Chance of Getting Magic Items}}$ |
 | | $\color{blue}{\text{+1-5 Life after each Kill}}$ |
 
 ---

@@ -49,17 +49,18 @@ def parse_markdown_items(file_path):
     return items
 
 def escape_latex(s):
-    """Escapes special LaTeX characters for GitHub MathJax."""
+    """Escapes special LaTeX characters for GitHub MathJax. Uses double backslashes to survive Markdown pass."""
     if not s: return s
-    # Map of characters to escape
+    # Map of characters to escape - double backslashes are needed because GitHub 
+    # processes the markdown (stripping one backslash) before MathJax sees it.
     chars = {
-        '%': r'\%',
-        '$': r'\$',
-        '#': r'\#',
-        '_': r'\_',
-        '{': r'\{',
-        '}': r'\}',
-        '&': r'\&',
+        '%': r'\\%',
+        '$': r'\\$',
+        '#': r'\\#',
+        '_': r'\\_',
+        '{': r'\\{',
+        '}': r'\\}',
+        '&': r'\\&',
     }
     for char, escaped in chars.items():
         s = s.replace(char, escaped)
@@ -85,6 +86,10 @@ def normalize_text(s):
 
 def get_styled_diffs(old_s, new_s):
     """Surgically highlights differences between two strings using token-based diff and LaTeX for GitHub."""
+    # Strip color codes for display
+    old_s = re.sub(r'ÿc.', '', old_s)
+    new_s = re.sub(r'ÿc.', '', new_s)
+
     if not old_s: 
         return "", f'$\\color{{blue}}{{\\text{{{escape_latex(new_s)}}}}}$'
     if not new_s or new_s == "(removed)": 
@@ -100,51 +105,30 @@ def get_styled_diffs(old_s, new_s):
     old_toks = tokenize(old_s)
     new_toks = tokenize(new_s)
     
-    s = difflib.SequenceMatcher(None, old_toks, new_toks)
-    old_styled_parts = []
-    new_styled_parts = []
+    matcher = difflib.SequenceMatcher(None, old_toks, new_toks)
     
-    for tag, i1, i2, j1, j2 in s.get_opcodes():
-        old_part = "".join(old_toks[i1:i2])
-        new_part = "".join(new_toks[j1:j2])
-        
-        if tag == 'equal':
-            old_styled_parts.append(('equal', old_part))
-            new_styled_parts.append(('equal', new_part))
-        elif tag == 'replace':
-            if old_part: old_styled_parts.append(('removed', old_part))
-            if new_part: new_styled_parts.append(('added', new_part))
-        elif tag == 'delete':
-            old_styled_parts.append(('removed', old_part))
-        elif tag == 'insert':
-            new_styled_parts.append(('added', new_part))
-            
-    def render(parts):
-        res = ""
-        last_type = None
-        current_text = ""
-        
-        def flush():
-            nonlocal res, current_text, last_type
-            if not current_text: return
-            esc_text = escape_latex(current_text)
-            if last_type == 'added':
-                res += f'$\\color{{blue}}{{\\text{{{esc_text}}}}}$'
-            elif last_type == 'removed':
-                res += f'$\\color{{gray}}{{\\text{{{esc_text}}}}}$'
+    def render_version(tokens, is_old):
+        # We need to know which tokens changed to color them
+        res = "$"
+        # Get opcodes relative to this version's tokens
+        for tag, i1, i2, j1, j2 in matcher.get_opcodes():
+            # i1:i2 are indices in old_toks, j1:j2 are indices in new_toks
+            if is_old:
+                part = "".join(tokens[i1:i2])
+                if tag in ['replace', 'delete']:
+                    res += f'\\color{{gray}}{{\\text{{{escape_latex(part)}}}}}'
+                elif tag == 'equal':
+                    res += f'\\text{{{escape_latex(part)}}}'
             else:
-                res += current_text
-            current_text = ""
-
-        for type, text in parts:
-            if type != last_type:
-                flush()
-                last_type = type
-            current_text += text
-        flush()
+                part = "".join(tokens[j1:j2])
+                if tag in ['replace', 'insert']:
+                    res += f'\\color{{blue}}{{\\text{{{escape_latex(part)}}}}}'
+                elif tag == 'equal':
+                    res += f'\\text{{{escape_latex(part)}}}'
+        res += "$"
         return res
 
-    return render(old_styled_parts), render(new_styled_parts)
+    return render_version(old_toks, True), render_version(new_toks, False)
 
 def align_properties(old_props, new_props):
     def get_stat_key(s):

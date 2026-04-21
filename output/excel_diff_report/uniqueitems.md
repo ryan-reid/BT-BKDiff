@@ -134,7 +134,7 @@
 
 ### corrupted azurewrath
 - `*ID`: $\color{gray}{\text{430}}$ (Old) &rarr; $\color{blue}{\text{468}}$ (New)
-- `prop7`: $\color{gray}{\text{mag\%}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `prop7`: $\color{gray}{\text{mag\\%}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 - `min7`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 - `max7`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
@@ -187,7 +187,7 @@
 - `max1`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `min6`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{1000}}$ (New)
 - `max6`: $\color{gray}{\text{300}}$ (Old) &rarr; $\color{blue}{\text{1000}}$ (New)
-- `prop7`: $\color{gray}{\text{red-dmg}}$ (Old) &rarr; $\color{blue}{\text{hp\%}}$ (New)
+- `prop7`: $\color{gray}{\text{red-dmg}}$ (Old) &rarr; $\color{blue}{\text{hp\\%}}$ (New)
 - `min7`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `max7`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
 - `prop9`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{hit-skill}}$ (New)
@@ -279,7 +279,7 @@
 - `max1`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
 - `min2`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `max2`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `prop3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{hp\%}}$ (New)
+- `prop3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{hp\\%}}$ (New)
 - `min3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `max3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
 - `max5`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{80}}$ (New)
@@ -389,13 +389,13 @@
 - `par1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{Static Field}}$ (New)
 - `min1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `max1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
-- `prop2`: $\color{gray}{\text{enr\%}}$ (Old) &rarr; $\color{blue}{\text{move1}}$ (New)
+- `prop2`: $\color{gray}{\text{enr\\%}}$ (Old) &rarr; $\color{blue}{\text{move1}}$ (New)
 - `min2`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `prop3`: $\color{gray}{\text{gethit-skill}}$ (Old) &rarr; $\color{blue}{\text{sock}}$ (New)
 - `par3`: $\color{gray}{\text{Static Field}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 - `min3`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `max3`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `prop4`: $\color{gray}{\text{move1}}$ (Old) &rarr; $\color{blue}{\text{enr\%}}$ (New)
+- `prop4`: $\color{gray}{\text{move1}}$ (Old) &rarr; $\color{blue}{\text{enr\\%}}$ (New)
 - `min4`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### stealskull
@@ -424,7 +424,7 @@
 - `prop9`: $\color{gray}{\text{gethit-skill}}$ (Old) &rarr; $\color{blue}{\text{91}}$ (New)
 
 ### superkhalimflail
-- `prop4`: $\color{gray}{\text{att\%}}$ (Old) &rarr; $\color{blue}{\text{att}}$ (New)
+- `prop4`: $\color{gray}{\text{att\\%}}$ (Old) &rarr; $\color{blue}{\text{att}}$ (New)
 - `min4`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `max4`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `prop7`: $\color{gray}{\text{dmg-norm}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
@@ -454,7 +454,7 @@
 
 ### the grandfather
 - `max1`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{30}}$ (New)
-- `prop2`: $\color{gray}{\text{att\%}}$ (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
+- `prop2`: $\color{gray}{\text{att\\%}}$ (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
 - `min2`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `max2`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 - `min3`: $\color{gray}{\text{80}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
