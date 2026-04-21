@@ -290,6 +290,9 @@ class PropertyResolver:
             # Handle # placeholder
             if func == '36': # Random class skill function
                 res_text = res_text.replace('#', val1)
+            elif func == '14': # Repair duration
+                # Repairs 1 durability in # seconds. val1 is the number.
+                res_text = res_text.replace('#', val1)
             else:
                 if res_text.count('#') > 1 and '-' in range_str:
                     # e.g., "Adds #-# Damage" with "10-20" should be "Adds 10-20 Damage"

@@ -4,6 +4,6 @@
 
 ## Modified Rows (1)
 ### 0
-- `sequence`: $\color{gray}{\text{seq\\_crlancerjab}}$ (Old) &rarr; $\color{blue}{\text{seq\\_wargoatmancleave}}$ (New)
-- `frame`: $\color{gray}{\text{17}}$ (Old) &rarr; $\color{blue}{\text{19}}$ (New)
+- `sequence`: $ \color{gray}{\text{seq\\_crlancerjab}} $ (Old) &rarr; $ \color{blue}{\text{seq\\_wargoatmancleave}} $ (New)
+- `frame`: $ \color{gray}{\text{17}} $ (Old) &rarr; $ \color{blue}{\text{19}} $ (New)
 

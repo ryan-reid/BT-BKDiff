@@ -102,7 +102,7 @@ def write_detail_markdown(report, output_path):
                     # Use LaTeX for coloring and escape characters
                     e_new = escape_latex(str(v_new))
                     e_old = escape_latex(str(v_old))
-                    f.write(f"- `{col}`: $\\color{{gray}}{{\\text{{{e_old}}}}}$ (Old) &rarr; $\\color{{blue}}{{\\text{{{e_new}}}}}$ (New)\n")
+                    f.write(f"- `{col}`: $ \\color{{gray}}{{\\text{{{e_old}}}}} $ (Old) &rarr; $ \\color{{blue}}{{\\text{{{e_new}}}}} $ (New)\n")
                 f.write("\n")
 
 def generate_summary(all_reports, report_dir):

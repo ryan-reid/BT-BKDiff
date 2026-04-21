@@ -10,5 +10,5 @@
 
 ## Modified Rows (1)
 ### 0
-- `enabled`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `enabled`: $ \color{gray}{\text{1}} $ (Old) &rarr; $ \color{blue}{\text{0}} $ (New)
 
