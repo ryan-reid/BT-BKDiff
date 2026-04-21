@@ -3,7 +3,7 @@
 This project provides a suite of Python scripts designed to compare Diablo 2 (D2R mod) data between two different mod versions. It handles both raw Excel (`.txt`) file differences and high-level Item Database comparisons.
 
 In this setup:
-- **BKDiablo (`bkdiablo.mpq`)** is treated as the **New/Target** version.
+- **BKDiablo (`BKDiablo`)** is treated as the **New/Target** version.
 - **BTDiablo (`btdiablo.mpq`)** is treated as the **Old/Base** version.
 
 ---
@@ -16,7 +16,7 @@ This tool exports items (Uniques, Sets, Runewords) into human-readable Markdown 
 *   **`d2_item_analyzer.py`**: Extracts item data from MPQ directories and saves them as `.md` files.
     *   **Usage**: 
         ```bash
-        python d2_item_analyzer.py --mpq bkdiablo.mpq --type export --out item_db
+        python d2_item_analyzer.py --mpq BKDiablo --type export --out item_db
         python d2_item_analyzer.py --mpq btdiablo.mpq --type export --out item_db_bt
         ```
     *   **Advanced**: Uses `propertygroups.txt` to resolve complex "composite" properties and random affix groups into human-readable text.

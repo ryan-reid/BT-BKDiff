@@ -14,5 +14,5 @@ def analyze_headers(directory):
             print("-" * 20)
 
 if __name__ == "__main__":
-    analyze_headers("bkdiablo.mpq/data/global/excel")
+    analyze_headers("BKDiablo/data/global/excel")
 

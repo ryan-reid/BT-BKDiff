@@ -532,7 +532,7 @@ class ItemAnalyzer:
 
 def main():
     parser = argparse.ArgumentParser(description="Diablo II Item Analyzer")
-    parser.add_argument("--mpq", default="bkdiablo.mpq", help="Path to the MPQ data directory")
+    parser.add_argument("--mpq", default="BKDiablo", help="Path to the MPQ data directory")
     parser.add_argument("--type", choices=["runeword", "unique", "export"], required=True, help="Item type to analyze or 'export' all")
     parser.add_argument("--name", help="Name of the item to search for (ignored if type is export)")
     parser.add_argument("--out", default="item_db", help="Output directory for export")

@@ -110,7 +110,7 @@ def generate_summary(all_reports, report_dir):
         f.write("\n\n*Click on a file name in the 'Link' column to see detailed changes.*\n")
 
 def main():
-    bk_dir = "bkdiablo.mpq/data/global/excel"
+    bk_dir = "BKDiablo/data/global/excel"
     bt_dir = "btdiablo.mpq/data/global/excel"
     report_dir = "excel_diff_report"
     

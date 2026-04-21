@@ -1,4 +1,4 @@
 [submodule "bkdiablo.mpq"]
-	path = bkdiablo.mpq
+	path = BKDiablo
 	url = https://github.com/BaronBeefStick/BKDiablo-Ascenstion
 	branch = BKDiablo-Ascension
