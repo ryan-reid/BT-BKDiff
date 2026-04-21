@@ -1,54 +1,58 @@
-# BT-BKDiff: Diablo 2 Excel Comparison Tool
+# BT-BKDiff: Diablo 2 Excel & Item Comparison Tool
 
-This project provides a suite of Python scripts designed to compare Diablo 2 (D2R mod) Excel (`.txt`) files between two different mod versions. It generates detailed Markdown reports highlighting additions, removals, and modifications in columns and rows.
+This project provides a suite of Python scripts designed to compare Diablo 2 (D2R mod) data between two different mod versions. It handles both raw Excel (`.txt`) file differences and high-level Item Database comparisons.
 
-In this specific setup:
+In this setup:
 - **BKDiablo (`bkdiablo.mpq`)** is treated as the **New/Target** version.
 - **BTDiablo (`btdiablo.mpq`)** is treated as the **Old/Base** version.
 
-## Project Structure
+---
 
-- `bkdiablo.mpq/`: Contains the target mod files (New).
-- `btdiablo.mpq/`: Contains the base mod files (Old).
-- `excel_diff_report/`: Directory where the generated Markdown reports are saved.
-- `SUMMARY.md`: Found inside `excel_diff_report/`, this serves as the main index for all comparisons.
+## 1. Item Database Comparison (The "High-Level" View)
 
-## Scripts
+This tool exports items (Uniques, Sets, Runewords) into human-readable Markdown and then compares them surgically.
 
-### 1. `compare_all_excel.py`
-The primary orchestration script. It iterates through all common Excel files in both mod folders and generates a comprehensive report.
-- **Usage**: `python compare_all_excel.py`
-- **What it does**: 
-    - Loads a predefined mapping of filenames to "key columns" (e.g., `code` for items, `skill` for skills) to ensures rows are matched correctly even if they move positions.
-    - Generates a `.md` file for every Excel file that has changes.
-    - Creates `SUMMARY.md` in the `excel_diff_report` folder.
+### Scripts:
+*   **`d2_item_analyzer.py`**: Extracts item data from MPQ directories and saves them as `.md` files.
+    *   **Usage**: 
+        ```bash
+        python d2_item_analyzer.py --mpq bkdiablo.mpq --type export --out item_db
+        python d2_item_analyzer.py --mpq btdiablo.mpq --type export --out item_db_bt
+        ```
+    *   **Advanced**: Uses `propertygroups.txt` to resolve complex "composite" properties and random affix groups into human-readable text.
+*   **`compare_item_db.py`**: Compares the two exported databases and generates a multi-page report.
+    *   **Usage**: `python compare_item_db.py`
+    *   **Output**: Files are saved in `item_diff_report/`:
+        *   `SUMMARY.md`: High-level counts and links.
+        *   `ADDED.md`: Full breakdown of new items.
+        *   `MODIFIED.md`: Surgical side-by-side diffs of changed items.
+        *   `REMOVED.md`: List of deleted items.
 
-### 2. `compare_excel.py`
-A standalone utility used by `compare_all_excel.py`. It can be run individually to compare any two specific TSV files.
-- **Usage**: `python compare_excel.py <bk_file> <bt_file> [key_col]`
-- **Output**: Returns a JSON object to stdout containing the diff data.
+---
 
-### 3. `analyze_headers.py`
-A simple utility to inspect the headers and the first row of all Excel files in a directory.
-- **Usage**: `python analyze_headers.py`
-- **Purpose**: Helps developers identify which column should be used as a "key column" for new files.
+## 2. Excel TSV Comparison (The "Raw Data" View)
 
-## How to Read the Reports
+Generates detailed technical reports highlighting additions, removals, and modifications in columns and rows of the game's `.txt` files.
 
-1. Open `excel_diff_report/SUMMARY.md` in a Markdown viewer (like VS Code or GitHub).
-2. The summary table shows:
-    - **Added/Rem Cols**: Changes to the structure of the Excel file.
-    - **Added/Rem Rows**: New entries or deleted entries.
-    - **Mod Rows**: Existing entries where values have changed.
-3. Click the links in the **Link** column to view the granular details for a specific file.
+### Scripts:
+*   **`compare_all_excel.py`**: The primary orchestration script for raw data.
+    *   **Usage**: `python compare_all_excel.py`
+    *   **Output**: Detailed `.md` reports for every changed file in `excel_diff_report/SUMMARY.md`.
+*   **`compare_excel.py`**: Standalone utility used to compare any two specific TSV files.
+*   **`analyze_headers.py`**: Inspects headers and first rows to help identify "key columns" for matching.
 
-### Detailed Report Format
-Within a detailed report (e.g., `armor.md`):
-- **Added Rows**: Lists keys that exist in the New version but not the Old.
-- **Modified Rows**: Shows the specific column that changed, the old value, and the new value.
-  - Example: `minac`: `10` (Old) &rarr; **`15` (New)**
+---
+
+## Technical Features
+
+*   **Surgical Highlighting**: Mod-level changes are highlighted token-by-token (e.g., if a range `10-20` changes to `10-30`, only the `30` is highlighted).
+*   **Smart Normalization**:
+    *   Ignores immaterial differences like Diablo II color codes (`ÿc1`), bullets (`•`), and formatting.
+    *   Treats equivalent phrasing (e.g., "Physical Damage Received Reduced by" vs "Damage Reduced by") as identical.
+    *   Distinguishes between flat reduction and percentile reduction by preserving the `%` sign in keys.
+*   **Property Group Resolution**: Unpacks custom mod properties (like `Incendiary-Affix1`) using the `propertygroups.txt` definition file.
 
 ## Requirements
 
 - Python 3.x
-- No external libraries required (uses standard `csv`, `json`, and `os` modules).
+- No external libraries required (uses standard `csv`, `json`, `difflib`, and `os` modules).

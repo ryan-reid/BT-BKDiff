@@ -37,8 +37,6 @@
 ### [Unique Accessories](uniques/accessories/)
 * [Unique Amulet](uniques/accessories/amulet.md)
 * [Unique Charms](uniques/accessories/charms.md)
-* [Unique Colossal Jewel](uniques/accessories/colossal_jewel.md)
-* [Unique Crafted Sunder Charm](uniques/accessories/crafted_sunder_charm.md)
 * [Unique Jewel](uniques/accessories/jewel.md)
 * [Unique Large Charm](uniques/accessories/large_charm.md)
 * [Unique Medium Charm](uniques/accessories/medium_charm.md)
@@ -46,7 +44,6 @@
 * [Unique Small Charm](uniques/accessories/small_charm.md)
 
 ### [Class Specific Uniques](uniques/class_specific/)
-* [Unique Grimoire](uniques/class_specific/grimoire.md)
 * [Unique Hand to Hand](uniques/class_specific/hand_to_hand.md)
 * [Unique Hand to Hand 2](uniques/class_specific/hand_to_hand_2.md)
 * [Unique Orb](uniques/class_specific/orb.md)
@@ -61,7 +58,6 @@
 * [Set Axe](sets/weapons/axe.md)
 * [Set Bow](sets/weapons/bow.md)
 * [Set Hammer](sets/weapons/hammer.md)
-* [Set Knife](sets/weapons/knife.md)
 * [Set Mace](sets/weapons/mace.md)
 * [Set Polearm](sets/weapons/polearm.md)
 * [Set Scepter](sets/weapons/scepter.md)
@@ -85,7 +81,6 @@
 * [Set Ring](sets/accessories/ring.md)
 
 ### [Class Specific Sets](sets/class_specific/)
-* [Set Grimoire](sets/class_specific/grimoire.md)
 * [Set Hand to Hand 2](sets/class_specific/hand_to_hand_2.md)
 * [Set Orb](sets/class_specific/orb.md)
 * [Set Pelt](sets/class_specific/pelt.md)
@@ -95,9 +90,7 @@
 
 ### [Runeword Weapons](runewords/weapons/)
 * [Club Runewords](runewords/weapons/club.md)
-* [Grimoire Runewords](runewords/weapons/grimoire.md)
 * [Hand to Hand Runewords](runewords/weapons/hand_to_hand.md)
-* [Knife Runewords](runewords/weapons/knife.md)
 * [Mace Runewords](runewords/weapons/mace.md)
 * [Melee Weapon Runewords](runewords/weapons/melee_weapon.md)
 * [Merc Equip Runewords](runewords/weapons/merc_equip.md)

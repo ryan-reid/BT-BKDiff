@@ -2,7 +2,11 @@ import os
 import json
 import csv
 import argparse
+import sys
 from typing import Dict, List, Optional
+
+# Increase CSV field size limit for large skill files
+csv.field_size_limit(1000000)
 
 class D2DataLoader:
     def __init__(self, mpq_path: str):
@@ -11,7 +15,31 @@ class D2DataLoader:
         self.excel_data: Dict[str, List[Dict]] = {}
         self._load_strings()
 
+    def load_external_table(self, filepath: str) -> List[Dict]:
+        if not os.path.exists(filepath):
+            return []
+
+        table = []
+        try:
+            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                lines = f.readlines()
+                if not lines:
+                    return []
+                if lines[0].startswith('\ufeff'):
+                    lines[0] = lines[0][1:]
+
+                reader = csv.DictReader(lines, delimiter='\t', quoting=csv.QUOTE_NONE)
+                reader.fieldnames = [f.strip() for f in reader.fieldnames] if reader.fieldnames else []
+                for row in reader:
+                    clean_row = {k.strip() if k else k: v.strip() if v else v for k, v in row.items()}
+                    table.append(clean_row)
+        except Exception as e:
+            print(f"Error reading {filepath}: {e}")
+            return []
+        return table
+
     def _load_strings(self):
+
         string_dir = os.path.join(self.mpq_path, "data", "local", "lng", "strings")
         if not os.path.exists(string_dir):
             return
@@ -36,68 +64,138 @@ class D2DataLoader:
         if not os.path.exists(filepath):
             return []
         
-        # Increase field size limit for large skill files
-        csv.field_size_limit(1000000)
-        
         table = []
-        with open(filepath, 'r', encoding='utf-8') as f:
-            reader = csv.DictReader(f, delimiter='\t')
-            for row in reader:
-                table.append(row)
+        try:
+            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                # Read all lines to handle potential issues
+                lines = f.readlines()
+                if not lines:
+                    return []
+                
+                # Strip BOM if present manually just in case
+                if lines[0].startswith('\ufeff'):
+                    lines[0] = lines[0][1:]
+                
+                reader = csv.DictReader(lines, delimiter='\t', quoting=csv.QUOTE_NONE)
+                # Normalize field names: strip and lower
+                reader.fieldnames = [f.strip() for f in reader.fieldnames] if reader.fieldnames else []
+                
+                for row in reader:
+                    # Strip values as well
+                    clean_row = {k.strip() if k else k: v.strip() if v else v for k, v in row.items()}
+                    table.append(clean_row)
+        except Exception as e:
+            print(f"Error reading {table_name}: {e}")
+            return []
         
         self.excel_data[table_name] = table
         return table
 
     def get_string(self, key: str) -> str:
+        if not key: return ""
         return self.strings.get(key, key)
 
 class PropertyResolver:
-    def __init__(self, loader: D2DataLoader):
+    def __init__(self, loader: D2DataLoader, property_groups: Optional[List[Dict]] = None):
         self.loader = loader
-        self.properties = {row['code']: row for row in loader.get_excel_data('properties')}
-        self.stats = {row['Stat']: row for row in loader.get_excel_data('itemstatcost')}
-        self.skills = {row['skill']: row for row in loader.get_excel_data('skills')}
-        self.skills_by_id = {row['*Id']: row for row in loader.get_excel_data('skills')}
-        self.skill_desc = {row['skilldesc']: row for row in loader.get_excel_data('skilldesc')}
+        # Use lowercase keys for all lookups to handle casing inconsistencies
+        self.property_groups = {row['code'].strip().lower(): row for row in property_groups} if property_groups else {}
+        
+        # Property aliases for common inconsistencies
+        self.aliases = {
+            'cast': 'cast1',
+            'balance': 'balance1',
+            'move': 'move1',
+            'swing': 'swing1',
+            'block': 'block1',
+            'cold-res': 'res-cold',
+            'fire-res': 'res-fire',
+            'ltng-res': 'res-ltng',
+            'pois-res': 'res-pois',
+            'all-res': 'res-all',
+            'ern%': 'enr%',
+            'res-poi-len': 'res-pois-len',
+            'get-hit-skill': 'gethit-skill'
+        }
+
+        self.properties = {}
+        for row in loader.get_excel_data('properties'):
+            code = row.get('code', '').strip().lower()
+            if code:
+                self.properties[code] = row
+
+        self.stats = {}
+        for row in loader.get_excel_data('itemstatcost'):
+            stat = row.get('Stat', '').strip().lower()
+            if stat:
+                self.stats[stat] = row
+        
+        # Robust skill loading
+        skills_data = loader.get_excel_data('skills')
+        self.skills = {}
+        self.skills_by_id = {}
+        for row in skills_data:
+            s_name = row.get('skill', '').strip().lower()
+            if s_name:
+                self.skills[s_name] = row
+            
+            s_id = row.get('*Id') or row.get('Id') or row.get('*ID') or row.get('ID')
+            if s_id:
+                self.skills_by_id[str(s_id).strip()] = row
+
+        self.skill_desc = {}
+        for row in loader.get_excel_data('skilldesc'):
+            sd_key = row.get('skilldesc', '').strip().lower()
+            if sd_key:
+                self.skill_desc[sd_key] = row
 
     def resolve_skill_name(self, skill_name_or_id: str) -> str:
-        skill = self.skills.get(skill_name_or_id)
-        if not skill:
+        skill_name_or_id = str(skill_name_or_id).strip()
+        if not skill_name_or_id or skill_name_or_id == '0':
+            return skill_name_or_id
+
+        # Try ID first if it's numeric
+        if skill_name_or_id.isdigit():
             skill = self.skills_by_id.get(skill_name_or_id)
-        
+        else:
+            skill = self.skills.get(skill_name_or_id.lower())
+            
         if skill:
-            desc_key = skill.get('skilldesc')
+            desc_key = skill.get('skilldesc', '').strip().lower()
             if desc_key and desc_key in self.skill_desc:
-                str_name_key = self.skill_desc[desc_key].get('str name')
+                str_name_key = self.skill_desc[desc_key].get('str name', '').strip()
                 if str_name_key:
-                    return self.loader.get_string(str_name_key)
-            return skill.get('skill', skill_name_or_id)
+                    resolved = self.loader.get_string(str_name_key)
+                    if resolved: return resolved
+            
+            # Fallback to internal name
+            internal_name = skill.get('skill', '').strip()
+            if internal_name: return internal_name
+            
         return skill_name_or_id
 
     def format_desc(self, stat_code: str, min_val: str, max_val: str) -> Optional[str]:
-        stat = self.stats.get(stat_code)
+        stat = self.stats.get(stat_code.lower())
         if not stat:
             return None
         
-        desc_func = stat.get('descfunc')
-        str_pos = stat.get('descstrpos')
-        str_neg = stat.get('descstrneg')
-        str_2 = stat.get('descstr2', '')
+        str_pos = stat.get('descstrpos', '').strip()
+        str_neg = stat.get('descstrneg', '').strip()
+        str_2 = stat.get('descstr2', '').strip()
         
         if not str_pos:
             return None
 
-        val = int(min_val) if min_val and min_val != '' else 0
+        try:
+            val = int(min_val) if min_val and min_val != '' else 0
+        except ValueError:
+            val = 0
+            
         range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
         
         fmt_string = self.loader.get_string(str_pos if val >= 0 else str_neg)
+        if not fmt_string: return None
         
-        # Handle the %+d manually. In D2, %+d includes the sign.
-        # Check if we have double percent in the source string (like %+d%%)
-        if "%%" in fmt_string:
-            # If the format string has %% and we are using a range, we might get double % if we aren't careful
-            pass
-
         sign = "+" if val >= 0 else ""
         
         if "%+d" in fmt_string:
@@ -105,7 +203,6 @@ class PropertyResolver:
         elif "%d" in fmt_string:
             fmt_string = fmt_string.replace("%d", f"{range_str}")
 
-        # Clean up double percent signs that often occur from D2 strings like %+d%%
         fmt_string = fmt_string.replace("%%", "%")
             
         if str_2:
@@ -114,53 +211,86 @@ class PropertyResolver:
         return fmt_string
 
     def resolve_property(self, code: str, param: str, min_val: str, max_val: str) -> str:
-        prop = self.properties.get(code)
+        code_lower = code.strip().lower()
+        
+        # Apply alias
+        if code_lower in self.aliases:
+            code_lower = self.aliases[code_lower]
+        
+        # Check property groups first
+        if code_lower in self.property_groups:
+            group = self.property_groups[code_lower]
+            pick_mode = group.get('PickMode', '1')
+            options = []
+            for i in range(1, 9):
+                p_code = group.get(f'Prop{i}', '').strip()
+                if p_code and p_code != 'xxx':
+                    p_min = group.get(f'ModMin{i}', '').strip()
+                    p_max = group.get(f'ModMax{i}', '').strip()
+                    p_param = group.get(f'ParMin{i}', '').strip()
+                    resolved = self.resolve_property(p_code, p_param, p_min, p_max)
+                    options.append(resolved)
+            
+            if pick_mode == '1':
+                return " / ".join(options)
+            else:
+                return " (Random: " + " OR ".join(options) + ")"
+
+        prop = self.properties.get(code_lower)
         if not prop:
             return f"Unknown Prop: {code} ({param}, {min_val}-{max_val})"
         
         range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
 
-        if code == 'oskill':
+        # Skill-related codes
+        skill_codes = ['oskill', 'skill', 'att-skill', 'hit-skill', 'gethit-skill', 'kill-skill', 'death-skill', 'level-skill', 'aura']
+        if code in skill_codes:
             skill_name = self.resolve_skill_name(param)
-            return f"+{range_str} to {skill_name}"
-        elif code == 'aura':
-            skill_name = self.resolve_skill_name(param)
-            return f"Level {range_str} {skill_name} Aura When Equipped"
-        elif code == 'hit-skill':
-            skill_name = self.resolve_skill_name(param)
-            return f"{min_val}% Chance to cast Level {max_val} {skill_name} on striking"
-        elif code == 'kill-skill':
-            skill_name = self.resolve_skill_name(param)
-            return f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Kill an Enemy"
+            
+            if code == 'oskill':
+                return f"+{range_str} to {skill_name}"
+            elif code == 'skill':
+                return f"+{range_str} to {skill_name}"
+            elif code == 'aura':
+                return f"Level {range_str} {skill_name} Aura When Equipped"
+            elif code in ['hit-skill', 'att-skill']:
+                return f"{min_val}% Chance to cast Level {max_val} {skill_name} on striking"
+            elif code == 'gethit-skill':
+                return f"{min_val}% Chance to cast Level {max_val} {skill_name} when struck"
+            elif code == 'kill-skill':
+                return f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Kill an Enemy"
+            elif code == 'death-skill':
+                return f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Die"
+            elif code == 'level-skill':
+                return f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Level-Up"
         
         # Priority: Check if the property itself has a specific description format
-        # In properties.txt, columns are code, *Id, *Enabled, func1, stat1, ..., val1, val2, ...
-        # val1-val7 often contain the text format
         for i in range(1, 8):
-            desc_fmt = prop.get(f'val{i}')
-            if desc_fmt and any(x in desc_fmt for x in ['+#', '#%', '# ']):
-                # Resolve skill name if placeholder [Skill] exists
+            desc_fmt = prop.get(f'val{i}', '').strip()
+            if desc_fmt and any(x in desc_fmt for x in ['+#', '#%', '# ', '%s']):
                 res_text = desc_fmt.replace('+#', f'+{range_str}').replace('#', range_str)
-                if '[Skill]' in res_text:
-                    res_text = res_text.replace('[Skill]', self.resolve_skill_name(param))
+                if '[Skill]' in res_text or '%s' in res_text:
+                    skill_name = self.resolve_skill_name(param)
+                    res_text = res_text.replace('[Skill]', skill_name).replace('%s', skill_name)
                 return res_text
 
         # Try to resolve via stats
         for i in range(1, 8):
-            stat_code = prop.get(f'stat{i}')
+            stat_code = prop.get(f'stat{i}', '').strip()
             if stat_code:
                 desc = self.format_desc(stat_code, min_val, max_val)
                 if desc:
                     return desc
         
         # Fallback to internal name
-        stat_name = prop.get('stat1', code)
+        stat_name = prop.get('stat1', code).strip()
+        if not stat_name: stat_name = code
         return f"{stat_name}: {range_str} (param: {param})"
 
 class ItemAnalyzer:
-    def __init__(self, mpq_path: str):
+    def __init__(self, mpq_path: str, property_groups: Optional[List[Dict]] = None):
         self.loader = D2DataLoader(mpq_path)
-        self.resolver = PropertyResolver(self.loader)
+        self.resolver = PropertyResolver(self.loader, property_groups)
         self.armor = {row['code']: row for row in self.loader.get_excel_data('armor')}
         self.weapons = {row['code']: row for row in self.loader.get_excel_data('weapons')}
         self.misc = {row['code']: row for row in self.loader.get_excel_data('misc')}
@@ -169,7 +299,7 @@ class ItemAnalyzer:
     def resolve_base_item(self, code: str) -> str:
         item = self.armor.get(code) or self.weapons.get(code) or self.misc.get(code)
         if item:
-            name_key = item.get('namestr') or item.get('name')
+            name_key = item.get('namestr', '').strip() or item.get('name', '').strip()
             if name_key:
                 return self.loader.get_string(name_key)
             return item.get('name', code)
@@ -180,35 +310,37 @@ class ItemAnalyzer:
         if not item:
             return "Miscellaneous"
         
-        type_code = item.get('type')
+        type_code = item.get('type', '').strip()
         item_type = self.item_types.get(type_code)
         if item_type:
-            return self.loader.get_string(item_type.get('ItemType', 'Unknown'))
+            return self.loader.get_string(item_type.get('ItemType', 'Unknown').strip())
         return "Miscellaneous"
 
     def get_runeword_category(self, itype_code: str) -> str:
+        itype_code = itype_code.strip()
         item_type = self.item_types.get(itype_code)
         if item_type:
-            return self.loader.get_string(item_type.get('ItemType', 'Unknown'))
+            return self.loader.get_string(item_type.get('ItemType', 'Unknown').strip())
         return itype_code
 
     def analyze_runeword(self, row: Dict) -> str:
-        output = f"### {row['*Rune Name']}\n"
+        name = row.get('*Rune Name', row.get('Name', 'Unknown')).strip()
+        output = f"### {name}\n"
         
         rune_names = []
         for i in range(1, 7):
-            rune_code = row.get(f'Rune{i}')
-            if rune_code and rune_code != 'xxx' and rune_code != '':
+            rune_code = row.get(f'Rune{i}', '').strip()
+            if rune_code and rune_code != 'xxx':
                 rune_item = self.misc.get(rune_code)
-                rune_names.append(rune_item['name'] if rune_item else rune_code)
+                rune_names.append(rune_item['name'].strip() if rune_item else rune_code)
         
         output += f"* **Runes:** {' + '.join(rune_names)}\n"
-        output += f"* **Base Items:** {self.resolve_base_item(row['itype1'])}\n"
+        output += f"* **Base Items:** {self.resolve_base_item(row.get('itype1', '').strip())}\n"
         output += "* **Properties:**\n"
         
         for i in range(1, 8):
-            code = row.get(f'T1Code{i}')
-            if code and code != 'xxx' and code != '':
+            code = row.get(f'T1Code{i}', '').strip()
+            if code and code != 'xxx':
                 prop_str = self.resolver.resolve_property(
                     code, 
                     row.get(f'T1Param{i}', ''), 
@@ -219,15 +351,16 @@ class ItemAnalyzer:
         return output
 
     def analyze_unique(self, row: Dict) -> str:
-        localized_name = self.loader.get_string(row['index'])
-        output = f"### {localized_name} ({row['index']})\n"
-        output += f"* **Base Item:** {self.resolve_base_item(row['code'])}\n"
-        output += f"* **Level Requirement:** {row['lvl req']}\n"
+        index = row.get('index', '').strip()
+        localized_name = self.loader.get_string(index)
+        output = f"### {localized_name} ({index})\n"
+        output += f"* **Base Item:** {self.resolve_base_item(row.get('code', '').strip())}\n"
+        output += f"* **Level Requirement:** {row.get('lvl req', '0')}\n"
         output += "* **Properties:**\n"
         
         for i in range(1, 13):
-            code = row.get(f'prop{i}')
-            if code and code != 'xxx' and code != '':
+            code = row.get(f'prop{i}', '').strip()
+            if code and code != 'xxx':
                 prop_str = self.resolver.resolve_property(
                     code, 
                     row.get(f'par{i}', ''), 
@@ -238,15 +371,16 @@ class ItemAnalyzer:
         return output
 
     def analyze_set_item(self, row: Dict) -> str:
-        localized_name = self.loader.get_string(row['index'])
-        output = f"### {localized_name} ({row['index']})\n"
-        output += f"* **Set:** {row['set']}\n"
-        output += f"* **Base Item:** {self.resolve_base_item(row['item'])}\n"
+        index = row.get('index', '').strip()
+        localized_name = self.loader.get_string(index)
+        output = f"### {localized_name} ({index})\n"
+        output += f"* **Set:** {row.get('set', '').strip()}\n"
+        output += f"* **Base Item:** {self.resolve_base_item(row.get('item', '').strip())}\n"
         output += "* **Properties:**\n"
         
         for i in range(1, 13):
-            code = row.get(f'prop{i}')
-            if code and code != 'xxx' and code != '':
+            code = row.get(f'prop{i}', '').strip()
+            if code and code != 'xxx':
                 prop_str = self.resolver.resolve_property(
                     code, 
                     row.get(f'par{i}', ''), 
@@ -256,70 +390,145 @@ class ItemAnalyzer:
                 output += f"    * {prop_str}\n"
         return output
 
+    def get_group_for_category(self, category: str) -> str:
+        category_lower = category.lower()
+        if category_lower in ['expansion', 'other']:
+            return 'other'
+        
+        # Weapons
+        if any(w in category_lower for w in ['axe', 'bow', 'club', 'crossbow', 'hammer', 'javelin', 'knife', 'mace', 'polearm', 'scepter', 'spear', 'staff', 'sword', 'throwing', 'wand', 'weapon']):
+            return 'weapons'
+        
+        # Armor
+        if any(a in category_lower for a in ['armor', 'belt', 'boots', 'gloves', 'circlet', 'helm', 'shield', 'merc', 'equip']):
+            return 'armor'
+            
+        # Accessories
+        if any(acc in category_lower for acc in ['amulet', 'ring', 'charm', 'jewel']):
+            return 'accessories'
+            
+        # Class Specific
+        if any(cls in category_lower for cls in ['amazon', 'auric', 'grimoire', 'hand to hand', 'orb', 'pelt', 'primal', 'voodoo']):
+            return 'class_specific'
+            
+        return 'other'
+
     def export_all(self, output_dir: str):
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
+        groups = ['weapons', 'armor', 'accessories', 'class_specific']
+
         # 1. Uniques
         uniques_dir = os.path.join(output_dir, "uniques")
-        os.makedirs(uniques_dir, exist_ok=True)
-        unique_categories = {}
+        unique_data = {g: {} for g in groups}
         for row in self.loader.get_excel_data('uniqueitems'):
             if row.get('disabled') == '1': continue
-            cat = self.get_item_category(row['code'])
-            if cat not in unique_categories: unique_categories[cat] = []
-            unique_categories[cat].append(self.analyze_unique(row))
+            cat = self.get_item_category(row.get('code', '').strip())
+            if cat.lower() == 'expansion': continue
+            group = self.get_group_for_category(cat)
+            if group == 'other': group = 'weapons' # Fallback
+            
+            if cat not in unique_data[group]: unique_data[group][cat] = []
+            unique_data[group][cat].append(self.analyze_unique(row))
         
-        for cat, items in unique_categories.items():
-            filename = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
-            with open(os.path.join(uniques_dir, filename), 'w', encoding='utf-8') as f:
-                f.write(f"# Unique {cat}\n\n")
-                f.write("\n".join(items))
+        for group in groups:
+            group_dir = os.path.join(uniques_dir, group)
+            os.makedirs(group_dir, exist_ok=True)
+            for cat, items in unique_data[group].items():
+                filename = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
+                with open(os.path.join(group_dir, filename), 'w', encoding='utf-8') as f:
+                    f.write(f"# Unique {cat}\n\n")
+                    f.write("\n".join(items))
 
         # 2. Sets
         sets_dir = os.path.join(output_dir, "sets")
-        os.makedirs(sets_dir, exist_ok=True)
-        set_categories = {}
+        set_data = {g: {} for g in groups}
         for row in self.loader.get_excel_data('setitems'):
             if row.get('disabled') == '1': continue
-            cat = self.get_item_category(row['item'])
-            if cat not in set_categories: set_categories[cat] = []
-            set_categories[cat].append(self.analyze_set_item(row))
+            cat = self.get_item_category(row.get('item', '').strip())
+            if cat.lower() == 'expansion': continue
+            group = self.get_group_for_category(cat)
+            if group == 'other': group = 'weapons' # Fallback
+            
+            if cat not in set_data[group]: set_data[group][cat] = []
+            set_data[group][cat].append(self.analyze_set_item(row))
         
-        for cat, items in set_categories.items():
-            filename = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
-            with open(os.path.join(sets_dir, filename), 'w', encoding='utf-8') as f:
-                f.write(f"# Set {cat}\n\n")
-                f.write("\n".join(items))
+        for group in groups:
+            group_dir = os.path.join(sets_dir, group)
+            os.makedirs(group_dir, exist_ok=True)
+            for cat, items in set_data[group].items():
+                filename = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
+                with open(os.path.join(group_dir, filename), 'w', encoding='utf-8') as f:
+                    f.write(f"# Set {cat}\n\n")
+                    f.write("\n".join(items))
 
         # 3. Runewords
         runes_dir = os.path.join(output_dir, "runewords")
-        os.makedirs(runes_dir, exist_ok=True)
-        rune_categories = {}
+        # Special groups for runewords
+        rw_groups_map = {'weapons': 'weapons', 'armor': 'chests', 'helm': 'helms', 'shield': 'shields'}
+        rune_data = {g: {} for g in rw_groups_map.values()}
+        
         for row in self.loader.get_excel_data('runes'):
             if row.get('complete') != '1': continue
-            cat = self.get_runeword_category(row['itype1'])
-            if cat not in rune_categories: rune_categories[cat] = []
-            rune_categories[cat].append(self.analyze_runeword(row))
+            cat = self.get_runeword_category(row.get('itype1', '').strip())
+            if cat.lower() == 'expansion': continue
             
-        for cat, items in rune_categories.items():
-            filename = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
-            with open(os.path.join(runes_dir, filename), 'w', encoding='utf-8') as f:
-                f.write(f"# Runewords for {cat}\n\n")
-                f.write("\n".join(items))
+            # Map category to group
+            group = 'weapons'
+            cat_lower = cat.lower()
+            if 'shield' in cat_lower: group = 'shields'
+            elif 'helm' in cat_lower: group = 'helms'
+            elif 'armor' in cat_lower: group = 'chests'
+            
+            if cat not in rune_data[group]: rune_data[group][cat] = []
+            rune_data[group][cat].append(self.analyze_runeword(row))
+            
+        for group in rune_data:
+            group_dir = os.path.join(runes_dir, group)
+            os.makedirs(group_dir, exist_ok=True)
+            for cat, items in rune_data[group].items():
+                filename = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
+                with open(os.path.join(group_dir, filename), 'w', encoding='utf-8') as f:
+                    display_cat = "Chests" if group == 'chests' else cat
+                    f.write(f"# Runewords for {display_cat}\n\n")
+                    f.write("\n".join(items))
 
         # 4. Index
         with open(os.path.join(output_dir, "index.md"), 'w', encoding='utf-8') as f:
             f.write("# Diablo II Item Database\n\n")
-            f.write("## Unique Items\n")
-            for cat in sorted(unique_categories.keys()):
-                f.write(f"* [Unique {cat}](uniques/{cat.lower().replace(' ', '_').replace('/', '_')}.md)\n")
-            f.write("\n## Set Items\n")
-            for cat in sorted(set_categories.keys()):
-                f.write(f"* [Set {cat}](sets/{cat.lower().replace(' ', '_').replace('/', '_')}.md)\n")
-            f.write("\n## Runewords\n")
-            for cat in sorted(rune_categories.keys()):
-                f.write(f"* [{cat} Runewords](runewords/{cat.lower().replace(' ', '_').replace('/', '_')}.md)\n")
+            
+            f.write("## Unique Items\n\n")
+            group_titles = {'weapons': 'Unique Weapons', 'armor': 'Unique Armor', 'accessories': 'Unique Accessories', 'class_specific': 'Class Specific Uniques'}
+            for group in groups:
+                if unique_data[group]:
+                    f.write(f"### [{group_titles[group]}](uniques/{group}/)\n")
+                    for cat in sorted(unique_data[group].keys()):
+                        filename = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
+                        f.write(f"* [Unique {cat}](uniques/{group}/{filename})\n")
+                    f.write("\n")
+
+            f.write("## Set Items\n\n")
+            group_titles_sets = {'weapons': 'Set Weapons', 'armor': 'Set Armor', 'accessories': 'Set Accessories', 'class_specific': 'Class Specific Sets'}
+            for group in groups:
+                if set_data[group]:
+                    f.write(f"### [{group_titles_sets[group]}](sets/{group}/)\n")
+                    for cat in sorted(set_data[group].keys()):
+                        filename = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
+                        f.write(f"* [Set {cat}](sets/{group}/{filename})\n")
+                    f.write("\n")
+
+            f.write("## Runewords\n\n")
+            rw_titles = {'weapons': 'Runeword Weapons', 'chests': 'Runeword Chests', 'helms': 'Runeword Helms', 'shields': 'Runeword Shields'}
+            for group in ['weapons', 'chests', 'helms', 'shields']:
+                if rune_data[group]:
+                    f.write(f"### [{rw_titles[group]}](runewords/{group}/)\n")
+                    for cat in sorted(rune_data[group].keys()):
+                        filename = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
+                        link_name = f"{cat} Runewords" if "Shield" in cat or "Armor" in cat else f"{cat} Runewords"
+                        if group == 'chests': link_name = "Chests Runewords"
+                        f.write(f"* [{link_name}](runewords/{group}/{filename})\n")
+                    f.write("\n")
 
 def main():
     parser = argparse.ArgumentParser(description="Diablo II Item Analyzer")
@@ -329,23 +538,26 @@ def main():
     parser.add_argument("--out", default="item_db", help="Output directory for export")
     
     args = parser.parse_args()
-    analyzer = ItemAnalyzer(args.mpq)
+    loader = D2DataLoader(args.mpq)
+    property_groups = loader.load_external_table("propertygroups.txt")
+    analyzer = ItemAnalyzer(args.mpq, property_groups)
     
     if args.type == "export":
         analyzer.export_all(args.out)
         print(f"Export complete to {args.out}")
     elif args.type == "runeword":
-        # Note: Logic updated to reuse analyze_runeword with a search
         runes_table = analyzer.loader.get_excel_data('runes')
         for row in runes_table:
-            if args.name.lower() in row.get('*Rune Name', '').lower() or args.name.lower() in row.get('Name', '').lower():
+            r_name = row.get('*Rune Name', row.get('Name', '')).strip()
+            if args.name.lower() in r_name.lower():
                 print(analyzer.analyze_runeword(row))
                 return
         print(f"Runeword '{args.name}' not found.")
     elif args.type == "unique":
         uniques = analyzer.loader.get_excel_data('uniqueitems')
         for row in uniques:
-            if args.name.lower() in row.get('index', '').lower():
+            u_index = row.get('index', '').strip()
+            if args.name.lower() in u_index.lower():
                 print(analyzer.analyze_unique(row))
                 return
         print(f"Unique item '{args.name}' not found.")
