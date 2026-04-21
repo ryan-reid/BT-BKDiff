@@ -49,18 +49,12 @@ def parse_markdown_items(file_path):
     return items
 
 def escape_latex(s):
-    """Escapes special LaTeX characters for GitHub MathJax. Uses double backslashes for LaTeX chars and single for Markdown chars."""
+    """Escapes special LaTeX characters for GitHub MathJax. Uses double backslashes to survive Markdown pass."""
     if not s: return s
-    # 1. LaTeX special characters (need to reach MathJax as \% etc)
+    # LaTeX special characters (need to reach MathJax as \% etc)
     # We use double backslash because GitHub Markdown eats one.
     for char in '%$#_{}&':
         s = s.replace(char, r'\\' + char)
-    
-    # 2. Markdown special characters (need to reach MathJax as literal * etc)
-    # Single backslash is enough to hide from Markdown.
-    for char in '*[]':
-        s = s.replace(char, '\\' + char)
-        
     return s
 
 def normalize_text(s):
@@ -88,9 +82,9 @@ def get_styled_diffs(old_s, new_s):
     new_s = re.sub(r'ÿc.', '', new_s)
 
     if not old_s: 
-        return "", f' $ \\color{{blue}}{{\\text{{{escape_latex(new_s)}}}}} $ '
+        return "", f'$\\color{{blue}}{{\\text{{{escape_latex(new_s)}}}}}$'
     if not new_s or new_s == "(removed)": 
-        return f' $ \\color{{gray}}{{\\text{{{escape_latex(old_s)}}}}} $ ', f' $ \\color{{blue}}{{\\text{{(removed)}}}} $ '
+        return f'$\\color{{gray}}{{\\text{{{escape_latex(old_s)}}}}}$', f'$\\color{{blue}}{{\\text{{(removed)}}}}$'
     
     if normalize_text(old_s) == normalize_text(new_s):
         return old_s, new_s
@@ -105,8 +99,7 @@ def get_styled_diffs(old_s, new_s):
     matcher = difflib.SequenceMatcher(None, old_toks, new_toks)
     
     def render_version(tokens, is_old):
-        # Mandatory spaces around $ are required for GitHub MathJax
-        res = " $ "
+        res = "$"
         for tag, i1, i2, j1, j2 in matcher.get_opcodes():
             if is_old:
                 part = "".join(tokens[i1:i2])
@@ -120,7 +113,7 @@ def get_styled_diffs(old_s, new_s):
                     res += f'\\color{{blue}}{{\\text{{{escape_latex(part)}}}}}'
                 elif tag == 'equal':
                     res += f'\\text{{{escape_latex(part)}}}'
-        res += " $ "
+        res += "$"
         return res
 
     return render_version(old_toks, True), render_version(new_toks, False)

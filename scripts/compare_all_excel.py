@@ -97,12 +97,12 @@ def write_detail_markdown(report, output_path):
             for key in keys:
                 f.write(f"### {key}\n")
                 for col, vals in report['rows']['modified'][key].items():
-                    v_new = vals['bk_new'] if vals['bk_new'] != '' else '*empty*'
-                    v_old = vals['bt_old'] if vals['bt_old'] != '' else '*empty*'
+                    v_new = vals['bk_new'] if vals['bk_new'] != '' else '(empty)'
+                    v_old = vals['bt_old'] if vals['bt_old'] != '' else '(empty)'
                     # Use LaTeX for coloring and escape characters
                     e_new = escape_latex(str(v_new))
                     e_old = escape_latex(str(v_old))
-                    f.write(f"- `{col}`: $ \\color{{gray}}{{\\text{{{e_old}}}}} $ (Old) &rarr; $ \\color{{blue}}{{\\text{{{e_new}}}}} $ (New)\n")
+                    f.write(f"- `{col}`: $\\color{{gray}}{{\\text{{{e_old}}}}}$ (Old) &rarr; $\\color{{blue}}{{\\text{{{e_new}}}}}$ (New)\n")
                 f.write("\n")
 
 def generate_summary(all_reports, report_dir):
