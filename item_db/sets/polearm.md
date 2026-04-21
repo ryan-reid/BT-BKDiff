@@ -7,7 +7,7 @@
     * +330 to Attack Rating
     * Repairs  durability per second
     * 10% Chance to cast Level 14 48 on striking
-    * +40%% Increased Attack Speed
+    * +40% Increased Attack Speed
     * : 200 (param: )
     * +1-300 to Minimum Lightning Damage
 
@@ -16,10 +16,10 @@
 * **Base Item:** Thresher
 * **Properties:**
     * +3-4 to All Skills
-    * Requirements -100%%
-    * +65-75%% Faster Cast Rate
+    * Requirements -100%
+    * +65-75% Faster Cast Rate
     * Poison Length Reduced by 100%
-    * Level 15 meditation Aura When Equipped
+    * Level 15-20 meditation Aura When Equipped
     * Increase Maximum Life 10-20%
     * Increase Maximum Mana 10-20%
     * +5-15 to Mana after each Kill
@@ -29,10 +29,10 @@
 * **Base Item:** Thresher
 * **Properties:**
     * +3-4 to All Skills
-    * +50%% Increased Attack Speed
-    * +25-35%% Faster Hit Recovery
+    * +50% Increased Attack Speed
+    * +25-35% Faster Hit Recovery
     * Physical Damage Received Reduced by 3-10%
     * : 220-280 (param: )
-    * Level 10 concentration Aura When Equipped
+    * Level 10-15 concentration Aura When Equipped
     * Increase Maximum Life 5-20%
-    * 22-20% Chance to cast level %d %s on attack
+    * 22-20% Chance to cast level 22-20 %s on attack

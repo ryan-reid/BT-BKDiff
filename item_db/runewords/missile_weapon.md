@@ -5,11 +5,11 @@
 * **Base Items:** miss
 * **Properties:**
     * : 260-340 (param: )
-    * +280-330%% Damage to Demons
+    * +280-330% Damage to Demons
     * 100% Chance to cast Level 18 Bone Spear on striking
-    * 35-14% Chance to cast level %d %s when struck
+    * 35-14% Chance to cast level 35-14 %s when struck
     * Knockback
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * Fires Explosive Arrows or Bolts
 
 ### Edge
@@ -17,8 +17,8 @@
 * **Base Items:** miss
 * **Properties:**
     * : 280-320 (param: )
-    * +33%% Piercing Attack
-    * +35%% Increased Attack Speed
+    * +33% Piercing Attack
+    * +35% Increased Attack Speed
     * Prevent Monster Heal
     * Level 15 Thorns Aura When Equipped
     * +5-10 to Strength
@@ -31,9 +31,9 @@
     * : 280 (param: )
     * 300% Bonus to Attack Rating
     * +50-100 to Minimum Damage
-    * Fire Resist +15%%
-    * Level 12 Fanaticism Aura When Equipped
-    * %0%% Reanimate as: %1
+    * Fire Resist +15%
+    * Level 12-15 Fanaticism Aura When Equipped
+    * %0% Reanimate as: %1
     * +2 to All Skills
 
 ### Harmony
@@ -44,7 +44,7 @@
     * +55-160 to Minimum Fire Damage
     * Level 25-20 %s (25-20/25-20 Charges)
     * Level 10 Vigor Aura When Equipped
-    * +2 to Valkyrie
+    * +2-6 to Valkyrie
     * Regenerate Mana 20%
     * +2 to Light Radius
 
@@ -54,9 +54,9 @@
 * **Properties:**
     * : 140-210 (param: )
     * Level 18 Holy Freeze Aura When Equipped
-    * +25-30%% to Cold Skill Damage
+    * +25-30% to Cold Skill Damage
     * 25% Chance to cast Level 35 Frost Nova on striking
-    * 100-40% Chance to cast level %d %s when you Level-Up
+    * 100-40% Chance to cast level 100-40 %s when you Level-Up
     * -25-30% to Enemy Cold Resistance
     * % Extra Gold from Monsters (Based on Character Level)
 
@@ -69,7 +69,7 @@
     * +3 to %s %s
     * +3 to %s %s
     * +3 to %s %s
-    * +300%% Damage to Undead
+    * +300% Damage to Undead
 
 ### Mist
 * **Runes:** Cham Rune + Shael Rune + Gul Rune + Thul Rune + Ith Rune
@@ -77,20 +77,20 @@
 * **Properties:**
     * +3 to All Skills
     * : 325-375 (param: )
-    * Level 8 Concentration Aura When Equipped
-    * +100%% Piercing Attack
+    * Level 8-12 Concentration Aura When Equipped
+    * +100% Piercing Attack
     * +24 to Vitality
-    * Fire Resist +40%%
+    * Fire Resist +40%
 
 ### Wrath
 * **Runes:** Pul Rune + Lum Rune + Ber Rune + Mal Rune
 * **Base Items:** miss
 * **Properties:**
     * : 300-375 (param: )
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * +50-300 to Minimum Lightning Damage
     * +200-300 magic damage
-    * +10-20%% Deadly Strike
+    * +10-20% Deadly Strike
     * 30% Chance to cast Level 7 Decrepify on striking
     * Cannot Be Frozen
 
@@ -98,10 +98,10 @@
 * **Runes:** Ort Rune + Eth Rune
 * **Base Items:** miss
 * **Properties:**
-    * +25%% Faster Run/Walk
-    * +25%% Increased Attack Speed
+    * +25% Faster Run/Walk
+    * +25% Increased Attack Speed
     * : 100 (param: )
     * 20% Bonus to Attack Rating
     * 14% Chance to cast Level 2 240 on striking
-    * +33%% Piercing Attack
+    * +33% Piercing Attack
     * +30 to Mana

@@ -7,8 +7,8 @@
     * +3-4 to Amazon Skill Levels
     * +3-4 to Javelin and Spear Skills
     * : 200 (param: )
-    * +60%% Increased Attack Speed
-    * +30%% Faster Run/Walk
+    * +60% Increased Attack Speed
+    * +30% Faster Run/Walk
     * +20 to Strength
     * +20 to Vitality
     * 5-9% Life stolen per hit
@@ -21,11 +21,11 @@
 * **Properties:**
     * : 269-300 (param: )
     * +101-300 magic damage
-    * Fire Resist +40-50%%
+    * Fire Resist +40-50%
     * +400-600 Defense
     * +3-6 to Javelin and Spear Skills
-    * +40%% Increased Attack Speed
-    * +50%% Faster Run/Walk
+    * +40% Increased Attack Speed
+    * +50% Faster Run/Walk
     * +1 to natural resistance
     * -35% to Enemy Lightning Resistance
 
@@ -33,12 +33,12 @@
 * **Base Item:** Matriarchal Pike
 * **Level Requirement:** 91
 * **Properties:**
-    * Level 6 conviction Aura When Equipped
+    * Level 6-10 conviction Aura When Equipped
     * +3-4 to Amazon Skill Levels
     * +3-4 to Javelin and Spear Skills
     * -20-30% to Enemy Lightning Resistance
     * +10-20 to Strength
     * +1000 Defense
     * Increase Maximum Life 5-15%
-    * +40%% Increased Attack Speed
+    * +40% Increased Attack Speed
     * 20% Chance to cast Level 40 Lightning Strike on striking

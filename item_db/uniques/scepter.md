@@ -4,11 +4,11 @@
 * **Base Item:** Scepter
 * **Level Requirement:** 5
 * **Properties:**
-    * +25%% Chance of Crushing Blow
-    * Fire Resist +20%%
-    * Poison Resist +20%%
+    * +25% Chance of Crushing Blow
+    * Fire Resist +20%
+    * Poison Resist +20%
     * +15 to Mana after each Kill
-    * +20%% Increased Attack Speed
+    * +20% Increased Attack Speed
     * : 170-180 (param: )
     * 6% Life stolen per hit
     * +1 to All Skills
@@ -31,11 +31,11 @@
 * **Level Requirement:** 23
 * **Properties:**
     * +1-400 to Minimum Lightning Damage
-    * +20%% Faster Cast Rate
+    * +20% Faster Cast Rate
     * Replenish Life +10
-    * +40%% Increased Attack Speed
-    * +3 to 110
-    * +3 to 118
+    * +40% Increased Attack Speed
+    * +3-5 to 110
+    * +3-5 to 118
     * +3 to 121
 
 ### Zakarum's Hand (Zakarum's Hand)
@@ -48,7 +48,7 @@
     * Replenish Life +15-20
     * 60% Chance to cast Level 25 59 on striking
     * : 180-220 (param: )
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * +2-3 to %s %s
     * +2-3 to %s %s
     * +1-2 to Amazon Skill Levels
@@ -59,7 +59,7 @@
 * **Properties:**
     * +2 to Amazon Skill Levels
     * 33% Chance to cast Level 1 87 on striking
-    * +25%% Increased Attack Speed
+    * +25% Increased Attack Speed
     * +409 to Minimum Poison Damage
     * : 200 (param: )
     * +30-50 to Minimum Damage
@@ -69,9 +69,9 @@
 * **Level Requirement:** 42
 * **Properties:**
     * +1-3 to Amazon Skill Levels
-    * +30%% Faster Cast Rate
+    * +30% Faster Cast Rate
     * Regenerate Mana 15%
-    * +20%% Increased Attack Speed
+    * +20% Increased Attack Speed
     * +1-3 to %s %s
     * +1-3 to %s %s
 
@@ -80,11 +80,11 @@
 * **Level Requirement:** 61
 * **Properties:**
     * : 300-350 (param: )
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * -66% Target Defense
     * +3 to Amazon Skill Levels
     * +15-20 Life after each Kill
-    * +33%% Chance of Crushing Blow
+    * +33% Chance of Crushing Blow
 
 ### Astreon's Iron Ward (Ironward)
 * **Base Item:** Caduceus
@@ -93,13 +93,13 @@
     * : 250-300 (param: )
     * Slows Target by 25%
     * 150-200% Bonus to Attack Rating
-    * +40%% Increased Attack Speed
+    * +40% Increased Attack Speed
     * +80-240 magic damage
     * Damage Reduced by 7
     * Damage +60-85
     * +1-2 to Javelin and Spear Skills
-    * +33%% Chance of Crushing Blow
-    * +40%% Faster Cast Rate
+    * +33% Chance of Crushing Blow
+    * +40% Faster Cast Rate
     * +3 to All Skills
     * Ignore Target's Defense
 
@@ -108,21 +108,21 @@
 * **Level Requirement:** 72
 * **Properties:**
     * : 250-300 (param: )
-    * +200-250%% Damage to Demons
+    * +200-250% Damage to Demons
     * +2 to Amazon Skill Levels
-    * Requirements -60%%
+    * Requirements -60%
     * Level 5 Redemption Aura When Equipped
     * +2-4 to %s %s
     * -33% Target Defense
     * Damage +60-120
-    * +200%% Damage to Undead
+    * +200% Damage to Undead
 
 ### Simple Solution (Simple Solution)
 * **Base Item:** Seraph Rod
 * **Level Requirement:** 85
 * **Properties:**
-    * 50-40% Chance to cast level %d %s on attack
-    * +30%% Increased Attack Speed
+    * 50-40% Chance to cast level 50-40 %s on attack
+    * +30% Increased Attack Speed
     * +2 to All Skills
     * Level 20 Concentration Aura When Equipped
     * +50 to Life
@@ -135,10 +135,10 @@
 * **Base Item:** Seraph Rod
 * **Level Requirement:** 60
 * **Properties:**
-    * Level 3 431 Aura When Equipped
-    * +30%% Faster Cast Rate
+    * Level 3-5 431 Aura When Equipped
+    * +30% Faster Cast Rate
     * +1 to All Skills
-    * +5-10%% to Magic Skill Damage
-    * +40%% Increased Attack Speed
-    * 100-20% Chance to cast level %d %s when you Kill an Enemy
-    * Lightning Resist +20-25%%
+    * +5-10% to Magic Skill Damage
+    * +40% Increased Attack Speed
+    * 100% Chance to cast Level 20 112 when you Kill an Enemy
+    * Lightning Resist +20-25%

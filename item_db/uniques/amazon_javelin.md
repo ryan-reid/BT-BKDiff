@@ -7,7 +7,7 @@
     * +2 to Amazon Skill Levels
     * +2 to Javelin and Spear Skills
     * : 150-200 (param: )
-    * +30%% Faster Run/Walk
+    * +30% Faster Run/Walk
     * Replenishes quantity
     * +20 to Strength
     * +20 to Dexterity
@@ -22,7 +22,7 @@
     * : 150-200 (param: )
     * +1-511 to Minimum Lightning Damage
     * 20% Chance to cast Level 14 Lightning on striking
-    * +15%% Increased Attack Speed
+    * +15% Increased Attack Speed
     * -15% to Enemy Lightning Resistance
     * +3 to %s %s
     * +2-4 to Javelin and Spear Skills
@@ -33,7 +33,7 @@
 * **Properties:**
     * +1 to All Skills
     * +3 to Mana after each Kill
-    * +20%% Increased Attack Speed
-    * +15%% Faster Run/Walk
+    * +20% Increased Attack Speed
+    * +15% Faster Run/Walk
     * 150% Extra Gold from Monsters
     * Prevent Monster Heal

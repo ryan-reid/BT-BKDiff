@@ -12,7 +12,7 @@
     * +3 to %s %s
     * -20-25% to Enemy Poison Resistance
     * +2-3 to Poison Skills
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * item_levelreq: 10 (param: )
 
 ### Demon's Arch (Demon's Arch)
@@ -23,13 +23,13 @@
     * +300-420 to Minimum Fire Damage
     * +9-12 Life after each Kill
     * Replenishes quantity
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * +69-420 to Minimum Lightning Damage
     * +300-420 to Minimum Cold Damage
     * -8-15% to Enemy Fire Resistance
     * -8-15% to Enemy Lightning Resistance
     * -8-15% to Enemy Cold Resistance
-    * Requirements -20%%
+    * Requirements -20%
 
 ### Wraith Flight (Wraithflight)
 * **Base Item:** Ghost Glaive
@@ -40,16 +40,16 @@
     * 8-12% Life stolen per hit
     * +15 to Mana after each Kill
     * : 1 (param: )
-    * +35%% Increased Attack Speed
-    * +10%% Chance of Crushing Blow
+    * +35% Increased Attack Speed
+    * +10% Chance of Crushing Blow
     * Slows Target by 15%
 
 ### Skorn (Skorn)
 * **Base Item:** Ghost Glaive
 * **Level Requirement:** 80
 * **Properties:**
-    * +8-50%% Strength
-    * +80%% Increased Attack Speed
+    * +8-50% Strength
+    * +80% Increased Attack Speed
     * : 180-250 (param: )
     * 5% Life stolen per hit
     * +3 to %s %s

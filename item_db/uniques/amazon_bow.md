@@ -7,13 +7,13 @@
     * +2-3 to Amazon Skill Levels
     * +3-2 to Javelin and Spear Skills
     * : 200-250 (param: )
-    * +35%% Increased Attack Speed
+    * +35% Increased Attack Speed
     * Prevent Monster Heal
     * +20 to Dexterity
     * +20 to Energy
     * 5-8% Mana stolen per hit
     * +25-50 to Minimum Damage
-    * +30%% Piercing Attack
+    * +30% Piercing Attack
 
 ### Blood Raven's Charge (Bloodraven's Charge)
 * **Base Item:** Matriarchal Bow
@@ -24,5 +24,5 @@
     * Fires Explosive Arrows or Bolts
     * +4-6 to Javelin and Spear Skills
     * +5 to Revive
-    * +30%% Increased Attack Speed
-    * +50%% Faster Run/Walk
+    * +30% Increased Attack Speed
+    * +50% Faster Run/Walk

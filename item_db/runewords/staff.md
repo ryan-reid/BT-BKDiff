@@ -4,11 +4,11 @@
 * **Runes:** Ko Rune + Vex Rune + Pul Rune + Thul Rune
 * **Base Items:** staf
 * **Properties:**
-    * +40%% Faster Cast Rate
+    * +40% Faster Cast Rate
     * Increase Maximum Mana 15%
     * +3 to All Skills
     * Replenish Life +20
-    * Fire Resist +30-40%%
+    * Fire Resist +30-40%
     * Level 60-14 %s (60-14/60-14 Charges)
 
 ### Leaf
@@ -17,7 +17,7 @@
 * **Properties:**
     * +3 to Fire Skills
     * +16 Defense (Based on Character Level)
-    * Cold Resist +33%%
+    * Cold Resist +33%
     * +3 to %s %s
     * +3 to %s %s
     * +3 to %s %s
@@ -28,8 +28,8 @@
 * **Properties:**
     * Increase Maximum Mana 20%
     * Magic Damage Reduced by 7
-    * +50%% Enhanced Defense
-    * +33%% Faster Cast Rate
+    * +50% Enhanced Defense
+    * +33% Faster Cast Rate
     * +3 to Amazon Skill Levels
     * +3 to %s %s
     * +2 to %s %s
@@ -39,9 +39,9 @@
 * **Base Items:** staf
 * **Properties:**
     * +4 to All Skills
-    * 24-10% Chance to cast level %d %s when struck
-    * +100%% Faster Cast Rate
-    * +60%% Faster Hit Recovery
-    * Fire Resist +60-70%%
+    * 24-10% Chance to cast level 24-10 %s when struck
+    * +100% Faster Cast Rate
+    * +60% Faster Hit Recovery
+    * Fire Resist +60-70%
     * Increase Maximum Life 15-25%
     * Regenerate Mana 15-30%

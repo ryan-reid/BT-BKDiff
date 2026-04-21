@@ -12,7 +12,7 @@
 * **Set:** Iratha's Finery
 * **Base Item:** Amulet
 * **Properties:**
-    * Poison Resist +30%%
+    * Poison Resist +30%
     * Poison Length Reduced by 75%
     * +20 to Mana
 
@@ -21,14 +21,14 @@
 * **Base Item:** Amulet
 * **Properties:**
     * +15 to Life
-    * Cold Resist +20%%
-    * Poison Resist +20%%
+    * Cold Resist +20%
+    * Poison Resist +20%
 
 ### Cathan's Sigil (Cathan's Sigil)
 * **Set:** Cathan's Traps
 * **Base Item:** Amulet
 * **Properties:**
-    * +23%% Faster Hit Recovery
+    * +23% Faster Hit Recovery
     * Attacker Takes Lightning Damage of 10
     * Regenerate Mana 15%
 
@@ -44,9 +44,9 @@
 * **Set:** Angelical Raiment
 * **Base Item:** Amulet
 * **Properties:**
-    * +20%% Damage Taken Goes To Mana
+    * +20% Damage Taken Goes To Mana
     * +30 to Mana
-    * +10%% Faster Cast Rate
+    * +10% Faster Cast Rate
 
 ### Arcanna's Sign (Arcanna's Sign)
 * **Set:** Arcanna's Tricks
@@ -54,13 +54,13 @@
 * **Properties:**
     * +40 to Mana
     * Regenerate Mana 20%
-    * +10%% Faster Cast Rate
+    * +10% Faster Cast Rate
 
 ### Tal Rasha's Adjudication (Tal Rasha's Adjudication)
 * **Set:** Tal Rasha's Wrappings
 * **Base Item:** Amulet
 * **Properties:**
-    * Lightning Resist +33%%
+    * Lightning Resist +33%
     * +2 to Amazon Skill Levels
     * +50 to Life
     * +3-32 to Minimum Lightning Damage
@@ -70,18 +70,18 @@
 * **Set:** The Disciple
 * **Base Item:** Amulet
 * **Properties:**
-    * Poison Resist +35-50%%
+    * Poison Resist +35-50%
     * +1 to All Skills
-    * Cold Resist +30%%
-    * +10%% Faster Cast Rate
+    * Cold Resist +30%
+    * +10% Faster Cast Rate
 
 ### Nadin's Determination (Nadin's Determination)
 * **Set:** Nadin's Winning Strategy
 * **Base Item:** Amulet
 * **Properties:**
     * +0-6 to Amazon Skill Levels
-    * +10%% Faster Cast Rate
-    * Fire Resist +10%%
+    * +10% Faster Cast Rate
+    * Fire Resist +10%
     * +3 to Mana after each Kill
 
 ### Equilibrium Caster (Equilibrium Caster)
@@ -89,27 +89,27 @@
 * **Base Item:** Amulet
 * **Properties:**
     * +1-2 to All Skills
-    * Magic Resist +25%%
+    * Magic Resist +25%
     * +10-20 to Strength
-    * +15%% Faster Cast Rate
-    * Fire Resist -20%%
+    * +15% Faster Cast Rate
+    * Fire Resist -20%
 
 ### Equilibrium Melee (Equilibrium Melee)
 * **Set:** Sanctuary's Blessing Melee
 * **Base Item:** Amulet
 * **Properties:**
     * +1-2 to All Skills
-    * Magic Resist +25%%
+    * Magic Resist +25%
     * +10-20 to Strength
-    * +15%% Faster Cast Rate
-    * Fire Resist -20%%
+    * +15% Faster Cast Rate
+    * Fire Resist -20%
 
 ### Inner Peace (Inner Peace)
 * **Set:** The Ascension
 * **Base Item:** Amulet
 * **Properties:**
     * +2 to All Skills
-    * +20%% Faster Cast Rate
+    * +20% Faster Cast Rate
     * Replenish Life +5-20
 
 ### Tal Rasha's Allegiance (Tal Rasha's Allegiance)
@@ -118,10 +118,10 @@
 * **Properties:**
     * +2-3 to Amazon Skill Levels
     * +60-90 to Mana
-    * +1-3%% to Maximum Fire Resist
+    * +1-3% to Maximum Fire Resist
     * +3-7 to Mana after each Kill
-    * Fire Resist +10-20%%
-    * +10-15%% Faster Cast Rate
+    * Fire Resist +10-20%
+    * +10-15% Faster Cast Rate
 
 ### Witcher's Medallion (Witcher's Medallion)
 * **Set:** Destiny
@@ -130,7 +130,7 @@
     * +1 to All Skills
     * +50-125 to Mana
     * +10-20 to Energy
-    * +50%% Damage Taken Goes To Mana
+    * +50% Damage Taken Goes To Mana
     * 3-6% Mana stolen per hit
     * +2 to Mana after each Kill
     * Regenerate Mana 20%

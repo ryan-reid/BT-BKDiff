@@ -5,7 +5,7 @@
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Cold Immunity is Sundered
-    * Cold Resist -90--70%%
+    * Cold Resist -90--70%
     * Unknown Prop: Gelid-Affix1 (, 1-1)
     * Unknown Prop: Gelid-Affix2 (, 1-1)
     * Unknown Prop: Gelid-Affix3 (, 1-1)
@@ -18,7 +18,7 @@
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Fire Immunity is Sundered
-    * Fire Resist -90--75%%
+    * Fire Resist -90--75%
     * Unknown Prop: Incendiary-Affix1 (, 1-1)
     * Unknown Prop: Incendiary-Affix2 (, 1-1)
     * Unknown Prop: Incendiary-Affix3 (, 1-1)
@@ -30,7 +30,7 @@
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Lightning Immunity is Sundered
-    * Lightning Resist -90--75%%
+    * Lightning Resist -90--75%
     * Unknown Prop: Magnetic-Affix1 (, 1-1)
     * Unknown Prop: Magnetic-Affix2 (, 1-1)
     * Unknown Prop: Magnetic-Affix3 (, 1-1)
@@ -42,7 +42,7 @@
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Poison Immunity is Sundered
-    * Poison Resist -90--75%%
+    * Poison Resist -90--75%
     * Unknown Prop: Virulent-Affix1 (, 1-1)
     * Unknown Prop: Virulent-Affix2 (, 1-1)
     * Unknown Prop: Virulent-Affix3 (, 1-1)
@@ -66,7 +66,7 @@
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Magic Immunity is Sundered
-    * Magic Resist -50--35%%
+    * Magic Resist -50--35%
     * Unknown Prop: Mystical-Affix1 (, 1-1)
     * Unknown Prop: Mystical-Affix2 (, 1-1)
     * Unknown Prop: Mystical-Affix3 (, 1-1)

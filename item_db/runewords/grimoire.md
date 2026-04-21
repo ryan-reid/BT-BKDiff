@@ -4,10 +4,10 @@
 * **Runes:** Dol Rune + Gul Rune
 * **Base Items:** grim
 * **Properties:**
-    * 5-10% Chance to cast level %d %s when struck
-    * +10%% Faster Run/Walk
-    * +30%% Faster Block Rate
+    * 5-10% Chance to cast level 5-10 %s when struck
+    * +10% Faster Run/Walk
+    * +30% Faster Block Rate
     * +20-40 to Life
     * +20-40 to Mana
-    * Fire Resist +25-35%%
-    * +75-100%% Enhanced Defense
+    * Fire Resist +25-35%
+    * +75-100% Enhanced Defense

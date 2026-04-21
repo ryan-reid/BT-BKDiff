@@ -4,15 +4,15 @@
 * **Set:** Hsarus' Defense
 * **Base Item:** Chain Boots
 * **Properties:**
-    * Fire Resist +25%%
-    * +25%% Faster Run/Walk
+    * Fire Resist +25%
+    * +25% Faster Run/Walk
 
 ### Vidala's Fetlock (Vidala's Fetlock)
 * **Set:** Vidala's Rig
 * **Base Item:** Light Plated Boots
 * **Properties:**
     * +10 to Vitality
-    * +30%% Faster Run/Walk
+    * +30% Faster Run/Walk
 
 ### Tancred's Hobnails (Tancred's Hobnails)
 * **Set:** Tancred's Battlegear
@@ -25,19 +25,19 @@
 * **Set:** Sigon's Complete Steel
 * **Base Item:** Greaves
 * **Properties:**
-    * +25%% Faster Run/Walk
-    * Cold Resist +40%%
+    * +25% Faster Run/Walk
+    * Cold Resist +40%
 
 ### Natalya's Soul (Natalya's Soul)
 * **Set:** Natalya's Odium
 * **Base Item:** Boneweave Boots
 * **Properties:**
     * +75-125 Defense
-    * +40%% Faster Run/Walk
+    * +40% Faster Run/Walk
     * -3-5% to Enemy Fire Resistance
     * -3-5% to Enemy Lightning Resistance
-    * Cold Resist +15-25%%
-    * Lightning Resist +15-25%%
+    * Cold Resist +15-25%
+    * Lightning Resist +15-25%
     * -3-5% to Enemy Cold Resistance
     * -3-5% to Enemy Poison Resistance
 
@@ -48,21 +48,21 @@
     * Repairs  durability per second
     * Regenerate Mana 10%
     * +50 to Life
-    * +10%% Damage Taken Goes To Mana
-    * +40%% Faster Run/Walk
+    * +10% Damage Taken Goes To Mana
+    * +40% Faster Run/Walk
     * Replenish Life +10
-    * Fire Resist +40-50%%
+    * Fire Resist +40-50%
 
 ### Immortal King's Pillar (Immortal King's Pillar)
 * **Set:** Immortal King
 * **Base Item:** Myrmidon Greaves
 * **Properties:**
     * +75 Defense
-    * +40%% Faster Run/Walk
+    * +40% Faster Run/Walk
     * +110 to Attack Rating
     * Physical Damage Received Reduced by 3-5%
-    * Magic Resist +30-40%%
-    * +10%% Faster Cast Rate
+    * Magic Resist +30-40%
+    * +10% Faster Cast Rate
     * +10-15 to Vitality
 
 ### Rite of Passage (Rite of Passage)
@@ -70,7 +70,7 @@
 * **Base Item:** Demonhide Boots
 * **Properties:**
     * +25 Defense
-    * +30%% Faster Run/Walk
+    * +30% Faster Run/Walk
     * Cannot Be Frozen
     * 20% Better Chance of Getting Magic Items
 
@@ -79,7 +79,7 @@
 * **Base Item:** Sharkskin Boots
 * **Properties:**
     * +25-35 Defense
-    * +30%% Faster Run/Walk
+    * +30% Faster Run/Walk
     * 25% Better Chance of Getting Magic Items
     * +20 to Dexterity
     * +1-450 to Minimum Lightning Damage
@@ -88,8 +88,8 @@
 * **Set:** McAuley's Folly
 * **Base Item:** Heavy Boots
 * **Properties:**
-    * +40%% Faster Run/Walk
-    * Fire Resist +15%%
+    * +40% Faster Run/Walk
+    * Fire Resist +15%
     * +5 to Strength
     * +10 to Dexterity
 
@@ -97,27 +97,27 @@
 * **Set:** Warlord's Glory
 * **Base Item:** Greaves
 * **Properties:**
-    * +20%% Faster Run/Walk
-    * Fire Resist +20%%
+    * +20% Faster Run/Walk
+    * Fire Resist +20%
 
 ### Horazon's Legacy (Horazon's Legacy)
 * **Set:** Horazon's Splendor
 * **Base Item:** Mirrored Boots
 * **Properties:**
-    * +30%% Faster Run/Walk
+    * +30% Faster Run/Walk
     * +10-15 to Strength
     * +10-15 to Dexterity
-    * Magic Resist +20-30%%
+    * Magic Resist +20-30%
     * Cannot Be Frozen
-    * Requirements -30%%
+    * Requirements -30%
 
 ### Journey's End (Journey's End)
 * **Set:** Royal Guard
 * **Base Item:** Mirrored Boots
 * **Properties:**
     * +42 Defense
-    * +30-40%% Faster Run/Walk
-    * Magic Resist +30-55%%
+    * +30-40% Faster Run/Walk
+    * Magic Resist +30-55%
     * +1 to All Skills
     * -5-8% to Enemy Magic Resistance
     * 25% Chance to cast Level 55 blessed hammer on striking
@@ -126,43 +126,43 @@
 * **Set:** Natalya's Vengeance
 * **Base Item:** Boneweave Boots
 * **Properties:**
-    * +40%% Faster Run/Walk
-    * +35%% Faster Hit Recovery
+    * +40% Faster Run/Walk
+    * +35% Faster Hit Recovery
     * +10-20 to Strength
-    * Fire Resist +10-20%%
+    * Fire Resist +10-20%
     * -3-5% to Enemy Poison Resistance
-    * +5%% to Poison Skill Damage
+    * +5% to Poison Skill Damage
     * +7 to %s %s
 
 ### Aldur's Momentum (Aldur's Momentum)
 * **Set:** Aldur's Beacon
 * **Base Item:** Mirrored Boots
 * **Properties:**
-    * +50%% Faster Run/Walk
+    * +50% Faster Run/Walk
     * +1 to Amazon Skill Levels
     * : 25-50 (param: )
     * Increase Maximum Life 5%
-    * Fire Resist +10-20%%
+    * Fire Resist +10-20%
     * Increase Maximum Mana 5%
 
 ### Immortal King's Statue (Immortal King's Statue)
 * **Set:** Bul Katho's Embodiment
 * **Base Item:** Myrmidon Greaves
 * **Properties:**
-    * +40%% Faster Run/Walk
-    * +1-3%% to Maximum Fire Resist
-    * Fire Resist +10-20%%
-    * Magic Resist +25%%
+    * +40% Faster Run/Walk
+    * +1-3% to Maximum Fire Resist
+    * Fire Resist +10-20%
+    * Magic Resist +25%
     * Physical Damage Received Reduced by 10-15%
-    * +40%% Faster Hit Recovery
+    * +40% Faster Hit Recovery
 
 ### Elder Blood Boots (Elder Blood Boots)
 * **Set:** Destiny
 * **Base Item:** Scarabshell Boots
 * **Properties:**
-    * +40%% Faster Run/Walk
+    * +40% Faster Run/Walk
     * +100-150 Defense
-    * +100-150%% Enhanced Defense
+    * +100-150% Enhanced Defense
     * +10-20 to Strength
     * +5-15 Magic Absorb
     * Reduces curse duration by 30-40%
@@ -171,10 +171,10 @@
 * **Set:** Horazon's Heirloom
 * **Base Item:** Mirrored Boots
 * **Properties:**
-    * +50%% Faster Run/Walk
+    * +50% Faster Run/Walk
     * +10-20 to Strength
     * +10-20 to Dexterity
-    * Magic Resist +75%%
+    * Magic Resist +75%
     * Cannot Be Frozen
-    * Requirements -50%%
-    * +100-300%% Enhanced Defense
+    * Requirements -50%
+    * +100-300% Enhanced Defense

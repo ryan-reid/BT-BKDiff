@@ -15,9 +15,9 @@
 * **Properties:**
     * +10 to Dexterity
     * : 200 (param: )
-    * +30%% Increased Attack Speed
-    * Cold Resist +25%%
-    * Fire Resist +25%%
+    * +30% Increased Attack Speed
+    * Cold Resist +25%
+    * Fire Resist +25%
     * Ignore Target's Defense
     * : 20 (param: )
     * +10 to Strength
@@ -26,11 +26,11 @@
 * **Base Item:** Kris
 * **Level Requirement:** 19
 * **Properties:**
-    * +50%% Increased Attack Speed
+    * +50% Increased Attack Speed
     * Cannot Be Frozen
     * +460 to Minimum Poison Damage
-    * Poison Resist +95%%
-    * +20%% to Maximum Poison Resist
+    * Poison Resist +95%
+    * +20% to Maximum Poison Resist
     * +15 to Dexterity
     * +15 to Strength
 
@@ -38,7 +38,7 @@
 * **Base Item:** Blade
 * **Level Requirement:** 25
 * **Properties:**
-    * +50%% Faster Cast Rate
+    * +50% Faster Cast Rate
     * +50 to Mana
     * +50 to Life
     * +1 to Fade
@@ -50,7 +50,7 @@
     * Ignore Target's Defense
     * 8% Life stolen per hit
     * Prevent Monster Heal
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * +30 to Dexterity
     * : 250 (param: )
     * +30-54 to Minimum Damage
@@ -61,15 +61,15 @@
 * **Base Item:** Rondel
 * **Level Requirement:** 95
 * **Properties:**
-    * +35%% Deadly Strike
+    * +35% Deadly Strike
     * Ignore Target's Defense
     * +15-35 to Minimum Damage
     * : 190-240 (param: )
-    * +1 to 131
-    * +1 to 142
-    * +1 to 150
+    * +1-3 to 131
+    * +1-3 to 142
+    * +1-3 to 150
     * 10-40% Better Chance of Getting Magic Items
-    * +20%% Faster Cast Rate
+    * +20% Faster Cast Rate
 
 ### Blackbog's Sharp (Blackbog's Sharp)
 * **Base Item:** Cinquedeas
@@ -77,7 +77,7 @@
 * **Properties:**
     * Slows Target by 50%
     * -15% to Enemy Poison Resistance
-    * +60%% Increased Attack Speed
+    * +60% Increased Attack Speed
     * +500 to Minimum Poison Damage
     * +6 to %s %s
     * +6 to %s %s
@@ -88,13 +88,13 @@
 * **Level Requirement:** 41
 * **Properties:**
     * +1-120 to Minimum Lightning Damage
-    * 25-50% Chance to cast level %d %s when struck
-    * +30%% Increased Attack Speed
-    * Lightning Resist +%% (Based on Character Level)
+    * 25-50% Chance to cast level 25-50 %s when struck
+    * +30% Increased Attack Speed
+    * Lightning Resist +% (Based on Character Level)
     * -5-10% to Enemy Lightning Resistance
-    * +5-10%% to Lightning Skill Damage
+    * +5-10% to Lightning Skill Damage
     * +1-3 to Lightning Skills
-    * +30%% Faster Cast Rate
+    * +30% Faster Cast Rate
 
 ### Wizardspike (Wizardspike)
 * **Base Item:** Bone Knife
@@ -103,9 +103,9 @@
     * + to Mana (Based on Character Level)
     * Regenerate Mana 15%
     * Increase Maximum Mana 15%
-    * Fire Resist +35-50%%
+    * Fire Resist +35-50%
     * Repairs  durability per second
-    * +50%% Faster Cast Rate
+    * +50% Faster Cast Rate
     * +1 to All Skills
 
 ### Fleshripper (Fleshripper)
@@ -115,9 +115,9 @@
     * : 200-300 (param: )
     * -50% Target Defense
     * Prevent Monster Heal
-    * +25%% Chance of Crushing Blow
-    * +50%% Chance of Open Wounds
-    * +33%% Deadly Strike
+    * +25% Chance of Crushing Blow
+    * +50% Chance of Open Wounds
+    * +33% Deadly Strike
     * Slows Target by 20%
     * +100 Kick Damage
 
@@ -128,18 +128,18 @@
     * +4 to Fire Skills
     * -5-10% to Enemy Fire Resistance
     * +108 magic damage
-    * +5-10%% to Fire Skill Damage
+    * +5-10% to Fire Skill Damage
     * : 1 (param: )
     * : 1 (param: )
-    * +30%% Faster Cast Rate
-    * +5%% to Maximum Fire Resist
+    * +30% Faster Cast Rate
+    * +5% to Maximum Fire Resist
 
 ### Bloodpact Shard (Bloodpact Shard)
 * **Base Item:** Mithril Point
 * **Level Requirement:** 67
 * **Properties:**
     * +1-2 to All Skills
-    * +30%% Faster Cast Rate
+    * +30% Faster Cast Rate
     * Increase Maximum Life 10-15%
     * +2-3 to %s %s
     * +2-3 to %s %s

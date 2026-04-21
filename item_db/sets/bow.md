@@ -5,7 +5,7 @@
 * **Base Item:** Long Battle Bow
 * **Properties:**
     * +256 to Minimum Poison Damage
-    * +20%% Chance of Open Wounds
+    * +20% Chance of Open Wounds
     * : 60-75 (param: )
 
 ### Arctic Horn (Arctic Horn)

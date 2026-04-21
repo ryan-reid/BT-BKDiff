@@ -6,9 +6,9 @@
 * **Properties:**
     * 11% Chance to cast Level 18 Confuse on striking
     * Level 60-17 %s (60-17/60-17 Charges)
-    * 14-13% Chance to cast level %d %s when struck
+    * 14-13% Chance to cast level 14-13 %s when struck
     * +261 Defense
-    * 6-14% Chance to cast level %d %s when struck
+    * 6-14% Chance to cast level 6-14 %s when struck
     * +2 to All Skills
 
 ### Dream
@@ -16,10 +16,10 @@
 * **Base Items:** helm
 * **Properties:**
     * +150-220 Defense
-    * 10-15% Chance to cast level %d %s when struck
+    * 10-15% Chance to cast level 10-15 %s when struck
     * + to Mana (Based on Character Level)
-    * Fire Resist +14-20%%
-    * +20-30%% Faster Hit Recovery
+    * Fire Resist +14-20%
+    * +20-30% Faster Hit Recovery
     * Level 15 Holy Shock Aura When Equipped
     * 20-30% Better Chance of Getting Magic Items
 
@@ -28,7 +28,7 @@
 * **Base Items:** helm
 * **Properties:**
     * +3 to Fire Skills
-    * Level 4 Resist Fire Aura When Equipped
+    * Level 4-8 Resist Fire Aura When Equipped
     * -10-15% to Enemy Fire Resistance
     * +50-75 to Mana
     * Half Freeze Duration
@@ -38,10 +38,10 @@
 * **Runes:** Sol Rune + Tir Rune + Shael Rune
 * **Base Items:** helm
 * **Properties:**
-    * +77%% Enhanced Defense
+    * +77% Enhanced Defense
     * Level 7 Prayer Aura When Equipped
     * 20-35% Better Chance of Getting Magic Items
-    * 20% Chance to cast level %d %s when struck
+    * 20% Chance to cast level 20 %s when struck
     * 77% Extra Gold from Monsters
     * +5 to Mana after each Kill
 
@@ -50,8 +50,8 @@
 * **Base Items:** helm
 * **Properties:**
     * +20-30 to Energy
-    * +25%% Faster Hit Recovery
-    * +15-25%% Faster Run/Walk
+    * +25% Faster Hit Recovery
+    * +15-25% Faster Run/Walk
     * +3 to Warmth
 
 ### Lore
@@ -67,7 +67,7 @@
 * **Runes:** Nef Rune + Tir Rune
 * **Base Items:** helm
 * **Properties:**
-    * +50%% Enhanced Defense
+    * +50% Enhanced Defense
     * +25 Defense
     * -3 to Light Radius
     * Level 9-13 %s (9-13/9-13 Charges)
@@ -91,7 +91,7 @@
 * **Runes:** Pul Rune + Ith Rune + Eld Rune
 * **Base Items:** helm
 * **Properties:**
-    * +33%% Piercing Attack
+    * +33% Piercing Attack
     * 4-8% Mana stolen per hit
     * 15-25% Bonus to Attack Rating
     * +5 to Mana after each Kill
@@ -105,36 +105,36 @@
     * 100% Chance to cast Level 1 Mark of the Bear on striking
     * 100% Chance to cast Level 1 Mark of the Wolf on striking
     * +5 to Javelin and Spear Skills
-    * +50-80%% Enhanced Defense
-    * Fire Resist +10%%
-    * +25%% Chance of Crushing Blow
+    * +50-80% Enhanced Defense
+    * Fire Resist +10%
+    * +25% Chance of Crushing Blow
 
 ### Ground
 * **Runes:** Shael Rune + Io Rune + Ort Rune
 * **Base Items:** helm
 * **Properties:**
     * Increase Maximum Life 5%
-    * +75-100%% Enhanced Defense
-    * Lightning Resist +10-30%%
-    * Lightning Absorb +10-15%%
+    * +75-100% Enhanced Defense
+    * Lightning Resist +10-30%
+    * Lightning Absorb +10-15%
 
 ### Temper
 * **Runes:** Shael Rune + Io Rune + Ral Rune
 * **Base Items:** helm
 * **Properties:**
     * Increase Maximum Life 5%
-    * +75-100%% Enhanced Defense
-    * Fire Resist +10-30%%
-    * Fire Absorb +10-15%%
+    * +75-100% Enhanced Defense
+    * Fire Resist +10-30%
+    * Fire Absorb +10-15%
 
 ### Hearth
 * **Runes:** Shael Rune + Io Rune + Thul Rune
 * **Base Items:** helm
 * **Properties:**
     * Increase Maximum Life 5%
-    * +75-100%% Enhanced Defense
-    * Cold Resist +10-30%%
-    * Cold Absorb +10-15%%
+    * +75-100% Enhanced Defense
+    * Cold Resist +10-30%
+    * Cold Absorb +10-15%
     * Cannot Be Frozen
 
 ### Cure
@@ -142,8 +142,8 @@
 * **Base Items:** helm
 * **Properties:**
     * Increase Maximum Life 5%
-    * +75-100%% Enhanced Defense
-    * Poison Resist +10-30%%
+    * +75-100% Enhanced Defense
+    * Poison Resist +10-30%
     * Poison Length Reduced by 50%
     * Level 1 Cleansing Aura When Equipped
 
@@ -152,7 +152,7 @@
 * **Base Items:** helm
 * **Properties:**
     * Increase Maximum Life 5%
-    * +75-100%% Enhanced Defense
+    * +75-100% Enhanced Defense
     * Physical Damage Received Reduced by 10%
     * Replenish Life +30
     * 4-6% Life stolen per hit
@@ -161,9 +161,9 @@
 * **Runes:** Ist Rune + Ral Rune + Io Rune
 * **Base Items:** helm
 * **Properties:**
-    * 5-10% Chance to cast level %d %s when struck
+    * 5-10% Chance to cast level 5-10 %s when struck
     * +1 to All Skills
-    * +20%% Faster Cast Rate
-    * +30-50%% Enhanced Defense
+    * +20% Faster Cast Rate
+    * +30-50% Enhanced Defense
     * 1-15% Better Chance of Getting Magic Items
     * +1-5 Life after each Kill

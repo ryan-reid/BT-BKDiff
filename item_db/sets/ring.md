@@ -6,7 +6,7 @@
 * **Properties:**
     * +2 Life after each Kill
     * Damage Reduced by 2
-    * +10%% Faster Cast Rate
+    * +10% Faster Cast Rate
 
 ### Angelic Halo (Angelic Halo)
 * **Set:** Angelical Raiment
@@ -31,8 +31,8 @@
 * **Base Item:** Ring
 * **Properties:**
     * +100 to Life
-    * +10-20%% Faster Run/Walk
-    * +10%% Faster Cast Rate
+    * +10-20% Faster Run/Walk
+    * +10% Faster Cast Rate
     * Magic Damage Reduced by 10
     * +10-20 to Vitality
 
@@ -41,7 +41,7 @@
 * **Base Item:** Ring
 * **Properties:**
     * +100 to Mana
-    * +10%% Faster Hit Recovery
+    * +10% Faster Hit Recovery
     * +100 Defense vs. Missile
     * +100 Defense vs. Melee
     * +10-30 to Energy
@@ -52,8 +52,8 @@
 * **Base Item:** Ring
 * **Properties:**
     * +100 to Life
-    * +10-20%% Faster Run/Walk
-    * +10%% Increased Attack Speed
+    * +10-20% Faster Run/Walk
+    * +10% Increased Attack Speed
     * Magic Damage Reduced by 10
     * +10-20 to Vitality
 
@@ -62,7 +62,7 @@
 * **Base Item:** Ring
 * **Properties:**
     * +100 to Mana
-    * +10%% Faster Hit Recovery
+    * +10% Faster Hit Recovery
     * +100 Defense vs. Missile
     * +100 Defense vs. Melee
     * +10-30 to Energy
@@ -72,9 +72,9 @@
 * **Set:** The Ascension
 * **Base Item:** Ring
 * **Properties:**
-    * Fire Resist +10-20%%
-    * +1-10%% Strength
-    * +1-10%% Dexterity
+    * Fire Resist +10-20%
+    * +1-10% Strength
+    * +1-10% Dexterity
 
 ### Yang (Yang)
 * **Set:** The Ascension
@@ -90,14 +90,14 @@
 * **Base Item:** Ring
 * **Properties:**
     * 20-30% Better Chance of Getting Magic Items
-    * +1-3%% to Maximum Fire Resist
-    * +10-15%% Vitality
+    * +1-3% to Maximum Fire Resist
+    * +10-15% Vitality
 
 ### Restless Will (Restless Will)
 * **Set:** Death's Embreace
 * **Base Item:** Ring
 * **Properties:**
-    * +15%% Faster Cast Rate
-    * +15%% Increased Attack Speed
-    * +15%% Faster Run/Walk
-    * +15%% Faster Hit Recovery
+    * +15% Faster Cast Rate
+    * +15% Increased Attack Speed
+    * +15% Faster Run/Walk
+    * +15% Faster Hit Recovery

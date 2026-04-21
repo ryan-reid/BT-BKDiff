@@ -4,8 +4,8 @@
 * **Set:** Iratha's Finery
 * **Base Item:** Crown
 * **Properties:**
-    * Fire Resist +30%%
-    * Lightning Resist +30%%
+    * Fire Resist +30%
+    * Lightning Resist +30%
 
 ### Isenhart's Horns (Isenhart's Horns)
 * **Set:** Isenhart's Armory
@@ -27,7 +27,7 @@
 * **Base Item:** Mask
 * **Properties:**
     * +50 to Mana
-    * Cold Resist +25%%
+    * Cold Resist +25%
 
 ### Tancred's Skull (Tancred's Skull)
 * **Set:** Tancred's Battlegear
@@ -42,14 +42,14 @@
 * **Properties:**
     * +30 to Mana
     * +50 Defense
-    * Poison Resist +20%%
+    * Poison Resist +20%
 
 ### Infernal Cranium (Infernal Cranium)
 * **Set:** Infernal Tools
 * **Base Item:** Cap
 * **Properties:**
-    * Fire Resist +20%%
-    * +20%% Damage Taken Goes To Mana
+    * Fire Resist +20%
+    * +20% Damage Taken Goes To Mana
     * +1 to Amazon Skill Levels
 
 ### Berserker's Headgear (Berserker's Headgear)
@@ -57,16 +57,16 @@
 * **Base Item:** Helm
 * **Properties:**
     * +4 to Strength (Based on Character Level)
-    * Fire Resist +25%%
-    * +27%% Faster Hit Recovery
+    * Fire Resist +25%
+    * +27% Faster Hit Recovery
 
 ### Arcanna's Head (Arcanna's Head)
 * **Set:** Arcanna's Tricks
 * **Base Item:** Skull Cap
 * **Properties:**
-    * Poison Resist +25%%
+    * Poison Resist +25%
     * +3 Life after each Kill
-    * +10%% Damage Taken Goes To Mana
+    * +10% Damage Taken Goes To Mana
 
 ### Natalya's Totem (Natalya's Totem)
 * **Set:** Natalya's Odium
@@ -75,7 +75,7 @@
     * +135-175 Defense
     * +20-30 to Dexterity
     * +20-30 to Strength
-    * Fire Resist +10-20%%
+    * Fire Resist +10-20%
     * Magic Damage Reduced by 6-9
     * +1-2 to All Skills
 
@@ -86,7 +86,7 @@
     * +30 to Mana
     * +60 to Life
     * +45 Defense
-    * Fire Resist +15%%
+    * Fire Resist +15%
     * 10% Life stolen per hit
     * 10% Mana stolen per hit
 
@@ -94,13 +94,13 @@
 * **Set:** Griswold's Legacy
 * **Base Item:** Corona
 * **Properties:**
-    * +50-75%% Enhanced Defense
+    * +50-75% Enhanced Defense
     * +2 Absorbs Cold Damage (Based on Character Level)
     * +1-2 to All Skills
-    * Requirements -40%%
+    * Requirements -40%
     * 20-30% Better Chance of Getting Magic Items
-    * Fire Resist +25%%
-    * +%% Deadly Strike (Based on Character Level)
+    * Fire Resist +25%
+    * +% Deadly Strike (Based on Character Level)
     * Poison Length Reduced by 100%
 
 ### Trang-Oul's Guise (Trang-Oul's Guise)
@@ -108,7 +108,7 @@
 * **Base Item:** Bone Visage
 * **Properties:**
     * +100 Defense
-    * +25%% Faster Hit Recovery
+    * +25% Faster Hit Recovery
     * Level 15 Thorns Aura When Equipped
     * +150 to Mana
     * +2 to Javelin and Spear Skills
@@ -120,22 +120,22 @@
 * **Base Item:** Spired Helm
 * **Properties:**
     * +50 Defense
-    * Requirements -40%%
+    * Requirements -40%
     * Level 15 Prayer Aura When Equipped
     * +10 to Strength
     * +15 to Dexterity
-    * +24%% Faster Hit Recovery
+    * +24% Faster Hit Recovery
     * +2 to All Skills
-    * +10%% Faster Cast Rate
+    * +10% Faster Cast Rate
 
 ### Guillaume's Face (Guillaume's Face)
 * **Set:** Orphan's Call
 * **Base Item:** Winged Helm
 * **Properties:**
-    * +120%% Enhanced Defense
-    * +30%% Faster Hit Recovery
-    * +35%% Chance of Crushing Blow
-    * +15%% Deadly Strike
+    * +120% Enhanced Defense
+    * +30% Faster Hit Recovery
+    * +35% Chance of Crushing Blow
+    * +15% Deadly Strike
     * +15 to Strength
 
 ### Hwanin's Splendor (Hwanin's Splendor)
@@ -144,8 +144,8 @@
 * **Properties:**
     * Replenish Life +50
     * Magic Damage Reduced by 10
-    * Cold Resist +37%%
-    * +100%% Enhanced Defense
+    * Cold Resist +37%
+    * +100% Enhanced Defense
     * Damage Reduced by 10
 
 ### Sazabi's Mental Sheath (Sazabi's Mental Sheath)
@@ -154,9 +154,9 @@
 * **Properties:**
     * +100 Defense
     * +2 to All Skills
-    * Fire Resist +20-25%%
-    * Lightning Resist +20-25%%
-    * +20%% Chance of Crushing Blow
+    * Fire Resist +20-25%
+    * Lightning Resist +20-25%
+    * +20% Chance of Crushing Blow
 
 ### Cow King's Horns (Cow King's Horns)
 * **Set:** Cow King's Leathers
@@ -164,7 +164,7 @@
 * **Properties:**
     * Physical Damage Received Reduced by 5-10%
     * Half Freeze Duration
-    * +35%% Damage Taken Goes To Mana
+    * +35% Damage Taken Goes To Mana
     * +25 to Strength
     * maxdurability: 35 (param: )
 
@@ -174,7 +174,7 @@
 * **Properties:**
     * 35% Better Chance of Getting Magic Items
     * +2 to Amazon Skill Levels
-    * +33%% Piercing Attack
+    * +33% Piercing Attack
 
 ### Warlord's Lust (Warlord's Lust)
 * **Set:** Warlord's Glory
@@ -191,17 +191,17 @@
     * +1 to Amazon Skill Levels
     * +10-20 to Strength
     * Magic Damage Reduced by 7-10
-    * +10%% Faster Hit Recovery
+    * +10% Faster Hit Recovery
     * +25-50 to Life
 
 ### Devil's Bargain (Devil's Bargain)
 * **Set:** Humanity's End
 * **Base Item:** Bone Visage
 * **Properties:**
-    * +20-26%% Faster Cast Rate
+    * +20-26% Faster Cast Rate
     * +1 to All Skills
-    * Requirements +10-50%%
-    * +66%% Enhanced Defense
+    * Requirements +10-50%
+    * +66% Enhanced Defense
     * +1-66 to Life
     * +1-66 to Mana
 
@@ -209,21 +209,21 @@
 * **Set:** Royal Guard
 * **Base Item:** Spired Helm
 * **Properties:**
-    * +150%% Enhanced Defense
+    * +150% Enhanced Defense
     * +10-30 to Strength
-    * Lightning Resist +40%%
+    * Lightning Resist +40%
     * 200% Extra Gold from Monsters
     * -3-5% to Enemy Lightning Resistance
-    * Level 10 holy shock Aura When Equipped
+    * Level 10-16 holy shock Aura When Equipped
 
 ### Natalya's Visage (Natalya's Visage)
 * **Set:** Natalya's Vengeance
 * **Base Item:** Bone Visage
 * **Properties:**
     * +2 to Amazon Skill Levels
-    * +25%% Increased Attack Speed
-    * +25%% Faster Cast Rate
-    * Fire Resist +20-30%%
+    * +25% Increased Attack Speed
+    * +25% Faster Cast Rate
+    * Fire Resist +20-30%
     * +30-40 to Strength
     * +270-350 Defense
 
@@ -232,9 +232,9 @@
 * **Base Item:** Demonhead
 * **Properties:**
     * +1-2 to Amazon Skill Levels
-    * +5-10%% Vitality
-    * +5-10%% Energy
-    * +20-25%% Faster Cast Rate
+    * +5-10% Vitality
+    * +5-10% Energy
+    * +20-25% Faster Cast Rate
     * -3-5% to Enemy Cold Resistance
     * +1-3 to %s %s
 
@@ -243,12 +243,12 @@
 * **Base Item:** Corona
 * **Properties:**
     * +2 to Amazon Skill Levels
-    * Level 15 holy fire Aura When Equipped
+    * Level 15-18 holy fire Aura When Equipped
     * 25% Chance to cast Level 55 blessed hammer on striking
-    * +20-25%% Increased Attack Speed
-    * +20-25%% Faster Cast Rate
+    * +20-25% Increased Attack Speed
+    * +20-25% Faster Cast Rate
     * Physical Damage Received Reduced by 5-10%
-    * +150-300%% Enhanced Defense
+    * +150-300% Enhanced Defense
     * 200% Bonus to Attack Rating
     * +3-7 Life after each Kill
 
@@ -257,12 +257,12 @@
 * **Base Item:** Bone Visage
 * **Properties:**
     * +2 to Amazon Skill Levels
-    * +20-25%% Increased Attack Speed
-    * +20-25%% Faster Cast Rate
+    * +20-25% Increased Attack Speed
+    * +20-25% Faster Cast Rate
     * +666 Defense
     * +7 to firegolem
     * +7 to golem mastery
-    * +67%% Piercing Attack
+    * +67% Piercing Attack
 
 ### Horazon's Madness (Horazon's Madness)
 * **Set:** Horazon's Heirloom
@@ -272,6 +272,6 @@
     * +2-3 to Amazon Skill Levels
     * +15-30 to Strength
     * Magic Damage Reduced by 20
-    * +24%% Faster Hit Recovery
+    * +24% Faster Hit Recovery
     * Increase Maximum Life 10-20%
-    * +100-300%% Enhanced Defense
+    * +100-300% Enhanced Defense

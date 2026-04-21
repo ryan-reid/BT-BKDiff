@@ -7,7 +7,7 @@
     * +57 to Life
     * +77 to Mana
     * +10 to Energy
-    * +20%% Faster Cast Rate
+    * +20% Faster Cast Rate
     * +2-3 to Amazon Skill Levels
 
 ### Tal Rasha's Omniscience (Tal Rasha's Omniscience)
@@ -15,7 +15,7 @@
 * **Base Item:** Dimensional Shard
 * **Properties:**
     * +3 to Amazon Skill Levels
-    * +40%% Faster Cast Rate
+    * +40% Faster Cast Rate
     * +2-3 to %s %s
     * +2-3 to %s %s
     * +2-3 to %s %s

@@ -6,7 +6,7 @@
 * **Properties:**
     * : 10 (param: )
     * : 10 (param: )
-    * +20%% Increased Attack Speed
+    * +20% Increased Attack Speed
     * +200 to Minimum Fire Damage
     * +10 to 41
     * +5 to Mana after each Kill
@@ -19,7 +19,7 @@
     * -50% Target Defense
     * +15 to Strength
     * +8 to Dexterity
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * : 180 (param: )
     * 10% Life stolen per hit
 
@@ -27,12 +27,12 @@
 * **Base Item:** Brandistock
 * **Level Requirement:** 17
 * **Properties:**
-    * +35%% Chance of Open Wounds
+    * +35% Chance of Open Wounds
     * +10 to Strength
     * 8-12% Life stolen per hit
     * +60 to Life
     * : 190-210 (param: )
-    * +40%% Increased Attack Speed
+    * +40% Increased Attack Speed
 
 ### Lance of Yaggai (Lance of Yaggai)
 * **Base Item:** Spetum
@@ -41,28 +41,28 @@
     * Attacker Takes Damage of 8
     * +1 to Minimum Lightning Damage
     * +400 to Maximum Lightning Damage
-    * Fire Resist +25%%
-    * +40%% Increased Attack Speed
+    * Fire Resist +25%
+    * +40% Increased Attack Speed
     * +6 Life after each Kill
 
 ### The Tannr Gorerod (The Tannr Gorerod)
 * **Base Item:** Pike
 * **Level Requirement:** 27
 * **Properties:**
-    * +30%% Increased Attack Speed
-    * +15%% to Maximum Fire Resist
+    * +30% Increased Attack Speed
+    * +15% to Maximum Fire Resist
     * +30 to Life
-    * Fire Resist +30%%
+    * Fire Resist +30%
     * : 100-130 (param: )
-    * +15%% Chance of Open Wounds
+    * +15% Chance of Open Wounds
 
 ### The Impaler (The Impaler)
 * **Base Item:** War Spear
 * **Level Requirement:** 31
 * **Properties:**
     * Ignore Target's Defense
-    * +20%% Increased Attack Speed
-    * +40%% Chance of Open Wounds
+    * +20% Increased Attack Speed
+    * +40% Chance of Open Wounds
     * Prevent Monster Heal
     * : 200 (param: )
     * +3 to 106
@@ -73,33 +73,33 @@
 * **Level Requirement:** 33
 * **Properties:**
     * Slows Target by 75%
-    * Fire Resist +50%%
+    * Fire Resist +50%
     * + to Life (Based on Character Level)
     * +30-50 to Minimum Damage
     * +10 to Strength
     * : 200 (param: )
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * 20% Chance to cast Level 3 87 on striking
 
 ### Soulfeast Tine (Soulfeast Tine)
 * **Base Item:** War Fork
 * **Level Requirement:** 35
 * **Properties:**
-    * Requirements -20%%
+    * Requirements -20%
     * 7% Life stolen per hit
     * 7% Mana stolen per hit
     * : 180-200 (param: )
-    * +40%% Increased Attack Speed
+    * +40% Increased Attack Speed
     * maxdurability: 15 (param: )
-    * +20%% Chance of Open Wounds
+    * +20% Chance of Open Wounds
 
 ### Hone Sundan (Hone Sundan)
 * **Base Item:** Yari
 * **Level Requirement:** 37
 * **Properties:**
-    * +20-25%% Increased Attack Speed
+    * +20-25% Increased Attack Speed
     * +40 to Minimum Damage
-    * +45%% Chance of Crushing Blow
+    * +45% Chance of Crushing Blow
     * : 1 (param: )
     * : 200-250 (param: )
 
@@ -109,11 +109,11 @@
 * **Properties:**
     * 25% Bonus to Attack Rating
     * Replenish Life +20
-    * +20%% Faster Hit Recovery
+    * +20% Faster Hit Recovery
     * +30-50 to Minimum Damage
-    * +%% Damage to Demons (Based on Character Level)
+    * +% Damage to Demons (Based on Character Level)
     * : 200 (param: )
-    * +20%% Increased Attack Speed
+    * +20% Increased Attack Speed
 
 ### Viperfork (Viperfork)
 * **Base Item:** Mancatcher
@@ -121,24 +121,24 @@
 * **Properties:**
     * : 190-240 (param: )
     * 66% Chance to cast Level 5 Lower Resist on striking
-    * +50%% Increased Attack Speed
-    * 33-60% Chance to cast level %d %s when struck
+    * +50% Increased Attack Speed
+    * 33-60% Chance to cast level 33-60 %s when struck
     * 25% Chance to cast Level 60 Poison Nova on striking
-    * Poison Resist +75%%
+    * Poison Resist +75%
 
 ### Steel Pillar (Steelpillar)
 * **Base Item:** War Pike
 * **Level Requirement:** 69
 * **Properties:**
     * : 300-350 (param: )
-    * +40%% Increased Attack Speed
+    * +40% Increased Attack Speed
     * -66% Target Defense
-    * +35-40%% Deadly Strike
+    * +35-40% Deadly Strike
     * Repairs  durability per second
-    * +44%% Chance of Crushing Blow
+    * +44% Chance of Crushing Blow
     * 7-12% Life stolen per hit
     * 15% Chance to cast Level 33 Amplify Damage on striking
-    * +1 to iron skin
+    * +1-3 to iron skin
 
 ### Arioc's Needle (Arioc's Needle)
 * **Base Item:** Hyperion Spear
@@ -146,8 +146,8 @@
 * **Properties:**
     * : 230-250 (param: )
     * +1 to Spear Mastery
-    * +50%% Deadly Strike
+    * +50% Deadly Strike
     * Ignore Target's Defense
     * +3-5 to All Skills
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * Damage +100-150

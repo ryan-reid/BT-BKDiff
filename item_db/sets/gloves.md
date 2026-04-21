@@ -4,15 +4,15 @@
 * **Set:** Cleglaw's Brace
 * **Base Item:** Chain Gloves
 * **Properties:**
-    * Fire Resist +10%%
+    * Fire Resist +10%
     * Slows Target by 25%
-    * +20%% Increased Attack Speed
+    * +20% Increased Attack Speed
 
 ### Iratha's Cuff (Iratha's Cuff)
 * **Set:** Iratha's Finery
 * **Base Item:** Light Gauntlets
 * **Properties:**
-    * Cold Resist +30%%
+    * Cold Resist +30%
     * +1-20 to Minimum Lightning Damage
     * +15 to Life
 
@@ -27,7 +27,7 @@
 * **Set:** Death's Disguise
 * **Base Item:** Leather Gloves
 * **Properties:**
-    * Poison Resist +50%%
+    * Poison Resist +50%
     * Poison Length Reduced by 75%
 
 ### Arctic Mitts (Arctic Mitts)
@@ -35,7 +35,7 @@
 * **Base Item:** Light Gauntlets
 * **Properties:**
     * +30 to Life
-    * +20%% Increased Attack Speed
+    * +20% Increased Attack Speed
 
 ### Immortal King's Forge (Immortal King's Forge)
 * **Set:** Immortal King
@@ -44,7 +44,7 @@
     * +65 Defense
     * +20-30 to Strength
     * +20-30 to Dexterity
-    * 12-20% Chance to cast level %d %s when struck
+    * 12-20% Chance to cast level 12-20 %s when struck
     * +40 to Life
 
 ### Trang-Oul's Claws (Trang-Oul's Claws)
@@ -52,8 +52,8 @@
 * **Base Item:** Vambraces
 * **Properties:**
     * +30 Defense
-    * +20%% Faster Cast Rate
-    * Cold Resist +30%%
+    * +20% Faster Cast Rate
+    * Cold Resist +30%
     * +2 to Javelin and Spear Skills
 
 ### M'avina's Icy Clutch (M'avina's Icy Clutch)
@@ -72,25 +72,25 @@
 * **Base Item:** Bramble Mitts
 * **Properties:**
     * +25 Defense
-    * +20%% Increased Attack Speed
-    * Fire Resist +50%%
-    * +150-200%% Damage to Demons
+    * +20% Increased Attack Speed
+    * Fire Resist +50%
+    * +150-200% Damage to Demons
     * 10% Chance to cast Level 16 101 on striking
 
 ### Magnus' Skin (Magnus' Skin)
 * **Set:** Orphan's Call
 * **Base Item:** Sharkskin Gloves
 * **Properties:**
-    * +50%% Enhanced Defense
-    * Fire Resist +25%%
-    * +20%% Increased Attack Speed
+    * +50% Enhanced Defense
+    * Fire Resist +25%
+    * +20% Increased Attack Speed
     * +500 to Attack Rating
 
 ### Sander's Taboo (McAuley's Taboo)
 * **Set:** McAuley's Folly
 * **Base Item:** Heavy Gloves
 * **Properties:**
-    * +10%% Faster Cast Rate
+    * +10% Faster Cast Rate
     * +3 to Mana after each Kill
     * +40 to Life
     * +2 to %s %s
@@ -106,51 +106,51 @@
 * **Set:** Horazon's Splendor
 * **Base Item:** Bramble Mitts
 * **Properties:**
-    * +10%% Chance of Crushing Blow
-    * +10%% Increased Attack Speed
+    * +10% Chance of Crushing Blow
+    * +10% Increased Attack Speed
     * +10-15 to Dexterity
     * +250-500 to Minimum Fire Damage
     * +25-50 to Life
-    * +10%% Faster Cast Rate
+    * +10% Faster Cast Rate
 
 ### Sigurd's Grip (Sigurd's Grip)
 * **Set:** Sigurds Nobility
 * **Base Item:** Ogre Gauntlets
 * **Properties:**
-    * +50%% Strength
-    * +30%% Increased Attack Speed
-    * +10-20%% Deadly Strike
+    * +50% Strength
+    * +30% Increased Attack Speed
+    * +10-20% Deadly Strike
     * 35-50% Bonus to Attack Rating
-    * Poison Resist +35-50%%
+    * Poison Resist +35-50%
     * +100 Defense
     * +75-100 to Minimum Damage
-    * Requirements +20%%
+    * Requirements +20%
 
 ### Comfortable Mittens (Comfortable Mittens)
 * **Set:** Royal Guard
 * **Base Item:** Crusader Gauntlets
 * **Properties:**
-    * +50-100%% Enhanced Defense
+    * +50-100% Enhanced Defense
     * +10-30 to Energy
     * 100% Bonus to Attack Rating
-    * Poison Resist +40%%
-    * +33%% Piercing Attack
+    * Poison Resist +40%
+    * +33% Piercing Attack
     * -3-5% to Enemy Poison Resistance
-    * +75-100%% Damage to Demons
-    * +75-100%% Damage to Undead
+    * +75-100% Damage to Demons
+    * +75-100% Damage to Undead
 
 ### Immortal King's Irons (Immortal King's Irons)
 * **Set:** Bul Katho's Embodiment
 * **Base Item:** Ogre Gauntlets
 * **Properties:**
-    * +20%% Increased Attack Speed
+    * +20% Increased Attack Speed
     * +1-3 to Amazon Skill Levels
-    * +20%% Faster Cast Rate
-    * +15%% Chance of Crushing Blow
-    * +15%% Deadly Strike
+    * +20% Faster Cast Rate
+    * +15% Chance of Crushing Blow
+    * +15% Deadly Strike
     * +400 Defense
     * Physical Damage Received Reduced by 10-20%
-    * +3-5%% Strength
+    * +3-5% Strength
 
 ### Trang-Oul's Sharp Claws (Trang-Oul's Sharp Claws)
 * **Set:** Trang-Oul's Incarnation
@@ -158,9 +158,9 @@
 * **Properties:**
     * +1-3 to Amazon Skill Levels
     * -10% to Enemy Poison Resistance
-    * 15-55% Chance to cast level %d %s when you Kill an Enemy
-    * +20%% Faster Cast Rate
-    * +20%% Increased Attack Speed
+    * 15% Chance to cast Level 55 poison nova when you Kill an Enemy
+    * +20% Faster Cast Rate
+    * +20% Increased Attack Speed
     * Damage Reduced by 10-15
     * 33% Chance to cast Level 55 bone spear on striking
     * +3-7 to Mana after each Kill
@@ -169,23 +169,23 @@
 * **Set:** God of War M'avina
 * **Base Item:** Crusader Gauntlets
 * **Properties:**
-    * +25%% Increased Attack Speed
+    * +25% Increased Attack Speed
     * : 50-75 (param: )
     * +333 Defense
-    * +50-150%% Enhanced Defense
-    * +5-10%% Dexterity
-    * +5-10%% Strength
-    * 20-50% Chance to cast level %d %s when struck
+    * +50-150% Enhanced Defense
+    * +5-10% Dexterity
+    * +5-10% Strength
+    * 20-50% Chance to cast level 20-50 %s when struck
     * Increase Maximum Life 5-10%
 
 ### Horazon's Arcane (Horazon's Arcane)
 * **Set:** Horazon's Heirloom
 * **Base Item:** Bramble Mitts
 * **Properties:**
-    * +20%% Chance of Crushing Blow
-    * +20-30%% Increased Attack Speed
+    * +20% Chance of Crushing Blow
+    * +20-30% Increased Attack Speed
     * +25-50 to Vitality
     * -20% to Enemy Magic Resistance
     * +100 to Life
-    * +20-30%% Faster Cast Rate
-    * +100-300%% Enhanced Defense
+    * +20-30% Faster Cast Rate
+    * +100-300% Enhanced Defense

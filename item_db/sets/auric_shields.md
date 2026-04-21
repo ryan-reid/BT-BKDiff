@@ -6,23 +6,23 @@
 * **Properties:**
     * Damage Reduced by 20-30
     * +3 to All Skills
-    * +65%% Faster Block Rate
+    * +65% Faster Block Rate
     * 60% Increased Chance of Blocking
-    * Fire Resist +45%%
+    * Fire Resist +45%
     * Magic Damage Reduced by 20-30
-    * +45%% Faster Cast Rate
-    * +150-200%% Enhanced Defense
+    * +45% Faster Cast Rate
+    * +150-200% Enhanced Defense
 
 ### Griswold's Pride (Griswold's Pride)
 * **Set:** Griswold's Masterwork
 * **Base Item:** Vortex Shield
 * **Properties:**
     * +3 to Amazon Skill Levels
-    * Level 15 holy freeze Aura When Equipped
-    * +300%% Enhanced Defense
-    * +30%% Increased Attack Speed
-    * +30%% Faster Cast Rate
+    * Level 15-18 holy freeze Aura When Equipped
+    * +300% Enhanced Defense
+    * +30% Increased Attack Speed
+    * +30% Faster Cast Rate
     * 40% Increased Chance of Blocking
-    * +40%% Faster Block Rate
+    * +40% Faster Block Rate
     * Damage Reduced by 20-30
     * Magic Damage Reduced by 20-30

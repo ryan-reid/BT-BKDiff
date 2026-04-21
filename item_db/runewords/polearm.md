@@ -5,10 +5,10 @@
 * **Base Items:** pole
 * **Properties:**
     * : 255-325 (param: )
-    * +35%% Faster Run/Walk
+    * +35% Faster Run/Walk
     * + to Vitality (Based on Character Level)
     * Level 12 Conviction Aura When Equipped
-    * 50-20% Chance to cast level %d %s when you Kill an Enemy
+    * 50% Chance to cast Level 20 Chain Lightning when you Kill an Enemy
     * -45-55% to Enemy Lightning Resistance
     * Level 30-21 %s (30-21/30-21 Charges)
 
@@ -19,9 +19,9 @@
     * : 200-260 (param: )
     * 180-250% Bonus to Attack Rating
     * 23% Better Chance of Getting Magic Items
-    * +1 to Critical Strike
-    * +35%% Faster Cast Rate
-    * Level 12 Meditation Aura When Equipped
+    * +1-6 to Critical Strike
+    * +35% Faster Cast Rate
+    * Level 12-17 Meditation Aura When Equipped
     * +5 to Strength
 
 ### Obedience
@@ -29,21 +29,21 @@
 * **Base Items:** pole
 * **Properties:**
     * : 370 (param: )
-    * +40%% Chance of Crushing Blow
-    * 30-21% Chance to cast level %d %s when you Kill an Enemy
+    * +40% Chance of Crushing Blow
+    * 30% Chance to cast Level 21 enchant when you Kill an Enemy
     * -25% to Enemy Fire Resistance
-    * +25%% Increased Attack Speed
-    * +40%% Faster Hit Recovery
-    * Fire Resist +20-30%%
+    * +25% Increased Attack Speed
+    * +40% Faster Hit Recovery
+    * Fire Resist +20-30%
 
 ### Whisper
 * **Runes:** Ber Rune + Ber Rune + Ist Rune + Mal Rune
 * **Base Items:** pole
 * **Properties:**
     * : 255-325 (param: )
-    * +35%% Faster Run/Walk
+    * +35% Faster Run/Walk
     * + to Vitality (Based on Character Level)
     * Level 12 376 Aura When Equipped
-    * 50-20% Chance to cast level %d %s when you Kill an Enemy
+    * 50% Chance to cast Level 20 84 when you Kill an Enemy
     * -45-55% to Enemy Magic Resistance
     * Level 30-21 %s (30-21/30-21 Charges)

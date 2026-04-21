@@ -6,7 +6,7 @@
 * **Properties:**
     * +3 to Javelin and Spear Skills
     * Magic Damage Reduced by 4
-    * +20%% Faster Cast Rate
+    * +20% Faster Cast Rate
     * +13 to Mana
     * +3 to %s %s
     * +2 to %s %s

@@ -6,7 +6,7 @@
 * **Properties:**
     * +4 to Attack Rating (Based on Character Level)
     * : 100 (param: )
-    * +35%% Chance of Crushing Blow
+    * +35% Chance of Crushing Blow
     * +12 to Maximum Damage (Based on Character Level)
 
 ### Berserker's Hatchet (Berserker's Hatchet)
@@ -16,5 +16,5 @@
     * +10-20 to Minimum Damage
     * 5% Mana stolen per hit
     * 5% Life stolen per hit
-    * +10%% Chance of Open Wounds
-    * +20%% Increased Attack Speed
+    * +10% Chance of Open Wounds
+    * +20% Increased Attack Speed

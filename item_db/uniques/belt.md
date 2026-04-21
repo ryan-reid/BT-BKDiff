@@ -6,8 +6,8 @@
 * **Properties:**
     * +5 to Strength
     * Regenerate Mana 50%
-    * Fire Resist +20%%
-    * +30%% Faster Hit Recovery
+    * Fire Resist +20%
+    * +30% Faster Hit Recovery
     * +30-50 Defense
 
 ### Snakecord (Snakecord)
@@ -15,9 +15,9 @@
 * **Level Requirement:** 12
 * **Properties:**
     * +40 to Minimum Poison Damage
-    * Poison Resist +25%%
+    * Poison Resist +25%
     * +25 to Life
-    * +20-30%% Enhanced Defense
+    * +20-30% Enhanced Defense
     * Replenish Life +5
     * Poison Length Reduced by 100%
     * +1 to Charge
@@ -27,11 +27,11 @@
 * **Base Item:** Belt
 * **Level Requirement:** 20
 * **Properties:**
-    * Fire Resist +10-15%%
-    * +50%% Damage Taken Goes To Mana
+    * Fire Resist +10-15%
+    * +50% Damage Taken Goes To Mana
     * +100 to Mana
     * Damage Reduced by 6
-    * +30-50%% Enhanced Defense
+    * +30-50% Enhanced Defense
 
 ### Goldwrap (Goldwrap)
 * **Base Item:** Heavy Belt
@@ -39,8 +39,8 @@
 * **Properties:**
     * 30% Better Chance of Getting Magic Items
     * +25 Defense
-    * +10%% Increased Attack Speed
-    * +40-60%% Enhanced Defense
+    * +10% Increased Attack Speed
+    * +40-60% Enhanced Defense
     * 70-100% Extra Gold from Monsters
 
 ### Bladebuckle (Bladebuckle)
@@ -52,9 +52,9 @@
     * Damage Reduced by 15
     * +15 to Strength
     * +10 to Dexterity
-    * +80-100%% Enhanced Defense
-    * +30%% Faster Hit Recovery
-    * Requirements -10%%
+    * +80-100% Enhanced Defense
+    * +30% Faster Hit Recovery
+    * Requirements -10%
 
 ### String of Ears (String of Ears)
 * **Base Item:** Demonhide Sash
@@ -63,7 +63,7 @@
     * Magic Damage Reduced by 10-15
     * Physical Damage Received Reduced by 10-15%
     * 6-8% Life stolen per hit
-    * +150-180%% Enhanced Defense
+    * +150-180% Enhanced Defense
     * +100 Defense
     * maxdurability: 10 (param: )
 
@@ -73,9 +73,9 @@
 * **Properties:**
     * Attacker Takes Damage of  (Based on Character Level)
     * +15 to Dexterity
-    * +33%% Piercing Attack
+    * +33% Piercing Attack
     * +50 Defense
-    * +120-150%% Enhanced Defense
+    * +120-150% Enhanced Defense
     * : 20 (param: )
     * : 20 (param: )
 
@@ -85,31 +85,31 @@
 * **Properties:**
     * Increase Maximum Mana 15%
     * 5% Mana stolen per hit
-    * +120-150%% Enhanced Defense
+    * +120-150% Enhanced Defense
     * +15 to Energy
     * Regenerate Mana 15%
-    * +15%% Faster Cast Rate
+    * +15% Faster Cast Rate
     * +1 to Dim Vision
 
 ### Snowclash (Snowclash)
 * **Base Item:** Battle Belt
 * **Level Requirement:** 42
 * **Properties:**
-    * 50-40% Chance to cast level %d %s when struck
+    * 50-40% Chance to cast level 50-40 %s when struck
     * +15 Cold Absorb
-    * +15%% to Maximum Cold Resist
+    * +15% to Maximum Cold Resist
     * +2 to Cold Skills
-    * +130-170%% Enhanced Defense
+    * +130-170% Enhanced Defense
 
 ### Thundergod's Vigor (Thudergod's Vigor)
 * **Base Item:** War Belt
 * **Level Requirement:** 47
 * **Properties:**
-    * 20-25% Chance to cast level %d %s when struck
+    * 20-25% Chance to cast level 20-25 %s when struck
     * +1-50 to Minimum Lightning Damage
-    * +10%% to Maximum Lightning Resist
+    * +10% to Maximum Lightning Resist
     * +20 Lightning Absorb
-    * +160-200%% Enhanced Defense
+    * +160-200% Enhanced Defense
     * +20 to Vitality
     * +20 to Strength
     * +2 to Lightning Skills
@@ -118,8 +118,8 @@
 * **Base Item:** Spiderweb Sash
 * **Level Requirement:** 80
 * **Properties:**
-    * +90-120%% Enhanced Defense
-    * +20%% Faster Cast Rate
+    * +90-120% Enhanced Defense
+    * +20% Faster Cast Rate
     * +3 to Venom
     * +1 to All Skills
     * Slows Target by 10%
@@ -133,16 +133,16 @@
     * +2 to Mana after each Kill
     * Slows Target by 10%
     * 5-7% Life stolen per hit
-    * +10%% Increased Attack Speed
+    * +10% Increased Attack Speed
     * Poison Length Reduced by 175%
 
 ### Verdungo's Hearty Cord (Verdugo's Hearty Cord)
 * **Base Item:** Mithril Coil
 * **Level Requirement:** 63
 * **Properties:**
-    * +90-140%% Enhanced Defense
+    * +90-140% Enhanced Defense
     * +50-80 to Life
-    * +24%% Faster Hit Recovery
+    * +24% Faster Hit Recovery
     * Physical Damage Received Reduced by 10-15%
     * Replenish Life +10-13
     * : 30-40 (param: )
@@ -151,12 +151,12 @@
 * **Base Item:** Troll Belt
 * **Level Requirement:** 71
 * **Properties:**
-    * +10-20%% Faster Cast Rate
-    * +10-20%% Faster Hit Recovery
-    * +10-20%% Faster Run/Walk
-    * +90-150%% Enhanced Defense
+    * +10-20% Faster Cast Rate
+    * +10-20% Faster Hit Recovery
+    * +10-20% Faster Run/Walk
+    * +90-150% Enhanced Defense
     * -4-10% to Enemy Magic Resistance
-    * Fire Resist +5-15%%
+    * Fire Resist +5-15%
     * 50-150% Extra Gold from Monsters
 
 ### Giant's Protection (Giant's Protection)
@@ -169,5 +169,5 @@
     * +5 to Cyclone Armor
     * +100-150 to Life
     * +10-15 to Strength
-    * -15%% Faster Run/Walk
-    * +80-100%% Enhanced Defense
+    * -15% Faster Run/Walk
+    * +80-100% Enhanced Defense

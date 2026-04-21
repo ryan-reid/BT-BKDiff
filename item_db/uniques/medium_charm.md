@@ -6,6 +6,6 @@
 * **Properties:**
     * +0-7 to Amazon Skill Levels
     * +10-20 to Strength
-    * Fire Resist +10-20%%
+    * Fire Resist +10-20%
     * +8 to Light Radius
     * Level 10-30 %s (10-30/10-30 Charges)

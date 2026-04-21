@@ -87,20 +87,26 @@ class PropertyResolver:
         if not str_pos:
             return None
 
-        val = int(min_val) if min_val else 0
+        val = int(min_val) if min_val and min_val != '' else 0
         range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
         
         fmt_string = self.loader.get_string(str_pos if val >= 0 else str_neg)
         
-        # Simple placeholder replacement
+        # Handle the %+d manually. In D2, %+d includes the sign.
+        # Check if we have double percent in the source string (like %+d%%)
+        if "%%" in fmt_string:
+            # If the format string has %% and we are using a range, we might get double % if we aren't careful
+            pass
+
+        sign = "+" if val >= 0 else ""
+        
         if "%+d" in fmt_string:
-            # Handle the %+d manually or via string formatting if we know it's always numeric
-            sign = "+" if val >= 0 else ""
             fmt_string = fmt_string.replace("%+d", f"{sign}{range_str}")
-        elif "%d%%" in fmt_string:
-            fmt_string = fmt_string.replace("%d%%", f"{range_str}%")
         elif "%d" in fmt_string:
             fmt_string = fmt_string.replace("%d", f"{range_str}")
+
+        # Clean up double percent signs that often occur from D2 strings like %+d%%
+        fmt_string = fmt_string.replace("%%", "%")
             
         if str_2:
             fmt_string += " " + self.loader.get_string(str_2)
@@ -112,16 +118,33 @@ class PropertyResolver:
         if not prop:
             return f"Unknown Prop: {code} ({param}, {min_val}-{max_val})"
         
+        range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
+
         if code == 'oskill':
             skill_name = self.resolve_skill_name(param)
-            return f"+{min_val} to {skill_name}"
+            return f"+{range_str} to {skill_name}"
         elif code == 'aura':
             skill_name = self.resolve_skill_name(param)
-            return f"Level {min_val} {skill_name} Aura When Equipped"
+            return f"Level {range_str} {skill_name} Aura When Equipped"
         elif code == 'hit-skill':
             skill_name = self.resolve_skill_name(param)
             return f"{min_val}% Chance to cast Level {max_val} {skill_name} on striking"
+        elif code == 'kill-skill':
+            skill_name = self.resolve_skill_name(param)
+            return f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Kill an Enemy"
         
+        # Priority: Check if the property itself has a specific description format
+        # In properties.txt, columns are code, *Id, *Enabled, func1, stat1, ..., val1, val2, ...
+        # val1-val7 often contain the text format
+        for i in range(1, 8):
+            desc_fmt = prop.get(f'val{i}')
+            if desc_fmt and any(x in desc_fmt for x in ['+#', '#%', '# ']):
+                # Resolve skill name if placeholder [Skill] exists
+                res_text = desc_fmt.replace('+#', f'+{range_str}').replace('#', range_str)
+                if '[Skill]' in res_text:
+                    res_text = res_text.replace('[Skill]', self.resolve_skill_name(param))
+                return res_text
+
         # Try to resolve via stats
         for i in range(1, 8):
             stat_code = prop.get(f'stat{i}')
@@ -132,7 +155,6 @@ class PropertyResolver:
         
         # Fallback to internal name
         stat_name = prop.get('stat1', code)
-        range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
         return f"{stat_name}: {range_str} (param: {param})"
 
 class ItemAnalyzer:

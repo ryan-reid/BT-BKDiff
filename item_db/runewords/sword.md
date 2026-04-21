@@ -4,8 +4,8 @@
 * **Runes:** Eth Rune + Tir Rune + Gul Rune + Vex Rune + Ral Rune
 * **Base Items:** swor
 * **Properties:**
-    * +33%% Deadly Strike
-    * +30-40%% Increased Attack Speed
+    * +33% Deadly Strike
+    * +30-40% Increased Attack Speed
     * : 300-350 (param: )
     * : 300-350 (param: )
     * -20-25% to Enemy Poison Resistance
@@ -19,8 +19,8 @@
     * : 330-375 (param: )
     * Repairs  durability per second
     * +11 to Sacrifice
-    * 50-17% Chance to cast level %d %s when struck
-    * +40-50%% Chance of Crushing Blow
+    * 50-17% Chance to cast level 50-17 %s when struck
+    * +40-50% Chance of Crushing Blow
     * % Better Chance of Getting Magic Items (Based on Character Level)
     * Level 17 Might Aura When Equipped
 
@@ -30,7 +30,7 @@
 * **Properties:**
     * +200-210 to Minimum Cold Damage
     * +200-210 to Minimum Fire Damage
-    * Level 30 Sanctuary Aura When Equipped
+    * Level 30-31 Sanctuary Aura When Equipped
     * 25% Chance to cast Level 30 Decrepify on striking
     * +200-250 Defense vs. Missile
     * +200-250 Defense vs. Melee
@@ -41,7 +41,7 @@
 * **Base Items:** swor
 * **Properties:**
     * : 210-340 (param: )
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * 30% Chance to cast Level 20 Bone Spirit on striking
     * -100 to Monster Defense Per Hit
     * Level 20-16 %s (20-16/20-16 Charges)
@@ -53,11 +53,11 @@
 * **Base Items:** swor
 * **Properties:**
     * : 220-320 (param: )
-    * 20-12% Chance to cast level %d %s when struck
-    * 25-54% Chance to cast level %d %s on attack
+    * 20-12% Chance to cast level 20-12 %s when struck
+    * 25-54% Chance to cast level 25-54 %s on attack
     * -25-35% to Enemy Poison Resistance
-    * +%% Deadly Strike (Based on Character Level)
-    * Level 13 Cleansing Aura When Equipped
+    * +% Deadly Strike (Based on Character Level)
+    * Level 13-17 Cleansing Aura When Equipped
     * +2 to All Skills
 
 ### Unbending Will
@@ -66,7 +66,7 @@
 * **Properties:**
     * +3 to Javelin and Spear Skills
     * 18% Chance to cast Level 18 Taunt on striking
-    * +30%% Increased Attack Speed
+    * +30% Increased Attack Speed
     * : 300-350 (param: )
     * Damage Reduced by 8
     * Prevent Monster Heal

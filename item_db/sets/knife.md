@@ -4,5 +4,5 @@
 * **Set:** Bane's Garments
 * **Base Item:** Kris
 * **Properties:**
-    * +20%% Faster Run/Walk
+    * +20% Faster Run/Walk
     * + to Maximum Damage (Based on Character Level)

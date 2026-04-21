@@ -34,10 +34,10 @@
 * **Base Item:** Ring
 * **Level Requirement:** 95
 * **Properties:**
-    * Fire Resist +20%%
+    * Fire Resist +20%
     * Drain Life -10
     * 20% Better Chance of Getting Magic Items
-    * +1-3%% to Maximum Fire Resist
+    * +1-3% to Maximum Fire Resist
 
 ### Bul-Kathos' Wedding Band (Bul Katho's Wedding Band)
 * **Base Item:** Ring
@@ -55,7 +55,7 @@
     * 100% Extra Gold from Monsters
     * +40 to Life
     * Magic Damage Reduced by 12-15
-    * Fire Absorb +15%%
+    * Fire Absorb +15%
     * Replenish Life +10
 
 ### Raven Frost (Raven Frost)
@@ -64,7 +64,7 @@
 * **Properties:**
     * Cannot Be Frozen
     * +1 to Frozen Armor
-    * Cold Absorb +20%%
+    * Cold Absorb +20%
     * +40 to Mana
     * +15-20 to Dexterity
     * +150-250 to Attack Rating
@@ -76,19 +76,19 @@
     * Prevent Monster Heal
     * Slain Monsters Rest in Peace
     * Damage Reduced by 7-11
-    * Poison Resist +20-30%%
+    * Poison Resist +20-30%
     * +5 to Oak Sage
-    * +20%% Chance of Open Wounds
+    * +20% Chance of Open Wounds
 
 ### Wisp Projector (Wisp)
 * **Base Item:** Ring
 * **Level Requirement:** 76
 * **Properties:**
-    * Lightning Absorb +10-20%%
+    * Lightning Absorb +10-20%
     * 25% Chance to cast Level 32 Lightning on striking
     * 10-20% Better Chance of Getting Magic Items
     * +5 to Heart of Wolverine
-    * Lightning Resist +10-30%%
+    * Lightning Resist +10-30%
 
 ### Carrion Wind (Carrion Wind)
 * **Base Item:** Ring
@@ -96,11 +96,11 @@
 * **Properties:**
     * +100-160 Defense vs. Missile
     * 6-9% Life stolen per hit
-    * Poison Resist +55%%
+    * Poison Resist +55%
     * 20% Chance to cast Level 30 Poison Nova on striking
     * +21 to Plague Poppy
     * 20% Chance to cast Level 25 Twister on striking
-    * +40%% Damage Taken Goes To Mana
+    * +40% Damage Taken Goes To Mana
     * +150-250 to Attack Rating
     * Poison Length Reduced by 100%
 
@@ -109,7 +109,7 @@
 * **Level Requirement:** 50
 * **Properties:**
     * +1 to Townportal O Skill
-    * +10%% Faster Cast Rate
+    * +10% Faster Cast Rate
     * -4-5% to Enemy Magic Resistance
     * +10-20 to Energy
     * Slows Target by 15%
@@ -119,9 +119,9 @@
 * **Base Item:** Ring
 * **Level Requirement:** 50
 * **Properties:**
-    * 20-30% Chance to cast level %d %s on attack
+    * 20-30% Chance to cast level 20-30 %s on attack
     * Unknown Prop: magdam-rand (, 1-1)
-    * +10%% Faster Cast Rate
-    * Fire Resist +6-11%%
+    * +10% Faster Cast Rate
+    * Fire Resist +6-11%
     * +1-3 Life after each Kill
     * +1-3 to Mana after each Kill

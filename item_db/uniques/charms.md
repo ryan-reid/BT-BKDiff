@@ -4,7 +4,7 @@
 * **Base Item:** Small Charm
 * **Level Requirement:** 1
 * **Properties:**
-    * Fire Resist -30%%
+    * Fire Resist -30%
     * -199% Better Chance of Getting Magic Items
     * % Better Chance of Getting Magic Items (Based on Character Level)
 

@@ -20,9 +20,9 @@
 * **Base Item:** Caduceus
 * **Properties:**
     * : 300-350 (param: )
-    * +60%% Increased Attack Speed
+    * +60% Increased Attack Speed
     * Damage +190-250
-    * Requirements -20%%
+    * Requirements -20%
     * -50% Target Defense
     * 15% Chance to cast Level 5 Frost Nova on striking
 
@@ -31,11 +31,11 @@
 * **Base Item:** Caduceus
 * **Properties:**
     * +3 to Amazon Skill Levels
-    * Level 15 holy shock Aura When Equipped
-    * +3-5%% to Maximum Fire Resist
+    * Level 15-18 holy shock Aura When Equipped
+    * +3-5% to Maximum Fire Resist
     * : 300-400 (param: )
     * : 200-300 (param: )
-    * +30%% Faster Cast Rate
-    * +30%% Increased Attack Speed
+    * +30% Faster Cast Rate
+    * +30% Increased Attack Speed
     * +10-20 to Strength
     * 25% Chance to cast Level 55 fist of the heavens on striking
