@@ -48,110 +48,110 @@
 
 ## Modified Rows (31)
 ### armorclass_vs_hth
-- `1.09-Save Bits`: `8` (Old) &rarr; **`9` (New)**
-- `Save Bits`: `8` (Old) &rarr; **`9` (New)**
+- `1.09-Save Bits`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `Save Bits`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
 
 ### augmented
-- `*ID`: `363` (Old) &rarr; **`370` (New)**
+- `*ID`: $\color{gray}{\text{363}}$ (Old) &rarr; $\color{blue}{\text{370}}$ (New)
 
 ### coldmindam
-- `1.09-Save Bits`: `6` (Old) &rarr; **`9` (New)**
-- `Save Bits`: `8` (Old) &rarr; **`9` (New)**
+- `1.09-Save Bits`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `Save Bits`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
 
 ### corrupted
-- `*ID`: `361` (Old) &rarr; **`368` (New)**
+- `*ID`: $\color{gray}{\text{361}}$ (Old) &rarr; $\color{blue}{\text{368}}$ (New)
 
 ### corruptordesc
-- `*ID`: `362` (Old) &rarr; **`369` (New)**
+- `*ID`: $\color{gray}{\text{362}}$ (Old) &rarr; $\color{blue}{\text{369}}$ (New)
 
 ### damagepercent
-- `descpriority`: `*empty*` (Old) &rarr; **`88` (New)**
-- `descfunc`: `*empty*` (Old) &rarr; **`19` (New)**
-- `descstrpos`: `*empty*` (Old) &rarr; **`strModEnhancedDamage` (New)**
-- `descstrneg`: `*empty*` (Old) &rarr; **`strModEnhancedDamage` (New)**
+- `descpriority`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{88}}$ (New)
+- `descfunc`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{19}}$ (New)
+- `descstrpos`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{strModEnhancedDamage}}$ (New)
+- `descstrneg`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{strModEnhancedDamage}}$ (New)
 
 ### damageresist
-- `descfunc`: `19` (Old) &rarr; **`29` (New)**
-- `descstrneg`: `ModStr2uPercent` (Old) &rarr; **`ModStr2uPercentNegative` (New)**
+- `descfunc`: $\color{gray}{\text{19}}$ (Old) &rarr; $\color{blue}{\text{29}}$ (New)
+- `descstrneg`: $\color{gray}{\text{ModStr2uPercent}}$ (Old) &rarr; $\color{blue}{\text{ModStr2uPercentNegative}}$ (New)
 
 ### dyeblack
-- `*ID`: `365` (Old) &rarr; **`372` (New)**
+- `*ID`: $\color{gray}{\text{365}}$ (Old) &rarr; $\color{blue}{\text{372}}$ (New)
 
 ### dyewhite
-- `*ID`: `364` (Old) &rarr; **`371` (New)**
+- `*ID`: $\color{gray}{\text{364}}$ (Old) &rarr; $\color{blue}{\text{371}}$ (New)
 
 ### firemindam
-- `1.09-Save Bits`: `8` (Old) &rarr; **`9` (New)**
-- `Save Bits`: `8` (Old) &rarr; **`9` (New)**
+- `1.09-Save Bits`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `Save Bits`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
 
 ### hpregen
-- `1.09-Save Bits`: `6` (Old) &rarr; **`7` (New)**
-- `Save Bits`: `6` (Old) &rarr; **`7` (New)**
+- `1.09-Save Bits`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
+- `Save Bits`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
 
 ### item_allskills
-- `descpriority`: `158` (Old) &rarr; **`156` (New)**
+- `descpriority`: $\color{gray}{\text{158}}$ (Old) &rarr; $\color{blue}{\text{156}}$ (New)
 
 ### item_attackertakesdamage
-- `1.09-Save Bits`: `7` (Old) &rarr; **`8` (New)**
-- `Save Bits`: `7` (Old) &rarr; **`8` (New)**
+- `1.09-Save Bits`: $\color{gray}{\text{7}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
+- `Save Bits`: $\color{gray}{\text{7}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
 
 ### item_aura
-- `descpriority`: `159` (Old) &rarr; **`157` (New)**
+- `descpriority`: $\color{gray}{\text{159}}$ (Old) &rarr; $\color{blue}{\text{157}}$ (New)
 
 ### item_charge_noconsume
-- `descpriority`: `159` (Old) &rarr; **`157` (New)**
+- `descpriority`: $\color{gray}{\text{159}}$ (Old) &rarr; $\color{blue}{\text{157}}$ (New)
 
 ### item_kickdamage
-- `1.09-Save Bits`: `7` (Old) &rarr; **`8` (New)**
-- `Save Bits`: `7` (Old) &rarr; **`8` (New)**
+- `1.09-Save Bits`: $\color{gray}{\text{7}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
+- `Save Bits`: $\color{gray}{\text{7}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
 
 ### item_nonclassskill
-- `Save Bits`: `6` (Old) &rarr; **`7` (New)**
+- `Save Bits`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
 
 ### item_pierce
-- `Multiply`: `0` (Old) &rarr; **`2048` (New)**
+- `Multiply`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{2048}}$ (New)
 
 ### item_singleskill
-- `Save Bits`: `3` (Old) &rarr; **`4` (New)**
+- `Save Bits`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
 
 ### item_skillonattack
-- `descpriority`: `160` (Old) &rarr; **`158` (New)**
+- `descpriority`: $\color{gray}{\text{160}}$ (Old) &rarr; $\color{blue}{\text{158}}$ (New)
 
 ### item_skillondeath
-- `descpriority`: `160` (Old) &rarr; **`158` (New)**
+- `descpriority`: $\color{gray}{\text{160}}$ (Old) &rarr; $\color{blue}{\text{158}}$ (New)
 
 ### item_skillongethit
-- `descpriority`: `160` (Old) &rarr; **`158` (New)**
+- `descpriority`: $\color{gray}{\text{160}}$ (Old) &rarr; $\color{blue}{\text{158}}$ (New)
 
 ### item_skillonhit
-- `descpriority`: `160` (Old) &rarr; **`158` (New)**
+- `descpriority`: $\color{gray}{\text{160}}$ (Old) &rarr; $\color{blue}{\text{158}}$ (New)
 
 ### item_skillonkill
-- `descpriority`: `160` (Old) &rarr; **`158` (New)**
+- `descpriority`: $\color{gray}{\text{160}}$ (Old) &rarr; $\color{blue}{\text{158}}$ (New)
 
 ### item_skillonlevelup
-- `descpriority`: `160` (Old) &rarr; **`158` (New)**
+- `descpriority`: $\color{gray}{\text{160}}$ (Old) &rarr; $\color{blue}{\text{158}}$ (New)
 
 ### lightmindam
-- `1.09-Save Bits`: `6` (Old) &rarr; **`9` (New)**
-- `Save Bits`: `6` (Old) &rarr; **`9` (New)**
+- `1.09-Save Bits`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `Save Bits`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
 
 ### magicmindam
-- `1.09-Save Bits`: `6` (Old) &rarr; **`9` (New)**
-- `Save Bits`: `8` (Old) &rarr; **`9` (New)**
+- `1.09-Save Bits`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `Save Bits`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
 
 ### passive_mag_mastery
-- `descstrpos`: `ModitemdamMagsk` (Old) &rarr; **`ModStrMagMastery` (New)**
-- `descstrneg`: `ModitemdamMagsk` (Old) &rarr; **`ModStrMagMastery` (New)**
+- `descstrpos`: $\color{gray}{\text{ModitemdamMagsk}}$ (Old) &rarr; $\color{blue}{\text{ModStrMagMastery}}$ (New)
+- `descstrneg`: $\color{gray}{\text{ModitemdamMagsk}}$ (Old) &rarr; $\color{blue}{\text{ModStrMagMastery}}$ (New)
 
 ### passive_mag_pierce
-- `descstrpos`: `ModitemenresMagsk` (Old) &rarr; **`ModStrMagPierce` (New)**
-- `descstrneg`: `ModitemenresMagsk` (Old) &rarr; **`ModStrMagPierce` (New)**
+- `descstrpos`: $\color{gray}{\text{ModitemenresMagsk}}$ (Old) &rarr; $\color{blue}{\text{ModStrMagPierce}}$ (New)
+- `descstrneg`: $\color{gray}{\text{ModitemenresMagsk}}$ (Old) &rarr; $\color{blue}{\text{ModStrMagPierce}}$ (New)
 
 ### passive_mastery_replenish_oncrit
-- `*ID`: `206` (Old) &rarr; **`207` (New)**
+- `*ID`: $\color{gray}{\text{206}}$ (Old) &rarr; $\color{blue}{\text{207}}$ (New)
 
 ### skill_cooldown
-- `Send Bits`: `32` (Old) &rarr; **`*empty*` (New)**
-- `Send Param Bits`: `16` (Old) &rarr; **`*empty*` (New)**
+- `Send Bits`: $\color{gray}{\text{32}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `Send Param Bits`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 

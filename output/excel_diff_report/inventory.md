@@ -8,10 +8,10 @@
 
 ## Modified Rows (2)
 ### transmogrify box page 1
-- `gridTop`: `278` (Old) &rarr; **`139` (New)**
-- `gridBottom`: `506` (Old) &rarr; **`253` (New)**
+- `gridTop`: $\color{gray}{\text{278}}$ (Old) &rarr; $\color{blue}{\text{139}}$ (New)
+- `gridBottom`: $\color{gray}{\text{506}}$ (Old) &rarr; $\color{blue}{\text{253}}$ (New)
 
 ### transmogrify box2
-- `gridX`: `3` (Old) &rarr; **`6` (New)**
-- `gridY`: `4` (Old) &rarr; **`6` (New)**
+- `gridX`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+- `gridY`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
 

@@ -18,354 +18,354 @@
 
 ## Modified Rows (42)
 ### of acceleration
-- `level`: `51` (Old) &rarr; **`65` (New)**
-- `levelreq`: `43` (Old) &rarr; **`57` (New)**
+- `level`: $\color{gray}{\text{51}}$ (Old) &rarr; $\color{blue}{\text{65}}$ (New)
+- `levelreq`: $\color{gray}{\text{43}}$ (Old) &rarr; $\color{blue}{\text{57}}$ (New)
 
 ### of amplify damage
-- `mod1min`: `20` (Old) &rarr; **`22` (New)**
+- `mod1min`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{22}}$ (New)
 
 ### of avarice
-- `mod1max`: `50` (Old) &rarr; **`30` (New)**
+- `mod1max`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{30}}$ (New)
 
 ### of blight
-- `version`: `100` (Old) &rarr; **`1` (New)**
-- `level`: `14` (Old) &rarr; **`1` (New)**
-- `maxlevel`: `*empty*` (Old) &rarr; **`4` (New)**
-- `levelreq`: `14` (Old) &rarr; **`1` (New)**
-- `frequency`: `3` (Old) &rarr; **`4` (New)**
-- `group`: `201` (Old) &rarr; **`16` (New)**
-- `mod1code`: `pierce-pois` (Old) &rarr; **`dmg-pois` (New)**
-- `mod1param`: `*empty*` (Old) &rarr; **`50` (New)**
-- `mod1min`: `3` (Old) &rarr; **`8` (New)**
-- `mod1max`: `3` (Old) &rarr; **`8` (New)**
-- `itype1`: `wand` (Old) &rarr; **`weap` (New)**
-- `itype2`: `jave` (Old) &rarr; **`*empty*` (New)**
-- `itype3`: `circ` (Old) &rarr; **`*empty*` (New)**
-- `etype1`: `*empty*` (Old) &rarr; **`scep` (New)**
-- `etype2`: `*empty*` (Old) &rarr; **`staf` (New)**
-- `etype3`: `*empty*` (Old) &rarr; **`orb` (New)**
+- `version`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `level`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `maxlevel`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `levelreq`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `frequency`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `group`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
+- `mod1code`: $\color{gray}{\text{pierce-pois}}$ (Old) &rarr; $\color{blue}{\text{dmg-pois}}$ (New)
+- `mod1param`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
+- `mod1min`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
+- `mod1max`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
+- `itype1`: $\color{gray}{\text{wand}}$ (Old) &rarr; $\color{blue}{\text{weap}}$ (New)
+- `itype2`: $\color{gray}{\text{jave}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype3`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `etype1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{scep}}$ (New)
+- `etype2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{staf}}$ (New)
+- `etype3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{orb}}$ (New)
 
 ### of bliss
-- `mod1min`: `11` (Old) &rarr; **`5` (New)**
-- `mod1max`: `20` (Old) &rarr; **`10` (New)**
+- `mod1min`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `mod1max`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 
 ### of burning
-- `level`: `14` (Old) &rarr; **`32` (New)**
-- `levelreq`: `14` (Old) &rarr; **`24` (New)**
-- `frequency`: `3` (Old) &rarr; **`1` (New)**
-- `group`: `201` (Old) &rarr; **`12` (New)**
-- `mod1code`: `pierce-fire` (Old) &rarr; **`fire-min` (New)**
-- `mod1min`: `5` (Old) &rarr; **`3` (New)**
-- `mod1max`: `5` (Old) &rarr; **`4` (New)**
-- `mod2code`: `*empty*` (Old) &rarr; **`fire-max` (New)**
-- `mod2min`: `*empty*` (Old) &rarr; **`5` (New)**
-- `mod2max`: `*empty*` (Old) &rarr; **`8` (New)**
-- `transformcolor`: `*empty*` (Old) &rarr; **`dred` (New)**
-- `itype1`: `orb` (Old) &rarr; **`scha` (New)**
-- `itype3`: `staf` (Old) &rarr; **`*empty*` (New)**
-- `itype5`: `swor` (Old) &rarr; **`*empty*` (New)**
-- `itype6`: `circ` (Old) &rarr; **`*empty*` (New)**
-- `itype7`: `h2h` (Old) &rarr; **`*empty*` (New)**
+- `level`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{32}}$ (New)
+- `levelreq`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{24}}$ (New)
+- `frequency`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `group`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
+- `mod1code`: $\color{gray}{\text{pierce-fire}}$ (Old) &rarr; $\color{blue}{\text{fire-min}}$ (New)
+- `mod1min`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `mod1max`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `mod2code`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{fire-max}}$ (New)
+- `mod2min`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `mod2max`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
+- `transformcolor`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{dred}}$ (New)
+- `itype1`: $\color{gray}{\text{orb}}$ (Old) &rarr; $\color{blue}{\text{scha}}$ (New)
+- `itype3`: $\color{gray}{\text{staf}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype5`: $\color{gray}{\text{swor}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype6`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype7`: $\color{gray}{\text{h2h}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### of butchery
-- `mod1min`: `41` (Old) &rarr; **`21` (New)**
-- `mod1max`: `50` (Old) &rarr; **`40` (New)**
-- `etype3`: `*empty*` (Old) &rarr; **`orb` (New)**
+- `mod1min`: $\color{gray}{\text{41}}$ (Old) &rarr; $\color{blue}{\text{21}}$ (New)
+- `mod1max`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
+- `etype3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{orb}}$ (New)
 
 ### of damage amplification
-- `level`: `90` (Old) &rarr; **`60` (New)**
-- `levelreq`: `*empty*` (Old) &rarr; **`80` (New)**
-- `group`: `44` (Old) &rarr; **`45` (New)**
-- `mod1min`: `33` (Old) &rarr; **`24` (New)**
-- `itype2`: `weap` (Old) &rarr; **`mele` (New)**
-- `itype3`: `swor` (Old) &rarr; **`*empty*` (New)**
-- `itype4`: `axe` (Old) &rarr; **`*empty*` (New)**
-- `itype5`: `hamm` (Old) &rarr; **`*empty*` (New)**
-- `itype6`: `mace` (Old) &rarr; **`*empty*` (New)**
-- `itype7`: `club` (Old) &rarr; **`*empty*` (New)**
-- `etype1`: `pole` (Old) &rarr; **`*empty*` (New)**
-- `etype2`: `spea` (Old) &rarr; **`*empty*` (New)**
-- `etype3`: `scep` (Old) &rarr; **`*empty*` (New)**
+- `level`: $\color{gray}{\text{90}}$ (Old) &rarr; $\color{blue}{\text{60}}$ (New)
+- `levelreq`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{80}}$ (New)
+- `group`: $\color{gray}{\text{44}}$ (Old) &rarr; $\color{blue}{\text{45}}$ (New)
+- `mod1min`: $\color{gray}{\text{33}}$ (Old) &rarr; $\color{blue}{\text{24}}$ (New)
+- `itype2`: $\color{gray}{\text{weap}}$ (Old) &rarr; $\color{blue}{\text{mele}}$ (New)
+- `itype3`: $\color{gray}{\text{swor}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype4`: $\color{gray}{\text{axe}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype5`: $\color{gray}{\text{hamm}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype6`: $\color{gray}{\text{mace}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype7`: $\color{gray}{\text{club}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `etype1`: $\color{gray}{\text{pole}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `etype2`: $\color{gray}{\text{spea}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `etype3`: $\color{gray}{\text{scep}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### of ennui
-- `mod2min`: `100` (Old) &rarr; **`10` (New)**
-- `mod2max`: `200` (Old) &rarr; **`20` (New)**
+- `mod2min`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `mod2max`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 
 ### of evisceration
-- `mod1min`: `51` (Old) &rarr; **`41` (New)**
-- `etype3`: `*empty*` (Old) &rarr; **`orb` (New)**
+- `mod1min`: $\color{gray}{\text{51}}$ (Old) &rarr; $\color{blue}{\text{41}}$ (New)
+- `etype3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{orb}}$ (New)
 
 ### of excellence
-- `mod1min`: `11` (Old) &rarr; **`6` (New)**
-- `mod1max`: `15` (Old) &rarr; **`9` (New)**
+- `mod1min`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+- `mod1max`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
 
 ### of fire
-- `level`: `14` (Old) &rarr; **`20` (New)**
-- `levelreq`: `14` (Old) &rarr; **`15` (New)**
-- `frequency`: `3` (Old) &rarr; **`1` (New)**
-- `group`: `201` (Old) &rarr; **`12` (New)**
-- `mod1code`: `pierce-fire` (Old) &rarr; **`fire-min` (New)**
-- `mod1min`: `4` (Old) &rarr; **`2` (New)**
-- `mod1max`: `4` (Old) &rarr; **`2` (New)**
-- `mod2code`: `*empty*` (Old) &rarr; **`fire-max` (New)**
-- `mod2min`: `*empty*` (Old) &rarr; **`3` (New)**
-- `mod2max`: `*empty*` (Old) &rarr; **`4` (New)**
-- `itype1`: `orb` (Old) &rarr; **`scha` (New)**
-- `itype3`: `staf` (Old) &rarr; **`*empty*` (New)**
-- `itype5`: `swor` (Old) &rarr; **`*empty*` (New)**
-- `itype6`: `circ` (Old) &rarr; **`*empty*` (New)**
-- `itype7`: `h2h` (Old) &rarr; **`*empty*` (New)**
+- `level`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `levelreq`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `frequency`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `group`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
+- `mod1code`: $\color{gray}{\text{pierce-fire}}$ (Old) &rarr; $\color{blue}{\text{fire-min}}$ (New)
+- `mod1min`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `mod1max`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `mod2code`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{fire-max}}$ (New)
+- `mod2min`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `mod2max`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `itype1`: $\color{gray}{\text{orb}}$ (Old) &rarr; $\color{blue}{\text{scha}}$ (New)
+- `itype3`: $\color{gray}{\text{staf}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype5`: $\color{gray}{\text{swor}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype6`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype7`: $\color{gray}{\text{h2h}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### of flame
-- `version`: `*empty*` (Old) &rarr; **`1` (New)**
-- `spawnable`: `*empty*` (Old) &rarr; **`1` (New)**
-- `rare`: `*empty*` (Old) &rarr; **`1` (New)**
-- `level`: `*empty*` (Old) &rarr; **`1` (New)**
-- `maxlevel`: `*empty*` (Old) &rarr; **`3` (New)**
-- `levelreq`: `*empty*` (Old) &rarr; **`1` (New)**
-- `frequency`: `*empty*` (Old) &rarr; **`4` (New)**
-- `group`: `*empty*` (Old) &rarr; **`12` (New)**
-- `mod1code`: `*empty*` (Old) &rarr; **`dmg-fire` (New)**
-- `mod1min`: `*empty*` (Old) &rarr; **`1` (New)**
-- `mod1max`: `*empty*` (Old) &rarr; **`2` (New)**
-- `itype1`: `*empty*` (Old) &rarr; **`weap` (New)**
-- `etype1`: `*empty*` (Old) &rarr; **`staf` (New)**
-- `etype2`: `*empty*` (Old) &rarr; **`wand` (New)**
-- `etype3`: `*empty*` (Old) &rarr; **`orb` (New)**
-- `multiply`: `*empty*` (Old) &rarr; **`0` (New)**
-- `add`: `*empty*` (Old) &rarr; **`0` (New)**
+- `version`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `spawnable`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `rare`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `level`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `maxlevel`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `levelreq`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `frequency`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `group`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
+- `mod1code`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{dmg-fire}}$ (New)
+- `mod1min`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `mod1max`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `itype1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{weap}}$ (New)
+- `etype1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{staf}}$ (New)
+- `etype2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{wand}}$ (New)
+- `etype3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{orb}}$ (New)
+- `multiply`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `add`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### of frigidity
-- `mod2min`: `50` (Old) &rarr; **`3` (New)**
-- `mod2max`: `75` (Old) &rarr; **`5` (New)**
+- `mod2min`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `mod2max`: $\color{gray}{\text{75}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 
 ### of frost
-- `version`: `100` (Old) &rarr; **`1` (New)**
-- `level`: `42` (Old) &rarr; **`1` (New)**
-- `maxlevel`: `*empty*` (Old) &rarr; **`3` (New)**
-- `levelreq`: `42` (Old) &rarr; **`1` (New)**
-- `frequency`: `2` (Old) &rarr; **`4` (New)**
-- `group`: `201` (Old) &rarr; **`10` (New)**
-- `mod1code`: `pierce-cold` (Old) &rarr; **`dmg-cold` (New)**
-- `mod1param`: `*empty*` (Old) &rarr; **`25` (New)**
-- `mod1min`: `5` (Old) &rarr; **`1` (New)**
-- `mod1max`: `5` (Old) &rarr; **`1` (New)**
-- `itype1`: `orb` (Old) &rarr; **`weap` (New)**
-- `itype3`: `staf` (Old) &rarr; **`*empty*` (New)**
-- `itype5`: `swor` (Old) &rarr; **`*empty*` (New)**
-- `itype6`: `circ` (Old) &rarr; **`*empty*` (New)**
-- `etype1`: `*empty*` (Old) &rarr; **`staf` (New)**
-- `etype2`: `*empty*` (Old) &rarr; **`wand` (New)**
-- `etype3`: `*empty*` (Old) &rarr; **`orb` (New)**
+- `version`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `level`: $\color{gray}{\text{42}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `maxlevel`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `levelreq`: $\color{gray}{\text{42}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `frequency`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `group`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `mod1code`: $\color{gray}{\text{pierce-cold}}$ (Old) &rarr; $\color{blue}{\text{dmg-cold}}$ (New)
+- `mod1param`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{25}}$ (New)
+- `mod1min`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `mod1max`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `itype1`: $\color{gray}{\text{orb}}$ (Old) &rarr; $\color{blue}{\text{weap}}$ (New)
+- `itype3`: $\color{gray}{\text{staf}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype5`: $\color{gray}{\text{swor}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype6`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `etype1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{staf}}$ (New)
+- `etype2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{wand}}$ (New)
+- `etype3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{orb}}$ (New)
 
 ### of gore
-- `mod1min`: `21` (Old) &rarr; **`8` (New)**
-- `mod1max`: `25` (Old) &rarr; **`10` (New)**
-- `etype3`: `*empty*` (Old) &rarr; **`orb` (New)**
+- `mod1min`: $\color{gray}{\text{21}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
+- `mod1max`: $\color{gray}{\text{25}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `etype3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{orb}}$ (New)
 
 ### of guarding
-- `spawnable`: `1` (Old) &rarr; **`0` (New)**
-- `mod1code`: `red-dmg%` (Old) &rarr; **`red-mag` (New)**
+- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `mod1code`: $\color{gray}{\text{red-dmg%}}$ (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
 
 ### of joyfulness
-- `mod1min`: `5` (Old) &rarr; **`1` (New)**
-- `mod1max`: `10` (Old) &rarr; **`4` (New)**
+- `mod1min`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `mod1max`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
 
 ### of lightning
-- `level`: `14` (Old) &rarr; **`21` (New)**
-- `levelreq`: `14` (Old) &rarr; **`15` (New)**
-- `frequency`: `3` (Old) &rarr; **`1` (New)**
-- `group`: `201` (Old) &rarr; **`13` (New)**
-- `mod1code`: `pierce-ltng` (Old) &rarr; **`ltng-min` (New)**
-- `mod1min`: `4` (Old) &rarr; **`1` (New)**
-- `mod1max`: `4` (Old) &rarr; **`1` (New)**
-- `mod2code`: `*empty*` (Old) &rarr; **`ltng-max` (New)**
-- `mod2min`: `*empty*` (Old) &rarr; **`7` (New)**
-- `mod2max`: `*empty*` (Old) &rarr; **`10` (New)**
-- `itype1`: `orb` (Old) &rarr; **`scha` (New)**
-- `itype2`: `jave` (Old) &rarr; **`*empty*` (New)**
-- `itype3`: `staf` (Old) &rarr; **`*empty*` (New)**
-- `itype5`: `swor` (Old) &rarr; **`*empty*` (New)**
-- `itype6`: `circ` (Old) &rarr; **`*empty*` (New)**
-- `itype7`: `h2h` (Old) &rarr; **`*empty*` (New)**
+- `level`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{21}}$ (New)
+- `levelreq`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `frequency`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `group`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{13}}$ (New)
+- `mod1code`: $\color{gray}{\text{pierce-ltng}}$ (Old) &rarr; $\color{blue}{\text{ltng-min}}$ (New)
+- `mod1min`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `mod1max`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `mod2code`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{ltng-max}}$ (New)
+- `mod2min`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
+- `mod2max`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `itype1`: $\color{gray}{\text{orb}}$ (Old) &rarr; $\color{blue}{\text{scha}}$ (New)
+- `itype2`: $\color{gray}{\text{jave}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype3`: $\color{gray}{\text{staf}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype5`: $\color{gray}{\text{swor}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype6`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype7`: $\color{gray}{\text{h2h}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### of lower resistance
-- `level`: `90` (Old) &rarr; **`85` (New)**
-- `levelreq`: `*empty*` (Old) &rarr; **`80` (New)**
-- `group`: `44` (Old) &rarr; **`45` (New)**
-- `mod1code`: `kill-skill` (Old) &rarr; **`hit-skill` (New)**
-- `mod1min`: `33` (Old) &rarr; **`11` (New)**
-- `itype2`: `weap` (Old) &rarr; **`mele` (New)**
-- `itype3`: `orb` (Old) &rarr; **`*empty*` (New)**
-- `itype4`: `wand` (Old) &rarr; **`*empty*` (New)**
-- `itype5`: `staf` (Old) &rarr; **`*empty*` (New)**
+- `level`: $\color{gray}{\text{90}}$ (Old) &rarr; $\color{blue}{\text{85}}$ (New)
+- `levelreq`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{80}}$ (New)
+- `group`: $\color{gray}{\text{44}}$ (Old) &rarr; $\color{blue}{\text{45}}$ (New)
+- `mod1code`: $\color{gray}{\text{kill-skill}}$ (Old) &rarr; $\color{blue}{\text{hit-skill}}$ (New)
+- `mod1min`: $\color{gray}{\text{33}}$ (Old) &rarr; $\color{blue}{\text{11}}$ (New)
+- `itype2`: $\color{gray}{\text{weap}}$ (Old) &rarr; $\color{blue}{\text{mele}}$ (New)
+- `itype3`: $\color{gray}{\text{orb}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype4`: $\color{gray}{\text{wand}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype5`: $\color{gray}{\text{staf}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### of malice
-- `mod1min`: `30` (Old) &rarr; **`1` (New)**
-- `mod1max`: `30` (Old) &rarr; **`5` (New)**
+- `mod1min`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `mod1max`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 
 ### of measure
-- `mod1min`: `6` (Old) &rarr; **`4` (New)**
-- `mod1max`: `10` (Old) &rarr; **`5` (New)**
+- `mod1min`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `mod1max`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 
 ### of meteors
-- `itype3`: `staf` (Old) &rarr; **`*empty*` (New)**
-- `itype4`: `orb` (Old) &rarr; **`*empty*` (New)**
-- `itype5`: `circ` (Old) &rarr; **`*empty*` (New)**
-- `itype6`: `wand` (Old) &rarr; **`*empty*` (New)**
+- `itype3`: $\color{gray}{\text{staf}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype4`: $\color{gray}{\text{orb}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype5`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype6`: $\color{gray}{\text{wand}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### of negation
-- `rare`: `1` (Old) &rarr; **`*empty*` (New)**
-- `mod1code`: `red-dmg%` (Old) &rarr; **`red-mag` (New)**
+- `rare`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `mod1code`: $\color{gray}{\text{red-dmg%}}$ (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
 
 ### of nova shield
-- `level`: `40` (Old) &rarr; **`45` (New)**
-- `levelreq`: `50` (Old) &rarr; **`20` (New)**
+- `level`: $\color{gray}{\text{40}}$ (Old) &rarr; $\color{blue}{\text{45}}$ (New)
+- `levelreq`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 
 ### of passion
-- `mod2min`: `100` (Old) &rarr; **`6` (New)**
-- `mod2max`: `100` (Old) &rarr; **`10` (New)**
+- `mod2min`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+- `mod2max`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 
 ### of performance
-- `mod1min`: `16` (Old) &rarr; **`10` (New)**
-- `mod1max`: `20` (Old) &rarr; **`13` (New)**
+- `mod1min`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `mod1max`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{13}}$ (New)
 
 ### of pestilence
-- `level`: `14` (Old) &rarr; **`32` (New)**
-- `levelreq`: `14` (Old) &rarr; **`24` (New)**
-- `frequency`: `3` (Old) &rarr; **`1` (New)**
-- `group`: `201` (Old) &rarr; **`16` (New)**
-- `mod1code`: `pierce-pois` (Old) &rarr; **`dmg-pois` (New)**
-- `mod1param`: `*empty*` (Old) &rarr; **`125` (New)**
-- `mod1min`: `5` (Old) &rarr; **`52` (New)**
-- `mod1max`: `5` (Old) &rarr; **`52` (New)**
-- `transformcolor`: `*empty*` (Old) &rarr; **`dgrn` (New)**
-- `itype1`: `wand` (Old) &rarr; **`scha` (New)**
-- `itype2`: `jave` (Old) &rarr; **`*empty*` (New)**
-- `itype3`: `circ` (Old) &rarr; **`*empty*` (New)**
+- `level`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{32}}$ (New)
+- `levelreq`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{24}}$ (New)
+- `frequency`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `group`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
+- `mod1code`: $\color{gray}{\text{pierce-pois}}$ (Old) &rarr; $\color{blue}{\text{dmg-pois}}$ (New)
+- `mod1param`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{125}}$ (New)
+- `mod1min`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{52}}$ (New)
+- `mod1max`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{52}}$ (New)
+- `transformcolor`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{dgrn}}$ (New)
+- `itype1`: $\color{gray}{\text{wand}}$ (Old) &rarr; $\color{blue}{\text{scha}}$ (New)
+- `itype2`: $\color{gray}{\text{jave}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype3`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### of prosperity
-- `mod1max`: `15` (Old) &rarr; **`10` (New)**
+- `mod1max`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 
 ### of razors
-- `mod1min`: `11` (Old) &rarr; **`7` (New)**
-- `mod1max`: `15` (Old) &rarr; **`9` (New)**
+- `mod1min`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
+- `mod1max`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
 
 ### of shock
-- `version`: `*empty*` (Old) &rarr; **`1` (New)**
-- `spawnable`: `*empty*` (Old) &rarr; **`1` (New)**
-- `rare`: `*empty*` (Old) &rarr; **`1` (New)**
-- `level`: `*empty*` (Old) &rarr; **`1` (New)**
-- `maxlevel`: `*empty*` (Old) &rarr; **`3` (New)**
-- `levelreq`: `*empty*` (Old) &rarr; **`1` (New)**
-- `frequency`: `*empty*` (Old) &rarr; **`4` (New)**
-- `group`: `*empty*` (Old) &rarr; **`13` (New)**
-- `mod1code`: `*empty*` (Old) &rarr; **`dmg-ltng` (New)**
-- `mod1min`: `*empty*` (Old) &rarr; **`1` (New)**
-- `mod1max`: `*empty*` (Old) &rarr; **`3` (New)**
-- `itype1`: `*empty*` (Old) &rarr; **`weap` (New)**
-- `etype1`: `*empty*` (Old) &rarr; **`staf` (New)**
-- `etype2`: `*empty*` (Old) &rarr; **`wand` (New)**
-- `etype3`: `*empty*` (Old) &rarr; **`orb` (New)**
-- `multiply`: `*empty*` (Old) &rarr; **`0` (New)**
-- `add`: `*empty*` (Old) &rarr; **`0` (New)**
+- `version`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `spawnable`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `rare`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `level`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `maxlevel`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `levelreq`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `frequency`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `group`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{13}}$ (New)
+- `mod1code`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{dmg-ltng}}$ (New)
+- `mod1min`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `mod1max`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `itype1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{weap}}$ (New)
+- `etype1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{staf}}$ (New)
+- `etype2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{wand}}$ (New)
+- `etype3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{orb}}$ (New)
+- `multiply`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `add`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### of slaughter
-- `mod1min`: `31` (Old) &rarr; **`15` (New)**
-- `mod1max`: `40` (Old) &rarr; **`20` (New)**
-- `etype3`: `*empty*` (Old) &rarr; **`orb` (New)**
+- `mod1min`: $\color{gray}{\text{31}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `mod1max`: $\color{gray}{\text{40}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `etype3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{orb}}$ (New)
 
 ### of slaying
-- `mod1min`: `16` (Old) &rarr; **`5` (New)**
-- `mod1max`: `20` (Old) &rarr; **`7` (New)**
-- `etype3`: `*empty*` (Old) &rarr; **`orb` (New)**
+- `mod1min`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `mod1max`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
+- `etype3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{orb}}$ (New)
 
 ### of spikes
-- `mod1min`: `6` (Old) &rarr; **`4` (New)**
-- `mod1max`: `10` (Old) &rarr; **`6` (New)**
+- `mod1min`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `mod1max`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
 
 ### of swords
-- `mod1min`: `16` (Old) &rarr; **`10` (New)**
-- `mod1max`: `25` (Old) &rarr; **`20` (New)**
+- `mod1min`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `mod1max`: $\color{gray}{\text{25}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 
 ### of the glacier
-- `level`: `28` (Old) &rarr; **`33` (New)**
-- `levelreq`: `28` (Old) &rarr; **`25` (New)**
-- `frequency`: `3` (Old) &rarr; **`1` (New)**
-- `group`: `201` (Old) &rarr; **`10` (New)**
-- `mod1code`: `pierce-cold` (Old) &rarr; **`cold-min` (New)**
-- `mod1min`: `4` (Old) &rarr; **`3` (New)**
-- `mod1max`: `4` (Old) &rarr; **`3` (New)**
-- `mod2code`: `*empty*` (Old) &rarr; **`cold-max` (New)**
-- `mod2min`: `*empty*` (Old) &rarr; **`5` (New)**
-- `mod2max`: `*empty*` (Old) &rarr; **`6` (New)**
-- `mod3code`: `*empty*` (Old) &rarr; **`cold-len` (New)**
-- `mod3min`: `*empty*` (Old) &rarr; **`25` (New)**
-- `mod3max`: `*empty*` (Old) &rarr; **`25` (New)**
-- `transformcolor`: `*empty*` (Old) &rarr; **`dblu` (New)**
-- `itype1`: `orb` (Old) &rarr; **`scha` (New)**
-- `itype3`: `staf` (Old) &rarr; **`*empty*` (New)**
-- `itype5`: `swor` (Old) &rarr; **`*empty*` (New)**
-- `itype6`: `circ` (Old) &rarr; **`*empty*` (New)**
+- `level`: $\color{gray}{\text{28}}$ (Old) &rarr; $\color{blue}{\text{33}}$ (New)
+- `levelreq`: $\color{gray}{\text{28}}$ (Old) &rarr; $\color{blue}{\text{25}}$ (New)
+- `frequency`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `group`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `mod1code`: $\color{gray}{\text{pierce-cold}}$ (Old) &rarr; $\color{blue}{\text{cold-min}}$ (New)
+- `mod1min`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `mod1max`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `mod2code`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{cold-max}}$ (New)
+- `mod2min`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `mod2max`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+- `mod3code`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{cold-len}}$ (New)
+- `mod3min`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{25}}$ (New)
+- `mod3max`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{25}}$ (New)
+- `transformcolor`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{dblu}}$ (New)
+- `itype1`: $\color{gray}{\text{orb}}$ (Old) &rarr; $\color{blue}{\text{scha}}$ (New)
+- `itype3`: $\color{gray}{\text{staf}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype5`: $\color{gray}{\text{swor}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype6`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### of the sentinel
-- `spawnable`: `1` (Old) &rarr; **`0` (New)**
-- `mod1code`: `red-dmg%` (Old) &rarr; **`red-mag` (New)**
+- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `mod1code`: $\color{gray}{\text{red-dmg%}}$ (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
 
 ### of thunder
-- `level`: `14` (Old) &rarr; **`33` (New)**
-- `levelreq`: `14` (Old) &rarr; **`25` (New)**
-- `frequency`: `3` (Old) &rarr; **`1` (New)**
-- `group`: `201` (Old) &rarr; **`13` (New)**
-- `mod1code`: `pierce-ltng` (Old) &rarr; **`ltng-min` (New)**
-- `mod1min`: `5` (Old) &rarr; **`1` (New)**
-- `mod1max`: `5` (Old) &rarr; **`1` (New)**
-- `mod2code`: `*empty*` (Old) &rarr; **`ltng-max` (New)**
-- `mod2min`: `*empty*` (Old) &rarr; **`11` (New)**
-- `mod2max`: `*empty*` (Old) &rarr; **`18` (New)**
-- `transformcolor`: `*empty*` (Old) &rarr; **`dyel` (New)**
-- `itype1`: `orb` (Old) &rarr; **`scha` (New)**
-- `itype2`: `jave` (Old) &rarr; **`*empty*` (New)**
-- `itype3`: `staf` (Old) &rarr; **`*empty*` (New)**
-- `itype5`: `swor` (Old) &rarr; **`*empty*` (New)**
-- `itype6`: `circ` (Old) &rarr; **`*empty*` (New)**
-- `itype7`: `h2h` (Old) &rarr; **`*empty*` (New)**
+- `level`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{33}}$ (New)
+- `levelreq`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{25}}$ (New)
+- `frequency`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `group`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{13}}$ (New)
+- `mod1code`: $\color{gray}{\text{pierce-ltng}}$ (Old) &rarr; $\color{blue}{\text{ltng-min}}$ (New)
+- `mod1min`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `mod1max`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `mod2code`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{ltng-max}}$ (New)
+- `mod2min`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{11}}$ (New)
+- `mod2max`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
+- `transformcolor`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{dyel}}$ (New)
+- `itype1`: $\color{gray}{\text{orb}}$ (Old) &rarr; $\color{blue}{\text{scha}}$ (New)
+- `itype2`: $\color{gray}{\text{jave}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype3`: $\color{gray}{\text{staf}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype5`: $\color{gray}{\text{swor}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype6`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype7`: $\color{gray}{\text{h2h}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### of transcendence
-- `level`: `42` (Old) &rarr; **`76` (New)**
-- `levelreq`: `42` (Old) &rarr; **`68` (New)**
-- `frequency`: `2` (Old) &rarr; **`4` (New)**
-- `group`: `201` (Old) &rarr; **`15` (New)**
-- `mod1code`: `pierce-mag` (Old) &rarr; **`dmg-min` (New)**
-- `mod1min`: `3` (Old) &rarr; **`15` (New)**
-- `mod1max`: `5` (Old) &rarr; **`20` (New)**
-- `transformcolor`: `*empty*` (Old) &rarr; **`blac` (New)**
-- `itype1`: `rod` (Old) &rarr; **`weap` (New)**
-- `itype2`: `circ` (Old) &rarr; **`*empty*` (New)**
-- `etype1`: `*empty*` (Old) &rarr; **`staf` (New)**
-- `etype2`: `*empty*` (Old) &rarr; **`wand` (New)**
-- `etype3`: `*empty*` (Old) &rarr; **`orb` (New)**
+- `level`: $\color{gray}{\text{42}}$ (Old) &rarr; $\color{blue}{\text{76}}$ (New)
+- `levelreq`: $\color{gray}{\text{42}}$ (Old) &rarr; $\color{blue}{\text{68}}$ (New)
+- `frequency`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `group`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `mod1code`: $\color{gray}{\text{pierce-mag}}$ (Old) &rarr; $\color{blue}{\text{dmg-min}}$ (New)
+- `mod1min`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `mod1max`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `transformcolor`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{blac}}$ (New)
+- `itype1`: $\color{gray}{\text{rod}}$ (Old) &rarr; $\color{blue}{\text{weap}}$ (New)
+- `itype2`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `etype1`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{staf}}$ (New)
+- `etype2`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{wand}}$ (New)
+- `etype3`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{orb}}$ (New)
 
 ### of traveling
-- `level`: `65` (Old) &rarr; **`51` (New)**
-- `levelreq`: `57` (Old) &rarr; **`45` (New)**
-- `mod1min`: `30` (Old) &rarr; **`35` (New)**
-- `mod1max`: `30` (Old) &rarr; **`35` (New)**
+- `level`: $\color{gray}{\text{65}}$ (Old) &rarr; $\color{blue}{\text{51}}$ (New)
+- `levelreq`: $\color{gray}{\text{57}}$ (Old) &rarr; $\color{blue}{\text{45}}$ (New)
+- `mod1min`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{35}}$ (New)
+- `mod1max`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{35}}$ (New)
 
 ### of venom
-- `level`: `14` (Old) &rarr; **`20` (New)**
-- `levelreq`: `14` (Old) &rarr; **`15` (New)**
-- `frequency`: `3` (Old) &rarr; **`1` (New)**
-- `group`: `201` (Old) &rarr; **`16` (New)**
-- `mod1code`: `pierce-pois` (Old) &rarr; **`dmg-pois` (New)**
-- `mod1param`: `*empty*` (Old) &rarr; **`100` (New)**
-- `mod1min`: `4` (Old) &rarr; **`39` (New)**
-- `mod1max`: `4` (Old) &rarr; **`39` (New)**
-- `itype1`: `wand` (Old) &rarr; **`scha` (New)**
-- `itype2`: `jave` (Old) &rarr; **`*empty*` (New)**
-- `itype3`: `circ` (Old) &rarr; **`*empty*` (New)**
+- `level`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `levelreq`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `frequency`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `group`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
+- `mod1code`: $\color{gray}{\text{pierce-pois}}$ (Old) &rarr; $\color{blue}{\text{dmg-pois}}$ (New)
+- `mod1param`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
+- `mod1min`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{39}}$ (New)
+- `mod1max`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{39}}$ (New)
+- `itype1`: $\color{gray}{\text{wand}}$ (Old) &rarr; $\color{blue}{\text{scha}}$ (New)
+- `itype2`: $\color{gray}{\text{jave}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `itype3`: $\color{gray}{\text{circ}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### of worth
-- `mod1min`: `1` (Old) &rarr; **`2` (New)**
-- `mod1max`: `5` (Old) &rarr; **`3` (New)**
+- `mod1min`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `mod1max`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
 

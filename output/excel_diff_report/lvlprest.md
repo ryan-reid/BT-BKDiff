@@ -11,10 +11,10 @@
 
 ## Modified Rows (2)
 ### rift 3a
-- `Def`: `1091` (Old) &rarr; **`1092` (New)**
-- `LevelId`: `140` (Old) &rarr; **`141` (New)**
+- `Def`: $\color{gray}{\text{1091}}$ (Old) &rarr; $\color{blue}{\text{1092}}$ (New)
+- `LevelId`: $\color{gray}{\text{140}}$ (Old) &rarr; $\color{blue}{\text{141}}$ (New)
 
 ### rift 6a
-- `Def`: `1092` (Old) &rarr; **`1093` (New)**
-- `LevelId`: `144` (Old) &rarr; **`145` (New)**
+- `Def`: $\color{gray}{\text{1092}}$ (Old) &rarr; $\color{blue}{\text{1093}}$ (New)
+- `LevelId`: $\color{gray}{\text{144}}$ (Old) &rarr; $\color{blue}{\text{145}}$ (New)
 

@@ -24,34 +24,34 @@
 
 ## Modified Rows (8)
 ### corruption1
-- `*Tooltip`: `*empty*` (Old) &rarr; **`1 through 1000` (New)**
-- `*Min`: `*empty*` (Old) &rarr; **`Min #` (New)**
-- `*Max`: `*empty*` (Old) &rarr; **`Max #` (New)**
+- `*Tooltip`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1 through 1000}}$ (New)
+- `*Min`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{Min #}}$ (New)
+- `*Max`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{Max #}}$ (New)
 
 ### dyed1
-- `*Min`: `*empty*` (Old) &rarr; **`Min %` (New)**
-- `*Max`: `*empty*` (Old) &rarr; **`Max %` (New)**
+- `*Min`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{Min %}}$ (New)
+- `*Max`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{Max %}}$ (New)
 
 ### enr%
-- `*Min`: `Min %` (Old) &rarr; **`100` (New)**
-- `*Max`: `Max %` (Old) &rarr; **`1` (New)**
+- `*Min`: $\color{gray}{\text{Min %}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
+- `*Max`: $\color{gray}{\text{Max %}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### hit-skill-splash
-- `*Min`: `"% Chance (If 0, then default to 5)"` (Old) &rarr; **`Min %` (New)**
-- `*Max`: `Skill Level` (Old) &rarr; **`Max %` (New)**
+- `*Min`: $\color{gray}{\text{"% Chance (If 0, then default to 5)"}}$ (Old) &rarr; $\color{blue}{\text{Min %}}$ (New)
+- `*Max`: $\color{gray}{\text{Skill Level}}$ (Old) &rarr; $\color{blue}{\text{Max %}}$ (New)
 
 ### noconsume
-- `*Enabled`: `*empty*` (Old) &rarr; **`1` (New)**
+- `*Enabled`: $\color{gray}{\text{*empty*}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### pierce-mag
-- `*Tooltip`: `-#% to Enemy Magic  Resistance` (Old) &rarr; **`-#% to Enemy Magic Resistance` (New)**
+- `*Tooltip`: $\color{gray}{\text{-#% to Enemy Magic  Resistance}}$ (Old) &rarr; $\color{blue}{\text{-#% to Enemy Magic Resistance}}$ (New)
 
 ### randclassskill3
-- `*Min`: `Min Class ID` (Old) &rarr; **`Min #` (New)**
-- `*Max`: `Max Class ID` (Old) &rarr; **`Max #` (New)**
-- `*Notes`: `val1 = # of Skill levels` (Old) &rarr; **`*empty*` (New)**
+- `*Min`: $\color{gray}{\text{Min Class ID}}$ (Old) &rarr; $\color{blue}{\text{Min #}}$ (New)
+- `*Max`: $\color{gray}{\text{Max Class ID}}$ (Old) &rarr; $\color{blue}{\text{Max #}}$ (New)
+- `*Notes`: $\color{gray}{\text{val1 = # of Skill levels}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### splash
-- `*Min`: `100` (Old) &rarr; **`*empty*` (New)**
-- `*Max`: `1` (Old) &rarr; **`*empty*` (New)**
+- `*Min`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
+- `*Max`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 

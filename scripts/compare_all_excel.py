@@ -83,7 +83,8 @@ def write_detail_markdown(report, output_path):
                 for col, vals in report['rows']['modified'][key].items():
                     v_new = vals['bk_new'] if vals['bk_new'] != '' else '*empty*'
                     v_old = vals['bt_old'] if vals['bt_old'] != '' else '*empty*'
-                    f.write(f"- `{col}`: `{v_old}` (Old) &rarr; **`{v_new}` (New)**\n")
+                    # Use LaTeX for coloring
+                    f.write(f"- `{col}`: $\\color{{gray}}{{\\text{{{v_old}}}}}$ (Old) &rarr; $\\color{{blue}}{{\\text{{{v_new}}}}}$ (New)\n")
                 f.write("\n")
 
 def generate_summary(all_reports, report_dir):

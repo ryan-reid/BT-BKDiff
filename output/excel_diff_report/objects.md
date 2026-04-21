@@ -4,92 +4,92 @@
 
 ## Modified Rows (26)
 ### ambientsound
-- `Token`: `S1` (Old) &rarr; **`SS` (New)**
+- `Token`: $\color{gray}{\text{S1}}$ (Old) &rarr; $\color{blue}{\text{SS}}$ (New)
 
 ### ancient statue 1
-- `Class`: `Curly` (Old) &rarr; **`colossal_statue_1` (New)**
-- `*ID`: `475` (Old) &rarr; **`574` (New)**
-- `OperateFn`: `63` (Old) &rarr; **`0` (New)**
-- `InitFn`: `64` (Old) &rarr; **`80` (New)**
+- `Class`: $\color{gray}{\text{Curly}}$ (Old) &rarr; $\color{blue}{\text{colossal_statue_1}}$ (New)
+- `*ID`: $\color{gray}{\text{475}}$ (Old) &rarr; $\color{blue}{\text{574}}$ (New)
+- `OperateFn`: $\color{gray}{\text{63}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `InitFn`: $\color{gray}{\text{64}}$ (Old) &rarr; $\color{blue}{\text{80}}$ (New)
 
 ### ancient statue 2
-- `Class`: `Larry` (Old) &rarr; **`colossal_statue_2` (New)**
-- `*ID`: `476` (Old) &rarr; **`575` (New)**
-- `OperateFn`: `64` (Old) &rarr; **`0` (New)**
-- `InitFn`: `65` (Old) &rarr; **`80` (New)**
+- `Class`: $\color{gray}{\text{Larry}}$ (Old) &rarr; $\color{blue}{\text{colossal_statue_2}}$ (New)
+- `*ID`: $\color{gray}{\text{476}}$ (Old) &rarr; $\color{blue}{\text{575}}$ (New)
+- `OperateFn`: $\color{gray}{\text{64}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `InitFn`: $\color{gray}{\text{65}}$ (Old) &rarr; $\color{blue}{\text{80}}$ (New)
 
 ### ancient statue 3
-- `Class`: `Moe` (Old) &rarr; **`colossal_statue_3` (New)**
-- `*ID`: `474` (Old) &rarr; **`576` (New)**
-- `OperateFn`: `62` (Old) &rarr; **`0` (New)**
-- `InitFn`: `63` (Old) &rarr; **`80` (New)**
+- `Class`: $\color{gray}{\text{Moe}}$ (Old) &rarr; $\color{blue}{\text{colossal_statue_3}}$ (New)
+- `*ID`: $\color{gray}{\text{474}}$ (Old) &rarr; $\color{blue}{\text{576}}$ (New)
+- `OperateFn`: $\color{gray}{\text{62}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `InitFn`: $\color{gray}{\text{63}}$ (Old) &rarr; $\color{blue}{\text{80}}$ (New)
 
 ### ancientsaltar
-- `Class`: `AncientsAltar` (Old) &rarr; **`ColossalAltar` (New)**
-- `*ID`: `546` (Old) &rarr; **`573` (New)**
-- `OperateFn`: `65` (Old) &rarr; **`74` (New)**
-- `InitFn`: `72` (Old) &rarr; **`0` (New)**
+- `Class`: $\color{gray}{\text{AncientsAltar}}$ (Old) &rarr; $\color{blue}{\text{ColossalAltar}}$ (New)
+- `*ID`: $\color{gray}{\text{546}}$ (Old) &rarr; $\color{blue}{\text{573}}$ (New)
+- `OperateFn`: $\color{gray}{\text{65}}$ (Old) &rarr; $\color{blue}{\text{74}}$ (New)
+- `InitFn`: $\color{gray}{\text{72}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### barrel wilderness
-- `Token`: `6t` (Old) &rarr; **`yo` (New)**
+- `Token`: $\color{gray}{\text{6t}}$ (Old) &rarr; $\color{blue}{\text{yo}}$ (New)
 
 ### burialchestr
-- `Token`: `ys` (Old) &rarr; **`yu` (New)**
+- `Token`: $\color{gray}{\text{ys}}$ (Old) &rarr; $\color{blue}{\text{yu}}$ (New)
 
 ### cagedwussie1
-- `Token`: `60` (Old) &rarr; **`ss` (New)**
+- `Token`: $\color{gray}{\text{60}}$ (Old) &rarr; $\color{blue}{\text{ss}}$ (New)
 
 ### controlobject
-- `*ID`: `573` (Old) &rarr; **`577` (New)**
+- `*ID`: $\color{gray}{\text{573}}$ (Old) &rarr; $\color{blue}{\text{577}}$ (New)
 
 ### debris
-- `Token`: `5l` (Old) &rarr; **`5L` (New)**
+- `Token`: $\color{gray}{\text{5l}}$ (Old) &rarr; $\color{blue}{\text{5L}}$ (New)
 
 ### desertshrinearmor
-- `*ID`: `574` (Old) &rarr; **`578` (New)**
+- `*ID`: $\color{gray}{\text{574}}$ (Old) &rarr; $\color{blue}{\text{578}}$ (New)
 
 ### desertshrinecombat
-- `*ID`: `575` (Old) &rarr; **`579` (New)**
+- `*ID`: $\color{gray}{\text{575}}$ (Old) &rarr; $\color{blue}{\text{579}}$ (New)
 
 ### desertshrinerecharge
-- `*ID`: `578` (Old) &rarr; **`582` (New)**
+- `*ID`: $\color{gray}{\text{578}}$ (Old) &rarr; $\color{blue}{\text{582}}$ (New)
 
 ### desertshrineresist
-- `*ID`: `576` (Old) &rarr; **`580` (New)**
+- `*ID`: $\color{gray}{\text{576}}$ (Old) &rarr; $\color{blue}{\text{580}}$ (New)
 
 ### desertshrineskill
-- `*ID`: `577` (Old) &rarr; **`581` (New)**
+- `*ID`: $\color{gray}{\text{577}}$ (Old) &rarr; $\color{blue}{\text{581}}$ (New)
 
 ### desertshrinestamina
-- `*ID`: `579` (Old) &rarr; **`583` (New)**
+- `*ID`: $\color{gray}{\text{579}}$ (Old) &rarr; $\color{blue}{\text{583}}$ (New)
 
 ### guild portal
-- `Token`: `PP` (Old) &rarr; **`pp` (New)**
+- `Token`: $\color{gray}{\text{PP}}$ (Old) &rarr; $\color{blue}{\text{pp}}$ (New)
 
 ### hungskeleton
-- `Token`: `jw` (Old) &rarr; **`xq` (New)**
+- `Token`: $\color{gray}{\text{jw}}$ (Old) &rarr; $\color{blue}{\text{xq}}$ (New)
 
 ### mrpole
-- `Token`: `5k` (Old) &rarr; **`5n` (New)**
+- `Token`: $\color{gray}{\text{5k}}$ (Old) &rarr; $\color{blue}{\text{5n}}$ (New)
 
 ### placearcanethingamajig
-- `*ID`: `582` (Old) &rarr; **`586` (New)**
+- `*ID`: $\color{gray}{\text{582}}$ (Old) &rarr; $\color{blue}{\text{586}}$ (New)
 
 ### placerandomtreasurechest
-- `*ID`: `581` (Old) &rarr; **`585` (New)**
+- `*ID`: $\color{gray}{\text{581}}$ (Old) &rarr; $\color{blue}{\text{585}}$ (New)
 
 ### placeuniquechest
-- `*ID`: `580` (Old) &rarr; **`584` (New)**
+- `*ID`: $\color{gray}{\text{580}}$ (Old) &rarr; $\color{blue}{\text{584}}$ (New)
 
 ### sarcophagus
-- `Token`: `qc` (Old) &rarr; **`QC` (New)**
+- `Token`: $\color{gray}{\text{qc}}$ (Old) &rarr; $\color{blue}{\text{QC}}$ (New)
 
 ### tome
-- `Token`: `TT` (Old) &rarr; **`tt` (New)**
+- `Token`: $\color{gray}{\text{TT}}$ (Old) &rarr; $\color{blue}{\text{tt}}$ (New)
 
 ### woodchest2l
-- `Token`: `5f` (Old) &rarr; **`5i` (New)**
+- `Token`: $\color{gray}{\text{5f}}$ (Old) &rarr; $\color{blue}{\text{5i}}$ (New)
 
 ### woodchest2r
-- `Token`: `5f` (Old) &rarr; **`5j` (New)**
+- `Token`: $\color{gray}{\text{5f}}$ (Old) &rarr; $\color{blue}{\text{5j}}$ (New)
 

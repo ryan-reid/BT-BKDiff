@@ -55,11 +55,11 @@ def normalize_text(s):
     return s.strip()
 
 def get_styled_diffs(old_s, new_s):
-    """Surgically highlights differences between two strings using token-based diff."""
+    """Surgically highlights differences between two strings using token-based diff and LaTeX for GitHub."""
     if not old_s: 
-        return "", f'**<span style="color: #3366cc;">{new_s}</span>**'
+        return "", f'$\\color{{blue}}{{\\text{{{new_s}}}}}$'
     if not new_s or new_s == "(removed)": 
-        return f'<span style="color: #999999;">{old_s}</span>', f'<span style="color: #3366cc;">(removed)</span>'
+        return f'$\\color{{gray}}{{\\text{{{old_s}}}}}$', f'$\\color{{blue}}{{\\text{{(removed)}}}}$'
     
     if normalize_text(old_s) == normalize_text(new_s):
         return old_s, new_s
@@ -99,9 +99,9 @@ def get_styled_diffs(old_s, new_s):
             nonlocal res, current_text, last_type
             if not current_text: return
             if last_type == 'added':
-                res += f'**<span style="color: #3366cc;">{current_text}</span>**'
+                res += f'$\\color{{blue}}{{\\text{{{current_text}}}}}$'
             elif last_type == 'removed':
-                res += f'<span style="color: #999999;">{current_text}</span>'
+                res += f'$\\color{{gray}}{{\\text{{{current_text}}}}}$'
             else:
                 res += current_text
             current_text = ""

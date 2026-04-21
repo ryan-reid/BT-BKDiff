@@ -4,8 +4,8 @@
 
 ## Modified Rows (2)
 ### halbu
-- `max buy`: `15000` (Old) &rarr; **`25000` (New)**
+- `max buy`: $\color{gray}{\text{15000}}$ (Old) &rarr; $\color{blue}{\text{25000}}$ (New)
 
 ### jamella
-- `max buy`: `15000` (Old) &rarr; **`25000` (New)**
+- `max buy`: $\color{gray}{\text{15000}}$ (Old) &rarr; $\color{blue}{\text{25000}}$ (New)
 

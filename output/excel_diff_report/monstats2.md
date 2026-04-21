@@ -16,11 +16,11 @@
 
 ## Modified Rows (3)
 ### baron
-- `*hcIdx`: `740` (Old) &rarr; **`752` (New)**
+- `*hcIdx`: $\color{gray}{\text{740}}$ (Old) &rarr; $\color{blue}{\text{752}}$ (New)
 
 ### btdiablo
-- `*hcIdx`: `739` (Old) &rarr; **`751` (New)**
+- `*hcIdx`: $\color{gray}{\text{739}}$ (Old) &rarr; $\color{blue}{\text{751}}$ (New)
 
 ### kexicon
-- `*hcIdx`: `741` (Old) &rarr; **`753` (New)**
+- `*hcIdx`: $\color{gray}{\text{741}}$ (Old) &rarr; $\color{blue}{\text{753}}$ (New)
 

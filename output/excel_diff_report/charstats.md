@@ -7,26 +7,26 @@
 
 ## Modified Rows (8)
 ### amazon
-- `RunDrain`: `15` (Old) &rarr; **`20` (New)**
+- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 
 ### assassin
-- `RunDrain`: `15` (Old) &rarr; **`20` (New)**
+- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 
 ### barbarian
-- `RunDrain`: `15` (Old) &rarr; **`20` (New)**
+- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 
 ### druid
-- `RunDrain`: `15` (Old) &rarr; **`20` (New)**
+- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 
 ### expansion
-- `item10count`: `0` (Old) &rarr; **`*empty*` (New)**
+- `item10count`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{*empty*}}$ (New)
 
 ### necromancer
-- `RunDrain`: `15` (Old) &rarr; **`20` (New)**
+- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 
 ### paladin
-- `RunDrain`: `15` (Old) &rarr; **`20` (New)**
+- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 
 ### sorceress
-- `RunDrain`: `15` (Old) &rarr; **`20` (New)**
+- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 

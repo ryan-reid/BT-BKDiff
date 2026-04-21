@@ -4,7 +4,7 @@
 
 ## Modified Rows (1)
 ### corpsefire
-- `Class`: `zombie1` (Old) &rarr; **`corpse` (New)**
-- `MinGrp`: `5` (Old) &rarr; **`1` (New)**
-- `MaxGrp`: `5` (Old) &rarr; **`6` (New)**
+- `Class`: $\color{gray}{\text{zombie1}}$ (Old) &rarr; $\color{blue}{\text{corpse}}$ (New)
+- `MinGrp`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `MaxGrp`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
 
