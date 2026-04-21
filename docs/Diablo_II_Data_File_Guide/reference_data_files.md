@@ -1,0 +1,21 @@
+# Reference Data Files
+* `ArmType.txt`
+* `bodylocs.txt`
+* `colors.txt`
+* `compcode.txt`
+* `Composit.txt`
+* `cubemod.txt`
+* `ElemTypes.txt`
+* `events.txt`
+* `HitClass.txt`
+* `lowqualityitems.txt`
+* `misscalc.txt`
+* `MonMode.txt`
+* `MonPlace.txt`
+* `ObjMode.txt`
+* `ObjType.txt`
+* `PlayerClass.txt`
+* `PlrMode.txt`
+* `PlrType.txt`
+* `skillcalc.txt`
+* `StorePage.txt`

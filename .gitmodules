@@ -1,8 +1,8 @@
 [submodule "bkdiablo.mpq"]
-	path = BKDiablo
+	path = mods/BKDiablo
 	url = https://github.com/BaronBeefStick/BKDiablo-Ascenstion
 	branch = BKDiablo-Ascension
 [submodule "BTDiablo"]
-	path = BTDiablo
+	path = mods/BTDiablo
 	url = https://github.com/BTNeandertha1/BTDiablo
 	branch = BTD-Brutality-Sets+Runeword-ON

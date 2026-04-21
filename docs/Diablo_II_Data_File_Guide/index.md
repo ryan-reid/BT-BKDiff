@@ -1,0 +1,33 @@
+# Diablo II Data File Guide - Index
+
+This directory contains a modular breakdown of the Diablo II Data File Guide for efficient processing.
+
+## Data Files
+* [Table of Contents](table_of_contents.md)
+* [actinfo.txt](actinfo.md)
+* [armor.txt](armor.md)
+* [automagic.txt](automagic.md)
+* [AutoMap.txt](automap.md)
+* [belts.txt](belts.md)
+* [books.txt](books.md)
+* [charstats.txt](charstats.md)
+* [cubemain.txt](cubemain.md)
+* [difficultylevels.txt](difficultylevels.md)
+* [experience.txt](experience.md)
+* [gamble.txt](gamble.md)
+* [gems.txt](gems.md)
+* [inventory.txt](inventory.md)
+* [itemratio.txt](itemratio.md)
+* [ItemStatCost.txt](itemstatcost.md)
+* [ItemTypes.txt](itemtypes.md)
+* [hireling.txt](hireling.md)
+* [Levels.txt](levels.md)
+* [Missiles.txt](missiles.md)
+* [objects.txt](objects.md)
+* [Properties.txt](properties.md)
+* [skills.txt](skills.md)
+* [states.txt](states.md)
+* [TreasureClassEx.txt](treasureclassex.md)
+* [UniqueItems.txt](uniqueitems.md)
+* [weapons.txt](weapons.md)
+* [Reference Data Files](reference_data_files.md)
