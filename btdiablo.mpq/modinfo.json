@@ -1,0 +1,33 @@
+{
+    "name": "BTDiablo",
+    "savepath": "BTDiablo/"
+
+/*
+--My Mod Details--
+Mod Download: https://github.com/BTNeandertha1/BTDiablo/archive/refs/heads/BTDiablo.zip
+Mod Config Download: https://drive.google.com/uc?export=download&id=1X9Nl4cY53vGuLAOSlQwZGpsYOTY_osCN
+Mod Version: 1.3.1
+News 1 Title: "BTDiablo Update 1.3.1 Released!"
+News 1 Message: "Adjusting Drops of Mawstone and Halo"
+News 2 Title: "D2RLaunch"
+News 2 Message: "Further integration to D2RLaunch has been added. Mod updates can now be performed with a single click. In addition, the launcher will now display our mod logo, allow quick access to our discord, wiki and patreon. Thanks Bonesy!"
+ 
+--General Options--
+Map Layouts: Enabled
+UI Themes: Enabled
+Customizations: Enabled
+Vault Access: Enabled
+
+--Additional Options--
+Item Icons: Disabled
+Runeword Sorting: Disabled
+HUD Display: Disabled
+Monster Stats Display: Enabled
+
+--Author Links--
+Discord: https://discord.gg/BTNeandertha1
+Wiki: https://btd.miraheze.org/wiki/Main_Page
+Patreon: https://www.patreon.com/BTNeanderthal
+*/
+
+}
