@@ -248,7 +248,9 @@ class PropertyResolver:
 
     def resolve_property(self, code: str, param: str, min_val: str, max_val: str) -> str:
         code_lower = code.strip().lower()
-        
+        if not code_lower or code_lower == 'xxx':
+            return ""
+
         # Apply alias
         if code_lower in self.aliases:
             code_lower = self.aliases[code_lower]
