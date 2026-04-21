@@ -16,7 +16,7 @@
 - of thaumaturgy
 - of townportal
 
-## Modified Rows (12)
+## Modified Rows (11)
 ### of absorption
 - `mod1code`: `red-dmg` (Old) &rarr; **`red-dmg%` (New)**
 - `mod1min`: `3` (Old) &rarr; **`6` (New)**
@@ -61,9 +61,6 @@
 ### of negation
 - `mod1min`: `4` (Old) &rarr; **`11` (New)**
 - `mod1max`: `6` (Old) &rarr; **`15` (New)**
-
-### of nova shield
-- `itype2`: `ring ` (Old) &rarr; **`ring` (New)**
 
 ### of protection
 - `mod1code`: `red-dmg` (Old) &rarr; **`red-dmg%` (New)**

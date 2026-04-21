@@ -2,7 +2,7 @@
 
 *Key column used: `Name`*
 
-## Modified Rows (28)
+## Modified Rows (26)
 ### ambientsound
 - `Token`: `S1` (Old) &rarr; **`SS` (New)**
 
@@ -81,9 +81,6 @@
 ### placeuniquechest
 - `*ID`: `580` (Old) &rarr; **`584` (New)**
 
-### red light
-- `Token`: `ss` (Old) &rarr; **`ss ` (New)**
-
 ### sarcophagus
 - `Token`: `qc` (Old) &rarr; **`QC` (New)**
 
@@ -95,7 +92,4 @@
 
 ### woodchest2r
 - `Token`: `5f` (Old) &rarr; **`5j` (New)**
-
-### zoo
-- `Token`: `ss` (Old) &rarr; **`ss ` (New)**
 

@@ -79,7 +79,6 @@
 
 ### dyewhite
 - `*ID`: `364` (Old) &rarr; **`371` (New)**
-- `descval`: ` ` (Old) &rarr; **`*empty*` (New)**
 
 ### firemindam
 - `1.09-Save Bits`: `8` (Old) &rarr; **`9` (New)**

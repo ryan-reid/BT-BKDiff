@@ -11,10 +11,3 @@
 - colossalwhirlwind
 - genericpet
 
-## Modified Rows (2)
-### brute
-- `*aip3`: `Attack Enemy / Circle Walk (% Chance) ` (Old) &rarr; **`Attack Enemy / Circle Walk (% Chance)` (New)**
-
-### fallenshaman
-- `*aip3`: `Attack Enemy / Circle Walk (% Chance) ` (Old) &rarr; **`Attack Enemy / Circle Walk (% Chance)` (New)**
-

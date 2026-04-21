@@ -36,7 +36,7 @@
 ## Removed Rows in BK (New) (1)
 - elite
 
-## Modified Rows (96)
+## Modified Rows (95)
 ### aldur's advance
 - `item`: `xtb` (Old) &rarr; **`utb` (New)**
 - `*ItemName`: `Battle Boots` (Old) &rarr; **`Mirrored Boots` (New)**
@@ -138,9 +138,6 @@
 ### hope melee
 - `*ID`: `134` (Old) &rarr; **`147` (New)**
 
-### hwanin's justice
-- `max3`: ` 14` (Old) &rarr; **`14` (New)**
-
 ### immortal king's detail
 - `item`: `zhb` (Old) &rarr; **`uhc` (New)**
 - `*ItemName`: `War Belt` (Old) &rarr; **`Colossus Girdle` (New)**
@@ -231,7 +228,6 @@
 - `*ID`: `186` (Old) &rarr; **`199` (New)**
 - `item`: `zvb` (Old) &rarr; **`uvc` (New)**
 - `*ItemName`: `Sharkskin Belt` (Old) &rarr; **`Vampirefang Belt` (New)**
-- `prop8`: `res-all ` (Old) &rarr; **`res-all` (New)**
 
 ### m'avina's tenet
 - `item`: `zvb` (Old) &rarr; **`uvc` (New)**

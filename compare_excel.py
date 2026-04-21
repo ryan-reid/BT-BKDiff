@@ -84,7 +84,15 @@ def compare_files(file_bk, file_bt, key_col='code'):
             for col in common_cols:
                 v_new = map_new[key].get(col, '')
                 v_old = map_old[key].get(col, '')
-                if v_new != v_old:
+                
+                # Normalize values for comparison: strip whitespace and surrounding quotes
+                def normalize(v):
+                    v = str(v).strip()
+                    if v.startswith('"') and v.endswith('"'):
+                        v = v[1:-1]
+                    return v.strip()
+
+                if normalize(v_new) != normalize(v_old):
                     diffs[col] = {"bk_new": v_new, "bt_old": v_old}
             if diffs:
                 report["rows"]["modified"][key] = diffs
