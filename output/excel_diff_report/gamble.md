@@ -9,12 +9,3 @@
 - old book
 - tome
 
-## Removed Rows in BK (New) (7)
-- bone wand
-- grand scepter
-- grim wand
-- scepter
-- wand
-- war scepter
-- yew wand
-

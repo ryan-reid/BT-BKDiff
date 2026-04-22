@@ -205,5 +205,5 @@
 * **Properties:**
     * 5% Chance to cast level 20 Static Field when struck
     * +10% Faster Run/Walk
-    * Socketed (1)
+    * Socketed ()
     * +1-10% Energy
