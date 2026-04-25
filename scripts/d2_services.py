@@ -50,8 +50,8 @@ class PropertyResolverService:
         }
         
         self.manual_overrides = {
-            'bloody': 'Extra Bloody',
-            'gelid-affix5': '[Invalid Mod Property: Gelid-Affix5]'
+            'bloody': '',
+            'gelid-affix5': ''
         }
 
     def resolve_skill_name(self, skill_name_or_id: str) -> str:
@@ -213,7 +213,10 @@ class ItemAnalyzerService:
         props = []
         for i in range(1, 13):
             code = row.get(f'prop{i}', '').strip()
-            if code and code != 'xxx': props.append(self.resolver.resolve_property(code, row.get(f'par{i}', ''), row.get(f'min{i}', ''), row.get(f'max{i}', '')))
+            if code and code != 'xxx':
+                res = self.resolver.resolve_property(code, row.get(f'par{i}', ''), row.get(f'min{i}', ''), row.get(f'max{i}', ''))
+                if res['resolved_text']:
+                    props.append(res)
         return {
             "id": idx, "display_name": self.repo.get_string(idx), "base_item": self.get_item_name(row.get('code', '').strip()),
             "item_type": self.get_item_category(row.get('code', '').strip()), "lvl_req": row.get('lvl req', '0'), "properties": props, "raw_row": row
@@ -228,7 +231,10 @@ class ItemAnalyzerService:
         props = []
         for i in range(1, 8):
             code = row.get(f'T1Code{i}', '').strip()
-            if code and code != 'xxx': props.append(self.resolver.resolve_property(code, row.get(f'T1Param{i}', ''), row.get(f'T1Min{i}', ''), row.get(f'T1Max{i}', '')))
+            if code and code != 'xxx':
+                res = self.resolver.resolve_property(code, row.get(f'T1Param{i}', ''), row.get(f'T1Min{i}', ''), row.get(f'T1Max{i}', ''))
+                if res['resolved_text']:
+                    props.append(res)
         return {
             "name": name, "runes": runes, "base_items": [self.repo.get_string(self.item_types.get(row.get('itype1', '').strip(), {}).get('ItemType', '')) or row.get('itype1', '')],
             "properties": props, "raw_row": row
