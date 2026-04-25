@@ -28,11 +28,7 @@
 * **Properties:**
     * +1 to All Skills
     * +1 to Random Class Skill Levels
-<<<<<<< HEAD
     * 20% Chance to cast level 1 Lower Resist when you Kill an Enemy
-=======
-    * 20-1% Chance to cast level 20-1 Lower Resist when you Kill an Enemy
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * +10-15 to Mana after each Kill
     * +10-15 Life after each Kill
     * +5-10% to Experience Gained

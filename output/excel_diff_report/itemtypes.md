@@ -39485,7 +39485,4 @@
 ### voodoo heads
 - `*skillID`: $\\color{gray}{\\text{69}}$ (Old) &rarr; $\\color{blue}{\\text{70}}$ (New)
 - `*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{6}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{7}}$ (New)
-<<<<<<< HEAD
-=======
 
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)

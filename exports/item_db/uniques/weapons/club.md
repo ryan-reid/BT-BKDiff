@@ -43,7 +43,7 @@
     * Prevent Monster Heal
     * 20% Chance of Crushing Blow
     * 20% Deadly Strike
-    * Adds 35-50-35-50 Damage
+    * Adds 35-50 Damage
     * +130-200% Enhanced Damage
     * +1 to Druid Skill Levels
     * +2 to Shape Shifting Skills
@@ -55,7 +55,7 @@
 * **Level Requirement:** 63
 * **Properties:**
     * +180-230% Enhanced Damage
-    * Adds 222-333-222-333 Fire Damage
+    * Adds 222-333 Fire Damage
     * 7-13% Life stolen per hit
     * +23 to Enchant
     * Repairs 1 durability in 5 seconds
@@ -72,5 +72,5 @@
     * +16 to Blizzard
     * 150-180% Bonus to Attack Rating
     * +5-15 Cold Absorb
-    * Adds 205-455-205-455 Cold Damage
+    * Adds 205-455 Cold Damage
 

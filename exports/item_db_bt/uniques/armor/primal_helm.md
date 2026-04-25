@@ -51,13 +51,8 @@
     * +2-3  to Barbarian Skill Levels
     * +20% Faster Hit Recovery
     * +15 Life after each Kill
-<<<<<<< HEAD
     * +1-2 to Battle Orders (Barbarian only)
     * +1-2 to Battle Command (Barbarian only)
-=======
-    * +1-2 to Battle Orders (Class only)
-    * +1-2 to Battle Command (Class only)
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * Damage Reduced by 10-15%
 
 ### Bul Katho's Mind (Bul Katho's Mind)

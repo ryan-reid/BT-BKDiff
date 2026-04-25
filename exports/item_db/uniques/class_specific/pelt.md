@@ -46,11 +46,7 @@
     * +3 to All Skills
     * +20-30 to Energy
     * -10-20% to Enemy Fire Resistance
-<<<<<<< HEAD
     * +7 to Raven (Druid only)
-=======
-    * +7 to Raven (Class only)
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
 
 ### Gungnir's Almighty (Gungnir's Almighty)
 * **Base Item:** Dream Spirit

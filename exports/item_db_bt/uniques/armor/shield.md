@@ -11,7 +11,7 @@
     * +30-40% Enhanced Defense
     * +20% Faster Block Rate
     * +40% Faster Block Rate
-    * Durability: 8-12 of 8-12
+    * Durability: 8 of 12
     * Damage Reduced by 6-8
     * Replenish Life +15
 
@@ -25,7 +25,7 @@
     * +30 to Life
     * +40-50% Enhanced Defense
     * +30% Faster Block Rate
-    * Durability: 10-15 of 10-15
+    * Durability: 10 of 15
     * Damage Reduced by 15%
     * (25.0 per clvl) Defense (Based on Character Level)
 
@@ -36,11 +36,11 @@
     * Magic Damage Reduced by 7
     * Level 3 Resist Lightning Aura When Equipped
     * +100 Defense
-    * Adds 1-150-1-150 Lightning Damage
+    * Adds 1-150 Lightning Damage
     * +50-60% Enhanced Defense
     * +30% Faster Block Rate
     * Attacker Takes Damage of 100
-    * Durability: 10-15 of 10-15
+    * Durability: 10 of 15
     * Increase Maximum Life 5%
 
 ### Wall of the Eyeless (Wall of the Eyeless)
@@ -81,7 +81,7 @@
     * +20% Faster Block Rate
     * All Resistances +25-35
     * +50-75 Defense
-    * Durability: 15-20 of 15-20
+    * Durability: 15 of 20
     * Increase Maximum Life 3-5%
 
 ### Bverrit Keep (Bverrit Keep)
@@ -94,7 +94,7 @@
     * Magic Damage Reduced by 10
     * +80-120% Enhanced Defense
     * +30% Faster Block Rate
-    * Durability: 80-100 of 80-100
+    * Durability: 80 of 100
     * Damage Reduced by 10
     * Requirements --20%
 
@@ -121,11 +121,7 @@
     * Attacker Takes Damage of 150
     * +50 to Energy
     * +10-15 to Strength
-<<<<<<< HEAD
     * Unknown property: pois-len (100)
-=======
-    * poisonlength: 100
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * Damage Reduced by 5-10%
 
 ### Moser's Blessed Circle (Mosers Blessed Circle)
@@ -143,15 +139,15 @@
 * **Base Item:** Scutum
 * **Level Requirement:** 35
 * **Properties:**
-    * Adds 1-501-1-501 Lightning Damage
+    * Adds 1-501 Lightning Damage
     * +20% Faster Block Rate
     * Cannot Be Frozen
     * Lightning Resist +50%
     * 150% Bonus to Attack Rating
     * +160-220% Enhanced Defense
     * +10% Faster Block Rate
-    * 75-30% Chance to cast level 75-30 Blizzard when struck
-    * 50-40% Chance to cast level 50-40 Twister when struck
+    * 75% Chance to cast level 30 Blizzard when struck
+    * 50% Chance to cast level 40 Twister when struck
     * +60% Faster Run/Walk
     * +25 to Vitality
 
@@ -159,14 +155,14 @@
 * **Base Item:** Dragon Shield
 * **Level Requirement:** 38
 * **Properties:**
-    * Adds 200-250-200-250 Cold Damage
-    * Adds 200-250-200-250 Fire Damage
-    * Adds 1-301-1-301 Lightning Damage
+    * Adds 200-250 Cold Damage
+    * Adds 200-250 Fire Damage
+    * Adds 1-301 Lightning Damage
     * All Resistances +35-45
     * +140-200% Enhanced Defense
     * 50% Chance to cast level 50 Frost Nova when struck
-    * 50-40% Chance to cast level 50-40 Nova when struck
-    * 33-63% Chance to cast level 33-63 Hydra when struck
+    * 50% Chance to cast level 40 Nova when struck
+    * 33% Chance to cast level 63 Hydra when struck
     * Durability: 40 of 40
     * +55% Faster Hit Recovery
     * Damage Reduced by 12-16
@@ -189,7 +185,7 @@
 * **Base Item:** Ancient Shield
 * **Level Requirement:** 50
 * **Properties:**
-    * 25-30% Chance to cast level 25-30 Poison Nova when you Kill an Enemy
+    * 25% Chance to cast level 30 Poison Nova when you Kill an Enemy
     * Poison Resist +75%
     * +160-200% Enhanced Defense
     * +20% Faster Block Rate
@@ -258,19 +254,15 @@
 * **Properties:**
     * +150-180% Enhanced Defense
     * Slows Target by 40%
-    * 33-20% Chance to cast level 33-20 Decrepify when struck
+    * 33% Chance to cast level 20 Decrepify when struck
     * 5-9% Life stolen per hit
-    * 100-44% Chance to cast level 100-44 Nova when you Die
+    * 100% Chance to cast level 44 Nova when you Die
     * Cold Resist +40-80%
     * Requirements --30%
     * Damage Reduced by 20-30%
     * +1 to All Skills
     * +2 to Random Class Skill Levels
-<<<<<<< HEAD
     * 33% Chance to cast level 40 Frost Nova when struck
-=======
-    * 33-40% Chance to cast level 33-40 Frost Nova when struck
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
 
 ### Spirit Ward (Spirit Ward)
 * **Base Item:** Ward
@@ -281,7 +273,7 @@
     * All Resistances +30-40
     * +20-30% Faster Block Rate
     * +25% Faster Block Rate
-    * 35-8% Chance to cast level 35-8 Fade when struck
+    * 35% Chance to cast level 8 Fade when struck
     * Requirements --30%
     * +2 to Random Class Skill Levels
     * +25% Faster Cast Rate

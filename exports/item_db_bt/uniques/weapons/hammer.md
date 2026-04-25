@@ -9,11 +9,7 @@
     * +100% Damage to Undead
     * +150% Damage to Demons
     * +10 to Strength
-<<<<<<< HEAD
     * Unknown property: *enr (-5)
-=======
-    * Unknown Prop: *enr
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
 
 ### Bonesnap (Bonesob)
 * **Base Item:** Maul
@@ -52,7 +48,7 @@
 * **Base Item:** Battle Hammer
 * **Level Requirement:** 43
 * **Properties:**
-    * 50-20% Chance to cast level 50-20 Fissure on striking
+    * 50% Chance to cast level 20 Fissure on striking
     * Knockback
     * +30% Increased Attack Speed
     * +180% Enhanced Damage
@@ -78,10 +74,10 @@
 * **Base Item:** Martel de Fer
 * **Level Requirement:** 45
 * **Properties:**
-    * 20-22% Chance to cast level 20-22 Amplify Damage on striking
+    * 20% Chance to cast level 22 Amplify Damage on striking
     * Attacker Takes Damage of 26
-    * Repairs 1 durability in  seconds
-    * Adds 12-30-12-30 Damage
+    * Repairs 1 durability in 5 seconds
+    * Adds 12-30 Damage
     * +200-250% Enhanced Damage
     * +8 to Amplify Damage
 
@@ -91,26 +87,26 @@
 * **Properties:**
     * 20% Chance to cast level 20 Static Field on striking
     * +100 to Life
-    * + to Attack Rating (Based on Character Level)
+    * (8.0 per clvl) to Attack Rating (Based on Character Level)
     * Lightning Resist +75%
     * +60% Increased Attack Speed
-    * + to Maximum Damage (Based on Character Level)
-    * Repairs 1 durability in  seconds
+    * (2.0 per clvl) to Maximum Damage (Based on Character Level)
+    * Repairs 1 durability in 5 seconds
     * +350% Enhanced Damage
-    * Adds 50-200-50-200 Lightning Damage
+    * Adds 50-200 Lightning Damage
 
 ### The Cranium Basher (The Cranium Basher)
 * **Base Item:** Thunder Maul
 * **Level Requirement:** 87
 * **Properties:**
     * +60% Increased Attack Speed
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * +25-30 to Strength
     * All Resistances +25-35
     * 75% Chance of Crushing Blow
-    * 100-50% Chance to cast level 100-50 Twister when you Kill an Enemy
+    * 100% Chance to cast level 50 Twister when you Kill an Enemy
     * +250-300% Enhanced Damage
-    * 30-22% Chance to cast level 30-22 Amplify Damage on striking
+    * 30% Chance to cast level 22 Amplify Damage on striking
     * Requirements --50--20%
     * 4-6% Life stolen per hit
 
@@ -133,9 +129,9 @@
     * +200-300% Enhanced Damage
     * 50% Chance of Crushing Blow
     * +60% Increased Attack Speed
-    * 40-44% Chance to cast level 40-44 Twister on striking
+    * 40% Chance to cast level 44 Twister on striking
     * +30% Faster Run/Walk
-    * 50-40% Chance to cast level 50-40 Tornado when you Kill an Enemy
+    * 50% Chance to cast level 40 Tornado when you Kill an Enemy
 
 ### Earth Shifter (Earthshifter)
 * **Base Item:** Thunder Maul
@@ -148,7 +144,7 @@
     * +14 to Volcano
     * +7 to Elemental Skills
     * +60% Faster Cast Rate
-    * 10-5% Chance to cast level 10-5 Lower Resist on striking
+    * 10% Chance to cast level 5 Lower Resist on striking
     * Requirements --50--30%
     * 6% Mana stolen per hit
 

@@ -266,7 +266,4 @@
 ### rift 7
 - `Id`: $\\color{gray}{\\text{145}}$ (Old) &rarr; $\\color{blue}{\\text{146}}$ (New)
 - `Vis0`: $\\color{gray}{\\text{143}}$ (Old) &rarr; $\\color{blue}{\\text{144}}$ (New)
-<<<<<<< HEAD
-=======
 
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)

@@ -76,7 +76,4 @@
 
 ### 123
 - `ExpRatio`: $\\color{gray}{\\text{11}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
-<<<<<<< HEAD
-=======
 
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)

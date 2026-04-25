@@ -21,17 +21,10 @@
     * Lightning Resist +40%
     * +80 to Mana
     * +30% Faster Cast Rate
-<<<<<<< HEAD
     * +1-3 to Corpse Explosion (Necromancer only)
     * +1-3 to Bone Armor (Necromancer only)
     * +1-3 to Amplify Damage (Necromancer only)
     * +1-3 to Dim Vision (Necromancer only)
-=======
-    * +1-3 to Corpse Explosion (Class only)
-    * +1-3 to Bone Armor (Class only)
-    * +1-3 to Amplify Damage (Class only)
-    * +1-3 to Dim Vision (Class only)
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * +1-2 to Necromancer Skill Levels
 
 ### Gravenspine (Gravenspine)
@@ -52,13 +45,8 @@
     * +2-3 to Necromancer Skill Levels
     * +80 to Mana
     * +40% Faster Cast Rate
-<<<<<<< HEAD
     * +3 to Skeleton Mastery (Necromancer only)
     * +2-3 to Decrepify (Necromancer only)
-=======
-    * +3 to Skeleton Mastery (Class only)
-    * +2-3 to Decrepify (Class only)
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
 
 ### Suicide Branch (Suicide Branch)
 * **Base Item:** Burnt Wand
@@ -77,9 +65,9 @@
 * **Base Item:** Petrified Wand
 * **Level Requirement:** 35
 * **Properties:**
-    * + to Life (Based on Character Level)
+    * (1.2 per clvl) to Life (Based on Character Level)
     * +30-40% Faster Cast Rate
-    * + to Mana (Based on Character Level)
+    * (1.2 per clvl) to Mana (Based on Character Level)
     * +30% Faster Hit Recovery
     * Replenish Life +30
     * +1-3 to Necromancer Skill Levels
@@ -90,22 +78,15 @@
 * **Level Requirement:** 36
 * **Properties:**
     * +1-4 to Summoning Skills
-    * 15-40% Chance to cast level 15-40 Bone Spirit when struck
-    * + to Mana (Based on Character Level)
-    * 15-30% Chance to cast level 15-30 Bone Armor when struck
+    * 15% Chance to cast level 40 Bone Spirit when struck
+    * (1.2 per clvl) to Mana (Based on Character Level)
+    * 15% Chance to cast level 30 Bone Armor when struck
     * +30% Faster Cast Rate
     * +1-2 to Poison and Bone Skills
-<<<<<<< HEAD
     * +2 to Corpse Explosion (Necromancer only)
     * +2 to Summon Resist (Necromancer only)
     * +3 to Skeleton Mastery (Necromancer only)
     * +3 to Raise Skeleton (Necromancer only)
-=======
-    * +2 to Corpse Explosion (Class only)
-    * +2 to Summon Resist (Class only)
-    * +3 to Skeleton Mastery (Class only)
-    * +3 to Raise Skeleton (Class only)
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
 
 ### Blackhand Key (Blackhand Key)
 * **Base Item:** Grave Wand
@@ -129,7 +110,7 @@
     * +7-12 to Mana after each Kill
     * +1-2 to Poison and Bone Skills
     * +20% Faster Cast Rate
-    * 50-10% Chance to cast level 50-10 Lower Resist when you Kill an Enemy
+    * 50% Chance to cast level 10 Lower Resist when you Kill an Enemy
 
 ### Boneshade (Boneshade)
 * **Base Item:** Lich Wand
@@ -137,19 +118,11 @@
 * **Properties:**
     * +2 to Necromancer Skill Levels
     * +30% Faster Cast Rate
-<<<<<<< HEAD
     * +4-5 to Teeth (Necromancer only)
     * +4-5 to Bone Armor (Necromancer only)
     * +2-3 to Bone Spear (Necromancer only)
     * +1-2 to Bone Spirit (Necromancer only)
     * +2-3 to Bone Wall (Necromancer only)
-=======
-    * +4-5 to Teeth (Class only)
-    * +4-5 to Bone Armor (Class only)
-    * +2-3 to Bone Spear (Class only)
-    * +1-2 to Bone Spirit (Class only)
-    * +2-3 to Bone Wall (Class only)
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
 
 ### Resistbreaker (Resistbreaker)
 * **Base Item:** Polished Wand

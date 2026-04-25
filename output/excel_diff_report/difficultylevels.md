@@ -10,7 +10,4 @@
 
 ### normal
 - `ResistPenalty`: $\\color{gray}{\\text{-70}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
-<<<<<<< HEAD
-=======
 
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)

@@ -31,7 +31,7 @@
     * +10 to Dexterity
     * 7% Mana stolen per hit
     * +190% Enhanced Damage
-    * Adds 20-40-20-40 Damage
+    * Adds 20-40 Damage
     * +40% Increased Attack Speed
     * +10 to Vitality
 
@@ -51,10 +51,10 @@
 * **Properties:**
     * 50% Deadly Strike
     * 10% Better Chance of Getting Magic Items
-    * Adds 3-6-3-6 Cold Damage
+    * Adds 3-6 Cold Damage
     * +100% Enhanced Damage
     * Durability: 25 of 25
-    * Adds 5-10-5-10 Magic Damage
+    * Adds 5-10 Magic Damage
 
 ### Griswold's Edge (Griswolds Edge)
 * **Base Item:** Broad Sword
@@ -132,11 +132,7 @@
     * +30% Increased Attack Speed
     * Poison Resist +50%
     * +180% Enhanced Damage
-<<<<<<< HEAD
     * Unknown property: *hp (-10)
-=======
-    * Unknown Prop: *hp
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * +20 to Strength
 
 ### Ripsaw (Ripsaw)
@@ -167,16 +163,12 @@
 * **Base Item:** Gladius
 * **Level Requirement:** 30
 * **Properties:**
-    * Adds 50-80-50-80 Damage
+    * Adds 50-80 Damage
     * +20% Faster Run/Walk
     * 8% Life stolen per hit
     * +30% Increased Attack Speed
     * +200% Enhanced Damage
-<<<<<<< HEAD
     * +2-4 to Whirlwind (Barbarian only)
-=======
-    * +2-4 to Whirlwind (Class only)
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * +1-3 to Combat Masteries Skills
     * Durability: 30 of 30
 
@@ -211,8 +203,8 @@
 * **Level Requirement:** 35
 * **Properties:**
     * 150% Extra Gold from Monsters
-    * % Extra Gold from Monsters (Based on Character Level)
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (2.5% per clvl) Extra Gold from Monsters (Based on Character Level)
+    * (1.0% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
     * +15 to Mana
     * +60-120% Enhanced Damage
     * +5-15 to Dexterity
@@ -223,7 +215,7 @@
 * **Properties:**
     * Magic Damage Reduced by 7-12
     * +40% Increased Attack Speed
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * Durability: 40 of 40
     * Damage +100
     * +200% Enhanced Damage
@@ -235,8 +227,8 @@
 * **Properties:**
     * Prevent Monster Heal
     * +15 to Strength
-    * % Deadly Strike (Based on Character Level)
-    * + to Maximum Damage (Based on Character Level)
+    * (1.5% per clvl) Deadly Strike (Based on Character Level)
+    * (1.0 per clvl) to Maximum Damage (Based on Character Level)
     * +200% Enhanced Damage
     * +30% Increased Attack Speed
 
@@ -244,16 +236,12 @@
 * **Base Item:** Rune Sword
 * **Level Requirement:** 41
 * **Properties:**
-    * 40-20% Chance to cast level 40-20 Poison Nova on striking
+    * 40% Chance to cast level 20 Poison Nova on striking
     * Adds 491-491 Poison Damage Over 491 Seconds
     * -5-15% to Enemy Poison Resistance
     * +20% Increased Attack Speed
     * Poison Resist +45%
-<<<<<<< HEAD
     * +5 to Rabies (Druid only)
-=======
-    * +5 to Rabies (Class only)
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
 
 ### The Atlantean (The Atlantian)
 * **Base Item:** Ancient Sword
@@ -285,10 +273,10 @@
 * **Level Requirement:** 43
 * **Properties:**
     * Requirements --30%
-    * Adds 100-200-100-200 Cold Damage
+    * Adds 100-200 Cold Damage
     * +20 to Strength
     * Freezes Target +2
-    * 50-17% Chance to cast level 50-17 Frozen Orb on striking
+    * 50% Chance to cast level 17 Frozen Orb on striking
     * +150-200% Enhanced Damage
     * +20% Increased Attack Speed
 
@@ -296,8 +284,8 @@
 * **Base Item:** Tusk Sword
 * **Level Requirement:** 44
 * **Properties:**
-    * 20-22% Chance to cast level 20-22 Amplify Damage on striking
-    * +% Damage to Undead (Based on Character Level)
+    * 20% Chance to cast level 22 Amplify Damage on striking
+    * (7.5% per clvl) Damage to Undead (Based on Character Level)
     * Poison Resist +50%
     * Adds 426-426 Poison Damage Over 426 Seconds
     * +200% Enhanced Damage
@@ -307,8 +295,8 @@
 * **Base Item:** Gothic Sword
 * **Level Requirement:** 45
 * **Properties:**
-    * 50-25% Chance to cast level 50-25 Fist of the Heavens on striking
-    * Adds 1-400-1-400 Lightning Damage
+    * 50% Chance to cast level 25 Fist of the Heavens on striking
+    * Adds 1-400 Lightning Damage
     * +200 Defense vs. Melee
     * +10% to Maximum Lightning Resist
     * +150-200% Enhanced Damage
@@ -321,7 +309,7 @@
 * **Base Item:** Zweihander
 * **Level Requirement:** 46
 * **Properties:**
-    * Adds 50-200-50-200 Fire Damage
+    * Adds 50-200 Fire Damage
     * Fire Resist +40%
     * Fire Absorb 10%
     * Level 10-12 Holy Fire Aura When Equipped
@@ -351,7 +339,7 @@
 * **Base Item:** Phase Blade
 * **Level Requirement:** 58
 * **Properties:**
-    * 50-35% Chance to cast level 50-35 Chain Lightning on attack
+    * 50% Chance to cast level 35 Chain Lightning on attack
     * Ignore Target's Defense
     * +25 Lightning Absorb
     * +40% Increased Attack Speed
@@ -359,7 +347,7 @@
     * +1 to Resist Lightning
     * 5-7% Mana stolen per hit
     * +150-200% Enhanced Damage
-    * Adds 75-100-75-100 Damage
+    * Adds 75-100 Damage
     * -10% to Enemy Lightning Resistance
 
 ### Doombringer (Doombringer)
@@ -369,12 +357,12 @@
     * Increase Maximum Life 20%
     * +200-280% Enhanced Damage
     * 40% Bonus to Attack Rating
-    * Repairs 1 durability in  seconds
-    * Adds 100-200-100-200 Damage
-    * 33-35% Chance to cast level 33-35 Glacial Spike on striking
+    * Repairs 1 durability in 5 seconds
+    * Adds 100-200 Damage
+    * 33% Chance to cast level 35 Glacial Spike on striking
     * 5-7% Life stolen per hit
     * +40% Increased Attack Speed
-    * 10-60% Chance to cast level 10-60 Chilling Armor when struck
+    * 10% Chance to cast level 60 Chilling Armor when struck
 
 ### The Grandfather (The Grandfather)
 * **Base Item:** Colossus Blade
@@ -383,8 +371,8 @@
     * +20-30 to all Attributes
     * -10-20% to Enemy Physical Resistance
     * +100 to Life
-    * + to Maximum Damage (Based on Character Level)
-    * Repairs 1 durability in  seconds
+    * (2.5 per clvl) to Maximum Damage (Based on Character Level)
+    * Repairs 1 durability in 5 seconds
     * +450% Enhanced Damage
 
 ### Bloodmoon (Bloodmoon)
@@ -416,23 +404,23 @@
     * -10% to Enemy Cold Resistance
     * +230-270% Enhanced Damage
     * Level 10-18 Holy Freeze Aura When Equipped
-    * Adds 250-500-250-500 Cold Damage
+    * Adds 250-500 Cold Damage
     * +30% Increased Attack Speed
     * +5-10 to all Attributes
     * +2 to All Skills
     * Cold Absorb 25%
     * 40% Chance to cast level 40 Blizzard on attack
-    * Adds 250-500-250-500 Magic Damage
+    * Adds 250-500 Magic Damage
 
 ### Flamebellow (Flamebellow)
 * **Base Item:** Balrog Blade
 * **Level Requirement:** 71
 * **Properties:**
     * +170-240% Enhanced Damage
-    * 100-60% Chance to cast level 100-60 Molten Boulder when you Kill an Enemy
+    * 100% Chance to cast level 60 Molten Boulder when you Kill an Enemy
     * +1-3 to Fire Skills
     * +20-30 Fire Absorb
-    * 20-60% Chance to cast level 20-60 Firestorm on attack
+    * 20% Chance to cast level 60 Firestorm on attack
     * +1 to Fire Mastery
     * +15-20 to all Attributes
     * +12-18 to Inferno
@@ -446,27 +434,23 @@
     * +180-230% Enhanced Damage
     * Freezes Target +4
     * Cannot Be Frozen
-    * Adds 237-486-237-486 Cold Damage
+    * Adds 237-486 Cold Damage
     * +25% Increased Attack Speed
     * +7-15 Cold Absorb
-    * 25-10% Chance to cast level 25-10 Lower Resist on attack
-    * 25-30% Chance to cast level 25-30 Frozen Orb on attack
+    * 25% Chance to cast level 10 Lower Resist on attack
+    * 25% Chance to cast level 30 Frozen Orb on attack
     * -25-40% to Enemy Cold Resistance
 
 ### Dreadfang (Dreadfang)
 * **Base Item:** Legend Sword
 * **Level Requirement:** 61
 * **Properties:**
-    * 33-22% Chance to cast level 33-22 Amplify Damage on striking
+    * 33% Chance to cast level 22 Amplify Damage on striking
     * +33% Increased Attack Speed
     * +150-280% Enhanced Damage
     * 3-6% Mana stolen per hit
     * 33% Deadly Strike
-<<<<<<< HEAD
     * +3 to Mirrored Blades (Warlock only)
-=======
-    * +3 to Mirrored Blades (Class only)
->>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * 33% Bonus to Attack Rating
     * Requirements --33%
 
@@ -488,11 +472,11 @@
 * **Properties:**
     * +20% Increased Attack Speed
     * +200-250% Enhanced Damage
-    * Adds 1-480-1-480 Lightning Damage
+    * Adds 1-480 Lightning Damage
     * +1 to Zeal
     * Prevent Monster Heal
-    * 30-40% Chance to cast level 30-40 Chain Lightning on striking
-    * 20-12% Chance to cast level 20-12 Static Field on striking
+    * 30% Chance to cast level 40 Chain Lightning on striking
+    * 20% Chance to cast level 12 Static Field on striking
     * -10-15% to Enemy Lightning Resistance
 
 ### Slayer's Edge (Slayer's Edge)
@@ -514,7 +498,7 @@
 * **Properties:**
     * Indestructible
     * +300-350% Enhanced Damage
-    * + to Maximum Damage (Based on Character Level)
+    * (2.5 per clvl) to Maximum Damage (Based on Character Level)
     * 250% Bonus to Attack Rating
     * +20 to Strength
     * +20 to Dexterity
@@ -529,8 +513,8 @@
 * **Properties:**
     * 50% Deadly Strike
     * 25% Better Chance of Getting Magic Items
-    * Adds 30-60-30-60 Cold Damage
+    * Adds 30-60 Cold Damage
     * +100-200% Enhanced Damage
     * Durability: 25 of 25
-    * Adds 50-100-50-100 Magic Damage
+    * Adds 50-100 Magic Damage
 

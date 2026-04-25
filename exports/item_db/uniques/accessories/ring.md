@@ -85,7 +85,7 @@
 * **Level Requirement:** 76
 * **Properties:**
     * +10-20 Lightning Absorb
-    * 25-32% Chance to cast level 25-32 Lightning on striking
+    * 25% Chance to cast level 32 Lightning on striking
     * 10-20% Better Chance of Getting Magic Items
     * +5 to Heart of Wolverine
     * Lightning Resist +10-30%
@@ -97,9 +97,9 @@
     * +100-160 Defense vs. Missile
     * 6-9% Life stolen per hit
     * Poison Resist +55%
-    * 20-30% Chance to cast level 20-30 Poison Nova on striking
+    * 20% Chance to cast level 30 Poison Nova on striking
     * +21 to Poison Creeper
-    * 20-25% Chance to cast level 20-25 Twister on striking
+    * 20% Chance to cast level 25 Twister on striking
     * 40% Damage Taken Goes To Mana
     * +150-250 to Attack Rating
     * Poison Length Reduced by 100%
@@ -119,7 +119,7 @@
 * **Base Item:** Ring
 * **Level Requirement:** 50
 * **Properties:**
-    * 20-30% Chance to cast level 20-30 Flame Wave on attack
+    * 20% Chance to cast level 30 Flame Wave on attack
     * +3-5% to Magic Skill Damage / +20-40% Enhanced Damage / +3-5% to Fire Skill Damage / +3-5% to Cold Skill Damage / +3-5% to Lightning Skill Damage / +3-5% to Poison Skill Damage
     * +10% Faster Cast Rate
     * All Resistances +6-11
