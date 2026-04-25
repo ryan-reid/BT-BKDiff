@@ -24,9 +24,10 @@ def strip_json_comments(text: str) -> str:
     return text
 
 class D2Repository:
-    def __init__(self, mpq_path: str, retail_path: Optional[str] = None):
+    def __init__(self, mpq_path: str):
         self.mpq_path: str = mpq_path
-        self.retail_path: Optional[str] = retail_path
+        # Supplemental files should be placed in data/retail/ within the repo
+        self.supplemental_path: str = os.path.join(os.path.dirname(__file__), "..", "data", "retail")
         self.strings: Dict[str, str] = {}
         self.excel_cache: Dict[str, List[Dict[str, str]]] = {}
         self._load_strings()
@@ -39,17 +40,16 @@ class D2Repository:
         if os.path.exists(mod_string_dir):
             mod_files = {f: os.path.join(mod_string_dir, f) for f in os.listdir(mod_string_dir) if f.endswith(".json")}
 
-        # 2. Map supplemental files from retail that don't exist in the mod
-        retail_files = {}
-        if self.retail_path:
-            retail_string_dir = os.path.join(self.retail_path, "local", "lng", "strings")
-            if os.path.exists(retail_string_dir):
-                retail_files = {f: os.path.join(retail_string_dir, f) for f in os.listdir(retail_string_dir) 
-                                if f.endswith(".json") and f not in mod_files}
+        # 2. Map supplemental files from local data/retail that don't exist in the mod
+        supp_files = {}
+        supp_string_dir = os.path.join(self.supplemental_path, "local", "lng", "strings")
+        if os.path.exists(supp_string_dir):
+            supp_files = {f: os.path.join(supp_string_dir, f) for f in os.listdir(supp_string_dir) 
+                            if f.endswith(".json") and f not in mod_files}
 
         # 3. Load all files. Files present in the mod are used exclusively for their filename.
-        # Retail files are only used if the filename is missing from the mod.
-        all_files = {**retail_files, **mod_files}
+        # Supplemental files are only used if the filename is missing from the mod.
+        all_files = {**supp_files, **mod_files}
         
         for filename, filepath in all_files.items():
             try:
@@ -59,8 +59,6 @@ class D2Repository:
                     data = json.loads(clean_content)
                     for entry in data:
                         if "Key" in entry and "enUS" in entry:
-                            # We don't overwrite if a previous file already defined the key, 
-                            # though file-level isolation should minimize this.
                             if entry["Key"] not in self.strings:
                                 self.strings[entry["Key"]] = entry["enUS"]
             except Exception as e:
@@ -104,11 +102,11 @@ class D2Repository:
         if os.path.exists(filepath):
             data = self.load_tsv(filepath)
         
-        # 2. Try Retail Fallback ONLY if file is missing from mod
-        if not data and self.retail_path:
-            retail_file = os.path.join(self.retail_path, "global", "excel", f"{table_name}.txt")
-            if os.path.exists(retail_file):
-                data = self.load_tsv(retail_file)
+        # 2. Try Supplemental Fallback ONLY if file is missing from mod
+        if not data:
+            supp_file = os.path.join(self.supplemental_path, "global", "excel", f"{table_name}.txt")
+            if os.path.exists(supp_file):
+                data = self.load_tsv(supp_file)
         
         self.excel_cache[table_name] = data
         return data
