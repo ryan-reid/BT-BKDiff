@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Ritual",
+    "runes": [
+      "Amn Rune (11)",
+      "Shael Rune (13)",
+      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Knife"
+    ],
+    "properties": [
+      {
+        "code": "gethit-skill",
+        "param": "Sigil Death",
+        "min_val": "20",
+        "max_val": "16",
+        "resolved_text": "20% Chance to cast level 16 Sigil: Death when struck"
+      },
+      {
+        "code": "swing1",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Increased Attack Speed"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "270",
+        "resolved_text": "+200-270% Enhanced Damage"
+      },
+      {
+        "code": "dmg-demon",
+        "param": "",
+        "min_val": "150",
+        "max_val": "250",
+        "resolved_text": "+150-250% Damage to Demons"
+      },
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "260",
+        "resolved_text": "200-260% Bonus to Attack Rating"
+      },
+      {
+        "code": "heal-kill",
+        "param": "",
+        "min_val": "3",
+        "max_val": "5",
+        "resolved_text": "+3-5 Life after each Kill"
+      },
+      {
+        "code": "ease",
+        "param": "",
+        "min_val": "-50",
+        "max_val": "-50",
+        "resolved_text": "Requirements --50%"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword182",
+      "*Rune Name": "Ritual",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "knif",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "AmnShaelOhm",
+      "Rune1": "r11",
+      "Rune2": "r13",
+      "Rune3": "r27",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "gethit-skill",
+      "T1Param1": "Sigil Death",
+      "T1Min1": "20",
+      "T1Max1": "16",
+      "T1Code2": "swing1",
+      "T1Param2": "",
+      "T1Min2": "20",
+      "T1Max2": "20",
+      "T1Code3": "dmg%",
+      "T1Param3": "",
+      "T1Min3": "200",
+      "T1Max3": "270",
+      "T1Code4": "dmg-demon",
+      "T1Param4": "",
+      "T1Min4": "150",
+      "T1Max4": "250",
+      "T1Code5": "att%",
+      "T1Param5": "",
+      "T1Min5": "200",
+      "T1Max5": "260",
+      "T1Code6": "heal-kill",
+      "T1Param6": "",
+      "T1Min6": "3",
+      "T1Max6": "5",
+      "T1Code7": "ease",
+      "T1Param7": "",
+      "T1Min7": "-50",
+      "T1Max7": "-50",
+      "*eol": "0"
+    }
+  }
+]

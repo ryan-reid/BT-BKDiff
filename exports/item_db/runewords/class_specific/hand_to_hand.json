@@ -1,0 +1,236 @@
+[
+  {
+    "name": "Chaos",
+    "runes": [
+      "Fal Rune (19)",
+      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
+      "\u2022Um Rune (22)\u2022"
+    ],
+    "base_items": [
+      "Hand to Hand"
+    ],
+    "properties": [
+      {
+        "code": "demon-heal",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15 Life after each Demon Kill"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "240",
+        "max_val": "290",
+        "resolved_text": "+240-290% Enhanced Damage"
+      },
+      {
+        "code": "dmg-mag",
+        "param": "",
+        "min_val": "216",
+        "max_val": "471",
+        "resolved_text": "Adds 216-471 Magic Damage"
+      },
+      {
+        "code": "oskill",
+        "param": "Whirlwind",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5 to Whirlwind"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "35",
+        "max_val": "40",
+        "resolved_text": "+35-40% Increased Attack Speed"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Frozen Orb",
+        "min_val": "25",
+        "max_val": "26",
+        "resolved_text": "25% Chance to cast level 26 Frozen Orb when struck"
+      },
+      {
+        "code": "rep-dur",
+        "param": "100",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "Repairs 1 durability in 100 seconds"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword16",
+      "*Rune Name": "Chaos",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "h2h",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "FalOhmUm",
+      "Rune1": "r19",
+      "Rune2": "r27",
+      "Rune3": "r22",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "demon-heal",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "15",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "240",
+      "T1Max2": "290",
+      "T1Code3": "dmg-mag",
+      "T1Param3": "",
+      "T1Min3": "216",
+      "T1Max3": "471",
+      "T1Code4": "oskill",
+      "T1Param4": "Whirlwind",
+      "T1Min4": "5",
+      "T1Max4": "5",
+      "T1Code5": "swing2",
+      "T1Param5": "",
+      "T1Min5": "35",
+      "T1Max5": "40",
+      "T1Code6": "gethit-skill",
+      "T1Param6": "Frozen Orb",
+      "T1Min6": "25",
+      "T1Max6": "26",
+      "T1Code7": "rep-dur",
+      "T1Param7": "100",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Pattern",
+    "runes": [
+      "Tal Rune (7)",
+      "Ort Rune (9)",
+      "Thul Rune (10)"
+    ],
+    "base_items": [
+      "Hand to Hand"
+    ],
+    "properties": [
+      {
+        "code": "swing1",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15% Increased Attack Speed"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "80",
+        "max_val": "120",
+        "resolved_text": "+80-120% Enhanced Damage"
+      },
+      {
+        "code": "dmg-elem",
+        "param": "",
+        "min_val": "100",
+        "max_val": "100",
+        "resolved_text": "Adds 100-100 Fire/Lightning/Cold Damage"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "All Resistances +15"
+      },
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15 to Strength"
+      },
+      {
+        "code": "dex",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15 to Dexterity"
+      },
+      {
+        "code": "skilltab",
+        "param": "20",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Martial Arts Skills"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword97",
+      "*Rune Name": "Pattern",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "h2h",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "TalOrtThul",
+      "Rune1": "r07",
+      "Rune2": "r09",
+      "Rune3": "r10",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "swing1",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "15",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "80",
+      "T1Max2": "120",
+      "T1Code3": "dmg-elem",
+      "T1Param3": "",
+      "T1Min3": "100",
+      "T1Max3": "100",
+      "T1Code4": "res-all",
+      "T1Param4": "",
+      "T1Min4": "15",
+      "T1Max4": "15",
+      "T1Code5": "str",
+      "T1Param5": "",
+      "T1Min5": "15",
+      "T1Max5": "15",
+      "T1Code6": "dex",
+      "T1Param6": "",
+      "T1Min6": "15",
+      "T1Max6": "15",
+      "T1Code7": "skilltab",
+      "T1Param7": "20",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  }
+]

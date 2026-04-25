@@ -1,45 +1,45 @@
 # Set Gloves
 
 ### Cleglaw's Pincers (Cleglaw's Pincers)
-* **Set:** Cleglaw's Brace
 * **Base Item:** Chain Gloves
+* **Level Requirement:** 1
 * **Properties:**
     * Fire Resist +10%
     * Slows Target by 25%
     * +20% Increased Attack Speed
 
 ### Iratha's Cuff (Iratha's Cuff)
-* **Set:** Iratha's Finery
 * **Base Item:** Light Gauntlets
+* **Level Requirement:** 1
 * **Properties:**
     * Cold Resist +30%
     * Adds 1-20 Lightning Damage
     * +15 to Life
 
 ### Sigon's Gage (Sigon's Gage)
-* **Set:** Sigon's Complete Steel
 * **Base Item:** Gauntlets
+* **Level Requirement:** 1
 * **Properties:**
     * +20 to Strength
     * +60 to Attack Rating
 
 ### Death's Hand (Death's Hand)
-* **Set:** Death's Disguise
 * **Base Item:** Leather Gloves
+* **Level Requirement:** 1
 * **Properties:**
     * Poison Resist +50%
     * Poison Length Reduced by 75%
 
 ### Arctic Mitts (Arctic Mitts)
-* **Set:** Arctic Gear
 * **Base Item:** Light Gauntlets
+* **Level Requirement:** 1
 * **Properties:**
     * +30 to Life
     * +20% Increased Attack Speed
 
 ### Immortal King's Forge (Immortal King's Forge)
-* **Set:** Immortal King
 * **Base Item:** War Gauntlets
+* **Level Requirement:** 30
 * **Properties:**
     * +65 Defense
     * +20-30 to Strength
@@ -48,8 +48,8 @@
     * +40 to Life
 
 ### Trang-Oul's Claws (Trang-Oul's Claws)
-* **Set:** Trang-Oul's Avatar
 * **Base Item:** Heavy Bracers
+* **Level Requirement:** 45
 * **Properties:**
     * +30 Defense
     * +20% Faster Cast Rate
@@ -57,8 +57,8 @@
     * +2 to Curses Skills
 
 ### M'avina's Icy Clutch (M'avina's Icy Clutch)
-* **Set:** M'avina's Battle Hymn
 * **Base Item:** Battle Gauntlets
+* **Level Requirement:** 32
 * **Properties:**
     * +45-50 Defense
     * Adds 100-100 Cold Damage
@@ -68,8 +68,8 @@
     * +20-30 to Dexterity
 
 ### Laying of Hands (Laying of Hands)
-* **Set:** The Disciple
 * **Base Item:** Bramble Mitts
+* **Level Requirement:** 56
 * **Properties:**
     * +25 Defense
     * +20% Increased Attack Speed
@@ -78,8 +78,8 @@
     * 10% Chance to cast level 16 Holy Bolt on striking
 
 ### Magnus' Skin (Magnus' Skin)
-* **Set:** Orphan's Call
 * **Base Item:** Sharkskin Gloves
+* **Level Requirement:** 35
 * **Properties:**
     * +50% Enhanced Defense
     * Fire Resist +25%
@@ -87,17 +87,17 @@
     * +500 to Attack Rating
 
 ### Sander's Taboo (McAuley's Taboo)
-* **Set:** McAuley's Folly
 * **Base Item:** Heavy Gloves
+* **Level Requirement:** 24
 * **Properties:**
     * +10% Faster Cast Rate
     * +3 to Mana after each Kill
     * +40 to Life
-    * +2 to Teeth (Class 67 only)
+    * +2 to Teeth (Necromancer only)
 
 ### Sigurd's Grip (Sigurd's Grip)
-* **Set:** Sigurds Nobility
 * **Base Item:** Ogre Gauntlets
+* **Level Requirement:** 85
 * **Properties:**
     * +50% Strength
     * +30% Increased Attack Speed
@@ -109,8 +109,8 @@
     * Requirements -20%
 
 ### Comfortable Mittens (Comfortable Mittens)
-* **Set:** Royal Guard
 * **Base Item:** Crusader Gauntlets
+* **Level Requirement:** 85
 * **Properties:**
     * +50-100% Enhanced Defense
     * +10-30 to Energy
@@ -122,8 +122,8 @@
     * +75-100% Damage to Undead
 
 ### Immortal King's Irons (Immortal King's Irons)
-* **Set:** Bul Katho's Embodiment
 * **Base Item:** War Gauntlets
+* **Level Requirement:** 95
 * **Properties:**
     * +20% Increased Attack Speed
     * +1-3  to Barbarian Skill Levels
@@ -135,8 +135,8 @@
     * +3-5% Strength
 
 ### Trang-Oul's Sharp Claws (Trang-Oul's Sharp Claws)
-* **Set:** Trang-Oul's Incarnation
 * **Base Item:** Heavy Bracers
+* **Level Requirement:** 85
 * **Properties:**
     * +1-3 to Necromancer Skill Levels
     * -10% to Enemy Poison Resistance
@@ -148,8 +148,8 @@
     * +3-7 to Mana after each Kill
 
 ### M'avina's Guidance (M'avina's Guidance)
-* **Set:** God of War M'avina
 * **Base Item:** Battle Gauntlets
+* **Level Requirement:** 85
 * **Properties:**
     * +25% Increased Attack Speed
     * +50-75% Enhanced Damage

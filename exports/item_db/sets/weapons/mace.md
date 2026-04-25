@@ -1,8 +1,8 @@
 # Set Mace
 
 ### Aldur's Rhythm (Aldur's Gauntlet)
-* **Set:** Aldur's Watchtower
 * **Base Item:** Devil Star
+* **Level Requirement:** 55
 * **Properties:**
     * Adds 50-100 Damage
     * Damage +50-75
@@ -13,10 +13,10 @@
     * +30% Faster Cast Rate
 
 ### Dangoon's Teaching (Dangoon's Teaching)
-* **Set:** Heaven's Brethren
 * **Base Item:** Reinforced Mace
+* **Level Requirement:** 65
 * **Properties:**
-    * + to Maximum Damage (Based on Character Level)
+    * (1.5 per clvl) to Maximum Damage (Based on Character Level)
     * +40% Increased Attack Speed
     * 10% Chance to cast level 20 Meteor on striking
     * Adds 20-30 Fire Damage
@@ -25,8 +25,8 @@
     * +200% Enhanced Damage
 
 ### Aldur's Onslaught (Aldur's Onslaught)
-* **Set:** Aldur's Beacon
 * **Base Item:** Devil Star
+* **Level Requirement:** 85
 * **Properties:**
     * +2-3 to Druid Skill Levels
     * +40-50% Increased Attack Speed

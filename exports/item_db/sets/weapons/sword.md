@@ -1,16 +1,16 @@
 # Set Sword
 
 ### Cleglaw's Tooth (Cleglaw's Tooth)
-* **Set:** Cleglaw's Brace
 * **Base Item:** Long Sword
+* **Level Requirement:** 1
 * **Properties:**
     * 30% Bonus to Attack Rating
     * 75% Deadly Strike
     * Adds 10-10 Damage
 
 ### Isenhart's Lightbrand (Isenhart's Lightbrand)
-* **Set:** Isenhart's Armory
 * **Base Item:** Broad Sword
+* **Level Requirement:** 1
 * **Properties:**
     * +10 to Minimum Damage
     * +20% Increased Attack Speed
@@ -18,38 +18,38 @@
     * +100% Damage to Undead
 
 ### Death's Touch (Death's Touch)
-* **Set:** Death's Disguise
 * **Base Item:** War Sword
+* **Level Requirement:** 1
 * **Properties:**
     * +75% Enhanced Damage
     * 4% Life stolen per hit
     * 4% Mana stolen per hit
     * Requirements --30%
-    * +14 to Maximum Damage (Based on Character Level)
+    * (1.8 per clvl) to Maximum Damage (Based on Character Level)
 
 ### Angelic Sickle (Angelic Sickle)
-* **Set:** Angelical Raiment
 * **Base Item:** Sabre
+* **Level Requirement:** 1
 * **Properties:**
     * +75% Enhanced Damage
     * +250% Damage to Undead
-    * +8% Damage to Undead (Based on Character Level)
+    * (1.0% per clvl) Damage to Undead (Based on Character Level)
 
 ### Sazabi's Cobalt Redeemer (Sazabi's Cobalt Redeemer)
-* **Set:** Sazabi's Grand Tribute
 * **Base Item:** Cryptic Sword
+* **Level Requirement:** 61
 * **Properties:**
     * +250% Enhanced Damage
     * 25% Deadly Strike
     * +40% Increased Attack Speed
     * +318% Damage to Demons
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * +15 to Dexterity
     * +5 to Strength
 
 ### Bul-Kathos' Sacred Charge (Bul-Kathos' Sacred Charge)
-* **Set:** Bul-Kathos' Children
 * **Base Item:** Colossus Blade
+* **Level Requirement:** 64
 * **Properties:**
     * 35% Chance of Crushing Blow
     * All Resistances +10-20
@@ -60,8 +60,8 @@
     * Hit Blinds Target +1
 
 ### Bul-Kathos' Tribal Guardian (Bul-Kathos' Tribal Guardian)
-* **Set:** Bul-Kathos' Children
 * **Base Item:** Colossus Sword
+* **Level Requirement:** 64
 * **Properties:**
     * All Resistances +10-20
     * 20% Chance to cast level 10 Poison Nova on striking
@@ -72,8 +72,8 @@
     * 15% Chance of Open Wounds
 
 ### Immortal King's Savager (Immortal King's Savager)
-* **Set:** Bul Katho's Embodiment
 * **Base Item:** Colossus Blade
+* **Level Requirement:** 95
 * **Properties:**
     * +40% Increased Attack Speed
     * Level 9 Fanaticism Aura When Equipped
@@ -86,8 +86,8 @@
     * Ignore Target's Defense
 
 ### Zireael (Zireael)
-* **Set:** Destiny
 * **Base Item:** Cryptic Sword
+* **Level Requirement:** 85
 * **Properties:**
     * +1-2 to All Skills
     * +20-30% Faster Cast Rate

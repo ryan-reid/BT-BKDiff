@@ -1,0 +1,769 @@
+[
+  {
+    "name": "Ancients' Pledge",
+    "runes": [
+      "Ral Rune (8)",
+      "Ort Rune (9)",
+      "Tal Rune (7)"
+    ],
+    "base_items": [
+      "Any Shield"
+    ],
+    "properties": [
+      {
+        "code": "res-cold",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "Cold Resist +30%"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "13",
+        "max_val": "13",
+        "resolved_text": "All Resistances +13"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50% Enhanced Defense"
+      },
+      {
+        "code": "dmg-to-mana",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "10% Damage Taken Goes To Mana"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword1",
+      "*Rune Name": "Ancients' Pledge",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "shld",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "RalOrtTal",
+      "Rune1": "r08",
+      "Rune2": "r09",
+      "Rune3": "r07",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "res-cold",
+      "T1Param1": "",
+      "T1Min1": "30",
+      "T1Max1": "30",
+      "T1Code2": "res-all",
+      "T1Param2": "",
+      "T1Min2": "13",
+      "T1Max2": "13",
+      "T1Code3": "ac%",
+      "T1Param3": "",
+      "T1Min3": "50",
+      "T1Max3": "50",
+      "T1Code4": "dmg-to-mana",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "10",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Knight's Vigil",
+    "runes": [
+      "Sol Rune (12)",
+      "Dol Rune (14)"
+    ],
+    "base_items": [
+      "Any Shield"
+    ],
+    "properties": [
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15 to Strength"
+      },
+      {
+        "code": "red-mag",
+        "param": "",
+        "min_val": "7",
+        "max_val": "7",
+        "resolved_text": "Magic Damage Reduced by 7"
+      },
+      {
+        "code": "aura",
+        "param": "defiance",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "Level 10 Defiance Aura When Equipped"
+      },
+      {
+        "code": "hp",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50 to Life"
+      },
+      {
+        "code": "res-cold-max",
+        "param": "",
+        "min_val": "5",
+        "max_val": "10",
+        "resolved_text": "+5-10% to Maximum Cold Resist"
+      },
+      {
+        "code": "block",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50% Faster Block Rate"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "All Resistances +15"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword67",
+      "*Rune Name": "Knight's Vigil",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "shld",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "SolDol",
+      "Rune1": "r12",
+      "Rune2": "r14",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "str",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "15",
+      "T1Code2": "red-mag",
+      "T1Param2": "",
+      "T1Min2": "7",
+      "T1Max2": "7",
+      "T1Code3": "aura",
+      "T1Param3": "defiance",
+      "T1Min3": "10",
+      "T1Max3": "10",
+      "T1Code4": "hp",
+      "T1Param4": "",
+      "T1Min4": "50",
+      "T1Max4": "50",
+      "T1Code5": "res-cold-max",
+      "T1Param5": "",
+      "T1Min5": "5",
+      "T1Max5": "10",
+      "T1Code6": "block",
+      "T1Param6": "",
+      "T1Min6": "50",
+      "T1Max6": "50",
+      "T1Code7": "res-all",
+      "T1Param7": "",
+      "T1Min7": "15",
+      "T1Max7": "15",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Rhyme",
+    "runes": [
+      "Shael Rune (13)",
+      "Eth Rune (5)"
+    ],
+    "base_items": [
+      "Any Shield"
+    ],
+    "properties": [
+      {
+        "code": "block2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Block Rate"
+      },
+      {
+        "code": "block",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Block Rate"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "All Resistances +25"
+      },
+      {
+        "code": "nofreeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Cannot Be Frozen"
+      },
+      {
+        "code": "gold%",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "50% Extra Gold from Monsters"
+      },
+      {
+        "code": "mag%",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "25% Better Chance of Getting Magic Items"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword120",
+      "*Rune Name": "Rhyme",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "shld",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelEth",
+      "Rune1": "r13",
+      "Rune2": "r05",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "block2",
+      "T1Param1": "",
+      "T1Min1": "20",
+      "T1Max1": "20",
+      "T1Code2": "block",
+      "T1Param2": "",
+      "T1Min2": "20",
+      "T1Max2": "20",
+      "T1Code3": "res-all",
+      "T1Param3": "",
+      "T1Min3": "25",
+      "T1Max3": "25",
+      "T1Code4": "nofreeze",
+      "T1Param4": "",
+      "T1Min4": "1",
+      "T1Max4": "1",
+      "T1Code5": "gold%",
+      "T1Param5": "",
+      "T1Min5": "50",
+      "T1Max5": "50",
+      "T1Code6": "mag%",
+      "T1Param6": "",
+      "T1Min6": "25",
+      "T1Max6": "25",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Sanctuary",
+    "runes": [
+      "Ko Rune (18)",
+      "Ko Rune (18)",
+      "\u2022Mal Rune (23)\u2022"
+    ],
+    "base_items": [
+      "Any Shield"
+    ],
+    "properties": [
+      {
+        "code": "block",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Block Rate"
+      },
+      {
+        "code": "block2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Block Rate"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "130",
+        "max_val": "160",
+        "resolved_text": "+130-160% Enhanced Defense"
+      },
+      {
+        "code": "extra-mag",
+        "param": "",
+        "min_val": "10",
+        "max_val": "15",
+        "resolved_text": "+10-15% to Magic Skill Damage"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "50",
+        "max_val": "70",
+        "resolved_text": "All Resistances +50-70"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Hit Recovery"
+      },
+      {
+        "code": "aura",
+        "param": "Sanctuary",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "Level 10 Sanctuary Aura When Equipped"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword122",
+      "*Rune Name": "Sanctuary",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "shld",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "KoKoMal",
+      "Rune1": "r18",
+      "Rune2": "r18",
+      "Rune3": "r23",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "block",
+      "T1Param1": "",
+      "T1Min1": "20",
+      "T1Max1": "20",
+      "T1Code2": "block2",
+      "T1Param2": "",
+      "T1Min2": "20",
+      "T1Max2": "20",
+      "T1Code3": "ac%",
+      "T1Param3": "",
+      "T1Min3": "130",
+      "T1Max3": "160",
+      "T1Code4": "extra-mag",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "15",
+      "T1Code5": "res-all",
+      "T1Param5": "",
+      "T1Min5": "50",
+      "T1Max5": "70",
+      "T1Code6": "balance2",
+      "T1Param6": "",
+      "T1Min6": "20",
+      "T1Max6": "20",
+      "T1Code7": "aura",
+      "T1Param7": "Sanctuary",
+      "T1Min7": "10",
+      "T1Max7": "10",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Spirit",
+    "runes": [
+      "Tal Rune (7)",
+      "Thul Rune (10)",
+      "Ort Rune (9)",
+      "Amn Rune (11)"
+    ],
+    "base_items": [
+      "Any Shield"
+    ],
+    "properties": [
+      {
+        "code": "balance3",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Hit Recovery"
+      },
+      {
+        "code": "mana",
+        "param": "",
+        "min_val": "89",
+        "max_val": "112",
+        "resolved_text": "+89-112 to Mana"
+      },
+      {
+        "code": "ac-miss",
+        "param": "",
+        "min_val": "250",
+        "max_val": "250",
+        "resolved_text": "+250 Defense vs. Missile"
+      },
+      {
+        "code": "vit",
+        "param": "",
+        "min_val": "22",
+        "max_val": "22",
+        "resolved_text": "+22 to Vitality"
+      },
+      {
+        "code": "cast3",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30% Faster Cast Rate"
+      },
+      {
+        "code": "abs-mag",
+        "param": "",
+        "min_val": "3",
+        "max_val": "8",
+        "resolved_text": "Magic Absorb 3-8%"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to All Skills"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword130",
+      "*Rune Name": "Spirit",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "shld",
+      "itype2": "swor",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "TalThulOrtAmn",
+      "Rune1": "r07",
+      "Rune2": "r10",
+      "Rune3": "r09",
+      "Rune4": "r11",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "balance3",
+      "T1Param1": "",
+      "T1Min1": "25",
+      "T1Max1": "25",
+      "T1Code2": "mana",
+      "T1Param2": "",
+      "T1Min2": "89",
+      "T1Max2": "112",
+      "T1Code3": "ac-miss",
+      "T1Param3": "",
+      "T1Min3": "250",
+      "T1Max3": "250",
+      "T1Code4": "vit",
+      "T1Param4": "",
+      "T1Min4": "22",
+      "T1Max4": "22",
+      "T1Code5": "cast3",
+      "T1Param5": "",
+      "T1Min5": "30",
+      "T1Max5": "30",
+      "T1Code6": "abs-mag",
+      "T1Param6": "",
+      "T1Min6": "3",
+      "T1Max6": "8",
+      "T1Code7": "allskills",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Splendor",
+    "runes": [
+      "Eth Rune (5)",
+      "Lum Rune (17)"
+    ],
+    "base_items": [
+      "Any Shield"
+    ],
+    "properties": [
+      {
+        "code": "light",
+        "param": "",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Light Radius"
+      },
+      {
+        "code": "gold%",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "50% Extra Gold from Monsters"
+      },
+      {
+        "code": "mag%",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "20% Better Chance of Getting Magic Items"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "60",
+        "max_val": "100",
+        "resolved_text": "+60-100% Enhanced Defense"
+      },
+      {
+        "code": "block2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Block Rate"
+      },
+      {
+        "code": "cast2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Cast Rate"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to All Skills"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword131",
+      "*Rune Name": "Splendor",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "shld",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "EthLum",
+      "Rune1": "r05",
+      "Rune2": "r17",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "light",
+      "T1Param1": "",
+      "T1Min1": "3",
+      "T1Max1": "3",
+      "T1Code2": "gold%",
+      "T1Param2": "",
+      "T1Min2": "50",
+      "T1Max2": "50",
+      "T1Code3": "mag%",
+      "T1Param3": "",
+      "T1Min3": "20",
+      "T1Max3": "20",
+      "T1Code4": "ac%",
+      "T1Param4": "",
+      "T1Min4": "60",
+      "T1Max4": "100",
+      "T1Code5": "block2",
+      "T1Param5": "",
+      "T1Min5": "20",
+      "T1Max5": "20",
+      "T1Code6": "cast2",
+      "T1Param6": "",
+      "T1Min6": "20",
+      "T1Max6": "20",
+      "T1Code7": "allskills",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Trust",
+    "runes": [
+      "Ith Rune (6)",
+      "Eld Rune (2)"
+    ],
+    "base_items": [
+      "Any Shield"
+    ],
+    "properties": [
+      {
+        "code": "regen-mana",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "Regenerate Mana 20%"
+      },
+      {
+        "code": "res-fire",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "Fire Resist +20%"
+      },
+      {
+        "code": "res-ltng",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "Lightning Resist +20%"
+      },
+      {
+        "code": "ac-miss",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50 Defense vs. Missile"
+      },
+      {
+        "code": "ac-hth",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50 Defense vs. Melee"
+      },
+      {
+        "code": "ac",
+        "param": "",
+        "min_val": "20",
+        "max_val": "35",
+        "resolved_text": "+20-35 Defense"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword149",
+      "*Rune Name": "Trust",
+      "complete": "1",
+      "firstLadderSeason": "3",
+      "lastLadderSeason": "",
+      "*Patch Release": "D2R Ladder 3",
+      "itype1": "shld",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "IthEld",
+      "Rune1": "r06",
+      "Rune2": "r02",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "regen-mana",
+      "T1Param1": "",
+      "T1Min1": "20",
+      "T1Max1": "20",
+      "T1Code2": "res-fire",
+      "T1Param2": "",
+      "T1Min2": "20",
+      "T1Max2": "20",
+      "T1Code3": "res-ltng",
+      "T1Param3": "",
+      "T1Min3": "20",
+      "T1Max3": "20",
+      "T1Code4": "ac-miss",
+      "T1Param4": "",
+      "T1Min4": "50",
+      "T1Max4": "50",
+      "T1Code5": "ac-hth",
+      "T1Param5": "",
+      "T1Min5": "50",
+      "T1Max5": "50",
+      "T1Code6": "ac",
+      "T1Param6": "",
+      "T1Min6": "20",
+      "T1Max6": "35",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  }
+]

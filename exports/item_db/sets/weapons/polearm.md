@@ -1,19 +1,19 @@
 # Set Polearm
 
 ### Hwanin's Justice (Hwanin's Justice)
-* **Set:** Hwanin's Majesty
 * **Base Item:** Bill
+* **Level Requirement:** 34
 * **Properties:**
     * +330 to Attack Rating
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * 10% Chance to cast level 14 Nova on striking
     * +40% Increased Attack Speed
     * +200% Enhanced Damage
     * Adds 1-300 Lightning Damage
 
 ### Astral Bond (Astral Bond)
-* **Set:** Sanctuary's Blessing Caster
 * **Base Item:** Thresher
+* **Level Requirement:** 85
 * **Properties:**
     * +3-4 to All Skills
     * Requirements --100%
@@ -25,8 +25,8 @@
     * +5-15 to Mana after each Kill
 
 ### The Decimation (The Decimation)
-* **Set:** Sanctuary's Blessing Melee
 * **Base Item:** Thresher
+* **Level Requirement:** 85
 * **Properties:**
     * +3-4 to All Skills
     * +50% Increased Attack Speed

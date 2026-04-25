@@ -1,8 +1,8 @@
 # Set Grimoire
 
 ### Horazon's Secrets (Horazon's Secrets)
-* **Set:** Horazon's Splendor
 * **Base Item:** Blasphemous Grimoire
+* **Level Requirement:** 57
 * **Properties:**
     * +1-2 to Warlock Skill Levels
     * +30% Faster Hit Recovery
@@ -13,8 +13,8 @@
     * +15% Increased Attack Speed
 
 ### Horazon's Sanctuary (Horazon's Sanctuary)
-* **Set:** Horazon's Heirloom
 * **Base Item:** Blasphemous Grimoire
+* **Level Requirement:** 85
 * **Properties:**
     * +1-3 to Warlock Skill Levels
     * +30% Faster Hit Recovery

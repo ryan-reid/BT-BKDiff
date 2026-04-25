@@ -1,0 +1,1134 @@
+[
+  {
+    "name": "Beast",
+    "runes": [
+      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
+      "Tir Rune (3)",
+      "\u2022Um Rune (22)\u2022",
+      "\u2022Mal Rune (23)\u2022",
+      "Lum Rune (17)"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Increased Attack Speed"
+      },
+      {
+        "code": "aura",
+        "param": "Fanaticism",
+        "min_val": "9",
+        "max_val": "9",
+        "resolved_text": "Level 9 Fanaticism Aura When Equipped"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "240",
+        "max_val": "270",
+        "resolved_text": "+240-270% Enhanced Damage"
+      },
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "25",
+        "max_val": "40",
+        "resolved_text": "+25-40 to Strength"
+      },
+      {
+        "code": "oskill",
+        "param": "Hunger",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Hunger"
+      },
+      {
+        "code": "oskill",
+        "param": "Wearbear",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Werebear"
+      },
+      {
+        "code": "oskill",
+        "param": "Shape Shifting",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Lycanthropy"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword4",
+      "*Rune Name": "Beast",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "BerTirUmMalLum",
+      "Rune1": "r30",
+      "Rune2": "r03",
+      "Rune3": "r22",
+      "Rune4": "r23",
+      "Rune5": "r17",
+      "Rune6": "",
+      "T1Code1": "swing2",
+      "T1Param1": "",
+      "T1Min1": "40",
+      "T1Max1": "40",
+      "T1Code2": "aura",
+      "T1Param2": "Fanaticism",
+      "T1Min2": "9",
+      "T1Max2": "9",
+      "T1Code3": "dmg%",
+      "T1Param3": "",
+      "T1Min3": "240",
+      "T1Max3": "270",
+      "T1Code4": "str",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "40",
+      "T1Code5": "oskill",
+      "T1Param5": "Hunger",
+      "T1Min5": "3",
+      "T1Max5": "3",
+      "T1Code6": "oskill",
+      "T1Param6": "Wearbear",
+      "T1Min6": "3",
+      "T1Max6": "3",
+      "T1Code7": "oskill",
+      "T1Param7": "Shape Shifting",
+      "T1Min7": "3",
+      "T1Max7": "3",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Death",
+    "runes": [
+      "Hel Rune (15)",
+      "El Rune (1)",
+      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
+      "Ort Rune (9)",
+      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "300",
+        "max_val": "385",
+        "resolved_text": "+300-385% Enhanced Damage"
+      },
+      {
+        "code": "deadly/lvl",
+        "param": "4",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(0.5% per clvl) Deadly Strike (Based on Character Level)"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Increased Attack Speed"
+      },
+      {
+        "code": "att-skill",
+        "param": "Glacial Spike",
+        "min_val": "25",
+        "max_val": "18",
+        "resolved_text": "25% Chance to cast level 18 Glacial Spike on attack"
+      },
+      {
+        "code": "death-skill",
+        "param": "Chain Lightning",
+        "min_val": "100",
+        "max_val": "44",
+        "resolved_text": "100% Chance to cast level 44 Chain Lightning when you Die"
+      },
+      {
+        "code": "crush",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "50% Chance of Crushing Blow"
+      },
+      {
+        "code": "indestruct",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Indestructible"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword20",
+      "*Rune Name": "Death",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelElVexOrtGul",
+      "Rune1": "r15",
+      "Rune2": "r01",
+      "Rune3": "r26",
+      "Rune4": "r09",
+      "Rune5": "r25",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "300",
+      "T1Max1": "385",
+      "T1Code2": "deadly/lvl",
+      "T1Param2": "4",
+      "T1Min2": "",
+      "T1Max2": "",
+      "T1Code3": "swing2",
+      "T1Param3": "",
+      "T1Min3": "25",
+      "T1Max3": "25",
+      "T1Code4": "att-skill",
+      "T1Param4": "Glacial Spike",
+      "T1Min4": "25",
+      "T1Max4": "18",
+      "T1Code5": "death-skill",
+      "T1Param5": "Chain Lightning",
+      "T1Min5": "100",
+      "T1Max5": "44",
+      "T1Code6": "crush",
+      "T1Param6": "",
+      "T1Min6": "50",
+      "T1Max6": "50",
+      "T1Code7": "indestruct",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Doom",
+    "runes": [
+      "Hel Rune (15)",
+      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
+      "\u2022Um Rune (22)\u2022",
+      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "280",
+        "max_val": "320",
+        "resolved_text": "+280-320% Enhanced Damage"
+      },
+      {
+        "code": "aura",
+        "param": "Holy Freeze",
+        "min_val": "12",
+        "max_val": "12",
+        "resolved_text": "Level 12 Holy Freeze Aura When Equipped"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "45",
+        "max_val": "45",
+        "resolved_text": "+45% Increased Attack Speed"
+      },
+      {
+        "code": "noheal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Prevent Monster Heal"
+      },
+      {
+        "code": "pierce-cold",
+        "param": "",
+        "min_val": "50",
+        "max_val": "75",
+        "resolved_text": "-50-75% to Enemy Cold Resistance"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to All Skills"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Blizzard",
+        "min_val": "20",
+        "max_val": "40",
+        "resolved_text": "20% Chance to cast level 40 Blizzard on striking"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword26",
+      "*Rune Name": "Doom",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelOhmUmLoCham",
+      "Rune1": "r15",
+      "Rune2": "r27",
+      "Rune3": "r22",
+      "Rune4": "r28",
+      "Rune5": "r32",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "280",
+      "T1Max1": "320",
+      "T1Code2": "aura",
+      "T1Param2": "Holy Freeze",
+      "T1Min2": "12",
+      "T1Max2": "12",
+      "T1Code3": "swing2",
+      "T1Param3": "",
+      "T1Min3": "45",
+      "T1Max3": "45",
+      "T1Code4": "noheal",
+      "T1Param4": "",
+      "T1Min4": "1",
+      "T1Max4": "1",
+      "T1Code5": "pierce-cold",
+      "T1Param5": "",
+      "T1Min5": "50",
+      "T1Max5": "75",
+      "T1Code6": "allskills",
+      "T1Param6": "",
+      "T1Min6": "2",
+      "T1Max6": "2",
+      "T1Code7": "hit-skill",
+      "T1Param7": "Blizzard",
+      "T1Min7": "20",
+      "T1Max7": "40",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Eternity",
+    "runes": [
+      "Amn Rune (11)",
+      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
+      "Sol Rune (12)",
+      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "260",
+        "max_val": "310",
+        "resolved_text": "+260-310% Enhanced Damage"
+      },
+      {
+        "code": "indestruct",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Indestructible"
+      },
+      {
+        "code": "slow",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "Slows Target by 33%"
+      },
+      {
+        "code": "charged",
+        "param": "Revive",
+        "min_val": "88",
+        "max_val": "8",
+        "resolved_text": "Level 88 Revive (8/# Charges)"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30% Increased Attack Speed"
+      },
+      {
+        "code": "addxp",
+        "param": "",
+        "min_val": "9",
+        "max_val": "9",
+        "resolved_text": "+9% to Experience Gained"
+      },
+      {
+        "code": "nofreeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Cannot Be Frozen"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword36",
+      "*Rune Name": "Eternity",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "AmnBerIstSolSur",
+      "Rune1": "r11",
+      "Rune2": "r30",
+      "Rune3": "r24",
+      "Rune4": "r12",
+      "Rune5": "r29",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "260",
+      "T1Max1": "310",
+      "T1Code2": "indestruct",
+      "T1Param2": "",
+      "T1Min2": "1",
+      "T1Max2": "1",
+      "T1Code3": "slow",
+      "T1Param3": "",
+      "T1Min3": "33",
+      "T1Max3": "33",
+      "T1Code4": "charged",
+      "T1Param4": "Revive",
+      "T1Min4": "88",
+      "T1Max4": "8",
+      "T1Code5": "swing2",
+      "T1Param5": "",
+      "T1Min5": "30",
+      "T1Max5": "30",
+      "T1Code6": "addxp",
+      "T1Param6": "",
+      "T1Min6": "9",
+      "T1Max6": "9",
+      "T1Code7": "nofreeze",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Holy Thunder",
+    "runes": [
+      "Eth Rune (5)",
+      "Ral Rune (8)",
+      "Ort Rune (9)",
+      "Tal Rune (7)"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "100",
+        "max_val": "100",
+        "resolved_text": "+100% Enhanced Damage"
+      },
+      {
+        "code": "dmg-ltng",
+        "param": "",
+        "min_val": "20",
+        "max_val": "60",
+        "resolved_text": "Adds 20-60 Lightning Damage"
+      },
+      {
+        "code": "dmg-max",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15 to Maximum Damage"
+      },
+      {
+        "code": "res-ltng",
+        "param": "",
+        "min_val": "60",
+        "max_val": "60",
+        "resolved_text": "Lightning Resist +60%"
+      },
+      {
+        "code": "res-ltng-max",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5% to Maximum Lightning Resist"
+      },
+      {
+        "code": "aura",
+        "param": "118",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "Level 5 Holy Shock Aura When Equipped"
+      },
+      {
+        "code": "res-pois-len",
+        "param": "",
+        "min_val": "75",
+        "max_val": "75",
+        "resolved_text": "Poison Length Reduced by 75%"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword54",
+      "*Rune Name": "Holy Thunder",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "EthRalOrtTal",
+      "Rune1": "r05",
+      "Rune2": "r08",
+      "Rune3": "r09",
+      "Rune4": "r07",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "100",
+      "T1Max1": "100",
+      "T1Code2": "dmg-ltng",
+      "T1Param2": "",
+      "T1Min2": "20",
+      "T1Max2": "60",
+      "T1Code3": "dmg-max",
+      "T1Param3": "",
+      "T1Min3": "15",
+      "T1Max3": "15",
+      "T1Code4": "res-ltng",
+      "T1Param4": "",
+      "T1Min4": "60",
+      "T1Max4": "60",
+      "T1Code5": "res-ltng-max",
+      "T1Param5": "",
+      "T1Min5": "5",
+      "T1Max5": "5",
+      "T1Code6": "aura",
+      "T1Param6": "118",
+      "T1Min6": "5",
+      "T1Max6": "5",
+      "T1Code7": "res-pois-len",
+      "T1Param7": "",
+      "T1Min7": "75",
+      "T1Max7": "75",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Honor",
+    "runes": [
+      "Amn Rune (11)",
+      "El Rune (1)",
+      "Ith Rune (6)",
+      "Tir Rune (3)",
+      "Sol Rune (12)"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "160",
+        "max_val": "190",
+        "resolved_text": "+160-190% Enhanced Damage"
+      },
+      {
+        "code": "rep-dur",
+        "param": "25",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "Repairs 1 durability in 25 seconds"
+      },
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "20% Bonus to Attack Rating"
+      },
+      {
+        "code": "deadly",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "25% Deadly Strike"
+      },
+      {
+        "code": "balance3",
+        "param": "",
+        "min_val": "55",
+        "max_val": "55",
+        "resolved_text": "+55% Faster Hit Recovery"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Increased Attack Speed"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword55",
+      "*Rune Name": "Honor",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "AmnElIthTirSol",
+      "Rune1": "r11",
+      "Rune2": "r01",
+      "Rune3": "r06",
+      "Rune4": "r03",
+      "Rune5": "r12",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "160",
+      "T1Max1": "190",
+      "T1Code2": "rep-dur",
+      "T1Param2": "25",
+      "T1Min2": "",
+      "T1Max2": "",
+      "T1Code3": "att%",
+      "T1Param3": "",
+      "T1Min3": "20",
+      "T1Max3": "20",
+      "T1Code4": "deadly",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "25",
+      "T1Code5": "balance3",
+      "T1Param5": "",
+      "T1Min5": "55",
+      "T1Max5": "55",
+      "T1Code6": "swing2",
+      "T1Param6": "",
+      "T1Min6": "25",
+      "T1Max6": "25",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Kingslayer",
+    "runes": [
+      "\u2022Mal Rune (23)\u2022",
+      "\u2022Um Rune (22)\u2022",
+      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022",
+      "Fal Rune (19)"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30% Increased Attack Speed"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "260",
+        "max_val": "300",
+        "resolved_text": "+260-300% Enhanced Damage"
+      },
+      {
+        "code": "reduce-ac",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "-25% Target Defense"
+      },
+      {
+        "code": "crush",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "33% Chance of Crushing Blow"
+      },
+      {
+        "code": "openwounds",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "25% Chance of Open Wounds"
+      },
+      {
+        "code": "oskill",
+        "param": "Berserk",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Berserk"
+      },
+      {
+        "code": "gold%",
+        "param": "",
+        "min_val": "350",
+        "max_val": "350",
+        "resolved_text": "350% Extra Gold from Monsters"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword66",
+      "*Rune Name": "Kingslayer",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "MalUmGulFal",
+      "Rune1": "r23",
+      "Rune2": "r22",
+      "Rune3": "r25",
+      "Rune4": "r19",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "swing2",
+      "T1Param1": "",
+      "T1Min1": "30",
+      "T1Max1": "30",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "260",
+      "T1Max2": "300",
+      "T1Code3": "reduce-ac",
+      "T1Param3": "",
+      "T1Min3": "25",
+      "T1Max3": "25",
+      "T1Code4": "crush",
+      "T1Param4": "",
+      "T1Min4": "33",
+      "T1Max4": "33",
+      "T1Code5": "openwounds",
+      "T1Param5": "",
+      "T1Min5": "25",
+      "T1Max5": "25",
+      "T1Code6": "oskill",
+      "T1Param6": "Berserk",
+      "T1Min6": "1",
+      "T1Max6": "1",
+      "T1Code7": "gold%",
+      "T1Param7": "",
+      "T1Min7": "350",
+      "T1Max7": "350",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Malice",
+    "runes": [
+      "Ith Rune (6)",
+      "El Rune (1)",
+      "Eth Rune (5)"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "openwounds",
+        "param": "",
+        "min_val": "100",
+        "max_val": "100",
+        "resolved_text": "100% Chance of Open Wounds"
+      },
+      {
+        "code": "dmg-ac",
+        "param": "",
+        "min_val": "-100",
+        "max_val": "-100",
+        "resolved_text": "--100 to Monster Defense Per Hit"
+      },
+      {
+        "code": "noheal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Prevent Monster Heal"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "+33% Enhanced Damage"
+      },
+      {
+        "code": "rep-dur",
+        "param": "25",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "Repairs 1 durability in 25 seconds"
+      },
+      {
+        "code": "regen",
+        "param": "",
+        "min_val": "-5",
+        "max_val": "-5",
+        "resolved_text": "Replenish Life +-5"
+      },
+      {
+        "code": "lifesteal",
+        "param": "",
+        "min_val": "7",
+        "max_val": "7",
+        "resolved_text": "7% Life stolen per hit"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword81",
+      "*Rune Name": "Malice",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "IthElEth",
+      "Rune1": "r06",
+      "Rune2": "r01",
+      "Rune3": "r05",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "openwounds",
+      "T1Param1": "",
+      "T1Min1": "100",
+      "T1Max1": "100",
+      "T1Code2": "dmg-ac",
+      "T1Param2": "",
+      "T1Min2": "-100",
+      "T1Max2": "-100",
+      "T1Code3": "noheal",
+      "T1Param3": "",
+      "T1Min3": "1",
+      "T1Max3": "1",
+      "T1Code4": "dmg%",
+      "T1Param4": "",
+      "T1Min4": "33",
+      "T1Max4": "33",
+      "T1Code5": "rep-dur",
+      "T1Param5": "25",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "regen",
+      "T1Param6": "",
+      "T1Min6": "-5",
+      "T1Max6": "-5",
+      "T1Code7": "lifesteal",
+      "T1Param7": "",
+      "T1Min7": "7",
+      "T1Max7": "7",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Steel",
+    "runes": [
+      "Tir Rune (3)",
+      "El Rune (1)"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Increased Attack Speed"
+      },
+      {
+        "code": "dmg",
+        "param": "",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "Damage +3"
+      },
+      {
+        "code": "openwounds",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "50% Chance of Open Wounds"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Enhanced Damage"
+      },
+      {
+        "code": "crush",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "5% Chance of Crushing Blow"
+      },
+      {
+        "code": "rep-dur",
+        "param": "25",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "Repairs 1 durability in 25 seconds"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword134",
+      "*Rune Name": "Steel",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "TirEl",
+      "Rune1": "r03",
+      "Rune2": "r01",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "swing2",
+      "T1Param1": "",
+      "T1Min1": "25",
+      "T1Max1": "25",
+      "T1Code2": "dmg",
+      "T1Param2": "",
+      "T1Min2": "3",
+      "T1Max2": "3",
+      "T1Code3": "openwounds",
+      "T1Param3": "",
+      "T1Min3": "50",
+      "T1Max3": "50",
+      "T1Code4": "dmg%",
+      "T1Param4": "",
+      "T1Min4": "20",
+      "T1Max4": "20",
+      "T1Code5": "crush",
+      "T1Param5": "",
+      "T1Min5": "5",
+      "T1Max5": "5",
+      "T1Code6": "rep-dur",
+      "T1Param6": "25",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Strength",
+    "runes": [
+      "Amn Rune (11)",
+      "Tir Rune (3)"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20 to Strength"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "90",
+        "max_val": "110",
+        "resolved_text": "+90-110% Enhanced Damage"
+      },
+      {
+        "code": "vit",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Vitality"
+      },
+      {
+        "code": "crush",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "25% Chance of Crushing Blow"
+      },
+      {
+        "code": "rep-dur",
+        "param": "25",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "Repairs 1 durability in 25 seconds"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword139",
+      "*Rune Name": "Strength",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "AmnTir",
+      "Rune1": "r11",
+      "Rune2": "r03",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "str",
+      "T1Param1": "",
+      "T1Min1": "20",
+      "T1Max1": "20",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "90",
+      "T1Max2": "110",
+      "T1Code3": "vit",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "10",
+      "T1Code4": "crush",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "25",
+      "T1Code5": "rep-dur",
+      "T1Param5": "25",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  }
+]

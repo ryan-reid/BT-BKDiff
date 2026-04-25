@@ -1,17 +1,17 @@
 # Set Axe
 
 ### Tancred's Crowbill (Tancred's Crowbill)
-* **Set:** Tancred's Battlegear
 * **Base Item:** Military Pick
+* **Level Requirement:** 1
 * **Properties:**
-    * +4 to Attack Rating (Based on Character Level)
+    * (2.0 per clvl) to Attack Rating (Based on Character Level)
     * +100% Enhanced Damage
     * 35% Chance of Crushing Blow
-    * +12 to Maximum Damage (Based on Character Level)
+    * (1.5 per clvl) to Maximum Damage (Based on Character Level)
 
 ### Berserker's Hatchet (Berserker's Hatchet)
-* **Set:** Berserker's Garb
 * **Base Item:** Double Axe
+* **Level Requirement:** 1
 * **Properties:**
     * Adds 10-20 Damage
     * 5% Mana stolen per hit

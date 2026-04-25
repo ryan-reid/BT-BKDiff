@@ -1,0 +1,2378 @@
+[
+  {
+    "name": "Breath of the Dying",
+    "runes": [
+      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
+      "Hel Rune (15)",
+      "El Rune (1)",
+      "Eld Rune (2)",
+      "\u2022\u2022\u2022Zod Rune  (33)\u2022\u2022\u2022",
+      "Eth Rune (5)"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "60",
+        "max_val": "60",
+        "resolved_text": "+60% Increased Attack Speed"
+      },
+      {
+        "code": "dmg-undead",
+        "param": "",
+        "min_val": "125",
+        "max_val": "125",
+        "resolved_text": "+125% Damage to Undead"
+      },
+      {
+        "code": "lifesteal",
+        "param": "",
+        "min_val": "12",
+        "max_val": "15",
+        "resolved_text": "12-15% Life stolen per hit"
+      },
+      {
+        "code": "dmg-demon",
+        "param": "",
+        "min_val": "200",
+        "max_val": "200",
+        "resolved_text": "+200% Damage to Demons"
+      },
+      {
+        "code": "kill-skill",
+        "param": "Poison Nova",
+        "min_val": "66",
+        "max_val": "45",
+        "resolved_text": "66% Chance to cast level 45 Poison Nova when you Kill an Enemy"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "350",
+        "max_val": "400",
+        "resolved_text": "+350-400% Enhanced Damage"
+      },
+      {
+        "code": "all-stats",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30 to all Attributes"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword11",
+      "*Rune Name": "Breath of the Dying",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "VexHelElEldZodEth",
+      "Rune1": "r26",
+      "Rune2": "r15",
+      "Rune3": "r01",
+      "Rune4": "r02",
+      "Rune5": "r33",
+      "Rune6": "r05",
+      "T1Code1": "swing2",
+      "T1Param1": "",
+      "T1Min1": "60",
+      "T1Max1": "60",
+      "T1Code2": "dmg-undead",
+      "T1Param2": "",
+      "T1Min2": "125",
+      "T1Max2": "125",
+      "T1Code3": "lifesteal",
+      "T1Param3": "",
+      "T1Min3": "12",
+      "T1Max3": "15",
+      "T1Code4": "dmg-demon",
+      "T1Param4": "",
+      "T1Min4": "200",
+      "T1Max4": "200",
+      "T1Code5": "kill-skill",
+      "T1Param5": "Poison Nova",
+      "T1Min5": "66",
+      "T1Max5": "45",
+      "T1Code6": "dmg%",
+      "T1Param6": "",
+      "T1Min6": "350",
+      "T1Max6": "400",
+      "T1Code7": "all-stats",
+      "T1Param7": "",
+      "T1Min7": "30",
+      "T1Max7": "30",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Call to Arms",
+    "runes": [
+      "Amn Rune (11)",
+      "Ral Rune (8)",
+      "\u2022Mal Rune (23)\u2022",
+      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Increased Attack Speed"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "240",
+        "resolved_text": "+200-240% Enhanced Damage"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to All Skills"
+      },
+      {
+        "code": "oskill",
+        "param": "Battle Command",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Battle Command"
+      },
+      {
+        "code": "oskill",
+        "param": "Battle Orders",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Battle Orders"
+      },
+      {
+        "code": "oskill",
+        "param": "Battle Cry",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Battle Cry"
+      },
+      {
+        "code": "regen",
+        "param": "",
+        "min_val": "12",
+        "max_val": "12",
+        "resolved_text": "Replenish Life +12"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword13",
+      "*Rune Name": "Call to Arms",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "AmnRalMalIstOhm",
+      "Rune1": "r11",
+      "Rune2": "r08",
+      "Rune3": "r23",
+      "Rune4": "r24",
+      "Rune5": "r27",
+      "Rune6": "",
+      "T1Code1": "swing2",
+      "T1Param1": "",
+      "T1Min1": "40",
+      "T1Max1": "40",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "200",
+      "T1Max2": "240",
+      "T1Code3": "allskills",
+      "T1Param3": "",
+      "T1Min3": "1",
+      "T1Max3": "1",
+      "T1Code4": "oskill",
+      "T1Param4": "Battle Command",
+      "T1Min4": "1",
+      "T1Max4": "1",
+      "T1Code5": "oskill",
+      "T1Param5": "Battle Orders",
+      "T1Min5": "1",
+      "T1Max5": "1",
+      "T1Code6": "oskill",
+      "T1Param6": "Battle Cry",
+      "T1Min6": "1",
+      "T1Max6": "1",
+      "T1Code7": "regen",
+      "T1Param7": "",
+      "T1Min7": "12",
+      "T1Max7": "12",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Crescent Moon",
+    "runes": [
+      "Shael Rune (13)",
+      "\u2022Um Rune (22)\u2022",
+      "Tir Rune (3)"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "pierce-ltng",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "-15% to Enemy Lightning Resistance"
+      },
+      {
+        "code": "ignore-ac",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Ignore Target's Defense"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "180",
+        "max_val": "220",
+        "resolved_text": "+180-220% Enhanced Damage"
+      },
+      {
+        "code": "abs-mag",
+        "param": "",
+        "min_val": "12",
+        "max_val": "18",
+        "resolved_text": "Magic Absorb 12-18%"
+      },
+      {
+        "code": "aura",
+        "param": "Holy Shock",
+        "min_val": "14",
+        "max_val": "16",
+        "resolved_text": "Level 14-16 Holy Shock Aura When Equipped"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Static Field",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "25% Chance to cast level 25 Static Field on striking"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Chain Lightning",
+        "min_val": "34",
+        "max_val": "34",
+        "resolved_text": "34% Chance to cast level 34 Chain Lightning on striking"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword17",
+      "*Rune Name": "Crescent Moon",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelUmTir",
+      "Rune1": "r13",
+      "Rune2": "r22",
+      "Rune3": "r03",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "pierce-ltng",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "15",
+      "T1Code2": "ignore-ac",
+      "T1Param2": "",
+      "T1Min2": "1",
+      "T1Max2": "1",
+      "T1Code3": "dmg%",
+      "T1Param3": "",
+      "T1Min3": "180",
+      "T1Max3": "220",
+      "T1Code4": "abs-mag",
+      "T1Param4": "",
+      "T1Min4": "12",
+      "T1Max4": "18",
+      "T1Code5": "aura",
+      "T1Param5": "Holy Shock",
+      "T1Min5": "14",
+      "T1Max5": "16",
+      "T1Code6": "hit-skill",
+      "T1Param6": "Static Field",
+      "T1Min6": "25",
+      "T1Max6": "25",
+      "T1Code7": "hit-skill",
+      "T1Param7": "Chain Lightning",
+      "T1Min7": "34",
+      "T1Max7": "34",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Destruction",
+    "runes": [
+      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
+      "Ko Rune (18)"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "350",
+        "max_val": "350",
+        "resolved_text": "+350% Enhanced Damage"
+      },
+      {
+        "code": "dmg-mag",
+        "param": "",
+        "min_val": "500",
+        "max_val": "500",
+        "resolved_text": "Adds 500-500 Magic Damage"
+      },
+      {
+        "code": "str/lvl",
+        "param": "4",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(0.5 per clvl) to Strength (Based on Character Level)"
+      },
+      {
+        "code": "death-skill",
+        "param": "Meteor",
+        "min_val": "100",
+        "max_val": "45",
+        "resolved_text": "100% Chance to cast level 45 Meteor when you Die"
+      },
+      {
+        "code": "att-skill",
+        "param": "Nova",
+        "min_val": "15",
+        "max_val": "35",
+        "resolved_text": "15% Chance to cast level 35 Nova on attack"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Volcano",
+        "min_val": "23",
+        "max_val": "35",
+        "resolved_text": "23% Chance to cast level 35 Volcano on striking"
+      },
+      {
+        "code": "noheal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Prevent Monster Heal"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword25",
+      "*Rune Name": "Destruction",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "VexLoBerJahKo",
+      "Rune1": "r26",
+      "Rune2": "r28",
+      "Rune3": "r30",
+      "Rune4": "r31",
+      "Rune5": "r18",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "350",
+      "T1Max1": "350",
+      "T1Code2": "dmg-mag",
+      "T1Param2": "",
+      "T1Min2": "500",
+      "T1Max2": "500",
+      "T1Code3": "str/lvl",
+      "T1Param3": "4",
+      "T1Min3": "",
+      "T1Max3": "",
+      "T1Code4": "death-skill",
+      "T1Param4": "Meteor",
+      "T1Min4": "100",
+      "T1Max4": "45",
+      "T1Code5": "att-skill",
+      "T1Param5": "Nova",
+      "T1Min5": "15",
+      "T1Max5": "35",
+      "T1Code6": "hit-skill",
+      "T1Param6": "Volcano",
+      "T1Min6": "23",
+      "T1Max6": "35",
+      "T1Code7": "noheal",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Famine",
+    "runes": [
+      "Fal Rune (19)",
+      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
+      "Ort Rune (9)",
+      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "270",
+        "max_val": "320",
+        "resolved_text": "+270-320% Enhanced Damage"
+      },
+      {
+        "code": "lifesteal",
+        "param": "",
+        "min_val": "12",
+        "max_val": "12",
+        "resolved_text": "12% Life stolen per hit"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30% Increased Attack Speed"
+      },
+      {
+        "code": "deadly",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "50% Deadly Strike"
+      },
+      {
+        "code": "dmg-mag",
+        "param": "",
+        "min_val": "200",
+        "max_val": "300",
+        "resolved_text": "Adds 200-300 Magic Damage"
+      },
+      {
+        "code": "dmg-elem",
+        "param": "",
+        "min_val": "200",
+        "max_val": "210",
+        "resolved_text": "Adds 200-210 Fire/Lightning/Cold Damage"
+      },
+      {
+        "code": "all-stats",
+        "param": "",
+        "min_val": "10",
+        "max_val": "20",
+        "resolved_text": "+10-20 to all Attributes"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword39",
+      "*Rune Name": "Famine",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "FalOhmOrtJah",
+      "Rune1": "r19",
+      "Rune2": "r27",
+      "Rune3": "r09",
+      "Rune4": "r31",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "270",
+      "T1Max1": "320",
+      "T1Code2": "lifesteal",
+      "T1Param2": "",
+      "T1Min2": "12",
+      "T1Max2": "12",
+      "T1Code3": "swing2",
+      "T1Param3": "",
+      "T1Min3": "30",
+      "T1Max3": "30",
+      "T1Code4": "deadly",
+      "T1Param4": "",
+      "T1Min4": "50",
+      "T1Max4": "50",
+      "T1Code5": "dmg-mag",
+      "T1Param5": "",
+      "T1Min5": "200",
+      "T1Max5": "300",
+      "T1Code6": "dmg-elem",
+      "T1Param6": "",
+      "T1Min6": "200",
+      "T1Max6": "210",
+      "T1Code7": "all-stats",
+      "T1Param7": "",
+      "T1Min7": "10",
+      "T1Max7": "20",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Fortitude",
+    "runes": [
+      "El Rune (1)",
+      "Sol Rune (12)",
+      "Dol Rune (14)",
+      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "200",
+        "resolved_text": "+200% Enhanced Defense"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "300",
+        "max_val": "300",
+        "resolved_text": "+300% Enhanced Damage"
+      },
+      {
+        "code": "cast3",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Cast Rate"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Chilling Armor",
+        "min_val": "20",
+        "max_val": "15",
+        "resolved_text": "20% Chance to cast level 15 Chilling Armor when struck"
+      },
+      {
+        "code": "dmg-to-mana",
+        "param": "",
+        "min_val": "12",
+        "max_val": "12",
+        "resolved_text": "12% Damage Taken Goes To Mana"
+      },
+      {
+        "code": "hp/lvl",
+        "param": "",
+        "min_val": "8",
+        "max_val": "12",
+        "resolved_text": "(1.0-1.5 per clvl) to Life (Based on Character Level)"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "25",
+        "max_val": "30",
+        "resolved_text": "All Resistances +25-30"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword41",
+      "*Rune Name": "Fortitude",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "weap",
+      "itype2": "tors",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ElSolDolLo",
+      "Rune1": "r01",
+      "Rune2": "r12",
+      "Rune3": "r14",
+      "Rune4": "r28",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "ac%",
+      "T1Param1": "",
+      "T1Min1": "200",
+      "T1Max1": "200",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "300",
+      "T1Max2": "300",
+      "T1Code3": "cast3",
+      "T1Param3": "",
+      "T1Min3": "25",
+      "T1Max3": "25",
+      "T1Code4": "gethit-skill",
+      "T1Param4": "Chilling Armor",
+      "T1Min4": "20",
+      "T1Max4": "15",
+      "T1Code5": "dmg-to-mana",
+      "T1Param5": "",
+      "T1Min5": "12",
+      "T1Max5": "12",
+      "T1Code6": "hp/lvl",
+      "T1Param6": "",
+      "T1Min6": "8",
+      "T1Max6": "12",
+      "T1Code7": "res-all",
+      "T1Param7": "",
+      "T1Min7": "25",
+      "T1Max7": "30",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Fury",
+    "runes": [
+      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022",
+      "Eth Rune (5)"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "280",
+        "max_val": "280",
+        "resolved_text": "+280% Enhanced Damage"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Increased Attack Speed"
+      },
+      {
+        "code": "noheal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Prevent Monster Heal"
+      },
+      {
+        "code": "openwounds",
+        "param": "",
+        "min_val": "66",
+        "max_val": "66",
+        "resolved_text": "66% Chance of Open Wounds"
+      },
+      {
+        "code": "lifesteal",
+        "param": "",
+        "min_val": "6",
+        "max_val": "6",
+        "resolved_text": "6% Life stolen per hit"
+      },
+      {
+        "code": "deadly",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "33% Deadly Strike"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword44",
+      "*Rune Name": "Fury",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "JahGulEth",
+      "Rune1": "r31",
+      "Rune2": "r25",
+      "Rune3": "r05",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "280",
+      "T1Max1": "280",
+      "T1Code2": "swing2",
+      "T1Param2": "",
+      "T1Min2": "40",
+      "T1Max2": "40",
+      "T1Code3": "noheal",
+      "T1Param3": "",
+      "T1Min3": "1",
+      "T1Max3": "1",
+      "T1Code4": "openwounds",
+      "T1Param4": "",
+      "T1Min4": "66",
+      "T1Max4": "66",
+      "T1Code5": "lifesteal",
+      "T1Param5": "",
+      "T1Min5": "6",
+      "T1Max5": "6",
+      "T1Code6": "deadly",
+      "T1Param6": "",
+      "T1Min6": "33",
+      "T1Max6": "33",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Hand of Justice",
+    "runes": [
+      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022",
+      "Amn Rune (11)",
+      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "+33% Increased Attack Speed"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "280",
+        "max_val": "330",
+        "resolved_text": "+280-330% Enhanced Damage"
+      },
+      {
+        "code": "aura",
+        "param": "Holy Fire",
+        "min_val": "16",
+        "max_val": "16",
+        "resolved_text": "Level 16 Holy Fire Aura When Equipped"
+      },
+      {
+        "code": "levelup-skill",
+        "param": "Blaze",
+        "min_val": "100",
+        "max_val": "36",
+        "resolved_text": "100% Chance to cast level 36 Blaze when you Level-Up"
+      },
+      {
+        "code": "death-skill",
+        "param": "Meteor",
+        "min_val": "100",
+        "max_val": "48",
+        "resolved_text": "100% Chance to cast level 48 Meteor when you Die"
+      },
+      {
+        "code": "ignore-ac",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Ignore Target's Defense"
+      },
+      {
+        "code": "pierce-fire",
+        "param": "",
+        "min_val": "20",
+        "max_val": "25",
+        "resolved_text": "-20-25% to Enemy Fire Resistance"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword48",
+      "*Rune Name": "Hand of Justice",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "SurChamAmnLo",
+      "Rune1": "r29",
+      "Rune2": "r32",
+      "Rune3": "r11",
+      "Rune4": "r28",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "swing2",
+      "T1Param1": "",
+      "T1Min1": "33",
+      "T1Max1": "33",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "280",
+      "T1Max2": "330",
+      "T1Code3": "aura",
+      "T1Param3": "Holy Fire",
+      "T1Min3": "16",
+      "T1Max3": "16",
+      "T1Code4": "levelup-skill",
+      "T1Param4": "Blaze",
+      "T1Min4": "100",
+      "T1Max4": "36",
+      "T1Code5": "death-skill",
+      "T1Param5": "Meteor",
+      "T1Min5": "100",
+      "T1Max5": "48",
+      "T1Code6": "ignore-ac",
+      "T1Param6": "",
+      "T1Min6": "1",
+      "T1Max6": "1",
+      "T1Code7": "pierce-fire",
+      "T1Param7": "",
+      "T1Min7": "20",
+      "T1Max7": "25",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "King's Grace",
+    "runes": [
+      "Amn Rune (11)",
+      "Ral Rune (8)",
+      "Thul Rune (10)"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "130",
+        "max_val": "180",
+        "resolved_text": "+130-180% Enhanced Damage"
+      },
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "150",
+        "max_val": "150",
+        "resolved_text": "150% Bonus to Attack Rating"
+      },
+      {
+        "code": "dmg-demon",
+        "param": "",
+        "min_val": "150",
+        "max_val": "150",
+        "resolved_text": "+150% Damage to Demons"
+      },
+      {
+        "code": "dmg-undead",
+        "param": "",
+        "min_val": "150",
+        "max_val": "150",
+        "resolved_text": "+150% Damage to Undead"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to All Skills"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword65",
+      "*Rune Name": "King's Grace",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "AmnRalThul",
+      "Rune1": "r11",
+      "Rune2": "r08",
+      "Rune3": "r10",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "130",
+      "T1Max1": "180",
+      "T1Code2": "att%",
+      "T1Param2": "",
+      "T1Min2": "150",
+      "T1Max2": "150",
+      "T1Code3": "dmg-demon",
+      "T1Param3": "",
+      "T1Min3": "150",
+      "T1Max3": "150",
+      "T1Code4": "dmg-undead",
+      "T1Param4": "",
+      "T1Min4": "150",
+      "T1Max4": "150",
+      "T1Code5": "allskills",
+      "T1Param5": "",
+      "T1Min5": "1",
+      "T1Max5": "1",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Passion",
+    "runes": [
+      "Dol Rune (14)",
+      "Ort Rune (9)",
+      "Eld Rune (2)",
+      "\u2022Lem Rune (20)\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "160",
+        "max_val": "210",
+        "resolved_text": "+160-210% Enhanced Damage"
+      },
+      {
+        "code": "oskill",
+        "param": "Zeal",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Zeal"
+      },
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "50",
+        "max_val": "80",
+        "resolved_text": "50-80% Bonus to Attack Rating"
+      },
+      {
+        "code": "oskill",
+        "param": "Berserk",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Berserk"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Increased Attack Speed"
+      },
+      {
+        "code": "charged",
+        "param": "Heart of Wolverine",
+        "min_val": "50",
+        "max_val": "3",
+        "resolved_text": "Level 50 Heart of Wolverine (3/# Charges)"
+      },
+      {
+        "code": "stupidity",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "Hit Blinds Target +10"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword95",
+      "*Rune Name": "Passion",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "DolOrtEldLem",
+      "Rune1": "r14",
+      "Rune2": "r09",
+      "Rune3": "r02",
+      "Rune4": "r20",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "160",
+      "T1Max1": "210",
+      "T1Code2": "oskill",
+      "T1Param2": "Zeal",
+      "T1Min2": "1",
+      "T1Max2": "1",
+      "T1Code3": "att%",
+      "T1Param3": "",
+      "T1Min3": "50",
+      "T1Max3": "80",
+      "T1Code4": "oskill",
+      "T1Param4": "Berserk",
+      "T1Min4": "1",
+      "T1Max4": "1",
+      "T1Code5": "swing2",
+      "T1Param5": "",
+      "T1Min5": "25",
+      "T1Max5": "25",
+      "T1Code6": "charged",
+      "T1Param6": "Heart of Wolverine",
+      "T1Min6": "50",
+      "T1Max6": "3",
+      "T1Code7": "stupidity",
+      "T1Param7": "",
+      "T1Min7": "10",
+      "T1Max7": "10",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Voice of Reason",
+    "runes": [
+      "\u2022Lem Rune (20)\u2022",
+      "Ko Rune (18)",
+      "El Rune (1)",
+      "Eld Rune (2)"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg-demon",
+        "param": "",
+        "min_val": "250",
+        "max_val": "350",
+        "resolved_text": "+250-350% Damage to Demons"
+      },
+      {
+        "code": "dmg-undead",
+        "param": "",
+        "min_val": "280",
+        "max_val": "300",
+        "resolved_text": "+280-300% Damage to Undead"
+      },
+      {
+        "code": "coldskill",
+        "param": "",
+        "min_val": "1",
+        "max_val": "2",
+        "resolved_text": "+1-2 to Cold Skills"
+      },
+      {
+        "code": "pierce-cold",
+        "param": "",
+        "min_val": "24",
+        "max_val": "36",
+        "resolved_text": "-24-36% to Enemy Cold Resistance"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Ice Blast",
+        "min_val": "20",
+        "max_val": "50",
+        "resolved_text": "20% Chance to cast level 50 Ice Blast on striking"
+      },
+      {
+        "code": "att-skill",
+        "param": "Frozen Orb",
+        "min_val": "15",
+        "max_val": "36",
+        "resolved_text": "15% Chance to cast level 36 Frozen Orb on attack"
+      },
+      {
+        "code": "nofreeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Cannot Be Frozen"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword99",
+      "*Rune Name": "Voice of Reason",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "LemKoElEld",
+      "Rune1": "r20",
+      "Rune2": "r18",
+      "Rune3": "r01",
+      "Rune4": "r02",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg-demon",
+      "T1Param1": "",
+      "T1Min1": "250",
+      "T1Max1": "350",
+      "T1Code2": "dmg-undead",
+      "T1Param2": "",
+      "T1Min2": "280",
+      "T1Max2": "300",
+      "T1Code3": "coldskill",
+      "T1Param3": "",
+      "T1Min3": "1",
+      "T1Max3": "2",
+      "T1Code4": "pierce-cold",
+      "T1Param4": "",
+      "T1Min4": "24",
+      "T1Max4": "36",
+      "T1Code5": "hit-skill",
+      "T1Param5": "Ice Blast",
+      "T1Min5": "20",
+      "T1Max5": "50",
+      "T1Code6": "att-skill",
+      "T1Param6": "Frozen Orb",
+      "T1Min6": "15",
+      "T1Max6": "36",
+      "T1Code7": "nofreeze",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Phoenix",
+    "runes": [
+      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "350",
+        "max_val": "400",
+        "resolved_text": "+350-400% Enhanced Damage"
+      },
+      {
+        "code": "ac-miss",
+        "param": "",
+        "min_val": "350",
+        "max_val": "400",
+        "resolved_text": "+350-400 Defense vs. Missile"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Firestorm",
+        "min_val": "40",
+        "max_val": "22",
+        "resolved_text": "40% Chance to cast level 22 Firestorm on striking"
+      },
+      {
+        "code": "levelup-skill",
+        "param": "Blaze",
+        "min_val": "100",
+        "max_val": "40",
+        "resolved_text": "100% Chance to cast level 40 Blaze when you Level-Up"
+      },
+      {
+        "code": "pierce-fire",
+        "param": "",
+        "min_val": "28",
+        "max_val": "30",
+        "resolved_text": "-28-30% to Enemy Fire Resistance"
+      },
+      {
+        "code": "aura",
+        "param": "Redemption",
+        "min_val": "10",
+        "max_val": "15",
+        "resolved_text": "Level 10-15 Redemption Aura When Equipped"
+      },
+      {
+        "code": "abs-fire",
+        "param": "",
+        "min_val": "15",
+        "max_val": "21",
+        "resolved_text": "Fire Absorb 15-21%"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword103",
+      "*Rune Name": "Phoenix",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "weap",
+      "itype2": "shld",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "VexVexLoJah",
+      "Rune1": "r26",
+      "Rune2": "r26",
+      "Rune3": "r28",
+      "Rune4": "r31",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "350",
+      "T1Max1": "400",
+      "T1Code2": "ac-miss",
+      "T1Param2": "",
+      "T1Min2": "350",
+      "T1Max2": "400",
+      "T1Code3": "hit-skill",
+      "T1Param3": "Firestorm",
+      "T1Min3": "40",
+      "T1Max3": "22",
+      "T1Code4": "levelup-skill",
+      "T1Param4": "Blaze",
+      "T1Min4": "100",
+      "T1Max4": "40",
+      "T1Code5": "pierce-fire",
+      "T1Param5": "",
+      "T1Min5": "28",
+      "T1Max5": "30",
+      "T1Code6": "aura",
+      "T1Param6": "Redemption",
+      "T1Min6": "10",
+      "T1Max6": "15",
+      "T1Code7": "abs-fire",
+      "T1Param7": "",
+      "T1Min7": "15",
+      "T1Max7": "21",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Pride",
+    "runes": [
+      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
+      "Io Rune (16)",
+      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg-dem/lvl",
+        "param": "8",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(1.0% per clvl) Damage to Demons (Based on Character Level)"
+      },
+      {
+        "code": "dmg-und/lvl",
+        "param": "8",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(1.0% per clvl) Damage to Undead (Based on Character Level)"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "260",
+        "max_val": "300",
+        "resolved_text": "+260-300% Enhanced Damage"
+      },
+      {
+        "code": "aura",
+        "param": "Concentration",
+        "min_val": "18",
+        "max_val": "20",
+        "resolved_text": "Level 18-20 Concentration Aura When Equipped"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Fire Wall",
+        "min_val": "25",
+        "max_val": "50",
+        "resolved_text": "25% Chance to cast level 50 Fire Wall on striking"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Increased Attack Speed"
+      },
+      {
+        "code": "gold%/lvl",
+        "param": "30",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(3.8% per clvl) Extra Gold from Monsters (Based on Character Level)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword109",
+      "*Rune Name": "Pride",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ChamSurIoLo",
+      "Rune1": "r32",
+      "Rune2": "r29",
+      "Rune3": "r16",
+      "Rune4": "r28",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg-dem/lvl",
+      "T1Param1": "8",
+      "T1Min1": "",
+      "T1Max1": "",
+      "T1Code2": "dmg-und/lvl",
+      "T1Param2": "8",
+      "T1Min2": "",
+      "T1Max2": "",
+      "T1Code3": "dmg%",
+      "T1Param3": "",
+      "T1Min3": "260",
+      "T1Max3": "300",
+      "T1Code4": "aura",
+      "T1Param4": "Concentration",
+      "T1Min4": "18",
+      "T1Max4": "20",
+      "T1Code5": "hit-skill",
+      "T1Param5": "Fire Wall",
+      "T1Min5": "25",
+      "T1Max5": "50",
+      "T1Code6": "swing2",
+      "T1Param6": "",
+      "T1Min6": "20",
+      "T1Max6": "20",
+      "T1Code7": "gold%/lvl",
+      "T1Param7": "30",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Rift",
+    "runes": [
+      "Hel Rune (15)",
+      "Ko Rune (18)",
+      "\u2022Lem Rune (20)\u2022",
+      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg-mag",
+        "param": "",
+        "min_val": "250",
+        "max_val": "400",
+        "resolved_text": "Adds 250-400 Magic Damage"
+      },
+      {
+        "code": "Kick",
+        "param": "",
+        "min_val": "50",
+        "max_val": "100",
+        "resolved_text": "+50-100 Kick Damage"
+      },
+      {
+        "code": "dmg-to-mana",
+        "param": "",
+        "min_val": "38",
+        "max_val": "38",
+        "resolved_text": "38% Damage Taken Goes To Mana"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Tornado",
+        "min_val": "20",
+        "max_val": "30",
+        "resolved_text": "20% Chance to cast level 30 Tornado on striking"
+      },
+      {
+        "code": "att-skill",
+        "param": "Frozen Orb",
+        "min_val": "16",
+        "max_val": "30",
+        "resolved_text": "16% Chance to cast level 30 Frozen Orb on attack"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15% Increased Attack Speed"
+      },
+      {
+        "code": "all-stats",
+        "param": "",
+        "min_val": "5",
+        "max_val": "10",
+        "resolved_text": "+5-10 to all Attributes"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword121",
+      "*Rune Name": "Rift",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelKoLemGul",
+      "Rune1": "r15",
+      "Rune2": "r18",
+      "Rune3": "r20",
+      "Rune4": "r25",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg-mag",
+      "T1Param1": "",
+      "T1Min1": "250",
+      "T1Max1": "400",
+      "T1Code2": "Kick",
+      "T1Param2": "",
+      "T1Min2": "50",
+      "T1Max2": "100",
+      "T1Code3": "dmg-to-mana",
+      "T1Param3": "",
+      "T1Min3": "38",
+      "T1Max3": "38",
+      "T1Code4": "hit-skill",
+      "T1Param4": "Tornado",
+      "T1Min4": "20",
+      "T1Max4": "30",
+      "T1Code5": "att-skill",
+      "T1Param5": "Frozen Orb",
+      "T1Min5": "16",
+      "T1Max5": "30",
+      "T1Code6": "swing2",
+      "T1Param6": "",
+      "T1Min6": "15",
+      "T1Max6": "15",
+      "T1Code7": "all-stats",
+      "T1Param7": "",
+      "T1Min7": "5",
+      "T1Max7": "10",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Silence",
+    "runes": [
+      "Shael Rune (13)",
+      "Eld Rune (2)",
+      "Hel Rune (15)",
+      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
+      "Tir Rune (3)",
+      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "manasteal",
+        "param": "",
+        "min_val": "4",
+        "max_val": "4",
+        "resolved_text": "4% Mana stolen per hit"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "200",
+        "resolved_text": "+200% Enhanced Damage"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Increased Attack Speed"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "75",
+        "max_val": "75",
+        "resolved_text": "All Resistances +75"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "2",
+        "max_val": "3",
+        "resolved_text": "+2-3 to All Skills"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Amplify Damage",
+        "min_val": "22",
+        "max_val": "25",
+        "resolved_text": "22% Chance to cast level 25 Amplify Damage on striking"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword126",
+      "*Rune Name": "Silence",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelEldHelIstTirVex",
+      "Rune1": "r13",
+      "Rune2": "r02",
+      "Rune3": "r15",
+      "Rune4": "r24",
+      "Rune5": "r03",
+      "Rune6": "r26",
+      "T1Code1": "manasteal",
+      "T1Param1": "",
+      "T1Min1": "4",
+      "T1Max1": "4",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "200",
+      "T1Max2": "200",
+      "T1Code3": "swing2",
+      "T1Param3": "",
+      "T1Min3": "20",
+      "T1Max3": "20",
+      "T1Code4": "res-all",
+      "T1Param4": "",
+      "T1Min4": "75",
+      "T1Max4": "75",
+      "T1Code5": "allskills",
+      "T1Param5": "",
+      "T1Min5": "2",
+      "T1Max5": "3",
+      "T1Code6": "hit-skill",
+      "T1Param6": "Amplify Damage",
+      "T1Min6": "22",
+      "T1Max6": "25",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Tempest",
+    "runes": [
+      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
+      "Tir Rune (3)"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "oskill",
+        "param": "Thunder Storm",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50 to Thunder Storm"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to All Skills"
+      },
+      {
+        "code": "cast2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Cast Rate"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Increased Attack Speed"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "24",
+        "max_val": "24",
+        "resolved_text": "+24% Faster Hit Recovery"
+      },
+      {
+        "code": "Mag%",
+        "param": "",
+        "min_val": "35",
+        "max_val": "35",
+        "resolved_text": "35% Better Chance of Getting Magic Items"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword140",
+      "*Rune Name": "Tempest",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "BerTir",
+      "Rune1": "r30",
+      "Rune2": "r03",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "oskill",
+      "T1Param1": "Thunder Storm",
+      "T1Min1": "50",
+      "T1Max1": "50",
+      "T1Code2": "allskills",
+      "T1Param2": "",
+      "T1Min2": "2",
+      "T1Max2": "2",
+      "T1Code3": "cast2",
+      "T1Param3": "",
+      "T1Min3": "25",
+      "T1Max3": "25",
+      "T1Code4": "swing2",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "25",
+      "T1Code5": "balance2",
+      "T1Param5": "",
+      "T1Min5": "24",
+      "T1Max5": "24",
+      "T1Code6": "Mag%",
+      "T1Param6": "",
+      "T1Min6": "35",
+      "T1Max6": "35",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Temptation",
+    "runes": [
+      "Hel Rune (15)",
+      "Shael Rune (13)",
+      "Amn Rune (11)",
+      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "280",
+        "resolved_text": "+200-280% Enhanced Damage"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Increased Attack Speed"
+      },
+      {
+        "code": "vit",
+        "param": "",
+        "min_val": "8",
+        "max_val": "15",
+        "resolved_text": "+8-15 to Vitality"
+      },
+      {
+        "code": "mag%",
+        "param": "",
+        "min_val": "25",
+        "max_val": "40",
+        "resolved_text": "25-40% Better Chance of Getting Magic Items"
+      },
+      {
+        "code": "rep-dur",
+        "param": "25",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "Repairs 1 durability in 25 seconds"
+      },
+      {
+        "code": "deadly",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "20% Deadly Strike"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Attract",
+        "min_val": "10",
+        "max_val": "25",
+        "resolved_text": "10% Chance to cast level 25 Attract on striking"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword141",
+      "*Rune Name": "Temptation",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelShaelAmnGul",
+      "Rune1": "r15",
+      "Rune2": "r13",
+      "Rune3": "r11",
+      "Rune4": "r25",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "200",
+      "T1Max1": "280",
+      "T1Code2": "swing2",
+      "T1Param2": "",
+      "T1Min2": "20",
+      "T1Max2": "20",
+      "T1Code3": "vit",
+      "T1Param3": "",
+      "T1Min3": "8",
+      "T1Max3": "15",
+      "T1Code4": "mag%",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "40",
+      "T1Code5": "rep-dur",
+      "T1Param5": "25",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "deadly",
+      "T1Param6": "",
+      "T1Min6": "20",
+      "T1Max6": "20",
+      "T1Code7": "hit-skill",
+      "T1Param7": "Attract",
+      "T1Min7": "10",
+      "T1Max7": "25",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Venom",
+    "runes": [
+      "Tal Rune (7)",
+      "Shael Rune (13)",
+      "\u2022Mal Rune (23)\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "190",
+        "max_val": "240",
+        "resolved_text": "+190-240% Enhanced Damage"
+      },
+      {
+        "code": "ignore-ac",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Ignore Target's Defense"
+      },
+      {
+        "code": "poisskill",
+        "param": "",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Poison Skills"
+      },
+      {
+        "code": "oskill",
+        "param": "Venom",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30 to Venom"
+      },
+      {
+        "code": "manasteal",
+        "param": "",
+        "min_val": "7",
+        "max_val": "7",
+        "resolved_text": "7% Mana stolen per hit"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "25",
+        "resolved_text": "+20-25% Increased Attack Speed"
+      },
+      {
+        "code": "pierce-pois",
+        "param": "",
+        "min_val": "20",
+        "max_val": "30",
+        "resolved_text": "-20-30% to Enemy Poison Resistance"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword154",
+      "*Rune Name": "Venom",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "TalShaelMal",
+      "Rune1": "r07",
+      "Rune2": "r13",
+      "Rune3": "r23",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "190",
+      "T1Max1": "240",
+      "T1Code2": "ignore-ac",
+      "T1Param2": "",
+      "T1Min2": "1",
+      "T1Max2": "1",
+      "T1Code3": "poisskill",
+      "T1Param3": "",
+      "T1Min3": "3",
+      "T1Max3": "3",
+      "T1Code4": "oskill",
+      "T1Param4": "Venom",
+      "T1Min4": "30",
+      "T1Max4": "30",
+      "T1Code5": "manasteal",
+      "T1Param5": "",
+      "T1Min5": "7",
+      "T1Max5": "7",
+      "T1Code6": "swing2",
+      "T1Param6": "",
+      "T1Min6": "20",
+      "T1Max6": "25",
+      "T1Code7": "pierce-pois",
+      "T1Param7": "",
+      "T1Min7": "20",
+      "T1Max7": "30",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Wind",
+    "runes": [
+      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
+      "\u2022Mal Rune (23)\u2022"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "260",
+        "max_val": "280",
+        "resolved_text": "+260-280% Enhanced Damage"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Increased Attack Speed"
+      },
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Faster Run/Walk"
+      },
+      {
+        "code": "reduce-ac",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "-50% Target Defense"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Tornado",
+        "min_val": "33",
+        "max_val": "30",
+        "resolved_text": "33% Chance to cast level 30 Tornado on striking"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Twister",
+        "min_val": "25",
+        "max_val": "35",
+        "resolved_text": "25% Chance to cast level 35 Twister on striking"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30% Faster Hit Recovery"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword163",
+      "*Rune Name": "Wind",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "SurMal",
+      "Rune1": "r29",
+      "Rune2": "r23",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "260",
+      "T1Max1": "280",
+      "T1Code2": "swing2",
+      "T1Param2": "",
+      "T1Min2": "40",
+      "T1Max2": "40",
+      "T1Code3": "move2",
+      "T1Param3": "",
+      "T1Min3": "40",
+      "T1Max3": "40",
+      "T1Code4": "reduce-ac",
+      "T1Param4": "",
+      "T1Min4": "50",
+      "T1Max4": "50",
+      "T1Code5": "hit-skill",
+      "T1Param5": "Tornado",
+      "T1Min5": "33",
+      "T1Max5": "30",
+      "T1Code6": "hit-skill",
+      "T1Param6": "Twister",
+      "T1Min6": "25",
+      "T1Max6": "35",
+      "T1Code7": "balance2",
+      "T1Param7": "",
+      "T1Min7": "30",
+      "T1Max7": "30",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Hustle (weapon)",
+    "runes": [
+      "Shael Rune (13)",
+      "Ko Rune (18)",
+      "Eld Rune (2)"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "hit-skill",
+        "param": "Quickness",
+        "min_val": "5",
+        "max_val": "1",
+        "resolved_text": "5% Chance to cast level 1 Burst of Speed on striking"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10% Increased Attack Speed"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "180",
+        "max_val": "200",
+        "resolved_text": "+180-200% Enhanced Damage"
+      },
+      {
+        "code": "aura",
+        "param": "Fanaticism",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Level 1 Fanaticism Aura When Equipped"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword173",
+      "*Rune Name": "Hustle (weapon)",
+      "complete": "1",
+      "firstLadderSeason": "3",
+      "lastLadderSeason": "",
+      "*Patch Release": "D2R Ladder 3",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelKoEld",
+      "Rune1": "r13",
+      "Rune2": "r18",
+      "Rune3": "r02",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hit-skill",
+      "T1Param1": "Quickness",
+      "T1Min1": "5",
+      "T1Max1": "1",
+      "T1Code2": "swing2",
+      "T1Param2": "",
+      "T1Min2": "10",
+      "T1Max2": "10",
+      "T1Code3": "dmg%",
+      "T1Param3": "",
+      "T1Min3": "180",
+      "T1Max3": "200",
+      "T1Code4": "aura",
+      "T1Param4": "Fanaticism",
+      "T1Min4": "1",
+      "T1Max4": "1",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Mosaic",
+    "runes": [
+      "\u2022Mal Rune (23)\u2022",
+      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
+      "Amn Rune (11)"
+    ],
+    "base_items": [
+      "Weapon"
+    ],
+    "properties": [
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to All Skills"
+      },
+      {
+        "code": "pierce-fire",
+        "param": "",
+        "min_val": "5",
+        "max_val": "12",
+        "resolved_text": "-5-12% to Enemy Fire Resistance"
+      },
+      {
+        "code": "pierce-cold",
+        "param": "",
+        "min_val": "5",
+        "max_val": "12",
+        "resolved_text": "-5-12% to Enemy Cold Resistance"
+      },
+      {
+        "code": "pierce-ltng",
+        "param": "",
+        "min_val": "5",
+        "max_val": "12",
+        "resolved_text": "-5-12% to Enemy Lightning Resistance"
+      },
+      {
+        "code": "extra-fire",
+        "param": "",
+        "min_val": "8",
+        "max_val": "15",
+        "resolved_text": "+8-15% to Fire Skill Damage"
+      },
+      {
+        "code": "extra-cold",
+        "param": "",
+        "min_val": "8",
+        "max_val": "15",
+        "resolved_text": "+8-15% to Cold Skill Damage"
+      },
+      {
+        "code": "extra-ltng",
+        "param": "",
+        "min_val": "8",
+        "max_val": "15",
+        "resolved_text": "+8-15% to Lightning Skill Damage"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword174",
+      "*Rune Name": "Mosaic",
+      "complete": "1",
+      "firstLadderSeason": "3",
+      "lastLadderSeason": "",
+      "*Patch Release": "D2R Ladder 3",
+      "itype1": "weap",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "MalSurAmn",
+      "Rune1": "r23",
+      "Rune2": "r29",
+      "Rune3": "r11",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "allskills",
+      "T1Param1": "",
+      "T1Min1": "2",
+      "T1Max1": "2",
+      "T1Code2": "pierce-fire",
+      "T1Param2": "",
+      "T1Min2": "5",
+      "T1Max2": "12",
+      "T1Code3": "pierce-cold",
+      "T1Param3": "",
+      "T1Min3": "5",
+      "T1Max3": "12",
+      "T1Code4": "pierce-ltng",
+      "T1Param4": "",
+      "T1Min4": "5",
+      "T1Max4": "12",
+      "T1Code5": "extra-fire",
+      "T1Param5": "",
+      "T1Min5": "8",
+      "T1Max5": "15",
+      "T1Code6": "extra-cold",
+      "T1Param6": "",
+      "T1Min6": "8",
+      "T1Max6": "15",
+      "T1Code7": "extra-ltng",
+      "T1Param7": "",
+      "T1Min7": "8",
+      "T1Max7": "15",
+      "*eol": "0"
+    }
+  }
+]

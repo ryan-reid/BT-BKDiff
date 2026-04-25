@@ -1,8 +1,8 @@
 # Set Hand to Hand 2
 
 ### Natalya's Mark (Natalya's Mark)
-* **Set:** Natalya's Odium
 * **Base Item:** Scissors Suwayyah
+* **Level Requirement:** 79
 * **Properties:**
     * +40% Increased Attack Speed
     * +200-250% Enhanced Damage
@@ -14,8 +14,8 @@
     * +2-3 to All Skills
 
 ### Natalya's Slayer (Natalya's Slayer)
-* **Set:** Natalya's Vengeance
 * **Base Item:** Scissors Suwayyah
+* **Level Requirement:** 85
 * **Properties:**
     * +2-3 to Assassin Skill Levels
     * Level 9 Fanaticism Aura When Equipped
@@ -28,8 +28,8 @@
     * Damage Reduced by 10-20%
 
 ### Natalya's Scar (Natalya's Scar)
-* **Set:** Natalya's Vengeance
 * **Base Item:** Scissors Suwayyah
+* **Level Requirement:** 85
 * **Properties:**
     * +2-3 to Assassin Skill Levels
     * Level 12 Thorns Aura When Equipped

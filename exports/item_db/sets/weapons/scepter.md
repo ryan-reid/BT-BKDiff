@@ -1,23 +1,23 @@
 # Set Scepter
 
 ### Civerb's Cudgel (Civerb's Cudgel)
-* **Set:** Civerb's Vestments
 * **Base Item:** Grand Scepter
+* **Level Requirement:** 1
 * **Properties:**
-    * +16 to Attack Rating (Based on Character Level)
+    * (8.0 per clvl) to Attack Rating (Based on Character Level)
     * +23 to Maximum Damage
     * Adds 1-20 Lightning Damage
 
 ### Milabrega's Rod (Milabrega's Rod)
-* **Set:** Milabrega's Regalia
 * **Base Item:** War Scepter
+* **Level Requirement:** 1
 * **Properties:**
     * +1 to All Skills
     * +100% Enhanced Damage
 
 ### Griswold's Redemption (Griswolds's Redemption)
-* **Set:** Griswold's Legacy
 * **Base Item:** Caduceus
+* **Level Requirement:** 53
 * **Properties:**
     * +300-350% Enhanced Damage
     * +60% Increased Attack Speed
@@ -27,8 +27,8 @@
     * 15% Chance to cast level 5 Frost Nova on striking
 
 ### Griswolds's Vindication (Griswolds's Vindication)
-* **Set:** Griswold's Masterwork
 * **Base Item:** Caduceus
+* **Level Requirement:** 85
 * **Properties:**
     * +3 to Paladin Skill Levels
     * Level 15-18 Holy Shock Aura When Equipped

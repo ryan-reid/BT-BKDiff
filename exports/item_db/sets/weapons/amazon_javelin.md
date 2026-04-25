@@ -1,8 +1,8 @@
 # Set Amazon Javelin
 
 ### M'avina's Piercing Truth (M'avina's Piercing Truth)
-* **Set:** God of War M'avina
 * **Base Item:** Matriarchal Javelin
+* **Level Requirement:** 85
 * **Properties:**
     * +3-4 to Amazon Skill Levels
     * +30% Increased Attack Speed
@@ -14,8 +14,8 @@
     * 10% Chance to cast level 60 Lower Resist when you Kill an Enemy
 
 ### M'avina's Broken Weapon (M'avina's Broken Weapon)
-* **Set:** M'avina's Disappointment
 * **Base Item:** Matriarchal Javelin
+* **Level Requirement:** 85
 * **Properties:**
     * +1-2 to All Skills
     * +15% Increased Attack Speed

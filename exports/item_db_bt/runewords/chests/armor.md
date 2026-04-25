@@ -1,8 +1,8 @@
-# Runewords for Chests
+# Armor Runewords
 
 ### Bone
-* **Runes:** Sol Rune + Amn Rune + Amn Rune
-* **Base Items:** tors
+* **Runes:** Sol Rune (12) + Amn Rune (11) + Amn Rune (11)
+* **Base Items:** Armor
 * **Properties:**
     * +15-20% Faster Cast Rate
     * 15% Chance to cast level 10 Bone Armor when struck
@@ -11,8 +11,8 @@
     * All Resistances +15
 
 ### Bramble
-* **Runes:** Ral Rune + Ohm Rune + Sur Rune + Eth Rune
-* **Base Items:** tors
+* **Runes:** Ral Rune (8) + •••Ohm Rune (27)••• + •••Sur Rune (29)••• + Eth Rune (5)
+* **Base Items:** Armor
 * **Properties:**
     * +50% Faster Hit Recovery
     * +300 Defense
@@ -23,8 +23,8 @@
     * Level 33 Spirit of Barbs (13/# Charges)
 
 ### Broken Promise
-* **Runes:** Io Rune + Lum Rune + Fal Rune + Ko Rune
-* **Base Items:** tors
+* **Runes:** Io Rune (16) + Lum Rune (17) + Fal Rune (19) + Ko Rune (18)
+* **Base Items:** Armor
 * **Properties:**
     * +20% Faster Hit Recovery
     * +20% Faster Run/Walk
@@ -35,8 +35,8 @@
     * 20% Better Chance of Getting Magic Items
 
 ### Chains of Honor
-* **Runes:** Dol Rune + Um Rune + Ber Rune + Ist Rune
-* **Base Items:** tors
+* **Runes:** Dol Rune (14) + •Um Rune (22)• + •••Ber Rune (30)••• + •••Ist Rune (24)•••
+* **Base Items:** Armor
 * **Properties:**
     * All Resistances +50
     * +70% Enhanced Defense
@@ -47,20 +47,20 @@
     * +20 to Strength
 
 ### Dragon
-* **Runes:** Sur Rune + Lo Rune + Sol Rune
-* **Base Items:** tors
+* **Runes:** •••Sur Rune (29)••• + •••Lo Rune (28)••• + Sol Rune (12)
+* **Base Items:** Armor
 * **Properties:**
     * +360 Defense
     * +230 Defense vs. Missile
-    * + to Strength (Based on Character Level)
+    * (0.4 per clvl) to Strength (Based on Character Level)
     * 12% Chance to cast level 15 Hydra on striking
     * 20% Chance to cast level 18 Venom when struck
     * Level 16-21 Holy Fire Aura When Equipped
     * +5-10 to all Attributes
 
 ### Duress
-* **Runes:** Shael Rune + Um Rune + Thul Rune
-* **Base Items:** tors
+* **Runes:** Shael Rune (13) + •Um Rune (22)• + Thul Rune (10)
+* **Base Items:** Armor
 * **Properties:**
     * +15-20 to Mana after each Kill
     * +80-100% Enhanced Damage
@@ -71,19 +71,19 @@
     * +9-15 Life after each Kill
 
 ### Enigma
-* **Runes:** Jah Rune + Ith Rune + Sol Rune
-* **Base Items:** tors
+* **Runes:** •••Jah Rune (31)••• + Ith Rune (6) + Sol Rune (12)
+* **Base Items:** Armor
 * **Properties:**
     * +750-775 Defense
     * +14 Life after each Kill
     * +45% Faster Run/Walk
     * +2 to All Skills
     * +1 to Teleport
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
 
 ### Enlightenment
-* **Runes:** Pul Rune + Ral Rune + Sol Rune
-* **Base Items:** tors
+* **Runes:** •Pul Rune (21)• + Ral Rune (8) + Sol Rune (12)
+* **Base Items:** Armor
 * **Properties:**
     * +15-20% Faster Cast Rate
     * 5% Chance to cast level 15 Blaze when struck
@@ -92,8 +92,8 @@
     * +20% Faster Hit Recovery
 
 ### Gloom
-* **Runes:** Fal Rune + Um Rune + Pul Rune
-* **Base Items:** tors
+* **Runes:** Fal Rune (19) + •Um Rune (22)• + •Pul Rune (21)•
+* **Base Items:** Armor
 * **Properties:**
     * +170-230% Enhanced Defense
     * All Resistances +30
@@ -104,8 +104,8 @@
     * Half Freeze Duration
 
 ### Lionheart
-* **Runes:** Hel Rune + Lum Rune + Fal Rune
-* **Base Items:** tors
+* **Runes:** Hel Rune (15) + Lum Rune (17) + Fal Rune (19)
+* **Base Items:** Armor
 * **Properties:**
     * +15 to Strength
     * +20 to Vitality
@@ -115,8 +115,8 @@
     * All Resistances +30
 
 ### Myth
-* **Runes:** Hel Rune + Amn Rune + Nef Rune
-* **Base Items:** tors
+* **Runes:** Hel Rune (15) + Amn Rune (11) + Nef Rune (4)
+* **Base Items:** Armor
 * **Properties:**
     * 10% Chance to cast level 1 Taunt on striking
     * +20% Faster Run/Walk
@@ -124,8 +124,8 @@
     * Replenish Life +10
 
 ### Peace
-* **Runes:** Shael Rune + Thul Rune + Amn Rune
-* **Base Items:** tors
+* **Runes:** Shael Rune (13) + Thul Rune (10) + Amn Rune (11)
+* **Base Items:** Armor
 * **Properties:**
     * 2% Chance to cast level 15 Valkyrie on striking
     * 4% Chance to cast level 5 Slow Missiles when struck
@@ -133,8 +133,8 @@
     * +2 to Critical Strike
 
 ### Pestilence
-* **Runes:** Tal Rune + Cham Rune + Ist Rune
-* **Base Items:** tors
+* **Runes:** Tal Rune (7) + •••Cham Rune (32)••• + •••Ist Rune (24)•••
+* **Base Items:** Armor
 * **Properties:**
     * +3 to Poison Skills
     * -40-50% to Enemy Poison Resistance
@@ -145,8 +145,8 @@
     * Magic Resist +50%
 
 ### Principle
-* **Runes:** Ral Rune + Ko Rune + Eld Rune
-* **Base Items:** tors
+* **Runes:** Ral Rune (8) + Ko Rune (18) + Eld Rune (2)
+* **Base Items:** Armor
 * **Properties:**
     * 100% Chance to cast level 5 Holy Bolt on striking
     * +2 to Paladin Skill Levels
@@ -154,20 +154,20 @@
     * +50% Damage to Undead
 
 ### Prudence
-* **Runes:** Mal Rune + Tir Rune
-* **Base Items:** tors
+* **Runes:** •Mal Rune (23)• + Tir Rune (3)
+* **Base Items:** Armor
 * **Properties:**
     * +140-170% Enhanced Defense
     * Magic Damage Reduced by 17
     * Damage Reduced by 24
     * All Resistances +25-35
     * +25% Faster Hit Recovery
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 25 seconds
     * Cannot Be Frozen
 
 ### Rain
-* **Runes:** Ort Rune + Dol Rune + Ith Rune
-* **Base Items:** tors
+* **Runes:** Ort Rune (9) + Dol Rune (14) + Ith Rune (6)
+* **Base Items:** Armor
 * **Properties:**
     * +15-20% Faster Cast Rate
     * 5% Chance to cast level 15 Cyclone Armor when struck
@@ -175,8 +175,8 @@
     * +100-150 to Mana
 
 ### Red
-* **Runes:** Io Rune + Eld Rune + Dol Rune
-* **Base Items:** tors
+* **Runes:** Io Rune (16) + Eld Rune (2) + Dol Rune (14)
+* **Base Items:** Armor
 * **Properties:**
     * Increase Maximum Life 15-25%
     * +80-100 to Life
@@ -187,19 +187,19 @@
     * +50-80% Enhanced Defense
 
 ### Smoke
-* **Runes:** Nef Rune + Lum Rune
-* **Base Items:** tors
+* **Runes:** Nef Rune (4) + Lum Rune (17)
+* **Base Items:** Armor
 * **Properties:**
     * +250 Defense vs. Missile
     * +75% Enhanced Defense
     * All Resistances +50
     * +20% Faster Hit Recovery
-    * +3-5 to Strength (Based on Character Level)
+    * (0.4-0.6 per clvl) to Strength (Based on Character Level)
     * 20% Chance to cast level 13 Cloak of Shadows when you Kill an Enemy
 
 ### Stealth
-* **Runes:** Tal Rune + Eth Rune
-* **Base Items:** tors
+* **Runes:** Tal Rune (7) + Eth Rune (5)
+* **Base Items:** Armor
 * **Properties:**
     * Magic Damage Reduced by 3
     * +6 to Dexterity
@@ -209,8 +209,8 @@
     * +25% Faster Hit Recovery
 
 ### Stone
-* **Runes:** Shael Rune + Um Rune + Pul Rune + Lum Rune
-* **Base Items:** tors
+* **Runes:** Shael Rune (13) + •Um Rune (22)• + •Pul Rune (21)• + Lum Rune (17)
+* **Base Items:** Armor
 * **Properties:**
     * +350-400% Enhanced Defense
     * +30 to Clay Golem
@@ -221,8 +221,8 @@
     * +40% Faster Hit Recovery
 
 ### Treachery
-* **Runes:** Shael Rune + Thul Rune + Lem Rune
-* **Base Items:** tors
+* **Runes:** Shael Rune (13) + Thul Rune (10) + •Lem Rune (20)•
+* **Base Items:** Armor
 * **Properties:**
     * 25% Chance to cast level 15 Venom on striking
     * 50% Chance to cast level 15 Fade when struck
@@ -230,17 +230,17 @@
     * +45% Increased Attack Speed
 
 ### Wealth
-* **Runes:** Lem Rune + Ko Rune + Tir Rune
-* **Base Items:** tors
+* **Runes:** •Lem Rune (20)• + Ko Rune (18) + Tir Rune (3)
+* **Base Items:** Armor
 * **Properties:**
     * 250% Extra Gold from Monsters
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (1.0% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
     * +20% Faster Run/Walk
     * +10% Increased Attack Speed
 
 ### Hustle (armor)
-* **Runes:** Shael Rune + Ko Rune + Eld Rune
-* **Base Items:** tors
+* **Runes:** Shael Rune (13) + Ko Rune (18) + Eld Rune (2)
+* **Base Items:** Armor
 * **Properties:**
     * +65% Faster Run/Walk
     * 35% Slower Stamina Drain
@@ -249,8 +249,8 @@
     * +6 to Evade
 
 ### Dilemma
-* **Runes:** Dol Rune + Lem Rune + Mal Rune
-* **Base Items:** tors
+* **Runes:** Dol Rune (14) + •Lem Rune (20)• + •Mal Rune (23)•
+* **Base Items:** Armor
 * **Properties:**
     * +1 to Teleport
     * Replenish Life +-40--20
@@ -258,8 +258,8 @@
     * 35-50% Better Chance of Getting Magic Items
 
 ### Shadows
-* **Runes:** Shael Rune + Sol Rune + Ko Rune
-* **Base Items:** tors
+* **Runes:** Shael Rune (13) + Sol Rune (12) + Ko Rune (18)
+* **Base Items:** Armor
 * **Properties:**
     * +45% Increased Attack Speed
     * +100-150 Kick Damage

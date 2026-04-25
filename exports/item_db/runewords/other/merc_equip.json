@@ -1,0 +1,1834 @@
+[
+  {
+    "name": "Delirium",
+    "runes": [
+      "\u2022Lem Rune (20)\u2022",
+      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
+      "Io Rune (16)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "hit-skill",
+        "param": "Amplifying Damage",
+        "min_val": "20",
+        "max_val": "15",
+        "resolved_text": "20% Chance to cast level 15 Amplifying Damage on striking"
+      },
+      {
+        "code": "red-dmg%",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "Damage Reduced by 10%"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Static Field",
+        "min_val": "15",
+        "max_val": "10",
+        "resolved_text": "15% Chance to cast level 10 Static Field when struck"
+      },
+      {
+        "code": "ac",
+        "param": "",
+        "min_val": "261",
+        "max_val": "261",
+        "resolved_text": "+261 Defense"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Chilling Armor",
+        "min_val": "5",
+        "max_val": "30",
+        "resolved_text": "5% Chance to cast level 30 Chilling Armor when struck"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to All Skills"
+      },
+      {
+        "code": "addxp",
+        "param": "",
+        "min_val": "8",
+        "max_val": "8",
+        "resolved_text": "+8% to Experience Gained"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword22",
+      "*Rune Name": "Delirium",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "LemIstIo",
+      "Rune1": "r20",
+      "Rune2": "r24",
+      "Rune3": "r16",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hit-skill",
+      "T1Param1": "Amplifying Damage",
+      "T1Min1": "20",
+      "T1Max1": "15",
+      "T1Code2": "red-dmg%",
+      "T1Param2": "",
+      "T1Min2": "10",
+      "T1Max2": "10",
+      "T1Code3": "gethit-skill",
+      "T1Param3": "Static Field",
+      "T1Min3": "15",
+      "T1Max3": "10",
+      "T1Code4": "ac",
+      "T1Param4": "",
+      "T1Min4": "261",
+      "T1Max4": "261",
+      "T1Code5": "gethit-skill",
+      "T1Param5": "Chilling Armor",
+      "T1Min5": "5",
+      "T1Max5": "30",
+      "T1Code6": "allskills",
+      "T1Param6": "",
+      "T1Min6": "2",
+      "T1Max6": "2",
+      "T1Code7": "addxp",
+      "T1Param7": "",
+      "T1Min7": "8",
+      "T1Max7": "8",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Dream",
+    "runes": [
+      "Io Rune (16)",
+      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
+      "\u2022Pul Rune (21)\u2022"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "ac",
+        "param": "",
+        "min_val": "150",
+        "max_val": "220",
+        "resolved_text": "+150-220 Defense"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Confuse",
+        "min_val": "10",
+        "max_val": "15",
+        "resolved_text": "10% Chance to cast level 15 Confuse when struck"
+      },
+      {
+        "code": "mana/lvl",
+        "param": "5",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(0.6 per clvl) to Mana (Based on Character Level)"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "14",
+        "max_val": "20",
+        "resolved_text": "All Resistances +14-20"
+      },
+      {
+        "code": "balance3",
+        "param": "",
+        "min_val": "20",
+        "max_val": "30",
+        "resolved_text": "+20-30% Faster Hit Recovery"
+      },
+      {
+        "code": "aura",
+        "param": "Holy Shock",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "Level 15 Holy Shock Aura When Equipped"
+      },
+      {
+        "code": "mag%",
+        "param": "",
+        "min_val": "20",
+        "max_val": "30",
+        "resolved_text": "20-30% Better Chance of Getting Magic Items"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword29",
+      "*Rune Name": "Dream",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "shld",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "IoJahPul",
+      "Rune1": "r16",
+      "Rune2": "r31",
+      "Rune3": "r21",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "ac",
+      "T1Param1": "",
+      "T1Min1": "150",
+      "T1Max1": "220",
+      "T1Code2": "gethit-skill",
+      "T1Param2": "Confuse",
+      "T1Min2": "10",
+      "T1Max2": "15",
+      "T1Code3": "mana/lvl",
+      "T1Param3": "5",
+      "T1Min3": "",
+      "T1Max3": "",
+      "T1Code4": "res-all",
+      "T1Param4": "",
+      "T1Min4": "14",
+      "T1Max4": "20",
+      "T1Code5": "balance3",
+      "T1Param5": "",
+      "T1Min5": "20",
+      "T1Max5": "30",
+      "T1Code6": "aura",
+      "T1Param6": "Holy Shock",
+      "T1Min6": "15",
+      "T1Max6": "15",
+      "T1Code7": "mag%",
+      "T1Param7": "",
+      "T1Min7": "20",
+      "T1Max7": "30",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Flickering Flame",
+    "runes": [
+      "Nef Rune (4)",
+      "\u2022Pul Rune (21)\u2022",
+      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "fireskill",
+        "param": "",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Fire Skills"
+      },
+      {
+        "code": "aura",
+        "param": "Resist Fire",
+        "min_val": "4",
+        "max_val": "8",
+        "resolved_text": "Level 4-8 Resist Fire Aura When Equipped"
+      },
+      {
+        "code": "pierce-fire",
+        "param": "",
+        "min_val": "10",
+        "max_val": "15",
+        "resolved_text": "-10-15% to Enemy Fire Resistance"
+      },
+      {
+        "code": "mana",
+        "param": "",
+        "min_val": "50",
+        "max_val": "75",
+        "resolved_text": "+50-75 to Mana"
+      },
+      {
+        "code": "half-freeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Half Freeze Duration"
+      },
+      {
+        "code": "res-pois-len",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "Poison Length Reduced by 50%"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword40",
+      "*Rune Name": "Flickering Flame",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "NefPulVex",
+      "Rune1": "r04",
+      "Rune2": "r21",
+      "Rune3": "r26",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "fireskill",
+      "T1Param1": "",
+      "T1Min1": "3",
+      "T1Max1": "3",
+      "T1Code2": "aura",
+      "T1Param2": "Resist Fire",
+      "T1Min2": "4",
+      "T1Max2": "8",
+      "T1Code3": "pierce-fire",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "15",
+      "T1Code4": "mana",
+      "T1Param4": "",
+      "T1Min4": "50",
+      "T1Max4": "75",
+      "T1Code5": "half-freeze",
+      "T1Param5": "",
+      "T1Min5": "1",
+      "T1Max5": "1",
+      "T1Code6": "res-pois-len",
+      "T1Param6": "",
+      "T1Min6": "50",
+      "T1Max6": "50",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Fortune",
+    "runes": [
+      "Sol Rune (12)",
+      "Tir Rune (3)",
+      "Shael Rune (13)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "77",
+        "max_val": "77",
+        "resolved_text": "+77% Enhanced Defense"
+      },
+      {
+        "code": "aura",
+        "param": "Prayer",
+        "min_val": "7",
+        "max_val": "7",
+        "resolved_text": "Level 7 Prayer Aura When Equipped"
+      },
+      {
+        "code": "mag%",
+        "param": "",
+        "min_val": "20",
+        "max_val": "35",
+        "resolved_text": "20-35% Better Chance of Getting Magic Items"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Blaze",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "20% Chance to cast level 20 Blaze when struck"
+      },
+      {
+        "code": "gold%",
+        "param": "",
+        "min_val": "77",
+        "max_val": "77",
+        "resolved_text": "77% Extra Gold from Monsters"
+      },
+      {
+        "code": "mana-kill",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5 to Mana after each Kill"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword42",
+      "*Rune Name": "Fortune",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "BTDIABLO",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "SolTirShael",
+      "Rune1": "r12",
+      "Rune2": "r03",
+      "Rune3": "r13",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "ac%",
+      "T1Param1": "",
+      "T1Min1": "77",
+      "T1Max1": "77",
+      "T1Code2": "aura",
+      "T1Param2": "Prayer",
+      "T1Min2": "7",
+      "T1Max2": "7",
+      "T1Code3": "mag%",
+      "T1Param3": "",
+      "T1Min3": "20",
+      "T1Max3": "35",
+      "T1Code4": "gethit-skill",
+      "T1Param4": "Blaze",
+      "T1Min4": "20",
+      "T1Max4": "20",
+      "T1Code5": "gold%",
+      "T1Param5": "",
+      "T1Min5": "77",
+      "T1Max5": "77",
+      "T1Code6": "mana-kill",
+      "T1Param6": "",
+      "T1Min6": "5",
+      "T1Max6": "5",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Hunger",
+    "runes": [
+      "Shael Rune (13)",
+      "Sol Rune (12)",
+      "Fal Rune (19)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "red-dmg%",
+        "param": "",
+        "min_val": "5",
+        "max_val": "8",
+        "resolved_text": "Damage Reduced by 5-8%"
+      },
+      {
+        "code": "red-mag",
+        "param": "",
+        "min_val": "9",
+        "max_val": "9",
+        "resolved_text": "Magic Damage Reduced by 9"
+      },
+      {
+        "code": "manasteal",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "10% Mana stolen per hit"
+      },
+      {
+        "code": "lifesteal",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "10% Life stolen per hit"
+      },
+      {
+        "code": "mana-kill",
+        "param": "",
+        "min_val": "8",
+        "max_val": "8",
+        "resolved_text": "+8 to Mana after each Kill"
+      },
+      {
+        "code": "heal-kill",
+        "param": "",
+        "min_val": "8",
+        "max_val": "8",
+        "resolved_text": "+8 Life after each Kill"
+      },
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Run/Walk"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword58",
+      "*Rune Name": "Hunger",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "BKDiablo",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelSolFal",
+      "Rune1": "r13",
+      "Rune2": "r12",
+      "Rune3": "r19",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "red-dmg%",
+      "T1Param1": "",
+      "T1Min1": "5",
+      "T1Max1": "8",
+      "T1Code2": "red-mag",
+      "T1Param2": "",
+      "T1Min2": "9",
+      "T1Max2": "9",
+      "T1Code3": "manasteal",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "10",
+      "T1Code4": "lifesteal",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "10",
+      "T1Code5": "mana-kill",
+      "T1Param5": "",
+      "T1Min5": "8",
+      "T1Max5": "8",
+      "T1Code6": "heal-kill",
+      "T1Param6": "",
+      "T1Min6": "8",
+      "T1Max6": "8",
+      "T1Code7": "move2",
+      "T1Param7": "",
+      "T1Min7": "25",
+      "T1Max7": "25",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Knowledge",
+    "runes": [
+      "Ith Rune (6)",
+      "Tir Rune (3)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "enr",
+        "param": "",
+        "min_val": "20",
+        "max_val": "30",
+        "resolved_text": "+20-30 to Energy"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Hit Recovery"
+      },
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "15",
+        "max_val": "25",
+        "resolved_text": "+15-25% Faster Run/Walk"
+      },
+      {
+        "code": "oskill",
+        "param": "Warmth",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Warmth"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword68",
+      "*Rune Name": "Knowledge",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "BTDIABLO",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "IthTir",
+      "Rune1": "r06",
+      "Rune2": "r03",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "enr",
+      "T1Param1": "",
+      "T1Min1": "20",
+      "T1Max1": "30",
+      "T1Code2": "balance2",
+      "T1Param2": "",
+      "T1Min2": "25",
+      "T1Max2": "25",
+      "T1Code3": "move2",
+      "T1Param3": "",
+      "T1Min3": "15",
+      "T1Max3": "25",
+      "T1Code4": "oskill",
+      "T1Param4": "Warmth",
+      "T1Min4": "3",
+      "T1Max4": "3",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Lore",
+    "runes": [
+      "Ort Rune (9)",
+      "Sol Rune (12)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "enr",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Energy"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to All Skills"
+      },
+      {
+        "code": "light",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Light Radius"
+      },
+      {
+        "code": "mana-kill",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Mana after each Kill"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword75",
+      "*Rune Name": "Lore",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "OrtSol",
+      "Rune1": "r09",
+      "Rune2": "r12",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "enr",
+      "T1Param1": "",
+      "T1Min1": "10",
+      "T1Max1": "10",
+      "T1Code2": "allskills",
+      "T1Param2": "",
+      "T1Min2": "1",
+      "T1Max2": "1",
+      "T1Code3": "light",
+      "T1Param3": "",
+      "T1Min3": "2",
+      "T1Max3": "2",
+      "T1Code4": "mana-kill",
+      "T1Param4": "",
+      "T1Min4": "2",
+      "T1Max4": "2",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Nadir",
+    "runes": [
+      "Nef Rune (4)",
+      "Tir Rune (3)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50% Enhanced Defense"
+      },
+      {
+        "code": "ac",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25 Defense"
+      },
+      {
+        "code": "light",
+        "param": "",
+        "min_val": "-3",
+        "max_val": "-3",
+        "resolved_text": "+-3 to Light Radius"
+      },
+      {
+        "code": "charged",
+        "param": "264",
+        "min_val": "9",
+        "max_val": "13",
+        "resolved_text": "Level 9 Cloak of Shadows (13/# Charges)"
+      },
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5 to Strength"
+      },
+      {
+        "code": "red-mag",
+        "param": "",
+        "min_val": "4",
+        "max_val": "4",
+        "resolved_text": "Magic Damage Reduced by 4"
+      },
+      {
+        "code": "red-dmg",
+        "param": "",
+        "min_val": "4",
+        "max_val": "4",
+        "resolved_text": "Damage Reduced by 4"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword88",
+      "*Rune Name": "Nadir",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "NefTir",
+      "Rune1": "r04",
+      "Rune2": "r03",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "ac%",
+      "T1Param1": "",
+      "T1Min1": "50",
+      "T1Max1": "50",
+      "T1Code2": "ac",
+      "T1Param2": "",
+      "T1Min2": "25",
+      "T1Max2": "25",
+      "T1Code3": "light",
+      "T1Param3": "",
+      "T1Min3": "-3",
+      "T1Max3": "-3",
+      "T1Code4": "charged",
+      "T1Param4": "264",
+      "T1Min4": "9",
+      "T1Max4": "13",
+      "T1Code5": "str",
+      "T1Param5": "",
+      "T1Min5": "5",
+      "T1Max5": "5",
+      "T1Code6": "red-mag",
+      "T1Param6": "",
+      "T1Min6": "4",
+      "T1Max6": "4",
+      "T1Code7": "red-dmg",
+      "T1Param7": "",
+      "T1Min7": "4",
+      "T1Max7": "4",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Radiance",
+    "runes": [
+      "Nef Rune (4)",
+      "Sol Rune (12)",
+      "Ith Rune (6)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "light",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5 to Light Radius"
+      },
+      {
+        "code": "enr",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Energy"
+      },
+      {
+        "code": "vit",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Vitality"
+      },
+      {
+        "code": "red-mag",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "Magic Damage Reduced by 10"
+      },
+      {
+        "code": "mana",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "+33 to Mana"
+      },
+      {
+        "code": "hp",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "+33 to Life"
+      },
+      {
+        "code": "red-mag",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "Magic Damage Reduced by 5"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword116",
+      "*Rune Name": "Radiance",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "NefSolIth",
+      "Rune1": "r04",
+      "Rune2": "r12",
+      "Rune3": "r06",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "light",
+      "T1Param1": "",
+      "T1Min1": "5",
+      "T1Max1": "5",
+      "T1Code2": "enr",
+      "T1Param2": "",
+      "T1Min2": "10",
+      "T1Max2": "10",
+      "T1Code3": "vit",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "10",
+      "T1Code4": "red-mag",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "10",
+      "T1Code5": "mana",
+      "T1Param5": "",
+      "T1Min5": "33",
+      "T1Max5": "33",
+      "T1Code6": "hp",
+      "T1Param6": "",
+      "T1Min6": "33",
+      "T1Max6": "33",
+      "T1Code7": "red-mag",
+      "T1Param7": "",
+      "T1Min7": "5",
+      "T1Max7": "5",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Wisdom",
+    "runes": [
+      "\u2022Pul Rune (21)\u2022",
+      "Ith Rune (6)",
+      "Eld Rune (2)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "pierce",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "Piercing Attack"
+      },
+      {
+        "code": "manasteal",
+        "param": "",
+        "min_val": "4",
+        "max_val": "8",
+        "resolved_text": "4-8% Mana stolen per hit"
+      },
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "15",
+        "max_val": "25",
+        "resolved_text": "15-25% Bonus to Attack Rating"
+      },
+      {
+        "code": "mana-kill",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5 to Mana after each Kill"
+      },
+      {
+        "code": "nofreeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Cannot Be Frozen"
+      },
+      {
+        "code": "enr",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Energy"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword165",
+      "*Rune Name": "Wisdom",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "PulIthEld",
+      "Rune1": "r21",
+      "Rune2": "r06",
+      "Rune3": "r02",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "pierce",
+      "T1Param1": "",
+      "T1Min1": "33",
+      "T1Max1": "33",
+      "T1Code2": "manasteal",
+      "T1Param2": "",
+      "T1Min2": "4",
+      "T1Max2": "8",
+      "T1Code3": "att%",
+      "T1Param3": "",
+      "T1Min3": "15",
+      "T1Max3": "25",
+      "T1Code4": "mana-kill",
+      "T1Param4": "",
+      "T1Min4": "5",
+      "T1Max4": "5",
+      "T1Code5": "nofreeze",
+      "T1Param5": "",
+      "T1Min5": "1",
+      "T1Max5": "1",
+      "T1Code6": "enr",
+      "T1Param6": "",
+      "T1Min6": "10",
+      "T1Max6": "10",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Metamorphosis",
+    "runes": [
+      "Io Rune (16)",
+      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022",
+      "Fal Rune (19)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "hit-skill",
+        "param": "Mark of the Bear",
+        "min_val": "100",
+        "max_val": "1",
+        "resolved_text": "100% Chance to cast level 1 Mark of the Bear on striking"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Mark of the Wolf",
+        "min_val": "100",
+        "max_val": "1",
+        "resolved_text": "100% Chance to cast level 1 Mark of the Wolf on striking"
+      },
+      {
+        "code": "skilltab",
+        "param": "16",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5 to Shape Shifting Skills"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "50",
+        "max_val": "80",
+        "resolved_text": "+50-80% Enhanced Defense"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "All Resistances +10"
+      },
+      {
+        "code": "crush",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "25% Chance of Crushing Blow"
+      },
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30% Faster Run/Walk"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword174",
+      "*Rune Name": "Metamorphosis",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "IoChamFal",
+      "Rune1": "r16",
+      "Rune2": "r32",
+      "Rune3": "r19",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hit-skill",
+      "T1Param1": "Mark of the Bear",
+      "T1Min1": "100",
+      "T1Max1": "1",
+      "T1Code2": "hit-skill",
+      "T1Param2": "Mark of the Wolf",
+      "T1Min2": "100",
+      "T1Max2": "1",
+      "T1Code3": "skilltab",
+      "T1Param3": "16",
+      "T1Min3": "5",
+      "T1Max3": "5",
+      "T1Code4": "ac%",
+      "T1Param4": "",
+      "T1Min4": "50",
+      "T1Max4": "80",
+      "T1Code5": "res-all",
+      "T1Param5": "",
+      "T1Min5": "10",
+      "T1Max5": "10",
+      "T1Code6": "crush",
+      "T1Param6": "",
+      "T1Min6": "25",
+      "T1Max6": "25",
+      "T1Code7": "move2",
+      "T1Param7": "",
+      "T1Min7": "30",
+      "T1Max7": "30",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Ground",
+    "runes": [
+      "Shael Rune (13)",
+      "Io Rune (16)",
+      "Ort Rune (9)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "hp%",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "Increase Maximum Life 5%"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "75",
+        "max_val": "100",
+        "resolved_text": "+75-100% Enhanced Defense"
+      },
+      {
+        "code": "res-ltng",
+        "param": "",
+        "min_val": "10",
+        "max_val": "30",
+        "resolved_text": "Lightning Resist +10-30%"
+      },
+      {
+        "code": "abs-ltng%",
+        "param": "",
+        "min_val": "10",
+        "max_val": "15",
+        "resolved_text": "+10-15 Lightning Absorb"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword175",
+      "*Rune Name": "Ground",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelIoOrt",
+      "Rune1": "r13",
+      "Rune2": "r16",
+      "Rune3": "r09",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hp%",
+      "T1Param1": "",
+      "T1Min1": "5",
+      "T1Max1": "5",
+      "T1Code2": "ac%",
+      "T1Param2": "",
+      "T1Min2": "75",
+      "T1Max2": "100",
+      "T1Code3": "res-ltng",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "30",
+      "T1Code4": "abs-ltng%",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "15",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Temper",
+    "runes": [
+      "Shael Rune (13)",
+      "Io Rune (16)",
+      "Ral Rune (8)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "hp%",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "Increase Maximum Life 5%"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "75",
+        "max_val": "100",
+        "resolved_text": "+75-100% Enhanced Defense"
+      },
+      {
+        "code": "res-fire",
+        "param": "",
+        "min_val": "10",
+        "max_val": "30",
+        "resolved_text": "Fire Resist +10-30%"
+      },
+      {
+        "code": "abs-fire%",
+        "param": "",
+        "min_val": "10",
+        "max_val": "15",
+        "resolved_text": "+10-15 Fire Absorb"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword176",
+      "*Rune Name": "Temper",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelIoRal",
+      "Rune1": "r13",
+      "Rune2": "r16",
+      "Rune3": "r08",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hp%",
+      "T1Param1": "",
+      "T1Min1": "5",
+      "T1Max1": "5",
+      "T1Code2": "ac%",
+      "T1Param2": "",
+      "T1Min2": "75",
+      "T1Max2": "100",
+      "T1Code3": "res-fire",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "30",
+      "T1Code4": "abs-fire%",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "15",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Hearth",
+    "runes": [
+      "Shael Rune (13)",
+      "Io Rune (16)",
+      "Thul Rune (10)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "hp%",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "Increase Maximum Life 5%"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "75",
+        "max_val": "100",
+        "resolved_text": "+75-100% Enhanced Defense"
+      },
+      {
+        "code": "res-cold",
+        "param": "",
+        "min_val": "10",
+        "max_val": "30",
+        "resolved_text": "Cold Resist +10-30%"
+      },
+      {
+        "code": "abs-cold%",
+        "param": "",
+        "min_val": "10",
+        "max_val": "15",
+        "resolved_text": "+10-15 Cold Absorb"
+      },
+      {
+        "code": "nofreeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Cannot Be Frozen"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword177",
+      "*Rune Name": "Hearth",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelIoThul",
+      "Rune1": "r13",
+      "Rune2": "r16",
+      "Rune3": "r10",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hp%",
+      "T1Param1": "",
+      "T1Min1": "5",
+      "T1Max1": "5",
+      "T1Code2": "ac%",
+      "T1Param2": "",
+      "T1Min2": "75",
+      "T1Max2": "100",
+      "T1Code3": "res-cold",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "30",
+      "T1Code4": "abs-cold%",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "15",
+      "T1Code5": "nofreeze",
+      "T1Param5": "",
+      "T1Min5": "1",
+      "T1Max5": "1",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Cure",
+    "runes": [
+      "Shael Rune (13)",
+      "Io Rune (16)",
+      "Tal Rune (7)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "hp%",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "Increase Maximum Life 5%"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "75",
+        "max_val": "100",
+        "resolved_text": "+75-100% Enhanced Defense"
+      },
+      {
+        "code": "res-pois",
+        "param": "",
+        "min_val": "10",
+        "max_val": "30",
+        "resolved_text": "Poison Resist +10-30%"
+      },
+      {
+        "code": "res-pois-len",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "Poison Length Reduced by 50%"
+      },
+      {
+        "code": "aura",
+        "param": "Cleansing",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Level 1 Cleansing Aura When Equipped"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword178",
+      "*Rune Name": "Cure",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelIoTal",
+      "Rune1": "r13",
+      "Rune2": "r16",
+      "Rune3": "r07",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hp%",
+      "T1Param1": "",
+      "T1Min1": "5",
+      "T1Max1": "5",
+      "T1Code2": "ac%",
+      "T1Param2": "",
+      "T1Min2": "75",
+      "T1Max2": "100",
+      "T1Code3": "res-pois",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "30",
+      "T1Code4": "res-pois-len",
+      "T1Param4": "",
+      "T1Min4": "50",
+      "T1Max4": "50",
+      "T1Code5": "aura",
+      "T1Param5": "Cleansing",
+      "T1Min5": "1",
+      "T1Max5": "1",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Bulwark",
+    "runes": [
+      "Shael Rune (13)",
+      "Io Rune (16)",
+      "Sol Rune (12)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "hp%",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "Increase Maximum Life 5%"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "75",
+        "max_val": "100",
+        "resolved_text": "+75-100% Enhanced Defense"
+      },
+      {
+        "code": "red-dmg%",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "Damage Reduced by 10%"
+      },
+      {
+        "code": "regen",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "Replenish Life +30"
+      },
+      {
+        "code": "lifesteal",
+        "param": "",
+        "min_val": "4",
+        "max_val": "6",
+        "resolved_text": "4-6% Life stolen per hit"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword179",
+      "*Rune Name": "Bulwark",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelIoSol",
+      "Rune1": "r13",
+      "Rune2": "r16",
+      "Rune3": "r12",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hp%",
+      "T1Param1": "",
+      "T1Min1": "5",
+      "T1Max1": "5",
+      "T1Code2": "ac%",
+      "T1Param2": "",
+      "T1Min2": "75",
+      "T1Max2": "100",
+      "T1Code3": "red-dmg%",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "10",
+      "T1Code4": "regen",
+      "T1Param4": "",
+      "T1Min4": "30",
+      "T1Max4": "30",
+      "T1Code5": "lifesteal",
+      "T1Param5": "",
+      "T1Min5": "4",
+      "T1Max5": "6",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Coven",
+    "runes": [
+      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
+      "Ral Rune (8)",
+      "Io Rune (16)"
+    ],
+    "base_items": [
+      "Merc Equip"
+    ],
+    "properties": [
+      {
+        "code": "gethit-skill",
+        "param": "Sigil Lethargy",
+        "min_val": "5",
+        "max_val": "20",
+        "resolved_text": "5% Chance to cast level 20 Sigil: Lethargy when struck"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to All Skills"
+      },
+      {
+        "code": "cast1",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Cast Rate"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "100",
+        "max_val": "100",
+        "resolved_text": "+100% Enhanced Defense"
+      },
+      {
+        "code": "mag%",
+        "param": "",
+        "min_val": "10",
+        "max_val": "25",
+        "resolved_text": "10-25% Better Chance of Getting Magic Items"
+      },
+      {
+        "code": "heal-kill",
+        "param": "",
+        "min_val": "1",
+        "max_val": "5",
+        "resolved_text": "+1-5 Life after each Kill"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword180",
+      "*Rune Name": "Coven",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "helm",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "IstRalIo",
+      "Rune1": "r24",
+      "Rune2": "r08",
+      "Rune3": "r16",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "gethit-skill",
+      "T1Param1": "Sigil Lethargy",
+      "T1Min1": "5",
+      "T1Max1": "20",
+      "T1Code2": "allskills",
+      "T1Param2": "",
+      "T1Min2": "1",
+      "T1Max2": "1",
+      "T1Code3": "cast1",
+      "T1Param3": "",
+      "T1Min3": "20",
+      "T1Max3": "20",
+      "T1Code4": "ac%",
+      "T1Param4": "",
+      "T1Min4": "100",
+      "T1Max4": "100",
+      "T1Code5": "mag%",
+      "T1Param5": "",
+      "T1Min5": "10",
+      "T1Max5": "25",
+      "T1Code6": "heal-kill",
+      "T1Param6": "",
+      "T1Min6": "1",
+      "T1Max6": "5",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  }
+]

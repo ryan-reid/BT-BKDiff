@@ -1,7 +1,9 @@
 import os
-from typing import List, Dict, Optional, Any
+import re
+import difflib
+from typing import List, Dict, Optional, Any, Tuple
 from d2_repository import D2Repository, normalize_d2_value
-from d2_models import PropertyDTO, AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, ExcelDiffRowDTO
+from d2_models import PropertyDTO, AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, ExcelDiffRowDTO, CubeRecipeDTO, ItemDiffDTO
 
 class PropertyResolverService:
     def __init__(self, repo: D2Repository, property_groups: Optional[List[Dict[str, str]]] = None):
@@ -151,8 +153,6 @@ class PropertyResolverService:
         prop = self.properties.get(code_lower)
         if not prop:
             range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
-            if "-affix" in code_lower:
-                return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
         
         func1 = prop.get('func1', '0').strip()
@@ -167,15 +167,15 @@ class PropertyResolverService:
         # Check if it's a level scaling stat to prefer format_desc over tooltip
         stat1_code = prop.get('stat1', '').lower()
         stat1 = self.stats.get(stat1_code)
-        is_level_stat = stat1 and stat1.get('op base') == 'level'
+        is_level_stat = stat1 and stat1.get('op base', '').strip().lower() == 'level'
 
         tooltip = prop.get('*Tooltip', '').strip()
         if tooltip and tooltip != '0' and not is_level_stat:
-            # Handle standard tooltips
+            func, val1 = prop.get('func1', '0').strip(), prop.get('val1', '0').strip()
             res_text = tooltip
             # Correct D2 placeholder logic: Handle multiple '#' symbols
-            if func1 in ['36', '14']:
-                res_text = res_text.replace('#', prop.get('val1', '0').strip())
+            if func in ['36', '14']:
+                res_text = res_text.replace('#', val1)
             else:
                 if res_text.count('#') > 1 and '-' in range_str:
                     parts = range_str.split('-')
@@ -186,14 +186,16 @@ class PropertyResolverService:
 
             if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(str(param), f"Tab {param}"))
             if '[Class]' in res_text:
-                if func1 == '36': cls = 'Random Class' if actual_min != actual_max else self.class_names.get(actual_min, f"Class {actual_min}")
+                if func == '36': cls = 'Random Class' if actual_min != actual_max else self.class_names.get(actual_min, f"Class {actual_min}")
                 else: 
                     set1 = prop.get('set1', '').strip()
                     cls_id = set1 if set1 and set1 != '0' else param
                     cls = self.class_names.get(str(cls_id))
                     if not cls:
+                        # Try lookup by skill class
                         skill_cls_abbr = self.skill_to_class.get(str(param).strip().lower())
-                        if skill_cls_abbr: cls = self.class_abbr_map.get(skill_cls_abbr)
+                        if skill_cls_abbr:
+                            cls = self.class_abbr_map.get(skill_cls_abbr)
                     if not cls: cls = "Class"
                 res_text = res_text.replace('[Class]', cls)
             if '[Skill]' in res_text or '%s' in res_text:
@@ -244,6 +246,17 @@ class ItemAnalyzerService:
         item_type = self.item_types.get(type_code)
         return self.repo.get_string(item_type.get('ItemType', 'Unknown').strip()) if item_type else "Miscellaneous"
 
+    def get_granular_group(self, category: str) -> str:
+        cat_lower = category.lower()
+        if any(w in cat_lower for w in ['axe', 'bow', 'club', 'crossbow', 'hammer', 'javelin', 'knife', 'mace', 'polearm', 'scepter', 'spear', 'staff', 'sword', 'throwing', 'wand', 'weapon']): return 'weapons'
+        if any(h in cat_lower for h in ['helm', 'circlet', 'pelt', 'primal']): return 'helms'
+        if any(s in cat_lower for s in ['shield', 'auric', 'voodoo']): return 'shields'
+        if any(c in cat_lower for c in ['armor', 'tors']): return 'chests'
+        if any(b in cat_lower for b in ['belt', 'boots', 'gloves']): return 'armor'
+        if any(acc in cat_lower for acc in ['amulet', 'ring', 'charm', 'jewel']): return 'accessories'
+        if any(cls in cat_lower for cls in ['amazon', 'auric', 'grimoire', 'hand to hand', 'orb', 'pelt', 'primal', 'voodoo']): return 'class_specific'
+        return 'other'
+
     def analyze_unique(self, row: Dict[str, str]) -> AnalyzedItemDTO:
         idx = row.get('index', '').strip()
         props = []
@@ -272,13 +285,206 @@ class ItemAnalyzerService:
             "properties": props, "raw_row": row
         }
 
+    def analyze_set_item(self, row: Dict[str, str]) -> AnalyzedItemDTO:
+        idx = row.get('index', '').strip()
+        props = []
+        for i in range(1, 10):
+            code = row.get(f'prop{i}', '').strip()
+            if code and code != 'xxx':
+                props.append(self.resolver.resolve_property(code, row.get(f'par{i}', ''), row.get(f'min{i}', ''), row.get(f'max{i}', '')))
+        return {
+            "id": idx, "display_name": self.repo.get_string(idx), "base_item": self.get_item_name(row.get('item', '').strip()),
+            "item_type": self.get_item_category(row.get('item', '').strip()), "lvl_req": row.get('lvl req', '0'), "properties": props, "raw_row": row
+        }
+
+class CubeAnalyzerService:
+    def __init__(self, repo: D2Repository):
+        self.repo = repo
+        self.armor = {row['code']: row for row in repo.get_excel_table('armor')}
+        self.weapons = {row['code']: row for row in repo.get_excel_table('weapons')}
+        self.misc = {row['code']: row for row in repo.get_excel_table('misc')}
+        self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
+        
+        # Prefixes and Suffixes use row index as ID
+        prefix_data = repo.get_excel_table('magicprefix')
+        self.prefixes = {str(i): row for i, row in enumerate(prefix_data)}
+        
+        suffix_data = repo.get_excel_table('magicsuffix')
+        self.suffixes = {str(i): row for i, row in enumerate(suffix_data)}
+
+    def get_item_name(self, code: str) -> str:
+        if not code: return ""
+        code = code.strip()
+        code_lower = code.lower()
+        if code_lower == "usetype": return "Input Item Type"
+        if code_lower == "useitem": return "Input Item"
+        if code_lower == "any": return "Any Item"
+        
+        item = self.armor.get(code) or self.weapons.get(code) or self.misc.get(code)
+        if item:
+            name = self.repo.get_string(item.get('namestr', '').strip() or item.get('name', '').strip())
+            return name or code
+        
+        # Check item types
+        it = self.item_types.get(code)
+        if it:
+            return self.repo.get_string(it.get('ItemType', '').strip()) or code
+            
+        return code
+
+    def resolve_token(self, token: str) -> str:
+        if not token: return ""
+        token = token.strip().strip('"')
+        
+        # Handle quantity: "code,qty=3"
+        qty = ""
+        if ",qty=" in token:
+            parts = token.split(",qty=", 1)
+            token = parts[0]
+            qty = f" (Qty: {parts[1]})"
+        
+        # Handle complex codes: "amu,mag" or "rin,mag,pre=372"
+        parts = token.split(',')
+        base_code = parts[0]
+        name = self.get_item_name(base_code)
+        
+        qualities = {
+            "low": "Low Quality", "nor": "Normal", "hi": "Superior", "mag": "Magic",
+            "set": "Set", "uni": "Unique", "rar": "Rare", "ora": "Crafted", "tmp": "Tempered"
+        }
+        
+        mods = []
+        for p in parts[1:]:
+            p = p.strip().lower()
+            if p in qualities:
+                mods.append(qualities[p])
+            elif p.startswith("pre="):
+                val = p.split("=")[1]
+                pre = self.prefixes.get(val)
+                pre_name = self.repo.get_string(pre.get('Name', '')) if pre else val
+                mods.append(f"Prefix: {pre_name} ({val})")
+            elif p.startswith("suf="):
+                val = p.split("=")[1]
+                suf = self.suffixes.get(val)
+                suf_name = self.repo.get_string(suf.get('Name', '')) if suf else val
+                mods.append(f"Suffix: {suf_name} ({val})")
+            else:
+                mods.append(p)
+                
+        res = name
+        if mods:
+            res += f" ({', '.join(mods)})"
+        return f"{res}{qty}"
+
+    def resolve_output(self, out: str, mod_str: str = "", mod_val: str = "") -> str:
+        if not out: return ""
+        res = self.resolve_token(out)
+        qualities = {"low": "Low Quality", "nor": "Normal", "hi": "Superior", "mag": "Magic", "set": "Set", "uni": "Unique", "rar": "Rare", "ora": "Crafted", "tmp": "Tempered"}
+        extra_mods = []
+        if mod_str:
+            parts = mod_str.split(',')
+            for p in parts:
+                p = p.strip().lower()
+                if p in qualities: extra_mods.append(qualities[p])
+                elif p == "pre":
+                    pre = self.prefixes.get(mod_val)
+                    pre_name = self.repo.get_string(pre.get('Name', '')) if pre else mod_val
+                    extra_mods.append(f"Prefix: {pre_name} ({mod_val})")
+                elif p == "suf":
+                    suf = self.suffixes.get(mod_val)
+                    suf_name = self.repo.get_string(suf.get('Name', '')) if suf else mod_val
+                    extra_mods.append(f"Suffix: {suf_name} ({mod_val})")
+                else: extra_mods.append(p)
+        if extra_mods: res += f" [Extra: {', '.join(extra_mods)}]"
+        return res
+
+    def analyze_recipe(self, row: Dict[str, str]) -> CubeRecipeDTO:
+        desc = row.get('description', 'Unknown Recipe').strip()
+        enabled = row.get('enabled', '1').strip() == '1'
+        actual_inputs = []
+        for i in range(1, 8):
+            val = row.get(f'input {i}', '').strip()
+            if val and val != '0': actual_inputs.append(self.resolve_token(val))
+        outputs = []
+        for i in range(1, 4):
+            out = row.get('output' if i == 1 else f'output {i}', '').strip()
+            if out and out != '0':
+                mod_str = row.get(f'mod {i}', '').strip()
+                mod_val = row.get(f'mod {i} param', '').strip()
+                outputs.append(self.resolve_output(out, mod_str, mod_val))
+        return {"id": desc, "description": desc, "enabled": enabled, "inputs": actual_inputs, "outputs": outputs, "raw_row": row}
+
+class ItemComparisonService:
+    def __init__(self):
+        pass
+
+    def normalize_text(self, s: str) -> str:
+        if not s: return ""
+        s = re.sub(r'ÿc.', '', s)
+        s = s.replace('•', '').replace('**', '')
+        s = s.replace("Physical Damage Received Reduced by", "Damage Reduced by")
+        s = re.sub(r'(Original|Random) Class', 'Random Class', s, flags=re.IGNORECASE)
+        s = re.sub(r'\s+', ' ', s)
+        return s.strip()
+
+    def align_properties(self, old_props: List[str], new_props: List[str]) -> List[Tuple[str, str]]:
+        def get_stat_key(s):
+            s = self.normalize_text(s)
+            return re.sub(r'[+-]?\d+(?:-\d+)?', '', s).strip().lower()
+
+        aligned = []
+        old_used, new_used = set(), set()
+        for i, op in enumerate(old_props):
+            onorm = self.normalize_text(op)
+            for j, np in enumerate(new_props):
+                if j in new_used: continue
+                if onorm == self.normalize_text(np):
+                    aligned.append((op, np))
+                    old_used.add(i); new_used.add(j); break
+        for i, op in enumerate(old_props):
+            if i in old_used: continue
+            okey = get_stat_key(op)
+            for j, np in enumerate(new_props):
+                if j in new_used: continue
+                if okey == get_stat_key(np) and okey != "":
+                    aligned.append((op, np))
+                    old_used.add(i); new_used.add(j); break
+        for i, op in enumerate(old_props):
+            if i not in old_used: aligned.append((op, "(removed)"))
+        for j, np in enumerate(new_props):
+            if j not in new_used: aligned.append(("", np))
+        return aligned
+
+    def compare_item_lists(self, bk_items: Dict[str, AnalyzedItemDTO], bt_items: Dict[str, AnalyzedItemDTO]) -> ItemDiffDTO:
+        added_ids = [k for k in bk_items if k not in bt_items]
+        removed_ids = [k for k in bt_items if k not in bk_items]
+        modified = {}
+        common = [k for k in bk_items if k in bt_items]
+        for k in common:
+            bk, bt = bk_items[k], bt_items[k]
+            header_diff = (self.normalize_text(bk['base_item']) != self.normalize_text(bt['base_item']) or 
+                           self.normalize_text(bk['lvl_req']) != self.normalize_text(bt['lvl_req']))
+            bk_norm = sorted([self.normalize_text(p['resolved_text']) for p in bk['properties']])
+            bt_norm = sorted([self.normalize_text(p['resolved_text']) for p in bt['properties']])
+            if header_diff or bk_norm != bt_norm:
+                modified[k] = {
+                    'name': bk['display_name'], 'bk_base': bk['base_item'], 'bt_base': bt['base_item'],
+                    'bk_lvl': bk['lvl_req'], 'bt_lvl': bt['lvl_req'],
+                    'bk_props': [p['resolved_text'] for p in bk['properties']],
+                    'bt_props': [p['resolved_text'] for p in bt['properties']]
+                }
+        return {
+            'added': {k: bk_items[k] for k in added_ids},
+            'removed': {k: bt_items[k] for k in removed_ids},
+            'modified': modified
+        }
+
 class ExcelComparisonService:
     @staticmethod
     def compare_tables(table_bk: List[Dict[str, str]], table_bt: List[Dict[str, str]], key_col: str, filename: str) -> ExcelDiffDTO:
         map_new = {str(row[key_col]).strip().lower(): row for row in table_bk if row.get(key_col)}
         map_old = {str(row[key_col]).strip().lower(): row for row in table_bt if row.get(key_col)}
-        h_new = list(table_bk[0].keys()) if table_bk else []
-        h_old = list(table_bt[0].keys()) if table_bt else []
+        h_new = list(table_bk[0].keys()) if table_bk else []; h_old = list(table_bt[0].keys()) if table_bt else []
         common_cols = [c for c in h_new if c in h_old]
         all_keys = sorted(set(map_new.keys()) | set(map_old.keys()))
         diff = {
