@@ -4,10 +4,12 @@
 * **Runes:** Hel Rune (15) + Shael Rune (13) + Ral Rune (8)
 * **Base Items:** Armor
 * **Properties:**
-    * 2% Chance to cast level 10 Psychic Ward when struck
-    * 10% Chance to cast level 15 Miasma Chain on striking
     * +2 to Warlock Skill Levels
-    * +40-60% Enhanced Damage
+    * +50% Enhanced Damage
+    * +10% Faster Cast Rate
+    * +2 to Mana after each Kill
+    * +2 Life after each Kill
+    * +50 Defense
 
 ### Bone
 * **Runes:** Sol Rune (12) + Amn Rune (11) + Amn Rune (11)
@@ -18,6 +20,7 @@
     * +2 to Necromancer Skill Levels
     * +100-150 to Mana
     * All Resistances +15
+    * +50% Enhanced Defense
 
 ### Bramble
 * **Runes:** Ral Rune (8) + •••Ohm Rune (27)••• + •••Sur Rune (29)••• + Eth Rune (5)
@@ -25,9 +28,9 @@
 * **Properties:**
     * +50% Faster Hit Recovery
     * +300 Defense
-    * Level 15-21 Thorns Aura When Equipped
-    * +13 Life after each Kill
-    * +25-50% to Poison Skill Damage
+    * Level 25 Thorns Aura When Equipped
+    * -10-20% to Enemy Poison Resistance
+    * +40-50% to Poison Skill Damage
     * Poison Resist +100%
     * Level 33 Spirit of Barbs (13/# Charges)
 
@@ -116,10 +119,8 @@
 * **Runes:** Hel Rune (15) + Lum Rune (17) + Fal Rune (19)
 * **Base Items:** Armor
 * **Properties:**
-    * +15 to Strength
-    * +20 to Vitality
-    * +15 to Dexterity
-    * +90-110% Enhanced Damage
+    * +15-30 to all Attributes
+    * +90-150% Enhanced Damage
     * +50 to Life
     * All Resistances +30
 
@@ -127,19 +128,24 @@
 * **Runes:** Hel Rune (15) + Amn Rune (11) + Nef Rune (4)
 * **Base Items:** Armor
 * **Properties:**
-    * 10% Chance to cast level 1 Taunt on striking
-    * +20% Faster Run/Walk
+    * 20% Chance to cast level 10 Taunt on striking
+    * +25% Faster Run/Walk
     * +2  to Barbarian Skill Levels
     * Replenish Life +10
+    * +100-150 to Life
+    * +100% Enhanced Defense
 
 ### Peace
 * **Runes:** Shael Rune (13) + Thul Rune (10) + Amn Rune (11)
 * **Base Items:** Armor
 * **Properties:**
-    * 2% Chance to cast level 15 Valkyrie on striking
-    * 4% Chance to cast level 5 Slow Missiles when struck
+    * +25% Faster Run/Walk
+    * 15% Chance to cast level 10 Slow Missiles when struck
     * +2 to Amazon Skill Levels
     * +2 to Critical Strike
+    * +2 to Evade (Amazon only)
+    * +2 to Avoid (Amazon only)
+    * +2 to Dodge (Amazon only)
 
 ### Pestilence
 * **Runes:** Tal Rune (7) + •••Cham Rune (32)••• + •••Ist Rune (24)•••
@@ -154,13 +160,14 @@
     * Magic Resist +50%
 
 ### Principle
-* **Runes:** Ral Rune (8) + Ko Rune (18) + Eld Rune (2)
+* **Runes:** Ral Rune (8) + Ko Rune (18) + Ith Rune (6)
 * **Base Items:** Armor
 * **Properties:**
-    * 100% Chance to cast level 5 Holy Bolt on striking
+    * 100% Chance to cast level 20 Blessed Hammer on striking
     * +2 to Paladin Skill Levels
     * +100-150 to Life
-    * +50% Damage to Undead
+    * 100% Bonus to Attack Rating
+    * +100% Enhanced Defense
 
 ### Prudence
 * **Runes:** •Mal Rune (23)• + Tir Rune (3)
@@ -204,7 +211,7 @@
     * All Resistances +50
     * +20% Faster Hit Recovery
     * (0.4-0.6 per clvl) to Strength (Based on Character Level)
-    * 20% Chance to cast level 13 Cloak of Shadows when you Kill an Enemy
+    * 20% Chance to cast level 13 Cloak of Shadows when struck
 
 ### Stealth
 * **Runes:** Tal Rune (7) + Eth Rune (5)

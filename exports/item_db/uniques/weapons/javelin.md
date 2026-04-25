@@ -53,3 +53,17 @@
     * +180-250% Enhanced Damage
     * 5% Life stolen per hit
     * +3 to Double Throw (Barbarian only)
+
+### Primal Gae Bolg (Primal Gae Bolg)
+* **Base Item:** Winged Harpoon
+* **Level Requirement:** 88
+* **Properties:**
+    * Monster Physical Immunity is Sundered
+    * 20% Chance to cast level 20 Amplify Damage on striking
+    * +300% Enhanced Damage
+    * -25% to Enemy Physical Resistance
+    * Adds 100-150 Damage
+    * +30 to Dexterity
+    * +30 to Strength
+    * +40% Increased Attack Speed
+    * Unknown property: ar% (200)

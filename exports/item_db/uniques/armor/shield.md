@@ -305,3 +305,17 @@
     * Cannot Be Frozen
     * Hit Blinds Target +1
     * +50% Faster Run/Walk
+
+### Primal Stormshield (Primal Stormshield)
+* **Base Item:** Monarch
+* **Level Requirement:** 88
+* **Properties:**
+    * +1 to Lightning Mastery
+    * +2 to All Skills
+    * Increase Maximum Life 20%
+    * Damage Reduced by 30%
+    * +35% Faster Hit Recovery
+    * +35% Faster Block Rate
+    * +35% Faster Block Rate
+    * +20 Cold Absorb
+    * +20 Lightning Absorb

@@ -46,12 +46,20 @@
 - `weaponMod1Min`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
 ### dol rune
-- `weaponMod1Min`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{2}}$ (New)
-- `weaponMod1Max`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{2}}$ (New)
+- `helmMod1Min`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
+- `helmMod1Max`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
+- `shieldMod1Min`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
+- `shieldMod1Max`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
 ### el rune
+- `weaponMod1Min`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `weaponMod1Max`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `helmMod1Min`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `helmMod1Max`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `helmMod2Min`: $\\color{gray}{\\text{30}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
 - `helmMod2Max`: $\\color{gray}{\\text{30}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
+- `shieldMod1Min`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `shieldMod1Max`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `shieldMod2Min`: $\\color{gray}{\\text{30}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
 - `shieldMod2Max`: $\\color{gray}{\\text{30}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
 

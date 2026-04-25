@@ -269,17 +269,19 @@
     * 4-8% Life stolen per hit
 
 ### Shaftstop (Shaftstop)
-* **Base Item:** Mesh Armor
+* **Base Item:** Boneweave
 * **Level Requirement:** 38
 * **Properties:**
     * +250 Defense vs. Missile
     * Damage Reduced by 25-30%
-    * +85-140 to Life
+    * +100-200 to Life
     * +200-250% Enhanced Defense
-    * Damage Reduced by 6-12
+    * Damage Reduced by 10-15
     * +250 Defense vs. Melee
     * +125-150% Damage to Demons
     * +125-150% Damage to Undead
+    * Magic Damage Reduced by 10-15
+    * +1 to All Skills
 
 ### Duriel's Shell (Duriel's Shell)
 * **Base Item:** Cuirass
@@ -570,3 +572,62 @@
     * Magic Damage Reduced by 10
     * (0.5 per clvl) to Mana (Based on Character Level)
     * +5-15% to Magic Skill Damage
+
+### Primal Shaftstop (Primal Shaftstop)
+* **Base Item:** Boneweave
+* **Level Requirement:** 88
+* **Properties:**
+    * Damage Reduced by 40%
+    * +25% Faster Cast Rate
+    * Increase Maximum Life 25%
+    * Increase Maximum Mana 25%
+    * +1 to All Skills
+    * Magic Damage Reduced by 15
+    * Damage Reduced by 15
+    * +40 Magic Absorb
+    * Magic Absorb 15%
+    * +20 to all Attributes
+    * +300 Defense
+
+### Primal Diamond Carapace (Primal Diamond Carapace)
+* **Base Item:** Diamond Mail
+* **Level Requirement:** 88
+* **Properties:**
+    * +2 to All Skills
+    * Increase Maximum Life 20%
+    * Damage Reduced by 50
+    * Cold Resist +40%
+    * Level 30 Thorns Aura When Equipped
+    * Attacker Takes Damage of 100
+    * +40% Faster Hit Recovery
+    * +300% Enhanced Defense
+    * 100% Chance to cast level 50 Frost Nova when struck
+
+### Diamond Dust (Diamond Dust)
+* **Base Item:** Diamond Mail
+* **Level Requirement:** 88
+* **Properties:**
+    * +150-250% Enhanced Defense
+    * +2 to All Skills
+    * +10-20 Cold Absorb
+    * Cold Resist +20-50%
+    * +5-10% to Maximum Cold Resist
+    * Cannot Be Frozen
+    * Increase Maximum Mana 50%
+    * -5-10% to Enemy Cold Resistance
+
+### Electrified (Electrified)
+* **Base Item:** Mesh Armor
+* **Level Requirement:** 38
+* **Properties:**
+    * +10-15 Lightning Absorb
+    * +10-20 to Energy
+    * +100-200% Enhanced Defense
+    * Increase Maximum Mana 5%
+    * +50% Faster Run/Walk
+    * +25% Increased Attack Speed
+    * +25% Faster Cast Rate
+    * +1 to All Skills
+    * +3 to Mana after each Kill
+    * Adds 1-501 Lightning Damage
+    * +10-25% to Lightning Skill Damage

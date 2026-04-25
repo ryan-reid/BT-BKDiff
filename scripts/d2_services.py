@@ -81,7 +81,8 @@ class PropertyResolverService:
 
         # Handle descfunc 19 (By Character Level)
         desc_func = stat.get('descfunc', '0').strip()
-        is_level_stat = stat.get('op base') == 'level'
+        op_base = stat.get('op base', '').strip().lower()
+        is_level_stat = op_base == 'level'
         
         if desc_func == '19' and is_level_stat:
             op_param_raw = stat.get('op param', '0').strip()

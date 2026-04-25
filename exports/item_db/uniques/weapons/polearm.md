@@ -197,3 +197,19 @@
     * 50% Chance to cast level 40 Bone Spear on striking
     * Prevent Monster Heal
     * 7% Life stolen per hit
+
+### Primal Sickle of Perseus (Primal Sickle of Perseus)
+* **Base Item:** Giant Thresher
+* **Level Requirement:** 88
+* **Properties:**
+    * +450% Enhanced Damage
+    * -20% to Enemy Physical Resistance
+    * +80% Increased Attack Speed
+    * Monster Physical Immunity is Sundered
+    * Unknown property: ar% (200)
+    * 300% Extra Gold from Monsters
+    * Reduces all Vendor Prices 15%
+    * Curse Resist +100%
+    * +3 to Random Class Skill Levels
+    * Ethereal
+    * +7 to Psychic Ward (Warlock only)

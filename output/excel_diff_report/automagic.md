@@ -49,6 +49,7 @@
 
 ### armor_flat_dr
 - `group`: $\\color{gray}{\\text{216}}$ (Old) &rarr; $\\color{blue}{\\text{416}}$ (New)
+- `mod1max`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 
 ### armor_flat_life
 - `group`: $\\color{gray}{\\text{221}}$ (Old) &rarr; $\\color{blue}{\\text{421}}$ (New)
@@ -58,18 +59,23 @@
 
 ### armor_flat_mdr
 - `group`: $\\color{gray}{\\text{220}}$ (Old) &rarr; $\\color{blue}{\\text{420}}$ (New)
+- `mod1max`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 
 ### armor_frw
 - `group`: $\\color{gray}{\\text{219}}$ (Old) &rarr; $\\color{blue}{\\text{419}}$ (New)
+- `mod1min`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
+- `mod1max`: $\\color{gray}{\\text{20}}$ (Old) &rarr; $\\color{blue}{\\text{25}}$ (New)
 
 ### armor_ias
 - `group`: $\\color{gray}{\\text{215}}$ (Old) &rarr; $\\color{blue}{\\text{415}}$ (New)
 
 ### armor_max_life
 - `group`: $\\color{gray}{\\text{214}}$ (Old) &rarr; $\\color{blue}{\\text{414}}$ (New)
+- `mod1max`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 
 ### armor_max_mana
 - `group`: $\\color{gray}{\\text{213}}$ (Old) &rarr; $\\color{blue}{\\text{413}}$ (New)
+- `mod1max`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 
 ### armor_max_res
 - `group`: $\\color{gray}{\\text{223}}$ (Old) &rarr; $\\color{blue}{\\text{423}}$ (New)

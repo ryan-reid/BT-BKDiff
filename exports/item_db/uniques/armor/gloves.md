@@ -166,3 +166,15 @@
     * +24% Faster Hit Recovery
     * +10 to Dexterity
     * -4-5% to Enemy Physical Resistance
+
+### Primal Archmage Fist (Primal Archmage Fist)
+* **Base Item:** Crusader Gauntlets
+* **Level Requirement:** 88
+* **Properties:**
+    * +1 to Fire Mastery
+    * +30% Faster Cast Rate
+    * Level 12 Meditation Aura When Equipped
+    * Increase Maximum Mana 25%
+    * +200 Defense
+    * Curse Resist +30%
+    * 15% Chance to cast level 50 Hydra on striking

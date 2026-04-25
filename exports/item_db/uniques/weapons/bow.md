@@ -259,3 +259,31 @@
     * +250% Enhanced Damage
     * +100 to Minimum Damage
     * Level 10 Redemption Aura When Equipped
+
+### Primal Aries Relic (Primal Aries Relic)
+* **Base Item:** Great Bow
+* **Level Requirement:** 88
+* **Properties:**
+    * Monster Cold Immunity is Sundered
+    * Monster Fire Immunity is Sundered
+    * +6 to Amazon Skill Levels
+    * 5% Chance to cast level 35 Enchant on striking
+    * 25% Chance to cast level 20 Lower Resist on striking
+    * -20% to Enemy Cold Resistance
+    * -20% to Enemy Fire Resistance
+    * Fires Explosive Arrows or Bolts
+    * 10% Chance to cast level 40 Meteor on striking
+    * 10% Chance to cast level 40 Frost Nova on striking
+
+### Flamestrikes (Flamestrikes)
+* **Base Item:** Great Bow
+* **Level Requirement:** 88
+* **Properties:**
+    * 50% Chance to cast level 30 Fire Ball on striking
+    * +10 to Multiple Shot
+    * +10-20 to all Attributes
+    * +40% Increased Attack Speed
+    * +40% Faster Run/Walk
+    * Adds 250-500 Fire Damage
+    * Adds 250-500 Magic Damage
+    * Adds 50-100 Damage

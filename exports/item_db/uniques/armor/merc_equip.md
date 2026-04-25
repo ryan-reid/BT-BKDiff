@@ -346,3 +346,33 @@
     * +40% Enhanced Damage
     * Magic Resist +-25%
     * -10-15% to Enemy Magic Resistance
+
+### Primal Lilith's Visage (Primal Lilith's Visage)
+* **Base Item:** Demonhead
+* **Level Requirement:** 88
+* **Properties:**
+    * +2 to All Skills
+    * +30 to Venom
+    * -25% to Enemy Poison Resistance
+    * Monster Poison Immunity is Sundered
+    * Poison Length Reduced by 175%
+    * Prevent Monster Heal
+    * Slows Target by 50%
+    * +25% to Poison Skill Damage
+    * 100% Deadly Strike
+    * Curse Resist +100%
+    * Increase Maximum Life 20%
+    * 100% Chance to cast level 35 Poison Nova on striking
+
+### Primal Divine Judgement (Primal Divine Judgement)
+* **Base Item:** Corona
+* **Level Requirement:** 88
+* **Properties:**
+    * +4 to All Skills
+    * Monster Lightning Immunity is Sundered
+    * Monster Magic Immunity is Sundered
+    * -20% to Enemy Lightning Resistance
+    * -20% to Enemy Magic Resistance
+    * +300% Enhanced Defense
+    * All Resistances +20
+    * +20 to all Attributes
