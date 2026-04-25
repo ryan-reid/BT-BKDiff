@@ -27,7 +27,7 @@
     * +30% Faster Block Rate
     * Durability: 10-15 of 10-15
     * Damage Reduced by 15%
-    * + Defense (Based on Character Level)
+    * (25.0 per clvl) Defense (Based on Character Level)
 
 ### Stormguild (Stormguild)
 * **Base Item:** Large Shield
@@ -227,12 +227,12 @@
 * **Base Item:** Luna
 * **Level Requirement:** 61
 * **Properties:**
-    * + to Dexterity (Based on Character Level)
+    * (0.5 per clvl) to Dexterity (Based on Character Level)
     * +160-200% Enhanced Defense
-    * Absorbs Cold Damage (Based on Character Level)
+    * (0.6 per clvl) Absorbs Cold Damage (Based on Character Level)
     * +1 to Weaken
     * Durability: 45 of 45
-    * + to Life (Based on Character Level)
+    * (1.2 per clvl) to Life (Based on Character Level)
     * +50% Faster Block Rate
     * Cannot Be Frozen
     * +50 to Strength
@@ -241,10 +241,10 @@
 * **Base Item:** Monarch
 * **Level Requirement:** 73
 * **Properties:**
-    * + Defense (Based on Character Level)
+    * (3.8 per clvl) Defense (Based on Character Level)
     * Damage Reduced by 35%
     * +30 to Strength
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * +40% Faster Block Rate
     * Lightning Resist +40-60%
     * +30% Faster Block Rate
@@ -291,7 +291,7 @@
 * **Level Requirement:** 70
 * **Properties:**
     * +120-150% Enhanced Defense
-    * Attacker Takes Damage of  (Based on Character Level)
+    * (1.4 per clvl) Attacker Takes Damage of (Based on Character Level)
     * Durability: 250 of 250
     * +30% Faster Hit Recovery
     * Damage Reduced by 15-20%

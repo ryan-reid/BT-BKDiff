@@ -53,7 +53,7 @@
 * **Level Requirement:** 14
 * **Properties:**
     * +20-30 to Life
-    * +5-10% to Maximum Fire Resist
+    * (5.0-10.0% per clvl) to Maximum Fire Resist
     * +100 Defense vs. Melee
     * All Resistances +10-15
     * +100-150% Enhanced Defense
@@ -240,7 +240,7 @@
     * Magic Damage Reduced by 16-20
     * +10-20 to Dexterity
     * Level 15 Defiance Aura When Equipped
-    * + to Life (Based on Character Level)
+    * (1.2 per clvl) to Life (Based on Character Level)
     * +3-5 to Iron Skin
 
 ### Spirit Forge (Spiritforge)
@@ -287,7 +287,7 @@
 * **Properties:**
     * +15-20 to Strength
     * +20% Faster Hit Recovery
-    * + to Life (Based on Character Level)
+    * (1.5 per clvl) to Life (Based on Character Level)
     * +180-220% Enhanced Defense
     * Fire Resist +40%
     * Lightning Resist +40%
@@ -301,11 +301,11 @@
 * **Level Requirement:** 42
 * **Properties:**
     * +1 to All Skills
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (1.2% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
     * +160-200% Enhanced Defense
     * Durability: 60 of 60
     * Magic Damage Reduced by 10
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 20 seconds
     * Damage Reduced by 10
 
 ### Guardian Angel (Guardian Angel)
@@ -315,7 +315,7 @@
     * +1 to All Skills
     * +200-220% Enhanced Defense
     * +35% Faster Block Rate
-    * +15% to Maximum Fire Resist
+    * (15.0% per clvl) to Maximum Fire Resist
     * - to Monster Defense Per Hit
     * +30% Faster Block Rate
     * +10% Increased Attack Speed
@@ -343,10 +343,10 @@
     * Regenerate Mana 50%
     * Increase Maximum Mana 15%
     * +40% Faster Hit Recovery
-    * + to Mana (Based on Character Level)
+    * (1.2 per clvl) to Mana (Based on Character Level)
     * +25% Faster Cast Rate
     * +150-180% Enhanced Defense
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (0.8% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
     * Requirements --30%
     * +15 to Telekinesis
 
@@ -415,7 +415,7 @@
     * +30% Faster Hit Recovery
     * +2 to All Skills
     * Damage Reduced by 10-15
-    * + to Vitality (Based on Character Level)
+    * (0.5 per clvl) to Vitality (Based on Character Level)
     * Requirements --20%
     * +1 to Random Class Skill Levels
 
@@ -424,7 +424,7 @@
 * **Level Requirement:** 1
 * **Properties:**
     * Requirements --100%
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * +200-250% Enhanced Defense
     * +200-250% Damage to Undead
     * +200-250% Damage to Demons
@@ -444,7 +444,7 @@
     * +169 Defense
     * Damage Reduced by 20-25%
     * +40-50 to Strength
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * +20% Faster Run/Walk
     * +30% Faster Hit Recovery
     * Poison Length Reduced by 100%
@@ -460,7 +460,7 @@
     * Damage Reduced by 9-14
     * Cold Resist +40-60%
     * Regenerate Mana 10-15%
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * Damage Reduced by 30-40%
     * +15% Faster Run/Walk
     * Level 8-10 Defiance Aura When Equipped
@@ -499,7 +499,7 @@
 * **Properties:**
     * +2 to All Skills
     * +200% Enhanced Damage
-    * +10% to Maximum Fire Resist
+    * (10.0% per clvl) to Maximum Fire Resist
     * +40% Faster Hit Recovery
     * +25% Faster Run/Walk
     * +30% Increased Attack Speed
@@ -512,7 +512,7 @@
 * **Properties:**
     * +2 to All Skills
     * +35% Faster Cast Rate
-    * +10% to Maximum Fire Resist
+    * (10.0% per clvl) to Maximum Fire Resist
     * +40% Faster Hit Recovery
     * +25% Faster Run/Walk
     * +20-30 to all Attributes
@@ -541,8 +541,8 @@
     * +30% Faster Hit Recovery
     * +200% Enhanced Defense
     * Fire Resist +50%
-    * + to Life (Based on Character Level)
-    * + to Vitality (Based on Character Level)
+    * (2.0 per clvl) to Life (Based on Character Level)
+    * (2.5 per clvl) to Vitality (Based on Character Level)
 
 ### Robe of the Horadrim (Robe of the Horadrim)
 * **Base Item:** Dusk Shroud
@@ -566,6 +566,6 @@
     * +20-55% Energy
     * +2 to Random Class Skill Levels
     * Magic Damage Reduced by 10
-    * +4 to Mana (Based on Character Level)
+    * (0.5 per clvl) to Mana (Based on Character Level)
     * +5-15% to Magic Skill Damage
 

@@ -71,7 +71,7 @@
 * **Base Item:** Sharkskin Belt
 * **Level Requirement:** 32
 * **Properties:**
-    * Attacker Takes Damage of  (Based on Character Level)
+    * (1.0 per clvl) Attacker Takes Damage of (Based on Character Level)
     * +15 to Dexterity
     * Piercing Attack
     * +50 Defense

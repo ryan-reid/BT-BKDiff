@@ -1,8 +1,8 @@
-# Runewords for Knife
+# Knife Runewords
 
 ### Ritual
-* **Runes:** Amn Rune + Shael Rune + Ohm Rune
-* **Base Items:** knif
+* **Runes:** Amn Rune (11) + Shael Rune (13) + •••Ohm Rune (27)•••
+* **Base Items:** Knife
 * **Properties:**
     * 13% Chance to cast level 1 Sigil: Death when struck
     * +20% Increased Attack Speed

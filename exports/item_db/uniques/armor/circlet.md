@@ -21,7 +21,7 @@
     * +20% Faster Hit Recovery
     * +2 to Random Class Skill Levels
     * -8-15% to Enemy Fire Resistance
-    * +1-5% to Maximum Fire Resist
+    * (1.0-5.0% per clvl) to Maximum Fire Resist
 
 ### King's Absolution (King's Absolution)
 * **Base Item:** Coronet

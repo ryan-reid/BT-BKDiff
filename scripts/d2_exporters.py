@@ -57,6 +57,23 @@ class MarkdownExporter(BaseExporter):
                     f.write(f"    * {prop['resolved_text']}\n")
                 f.write("\n")
 
+    def export_runewords(self, rws: List[RunewordDTO], title: str, output_path: str):
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        content = f"# {title}\n\n"
+        rw_blocks = []
+        for rw in rws:
+            block = f"### {rw['name']}\n"
+            block += f"* **Runes:** {' + '.join(rw['runes'])}\n"
+            block += f"* **Base Items:** {', '.join(rw['base_items'])}\n"
+            block += "* **Properties:**\n"
+            for prop in rw['properties']:
+                block += f"    * {prop['resolved_text']}\n"
+            rw_blocks.append(block)
+        
+        content += "\n".join(rw_blocks)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(content.strip() + "\n")
+
     def export_excel_diff(self, diff: ExcelDiffDTO, output_path: str):
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, 'w', encoding='utf-8') as f:

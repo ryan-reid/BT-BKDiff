@@ -93,6 +93,8 @@ class D2Repository:
         return data
 
     def get_string(self, key: str) -> str:
-        """Resolves a D2 string key to its localized value."""
+        """Resolves a D2 string key to its localized value and strips color codes."""
         if not key: return ""
-        return self.strings.get(key, key)
+        raw = self.strings.get(key, key)
+        # Strip D2 color codes like ÿc0, ÿc;, etc.
+        return re.sub(r'ÿc[0-9:;<=>?@A-Z]', '', raw)

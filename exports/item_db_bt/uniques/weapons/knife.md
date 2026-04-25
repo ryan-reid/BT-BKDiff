@@ -96,7 +96,7 @@
     * Adds 1-120-1-120 Lightning Damage
     * 25-50% Chance to cast level 25-50 Lightning when struck
     * +30% Increased Attack Speed
-    * Lightning Resist +% (Based on Character Level)
+    * (1.0% per clvl) Lightning Resist (Based on Character Level)
     * -5-10% to Enemy Lightning Resistance
     * +5-10% to Lightning Skill Damage
     * +1-3 to Lightning Skills
@@ -106,11 +106,11 @@
 * **Base Item:** Bone Knife
 * **Level Requirement:** 61
 * **Properties:**
-    * + to Mana (Based on Character Level)
+    * (2.0 per clvl) to Mana (Based on Character Level)
     * Regenerate Mana 15%
     * Increase Maximum Mana 15%
     * All Resistances +35-50
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * +50% Faster Cast Rate
     * +1 to All Skills
 

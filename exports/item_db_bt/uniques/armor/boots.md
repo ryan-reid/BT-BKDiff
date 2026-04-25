@@ -150,7 +150,7 @@
     * +40% Faster Run/Walk
     * +20% Faster Hit Recovery
     * Poison Resist +40-70%
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * +10-15 to all Attributes
     * Level 1 Cleansing Aura When Equipped
     * Replenish Life +15

@@ -6,7 +6,7 @@
 * **Properties:**
     * All Resistances +-30
     * -199% Better Chance of Getting Magic Items
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
 
 ### Level 90 Reward (Charm Level Reward)
 * **Base Item:** Small Charm

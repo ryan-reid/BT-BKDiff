@@ -165,7 +165,7 @@
 * **Properties:**
     * 20-22% Chance to cast level 20-22 Amplify Damage on striking
     * All Resistances +40
-    * % Deadly Strike (Based on Character Level)
+    * (0.5% per clvl) Deadly Strike (Based on Character Level)
     * +180-200% Enhanced Damage
     * Fires Magic Arrows
     * +20% Increased Attack Speed
@@ -220,7 +220,7 @@
 * **Properties:**
     * Ignore Target's Defense
     * 6-8% Life stolen per hit
-    * +% Enhanced Maximum Damage (Based on Character Level)
+    * (2.5% per clvl) Enhanced Maximum Damage (Based on Character Level)
     * +250% Enhanced Damage
     * +2 to Amazon Skill Levels
     * +25 to Dexterity
@@ -237,7 +237,7 @@
 * **Level Requirement:** 73
 * **Properties:**
     * +20 to Dexterity
-    * + to Maximum Damage (Based on Character Level)
+    * (3.1 per clvl) to Maximum Damage (Based on Character Level)
     * 6-8% Mana stolen per hit
     * Knockback
     * +250-300% Enhanced Damage

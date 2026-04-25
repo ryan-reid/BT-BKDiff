@@ -1,7 +1,7 @@
 # Unique Medium Charm
 
-### ÿc4Hellfire Torch (Hellfire Torch)
-* **Base Item:** Large ÿc1Charmÿc3
+### Hellfire Torch (Hellfire Torch)
+* **Base Item:** Large Charm
 * **Level Requirement:** 75
 * **Properties:**
     * +3 to Random Class Skill Levels

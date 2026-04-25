@@ -1,7 +1,7 @@
 # Unique Large Charm
 
-### ÿc4Gheed's Fortune (Gheed's Fortune)
-* **Base Item:** Grand ÿc1Charmÿc3
+### Gheed's Fortune (Gheed's Fortune)
+* **Base Item:** Grand Charm
 * **Level Requirement:** 62
 * **Properties:**
     * 20-50% Better Chance of Getting Magic Items

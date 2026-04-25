@@ -1,8 +1,8 @@
-# Runewords for Melee Weapon
+# Melee Weapon Runewords
 
 ### Beast
-* **Runes:** Ber Rune + Tir Rune + Um Rune + Mal Rune + Lum Rune
-* **Base Items:** mele
+* **Runes:** •••Ber Rune (30)••• + Tir Rune (3) + •Um Rune (22)• + •Mal Rune (23)• + Lum Rune (17)
+* **Base Items:** Melee Weapon
 * **Properties:**
     * +40% Increased Attack Speed
     * Level 9 Fanaticism Aura When Equipped
@@ -13,11 +13,11 @@
     * +3 to Lycanthropy
 
 ### Death
-* **Runes:** Hel Rune + El Rune + Vex Rune + Ort Rune + Gul Rune
-* **Base Items:** mele
+* **Runes:** Hel Rune (15) + El Rune (1) + •••Vex Rune (26)••• + Ort Rune (9) + •••Gul Rune (25)•••
+* **Base Items:** Melee Weapon
 * **Properties:**
     * +300-385% Enhanced Damage
-    * % Deadly Strike (Based on Character Level)
+    * (0.5% per clvl) Deadly Strike (Based on Character Level)
     * +25% Increased Attack Speed
     * 25% Chance to cast level 18 Glacial Spike on attack
     * 100% Chance to cast level 44 Chain Lightning when you Die
@@ -25,8 +25,8 @@
     * Indestructible
 
 ### Doom
-* **Runes:** Hel Rune + Ohm Rune + Um Rune + Lo Rune + Cham Rune
-* **Base Items:** mele
+* **Runes:** Hel Rune (15) + •••Ohm Rune (27)••• + •Um Rune (22)• + •••Lo Rune (28)••• + •••Cham Rune (32)•••
+* **Base Items:** Melee Weapon
 * **Properties:**
     * +280-320% Enhanced Damage
     * Level 12 Holy Freeze Aura When Equipped
@@ -37,8 +37,8 @@
     * 20% Chance to cast level 40 Blizzard on striking
 
 ### Eternity
-* **Runes:** Amn Rune + Ber Rune + Ist Rune + Sol Rune + Sur Rune
-* **Base Items:** mele
+* **Runes:** Amn Rune (11) + •••Ber Rune (30)••• + •••Ist Rune (24)••• + Sol Rune (12) + •••Sur Rune (29)•••
+* **Base Items:** Melee Weapon
 * **Properties:**
     * +260-310% Enhanced Damage
     * Indestructible
@@ -49,8 +49,8 @@
     * Cannot Be Frozen
 
 ### Holy Thunder
-* **Runes:** Eth Rune + Ral Rune + Ort Rune + Tal Rune
-* **Base Items:** mele
+* **Runes:** Eth Rune (5) + Ral Rune (8) + Ort Rune (9) + Tal Rune (7)
+* **Base Items:** Melee Weapon
 * **Properties:**
     * +100% Enhanced Damage
     * Adds 20-60 Lightning Damage
@@ -61,19 +61,19 @@
     * Poison Length Reduced by 75%
 
 ### Honor
-* **Runes:** Amn Rune + El Rune + Ith Rune + Tir Rune + Sol Rune
-* **Base Items:** mele
+* **Runes:** Amn Rune (11) + El Rune (1) + Ith Rune (6) + Tir Rune (3) + Sol Rune (12)
+* **Base Items:** Melee Weapon
 * **Properties:**
     * +160-190% Enhanced Damage
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 25 seconds
     * 20% Bonus to Attack Rating
     * 25% Deadly Strike
     * +55% Faster Hit Recovery
     * +25% Increased Attack Speed
 
 ### Kingslayer
-* **Runes:** Mal Rune + Um Rune + Gul Rune + Fal Rune
-* **Base Items:** mele
+* **Runes:** •Mal Rune (23)• + •Um Rune (22)• + •••Gul Rune (25)••• + Fal Rune (19)
+* **Base Items:** Melee Weapon
 * **Properties:**
     * +30% Increased Attack Speed
     * +260-300% Enhanced Damage
@@ -84,34 +84,34 @@
     * 350% Extra Gold from Monsters
 
 ### Malice
-* **Runes:** Ith Rune + El Rune + Eth Rune
-* **Base Items:** mele
+* **Runes:** Ith Rune (6) + El Rune (1) + Eth Rune (5)
+* **Base Items:** Melee Weapon
 * **Properties:**
     * 100% Chance of Open Wounds
     * --100 to Monster Defense Per Hit
     * Prevent Monster Heal
     * +33% Enhanced Damage
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 25 seconds
     * Replenish Life +-5
     * 7% Life stolen per hit
 
 ### Steel
-* **Runes:** Tir Rune + El Rune
-* **Base Items:** mele
+* **Runes:** Tir Rune (3) + El Rune (1)
+* **Base Items:** Melee Weapon
 * **Properties:**
     * +25% Increased Attack Speed
     * Damage +3
     * 50% Chance of Open Wounds
     * +20% Enhanced Damage
     * 5% Chance of Crushing Blow
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 25 seconds
 
 ### Strength
-* **Runes:** Amn Rune + Tir Rune
-* **Base Items:** mele
+* **Runes:** Amn Rune (11) + Tir Rune (3)
+* **Base Items:** Melee Weapon
 * **Properties:**
     * +20 to Strength
     * +90-110% Enhanced Damage
     * +10 to Vitality
     * 25% Chance of Crushing Blow
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 25 seconds
