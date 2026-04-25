@@ -63,12 +63,22 @@
 ## Removed Rows in BK (New) (1)
 - frostnovamsl
 
-## Modified Rows (9)
+## Modified Rows (11)
 ### firenovaarrow
 - `*ID`: $\color{gray}{\text{691}}$ (Old) &rarr; $\color{blue}{\text{740}}$ (New)
 
+### fistoftheheavensbolt
+- `sHitPar2`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `cHitPar1`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `cHitPar2`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+
 ### frostnovaarrow
 - `*ID`: $\color{gray}{\text{690}}$ (Old) &rarr; $\color{blue}{\text{739}}$ (New)
+
+### holybolt
+- `sHitPar2`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `cHitPar1`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `cHitPar2`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
 
 ### poisondagger
 - `*ID`: $\color{gray}{\text{693}}$ (Old) &rarr; $\color{blue}{\text{742}}$ (New)

@@ -67,7 +67,10 @@
 - frostnovanew
 - magic pierce
 
-## Modified Rows (32)
+## Modified Rows (38)
+### berserk
+- `Param1`: $\color{gray}{\text{500}}$ (Old) &rarr; $\color{blue}{\text{150}}$ (New)
+
 ### blade sentinel
 - `passivecalc6`: $\color{gray}{\text{stat('item\\_pierce\\_cold\\_immunity'.accr}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_cold\\_immunity'.accr)}}$ (New)
 
@@ -95,6 +98,17 @@
 ### double swing
 - `calc1`: $\color{gray}{\text{skill('Frenzy'.blvl)*par8}}$ (Old) &rarr; $\color{blue}{\text{skill('Bash'.blvl)*par8}}$ (New)
 
+### dragon claw
+- `Param1`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
+- `Param2`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `Param7`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+
+### eruption
+- `Param8`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+
+### fire trauma
+- `Param8`: $\color{gray}{\text{18}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+
 ### firegolem
 - `passivestat4`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
 - `passivecalc4`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_fire\\_immunity'.accr)}}$ (New)
@@ -108,7 +122,8 @@
 ### hydra
 - `passivestat3`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
 - `passivecalc3`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_fire\\_immunity'.accr)}}$ (New)
-- `Param2`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{25}}$ (New)
+- `Param1`: $\color{gray}{\text{250}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `Param2`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### increased endurance
 - `passivestate`: $\color{gray}{\text{increasedstamina}}$ (Old) &rarr; $\color{blue}{\text{increasedendurance}}$ (New)
@@ -181,6 +196,7 @@
 
 ### splash
 - `*Id`: $\color{gray}{\text{375}}$ (Old) &rarr; $\color{blue}{\text{430}}$ (New)
+- `itypea2`: $\color{gray}{\text{miss}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
 
 ### summon fenris
 - `passivestat4`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_damage\\_immunity}}$ (New)
@@ -207,6 +223,15 @@
 - `passivestat5`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_light\\_immunity}}$ (New)
 - `passivecalc5`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_light\\_immunity'.accr)}}$ (New)
 - `passivestat6`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_poison\\_immunity}}$ (New)
+
+### vengeance
+- `Param1`: $\color{gray}{\text{500}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
+- `Param2`: $\color{gray}{\text{25}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `Param7`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `Param8`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+
+### war cry
+- `DmgSymPerCalc`: $\color{gray}{\text{(skill('Battle Orders'.blvl)+skill('Taunt'.blvl)+skill('Battle Cry'.blvl))*par8}}$ (Old) &rarr; $\color{blue}{\text{(skill('Howl'.blvl)+skill('Taunt'.blvl)+skill('Battle Cry'.blvl))*par8}}$ (New)
 
 ### wearwolf
 - `Param1`: $\color{gray}{\text{25}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)

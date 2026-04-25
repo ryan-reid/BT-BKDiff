@@ -35,35 +35,27 @@
 - summon goatman
 - summon tainted
 
-## Modified Rows (8)
+## Modified Rows (10)
 ### bone spear
 - `desccalca3`: $\color{gray}{\text{min(3,1+lvl/10)}}$ (Old) &rarr; $\color{blue}{\text{min(3, 1 + skill('Bone Spear'.blvl)/10) + ((skill('Bone Spear'.lvl) - skill('Bone Spear'.blvl)) / 5)}}$ (New)
-- `dsc3line2`: $\color{gray}{\text{76}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3texta2`: $\color{gray}{\text{Magdplev}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3textb2`: $\color{gray}{\text{skillname67}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3calca2`: $\color{gray}{\text{par8}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3texta3`: $\color{gray}{\text{Magdplev}}$ (Old) &rarr; $\color{blue}{\text{skillname93}}$ (New)
-- `dsc3textb3`: $\color{gray}{\text{skillname}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `dsc3line3`: $\color{gray}{\text{76}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+- `dsc3texta3`: $\color{gray}{\text{Magdplev}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+- `dsc3textb3`: $\color{gray}{\text{skillname}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
 - `dsc3calca3`: $\color{gray}{\text{par8}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
 - `dsc3line4`: $\color{gray}{\text{76}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
 - `dsc3texta4`: $\color{gray}{\text{Magdplev}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
 - `dsc3textb4`: $\color{gray}{\text{skillname}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
 - `dsc3calca4`: $\color{gray}{\text{par8}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3textb5`: $\color{gray}{\text{skillname93}}$ (Old) &rarr; $\color{blue}{\text{skillname67}}$ (New)
 
 ### bone spirit
-- `dsc3line2`: $\color{gray}{\text{76}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3texta2`: $\color{gray}{\text{Magdplev}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3textb2`: $\color{gray}{\text{skillname67}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3calca2`: $\color{gray}{\text{par8}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3texta3`: $\color{gray}{\text{Magdplev}}$ (Old) &rarr; $\color{blue}{\text{skillname84}}$ (New)
-- `dsc3textb3`: $\color{gray}{\text{skillname}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `dsc3line3`: $\color{gray}{\text{76}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+- `dsc3texta3`: $\color{gray}{\text{Magdplev}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+- `dsc3textb3`: $\color{gray}{\text{skillname}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
 - `dsc3calca3`: $\color{gray}{\text{par8}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3line4`: $\color{gray}{\text{76}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3texta4`: $\color{gray}{\text{Magdplev}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3textb4`: $\color{gray}{\text{skillname84}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3calca4`: $\color{gray}{\text{par8}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dsc3textb5`: $\color{gray}{\text{skillname}}$ (Old) &rarr; $\color{blue}{\text{skillname67}}$ (New)
+- `dsc3line5`: $\color{gray}{\text{76}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+- `dsc3texta5`: $\color{gray}{\text{Magdplev}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+- `dsc3textb5`: $\color{gray}{\text{skillname}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+- `dsc3calca5`: $\color{gray}{\text{par8}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
 
 ### fire ball
 - `desccalca3`: $\color{gray}{\text{min(3,1+lvl/10)}}$ (Old) &rarr; $\color{blue}{\text{min(3,1+skill('Fire Ball'.blvl)/10}}$ (New)
@@ -74,10 +66,18 @@
 ### holy bolt
 - `desccalca5`: $\color{gray}{\text{min(3,1+lvl/10)}}$ (Old) &rarr; $\color{blue}{\text{min(5,1+skill('Holy Bolt'.blvl)/5}}$ (New)
 
+### multiple shot
+- `ddam calc1`: $\color{gray}{\text{skill('Guided Arrow'.blvl) * par4}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+- `dsc2calca1`: $\color{gray}{\text{(96*100/128)+(skill('Guided Arrow'.blvl)*par4)}}$ (Old) &rarr; $\color{blue}{\text{96*100/128}}$ (New)
+
 ### poison dagger
 - `dsc2line1`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{36}}$ (New)
 - `dsc2texta1`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{StrSkillRadiusSingular}}$ (New)
 - `dsc2calca1`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+
+### strafe
+- `ddam calc1`: $\color{gray}{\text{ln12 + (skill('Guided Arrow'.blvl)*par8) + (skill('Multiple Shot'.blvl)*par9)}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+- `desccalca1`: $\color{gray}{\text{ln12 + (skill('Guided Arrow'.blvl)*par8) + (skill('Multiple Shot'.blvl)*par9)}}$ (Old) &rarr; $\color{blue}{\text{ln12}}$ (New)
 
 ### teeth
 - `dsc3line2`: $\color{gray}{\text{76}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)

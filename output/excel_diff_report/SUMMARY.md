@@ -6,26 +6,26 @@ This report treats **BKDiablo** as the target (New) version and **BTDiablo** as 
 
 | File | Added Cols | Rem Cols | Added Rows | Rem Rows | Mod Rows | Link |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| armor.txt | 2 | 0 | 15 | 0 | 61 | [armor.txt](armor.md) |
+| armor.txt | 2 | 0 | 15 | 0 | 69 | [armor.txt](armor.md) |
 | automagic.txt | 0 | 0 | 24 | 4 | 16 | [automagic.txt](automagic.md) |
 | charstats.txt | 0 | 0 | 1 | 0 | 8 | [charstats.txt](charstats.md) |
 | cubemain.txt | 1 | 1 | 0 | 0 | 1 | [cubemain.txt](cubemain.md) |
-| difficultylevels.txt | 1 | 0 | 0 | 0 | 0 | [difficultylevels.txt](difficultylevels.md) |
+| difficultylevels.txt | 1 | 0 | 0 | 0 | 2 | [difficultylevels.txt](difficultylevels.md) |
 | experience.txt | 1 | 0 | 0 | 0 | 24 | [experience.txt](experience.md) |
-| gamble.txt | 0 | 0 | 5 | 0 | 0 | [gamble.txt](gamble.md) |
+| gamble.txt | 0 | 0 | 5 | 7 | 0 | [gamble.txt](gamble.md) |
 | gems.txt | 0 | 0 | 0 | 0 | 29 | [gems.txt](gems.md) |
 | hireling.txt | 0 | 0 | 0 | 0 | 0 | No changes |
 | inventory.txt | 0 | 0 | 2 | 0 | 2 | [inventory.txt](inventory.md) |
 | itemstatcost.txt | 0 | 0 | 20 | 20 | 31 | [itemstatcost.txt](itemstatcost.md) |
 | itemtypes.txt | 4 | 0 | 4 | 98 | 13044 | [itemtypes.txt](itemtypes.md) |
-| levels.txt | 2 | 0 | 1 | 0 | 16 | [levels.txt](levels.md) |
+| levels.txt | 2 | 0 | 1 | 0 | 23 | [levels.txt](levels.md) |
 | lvlmaze.txt | 0 | 0 | 0 | 0 | 6 | [lvlmaze.txt](lvlmaze.md) |
 | lvlprest.txt | 0 | 0 | 2 | 1 | 2 | [lvlprest.txt](lvlprest.md) |
 | lvlwarp.txt | 0 | 0 | 0 | 0 | 0 | No changes |
 | magicprefix.txt | 0 | 0 | 17 | 2 | 52 | [magicprefix.txt](magicprefix.md) |
 | magicsuffix.txt | 0 | 0 | 12 | 0 | 42 | [magicsuffix.txt](magicsuffix.md) |
 | misc.txt | 5 | 1 | 18 | 80 | 133 | [misc.txt](misc.md) |
-| missiles.txt | 4 | 1 | 50 | 1 | 9 | [missiles.txt](missiles.md) |
+| missiles.txt | 4 | 1 | 50 | 1 | 11 | [missiles.txt](missiles.md) |
 | monai.txt | 0 | 0 | 7 | 0 | 0 | [monai.txt](monai.md) |
 | monpreset.txt | 0 | 0 | 0 | 0 | 0 | No changes |
 | monprop.txt | 0 | 0 | 0 | 0 | 0 | No changes |
@@ -42,8 +42,8 @@ This report treats **BKDiablo** as the target (New) version and **BTDiablo** as 
 | setitems.txt | 6 | 0 | 26 | 1 | 95 | [setitems.txt](setitems.md) |
 | sets.txt | 1 | 0 | 6 | 0 | 0 | [sets.txt](sets.md) |
 | shrines.txt | 0 | 0 | 0 | 0 | 0 | No changes |
-| skilldesc.txt | 0 | 0 | 31 | 0 | 8 | [skilldesc.txt](skilldesc.md) |
-| skills.txt | 29 | 0 | 56 | 2 | 32 | [skills.txt](skills.md) |
+| skilldesc.txt | 0 | 0 | 31 | 0 | 10 | [skilldesc.txt](skilldesc.md) |
+| skills.txt | 29 | 0 | 56 | 2 | 38 | [skills.txt](skills.md) |
 | states.txt | 1 | 0 | 39 | 30 | 21 | [states.txt](states.md) |
 | superuniques.txt | 0 | 0 | 0 | 0 | 1 | [superuniques.txt](superuniques.md) |
 | treasureclassex.txt | 3 | 0 | 122 | 1 | 450 | [treasureclassex.txt](treasureclassex.md) |
