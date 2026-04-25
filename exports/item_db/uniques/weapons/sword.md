@@ -517,3 +517,19 @@
     * +100-200% Enhanced Damage
     * Durability: 25 of 25
     * Adds 50-100 Magic Damage
+
+### Primal Manslaughter (Primal Manslaughter)
+* **Base Item:** Hydra Edge
+* **Level Requirement:** 88
+* **Properties:**
+    * Monster Physical Immunity is Sundered
+    * -25% to Enemy Physical Resistance
+    * +250 Defense vs. Missile
+    * +250 Defense vs. Melee
+    * +300% Enhanced Damage
+    * Ignore Target's Defense
+    * +35% Increased Attack Speed
+    * (2.0% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
+    * Replenish Life +-30
+    * 15% Life stolen per hit
+    * +10 Life after each Kill

@@ -67,7 +67,7 @@
     * +200% Enhanced Defense
     * +300% Enhanced Damage
     * +25% Faster Cast Rate
-    * 20% Chance to cast level 15 Chilling Armor when struck
+    * 20% Chance to cast level 35 Chilling Armor when struck
     * 12% Damage Taken Goes To Mana
     * (1.0-1.5 per clvl) to Life (Based on Character Level)
     * All Resistances +25-30
@@ -237,9 +237,9 @@
 * **Base Items:** Weapon
 * **Properties:**
     * +2 to All Skills
-    * -5-12% to Enemy Fire Resistance
-    * -5-12% to Enemy Cold Resistance
-    * -5-12% to Enemy Lightning Resistance
-    * +8-15% to Fire Skill Damage
-    * +8-15% to Cold Skill Damage
-    * +8-15% to Lightning Skill Damage
+    * -10% to Enemy Fire Resistance
+    * -10% to Enemy Cold Resistance
+    * -10% to Enemy Lightning Resistance
+    * +15% to Fire Skill Damage
+    * +15% to Cold Skill Damage
+    * +15% to Lightning Skill Damage

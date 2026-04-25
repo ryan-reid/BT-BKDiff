@@ -4,12 +4,13 @@
 * **Runes:** •Lem Rune (20)• + •••Ist Rune (24)••• + Io Rune (16)
 * **Base Items:** Merc Equip
 * **Properties:**
-    * 11% Chance to cast level 18 Confuse on striking
-    * Level 60 Attract (17/# Charges)
-    * 14% Chance to cast level 13 Terror when struck
+    * 20% Chance to cast level 15 Amplifying Damage on striking
+    * Damage Reduced by 10%
+    * 15% Chance to cast level 10 Static Field when struck
     * +261 Defense
-    * 6% Chance to cast level 14 Mind Blast when struck
+    * 5% Chance to cast level 30 Chilling Armor when struck
     * +2 to All Skills
+    * +8% to Experience Gained
 
 ### Dream
 * **Runes:** Io Rune (16) + •••Jah Rune (31)••• + •Pul Rune (21)•
@@ -44,6 +45,18 @@
     * 20% Chance to cast level 20 Blaze when struck
     * 77% Extra Gold from Monsters
     * +5 to Mana after each Kill
+
+### Hunger
+* **Runes:** Shael Rune (13) + Sol Rune (12) + Fal Rune (19)
+* **Base Items:** Merc Equip
+* **Properties:**
+    * Damage Reduced by 5-8%
+    * Magic Damage Reduced by 9
+    * 10% Mana stolen per hit
+    * 10% Life stolen per hit
+    * +8 to Mana after each Kill
+    * +8 Life after each Kill
+    * +25% Faster Run/Walk
 
 ### Knowledge
 * **Runes:** Ith Rune (6) + Tir Rune (3)
@@ -108,6 +121,7 @@
     * +50-80% Enhanced Defense
     * All Resistances +10
     * 25% Chance of Crushing Blow
+    * +30% Faster Run/Walk
 
 ### Ground
 * **Runes:** Shael Rune (13) + Io Rune (16) + Ort Rune (9)
@@ -161,9 +175,9 @@
 * **Runes:** •••Ist Rune (24)••• + Ral Rune (8) + Io Rune (16)
 * **Base Items:** Merc Equip
 * **Properties:**
-    * 5% Chance to cast level 10 Sigil: Lethargy when struck
+    * 5% Chance to cast level 20 Sigil: Lethargy when struck
     * +1 to All Skills
     * +20% Faster Cast Rate
-    * +30-50% Enhanced Defense
-    * 1-15% Better Chance of Getting Magic Items
+    * +100% Enhanced Defense
+    * 10-25% Better Chance of Getting Magic Items
     * +1-5 Life after each Kill

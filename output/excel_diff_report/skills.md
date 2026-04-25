@@ -66,10 +66,7 @@
 - frostnovanew
 - magic pierce
 
-## Modified Rows (38)
-### berserk
-- `Param1`: $\\color{gray}{\\text{500}}$ (Old) &rarr; $\\color{blue}{\\text{150}}$ (New)
-
+## Modified Rows (34)
 ### blade sentinel
 - `passivecalc6`: $\\text{stat('itempiercecoldimmunity'.accr}$ (Old) &rarr; $\\text{stat('itempiercecoldimmunity'.accr}\\color{blue}{\\text{)}}$ (New)
 
@@ -82,7 +79,7 @@
 - `srvdofunc`: $\\color{gray}{\\text{109}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 
 ### bone spear
-- `calc1`: $\\text{min(3,}\\text{1}\\text{+}\\text{skill('Bone Spear'.blvl)/10}$ (Old) &rarr; $\\text{min(3,}\\color{blue}{\\text{ }}\\text{1}\\color{blue}{\\text{ }}\\text{+}\\color{blue}{\\text{ }}\\text{skill('Bone Spear'.blvl)/10}\\color{blue}{\\text{) + ((skill('Bone Spear'.lvl) - skill('Bone Spear'.blvl)) / 5)}}$ (New)
+- `calc1`: $\\text{min(}\\color{gray}{\\text{3}}\\text{,}\\text{1}\\text{+}\\text{skill('Bone Spear'.blvl)/10}$ (Old) &rarr; $\\text{min(}\\color{blue}{\\text{5}}\\text{,}\\color{blue}{\\text{ }}\\text{1}\\color{blue}{\\text{ }}\\text{+}\\color{blue}{\\text{ }}\\text{skill('Bone Spear'.blvl)/10}\\color{blue}{\\text{) + ((skill('Bone Spear'.lvl) - skill('Bone Spear'.blvl)) / 5)}}$ (New)
 
 ### clay golem
 - `passivestat5`:  (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_damage\\_immunity}}$ (New)
@@ -97,16 +94,8 @@
 ### double swing
 - `calc1`: $\\text{skill('}\\color{gray}{\\text{Frenzy}}\\text{'.blvl)*par8}$ (Old) &rarr; $\\text{skill('}\\color{blue}{\\text{Bash}}\\text{'.blvl)*par8}$ (New)
 
-### dragon claw
-- `Param1`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{50}}$ (New)
-- `Param2`: $\\color{gray}{\\text{20}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
-- `Param7`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
-
-### eruption
-- `Param8`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
-
-### fire trauma
-- `Param8`: $\\color{gray}{\\text{18}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+### fire ball
+- `calc1`: $\\text{min(}\\color{gray}{\\text{3}}\\text{,1+skill('Fire Ball'.blvl)/}\\color{gray}{\\text{10}}$ (Old) &rarr; $\\text{min(}\\color{blue}{\\text{5}}\\text{,1+skill('Fire Ball'.blvl)/}\\color{blue}{\\text{5}}$ (New)
 
 ### firegolem
 - `passivestat4`:  (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
@@ -115,14 +104,16 @@
 ### frenzy
 - `auralencalc`: $\\text{par7+skill('Increased }\\color{gray}{\\text{Stamina}}\\text{'.blvl)*10}$ (Old) &rarr; $\\text{par7+skill('Increased }\\color{blue}{\\text{Endurance}}\\text{'.blvl)*10}$ (New)
 
+### glacial spike
+- `calc1`: $\\text{min(}\\color{gray}{\\text{3}}\\text{,1+skill('Glacial Spike'.blvl)/}\\color{gray}{\\text{10}}$ (Old) &rarr; $\\text{min(}\\color{blue}{\\text{5}}\\text{,1+skill('Glacial Spike'.blvl)/}\\color{blue}{\\text{5}}$ (New)
+
 ### holy bolt
 - `calc1`: $\\text{min(}\\color{gray}{\\text{3}}\\text{,1+skill('Holy Bolt'.blvl)/}\\color{gray}{\\text{10}}$ (Old) &rarr; $\\text{min(}\\color{blue}{\\text{5}}\\text{,1+skill('Holy Bolt'.blvl)/}\\color{blue}{\\text{5}}$ (New)
 
 ### hydra
 - `passivestat3`:  (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_fire\\_immunity}}$ (New)
 - `passivecalc3`:  (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_fire\\_immunity'.accr)}}$ (New)
-- `Param1`: $\\color{gray}{\\text{250}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
-- `Param2`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `Param2`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{25}}$ (New)
 
 ### increased endurance
 - `passivestate`: $\\color{gray}{\\text{increasedstamina}}$ (Old) &rarr; $\\color{blue}{\\text{increasedendurance}}$ (New)
@@ -195,7 +186,6 @@
 
 ### splash
 - `*Id`: $\\color{gray}{\\text{375}}$ (Old) &rarr; $\\color{blue}{\\text{430}}$ (New)
-- `itypea2`: $\color{gray}{\text{miss}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### summon fenris
 - `passivestat4`:  (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_damage\\_immunity}}$ (New)
@@ -222,15 +212,6 @@
 - `passivestat5`:  (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_light\\_immunity}}$ (New)
 - `passivecalc5`:  (Old) &rarr; $\color{blue}{\text{stat('item\\_pierce\\_light\\_immunity'.accr)}}$ (New)
 - `passivestat6`:  (Old) &rarr; $\color{blue}{\text{item\\_pierce\\_poison\\_immunity}}$ (New)
-
-### vengeance
-- `Param1`: $\\color{gray}{\\text{500}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
-- `Param2`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
-- `Param7`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
-- `Param8`: $\\color{gray}{\\text{20}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
-
-### war cry
-- `DmgSymPerCalc`: $\\text{(skill('}\\color{gray}{\\text{Battle Orders}}\\text{'.blvl)+skill('Taunt'.blvl)+skill('Battle Cry'.blvl))*par8}$ (Old) &rarr; $\\text{(skill('}\\color{blue}{\\text{Howl}}\\text{'.blvl)+skill('Taunt'.blvl)+skill('Battle Cry'.blvl))*par8}$ (New)
 
 ### wearwolf
 - `Param1`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)

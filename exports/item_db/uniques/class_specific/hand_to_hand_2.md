@@ -85,3 +85,32 @@
     * 7% Mana stolen per hit
     * 7% Life stolen per hit
     * Slain Monsters Rest in Peace
+
+### Primal Warlords Thirst (Primal Warlords Thirst)
+* **Base Item:** Feral Claws
+* **Level Requirement:** 88
+* **Properties:**
+    * +3 to Assassin Skill Levels
+    * +2 to Fire Mastery
+    * +10 to Corpse Explosion
+    * +30% Faster Cast Rate
+    * +30% Increased Attack Speed
+    * Damage Reduced by 15%
+    * +2 to Death Sentry (Assassin only)
+    * +2 to Wake of Fire (Assassin only)
+    * -10% to Enemy Fire Resistance
+
+### Blood Thirst (Blood Thirst)
+* **Base Item:** Feral Claws
+* **Level Requirement:** 88
+* **Properties:**
+    * +3 to Assassin Skill Levels
+    * +200-400% Enhanced Damage
+    * +3 to Whirlwind
+    * +2 to Weapon Block (Assassin only)
+    * +30% Increased Attack Speed
+    * +3-10% Dexterity
+    * +3-10% Strength
+    * Adds 100-150 Damage
+    * 3-6% Life stolen per hit
+    * 3-6% Mana stolen per hit

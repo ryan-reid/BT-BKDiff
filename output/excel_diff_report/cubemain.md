@@ -486,9 +486,14 @@
 - all resistances
 - amplify damage
 - amulet
+- amulet + standard of heroes + charsi's malus + gul = melee augment amulet
+- amulet + standard of heroes + jah + lo + vex = mf + gf amulet
 - annihilus
 - armor
 - armor + flask = ethereal armor
+- armor + standard of heroes + cham + sur + the stone of jordan = teleport + mf + gf armor
+- armor + standard of heroes + charsi's malus + gul = melee augment armor
+- armor + standard of heroes + jah + lo + vex = mf + gf armor
 - armor eth
 - armor eth sup
 - armor inf
@@ -498,6 +503,8 @@
 - attributes
 - barb combat
 - belt
+- belt + standard of heroes + charsi's malus + gul = melee augment belt
+- belt + standard of heroes + jah + lo + vex = mf + gf belt
 - belt eth
 - belt eth sup
 - belt inf
@@ -510,14 +517,13 @@
 - bolts
 - bone armor
 - boots
+- boots + standard of heroes + charsi's malus + gul = melee augment boots
+- boots + standard of heroes + jah + lo + vex = mf + gf boots
 - boots eth
 - boots eth sup
 - boots inf
 - boots sup
 - bow and crossbow
-- break down annihilus -> 3 standard of heroes
-- break down gheed's fortune -> 3 mf potions
-- break down hellfire torch -> 1 hellfire ashes
 - brick
 - charsi hammer + larzuk hammer  +  standard of heros + 1 exceptional set armor -> elite set armor
 - charsi hammer + larzuk hammer  +  standard of heros + 1 exceptional set weapon -> elite set weapon
@@ -535,6 +541,9 @@
 - charsi hammer + larzuk hammer + 1 normal set weapon -> exceptional set weapon
 - charsi hammer + larzuk hammer + 1 normal unique armor -> exceptional unique armor
 - charsi hammer + larzuk hammer + 1 normal unique weapon -> exceptional unique weapon
+- charsi's malus + annihilus  -> 3 standard of heroes
+- charsi's malus + gheed's fortune -> 3 mf potions
+- charsi's malus + hellfire torch = 1 hellfire ashes
 - circ eth
 - circ eth sup
 - cold skills
@@ -571,6 +580,8 @@
 - ghostflame
 - giant skull
 - gloves
+- gloves + standard of heroes + charsi's malus + gul = melee augment gloves
+- gloves + standard of heroes + jah + lo + vex = mf + gf gloves
 - gloves eth
 - gloves eth sup
 - gloves inf
@@ -580,10 +591,24 @@
 - hellfire ash + stamina potion -> 2 standard of heroes
 - hellfire torch
 - helm
+- helm + standard of heroes + charsi's malus + gul = melee augment helm
+- helm + standard of heroes + jah + lo + vex = mf + gf helm
 - helm eth
 - helm eth sup
 - helm inf
 - helm sup
+- herb + standard of heros = repair augment on crafted item
+- herb + standard of heros = repair augment on javelin
+- herb + standard of heros = repair augment on magic item
+- herb + standard of heros = repair augment on rare item
+- herb + standard of heros = repair augment on set armor
+- herb + standard of heros = repair augment on set weapon
+- herb + standard of heros = repair augment on throwing axe
+- herb + standard of heros = repair augment on throwing knife
+- herb + standard of heros = repair augment on unique armor
+- herb + standard of heros = repair augment on unique weapon
+- herb + standard of heros = replenishing id book
+- herb + standard of heros = replenishing tp book
 - increased attack speed
 - infernal mawstone + item --> rerolls ethereal set ; potential upgrade or downgrade
 - infernal mawstone + item --> rerolls ethereal unique ; potential upgrade or downgrade
@@ -597,30 +622,15 @@
 - lower resist
 - magic corruptions
 - magic corruptor
+- magic staff + riftcarver = staff of teleportation
+- magic wand + blood coiled stone + hp potion = wand of life tap
+- magic wand + blood coiled stone + mana potion = wand of lower res
 - mang song's lesson
 - martial arts
 - masteries
 - maximum damage and ar
-- melee augment on amulet
-- melee augment on armor
-- melee augment on belt
-- melee augment on boots
-- melee augment on gloves
-- melee augment on helm
-- melee augment on ring
-- melee augment on shield
-- melee augment on weapon
 - messerschmidt's reaver
 - mf +  gf
-- mf + gf on amulet
-- mf + gf on armor
-- mf + gf on belt
-- mf + gf on boots
-- mf + gf on gloves
-- mf + gf on helm
-- mf + gf on ring
-- mf + gf on shield
-- mf + gf on weapon
 - necro summoning skills
 - offensive auras
 - pally combat
@@ -633,18 +643,8 @@
 - ravenlore
 - remove black
 - remove white
-- repair augment on crafted item
-- repair augment on javelin
-- repair augment on magic item
-- repair augment on rare item
-- repair augment on set armor
-- repair augment on set weapon
-- repair augment on throwing axe
-- repair augment on throwing knife
-- repair augment on unique armor
-- repair augment on unique weapon
-- replenishing id book
-- replenishing tp book
+- ring + standard of heroes + charsi's malus + gul = melee augment ring
+- ring + standard of heroes + jah + lo + vex = mf + gf ring
 - rings
 - schaefer's hammer
 - seasonal gift
@@ -654,6 +654,8 @@
 - shadow disciplines
 - shapeshifting skills
 - shield
+- shield + standard of heroes + charsi's malus + gul = melee augment shield
+- shield + standard of heroes + jah + lo + vex = mf + gf shield
 - shield eth
 - shield eth sup
 - shield inf
@@ -661,7 +663,6 @@
 - spirit ward
 - splash charm upgrades wip
 - staff of kings + amulet of the viper -> horadric staff
-- staff of teleportation
 - static
 - steel carapace
 - steel pillar
@@ -672,7 +673,6 @@
 - sup 1 ral rune + 1 thul rune + 1 perfect sapphire + 1 normal helm -> socketed helm
 - sup 1 tal rune + 1 amn rune + 1 perfect ruby + 1 normal shield -> socketed shield
 - sup 1 tal rune + 1 thul rune + 1 perfect topaz + 1 normal torso armor -> socketed torso armor
-- teleport + mf + gf on armor
 - templar's might
 - the cranium basher
 - the grandfather
@@ -693,12 +693,12 @@
 - upgrade splash charm tier - t7 splash charm & mal-rune & tal-rune & perfect skull = t8 splash charm
 - upgrade splash charm tier - t8 splash charm & ohm-rune & ral-rune & charsi malus & larzuk malus = t9 splash charm
 - vigor
-- wand of life tap
-- wand of lower res
 - warcries
 - weaken
 - weapon
 - weapon + flask = ethereal weapon
+- weapon + standard of heroes + charsi's malus + gul = melee augment weapon
+- weapon + standard of heroes + jah + lo + vex = mf + gf weapon
 - weapon eth
 - weapon eth sup
 - weapon inf

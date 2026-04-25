@@ -6,11 +6,12 @@
 
 ## Removed Columns: `enabled`  
 
-## Added Rows (40)
+## Added Rows (55)
 - ars al'diablolos
 - ars dul'mephistos
 - ars tor'baalos
 - black cleft
+- blood thirst
 - bloodpact shard
 - bone break
 - charm blank
@@ -25,9 +26,12 @@
 - crafted rotting fissure
 - defender's bile
 - defender's fire
+- diamond dust
 - dreadfang
+- electrified
 - entropy locket
 - flame rift
+- flamestrikes
 - gheed's wager
 - guardian's light
 - guardian's thunder
@@ -39,6 +43,17 @@
 - precrafted crack of the heavens
 - precrafted flame rift
 - precrafted rotting fissure
+- primal archmage fist
+- primal aries relic
+- primal diamond carapace
+- primal divine judgement
+- primal gae bolg
+- primal lilith's visage
+- primal manslaughter
+- primal shaftstop
+- primal sickle of perseus
+- primal stormshield
+- primal warlords thirst
 - protector's frost
 - protector's stone
 - rotting fissure
@@ -52,9 +67,10 @@
 - ciris's guidance
 - ravaging t1
 
-## Modified Rows (91)
+## Modified Rows (96)
 ### amazon's teaching
 - `*ID`: $\\color{gray}{\\text{421}}$ (Old) &rarr; $\\color{blue}{\\text{459}}$ (New)
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{99}}$ (New)
 - `prop7`:  (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
 - `min7`:  (Old) &rarr; $\color{blue}{\text{4}}$ (New)
 - `max7`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
@@ -68,6 +84,9 @@
 - `min3`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `max3`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 
+### andariel's visage
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{99}}$ (New)
+
 ### annihilus
 - `max2`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{20}}$ (New)
 - `max3`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{20}}$ (New)
@@ -76,7 +95,7 @@
 ### arcbane
 - `*ID`: $\\color{gray}{\\text{448}}$ (Old) &rarr; $\\color{blue}{\\text{486}}$ (New)
 - `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{431}}$ (New)
+- `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{Magic Conviction}}$ (New)
 - `min1`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
 
 ### arkaine's valor
@@ -149,6 +168,7 @@
 - `*ID`: $\\color{gray}{\\text{425}}$ (Old) &rarr; $\\color{blue}{\\text{463}}$ (New)
 
 ### crown of ages
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{99}}$ (New)
 - `max4`: $\\color{gray}{\\text{150}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 - `max6`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{20}}$ (New)
 - `max7`: $\\color{gray}{\\text{50}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
@@ -179,6 +199,9 @@
 - `*ID`: $\\color{gray}{\\text{417}}$ (Old) &rarr; $\\color{blue}{\\text{455}}$ (New)
 - `prop1`: $\\color{gray}{\\text{Aura}}$ (Old) &rarr; $\\color{blue}{\\text{aura}}$ (New)
 
+### firelizard's talons
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{51}}$ (New)
+
 ### gaia's precision
 - `*ID`: $\\color{gray}{\\text{413}}$ (Old) &rarr; $\\color{blue}{\\text{451}}$ (New)
 - `min1`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
@@ -192,6 +215,9 @@
 - `par9`:  (Old) &rarr; $\color{blue}{\text{Lightning Strike}}$ (New)
 - `min9`:  (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 - `max9`:  (Old) &rarr; $\color{blue}{\text{40}}$ (New)
+
+### gargoyle's bite
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{99}}$ (New)
 
 ### giant's protection
 - `*ID`: $\\color{gray}{\\text{412}}$ (Old) &rarr; $\\color{blue}{\\text{450}}$ (New)
@@ -268,7 +294,7 @@
 ### manawyrm
 - `*ID`: $\\color{gray}{\\text{449}}$ (Old) &rarr; $\\color{blue}{\\text{487}}$ (New)
 - `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{431}}$ (New)
+- `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{Magic Conviction}}$ (New)
 - `par6`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `max6`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 
@@ -297,7 +323,7 @@
 ### mindnumb
 - `*ID`: $\\color{gray}{\\text{451}}$ (Old) &rarr; $\\color{blue}{\\text{489}}$ (New)
 - `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{431}}$ (New)
+- `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{Magic Conviction}}$ (New)
 - `prop5`: $\\text{cold}\\color{gray}{\\text{-res}}$ (Old) &rarr; $\\color{blue}{\\text{res-}}\\text{cold}$ (New)
 
 ### mistiltein
@@ -322,7 +348,7 @@
 ### resistbreaker
 - `*ID`: $\\color{gray}{\\text{447}}$ (Old) &rarr; $\\color{blue}{\\text{485}}$ (New)
 - `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{431}}$ (New)
+- `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{Magic Conviction}}$ (New)
 
 ### robe of the horadrim
 - `*ID`: $\\color{gray}{\\text{438}}$ (Old) &rarr; $\\color{blue}{\\text{476}}$ (New)
@@ -342,6 +368,22 @@
 
 ### shadowdancer
 - `max5`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
+
+### shaftstop
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{99}}$ (New)
+- `lvl`: $\\color{gray}{\\text{46}}$ (Old) &rarr; $\\color{blue}{\\text{75}}$ (New)
+- `code`: $\\color{gray}{\\text{xhn}}$ (Old) &rarr; $\\color{blue}{\\text{uhn}}$ (New)
+- `*ItemName`: $\\color{gray}{\\text{Mesh Armor}}$ (Old) &rarr; $\\color{blue}{\\text{Boneweave}}$ (New)
+- `min3`: $\\color{gray}{\\text{85}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
+- `max3`: $\\color{gray}{\\text{140}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
+- `min5`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `max5`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
+- `prop9`:  (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
+- `min9`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `max9`:  (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `prop10`:  (Old) &rarr; $\color{blue}{\text{allskills}}$ (New)
+- `min10`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `max10`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### sigurds staunching helm
 - `*ID`: $\\color{gray}{\\text{419}}$ (Old) &rarr; $\\color{blue}{\\text{457}}$ (New)
@@ -364,6 +406,7 @@
 
 ### slayer's edge
 - `*ID`: $\\color{gray}{\\text{420}}$ (Old) &rarr; $\\color{blue}{\\text{458}}$ (New)
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{99}}$ (New)
 
 ### spike thorn
 - `par10`: $\\color{gray}{\\text{Thorns}}$ (Old) &rarr; $\\color{blue}{\\text{thorns}}$ (New)
@@ -418,7 +461,11 @@
 - `min8`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `max8`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 
+### stormshield
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{99}}$ (New)
+
 ### stormspire
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{99}}$ (New)
 - `prop9`: $\\color{gray}{\\text{gethit-skill}}$ (Old) &rarr; $\\color{blue}{\\text{91}}$ (New)
 
 ### superkhalimflail
@@ -483,7 +530,7 @@
 ### undeniable
 - `*ID`: $\\color{gray}{\\text{450}}$ (Old) &rarr; $\\color{blue}{\\text{488}}$ (New)
 - `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{431}}$ (New)
+- `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{Magic Conviction}}$ (New)
 
 ### unsullied's glory
 - `*ID`: $\\color{gray}{\\text{406}}$ (Old) &rarr; $\\color{blue}{\\text{444}}$ (New)

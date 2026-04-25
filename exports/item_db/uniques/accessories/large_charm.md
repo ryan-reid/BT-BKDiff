@@ -55,28 +55,28 @@
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Cold Immunity is Sundered
-    * Cold Resist +-90%
+    * Cold Resist +-100%
 
 ### Latent Flame Rift (PreCrafted Flame Rift)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Fire Immunity is Sundered
-    * Fire Resist +-90%
+    * Fire Resist +-100%
 
 ### Latent Crack of the Heavens (PreCrafted Crack of the Heavens)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Lightning Immunity is Sundered
-    * Lightning Resist +-90%
+    * Lightning Resist +-100%
 
 ### Latent Rotting Fissure (PreCrafted Rotting Fissure)
 * **Base Item:** Grand Charm
 * **Level Requirement:** 75
 * **Properties:**
     * Monster Poison Immunity is Sundered
-    * Poison Resist +-90%
+    * Poison Resist +-100%
 
 ### Latent Bone Break (PreCrafted Bone Break)
 * **Base Item:** Grand Charm
