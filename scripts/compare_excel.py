@@ -1,23 +1,7 @@
-import csv
 import sys
 import os
 import json
-
-# Increase CSV field size limit for large D2 fields
-csv.field_size_limit(1000000)
-
-def load_tsv(file_path):
-    if not os.path.exists(file_path):
-        return [], []
-    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-        lines = [line.strip('\n\r') for line in f if line.strip('\n\r')]
-        if not lines:
-            return [], []
-        
-        reader = csv.DictReader(lines, delimiter='\t', quoting=csv.QUOTE_NONE)
-        headers = reader.fieldnames
-        data = list(reader)
-        return headers, data
+from utils import load_tsv, normalize_d2_value
 
 def compare_files(file_bk, file_bt, key_col='code'):
     # file_bk = New Version
@@ -26,7 +10,7 @@ def compare_files(file_bk, file_bt, key_col='code'):
     h_old, d_old = load_tsv(file_bt)
 
     if not h_new or not h_old:
-        return {"error": "Could not read one or both files"}
+        return {"error": f"Could not read one or both files: {file_bk}, {file_bt}"}
 
     # Fallback for key column logic
     if key_col not in h_new or key_col not in h_old:
@@ -85,14 +69,7 @@ def compare_files(file_bk, file_bt, key_col='code'):
                 v_new = map_new[key].get(col, '')
                 v_old = map_old[key].get(col, '')
                 
-                # Normalize values for comparison: strip whitespace and surrounding quotes
-                def normalize(v):
-                    v = str(v).strip()
-                    if v.startswith('"') and v.endswith('"'):
-                        v = v[1:-1]
-                    return v.strip()
-
-                if normalize(v_new) != normalize(v_old):
+                if normalize_d2_value(v_new) != normalize_d2_value(v_old):
                     diffs[col] = {"bk_new": v_new, "bt_old": v_old}
             if diffs:
                 report["rows"]["modified"][key] = diffs

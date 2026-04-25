@@ -4,9 +4,7 @@ import csv
 import argparse
 import sys
 from typing import Dict, List, Optional
-
-# Increase CSV field size limit for large skill files
-csv.field_size_limit(1000000)
+from utils import load_tsv
 
 class D2DataLoader:
     def __init__(self, mpq_path: str):
@@ -16,30 +14,10 @@ class D2DataLoader:
         self._load_strings()
 
     def load_external_table(self, filepath: str) -> List[Dict]:
-        if not os.path.exists(filepath):
-            return []
-
-        table = []
-        try:
-            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-                lines = f.readlines()
-                if not lines:
-                    return []
-                if lines[0].startswith('\ufeff'):
-                    lines[0] = lines[0][1:]
-
-                reader = csv.DictReader(lines, delimiter='\t', quoting=csv.QUOTE_NONE)
-                reader.fieldnames = [f.strip() for f in reader.fieldnames] if reader.fieldnames else []
-                for row in reader:
-                    clean_row = {k.strip() if k else k: v.strip() if v else v for k, v in row.items()}
-                    table.append(clean_row)
-        except Exception as e:
-            print(f"Error reading {filepath}: {e}")
-            return []
-        return table
+        _, data = load_tsv(filepath)
+        return data
 
     def _load_strings(self):
-
         string_dir = os.path.join(self.mpq_path, "data", "local", "lng", "strings")
         if not os.path.exists(string_dir):
             return
@@ -61,35 +39,10 @@ class D2DataLoader:
             return self.excel_data[table_name]
         
         filepath = os.path.join(self.mpq_path, "data", "global", "excel", f"{table_name}.txt")
-        if not os.path.exists(filepath):
-            return []
+        _, data = load_tsv(filepath)
         
-        table = []
-        try:
-            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-                # Read all lines to handle potential issues
-                lines = f.readlines()
-                if not lines:
-                    return []
-                
-                # Strip BOM if present manually just in case
-                if lines[0].startswith('\ufeff'):
-                    lines[0] = lines[0][1:]
-                
-                reader = csv.DictReader(lines, delimiter='\t', quoting=csv.QUOTE_NONE)
-                # Normalize field names: strip and lower
-                reader.fieldnames = [f.strip() for f in reader.fieldnames] if reader.fieldnames else []
-                
-                for row in reader:
-                    # Strip values as well
-                    clean_row = {k.strip() if k else k: v.strip() if v else v for k, v in row.items()}
-                    table.append(clean_row)
-        except Exception as e:
-            print(f"Error reading {table_name}: {e}")
-            return []
-        
-        self.excel_data[table_name] = table
-        return table
+        self.excel_data[table_name] = data
+        return data
 
     def get_string(self, key: str) -> str:
         if not key: return ""
