@@ -1,348 +1,343 @@
 # Differences for weapons.txt
 
-*Key column used: `name`*
+*Key column used: `code`*
 
-## Added Columns in BK (New)
-`DropConditionCalc, UICatOverride`  
+## Added Columns: `DropConditionCalc, UICatOverride`  
 
-## Modified Rows (106)
-### arbalest
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+## Modified Rows (105)
+### 6bs
+- `auto prefix`: $\\color{gray}{\\text{202}}$ (Old) &rarr; $\\color{blue}{\\text{402}}$ (New)
 
-### archon staff
-- `auto prefix`: $\color{gray}{\text{202}}$ (Old) &rarr; $\color{blue}{\text{402}}$ (New)
+### 6cs
+- `auto prefix`: $\\color{gray}{\\text{202}}$ (Old) &rarr; $\\color{blue}{\\text{402}}$ (New)
 
-### bardiche
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### 6ls
+- `auto prefix`: $\\color{gray}{\\text{202}}$ (Old) &rarr; $\\color{blue}{\\text{402}}$ (New)
 
-### battle hammer
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+### 6ss
+- `auto prefix`: $\\color{gray}{\\text{202}}$ (Old) &rarr; $\\color{blue}{\\text{402}}$ (New)
 
-### battle staff
-- `auto prefix`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{400}}$ (New)
+### 6ws
+- `auto prefix`: $\\color{gray}{\\text{202}}$ (Old) &rarr; $\\color{blue}{\\text{402}}$ (New)
 
-### blade
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### 7bl
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### bone wand
-- `auto prefix`: $\color{gray}{\text{209}}$ (Old) &rarr; $\color{blue}{\text{409}}$ (New)
+### 7bw
+- `magic lvl`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `auto prefix`: $\\color{gray}{\\text{211}}$ (Old) &rarr; $\\color{blue}{\\text{411}}$ (New)
 
-### burnt wand
-- `auto prefix`: $\color{gray}{\text{210}}$ (Old) &rarr; $\color{blue}{\text{410}}$ (New)
+### 7gw
+- `magic lvl`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `auto prefix`: $\\color{gray}{\\text{211}}$ (Old) &rarr; $\\color{blue}{\\text{411}}$ (New)
 
-### caduceus
-- `auto prefix`: $\color{gray}{\text{208}}$ (Old) &rarr; $\color{blue}{\text{408}}$ (New)
+### 7la
+- `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 
-### cedar staff
-- `auto prefix`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{401}}$ (New)
+### 7ma
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### choking gas potion
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+### 7qs
+- `auto prefix`: $\\color{gray}{\\text{208}}$ (Old) &rarr; $\\color{blue}{\\text{408}}$ (New)
 
-### chu-ko-nu
-- `gemsockets`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+### 7sc
+- `auto prefix`: $\\color{gray}{\\text{208}}$ (Old) &rarr; $\\color{blue}{\\text{408}}$ (New)
 
-### clasped orb
-- `auto prefix`: $\color{gray}{\text{203}}$ (Old) &rarr; $\color{blue}{\text{403}}$ (New)
+### 7wh
+- `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 
-### cloudy sphere
-- `auto prefix`: $\color{gray}{\text{204}}$ (Old) &rarr; $\color{blue}{\text{404}}$ (New)
+### 7wn
+- `magic lvl`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `auto prefix`: $\\color{gray}{\\text{211}}$ (Old) &rarr; $\\color{blue}{\\text{411}}$ (New)
 
-### club
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### 7ws
+- `auto prefix`: $\\color{gray}{\\text{208}}$ (Old) &rarr; $\\color{blue}{\\text{408}}$ (New)
 
-### crossbow
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+### 7yw
+- `magic lvl`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `auto prefix`: $\\color{gray}{\\text{211}}$ (Old) &rarr; $\\color{blue}{\\text{411}}$ (New)
 
-### crystalline globe
-- `auto prefix`: $\color{gray}{\text{204}}$ (Old) &rarr; $\color{blue}{\text{404}}$ (New)
+### 8bs
+- `auto prefix`: $\\color{gray}{\\text{201}}$ (Old) &rarr; $\\color{blue}{\\text{401}}$ (New)
 
-### cudgel
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### 8cs
+- `auto prefix`: $\\color{gray}{\\text{201}}$ (Old) &rarr; $\\color{blue}{\\text{401}}$ (New)
 
-### cutlass
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### 8ls
+- `auto prefix`: $\\color{gray}{\\text{201}}$ (Old) &rarr; $\\color{blue}{\\text{401}}$ (New)
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### decoy gidbinn
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+### 8lx
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 
-### demon heart
-- `auto prefix`: $\color{gray}{\text{205}}$ (Old) &rarr; $\color{blue}{\text{405}}$ (New)
+### 8mx
+- `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 
-### dimensional shard
-- `auto prefix`: $\color{gray}{\text{205}}$ (Old) &rarr; $\color{blue}{\text{405}}$ (New)
+### 8rx
+- `gemsockets`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 
-### divine scepter
-- `auto prefix`: $\color{gray}{\text{207}}$ (Old) &rarr; $\color{blue}{\text{407}}$ (New)
+### 8sb
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### eagle orb
-- `auto prefix`: $\color{gray}{\text{203}}$ (Old) &rarr; $\color{blue}{\text{403}}$ (New)
+### 8ss
+- `auto prefix`: $\\color{gray}{\\text{201}}$ (Old) &rarr; $\\color{blue}{\\text{401}}$ (New)
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### edge bow
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### 8ws
+- `auto prefix`: $\\color{gray}{\\text{201}}$ (Old) &rarr; $\\color{blue}{\\text{401}}$ (New)
 
-### elder staff
-- `auto prefix`: $\color{gray}{\text{202}}$ (Old) &rarr; $\color{blue}{\text{402}}$ (New)
+### 92h
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### eldritch orb
-- `auto prefix`: $\color{gray}{\text{205}}$ (Old) &rarr; $\color{blue}{\text{405}}$ (New)
+### 9b7
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### espandon
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### 9bl
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### expansion
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+### 9bw
+- `auto prefix`: $\\color{gray}{\\text{210}}$ (Old) &rarr; $\\color{blue}{\\text{410}}$ (New)
 
-### exploding potion
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+### 9cl
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### falchion
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### 9gl
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### feral axe
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+### 9gw
+- `auto prefix`: $\\color{gray}{\\text{210}}$ (Old) &rarr; $\\color{blue}{\\text{410}}$ (New)
 
-### flanged mace
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### 9ha
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### fulminating potion
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+### 9la
+- `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 
-### ghost wand
-- `magic lvl`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `auto prefix`: $\color{gray}{\text{211}}$ (Old) &rarr; $\color{blue}{\text{411}}$ (New)
+### 9ma
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### gladius
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### 9qs
+- `auto prefix`: $\\color{gray}{\\text{207}}$ (Old) &rarr; $\\color{blue}{\\text{407}}$ (New)
 
-### glowing orb
-- `auto prefix`: $\color{gray}{\text{204}}$ (Old) &rarr; $\color{blue}{\text{404}}$ (New)
+### 9sb
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### gnarled staff
-- `auto prefix`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{400}}$ (New)
+### 9sc
+- `auto prefix`: $\\color{gray}{\\text{207}}$ (Old) &rarr; $\\color{blue}{\\text{407}}$ (New)
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### gothic staff
-- `auto prefix`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{401}}$ (New)
+### 9sm
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### grand scepter
-- `auto prefix`: $\color{gray}{\text{206}}$ (Old) &rarr; $\color{blue}{\text{406}}$ (New)
+### 9sr
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### grave wand
-- `auto prefix`: $\color{gray}{\text{210}}$ (Old) &rarr; $\color{blue}{\text{410}}$ (New)
+### 9ss
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### grim wand
-- `auto prefix`: $\color{gray}{\text{209}}$ (Old) &rarr; $\color{blue}{\text{409}}$ (New)
+### 9ts
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### harpoon
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### 9wh
+- `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 
-### hatchet
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### 9wn
+- `auto prefix`: $\\color{gray}{\\text{210}}$ (Old) &rarr; $\\color{blue}{\\text{410}}$ (New)
 
-### heavenly stone
-- `auto prefix`: $\color{gray}{\text{205}}$ (Old) &rarr; $\color{blue}{\text{405}}$ (New)
+### 9ws
+- `auto prefix`: $\\color{gray}{\\text{207}}$ (Old) &rarr; $\\color{blue}{\\text{407}}$ (New)
 
-### hellforge hammer
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+### 9yw
+- `auto prefix`: $\\color{gray}{\\text{210}}$ (Old) &rarr; $\\color{blue}{\\text{410}}$ (New)
 
-### holy water sprinkler
-- `auto prefix`: $\color{gray}{\text{207}}$ (Old) &rarr; $\color{blue}{\text{407}}$ (New)
+### am1
+- `gemsockets`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### horadric malus
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+### bar
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### horadric staff
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+### bld
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### jared's stone
-- `auto prefix`: $\color{gray}{\text{203}}$ (Old) &rarr; $\color{blue}{\text{403}}$ (New)
+### bst
+- `auto prefix`: $\\color{gray}{\\text{200}}$ (Old) &rarr; $\\color{blue}{\\text{400}}$ (New)
 
-### jo staff
-- `auto prefix`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{401}}$ (New)
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### bwn
+- `auto prefix`: $\\color{gray}{\\text{209}}$ (Old) &rarr; $\\color{blue}{\\text{409}}$ (New)
 
-### khalim's flail
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+### clb
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### khalim's will
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+### cst
+- `auto prefix`: $\\color{gray}{\\text{200}}$ (Old) &rarr; $\\color{blue}{\\text{400}}$ (New)
 
-### large axe
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+### d33
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
-### legend spike
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### flc
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### legendary mallet
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+### g33
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
-### lich wand
-- `magic lvl`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `auto prefix`: $\color{gray}{\text{211}}$ (Old) &rarr; $\color{blue}{\text{411}}$ (New)
+### gpl
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 
-### light crossbow
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+### gpm
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 
-### lochaber axe
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### gps
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 
-### long staff
-- `auto prefix`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{400}}$ (New)
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### gsc
+- `auto prefix`: $\\color{gray}{\\text{206}}$ (Old) &rarr; $\\color{blue}{\\text{406}}$ (New)
 
-### mace
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### gwn
+- `auto prefix`: $\\color{gray}{\\text{209}}$ (Old) &rarr; $\\color{blue}{\\text{409}}$ (New)
 
-### mighty scepter
-- `auto prefix`: $\color{gray}{\text{208}}$ (Old) &rarr; $\color{blue}{\text{408}}$ (New)
+### hdm
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
-### military axe
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+### hfh
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
-### oil potion
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+### hst
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
-### petrified wand
-- `auto prefix`: $\color{gray}{\text{210}}$ (Old) &rarr; $\color{blue}{\text{410}}$ (New)
+### lax
+- `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 
-### polished wand
-- `magic lvl`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `auto prefix`: $\color{gray}{\text{211}}$ (Old) &rarr; $\color{blue}{\text{411}}$ (New)
+### leg
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
-### quarterstaff
-- `auto prefix`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{401}}$ (New)
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### lst
+- `auto prefix`: $\\color{gray}{\\text{200}}$ (Old) &rarr; $\\color{blue}{\\text{400}}$ (New)
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### rancid gas potion
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+### lxb
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 
-### reinforced mace
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### mac
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### repeating crossbow
-- `gemsockets`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+### msf
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
-### rune scepter
-- `auto prefix`: $\color{gray}{\text{207}}$ (Old) &rarr; $\color{blue}{\text{407}}$ (New)
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### mxb
+- `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 
-### rune staff
-- `auto prefix`: $\color{gray}{\text{201}}$ (Old) &rarr; $\color{blue}{\text{401}}$ (New)
+### ob1
+- `auto prefix`: $\\color{gray}{\\text{203}}$ (Old) &rarr; $\\color{blue}{\\text{403}}$ (New)
 
-### saber
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### ob2
+- `auto prefix`: $\\color{gray}{\\text{203}}$ (Old) &rarr; $\\color{blue}{\\text{403}}$ (New)
 
-### sacred globe
-- `auto prefix`: $\color{gray}{\text{203}}$ (Old) &rarr; $\color{blue}{\text{403}}$ (New)
+### ob3
+- `auto prefix`: $\\color{gray}{\\text{203}}$ (Old) &rarr; $\\color{blue}{\\text{403}}$ (New)
 
-### scepter
-- `auto prefix`: $\color{gray}{\text{206}}$ (Old) &rarr; $\color{blue}{\text{406}}$ (New)
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### ob4
+- `auto prefix`: $\\color{gray}{\\text{203}}$ (Old) &rarr; $\\color{blue}{\\text{403}}$ (New)
 
-### scimitar
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### ob5
+- `auto prefix`: $\\color{gray}{\\text{203}}$ (Old) &rarr; $\\color{blue}{\\text{403}}$ (New)
 
-### seraph rod
-- `auto prefix`: $\color{gray}{\text{208}}$ (Old) &rarr; $\color{blue}{\text{408}}$ (New)
+### ob6
+- `auto prefix`: $\\color{gray}{\\text{204}}$ (Old) &rarr; $\\color{blue}{\\text{404}}$ (New)
 
-### shamshir
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### ob7
+- `auto prefix`: $\\color{gray}{\\text{204}}$ (Old) &rarr; $\\color{blue}{\\text{404}}$ (New)
 
-### shillelagh
-- `auto prefix`: $\color{gray}{\text{202}}$ (Old) &rarr; $\color{blue}{\text{402}}$ (New)
+### ob8
+- `auto prefix`: $\\color{gray}{\\text{204}}$ (Old) &rarr; $\\color{blue}{\\text{404}}$ (New)
 
-### short bow
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### ob9
+- `auto prefix`: $\\color{gray}{\\text{204}}$ (Old) &rarr; $\\color{blue}{\\text{404}}$ (New)
 
-### short spear
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### oba
+- `auto prefix`: $\\color{gray}{\\text{204}}$ (Old) &rarr; $\\color{blue}{\\text{404}}$ (New)
 
-### short staff
-- `auto prefix`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{400}}$ (New)
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### obb
+- `auto prefix`: $\\color{gray}{\\text{205}}$ (Old) &rarr; $\\color{blue}{\\text{405}}$ (New)
 
-### short sword
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### obc
+- `auto prefix`: $\\color{gray}{\\text{205}}$ (Old) &rarr; $\\color{blue}{\\text{405}}$ (New)
 
-### siege crossbow
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+### obd
+- `auto prefix`: $\\color{gray}{\\text{205}}$ (Old) &rarr; $\\color{blue}{\\text{405}}$ (New)
 
-### smoked sphere
-- `auto prefix`: $\color{gray}{\text{203}}$ (Old) &rarr; $\color{blue}{\text{403}}$ (New)
+### obe
+- `auto prefix`: $\\color{gray}{\\text{205}}$ (Old) &rarr; $\\color{blue}{\\text{405}}$ (New)
 
-### sparkling ball
-- `auto prefix`: $\color{gray}{\text{204}}$ (Old) &rarr; $\color{blue}{\text{404}}$ (New)
+### obf
+- `auto prefix`: $\\color{gray}{\\text{205}}$ (Old) &rarr; $\\color{blue}{\\text{405}}$ (New)
 
-### spiculum
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### opl
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 
-### spiked club
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### opm
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 
-### staff of kings
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+### ops
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 
-### stag bow
-- `gemsockets`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### qf1
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
-### stalagmite
-- `auto prefix`: $\color{gray}{\text{202}}$ (Old) &rarr; $\color{blue}{\text{402}}$ (New)
+### qf2
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
-### stilleto
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+### rxb
+- `gemsockets`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 
-### strangling gas potion
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+### sbr
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### swirling crystal
-- `auto prefix`: $\color{gray}{\text{204}}$ (Old) &rarr; $\color{blue}{\text{404}}$ (New)
+### sbw
+- `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 
-### the gidbinn
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+### scm
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### tomb wand
-- `auto prefix`: $\color{gray}{\text{210}}$ (Old) &rarr; $\color{blue}{\text{410}}$ (New)
+### scp
+- `auto prefix`: $\\color{gray}{\\text{206}}$ (Old) &rarr; $\\color{blue}{\\text{406}}$ (New)
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### unearthed wand
-- `magic lvl`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `auto prefix`: $\color{gray}{\text{211}}$ (Old) &rarr; $\color{blue}{\text{411}}$ (New)
+### spc
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### vortex orb
-- `auto prefix`: $\color{gray}{\text{205}}$ (Old) &rarr; $\color{blue}{\text{405}}$ (New)
+### ssd
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### walking stick
-- `auto prefix`: $\color{gray}{\text{202}}$ (Old) &rarr; $\color{blue}{\text{402}}$ (New)
+### ssp
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### wand
-- `auto prefix`: $\color{gray}{\text{209}}$ (Old) &rarr; $\color{blue}{\text{409}}$ (New)
+### sst
+- `auto prefix`: $\\color{gray}{\\text{200}}$ (Old) &rarr; $\\color{blue}{\\text{400}}$ (New)
+- `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 
-### war hammer
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+### whm
+- `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 
-### war scepter
-- `auto prefix`: $\color{gray}{\text{206}}$ (Old) &rarr; $\color{blue}{\text{406}}$ (New)
+### wnd
+- `auto prefix`: $\\color{gray}{\\text{209}}$ (Old) &rarr; $\\color{blue}{\\text{409}}$ (New)
 
-### war spear
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+### wsp
+- `auto prefix`: $\\color{gray}{\\text{206}}$ (Old) &rarr; $\\color{blue}{\\text{406}}$ (New)
 
-### war staff
-- `auto prefix`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{400}}$ (New)
+### wst
+- `auto prefix`: $\\color{gray}{\\text{200}}$ (Old) &rarr; $\\color{blue}{\\text{400}}$ (New)
 
-### wirt's leg
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### yew wand
-- `auto prefix`: $\color{gray}{\text{209}}$ (Old) &rarr; $\color{blue}{\text{409}}$ (New)
-
+### ywn
+- `auto prefix`: $\\color{gray}{\\text{209}}$ (Old) &rarr; $\\color{blue}{\\text{409}}$ (New)

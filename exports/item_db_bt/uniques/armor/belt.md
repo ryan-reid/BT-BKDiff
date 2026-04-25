@@ -151,7 +151,7 @@
 * **Base Item:** Colossus Girdle
 * **Level Requirement:** 93
 * **Properties:**
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
     * Damage Reduced by 25-35
     * Magic Damage Reduced by 25-35
     * +5 to Cyclone Armor

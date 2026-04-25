@@ -23,8 +23,8 @@
     * 8% Life stolen per hit
     * +180% Enhanced Damage
     * Level 5 Might Aura When Equipped
-    * +3 to Sacrifice (Class 96 only)
-    * +3 to Zeal (Class 106 only)
+    * +3 to Sacrifice (Paladin only)
+    * +3 to Zeal (Paladin only)
 
 ### Stormeye (Stormeye)
 * **Base Item:** War Scepter
@@ -49,8 +49,8 @@
     * 60% Chance to cast level 25 Blizzard on striking
     * +180-220% Enhanced Damage
     * +30% Increased Attack Speed
-    * +2-3 to Holy Freeze (Class 114 only)
-    * +2-3 to Holy Shock (Class 118 only)
+    * +2-3 to Holy Freeze (Paladin only)
+    * +2-3 to Holy Shock (Paladin only)
     * +1-2 to Paladin Skill Levels
 
 ### The Fetid Sprinkler (The Fetid Sprinkler)
@@ -72,8 +72,8 @@
     * +30% Faster Cast Rate
     * Regenerate Mana 15%
     * +20% Increased Attack Speed
-    * +1-3 to Holy Bolt (Class 101 only)
-    * +1-3 to Fist of the Heavens (Class 121 only)
+    * +1-3 to Holy Bolt (Paladin only)
+    * +1-3 to Fist of the Heavens (Paladin only)
 
 ### Heaven's Light (Heaven's Light)
 * **Base Item:** Mighty Scepter
@@ -112,7 +112,7 @@
     * +2 to Paladin Skill Levels
     * Requirements --60%
     * Level 5 Redemption Aura When Equipped
-    * +2-4 to Holy Bolt (Class Holy Bolt only)
+    * +2-4 to Holy Bolt (Paladin only)
     * -33% Target Defense
     * Damage +60-120
     * +200% Damage to Undead

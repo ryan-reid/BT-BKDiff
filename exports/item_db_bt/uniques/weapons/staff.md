@@ -31,8 +31,8 @@
     * Lightning Resist +75%
     * Damage Reduced by 7-14
     * +30 to Energy
-    * +2-3 to Chain Lightning (Class 53 only)
-    * +2-3 to Lightning (Class 49 only)
+    * +2-3 to Chain Lightning (Sorceress only)
+    * +2-3 to Lightning (Sorceress only)
     * Regenerate Mana 43%
     * +60% Faster Cast Rate
     * +2-3 to Sorceress Skill Levels
@@ -43,8 +43,8 @@
 * **Properties:**
     * +30% Faster Cast Rate
     * Fire Resist +30%
-    * +3 to Fire Wall (Class 51 only)
-    * +3 to Fire Ball (Class 47 only)
+    * +3 to Fire Wall (Sorceress only)
+    * +3 to Fire Ball (Sorceress only)
     * +60 to Mana
     * +3 to Fire Skills
 
@@ -55,7 +55,7 @@
     * +2-4 to Sorceress Skill Levels
     * +69% Faster Cast Rate
     * Replenish Life +20
-    * +2-4 to Blaze (Class 46 only)
+    * +2-4 to Blaze (Sorceress only)
     * +220 to Mana
 
 ### Staff of Kings (Staff of Kings)
@@ -111,9 +111,9 @@
     * All Resistances +40
     * +50% Faster Cast Rate
     * Increase Maximum Life 20-25%
-    * +3 to Blizzard (Class 59 only)
-    * +3 to Meteor (Class 56 only)
-    * +3-5 to Chain Lightning (Class 53 only)
+    * +3 to Blizzard (Sorceress only)
+    * +3 to Meteor (Sorceress only)
+    * +3-5 to Chain Lightning (Sorceress only)
 
 ### Warpspear (Warpspear)
 * **Base Item:** Gothic Staff
@@ -121,9 +121,9 @@
 * **Properties:**
     * +3 to Sorceress Skill Levels
     * +55% Faster Hit Recovery
-    * +3 to Teleport (Class 54 only)
-    * +3 to Telekinesis (Class 43 only)
-    * +3 to Meteor (Class 56 only)
+    * +3 to Teleport (Sorceress only)
+    * +3 to Telekinesis (Sorceress only)
+    * +3 to Meteor (Sorceress only)
     * +250 Defense vs. Missile
     * +40% Faster Cast Rate
     * +150 to Mana

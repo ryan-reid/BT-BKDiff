@@ -51,8 +51,8 @@
     * +2-3  to Barbarian Skill Levels
     * +20% Faster Hit Recovery
     * +15 Life after each Kill
-    * +1-2 to Battle Orders (Class Battle Orders only)
-    * +1-2 to Battle Command (Class Battle Command only)
+    * +1-2 to Battle Orders (Barbarian only)
+    * +1-2 to Battle Command (Barbarian only)
     * Damage Reduced by 10-15%
 
 ### Bul Katho's Mind (Bul Katho's Mind)

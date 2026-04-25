@@ -21,10 +21,10 @@
     * Lightning Resist +40%
     * +80 to Mana
     * +30% Faster Cast Rate
-    * +1-3 to Corpse Explosion (Class 74 only)
-    * +1-3 to Bone Armor (Class 68 only)
-    * +1-3 to Amplify Damage (Class 66 only)
-    * +1-3 to Dim Vision (Class 71 only)
+    * +1-3 to Corpse Explosion (Necromancer only)
+    * +1-3 to Bone Armor (Necromancer only)
+    * +1-3 to Amplify Damage (Necromancer only)
+    * +1-3 to Dim Vision (Necromancer only)
     * +1-2 to Necromancer Skill Levels
 
 ### Gravenspine (Gravenspine)
@@ -45,8 +45,8 @@
     * +2-3 to Necromancer Skill Levels
     * +80 to Mana
     * +40% Faster Cast Rate
-    * +3 to Skeleton Mastery (Class 69 only)
-    * +2-3 to Decrepify (Class 87 only)
+    * +3 to Skeleton Mastery (Necromancer only)
+    * +2-3 to Decrepify (Necromancer only)
 
 ### Suicide Branch (Suicide Branch)
 * **Base Item:** Burnt Wand
@@ -83,10 +83,10 @@
     * 15% Chance to cast level 30 Bone Armor when struck
     * +30% Faster Cast Rate
     * +1-2 to Poison and Bone Skills
-    * +2 to Corpse Explosion (Class 74 only)
-    * +2 to Summon Resist (Class 89 only)
-    * +3 to Skeleton Mastery (Class 69 only)
-    * +3 to Raise Skeleton (Class 70 only)
+    * +2 to Corpse Explosion (Necromancer only)
+    * +2 to Summon Resist (Necromancer only)
+    * +3 to Skeleton Mastery (Necromancer only)
+    * +3 to Raise Skeleton (Necromancer only)
 
 ### Blackhand Key (Blackhand Key)
 * **Base Item:** Grave Wand
@@ -118,11 +118,11 @@
 * **Properties:**
     * +2 to Necromancer Skill Levels
     * +30% Faster Cast Rate
-    * +4-5 to Teeth (Class Teeth only)
-    * +4-5 to Bone Armor (Class Bone Armor only)
-    * +2-3 to Bone Spear (Class Bone Spear only)
-    * +1-2 to Bone Spirit (Class Bone Spirit only)
-    * +2-3 to Bone Wall (Class Bone Wall only)
+    * +4-5 to Teeth (Necromancer only)
+    * +4-5 to Bone Armor (Necromancer only)
+    * +2-3 to Bone Spear (Necromancer only)
+    * +1-2 to Bone Spirit (Necromancer only)
+    * +2-3 to Bone Wall (Necromancer only)
 
 ### Resistbreaker (Resistbreaker)
 * **Base Item:** Polished Wand

@@ -121,7 +121,7 @@
     * Attacker Takes Damage of 150
     * +50 to Energy
     * +10-15 to Strength
-    * poisonlength: 100 (param: )
+    * Unknown property: pois-len (100)
     * Damage Reduced by 5-10%
 
 ### Moser's Blessed Circle (Mosers Blessed Circle)

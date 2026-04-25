@@ -114,7 +114,7 @@
     * All Resistances +35-40
     * 24% Chance to cast level 20 Lower Resist when struck
     * +20-30 to all Attributes
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
 
 ### Seraph's Hymn (Seraph's Hymn)
 * **Base Item:** Amulet

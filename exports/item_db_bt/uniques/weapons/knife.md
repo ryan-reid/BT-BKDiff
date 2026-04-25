@@ -79,9 +79,9 @@
     * -15% to Enemy Poison Resistance
     * +60% Increased Attack Speed
     * Adds 500-500 Poison Damage Over 500 Seconds
-    * +6 to Poison Dagger (Class 73 only)
-    * +6 to Poison Explosion (Class 83 only)
-    * +6 to Poison Nova (Class 92 only)
+    * +6 to Poison Dagger (Necromancer only)
+    * +6 to Poison Explosion (Necromancer only)
+    * +6 to Poison Nova (Necromancer only)
 
 ### Stormspike (Stormspike)
 * **Base Item:** Stiletto

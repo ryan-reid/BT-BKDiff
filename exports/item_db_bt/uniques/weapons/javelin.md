@@ -8,8 +8,8 @@
     * Replenishes quantity
     * Adds 300-300 Poison Damage Over 300 Seconds
     * 11-15% Life stolen per hit
-    * +3 to Plague Javelin (Class Plague Javelin only)
-    * +3 to Poison Javelin (Class Poison Javelin only)
+    * +3 to Plague Javelin (Amazon only)
+    * +3 to Poison Javelin (Amazon only)
     * -20-25% to Enemy Poison Resistance
     * +2-3 to Poison Skills
     * +30% Increased Attack Speed
@@ -52,4 +52,4 @@
     * +80% Increased Attack Speed
     * +250-300% Enhanced Damage
     * 5% Life stolen per hit
-    * +3 to Double Throw (Class 140 only)
+    * +3 to Double Throw (Barbarian only)

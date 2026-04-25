@@ -1,7 +1,7 @@
 # Modified Items
 
-- $\color{gray}{\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\text{Blue text}}$: Added/New Value
+- $\color{{gray}}{\text{Gray text}}$: Removed/Old Value
+- $\color{{blue}}{\text{Blue text}}$: Added/New Value
 
 ## Uniques
 
@@ -42,9 +42,9 @@
 | **Base Item:** Large ÿc1Charmÿc3 | **Base Item:** Large Charm |
 | **Level Requirement:** 75 | **Level Requirement:** 75 |
 | **Properties:** | **Properties:** |
-| +3 to Original Class Skill Levels | +3 to Random Class Skill Levels |
+| +3 to Random Class Skill Levels | +3 to Random Class Skill Levels |
 | +8 to Light Radius | +8 to Light Radius |
-| Level 10 Hydra (30/# Charges) | Level 10 Hydra (30/# Charges) |
+| Level 10-30 Hydra (10-30/10-30 Charges) | Level 10-30 Hydra (10-30/10-30 Charges) |
 | $\color{gray}{\text{+10-25}}\text{ to all Attributes}$ | $\color{blue}{\text{+10-20}}\text{ to all Attributes}$ |
 | $\text{All Resistances }\color{gray}{\text{+10-25}}$ | $\text{All Resistances }\color{blue}{\text{+10-20}}$ |
 
@@ -94,7 +94,7 @@
 | **Properties:** | **Properties:** |
 | Socketed () | Socketed () |
 | +1-10% Energy | +1-10% Energy |
-| 5% Chance to cast level 20 Static Field when struck | 5% Chance to cast level 20 Static Field when struck |
+| 5-20% Chance to cast level 5-20 Static Field when struck | 5-20% Chance to cast level 5-20 Static Field when struck |
 | $\color{gray}{\text{+5-10\\%}}\text{ Faster Run/Walk}$ | $\color{blue}{\text{+10\\%}}\text{ Faster Run/Walk}$ |
 
 ### armor\circlet.md
@@ -215,7 +215,7 @@
 | +30% Increased Attack Speed | +30% Increased Attack Speed |
 | +250-300% Enhanced Damage | +250-300% Enhanced Damage |
 | Level 5 Vigor Aura When Equipped | Level 5 Vigor Aura When Equipped |
-| +3 to Weapon Block (Class Weapon Block only) | +3 to Weapon Block (Class Weapon Block only) |
+| +3 to Weapon Block (Class only) | +3 to Weapon Block (Class only) |
 | $\color{gray}{\text{+1-2}}\text{ to Assassin Skill Levels}$ | $\color{blue}{\text{+2}}\text{ to Assassin Skill Levels}$ |
 
 ### class_specific\pelt.md
@@ -252,7 +252,7 @@
 | $\color{gray}{\text{+200-300}}\text{ Defense}$ | $\color{blue}{\text{+1000}}\text{ Defense}$ |
 | $\color{gray}{\text{Damage Reduced by 15-20}}$ | $\color{blue}{\text{(removed)}}$ |
 |  | $\color{blue}{\text{Increase Maximum Life 5-15\\%}}$ |
-|  | $\color{blue}{\text{20\\% Chance to cast level 40 Lightning Strike on striking}}$ |
+|  | $\color{blue}{\text{20-40\\% Chance to cast level 20-40 Lightning Strike on striking}}$ |
 
 ### weapons\axe.md
 
@@ -317,8 +317,8 @@
 | + to Maximum Damage (Based on Character Level) | + to Maximum Damage (Based on Character Level) |
 | Repairs 1 durability in  seconds | Repairs 1 durability in  seconds |
 | +350% Enhanced Damage | +350% Enhanced Damage |
-| $\text{20\\% Chance to cast level }\color{gray}{\text{20}}\text{ Static Field on striking}$ | $\text{20\\% Chance to cast level }\color{blue}{\text{50}}\text{ Static Field on striking}$ |
-| $\color{gray}{\text{Adds 50-200 Lightning Damage}}$ | $\color{blue}{\text{(removed)}}$ |
+| $\color{gray}{\text{20\\%}}\text{ Chance to cast level }\color{gray}{\text{20}}\text{ Static Field on striking}$ | $\color{blue}{\text{20-50\\%}}\text{ Chance to cast level }\color{blue}{\text{20-50}}\text{ Static Field on striking}$ |
+| $\color{gray}{\text{Adds 50-200-50-200 Lightning Damage}}$ | $\color{blue}{\text{(removed)}}$ |
 |  | $\color{blue}{\text{-10-15\\% to Enemy Physical Resistance}}$ |
 
 **Stone Crusher** (Stone Crusher)
@@ -347,9 +347,9 @@
 | +200-300% Enhanced Damage | +200-300% Enhanced Damage |
 | 50% Chance of Crushing Blow | 50% Chance of Crushing Blow |
 | +60% Increased Attack Speed | +60% Increased Attack Speed |
-| 40% Chance to cast level 44 Twister on striking | 40% Chance to cast level 44 Twister on striking |
+| 40-44% Chance to cast level 40-44 Twister on striking | 40-44% Chance to cast level 40-44 Twister on striking |
 | +30% Faster Run/Walk | +30% Faster Run/Walk |
-| 50% Chance to cast level 40 Tornado when you Kill an Enemy | 50% Chance to cast level 40 Tornado when you Kill an Enemy |
+| 50-40% Chance to cast level 50-40 Tornado when you Kill an Enemy | 50-40% Chance to cast level 50-40 Tornado when you Kill an Enemy |
 |  | $\color{blue}{\text{-5-15\\% to Enemy Physical Resistance}}$ |
 
 ### weapons\javelin.md
@@ -380,7 +380,7 @@
 | +8-50% Strength | +8-50% Strength |
 | +80% Increased Attack Speed | +80% Increased Attack Speed |
 | 5% Life stolen per hit | 5% Life stolen per hit |
-| +3 to Double Throw (Class 140 only) | +3 to Double Throw (Class 140 only) |
+| +3 to Double Throw (Class only) | +3 to Double Throw (Class only) |
 | $\color{gray}{\text{+250-300\\%}}\text{ Enhanced Damage}$ | $\color{blue}{\text{+180-250\\%}}\text{ Enhanced Damage}$ |
 
 ### weapons\knife.md
@@ -398,7 +398,7 @@
 | +30% Increased Attack Speed | +30% Increased Attack Speed |
 | +30 to Dexterity | +30 to Dexterity |
 | +250% Enhanced Damage | +250% Enhanced Damage |
-| Adds 30-54 Damage | Adds 30-54 Damage |
+| Adds 30-54-30-54 Damage | Adds 30-54-30-54 Damage |
 | +2 to Necromancer Skill Levels | +2 to Necromancer Skill Levels |
 | $\color{gray}{\text{+3 to Poison Dagger}}$ | $\color{blue}{\text{(removed)}}$ |
 |  | $\color{blue}{\text{+3 to Poison Strike}}$ |
@@ -414,10 +414,10 @@
 | -15% to Enemy Poison Resistance | -15% to Enemy Poison Resistance |
 | +60% Increased Attack Speed | +60% Increased Attack Speed |
 | Adds 500-500 Poison Damage Over 500 Seconds | Adds 500-500 Poison Damage Over 500 Seconds |
-| +6 to Poison Explosion (Class 83 only) | +6 to Poison Explosion (Class 83 only) |
-| +6 to Poison Nova (Class 92 only) | +6 to Poison Nova (Class 92 only) |
-| $\color{gray}{\text{+6 to Poison Dagger (Class 73 only)}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{+6 to Poison Strike (Class 73 only)}}$ |
+| +6 to Poison Explosion (Class only) | +6 to Poison Explosion (Class only) |
+| +6 to Poison Nova (Class only) | +6 to Poison Nova (Class only) |
+| $\color{gray}{\text{+6 to Poison Dagger (Class only)}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{+6 to Poison Strike (Class only)}}$ |
 
 ### weapons\mace.md
 
@@ -464,17 +464,17 @@
 | **Level Requirement:** 70 | **Level Requirement:** 70 |
 | **Properties:** | **Properties:** |
 | Lightning Resist +50% | Lightning Resist +50% |
-| 30% Chance to cast level 20 Static Field when struck | 30% Chance to cast level 20 Static Field when struck |
+| 30-20% Chance to cast level 30-20 Static Field when struck | 30-20% Chance to cast level 30-20 Static Field when struck |
 | +200-300% Enhanced Damage | +200-300% Enhanced Damage |
 | +20 to Strength | +20 to Strength |
-| 30% Chance to cast level 10 Lower Resist on striking | 30% Chance to cast level 10 Lower Resist on striking |
+| 30-10% Chance to cast level 30-10 Lower Resist on striking | 30-10% Chance to cast level 30-10 Lower Resist on striking |
 | +30% Increased Attack Speed | +30% Increased Attack Speed |
 | Repairs 1 durability in  seconds | Repairs 1 durability in  seconds |
-| Adds 1-237 Lightning Damage | Adds 1-237 Lightning Damage |
+| Adds 1-237-1-237 Lightning Damage | Adds 1-237-1-237 Lightning Damage |
 | 8-10% Life stolen per hit | 8-10% Life stolen per hit |
 | 150% Bonus to Attack Rating | 150% Bonus to Attack Rating |
-| $\color{gray}{\text{30\\% Chance to cast level 10 Lower Resist when struck}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{Unknown Prop: 91 (91, 30-10)}}$ |
+| $\color{gray}{\text{30-10\\% Chance to cast level 30-10 Lower Resist when struck}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{Unknown Prop: 91}}$ |
 
 ### weapons\spear.md
 
@@ -492,7 +492,7 @@
 | Repairs 1 durability in  seconds | Repairs 1 durability in  seconds |
 | 44% Chance of Crushing Blow | 44% Chance of Crushing Blow |
 | 7-12% Life stolen per hit | 7-12% Life stolen per hit |
-| 15% Chance to cast level 33 Amplify Damage on striking | 15% Chance to cast level 33 Amplify Damage on striking |
+| 15-33% Chance to cast level 15-33 Amplify Damage on striking | 15-33% Chance to cast level 15-33 Amplify Damage on striking |
 | $\color{gray}{\text{+1}}\text{ to Iron Skin}$ | $\color{blue}{\text{+1-3}}\text{ to Iron Skin}$ |
 
 ### weapons\staff.md
@@ -556,8 +556,8 @@
 | +2 to All Skills | +2 to All Skills |
 | Cold Absorb 25% | Cold Absorb 25% |
 | 40% Chance to cast level 40 Blizzard on attack | 40% Chance to cast level 40 Blizzard on attack |
-| Adds 250-500 Magic Damage | Adds 250-500 Magic Damage |
-| $\text{Adds }\color{gray}{\text{500-500}}\text{ Cold Damage}$ | $\text{Adds }\color{blue}{\text{250-500}}\text{ Cold Damage}$ |
+| Adds 250-500-250-500 Magic Damage | Adds 250-500-250-500 Magic Damage |
+| $\text{Adds }\color{gray}{\text{500-500}}\text{ Cold Damage}$ | $\text{Adds }\color{blue}{\text{250-500-250-500}}\text{ Cold Damage}$ |
 
 **Shadowfang** (Shadowfang)
 
@@ -615,10 +615,10 @@
 | **Properties:** | **Properties:** |
 | 50% Deadly Strike | 50% Deadly Strike |
 | 25% Better Chance of Getting Magic Items | 25% Better Chance of Getting Magic Items |
-| Adds 30-60 Cold Damage | Adds 30-60 Cold Damage |
+| Adds 30-60-30-60 Cold Damage | Adds 30-60-30-60 Cold Damage |
 | +100-200% Enhanced Damage | +100-200% Enhanced Damage |
 | Durability: 25 of 25 | Durability: 25 of 25 |
-| Adds 50-100 Magic Damage | Adds 50-100 Magic Damage |
+| Adds 50-100-50-100 Magic Damage | Adds 50-100-50-100 Magic Damage |
 | $\color{gray}{\text{10-15\\% Better Chance of Getting Magic Items}}$ | $\color{blue}{\text{(removed)}}$ |
 
 ### weapons\throwing_axe.md
@@ -631,12 +631,12 @@
 | **Level Requirement:** 70 | **Level Requirement:** 70 |
 | **Properties:** | **Properties:** |
 | +200-230% Enhanced Damage | +200-230% Enhanced Damage |
-| Adds 250-500 Fire Damage | Adds 250-500 Fire Damage |
-| Adds 250-500 Cold Damage | Adds 250-500 Cold Damage |
+| Adds 250-500-250-500 Fire Damage | Adds 250-500-250-500 Fire Damage |
+| Adds 250-500-250-500 Cold Damage | Adds 250-500-250-500 Cold Damage |
 | Increased Stack Size | Increased Stack Size |
 | +30% Increased Attack Speed | +30% Increased Attack Speed |
 | 20% Chance to cast level 20 Lower Resist on striking | 20% Chance to cast level 20 Lower Resist on striking |
-| $\text{Adds }\color{gray}{\text{61-511}}\text{ Lightning Damage}$ | $\text{Adds }\color{blue}{\text{61-501}}\text{ Lightning Damage}$ |
+| $\text{Adds }\color{gray}{\text{61-511-61-511}}\text{ Lightning Damage}$ | $\text{Adds }\color{blue}{\text{61-501-61-501}}\text{ Lightning Damage}$ |
 
 ### weapons\wand.md
 

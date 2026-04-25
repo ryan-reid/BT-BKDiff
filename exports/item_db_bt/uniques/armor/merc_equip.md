@@ -127,7 +127,7 @@
     * +200-240% Enhanced Defense
     * 30-50% Better Chance of Getting Magic Items
     * +1 to All Skills
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
 
 ### Darksight Helm (Darksight Helm)
 * **Base Item:** Basinet
@@ -293,7 +293,7 @@
     * +150% Enhanced Defense
     * +10% Faster Cast Rate
     * +1 to All Skills
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
     * +50 to Mana
     * +50 to Life
     * Damage Reduced by 5

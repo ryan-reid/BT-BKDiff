@@ -1,18 +1,26 @@
+import sys
 import os
+from d2_repository import D2Repository
 
-def analyze_headers(directory):
-    files = [f for f in os.listdir(directory) if f.endswith('.txt')] 
-    for filename in sorted(files):
-        path = os.path.join(directory, filename)
-        with open(path, 'r', encoding='utf-8', errors='ignore') as f:
-            header = f.readline().strip().split('\t')
-            first_row = f.readline().strip().split('\t')
-            print(f"FILE: {filename}")
-            print(f"  HEAD: {header[:5]} ...")
-            if first_row:
-                print(f"  DATA: {first_row[:5]} ...")
-            print("-" * 20)
+def main() -> None:
+    if len(sys.argv) < 2:
+        print("Usage: python analyze_headers.py <file_or_dir>", file=sys.stderr)
+        return
+
+    repo = D2Repository(".")
+    target: str = sys.argv[1]
+    
+    files = []
+    if os.path.isdir(target):
+        files = [os.path.join(target, f) for f in os.listdir(target) if f.endswith('.txt')]
+    else:
+        files = [target]
+        
+    for f_path in files:
+        data = repo.load_tsv(f_path)
+        if data:
+            headers = list(data[0].keys())
+            print(f"{os.path.basename(f_path)}: {', '.join(headers)}")
 
 if __name__ == "__main__":
-    analyze_headers("../mods/BKDiablo/bkdiablo.mpq/data/global/excel")
-
+    main()

@@ -132,8 +132,8 @@
 * **Base Item:** Cedar Bow
 * **Level Requirement:** 33
 * **Properties:**
-    * +2-3 to Immolation Arrow (Class 27 only)
-    * +2-3 to Exploding Arrow (Class 16 only)
+    * +2-3 to Immolation Arrow (Amazon only)
+    * +2-3 to Exploding Arrow (Amazon only)
     * +150-180% Enhanced Damage
     * Piercing Attack
     * Adds 40-180 Fire Damage
@@ -184,7 +184,7 @@
 * **Properties:**
     * 15% Mana stolen per hit
     * Magic Damage Reduced by 9-13
-    * +3 to Guided Arrow (Class 22 only)
+    * +3 to Guided Arrow (Amazon only)
     * +20% Increased Attack Speed
     * +25 to Dexterity
     * Hit Blinds Target +1
@@ -215,7 +215,7 @@
     * +250% Enhanced Damage
     * +2 to Amazon Skill Levels
     * +25 to Dexterity
-    * +7 to Valkyrie (Class 32 only)
+    * +7 to Valkyrie (Amazon only)
     * +30% Increased Attack Speed
     * Level 6 Blessed Aim Aura When Equipped
 

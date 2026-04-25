@@ -132,7 +132,7 @@
     * +30% Increased Attack Speed
     * Poison Resist +50%
     * +180% Enhanced Damage
-    * Unknown Prop: *hp (, -10--10)
+    * Unknown property: *hp (-10)
     * +20 to Strength
 
 ### Ripsaw (Ripsaw)
@@ -168,7 +168,7 @@
     * 8% Life stolen per hit
     * +30% Increased Attack Speed
     * +200% Enhanced Damage
-    * +2-4 to Whirlwind (Class 151 only)
+    * +2-4 to Whirlwind (Barbarian only)
     * +1-3 to Combat Masteries Skills
     * Durability: 30 of 30
 
@@ -241,7 +241,7 @@
     * -5-15% to Enemy Poison Resistance
     * +20% Increased Attack Speed
     * Poison Resist +45%
-    * +5 to Rabies (Class 238 only)
+    * +5 to Rabies (Druid only)
 
 ### The Atlantean (The Atlantian)
 * **Base Item:** Ancient Sword

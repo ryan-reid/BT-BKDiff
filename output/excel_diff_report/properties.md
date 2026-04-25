@@ -2,10 +2,9 @@
 
 *Key column used: `code`*
 
-## Added Columns in BK (New)
-`*Id, uiRangeType`  
+## Added Columns: `*Id, uiRangeType`  
 
-## Added Rows in BK (New) (6)
+## Added Rows (6)
 - affix-rand
 - dmg-mag/lvl
 - extra-skill-dmg%-rand
@@ -13,7 +12,7 @@
 - war
 - war-tab-rand
 
-## Removed Rows in BK (New) (7)
+## Removed Rows (7)
 - dyecblue1
 - dyecred1
 - dyedarkpurple1
@@ -24,34 +23,33 @@
 
 ## Modified Rows (8)
 ### corruption1
-- `*Tooltip`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1 through 1000}}$ (New)
-- `*Min`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{Min \\#}}$ (New)
-- `*Max`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{Max \\#}}$ (New)
+- `*Tooltip`:  (Old) &rarr; $\color{blue}{\text{1 through 1000}}$ (New)
+- `*Min`:  (Old) &rarr; $\color{blue}{\text{Min \\#}}$ (New)
+- `*Max`:  (Old) &rarr; $\color{blue}{\text{Max \\#}}$ (New)
 
 ### dyed1
-- `*Min`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{Min \\%}}$ (New)
-- `*Max`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{Max \\%}}$ (New)
+- `*Min`:  (Old) &rarr; $\color{blue}{\text{Min \\%}}$ (New)
+- `*Max`:  (Old) &rarr; $\color{blue}{\text{Max \\%}}$ (New)
 
 ### enr%
-- `*Min`: $\color{gray}{\text{Min \\%}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
-- `*Max`: $\color{gray}{\text{Max \\%}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `*Min`: $\\color{gray}{\\text{Min \\%}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
+- `*Max`: $\\color{gray}{\\text{Max \\%}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
 
 ### hit-skill-splash
-- `*Min`: $\color{gray}{\text{"\\% Chance (If 0, then default to 5)"}}$ (Old) &rarr; $\color{blue}{\text{Min \\%}}$ (New)
-- `*Max`: $\color{gray}{\text{Skill Level}}$ (Old) &rarr; $\color{blue}{\text{Max \\%}}$ (New)
+- `*Min`: $\\color{gray}{\\text{"}}\\text{\\%}\\color{gray}{\\text{ Chance (If 0, then default to 5)"}}$ (Old) &rarr; $\\color{blue}{\\text{Min }}\\text{\\%}$ (New)
+- `*Max`: $\\color{gray}{\\text{Skill}}\\text{ }\\color{gray}{\\text{Level}}$ (Old) &rarr; $\\color{blue}{\\text{Max}}\\text{ }\\color{blue}{\\text{\\%}}$ (New)
 
 ### noconsume
-- `*Enabled`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `*Enabled`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### pierce-mag
-- `*Tooltip`: $\color{gray}{\text{-\\#\\% to Enemy Magic  Resistance}}$ (Old) &rarr; $\color{blue}{\text{-\\#\\% to Enemy Magic Resistance}}$ (New)
+- `*Tooltip`: $\\text{-\\#\\% to Enemy Magic}\\color{gray}{\\text{  }}\\text{Resistance}$ (Old) &rarr; $\\text{-\\#\\% to Enemy Magic}\\color{blue}{\\text{ }}\\text{Resistance}$ (New)
 
 ### randclassskill3
-- `*Min`: $\color{gray}{\text{Min Class ID}}$ (Old) &rarr; $\color{blue}{\text{Min \\#}}$ (New)
-- `*Max`: $\color{gray}{\text{Max Class ID}}$ (Old) &rarr; $\color{blue}{\text{Max \\#}}$ (New)
-- `*Notes`: $\color{gray}{\text{val1 = \\# of Skill levels}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
+- `*Min`: $\\text{Min }\\color{gray}{\\text{Class ID}}$ (Old) &rarr; $\\text{Min }\\color{blue}{\\text{\\#}}$ (New)
+- `*Max`: $\\text{Max }\\color{gray}{\\text{Class ID}}$ (Old) &rarr; $\\text{Max }\\color{blue}{\\text{\\#}}$ (New)
+- `*Notes`: $\color{gray}{\text{val1 = \\# of Skill levels}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### splash
-- `*Min`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `*Max`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
+- `*Min`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `*Max`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)

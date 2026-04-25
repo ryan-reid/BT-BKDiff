@@ -121,7 +121,7 @@
     * Attacker Takes Damage of 150
     * +50 to Energy
     * +10-15 to Strength
-    * poisonlength: 100 (param: )
+    * Unknown property: pois-len (100)
     * Damage Reduced by 5-10%
 
 ### Moser's Blessed Circle (Mosers Blessed Circle)
@@ -261,7 +261,7 @@
     * Requirements --30%
     * Damage Reduced by 20-30%
     * +1 to All Skills
-    * +2 to Original Class Skill Levels
+    * +2 to Random Class Skill Levels
     * 33% Chance to cast level 40 Frost Nova when struck
 
 ### Spirit Ward (Spirit Ward)
@@ -275,7 +275,7 @@
     * +25% Faster Block Rate
     * 35% Chance to cast level 8 Fade when struck
     * Requirements --30%
-    * +2 to Original Class Skill Levels
+    * +2 to Random Class Skill Levels
     * +25% Faster Cast Rate
 
 ### Spike Thorn (Spike Thorn)

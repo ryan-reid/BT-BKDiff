@@ -229,7 +229,7 @@
     * +50-75 to Life
     * +20% Increased Attack Speed
     * +14% Faster Hit Recovery
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
 
 ### Iron Pelt (Ironpelt)
 * **Base Item:** Trellised Armor
@@ -320,7 +320,7 @@
     * +30% Faster Block Rate
     * +10% Increased Attack Speed
     * Requirements --40--30%
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
 
 ### Toothrow (Toothrow)
 * **Base Item:** Sharktooth Armor
@@ -417,7 +417,7 @@
     * Damage Reduced by 10-15
     * + to Vitality (Based on Character Level)
     * Requirements --20%
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
 
 ### Tyrael's Might (Tyrael's Might)
 * **Base Item:** Sacred Armor
@@ -564,7 +564,7 @@
     * +15-25% Faster Cast Rate
     * Increase Maximum Mana 5-8%
     * +20-55% Energy
-    * +2 to Original Class Skill Levels
+    * +2 to Random Class Skill Levels
     * Magic Damage Reduced by 10
     * +4 to Mana (Based on Character Level)
     * +5-15% to Magic Skill Damage

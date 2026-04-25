@@ -53,7 +53,7 @@
     * +20% Faster Block Rate
     * +20% Faster Block Rate
     * +2 to Paladin Skill Levels
-    * +4-5 to Vengeance (Class Vengeance only)
+    * +4-5 to Vengeance (Paladin only)
     * All Resistances +25-45
     * Adds 300-300 Fire Damage
     * Adds 300-300 Cold Damage
