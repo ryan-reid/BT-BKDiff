@@ -171,4 +171,3 @@
     * +10-15 to Strength
     * +-15% Faster Run/Walk
     * +80-100% Enhanced Defense
-

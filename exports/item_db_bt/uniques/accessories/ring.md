@@ -103,4 +103,3 @@
     * 40% Damage Taken Goes To Mana
     * +150-250 to Attack Rating
     * Poison Length Reduced by 100%
-

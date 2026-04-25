@@ -18,4 +18,3 @@
 * **Base Item:** Small Charm
 * **Level Requirement:** 1
 * **Properties:**
-

@@ -48,4 +48,3 @@
     * +10-25% Faster Cast Rate
     * +10-25% Increased Attack Speed
     * +200-300% Enhanced Defense
-

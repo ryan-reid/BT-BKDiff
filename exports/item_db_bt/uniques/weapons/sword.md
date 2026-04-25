@@ -504,4 +504,3 @@
     * Durability: 25 of 25
     * Adds 50-100 Magic Damage
     * 10-15% Better Chance of Getting Magic Items
-

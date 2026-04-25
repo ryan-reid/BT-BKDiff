@@ -125,4 +125,3 @@
     * All Resistances +6-11
     * +1-3 Life after each Kill
     * +1-3 to Mana after each Kill
-

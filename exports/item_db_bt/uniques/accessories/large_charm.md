@@ -7,4 +7,3 @@
     * 20-50% Better Chance of Getting Magic Items
     * 80-160% Extra Gold from Monsters
     * Reduces all Vendor Prices 10-15%
-

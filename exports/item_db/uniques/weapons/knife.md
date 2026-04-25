@@ -146,4 +146,3 @@
     * +1-3 to Bind Demon (Warlock only)
     * 20-35% Better Chance of Getting Magic Items
     * Slows Target by 25%
-

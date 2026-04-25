@@ -26,4 +26,3 @@
     * +5 to Revive
     * +30% Increased Attack Speed
     * +50% Faster Run/Walk
-

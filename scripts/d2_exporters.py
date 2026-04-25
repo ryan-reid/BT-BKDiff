@@ -46,37 +46,44 @@ class MarkdownExporter(BaseExporter):
 
     def export_item_db(self, items: List[AnalyzedItemDTO], title: str, output_path: str):
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        content = f"# {title}\n\n"
+        item_blocks = []
+        for item in items:
+            block = f"### {item['display_name']} ({item['id']})\n"
+            block += f"* **Base Item:** {item['base_item']}\n"
+            block += f"* **Level Requirement:** {item['lvl_req']}\n"
+            block += "* **Properties:**\n"
+            for prop in item['properties']:
+                block += f"    * {prop['resolved_text']}\n"
+            item_blocks.append(block)
+        
+        content += "\n".join(item_blocks)
         with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(f"# {title}\n\n")
-            for item in items:
-                f.write(f"### {item['display_name']} ({item['id']})\n")
-                f.write(f"* **Base Item:** {item['base_item']}\n")
-                f.write(f"* **Level Requirement:** {item['lvl_req']}\n")
-                f.write("* **Properties:**\n")
-                for prop in item['properties']:
-                    f.write(f"    * {prop['resolved_text']}\n")
-                f.write("\n")
+            f.write(content.strip() + "\n")
 
     def export_excel_diff(self, diff: ExcelDiffDTO, output_path: str):
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        lines = []
+        lines.append(f"# Differences for {diff['filename']}\n")
+        lines.append(f"*Key column used: `{diff['key_used']}`*\n")
+        if diff['added_cols']: lines.append(f"## Added Columns: `{', '.join(diff['added_cols'])}`  \n")
+        if diff['removed_cols']: lines.append(f"## Removed Columns: `{', '.join(diff['removed_cols'])}`  \n")
+        if diff['added_rows']:
+            lines.append(f"## Added Rows ({len(diff['added_rows'])})")
+            for r in diff['added_rows']: lines.append(f"- {r}")
+            lines.append("")
+        if diff['removed_rows']:
+            lines.append(f"## Removed Rows ({len(diff['removed_rows'])})")
+            for r in diff['removed_rows']: lines.append(f"- {r}")
+            lines.append("")
+        if diff['modified_rows']:
+            lines.append(f"## Modified Rows ({len(diff['modified_rows'])})")
+            for key, row_diff in sorted(diff['modified_rows'].items()):
+                lines.append(f"### {key}")
+                for col, vals in row_diff.items():
+                    old_fmt, new_fmt = self.get_styled_diffs(str(vals['bt_old']), str(vals['bk_new']))
+                    lines.append(f"- `{col}`: {old_fmt} (Old) &rarr; {new_fmt} (New)")
+                lines.append("")
+        
         with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(f"# Differences for {diff['filename']}\n\n")
-            f.write(f"*Key column used: `{diff['key_used']}`*\n\n")
-            if diff['added_cols']: f.write(f"## Added Columns: `{', '.join(diff['added_cols'])}`  \n\n")
-            if diff['removed_cols']: f.write(f"## Removed Columns: `{', '.join(diff['removed_cols'])}`  \n\n")
-            if diff['added_rows']:
-                f.write(f"## Added Rows ({len(diff['added_rows'])})\n")
-                for r in diff['added_rows']: f.write(f"- {r}\n")
-                f.write("\n")
-            if diff['removed_rows']:
-                f.write(f"## Removed Rows ({len(diff['removed_rows'])})\n")
-                for r in diff['removed_rows']: f.write(f"- {r}\n")
-                f.write("\n")
-            if diff['modified_rows']:
-                f.write(f"## Modified Rows ({len(diff['modified_rows'])})\n")
-                for key, row_diff in sorted(diff['modified_rows'].items()):
-                    f.write(f"### {key}\n")
-                    for col, vals in row_diff.items():
-                        old_fmt, new_fmt = self.get_styled_diffs(str(vals['bt_old']), str(vals['bk_new']))
-                        f.write(f"- `{col}`: {old_fmt} (Old) &rarr; {new_fmt} (New)\n")
-                    f.write("\n")
+            f.write("\n".join(lines).strip() + "\n")

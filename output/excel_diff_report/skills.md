@@ -234,4 +234,3 @@
 
 ### wearwolf
 - `Param1`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
-

@@ -207,4 +207,3 @@
     * +10% Faster Run/Walk
     * Socketed ()
     * +1-10% Energy
-

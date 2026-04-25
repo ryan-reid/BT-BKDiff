@@ -67,4 +67,3 @@
     * +50% Faster Block Rate
     * +50% Faster Block Rate
     * +200-300% Enhanced Defense
-

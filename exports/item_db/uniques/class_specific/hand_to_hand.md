@@ -24,4 +24,3 @@
     * +20 to Dexterity
     * -4% to Enemy Fire Resistance
     * +50 Kick Damage
-

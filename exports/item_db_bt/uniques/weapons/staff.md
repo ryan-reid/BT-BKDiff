@@ -159,4 +159,3 @@
     * +450-550 Defense
     * +5-15% to Experience Gained
     * Magic Damage Reduced by 5-8
-

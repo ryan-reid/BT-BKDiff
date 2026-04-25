@@ -570,4 +570,3 @@
     * Magic Damage Reduced by 10
     * +4 to Mana (Based on Character Level)
     * +5-15% to Magic Skill Damage
-
