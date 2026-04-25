@@ -25,12 +25,12 @@
 ### chipped diamond
 - `weaponMod1Min`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 - `weaponMod1Max`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
-- `weaponMod2Code`: $\color{gray}{	ext{move2}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `weaponMod2Min`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `weaponMod2Max`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `weaponMod3Code`: $\color{gray}{	ext{regen}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `weaponMod3Param`: $\color{gray}{	ext{0}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `weaponMod3Min`: $\color{gray}{	ext{0}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `weaponMod2Code`: $\color{gray}{\text{move2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `weaponMod2Min`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `weaponMod2Max`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `weaponMod3Code`: $\color{gray}{\text{regen}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `weaponMod3Param`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `weaponMod3Min`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### chipped ruby
 - `helmMod1Code`: $\color{gray}{\text{hp}}$ (Old) &rarr; $\color{blue}{\text{vit}}$ (New)
@@ -72,12 +72,12 @@
 ### flawed diamond
 - `weaponMod1Min`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
 - `weaponMod1Max`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
-- `weaponMod2Code`: $\color{gray}{	ext{move2}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `weaponMod2Min`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `weaponMod2Max`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `weaponMod3Code`: $\color{gray}{	ext{regen}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `weaponMod3Param`: $\color{gray}{	ext{0}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `weaponMod3Min`: $\color{gray}{	ext{0}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `weaponMod2Code`: $\color{gray}{\text{move2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `weaponMod2Min`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `weaponMod2Max`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `weaponMod3Code`: $\color{gray}{\text{regen}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `weaponMod3Param`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `weaponMod3Min`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### flawed ruby
 - `helmMod1Code`: $\color{gray}{\text{hp}}$ (Old) &rarr; $\color{blue}{\text{vit}}$ (New)
