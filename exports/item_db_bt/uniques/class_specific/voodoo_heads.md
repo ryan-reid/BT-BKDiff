@@ -25,10 +25,10 @@
     * +2-3 to Curses Skills
     * +2-3 to Poison and Bone Skills
     * +2-3 to Summoning Skills
-    * +5 to Teeth (Necromancer only)
-    * +5 to Bone Armor (Necromancer only)
-    * +5 to Bone Spear (Necromancer only)
-    * +5 to Bone Spirit (Necromancer only)
+    * +5 to Teeth (Class only)
+    * +5 to Bone Armor (Class only)
+    * +5 to Bone Spear (Class only)
+    * +5 to Bone Spirit (Class only)
     * Piercing Attack
 
 ### Boneflame (Boneflame)
@@ -37,7 +37,7 @@
 * **Properties:**
     * +120-150% Enhanced Defense
     * Level 3-5 Vigor Aura When Equipped
-    * 15% Chance to cast level 3 Terror when struck
+    * 15-3% Chance to cast level 15-3 Terror when struck
     * +2-3 to Necromancer Skill Levels
     * All Resistances +20-30
     * Piercing Attack
@@ -67,3 +67,4 @@
     * +50% Faster Block Rate
     * +50% Faster Block Rate
     * +200-300% Enhanced Defense
+

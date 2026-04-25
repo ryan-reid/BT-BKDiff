@@ -153,3 +153,4 @@
 ### tir rune
 - `weaponMod1Min`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{2}}$ (New)
 - `weaponMod1Max`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{2}}$ (New)
+

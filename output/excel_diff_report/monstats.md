@@ -84,3 +84,4 @@
 - `Skill1`:  (Old) &rarr; $\color{blue}{\text{Summon Splash}}$ (New)
 - `Sk1mode`:  (Old) &rarr; $\color{blue}{\text{A1}}$ (New)
 - `Sk1lvl`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+

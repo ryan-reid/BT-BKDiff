@@ -2,4 +2,5 @@
 
 *Key column used: `code`*
 
-## Added Columns: `disabled, spawnable, disableChronicle, DropConditionCalc, firstLadderSeason, lastLadderSeason`
+## Added Columns: `disabled, spawnable, disableChronicle, DropConditionCalc, firstLadderSeason, lastLadderSeason`  
+

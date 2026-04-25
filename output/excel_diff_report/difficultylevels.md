@@ -10,3 +10,4 @@
 
 ### normal
 - `ResistPenalty`: $\\color{gray}{\\text{-70}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+

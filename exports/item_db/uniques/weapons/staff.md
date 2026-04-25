@@ -31,8 +31,8 @@
     * Lightning Resist +75%
     * Damage Reduced by 7-14
     * +30 to Energy
-    * +2-3 to Chain Lightning (Sorceress only)
-    * +2-3 to Lightning (Sorceress only)
+    * +2-3 to Chain Lightning (Class only)
+    * +2-3 to Lightning (Class only)
     * Regenerate Mana 43%
     * +60% Faster Cast Rate
     * +2-3 to Sorceress Skill Levels
@@ -43,8 +43,8 @@
 * **Properties:**
     * +30% Faster Cast Rate
     * Fire Resist +30%
-    * +3 to Fire Wall (Sorceress only)
-    * +3 to Fire Ball (Sorceress only)
+    * +3 to Fire Wall (Class only)
+    * +3 to Fire Ball (Class only)
     * +60 to Mana
     * +3 to Fire Skills
 
@@ -55,7 +55,7 @@
     * +2-4 to Sorceress Skill Levels
     * +69% Faster Cast Rate
     * Replenish Life +20
-    * +2-4 to Blaze (Sorceress only)
+    * +2-4 to Blaze (Class only)
     * +220 to Mana
 
 ### Staff of Kings (Staff of Kings)
@@ -90,7 +90,7 @@
 * **Base Item:** Quarterstaff
 * **Level Requirement:** 31
 * **Properties:**
-    * Adds 30-65 Damage
+    * Adds 30-65-30-65 Damage
     * +200-300% Enhanced Damage
     * 50% Chance of Crushing Blow
     * +15 to Dexterity
@@ -108,9 +108,9 @@
     * All Resistances +40
     * +50% Faster Cast Rate
     * Increase Maximum Life 20-25%
-    * +3 to Blizzard (Sorceress only)
-    * +3 to Meteor (Sorceress only)
-    * +3-5 to Chain Lightning (Sorceress only)
+    * +3 to Blizzard (Class only)
+    * +3 to Meteor (Class only)
+    * +3-5 to Chain Lightning (Class only)
 
 ### Warpspear (Warpspear)
 * **Base Item:** Gothic Staff
@@ -118,9 +118,9 @@
 * **Properties:**
     * +3 to Sorceress Skill Levels
     * +55% Faster Hit Recovery
-    * +3 to Teleport (Sorceress only)
-    * +3 to Telekinesis (Sorceress only)
-    * +3 to Meteor (Sorceress only)
+    * +3 to Teleport (Class only)
+    * +3 to Telekinesis (Class only)
+    * +3 to Meteor (Class only)
     * +250 Defense vs. Missile
     * +40% Faster Cast Rate
     * +150 to Mana
@@ -157,3 +157,4 @@
     * +450-550 Defense
     * +5-15% to Experience Gained
     * Magic Damage Reduced by 5-8
+

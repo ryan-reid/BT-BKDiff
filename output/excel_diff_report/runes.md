@@ -2,4 +2,5 @@
 
 *Key column used: `code`*
 
-## Added Columns: `disallowCraftingInLadder, disallowCraftingInNonLadder`
+## Added Columns: `disallowCraftingInLadder, disallowCraftingInNonLadder`  
+

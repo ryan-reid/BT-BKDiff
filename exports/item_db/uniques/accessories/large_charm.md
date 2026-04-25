@@ -91,3 +91,4 @@
 * **Properties:**
     * Monster Magic Immunity is Sundered
     * Magic Resist +-65%
+

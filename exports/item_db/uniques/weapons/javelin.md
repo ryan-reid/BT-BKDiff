@@ -8,8 +8,8 @@
     * Replenishes quantity
     * Adds 300-300 Poison Damage Over 300 Seconds
     * 11-15% Life stolen per hit
-    * +3 to Plague Javelin (Amazon only)
-    * +3 to Poison Javelin (Amazon only)
+    * +3 to Plague Javelin (Class only)
+    * +3 to Poison Javelin (Class only)
     * -20-25% to Enemy Poison Resistance
     * +2-3 to Poison Skills
     * +30% Increased Attack Speed
@@ -20,12 +20,12 @@
 * **Level Requirement:** 68
 * **Properties:**
     * +200-230% Enhanced Damage
-    * Adds 300-420 Fire Damage
+    * Adds 300-420-300-420 Fire Damage
     * +9-12 Life after each Kill
     * Replenishes quantity
     * +30% Increased Attack Speed
-    * Adds 69-420 Lightning Damage
-    * Adds 300-420 Cold Damage
+    * Adds 69-420-69-420 Lightning Damage
+    * Adds 300-420-300-420 Cold Damage
     * -8-15% to Enemy Fire Resistance
     * -8-15% to Enemy Lightning Resistance
     * -8-15% to Enemy Cold Resistance
@@ -52,4 +52,5 @@
     * +80% Increased Attack Speed
     * +180-250% Enhanced Damage
     * 5% Life stolen per hit
-    * +3 to Double Throw (Barbarian only)
+    * +3 to Double Throw (Class only)
+

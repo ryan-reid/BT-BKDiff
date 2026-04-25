@@ -12,7 +12,7 @@
     * +20 to Strength
     * +20 to Dexterity
     * 5-9% Life stolen per hit
-    * Adds 25-50 Damage
+    * Adds 25-50-25-50 Damage
     * Increased Stack Size
 
 ### Thunderstroke (Thunderstroke)
@@ -20,11 +20,11 @@
 * **Level Requirement:** 69
 * **Properties:**
     * +150-200% Enhanced Damage
-    * Adds 1-511 Lightning Damage
-    * 20% Chance to cast level 14 Lightning on striking
+    * Adds 1-511-1-511 Lightning Damage
+    * 20-14% Chance to cast level 20-14 Lightning on striking
     * +15% Increased Attack Speed
     * -15% to Enemy Lightning Resistance
-    * +3 to Lightning Bolt (Amazon only)
+    * +3 to Lightning Bolt (Class only)
     * +2-4 to Javelin and Spear Skills
 
 ### Calamity (Calamity)
@@ -37,3 +37,4 @@
     * +15% Faster Run/Walk
     * 150% Extra Gold from Monsters
     * Prevent Monster Heal
+
