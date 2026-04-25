@@ -44,7 +44,7 @@
     * Increase Maximum Life 5%
 
 ### Wall of the Eyeless (Wall of the Eyeless)
-* **Base Item:** Bone Shield
+* **Base Item:** Spiny Shield
 * **Level Requirement:** 20
 * **Properties:**
     * +7-10 to Mana after each Kill
@@ -53,7 +53,7 @@
     * Poison Resist +20%
     * +30-40% Enhanced Defense
     * +10 Defense
-    * +20 to Bone Wall
+    * +20 to Spike Wall
     * +10% to Experience Gained
 
 ### Swordback Hold (Swordback Hold)

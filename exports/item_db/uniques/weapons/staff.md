@@ -125,7 +125,7 @@
     * +40% Faster Cast Rate
     * +150 to Mana
 
-### Skull Collector (Skullcollector)
+### Soul Collector (Skullcollector)
 * **Base Item:** Rune Staff
 * **Level Requirement:** 41
 * **Properties:**

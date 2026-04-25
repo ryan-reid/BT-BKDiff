@@ -1,7 +1,7 @@
 # Unique Primal Helm
 
 ### Arreat's Face (Arreat's Face)
-* **Base Item:** Slayer Guard
+* **Base Item:** Violator Guard
 * **Level Requirement:** 42
 * **Properties:**
     * +2  to Barbarian Skill Levels

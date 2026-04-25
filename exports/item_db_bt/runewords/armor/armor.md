@@ -5,7 +5,7 @@
 * **Base Items:** Armor
 * **Properties:**
     * +15-20% Faster Cast Rate
-    * 15% Chance to cast level 10 Bone Armor when struck
+    * 15% Chance to cast level 10 Spike Armor when struck
     * +2 to Necromancer Skill Levels
     * +100-150 to Mana
     * All Resistances +15
@@ -130,7 +130,7 @@
     * 2% Chance to cast level 15 Valkyrie on striking
     * 4% Chance to cast level 5 Slow Missiles when struck
     * +2 to Amazon Skill Levels
-    * +2 to Critical Strike
+    * +2 to Dangerous Strike
 
 ### Pestilence
 * **Runes:** Tal Rune (7) + •••Cham Rune (32)••• + •••Ist Rune (24)•••

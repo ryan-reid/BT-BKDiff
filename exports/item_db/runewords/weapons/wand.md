@@ -8,6 +8,6 @@
     * Magic Damage Reduced by 4
     * +20% Faster Cast Rate
     * +13 to Mana
-    * +3 to Bone Armor (Necromancer only)
+    * +3 to Spike Armor (Necromancer only)
     * +2 to Bone Spear (Necromancer only)
-    * +4 to Skeleton Mastery (Necromancer only)
+    * +4 to Undead Mastery (Necromancer only)

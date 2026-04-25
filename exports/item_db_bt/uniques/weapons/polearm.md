@@ -131,7 +131,7 @@
     * Adds 50-75 Damage
     * +160-200% Enhanced Damage
     * +20% Increased Attack Speed
-    * +5 to Critical Strike
+    * +5 to Dangerous Strike
 
 ### Grim's Burning Dead (Grim's Burning Dead)
 * **Base Item:** Grim Scythe

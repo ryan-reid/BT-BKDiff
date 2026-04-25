@@ -18,7 +18,7 @@
 * **Properties:**
     * +330-375% Enhanced Damage
     * Repairs 1 durability in 25 seconds
-    * +11 to Sacrifice
+    * +11 to Life Contributor
     * 50% Chance to cast level 17 Fade when struck
     * 40-50% Chance of Crushing Blow
     * (0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
