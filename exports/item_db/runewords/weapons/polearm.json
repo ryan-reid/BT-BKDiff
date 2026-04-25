@@ -1,0 +1,475 @@
+[
+  {
+    "name": "Infinity",
+    "runes": [
+      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
+      "\u2022Mal Rune (23)\u2022",
+      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Polearm"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "255",
+        "max_val": "325",
+        "resolved_text": "+255-325% Enhanced Damage"
+      },
+      {
+        "code": "move3",
+        "param": "",
+        "min_val": "35",
+        "max_val": "35",
+        "resolved_text": "+35% Faster Run/Walk"
+      },
+      {
+        "code": "vit/lvl",
+        "param": "4",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(0.5 per clvl) to Vitality (Based on Character Level)"
+      },
+      {
+        "code": "aura",
+        "param": "Conviction",
+        "min_val": "12",
+        "max_val": "12",
+        "resolved_text": "Level 12 Conviction Aura When Equipped"
+      },
+      {
+        "code": "kill-skill",
+        "param": "Chain Lightning",
+        "min_val": "50",
+        "max_val": "20",
+        "resolved_text": "50% Chance to cast level 20 Chain Lightning when you Kill an Enemy"
+      },
+      {
+        "code": "pierce-ltng",
+        "param": "",
+        "min_val": "45",
+        "max_val": "55",
+        "resolved_text": "-45-55% to Enemy Lightning Resistance"
+      },
+      {
+        "code": "charged",
+        "param": "Cyclone Armor",
+        "min_val": "30",
+        "max_val": "21",
+        "resolved_text": "Level 30 Cyclone Armor (21/# Charges)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword60",
+      "*Rune Name": "Infinity",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "pole",
+      "itype2": "spea",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "BerMalBerIst",
+      "Rune1": "r30",
+      "Rune2": "r23",
+      "Rune3": "r30",
+      "Rune4": "r24",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "255",
+      "T1Max1": "325",
+      "T1Code2": "move3",
+      "T1Param2": "",
+      "T1Min2": "35",
+      "T1Max2": "35",
+      "T1Code3": "vit/lvl",
+      "T1Param3": "4",
+      "T1Min3": "",
+      "T1Max3": "",
+      "T1Code4": "aura",
+      "T1Param4": "Conviction",
+      "T1Min4": "12",
+      "T1Max4": "12",
+      "T1Code5": "kill-skill",
+      "T1Param5": "Chain Lightning",
+      "T1Min5": "50",
+      "T1Max5": "20",
+      "T1Code6": "pierce-ltng",
+      "T1Param6": "",
+      "T1Min6": "45",
+      "T1Max6": "55",
+      "T1Code7": "charged",
+      "T1Param7": "Cyclone Armor",
+      "T1Min7": "30",
+      "T1Max7": "21",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Insight",
+    "runes": [
+      "Ral Rune (8)",
+      "Tir Rune (3)",
+      "Tal Rune (7)",
+      "Sol Rune (12)"
+    ],
+    "base_items": [
+      "Polearm"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "260",
+        "resolved_text": "+200-260% Enhanced Damage"
+      },
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "180",
+        "max_val": "250",
+        "resolved_text": "180-250% Bonus to Attack Rating"
+      },
+      {
+        "code": "mag%",
+        "param": "",
+        "min_val": "23",
+        "max_val": "23",
+        "resolved_text": "23% Better Chance of Getting Magic Items"
+      },
+      {
+        "code": "oskill",
+        "param": "Critical Strike",
+        "min_val": "1",
+        "max_val": "6",
+        "resolved_text": "+1-6 to Critical Strike"
+      },
+      {
+        "code": "cast2",
+        "param": "",
+        "min_val": "35",
+        "max_val": "35",
+        "resolved_text": "+35% Faster Cast Rate"
+      },
+      {
+        "code": "aura",
+        "param": "Meditation",
+        "min_val": "12",
+        "max_val": "17",
+        "resolved_text": "Level 12-17 Meditation Aura When Equipped"
+      },
+      {
+        "code": "all-stats",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5 to all Attributes"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword62",
+      "*Rune Name": "Insight",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "pole",
+      "itype2": "staf",
+      "itype3": "miss",
+      "itype4": "spea",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "RalTirTalSol",
+      "Rune1": "r08",
+      "Rune2": "r03",
+      "Rune3": "r07",
+      "Rune4": "r12",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "200",
+      "T1Max1": "260",
+      "T1Code2": "att%",
+      "T1Param2": "",
+      "T1Min2": "180",
+      "T1Max2": "250",
+      "T1Code3": "mag%",
+      "T1Param3": "",
+      "T1Min3": "23",
+      "T1Max3": "23",
+      "T1Code4": "oskill",
+      "T1Param4": "Critical Strike",
+      "T1Min4": "1",
+      "T1Max4": "6",
+      "T1Code5": "cast2",
+      "T1Param5": "",
+      "T1Min5": "35",
+      "T1Max5": "35",
+      "T1Code6": "aura",
+      "T1Param6": "Meditation",
+      "T1Min6": "12",
+      "T1Max6": "17",
+      "T1Code7": "all-stats",
+      "T1Param7": "",
+      "T1Min7": "5",
+      "T1Max7": "5",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Obedience",
+    "runes": [
+      "Hel Rune (15)",
+      "Ko Rune (18)",
+      "Thul Rune (10)",
+      "Eth Rune (5)",
+      "Fal Rune (19)"
+    ],
+    "base_items": [
+      "Polearm"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "370",
+        "max_val": "370",
+        "resolved_text": "+370% Enhanced Damage"
+      },
+      {
+        "code": "crush",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "40% Chance of Crushing Blow"
+      },
+      {
+        "code": "kill-skill",
+        "param": "enchant",
+        "min_val": "30",
+        "max_val": "21",
+        "resolved_text": "30% Chance to cast level 21 Enchant when you Kill an Enemy"
+      },
+      {
+        "code": "pierce-fire",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "-25% to Enemy Fire Resistance"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Increased Attack Speed"
+      },
+      {
+        "code": "balance3",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Faster Hit Recovery"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "20",
+        "max_val": "30",
+        "resolved_text": "All Resistances +20-30"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword92",
+      "*Rune Name": "Obedience",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "pole",
+      "itype2": "spea",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelKoThulEthFal",
+      "Rune1": "r15",
+      "Rune2": "r18",
+      "Rune3": "r10",
+      "Rune4": "r05",
+      "Rune5": "r19",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "370",
+      "T1Max1": "370",
+      "T1Code2": "crush",
+      "T1Param2": "",
+      "T1Min2": "40",
+      "T1Max2": "40",
+      "T1Code3": "kill-skill",
+      "T1Param3": "enchant",
+      "T1Min3": "30",
+      "T1Max3": "21",
+      "T1Code4": "pierce-fire",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "25",
+      "T1Code5": "swing2",
+      "T1Param5": "",
+      "T1Min5": "25",
+      "T1Max5": "25",
+      "T1Code6": "balance3",
+      "T1Param6": "",
+      "T1Min6": "40",
+      "T1Max6": "40",
+      "T1Code7": "res-all",
+      "T1Param7": "",
+      "T1Min7": "20",
+      "T1Max7": "30",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Whisper",
+    "runes": [
+      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
+      "\u2022Mal Rune (23)\u2022"
+    ],
+    "base_items": [
+      "Polearm"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "255",
+        "max_val": "325",
+        "resolved_text": "+255-325% Enhanced Damage"
+      },
+      {
+        "code": "move3",
+        "param": "",
+        "min_val": "35",
+        "max_val": "35",
+        "resolved_text": "+35% Faster Run/Walk"
+      },
+      {
+        "code": "vit/lvl",
+        "param": "4",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(0.5 per clvl) to Vitality (Based on Character Level)"
+      },
+      {
+        "code": "aura",
+        "param": "376",
+        "min_val": "12",
+        "max_val": "12",
+        "resolved_text": "Level 12 Summon Tainted Aura When Equipped"
+      },
+      {
+        "code": "kill-skill",
+        "param": "84",
+        "min_val": "50",
+        "max_val": "20",
+        "resolved_text": "50% Chance to cast level 20 Bone Spear when you Kill an Enemy"
+      },
+      {
+        "code": "pierce-mag",
+        "param": "",
+        "min_val": "45",
+        "max_val": "55",
+        "resolved_text": "-45-55% to Enemy Magic Resistance"
+      },
+      {
+        "code": "charged",
+        "param": "Cyclone Armor",
+        "min_val": "30",
+        "max_val": "21",
+        "resolved_text": "Level 30 Cyclone Armor (21/# Charges)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword161",
+      "*Rune Name": "Whisper",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "BTDIABLO",
+      "itype1": "pole",
+      "itype2": "spea",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "BerBerIstMal",
+      "Rune1": "r30",
+      "Rune2": "r30",
+      "Rune3": "r24",
+      "Rune4": "r23",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "255",
+      "T1Max1": "325",
+      "T1Code2": "move3",
+      "T1Param2": "",
+      "T1Min2": "35",
+      "T1Max2": "35",
+      "T1Code3": "vit/lvl",
+      "T1Param3": "4",
+      "T1Min3": "",
+      "T1Max3": "",
+      "T1Code4": "aura",
+      "T1Param4": "376",
+      "T1Min4": "12",
+      "T1Max4": "12",
+      "T1Code5": "kill-skill",
+      "T1Param5": "84",
+      "T1Min5": "50",
+      "T1Max5": "20",
+      "T1Code6": "pierce-mag",
+      "T1Param6": "",
+      "T1Min6": "45",
+      "T1Max6": "55",
+      "T1Code7": "charged",
+      "T1Param7": "Cyclone Armor",
+      "T1Min7": "30",
+      "T1Max7": "21",
+      "*eol": "0"
+    }
+  }
+]

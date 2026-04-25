@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Revenge",
+    "runes": [
+      "Thul Rune (10)",
+      "Ort Rune (9)",
+      "Ral Rune (8)"
+    ],
+    "base_items": [
+      "Mace"
+    ],
+    "properties": [
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Increased Attack Speed"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Nova",
+        "min_val": "33",
+        "max_val": "8",
+        "resolved_text": "33% Chance to cast level 8 Nova on striking"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Fire Ball",
+        "min_val": "33",
+        "max_val": "8",
+        "resolved_text": "33% Chance to cast level 8 Fire Ball on striking"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Frost Nova",
+        "min_val": "33",
+        "max_val": "8",
+        "resolved_text": "33% Chance to cast level 8 Frost Nova on striking"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword185",
+      "*Rune Name": "Revenge",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "BTDIABLO",
+      "itype1": "mace",
+      "itype2": "club",
+      "itype3": "hamm",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ThulOrtRal",
+      "Rune1": "r10",
+      "Rune2": "r09",
+      "Rune3": "r08",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "swing2",
+      "T1Param1": "",
+      "T1Min1": "20",
+      "T1Max1": "20",
+      "T1Code2": "hit-skill",
+      "T1Param2": "Nova",
+      "T1Min2": "33",
+      "T1Max2": "8",
+      "T1Code3": "hit-skill",
+      "T1Param3": "Fire Ball",
+      "T1Min3": "33",
+      "T1Max3": "8",
+      "T1Code4": "hit-skill",
+      "T1Param4": "Frost Nova",
+      "T1Min4": "33",
+      "T1Max4": "8",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  }
+]

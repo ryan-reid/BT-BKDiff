@@ -1,0 +1,118 @@
+[
+  {
+    "name": "Exile",
+    "runes": [
+      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
+      "Dol Rune (14)"
+    ],
+    "base_items": [
+      "Paladin Item"
+    ],
+    "properties": [
+      {
+        "code": "block2",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30% Faster Block Rate"
+      },
+      {
+        "code": "freeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Freezes Target +1"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "220",
+        "max_val": "260",
+        "resolved_text": "+220-260% Enhanced Defense"
+      },
+      {
+        "code": "aura",
+        "param": "Defiance",
+        "min_val": "13",
+        "max_val": "16",
+        "resolved_text": "Level 13-16 Defiance Aura When Equipped"
+      },
+      {
+        "code": "skilltab",
+        "param": "10",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Offensive Auras Skills"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Life Tap",
+        "min_val": "15",
+        "max_val": "5",
+        "resolved_text": "15% Chance to cast level 5 Life Tap on striking"
+      },
+      {
+        "code": "rep-dur",
+        "param": "25",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "Repairs 1 durability in 25 seconds"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword37",
+      "*Rune Name": "Exile",
+      "complete": "1",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "pala",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "VexOhmIstDol",
+      "Rune1": "r26",
+      "Rune2": "r27",
+      "Rune3": "r24",
+      "Rune4": "r14",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "block2",
+      "T1Param1": "",
+      "T1Min1": "30",
+      "T1Max1": "30",
+      "T1Code2": "freeze",
+      "T1Param2": "",
+      "T1Min2": "1",
+      "T1Max2": "1",
+      "T1Code3": "ac%",
+      "T1Param3": "",
+      "T1Min3": "220",
+      "T1Max3": "260",
+      "T1Code4": "aura",
+      "T1Param4": "Defiance",
+      "T1Min4": "13",
+      "T1Max4": "16",
+      "T1Code5": "skilltab",
+      "T1Param5": "10",
+      "T1Min5": "2",
+      "T1Max5": "2",
+      "T1Code6": "hit-skill",
+      "T1Param6": "Life Tap",
+      "T1Min6": "15",
+      "T1Max6": "5",
+      "T1Code7": "rep-dur",
+      "T1Param7": "25",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  }
+]

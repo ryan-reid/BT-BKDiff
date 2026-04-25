@@ -1,0 +1,307 @@
+# Unique Shield
+
+### Pelta Lunata (Pelta Lunata)
+* **Base Item:** Buckler
+* **Level Requirement:** 2
+* **Properties:**
+    * +30 to Life
+    * +20 to Vitality
+    * +20 to Strength
+    * +25-30 to Energy
+    * +30-40% Enhanced Defense
+    * +20% Faster Block Rate
+    * +40% Faster Block Rate
+    * Durability: 8 of 12
+    * Damage Reduced by 6-8
+    * Replenish Life +15
+
+### Umbral Disk (Umbral Disk)
+* **Base Item:** Small Shield
+* **Level Requirement:** 9
+* **Properties:**
+    * Hit Blinds Target +1
+    * +20 to Dexterity
+    * +30 to Mana
+    * +30 to Life
+    * +40-50% Enhanced Defense
+    * +30% Faster Block Rate
+    * Durability: 10 of 15
+    * Damage Reduced by 15%
+    * (25.0 per clvl) Defense (Based on Character Level)
+
+### Stormguild (Stormguild)
+* **Base Item:** Large Shield
+* **Level Requirement:** 13
+* **Properties:**
+    * Magic Damage Reduced by 7
+    * Level 3 Resist Lightning Aura When Equipped
+    * +100 Defense
+    * Adds 1-150 Lightning Damage
+    * +50-60% Enhanced Defense
+    * +30% Faster Block Rate
+    * Attacker Takes Damage of 100
+    * Durability: 10 of 15
+    * Increase Maximum Life 5%
+
+### Wall of the Eyeless (Wall of the Eyeless)
+* **Base Item:** Bone Shield
+* **Level Requirement:** 20
+* **Properties:**
+    * +7-10 to Mana after each Kill
+    * 3% Mana stolen per hit
+    * +25% Faster Cast Rate
+    * Poison Resist +20%
+    * +30-40% Enhanced Defense
+    * +10 Defense
+    * +20 to Bone Wall
+    * +10% to Experience Gained
+
+### Swordback Hold (Swordback Hold)
+* **Base Item:** Spiked Shield
+* **Level Requirement:** 15
+* **Properties:**
+    * Attacker Takes Damage of 50
+    * +30% Faster Block Rate
+    * 50% Chance of Open Wounds
+    * 5% Chance of Crushing Blow
+    * +30-60% Enhanced Defense
+    * Damage Reduced by 12
+    * +10 Defense
+    * +60% Faster Hit Recovery
+    * Damage +25-50
+
+### Steelclash (Steelclash)
+* **Base Item:** Kite Shield
+* **Level Requirement:** 17
+* **Properties:**
+    * +25% Faster Block Rate
+    * +1 to All Skills
+    * Damage Reduced by 7-9
+    * +60-100% Enhanced Defense
+    * +20% Faster Block Rate
+    * All Resistances +25-35
+    * +50-75 Defense
+    * Durability: 15 of 20
+    * Increase Maximum Life 3-5%
+
+### Bverrit Keep (Bverrit Keep)
+* **Base Item:** Tower Shield
+* **Level Requirement:** 19
+* **Properties:**
+    * +30 Defense
+    * Fire Resist +75%
+    * +15 to Strength
+    * Magic Damage Reduced by 10
+    * +80-120% Enhanced Defense
+    * +30% Faster Block Rate
+    * Durability: 80 of 100
+    * Damage Reduced by 10
+    * Requirements --20%
+
+### The Ward (The Ward)
+* **Base Item:** Gothic Shield
+* **Level Requirement:** 26
+* **Properties:**
+    * +150 Defense
+    * Magic Damage Reduced by 7-14
+    * +10 to all Attributes
+    * +50% Faster Block Rate
+    * +100% Enhanced Defense
+    * All Resistances +30-50
+    * Requirements --20%
+
+### Visceratuant (Visceratuant)
+* **Base Item:** Defender
+* **Level Requirement:** 28
+* **Properties:**
+    * +1 to All Skills
+    * +30% Faster Block Rate
+    * +30% Faster Block Rate
+    * +100-150% Enhanced Defense
+    * Attacker Takes Damage of 150
+    * +50 to Energy
+    * +10-15 to Strength
+    * Unknown property: pois-len (100)
+    * Damage Reduced by 5-10%
+
+### Moser's Blessed Circle (Mosers Blessed Circle)
+* **Base Item:** Round Shield
+* **Level Requirement:** 31
+* **Properties:**
+    * All Resistances +40-55
+    * +55% Faster Block Rate
+    * +60% Faster Block Rate
+    * +180-220% Enhanced Defense
+    * Cannot Be Frozen
+    * Magic Damage Reduced by 20
+
+### Stormchaser (Stormchaser)
+* **Base Item:** Scutum
+* **Level Requirement:** 35
+* **Properties:**
+    * Adds 1-501 Lightning Damage
+    * +20% Faster Block Rate
+    * Cannot Be Frozen
+    * Lightning Resist +50%
+    * 150% Bonus to Attack Rating
+    * +160-220% Enhanced Defense
+    * +10% Faster Block Rate
+    * 75% Chance to cast level 30 Blizzard when struck
+    * 50% Chance to cast level 40 Twister when struck
+    * +60% Faster Run/Walk
+    * +25 to Vitality
+
+### Tiamat's Rebuke (Tiamat's Rebuke)
+* **Base Item:** Dragon Shield
+* **Level Requirement:** 38
+* **Properties:**
+    * Adds 200-250 Cold Damage
+    * Adds 200-250 Fire Damage
+    * Adds 1-301 Lightning Damage
+    * All Resistances +35-45
+    * +140-200% Enhanced Defense
+    * 50% Chance to cast level 50 Frost Nova when struck
+    * 50% Chance to cast level 40 Nova when struck
+    * 33% Chance to cast level 63 Hydra when struck
+    * Durability: 40 of 40
+    * +55% Faster Hit Recovery
+    * Damage Reduced by 12-16
+
+### Gerke's Sanctuary (Kerke's Sanctuary)
+* **Base Item:** Pavise
+* **Level Requirement:** 44
+* **Properties:**
+    * Damage Reduced by 11-16
+    * Magic Damage Reduced by 14-18
+    * Replenish Life +15
+    * +180-240% Enhanced Defense
+    * Durability: 100 of 100
+    * +30% Faster Block Rate
+    * All Resistances +20-30
+    * +20% Faster Block Rate
+    * Requirements --50%
+
+### Radament's Sphere (Radimant's Sphere)
+* **Base Item:** Ancient Shield
+* **Level Requirement:** 50
+* **Properties:**
+    * 25% Chance to cast level 30 Poison Nova when you Kill an Enemy
+    * Poison Resist +75%
+    * +160-200% Enhanced Defense
+    * +20% Faster Block Rate
+    * +20% Faster Block Rate
+    * +6 to Poison Nova
+    * Durability: 20 of 20
+
+### Lidless Wall (Lidless Wall)
+* **Base Item:** Grim Shield
+* **Level Requirement:** 41
+* **Properties:**
+    * +1-2 to All Skills
+    * +20-30% Faster Cast Rate
+    * +3-5 to Mana after each Kill
+    * +80-130% Enhanced Defense
+    * +10 to Energy
+    * Increase Maximum Mana 10%
+
+### Lance Guard (Lance Guard)
+* **Base Item:** Barbed Shield
+* **Level Requirement:** 35
+* **Properties:**
+    * +75-100 to Life
+    * +40% Faster Hit Recovery
+    * 15% Damage Taken Goes To Mana
+    * Attacker Takes Damage of 127
+    * +70-120% Enhanced Defense
+    * 20% Deadly Strike
+    * +30% Faster Block Rate
+    * +25% Faster Block Rate
+    * +50 to Vitality
+    * Damage Reduced by 25%
+
+### Blackoak Shield (Blackoak Shield)
+* **Base Item:** Luna
+* **Level Requirement:** 61
+* **Properties:**
+    * (0.5 per clvl) to Dexterity (Based on Character Level)
+    * +160-200% Enhanced Defense
+    * (0.6 per clvl) Absorbs Cold Damage (Based on Character Level)
+    * +1 to Weaken
+    * Durability: 45 of 45
+    * (1.2 per clvl) to Life (Based on Character Level)
+    * +50% Faster Block Rate
+    * Cannot Be Frozen
+    * +50 to Strength
+
+### Stormshield (Stormshield)
+* **Base Item:** Monarch
+* **Level Requirement:** 73
+* **Properties:**
+    * (3.8 per clvl) Defense (Based on Character Level)
+    * Damage Reduced by 35%
+    * +30 to Strength
+    * Repairs 1 durability in 5 seconds
+    * +40% Faster Block Rate
+    * Lightning Resist +40-60%
+    * +30% Faster Block Rate
+    * Cold Resist +60%
+    * Attacker Takes Damage of 100
+    * Requirements --20%
+
+### Medusa's Gaze (Medusa's Gaze)
+* **Base Item:** Aegis
+* **Level Requirement:** 76
+* **Properties:**
+    * +150-180% Enhanced Defense
+    * Slows Target by 40%
+    * 33% Chance to cast level 20 Decrepify when struck
+    * 5-9% Life stolen per hit
+    * 100% Chance to cast level 44 Nova when you Die
+    * Cold Resist +40-80%
+    * Requirements --30%
+    * Damage Reduced by 20-30%
+    * +1 to All Skills
+    * +2 to Random Class Skill Levels
+    * 33% Chance to cast level 40 Frost Nova when struck
+
+### Spirit Ward (Spirit Ward)
+* **Base Item:** Ward
+* **Level Requirement:** 68
+* **Properties:**
+    * +130-180% Enhanced Defense
+    * Cold Absorb 6-11%
+    * All Resistances +30-40
+    * +20-30% Faster Block Rate
+    * +25% Faster Block Rate
+    * 35% Chance to cast level 8 Fade when struck
+    * Requirements --30%
+    * +2 to Random Class Skill Levels
+    * +25% Faster Cast Rate
+
+### Spike Thorn (Spike Thorn)
+* **Base Item:** Blade Barrier
+* **Level Requirement:** 70
+* **Properties:**
+    * +120-150% Enhanced Defense
+    * (1.4 per clvl) Attacker Takes Damage of (Based on Character Level)
+    * Durability: 250 of 250
+    * +30% Faster Hit Recovery
+    * Damage Reduced by 15-20%
+    * Requirements --30%
+    * +25% Faster Block Rate
+    * +30% Faster Block Rate
+    * Damage +40-65
+    * Level 20 Thorns Aura When Equipped
+
+### Head Hunter's Glory (Headhunter's Glory)
+* **Base Item:** Troll Nest
+* **Level Requirement:** 75
+* **Properties:**
+    * +320-420 Defense
+    * +300-350 Defense vs. Missile
+    * All Resistances +15-25
+    * +40% Increased Attack Speed
+    * +10-15 Life after each Kill
+    * Cannot Be Frozen
+    * Hit Blinds Target +1
+    * +50% Faster Run/Walk

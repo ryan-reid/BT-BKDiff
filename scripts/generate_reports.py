@@ -8,45 +8,32 @@ from typing import List
 csv.field_size_limit(1000000)
 
 def run_command(command: List[str], description: str) -> None:
-    """Runs a shell command and logs output/errors to the console."""
+    """Runs a shell command and logs output/errors."""
     print(f"--- {description} ---")
     print(f"Executing: {' '.join(command)}")
     try:
-        result = subprocess.run(command, check=True, capture_output=True, text=True)
+        result = subprocess.run(command, capture_output=True, text=True, check=True)
         if result.stdout:
             print(result.stdout)
-        if result.stderr:
-            print(result.stderr, file=sys.stderr)
     except subprocess.CalledProcessError as e:
-        print(f"Error during {description}:", file=sys.stderr)
-        if e.stdout:
-            print(e.stdout, file=sys.stderr)
-        if e.stderr:
-            print(e.stderr, file=sys.stderr)
-        sys.exit(1)
+        print(f"Error during {description}:\n{e.stderr}", file=sys.stderr)
 
 def main() -> None:
-    # Base paths relative to the scripts directory
-    bk_mpq: str = "../mods/BKDiablo/bkdiablo.mpq"
-    bt_mpq: str = "../mods/BTDiablo/btdiablo.mpq"
-    bk_export: str = "../exports/item_db"
-    bt_export: str = "../exports/item_db_bt"
-
-    # 1. Export BK Items
+    # 1. Export BK Item Database (Markdown & JSON for comparison)
     run_command([
-        sys.executable, "d2_item_analyzer.py",
-        "--mpq", bk_mpq,
-        "--type", "export",
-        "--out", bk_export
-    ], "Exporting BK Item Database")
-
-    # 2. Export BT Items
+        sys.executable, "d2_item_analyzer.py", "--mpq", "../mods/BKDiablo/bkdiablo.mpq", "--type", "export", "--out", "../exports/item_db", "--format", "markdown"
+    ], "Exporting BK Item Database (Markdown)")
     run_command([
-        sys.executable, "d2_item_analyzer.py",
-        "--mpq", bt_mpq,
-        "--type", "export",
-        "--out", bt_export
-    ], "Exporting BT Item Database")
+        sys.executable, "d2_item_analyzer.py", "--mpq", "../mods/BKDiablo/bkdiablo.mpq", "--type", "export", "--out", "../exports/item_db", "--format", "json"
+    ], "Exporting BK Item Database (JSON)")
+
+    # 2. Export BT Item Database (Markdown & JSON for comparison)
+    run_command([
+        sys.executable, "d2_item_analyzer.py", "--mpq", "../mods/BTDiablo/btdiablo.mpq", "--type", "export", "--out", "../exports/item_db_bt", "--format", "markdown"
+    ], "Exporting BT Item Database (Markdown)")
+    run_command([
+        sys.executable, "d2_item_analyzer.py", "--mpq", "../mods/BTDiablo/btdiablo.mpq", "--type", "export", "--out", "../exports/item_db_bt", "--format", "json"
+    ], "Exporting BT Item Database (JSON)")
 
     # 3. Compare Item Databases
     run_command([

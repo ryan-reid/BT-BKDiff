@@ -1,0 +1,2849 @@
+[
+  {
+    "name": "Authority",
+    "runes": [
+      "Hel Rune (15)",
+      "Shael Rune (13)",
+      "Ral Rune (8)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "war",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Warlock Skill Levels"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50% Enhanced Damage"
+      },
+      {
+        "code": "cast",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10% Faster Cast Rate"
+      },
+      {
+        "code": "mana-kill",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Mana after each Kill"
+      },
+      {
+        "code": "heal-kill",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 Life after each Kill"
+      },
+      {
+        "code": "ac",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50 Defense"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword3",
+      "*Rune Name": "Authority",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelShaelRal",
+      "Rune1": "r15",
+      "Rune2": "r13",
+      "Rune3": "r08",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "war",
+      "T1Param1": "",
+      "T1Min1": "2",
+      "T1Max1": "2",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "50",
+      "T1Max2": "50",
+      "T1Code3": "cast",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "10",
+      "T1Code4": "mana-kill",
+      "T1Param4": "",
+      "T1Min4": "2",
+      "T1Max4": "2",
+      "T1Code5": "heal-kill",
+      "T1Param5": "",
+      "T1Min5": "2",
+      "T1Max5": "2",
+      "T1Code6": "ac",
+      "T1Param6": "",
+      "T1Min6": "50",
+      "T1Max6": "50",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Bone",
+    "runes": [
+      "Sol Rune (12)",
+      "Amn Rune (11)",
+      "Amn Rune (11)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "cast1",
+        "param": "",
+        "min_val": "15",
+        "max_val": "20",
+        "resolved_text": "+15-20% Faster Cast Rate"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Bone Armor",
+        "min_val": "15",
+        "max_val": "10",
+        "resolved_text": "15% Chance to cast level 10 Bone Armor when struck"
+      },
+      {
+        "code": "nec",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Necromancer Skill Levels"
+      },
+      {
+        "code": "mana",
+        "param": "",
+        "min_val": "100",
+        "max_val": "150",
+        "resolved_text": "+100-150 to Mana"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "All Resistances +15"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50% Enhanced Defense"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword8",
+      "*Rune Name": "Bone",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "SolAmnAmn",
+      "Rune1": "r12",
+      "Rune2": "r11",
+      "Rune3": "r11",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "cast1",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "20",
+      "T1Code2": "gethit-skill",
+      "T1Param2": "Bone Armor",
+      "T1Min2": "15",
+      "T1Max2": "10",
+      "T1Code3": "nec",
+      "T1Param3": "",
+      "T1Min3": "2",
+      "T1Max3": "2",
+      "T1Code4": "mana",
+      "T1Param4": "",
+      "T1Min4": "100",
+      "T1Max4": "150",
+      "T1Code5": "res-all",
+      "T1Param5": "",
+      "T1Min5": "15",
+      "T1Max5": "15",
+      "T1Code6": "ac%",
+      "T1Param6": "",
+      "T1Min6": "50",
+      "T1Max6": "50",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Bramble",
+    "runes": [
+      "Ral Rune (8)",
+      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
+      "Eth Rune (5)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50% Faster Hit Recovery"
+      },
+      {
+        "code": "ac",
+        "param": "",
+        "min_val": "300",
+        "max_val": "300",
+        "resolved_text": "+300 Defense"
+      },
+      {
+        "code": "aura",
+        "param": "Thorns",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "Level 25 Thorns Aura When Equipped"
+      },
+      {
+        "code": "pierce-pois",
+        "param": "",
+        "min_val": "10",
+        "max_val": "20",
+        "resolved_text": "-10-20% to Enemy Poison Resistance"
+      },
+      {
+        "code": "extra-pois",
+        "param": "",
+        "min_val": "40",
+        "max_val": "50",
+        "resolved_text": "+40-50% to Poison Skill Damage"
+      },
+      {
+        "code": "res-pois",
+        "param": "",
+        "min_val": "100",
+        "max_val": "100",
+        "resolved_text": "Poison Resist +100%"
+      },
+      {
+        "code": "charged",
+        "param": "Spirit of Barbs",
+        "min_val": "33",
+        "max_val": "13",
+        "resolved_text": "Level 33 Spirit of Barbs (13/# Charges)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword9",
+      "*Rune Name": "Bramble",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "RalOhmSurEth",
+      "Rune1": "r08",
+      "Rune2": "r27",
+      "Rune3": "r29",
+      "Rune4": "r05",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "balance2",
+      "T1Param1": "",
+      "T1Min1": "50",
+      "T1Max1": "50",
+      "T1Code2": "ac",
+      "T1Param2": "",
+      "T1Min2": "300",
+      "T1Max2": "300",
+      "T1Code3": "aura",
+      "T1Param3": "Thorns",
+      "T1Min3": "25",
+      "T1Max3": "25",
+      "T1Code4": "pierce-pois",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "20",
+      "T1Code5": "extra-pois",
+      "T1Param5": "",
+      "T1Min5": "40",
+      "T1Max5": "50",
+      "T1Code6": "res-pois",
+      "T1Param6": "",
+      "T1Min6": "100",
+      "T1Max6": "100",
+      "T1Code7": "charged",
+      "T1Param7": "Spirit of Barbs",
+      "T1Min7": "33",
+      "T1Max7": "13",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Broken Promise",
+    "runes": [
+      "Io Rune (16)",
+      "Lum Rune (17)",
+      "Fal Rune (19)",
+      "Ko Rune (18)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Hit Recovery"
+      },
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Run/Walk"
+      },
+      {
+        "code": "all-stats",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to all Attributes"
+      },
+      {
+        "code": "cast2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Cast Rate"
+      },
+      {
+        "code": "nofreeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Cannot Be Frozen"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Increased Attack Speed"
+      },
+      {
+        "code": "mag%",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "20% Better Chance of Getting Magic Items"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword12",
+      "*Rune Name": "Broken Promise",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "BTDIABLO",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "IoLumFalKo",
+      "Rune1": "r16",
+      "Rune2": "r17",
+      "Rune3": "r19",
+      "Rune4": "r18",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "balance2",
+      "T1Param1": "",
+      "T1Min1": "20",
+      "T1Max1": "20",
+      "T1Code2": "move2",
+      "T1Param2": "",
+      "T1Min2": "20",
+      "T1Max2": "20",
+      "T1Code3": "all-stats",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "10",
+      "T1Code4": "cast2",
+      "T1Param4": "",
+      "T1Min4": "20",
+      "T1Max4": "20",
+      "T1Code5": "nofreeze",
+      "T1Param5": "",
+      "T1Min5": "1",
+      "T1Max5": "1",
+      "T1Code6": "swing2",
+      "T1Param6": "",
+      "T1Min6": "20",
+      "T1Max6": "20",
+      "T1Code7": "mag%",
+      "T1Param7": "",
+      "T1Min7": "20",
+      "T1Max7": "20",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Chains of Honor",
+    "runes": [
+      "Dol Rune (14)",
+      "\u2022Um Rune (22)\u2022",
+      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "All Resistances +50"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "70",
+        "max_val": "70",
+        "resolved_text": "+70% Enhanced Defense"
+      },
+      {
+        "code": "dmg-demon",
+        "param": "",
+        "min_val": "200",
+        "max_val": "200",
+        "resolved_text": "+200% Damage to Demons"
+      },
+      {
+        "code": "dmg-undead",
+        "param": "",
+        "min_val": "100",
+        "max_val": "100",
+        "resolved_text": "+100% Damage to Undead"
+      },
+      {
+        "code": "lifesteal",
+        "param": "",
+        "min_val": "8",
+        "max_val": "8",
+        "resolved_text": "8% Life stolen per hit"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to All Skills"
+      },
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20 to Strength"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword14",
+      "*Rune Name": "Chains of Honor",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "DolUmBerIst",
+      "Rune1": "r14",
+      "Rune2": "r22",
+      "Rune3": "r30",
+      "Rune4": "r24",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "res-all",
+      "T1Param1": "",
+      "T1Min1": "50",
+      "T1Max1": "50",
+      "T1Code2": "ac%",
+      "T1Param2": "",
+      "T1Min2": "70",
+      "T1Max2": "70",
+      "T1Code3": "dmg-demon",
+      "T1Param3": "",
+      "T1Min3": "200",
+      "T1Max3": "200",
+      "T1Code4": "dmg-undead",
+      "T1Param4": "",
+      "T1Min4": "100",
+      "T1Max4": "100",
+      "T1Code5": "lifesteal",
+      "T1Param5": "",
+      "T1Min5": "8",
+      "T1Max5": "8",
+      "T1Code6": "allskills",
+      "T1Param6": "",
+      "T1Min6": "2",
+      "T1Max6": "2",
+      "T1Code7": "str",
+      "T1Param7": "",
+      "T1Min7": "20",
+      "T1Max7": "20",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Dragon",
+    "runes": [
+      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022",
+      "Sol Rune (12)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "ac",
+        "param": "",
+        "min_val": "360",
+        "max_val": "360",
+        "resolved_text": "+360 Defense"
+      },
+      {
+        "code": "ac-miss",
+        "param": "",
+        "min_val": "230",
+        "max_val": "230",
+        "resolved_text": "+230 Defense vs. Missile"
+      },
+      {
+        "code": "str/lvl",
+        "param": "3",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(0.4 per clvl) to Strength (Based on Character Level)"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Hydra",
+        "min_val": "12",
+        "max_val": "15",
+        "resolved_text": "12% Chance to cast level 15 Hydra on striking"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Venom",
+        "min_val": "20",
+        "max_val": "18",
+        "resolved_text": "20% Chance to cast level 18 Venom when struck"
+      },
+      {
+        "code": "aura",
+        "param": "Holy Fire",
+        "min_val": "16",
+        "max_val": "21",
+        "resolved_text": "Level 16-21 Holy Fire Aura When Equipped"
+      },
+      {
+        "code": "all-stats",
+        "param": "",
+        "min_val": "5",
+        "max_val": "10",
+        "resolved_text": "+5-10 to all Attributes"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword27",
+      "*Rune Name": "Dragon",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "shld",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "SurLoSol",
+      "Rune1": "r29",
+      "Rune2": "r28",
+      "Rune3": "r12",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "ac",
+      "T1Param1": "",
+      "T1Min1": "360",
+      "T1Max1": "360",
+      "T1Code2": "ac-miss",
+      "T1Param2": "",
+      "T1Min2": "230",
+      "T1Max2": "230",
+      "T1Code3": "str/lvl",
+      "T1Param3": "3",
+      "T1Min3": "",
+      "T1Max3": "",
+      "T1Code4": "hit-skill",
+      "T1Param4": "Hydra",
+      "T1Min4": "12",
+      "T1Max4": "15",
+      "T1Code5": "gethit-skill",
+      "T1Param5": "Venom",
+      "T1Min5": "20",
+      "T1Max5": "18",
+      "T1Code6": "aura",
+      "T1Param6": "Holy Fire",
+      "T1Min6": "16",
+      "T1Max6": "21",
+      "T1Code7": "all-stats",
+      "T1Param7": "",
+      "T1Min7": "5",
+      "T1Max7": "10",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Duress",
+    "runes": [
+      "Shael Rune (13)",
+      "\u2022Um Rune (22)\u2022",
+      "Thul Rune (10)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "mana-kill",
+        "param": "",
+        "min_val": "15",
+        "max_val": "20",
+        "resolved_text": "+15-20 to Mana after each Kill"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "80",
+        "max_val": "100",
+        "resolved_text": "+80-100% Enhanced Damage"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "150",
+        "max_val": "200",
+        "resolved_text": "+150-200% Enhanced Defense"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Hit Recovery"
+      },
+      {
+        "code": "openwounds",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "33% Chance of Open Wounds"
+      },
+      {
+        "code": "crush",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "15% Chance of Crushing Blow"
+      },
+      {
+        "code": "heal-kill",
+        "param": "",
+        "min_val": "9",
+        "max_val": "15",
+        "resolved_text": "+9-15 Life after each Kill"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword30",
+      "*Rune Name": "Duress",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelUmThul",
+      "Rune1": "r13",
+      "Rune2": "r22",
+      "Rune3": "r10",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "mana-kill",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "20",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "80",
+      "T1Max2": "100",
+      "T1Code3": "ac%",
+      "T1Param3": "",
+      "T1Min3": "150",
+      "T1Max3": "200",
+      "T1Code4": "balance2",
+      "T1Param4": "",
+      "T1Min4": "20",
+      "T1Max4": "20",
+      "T1Code5": "openwounds",
+      "T1Param5": "",
+      "T1Min5": "33",
+      "T1Max5": "33",
+      "T1Code6": "crush",
+      "T1Param6": "",
+      "T1Min6": "15",
+      "T1Max6": "15",
+      "T1Code7": "heal-kill",
+      "T1Param7": "",
+      "T1Min7": "9",
+      "T1Max7": "15",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Enigma",
+    "runes": [
+      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
+      "Ith Rune (6)",
+      "Sol Rune (12)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "ac",
+        "param": "",
+        "min_val": "750",
+        "max_val": "775",
+        "resolved_text": "+750-775 Defense"
+      },
+      {
+        "code": "heal-kill",
+        "param": "",
+        "min_val": "14",
+        "max_val": "14",
+        "resolved_text": "+14 Life after each Kill"
+      },
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "45",
+        "max_val": "45",
+        "resolved_text": "+45% Faster Run/Walk"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to All Skills"
+      },
+      {
+        "code": "oskill",
+        "param": "Teleport",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Teleport"
+      },
+      {
+        "code": "mag%/lvl",
+        "param": "4",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword33",
+      "*Rune Name": "Enigma",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "JahIthSol",
+      "Rune1": "r31",
+      "Rune2": "r06",
+      "Rune3": "r12",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "ac",
+      "T1Param1": "",
+      "T1Min1": "750",
+      "T1Max1": "775",
+      "T1Code2": "heal-kill",
+      "T1Param2": "",
+      "T1Min2": "14",
+      "T1Max2": "14",
+      "T1Code3": "move2",
+      "T1Param3": "",
+      "T1Min3": "45",
+      "T1Max3": "45",
+      "T1Code4": "allskills",
+      "T1Param4": "",
+      "T1Min4": "2",
+      "T1Max4": "2",
+      "T1Code5": "oskill",
+      "T1Param5": "Teleport",
+      "T1Min5": "1",
+      "T1Max5": "1",
+      "T1Code6": "mag%/lvl",
+      "T1Param6": "4",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Enlightenment",
+    "runes": [
+      "\u2022Pul Rune (21)\u2022",
+      "Ral Rune (8)",
+      "Sol Rune (12)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "cast1",
+        "param": "",
+        "min_val": "15",
+        "max_val": "20",
+        "resolved_text": "+15-20% Faster Cast Rate"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Blaze",
+        "min_val": "5",
+        "max_val": "15",
+        "resolved_text": "5% Chance to cast level 15 Blaze when struck"
+      },
+      {
+        "code": "sor",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Sorceress Skill Levels"
+      },
+      {
+        "code": "oskill",
+        "param": "Warmth",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Warmth"
+      },
+      {
+        "code": "balance1",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Hit Recovery"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword34",
+      "*Rune Name": "Enlightenment",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "PulRalSol",
+      "Rune1": "r21",
+      "Rune2": "r08",
+      "Rune3": "r12",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "cast1",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "20",
+      "T1Code2": "gethit-skill",
+      "T1Param2": "Blaze",
+      "T1Min2": "5",
+      "T1Max2": "15",
+      "T1Code3": "sor",
+      "T1Param3": "",
+      "T1Min3": "2",
+      "T1Max3": "2",
+      "T1Code4": "oskill",
+      "T1Param4": "Warmth",
+      "T1Min4": "1",
+      "T1Max4": "1",
+      "T1Code5": "balance1",
+      "T1Param5": "",
+      "T1Min5": "20",
+      "T1Max5": "20",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Gloom",
+    "runes": [
+      "Fal Rune (19)",
+      "\u2022Um Rune (22)\u2022",
+      "\u2022Pul Rune (21)\u2022"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "170",
+        "max_val": "230",
+        "resolved_text": "+170-230% Enhanced Defense"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "All Resistances +30"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Dim Vision",
+        "min_val": "15",
+        "max_val": "6",
+        "resolved_text": "15% Chance to cast level 6 Dim Vision when struck"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "23",
+        "max_val": "23",
+        "resolved_text": "+23% Faster Hit Recovery"
+      },
+      {
+        "code": "dmg-to-mana",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "5% Damage Taken Goes To Mana"
+      },
+      {
+        "code": "death-skill",
+        "param": "Meteor",
+        "min_val": "100",
+        "max_val": "55",
+        "resolved_text": "100% Chance to cast level 55 Meteor when you Die"
+      },
+      {
+        "code": "half-freeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Half Freeze Duration"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword45",
+      "*Rune Name": "Gloom",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "FalUmPul",
+      "Rune1": "r19",
+      "Rune2": "r22",
+      "Rune3": "r21",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "ac%",
+      "T1Param1": "",
+      "T1Min1": "170",
+      "T1Max1": "230",
+      "T1Code2": "res-all",
+      "T1Param2": "",
+      "T1Min2": "30",
+      "T1Max2": "30",
+      "T1Code3": "gethit-skill",
+      "T1Param3": "Dim Vision",
+      "T1Min3": "15",
+      "T1Max3": "6",
+      "T1Code4": "balance2",
+      "T1Param4": "",
+      "T1Min4": "23",
+      "T1Max4": "23",
+      "T1Code5": "dmg-to-mana",
+      "T1Param5": "",
+      "T1Min5": "5",
+      "T1Max5": "5",
+      "T1Code6": "death-skill",
+      "T1Param6": "Meteor",
+      "T1Min6": "100",
+      "T1Max6": "55",
+      "T1Code7": "half-freeze",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Lionheart",
+    "runes": [
+      "Hel Rune (15)",
+      "Lum Rune (17)",
+      "Fal Rune (19)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "all-stats",
+        "param": "",
+        "min_val": "15",
+        "max_val": "30",
+        "resolved_text": "+15-30 to all Attributes"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "90",
+        "max_val": "150",
+        "resolved_text": "+90-150% Enhanced Damage"
+      },
+      {
+        "code": "hp",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50 to Life"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "All Resistances +30"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword74",
+      "*Rune Name": "Lionheart",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelLumFal",
+      "Rune1": "r15",
+      "Rune2": "r17",
+      "Rune3": "r19",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "all-stats",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "30",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "90",
+      "T1Max2": "150",
+      "T1Code3": "hp",
+      "T1Param3": "",
+      "T1Min3": "50",
+      "T1Max3": "50",
+      "T1Code4": "res-all",
+      "T1Param4": "",
+      "T1Min4": "30",
+      "T1Max4": "30",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Myth",
+    "runes": [
+      "Hel Rune (15)",
+      "Amn Rune (11)",
+      "Nef Rune (4)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "hit-skill",
+        "param": "Taunt",
+        "min_val": "20",
+        "max_val": "10",
+        "resolved_text": "20% Chance to cast level 10 Taunt on striking"
+      },
+      {
+        "code": "move1",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Run/Walk"
+      },
+      {
+        "code": "bar",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2  to Barbarian Skill Levels"
+      },
+      {
+        "code": "regen",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "Replenish Life +10"
+      },
+      {
+        "code": "hp",
+        "param": "",
+        "min_val": "100",
+        "max_val": "150",
+        "resolved_text": "+100-150 to Life"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "100",
+        "max_val": "100",
+        "resolved_text": "+100% Enhanced Defense"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword87",
+      "*Rune Name": "Myth",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelAmnNef",
+      "Rune1": "r15",
+      "Rune2": "r11",
+      "Rune3": "r04",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hit-skill",
+      "T1Param1": "Taunt",
+      "T1Min1": "20",
+      "T1Max1": "10",
+      "T1Code2": "move1",
+      "T1Param2": "",
+      "T1Min2": "25",
+      "T1Max2": "25",
+      "T1Code3": "bar",
+      "T1Param3": "",
+      "T1Min3": "2",
+      "T1Max3": "2",
+      "T1Code4": "regen",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "10",
+      "T1Code5": "hp",
+      "T1Param5": "",
+      "T1Min5": "100",
+      "T1Max5": "150",
+      "T1Code6": "ac%",
+      "T1Param6": "",
+      "T1Min6": "100",
+      "T1Max6": "100",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Peace",
+    "runes": [
+      "Shael Rune (13)",
+      "Thul Rune (10)",
+      "Amn Rune (11)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Run/Walk"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Slow Missiles",
+        "min_val": "15",
+        "max_val": "10",
+        "resolved_text": "15% Chance to cast level 10 Slow Missiles when struck"
+      },
+      {
+        "code": "ama",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Amazon Skill Levels"
+      },
+      {
+        "code": "oskill",
+        "param": "Critical Strike",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Critical Strike"
+      },
+      {
+        "code": "skill",
+        "param": "Evade",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Evade (Amazon only)"
+      },
+      {
+        "code": "skill",
+        "param": "Avoid",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Avoid (Amazon only)"
+      },
+      {
+        "code": "skill",
+        "param": "Dodge",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Dodge (Amazon only)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword98",
+      "*Rune Name": "Peace",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelThulAmn",
+      "Rune1": "r13",
+      "Rune2": "r10",
+      "Rune3": "r11",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "move2",
+      "T1Param1": "",
+      "T1Min1": "25",
+      "T1Max1": "25",
+      "T1Code2": "gethit-skill",
+      "T1Param2": "Slow Missiles",
+      "T1Min2": "15",
+      "T1Max2": "10",
+      "T1Code3": "ama",
+      "T1Param3": "",
+      "T1Min3": "2",
+      "T1Max3": "2",
+      "T1Code4": "oskill",
+      "T1Param4": "Critical Strike",
+      "T1Min4": "2",
+      "T1Max4": "2",
+      "T1Code5": "skill",
+      "T1Param5": "Evade",
+      "T1Min5": "2",
+      "T1Max5": "2",
+      "T1Code6": "skill",
+      "T1Param6": "Avoid",
+      "T1Min6": "2",
+      "T1Max6": "2",
+      "T1Code7": "skill",
+      "T1Param7": "Dodge",
+      "T1Min7": "2",
+      "T1Max7": "2",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Pestilence",
+    "runes": [
+      "Tal Rune (7)",
+      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022",
+      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "poisskill",
+        "param": "",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Poison Skills"
+      },
+      {
+        "code": "pierce-pois",
+        "param": "",
+        "min_val": "40",
+        "max_val": "50",
+        "resolved_text": "-40-50% to Enemy Poison Resistance"
+      },
+      {
+        "code": "noheal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Prevent Monster Heal"
+      },
+      {
+        "code": "ac",
+        "param": "",
+        "min_val": "400",
+        "max_val": "500",
+        "resolved_text": "+400-500 Defense"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Lower Resist",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "50% Chance to cast level 50 Lower Resist when struck"
+      },
+      {
+        "code": "aura",
+        "param": "cleansing",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "Level 15 Cleansing Aura When Equipped"
+      },
+      {
+        "code": "res-mag",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "Magic Resist +50%"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword102",
+      "*Rune Name": "Pestilence",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "BTDIABLO",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "TalChamIst",
+      "Rune1": "r07",
+      "Rune2": "r32",
+      "Rune3": "r24",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "poisskill",
+      "T1Param1": "",
+      "T1Min1": "3",
+      "T1Max1": "3",
+      "T1Code2": "pierce-pois",
+      "T1Param2": "",
+      "T1Min2": "40",
+      "T1Max2": "50",
+      "T1Code3": "noheal",
+      "T1Param3": "",
+      "T1Min3": "1",
+      "T1Max3": "1",
+      "T1Code4": "ac",
+      "T1Param4": "",
+      "T1Min4": "400",
+      "T1Max4": "500",
+      "T1Code5": "gethit-skill",
+      "T1Param5": "Lower Resist",
+      "T1Min5": "50",
+      "T1Max5": "50",
+      "T1Code6": "aura",
+      "T1Param6": "cleansing",
+      "T1Min6": "15",
+      "T1Max6": "15",
+      "T1Code7": "res-mag",
+      "T1Param7": "",
+      "T1Min7": "50",
+      "T1Max7": "50",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Principle",
+    "runes": [
+      "Ral Rune (8)",
+      "Ko Rune (18)",
+      "Ith Rune (6)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "hit-skill",
+        "param": "Blessed Hammer",
+        "min_val": "100",
+        "max_val": "20",
+        "resolved_text": "100% Chance to cast level 20 Blessed Hammer on striking"
+      },
+      {
+        "code": "pal",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Paladin Skill Levels"
+      },
+      {
+        "code": "hp",
+        "param": "",
+        "min_val": "100",
+        "max_val": "150",
+        "resolved_text": "+100-150 to Life"
+      },
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "100",
+        "max_val": "100",
+        "resolved_text": "100% Bonus to Attack Rating"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "100",
+        "max_val": "100",
+        "resolved_text": "+100% Enhanced Defense"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword110",
+      "*Rune Name": "Principle",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "RalKoIth",
+      "Rune1": "r08",
+      "Rune2": "r18",
+      "Rune3": "r06",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hit-skill",
+      "T1Param1": "Blessed Hammer",
+      "T1Min1": "100",
+      "T1Max1": "20",
+      "T1Code2": "pal",
+      "T1Param2": "",
+      "T1Min2": "2",
+      "T1Max2": "2",
+      "T1Code3": "hp",
+      "T1Param3": "",
+      "T1Min3": "100",
+      "T1Max3": "150",
+      "T1Code4": "att%",
+      "T1Param4": "",
+      "T1Min4": "100",
+      "T1Max4": "100",
+      "T1Code5": "ac%",
+      "T1Param5": "",
+      "T1Min5": "100",
+      "T1Max5": "100",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Prudence",
+    "runes": [
+      "\u2022Mal Rune (23)\u2022",
+      "Tir Rune (3)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "140",
+        "max_val": "170",
+        "resolved_text": "+140-170% Enhanced Defense"
+      },
+      {
+        "code": "red-mag",
+        "param": "",
+        "min_val": "17",
+        "max_val": "17",
+        "resolved_text": "Magic Damage Reduced by 17"
+      },
+      {
+        "code": "red-dmg",
+        "param": "",
+        "min_val": "24",
+        "max_val": "24",
+        "resolved_text": "Damage Reduced by 24"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "25",
+        "max_val": "35",
+        "resolved_text": "All Resistances +25-35"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Hit Recovery"
+      },
+      {
+        "code": "rep-dur",
+        "param": "25",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "Repairs 1 durability in 25 seconds"
+      },
+      {
+        "code": "nofreeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Cannot Be Frozen"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword112",
+      "*Rune Name": "Prudence",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "MalTir",
+      "Rune1": "r23",
+      "Rune2": "r03",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "ac%",
+      "T1Param1": "",
+      "T1Min1": "140",
+      "T1Max1": "170",
+      "T1Code2": "red-mag",
+      "T1Param2": "",
+      "T1Min2": "17",
+      "T1Max2": "17",
+      "T1Code3": "red-dmg",
+      "T1Param3": "",
+      "T1Min3": "24",
+      "T1Max3": "24",
+      "T1Code4": "res-all",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "35",
+      "T1Code5": "balance2",
+      "T1Param5": "",
+      "T1Min5": "25",
+      "T1Max5": "25",
+      "T1Code6": "rep-dur",
+      "T1Param6": "25",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "nofreeze",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Rain",
+    "runes": [
+      "Ort Rune (9)",
+      "Dol Rune (14)",
+      "Ith Rune (6)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "cast1",
+        "param": "",
+        "min_val": "15",
+        "max_val": "20",
+        "resolved_text": "+15-20% Faster Cast Rate"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Cyclone Armor",
+        "min_val": "5",
+        "max_val": "15",
+        "resolved_text": "5% Chance to cast level 15 Cyclone Armor when struck"
+      },
+      {
+        "code": "dru",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Druid Skill Levels"
+      },
+      {
+        "code": "mana",
+        "param": "",
+        "min_val": "100",
+        "max_val": "150",
+        "resolved_text": "+100-150 to Mana"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword117",
+      "*Rune Name": "Rain",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "OrtDolIth",
+      "Rune1": "r09",
+      "Rune2": "r14",
+      "Rune3": "r06",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "cast1",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "20",
+      "T1Code2": "gethit-skill",
+      "T1Param2": "Cyclone Armor",
+      "T1Min2": "5",
+      "T1Max2": "15",
+      "T1Code3": "dru",
+      "T1Param3": "",
+      "T1Min3": "2",
+      "T1Max3": "2",
+      "T1Code4": "mana",
+      "T1Param4": "",
+      "T1Min4": "100",
+      "T1Max4": "150",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Red",
+    "runes": [
+      "Io Rune (16)",
+      "Eld Rune (2)",
+      "Dol Rune (14)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "hp%",
+        "param": "",
+        "min_val": "15",
+        "max_val": "25",
+        "resolved_text": "Increase Maximum Life 15-25%"
+      },
+      {
+        "code": "hp",
+        "param": "",
+        "min_val": "80",
+        "max_val": "100",
+        "resolved_text": "+80-100 to Life"
+      },
+      {
+        "code": "lifesteal",
+        "param": "",
+        "min_val": "9",
+        "max_val": "9",
+        "resolved_text": "9% Life stolen per hit"
+      },
+      {
+        "code": "heal-kill",
+        "param": "",
+        "min_val": "5",
+        "max_val": "10",
+        "resolved_text": "+5-10 Life after each Kill"
+      },
+      {
+        "code": "res-fire",
+        "param": "",
+        "min_val": "75",
+        "max_val": "75",
+        "resolved_text": "Fire Resist +75%"
+      },
+      {
+        "code": "abs-fire%",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20 Fire Absorb"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "50",
+        "max_val": "80",
+        "resolved_text": "+50-80% Enhanced Defense"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword119",
+      "*Rune Name": "Red",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "BTDIABLO",
+      "itype1": "tors",
+      "itype2": "shld",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "IoEldDol",
+      "Rune1": "r16",
+      "Rune2": "r02",
+      "Rune3": "r14",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hp%",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "25",
+      "T1Code2": "hp",
+      "T1Param2": "",
+      "T1Min2": "80",
+      "T1Max2": "100",
+      "T1Code3": "lifesteal",
+      "T1Param3": "",
+      "T1Min3": "9",
+      "T1Max3": "9",
+      "T1Code4": "heal-kill",
+      "T1Param4": "",
+      "T1Min4": "5",
+      "T1Max4": "10",
+      "T1Code5": "res-fire",
+      "T1Param5": "",
+      "T1Min5": "75",
+      "T1Max5": "75",
+      "T1Code6": "abs-fire%",
+      "T1Param6": "",
+      "T1Min6": "20",
+      "T1Max6": "20",
+      "T1Code7": "ac%",
+      "T1Param7": "",
+      "T1Min7": "50",
+      "T1Max7": "80",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Smoke",
+    "runes": [
+      "Nef Rune (4)",
+      "Lum Rune (17)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "ac-miss",
+        "param": "",
+        "min_val": "250",
+        "max_val": "250",
+        "resolved_text": "+250 Defense vs. Missile"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "75",
+        "max_val": "75",
+        "resolved_text": "+75% Enhanced Defense"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "All Resistances +50"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Hit Recovery"
+      },
+      {
+        "code": "str/lvl",
+        "param": "",
+        "min_val": "3",
+        "max_val": "5",
+        "resolved_text": "(0.4-0.6 per clvl) to Strength (Based on Character Level)"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "264",
+        "min_val": "20",
+        "max_val": "13",
+        "resolved_text": "20% Chance to cast level 13 Cloak of Shadows when struck"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword128",
+      "*Rune Name": "Smoke",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "NefLum",
+      "Rune1": "r04",
+      "Rune2": "r17",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "ac-miss",
+      "T1Param1": "",
+      "T1Min1": "250",
+      "T1Max1": "250",
+      "T1Code2": "ac%",
+      "T1Param2": "",
+      "T1Min2": "75",
+      "T1Max2": "75",
+      "T1Code3": "res-all",
+      "T1Param3": "",
+      "T1Min3": "50",
+      "T1Max3": "50",
+      "T1Code4": "balance2",
+      "T1Param4": "",
+      "T1Min4": "20",
+      "T1Max4": "20",
+      "T1Code5": "str/lvl",
+      "T1Param5": "",
+      "T1Min5": "3",
+      "T1Max5": "5",
+      "T1Code6": "gethit-skill",
+      "T1Param6": "264",
+      "T1Min6": "20",
+      "T1Max6": "13",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Stealth",
+    "runes": [
+      "Tal Rune (7)",
+      "Eth Rune (5)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "red-mag",
+        "param": "",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "Magic Damage Reduced by 3"
+      },
+      {
+        "code": "dex",
+        "param": "",
+        "min_val": "6",
+        "max_val": "6",
+        "resolved_text": "+6 to Dexterity"
+      },
+      {
+        "code": "stam",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15 Maximum Stamina"
+      },
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Run/Walk"
+      },
+      {
+        "code": "cast2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Cast Rate"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "+25% Faster Hit Recovery"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword133",
+      "*Rune Name": "Stealth",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "TalEth",
+      "Rune1": "r07",
+      "Rune2": "r05",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "red-mag",
+      "T1Param1": "",
+      "T1Min1": "3",
+      "T1Max1": "3",
+      "T1Code2": "dex",
+      "T1Param2": "",
+      "T1Min2": "6",
+      "T1Max2": "6",
+      "T1Code3": "stam",
+      "T1Param3": "",
+      "T1Min3": "15",
+      "T1Max3": "15",
+      "T1Code4": "move2",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "25",
+      "T1Code5": "cast2",
+      "T1Param5": "",
+      "T1Min5": "25",
+      "T1Max5": "25",
+      "T1Code6": "balance2",
+      "T1Param6": "",
+      "T1Min6": "25",
+      "T1Max6": "25",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Stone",
+    "runes": [
+      "Shael Rune (13)",
+      "\u2022Um Rune (22)\u2022",
+      "\u2022Pul Rune (21)\u2022",
+      "Lum Rune (17)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "350",
+        "max_val": "400",
+        "resolved_text": "+350-400% Enhanced Defense"
+      },
+      {
+        "code": "oskill",
+        "param": "Clay Golem",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30 to Clay Golem"
+      },
+      {
+        "code": "ac-miss",
+        "param": "",
+        "min_val": "300",
+        "max_val": "300",
+        "resolved_text": "+300 Defense vs. Missile"
+      },
+      {
+        "code": "str%",
+        "param": "",
+        "min_val": "10",
+        "max_val": "15",
+        "resolved_text": "+10-15% Strength"
+      },
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "15",
+        "max_val": "20",
+        "resolved_text": "+15-20 to Strength"
+      },
+      {
+        "code": "vit",
+        "param": "",
+        "min_val": "15",
+        "max_val": "20",
+        "resolved_text": "+15-20 to Vitality"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Faster Hit Recovery"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword137",
+      "*Rune Name": "Stone",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelUmPulLum",
+      "Rune1": "r13",
+      "Rune2": "r22",
+      "Rune3": "r21",
+      "Rune4": "r17",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "ac%",
+      "T1Param1": "",
+      "T1Min1": "350",
+      "T1Max1": "400",
+      "T1Code2": "oskill",
+      "T1Param2": "Clay Golem",
+      "T1Min2": "30",
+      "T1Max2": "30",
+      "T1Code3": "ac-miss",
+      "T1Param3": "",
+      "T1Min3": "300",
+      "T1Max3": "300",
+      "T1Code4": "str%",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "15",
+      "T1Code5": "str",
+      "T1Param5": "",
+      "T1Min5": "15",
+      "T1Max5": "20",
+      "T1Code6": "vit",
+      "T1Param6": "",
+      "T1Min6": "15",
+      "T1Max6": "20",
+      "T1Code7": "balance2",
+      "T1Param7": "",
+      "T1Min7": "40",
+      "T1Max7": "40",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Treachery",
+    "runes": [
+      "Shael Rune (13)",
+      "Thul Rune (10)",
+      "\u2022Lem Rune (20)\u2022"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "hit-skill",
+        "param": "Venom",
+        "min_val": "25",
+        "max_val": "15",
+        "resolved_text": "25% Chance to cast level 15 Venom on striking"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Fade",
+        "min_val": "50",
+        "max_val": "15",
+        "resolved_text": "50% Chance to cast level 15 Fade when struck"
+      },
+      {
+        "code": "ass",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Assassin Skill Levels"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "45",
+        "max_val": "45",
+        "resolved_text": "+45% Increased Attack Speed"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword148",
+      "*Rune Name": "Treachery",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelThulLem",
+      "Rune1": "r13",
+      "Rune2": "r10",
+      "Rune3": "r20",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "hit-skill",
+      "T1Param1": "Venom",
+      "T1Min1": "25",
+      "T1Max1": "15",
+      "T1Code2": "gethit-skill",
+      "T1Param2": "Fade",
+      "T1Min2": "50",
+      "T1Max2": "15",
+      "T1Code3": "ass",
+      "T1Param3": "",
+      "T1Min3": "2",
+      "T1Max3": "2",
+      "T1Code4": "swing2",
+      "T1Param4": "",
+      "T1Min4": "45",
+      "T1Max4": "45",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Wealth",
+    "runes": [
+      "\u2022Lem Rune (20)\u2022",
+      "Ko Rune (18)",
+      "Tir Rune (3)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "gold%",
+        "param": "",
+        "min_val": "250",
+        "max_val": "250",
+        "resolved_text": "250% Extra Gold from Monsters"
+      },
+      {
+        "code": "mag%/lvl",
+        "param": "8",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(1.0% per clvl) Better Chance of Getting Magic Items (Based on Character Level)"
+      },
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Run/Walk"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10% Increased Attack Speed"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword160",
+      "*Rune Name": "Wealth",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "LemKoTir",
+      "Rune1": "r20",
+      "Rune2": "r18",
+      "Rune3": "r03",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "gold%",
+      "T1Param1": "",
+      "T1Min1": "250",
+      "T1Max1": "250",
+      "T1Code2": "mag%/lvl",
+      "T1Param2": "8",
+      "T1Min2": "",
+      "T1Max2": "",
+      "T1Code3": "move2",
+      "T1Param3": "",
+      "T1Min3": "20",
+      "T1Max3": "20",
+      "T1Code4": "swing2",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "10",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Hustle (armor)",
+    "runes": [
+      "Shael Rune (13)",
+      "Ko Rune (18)",
+      "Eld Rune (2)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "65",
+        "max_val": "65",
+        "resolved_text": "+65% Faster Run/Walk"
+      },
+      {
+        "code": "stamdrain",
+        "param": "",
+        "min_val": "35",
+        "max_val": "35",
+        "resolved_text": "35% Slower Stamina Drain"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Increased Attack Speed"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "All Resistances +10"
+      },
+      {
+        "code": "oskill",
+        "param": "Evade",
+        "min_val": "6",
+        "max_val": "6",
+        "resolved_text": "+6 to Evade"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword171",
+      "*Rune Name": "Hustle (armor)",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelKoEld",
+      "Rune1": "r13",
+      "Rune2": "r18",
+      "Rune3": "r02",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "move2",
+      "T1Param1": "",
+      "T1Min1": "65",
+      "T1Max1": "65",
+      "T1Code2": "stamdrain",
+      "T1Param2": "",
+      "T1Min2": "35",
+      "T1Max2": "35",
+      "T1Code3": "swing2",
+      "T1Param3": "",
+      "T1Min3": "40",
+      "T1Max3": "40",
+      "T1Code4": "res-all",
+      "T1Param4": "",
+      "T1Min4": "10",
+      "T1Max4": "10",
+      "T1Code5": "oskill",
+      "T1Param5": "Evade",
+      "T1Min5": "6",
+      "T1Max5": "6",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Dilemma",
+    "runes": [
+      "Dol Rune (14)",
+      "\u2022Lem Rune (20)\u2022",
+      "\u2022Mal Rune (23)\u2022"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "oskill",
+        "param": "Teleport",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Teleport"
+      },
+      {
+        "code": "regen",
+        "param": "",
+        "min_val": "-40",
+        "max_val": "-20",
+        "resolved_text": "Replenish Life +-40--20"
+      },
+      {
+        "code": "heal-kill",
+        "param": "",
+        "min_val": "-35",
+        "max_val": "-25",
+        "resolved_text": "+-35--25 Life after each Kill"
+      },
+      {
+        "code": "mag%",
+        "param": "",
+        "min_val": "35",
+        "max_val": "50",
+        "resolved_text": "35-50% Better Chance of Getting Magic Items"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword183",
+      "*Rune Name": "Dilemma",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "BTDIABLO",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "DolLemMal",
+      "Rune1": "r14",
+      "Rune2": "r20",
+      "Rune3": "r23",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "oskill",
+      "T1Param1": "Teleport",
+      "T1Min1": "1",
+      "T1Max1": "1",
+      "T1Code2": "regen",
+      "T1Param2": "",
+      "T1Min2": "-40",
+      "T1Max2": "-20",
+      "T1Code3": "heal-kill",
+      "T1Param3": "",
+      "T1Min3": "-35",
+      "T1Max3": "-25",
+      "T1Code4": "mag%",
+      "T1Param4": "",
+      "T1Min4": "35",
+      "T1Max4": "50",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Shadows",
+    "runes": [
+      "Shael Rune (13)",
+      "Sol Rune (12)",
+      "Ko Rune (18)"
+    ],
+    "base_items": [
+      "Armor"
+    ],
+    "properties": [
+      {
+        "code": "swing1",
+        "param": "",
+        "min_val": "45",
+        "max_val": "45",
+        "resolved_text": "+45% Increased Attack Speed"
+      },
+      {
+        "code": "kick",
+        "param": "",
+        "min_val": "100",
+        "max_val": "150",
+        "resolved_text": "+100-150 Kick Damage"
+      },
+      {
+        "code": "mana",
+        "param": "",
+        "min_val": "100",
+        "max_val": "150",
+        "resolved_text": "+100-150 to Mana"
+      },
+      {
+        "code": "ass",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Assassin Skill Levels"
+      },
+      {
+        "code": "deadly",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "5% Deadly Strike"
+      },
+      {
+        "code": "res-cold",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "Cold Resist +30%"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword184",
+      "*Rune Name": "Shadows",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "BTDIABLO",
+      "itype1": "tors",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShealSolKo",
+      "Rune1": "r13",
+      "Rune2": "r12",
+      "Rune3": "r18",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "swing1",
+      "T1Param1": "",
+      "T1Min1": "45",
+      "T1Max1": "45",
+      "T1Code2": "kick",
+      "T1Param2": "",
+      "T1Min2": "100",
+      "T1Max2": "150",
+      "T1Code3": "mana",
+      "T1Param3": "",
+      "T1Min3": "100",
+      "T1Max3": "150",
+      "T1Code4": "ass",
+      "T1Param4": "",
+      "T1Min4": "2",
+      "T1Max4": "2",
+      "T1Code5": "deadly",
+      "T1Param5": "",
+      "T1Min5": "5",
+      "T1Max5": "5",
+      "T1Code6": "res-cold",
+      "T1Param6": "",
+      "T1Min6": "30",
+      "T1Max6": "30",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  }
+]
