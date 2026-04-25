@@ -46,7 +46,7 @@ class PropertyResolverService:
             '8': 'Summoning', '9': 'Combat', '10': 'Offensive Auras', '11': 'Defensive Auras',
             '12': 'Combat', '13': 'Combat Masteries', '14': 'Warcries', '15': 'Summoning',
             '16': 'Shape Shifting', '17': 'Elemental', '18': 'Traps', '19': 'Shadow Disciplines',
-            20: 'Martial Arts', '21': 'Warlock'
+            '20': 'Martial Arts', '21': 'Warlock'
         }
         
         self.manual_overrides = {
