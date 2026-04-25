@@ -48,6 +48,11 @@ class PropertyResolverService:
             '16': 'Shape Shifting', '17': 'Elemental', '18': 'Traps', '19': 'Shadow Disciplines',
             20: 'Martial Arts', '21': 'Warlock'
         }
+        
+        self.manual_overrides = {
+            'bloody': 'Extra Bloody',
+            'gelid-affix5': '[Invalid Mod Property: Gelid-Affix5]'
+        }
 
     def resolve_skill_name(self, skill_name_or_id: str) -> str:
         skill_name_or_id = str(skill_name_or_id).strip()
@@ -82,11 +87,20 @@ class PropertyResolverService:
     def resolve_property(self, code: str, param: str, min_val: str, max_val: str) -> PropertyDTO:
         code_orig = code
         code_lower = code.strip().lower()
+        range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
+        
         if not code_lower or code_lower == 'xxx':
             return {"code": code, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": ""}
 
         if code_lower in self.aliases: code_lower = self.aliases[code_lower]
         
+        # 1. Manual Overrides
+        if code_lower in self.manual_overrides:
+            text = self.manual_overrides[code_lower]
+            if code_lower == 'bloody': text = f"{text}: {range_str}"
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": text}
+
+        # 2. Property Groups
         if code_lower in self.property_groups:
             group = self.property_groups[code_lower]
             pick_mode = group.get('PickMode', '1')
@@ -99,11 +113,14 @@ class PropertyResolverService:
             text = " / ".join(options) if pick_mode == '1' else f" (Random: {' OR '.join(options)})"
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": text}
 
+        # 3. Missing Property Groups
+        if "-affix" in code_lower:
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"[Missing Property Group: {code_orig}]"}
+
         prop = self.properties.get(code_lower)
         if not prop:
-            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown Prop: {code}"}
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown Prop: {code_orig}"}
         
-        range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
         tooltip = prop.get('*Tooltip', '').strip()
         if tooltip and tooltip != '0':
             func, val1 = prop.get('func1', '0').strip(), prop.get('val1', '0').strip()
@@ -150,7 +167,24 @@ class PropertyResolverService:
                 desc = self.format_desc(stat_code, min_val, max_val)
                 if desc: return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": desc}
         
-        # Remove redundant range_str from Unknown Prop message
+        # New Fallback Logic: Try manual overrides first
+        if code_lower in self.manual_overrides:
+            text = self.manual_overrides[code_lower]
+            if code_lower == 'bloody': text = f"{text}: {range_str}"
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": text}
+
+        # Try resolving via the code name itself
+        localized_code = self.repo.get_string(code_orig)
+        if not localized_code or localized_code == code_orig:
+            localized_code = self.repo.get_string(code_orig.capitalize())
+        
+        if localized_code and localized_code != code_orig and localized_code != code_orig.capitalize():
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{localized_code}: {range_str}"}
+
+        # Handle missing property groups
+        if "-Affix" in code_orig:
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"[Missing Property Group: {code_orig}]"}
+
         return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown Prop: {code_orig}"}
 
 class ItemAnalyzerService:
