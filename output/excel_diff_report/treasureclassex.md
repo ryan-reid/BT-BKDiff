@@ -2,5 +2,4 @@
 
 *Key column used: `code`*
 
-## Added Columns: `ConditionCalc, QuestFlag, QuestFlagEx`  
-
+## Added Columns: `ConditionCalc, QuestFlag, QuestFlagEx`

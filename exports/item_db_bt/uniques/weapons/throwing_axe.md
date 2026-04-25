@@ -36,4 +36,3 @@
     * Increased Stack Size
     * +30% Increased Attack Speed
     * 20% Chance to cast level 20 Lower Resist on striking
-

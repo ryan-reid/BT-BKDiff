@@ -126,4 +126,3 @@
     * 20% Chance to cast level 10 Lower Resist on striking
     * +18 to Immolation Arrow
     * Piercing Attack
-

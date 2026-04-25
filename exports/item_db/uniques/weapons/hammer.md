@@ -148,4 +148,3 @@
     * 10% Chance to cast level 5 Lower Resist on striking
     * Requirements --50--30%
     * 6% Mana stolen per hit
-

@@ -145,4 +145,3 @@
     * Curse Resist +50%
     * Piercing Attack
     * Increase Maximum Mana 10-20%
-

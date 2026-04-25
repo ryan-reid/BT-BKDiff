@@ -841,4 +841,3 @@
 ### yps
 - `OrmusMin`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `OrmusMax`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-

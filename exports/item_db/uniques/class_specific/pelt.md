@@ -70,4 +70,3 @@
     * +20% Faster Run/Walk
     * +50% Enhanced Defense
     * 10% Life stolen per hit
-

@@ -267,4 +267,3 @@
 ### zombie head
 - `auto prefix`: $\\color{gray}{\\text{305}}$ (Old) &rarr; $\\color{blue}{\\text{307}}$ (New)
 - `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
-

@@ -124,4 +124,3 @@
     * Attacker Takes Lightning Damage of 30
     * 33% Chance of Crushing Blow
     * Lightning Absorb 3-9%
-

@@ -2,5 +2,4 @@
 
 *Key column used: `code`*
 
-## Added Columns: `vfxweaponstate`  
-
+## Added Columns: `vfxweaponstate`

@@ -142,4 +142,3 @@
     * +40% Increased Attack Speed
     * 100% Chance to cast level 20 Blessed Hammer when you Kill an Enemy
     * Lightning Resist +20-25%
-

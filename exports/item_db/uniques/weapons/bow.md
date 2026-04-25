@@ -259,4 +259,3 @@
     * +250% Enhanced Damage
     * +100 to Minimum Damage
     * Level 10 Redemption Aura When Equipped
-

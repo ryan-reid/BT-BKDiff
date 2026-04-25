@@ -2,5 +2,4 @@
 
 *Key column used: `code`*
 
-## Added Columns: `WeaponStateFlags, WeaponStateGroup, StartSound`  
-
+## Added Columns: `WeaponStateFlags, WeaponStateGroup, StartSound`

@@ -133,4 +133,3 @@
     * Indestructible
     * +30% Faster Cast Rate
     * +5% to Maximum Fire Resist
-

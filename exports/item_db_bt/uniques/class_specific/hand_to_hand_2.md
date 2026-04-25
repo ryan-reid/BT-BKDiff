@@ -85,4 +85,3 @@
     * 7% Mana stolen per hit
     * 7% Life stolen per hit
     * Slain Monsters Rest in Peace
-

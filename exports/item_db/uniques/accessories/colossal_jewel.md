@@ -71,4 +71,3 @@
     * +3-5% to Experience Gained
     * 15-35% Better Chance of Getting Magic Items
     * 25-50% Extra Gold from Monsters
-

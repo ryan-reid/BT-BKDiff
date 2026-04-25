@@ -73,4 +73,3 @@
     * 150-180% Bonus to Attack Rating
     * +5-15 Cold Absorb
     * Adds 205-455 Cold Damage
-

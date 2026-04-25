@@ -69,4 +69,3 @@
     * +30% Faster Cast Rate
     * +50% Enhanced Defense
     * Damage Reduced by 3-5
-

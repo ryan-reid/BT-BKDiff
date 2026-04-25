@@ -708,4 +708,3 @@
 - wip 2 arrows -> bolts with mf + sockets
 - wip 2 bolts -> arrows with mf + sockets
 - wirt's leg  -> portal to the secret cow level
-

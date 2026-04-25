@@ -23,4 +23,3 @@
     * 50% Deadly Strike
     * Replenishes quantity
     * 40% Chance to cast level 20 Nova on striking
-
