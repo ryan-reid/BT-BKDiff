@@ -8,5 +8,5 @@
     * +10-20 to all Attributes
     * All Resistances +10-20
     * +8 to Light Radius
-    * Level 10-30 Hydra (#/# Charges)
+    * Level 10 Hydra (30/# Charges)
 

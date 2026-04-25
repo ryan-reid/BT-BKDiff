@@ -14,7 +14,7 @@
 * **Base Item:** Light Belt
 * **Level Requirement:** 12
 * **Properties:**
-    * Adds 40-# Poison Damage Over # Seconds
+    * Adds 40-40 Poison Damage Over 40 Seconds
     * Poison Resist +25%
     * +25 to Life
     * +20-30% Enhanced Defense
@@ -65,7 +65,7 @@
     * 6-8% Life stolen per hit
     * +150-180% Enhanced Defense
     * +100 Defense
-    * Durability: 10 of #
+    * Durability: 10 of 10
 
 ### Razortail (Razortail)
 * **Base Item:** Sharkskin Belt
@@ -95,7 +95,7 @@
 * **Base Item:** Battle Belt
 * **Level Requirement:** 42
 * **Properties:**
-    * 50-40% Chance to cast level # Blizzard when struck
+    * 50% Chance to cast level 40 Blizzard when struck
     * Cold Absorb 15%
     * +15% to Maximum Cold Resist
     * +2 to Cold Skills
@@ -105,8 +105,8 @@
 * **Base Item:** War Belt
 * **Level Requirement:** 47
 * **Properties:**
-    * 20-25% Chance to cast level # Fist of the Heavens when struck
-    * Adds 1-50-# Lightning Damage
+    * 20% Chance to cast level 25 Fist of the Heavens when struck
+    * Adds 1-50 Lightning Damage
     * +10% to Maximum Lightning Resist
     * Lightning Absorb 20%
     * +160-200% Enhanced Defense

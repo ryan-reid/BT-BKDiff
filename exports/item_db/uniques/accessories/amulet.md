@@ -4,7 +4,7 @@
 * **Base Item:** Amulet
 * **Level Requirement:** 10
 * **Properties:**
-    * Adds 50-100-# Fire Damage
+    * Adds 50-100 Fire Damage
     * +10% to Maximum Fire Resist
     * Fire Resist +50%
     * +20% Faster Hit Recovery
@@ -18,7 +18,7 @@
     * +1-2 to Cold Skills
     * 3-7% Life stolen per hit
     * -8-15% to Enemy Cold Resistance
-    * Adds 100-200-# Cold Damage
+    * Adds 100-200 Cold Damage
 
 ### The Mahim-Oak Curio (The Mahim-Oak Curio)
 * **Base Item:** Amulet
@@ -57,8 +57,8 @@
 * **Level Requirement:** 65
 * **Properties:**
     * Absorbs Fire Damage (Based on Character Level)
-    * 50-40% Chance to cast level # Fire Ball when struck
-    * Adds 100-200-# Fire Damage
+    * 50% Chance to cast level 40 Fire Ball when struck
+    * Adds 100-200 Fire Damage
     * +2 to Fire Skills
     * Replenish Life +10
     * +15-20% to Fire Skill Damage
@@ -91,10 +91,10 @@
 * **Base Item:** Amulet
 * **Level Requirement:** 60
 * **Properties:**
-    * Adds 102-# Poison Damage Over # Seconds
+    * Adds 102-102 Poison Damage Over 102 Seconds
     * Poison Resist +75%
     * Attacker Takes Damage of 120
-    * 25-22% Chance to cast level # Amplify Damage on striking
+    * 25% Chance to cast level 22 Amplify Damage on striking
     * 20% Bonus to Attack Rating
 
 ### Highlord's Wrath (Highlord's Wrath)
@@ -102,7 +102,7 @@
 * **Level Requirement:** 65
 * **Properties:**
     * Lightning Resist +35%
-    * Adds 1-30-# Lightning Damage
+    * Adds 1-30 Lightning Damage
     * +20% Increased Attack Speed
     * +1 to All Skills
     * % Deadly Strike (Based on Character Level)
@@ -113,7 +113,7 @@
 * **Level Requirement:** 47
 * **Properties:**
     * All Resistances +35-40
-    * 24-20% Chance to cast level # Lower Resist when struck
+    * 24% Chance to cast level 20 Lower Resist when struck
     * +20-30 to all Attributes
     * +1 to Random Class Skill Levels
 
@@ -143,7 +143,7 @@
 * **Base Item:** Amulet
 * **Level Requirement:** 54
 * **Properties:**
-    * 20-25% Chance to cast level # Miasma Chain on striking
+    * 20% Chance to cast level 25 Miasma Chain on striking
     * +5-10% to Magic Skill Damage
     * +10% Faster Cast Rate
     * Lightning Resist +25-40%
@@ -154,8 +154,8 @@
 * **Base Item:** Amulet
 * **Level Requirement:** 47
 * **Properties:**
-    * 10-5% Chance to cast level # Amplify Damage on striking
-    * 1-63% Chance to cast level # Iron Maiden when struck
+    * 10% Chance to cast level 5 Amplify Damage on striking
+    * 1% Chance to cast level 63 Iron Maiden when struck
     * +10 to Strength
     * +10 to Dexterity
     * All Resistances +15

@@ -51,7 +51,7 @@
     * 6-9% Life stolen per hit
     * +70 to Mana
     * Poison Resist +50%
-    * Adds 102-# Poison Damage Over # Seconds
+    * Adds 102-102 Poison Damage Over 102 Seconds
     * +30% Faster Hit Recovery
     * +10 to Strength
 
@@ -136,7 +136,7 @@
     * Increase Maximum Life 5-8%
     * Cannot Be Frozen
     * 5% Mana stolen per hit
-    * 33-30% Chance to cast level # Dim Vision when struck
+    * 33% Chance to cast level 30 Dim Vision when struck
     * +5 to Cloak of Shadows
     * Fire Resist +20-40%
     * Lightning Resist +20-40%
@@ -210,7 +210,7 @@
     * +60% Enhanced Defense
     * +15 to Strength
     * +15 to Vitality
-    * Durability: 20 of #
+    * Durability: 20 of 20
     * +140 Defense
     * +1 to All Skills
     * +40-80% Enhanced Damage
@@ -264,7 +264,7 @@
     * +10% to Maximum Poison Resist
     * +20% Increased Attack Speed
     * +25-30 to Strength
-    * 15% Chance to cast level # Poison Nova when struck
+    * 15% Chance to cast level 15 Poison Nova when struck
     * +3 to Venom
     * 8-10% Life stolen per hit
     * Fire Resist +-30%

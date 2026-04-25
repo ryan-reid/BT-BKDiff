@@ -52,13 +52,13 @@
     * 200% Bonus to Attack Rating
     * 6% Mana stolen per hit
     * 6% Life stolen per hit
-    * Adds 50-# Damage
+    * Adds 50-50 Damage
 
 ### Sureshrill Frost (Sureshrill Frost)
 * **Base Item:** Flanged Mace
 * **Level Requirement:** 39
 * **Properties:**
-    * Adds 255-400-# Cold Damage
+    * Adds 255-400 Cold Damage
     * Cannot Be Frozen
     * +20% Increased Attack Speed
     * -10-15% to Enemy Cold Resistance
@@ -68,8 +68,8 @@
 * **Base Item:** Jagged Star
 * **Level Requirement:** 42
 * **Properties:**
-    * 40-30% Chance to cast level # Meteor on striking
-    * Adds 300-# Fire Damage
+    * 40% Chance to cast level 30 Meteor on striking
+    * Adds 300-300 Fire Damage
     * Magic Damage Reduced by 9-12
     * +180-200% Enhanced Damage
     * +11 to Meteor
@@ -79,8 +79,8 @@
 * **Base Item:** Knout
 * **Level Requirement:** 45
 * **Properties:**
-    * 20-30% Chance to cast level # Nova on striking
-    * Adds 1-300-# Lightning Damage
+    * 20% Chance to cast level 30 Nova on striking
+    * Adds 1-300 Lightning Damage
     * +100 to Mana
     * Lightning Resist +25%
     * +200% Enhanced Damage
@@ -95,11 +95,11 @@
     * +200% Enhanced Damage
     * +15-20 to all Attributes
     * +50% Increased Attack Speed
-    * Durability: 100 of #
-    * Adds 1-500-# Lightning Damage
-    * Adds 1-500-# Fire Damage
-    * Adds 1-500-# Cold Damage
-    * 10-1% Chance to cast level # Lower Resist on attack
+    * Durability: 100 of 100
+    * Adds 1-500 Lightning Damage
+    * Adds 1-500 Fire Damage
+    * Adds 1-500 Cold Damage
+    * 10% Chance to cast level 1 Lower Resist on attack
 
 ### Horizon's Tornado (Horizon's Tornado)
 * **Base Item:** Scourge
@@ -108,7 +108,7 @@
     * +230-280% Enhanced Damage
     * +50% Increased Attack Speed
     * Slows Target by 20%
-    * 20-30% Chance to cast level # Tornado on striking
+    * 20% Chance to cast level 30 Tornado on striking
     * Requirements --20%
     * 33% Deadly Strike
     * +30 to Tornado
@@ -119,9 +119,9 @@
 * **Properties:**
     * +269-300% Enhanced Damage
     * +30% Increased Attack Speed
-    * 20% Chance to cast level # Static Field on striking
-    * 20-44% Chance to cast level # Lightning on striking
-    * Adds 1-473-# Lightning Damage
+    * 20% Chance to cast level 20 Static Field on striking
+    * 20% Chance to cast level 44 Lightning on striking
+    * Adds 1-473 Lightning Damage
     * Attacker Takes Lightning Damage of 30
     * 33% Chance of Crushing Blow
     * Lightning Absorb 3-9%

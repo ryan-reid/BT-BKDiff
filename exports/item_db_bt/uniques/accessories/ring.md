@@ -85,7 +85,7 @@
 * **Level Requirement:** 76
 * **Properties:**
     * +10-20 Lightning Absorb
-    * 25-32% Chance to cast level # Lightning on striking
+    * 25% Chance to cast level 32 Lightning on striking
     * 10-20% Better Chance of Getting Magic Items
     * +5 to Heart of Wolverine
     * Lightning Resist +10-30%
@@ -97,9 +97,9 @@
     * +100-160 Defense vs. Missile
     * 6-9% Life stolen per hit
     * Poison Resist +55%
-    * 20-30% Chance to cast level # Poison Nova on striking
+    * 20% Chance to cast level 30 Poison Nova on striking
     * +21 to Poison Creeper
-    * 20-25% Chance to cast level # Twister on striking
+    * 20% Chance to cast level 25 Twister on striking
     * 40% Damage Taken Goes To Mana
     * +150-250 to Attack Rating
     * Poison Length Reduced by 100%
