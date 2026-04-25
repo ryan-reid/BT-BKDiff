@@ -24,7 +24,7 @@
     * 20% Chance to cast level 14 Lightning on striking
     * +15% Increased Attack Speed
     * -15% to Enemy Lightning Resistance
-    * +3 to Lightning Bolt (Class only)
+    * +3 to Lightning Bolt (Amazon only)
     * +2-4 to Javelin and Spear Skills
 
 ### Calamity (Calamity)

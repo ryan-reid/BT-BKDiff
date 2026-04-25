@@ -46,7 +46,7 @@
     * +3 to All Skills
     * +20-30 to Energy
     * -10-20% to Enemy Fire Resistance
-    * +7 to Raven (Class only)
+    * +7 to Raven (Druid only)
 
 ### Gungnir's Almighty (Gungnir's Almighty)
 * **Base Item:** Dream Spirit

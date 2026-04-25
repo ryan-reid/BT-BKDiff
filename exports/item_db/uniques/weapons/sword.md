@@ -168,7 +168,7 @@
     * 8% Life stolen per hit
     * +30% Increased Attack Speed
     * +200% Enhanced Damage
-    * +2-4 to Whirlwind (Class only)
+    * +2-4 to Whirlwind (Barbarian only)
     * +1-3 to Combat Masteries Skills
     * Durability: 30 of 30
 
@@ -241,7 +241,7 @@
     * -5-15% to Enemy Poison Resistance
     * +20% Increased Attack Speed
     * Poison Resist +45%
-    * +5 to Rabies (Class only)
+    * +5 to Rabies (Druid only)
 
 ### The Atlantean (The Atlantian)
 * **Base Item:** Ancient Sword
@@ -450,7 +450,7 @@
     * +150-280% Enhanced Damage
     * 3-6% Mana stolen per hit
     * 33% Deadly Strike
-    * +3 to Mirrored Blades (Class only)
+    * +3 to Mirrored Blades (Warlock only)
     * 33% Bonus to Attack Rating
     * Requirements --33%
 

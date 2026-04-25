@@ -79,9 +79,9 @@
     * -15% to Enemy Poison Resistance
     * +60% Increased Attack Speed
     * Adds 500-500 Poison Damage Over 500 Seconds
-    * +6 to Poison Strike (Class only)
-    * +6 to Poison Explosion (Class only)
-    * +6 to Poison Nova (Class only)
+    * +6 to Poison Strike (Necromancer only)
+    * +6 to Poison Explosion (Necromancer only)
+    * +6 to Poison Nova (Necromancer only)
 
 ### Stormspike (Stormspike)
 * **Base Item:** Stiletto
@@ -141,9 +141,9 @@
     * +1-2 to All Skills
     * +30% Faster Cast Rate
     * Increase Maximum Life 10-15%
-    * +2-3 to Blood Oath (Class only)
-    * +2-3 to Blood Boil (Class only)
-    * +1-3 to Bind Demon (Class only)
+    * +2-3 to Blood Oath (Warlock only)
+    * +2-3 to Blood Boil (Warlock only)
+    * +1-3 to Bind Demon (Warlock only)
     * 20-35% Better Chance of Getting Magic Items
     * Slows Target by 25%
 

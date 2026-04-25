@@ -29,6 +29,17 @@ class PropertyResolverService:
 
         self.skill_desc = {row.get('skilldesc', '').strip().lower(): row for row in repo.get_excel_table('skilldesc')}
         self.class_names = {'0': 'Amazon', '1': 'Sorceress', '2': 'Necromancer', '3': 'Paladin', '4': 'Barbarian', '5': 'Druid', '6': 'Assassin', '7': 'Warlock'}
+        self.class_abbr_map = {'ama': 'Amazon', 'sor': 'Sorceress', 'nec': 'Necromancer', 'pal': 'Paladin', 'bar': 'Barbarian', 'dru': 'Druid', 'ass': 'Assassin', 'war': 'Warlock'}
+        
+        self.skill_to_class = {}
+        for row in skills_data:
+            s_name = row.get('skill', '').strip().lower()
+            s_id = row.get('*Id') or row.get('Id') or row.get('*ID') or row.get('ID')
+            charclass = row.get('charclass', '').strip().lower()
+            if charclass:
+                if s_name: self.skill_to_class[s_name] = charclass
+                if s_id: self.skill_to_class[str(s_id).strip()] = charclass
+
         self.skill_tab_names = {
             '0': 'Bow and Crossbow', '1': 'Passive and Magic', '2': 'Javelin and Spear',
             '3': 'Fire', '4': 'Lightning', '5': 'Cold', '6': 'Curses', '7': 'Poison and Bone',
@@ -113,7 +124,14 @@ class PropertyResolverService:
                 if func == '36': cls = 'Random Class' if min_val != max_val else self.class_names.get(min_val, f"Class {min_val}")
                 else: 
                     set1 = prop.get('set1', '').strip()
-                    cls = self.class_names.get(set1 if set1 and set1 != '0' else param, "Class")
+                    cls_id = set1 if set1 and set1 != '0' else param
+                    cls = self.class_names.get(str(cls_id))
+                    if not cls:
+                        # Try lookup by skill class
+                        skill_cls_abbr = self.skill_to_class.get(str(param).strip().lower())
+                        if skill_cls_abbr:
+                            cls = self.class_abbr_map.get(skill_cls_abbr)
+                    if not cls: cls = "Class"
                 res_text = res_text.replace('[Class]', cls)
             if '[Skill]' in res_text or '%s' in res_text:
                 skill_name = self.resolve_skill_name(param)

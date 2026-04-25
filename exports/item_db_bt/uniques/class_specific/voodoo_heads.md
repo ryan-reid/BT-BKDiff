@@ -25,10 +25,10 @@
     * +2-3 to Curses Skills
     * +2-3 to Poison and Bone Skills
     * +2-3 to Summoning Skills
-    * +5 to Teeth (Class only)
-    * +5 to Bone Armor (Class only)
-    * +5 to Bone Spear (Class only)
-    * +5 to Bone Spirit (Class only)
+    * +5 to Teeth (Necromancer only)
+    * +5 to Bone Armor (Necromancer only)
+    * +5 to Bone Spear (Necromancer only)
+    * +5 to Bone Spirit (Necromancer only)
     * Piercing Attack
 
 ### Boneflame (Boneflame)

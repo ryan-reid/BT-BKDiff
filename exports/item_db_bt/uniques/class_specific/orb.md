@@ -42,7 +42,7 @@
 * **Level Requirement:** 85
 * **Properties:**
     * +3 to Sorceress Skill Levels
-    * +7 to Thunder Storm (Class only)
+    * +7 to Thunder Storm (Sorceress only)
     * +30% Faster Cast Rate
     * -10-20% to Enemy Lightning Resistance
     * +20% to Lightning Skill Damage
