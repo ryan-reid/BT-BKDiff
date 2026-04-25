@@ -74,7 +74,7 @@
 * **Properties:**
     * Slows Target by 75%
     * Fire Resist +50%
-    * + to Life (Based on Character Level)
+    * (1.2 per clvl) to Life (Based on Character Level)
     * Adds 30-50 Damage
     * +10 to Strength
     * +200% Enhanced Damage
@@ -111,7 +111,7 @@
     * Replenish Life +20
     * +20% Faster Hit Recovery
     * Adds 30-50 Damage
-    * +% Damage to Demons (Based on Character Level)
+    * (1.5% per clvl) Damage to Demons (Based on Character Level)
     * +200% Enhanced Damage
     * +20% Increased Attack Speed
 
@@ -134,7 +134,7 @@
     * +40% Increased Attack Speed
     * -66% Target Defense
     * 35-40% Deadly Strike
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 12 seconds
     * 44% Chance of Crushing Blow
     * 7-12% Life stolen per hit
     * 15% Chance to cast level 33 Amplify Damage on striking

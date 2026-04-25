@@ -72,7 +72,7 @@
     * 40% Chance to cast level 30 Poison Nova when struck
     * +20% Increased Attack Speed
     * +150-220% Enhanced Damage
-    * + to Attack Rating (Based on Character Level)
+    * (5.0 per clvl) to Attack Rating (Based on Character Level)
     * Piercing Attack
 
 ### Buriza-Do Kyanon (Buriza-Do Kyanon)
@@ -82,7 +82,7 @@
     * Piercing Attack
     * +35 to Dexterity
     * +75-150 Defense
-    * + to Maximum Damage (Based on Character Level)
+    * (2.5 per clvl) to Maximum Damage (Based on Character Level)
     * +100% Increased Attack Speed
     * +180-280% Enhanced Damage
     * Freezes Target +3

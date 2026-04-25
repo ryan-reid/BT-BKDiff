@@ -58,7 +58,7 @@
     * Adds 222-333 Fire Damage
     * 7-13% Life stolen per hit
     * +23 to Enchant
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * +123% Damage to Demons
     * Fire Resist +15-20%
 

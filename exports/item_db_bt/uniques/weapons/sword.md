@@ -203,8 +203,8 @@
 * **Level Requirement:** 35
 * **Properties:**
     * 150% Extra Gold from Monsters
-    * % Extra Gold from Monsters (Based on Character Level)
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (2.5% per clvl) Extra Gold from Monsters (Based on Character Level)
+    * (1.0% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
     * +15 to Mana
     * +60-120% Enhanced Damage
     * +5-15 to Dexterity
@@ -215,7 +215,7 @@
 * **Properties:**
     * Magic Damage Reduced by 7-12
     * +40% Increased Attack Speed
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * Durability: 40 of 40
     * Damage +100
     * +200% Enhanced Damage
@@ -227,8 +227,8 @@
 * **Properties:**
     * Prevent Monster Heal
     * +15 to Strength
-    * % Deadly Strike (Based on Character Level)
-    * + to Maximum Damage (Based on Character Level)
+    * (1.5% per clvl) Deadly Strike (Based on Character Level)
+    * (1.0 per clvl) to Maximum Damage (Based on Character Level)
     * +200% Enhanced Damage
     * +30% Increased Attack Speed
 
@@ -285,7 +285,7 @@
 * **Level Requirement:** 44
 * **Properties:**
     * 20% Chance to cast level 22 Amplify Damage on striking
-    * +% Damage to Undead (Based on Character Level)
+    * (7.5% per clvl) Damage to Undead (Based on Character Level)
     * Poison Resist +50%
     * Adds 426-426 Poison Damage Over 426 Seconds
     * +200% Enhanced Damage
@@ -357,7 +357,7 @@
     * Increase Maximum Life 20%
     * +200-280% Enhanced Damage
     * 40% Bonus to Attack Rating
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * Adds 100-200 Damage
     * 33% Chance to cast level 35 Glacial Spike on striking
     * 5-7% Life stolen per hit
@@ -371,8 +371,8 @@
     * +20 to all Attributes
     * 50% Bonus to Attack Rating
     * +80 to Life
-    * + to Maximum Damage (Based on Character Level)
-    * Repairs 1 durability in  seconds
+    * (2.5 per clvl) to Maximum Damage (Based on Character Level)
+    * Repairs 1 durability in 5 seconds
     * +450% Enhanced Damage
 
 ### Bloodmoon (Bloodmoon)
@@ -485,7 +485,7 @@
 * **Properties:**
     * Indestructible
     * +250% Enhanced Damage
-    * + to Maximum Damage (Based on Character Level)
+    * (2.5 per clvl) to Maximum Damage (Based on Character Level)
     * 150% Bonus to Attack Rating
     * +20 to Strength
     * +20 to Dexterity

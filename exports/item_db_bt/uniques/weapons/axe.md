@@ -130,7 +130,7 @@
     * 35% Deadly Strike
     * 25% Chance of Open Wounds
     * +200% Enhanced Damage
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * +30% Increased Attack Speed
     * Adds 30-50 Damage
     * +8 to Mana after each Kill
@@ -179,9 +179,9 @@
 * **Properties:**
     * +50% Increased Attack Speed
     * Replenish Life +20
-    * + to Vitality (Based on Character Level)
+    * (0.5 per clvl) to Vitality (Based on Character Level)
     * All Resistances +25
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 25 seconds
     * +200% Enhanced Damage
     * +150 Defense vs. Melee
     * +30-40% Faster Hit Recovery
@@ -220,7 +220,7 @@
 * **Level Requirement:** 42
 * **Properties:**
     * Requirements --50%
-    * +% Damage to Undead (Based on Character Level)
+    * (2.5% per clvl) Damage to Undead (Based on Character Level)
     * +20 to Strength
     * +60% Increased Attack Speed
     * 35% Bonus to Attack Rating
@@ -244,9 +244,9 @@
 * **Base Item:** Decapitator
 * **Level Requirement:** 66
 * **Properties:**
-    * + to Strength (Based on Character Level)
-    * + to Vitality (Based on Character Level)
-    * +% Enhanced Maximum Damage (Based on Character Level)
+    * (0.5 per clvl) to Strength (Based on Character Level)
+    * (0.5 per clvl) to Vitality (Based on Character Level)
+    * (3.0% per clvl) Enhanced Maximum Damage (Based on Character Level)
     * +100 to Life
     * +200% Enhanced Damage
     * 50% Chance to cast level 40 Fire Ball on attack
@@ -257,12 +257,12 @@
 * **Base Item:** Champion Axe
 * **Level Requirement:** 70
 * **Properties:**
-    * +% Enhanced Maximum Damage (Based on Character Level)
+    * (2.5% per clvl) Enhanced Maximum Damage (Based on Character Level)
     * +200-300% Enhanced Damage
     * +15-30 to all Attributes
     * Level 8-10 Might Aura When Equipped
-    * % Deadly Strike (Based on Character Level)
-    * Absorbs Fire Damage (Based on Character Level)
+    * (0.5% per clvl) Deadly Strike (Based on Character Level)
+    * (1.0 per clvl) Absorbs Fire Damage (Based on Character Level)
     * Adds 200-500 Fire Damage
     * Durability: 25 of 25
     * 100% Bonus to Attack Rating
@@ -338,6 +338,6 @@
     * -25% Target Defense
     * 30-65% Better Chance of Getting Magic Items
     * +20 to Raven
-    * + to Maximum Damage (Based on Character Level)
+    * (2.5 per clvl) to Maximum Damage (Based on Character Level)
     * +50 to Minimum Damage
     * +1 to Lightning Mastery

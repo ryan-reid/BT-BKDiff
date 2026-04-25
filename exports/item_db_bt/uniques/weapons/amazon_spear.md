@@ -13,7 +13,7 @@
     * +20 to Vitality
     * 5-9% Life stolen per hit
     * Adds 25-50 Damage
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (1.0% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
 
 ### Stoneraven (Stoneraven)
 * **Base Item:** Matriarchal Spear

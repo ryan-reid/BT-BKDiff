@@ -91,7 +91,7 @@
     * Requirements --25%
     * 25% Chance to cast level 35 Poison Nova on striking
     * 8% Life stolen per hit
-    * + to Maximum Damage (Based on Character Level)
+    * (1.2 per clvl) to Maximum Damage (Based on Character Level)
     * +150-180% Enhanced Damage
     * +20% Increased Attack Speed
 
@@ -102,8 +102,8 @@
     * +3 to Werewolf
     * +15 to Dexterity
     * +30% Increased Attack Speed
-    * + to Life (Based on Character Level)
-    * + to Maximum Damage (Based on Character Level)
+    * (1.0 per clvl) to Life (Based on Character Level)
+    * (1.0 per clvl) to Maximum Damage (Based on Character Level)
     * +200% Enhanced Damage
     * +20% Increased Attack Speed
     * +3 to Lycanthropy
@@ -156,7 +156,7 @@
     * +20 to Strength
     * 30% Chance to cast level 10 Lower Resist on striking
     * +30% Increased Attack Speed
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * Adds 1-237 Lightning Damage
     * 30% Chance to cast level 10 Lower Resist when struck
     * 8-10% Life stolen per hit

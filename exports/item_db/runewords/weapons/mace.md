@@ -1,8 +1,8 @@
-# Runewords for Mace
+# Mace Runewords
 
 ### Revenge
-* **Runes:** Thul Rune + Ort Rune + Ral Rune
-* **Base Items:** mace
+* **Runes:** Thul Rune (10) + Ort Rune (9) + Ral Rune (8)
+* **Base Items:** Mace
 * **Properties:**
     * +20% Increased Attack Speed
     * 33% Chance to cast level 8 Nova on striking

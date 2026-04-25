@@ -73,7 +73,7 @@
 * **Base Item:** War Fist
 * **Level Requirement:** 90
 * **Properties:**
-    * 5% Deadly Strike (Based on Character Level)
+    * (0.6% per clvl) Deadly Strike (Based on Character Level)
     * +40-50 to Hurricane
     * +290-355% Enhanced Damage
     * Indestructible

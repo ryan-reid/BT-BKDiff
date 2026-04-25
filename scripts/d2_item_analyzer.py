@@ -41,7 +41,23 @@ class ExportOrchestrator:
                 if export_format == "markdown": self.exporter.export_item_db(items, f"Unique {cat}", path)
                 else: self.json_exporter.export(items, path)
 
-        # Similar logic would follow for sets and runewords... (omitted for brevity in this turn but should be complete)
+        # 2. Runewords
+        rw_data = {g: {} for g in groups + ['other']}
+        for row in self.repo.get_excel_table('runes'):
+            if row.get('complete') != '1': continue
+            rw = self.analyzer.analyze_runeword(row)
+            base_cat = rw['base_items'][0] if rw['base_items'] else "Other"
+            group = self.get_group_for_category(base_cat)
+            if base_cat not in rw_data[group]: rw_data[group][base_cat] = []
+            rw_data[group][base_cat].append(rw)
+
+        for group in groups:
+            for cat, rws in rw_data[group].items():
+                filename = cat.lower().replace(" ", "_").replace("/", "_")
+                path = os.path.join(output_dir, "runewords", group, f"{filename}.{'md' if export_format == 'markdown' else 'json'}")
+                if export_format == "markdown": self.exporter.export_runewords(rws, f"{cat} Runewords", path)
+                else: self.json_exporter.export(rws, path)
+
         print(f"Export to {output_dir} complete.")
 
 def main() -> None:

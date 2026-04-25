@@ -56,7 +56,7 @@
 * **Base Item:** Amulet
 * **Level Requirement:** 65
 * **Properties:**
-    * Absorbs Fire Damage (Based on Character Level)
+    * (0.8 per clvl) Absorbs Fire Damage (Based on Character Level)
     * 50% Chance to cast level 40 Fire Ball when struck
     * Adds 100-200 Fire Damage
     * +2 to Fire Skills
@@ -105,7 +105,7 @@
     * Adds 1-30 Lightning Damage
     * +20% Increased Attack Speed
     * +1 to All Skills
-    * % Deadly Strike (Based on Character Level)
+    * (0.4% per clvl) Deadly Strike (Based on Character Level)
     * Attacker Takes Lightning Damage of 15
 
 ### Saracen's Chance (Saracen's Chance)

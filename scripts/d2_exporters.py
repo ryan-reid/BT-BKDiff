@@ -47,7 +47,7 @@ class MarkdownExporter(BaseExporter):
     def export_item_db(self, items: List[AnalyzedItemDTO], title: str, output_path: str):
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         content = f"# {title}\n\n"
-        item_blocks = []
+        blocks = []
         for item in items:
             block = f"### {item['display_name']} ({item['id']})\n"
             block += f"* **Base Item:** {item['base_item']}\n"
@@ -55,9 +55,26 @@ class MarkdownExporter(BaseExporter):
             block += "* **Properties:**\n"
             for prop in item['properties']:
                 block += f"    * {prop['resolved_text']}\n"
-            item_blocks.append(block)
+            blocks.append(block)
         
-        content += "\n".join(item_blocks)
+        content += "\n".join(blocks)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(content.strip() + "\n")
+
+    def export_runewords(self, rws: List[RunewordDTO], title: str, output_path: str):
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        content = f"# {title}\n\n"
+        blocks = []
+        for rw in rws:
+            block = f"### {rw['name']}\n"
+            block += f"* **Runes:** {' + '.join(rw['runes'])}\n"
+            block += f"* **Base Items:** {', '.join(rw['base_items'])}\n"
+            block += "* **Properties:**\n"
+            for prop in rw['properties']:
+                block += f"    * {prop['resolved_text']}\n"
+            blocks.append(block)
+        
+        content += "\n".join(blocks)
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(content.strip() + "\n")
 
@@ -66,16 +83,20 @@ class MarkdownExporter(BaseExporter):
         lines = []
         lines.append(f"# Differences for {diff['filename']}\n")
         lines.append(f"*Key column used: `{diff['key_used']}`*\n")
+        
         if diff['added_cols']: lines.append(f"## Added Columns: `{', '.join(diff['added_cols'])}`  \n")
         if diff['removed_cols']: lines.append(f"## Removed Columns: `{', '.join(diff['removed_cols'])}`  \n")
+        
         if diff['added_rows']:
             lines.append(f"## Added Rows ({len(diff['added_rows'])})")
             for r in diff['added_rows']: lines.append(f"- {r}")
             lines.append("")
+            
         if diff['removed_rows']:
             lines.append(f"## Removed Rows ({len(diff['removed_rows'])})")
             for r in diff['removed_rows']: lines.append(f"- {r}")
             lines.append("")
+            
         if diff['modified_rows']:
             lines.append(f"## Modified Rows ({len(diff['modified_rows'])})")
             for key, row_diff in sorted(diff['modified_rows'].items()):

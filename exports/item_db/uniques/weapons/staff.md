@@ -132,7 +132,7 @@
     * Increase Maximum Mana 20%
     * +10-20 to Mana after each Kill
     * +1-4 to All Skills
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (1.0% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
     * +40-50% Faster Cast Rate
 
 ### Mang Song's Lesson (Mang Song's Lesson)

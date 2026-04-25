@@ -43,7 +43,7 @@
 * **Base Item:** Ring
 * **Level Requirement:** 58
 * **Properties:**
-    * + to Life (Based on Character Level)
+    * (0.5 per clvl) to Life (Based on Character Level)
     * +1 to All Skills
     * 3-5% Life stolen per hit
     * Increase Maximum Life 1-5%

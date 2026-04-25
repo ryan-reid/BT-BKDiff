@@ -5,7 +5,7 @@
 * **Level Requirement:** 3
 * **Properties:**
     * +15 to all Attributes
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (1.0% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
     * +80% Enhanced Damage
     * +15 to Mana
     * +15 to Life
@@ -169,7 +169,7 @@
 * **Base Item:** Death Mask
 * **Level Requirement:** 41
 * **Properties:**
-    * + Kick Damage (Based on Character Level)
+    * (1.2 per clvl) Kick Damage (Based on Character Level)
     * Slows Target by 20%
     * Prevent Monster Heal
     * Lightning Absorb 20-30%
@@ -193,8 +193,8 @@
 * **Level Requirement:** 62
 * **Properties:**
     * +2 to All Skills
-    * + to Life (Based on Character Level)
-    * + to Mana (Based on Character Level)
+    * (1.5 per clvl) to Life (Based on Character Level)
+    * (1.5 per clvl) to Mana (Based on Character Level)
     * 40-50% Better Chance of Getting Magic Items
     * Damage Reduced by 5-10%
     * +2 to Strength
@@ -248,7 +248,7 @@
     * All Resistances +20-30
     * +1-3 to All Skills
     * +100-150 Defense
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * Damage Reduced by 10-15%
     * +50% Enhanced Defense
     * Magic Damage Reduced by 12-15

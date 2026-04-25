@@ -1,8 +1,8 @@
-# Runewords for Staff
+# Staff Runewords
 
 ### Heart of the Oak
-* **Runes:** Ko Rune + Vex Rune + Pul Rune + Thul Rune
-* **Base Items:** staf
+* **Runes:** Ko Rune (18) + •••Vex Rune (26)••• + •Pul Rune (21)• + Thul Rune (10)
+* **Base Items:** Staff
 * **Properties:**
     * +40% Faster Cast Rate
     * Increase Maximum Mana 15%
@@ -12,31 +12,31 @@
     * Level 60 Raven (14/# Charges)
 
 ### Leaf
-* **Runes:** Tir Rune + Ral Rune
-* **Base Items:** staf
+* **Runes:** Tir Rune (3) + Ral Rune (8)
+* **Base Items:** Staff
 * **Properties:**
     * +3 to Fire Skills
-    * +16 Defense (Based on Character Level)
+    * (2.0 per clvl) Defense (Based on Character Level)
     * Cold Resist +33%
-    * +3 to Inferno (Class 41 only)
-    * +3 to Fire Bolt (Class 36 only)
-    * +3 to Warmth (Class 37 only)
+    * +3 to Inferno (Sorceress only)
+    * +3 to Fire Bolt (Sorceress only)
+    * +3 to Warmth (Sorceress only)
 
 ### Memory
-* **Runes:** Lum Rune + Io Rune + Sol Rune + Eth Rune
-* **Base Items:** staf
+* **Runes:** Lum Rune (17) + Io Rune (16) + Sol Rune (12) + Eth Rune (5)
+* **Base Items:** Staff
 * **Properties:**
     * Increase Maximum Mana 20%
     * Magic Damage Reduced by 7
     * +50% Enhanced Defense
     * +33% Faster Cast Rate
     * +3 to Sorceress Skill Levels
-    * +3 to Energy Shield (Class 58 only)
-    * +2 to Static Field (Class 42 only)
+    * +3 to Energy Shield (Sorceress only)
+    * +2 to Static Field (Sorceress only)
 
 ### Obsession
-* **Runes:** Zod Rune + Ist Rune + Lem Rune + Lum Rune + Io Rune + Nef Rune
-* **Base Items:** staf
+* **Runes:** •••Zod Rune  (33)••• + •••Ist Rune (24)••• + •Lem Rune (20)• + Lum Rune (17) + Io Rune (16) + Nef Rune (4)
+* **Base Items:** Staff
 * **Properties:**
     * +4 to All Skills
     * 24% Chance to cast level 10 Weaken when struck

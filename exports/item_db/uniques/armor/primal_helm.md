@@ -64,7 +64,7 @@
     * +20% Faster Cast Rate
     * +15-20 to all Attributes
     * +20% Faster Hit Recovery
-    * % Better Chance of Getting Magic Items (Based on Character Level)
+    * (0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level)
     * +150-200% Enhanced Defense
     * -5-10% to Enemy Physical Resistance
 

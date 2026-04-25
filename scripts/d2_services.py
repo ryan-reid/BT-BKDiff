@@ -72,12 +72,47 @@ class PropertyResolverService:
         if not stat: return None
         str_pos, str_neg, str_2 = stat.get('descstrpos', '').strip(), stat.get('descstrneg', '').strip(), stat.get('descstr2', '').strip()
         if not str_pos: return None
-        try: val = int(min_val) if min_val else 0
-        except ValueError: val = 0
+        
+        try: 
+            v_min = int(min_val) if min_val else 0
+            v_max = int(max_val) if max_val else 0
+        except ValueError: 
+            v_min, v_max = 0, 0
+
+        # Handle descfunc 19 (By Character Level)
+        desc_func = stat.get('descfunc', '0').strip()
+        is_level_stat = stat.get('op base') == 'level'
+        
+        if desc_func == '19' and is_level_stat:
+            op_param_raw = stat.get('op param', '0').strip()
+            op_param = int(op_param_raw) if op_param_raw else 0
+            factor = 2 ** op_param
+            
+            p_min = v_min / factor
+            p_max = v_max / factor
+            
+            p_range = f"{p_min:.1f}" if p_min == p_max else f"{p_min:.1f}-{p_max:.1f}"
+            
+            fmt_string = self.repo.get_string(str_pos if v_min >= 0 else str_neg)
+            if not fmt_string: return None
+            
+            # Remove value placeholders and any leading +/- or % from the remaining string
+            clean_fmt = fmt_string.replace('%+d', '').replace('%d', '').replace('%%', '').strip()
+            if clean_fmt.startswith('+') or clean_fmt.startswith('-'): clean_fmt = clean_fmt[1:].strip()
+            if clean_fmt.startswith('%'): clean_fmt = clean_fmt[1:].strip()
+            
+            # Construct (X% per clvl) prefix
+            pct = "%" if '%%' in fmt_string else ""
+            prefix = f"({p_range}{pct} per clvl) "
+            
+            res = prefix + clean_fmt
+            if str_2: res += " " + self.repo.get_string(str_2)
+            return res
+
         range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
-        fmt_string = self.repo.get_string(str_pos if val >= 0 else str_neg)
+        fmt_string = self.repo.get_string(str_pos if v_min >= 0 else str_neg)
         if not fmt_string: return None
-        sign = "+" if val >= 0 else ""
+        sign = "+" if v_min >= 0 else ""
         if "%+d" in fmt_string: fmt_string = fmt_string.replace("%+d", f"{sign}{range_str}")
         elif "%d" in fmt_string: fmt_string = fmt_string.replace("%d", f"{range_str}")
         fmt_string = fmt_string.replace("%%", "%")
@@ -87,7 +122,6 @@ class PropertyResolverService:
     def resolve_property(self, code: str, param: str, min_val: str, max_val: str) -> PropertyDTO:
         code_orig = code
         code_lower = code.strip().lower()
-        range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
         
         if not code_lower or code_lower == 'xxx':
             return {"code": code, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": ""}
@@ -97,7 +131,8 @@ class PropertyResolverService:
         # 1. Manual Overrides
         if code_lower in self.manual_overrides:
             text = self.manual_overrides[code_lower]
-            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{text} ({range_str})"}
+            range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{text} ({range_str})" if range_str else text}
 
         # 2. Property Groups
         if code_lower in self.property_groups:
@@ -112,21 +147,34 @@ class PropertyResolverService:
             text = " / ".join(options) if pick_mode == '1' else f" (Random: {' OR '.join(options)})"
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": text}
 
-        # 3. Missing Property Groups
-        if "-affix" in code_lower:
-            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
-
         prop = self.properties.get(code_lower)
         if not prop:
+            range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
+            if "-affix" in code_lower:
+                return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
         
+        func1 = prop.get('func1', '0').strip()
+        
+        # Use param if min_val is empty and it's a per-level stat (func 17)
+        actual_min, actual_max = min_val, max_val
+        if func1 == '17' and not actual_min and param:
+            actual_min, actual_max = param, param
+
+        range_str = f"{actual_min}" if actual_min == actual_max else f"{actual_min}-{actual_max}"
+
+        # Check if it's a level scaling stat to prefer format_desc over tooltip
+        stat1_code = prop.get('stat1', '').lower()
+        stat1 = self.stats.get(stat1_code)
+        is_level_stat = stat1 and stat1.get('op base') == 'level'
+
         tooltip = prop.get('*Tooltip', '').strip()
-        if tooltip and tooltip != '0':
-            func, val1 = prop.get('func1', '0').strip(), prop.get('val1', '0').strip()
+        if tooltip and tooltip != '0' and not is_level_stat:
+            # Handle standard tooltips
             res_text = tooltip
             # Correct D2 placeholder logic: Handle multiple '#' symbols
-            if func in ['36', '14']:
-                res_text = res_text.replace('#', val1)
+            if func1 in ['36', '14']:
+                res_text = res_text.replace('#', prop.get('val1', '0').strip())
             else:
                 if res_text.count('#') > 1 and '-' in range_str:
                     parts = range_str.split('-')
@@ -137,16 +185,14 @@ class PropertyResolverService:
 
             if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(str(param), f"Tab {param}"))
             if '[Class]' in res_text:
-                if func == '36': cls = 'Random Class' if min_val != max_val else self.class_names.get(min_val, f"Class {min_val}")
+                if func1 == '36': cls = 'Random Class' if actual_min != actual_max else self.class_names.get(actual_min, f"Class {actual_min}")
                 else: 
                     set1 = prop.get('set1', '').strip()
                     cls_id = set1 if set1 and set1 != '0' else param
                     cls = self.class_names.get(str(cls_id))
                     if not cls:
-                        # Try lookup by skill class
                         skill_cls_abbr = self.skill_to_class.get(str(param).strip().lower())
-                        if skill_cls_abbr:
-                            cls = self.class_abbr_map.get(skill_cls_abbr)
+                        if skill_cls_abbr: cls = self.class_abbr_map.get(skill_cls_abbr)
                     if not cls: cls = "Class"
                 res_text = res_text.replace('[Class]', cls)
             if '[Skill]' in res_text or '%s' in res_text:
@@ -163,7 +209,7 @@ class PropertyResolverService:
         for i in range(1, 8):
             stat_code = prop.get(f'stat{i}', '').strip()
             if stat_code:
-                desc = self.format_desc(stat_code, min_val, max_val)
+                desc = self.format_desc(stat_code, actual_min, actual_max)
                 if desc: return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": desc}
         
         # New Fallback Logic: Try resolving via the code name itself

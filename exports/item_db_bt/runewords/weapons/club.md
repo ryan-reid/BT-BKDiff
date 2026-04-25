@@ -1,8 +1,8 @@
-# Runewords for Club
+# Club Runewords
 
 ### Black
-* **Runes:** Thul Rune + Io Rune + Nef Rune
-* **Base Items:** club
+* **Runes:** Thul Rune (10) + Io Rune (16) + Nef Rune (4)
+* **Base Items:** Club
 * **Properties:**
     * 40% Chance of Crushing Blow
     * +120% Enhanced Damage

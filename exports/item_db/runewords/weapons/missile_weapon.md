@@ -1,8 +1,8 @@
-# Runewords for Missile Weapon
+# Missile Weapon Runewords
 
 ### Brand
-* **Runes:** Jah Rune + Lo Rune + Mal Rune + Gul Rune
-* **Base Items:** miss
+* **Runes:** •••Jah Rune (31)••• + •••Lo Rune (28)••• + •Mal Rune (23)• + •••Gul Rune (25)•••
+* **Base Items:** Missile Weapon
 * **Properties:**
     * +260-340% Enhanced Damage
     * +280-330% Damage to Demons
@@ -13,8 +13,8 @@
     * Fires Explosive Arrows or Bolts
 
 ### Edge
-* **Runes:** Tir Rune + Tal Rune + Amn Rune
-* **Base Items:** miss
+* **Runes:** Tir Rune (3) + Tal Rune (7) + Amn Rune (11)
+* **Base Items:** Missile Weapon
 * **Properties:**
     * +280-320% Enhanced Damage
     * Piercing Attack
@@ -25,8 +25,8 @@
     * Reduces all Vendor Prices 15%
 
 ### Faith
-* **Runes:** Ohm Rune + Jah Rune + Lem Rune + Eld Rune
-* **Base Items:** miss
+* **Runes:** •••Ohm Rune (27)••• + •••Jah Rune (31)••• + •Lem Rune (20)• + Eld Rune (2)
+* **Base Items:** Missile Weapon
 * **Properties:**
     * +280% Enhanced Damage
     * 300% Bonus to Attack Rating
@@ -37,8 +37,8 @@
     * +2 to All Skills
 
 ### Harmony
-* **Runes:** Tir Rune + Ith Rune + Sol Rune + Ko Rune
-* **Base Items:** miss
+* **Runes:** Tir Rune (3) + Ith Rune (6) + Sol Rune (12) + Ko Rune (18)
+* **Base Items:** Missile Weapon
 * **Properties:**
     * +275-325% Enhanced Damage
     * Adds 55-160 Fire/Lightning/Cold Damage
@@ -49,8 +49,8 @@
     * +2 to Light Radius
 
 ### Ice
-* **Runes:** Amn Rune + Shael Rune + Jah Rune + Lo Rune
-* **Base Items:** miss
+* **Runes:** Amn Rune (11) + Shael Rune (13) + •••Jah Rune (31)••• + •••Lo Rune (28)•••
+* **Base Items:** Missile Weapon
 * **Properties:**
     * +140-210% Enhanced Damage
     * Level 18 Holy Freeze Aura When Equipped
@@ -58,22 +58,22 @@
     * 25% Chance to cast level 35 Frost Nova on striking
     * 100% Chance to cast level 40 Blizzard when you Level-Up
     * -25-30% to Enemy Cold Resistance
-    * % Extra Gold from Monsters (Based on Character Level)
+    * (3.1% per clvl) Extra Gold from Monsters (Based on Character Level)
 
 ### Melody
-* **Runes:** Shael Rune + Ko Rune + Nef Rune
-* **Base Items:** miss
+* **Runes:** Shael Rune (13) + Ko Rune (18) + Nef Rune (4)
+* **Base Items:** Missile Weapon
 * **Properties:**
     * +50% Enhanced Damage
     * +3 to Bow and Crossbow Skills
-    * +3 to Critical Strike (Class 9 only)
-    * +3 to Dodge (Class 13 only)
-    * +3 to Slow Missiles (Class 17 only)
+    * +3 to Critical Strike (Amazon only)
+    * +3 to Dodge (Amazon only)
+    * +3 to Slow Missiles (Amazon only)
     * +300% Damage to Undead
 
 ### Mist
-* **Runes:** Cham Rune + Shael Rune + Gul Rune + Thul Rune + Ith Rune
-* **Base Items:** miss
+* **Runes:** •••Cham Rune (32)••• + Shael Rune (13) + •••Gul Rune (25)••• + Thul Rune (10) + Ith Rune (6)
+* **Base Items:** Missile Weapon
 * **Properties:**
     * +3 to All Skills
     * +325-375% Enhanced Damage
@@ -83,8 +83,8 @@
     * All Resistances +40
 
 ### Wrath
-* **Runes:** Pul Rune + Lum Rune + Ber Rune + Mal Rune
-* **Base Items:** miss
+* **Runes:** •Pul Rune (21)• + Lum Rune (17) + •••Ber Rune (30)••• + •Mal Rune (23)•
+* **Base Items:** Missile Weapon
 * **Properties:**
     * +300-375% Enhanced Damage
     * +30% Increased Attack Speed
@@ -95,8 +95,8 @@
     * Cannot Be Frozen
 
 ### Zephyr
-* **Runes:** Ort Rune + Eth Rune
-* **Base Items:** miss
+* **Runes:** Ort Rune (9) + Eth Rune (5)
+* **Base Items:** Missile Weapon
 * **Properties:**
     * +25% Faster Run/Walk
     * +25% Increased Attack Speed

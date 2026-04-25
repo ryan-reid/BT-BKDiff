@@ -75,7 +75,7 @@
 * **Properties:**
     * 20% Chance to cast level 22 Amplify Damage on striking
     * Attacker Takes Damage of 26
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * Adds 12-30 Damage
     * +200-250% Enhanced Damage
     * +8 to Amplify Damage
@@ -86,11 +86,11 @@
 * **Properties:**
     * 20% Chance to cast level 50 Static Field on striking
     * +100 to Life
-    * + to Attack Rating (Based on Character Level)
+    * (8.0 per clvl) to Attack Rating (Based on Character Level)
     * Lightning Resist +75%
     * +60% Increased Attack Speed
-    * + to Maximum Damage (Based on Character Level)
-    * Repairs 1 durability in  seconds
+    * (2.0 per clvl) to Maximum Damage (Based on Character Level)
+    * Repairs 1 durability in 5 seconds
     * +350% Enhanced Damage
     * -10-15% to Enemy Physical Resistance
 
@@ -99,7 +99,7 @@
 * **Level Requirement:** 87
 * **Properties:**
     * +60% Increased Attack Speed
-    * Repairs 1 durability in  seconds
+    * Repairs 1 durability in 5 seconds
     * +25-30 to Strength
     * All Resistances +25-35
     * 75% Chance of Crushing Blow

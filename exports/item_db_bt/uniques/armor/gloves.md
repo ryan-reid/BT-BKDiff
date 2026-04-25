@@ -15,7 +15,7 @@
 * **Base Item:** Heavy Gloves
 * **Level Requirement:** 9
 * **Properties:**
-    * +1-4 to Maximum Damage (Based on Character Level)
+    * (0.1-0.5 per clvl) to Maximum Damage (Based on Character Level)
     * +40 to Life
     * +30% Faster Hit Recovery
     * +10 Defense
@@ -77,7 +77,7 @@
     * +100-200% Damage to Undead
     * Level 6 Blessed Aim Aura When Equipped
     * +140-180% Enhanced Defense
-    * 20% Extra Gold from Monsters (Based on Character Level)
+    * (2.5% per clvl) Extra Gold from Monsters (Based on Character Level)
     * Prevent Monster Heal
     * +1 to Poison and Bone Skills
     * +1 to Zeal

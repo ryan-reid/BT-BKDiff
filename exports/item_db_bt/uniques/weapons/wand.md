@@ -65,9 +65,9 @@
 * **Base Item:** Petrified Wand
 * **Level Requirement:** 35
 * **Properties:**
-    * + to Life (Based on Character Level)
+    * (1.2 per clvl) to Life (Based on Character Level)
     * +30-40% Faster Cast Rate
-    * + to Mana (Based on Character Level)
+    * (1.2 per clvl) to Mana (Based on Character Level)
     * +30% Faster Hit Recovery
     * Replenish Life +30
     * +1-3 to Necromancer Skill Levels
@@ -79,7 +79,7 @@
 * **Properties:**
     * +1-4 to Summoning Skills
     * 15% Chance to cast level 40 Bone Spirit when struck
-    * + to Mana (Based on Character Level)
+    * (1.2 per clvl) to Mana (Based on Character Level)
     * 15% Chance to cast level 30 Bone Armor when struck
     * +30% Faster Cast Rate
     * +1-2 to Poison and Bone Skills
