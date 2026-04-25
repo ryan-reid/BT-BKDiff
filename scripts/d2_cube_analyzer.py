@@ -12,7 +12,8 @@ def main() -> None:
     parser.add_argument("--format", choices=["markdown", "json"], default="markdown", help="Output format")
     
     args = parser.parse_args()
-    repo = D2Repository(args.mpq)
+    retail_path = "E:\\Games\\Diablo II Resurrected\\Data"
+    repo = D2Repository(args.mpq, retail_path=retail_path)
     analyzer = CubeAnalyzerService(repo)
     exporter = MarkdownExporter()
     

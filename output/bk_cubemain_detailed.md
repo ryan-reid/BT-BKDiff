@@ -868,13 +868,13 @@
 
 **Inputs:** **• Flawed Ruby (Qty: 3)**
 
-**Outputs:** **• Ruby**
+**Outputs:** **Ruby**
 
 ---
 
 ## 3 Standard Rubies -> Flawless Ruby
 
-**Inputs:** **• Ruby (Qty: 3)**
+**Inputs:** **Ruby (Qty: 3)**
 
 **Outputs:** **• Flawless Ruby**
 
@@ -900,13 +900,13 @@
 
 **Inputs:** **• Flawed Sapphire (Qty: 3)**
 
-**Outputs:** **• Sapphire**
+**Outputs:** **Sapphire**
 
 ---
 
 ## 3 Standard Sapphires -> Flawless Sapphire
 
-**Inputs:** **• Sapphire (Qty: 3)**
+**Inputs:** **Sapphire (Qty: 3)**
 
 **Outputs:** **• Flawless Sapphire**
 
@@ -964,13 +964,13 @@
 
 **Inputs:** **• Flawed Emerald (Qty: 3)**
 
-**Outputs:** **• Emerald**
+**Outputs:** **Emerald**
 
 ---
 
 ## 3 Standard Emeralds -> Flawless Emerald
 
-**Inputs:** **• Emerald (Qty: 3)**
+**Inputs:** **Emerald (Qty: 3)**
 
 **Outputs:** **• Flawless Emerald**
 
@@ -996,13 +996,13 @@
 
 **Inputs:** **• Flawed Diamond (Qty: 3)**
 
-**Outputs:** **• Diamond**
+**Outputs:** **Diamond**
 
 ---
 
 ## 3 Standard Diamonds -> Flawless Diamond
 
-**Inputs:** **• Diamond (Qty: 3)**
+**Inputs:** **Diamond (Qty: 3)**
 
 **Outputs:** **• Flawless Diamond**
 
@@ -1092,13 +1092,13 @@
 
 **Inputs:** **• Flawed Ruby (Qty: 9)**
 
-**Outputs:** **• Ruby**
+**Outputs:** **Ruby**
 
 ---
 
 ## 9 Standard Rubies -> 3 Flawless Ruby
 
-**Inputs:** **• Ruby (Qty: 9)**
+**Inputs:** **Ruby (Qty: 9)**
 
 **Outputs:** **• Flawless Ruby**
 
@@ -1124,13 +1124,13 @@
 
 **Inputs:** **• Flawed Sapphire (Qty: 9)**
 
-**Outputs:** **• Sapphire**
+**Outputs:** **Sapphire**
 
 ---
 
 ## 9 Standard Sapphires -> 3 Flawless Sapphire
 
-**Inputs:** **• Sapphire (Qty: 9)**
+**Inputs:** **Sapphire (Qty: 9)**
 
 **Outputs:** **• Flawless Sapphire**
 
@@ -1188,13 +1188,13 @@
 
 **Inputs:** **• Flawed Emerald (Qty: 9)**
 
-**Outputs:** **• Emerald**
+**Outputs:** **Emerald**
 
 ---
 
 ## 9 Standard Emeralds -> 3 Flawless Emerald
 
-**Inputs:** **• Emerald (Qty: 9)**
+**Inputs:** **Emerald (Qty: 9)**
 
 **Outputs:** **• Flawless Emerald**
 
@@ -1220,13 +1220,13 @@
 
 **Inputs:** **• Flawed Diamond (Qty: 9)**
 
-**Outputs:** **• Diamond**
+**Outputs:** **Diamond**
 
 ---
 
 ## 9 Standard Diamonds -> 3 Flawless Diamond
 
-**Inputs:** **• Diamond (Qty: 9)**
+**Inputs:** **Diamond (Qty: 9)**
 
 **Outputs:** **• Flawless Diamond**
 
@@ -1282,7 +1282,7 @@
 
 ## 3 Perfect Gems + Thawing Potion + 1 Standard Diamond -> 3 Perfect Diamonds
 
-**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Diamond**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **Diamond**
 
 **Outputs:** **• Perfect Diamond**
 
@@ -1290,7 +1290,7 @@
 
 ## 3 Perfect Gems + Thawing Potion + 1 Standard Emerald -> 3 Perfect Emeralds
 
-**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Emerald**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **Emerald**
 
 **Outputs:** **• Perfect Emerald**
 
@@ -1298,7 +1298,7 @@
 
 ## 3 Perfect Gems + Thawing Potion + 1 Standard Ruby -> 3 Perfect Rubies
 
-**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Ruby**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **Ruby**
 
 **Outputs:** **• Perfect Ruby**
 
@@ -1306,7 +1306,7 @@
 
 ## 3 Perfect Gems + Thawing Potion + 1 Standard Sapphire -> 3 Perfect Sapphires
 
-**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Sapphire**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **Sapphire**
 
 **Outputs:** **• Perfect Sapphire**
 
