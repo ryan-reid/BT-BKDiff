@@ -27,7 +27,7 @@
     * +30% Faster Hit Recovery
     * +3-4 to Shadow Disciplines Skills
     * +3-4 to Tab 20 Skills
-    * +3 to Dragon Flight (Class only)
+    * +3 to Dragon Flight (Assassin only)
 
 ### Shadow Killer (Shadowkiller)
 * **Base Item:** Battle Cestus
@@ -52,9 +52,9 @@
     * +3 to Tab 20 Skills
     * Adds 236-480 Fire Damage
     * -8-10% to Enemy Fire Resistance
-    * +4 to Wake of Fire (Class only)
-    * +4 to Wake of Inferno (Class only)
-    * +3 to Death Sentry (Class only)
+    * +4 to Wake of Fire (Assassin only)
+    * +4 to Wake of Inferno (Assassin only)
+    * +3 to Death Sentry (Assassin only)
 
 ### Saboteurs Blade (Saboteurs Blade)
 * **Base Item:** Scissors Suwayyah
@@ -67,7 +67,7 @@
     * +30% Increased Attack Speed
     * +250-300% Enhanced Damage
     * Level 5 Vigor Aura When Equipped
-    * +3 to Weapon Block (Class only)
+    * +3 to Weapon Block (Assassin only)
 
 ### Wind God Fist (Wind God Fist)
 * **Base Item:** War Fist

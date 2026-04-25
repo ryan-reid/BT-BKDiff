@@ -21,7 +21,7 @@
     * Cold Resist +20%
     * +12 Defense
     * +20-30% Enhanced Defense
-    * +2 to Leap Attack (Class only)
+    * +2 to Leap Attack (Barbarian only)
     * +5-10% to Maximum Cold Resist
 
 ### Treads of Cthon (Treads of Cthon)
@@ -160,7 +160,7 @@
     * Cannot Be Frozen
     * +10-20 to Strength
     * +17 to Dexterity
-    * +1-2 to Skeleton Mastery (Class only)
+    * +1-2 to Skeleton Mastery (Necromancer only)
     * Magic Damage Reduced by 20
 
 ### Wraithstep (Wraithstep)
