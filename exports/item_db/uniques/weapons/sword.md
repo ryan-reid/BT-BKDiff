@@ -132,7 +132,7 @@
     * +30% Increased Attack Speed
     * Poison Resist +50%
     * +180% Enhanced Damage
-    * Unknown Prop: *hp
+    * Unknown property: *hp (-10)
     * +20 to Strength
 
 ### Ripsaw (Ripsaw)

@@ -9,7 +9,7 @@
     * +100% Damage to Undead
     * +150% Damage to Demons
     * +10 to Strength
-    * Unknown Prop: *enr
+    * Unknown property: *enr (-5)
 
 ### Bonesnap (Bonesob)
 * **Base Item:** Maul

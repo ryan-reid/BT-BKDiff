@@ -50,8 +50,8 @@ class PropertyResolverService:
         }
         
         self.manual_overrides = {
-            'bloody': '',
-            'gelid-affix5': ''
+            'bloody': 'Unknown property: bloody',
+            'gelid-affix5': 'Unknown property: Gelid-Affix5'
         }
 
     def resolve_skill_name(self, skill_name_or_id: str) -> str:
@@ -97,8 +97,7 @@ class PropertyResolverService:
         # 1. Manual Overrides
         if code_lower in self.manual_overrides:
             text = self.manual_overrides[code_lower]
-            if code_lower == 'bloody': text = f"{text}: {range_str}"
-            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": text}
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{text} ({range_str})"}
 
         # 2. Property Groups
         if code_lower in self.property_groups:
@@ -115,11 +114,11 @@ class PropertyResolverService:
 
         # 3. Missing Property Groups
         if "-affix" in code_lower:
-            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"[Missing Property Group: {code_orig}]"}
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
 
         prop = self.properties.get(code_lower)
         if not prop:
-            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown Prop: {code_orig}"}
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
         
         tooltip = prop.get('*Tooltip', '').strip()
         if tooltip and tooltip != '0':
@@ -167,13 +166,7 @@ class PropertyResolverService:
                 desc = self.format_desc(stat_code, min_val, max_val)
                 if desc: return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": desc}
         
-        # New Fallback Logic: Try manual overrides first
-        if code_lower in self.manual_overrides:
-            text = self.manual_overrides[code_lower]
-            if code_lower == 'bloody': text = f"{text}: {range_str}"
-            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": text}
-
-        # Try resolving via the code name itself
+        # New Fallback Logic: Try resolving via the code name itself
         localized_code = self.repo.get_string(code_orig)
         if not localized_code or localized_code == code_orig:
             localized_code = self.repo.get_string(code_orig.capitalize())
@@ -181,11 +174,7 @@ class PropertyResolverService:
         if localized_code and localized_code != code_orig and localized_code != code_orig.capitalize():
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{localized_code}: {range_str}"}
 
-        # Handle missing property groups
-        if "-Affix" in code_orig:
-            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"[Missing Property Group: {code_orig}]"}
-
-        return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown Prop: {code_orig}"}
+        return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
 
 class ItemAnalyzerService:
     def __init__(self, repo: D2Repository, resolver: PropertyResolverService):
@@ -214,9 +203,7 @@ class ItemAnalyzerService:
         for i in range(1, 13):
             code = row.get(f'prop{i}', '').strip()
             if code and code != 'xxx':
-                res = self.resolver.resolve_property(code, row.get(f'par{i}', ''), row.get(f'min{i}', ''), row.get(f'max{i}', ''))
-                if res['resolved_text']:
-                    props.append(res)
+                props.append(self.resolver.resolve_property(code, row.get(f'par{i}', ''), row.get(f'min{i}', ''), row.get(f'max{i}', '')))
         return {
             "id": idx, "display_name": self.repo.get_string(idx), "base_item": self.get_item_name(row.get('code', '').strip()),
             "item_type": self.get_item_category(row.get('code', '').strip()), "lvl_req": row.get('lvl req', '0'), "properties": props, "raw_row": row
@@ -232,9 +219,7 @@ class ItemAnalyzerService:
         for i in range(1, 8):
             code = row.get(f'T1Code{i}', '').strip()
             if code and code != 'xxx':
-                res = self.resolver.resolve_property(code, row.get(f'T1Param{i}', ''), row.get(f'T1Min{i}', ''), row.get(f'T1Max{i}', ''))
-                if res['resolved_text']:
-                    props.append(res)
+                props.append(self.resolver.resolve_property(code, row.get(f'T1Param{i}', ''), row.get(f'T1Min{i}', ''), row.get(f'T1Max{i}', '')))
         return {
             "name": name, "runes": runes, "base_items": [self.repo.get_string(self.item_types.get(row.get('itype1', '').strip(), {}).get('ItemType', '')) or row.get('itype1', '')],
             "properties": props, "raw_row": row

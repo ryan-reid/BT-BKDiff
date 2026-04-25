@@ -157,7 +157,7 @@
     * +30% Increased Attack Speed
     * Repairs 1 durability in  seconds
     * Adds 1-237 Lightning Damage
-    * Unknown Prop: 91
+    * Unknown property: 91 (30-10)
     * 8-10% Life stolen per hit
     * 150% Bonus to Attack Rating
 
