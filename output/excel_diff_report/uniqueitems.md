@@ -71,16 +71,16 @@
 ### amazon's teaching
 - `*ID`: $\color{gray}{\text{421}}$ (Old) &rarr; $\color{blue}{\text{459}}$ (New)
 - `rarity`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{99}}$ (New)
-- `prop7`:  (Old) &rarr; $\color{blue}{	ext{pierce-dmg}}$ (New)
-- `min7`:  (Old) &rarr; $\color{blue}{	ext{4}}$ (New)
-- `max7`:  (Old) &rarr; $\color{blue}{	ext{5}}$ (New)
+- `prop7`:  (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
+- `min7`:  (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `max7`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 
 ### amulet of the viper
 - `min1`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `max1`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `prop2`:  (Old) &rarr; $\color{blue}{	ext{res-pois}}$ (New)
-- `min2`:  (Old) &rarr; $\color{blue}{	ext{25}}$ (New)
-- `max2`:  (Old) &rarr; $\color{blue}{	ext{25}}$ (New)
+- `prop2`:  (Old) &rarr; $\color{blue}{\text{res-pois}}$ (New)
+- `min2`:  (Old) &rarr; $\color{blue}{\text{25}}$ (New)
+- `max2`:  (Old) &rarr; $\color{blue}{\text{25}}$ (New)
 - `min3`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `max3`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 
@@ -94,7 +94,7 @@
 
 ### arcbane
 - `*ID`: $\color{gray}{\text{448}}$ (Old) &rarr; $\color{blue}{\text{486}}$ (New)
-- `firstLadderSeason`: $\color{gray}{	ext{Magic Conviction}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `par1`: $\color{gray}{\text{376}}$ (Old) &rarr; $\color{blue}{\text{Magic Conviction}}$ (New)
 - `min1`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
@@ -114,46 +114,46 @@
 
 ### bul katho's mind
 - `*ID`: $\color{gray}{\text{410}}$ (Old) &rarr; $\color{blue}{\text{448}}$ (New)
-- `prop8`:  (Old) &rarr; $\color{blue}{	ext{pierce-dmg}}$ (New)
-- `min8`:  (Old) &rarr; $\color{blue}{	ext{5}}$ (New)
-- `max8`:  (Old) &rarr; $\color{blue}{	ext{10}}$ (New)
+- `prop8`:  (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
+- `min8`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `max8`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 
 ### calamity
 - `*ID`: $\color{gray}{\text{440}}$ (Old) &rarr; $\color{blue}{\text{478}}$ (New)
 
 ### cerebus
-- `prop6`:  (Old) &rarr; $\color{blue}{	ext{pierce-dmg}}$ (New)
-- `min6`:  (Old) &rarr; $\color{blue}{	ext{5}}$ (New)
-- `max6`:  (Old) &rarr; $\color{blue}{	ext{10}}$ (New)
+- `prop6`:  (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
+- `min6`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `max6`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 
 ### charm level reward
 - `*ID`: $\color{gray}{\text{405}}$ (Old) &rarr; $\color{blue}{\text{439}}$ (New)
-- `carry1`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `carry1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `cost mult`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `cost add`: $\color{gray}{\text{5000}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### charm modifiers
 - `*ID`: $\color{gray}{\text{401}}$ (Old) &rarr; $\color{blue}{\text{438}}$ (New)
-- `carry1`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `carry1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `cost mult`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `cost add`: $\color{gray}{\text{5000}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `par3`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
-- `prop4`: $\color{gray}{	ext{aura}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `par4`: $\color{gray}{	ext{377}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `min4`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `max4`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `prop5`: $\color{gray}{	ext{addxp}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `min5`: $\color{gray}{	ext{-50}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `max5`: $\color{gray}{	ext{-50}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `prop4`: $\color{gray}{\text{aura}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `par4`: $\color{gray}{\text{377}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `min4`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `max4`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `prop5`: $\color{gray}{\text{addxp}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `min5`: $\color{gray}{\text{-50}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `max5`: $\color{gray}{\text{-50}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### corrupted arkaine's valor
 - `*ID`: $\color{gray}{\text{427}}$ (Old) &rarr; $\color{blue}{\text{465}}$ (New)
 
 ### corrupted azurewrath
 - `*ID`: $\color{gray}{\text{430}}$ (Old) &rarr; $\color{blue}{\text{468}}$ (New)
-- `prop7`: $\color{gray}{	ext{mag\%}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `min7`: $\color{gray}{	ext{10}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `max7`: $\color{gray}{	ext{15}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `prop7`: $\color{gray}{\text{mag\%}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `min7`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `max7`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### corrupted bartuc's cut-throat
 - `*ID`: $\color{gray}{\text{429}}$ (Old) &rarr; $\color{blue}{\text{467}}$ (New)
@@ -175,16 +175,16 @@
 - `min8`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `max8`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{30}}$ (New)
 - `min9`: $\color{gray}{\text{7}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `prop10`:  (Old) &rarr; $\color{blue}{	ext{mana-kill}}$ (New)
-- `min10`:  (Old) &rarr; $\color{blue}{	ext{5}}$ (New)
-- `max10`:  (Old) &rarr; $\color{blue}{	ext{9}}$ (New)
+- `prop10`:  (Old) &rarr; $\color{blue}{\text{mana-kill}}$ (New)
+- `min10`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `max10`:  (Old) &rarr; $\color{blue}{\text{9}}$ (New)
 
 ### deathcleaver
 - `prop7`: $\text{dmg}\color{gray}{\text{-norm}}$ (Old) &rarr; $\text{dmg}$ (New)
 - `min7`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
-- `prop8`:  (Old) &rarr; $\color{blue}{	ext{pierce-dmg}}$ (New)
-- `min8`:  (Old) &rarr; $\color{blue}{	ext{10}}$ (New)
-- `max8`:  (Old) &rarr; $\color{blue}{	ext{20}}$ (New)
+- `prop8`:  (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
+- `min8`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `max8`:  (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 
 ### destiny
 - `*ID`: $\color{gray}{\text{445}}$ (Old) &rarr; $\color{blue}{\text{483}}$ (New)
@@ -211,10 +211,10 @@
 - `prop7`: $\color{gray}{\text{red-dmg}}$ (Old) &rarr; $\color{blue}{\text{hp\%}}$ (New)
 - `min7`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `max7`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `prop9`:  (Old) &rarr; $\color{blue}{	ext{hit-skill}}$ (New)
-- `par9`:  (Old) &rarr; $\color{blue}{	ext{Lightning Strike}}$ (New)
-- `min9`:  (Old) &rarr; $\color{blue}{	ext{20}}$ (New)
-- `max9`:  (Old) &rarr; $\color{blue}{	ext{40}}$ (New)
+- `prop9`:  (Old) &rarr; $\color{blue}{\text{hit-skill}}$ (New)
+- `par9`:  (Old) &rarr; $\color{blue}{\text{Lightning Strike}}$ (New)
+- `min9`:  (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `max9`:  (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 
 ### gargoyle's bite
 - `rarity`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{99}}$ (New)
@@ -227,10 +227,10 @@
 - `max4`: $\color{gray}{\text{511}}$ (Old) &rarr; $\color{blue}{\text{501}}$ (New)
 
 ### griffon's eye
-- `prop6`:  (Old) &rarr; $\color{blue}{	ext{oskill}}$ (New)
-- `par6`:  (Old) &rarr; $\color{blue}{	ext{Thunder Storm}}$ (New)
-- `min6`:  (Old) &rarr; $\color{blue}{	ext{7}}$ (New)
-- `max6`:  (Old) &rarr; $\color{blue}{	ext{7}}$ (New)
+- `prop6`:  (Old) &rarr; $\color{blue}{\text{oskill}}$ (New)
+- `par6`:  (Old) &rarr; $\color{blue}{\text{Thunder Storm}}$ (New)
+- `min6`:  (Old) &rarr; $\color{blue}{\text{7}}$ (New)
+- `max6`:  (Old) &rarr; $\color{blue}{\text{7}}$ (New)
 
 ### guardian angel
 - `max9`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
@@ -241,7 +241,7 @@
 ### hell forge hammer
 - `min4`: $\color{gray}{\text{66}}$ (Old) &rarr; $\color{blue}{\text{35}}$ (New)
 - `max4`: $\color{gray}{\text{66}}$ (Old) &rarr; $\color{blue}{\text{35}}$ (New)
-- `prop5`: $\color{gray}{	ext{dmg-norm}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `prop5`: $\color{gray}{\text{dmg-norm}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `min5`: $\color{gray}{\text{66}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `max5`: $\color{gray}{\text{66}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
@@ -267,7 +267,7 @@
 - `prop4`: $\color{gray}{\text{cast3}}$ (Old) &rarr; $\color{blue}{\text{res-all}}$ (New)
 - `min4`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `max4`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `prop6`: $\color{gray}{	ext{dmg-norm}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `prop6`: $\color{gray}{\text{dmg-norm}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `min6`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `max6`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
@@ -293,9 +293,9 @@
 
 ### manawyrm
 - `*ID`: $\color{gray}{\text{449}}$ (Old) &rarr; $\color{blue}{\text{487}}$ (New)
-- `firstLadderSeason`: $\color{gray}{	ext{Magic Conviction}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `par1`: $\color{gray}{\text{376}}$ (Old) &rarr; $\color{blue}{\text{Magic Conviction}}$ (New)
-- `par6`: $\color{gray}{	ext{2}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `par6`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `max6`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
 
 ### mang song's lesson
@@ -303,9 +303,9 @@
 - `max1`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
 - `min2`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `max2`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `prop3`:  (Old) &rarr; $\color{blue}{	ext{hp\%}}$ (New)
-- `min3`:  (Old) &rarr; $\color{blue}{	ext{40}}$ (New)
-- `max3`:  (Old) &rarr; $\color{blue}{	ext{50}}$ (New)
+- `prop3`:  (Old) &rarr; $\color{blue}{\text{hp\%}}$ (New)
+- `min3`:  (Old) &rarr; $\color{blue}{\text{40}}$ (New)
+- `max3`:  (Old) &rarr; $\color{blue}{\text{50}}$ (New)
 - `max5`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{80}}$ (New)
 - `min6`: $\color{gray}{\text{85}}$ (Old) &rarr; $\color{blue}{\text{115}}$ (New)
 - `max6`: $\color{gray}{\text{85}}$ (Old) &rarr; $\color{blue}{\text{115}}$ (New)
@@ -322,7 +322,7 @@
 
 ### mindnumb
 - `*ID`: $\color{gray}{\text{451}}$ (Old) &rarr; $\color{blue}{\text{489}}$ (New)
-- `firstLadderSeason`: $\color{gray}{	ext{Magic Conviction}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `par1`: $\color{gray}{\text{376}}$ (Old) &rarr; $\color{blue}{\text{Magic Conviction}}$ (New)
 - `prop5`: $\text{cold}\color{gray}{\text{-res}}$ (Old) &rarr; $\color{blue}{\text{res-}}\text{cold}$ (New)
 
@@ -347,7 +347,7 @@
 
 ### resistbreaker
 - `*ID`: $\color{gray}{\text{447}}$ (Old) &rarr; $\color{blue}{\text{485}}$ (New)
-- `firstLadderSeason`: $\color{gray}{	ext{Magic Conviction}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `par1`: $\color{gray}{\text{376}}$ (Old) &rarr; $\color{blue}{\text{Magic Conviction}}$ (New)
 
 ### robe of the horadrim
@@ -378,12 +378,12 @@
 - `max3`: $\color{gray}{\text{140}}$ (Old) &rarr; $\color{blue}{\text{200}}$ (New)
 - `min5`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `max5`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `prop9`:  (Old) &rarr; $\color{blue}{	ext{red-mag}}$ (New)
-- `min9`:  (Old) &rarr; $\color{blue}{	ext{10}}$ (New)
-- `max9`:  (Old) &rarr; $\color{blue}{	ext{15}}$ (New)
-- `prop10`:  (Old) &rarr; $\color{blue}{	ext{allskills}}$ (New)
-- `min10`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `max10`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `prop9`:  (Old) &rarr; $\color{blue}{\text{red-mag}}$ (New)
+- `min9`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `max9`:  (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `prop10`:  (Old) &rarr; $\color{blue}{\text{allskills}}$ (New)
+- `min10`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `max10`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### sigurds staunching helm
 - `*ID`: $\color{gray}{\text{419}}$ (Old) &rarr; $\color{blue}{\text{457}}$ (New)
@@ -417,23 +417,23 @@
 ### staff of kings
 - `min1`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `max1`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `prop3`: $\color{gray}{	ext{cast3}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `prop3`: $\color{gray}{\text{cast3}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `min3`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `max3`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `prop4`: $\color{gray}{	ext{dmg-norm}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `prop4`: $\color{gray}{\text{dmg-norm}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `min4`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `max4`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### static accumulator
 - `*ID`: $\color{gray}{\text{433}}$ (Old) &rarr; $\color{blue}{\text{471}}$ (New)
 - `prop1`: $\color{gray}{\text{sock}}$ (Old) &rarr; $\color{blue}{\text{gethit-skill}}$ (New)
-- `par1`:  (Old) &rarr; $\color{blue}{	ext{Static Field}}$ (New)
+- `par1`:  (Old) &rarr; $\color{blue}{\text{Static Field}}$ (New)
 - `min1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `max1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 - `prop2`: $\color{gray}{\text{enr\%}}$ (Old) &rarr; $\color{blue}{\text{move1}}$ (New)
 - `min2`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `prop3`: $\color{gray}{\text{gethit-skill}}$ (Old) &rarr; $\color{blue}{\text{sock}}$ (New)
-- `par3`: $\color{gray}{	ext{Static Field}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `par3`: $\color{gray}{\text{Static Field}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `min3`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `max3`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `prop4`: $\color{gray}{\text{move1}}$ (Old) &rarr; $\color{blue}{\text{enr\%}}$ (New)
@@ -446,20 +446,20 @@
 - `max2`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `min5`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
 - `max5`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
-- `prop10`:  (Old) &rarr; $\color{blue}{	ext{allskills}}$ (New)
-- `min10`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `max10`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
-- `prop11`:  (Old) &rarr; $\color{blue}{	ext{ease}}$ (New)
-- `min11`:  (Old) &rarr; $\color{blue}{	ext{-50}}$ (New)
-- `max11`:  (Old) &rarr; $\color{blue}{	ext{-50}}$ (New)
+- `prop10`:  (Old) &rarr; $\color{blue}{\text{allskills}}$ (New)
+- `min10`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `max10`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `prop11`:  (Old) &rarr; $\color{blue}{\text{ease}}$ (New)
+- `min11`:  (Old) &rarr; $\color{blue}{\text{-50}}$ (New)
+- `max11`:  (Old) &rarr; $\color{blue}{\text{-50}}$ (New)
 
 ### steelpillar
 - `max9`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
 
 ### stone crusher
-- `prop8`:  (Old) &rarr; $\color{blue}{	ext{pierce-dmg}}$ (New)
-- `min8`:  (Old) &rarr; $\color{blue}{	ext{5}}$ (New)
-- `max8`:  (Old) &rarr; $\color{blue}{	ext{10}}$ (New)
+- `prop8`:  (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
+- `min8`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `max8`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 
 ### stormshield
 - `rarity`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{99}}$ (New)
@@ -472,7 +472,7 @@
 - `prop4`: $\text{att}\color{gray}{\text{\%}}$ (Old) &rarr; $\text{att}$ (New)
 - `min4`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `max4`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
-- `prop7`: $\color{gray}{	ext{dmg-norm}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `prop7`: $\color{gray}{\text{dmg-norm}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `min7`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `max7`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
@@ -488,14 +488,14 @@
 - `max8`: $\color{gray}{\text{25}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
 - `min9`: $\color{gray}{\text{25}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `max9`: $\color{gray}{\text{25}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
-- `prop10`:  (Old) &rarr; $\color{blue}{	ext{pierce-dmg}}$ (New)
-- `min10`:  (Old) &rarr; $\color{blue}{	ext{15}}$ (New)
-- `max10`:  (Old) &rarr; $\color{blue}{	ext{30}}$ (New)
+- `prop10`:  (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
+- `min10`:  (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `max10`:  (Old) &rarr; $\color{blue}{\text{30}}$ (New)
 
 ### the gnasher
-- `prop7`: $\color{gray}{	ext{dmg-norm}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `min7`: $\color{gray}{	ext{20}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `max7`: $\color{gray}{	ext{20}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `prop7`: $\color{gray}{\text{dmg-norm}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `min7`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `max7`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### the grandfather
 - `max1`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{30}}$ (New)
@@ -516,11 +516,11 @@
 
 ### tyrael's might
 - `prop9`: $\color{gray}{\text{swing2}}$ (Old) &rarr; $\color{blue}{\text{oskill}}$ (New)
-- `par9`:  (Old) &rarr; $\color{blue}{	ext{Teleport}}$ (New)
+- `par9`:  (Old) &rarr; $\color{blue}{\text{Teleport}}$ (New)
 - `min9`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `max9`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `prop10`: $\color{gray}{\text{oskill}}$ (Old) &rarr; $\color{blue}{\text{allskills}}$ (New)
-- `par10`: $\color{gray}{	ext{Teleport}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `par10`: $\color{gray}{\text{Teleport}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `min10`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 - `max10`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 - `prop11`: $\color{gray}{\text{allskills}}$ (Old) &rarr; $\color{blue}{\text{swing2}}$ (New)
@@ -529,7 +529,7 @@
 
 ### undeniable
 - `*ID`: $\color{gray}{\text{450}}$ (Old) &rarr; $\color{blue}{\text{488}}$ (New)
-- `firstLadderSeason`: $\color{gray}{	ext{Magic Conviction}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `par1`: $\color{gray}{\text{376}}$ (Old) &rarr; $\color{blue}{\text{Magic Conviction}}$ (New)
 
 ### unsullied's glory
@@ -546,15 +546,15 @@
 
 ### windhammer
 - `par6`: $\color{gray}{\text{tornado}}$ (Old) &rarr; $\color{blue}{\text{Tornado}}$ (New)
-- `prop7`:  (Old) &rarr; $\color{blue}{	ext{pierce-dmg}}$ (New)
-- `min7`:  (Old) &rarr; $\color{blue}{	ext{5}}$ (New)
-- `max7`:  (Old) &rarr; $\color{blue}{	ext{15}}$ (New)
+- `prop7`:  (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
+- `min7`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `max7`:  (Old) &rarr; $\color{blue}{\text{15}}$ (New)
 
 ### woestave
-- `prop9`: $\color{gray}{	ext{aura}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `par9`: $\color{gray}{	ext{Meditation}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `min9`: $\color{gray}{	ext{12}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `max9`: $\color{gray}{	ext{17}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `prop9`: $\color{gray}{\text{aura}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `par9`: $\color{gray}{\text{Meditation}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `min9`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `max9`: $\color{gray}{\text{17}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### wraithflight
 - `max1`: $\color{gray}{\text{250}}$ (Old) &rarr; $\color{blue}{\text{240}}$ (New)

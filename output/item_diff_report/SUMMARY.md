@@ -1,7 +1,10 @@
 # Item Database Comparison Summary
 
-| Type | [Added](ADDED.md) | [Removed](REMOVED.md) | [Modified](MODIFIED.md) |
+| Category | [Added](ADDED.md) | [Removed](REMOVED.md) | [Modified](MODIFIED.md) |
 | :--- | :---: | :---: | :---: |
-| All Items | 81 | 3 | 73 |
+| Uniques | 55 | 2 | 40 |
+| Sets | 26 | 1 | 33 |
+| Runewords | 0 | 0 | 0 |
+| **Total** | **81** | **3** | **73** |
 
 Click the links in the header to see detailed breakdowns.

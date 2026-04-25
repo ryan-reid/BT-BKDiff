@@ -24,8 +24,12 @@ class MarkdownExporter(BaseExporter):
 
     @staticmethod
     def get_styled_diffs(old_s: str, new_s: str) -> Tuple[str, str]:
-        if not old_s: return "", f'$\color{{blue}}{{\text{{{MarkdownExporter.escape_latex(new_s)}}}}}$'
-        if not new_s or new_s == "(removed)": return f'$\color{{gray}}{{\text{{{MarkdownExporter.escape_latex(old_s)}}}}}$', f'$\color{{blue}}{{\text{{(removed)}}}}$'
+        def fmt(color, text):
+            return r"$\color{" + color + r"}{\text{" + MarkdownExporter.escape_latex(text) + r"}}$"
+
+        if not old_s: return "", fmt("blue", new_s)
+        if not new_s or new_s == "(removed)": 
+            return fmt("gray", old_s), fmt("blue", "(removed)")
         
         def normalize_text(t):
             return re.sub(r'\s+', ' ', re.sub(r'ÿc.', '', t)).strip()
@@ -45,8 +49,9 @@ class MarkdownExporter(BaseExporter):
                 part = "".join(tokens[i1:i2] if is_old else tokens[j1:j2])
                 if (is_old and tag in ['replace', 'delete']) or (not is_old and tag in ['replace', 'insert']):
                     color = 'gray' if is_old else 'blue'
-                    res += f'\\color{{{color}}}{{\\text{{{MarkdownExporter.escape_latex(part)}}}}}'
-                elif tag == 'equal': res += f'\\text{{{MarkdownExporter.escape_latex(part)}}}'
+                    res += r"\color{" + color + r"}{\text{" + MarkdownExporter.escape_latex(part) + r"}}"
+                elif tag == 'equal': 
+                    res += r"\text{" + MarkdownExporter.escape_latex(part) + r"}"
             return res + "$"
         return render(old_toks, True), render(new_toks, False)
 
@@ -130,8 +135,8 @@ class MarkdownExporter(BaseExporter):
         # 4. MODIFIED.md
         with open(os.path.join(output_dir, "MODIFIED.md"), 'w', encoding='utf-8') as f:
             f.write("# Modified Items\n\n")
-            f.write("- $\color{{gray}}{\text{Gray text}}$: Removed/Old Value\n")
-            f.write("- $\color{{blue}}{\text{Blue text}}$: Added/New Value\n\n")
+            f.write("- $\color{gray}{\text{Gray text}}$: Removed/Old Value\n")
+            f.write("- $\color{blue}{\text{Blue text}}$: Added/New Value\n\n")
             for k, mod in sorted(diff['modified'].items()):
                 f.write(f"**{mod['name']}** ({k})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
@@ -141,8 +146,6 @@ class MarkdownExporter(BaseExporter):
                 f.write(f"| **Level Requirement:** {l_old} | **Level Requirement:** {l_new} |\n")
                 f.write("| **Properties:** | **Properties:** |\n")
                 
-                # Align properties for display
-                # We'll use a simple name-based alignment
                 old_props = mod['bt_props']
                 new_props = mod['bk_props']
                 

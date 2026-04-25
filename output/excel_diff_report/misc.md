@@ -110,26 +110,26 @@
 
 ## Modified Rows (132)
 ### 0sc
-- `CharsiMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `CharsiMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### 1dr
 - `cost`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{250}}$ (New)
 - `useable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{Dyerdesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{Dyerdesc}}$ (New)
 
 ### amu
-- `Nameable`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### aqv
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `auto prefix`: $\color{gray}{	ext{306}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `auto prefix`: $\color{gray}{\text{306}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### bct
 - `version`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `cost`: $\color{gray}{\text{7950}}$ (Old) &rarr; $\color{blue}{\text{19999}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{bctd}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{bctd}}$ (New)
 
 ### bet
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -139,24 +139,24 @@
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### bey
-- `type2`: $\color{gray}{	ext{orgn}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `dropsound`: $\text{item}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}\color{blue}{\text{baalseyehd}}$ (New)
 - `usesound`: $\text{item}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}\color{blue}{\text{baalseyehd}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{	ext{2}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `spelldescstr`: $\color{gray}{	ext{StackDescTwo}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `CharsiMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `CharsiMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### bgn
 - `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{BigDinnDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{BigDinnDesc}}$ (New)
 
 ### box
-- `Nameable`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### brk
 - `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
@@ -165,19 +165,19 @@
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{BrickDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{BrickDesc}}$ (New)
 
 ### brz
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### cct
 - `version`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `cost`: $\color{gray}{\text{7950}}$ (Old) &rarr; $\color{blue}{\text{19999}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{cctd}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{cctd}}$ (New)
 
 ### ceh
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -187,30 +187,30 @@
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### cm1
-- `Nameable`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### cm2
-- `Nameable`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### cm3
-- `uniqueinvfile`: $\color{gray}{	ext{invsst}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `uniqueinvfile`: $\color{gray}{\text{invsst}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `Transform`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
 - `InvTrans`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `Nameable`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### cqv
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `auto prefix`: $\color{gray}{	ext{306}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `auto prefix`: $\color{gray}{\text{306}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### db1
 - `cost`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{4999}}$ (New)
 - `useable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{Dyedesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{Dyedesc}}$ (New)
 
 ### dhn
 - `flippyfile`: $\color{gray}{\text{flpear}}$ (Old) &rarr; $\color{blue}{\text{flpfang}}$ (New)
 - `invfile`: $\color{gray}{\text{invear}}$ (Old) &rarr; $\color{blue}{\text{invfang}}$ (New)
-- `type2`: $\color{gray}{	ext{orgn}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `dropsound`: $\text{item}\color{gray}{\text{monsterguts}}$ (Old) &rarr; $\text{item}\color{blue}{\text{diabloshornhd}}$ (New)
 - `dropsfxframe`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
 - `usesound`: $\text{item}\color{gray}{\text{monsterguts}}$ (Old) &rarr; $\text{item}\color{blue}{\text{diabloshornhd}}$ (New)
@@ -218,37 +218,37 @@
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{	ext{2}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `spelldescstr`: $\color{gray}{	ext{StackDescTwo}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `CharsiMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `CharsiMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### dsd
 - `cost`: $\color{gray}{\text{200000}}$ (Old) &rarr; $\color{blue}{\text{50000}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{DivineDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{DivineDesc}}$ (New)
 
 ### dss
 - `cost`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{50000}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{DiabloDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{DiabloDesc}}$ (New)
 
 ### dw1
 - `cost`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{4999}}$ (New)
 - `useable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{Dyedesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{Dyedesc}}$ (New)
 
 ### elx
 - `rarity`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
 - `cost`: $\color{gray}{\text{7000}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
 - `useable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `stat1`:  (Old) &rarr; $\color{blue}{	ext{experience}}$ (New)
-- `calc1`:  (Old) &rarr; $\color{blue}{	ext{5}}$ (New)
-- `spelldesc`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `spelldescstr`: $\color{gray}{	ext{ElixirDesc}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `stat1`:  (Old) &rarr; $\color{blue}{\text{experience}}$ (New)
+- `calc1`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `spelldesc`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{ElixirDesc}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### eyz
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### fed
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -260,15 +260,15 @@
 ### fel
 - `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `cost`: $\color{gray}{\text{200000}}$ (Old) &rarr; $\color{blue}{\text{50000}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{FlaskDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{FlaskDesc}}$ (New)
 
 ### flg
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### fng
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### gcb
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
@@ -312,7 +312,7 @@
 ### gft
 - `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `cost`: $\color{gray}{\text{134540}}$ (Old) &rarr; $\color{blue}{\text{50000}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{EventDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{EventDesc}}$ (New)
 
 ### gfv
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
@@ -416,11 +416,11 @@
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{Griswold's Heirloom Desc}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{Griswold's Heirloom Desc}}$ (New)
-- `GheedMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `GheedMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
-- `PermStoreItem`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `multibuy`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{Griswold's Heirloom Desc}}$ (New)
+- `GheedMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `GheedMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `PermStoreItem`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `multibuy`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### gzv
 - `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
@@ -428,67 +428,67 @@
 - `type2`: $\color{gray}{\text{gg}}\text{3}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}$ (New)
 
 ### hp1
-- `normcode`:  (Old) &rarr; $\color{blue}{	ext{hp1}}$ (New)
-- `ubercode`:  (Old) &rarr; $\color{blue}{	ext{hp1}}$ (New)
-- `ultracode`:  (Old) &rarr; $\color{blue}{	ext{hp1}}$ (New)
-- `MalahMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `MalahMax`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{hp1}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{hp1}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{hp1}}$ (New)
+- `MalahMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `MalahMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### hp2
-- `normcode`:  (Old) &rarr; $\color{blue}{	ext{hp2}}$ (New)
-- `ubercode`:  (Old) &rarr; $\color{blue}{	ext{hp2}}$ (New)
-- `ultracode`:  (Old) &rarr; $\color{blue}{	ext{hp2}}$ (New)
-- `MalahMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `MalahMax`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{hp2}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{hp2}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{hp2}}$ (New)
+- `MalahMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `MalahMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### hp3
-- `normcode`:  (Old) &rarr; $\color{blue}{	ext{hp3}}$ (New)
-- `ubercode`:  (Old) &rarr; $\color{blue}{	ext{hp3}}$ (New)
-- `ultracode`:  (Old) &rarr; $\color{blue}{	ext{hp3}}$ (New)
-- `LysanderMin`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `LysanderMax`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `DrognanMin`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `DrognanMax`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{hp3}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{hp3}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{hp3}}$ (New)
+- `LysanderMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `LysanderMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `DrognanMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `DrognanMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### hp4
-- `normcode`:  (Old) &rarr; $\color{blue}{	ext{hp4}}$ (New)
-- `ubercode`:  (Old) &rarr; $\color{blue}{	ext{hp4}}$ (New)
-- `ultracode`:  (Old) &rarr; $\color{blue}{	ext{hp4}}$ (New)
-- `OrmusMin`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `OrmusMax`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{hp4}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{hp4}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{hp4}}$ (New)
+- `OrmusMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `OrmusMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### hp5
-- `normcode`:  (Old) &rarr; $\color{blue}{	ext{hp5}}$ (New)
-- `ubercode`:  (Old) &rarr; $\color{blue}{	ext{hp5}}$ (New)
-- `ultracode`:  (Old) &rarr; $\color{blue}{	ext{hp5}}$ (New)
-- `MalahMin`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `MalahMax`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{hp5}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{hp5}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{hp5}}$ (New)
+- `MalahMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `MalahMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### hrb
 - `useable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### hrn
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{10}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{40}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 
 ### hrt
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### hsm
 - `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `cost`: $\color{gray}{\text{2250000}}$ (Old) &rarr; $\color{blue}{\text{1900000}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{HratliHerbDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{HratliHerbDesc}}$ (New)
 
 ### ibk
-- `Nameable`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### ice
-- `CharsiMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `CharsiMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### jaw
 - `compactsave`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -496,147 +496,147 @@
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `cost`: $\color{gray}{\text{2760000}}$ (Old) &rarr; $\color{blue}{\text{75}}$ (New)
 - `TMogType`: $\color{gray}{\text{xxx}}$ (Old) &rarr; $\color{blue}{\text{cqv}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{10}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{40}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `type`: $\color{gray}{\text{hpot}}$ (Old) &rarr; $\color{blue}{\text{body}}$ (New)
 - `spelldescstr`: $\color{gray}{\text{JawboneDesc}}$ (Old) &rarr; $\color{blue}{\text{convertsto}}$ (New)
 
 ### jew
-- `gamble cost`:  (Old) &rarr; $\color{blue}{	ext{60000}}$ (New)
-- `PermStoreItem`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `multibuy`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `gamble cost`:  (Old) &rarr; $\color{blue}{\text{60000}}$ (New)
+- `PermStoreItem`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `multibuy`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### lmr
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{LarzukHammerDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{LarzukHammerDesc}}$ (New)
 
 ### luv
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### mbr
-- `type2`: $\color{gray}{	ext{orgn}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `dropsound`: $\text{item}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}\color{blue}{\text{mephistosbrainhd}}$ (New)
 - `usesound`: $\text{item}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}\color{blue}{\text{mephistosbrainhd}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{	ext{2}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `spelldescstr`: $\color{gray}{	ext{StackDescTwo}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `CharsiMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `CharsiMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### mfc
 - `levelreq`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `rarity`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `cost`: $\color{gray}{\text{600}}$ (Old) &rarr; $\color{blue}{\text{666}}$ (New)
-- `type2`:  (Old) &rarr; $\color{blue}{	ext{jwly}}$ (New)
+- `type2`:  (Old) &rarr; $\color{blue}{\text{jwly}}$ (New)
 - `unique`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `PermStoreItem`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `multibuy`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `PermStoreItem`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `multibuy`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### mfd
 - `levelreq`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `rarity`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `cost`: $\color{gray}{\text{600}}$ (Old) &rarr; $\color{blue}{\text{666}}$ (New)
-- `type2`:  (Old) &rarr; $\color{blue}{	ext{jwly}}$ (New)
+- `type2`:  (Old) &rarr; $\color{blue}{\text{jwly}}$ (New)
 - `unique`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `PermStoreItem`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `multibuy`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `PermStoreItem`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `multibuy`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### mff
 - `levelreq`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{90}}$ (New)
 - `rarity`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `cost`: $\color{gray}{\text{600}}$ (Old) &rarr; $\color{blue}{\text{666}}$ (New)
-- `type2`:  (Old) &rarr; $\color{blue}{	ext{jwly}}$ (New)
+- `type2`:  (Old) &rarr; $\color{blue}{\text{jwly}}$ (New)
 - `unique`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `PermStoreItem`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `multibuy`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `PermStoreItem`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `multibuy`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### mfg
 - `cost`: $\color{gray}{\text{600}}$ (Old) &rarr; $\color{blue}{\text{7999}}$ (New)
 
 ### mfp
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{PotionMagicFindDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{PotionMagicFindDesc}}$ (New)
 
 ### mls
 - `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{CharsiMalusDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{CharsiMalusDesc}}$ (New)
 
 ### mp1
-- `normcode`:  (Old) &rarr; $\color{blue}{	ext{mp1}}$ (New)
-- `ubercode`:  (Old) &rarr; $\color{blue}{	ext{mp1}}$ (New)
-- `ultracode`:  (Old) &rarr; $\color{blue}{	ext{mp1}}$ (New)
-- `MalahMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `MalahMax`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{mp1}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{mp1}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{mp1}}$ (New)
+- `MalahMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `MalahMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### mp2
-- `normcode`:  (Old) &rarr; $\color{blue}{	ext{mp2}}$ (New)
-- `ubercode`:  (Old) &rarr; $\color{blue}{	ext{mp2}}$ (New)
-- `ultracode`:  (Old) &rarr; $\color{blue}{	ext{mp2}}$ (New)
-- `MalahMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `MalahMax`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{mp2}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{mp2}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{mp2}}$ (New)
+- `MalahMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `MalahMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### mp3
-- `normcode`:  (Old) &rarr; $\color{blue}{	ext{mp3}}$ (New)
-- `ubercode`:  (Old) &rarr; $\color{blue}{	ext{mp3}}$ (New)
-- `ultracode`:  (Old) &rarr; $\color{blue}{	ext{mp3}}$ (New)
-- `LysanderMin`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `LysanderMax`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `DrognanMin`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `DrognanMax`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{mp3}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{mp3}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{mp3}}$ (New)
+- `LysanderMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `LysanderMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `DrognanMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `DrognanMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### mp4
-- `normcode`:  (Old) &rarr; $\color{blue}{	ext{mp4}}$ (New)
-- `ubercode`:  (Old) &rarr; $\color{blue}{	ext{mp4}}$ (New)
-- `ultracode`:  (Old) &rarr; $\color{blue}{	ext{mp4}}$ (New)
-- `OrmusMin`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `OrmusMax`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{mp4}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{mp4}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{mp4}}$ (New)
+- `OrmusMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `OrmusMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### mp5
-- `normcode`:  (Old) &rarr; $\color{blue}{	ext{mp5}}$ (New)
-- `ubercode`:  (Old) &rarr; $\color{blue}{	ext{mp5}}$ (New)
-- `ultracode`:  (Old) &rarr; $\color{blue}{	ext{mp5}}$ (New)
-- `MalahMin`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `MalahMax`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{mp5}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{mp5}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{mp5}}$ (New)
+- `MalahMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `MalahMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### pct
 - `version`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `cost`: $\color{gray}{\text{7950}}$ (Old) &rarr; $\color{blue}{\text{19999}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{pctd}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{pctd}}$ (New)
 
 ### pk1
-- `type2`: $\color{gray}{	ext{ukey}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `type2`: $\color{gray}{\text{ukey}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{	ext{2}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `spelldescstr`: $\color{gray}{	ext{StackDescTwo}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `CharsiMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `CharsiMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### pk2
-- `type2`: $\color{gray}{	ext{ukey}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `type2`: $\color{gray}{\text{ukey}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{	ext{2}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `spelldescstr`: $\color{gray}{	ext{StackDescTwo}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `CharsiMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `CharsiMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### pk3
-- `type2`: $\color{gray}{	ext{ukey}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `type2`: $\color{gray}{\text{ukey}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{	ext{2}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `spelldescstr`: $\color{gray}{	ext{StackDescTwo}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `CharsiMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `CharsiMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### qll
 - `compactsave`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -644,8 +644,8 @@
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `cost`: $\color{gray}{\text{2760000}}$ (Old) &rarr; $\color{blue}{\text{32}}$ (New)
 - `TMogType`: $\color{gray}{\text{xxx}}$ (Old) &rarr; $\color{blue}{\text{aqv}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{10}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{40}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `type`: $\color{gray}{\text{hpot}}$ (Old) &rarr; $\color{blue}{\text{body}}$ (New)
 - `spelldescstr`: $\color{gray}{\text{QuillDesc}}$ (Old) &rarr; $\color{blue}{\text{convertsto}}$ (New)
 
@@ -692,39 +692,39 @@
 - `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### rin
-- `Nameable`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### rrr
 - `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{rrrDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{rrrDesc}}$ (New)
 
 ### rtr
 - `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{rtrDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{rtrDesc}}$ (New)
 
 ### rvl
 - `transtbl`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `lightradius`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `belt`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `stackable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `quest`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
+- `quest`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### rvs
-- `AkaraMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `AkaraMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `AkaraMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `AkaraMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### sct
 - `version`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `cost`: $\color{gray}{\text{7950}}$ (Old) &rarr; $\color{blue}{\text{19999}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{sctd}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{sctd}}$ (New)
 
 ### scz
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### skc
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
@@ -751,8 +751,8 @@
 
 ### sol
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### spe
 - `compactsave`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -760,8 +760,8 @@
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `cost`: $\color{gray}{\text{2760000}}$ (Old) &rarr; $\color{blue}{\text{85}}$ (New)
 - `TMogType`: $\color{gray}{\text{xxx}}$ (Old) &rarr; $\color{blue}{\text{gps}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `type`: $\color{gray}{\text{hpot}}$ (Old) &rarr; $\color{blue}{\text{body}}$ (New)
 - `spelldescstr`: $\color{gray}{\text{SpleenDesc}}$ (Old) &rarr; $\color{blue}{\text{convertsto}}$ (New)
 
@@ -773,11 +773,11 @@
 
 ### tal
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
-- `TMogMax`:  (Old) &rarr; $\color{blue}{	ext{0}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 
 ### tbk
-- `Nameable`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### tch
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
@@ -790,7 +790,7 @@
 - `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{HAshDesc}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{HAshDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{HAshDesc}}$ (New)
 
 ### tes
 - `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -804,40 +804,40 @@
 - `levelreq`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `rarity`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{999}}$ (New)
 - `cost`: $\color{gray}{\text{250000}}$ (Old) &rarr; $\color{blue}{\text{250256}}$ (New)
-- `AkaraMagicMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `AkaraMagicMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `AkaraMagicMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `AkaraMagicMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### tr2
-- `CharsiMin`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `CharsiMax`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
 
 ### voa
 - `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spelldescstr2`:  (Old) &rarr; $\color{blue}{	ext{ViperDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{ViperDesc}}$ (New)
 
 ### vps
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `AkaraMin`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
-- `AkaraMax`:  (Old) &rarr; $\color{blue}{	ext{4}}$ (New)
-- `LysanderMin`:  (Old) &rarr; $\color{blue}{	ext{3}}$ (New)
-- `LysanderMax`:  (Old) &rarr; $\color{blue}{	ext{5}}$ (New)
-- `LysanderMagicMin`:  (Old) &rarr; $\color{blue}{	ext{3}}$ (New)
-- `LysanderMagicMax`:  (Old) &rarr; $\color{blue}{	ext{5}}$ (New)
-- `AlkorMin`:  (Old) &rarr; $\color{blue}{	ext{3}}$ (New)
-- `AlkorMax`:  (Old) &rarr; $\color{blue}{	ext{5}}$ (New)
-- `CainMin`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
-- `CainMax`:  (Old) &rarr; $\color{blue}{	ext{3}}$ (New)
-- `MalahMin`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
-- `MalahMax`:  (Old) &rarr; $\color{blue}{	ext{3}}$ (New)
-- `JamellaMin`:  (Old) &rarr; $\color{blue}{	ext{2}}$ (New)
-- `JamellaMax`:  (Old) &rarr; $\color{blue}{	ext{3}}$ (New)
-- `PermStoreItem`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
-- `multibuy`:  (Old) &rarr; $\color{blue}{	ext{1}}$ (New)
+- `AkaraMin`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `AkaraMax`:  (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `LysanderMin`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `LysanderMax`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `LysanderMagicMin`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `LysanderMagicMax`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `AlkorMin`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `AlkorMax`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `CainMin`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `CainMax`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `MalahMin`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `MalahMax`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `JamellaMin`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `JamellaMax`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `PermStoreItem`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `multibuy`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### wms
-- `OrmusMin`: $\color{gray}{	ext{6}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `OrmusMax`: $\color{gray}{	ext{9}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `OrmusMin`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `OrmusMax`: $\color{gray}{\text{9}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### yps
-- `OrmusMin`: $\color{gray}{	ext{8}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
-- `OrmusMax`: $\color{gray}{	ext{11}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `OrmusMin`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `OrmusMax`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)

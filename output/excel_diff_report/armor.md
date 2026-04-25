@@ -71,7 +71,7 @@
 - `auto prefix`: $\color{gray}{\text{224}}$ (Old) &rarr; $\color{blue}{\text{424}}$ (New)
 
 ### expansion
-- `ShowLevel`: $\color{gray}{	ext{1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### fetish trophy
 - `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)

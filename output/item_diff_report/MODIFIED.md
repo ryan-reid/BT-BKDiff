@@ -1,7 +1,7 @@
 # Modified Items
 
-- $\color{{gray}}{	ext{Gray text}}$: Removed/Old Value
-- $\color{{blue}}{	ext{Blue text}}$: Added/New Value
+- $\color{gray}{	ext{Gray text}}$: Removed/Old Value
+- $\color{blue}{	ext{Blue text}}$: Added/New Value
 
 **Aldur's Advance** (Aldur's Advance)
 
@@ -107,7 +107,7 @@
 | +1 to Multiple Shot | +1 to Multiple Shot |
 | +24% Faster Hit Recovery | +24% Faster Hit Recovery |
 | +10 to Dexterity | +10 to Dexterity |
-|  | $\color{blue}{	ext{-4-5\% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-4-5\% to Enemy Physical Resistance}}$ |
 
 **Amulet of the Viper** (Amulet of the Viper)
 
@@ -118,7 +118,7 @@
 | **Properties:** | **Properties:** |
 | $\color{gray}{\text{+100}}\text{ to Mana}$ | $\color{blue}{\text{+10}}\text{ to Mana}$ |
 | $\color{gray}{\text{+100}}\text{ to Life}$ | $\color{blue}{\text{+10}}\text{ to Life}$ |
-|  | $\color{blue}{	ext{Poison Resist +25\%}}$ |
+|  | $\color{blue}{\text{Poison Resist +25\%}}$ |
 
 **Annihilus** (Annihilus)
 
@@ -177,8 +177,8 @@
 | Adds 500-500 Poison Damage Over 500 Seconds | Adds 500-500 Poison Damage Over 500 Seconds |
 | +6 to Poison Explosion (Necromancer only) | +6 to Poison Explosion (Necromancer only) |
 | +6 to Poison Nova (Necromancer only) | +6 to Poison Nova (Necromancer only) |
-| $\color{gray}{	ext{+6 to Poison Dagger (Necromancer only)}}$ | $\color{blue}{	ext{(removed)}}$ |
-|  | $\color{blue}{	ext{+6 to Poison Strike (Necromancer only)}}$ |
+| $\color{gray}{\text{+6 to Poison Dagger (Necromancer only)}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{+6 to Poison Strike (Necromancer only)}}$ |
 
 **Bul Katho's Mind** (Bul Katho's Mind)
 
@@ -194,7 +194,7 @@
 | +20% Faster Hit Recovery | +20% Faster Hit Recovery |
 | (0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level) | (0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level) |
 | +150-200% Enhanced Defense | +150-200% Enhanced Defense |
-|  | $\color{blue}{	ext{-5-10\% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-5-10\% to Enemy Physical Resistance}}$ |
 
 **Cerebus' Bite** (Cerebus)
 
@@ -208,7 +208,7 @@
 | 7-10% Life stolen per hit | 7-10% Life stolen per hit |
 | Level 6-12 Fanaticism Aura When Equipped | Level 6-12 Fanaticism Aura When Equipped |
 | 33% Chance of Open Wounds | 33% Chance of Open Wounds |
-|  | $\color{blue}{	ext{-5-10\% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-5-10\% to Enemy Physical Resistance}}$ |
 
 **Game Modifers** (Charm Modifiers)
 
@@ -220,8 +220,8 @@
 | All Resistances +-30 | All Resistances +-30 |
 | -199% Better Chance of Getting Magic Items | -199% Better Chance of Getting Magic Items |
 | $\text{(}\color{gray}{\text{2}}\text{.}\color{gray}{\text{0\%}}\text{ per clvl) Better Chance of Getting Magic Items (Based on Character Level)}$ | $\text{(}\color{blue}{\text{0}}\text{.}\color{blue}{\text{5\%}}\text{ per clvl) Better Chance of Getting Magic Items (Based on Character Level)}$ |
-| $\color{gray}{	ext{Level 1 Magic Pierce Aura When Equipped}}$ | $\color{blue}{	ext{(removed)}}$ |
-| $\color{gray}{	ext{+-50\% to Experience Gained}}$ | $\color{blue}{	ext{(removed)}}$ |
+| $\color{gray}{\text{Level 1 Magic Pierce Aura When Equipped}}$ | $\color{blue}{\text{(removed)}}$ |
+| $\color{gray}{\text{+-50\% to Experience Gained}}$ | $\color{blue}{\text{(removed)}}$ |
 
 **Corrupted Azurewrath** (Corrupted Azurewrath)
 
@@ -236,7 +236,7 @@
 | +100-200% Enhanced Damage | +100-200% Enhanced Damage |
 | Durability: 25 of 25 | Durability: 25 of 25 |
 | Adds 50-100 Magic Damage | Adds 50-100 Magic Damage |
-| $\color{gray}{	ext{10-15\% Better Chance of Getting Magic Items}}$ | $\color{blue}{	ext{(removed)}}$ |
+| $\color{gray}{\text{10-15\% Better Chance of Getting Magic Items}}$ | $\color{blue}{\text{(removed)}}$ |
 
 **Crown of Ages** (Crown of Ages)
 
@@ -254,7 +254,7 @@
 | $\color{gray}{\text{+50\%}}\text{ Enhanced Defense}$ | $\color{blue}{\text{+50-100\%}}\text{ Enhanced Defense}$ |
 | $\text{Magic Damage Reduced by }\color{gray}{\text{12-15}}$ | $\text{Magic Damage Reduced by }\color{blue}{\text{10-30}}$ |
 | $\color{gray}{\text{+7-9}}\text{ Life after each Kill}$ | $\color{blue}{\text{+5-9}}\text{ Life after each Kill}$ |
-|  | $\color{blue}{	ext{+5-9 to Mana after each Kill}}$ |
+|  | $\color{blue}{\text{+5-9 to Mana after each Kill}}$ |
 
 **Death Cleaver** (Deathcleaver)
 
@@ -269,9 +269,9 @@
 | +40% Increased Attack Speed | +40% Increased Attack Speed |
 | +6-9 Life after each Kill | +6-9 Life after each Kill |
 | 10-15% Chance of Crushing Blow | 10-15% Chance of Crushing Blow |
-| $\color{gray}{	ext{Adds 100-100 Damage}}$ | $\color{blue}{	ext{(removed)}}$ |
-|  | $\color{blue}{	ext{Damage +50-100}}$ |
-|  | $\color{blue}{	ext{-10-20\% to Enemy Physical Resistance}}$ |
+| $\color{gray}{\text{Adds 100-100 Damage}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{Damage +50-100}}$ |
+|  | $\color{blue}{\text{-10-20\% to Enemy Physical Resistance}}$ |
 
 **Gaia's Precision** (Gaia's Precision)
 
@@ -287,9 +287,9 @@
 | +10-20 to all Attributes | +10-20 to all Attributes |
 | $\color{gray}{\text{+200-300}}\text{ Defense}$ | $\color{blue}{\text{+1000}}\text{ Defense}$ |
 | +40% Increased Attack Speed | +40% Increased Attack Speed |
-| $\color{gray}{	ext{Damage Reduced by 15-20}}$ | $\color{blue}{	ext{(removed)}}$ |
-|  | $\color{blue}{	ext{Increase Maximum Life 5-15\%}}$ |
-|  | $\color{blue}{	ext{20\% Chance to cast level 40 Lightning Strike on striking}}$ |
+| $\color{gray}{\text{Damage Reduced by 15-20}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{Increase Maximum Life 5-15\%}}$ |
+|  | $\color{blue}{\text{20\% Chance to cast level 40 Lightning Strike on striking}}$ |
 
 **Gimmershred** (Gimmershred)
 
@@ -318,7 +318,7 @@
 | +1 to All Skills | +1 to All Skills |
 | +10-15% to Lightning Skill Damage | +10-15% to Lightning Skill Damage |
 | -8-15% to Enemy Lightning Resistance | -8-15% to Enemy Lightning Resistance |
-|  | $\color{blue}{	ext{+7 to Thunder Storm}}$ |
+|  | $\color{blue}{\text{+7 to Thunder Storm}}$ |
 
 **Griswold's Heart** (Griswold's Heart)
 
@@ -346,7 +346,7 @@
 | +20 to Maximum Fire Damage | +20 to Maximum Fire Damage |
 | Fire Resist +40% | Fire Resist +40% |
 | $\color{gray}{\text{+66}}\text{ Defense}$ | $\color{blue}{\text{+35}}\text{ Defense}$ |
-| $\color{gray}{	ext{Adds 66-66 Damage}}$ | $\color{blue}{	ext{(removed)}}$ |
+| $\color{gray}{\text{Adds 66-66 Damage}}$ | $\color{blue}{\text{(removed)}}$ |
 
 **Hellfire Torch** (Hellfire Torch)
 
@@ -372,9 +372,9 @@
 | $\text{All Resistances }\color{gray}{\text{+30}}$ | $\text{All Resistances }\color{blue}{\text{+10}}$ |
 | $\color{gray}{\text{+100}}\text{ to Life}$ | $\color{blue}{\text{+10}}\text{ to Life}$ |
 | +50% Increased Attack Speed | +50% Increased Attack Speed |
-| $\color{gray}{	ext{+30\% Faster Cast Rate}}$ | $\color{blue}{	ext{(removed)}}$ |
-| $\color{gray}{	ext{Adds 30-30 Damage}}$ | $\color{blue}{	ext{(removed)}}$ |
-|  | $\color{blue}{	ext{Poison Resist +25\%}}$ |
+| $\color{gray}{\text{+30\% Faster Cast Rate}}$ | $\color{blue}{\text{(removed)}}$ |
+| $\color{gray}{\text{Adds 30-30 Damage}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{Poison Resist +25\%}}$ |
 
 **Immortal King's Detail** (Immortal King's Detail)
 
@@ -576,7 +576,7 @@
 | $\color{gray}{\text{+85\%}}\text{ Faster Cast Rate}$ | $\color{blue}{\text{+115\%}}\text{ Faster Cast Rate}$ |
 | $\text{Increase Maximum Mana }\color{gray}{\text{40\%}}$ | $\text{Increase Maximum Mana }\color{blue}{\text{40-50\%}}$ |
 | All Resistances +40-50 | All Resistances +40-50 |
-|  | $\color{blue}{	ext{Increase Maximum Life 40-50\%}}$ |
+|  | $\color{blue}{\text{Increase Maximum Life 40-50\%}}$ |
 
 **Natalya's Footprints** (Natalya's Footprints)
 
@@ -684,8 +684,8 @@
 | (2.0 per clvl) to Maximum Damage (Based on Character Level) | (2.0 per clvl) to Maximum Damage (Based on Character Level) |
 | Repairs 1 durability in 5 seconds | Repairs 1 durability in 5 seconds |
 | +350% Enhanced Damage | +350% Enhanced Damage |
-| $\color{gray}{	ext{Adds 50-200 Lightning Damage}}$ | $\color{blue}{	ext{(removed)}}$ |
-|  | $\color{blue}{	ext{-10-15\% to Enemy Physical Resistance}}$ |
+| $\color{gray}{\text{Adds 50-200 Lightning Damage}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{-10-15\% to Enemy Physical Resistance}}$ |
 
 **Shadowfang** (Shadowfang)
 
@@ -716,8 +716,8 @@
 | +250 Defense vs. Melee | +250 Defense vs. Melee |
 | +125-150% Damage to Demons | +125-150% Damage to Demons |
 | +125-150% Damage to Undead | +125-150% Damage to Undead |
-|  | $\color{blue}{	ext{Magic Damage Reduced by 10-15}}$ |
-|  | $\color{blue}{	ext{+1 to All Skills}}$ |
+|  | $\color{blue}{\text{Magic Damage Reduced by 10-15}}$ |
+|  | $\color{blue}{\text{+1 to All Skills}}$ |
 
 **Skorn** (Skorn)
 
@@ -747,8 +747,8 @@
 | +250% Enhanced Damage | +250% Enhanced Damage |
 | Adds 30-54 Damage | Adds 30-54 Damage |
 | +2 to Necromancer Skill Levels | +2 to Necromancer Skill Levels |
-| $\color{gray}{	ext{+3 to Poison Dagger}}$ | $\color{blue}{	ext{(removed)}}$ |
-|  | $\color{blue}{	ext{+3 to Poison Strike}}$ |
+| $\color{gray}{\text{+3 to Poison Dagger}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{+3 to Poison Strike}}$ |
 
 **Staff of Kings** (Staff of Kings)
 
@@ -759,8 +759,8 @@
 | **Properties:** | **Properties:** |
 | $\text{All Resistances }\color{gray}{\text{+30}}$ | $\text{All Resistances }\color{blue}{\text{+10}}$ |
 | +50% Increased Attack Speed | +50% Increased Attack Speed |
-| $\color{gray}{	ext{+30\% Faster Cast Rate}}$ | $\color{blue}{	ext{(removed)}}$ |
-| $\color{gray}{	ext{Adds 30-30 Damage}}$ | $\color{blue}{	ext{(removed)}}$ |
+| $\color{gray}{\text{+30\% Faster Cast Rate}}$ | $\color{blue}{\text{(removed)}}$ |
+| $\color{gray}{\text{Adds 30-30 Damage}}$ | $\color{blue}{\text{(removed)}}$ |
 
 **Static Accumulator** (Static Accumulator)
 
@@ -790,8 +790,8 @@
 | Damage Reduced by 30-40% | Damage Reduced by 30-40% |
 | +15% Faster Run/Walk | +15% Faster Run/Walk |
 | Level 8-10 Defiance Aura When Equipped | Level 8-10 Defiance Aura When Equipped |
-|  | $\color{blue}{	ext{+1-2 to All Skills}}$ |
-|  | $\color{blue}{	ext{Requirements --50\%}}$ |
+|  | $\color{blue}{\text{+1-2 to All Skills}}$ |
+|  | $\color{blue}{\text{Requirements --50\%}}$ |
 
 **Steel Pillar** (Steelpillar)
 
@@ -824,7 +824,7 @@
 | --100 to Monster Defense Per Hit | --100 to Monster Defense Per Hit |
 | Damage +50-85 | Damage +50-85 |
 | +40% Increased Attack Speed | +40% Increased Attack Speed |
-|  | $\color{blue}{	ext{-5-10\% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-5-10\% to Enemy Physical Resistance}}$ |
 
 **Stormspire** (Stormspire)
 
@@ -843,8 +843,8 @@
 | Adds 1-237 Lightning Damage | Adds 1-237 Lightning Damage |
 | 8-10% Life stolen per hit | 8-10% Life stolen per hit |
 | 150% Bonus to Attack Rating | 150% Bonus to Attack Rating |
-| $\color{gray}{	ext{30\% Chance to cast level 10 Lower Resist when struck}}$ | $\color{blue}{	ext{(removed)}}$ |
-|  | $\color{blue}{	ext{Unknown property: 91 (30-10)}}$ |
+| $\color{gray}{\text{30\% Chance to cast level 10 Lower Resist when struck}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{Unknown property: 91 (30-10)}}$ |
 
 **Khalim's Will** (SuperKhalimFlail)
 
@@ -858,9 +858,9 @@
 | +50% Increased Attack Speed | +50% Increased Attack Speed |
 | 6% Mana stolen per hit | 6% Mana stolen per hit |
 | 6% Life stolen per hit | 6% Life stolen per hit |
-| $\color{gray}{	ext{200\% Bonus to Attack Rating}}$ | $\color{blue}{	ext{(removed)}}$ |
-| $\color{gray}{	ext{Adds 50-50 Damage}}$ | $\color{blue}{	ext{(removed)}}$ |
-|  | $\color{blue}{	ext{+40 to Attack Rating}}$ |
+| $\color{gray}{\text{200\% Bonus to Attack Rating}}$ | $\color{blue}{\text{(removed)}}$ |
+| $\color{gray}{\text{Adds 50-50 Damage}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{+40 to Attack Rating}}$ |
 
 **Tal Rasha's Brace** (Tal Rasha's Brace)
 
@@ -965,7 +965,7 @@
 | $\color{gray}{\text{+175}}\text{ to Life}$ | $\color{blue}{\text{+200}}\text{ to Life}$ |
 | $\text{Increase Maximum Mana }\color{gray}{\text{25\%}}$ | $\text{Increase Maximum Mana }\color{blue}{\text{40-50\%}}$ |
 | $\text{Increase Maximum Life }\color{gray}{\text{25\%}}$ | $\text{Increase Maximum Life }\color{blue}{\text{40-50\%}}$ |
-|  | $\color{blue}{	ext{-15-30\% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-15-30\% to Enemy Physical Resistance}}$ |
 
 **The Gnasher** (The Gnasher)
 
@@ -980,7 +980,7 @@
 | +180-200% Enhanced Damage | +180-200% Enhanced Damage |
 | +25% Increased Attack Speed | +25% Increased Attack Speed |
 | 10% Deadly Strike | 10% Deadly Strike |
-| $\color{gray}{	ext{Adds 20-20 Damage}}$ | $\color{blue}{	ext{(removed)}}$ |
+| $\color{gray}{\text{Adds 20-20 Damage}}$ | $\color{blue}{\text{(removed)}}$ |
 
 **The Grandfather** (The Grandfather)
 
@@ -994,8 +994,8 @@
 | (2.5 per clvl) to Maximum Damage (Based on Character Level) | (2.5 per clvl) to Maximum Damage (Based on Character Level) |
 | Repairs 1 durability in 5 seconds | Repairs 1 durability in 5 seconds |
 | +450% Enhanced Damage | +450% Enhanced Damage |
-| $\color{gray}{	ext{50\% Bonus to Attack Rating}}$ | $\color{blue}{	ext{(removed)}}$ |
-|  | $\color{blue}{	ext{-10-20\% to Enemy Physical Resistance}}$ |
+| $\color{gray}{\text{50\% Bonus to Attack Rating}}$ | $\color{blue}{\text{(removed)}}$ |
+|  | $\color{blue}{\text{-10-20\% to Enemy Physical Resistance}}$ |
 
 **Trang-Oul's Appendage** (Trang-Oul's Appendage)
 
@@ -1071,7 +1071,7 @@
 | 40% Chance to cast level 44 Twister on striking | 40% Chance to cast level 44 Twister on striking |
 | +30% Faster Run/Walk | +30% Faster Run/Walk |
 | 50% Chance to cast level 40 Tornado when you Kill an Enemy | 50% Chance to cast level 40 Tornado when you Kill an Enemy |
-|  | $\color{blue}{	ext{-5-15\% to Enemy Physical Resistance}}$ |
+|  | $\color{blue}{\text{-5-15\% to Enemy Physical Resistance}}$ |
 
 **Woestave** (Woestave)
 
@@ -1088,7 +1088,7 @@
 | Prevent Monster Heal | Prevent Monster Heal |
 | +200% Enhanced Damage | +200% Enhanced Damage |
 | +30% Increased Attack Speed | +30% Increased Attack Speed |
-| $\color{gray}{	ext{Level 12-17 Meditation Aura When Equipped}}$ | $\color{blue}{	ext{(removed)}}$ |
+| $\color{gray}{\text{Level 12-17 Meditation Aura When Equipped}}$ | $\color{blue}{\text{(removed)}}$ |
 
 **Wraith Flight** (Wraithflight)
 

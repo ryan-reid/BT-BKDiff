@@ -7,47 +7,77 @@ from d2_repository import D2Repository
 from d2_services import ItemComparisonService
 from d2_exporters import MarkdownExporter
 
-def load_json_db(db_dir: str) -> Dict[str, Any]:
-    items = {}
-    pattern = os.path.join(db_dir, "**", "*.json")
-    for filepath in glob.glob(pattern, recursive=True):
-        try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                if isinstance(data, list):
-                    for item in data:
-                        items[item['id']] = item
-                elif isinstance(data, dict):
-                    # Should be a dict of categories or items
-                    for k, v in data.items():
-                        if isinstance(v, list):
-                            for item in v: items[item['id']] = item
-                        else:
-                            items[v['id']] = v
-        except Exception as e:
-            print(f"Error loading {filepath}: {e}", file=sys.stderr)
-    return items
+def load_json_db(db_dir: str) -> Dict[str, Dict[str, Any]]:
+    # type -> id -> item
+    types = {'uniques': {}, 'sets': {}, 'runewords': {}}
+    for t in types:
+        pattern = os.path.join(db_dir, t, "**", "*.json")
+        for filepath in glob.glob(pattern, recursive=True):
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    if isinstance(data, list):
+                        for item in data: types[t][item['id']] = item
+                    elif isinstance(data, dict):
+                        for k, v in data.items():
+                            if isinstance(v, list):
+                                for item in v: types[t][item['id']] = item
+                            else:
+                                types[t][v['id']] = v
+            except Exception as e:
+                print(f"Error loading {filepath}: {e}", file=sys.stderr)
+    return types
 
 def main() -> None:
     bk_json_dir = "../exports/item_db"
     bt_json_dir = "../exports/item_db_bt"
     out_dir = "../output/item_diff_report"
 
-    # We need to run with --format json to have these files
     print("Loading Item Databases...")
-    bk_items = load_json_db(bk_json_dir)
-    bt_items = load_json_db(bt_json_dir)
+    bk_db = load_json_db(bk_json_dir)
+    bt_db = load_json_db(bt_json_dir)
 
-    if not bk_items or not bt_items:
-        print("Error: Item databases missing or empty. Ensure d2_item_analyzer was run with --format json.", file=sys.stderr)
-        return
-
-    print(f"Comparing {len(bk_items)} BK items against {len(bt_items)} BT items...")
     service = ItemComparisonService()
-    diff = service.compare_item_lists(bk_items, bt_items)
+    
+    # We'll aggregate into a single ItemDiffDTO but keep track of counts for the summary
+    combined_added = {}
+    combined_removed = {}
+    combined_modified = {}
+    
+    type_counts = {}
+
+    for t in ['uniques', 'sets', 'runewords']:
+        diff = service.compare_item_lists(bk_db[t], bt_db[t])
+        combined_added.update(diff['added'])
+        combined_removed.update(diff['removed'])
+        combined_modified.update(diff['modified'])
+        type_counts[t] = {
+            'added': len(diff['added']),
+            'removed': len(diff['removed']),
+            'modified': len(diff['modified'])
+        }
+
+    combined_diff = {
+        'added': combined_added,
+        'removed': combined_removed,
+        'modified': combined_modified
+    }
     
     exporter = MarkdownExporter()
-    exporter.export_item_diff(diff, out_dir)
+    # Update SUMMARY.md with breakdown
+    exporter.export_item_diff(combined_diff, out_dir)
+    
+    # Inject breakdown into SUMMARY.md
+    summary_path = os.path.join(out_dir, "SUMMARY.md")
+    with open(summary_path, 'w', encoding='utf-8') as f:
+        f.write("# Item Database Comparison Summary\n\n")
+        f.write("| Category | [Added](ADDED.md) | [Removed](REMOVED.md) | [Modified](MODIFIED.md) |\n")
+        f.write("| :--- | :---: | :---: | :---: |\n")
+        for t in ['uniques', 'sets', 'runewords']:
+            c = type_counts[t]
+            f.write(f"| {t.capitalize()} | {c['added']} | {c['removed']} | {c['modified']} |\n")
+        f.write(f"| **Total** | **{len(combined_added)}** | **{len(combined_removed)}** | **{len(combined_modified)}** |\n\n")
+        f.write("Click the links in the header to see detailed breakdowns.\n")
     
     print(f"Reports generated in {out_dir}")
 
