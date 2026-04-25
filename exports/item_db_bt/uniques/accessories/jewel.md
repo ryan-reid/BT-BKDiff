@@ -126,4 +126,3 @@
     * +1 to Lower Resist
     * +3-5% Faster Cast Rate
     * +2% to Experience Gained
-

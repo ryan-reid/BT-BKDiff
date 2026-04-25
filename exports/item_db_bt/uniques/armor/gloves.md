@@ -165,4 +165,3 @@
     * +1 to Multiple Shot
     * +24% Faster Hit Recovery
     * +10 to Dexterity
-

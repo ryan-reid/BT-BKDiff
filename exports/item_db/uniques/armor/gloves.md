@@ -166,4 +166,3 @@
     * +24% Faster Hit Recovery
     * +10 to Dexterity
     * -4-5% to Enemy Physical Resistance
-

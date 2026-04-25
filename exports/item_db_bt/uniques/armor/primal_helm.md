@@ -77,4 +77,3 @@
     * +20% Faster Run/Walk
     * 10% Life stolen per hit
     * 10% Mana stolen per hit
-

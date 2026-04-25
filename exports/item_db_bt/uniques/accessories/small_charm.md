@@ -14,4 +14,3 @@
 * **Level Requirement:** 1
 * **Properties:**
     * splash
-

@@ -8,4 +8,3 @@
     * +10-20 to all Attributes
     * All Resistances +10-20
     * +10-15% to Experience Gained
-

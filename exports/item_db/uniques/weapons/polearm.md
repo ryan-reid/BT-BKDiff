@@ -197,4 +197,3 @@
     * 50% Chance to cast level 40 Bone Spear on striking
     * Prevent Monster Heal
     * 7% Life stolen per hit
-

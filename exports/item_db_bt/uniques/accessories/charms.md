@@ -15,4 +15,3 @@
 * **Level Requirement:** 90
 * **Properties:**
     * 35% Better Chance of Getting Magic Items
-

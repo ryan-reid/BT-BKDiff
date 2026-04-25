@@ -53,7 +53,7 @@
 * **Level Requirement:** 14
 * **Properties:**
     * +20-30 to Life
-    * (5.0-10.0% per clvl) to Maximum Fire Resist
+    * +5-10% to Maximum Fire Resist
     * +100 Defense vs. Melee
     * All Resistances +10-15
     * +100-150% Enhanced Defense
@@ -315,7 +315,7 @@
     * +1 to All Skills
     * +200-220% Enhanced Defense
     * +35% Faster Block Rate
-    * (15.0% per clvl) to Maximum Fire Resist
+    * +15% to Maximum Fire Resist
     * - to Monster Defense Per Hit
     * +30% Faster Block Rate
     * +10% Increased Attack Speed
@@ -501,7 +501,7 @@
 * **Properties:**
     * +2 to All Skills
     * +200% Enhanced Damage
-    * (10.0% per clvl) to Maximum Fire Resist
+    * +10% to Maximum Fire Resist
     * +40% Faster Hit Recovery
     * +25% Faster Run/Walk
     * +30% Increased Attack Speed
@@ -514,7 +514,7 @@
 * **Properties:**
     * +2 to All Skills
     * +35% Faster Cast Rate
-    * (10.0% per clvl) to Maximum Fire Resist
+    * +10% to Maximum Fire Resist
     * +40% Faster Hit Recovery
     * +25% Faster Run/Walk
     * +20-30 to all Attributes
@@ -570,4 +570,3 @@
     * Magic Damage Reduced by 10
     * (0.5 per clvl) to Mana (Based on Character Level)
     * +5-15% to Magic Skill Damage
-

@@ -159,4 +159,3 @@
     * +10 to Strength
     * +10 to Dexterity
     * All Resistances +15
-

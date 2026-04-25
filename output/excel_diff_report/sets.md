@@ -2,5 +2,4 @@
 
 *Key column used: `code`*
 
-## Added Columns: `UIClass`  
-
+## Added Columns: `UIClass`

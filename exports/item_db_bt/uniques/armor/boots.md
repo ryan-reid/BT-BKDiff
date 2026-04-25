@@ -195,4 +195,3 @@
     * +1-10% Energy
     * 5% Chance to cast level 20 Static Field when struck
     * +5-10% Faster Run/Walk
-

@@ -151,4 +151,3 @@
     * +3-5 to All Skills
     * +30% Increased Attack Speed
     * Damage +100-150
-

@@ -333,4 +333,3 @@
     * +40% Enhanced Damage
     * Magic Resist +-25%
     * -10-15% to Enemy Magic  Resistance
-

@@ -53,4 +53,3 @@
     * +250-300% Enhanced Damage
     * 5% Life stolen per hit
     * +3 to Double Throw (Barbarian only)
-

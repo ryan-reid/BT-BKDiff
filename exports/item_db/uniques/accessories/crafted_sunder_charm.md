@@ -72,4 +72,3 @@
     *  (Random: +10-65 to Life OR +10-75 to Mana)
     *  (Random: +5-10% Faster Run/Walk OR +12-24% Faster Hit Recovery OR +3-8 to all Attributes)
     *  (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)
-

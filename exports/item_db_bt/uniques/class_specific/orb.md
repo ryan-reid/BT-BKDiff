@@ -60,4 +60,3 @@
     * +40 to Mana
     * +40 to Life
     * -4% to Enemy Lightning Resistance
-

@@ -517,4 +517,3 @@
     * +100-200% Enhanced Damage
     * Durability: 25 of 25
     * Adds 50-100 Magic Damage
-

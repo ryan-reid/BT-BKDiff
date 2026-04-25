@@ -41,4 +41,3 @@
     * +200-300 Defense
     * Damage Reduced by 15-20
     * +40% Increased Attack Speed
-

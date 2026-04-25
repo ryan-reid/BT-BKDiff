@@ -37,4 +37,3 @@
     * +15% Faster Run/Walk
     * 150% Extra Gold from Monsters
     * Prevent Monster Heal
-

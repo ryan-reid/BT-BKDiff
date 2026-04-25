@@ -37,7 +37,7 @@
     * All Resistances +20
     * Replenish Life +-10
     * 20% Better Chance of Getting Magic Items
-    * (1.0-3.0% per clvl) to Maximum Fire Resist
+    * +1-3% to Maximum Fire Resist
 
 ### Bul-Kathos' Wedding Band (Bul Katho's Wedding Band)
 * **Base Item:** Ring
@@ -125,4 +125,3 @@
     * All Resistances +6-11
     * +1-3 Life after each Kill
     * +1-3 to Mana after each Kill
-

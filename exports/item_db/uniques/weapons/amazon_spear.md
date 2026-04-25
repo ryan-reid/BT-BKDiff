@@ -42,4 +42,3 @@
     * Increase Maximum Life 5-15%
     * +40% Increased Attack Speed
     * 20% Chance to cast level 40 Lightning Strike on striking
-

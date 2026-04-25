@@ -305,4 +305,3 @@
     * Cannot Be Frozen
     * Hit Blinds Target +1
     * +50% Faster Run/Walk
-

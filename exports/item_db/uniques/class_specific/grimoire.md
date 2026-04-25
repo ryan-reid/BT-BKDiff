@@ -59,4 +59,3 @@
     * +10-20 to Vitality
     * +3-5 Life after each Kill
     * All Resistances +20-30
-

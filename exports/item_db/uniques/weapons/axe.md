@@ -341,4 +341,3 @@
     * (2.5 per clvl) to Maximum Damage (Based on Character Level)
     * +50 to Minimum Damage
     * +1 to Lightning Mastery
-
