@@ -96,7 +96,7 @@
     * Adds 30-43 Magic Damage
     * -4-5% to Enemy Magic Resistance
     * +4-5% to Magic Skill Damage
-    * 100% Chance to cast level 51 Spike Armor when you Level-Up
+    * 100% Chance to cast level 51 Bone Armor when you Level-Up
     * +2% to Experience Gained
 
 ### Rainbow Facet (Rainbow Facet)

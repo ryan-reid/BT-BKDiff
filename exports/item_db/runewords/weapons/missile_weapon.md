@@ -66,7 +66,7 @@
 * **Properties:**
     * +50% Enhanced Damage
     * +3 to Bow and Crossbow Skills
-    * +3 to Dangerous Strike (Amazon only)
+    * +3 to Critical Strike (Amazon only)
     * +3 to Dodge (Amazon only)
     * +3 to Slow Missiles (Amazon only)
     * +300% Damage to Undead

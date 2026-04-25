@@ -154,13 +154,13 @@
 * **Properties:**
     * +170-200% Enhanced Defense
     * +40% Faster Run/Walk
-    * +33 to Spike Prison
+    * +33 to Bone Prison
     * +10-12 to Life Tap
     * Regenerate Mana 10%
     * Cannot Be Frozen
     * +10-20 to Strength
     * +17 to Dexterity
-    * +1-2 to Undead Mastery (Necromancer only)
+    * +1-2 to Skeleton Mastery (Necromancer only)
     * Magic Damage Reduced by 20
 
 ### Meshif's Travellers (Meshif's Travellers)

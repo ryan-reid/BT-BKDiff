@@ -4,7 +4,7 @@
 * **Base Item:** Jewel
 * **Level Requirement:** 75
 * **Properties:**
-    * 10% Chance to cast level 25 Spike Armor when struck
+    * 10% Chance to cast level 25 Bone Armor when struck
     * +5-10% to Poison Skill Damage
     * Adds 975-975 Poison Damage Over 975 Seconds
     * -5-10% to Enemy Poison Resistance

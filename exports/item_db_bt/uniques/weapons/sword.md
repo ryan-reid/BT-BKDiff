@@ -381,7 +381,7 @@
 * **Properties:**
     * +210-260% Enhanced Damage
     * 10-15% Life stolen per hit
-    * +15 to Dark Golem
+    * +15 to Blood Golem
     * +7-13 Life after each Kill
     * 50% Chance of Open Wounds
     * +50 to Life

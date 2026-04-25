@@ -292,8 +292,9 @@ class CubeAnalyzerService:
         if not code: return ""
         code = code.strip()
         code_lower = code.lower()
-        if code_lower == "usetype": return "Use Type"
-        if code_lower == "useitem": return "Use Item"
+        if code_lower == "usetype": return "Input Item Type"
+        if code_lower == "useitem": return "Input Item"
+        if code_lower == "any": return "Any Item"
         
         item = self.armor.get(code) or self.weapons.get(code) or self.misc.get(code)
         if item:

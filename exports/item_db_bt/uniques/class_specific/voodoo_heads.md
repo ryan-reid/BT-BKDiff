@@ -16,7 +16,7 @@
     * Piercing Attack
 
 ### Darkforce Spawn (Darkforge Spawn)
-* **Base Item:** Evil Lord Head
+* **Base Item:** Bloodlord Skull
 * **Level Requirement:** 64
 * **Properties:**
     * +140-180% Enhanced Defense
@@ -26,13 +26,13 @@
     * +2-3 to Poison and Bone Skills
     * +2-3 to Summoning Skills
     * +5 to Teeth (Necromancer only)
-    * +5 to Spike Armor (Necromancer only)
+    * +5 to Bone Armor (Necromancer only)
     * +5 to Bone Spear (Necromancer only)
     * +5 to Bone Spirit (Necromancer only)
     * Piercing Attack
 
 ### Boneflame (Boneflame)
-* **Base Item:** Succubus Head
+* **Base Item:** Succubus Skull
 * **Level Requirement:** 72
 * **Properties:**
     * +120-150% Enhanced Defense

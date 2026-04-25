@@ -130,33 +130,33 @@
 
 ## 3 Perfect Gems (Any) + 1 Magic Item -> Re-rolled Magic Item
 
-**Inputs:** **any (Magic)** + **Perfect Gem (Qty: 3)**
+**Inputs:** **Any Item (Magic)** + **Perfect Gem (Qty: 3)**
 
-**Outputs:** **Use Type (Magic)**
+**Outputs:** **Input Item Type (Magic)**
 
 ---
 
 ## 6 Perfect Skulls + 1 Rare Item -> 1 Low Quality Rare Item
 
-**Inputs:** **any (Rare)** + **• Perfect Skull (Qty: 6)**
+**Inputs:** **Any Item (Rare)** + **• Perfect Skull (Qty: 6)**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
 ## 1 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> 1 High Quality Rare Item
 
-**Inputs:** **any (Rare)** + **• Perfect Skull** + **The Stone of Jordan**
+**Inputs:** **Any Item (Rare)** + **• Perfect Skull** + **The Stone of Jordan**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
 ## 1 Hel Rune + Scroll of Town Portal + 1 Socketed Item -> Clear Sockets on Item
 
-**Inputs:** **any (sock)** + **Hel Rune (15)** + **TP**
+**Inputs:** **Any Item (sock)** + **Hel Rune (15)** + **TP**
 
-**Outputs:** **Use Item (uns)**
+**Outputs:** **Input Item (uns)**
 
 ---
 
@@ -170,9 +170,9 @@
 
 ## 3 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> Add 3 Socket to Rare Item
 
-**Inputs:** **any (Rare, nos)** + **• Perfect Skull (Qty: 3)** + **The Stone of Jordan**
+**Inputs:** **Any Item (Rare, nos)** + **• Perfect Skull (Qty: 3)** + **The Stone of Jordan**
 
-**Outputs:** **Use Item (sock=3)**
+**Outputs:** **Input Item (sock=3)**
 
 ---
 
@@ -186,41 +186,41 @@
 
 ## Infernal Mawstone + Item --> Rerolls Ethereal Set ; Potential Upgrade or Downgrade
 
-**Inputs:** **any (Set, eth)** + **Infernal Mawstone**
+**Inputs:** **Any Item (Set, eth)** + **Infernal Mawstone**
 
-**Outputs:** **Use Type (Set) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Set) [Extra: ethereal]**
 
 ---
 
 ## Infernal Mawstone + Item --> Rerolls Set; Potential Upgrade or Downgrade
 
-**Inputs:** **any (Set, noe)** + **Infernal Mawstone**
+**Inputs:** **Any Item (Set, noe)** + **Infernal Mawstone**
 
-**Outputs:** **Use Type (Set)**
+**Outputs:** **Input Item Type (Set)**
 
 ---
 
 ## Infernal Mawstone + Item --> Rerolls Ethereal Unique ; Potential Upgrade or Downgrade
 
-**Inputs:** **any (Unique, eth)** + **Infernal Mawstone**
+**Inputs:** **Any Item (Unique, eth)** + **Infernal Mawstone**
 
-**Outputs:** **Use Type (Unique) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Unique) [Extra: ethereal]**
 
 ---
 
 ## Infernal Mawstone + Item --> Rerolls Unique ; Potential Upgrade or Downgrade
 
-**Inputs:** **any (Unique, noe)** + **Infernal Mawstone**
+**Inputs:** **Any Item (Unique, noe)** + **Infernal Mawstone**
 
-**Outputs:** **Use Type (Unique)**
+**Outputs:** **Input Item Type (Unique)**
 
 ---
 
 ## Fracture Halo --> Return Base + Socketed Items
 
-**Inputs:** **any (sock)** + **Fracture Halo**
+**Inputs:** **Any Item (sock)** + **Fracture Halo**
 
-**Outputs:** **Use Item (rem)**
+**Outputs:** **Input Item (rem)**
 
 ---
 
@@ -252,7 +252,7 @@
 
 **Inputs:** **Wand (Magic)** + **Blood-Coiled Stone** + **Mana Potion**
 
-**Outputs:** **Use Type (Magic) [Extra: oskill]**
+**Outputs:** **Input Item Type (Magic) [Extra: oskill]**
 
 ---
 
@@ -260,7 +260,7 @@
 
 **Inputs:** **Wand (Magic)** + **Blood-Coiled Stone** + **Healing Potion**
 
-**Outputs:** **Use Type (Magic) [Extra: oskill]**
+**Outputs:** **Input Item Type (Magic) [Extra: oskill]**
 
 ---
 
@@ -268,7 +268,7 @@
 
 **Inputs:** **Staff (Magic)** + **Riftcarver**
 
-**Outputs:** **Use Type (Magic) [Extra: charged]**
+**Outputs:** **Input Item Type (Magic) [Extra: charged]**
 
 ---
 
@@ -276,7 +276,7 @@
 
 **Inputs:** **Tome of Town Portal** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-quant]**
+**Outputs:** **Input Item [Extra: rep-quant]**
 
 ---
 
@@ -284,7 +284,7 @@
 
 **Inputs:** **Tome of Identify** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-quant]**
+**Outputs:** **Input Item [Extra: rep-quant]**
 
 ---
 
@@ -292,7 +292,7 @@
 
 **Inputs:** **Throwing Knife** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-quant]**
+**Outputs:** **Input Item [Extra: rep-quant]**
 
 ---
 
@@ -300,7 +300,7 @@
 
 **Inputs:** **Throwing Axe** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-quant]**
+**Outputs:** **Input Item [Extra: rep-quant]**
 
 ---
 
@@ -308,23 +308,23 @@
 
 **Inputs:** **Javelin** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-quant]**
+**Outputs:** **Input Item [Extra: rep-quant]**
 
 ---
 
 ## Herb + Standard of Heros = Repair Augment on Magic Item
 
-**Inputs:** **any (Magic)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
+**Inputs:** **Any Item (Magic)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-dur]**
+**Outputs:** **Input Item [Extra: rep-dur]**
 
 ---
 
 ## Herb + Standard of Heros = Repair Augment on Rare Item
 
-**Inputs:** **any (Rare)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
+**Inputs:** **Any Item (Rare)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-dur]**
+**Outputs:** **Input Item [Extra: rep-dur]**
 
 ---
 
@@ -332,7 +332,7 @@
 
 **Inputs:** **Any Armor (Set)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-dur]**
+**Outputs:** **Input Item [Extra: rep-dur]**
 
 ---
 
@@ -340,7 +340,7 @@
 
 **Inputs:** **Weapon (Set)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-dur]**
+**Outputs:** **Input Item [Extra: rep-dur]**
 
 ---
 
@@ -348,7 +348,7 @@
 
 **Inputs:** **Any Armor (Unique)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-dur]**
+**Outputs:** **Input Item [Extra: rep-dur]**
 
 ---
 
@@ -356,15 +356,15 @@
 
 **Inputs:** **Weapon (Unique)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-dur]**
+**Outputs:** **Input Item [Extra: rep-dur]**
 
 ---
 
 ## Herb + Standard of Heros = Repair Augment on Crafted Item
 
-**Inputs:** **any (crf)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
+**Inputs:** **Any Item (crf)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:** **Use Item [Extra: rep-dur]**
+**Outputs:** **Input Item [Extra: rep-dur]**
 
 ---
 
@@ -372,7 +372,7 @@
 
 **Inputs:** **Bow** + **Flask of Etheric Light**
 
-**Outputs:** **Use Item**
+**Outputs:** **Input Item**
 
 ---
 
@@ -380,7 +380,7 @@
 
 **Inputs:** **Weapon (noe)** + **Flask of Etheric Light**
 
-**Outputs:** **Use Item [Extra: ethereal]**
+**Outputs:** **Input Item [Extra: ethereal]**
 
 ---
 
@@ -388,7 +388,7 @@
 
 **Inputs:** **Any Armor (noe)** + **Flask of Etheric Light**
 
-**Outputs:** **Use Item [Extra: ethereal]**
+**Outputs:** **Input Item [Extra: ethereal]**
 
 ---
 
@@ -396,7 +396,7 @@
 
 **Inputs:** **Merc Equip** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -404,7 +404,7 @@
 
 **Inputs:** **Weapon** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -412,7 +412,7 @@
 
 **Inputs:** **Amulet** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -420,7 +420,7 @@
 
 **Inputs:** **Any Shield** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -428,7 +428,7 @@
 
 **Inputs:** **Ring** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -436,7 +436,7 @@
 
 **Inputs:** **Gloves** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -444,7 +444,7 @@
 
 **Inputs:** **Boots** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -452,7 +452,7 @@
 
 **Inputs:** **Armor** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -460,7 +460,7 @@
 
 **Inputs:** **Belt** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -468,7 +468,7 @@
 
 **Inputs:** **Merc Equip** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -476,7 +476,7 @@
 
 **Inputs:** **Weapon** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -484,7 +484,7 @@
 
 **Inputs:** **Amulet** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -492,7 +492,7 @@
 
 **Inputs:** **Any Shield** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -500,7 +500,7 @@
 
 **Inputs:** **Ring** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -508,7 +508,7 @@
 
 **Inputs:** **Gloves** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -516,7 +516,7 @@
 
 **Inputs:** **Boots** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -524,7 +524,7 @@
 
 **Inputs:** **Armor** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -532,7 +532,7 @@
 
 **Inputs:** **Belt** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: augmented1]**
+**Outputs:** **Input Item [Extra: augmented1]**
 
 ---
 
@@ -540,7 +540,7 @@
 
 **Inputs:** **Armor** + **•••Zod Rune  (33)•••** + **•••Sur Rune (29)•••** + **The Stone of Jordan** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:** **Use Item [Extra: oskill]**
+**Outputs:** **Input Item [Extra: oskill]**
 
 ---
 
@@ -580,7 +580,7 @@
 
 **Inputs:** **Weapon (noe)** + **Ort Rune (9)**
 
-**Outputs:** **Use Item (rep, rch) (Qty: 500)**
+**Outputs:** **Input Item (rep, rch) (Qty: 500)**
 
 ---
 
@@ -588,7 +588,7 @@
 
 **Inputs:** **Any Armor (noe)** + **Ral Rune (8)**
 
-**Outputs:** **Use Item (rep, rch) (Qty: 500)**
+**Outputs:** **Input Item (rep, rch) (Qty: 500)**
 
 ---
 
@@ -596,7 +596,7 @@
 
 **Inputs:** **Weapon (noe)** + **Ort Rune (9)** + **Chipped Gem**
 
-**Outputs:** **Use Item (rep, rch) (Qty: 500)**
+**Outputs:** **Input Item (rep, rch) (Qty: 500)**
 
 ---
 
@@ -604,7 +604,7 @@
 
 **Inputs:** **Any Armor (noe)** + **Ral Rune (8)** + **Flawed Gem**
 
-**Outputs:** **Use Item (rep, rch) (Qty: 500)**
+**Outputs:** **Input Item (rep, rch) (Qty: 500)**
 
 ---
 
@@ -2108,7 +2108,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2116,7 +2116,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2124,7 +2124,7 @@
 
 **Inputs:** **Merc Equip (Magic, eth)** + **Jewel** + **Ith Rune (6)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2132,7 +2132,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2140,7 +2140,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2148,7 +2148,7 @@
 
 **Inputs:** **Boots (Magic, eth)** + **Jewel** + **Ral Rune (8)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2156,7 +2156,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2164,7 +2164,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2172,7 +2172,7 @@
 
 **Inputs:** **Gloves (Magic, eth)** + **Jewel** + **Ort Rune (9)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2180,7 +2180,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2188,7 +2188,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2196,7 +2196,7 @@
 
 **Inputs:** **Belt (Magic, eth)** + **Jewel** + **Tal Rune (7)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2204,7 +2204,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2212,7 +2212,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2220,7 +2220,7 @@
 
 **Inputs:** **Any Shield (Magic, eth)** + **Jewel** + **Eth Rune (5)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2228,7 +2228,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2236,7 +2236,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2244,7 +2244,7 @@
 
 **Inputs:** **Armor (Magic, eth)** + **Jewel** + **Nef Rune (4)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2252,7 +2252,7 @@
 
 **Inputs:** **Amulet (Magic)** + **Jewel** + **Thul Rune (10)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2260,7 +2260,7 @@
 
 **Inputs:** **Ring (Magic)** + **Jewel** + **Amn Rune (11)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2268,7 +2268,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Tir Rune (3)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2276,7 +2276,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Tir Rune (3)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2284,7 +2284,7 @@
 
 **Inputs:** **Weapon (Magic, eth)** + **Jewel** + **Tir Rune (3)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2292,7 +2292,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2300,7 +2300,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2308,7 +2308,7 @@
 
 **Inputs:** **Merc Equip (Magic, eth)** + **Jewel** + **Ral Rune (8)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2316,7 +2316,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2324,7 +2324,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2332,7 +2332,7 @@
 
 **Inputs:** **Boots (Magic, eth)** + **Jewel** + **Eth Rune (5)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2340,7 +2340,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2348,7 +2348,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2356,7 +2356,7 @@
 
 **Inputs:** **Gloves (Magic, eth)** + **Jewel** + **Nef Rune (4)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2364,7 +2364,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2372,7 +2372,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2380,7 +2380,7 @@
 
 **Inputs:** **Belt (Magic, eth)** + **Jewel** + **Tal Rune (7)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2388,7 +2388,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2396,7 +2396,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2404,7 +2404,7 @@
 
 **Inputs:** **Any Shield (Magic, eth)** + **Jewel** + **Ith Rune (6)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2412,7 +2412,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **Jewel** + **Thul Rune (10)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2420,7 +2420,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **Jewel** + **Thul Rune (10)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2428,7 +2428,7 @@
 
 **Inputs:** **Armor (Magic, eth)** + **Jewel** + **Thul Rune (10)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2436,7 +2436,7 @@
 
 **Inputs:** **Amulet (Magic)** + **Jewel** + **Amn Rune (11)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2444,7 +2444,7 @@
 
 **Inputs:** **Ring (Magic)** + **Jewel** + **Sol Rune (12)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2452,7 +2452,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2460,7 +2460,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2468,7 +2468,7 @@
 
 **Inputs:** **Weapon (Magic, eth)** + **Jewel** + **Ort Rune (9)** + **• Perfect Ruby**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -2476,7 +2476,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -2484,7 +2484,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -2492,7 +2492,7 @@
 
 **Inputs:** **Merc Equip (Magic, eth)** + **Jewel** + **Nef Rune (4)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -2500,7 +2500,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **Jewel** + **Thul Rune (10)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -2508,7 +2508,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **Jewel** + **Thul Rune (10)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -2516,7 +2516,7 @@
 
 **Inputs:** **Boots (Magic, eth)** + **Jewel** + **Thul Rune (10)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -2524,7 +2524,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: mana-kill]**
+**Outputs:** **Input Item Type (crf) [Extra: mana-kill]**
 
 ---
 
@@ -2532,7 +2532,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: mana-kill]**
+**Outputs:** **Input Item Type (crf) [Extra: mana-kill]**
 
 ---
 
@@ -2540,7 +2540,7 @@
 
 **Inputs:** **Gloves (Magic, eth)** + **Jewel** + **Ort Rune (9)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: mana-kill]**
+**Outputs:** **Input Item Type (crf) [Extra: mana-kill]**
 
 ---
 
@@ -2548,7 +2548,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -2556,7 +2556,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -2564,7 +2564,7 @@
 
 **Inputs:** **Belt (Magic, eth)** + **Jewel** + **Ith Rune (6)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -2572,7 +2572,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -2580,7 +2580,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Eth Rune (5) (Qty: 2)** + **• Perfect Amethyst** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -2588,7 +2588,7 @@
 
 **Inputs:** **Any Shield (Magic, eth)** + **Jewel** + **Eth Rune (5)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -2596,7 +2596,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -2604,7 +2604,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -2612,7 +2612,7 @@
 
 **Inputs:** **Armor (Magic, eth)** + **Jewel** + **Tal Rune (7)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -2620,7 +2620,7 @@
 
 **Inputs:** **Amulet (Magic)** + **Jewel** + **Ral Rune (8)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -2628,7 +2628,7 @@
 
 **Inputs:** **Ring (Magic)** + **Jewel** + **Amn Rune (11)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: mana-kill]**
+**Outputs:** **Input Item Type (crf) [Extra: mana-kill]**
 
 ---
 
@@ -2636,7 +2636,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Tir Rune (3)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: allskills]**
+**Outputs:** **Input Item Type (crf) [Extra: allskills]**
 
 ---
 
@@ -2644,7 +2644,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Tir Rune (3)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: allskills]**
+**Outputs:** **Input Item Type (crf) [Extra: allskills]**
 
 ---
 
@@ -2652,7 +2652,7 @@
 
 **Inputs:** **Weapon (Magic, eth)** + **Jewel** + **Tir Rune (3)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Type (crf) [Extra: allskills]**
+**Outputs:** **Input Item Type (crf) [Extra: allskills]**
 
 ---
 
@@ -2660,7 +2660,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2668,7 +2668,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2676,7 +2676,7 @@
 
 **Inputs:** **Merc Equip (Magic, eth)** + **Jewel** + **Ith Rune (6)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2684,7 +2684,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2692,7 +2692,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2700,7 +2700,7 @@
 
 **Inputs:** **Boots (Magic, eth)** + **Jewel** + **Ort Rune (9)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2708,7 +2708,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2716,7 +2716,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2724,7 +2724,7 @@
 
 **Inputs:** **Gloves (Magic, eth)** + **Jewel** + **Ral Rune (8)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2732,7 +2732,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2740,7 +2740,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2748,7 +2748,7 @@
 
 **Inputs:** **Belt (Magic, eth)** + **Jewel** + **Tal Rune (7)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2756,7 +2756,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -2764,7 +2764,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -2772,7 +2772,7 @@
 
 **Inputs:** **Any Shield (Magic, eth)** + **Jewel** + **Nef Rune (4)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -2780,7 +2780,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -2788,7 +2788,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **Jewel** + **Eth Rune (5) (Qty: 2)** + **• Perfect Emerald** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -2796,7 +2796,7 @@
 
 **Inputs:** **Armor (Magic, eth)** + **Jewel** + **Eth Rune (5)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -2804,7 +2804,7 @@
 
 **Inputs:** **Amulet (Magic)** + **Jewel** + **Thul Rune (10)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2812,7 +2812,7 @@
 
 **Inputs:** **Ring (Magic)** + **Jewel** + **Amn Rune (11)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2820,7 +2820,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Sol Rune (12)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2828,7 +2828,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Sol Rune (12)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2836,7 +2836,7 @@
 
 **Inputs:** **Weapon (Magic, eth)** + **Jewel** + **Sol Rune (12)** + **• Perfect Emerald**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -2844,7 +2844,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2852,7 +2852,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2860,7 +2860,7 @@
 
 **Inputs:** **Merc Equip (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2868,7 +2868,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2876,7 +2876,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2884,7 +2884,7 @@
 
 **Inputs:** **Boots (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2892,7 +2892,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2900,7 +2900,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2908,7 +2908,7 @@
 
 **Inputs:** **Gloves (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2916,7 +2916,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2924,7 +2924,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2932,7 +2932,7 @@
 
 **Inputs:** **Belt (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2940,7 +2940,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2948,7 +2948,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2956,7 +2956,7 @@
 
 **Inputs:** **Any Shield (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2964,7 +2964,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2972,7 +2972,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2980,7 +2980,7 @@
 
 **Inputs:** **Armor (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2988,7 +2988,7 @@
 
 **Inputs:** **Amulet (Magic)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -2996,7 +2996,7 @@
 
 **Inputs:** **Ring (Magic)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -3004,7 +3004,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -3012,7 +3012,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -3020,7 +3020,7 @@
 
 **Inputs:** **Weapon (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
+**Outputs:** **Input Item Type (crf) [Extra: gethit-skill]**
 
 ---
 
@@ -3028,7 +3028,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3036,7 +3036,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3044,7 +3044,7 @@
 
 **Inputs:** **Merc Equip (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3052,7 +3052,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3060,7 +3060,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3068,7 +3068,7 @@
 
 **Inputs:** **Boots (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3076,7 +3076,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3084,7 +3084,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3092,7 +3092,7 @@
 
 **Inputs:** **Gloves (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3100,7 +3100,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3108,7 +3108,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3116,7 +3116,7 @@
 
 **Inputs:** **Belt (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3124,7 +3124,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3132,7 +3132,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3140,7 +3140,7 @@
 
 **Inputs:** **Any Shield (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3148,7 +3148,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3156,7 +3156,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3164,7 +3164,7 @@
 
 **Inputs:** **Armor (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3172,7 +3172,7 @@
 
 **Inputs:** **Amulet (Magic)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3180,7 +3180,7 @@
 
 **Inputs:** **Ring (Magic)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3188,7 +3188,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3196,7 +3196,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3204,7 +3204,7 @@
 
 **Inputs:** **Weapon (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: lifesteal]**
+**Outputs:** **Input Item Type (crf) [Extra: lifesteal]**
 
 ---
 
@@ -3212,7 +3212,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -3220,7 +3220,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -3228,7 +3228,7 @@
 
 **Inputs:** **Merc Equip (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -3236,7 +3236,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -3244,7 +3244,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -3252,7 +3252,7 @@
 
 **Inputs:** **Boots (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -3260,7 +3260,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: mana-kill]**
+**Outputs:** **Input Item Type (crf) [Extra: mana-kill]**
 
 ---
 
@@ -3268,7 +3268,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: mana-kill]**
+**Outputs:** **Input Item Type (crf) [Extra: mana-kill]**
 
 ---
 
@@ -3276,7 +3276,7 @@
 
 **Inputs:** **Gloves (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: mana-kill]**
+**Outputs:** **Input Item Type (crf) [Extra: mana-kill]**
 
 ---
 
@@ -3284,7 +3284,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -3292,7 +3292,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -3300,7 +3300,7 @@
 
 **Inputs:** **Belt (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -3308,7 +3308,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -3316,7 +3316,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -3324,7 +3324,7 @@
 
 **Inputs:** **Any Shield (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -3332,7 +3332,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -3340,7 +3340,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -3348,7 +3348,7 @@
 
 **Inputs:** **Armor (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: cast1]**
+**Outputs:** **Input Item Type (crf) [Extra: cast1]**
 
 ---
 
@@ -3356,7 +3356,7 @@
 
 **Inputs:** **Amulet (Magic)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: regen-mana]**
+**Outputs:** **Input Item Type (crf) [Extra: regen-mana]**
 
 ---
 
@@ -3364,7 +3364,7 @@
 
 **Inputs:** **Ring (Magic)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: mana-kill]**
+**Outputs:** **Input Item Type (crf) [Extra: mana-kill]**
 
 ---
 
@@ -3372,7 +3372,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: allskills]**
+**Outputs:** **Input Item Type (crf) [Extra: allskills]**
 
 ---
 
@@ -3380,7 +3380,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: allskills]**
+**Outputs:** **Input Item Type (crf) [Extra: allskills]**
 
 ---
 
@@ -3388,7 +3388,7 @@
 
 **Inputs:** **Weapon (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: allskills]**
+**Outputs:** **Input Item Type (crf) [Extra: allskills]**
 
 ---
 
@@ -3396,7 +3396,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3404,7 +3404,7 @@
 
 **Inputs:** **Merc Equip (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3412,7 +3412,7 @@
 
 **Inputs:** **Merc Equip (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3420,7 +3420,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3428,7 +3428,7 @@
 
 **Inputs:** **Boots (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3436,7 +3436,7 @@
 
 **Inputs:** **Boots (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3444,7 +3444,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3452,7 +3452,7 @@
 
 **Inputs:** **Gloves (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3460,7 +3460,7 @@
 
 **Inputs:** **Gloves (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3468,7 +3468,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3476,7 +3476,7 @@
 
 **Inputs:** **Belt (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3484,7 +3484,7 @@
 
 **Inputs:** **Belt (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3492,7 +3492,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -3500,7 +3500,7 @@
 
 **Inputs:** **Any Shield (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -3508,7 +3508,7 @@
 
 **Inputs:** **Any Shield (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -3516,7 +3516,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -3524,7 +3524,7 @@
 
 **Inputs:** **Armor (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -3532,7 +3532,7 @@
 
 **Inputs:** **Armor (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg%]**
 
 ---
 
@@ -3540,7 +3540,7 @@
 
 **Inputs:** **Amulet (Magic)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3548,7 +3548,7 @@
 
 **Inputs:** **Ring (Magic)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3556,7 +3556,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3564,7 +3564,7 @@
 
 **Inputs:** **Weapon (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3572,7 +3572,7 @@
 
 **Inputs:** **Weapon (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:** **Use Type (crf) [Extra: red-dmg]**
+**Outputs:** **Input Item Type (crf) [Extra: red-dmg]**
 
 ---
 
@@ -3772,7 +3772,7 @@
 
 **Inputs:** **Weapon (bas, Unique)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item (mod, exc)**
+**Outputs:** **Input Item (mod, exc)**
 
 ---
 
@@ -3780,7 +3780,7 @@
 
 **Inputs:** **Any Armor (bas, Unique)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item (mod, exc)**
+**Outputs:** **Input Item (mod, exc)**
 
 ---
 
@@ -3788,7 +3788,7 @@
 
 **Inputs:** **Weapon (exc, Unique)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:** **Use Item (mod, eli)**
+**Outputs:** **Input Item (mod, eli)**
 
 ---
 
@@ -3796,7 +3796,7 @@
 
 **Inputs:** **Any Armor (exc, Unique)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:** **Use Item (mod, eli)**
+**Outputs:** **Input Item (mod, eli)**
 
 ---
 
@@ -3804,7 +3804,7 @@
 
 **Inputs:** **Weapon (bas, Rare)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item (mod, exc)**
+**Outputs:** **Input Item (mod, exc)**
 
 ---
 
@@ -3812,7 +3812,7 @@
 
 **Inputs:** **Weapon (bas, crf)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item (mod, exc)**
+**Outputs:** **Input Item (mod, exc)**
 
 ---
 
@@ -3820,7 +3820,7 @@
 
 **Inputs:** **Any Armor (bas, Rare)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item (mod, exc)**
+**Outputs:** **Input Item (mod, exc)**
 
 ---
 
@@ -3828,7 +3828,7 @@
 
 **Inputs:** **Any Armor (bas, crf)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item (mod, exc)**
+**Outputs:** **Input Item (mod, exc)**
 
 ---
 
@@ -3836,7 +3836,7 @@
 
 **Inputs:** **Weapon (exc, Rare)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:** **Use Item (mod, eli)**
+**Outputs:** **Input Item (mod, eli)**
 
 ---
 
@@ -3844,7 +3844,7 @@
 
 **Inputs:** **Weapon (exc, crf)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:** **Use Item (mod, eli)**
+**Outputs:** **Input Item (mod, eli)**
 
 ---
 
@@ -3852,7 +3852,7 @@
 
 **Inputs:** **Any Armor (exc, Rare)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:** **Use Item (mod, eli)**
+**Outputs:** **Input Item (mod, eli)**
 
 ---
 
@@ -3860,7 +3860,7 @@
 
 **Inputs:** **Any Armor (exc, crf)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:** **Use Item (mod, eli)**
+**Outputs:** **Input Item (mod, eli)**
 
 ---
 
@@ -3868,7 +3868,7 @@
 
 **Inputs:** **Weapon (bas, Set)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item (mod, exc)**
+**Outputs:** **Input Item (mod, exc)**
 
 ---
 
@@ -3876,7 +3876,7 @@
 
 **Inputs:** **Any Armor (bas, Set)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item (mod, exc)**
+**Outputs:** **Input Item (mod, exc)**
 
 ---
 
@@ -3884,7 +3884,7 @@
 
 **Inputs:** **Weapon (exc, Set)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:** **Use Item (mod, eli)**
+**Outputs:** **Input Item (mod, eli)**
 
 ---
 
@@ -3892,7 +3892,7 @@
 
 **Inputs:** **Any Armor (exc, Set)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:** **Use Item (mod, eli)**
+**Outputs:** **Input Item (mod, eli)**
 
 ---
 
@@ -3900,7 +3900,7 @@
 
 **Inputs:** **Any Armor (hiq, nos)** + **Jewel** + **Ral Rune (8)**
 
-**Outputs:** **Use Item (Tempered)**
+**Outputs:** **Input Item (Tempered)**
 
 ---
 
@@ -3908,7 +3908,7 @@
 
 **Inputs:** **Weapon (hiq, nos)** + **Jewel** + **Ral Rune (8)**
 
-**Outputs:** **Use Item (Tempered)**
+**Outputs:** **Input Item (Tempered)**
 
 ---
 
@@ -3916,7 +3916,7 @@
 
 **Inputs:** **Ring (Magic)** + **Jewel** + **Ral Rune (8)**
 
-**Outputs:** **Use Type (Tempered) [Extra: levelreq]**
+**Outputs:** **Input Item Type (Tempered) [Extra: levelreq]**
 
 ---
 
@@ -3924,7 +3924,7 @@
 
 **Inputs:** **Amulet (Magic)** + **Jewel** + **Ral Rune (8)**
 
-**Outputs:** **Use Type (Tempered) [Extra: levelreq]**
+**Outputs:** **Input Item Type (Tempered) [Extra: levelreq]**
 
 ---
 
@@ -3932,7 +3932,7 @@
 
 **Inputs:** **Weapon (Tempered)** + **El Rune (1)** + **• Chipped Amethyst**
 
-**Outputs:** **Use Item [Extra: levelreq]**
+**Outputs:** **Input Item [Extra: levelreq]**
 
 ---
 
@@ -3940,7 +3940,7 @@
 
 **Inputs:** **Amulet (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
+**Outputs:** **Input Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
 
 ---
 
@@ -3948,7 +3948,7 @@
 
 **Inputs:** **Ring (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Virulent (673)) [Extra: pierce-pois]**
+**Outputs:** **Input Item (Prefix: Virulent (673)) [Extra: pierce-pois]**
 
 ---
 
@@ -3956,7 +3956,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
+**Outputs:** **Input Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
 
 ---
 
@@ -3964,7 +3964,7 @@
 
 **Inputs:** **Boots (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
+**Outputs:** **Input Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
 
 ---
 
@@ -3972,7 +3972,7 @@
 
 **Inputs:** **Gloves (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
+**Outputs:** **Input Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
 
 ---
 
@@ -3980,7 +3980,7 @@
 
 **Inputs:** **Armor (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (676)) [Extra: pierce-pois]**
+**Outputs:** **Input Item (Prefix: Incendiary (676)) [Extra: pierce-pois]**
 
 ---
 
@@ -3988,7 +3988,7 @@
 
 **Inputs:** **Weapon (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (675)) [Extra: pierce-pois]**
+**Outputs:** **Input Item (Prefix: Incendiary (675)) [Extra: pierce-pois]**
 
 ---
 
@@ -3996,7 +3996,7 @@
 
 **Inputs:** **Shield (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (675)) [Extra: pierce-pois]**
+**Outputs:** **Input Item (Prefix: Incendiary (675)) [Extra: pierce-pois]**
 
 ---
 
@@ -4004,7 +4004,7 @@
 
 **Inputs:** **Small Charm (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Virulent (671)) [Extra: pierce-pois]**
+**Outputs:** **Input Item (Prefix: Virulent (671)) [Extra: pierce-pois]**
 
 ---
 
@@ -4012,7 +4012,7 @@
 
 **Inputs:** **Medium Charm (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Virulent (673)) [Extra: pierce-pois]**
+**Outputs:** **Input Item (Prefix: Virulent (673)) [Extra: pierce-pois]**
 
 ---
 
@@ -4028,7 +4028,7 @@
 
 **Inputs:** **Amulet (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
 
 ---
 
@@ -4036,7 +4036,7 @@
 
 **Inputs:** **Ring (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (683)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Gelid (683)) [Extra: pierce-cold]**
 
 ---
 
@@ -4044,7 +4044,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
 
 ---
 
@@ -4052,7 +4052,7 @@
 
 **Inputs:** **Boots (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
 
 ---
 
@@ -4060,7 +4060,7 @@
 
 **Inputs:** **Gloves (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
 
 ---
 
@@ -4068,7 +4068,7 @@
 
 **Inputs:** **Armor (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (686)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Magnetic (686)) [Extra: pierce-cold]**
 
 ---
 
@@ -4076,7 +4076,7 @@
 
 **Inputs:** **Weapon (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (685)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Magnetic (685)) [Extra: pierce-cold]**
 
 ---
 
@@ -4084,7 +4084,7 @@
 
 **Inputs:** **Shield (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (685)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Magnetic (685)) [Extra: pierce-cold]**
 
 ---
 
@@ -4092,7 +4092,7 @@
 
 **Inputs:** **Small Charm (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (682)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Gelid (682)) [Extra: pierce-cold]**
 
 ---
 
@@ -4100,7 +4100,7 @@
 
 **Inputs:** **Medium Charm (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (683)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Gelid (683)) [Extra: pierce-cold]**
 
 ---
 
@@ -4108,7 +4108,7 @@
 
 **Inputs:** **Large Charm (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
+**Outputs:** **Input Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
 
 ---
 
@@ -4124,7 +4124,7 @@
 
 **Inputs:** **Amulet (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4132,7 +4132,7 @@
 
 **Inputs:** **Ring (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (688)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Magnetic (688)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4140,7 +4140,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4148,7 +4148,7 @@
 
 **Inputs:** **Boots (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4156,7 +4156,7 @@
 
 **Inputs:** **Gloves (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4164,7 +4164,7 @@
 
 **Inputs:** **Armor (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (691)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Mystical (691)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4172,7 +4172,7 @@
 
 **Inputs:** **Weapon (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (690)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Mystical (690)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4180,7 +4180,7 @@
 
 **Inputs:** **Shield (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (690)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Mystical (690)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4188,7 +4188,7 @@
 
 **Inputs:** **Small Charm (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (687)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Magnetic (687)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4196,7 +4196,7 @@
 
 **Inputs:** **Medium Charm (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (688)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Magnetic (688)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4204,7 +4204,7 @@
 
 **Inputs:** **Large Charm (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
+**Outputs:** **Input Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
 
 ---
 
@@ -4220,7 +4220,7 @@
 
 **Inputs:** **Amulet (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
 
 ---
 
@@ -4228,7 +4228,7 @@
 
 **Inputs:** **Ring (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (678)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Incendiary (678)) [Extra: pierce-fire]**
 
 ---
 
@@ -4236,7 +4236,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
 
 ---
 
@@ -4244,7 +4244,7 @@
 
 **Inputs:** **Boots (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
 
 ---
 
@@ -4252,7 +4252,7 @@
 
 **Inputs:** **Gloves (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
 
 ---
 
@@ -4260,7 +4260,7 @@
 
 **Inputs:** **Armor (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (681)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Gelid (681)) [Extra: pierce-fire]**
 
 ---
 
@@ -4268,7 +4268,7 @@
 
 **Inputs:** **Weapon (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (680)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Gelid (680)) [Extra: pierce-fire]**
 
 ---
 
@@ -4276,7 +4276,7 @@
 
 **Inputs:** **Shield (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Gelid (680)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Gelid (680)) [Extra: pierce-fire]**
 
 ---
 
@@ -4284,7 +4284,7 @@
 
 **Inputs:** **Small Charm (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (677)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Incendiary (677)) [Extra: pierce-fire]**
 
 ---
 
@@ -4292,7 +4292,7 @@
 
 **Inputs:** **Medium Charm (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (678)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Incendiary (678)) [Extra: pierce-fire]**
 
 ---
 
@@ -4300,7 +4300,7 @@
 
 **Inputs:** **Large Charm (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
+**Outputs:** **Input Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
 
 ---
 
@@ -4316,7 +4316,7 @@
 
 **Inputs:** **Amulet (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4324,7 +4324,7 @@
 
 **Inputs:** **Ring (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (698)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Breaching (698)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4332,7 +4332,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4340,7 +4340,7 @@
 
 **Inputs:** **Boots (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4348,7 +4348,7 @@
 
 **Inputs:** **Gloves (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4356,7 +4356,7 @@
 
 **Inputs:** **Armor (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Sullied (701)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Sullied (701)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4364,7 +4364,7 @@
 
 **Inputs:** **Weapon (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Chaotic (700)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Chaotic (700)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4372,7 +4372,7 @@
 
 **Inputs:** **Shield (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Chaotic (700)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Chaotic (700)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4380,7 +4380,7 @@
 
 **Inputs:** **Small Charm (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (697)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Breaching (697)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4388,7 +4388,7 @@
 
 **Inputs:** **Medium Charm (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (698)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Breaching (698)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4396,7 +4396,7 @@
 
 **Inputs:** **Large Charm (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
+**Outputs:** **Input Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
 
 ---
 
@@ -4412,7 +4412,7 @@
 
 **Inputs:** **Amulet (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
 
 ---
 
@@ -4420,7 +4420,7 @@
 
 **Inputs:** **Ring (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (693)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Mystical (693)) [Extra: pierce-mag]**
 
 ---
 
@@ -4428,7 +4428,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
 
 ---
 
@@ -4436,7 +4436,7 @@
 
 **Inputs:** **Boots (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
 
 ---
 
@@ -4444,7 +4444,7 @@
 
 **Inputs:** **Gloves (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
 
 ---
 
@@ -4452,7 +4452,7 @@
 
 **Inputs:** **Armor (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (696)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Breaching (696)) [Extra: pierce-mag]**
 
 ---
 
@@ -4460,7 +4460,7 @@
 
 **Inputs:** **Weapon (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (695)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Breaching (695)) [Extra: pierce-mag]**
 
 ---
 
@@ -4468,7 +4468,7 @@
 
 **Inputs:** **Shield (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Breaching (695)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Breaching (695)) [Extra: pierce-mag]**
 
 ---
 
@@ -4476,7 +4476,7 @@
 
 **Inputs:** **Small Charm (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (692)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Mystical (692)) [Extra: pierce-mag]**
 
 ---
 
@@ -4484,7 +4484,7 @@
 
 **Inputs:** **Medium Charm (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (693)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Mystical (693)) [Extra: pierce-mag]**
 
 ---
 
@@ -4492,7 +4492,7 @@
 
 **Inputs:** **Large Charm (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:** **Use Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
+**Outputs:** **Input Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
 
 ---
 
@@ -4508,7 +4508,7 @@
 
 **Inputs:** **Jewel (Qty: 9)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4516,7 +4516,7 @@
 
 **Inputs:** **Merc Equip (Normal, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4524,7 +4524,7 @@
 
 **Inputs:** **Merc Equip (Low Quality)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4532,7 +4532,7 @@
 
 **Inputs:** **Merc Equip (hiq, noe, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4540,7 +4540,7 @@
 
 **Inputs:** **Merc Equip (Normal, eth, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4548,7 +4548,7 @@
 
 **Inputs:** **Circlet (Normal, eth, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4556,7 +4556,7 @@
 
 **Inputs:** **Merc Equip (hiq, eth, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4564,7 +4564,7 @@
 
 **Inputs:** **Circlet (hiq, eth, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4572,7 +4572,7 @@
 
 **Inputs:** **Weapon (Normal, noe, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4580,7 +4580,7 @@
 
 **Inputs:** **Weapon (Low Quality)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4588,7 +4588,7 @@
 
 **Inputs:** **Weapon (hiq, noe, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4596,7 +4596,7 @@
 
 **Inputs:** **Weapon (Normal, eth, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4604,7 +4604,7 @@
 
 **Inputs:** **Weapon (hiq, eth, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4612,7 +4612,7 @@
 
 **Inputs:** **Armor (Normal, noe, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4620,7 +4620,7 @@
 
 **Inputs:** **Armor (Low Quality)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4628,7 +4628,7 @@
 
 **Inputs:** **Armor (hiq, noe, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4636,7 +4636,7 @@
 
 **Inputs:** **Armor (Normal, eth, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4644,7 +4644,7 @@
 
 **Inputs:** **Armor (hiq, eth, nos)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4652,7 +4652,7 @@
 
 **Inputs:** **Any Shield (Normal, noe)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4660,7 +4660,7 @@
 
 **Inputs:** **Any Shield (Low Quality)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4668,7 +4668,7 @@
 
 **Inputs:** **Any Shield (hiq, noe)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4676,7 +4676,7 @@
 
 **Inputs:** **Any Shield (Normal, eth)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4684,7 +4684,7 @@
 
 **Inputs:** **Any Shield (hiq, eth)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4692,7 +4692,7 @@
 
 **Inputs:** **Gloves (Normal, noe)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4700,7 +4700,7 @@
 
 **Inputs:** **Gloves (Low Quality)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4708,7 +4708,7 @@
 
 **Inputs:** **Gloves (hiq, noe)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4716,7 +4716,7 @@
 
 **Inputs:** **Gloves (Normal, eth)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4724,7 +4724,7 @@
 
 **Inputs:** **Gloves (hiq, eth)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4732,7 +4732,7 @@
 
 **Inputs:** **Belt (Normal, noe)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4740,7 +4740,7 @@
 
 **Inputs:** **Belt (Low Quality)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4748,7 +4748,7 @@
 
 **Inputs:** **Belt (hiq, noe)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4756,7 +4756,7 @@
 
 **Inputs:** **Belt (Normal, eth)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4764,7 +4764,7 @@
 
 **Inputs:** **Belt (hiq, eth)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4772,7 +4772,7 @@
 
 **Inputs:** **Boots (Normal, noe)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4780,7 +4780,7 @@
 
 **Inputs:** **Boots (Low Quality)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4788,7 +4788,7 @@
 
 **Inputs:** **Boots (hiq, noe)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare)**
+**Outputs:** **Input Item Type (Rare)**
 
 ---
 
@@ -4796,7 +4796,7 @@
 
 **Inputs:** **Boots (Normal, eth)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4804,7 +4804,7 @@
 
 **Inputs:** **Boots (hiq, eth)** + **Charsi's Malus**
 
-**Outputs:** **Use Type (Rare) [Extra: ethereal]**
+**Outputs:** **Input Item Type (Rare) [Extra: ethereal]**
 
 ---
 
@@ -4812,7 +4812,7 @@
 
 **Inputs:** **Armor (hiq, nos)** + **Tal Rune (7)** + **Thul Rune (10)** + **• Perfect Topaz**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4820,7 +4820,7 @@
 
 **Inputs:** **Armor (Normal, nos)** + **Tal Rune (7)** + **Thul Rune (10)** + **• Perfect Topaz**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4828,7 +4828,7 @@
 
 **Inputs:** **Weapon (hiq, nos)** + **Ral Rune (8)** + **Amn Rune (11)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4836,7 +4836,7 @@
 
 **Inputs:** **Weapon (Normal, nos)** + **Ral Rune (8)** + **Amn Rune (11)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4844,7 +4844,7 @@
 
 **Inputs:** **Merc Equip (hiq, nos)** + **Ral Rune (8)** + **Thul Rune (10)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4852,7 +4852,7 @@
 
 **Inputs:** **Merc Equip (Normal, nos)** + **Ral Rune (8)** + **Thul Rune (10)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4860,7 +4860,7 @@
 
 **Inputs:** **Any Shield (hiq, nos)** + **Tal Rune (7)** + **Amn Rune (11)** + **• Perfect Ruby**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4868,7 +4868,7 @@
 
 **Inputs:** **Any Shield (Normal, nos)** + **Tal Rune (7)** + **Amn Rune (11)** + **• Perfect Ruby**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4892,7 +4892,7 @@
 
 **Inputs:** **Merc Equip (Normal, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4900,7 +4900,7 @@
 
 **Inputs:** **Merc Equip (Low Quality)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4908,7 +4908,7 @@
 
 **Inputs:** **Merc Equip (hiq, noe, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4916,7 +4916,7 @@
 
 **Inputs:** **Merc Equip (Normal, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4924,7 +4924,7 @@
 
 **Inputs:** **Merc Equip (hiq, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4932,7 +4932,7 @@
 
 **Inputs:** **Weapon (Normal, noe, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4940,7 +4940,7 @@
 
 **Inputs:** **Weapon (Low Quality)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4948,7 +4948,7 @@
 
 **Inputs:** **Weapon (hiq, noe, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4956,7 +4956,7 @@
 
 **Inputs:** **Weapon (Normal, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4964,7 +4964,7 @@
 
 **Inputs:** **Weapon (hiq, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4972,7 +4972,7 @@
 
 **Inputs:** **Armor (Normal, noe, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4980,7 +4980,7 @@
 
 **Inputs:** **Armor (Low Quality)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4988,7 +4988,7 @@
 
 **Inputs:** **Armor (hiq, noe, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -4996,7 +4996,7 @@
 
 **Inputs:** **Armor (Normal, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5004,7 +5004,7 @@
 
 **Inputs:** **Armor (hiq, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5012,7 +5012,7 @@
 
 **Inputs:** **Any Shield (Normal, noe)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5020,7 +5020,7 @@
 
 **Inputs:** **Any Shield (Low Quality)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5028,7 +5028,7 @@
 
 **Inputs:** **Any Shield (hiq, noe)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5036,7 +5036,7 @@
 
 **Inputs:** **Any Shield (Normal, eth)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5044,7 +5044,7 @@
 
 **Inputs:** **Any Shield (hiq, eth)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5052,7 +5052,7 @@
 
 **Inputs:** **Merc Equip (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5060,7 +5060,7 @@
 
 **Inputs:** **Weapon (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5068,7 +5068,7 @@
 
 **Inputs:** **Armor (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5076,7 +5076,7 @@
 
 **Inputs:** **Any Shield (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5084,7 +5084,7 @@
 
 **Inputs:** **Throwing Knife (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5092,7 +5092,7 @@
 
 **Inputs:** **Throwing Axe (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5100,7 +5100,7 @@
 
 **Inputs:** **Javelin (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5108,7 +5108,7 @@
 
 **Inputs:** **Merc Equip (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5116,7 +5116,7 @@
 
 **Inputs:** **Weapon (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5124,7 +5124,7 @@
 
 **Inputs:** **Armor (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5132,7 +5132,7 @@
 
 **Inputs:** **Any Shield (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5140,7 +5140,7 @@
 
 **Inputs:** **Throwing Knife (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5148,7 +5148,7 @@
 
 **Inputs:** **Throwing Axe (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5156,7 +5156,7 @@
 
 **Inputs:** **Javelin (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5164,7 +5164,7 @@
 
 **Inputs:** **Merc Equip (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5172,7 +5172,7 @@
 
 **Inputs:** **Weapon (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5180,7 +5180,7 @@
 
 **Inputs:** **Armor (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5188,7 +5188,7 @@
 
 **Inputs:** **Any Shield (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5196,7 +5196,7 @@
 
 **Inputs:** **Throwing Knife (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5204,7 +5204,7 @@
 
 **Inputs:** **Throwing Axe (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5212,7 +5212,7 @@
 
 **Inputs:** **Javelin (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5220,7 +5220,7 @@
 
 **Inputs:** **Merc Equip (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5228,7 +5228,7 @@
 
 **Inputs:** **Weapon (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5236,7 +5236,7 @@
 
 **Inputs:** **Armor (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5244,7 +5244,7 @@
 
 **Inputs:** **Any Shield (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5252,7 +5252,7 @@
 
 **Inputs:** **Throwing Knife (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5260,7 +5260,7 @@
 
 **Inputs:** **Throwing Axe (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5268,7 +5268,7 @@
 
 **Inputs:** **Javelin (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5276,7 +5276,7 @@
 
 **Inputs:** **Merc Equip (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5284,7 +5284,7 @@
 
 **Inputs:** **Weapon (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5292,7 +5292,7 @@
 
 **Inputs:** **Armor (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5300,7 +5300,7 @@
 
 **Inputs:** **Any Shield (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5308,7 +5308,7 @@
 
 **Inputs:** **Throwing Knife (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5316,7 +5316,7 @@
 
 **Inputs:** **Throwing Axe (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5324,7 +5324,7 @@
 
 **Inputs:** **Javelin (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:** **Use Item [Extra: sock]**
+**Outputs:** **Input Item [Extra: sock]**
 
 ---
 
@@ -5332,7 +5332,7 @@
 
 **Inputs:** **Bow** + **Flask of Etheric Light**
 
-**Outputs:** **Use Item**
+**Outputs:** **Input Item**
 
 ---
 
@@ -5340,7 +5340,7 @@
 
 **Inputs:** **Small Charm (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item**
+**Outputs:** **Input Item**
 
 ---
 
@@ -5348,7 +5348,7 @@
 
 **Inputs:** **Large Charm (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item**
+**Outputs:** **Input Item**
 
 ---
 
@@ -5356,7 +5356,7 @@
 
 **Inputs:** **Grand Charm (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item**
+**Outputs:** **Input Item**
 
 ---
 
@@ -5364,23 +5364,23 @@
 
 **Inputs:** **Jewel** + **Standard of Heroes**
 
-**Outputs:** **Use Item**
+**Outputs:** **Input Item**
 
 ---
 
 ## Magic Corruptor
 
-**Inputs:** **any (Magic)** + **Standard of Heroes**
+**Inputs:** **Any Item (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Brick
 
-**Inputs:** **any (Magic)** + **Standard of Heroes**
+**Inputs:** **Any Item (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -5388,7 +5388,7 @@
 
 **Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5396,7 +5396,7 @@
 
 **Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5404,7 +5404,7 @@
 
 **Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5412,7 +5412,7 @@
 
 **Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5420,7 +5420,7 @@
 
 **Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5428,7 +5428,7 @@
 
 **Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5436,7 +5436,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5444,7 +5444,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5452,7 +5452,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5460,7 +5460,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5468,7 +5468,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5476,7 +5476,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5484,7 +5484,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5492,7 +5492,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5500,7 +5500,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5508,7 +5508,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5516,7 +5516,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5524,7 +5524,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5532,7 +5532,7 @@
 
 **Inputs:** **Ring (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5540,7 +5540,7 @@
 
 **Inputs:** **Amulet (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5548,7 +5548,7 @@
 
 **Inputs:** **Belt (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5556,7 +5556,7 @@
 
 **Inputs:** **Belt (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5564,7 +5564,7 @@
 
 **Inputs:** **Gloves (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5572,7 +5572,7 @@
 
 **Inputs:** **Gloves (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5580,7 +5580,7 @@
 
 **Inputs:** **Gloves (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5588,7 +5588,7 @@
 
 **Inputs:** **Boots (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5596,7 +5596,7 @@
 
 **Inputs:** **Boots (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5604,7 +5604,7 @@
 
 **Inputs:** **Boots (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5612,7 +5612,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5620,7 +5620,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5628,7 +5628,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5636,7 +5636,7 @@
 
 **Inputs:** **Armor (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5644,7 +5644,7 @@
 
 **Inputs:** **Armor (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5652,7 +5652,7 @@
 
 **Inputs:** **Armor (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5660,7 +5660,7 @@
 
 **Inputs:** **Any Shield (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5668,7 +5668,7 @@
 
 **Inputs:** **Any Shield (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5676,7 +5676,7 @@
 
 **Inputs:** **Any Shield (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5684,7 +5684,7 @@
 
 **Inputs:** **Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5692,7 +5692,7 @@
 
 **Inputs:** **Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5700,7 +5700,7 @@
 
 **Inputs:** **Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5708,23 +5708,23 @@
 
 **Inputs:** **Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Rare Corruptor
 
-**Inputs:** **any (Rare)** + **Standard of Heroes**
+**Inputs:** **Any Item (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Brick
 
-**Inputs:** **any (Rare)** + **Standard of Heroes**
+**Inputs:** **Any Item (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -5732,7 +5732,7 @@
 
 **Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5740,7 +5740,7 @@
 
 **Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5748,7 +5748,7 @@
 
 **Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5756,7 +5756,7 @@
 
 **Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5764,7 +5764,7 @@
 
 **Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5772,7 +5772,7 @@
 
 **Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5780,7 +5780,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5788,7 +5788,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5796,7 +5796,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5804,7 +5804,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5812,7 +5812,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5820,7 +5820,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5828,7 +5828,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5836,7 +5836,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5844,7 +5844,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5852,7 +5852,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5860,7 +5860,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5868,7 +5868,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5876,7 +5876,7 @@
 
 **Inputs:** **Ring (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5884,7 +5884,7 @@
 
 **Inputs:** **Amulet (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5892,7 +5892,7 @@
 
 **Inputs:** **Belt (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5900,7 +5900,7 @@
 
 **Inputs:** **Belt (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5908,7 +5908,7 @@
 
 **Inputs:** **Gloves (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5916,7 +5916,7 @@
 
 **Inputs:** **Gloves (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5924,7 +5924,7 @@
 
 **Inputs:** **Gloves (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5932,7 +5932,7 @@
 
 **Inputs:** **Boots (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5940,7 +5940,7 @@
 
 **Inputs:** **Boots (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5948,7 +5948,7 @@
 
 **Inputs:** **Boots (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5956,7 +5956,7 @@
 
 **Inputs:** **Merc Equip (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5964,7 +5964,7 @@
 
 **Inputs:** **Merc Equip (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5972,7 +5972,7 @@
 
 **Inputs:** **Merc Equip (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5980,7 +5980,7 @@
 
 **Inputs:** **Armor (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5988,7 +5988,7 @@
 
 **Inputs:** **Armor (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -5996,7 +5996,7 @@
 
 **Inputs:** **Armor (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6004,7 +6004,7 @@
 
 **Inputs:** **Any Shield (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6012,7 +6012,7 @@
 
 **Inputs:** **Any Shield (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6020,7 +6020,7 @@
 
 **Inputs:** **Any Shield (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6028,7 +6028,7 @@
 
 **Inputs:** **Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6036,7 +6036,7 @@
 
 **Inputs:** **Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6044,7 +6044,7 @@
 
 **Inputs:** **Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6052,23 +6052,23 @@
 
 **Inputs:** **Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Set Corruptor
 
-**Inputs:** **any (Set)** + **Standard of Heroes**
+**Inputs:** **Any Item (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Brick
 
-**Inputs:** **any (Set)** + **Standard of Heroes**
+**Inputs:** **Any Item (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -6076,7 +6076,7 @@
 
 **Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6084,7 +6084,7 @@
 
 **Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6092,7 +6092,7 @@
 
 **Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6100,7 +6100,7 @@
 
 **Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6108,7 +6108,7 @@
 
 **Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6116,7 +6116,7 @@
 
 **Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6124,7 +6124,7 @@
 
 **Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6132,7 +6132,7 @@
 
 **Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6140,7 +6140,7 @@
 
 **Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6148,7 +6148,7 @@
 
 **Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6156,7 +6156,7 @@
 
 **Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6164,7 +6164,7 @@
 
 **Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6172,7 +6172,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6180,7 +6180,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6188,7 +6188,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6196,7 +6196,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6204,7 +6204,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6212,7 +6212,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6220,7 +6220,7 @@
 
 **Inputs:** **Ring (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6228,7 +6228,7 @@
 
 **Inputs:** **Amulet (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6236,7 +6236,7 @@
 
 **Inputs:** **Belt (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6244,7 +6244,7 @@
 
 **Inputs:** **Belt (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6252,7 +6252,7 @@
 
 **Inputs:** **Gloves (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6260,7 +6260,7 @@
 
 **Inputs:** **Gloves (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6268,7 +6268,7 @@
 
 **Inputs:** **Gloves (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6276,7 +6276,7 @@
 
 **Inputs:** **Boots (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6284,7 +6284,7 @@
 
 **Inputs:** **Boots (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6292,7 +6292,7 @@
 
 **Inputs:** **Boots (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6300,7 +6300,7 @@
 
 **Inputs:** **Merc Equip (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6308,7 +6308,7 @@
 
 **Inputs:** **Merc Equip (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6316,7 +6316,7 @@
 
 **Inputs:** **Merc Equip (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6324,7 +6324,7 @@
 
 **Inputs:** **Armor (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6332,7 +6332,7 @@
 
 **Inputs:** **Armor (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6340,7 +6340,7 @@
 
 **Inputs:** **Armor (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6348,7 +6348,7 @@
 
 **Inputs:** **Any Shield (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6356,7 +6356,7 @@
 
 **Inputs:** **Any Shield (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6364,7 +6364,7 @@
 
 **Inputs:** **Any Shield (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6372,7 +6372,7 @@
 
 **Inputs:** **Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6380,7 +6380,7 @@
 
 **Inputs:** **Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6388,7 +6388,7 @@
 
 **Inputs:** **Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6396,7 +6396,7 @@
 
 **Inputs:** **Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6404,7 +6404,7 @@
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6412,7 +6412,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6420,7 +6420,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6428,7 +6428,7 @@
 
 **Inputs:** **Any Armor (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6436,7 +6436,7 @@
 
 **Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6444,7 +6444,7 @@
 
 **Inputs:** **Ring (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6452,7 +6452,7 @@
 
 **Inputs:** **Amulet (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6460,7 +6460,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Type (Magic) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Magic) [Extra: corruption2]**
 
 ---
 
@@ -6468,7 +6468,7 @@
 
 **Inputs:** **Any Armor (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -6476,7 +6476,7 @@
 
 **Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -6484,7 +6484,7 @@
 
 **Inputs:** **Ring (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -6492,7 +6492,7 @@
 
 **Inputs:** **Amulet (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -6500,7 +6500,7 @@
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6508,7 +6508,7 @@
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6516,7 +6516,7 @@
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6524,7 +6524,7 @@
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6532,7 +6532,7 @@
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6540,7 +6540,7 @@
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6548,7 +6548,7 @@
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6556,7 +6556,7 @@
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6564,7 +6564,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6572,7 +6572,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6580,7 +6580,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6588,7 +6588,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6596,7 +6596,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6604,7 +6604,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6612,7 +6612,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6620,7 +6620,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6628,7 +6628,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6636,7 +6636,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6644,7 +6644,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6652,7 +6652,7 @@
 
 **Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6660,7 +6660,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6668,7 +6668,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6676,7 +6676,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6684,7 +6684,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6692,7 +6692,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6700,7 +6700,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6708,7 +6708,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6716,7 +6716,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6724,7 +6724,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6732,7 +6732,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6740,7 +6740,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6748,7 +6748,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6756,7 +6756,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6764,7 +6764,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6772,7 +6772,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6780,7 +6780,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6788,7 +6788,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6796,7 +6796,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6804,7 +6804,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6812,7 +6812,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6820,7 +6820,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6828,7 +6828,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6836,7 +6836,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6844,7 +6844,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6852,7 +6852,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6860,7 +6860,7 @@
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6868,7 +6868,7 @@
 
 **Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6876,7 +6876,7 @@
 
 **Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6884,7 +6884,7 @@
 
 **Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6892,7 +6892,7 @@
 
 **Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6900,7 +6900,7 @@
 
 **Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6908,7 +6908,7 @@
 
 **Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6916,7 +6916,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6924,7 +6924,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6932,7 +6932,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6940,7 +6940,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6948,7 +6948,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6956,7 +6956,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6964,7 +6964,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6972,7 +6972,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6980,7 +6980,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6988,7 +6988,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -6996,7 +6996,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7004,7 +7004,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7012,7 +7012,7 @@
 
 **Inputs:** **Ring (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7020,7 +7020,7 @@
 
 **Inputs:** **Amulet (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7028,7 +7028,7 @@
 
 **Inputs:** **Belt (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7036,7 +7036,7 @@
 
 **Inputs:** **Belt (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7044,7 +7044,7 @@
 
 **Inputs:** **Gloves (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7052,7 +7052,7 @@
 
 **Inputs:** **Gloves (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7060,7 +7060,7 @@
 
 **Inputs:** **Gloves (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7068,7 +7068,7 @@
 
 **Inputs:** **Boots (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7076,7 +7076,7 @@
 
 **Inputs:** **Boots (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7084,7 +7084,7 @@
 
 **Inputs:** **Boots (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7092,7 +7092,7 @@
 
 **Inputs:** **Merc Equip (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7100,7 +7100,7 @@
 
 **Inputs:** **Merc Equip (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7108,7 +7108,7 @@
 
 **Inputs:** **Merc Equip (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7116,7 +7116,7 @@
 
 **Inputs:** **Armor (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7124,7 +7124,7 @@
 
 **Inputs:** **Armor (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7132,7 +7132,7 @@
 
 **Inputs:** **Armor (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7140,7 +7140,7 @@
 
 **Inputs:** **Any Shield (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7148,7 +7148,7 @@
 
 **Inputs:** **Any Shield (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7156,7 +7156,7 @@
 
 **Inputs:** **Any Shield (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7164,7 +7164,7 @@
 
 **Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7172,7 +7172,7 @@
 
 **Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7180,7 +7180,7 @@
 
 **Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7188,23 +7188,23 @@
 
 **Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Craft Corruptor
 
-**Inputs:** **any (crf)** + **Standard of Heroes**
+**Inputs:** **Any Item (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Brick
 
-**Inputs:** **any (crf)** + **Standard of Heroes**
+**Inputs:** **Any Item (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -7212,7 +7212,7 @@
 
 **Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7220,7 +7220,7 @@
 
 **Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7228,7 +7228,7 @@
 
 **Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7236,7 +7236,7 @@
 
 **Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7244,7 +7244,7 @@
 
 **Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7252,7 +7252,7 @@
 
 **Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7260,7 +7260,7 @@
 
 **Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7268,7 +7268,7 @@
 
 **Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7276,7 +7276,7 @@
 
 **Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7284,7 +7284,7 @@
 
 **Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7292,7 +7292,7 @@
 
 **Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7300,7 +7300,7 @@
 
 **Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7308,7 +7308,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7316,7 +7316,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7324,7 +7324,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7332,7 +7332,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7340,7 +7340,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7348,7 +7348,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7356,7 +7356,7 @@
 
 **Inputs:** **Ring (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7364,7 +7364,7 @@
 
 **Inputs:** **Amulet (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7372,7 +7372,7 @@
 
 **Inputs:** **Belt (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7380,7 +7380,7 @@
 
 **Inputs:** **Belt (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7388,7 +7388,7 @@
 
 **Inputs:** **Gloves (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7396,7 +7396,7 @@
 
 **Inputs:** **Gloves (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7404,7 +7404,7 @@
 
 **Inputs:** **Gloves (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7412,7 +7412,7 @@
 
 **Inputs:** **Boots (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7420,7 +7420,7 @@
 
 **Inputs:** **Boots (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7428,7 +7428,7 @@
 
 **Inputs:** **Boots (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7436,7 +7436,7 @@
 
 **Inputs:** **Merc Equip (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7444,7 +7444,7 @@
 
 **Inputs:** **Merc Equip (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7452,7 +7452,7 @@
 
 **Inputs:** **Merc Equip (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7460,7 +7460,7 @@
 
 **Inputs:** **Armor (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7468,7 +7468,7 @@
 
 **Inputs:** **Armor (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7476,7 +7476,7 @@
 
 **Inputs:** **Armor (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7484,7 +7484,7 @@
 
 **Inputs:** **Any Shield (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7492,7 +7492,7 @@
 
 **Inputs:** **Any Shield (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7500,7 +7500,7 @@
 
 **Inputs:** **Any Shield (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7508,7 +7508,7 @@
 
 **Inputs:** **Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7516,7 +7516,7 @@
 
 **Inputs:** **Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7524,7 +7524,7 @@
 
 **Inputs:** **Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7532,7 +7532,7 @@
 
 **Inputs:** **Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7540,7 +7540,7 @@
 
 **Inputs:** **Small Charm (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item**
+**Outputs:** **Input Item**
 
 ---
 
@@ -7548,7 +7548,7 @@
 
 **Inputs:** **Large Charm (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item**
+**Outputs:** **Input Item**
 
 ---
 
@@ -7556,7 +7556,7 @@
 
 **Inputs:** **Grand Charm (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item**
+**Outputs:** **Input Item**
 
 ---
 
@@ -7564,23 +7564,23 @@
 
 **Inputs:** **Jewel** + **The Divine Standard**
 
-**Outputs:** **Use Item**
+**Outputs:** **Input Item**
 
 ---
 
 ## Magic Corruptor
 
-**Inputs:** **any (Magic)** + **The Divine Standard**
+**Inputs:** **Any Item (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Brick
 
-**Inputs:** **any (Magic)** + **The Divine Standard**
+**Inputs:** **Any Item (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -7588,7 +7588,7 @@
 
 **Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7596,7 +7596,7 @@
 
 **Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7604,7 +7604,7 @@
 
 **Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7612,7 +7612,7 @@
 
 **Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7620,7 +7620,7 @@
 
 **Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7628,7 +7628,7 @@
 
 **Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7636,7 +7636,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7644,7 +7644,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7652,7 +7652,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7660,7 +7660,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7668,7 +7668,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7676,7 +7676,7 @@
 
 **Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7684,7 +7684,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7692,7 +7692,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7700,7 +7700,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7708,7 +7708,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7716,7 +7716,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7724,7 +7724,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7732,7 +7732,7 @@
 
 **Inputs:** **Ring (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7740,7 +7740,7 @@
 
 **Inputs:** **Amulet (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7748,7 +7748,7 @@
 
 **Inputs:** **Belt (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7756,7 +7756,7 @@
 
 **Inputs:** **Belt (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7764,7 +7764,7 @@
 
 **Inputs:** **Gloves (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7772,7 +7772,7 @@
 
 **Inputs:** **Gloves (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7780,7 +7780,7 @@
 
 **Inputs:** **Gloves (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7788,7 +7788,7 @@
 
 **Inputs:** **Boots (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7796,7 +7796,7 @@
 
 **Inputs:** **Boots (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7804,7 +7804,7 @@
 
 **Inputs:** **Boots (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7812,7 +7812,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7820,7 +7820,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7828,7 +7828,7 @@
 
 **Inputs:** **Merc Equip (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7836,7 +7836,7 @@
 
 **Inputs:** **Armor (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7844,7 +7844,7 @@
 
 **Inputs:** **Armor (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7852,7 +7852,7 @@
 
 **Inputs:** **Armor (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7860,7 +7860,7 @@
 
 **Inputs:** **Any Shield (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7868,7 +7868,7 @@
 
 **Inputs:** **Any Shield (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7876,7 +7876,7 @@
 
 **Inputs:** **Any Shield (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7884,7 +7884,7 @@
 
 **Inputs:** **Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7892,7 +7892,7 @@
 
 **Inputs:** **Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7900,7 +7900,7 @@
 
 **Inputs:** **Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7908,23 +7908,23 @@
 
 **Inputs:** **Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Rare Corruptor
 
-**Inputs:** **any (Rare)** + **The Divine Standard**
+**Inputs:** **Any Item (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Brick
 
-**Inputs:** **any (Rare)** + **The Divine Standard**
+**Inputs:** **Any Item (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -7932,7 +7932,7 @@
 
 **Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7940,7 +7940,7 @@
 
 **Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7948,7 +7948,7 @@
 
 **Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7956,7 +7956,7 @@
 
 **Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7964,7 +7964,7 @@
 
 **Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7972,7 +7972,7 @@
 
 **Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7980,7 +7980,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7988,7 +7988,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -7996,7 +7996,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8004,7 +8004,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8012,7 +8012,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8020,7 +8020,7 @@
 
 **Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8028,7 +8028,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8036,7 +8036,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8044,7 +8044,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8052,7 +8052,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8060,7 +8060,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8068,7 +8068,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8076,7 +8076,7 @@
 
 **Inputs:** **Ring (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8084,7 +8084,7 @@
 
 **Inputs:** **Amulet (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8092,7 +8092,7 @@
 
 **Inputs:** **Belt (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8100,7 +8100,7 @@
 
 **Inputs:** **Belt (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8108,7 +8108,7 @@
 
 **Inputs:** **Gloves (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8116,7 +8116,7 @@
 
 **Inputs:** **Gloves (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8124,7 +8124,7 @@
 
 **Inputs:** **Gloves (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8132,7 +8132,7 @@
 
 **Inputs:** **Boots (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8140,7 +8140,7 @@
 
 **Inputs:** **Boots (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8148,7 +8148,7 @@
 
 **Inputs:** **Boots (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8156,7 +8156,7 @@
 
 **Inputs:** **Merc Equip (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8164,7 +8164,7 @@
 
 **Inputs:** **Merc Equip (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8172,7 +8172,7 @@
 
 **Inputs:** **Merc Equip (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8180,7 +8180,7 @@
 
 **Inputs:** **Armor (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8188,7 +8188,7 @@
 
 **Inputs:** **Armor (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8196,7 +8196,7 @@
 
 **Inputs:** **Armor (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8204,7 +8204,7 @@
 
 **Inputs:** **Any Shield (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8212,7 +8212,7 @@
 
 **Inputs:** **Any Shield (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8220,7 +8220,7 @@
 
 **Inputs:** **Any Shield (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8228,7 +8228,7 @@
 
 **Inputs:** **Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8236,7 +8236,7 @@
 
 **Inputs:** **Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8244,7 +8244,7 @@
 
 **Inputs:** **Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8252,23 +8252,23 @@
 
 **Inputs:** **Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Set Corruptor
 
-**Inputs:** **any (Set)** + **The Divine Standard**
+**Inputs:** **Any Item (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Brick
 
-**Inputs:** **any (Set)** + **The Divine Standard**
+**Inputs:** **Any Item (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -8276,7 +8276,7 @@
 
 **Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8284,7 +8284,7 @@
 
 **Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8292,7 +8292,7 @@
 
 **Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8300,7 +8300,7 @@
 
 **Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8308,7 +8308,7 @@
 
 **Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8316,7 +8316,7 @@
 
 **Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8324,7 +8324,7 @@
 
 **Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8332,7 +8332,7 @@
 
 **Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8340,7 +8340,7 @@
 
 **Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8348,7 +8348,7 @@
 
 **Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8356,7 +8356,7 @@
 
 **Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8364,7 +8364,7 @@
 
 **Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8372,7 +8372,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8380,7 +8380,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8388,7 +8388,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8396,7 +8396,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8404,7 +8404,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8412,7 +8412,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8420,7 +8420,7 @@
 
 **Inputs:** **Ring (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8428,7 +8428,7 @@
 
 **Inputs:** **Amulet (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8436,7 +8436,7 @@
 
 **Inputs:** **Belt (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8444,7 +8444,7 @@
 
 **Inputs:** **Belt (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8452,7 +8452,7 @@
 
 **Inputs:** **Gloves (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8460,7 +8460,7 @@
 
 **Inputs:** **Gloves (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8468,7 +8468,7 @@
 
 **Inputs:** **Gloves (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8476,7 +8476,7 @@
 
 **Inputs:** **Boots (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8484,7 +8484,7 @@
 
 **Inputs:** **Boots (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8492,7 +8492,7 @@
 
 **Inputs:** **Boots (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8500,7 +8500,7 @@
 
 **Inputs:** **Merc Equip (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8508,7 +8508,7 @@
 
 **Inputs:** **Merc Equip (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8516,7 +8516,7 @@
 
 **Inputs:** **Merc Equip (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8524,7 +8524,7 @@
 
 **Inputs:** **Armor (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8532,7 +8532,7 @@
 
 **Inputs:** **Armor (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8540,7 +8540,7 @@
 
 **Inputs:** **Armor (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8548,7 +8548,7 @@
 
 **Inputs:** **Any Shield (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8556,7 +8556,7 @@
 
 **Inputs:** **Any Shield (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8564,7 +8564,7 @@
 
 **Inputs:** **Any Shield (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8572,7 +8572,7 @@
 
 **Inputs:** **Weapon (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8580,7 +8580,7 @@
 
 **Inputs:** **Weapon (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8588,7 +8588,7 @@
 
 **Inputs:** **Weapon (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8596,7 +8596,7 @@
 
 **Inputs:** **Weapon (Set)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8604,7 +8604,7 @@
 
 **Inputs:** **Any Armor (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8612,7 +8612,7 @@
 
 **Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8620,7 +8620,7 @@
 
 **Inputs:** **Ring (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8628,7 +8628,7 @@
 
 **Inputs:** **Amulet (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8636,7 +8636,7 @@
 
 **Inputs:** **Any Armor (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -8644,7 +8644,7 @@
 
 **Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -8652,7 +8652,7 @@
 
 **Inputs:** **Ring (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -8660,7 +8660,7 @@
 
 **Inputs:** **Amulet (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -8668,7 +8668,7 @@
 
 **Inputs:** **Dragonscale** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8676,7 +8676,7 @@
 
 **Inputs:** **Spirit Ward** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8684,7 +8684,7 @@
 
 **Inputs:** **Ravenlore** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8692,7 +8692,7 @@
 
 **Inputs:** **Steel Carapice** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8700,7 +8700,7 @@
 
 **Inputs:** **Stone Crusher** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8708,7 +8708,7 @@
 
 **Inputs:** **Schaefer's Hammer** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8716,7 +8716,7 @@
 
 **Inputs:** **Fleshripper** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8724,7 +8724,7 @@
 
 **Inputs:** **Gutsiphon** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8732,7 +8732,7 @@
 
 **Inputs:** **Frostwind** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8740,7 +8740,7 @@
 
 **Inputs:** **Messerschmidt's Reaver** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8748,7 +8748,7 @@
 
 **Inputs:** **Giantskull** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8756,7 +8756,7 @@
 
 **Inputs:** **Gargoyle's Bite** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8764,7 +8764,7 @@
 
 **Inputs:** **Steelpillar** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8772,7 +8772,7 @@
 
 **Inputs:** **Deaths's Web** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8780,7 +8780,7 @@
 
 **Inputs:** **Earthshifter** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8788,7 +8788,7 @@
 
 **Inputs:** **Dragonscale** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8796,7 +8796,7 @@
 
 **Inputs:** **Templar's Might** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8804,7 +8804,7 @@
 
 **Inputs:** **Tyrael's Might** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8812,7 +8812,7 @@
 
 **Inputs:** **Steelrend** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8820,7 +8820,7 @@
 
 **Inputs:** **Shadowdancer** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8828,7 +8828,7 @@
 
 **Inputs:** **Ghostflame** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8836,7 +8836,7 @@
 
 **Inputs:** **Windforce** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8844,7 +8844,7 @@
 
 **Inputs:** **Executioner's Justice** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8852,7 +8852,7 @@
 
 **Inputs:** **Stormspire** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8860,7 +8860,7 @@
 
 **Inputs:** **Fathom** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8868,7 +8868,7 @@
 
 **Inputs:** **Griffon's Eye** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8876,7 +8876,7 @@
 
 **Inputs:** **Crown of Ages** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8884,7 +8884,7 @@
 
 **Inputs:** **The Grandfather** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8892,7 +8892,7 @@
 
 **Inputs:** **Ironward** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8900,7 +8900,7 @@
 
 **Inputs:** **Darkforge Spawn** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8908,7 +8908,7 @@
 
 **Inputs:** **Deathcleaver** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8916,7 +8916,7 @@
 
 **Inputs:** **Mang Song's Lesson** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8924,7 +8924,7 @@
 
 **Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8932,7 +8932,7 @@
 
 **Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8940,7 +8940,7 @@
 
 **Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8948,7 +8948,7 @@
 
 **Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8956,7 +8956,7 @@
 
 **Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8964,7 +8964,7 @@
 
 **Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8972,7 +8972,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8980,7 +8980,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8988,7 +8988,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -8996,7 +8996,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9004,7 +9004,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9012,7 +9012,7 @@
 
 **Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9020,7 +9020,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9028,7 +9028,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9036,7 +9036,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9044,7 +9044,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9052,7 +9052,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9060,7 +9060,7 @@
 
 **Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9068,7 +9068,7 @@
 
 **Inputs:** **Ring (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9076,7 +9076,7 @@
 
 **Inputs:** **Amulet (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9084,7 +9084,7 @@
 
 **Inputs:** **Belt (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9092,7 +9092,7 @@
 
 **Inputs:** **Belt (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9100,7 +9100,7 @@
 
 **Inputs:** **Gloves (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9108,7 +9108,7 @@
 
 **Inputs:** **Gloves (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9116,7 +9116,7 @@
 
 **Inputs:** **Gloves (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9124,7 +9124,7 @@
 
 **Inputs:** **Boots (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9132,7 +9132,7 @@
 
 **Inputs:** **Boots (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9140,7 +9140,7 @@
 
 **Inputs:** **Boots (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9148,7 +9148,7 @@
 
 **Inputs:** **Merc Equip (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9156,7 +9156,7 @@
 
 **Inputs:** **Merc Equip (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9164,7 +9164,7 @@
 
 **Inputs:** **Merc Equip (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9172,7 +9172,7 @@
 
 **Inputs:** **Armor (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9180,7 +9180,7 @@
 
 **Inputs:** **Armor (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9188,7 +9188,7 @@
 
 **Inputs:** **Armor (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9196,7 +9196,7 @@
 
 **Inputs:** **Any Shield (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9204,7 +9204,7 @@
 
 **Inputs:** **Any Shield (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9212,7 +9212,7 @@
 
 **Inputs:** **Any Shield (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9220,7 +9220,7 @@
 
 **Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9228,7 +9228,7 @@
 
 **Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9236,7 +9236,7 @@
 
 **Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9244,23 +9244,23 @@
 
 **Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Craft Corruptor
 
-**Inputs:** **any (crf)** + **The Divine Standard**
+**Inputs:** **Any Item (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
 ## Brick
 
-**Inputs:** **any (crf)** + **The Divine Standard**
+**Inputs:** **Any Item (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Type (Rare) [Extra: corruption2]**
+**Outputs:** **Input Item Type (Rare) [Extra: corruption2]**
 
 ---
 
@@ -9268,7 +9268,7 @@
 
 **Inputs:** **Bow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9276,7 +9276,7 @@
 
 **Inputs:** **Bow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9284,7 +9284,7 @@
 
 **Inputs:** **Bow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9292,7 +9292,7 @@
 
 **Inputs:** **Bow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9300,7 +9300,7 @@
 
 **Inputs:** **Bow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9308,7 +9308,7 @@
 
 **Inputs:** **Bow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9316,7 +9316,7 @@
 
 **Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9324,7 +9324,7 @@
 
 **Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9332,7 +9332,7 @@
 
 **Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9340,7 +9340,7 @@
 
 **Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9348,7 +9348,7 @@
 
 **Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9356,7 +9356,7 @@
 
 **Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9364,7 +9364,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9372,7 +9372,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9380,7 +9380,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9388,7 +9388,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9396,7 +9396,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9404,7 +9404,7 @@
 
 **Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9412,7 +9412,7 @@
 
 **Inputs:** **Ring (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9420,7 +9420,7 @@
 
 **Inputs:** **Amulet (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9428,7 +9428,7 @@
 
 **Inputs:** **Belt (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9436,7 +9436,7 @@
 
 **Inputs:** **Belt (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9444,7 +9444,7 @@
 
 **Inputs:** **Gloves (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9452,7 +9452,7 @@
 
 **Inputs:** **Gloves (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9460,7 +9460,7 @@
 
 **Inputs:** **Gloves (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9468,7 +9468,7 @@
 
 **Inputs:** **Boots (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9476,7 +9476,7 @@
 
 **Inputs:** **Boots (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9484,7 +9484,7 @@
 
 **Inputs:** **Boots (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9492,7 +9492,7 @@
 
 **Inputs:** **Merc Equip (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9500,7 +9500,7 @@
 
 **Inputs:** **Merc Equip (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9508,7 +9508,7 @@
 
 **Inputs:** **Merc Equip (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9516,7 +9516,7 @@
 
 **Inputs:** **Armor (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9524,7 +9524,7 @@
 
 **Inputs:** **Armor (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9532,7 +9532,7 @@
 
 **Inputs:** **Armor (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9540,7 +9540,7 @@
 
 **Inputs:** **Any Shield (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9548,7 +9548,7 @@
 
 **Inputs:** **Any Shield (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9556,7 +9556,7 @@
 
 **Inputs:** **Any Shield (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9564,7 +9564,7 @@
 
 **Inputs:** **Weapon (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9572,7 +9572,7 @@
 
 **Inputs:** **Weapon (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9580,7 +9580,7 @@
 
 **Inputs:** **Weapon (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9588,7 +9588,7 @@
 
 **Inputs:** **Weapon (crf)** + **The Divine Standard**
 
-**Outputs:** **Use Item [Extra: corruption2]**
+**Outputs:** **Input Item [Extra: corruption2]**
 
 ---
 
@@ -9596,7 +9596,7 @@
 
 **Inputs:** **Armor** + **Dyed: White**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9604,7 +9604,7 @@
 
 **Inputs:** **Armor** + **Dyed: Black**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9612,7 +9612,7 @@
 
 **Inputs:** **Armor** + **Dye Cleanser**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9620,7 +9620,7 @@
 
 **Inputs:** **Armor** + **Dye Cleanser**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9628,7 +9628,7 @@
 
 **Inputs:** **Merc Equip** + **Dyed: White**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9636,7 +9636,7 @@
 
 **Inputs:** **Merc Equip** + **Dyed: Black**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9644,7 +9644,7 @@
 
 **Inputs:** **Merc Equip** + **Dye Cleanser**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9652,7 +9652,7 @@
 
 **Inputs:** **Merc Equip** + **Dye Cleanser**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9660,7 +9660,7 @@
 
 **Inputs:** **Any Shield** + **Dyed: White**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9668,7 +9668,7 @@
 
 **Inputs:** **Any Shield** + **Dyed: Black**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9676,7 +9676,7 @@
 
 **Inputs:** **Any Shield** + **Dye Cleanser**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9684,7 +9684,7 @@
 
 **Inputs:** **Any Shield** + **Dye Cleanser**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9692,7 +9692,7 @@
 
 **Inputs:** **Weapon** + **Dyed: White**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9700,7 +9700,7 @@
 
 **Inputs:** **Weapon** + **Dyed: Black**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9708,7 +9708,7 @@
 
 **Inputs:** **Weapon** + **Dye Cleanser**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---
 
@@ -9716,6 +9716,6 @@
 
 **Inputs:** **Weapon** + **Dye Cleanser**
 
-**Outputs:** **Use Item [Extra: state]**
+**Outputs:** **Input Item [Extra: state]**
 
 ---

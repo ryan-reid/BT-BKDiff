@@ -136,7 +136,7 @@
     * +10% Increased Attack Speed
     * Poison Length Reduced by 175%
 
-### Punisher's Hearty Cord (Verdugo's Hearty Cord)
+### Verdungo's Hearty Cord (Verdugo's Hearty Cord)
 * **Base Item:** Mithril Coil
 * **Level Requirement:** 63
 * **Properties:**

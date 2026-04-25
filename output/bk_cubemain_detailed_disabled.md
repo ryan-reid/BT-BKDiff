@@ -60,7 +60,7 @@
 
 **Inputs:** **Weapon (sock)** + **Standard Gem (Qty: 3)**
 
-**Outputs:** **Use Type (Magic) [Extra: sock]**
+**Outputs:** **Input Item Type (Magic) [Extra: sock]**
 
 ---
 
@@ -68,7 +68,7 @@
 
 **Inputs:** **Weapon (Magic)** + **Flawless Gem (Qty: 3)**
 
-**Outputs:** **Use Type (Magic) [Extra: sock]**
+**Outputs:** **Input Item Type (Magic) [Extra: sock]**
 
 ---
 
@@ -76,7 +76,7 @@
 
 **Inputs:** **Any Shield (Magic)** + **Skull (Qty: 2)** + **Spiked Club**
 
-**Outputs:** **Use Type (Magic, Suffix: of Spikes (162))**
+**Outputs:** **Input Item Type (Magic, Suffix: of Spikes (162))**
 
 ---
 
@@ -84,7 +84,7 @@
 
 **Inputs:** **Sword (Magic)** + **• Perfect Ruby** + **Healing Potion (Qty: 4)**
 
-**Outputs:** **Use Type (Magic, Suffix: of the Leech (352))**
+**Outputs:** **Input Item Type (Magic, Suffix: of the Leech (352))**
 
 ---
 
@@ -100,7 +100,7 @@
 
 **Inputs:** **Weapon (Low Quality)** + **Eld Rune (2)** + **Chipped Gem**
 
-**Outputs:** **Use Type (Normal)**
+**Outputs:** **Input Item Type (Normal)**
 
 ---
 
@@ -108,7 +108,7 @@
 
 **Inputs:** **Any Armor (Low Quality)** + **El Rune (1)** + **Chipped Gem**
 
-**Outputs:** **Use Type (Normal)**
+**Outputs:** **Input Item Type (Normal)**
 
 ---
 
@@ -124,7 +124,7 @@
 
 **Inputs:** **Weapon (bas, Set)** + **Ral Rune (8)** + **Sol Rune (12)** + **• Perfect Emerald**
 
-**Outputs:** **Use Item (mod, exc) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, exc) [Extra: levelreq]**
 
 ---
 
@@ -132,7 +132,7 @@
 
 **Inputs:** **Any Armor (bas, Set)** + **Tal Rune (7)** + **Shael Rune (13)** + **• Perfect Diamond**
 
-**Outputs:** **Use Item (mod, exc) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, exc) [Extra: levelreq]**
 
 ---
 
@@ -140,7 +140,7 @@
 
 **Inputs:** **Weapon (exc, Set)** + **Lum Rune (17)** + **•Pul Rune (21)•** + **• Perfect Emerald**
 
-**Outputs:** **Use Item (mod, eli) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, eli) [Extra: levelreq]**
 
 ---
 
@@ -148,7 +148,7 @@
 
 **Inputs:** **Any Armor (exc, Set)** + **Ko Rune (18)** + **•Lem Rune (20)•** + **• Perfect Diamond**
 
-**Outputs:** **Use Item (mod, eli) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, eli) [Extra: levelreq]**
 
 ---
 
@@ -156,7 +156,7 @@
 
 **Inputs:** **Weapon (bas, Unique)** + **Ral Rune (8)** + **Sol Rune (12)** + **• Perfect Emerald**
 
-**Outputs:** **Use Item (mod, exc) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, exc) [Extra: levelreq]**
 
 ---
 
@@ -164,7 +164,7 @@
 
 **Inputs:** **Any Armor (bas, Unique)** + **Tal Rune (7)** + **Shael Rune (13)** + **• Perfect Diamond**
 
-**Outputs:** **Use Item (mod, exc) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, exc) [Extra: levelreq]**
 
 ---
 
@@ -172,7 +172,7 @@
 
 **Inputs:** **Weapon (exc, Unique)** + **Lum Rune (17)** + **•Pul Rune (21)•** + **• Perfect Emerald**
 
-**Outputs:** **Use Item (mod, eli) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, eli) [Extra: levelreq]**
 
 ---
 
@@ -180,7 +180,7 @@
 
 **Inputs:** **Any Armor (exc, Unique)** + **Ko Rune (18)** + **•Lem Rune (20)•** + **• Perfect Diamond**
 
-**Outputs:** **Use Item (mod, eli) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, eli) [Extra: levelreq]**
 
 ---
 
@@ -188,7 +188,7 @@
 
 **Inputs:** **Weapon (bas, Rare)** + **Ort Rune (9)** + **Amn Rune (11)** + **• Perfect Sapphire**
 
-**Outputs:** **Use Item (mod, exc) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, exc) [Extra: levelreq]**
 
 ---
 
@@ -196,7 +196,7 @@
 
 **Inputs:** **Any Armor (bas, Rare)** + **Ral Rune (8)** + **Thul Rune (10)** + **• Perfect Amethyst**
 
-**Outputs:** **Use Item (mod, exc) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, exc) [Extra: levelreq]**
 
 ---
 
@@ -204,7 +204,7 @@
 
 **Inputs:** **Weapon (exc, Rare)** + **Fal Rune (19)** + **•Um Rune (22)•** + **• Perfect Sapphire**
 
-**Outputs:** **Use Item (mod, eli) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, eli) [Extra: levelreq]**
 
 ---
 
@@ -212,7 +212,7 @@
 
 **Inputs:** **Any Armor (exc, Rare)** + **Ko Rune (18)** + **•Pul Rune (21)•** + **• Perfect Amethyst**
 
-**Outputs:** **Use Item (mod, eli) [Extra: levelreq]**
+**Outputs:** **Input Item (mod, eli) [Extra: levelreq]**
 
 ---
 
