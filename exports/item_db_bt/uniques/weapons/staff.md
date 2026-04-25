@@ -16,7 +16,7 @@
 * **Base Item:** Long Staff
 * **Level Requirement:** 9
 * **Properties:**
-    * Adds 100-100 Poison Damage Over 100 Seconds
+    * Adds 100-# Poison Damage Over # Seconds
     * Poison Resist +50%
     * +60 to Life
     * +100-200% Enhanced Damage
@@ -65,7 +65,7 @@
     * All Resistances +30
     * +50% Increased Attack Speed
     * +30% Faster Cast Rate
-    * Adds 30-30 Damage
+    * Adds 30-# Damage
 
 ### Horadric Staff (Horadric Staff)
 * **Base Item:** Horadric Staff
@@ -76,7 +76,7 @@
     * +100 to Life
     * +30% Faster Cast Rate
     * +50% Increased Attack Speed
-    * Adds 30-30 Damage
+    * Adds 30-# Damage
 
 ### Razorswitch (Razorswitch)
 * **Base Item:** Jo Staff
@@ -93,7 +93,7 @@
 * **Base Item:** Quarterstaff
 * **Level Requirement:** 31
 * **Properties:**
-    * Adds 30-65-30-65 Damage
+    * Adds 30-65-# Damage
     * +200-300% Enhanced Damage
     * 50% Chance of Crushing Blow
     * +15 to Dexterity
@@ -101,7 +101,7 @@
     * +150 Defense vs. Missile
     * +50% Faster Hit Recovery
     * +50% Increased Attack Speed
-    * Durability: 100 of 100
+    * Durability: 100 of #
 
 ### Chromatic Ire (Chromatic Ire)
 * **Base Item:** Cedar Staff

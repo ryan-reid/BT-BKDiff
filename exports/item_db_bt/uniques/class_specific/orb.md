@@ -5,7 +5,7 @@
 * **Level Requirement:** 42
 * **Properties:**
     * +3 to Sorceress Skill Levels
-    * 5-1% Chance to cast level 5-1 Teleport when struck
+    * 5-1% Chance to cast level # Teleport when struck
     * All Resistances +20
     * +30% Faster Cast Rate
     * +20% Enhanced Defense

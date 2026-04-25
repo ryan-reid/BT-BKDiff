@@ -37,7 +37,7 @@
 * **Properties:**
     * +120-150% Enhanced Defense
     * Level 3-5 Vigor Aura When Equipped
-    * 15-3% Chance to cast level 15-3 Terror when struck
+    * 15-3% Chance to cast level # Terror when struck
     * +2-3 to Necromancer Skill Levels
     * All Resistances +20-30
     * Piercing Attack

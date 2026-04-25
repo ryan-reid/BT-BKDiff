@@ -61,7 +61,7 @@
 * **Properties:**
     * Poison Resist +30%
     * +10% to Maximum Poison Resist
-    * Adds 153-153 Poison Damage Over 153 Seconds
+    * Adds 153-# Poison Damage Over # Seconds
     * +1 to Poison Skills
     * 5% Life stolen per hit
     * +15-25 Defense
@@ -100,22 +100,22 @@
 * **Properties:**
     * Fire Resist +35-40%
     * Cannot Be Frozen
-    * 20-10% Chance to cast level 20-10 Enchant on striking
+    * 20-10% Chance to cast level # Enchant on striking
     * +20% Increased Attack Speed
     * +150-200% Enhanced Defense
-    * Adds 13-46-13-46 Fire Damage
-    * Durability: 20 of 20
+    * Adds 13-46-# Fire Damage
+    * Durability: 20 of #
 
 ### Hellmouth (Hellmouth)
 * **Base Item:** War Gauntlets
 * **Level Requirement:** 47
 * **Properties:**
-    * Adds 15-72-15-72 Fire Damage
+    * Adds 15-72-# Fire Damage
     * Fire Absorb 15%
     * +150-200% Enhanced Defense
-    * Durability: 15 of 15
-    * 25% Chance to cast level 25 Meteor on striking
-    * 20% Chance to cast level 20 Firestorm on striking
+    * Durability: 15 of #
+    * 25% Chance to cast level # Meteor on striking
+    * 20% Chance to cast level # Firestorm on striking
     * +10% Faster Cast Rate
     * +30 to Fire Golem
     * Lightning Resist +25%
@@ -127,7 +127,7 @@
     * +90-120% Enhanced Defense
     * 4-7% Mana stolen per hit
     * 4-7% Life stolen per hit
-    * 25-18% Chance to cast level 25-18 Decrepify on striking
+    * 25-18% Chance to cast level # Decrepify on striking
     * --50 to Monster Defense Per Hit
     * Slows Target by 15%
 
@@ -138,7 +138,7 @@
     * +90-120% Enhanced Defense
     * 7-10% Life stolen per hit
     * 25% Chance of Open Wounds
-    * 10-15% Chance to cast level 10-15 Life Tap on striking
+    * 10-15% Chance to cast level # Life Tap on striking
     * +5-10 Life after each Kill
     * +10-15 to Strength
     * Ignore Target's Defense

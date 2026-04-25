@@ -96,8 +96,9 @@ class PropertyResolverService:
         tooltip = prop.get('*Tooltip', '').strip()
         if tooltip and tooltip != '0':
             func, val1 = prop.get('func1', '0').strip(), prop.get('val1', '0').strip()
-            res_text = tooltip.replace('#', val1 if func in ['36', '14'] else range_str)
-            if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(param, f"Tab {param}"))
+            # Fix duplicate replacement bug: replace '#' only once
+            res_text = tooltip.replace('#', val1 if func in ['36', '14'] else range_str, 1)
+            if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(str(param), f"Tab {param}"))
             if '[Class]' in res_text:
                 if func == '36': cls = 'Random Class' if min_val != max_val else self.class_names.get(min_val, f"Class {min_val}")
                 else: 
@@ -121,7 +122,8 @@ class PropertyResolverService:
                 desc = self.format_desc(stat_code, min_val, max_val)
                 if desc: return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": desc}
         
-        return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{prop.get('stat1', code_lower)}: {range_str}"}
+        # Remove redundant range_str from Unknown Prop message
+        return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown Prop: {code_orig}"}
 
 class ItemAnalyzerService:
     def __init__(self, repo: D2Repository, resolver: PropertyResolverService):

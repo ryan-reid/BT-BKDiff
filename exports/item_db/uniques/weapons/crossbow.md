@@ -16,7 +16,7 @@
 * **Base Item:** Crossbow
 * **Level Requirement:** 18
 * **Properties:**
-    * Adds 150-150 Poison Damage Over 150 Seconds
+    * Adds 150-# Poison Damage Over # Seconds
     * +20 to Dexterity
     * Piercing Attack
     * +20 to Strength
@@ -32,7 +32,7 @@
     * Fire Resist +15%
     * +60% Increased Attack Speed
     * +170-180% Enhanced Damage
-    * Adds 100-150-100-150 Fire Damage
+    * Adds 100-150-# Fire Damage
     * Piercing Attack
 
 ### Doomslinger (Doomspittle)
@@ -58,18 +58,18 @@
     * +30 to Life
     * +10-30 to Maximum Damage
     * 33% Chance of Open Wounds
-    * Adds 1-212-1-212 Lightning Damage
+    * Adds 1-212-# Lightning Damage
     * Piercing Attack
 
 ### Pus Spitter (Pus Spiter)
 * **Base Item:** Siege Crossbow
 * **Level Requirement:** 36
 * **Properties:**
-    * Adds 192-192 Poison Damage Over 192 Seconds
-    * 30-10% Chance to cast level 30-10 Lower Resist on striking
+    * Adds 192-# Poison Damage Over # Seconds
+    * 30-10% Chance to cast level # Lower Resist on striking
     * +2 to All Skills
     * Requirements --60%
-    * 40-30% Chance to cast level 40-30 Poison Nova when struck
+    * 40-30% Chance to cast level # Poison Nova when struck
     * +20% Increased Attack Speed
     * +150-220% Enhanced Damage
     * + to Attack Rating (Based on Character Level)
@@ -86,7 +86,7 @@
     * +100% Increased Attack Speed
     * +180-280% Enhanced Damage
     * Freezes Target +3
-    * Adds 32-196-32-196 Cold Damage
+    * Adds 32-196-# Cold Damage
 
 ### Demon Machine (Demon Machine)
 * **Base Item:** Chu-Ko-Nu
@@ -120,10 +120,10 @@
 * **Level Requirement:** 76
 * **Properties:**
     * +180-230% Enhanced Damage
-    * Adds 400-400 Fire/Lightning/Cold Damage
+    * Adds 400-# Fire/Lightning/Cold Damage
     * +30% Increased Attack Speed
     * 100-150% Bonus to Attack Rating
-    * 20-10% Chance to cast level 20-10 Lower Resist on striking
+    * 20-10% Chance to cast level # Lower Resist on striking
     * +18 to Immolation Arrow
     * Piercing Attack
 

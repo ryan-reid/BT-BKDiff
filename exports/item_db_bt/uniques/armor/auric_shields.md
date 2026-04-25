@@ -48,16 +48,16 @@
 * **Level Requirement:** 90
 * **Properties:**
     * Level 15-20 Holy Freeze Aura When Equipped
-    * 85-55% Chance to cast level 85-55 Nova on striking
-    * 25-50% Chance to cast level 25-50 Enchant when you Kill an Enemy
+    * 85-55% Chance to cast level # Nova on striking
+    * 25-50% Chance to cast level # Enchant when you Kill an Enemy
     * +20% Faster Block Rate
     * +20% Faster Block Rate
     * +2 to Paladin Skill Levels
     * +4-5 to Vengeance (Class only)
     * All Resistances +25-45
-    * Adds 300-300 Fire Damage
-    * Adds 300-300 Cold Damage
-    * Adds 300-300 Lightning Damage
+    * Adds 300-# Fire Damage
+    * Adds 300-# Cold Damage
+    * Adds 300-# Lightning Damage
 
 ### Honor (Honor)
 * **Base Item:** Rondache

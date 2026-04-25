@@ -30,7 +30,7 @@
 * **Base Item:** Long Bow
 * **Level Requirement:** 15
 * **Properties:**
-    * Adds 100-100 Fire Damage
+    * Adds 100-# Fire Damage
     * +15 to Dexterity
     * Fires Explosive Arrows or Bolts
     * +15 to Strength
@@ -57,13 +57,13 @@
 * **Base Item:** Short Battle Bow
 * **Level Requirement:** 25
 * **Properties:**
-    * Adds 1-300-1-300 Lightning Damage
+    * Adds 1-300-# Lightning Damage
     * +15 to Strength
     * +50% Increased Attack Speed
     * Piercing Attack
     * Lightning Resist +25%
-    * 50-30% Chance to cast level 50-30 Chain Lightning on striking
-    * 15-1% Chance to cast level 15-1 Lower Resist on striking
+    * 50-30% Chance to cast level # Chain Lightning on striking
+    * 15-1% Chance to cast level # Lower Resist on striking
 
 ### Wizendraw (Wizendraw)
 * **Base Item:** Long Battle Bow
@@ -106,12 +106,12 @@
 * **Base Item:** Edge Bow
 * **Level Requirement:** 28
 * **Properties:**
-    * Adds 1-301-1-301 Lightning Damage
+    * Adds 1-301-# Lightning Damage
     * +20 to Minimum Damage
     * +10 to Energy
     * +40% Increased Attack Speed
     * +150-200% Enhanced Damage
-    * 33-18% Chance to cast level 33-18 Meteor on striking
+    * 33-18% Chance to cast level # Meteor on striking
     * +2 to Amazon Skill Levels
     * +1 to Bow and Crossbow Skills
 
@@ -136,7 +136,7 @@
     * +2-3 to Exploding Arrow (Class only)
     * +150-180% Enhanced Damage
     * Piercing Attack
-    * Adds 40-180-40-180 Fire Damage
+    * Adds 40-180-# Fire Damage
     * +3 to Bow and Crossbow Skills
     * +20% Increased Attack Speed
 
@@ -144,21 +144,21 @@
 * **Base Item:** Double Bow
 * **Level Requirement:** 36
 * **Properties:**
-    * 45% Chance to cast level 45 Ice Bolt on striking
+    * 45% Chance to cast level # Ice Bolt on striking
     * +80 to Mana
     * +150 Defense vs. Missile
     * +3 to Strafe
-    * 45% Chance to cast level 45 Glacial Spike on striking
-    * Adds 300-300 Cold Damage
+    * 45% Chance to cast level # Glacial Spike on striking
+    * Adds 300-# Cold Damage
     * +30% Increased Attack Speed
-    * 5-1% Chance to cast level 5-1 Lower Resist on striking
+    * 5-1% Chance to cast level # Lower Resist on striking
     * Knockback
 
 ### Witchwild String (Whichwild String)
 * **Base Item:** Short Siege Bow
 * **Level Requirement:** 39
 * **Properties:**
-    * 20-22% Chance to cast level 20-22 Amplify Damage on striking
+    * 20-22% Chance to cast level # Amplify Damage on striking
     * All Resistances +40
     * % Deadly Strike (Based on Character Level)
     * +180-200% Enhanced Damage
@@ -188,7 +188,7 @@
     * +20% Increased Attack Speed
     * +25 to Dexterity
     * Hit Blinds Target +1
-    * Adds 25-50-25-50 Damage
+    * Adds 25-50-# Damage
     * +150-200% Enhanced Damage
     * +1-3 to Amazon Skill Levels
 
@@ -230,7 +230,7 @@
     * +250-300% Enhanced Damage
     * +20% Increased Attack Speed
     * +20 to Strength
-    * 50-40% Chance to cast level 50-40 Twister on striking
+    * 50-40% Chance to cast level # Twister on striking
 
 ### Widowmaker (Widowmaker)
 * **Base Item:** Ward Bow
@@ -243,15 +243,15 @@
     * +3-5 to Guided Arrow
     * +30% Increased Attack Speed
     * Piercing Attack
-    * 75-20% Chance to cast level 75-20 Slow Missiles when struck
+    * 75-20% Chance to cast level # Slow Missiles when struck
     * 15% Chance of Open Wounds
-    * 50-55% Chance to cast level 50-55 Bone Spirit on striking
+    * 50-55% Chance to cast level # Bone Spirit on striking
 
 ### Wrath of the High Heavens (Wrath of the High Heavens)
 * **Base Item:** Hydra Bow
 * **Level Requirement:** 99
 * **Properties:**
-    * 50-40% Chance to cast level 50-40 Fist of the Heavens on striking
+    * 50-40% Chance to cast level # Fist of the Heavens on striking
     * +30% Increased Attack Speed
     * +100% Damage to Demons
     * +100% Damage to Undead
