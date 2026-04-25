@@ -3,7 +3,7 @@ import json
 import re
 import difflib
 from typing import List, Dict, Any, Tuple
-from d2_models import AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO
+from d2_models import AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, CubeRecipeDTO
 
 class BaseExporter:
     def export(self, data: Any, output_path: str):
@@ -74,6 +74,21 @@ class MarkdownExporter(BaseExporter):
                 block += f"    * {prop['resolved_text']}\n"
             blocks.append(block)
         
+        content += "\n".join(blocks)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(content.strip() + "\n")
+
+    def export_cube_recipes(self, recipes: List[CubeRecipeDTO], title: str, output_path: str):
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        content = f"# {title}\n\n"
+        blocks = []
+        for r in recipes:
+            block = f"## {r['description']}\n\n"
+            block += f"**Inputs:** {' + '.join([f'**{inp}**' for inp in r['inputs']])}\n\n"
+            block += f"**Outputs:** {', '.join([f'**{out}**' for out in r['outputs']])}\n\n"
+            block += "---\n"
+            blocks.append(block)
+            
         content += "\n".join(blocks)
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(content.strip() + "\n")

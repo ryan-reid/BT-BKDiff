@@ -40,3 +40,11 @@ class ItemDiffDTO(TypedDict):
     added: Dict[str, AnalyzedItemDTO]
     removed: Dict[str, AnalyzedItemDTO]
     modified: Dict[str, Dict[str, Any]] # Detailed diff structure
+
+class CubeRecipeDTO(TypedDict):
+    id: str
+    description: str
+    enabled: bool
+    inputs: List[str]
+    outputs: List[str]
+    raw_row: Dict[str, str]

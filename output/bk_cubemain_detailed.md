@@ -1,16484 +1,9721 @@
 # Horadric Cube Recipes (BK Diablo)
 
-## 1 mana potion ❌
+## Staff of Kings + Amulet of the Viper -> Horadric Staff
 
-**Inputs:** **Mana Potion**
+**Inputs:** **Shaft of the Horadric Staff** + **Top of the Horadric Staff**
 
-**Outputs:**
-
-
----
-
-## ,qty= ❌
-
-**Inputs:** **Healing Potion**
-
-**Outputs:**
-
+**Outputs:** **Horadric Staff**
 
 ---
 
-## ,uni ❌
-
-**Inputs:** **Antidote Potion**
-
-**Outputs:**
-
-
----
-
-## ,set ❌
-
-**Inputs:** **Mana Potion** (Qty: 2)
-
-**Outputs:**
-
-
----
-
-## ,mag ❌
-
-**Inputs:** **Healing Potion** (Qty: 2)
-
-**Outputs:**
-
-
----
-
-## Staff of Kings + Amulet of the Viper -> Horadric Staff ✅
-
-**Inputs:** **Staff of Kings** + **Amulet of the Viper**
-
-**Outputs:**
-**Horadric Staff**
-
----
-
-## Khalim's Flail + Khalim's Heart + Khalim's Eye + Khalim's Brain -> Khalim's Will ✅
+## Khalim's Flail + Khalim's Heart + Khalim's Eye + Khalim's Brain -> Khalim's Will
 
 **Inputs:** **Khalim's Flail** + **Khalim's Heart** + **Khalim's Eye** + **Khalim's Brain**
 
-**Outputs:**
-**Khalim's Will**
+**Outputs:** **Khalim's Will**
 
 ---
 
-## Wirt's Leg  -> Portal to The Secret Cow Level ✅
+## Wirt's Leg  -> Portal to The Secret Cow Level
 
 **Inputs:** **Wirt's Leg**
 
-**Outputs:**
-**Cow Portal**
-
-**Wirt's Leg**
+**Outputs:** **Cow Portal**
 
 ---
 
-## 3 Healing Potions (Any) + 3 Mana Potions (Any) + 1 Standard Gem (Any) -> Full Rejuvenation Potion ❌
+## 3 Rejuvenation Potions -> Full Rejuvenation Potion
 
-**Inputs:** **Healing Potion** (Qty: 3) + **Mana Potion** (Qty: 3) + **Standard Gem**
+**Inputs:** **•35%• (Qty: 3)**
 
-**Outputs:**
-**Full Rejuvenation Potion**
-
----
-
-## 3 Healing Potions (Any) + 3 Mana Potions (Any)  + 1 Chipped Gem (Any) -> Rejuvenation Potion ❌
-
-**Inputs:** **Healing Potion** (Qty: 3) + **Mana Potion** (Qty: 3) + **Chipped Gem**
-
-**Outputs:**
-**Rejuvenation Potion**
+**Outputs:** **•FULL•**
 
 ---
 
-## 3 Rejuvenation Potions -> Full Rejuvenation Potion ✅
+## 6 Perfect Gems (1 of each type) + 1 Magic Amulet -> Prismatic Amulet
 
-**Inputs:** **Rejuvenation Potion** (Qty: 3)
+**Inputs:** **Amulet (Magic)** + **• Perfect Amethyst** + **• Perfect Topaz** + **• Perfect Sapphire** + **• Perfect Emerald** + **• Perfect Ruby** + **• Perfect Diamond**
 
-**Outputs:**
-**Full Rejuvenation Potion**
-
----
-
-## 6 Perfect Gems (1 of each type) + 1 Magic Amulet -> Prismatic Amulet ✅
-
-**Inputs:** **Amulet** (Mag) + **Perfect Amethyst** + **Perfect Topaz** + **Perfect Sapphire** + **Perfect Emerald** + **Perfect Ruby** + **Perfect Diamond**
-
-**Outputs:**
-**Amulet** (Mag, Prefix: 331)
+**Outputs:** **Amulet (Magic, Prefix: Prismatic (331))**
 
 ---
 
-## 1 Magic Ring + 1 Standard Ruby + 1 Healing Potion -> Garnet Ring ✅
+## 1 Magic Ring + 1 Standard Ruby + 1 Healing Potion -> Garnet Ring
 
-**Inputs:** **Ring** (Mag) + **Perfect Ruby** + **Healing Potion**
+**Inputs:** **Ring (Magic)** + **• Perfect Ruby** + **Healing Potion**
 
-**Outputs:**
-**Ring** (Mag, Prefix: 372)
-
----
-
-## 1 Magic Ring + 1 Standard Sapphire + 1 Thawing Potion -> Cobalt Ring ✅
-
-**Inputs:** **Ring** (Mag) + **Perfect Sapphire** + **Thawing Potion**
-
-**Outputs:**
-**Ring** (Mag, Prefix: 353)
+**Outputs:** **Ring (Magic, Prefix: Garnet (372))**
 
 ---
 
-## 1 Magic Ring + 1 Standard Topaz + 1 Rejuvenation Potion -> Coral Ring ✅
+## 1 Magic Ring + 1 Standard Sapphire + 1 Thawing Potion -> Cobalt Ring
 
-**Inputs:** **Ring** (Mag) + **Perfect Topaz** + **Rejuvenation Potion**
+**Inputs:** **Ring (Magic)** + **• Perfect Sapphire** + **Thaw**
 
-**Outputs:**
-**Ring** (Mag, Prefix: 392)
-
----
-
-## 1 Magic Ring + 1 Standard Emerald + 1 Antidote Potion -> Jade Ring ✅
-
-**Inputs:** **Ring** (Mag) + **Perfect Emerald** + **Antidote Potion**
-
-**Outputs:**
-**Ring** (Mag, Prefix: 412)
+**Outputs:** **Ring (Magic, Prefix: Cobalt (353))**
 
 ---
 
-## 1 Axe (Any) + 1 Dagger (Any) -> Throwing Axe ✅
+## 1 Magic Ring + 1 Standard Topaz + 1 Rejuvenation Potion -> Coral Ring
+
+**Inputs:** **Ring (Magic)** + **• Perfect Topaz** + **•35%•**
+
+**Outputs:** **Ring (Magic, Prefix: Coral (392))**
+
+---
+
+## 1 Magic Ring + 1 Standard Emerald + 1 Antidote Potion -> Jade Ring
+
+**Inputs:** **Ring (Magic)** + **• Perfect Emerald** + **Anti**
+
+**Outputs:** **Ring (Magic, Prefix: Jade (412))**
+
+---
+
+## 1 Axe (Any) + 1 Dagger (Any) -> Throwing Axe
 
 **Inputs:** **Axe** + **Knife**
 
-**Outputs:**
-**Throwing Axe** (Nor)
+**Outputs:** **Throwing Axe (Normal)**
 
 ---
 
-## 1 Spear (Any) + 1 Arrows -> Javelins ✅
+## 1 Spear (Any) + 1 Arrows -> Javelins
 
-**Inputs:** **Spear** + **Arrows**
+**Inputs:** **Spear** + **A**
 
-**Outputs:**
-**Javelin** (Nor)
-
----
-
-## 3 Magic Rings -> Magic Amulet ✅
-
-**Inputs:** **Ring** (Mag, Qty: 3)
-
-**Outputs:**
-**Amulet** (Mag)
+**Outputs:** **Javelin (Normal)**
 
 ---
 
-## 3 Magic Amulets -> Magic Ring ✅
+## 3 Magic Rings -> Magic Amulet
 
-**Inputs:** **Amulet** (Mag, Qty: 3)
+**Inputs:** **Ring (Magic) (Qty: 3)**
 
-**Outputs:**
-**Ring** (Mag)
-
----
-
-## 3 Standard Gems + 1 Socketed Weapon ->  Socketed Magic Weapon ❌
-
-**Inputs:** **Weapon** (Sock) + **Standard Gem** (Qty: 3)
-
-**Outputs:**
-**usetype** (Mag)
-- Socketed (#) 1-2 (% chance)
+**Outputs:** **Amulet (Magic)**
 
 ---
 
-## 3 Flawless Gems + 1 Magic Weapon -> Socketed Magic Weapon ❌
+## 3 Magic Amulets -> Magic Ring
 
-**Inputs:** **Weapon** (Mag) + **Flawless Gem** (Qty: 3)
+**Inputs:** **Amulet (Magic) (Qty: 3)**
 
-**Outputs:**
-**usetype** (Mag)
-- Socketed (#) 1-2 (% chance)
+**Outputs:** **Ring (Magic)**
 
 ---
 
-## 1 Magic Shield + 1 Spiked Club + 2 Skulls (Any) -> Magic Shield of Spikes ❌
-
-**Inputs:** **Shield** (Mag) + **Skull** (Qty: 2) + **Spiked Club**
-
-**Outputs:**
-**usetype** (Mag, Suffix: 162)
-
----
-
-## 4 Healing Potions (Any) + 1 Perfect Ruby + 1 Magic Sword -> Sword of the Leech ❌
-
-**Inputs:** **Sword** (Mag) + **Perfect Ruby** + **Healing Potion** (Qty: 4)
-
-**Outputs:**
-**usetype** (Mag, Suffix: 352)
-
----
-
-## 1 Perfect Diamond + 1 Kris + 1 Staff + 1 Belt -> Savage Polearm ❌
-
-**Inputs:** **Kriss** + **Perfect Diamond** + **Staff** + **Belt**
-
-**Outputs:**
-**Polearm** (Mag, Prefix: 191)
-
----
-
-## 1 Strangling Gas Potion + 1 Healing Potion (Any) -> Antidote Potion ✅
+## 1 Strangling Gas Potion + 1 Healing Potion (Any) -> Antidote Potion
 
 **Inputs:** **Strangling Gas Potion** + **Healing Potion**
 
-**Outputs:**
-**Antidote Potion**
+**Outputs:** **Anti**
 
 ---
 
-## WIP 2 Arrows -> Bolts with MF + Sockets ✅
+## WIP 2 Arrows -> Bolts with MF + Sockets
 
-**Inputs:** **Arrows** (Qty: 2)
+**Inputs:** **A (Qty: 2)**
 
-**Outputs:**
-**Bolts**
-- % Better Chance of Getting Magic Items (Based on Character Level) 4
-- Socketed (#) 1-3
+**Outputs:** **B [Extra: mag%/lvl]**
 
 ---
 
-## WIP 2 Bolts -> Arrows with MF + Sockets ✅
+## WIP 2 Bolts -> Arrows with MF + Sockets
 
-**Inputs:** **Bolts** (Qty: 2)
+**Inputs:** **B (Qty: 2)**
 
-**Outputs:**
-**Arrows**
-- % Better Chance of Getting Magic Items (Based on Character Level) 4
-- Socketed (#) 1-3
+**Outputs:** **A [Extra: mag%/lvl]**
 
 ---
 
-## 3 Perfect Gems (Any) + 1 Magic Item -> Re-rolled Magic Item ✅
+## 3 Perfect Gems (Any) + 1 Magic Item -> Re-rolled Magic Item
 
-**Inputs:** **Any Item** (Mag) + **Perfect Gem** (Qty: 3)
+**Inputs:** **any (Magic)** + **Perfect Gem (Qty: 3)**
 
-**Outputs:**
-**usetype** (Mag)
-
----
-
-## 6 Perfect Skulls + 1 Rare Item -> 1 Low Quality Rare Item ✅
-
-**Inputs:** **Any Item** (Rar) + **Perfect Skull** (Qty: 6)
-
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Magic)**
 
 ---
 
-## 1 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> 1 High Quality Rare Item ✅
+## 6 Perfect Skulls + 1 Rare Item -> 1 Low Quality Rare Item
 
-**Inputs:** **Any Item** (Rar) + **Perfect Skull** + **The Stone of Jordan**
+**Inputs:** **any (Rare)** + **• Perfect Skull (Qty: 6)**
 
-**Outputs:**
-**usetype** (Rar)
-
----
-
-## 1 Eld Rune + 1 Chipped Gem (Any) + 1 Low Quality Weapon -> Normal Weapon ❌
-
-**Inputs:** **Weapon** (Low) + **Eld Rune** + **Chipped Gem**
-
-**Outputs:**
-**usetype** (Nor)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## 1 El Rune + 1 Chipped Gem (Any) + 1 Low Quality Armor -> Normal Armor ❌
+## 1 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> 1 High Quality Rare Item
 
-**Inputs:** **Armor** (Low) + **El Rune** + **Chipped Gem**
+**Inputs:** **any (Rare)** + **• Perfect Skull** + **The Stone of Jordan**
 
-**Outputs:**
-**usetype** (Nor)
-
----
-
-## 1 Hel Rune + Scroll of Town Portal + 1 Socketed Item -> Clear Sockets on Item ✅
-
-**Inputs:** **Any Item** (Sock) + **Hel Rune** + **Scroll of Town Portal**
-
-**Outputs:**
-**useitem** (uns)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## 1 Uber Ancient Summon Material from Act 1 + Act2 + Act3 + Act 4 + Act 5 -> Portal to Colossal Summit ✅
+## 1 Hel Rune + Scroll of Town Portal + 1 Socketed Item -> Clear Sockets on Item
 
-**Inputs:** **Uber Ancient Summon Material Act 1** + **Uber Ancient Summon Material Act 2** + **Uber Ancient Summon Material Act 3** + **Uber Ancient Summon Material Act 4** + **Uber Ancient Summon Material Act5**
+**Inputs:** **any (sock)** + **Hel Rune (15)** + **TP**
 
-**Outputs:**
-**Red Portal** (Lvl: 137, Qty: 1)
-
----
-
-## 3 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> Add 3 Socket to Rare Item ✅
-
-**Inputs:** **Any Item** (Rar, Nos) + **Perfect Skull** (Qty: 3) + **The Stone of Jordan**
-
-**Outputs:**
-**useitem** (Sockets: 3)
+**Outputs:** **Use Item (uns)**
 
 ---
 
-## 2 Unique Jewerly = SOH ✅
+## 1 Uber Ancient Summon Material from Act 1 + Act2 + Act3 + Act 4 + Act 5 -> Portal to Colossal Summit
 
-**Inputs:** **Jewelry** (Uni, Qty: 2) + **Thawing Potion**
+**Inputs:** **Talic's Anguish** + **Korlic's Pain** + **Madawc's Ire** + **Bul-Kathos' Nightmare** + **Worusk's End**
 
-**Outputs:**
-**Standard of Heroes**
-
----
-
-## Seasonal Gift ❌
-
-**Inputs:** **Event Gift**
-
-**Outputs:**
-**r15g**
-
-**r01g** (Qty: 5)
-
-**Gem** (Qty: 5)
+**Outputs:** **Red Portal (lvl=137) (Qty: 1)**
 
 ---
 
-## Infernal Mawstone + Item --> Rerolls Ethereal Set ; Potential Upgrade or Downgrade ✅
+## 3 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> Add 3 Socket to Rare Item
 
-**Inputs:** **Any Item** (Set, Eth) + **Infernal Mawstone**
+**Inputs:** **any (Rare, nos)** + **• Perfect Skull (Qty: 3)** + **The Stone of Jordan**
 
-**Outputs:**
-**usetype** (Set)
-- Ethereal 1
+**Outputs:** **Use Item (sock=3)**
 
 ---
 
-## Infernal Mawstone + Item --> Rerolls Set; Potential Upgrade or Downgrade ✅
+## 2 Unique Jewerly = SOH
 
-**Inputs:** **Any Item** (Set, Noe) + **Infernal Mawstone**
+**Inputs:** **Jewelery (Unique) (Qty: 2)** + **Thaw**
 
-**Outputs:**
-**usetype** (Set)
-
----
-
-## Infernal Mawstone + Item --> Rerolls Ethereal Unique ; Potential Upgrade or Downgrade ✅
-
-**Inputs:** **Any Item** (Uni, Eth) + **Infernal Mawstone**
-
-**Outputs:**
-**usetype** (Uni)
-- Ethereal 1
+**Outputs:** **Standard of Heroes**
 
 ---
 
-## Infernal Mawstone + Item --> Rerolls Unique ; Potential Upgrade or Downgrade ✅
+## Infernal Mawstone + Item --> Rerolls Ethereal Set ; Potential Upgrade or Downgrade
 
-**Inputs:** **Any Item** (Uni, Noe) + **Infernal Mawstone**
+**Inputs:** **any (Set, eth)** + **Infernal Mawstone**
 
-**Outputs:**
-**usetype** (Uni)
-
----
-
-## Fracture Halo --> Return Base + Socketed Items ✅
-
-**Inputs:** **Any Item** (Sock) + **Fracture Halo**
-
-**Outputs:**
-**useitem** (rem)
+**Outputs:** **Use Type (Set) [Extra: ethereal]**
 
 ---
 
-## 1 Thaw for Blank Charm ✅
+## Infernal Mawstone + Item --> Rerolls Set; Potential Upgrade or Downgrade
 
-**Inputs:** **Thawing Potion**
+**Inputs:** **any (Set, noe)** + **Infernal Mawstone**
 
-**Outputs:**
-**Charm Blank**
-
-**Charm Blank**
-
-**Charm Blank**
+**Outputs:** **Use Type (Set)**
 
 ---
 
-## 2 Thaw for Modifiers Charm ✅
+## Infernal Mawstone + Item --> Rerolls Ethereal Unique ; Potential Upgrade or Downgrade
 
-**Inputs:** **Thawing Potion** (Qty: 2)
+**Inputs:** **any (Unique, eth)** + **Infernal Mawstone**
 
-**Outputs:**
-**Charm Modifiers**
-
----
-
-## 3 Thaw for Level Reward Charm ✅
-
-**Inputs:** **Thawing Potion** (Qty: 3)
-
-**Outputs:**
-**Charm Level Reward**
+**Outputs:** **Use Type (Unique) [Extra: ethereal]**
 
 ---
 
-## Wand of Lower Res ✅
+## Infernal Mawstone + Item --> Rerolls Unique ; Potential Upgrade or Downgrade
 
-**Inputs:** **Wand** (Mag) + **Viper of the Amulet** + **Mana Potion**
+**Inputs:** **any (Unique, noe)** + **Infernal Mawstone**
 
-**Outputs:**
-**usetype** (Mag)
-- + to [Skill] 1
+**Outputs:** **Use Type (Unique)**
 
 ---
 
-## Wand of Life Tap ✅
+## Fracture Halo --> Return Base + Socketed Items
 
-**Inputs:** **Wand** (Mag) + **Viper of the Amulet** + **Healing Potion**
+**Inputs:** **any (sock)** + **Fracture Halo**
 
-**Outputs:**
-**usetype** (Mag)
-- + to [Skill] 1
+**Outputs:** **Use Item (rem)**
 
 ---
 
-## Staff of Teleportation ✅
+## 1 Thaw for Blank Charm
 
-**Inputs:** **Staff** (Mag) + **BigDinn**
+**Inputs:** **Thaw**
 
-**Outputs:**
-**usetype** (Mag)
-- Level # [Skill] (#/# Charges) 33-1
+**Outputs:** **Small Charm**
 
 ---
 
-## Replenishing TP Book ✅
+## 2 Thaw for Modifiers Charm
 
-**Inputs:** **Tome of Town Portal** + **Hratli's Sprirtual Herb**
+**Inputs:** **Thaw (Qty: 2)**
 
-**Outputs:**
-**useitem**
-- Replenishes quantity  (% chance)
+**Outputs:** **Charm Modifiers**
 
 ---
 
-## Replenishing ID Book ✅
+## 3 Thaw for Level Reward Charm
 
-**Inputs:** **Tome of Identify** + **Hratli's Sprirtual Herb**
+**Inputs:** **Thaw (Qty: 3)**
 
-**Outputs:**
-**useitem**
-- Replenishes quantity  (% chance)
+**Outputs:** **Charm Level Reward**
 
 ---
 
-## Repair Augment on Throwing Knife ✅
+## Magic Wand + Blood Coiled Stone + Mana Potion = Wand of Lower Res
 
-**Inputs:** **Throwing Knife** + **Standard of Heroes** + **Hratli's Sprirtual Herb**
+**Inputs:** **Wand (Magic)** + **Blood-Coiled Stone** + **Mana Potion**
 
-**Outputs:**
-**useitem**
-- Replenishes quantity  (% chance)
+**Outputs:** **Use Type (Magic) [Extra: oskill]**
 
 ---
 
-## Repair Augment on Throwing Axe ✅
+## Magic Wand + Blood Coiled Stone + HP Potion = Wand of Life Tap
 
-**Inputs:** **Throwing Axe** + **Standard of Heroes** + **Hratli's Sprirtual Herb**
+**Inputs:** **Wand (Magic)** + **Blood-Coiled Stone** + **Healing Potion**
 
-**Outputs:**
-**useitem**
-- Replenishes quantity  (% chance)
+**Outputs:** **Use Type (Magic) [Extra: oskill]**
 
 ---
 
-## Repair Augment on Javelin ✅
+## Magic Staff + Riftcarver = Staff of Teleportation
 
-**Inputs:** **Javelin** + **Standard of Heroes** + **Hratli's Sprirtual Herb**
+**Inputs:** **Staff (Magic)** + **Riftcarver**
 
-**Outputs:**
-**useitem**
-- Replenishes quantity  (% chance)
+**Outputs:** **Use Type (Magic) [Extra: charged]**
 
 ---
 
-## Repair Augment on Magic Item ✅
+## Herb + Standard of Heros = Replenishing TP Book
 
-**Inputs:** **Any Item** (Mag) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
+**Inputs:** **Tome of Town Portal** + **Hratli's Spiritual Herb**
 
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
+**Outputs:** **Use Item [Extra: rep-quant]**
 
 ---
 
-## Repair Augment on Rare Item ✅
+## Herb + Standard of Heros = Replenishing ID Book
 
-**Inputs:** **Any Item** (Rar) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
+**Inputs:** **Tome of Identify** + **Hratli's Spiritual Herb**
 
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
+**Outputs:** **Use Item [Extra: rep-quant]**
 
 ---
 
-## Repair Augment on Set Armor ✅
+## Herb + Standard of Heros = Repair Augment on Throwing Knife
 
-**Inputs:** **Armor** (Set) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
+**Inputs:** **Throwing Knife** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
+**Outputs:** **Use Item [Extra: rep-quant]**
 
 ---
 
-## Repair Augment on Set Weapon ✅
+## Herb + Standard of Heros = Repair Augment on Throwing Axe
 
-**Inputs:** **Weapon** (Set) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
+**Inputs:** **Throwing Axe** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
+**Outputs:** **Use Item [Extra: rep-quant]**
 
 ---
 
-## Repair Augment on Unique Armor ✅
+## Herb + Standard of Heros = Repair Augment on Javelin
 
-**Inputs:** **Armor** (Uni) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
+**Inputs:** **Javelin** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
+**Outputs:** **Use Item [Extra: rep-quant]**
 
 ---
 
-## Repair Augment on Unique Weapon ✅
+## Herb + Standard of Heros = Repair Augment on Magic Item
 
-**Inputs:** **Weapon** (Uni) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
+**Inputs:** **any (Magic)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
+**Outputs:** **Use Item [Extra: rep-dur]**
 
 ---
 
-## Repair Augment on Crafted Item ✅
+## Herb + Standard of Heros = Repair Augment on Rare Item
 
-**Inputs:** **Any Item** (Crf) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
+**Inputs:** **any (Rare)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
 
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
+**Outputs:** **Use Item [Extra: rep-dur]**
 
 ---
 
-## Block Bows ✅
+## Herb + Standard of Heros = Repair Augment on Set Armor
+
+**Inputs:** **Any Armor (Set)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
+
+**Outputs:** **Use Item [Extra: rep-dur]**
+
+---
+
+## Herb + Standard of Heros = Repair Augment on Set Weapon
+
+**Inputs:** **Weapon (Set)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
+
+**Outputs:** **Use Item [Extra: rep-dur]**
+
+---
+
+## Herb + Standard of Heros = Repair Augment on Unique Armor
+
+**Inputs:** **Any Armor (Unique)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
+
+**Outputs:** **Use Item [Extra: rep-dur]**
+
+---
+
+## Herb + Standard of Heros = Repair Augment on Unique Weapon
+
+**Inputs:** **Weapon (Unique)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
+
+**Outputs:** **Use Item [Extra: rep-dur]**
+
+---
+
+## Herb + Standard of Heros = Repair Augment on Crafted Item
+
+**Inputs:** **any (crf)** + **Standard of Heroes** + **Hratli's Spiritual Herb**
+
+**Outputs:** **Use Item [Extra: rep-dur]**
+
+---
+
+## Block Bows
 
 **Inputs:** **Bow** + **Flask of Etheric Light**
 
-**Outputs:**
-**useitem**
-
-**Flask of Etheric Light**
+**Outputs:** **Use Item**
 
 ---
 
-## Weapon + Flask = Ethereal Weapon ✅
+## Weapon + Flask = Ethereal Weapon
 
-**Inputs:** **Weapon** (Noe) + **Flask of Etheric Light**
+**Inputs:** **Weapon (noe)** + **Flask of Etheric Light**
 
-**Outputs:**
-**useitem**
-- Ethereal 1
+**Outputs:** **Use Item [Extra: ethereal]**
 
 ---
 
-## Armor + Flask = Ethereal Armor ✅
+## Armor + Flask = Ethereal Armor
 
-**Inputs:** **Armor** (Noe) + **Flask of Etheric Light**
+**Inputs:** **Any Armor (noe)** + **Flask of Etheric Light**
 
-**Outputs:**
-**useitem**
-- Ethereal 1
+**Outputs:** **Use Item [Extra: ethereal]**
 
 ---
 
-## MF + GF on Helm ✅
+## Helm + Standard Of Heroes + Jah + Lo + Vex = MF + GF Helm
 
-**Inputs:** **Helm** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Merc Equip** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## MF + GF on Weapon ✅
+## Weapon + Standard Of Heroes + Jah + Lo + Vex = MF + GF Weapon
 
-**Inputs:** **Weapon** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Weapon** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## MF + GF on Amulet ✅
+## Amulet + Standard Of Heroes + Jah + Lo + Vex = MF + GF Amulet
 
-**Inputs:** **Amulet** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Amulet** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## MF + GF on Shield ✅
+## Shield + Standard Of Heroes + Jah + Lo + Vex = MF + GF Shield
 
-**Inputs:** **Shield** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Any Shield** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## MF + GF on Ring ✅
+## Ring + Standard Of Heroes + Jah + Lo + Vex = MF + GF Ring
 
-**Inputs:** **Ring** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Ring** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## MF + GF on Gloves ✅
+## Gloves + Standard Of Heroes + Jah + Lo + Vex = MF + GF Gloves
 
-**Inputs:** **Gloves** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Gloves** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## MF + GF on Boots ✅
+## Boots + Standard Of Heroes + Jah + Lo + Vex = MF + GF Boots
 
-**Inputs:** **Boots** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Boots** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## MF + GF on Armor ✅
+## Armor + Standard Of Heroes + Jah + Lo + Vex = MF + GF Armor
 
-**Inputs:** **Body Armor** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Armor** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## MF + GF on Belt ✅
+## Belt + Standard Of Heroes + Jah + Lo + Vex = MF + GF Belt
 
-**Inputs:** **Belt** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Belt** + **•••Cham Rune (32)•••** + **•••Ist Rune (24)•••** + **•Lem Rune (20)•** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## Melee Augment on Helm ✅
+## Helm + Standard Of Heroes + Charsi's Malus + Gul = Melee Augment Helm
 
-**Inputs:** **Helm** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Merc Equip** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## Melee Augment on Weapon ✅
+## Weapon + Standard Of Heroes + Charsi's Malus + Gul = Melee Augment Weapon
 
-**Inputs:** **Weapon** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Weapon** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## Melee Augment on Amulet ✅
+## Amulet + Standard Of Heroes + Charsi's Malus + Gul = Melee Augment Amulet
 
-**Inputs:** **Amulet** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Amulet** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## Melee Augment on Shield ✅
+## Shield + Standard Of Heroes + Charsi's Malus + Gul = Melee Augment Shield
 
-**Inputs:** **Shield** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Any Shield** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## Melee Augment on Ring ✅
+## Ring + Standard Of Heroes + Charsi's Malus + Gul = Melee Augment Ring
 
-**Inputs:** **Ring** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Ring** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## Melee Augment on Gloves ✅
+## Gloves + Standard Of Heroes + Charsi's Malus + Gul = Melee Augment Gloves
 
-**Inputs:** **Gloves** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Gloves** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## Melee Augment on Boots ✅
+## Boots + Standard Of Heroes + Charsi's Malus + Gul = Melee Augment Boots
 
-**Inputs:** **Boots** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Boots** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## Melee Augment on Armor ✅
+## Armor + Standard Of Heroes + Charsi's Malus + Gul = Melee Augment Armor
 
-**Inputs:** **Body Armor** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Armor** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## Melee Augment on Belt ✅
+## Belt + Standard Of Heroes + Charsi's Malus + Gul = Melee Augment Belt
 
-**Inputs:** **Belt** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Belt** + **•••Gul Rune (25)•••** + **Fal Rune (19)** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
+**Outputs:** **Use Item [Extra: augmented1]**
 
 ---
 
-## Teleport + MF + GF on Armor ✅
+## Armor + Standard Of Heroes + Cham + Sur + The Stone Of Jordan = Teleport + MF + GF Armor
 
-**Inputs:** **Body Armor** + **Zod Rune** + **Ber Rune** + **The Stone of Jordan** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Armor** + **•••Zod Rune  (33)•••** + **•••Sur Rune (29)•••** + **The Stone of Jordan** + **Standard of Heroes** + **Charsi's Malus**
 
-**Outputs:**
-**useitem**
-- + to [Skill] 1 (% chance)
--  1 (% chance)
-- % Better Chance of Getting Magic Items (Based on Character Level)  (% chance)
-- % Extra Gold from Monsters (Based on Character Level)  (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item [Extra: oskill]**
 
 ---
 
-## Break Down Hellfire Torch -> 1 Hellfire Ashes ✅
+## Charsi's Malus + Hellfire Torch = 1 Hellfire Ashes
 
 **Inputs:** **Hellfire Torch** + **Charsi's Malus**
 
-**Outputs:**
-**Hellfire Ashes**
+**Outputs:** **Hellfire Ashes**
 
 ---
 
-## Hellfire Ash + Stamina Potion -> 2 Standard of Heroes ✅
+## Hellfire Ash + Stamina Potion -> 2 Standard of Heroes
 
-**Inputs:** **Hellfire Ashes** + **Thawing Potion**
+**Inputs:** **Hellfire Ashes** + **Thaw**
 
-**Outputs:**
-**Standard of Heroes**
-
-**Standard of Heroes**
+**Outputs:** **Standard of Heroes**
 
 ---
 
-## Break Down Annihilus -> 3 Standard of Heroes ✅
+## Charsi's Malus + Annihilus  -> 3 Standard of Heroes
 
 **Inputs:** **Annihilus** + **Charsi's Malus**
 
-**Outputs:**
-**Standard of Heroes**
-
-**Standard of Heroes**
-
-**Standard of Heroes**
+**Outputs:** **Standard of Heroes**
 
 ---
 
-## Break Down Gheed's Fortune -> 3 MF Potions ✅
+## Charsi's Malus + Gheed's Fortune -> 3 MF Potions
 
 **Inputs:** **Gheed's Fortune** + **Charsi's Malus**
 
-**Outputs:**
-**Magic Find Potion**
-
-**Magic Find Potion**
-
-**Magic Find Potion**
+**Outputs:** **Magic Find Potion**
 
 ---
 
-## 1 Ort Rune + 1 Weapon -> Fully Repaired Weapon ✅
+## 1 Ort Rune + 1 Weapon -> Fully Repaired Weapon
 
-**Inputs:** **Weapon** (Noe) + **Ort Rune**
+**Inputs:** **Weapon (noe)** + **Ort Rune (9)**
 
-**Outputs:**
-**useitem** (rep, rch, Qty: 500)
-
----
-
-## 1 Ral Rune + 1 Armor -> Fully Repaired Armor ✅
-
-**Inputs:** **Armor** (Noe) + **Ral Rune**
-
-**Outputs:**
-**useitem** (rep, rch, Qty: 500)
+**Outputs:** **Use Item (rep, rch) (Qty: 500)**
 
 ---
 
-## 1 Ort Rune + 1 Chipped Gem (Any) + 1 Weapon -> Fully Repaired and Recharged Weapon ✅
+## 1 Ral Rune + 1 Armor -> Fully Repaired Armor
 
-**Inputs:** **Weapon** (Noe) + **Ort Rune** + **Chipped Gem**
+**Inputs:** **Any Armor (noe)** + **Ral Rune (8)**
 
-**Outputs:**
-**useitem** (rep, rch, Qty: 500)
-
----
-
-## 1 Ral Rune + 1 Flawed Gem (Any) + 1 Armor -> Fully Repaired and Recharged Armor ✅
-
-**Inputs:** **Armor** (Noe) + **Ral Rune** + **Flawed Gem**
-
-**Outputs:**
-**useitem** (rep, rch, Qty: 500)
+**Outputs:** **Use Item (rep, rch) (Qty: 500)**
 
 ---
 
-## 3 pk1 = Matrons Den ✅
+## 1 Ort Rune + 1 Chipped Gem (Any) + 1 Weapon -> Fully Repaired and Recharged Weapon
 
-**Inputs:** **Key of Terror** (Qty: 3)
+**Inputs:** **Weapon (noe)** + **Ort Rune (9)** + **Chipped Gem**
 
-**Outputs:**
-**Red Portal** (Qty: 133)
-
----
-
-## 2 pk1 + 1 pk2 = Matrons Den ✅
-
-**Inputs:** **Key of Terror** (Qty: 2) + **Key of Hate** (Qty: 1)
-
-**Outputs:**
-**Red Portal** (Qty: 133)
+**Outputs:** **Use Item (rep, rch) (Qty: 500)**
 
 ---
 
-## 2 pk1 + 1 pk3 = Matrons Den ✅
+## 1 Ral Rune + 1 Flawed Gem (Any) + 1 Armor -> Fully Repaired and Recharged Armor
 
-**Inputs:** **Key of Terror** (Qty: 2) + **Key of Destruction** (Qty: 1)
+**Inputs:** **Any Armor (noe)** + **Ral Rune (8)** + **Flawed Gem**
 
-**Outputs:**
-**Red Portal** (Qty: 133)
-
----
-
-## 3 pk2 = Forgotten Sands ✅
-
-**Inputs:** **Key of Hate** (Qty: 3)
-
-**Outputs:**
-**Red Portal** (Qty: 134)
+**Outputs:** **Use Item (rep, rch) (Qty: 500)**
 
 ---
 
-## 2 pk2 + 1 pk1 = Forgotten Sands ✅
+## 3 pk1 = Matrons Den
 
-**Inputs:** **Key of Hate** (Qty: 2) + **Key of Terror** (Qty: 1)
+**Inputs:** **Key of Terror (Qty: 3)**
 
-**Outputs:**
-**Red Portal** (Qty: 134)
-
----
-
-## 2 pk2 + 1 pk3 = Forgotten Sands ✅
-
-**Inputs:** **Key of Hate** (Qty: 2) + **Key of Destruction** (Qty: 1)
-
-**Outputs:**
-**Red Portal** (Qty: 134)
+**Outputs:** **Red Portal (Qty: 133)**
 
 ---
 
-## 3 pk3 = Furnace of pain ✅
+## 2 pk1 + 1 pk2 = Matrons Den
 
-**Inputs:** **Key of Destruction** (Qty: 3)
+**Inputs:** **Key of Terror (Qty: 2)** + **Key of Hate (Qty: 1)**
 
-**Outputs:**
-**Red Portal** (Qty: 135)
-
----
-
-## 2 pk3 + 1 pk1 = Furnace of pain ✅
-
-**Inputs:** **Key of Destruction** (Qty: 2) + **Key of Terror** (Qty: 1)
-
-**Outputs:**
-**Red Portal** (Qty: 135)
+**Outputs:** **Red Portal (Qty: 133)**
 
 ---
 
-## 2 pk3 + 1 pk2 = Furnace of pain ✅
+## 2 pk1 + 1 pk3 = Matrons Den
 
-**Inputs:** **Key of Destruction** (Qty: 2) + **Key of Hate** (Qty: 1)
+**Inputs:** **Key of Terror (Qty: 2)** + **Key of Destruction (Qty: 1)**
 
-**Outputs:**
-**Red Portal** (Qty: 135)
+**Outputs:** **Red Portal (Qty: 133)**
 
 ---
 
-## pk1 + pk2 + pk3 = Random Uber ✅
+## 3 pk2 = Forgotten Sands
+
+**Inputs:** **Key of Hate (Qty: 3)**
+
+**Outputs:** **Red Portal (Qty: 134)**
+
+---
+
+## 2 pk2 + 1 pk1 = Forgotten Sands
+
+**Inputs:** **Key of Hate (Qty: 2)** + **Key of Terror (Qty: 1)**
+
+**Outputs:** **Red Portal (Qty: 134)**
+
+---
+
+## 2 pk2 + 1 pk3 = Forgotten Sands
+
+**Inputs:** **Key of Hate (Qty: 2)** + **Key of Destruction (Qty: 1)**
+
+**Outputs:** **Red Portal (Qty: 134)**
+
+---
+
+## 3 pk3 = Furnace of pain
+
+**Inputs:** **Key of Destruction (Qty: 3)**
+
+**Outputs:** **Red Portal (Qty: 135)**
+
+---
+
+## 2 pk3 + 1 pk1 = Furnace of pain
+
+**Inputs:** **Key of Destruction (Qty: 2)** + **Key of Terror (Qty: 1)**
+
+**Outputs:** **Red Portal (Qty: 135)**
+
+---
+
+## 2 pk3 + 1 pk2 = Furnace of pain
+
+**Inputs:** **Key of Destruction (Qty: 2)** + **Key of Hate (Qty: 1)**
+
+**Outputs:** **Red Portal (Qty: 135)**
+
+---
+
+## pk1 + pk2 + pk3 = Random Uber
 
 **Inputs:** **Key of Terror** + **Key of Hate** + **Key of Destruction**
 
-**Outputs:**
-**Pandemonium Portal**
+**Outputs:** **Pandemonium Portal**
 
 ---
 
-## 1 Diablo's Horn + 1 Baal's Eye + 1 Mephisto's Brain -> Portal to Tristram (Pandemonium Finale) ✅
+## 1 Diablo's Horn + 1 Baal's Eye + 1 Mephisto's Brain -> Portal to Tristram (Pandemonium Finale)
 
 **Inputs:** **Diablo's Horn** + **Baal's Eye** + **Mephisto's Brain**
 
-**Outputs:**
-**Pandemonium Finale Portal**
+**Outputs:** **Pandemonium Finale Portal**
 
 ---
 
-## 1 Twisted Essence of Suffering + 1 Charged Essence of Hatred + 1 Burning Essence of Terror + 1 Festering Essence of Destruction -> Uber Keys ✅
+## 1 Twisted Essence of Suffering + 1 Charged Essence of Hatred + 1 Burning Essence of Terror + 1 Festering Essence of Destruction -> Uber Keys
 
-**Inputs:** **Twisted Essence of Suffering** + **Charged Essense of Hatred** + **Burning Essence of Terror** + **Festering Essence of Destruction**
+**Inputs:** **Twisted Essence of Suffering** + **Charged Essence of Hatred** + **Burning Essence of Terror** + **Festering Essence of Destruction**
 
-**Outputs:**
-**Key of Terror**
+**Outputs:** **Key of Terror**
 
-**Key of Hate**
-
-**Key of Destruction**
-
----
-
-## 3 Twisted Essence of Suffering -> 1 Charged Essence of Hatred ✅
-
-**Inputs:** **Twisted Essence of Suffering** (Qty: 3)
-
-**Outputs:**
-**Charged Essense of Hatred**
-
----
-
-## 3 Charged Essence of Hatred -> 1 Burning Essence of Terror ✅
-
-**Inputs:** **Charged Essense of Hatred** (Qty: 3)
-
-**Outputs:**
-**Burning Essence of Terror**
-
----
-
-## 3 Burning Essence of Terror -> 1 Festering Essence of Destruction ✅
-
-**Inputs:** **Burning Essence of Terror** (Qty: 3)
-
-**Outputs:**
-**Festering Essence of Destruction**
-
----
-
-## 3 Festering Essence of Destruction -> Twisted Essence of Suffering ✅
-
-**Inputs:** **Festering Essence of Destruction** (Qty: 3)
-
-**Outputs:**
-**Twisted Essence of Suffering** (Qty: 3)
-
----
-
-## 35 Standard of Heroes + Thawing Potion = Flask of Etheric Light ✅
-
-**Inputs:** **Standard of Heroes** (Qty: 35) + **Thawing Potion**
-
-**Outputs:**
-**Flask of Etheric Light**
-
----
-
-## 35 Bricks + Thawing Potion = The Divine Standard ✅
-
-**Inputs:** **Brick** (Qty: 35) + **Thawing Potion**
-
-**Outputs:**
-**Dark Soul**
-
----
-
-## 35 Bricks + TP Scroll = Cham Rune ✅
-
-**Inputs:** **Brick** (Qty: 35) + **Scroll of Town Portal**
-
-**Outputs:**
-**Zod Rune**
-
----
-
-## 35 Perfect Diamonds + Thawing Potion = Diablo's Soulstone ✅
-
-**Inputs:** **Perfect Diamond** (Qty: 35) + **Thawing Potion**
-
-**Outputs:**
-**Diablo's Soulstone**
-
----
-
-## 35 Perfect Amethysts + Thawing Potion = 2 Unique Amulets ✅
-
-**Inputs:** **Perfect Amethyst** (Qty: 35) + **Thawing Potion**
-
-**Outputs:**
-**Amulet** (Uni)
-
-**Amulet** (Uni)
-
----
-
-## 35 Perfect Rubies + Thawing Potion = 2 Unique Rings ✅
-
-**Inputs:** **Perfect Ruby** (Qty: 35) + **Thawing Potion**
-
-**Outputs:**
-**Ring** (Uni)
-
-**Ring** (Uni)
-
----
-
-## 35 Perfect Sapphires + Thawing Potion = Jewel ✅
-
-**Inputs:** **Perfect Sapphire** (Qty: 35) + **Thawing Potion**
-
-**Outputs:**
-**Jewel** (Uni)
-
----
-
-## 35 Perfect Emeralds + Thawing Potion = Gheed ✅
-
-**Inputs:** **Perfect Emerald** (Qty: 35) + **Thawing Potion**
-
-**Outputs:**
-**Gheed's Fortune**
-
 ---
 
-## 35 Perfect Topazes + Thawing Potion = Vex Rune ✅
+## 3 Twisted Essence of Suffering -> 1 Charged Essence of Hatred
 
-**Inputs:** **Perfect Topaz** (Qty: 35) + **Thawing Potion**
+**Inputs:** **Twisted Essence of Suffering (Qty: 3)**
 
-**Outputs:**
-**Gul Rune**
+**Outputs:** **Charged Essence of Hatred**
 
 ---
-
-## 35 Perfect Skulls + Thawing Potion = Fracture Halo + Infernal Maw ✅
 
-**Inputs:** **Perfect Skull** (Qty: 35) + **Thawing Potion**
+## 3 Charged Essence of Hatred -> 1 Burning Essence of Terror
 
-**Outputs:**
-**Infernal Mawstone**
+**Inputs:** **Charged Essence of Hatred (Qty: 3)**
 
-**Fracture Halo**
+**Outputs:** **Burning Essence of Terror**
 
 ---
 
-## 9 Pskulls + 3 Hellfire Ash + Larzuk's Forging Hammer + Unique Jewel = Random Unique Jewel ✅
+## 3 Burning Essence of Terror -> 1 Festering Essence of Destruction
 
-**Inputs:** **Perfect Skull** (Qty: 9) + **Larzuk's Forging Hammer** + **Jewel** (Uni) + **Hellfire Ashes** (Qty: 3)
+**Inputs:** **Burning Essence of Terror (Qty: 3)**
 
-**Outputs:**
-**Jewel** (Uni)
+**Outputs:** **Festering Essence of Destruction**
 
 ---
 
-## 3 Chipped Amethysts -> Flawed Amethyst ✅
+## 3 Festering Essence of Destruction -> Twisted Essence of Suffering
 
-**Inputs:** **Chipped Amethyst** (Qty: 3)
+**Inputs:** **Festering Essence of Destruction (Qty: 3)**
 
-**Outputs:**
-**Flawed Amethyst**
+**Outputs:** **Twisted Essence of Suffering (Qty: 3)**
 
 ---
 
-## 3 Flawed Amethysts -> Standard Amethyst ✅
+## 35 Standard of Heroes + Thawing Potion = Flask of Etheric Light
 
-**Inputs:** **Flawed Amethyst** (Qty: 3)
+**Inputs:** **Standard of Heroes (Qty: 35)** + **Thaw**
 
-**Outputs:**
-**Amethyst**
+**Outputs:** **Flask of Etheric Light**
 
 ---
 
-## 3 Standard Amethysts -> Flawless Amethyst ✅
+## 35 Bricks + Thawing Potion = The Divine Standard
 
-**Inputs:** **Amethyst** (Qty: 3)
+**Inputs:** **Brick (Qty: 35)** + **Thaw**
 
-**Outputs:**
-**Flawless Amethyst**
+**Outputs:** **The Divine Standard**
 
 ---
 
-## 3 Flawless Amethysts -> Perfect Amethyst ✅
+## 35 Bricks + TP Scroll = Cham Rune
 
-**Inputs:** **Flawless Amethyst** (Qty: 3)
+**Inputs:** **Brick (Qty: 35)** + **TP**
 
-**Outputs:**
-**Perfect Amethyst**
+**Outputs:** **•••Cham Rune (32)•••**
 
 ---
 
-## 3 Chipped Rubies -> Flawed Ruby ✅
+## 35 Perfect Diamonds + Thawing Potion = Diablo's Soulstone
 
-**Inputs:** **Chipped Ruby** (Qty: 3)
+**Inputs:** **• Perfect Diamond (Qty: 35)** + **Thaw**
 
-**Outputs:**
-**Flawed Ruby**
+**Outputs:** **Diablo's Soulstone**
 
 ---
 
-## 3 Flawed Rubies -> Standard Ruby ✅
+## 35 Perfect Amethysts + Thawing Potion = 2 Unique Amulets
 
-**Inputs:** **Flawed Ruby** (Qty: 3)
+**Inputs:** **• Perfect Amethyst (Qty: 35)** + **Thaw**
 
-**Outputs:**
-**Ruby**
+**Outputs:** **Amulet (Unique)**
 
 ---
 
-## 3 Standard Rubies -> Flawless Ruby ✅
+## 35 Perfect Rubies + Thawing Potion = 2 Unique Rings
 
-**Inputs:** **Ruby** (Qty: 3)
+**Inputs:** **• Perfect Ruby (Qty: 35)** + **Thaw**
 
-**Outputs:**
-**Flawless Ruby**
+**Outputs:** **Ring (Unique)**
 
 ---
 
-## 3 Flawless Rubies -> Perfect Ruby ✅
+## 35 Perfect Sapphires + Thawing Potion = Jewel
 
-**Inputs:** **Flawless Ruby** (Qty: 3)
+**Inputs:** **• Perfect Sapphire (Qty: 35)** + **Thaw**
 
-**Outputs:**
-**Perfect Ruby**
+**Outputs:** **Jewel (Unique)**
 
 ---
 
-## 3 Chipped Sapphires -> Flawed Sapphire ✅
+## 35 Perfect Emeralds + Thawing Potion = Gheed
 
-**Inputs:** **Chipped Sapphire** (Qty: 3)
+**Inputs:** **• Perfect Emerald (Qty: 35)** + **Thaw**
 
-**Outputs:**
-**Flawed Sapphire**
+**Outputs:** **Gheed's Fortune**
 
 ---
 
-## 3 Flawed Sapphires -> Standard Sapphire ✅
+## 35 Perfect Topazes + Thawing Potion = Vex Rune
 
-**Inputs:** **Flawed Sapphire** (Qty: 3)
+**Inputs:** **• Perfect Topaz (Qty: 35)** + **Thaw**
 
-**Outputs:**
-**Sapphire**
+**Outputs:** **•••Ist Rune (24)•••**
 
 ---
 
-## 3 Standard Sapphires -> Flawless Sapphire ✅
+## 35 Perfect Skulls + Thawing Potion = Fracture Halo + Infernal Maw
 
-**Inputs:** **Sapphire** (Qty: 3)
+**Inputs:** **• Perfect Skull (Qty: 35)** + **Thaw**
 
-**Outputs:**
-**Flawless Sapphire**
+**Outputs:** **Infernal Mawstone**
 
 ---
 
-## 3 Flawless Sapphires -> Perfect Sapphire ✅
+## 9 Pskulls + 3 Hellfire Ash + Larzuk's Forging Hammer + Unique Jewel = Random Unique Jewel
 
-**Inputs:** **Flawless Sapphire** (Qty: 3)
+**Inputs:** **• Perfect Skull (Qty: 9)** + **Larzuk's Forging Hammer** + **Jewel (Unique)** + **Hellfire Ashes (Qty: 3)**
 
-**Outputs:**
-**Perfect Sapphire**
+**Outputs:** **Jewel (Unique)**
 
 ---
 
-## 3 Chipped Topazes -> Flawed Topaz ✅
+## 3 Chipped Amethysts -> Flawed Amethyst
 
-**Inputs:** **Chipped Topaz** (Qty: 3)
+**Inputs:** **• Chipped Amethyst (Qty: 3)**
 
-**Outputs:**
-**Flawed Topaz**
+**Outputs:** **• Flawed Amethyst**
 
 ---
 
-## 3 Flawed Topazes -> Standard Topaz ✅
+## 3 Flawed Amethysts -> Standard Amethyst
 
-**Inputs:** **Flawed Topaz** (Qty: 3)
+**Inputs:** **• Flawed Amethyst (Qty: 3)**
 
-**Outputs:**
-**Topaz**
+**Outputs:** **• Amethyst**
 
 ---
 
-## 3 Standard Topazes -> Flawless Topaz ✅
+## 3 Standard Amethysts -> Flawless Amethyst
 
-**Inputs:** **Topaz** (Qty: 3)
+**Inputs:** **• Amethyst (Qty: 3)**
 
-**Outputs:**
-**Flawless Topaz**
+**Outputs:** **• Flawless Amethyst**
 
 ---
 
-## 3 Flawless Topazes -> Perfect Topaz ✅
+## 3 Flawless Amethysts -> Perfect Amethyst
 
-**Inputs:** **Flawless Topaz** (Qty: 3)
+**Inputs:** **• Flawless Amethyst (Qty: 3)**
 
-**Outputs:**
-**Perfect Topaz**
+**Outputs:** **• Perfect Amethyst**
 
 ---
 
-## 3 Chipped Emeralds -> Flawed Emerald ✅
+## 3 Chipped Rubies -> Flawed Ruby
 
-**Inputs:** **Chipped Emerald** (Qty: 3)
+**Inputs:** **• Chipped Ruby (Qty: 3)**
 
-**Outputs:**
-**Flawed Emerald**
+**Outputs:** **• Flawed Ruby**
 
 ---
 
-## 3 Flawed Emeralds -> Standard Emerald ✅
+## 3 Flawed Rubies -> Standard Ruby
 
-**Inputs:** **Flawed Emerald** (Qty: 3)
+**Inputs:** **• Flawed Ruby (Qty: 3)**
 
-**Outputs:**
-**Emerald**
+**Outputs:** **• Ruby**
 
 ---
 
-## 3 Standard Emeralds -> Flawless Emerald ✅
+## 3 Standard Rubies -> Flawless Ruby
 
-**Inputs:** **Emerald** (Qty: 3)
+**Inputs:** **• Ruby (Qty: 3)**
 
-**Outputs:**
-**Flawless Emerald**
+**Outputs:** **• Flawless Ruby**
 
 ---
 
-## 3 Flawless Emeralds -> Perfect Emerald ✅
+## 3 Flawless Rubies -> Perfect Ruby
 
-**Inputs:** **Flawless Emerald** (Qty: 3)
+**Inputs:** **• Flawless Ruby (Qty: 3)**
 
-**Outputs:**
-**Perfect Emerald**
+**Outputs:** **• Perfect Ruby**
 
 ---
 
-## 3 Chipped Diamonds -> Flawed Diamond ✅
+## 3 Chipped Sapphires -> Flawed Sapphire
 
-**Inputs:** **Chipped Diamond** (Qty: 3)
+**Inputs:** **• Chipped Sapphire (Qty: 3)**
 
-**Outputs:**
-**Flawed Diamond**
+**Outputs:** **• Flawed Sapphire**
 
 ---
 
-## 3 Flawed Diamonds -> Standard Diamond ✅
+## 3 Flawed Sapphires -> Standard Sapphire
 
-**Inputs:** **Flawed Diamond** (Qty: 3)
+**Inputs:** **• Flawed Sapphire (Qty: 3)**
 
-**Outputs:**
-**Diamond**
+**Outputs:** **• Sapphire**
 
 ---
 
-## 3 Standard Diamonds -> Flawless Diamond ✅
+## 3 Standard Sapphires -> Flawless Sapphire
 
-**Inputs:** **Diamond** (Qty: 3)
+**Inputs:** **• Sapphire (Qty: 3)**
 
-**Outputs:**
-**Flawless Diamond**
+**Outputs:** **• Flawless Sapphire**
 
 ---
 
-## 3 Flawless Diamonds -> Perfect Diamond ✅
+## 3 Flawless Sapphires -> Perfect Sapphire
 
-**Inputs:** **Flawless Diamond** (Qty: 3)
+**Inputs:** **• Flawless Sapphire (Qty: 3)**
 
-**Outputs:**
-**Perfect Diamond**
+**Outputs:** **• Perfect Sapphire**
 
 ---
 
-## 3 Chipped Skulls -> Flawed Skull ✅
+## 3 Chipped Topazes -> Flawed Topaz
 
-**Inputs:** **Chipped Skull** (Qty: 3)
+**Inputs:** **• Chipped Topaz (Qty: 3)**
 
-**Outputs:**
-**Flawed Skull**
+**Outputs:** **• Flawed Topaz**
 
 ---
 
-## 3 Flawed Skulls -> Standard Skull ✅
+## 3 Flawed Topazes -> Standard Topaz
 
-**Inputs:** **Flawed Skull** (Qty: 3)
+**Inputs:** **• Flawed Topaz (Qty: 3)**
 
-**Outputs:**
-**Skull**
+**Outputs:** **• Topaz**
 
 ---
 
-## 3 Standard Skulls -> Flawless Skull ✅
+## 3 Standard Topazes -> Flawless Topaz
 
-**Inputs:** **Skull** (Qty: 3)
+**Inputs:** **• Topaz (Qty: 3)**
 
-**Outputs:**
-**Flawless Skull**
+**Outputs:** **• Flawless Topaz**
 
 ---
 
-## 3 Flawless Skulls -> Perfect Skull ✅
+## 3 Flawless Topazes -> Perfect Topaz
 
-**Inputs:** **Flawless Skull** (Qty: 3)
+**Inputs:** **• Flawless Topaz (Qty: 3)**
 
-**Outputs:**
-**Perfect Skull**
+**Outputs:** **• Perfect Topaz**
 
 ---
 
-## 9 Chipped Amethysts -> 3 Flawed Amethyst ✅
+## 3 Chipped Emeralds -> Flawed Emerald
 
-**Inputs:** **Chipped Amethyst** (Qty: 9)
+**Inputs:** **• Chipped Emerald (Qty: 3)**
 
-**Outputs:**
-**Flawed Amethyst**
+**Outputs:** **• Flawed Emerald**
 
-**Flawed Amethyst**
-
-**Flawed Amethyst**
-
 ---
-
-## 9 Flawed Amethysts -> 3 Standard Amethyst ✅
-
-**Inputs:** **Flawed Amethyst** (Qty: 9)
 
-**Outputs:**
-**Amethyst**
+## 3 Flawed Emeralds -> Standard Emerald
 
-**Amethyst**
+**Inputs:** **• Flawed Emerald (Qty: 3)**
 
-**Amethyst**
+**Outputs:** **• Emerald**
 
 ---
 
-## 9 Standard Amethysts -> 3 Flawless Amethyst ✅
+## 3 Standard Emeralds -> Flawless Emerald
 
-**Inputs:** **Amethyst** (Qty: 9)
+**Inputs:** **• Emerald (Qty: 3)**
 
-**Outputs:**
-**Flawless Amethyst**
+**Outputs:** **• Flawless Emerald**
 
-**Flawless Amethyst**
-
-**Flawless Amethyst**
-
 ---
-
-## 9 Flawless Amethysts -> 3 Perfect Amethyst ✅
 
-**Inputs:** **Flawless Amethyst** (Qty: 9)
+## 3 Flawless Emeralds -> Perfect Emerald
 
-**Outputs:**
-**Perfect Amethyst**
+**Inputs:** **• Flawless Emerald (Qty: 3)**
 
-**Perfect Amethyst**
+**Outputs:** **• Perfect Emerald**
 
-**Perfect Amethyst**
-
 ---
-
-## 9 Chipped Rubies -> 3 Flawed Ruby ✅
 
-**Inputs:** **Chipped Ruby** (Qty: 9)
+## 3 Chipped Diamonds -> Flawed Diamond
 
-**Outputs:**
-**Flawed Ruby**
+**Inputs:** **• Chipped Diamond (Qty: 3)**
 
-**Flawed Ruby**
+**Outputs:** **• Flawed Diamond**
 
-**Flawed Ruby**
-
 ---
-
-## 9 Flawed Rubies -> 3 Standard Ruby ✅
 
-**Inputs:** **Flawed Ruby** (Qty: 9)
+## 3 Flawed Diamonds -> Standard Diamond
 
-**Outputs:**
-**Ruby**
+**Inputs:** **• Flawed Diamond (Qty: 3)**
 
-**Ruby**
+**Outputs:** **• Diamond**
 
-**Ruby**
-
 ---
-
-## 9 Standard Rubies -> 3 Flawless Ruby ✅
-
-**Inputs:** **Ruby** (Qty: 9)
 
-**Outputs:**
-**Flawless Ruby**
+## 3 Standard Diamonds -> Flawless Diamond
 
-**Flawless Ruby**
+**Inputs:** **• Diamond (Qty: 3)**
 
-**Flawless Ruby**
+**Outputs:** **• Flawless Diamond**
 
 ---
 
-## 9 Flawless Rubies -> 3 Perfect Ruby ✅
+## 3 Flawless Diamonds -> Perfect Diamond
 
-**Inputs:** **Flawless Ruby** (Qty: 9)
+**Inputs:** **• Flawless Diamond (Qty: 3)**
 
-**Outputs:**
-**Perfect Ruby**
+**Outputs:** **• Perfect Diamond**
 
-**Perfect Ruby**
-
-**Perfect Ruby**
-
 ---
-
-## 9 Chipped Sapphires -> 3 Flawed Sapphire ✅
-
-**Inputs:** **Chipped Sapphire** (Qty: 9)
 
-**Outputs:**
-**Flawed Sapphire**
+## 3 Chipped Skulls -> Flawed Skull
 
-**Flawed Sapphire**
+**Inputs:** **• Chipped Skull (Qty: 3)**
 
-**Flawed Sapphire**
+**Outputs:** **• Flawed Skull**
 
 ---
 
-## 9 Flawed Sapphires -> 3 Standard Sapphire ✅
+## 3 Flawed Skulls -> Standard Skull
 
-**Inputs:** **Flawed Sapphire** (Qty: 9)
+**Inputs:** **• Flawed Skull (Qty: 3)**
 
-**Outputs:**
-**Sapphire**
+**Outputs:** **• Skull**
 
-**Sapphire**
-
-**Sapphire**
-
 ---
-
-## 9 Standard Sapphires -> 3 Flawless Sapphire ✅
 
-**Inputs:** **Sapphire** (Qty: 9)
+## 3 Standard Skulls -> Flawless Skull
 
-**Outputs:**
-**Flawless Sapphire**
+**Inputs:** **• Skull (Qty: 3)**
 
-**Flawless Sapphire**
+**Outputs:** **• Flawless Skull**
 
-**Flawless Sapphire**
-
 ---
-
-## 9 Flawless Sapphires -> 3 Perfect Sapphire ✅
 
-**Inputs:** **Flawless Sapphire** (Qty: 9)
+## 3 Flawless Skulls -> Perfect Skull
 
-**Outputs:**
-**Perfect Sapphire**
+**Inputs:** **• Flawless Skull (Qty: 3)**
 
-**Perfect Sapphire**
+**Outputs:** **• Perfect Skull**
 
-**Perfect Sapphire**
-
 ---
-
-## 9 Chipped Topazes -> 3 Flawed Topaz ✅
 
-**Inputs:** **Chipped Topaz** (Qty: 9)
+## 9 Chipped Amethysts -> 3 Flawed Amethyst
 
-**Outputs:**
-**Flawed Topaz**
+**Inputs:** **• Chipped Amethyst (Qty: 9)**
 
-**Flawed Topaz**
+**Outputs:** **• Flawed Amethyst**
 
-**Flawed Topaz**
-
 ---
-
-## 9 Flawed Topazes -> 3 Standard Topaz ✅
-
-**Inputs:** **Flawed Topaz** (Qty: 9)
 
-**Outputs:**
-**Topaz**
+## 9 Flawed Amethysts -> 3 Standard Amethyst
 
-**Topaz**
+**Inputs:** **• Flawed Amethyst (Qty: 9)**
 
-**Topaz**
+**Outputs:** **• Amethyst**
 
 ---
 
-## 9 Standard Topazes -> 3 Flawless Topaz ✅
+## 9 Standard Amethysts -> 3 Flawless Amethyst
 
-**Inputs:** **Topaz** (Qty: 9)
+**Inputs:** **• Amethyst (Qty: 9)**
 
-**Outputs:**
-**Flawless Topaz**
+**Outputs:** **• Flawless Amethyst**
 
-**Flawless Topaz**
-
-**Flawless Topaz**
-
 ---
-
-## 9 Flawless Topazes -> 3 Perfect Topaz ✅
-
-**Inputs:** **Flawless Topaz** (Qty: 9)
 
-**Outputs:**
-**Perfect Topaz**
+## 9 Flawless Amethysts -> 3 Perfect Amethyst
 
-**Perfect Topaz**
+**Inputs:** **• Flawless Amethyst (Qty: 9)**
 
-**Perfect Topaz**
+**Outputs:** **• Perfect Amethyst**
 
 ---
 
-## 9 Chipped Emeralds -> 3 Flawed Emerald ✅
+## 9 Chipped Rubies -> 3 Flawed Ruby
 
-**Inputs:** **Chipped Emerald** (Qty: 9)
+**Inputs:** **• Chipped Ruby (Qty: 9)**
 
-**Outputs:**
-**Flawed Emerald**
+**Outputs:** **• Flawed Ruby**
 
-**Flawed Emerald**
-
-**Flawed Emerald**
-
 ---
-
-## 9 Flawed Emeralds -> 3 Standard Emerald ✅
 
-**Inputs:** **Flawed Emerald** (Qty: 9)
+## 9 Flawed Rubies -> 3 Standard Ruby
 
-**Outputs:**
-**Emerald**
+**Inputs:** **• Flawed Ruby (Qty: 9)**
 
-**Emerald**
+**Outputs:** **• Ruby**
 
-**Emerald**
-
 ---
-
-## 9 Standard Emeralds -> 3 Flawless Emerald ✅
 
-**Inputs:** **Emerald** (Qty: 9)
+## 9 Standard Rubies -> 3 Flawless Ruby
 
-**Outputs:**
-**Flawless Emerald**
+**Inputs:** **• Ruby (Qty: 9)**
 
-**Flawless Emerald**
+**Outputs:** **• Flawless Ruby**
 
-**Flawless Emerald**
-
 ---
-
-## 9 Flawless Emeralds -> 3 Perfect Emerald ✅
 
-**Inputs:** **Flawless Emerald** (Qty: 9)
+## 9 Flawless Rubies -> 3 Perfect Ruby
 
-**Outputs:**
-**Perfect Emerald**
+**Inputs:** **• Flawless Ruby (Qty: 9)**
 
-**Perfect Emerald**
+**Outputs:** **• Perfect Ruby**
 
-**Perfect Emerald**
-
 ---
-
-## 9 Chipped Diamonds -> 3 Flawed Diamond ✅
-
-**Inputs:** **Chipped Diamond** (Qty: 9)
 
-**Outputs:**
-**Flawed Diamond**
+## 9 Chipped Sapphires -> 3 Flawed Sapphire
 
-**Flawed Diamond**
+**Inputs:** **• Chipped Sapphire (Qty: 9)**
 
-**Flawed Diamond**
+**Outputs:** **• Flawed Sapphire**
 
 ---
 
-## 9 Flawed Diamonds -> 3 Standard Diamond ✅
+## 9 Flawed Sapphires -> 3 Standard Sapphire
 
-**Inputs:** **Flawed Diamond** (Qty: 9)
+**Inputs:** **• Flawed Sapphire (Qty: 9)**
 
-**Outputs:**
-**Diamond**
+**Outputs:** **• Sapphire**
 
-**Diamond**
-
-**Diamond**
-
 ---
-
-## 9 Standard Diamonds -> 3 Flawless Diamond ✅
-
-**Inputs:** **Diamond** (Qty: 9)
 
-**Outputs:**
-**Flawless Diamond**
+## 9 Standard Sapphires -> 3 Flawless Sapphire
 
-**Flawless Diamond**
+**Inputs:** **• Sapphire (Qty: 9)**
 
-**Flawless Diamond**
+**Outputs:** **• Flawless Sapphire**
 
 ---
 
-## 9 Flawless Diamonds -> 3 Perfect Diamond ✅
+## 9 Flawless Sapphires -> 3 Perfect Sapphire
 
-**Inputs:** **Flawless Diamond** (Qty: 9)
+**Inputs:** **• Flawless Sapphire (Qty: 9)**
 
-**Outputs:**
-**Perfect Diamond**
+**Outputs:** **• Perfect Sapphire**
 
-**Perfect Diamond**
-
-**Perfect Diamond**
-
 ---
-
-## 9 Chipped Skulls -> 3 Flawed Skull ✅
 
-**Inputs:** **Chipped Skull** (Qty: 9)
+## 9 Chipped Topazes -> 3 Flawed Topaz
 
-**Outputs:**
-**Flawed Skull**
+**Inputs:** **• Chipped Topaz (Qty: 9)**
 
-**Flawed Skull**
+**Outputs:** **• Flawed Topaz**
 
-**Flawed Skull**
-
 ---
-
-## 9 Flawed Skulls -> 3 Standard Skull ✅
 
-**Inputs:** **Flawed Skull** (Qty: 9)
+## 9 Flawed Topazes -> 3 Standard Topaz
 
-**Outputs:**
-**Skull**
+**Inputs:** **• Flawed Topaz (Qty: 9)**
 
-**Skull**
+**Outputs:** **• Topaz**
 
-**Skull**
-
 ---
-
-## 9 Standard Skulls -> 3 Flawless Skull ✅
 
-**Inputs:** **Skull** (Qty: 9)
+## 9 Standard Topazes -> 3 Flawless Topaz
 
-**Outputs:**
-**Flawless Skull**
+**Inputs:** **• Topaz (Qty: 9)**
 
-**Flawless Skull**
+**Outputs:** **• Flawless Topaz**
 
-**Flawless Skull**
-
 ---
-
-## 9 Flawless Skulls -> 3 Perfect Skull ✅
-
-**Inputs:** **Flawless Skull** (Qty: 9)
 
-**Outputs:**
-**Perfect Skull**
+## 9 Flawless Topazes -> 3 Perfect Topaz
 
-**Perfect Skull**
+**Inputs:** **• Flawless Topaz (Qty: 9)**
 
-**Perfect Skull**
+**Outputs:** **• Perfect Topaz**
 
 ---
 
-## 3 Perfect Gems + Thawing Potion + 1 Standard Amethyst -> 3 Perfect Amethyst ✅
+## 9 Chipped Emeralds -> 3 Flawed Emerald
 
-**Inputs:** **Perfect Gem** (Qty: 3) + **Thawing Potion** + **Amethyst**
+**Inputs:** **• Chipped Emerald (Qty: 9)**
 
-**Outputs:**
-**Perfect Amethyst**
+**Outputs:** **• Flawed Emerald**
 
-**Perfect Amethyst**
-
-**Perfect Amethyst**
-
 ---
-
-## 3 Perfect Gems + Thawing Potion + 1 Standard Diamond -> 3 Perfect Diamonds ✅
-
-**Inputs:** **Perfect Gem** (Qty: 3) + **Thawing Potion** + **Diamond**
 
-**Outputs:**
-**Perfect Diamond**
+## 9 Flawed Emeralds -> 3 Standard Emerald
 
-**Perfect Diamond**
+**Inputs:** **• Flawed Emerald (Qty: 9)**
 
-**Perfect Diamond**
+**Outputs:** **• Emerald**
 
 ---
 
-## 3 Perfect Gems + Thawing Potion + 1 Standard Emerald -> 3 Perfect Emeralds ✅
+## 9 Standard Emeralds -> 3 Flawless Emerald
 
-**Inputs:** **Perfect Gem** (Qty: 3) + **Thawing Potion** + **Emerald**
+**Inputs:** **• Emerald (Qty: 9)**
 
-**Outputs:**
-**Perfect Emerald**
+**Outputs:** **• Flawless Emerald**
 
-**Perfect Emerald**
-
-**Perfect Emerald**
-
 ---
-
-## 3 Perfect Gems + Thawing Potion + 1 Standard Ruby -> 3 Perfect Rubies ✅
 
-**Inputs:** **Perfect Gem** (Qty: 3) + **Thawing Potion** + **Ruby**
+## 9 Flawless Emeralds -> 3 Perfect Emerald
 
-**Outputs:**
-**Perfect Ruby**
+**Inputs:** **• Flawless Emerald (Qty: 9)**
 
-**Perfect Ruby**
+**Outputs:** **• Perfect Emerald**
 
-**Perfect Ruby**
-
 ---
-
-## 3 Perfect Gems + Thawing Potion + 1 Standard Sapphire -> 3 Perfect Sapphires ✅
 
-**Inputs:** **Perfect Gem** (Qty: 3) + **Thawing Potion** + **Sapphire**
+## 9 Chipped Diamonds -> 3 Flawed Diamond
 
-**Outputs:**
-**Perfect Sapphire**
+**Inputs:** **• Chipped Diamond (Qty: 9)**
 
-**Perfect Sapphire**
+**Outputs:** **• Flawed Diamond**
 
-**Perfect Sapphire**
-
 ---
-
-## 3 Perfect Gems + Thawing Potion + 1 Standard Topaz -> 3 Perfect Topazes ✅
 
-**Inputs:** **Perfect Gem** (Qty: 3) + **Thawing Potion** + **Topaz**
+## 9 Flawed Diamonds -> 3 Standard Diamond
 
-**Outputs:**
-**Perfect Topaz**
+**Inputs:** **• Flawed Diamond (Qty: 9)**
 
-**Perfect Topaz**
+**Outputs:** **• Diamond**
 
-**Perfect Topaz**
-
 ---
-
-## 3 Perfect Gems + Thawing Potion + 1 Standard Skull -> 3 Perfect Skulls ✅
-
-**Inputs:** **Perfect Gem** (Qty: 3) + **Thawing Potion** + **Skull**
 
-**Outputs:**
-**Perfect Skull**
+## 9 Standard Diamonds -> 3 Flawless Diamond
 
-**Perfect Skull**
+**Inputs:** **• Diamond (Qty: 9)**
 
-**Perfect Skull**
+**Outputs:** **• Flawless Diamond**
 
 ---
 
-## 1 Zod + Standard Gem -> Cham Rune ✅
+## 9 Flawless Diamonds -> 3 Perfect Diamond
 
-**Inputs:** **Zod Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **• Flawless Diamond (Qty: 9)**
 
-**Outputs:**
-**Zod Rune**
+**Outputs:** **• Perfect Diamond**
 
 ---
 
-## 1 Cham + Standard Gem -> Jah Rune ✅
+## 9 Chipped Skulls -> 3 Flawed Skull
 
-**Inputs:** **Zod Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **• Chipped Skull (Qty: 9)**
 
-**Outputs:**
-**Cham Rune**
+**Outputs:** **• Flawed Skull**
 
 ---
 
-## 1 Jah + Standard Gem -> Ber Rune ✅
+## 9 Flawed Skulls -> 3 Standard Skull
 
-**Inputs:** **Cham Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **• Flawed Skull (Qty: 9)**
 
-**Outputs:**
-**Jah Rune**
+**Outputs:** **• Skull**
 
 ---
 
-## 1 Ber + Standard Gem -> Sur Rune ✅
+## 9 Standard Skulls -> 3 Flawless Skull
 
-**Inputs:** **Jah Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **• Skull (Qty: 9)**
 
-**Outputs:**
-**Ber Rune**
+**Outputs:** **• Flawless Skull**
 
 ---
 
-## 1 Sur + Standard Gem -> Lo  Rune ✅
+## 9 Flawless Skulls -> 3 Perfect Skull
 
-**Inputs:** **Ber Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **• Flawless Skull (Qty: 9)**
 
-**Outputs:**
-**Sur Rune**
+**Outputs:** **• Perfect Skull**
 
 ---
 
-## 1 Lo + Standard Gem -> Ohm Rune ✅
+## 3 Perfect Gems + Thawing Potion + 1 Standard Amethyst -> 3 Perfect Amethyst
 
-**Inputs:** **Sur Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Amethyst**
 
-**Outputs:**
-**Lo Rune**
+**Outputs:** **• Perfect Amethyst**
 
 ---
 
-## 1 Ohm + Standard Gem -> Vex Rune ✅
+## 3 Perfect Gems + Thawing Potion + 1 Standard Diamond -> 3 Perfect Diamonds
 
-**Inputs:** **Lo Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Diamond**
 
-**Outputs:**
-**Ohm Rune**
+**Outputs:** **• Perfect Diamond**
 
 ---
 
-## 1 Vex + Standard Gem -> Gul Rune ✅
+## 3 Perfect Gems + Thawing Potion + 1 Standard Emerald -> 3 Perfect Emeralds
 
-**Inputs:** **Ohm Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Emerald**
 
-**Outputs:**
-**Vex Rune**
+**Outputs:** **• Perfect Emerald**
 
 ---
 
-## 1 Gul + Standard Gem -> Ist Rune ✅
+## 3 Perfect Gems + Thawing Potion + 1 Standard Ruby -> 3 Perfect Rubies
 
-**Inputs:** **Vex Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Ruby**
 
-**Outputs:**
-**Gul Rune**
+**Outputs:** **• Perfect Ruby**
 
 ---
 
-## 1 Ist + Standard Gem -> Mal Rune ✅
+## 3 Perfect Gems + Thawing Potion + 1 Standard Sapphire -> 3 Perfect Sapphires
 
-**Inputs:** **Gul Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Sapphire**
 
-**Outputs:**
-**Ist Rune**
+**Outputs:** **• Perfect Sapphire**
 
 ---
 
-## 1 Mal + Standard Gem -> Um Rune ✅
+## 3 Perfect Gems + Thawing Potion + 1 Standard Topaz -> 3 Perfect Topazes
 
-**Inputs:** **Ist Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Topaz**
 
-**Outputs:**
-**Mal Rune**
+**Outputs:** **• Perfect Topaz**
 
 ---
 
-## 1 Um + Standard Gem -> Pul Rune ✅
+## 3 Perfect Gems + Thawing Potion + 1 Standard Skull -> 3 Perfect Skulls
 
-**Inputs:** **Mal Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Perfect Gem (Qty: 3)** + **Thaw** + **• Skull**
 
-**Outputs:**
-**Um Rune**
+**Outputs:** **• Perfect Skull**
 
 ---
 
-## 1 Pul + Standard Gem -> Lem Rune ✅
+## 1 Zod + Standard Gem -> Cham Rune
 
-**Inputs:** **Um Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•••Zod Rune  (33)••• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Pul Rune**
+**Outputs:** **•••Cham Rune (32)•••**
 
 ---
 
-## 1 Lem + Standard Gem -> Fal Rune ✅
+## 1 Cham + Standard Gem -> Jah Rune
 
-**Inputs:** **Pul Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•••Cham Rune (32)••• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Fal Rune**
+**Outputs:** **•••Jah Rune (31)•••**
 
 ---
 
-## 1 Fal + Standard Gem -> Ko Rune ✅
+## 1 Jah + Standard Gem -> Ber Rune
 
-**Inputs:** **Fal Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•••Jah Rune (31)••• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Ko Rune**
+**Outputs:** **•••Ber Rune (30)•••**
 
 ---
 
-## 1 Ko + Standard Gem -> Lum Rune ✅
+## 1 Ber + Standard Gem -> Sur Rune
 
-**Inputs:** **Ko Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•••Ber Rune (30)••• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Lum Rune**
+**Outputs:** **•••Sur Rune (29)•••**
 
 ---
 
-## 1 Lum + Standard Gem -> Io Rune ✅
+## 1 Sur + Standard Gem -> Lo  Rune
 
-**Inputs:** **Lum Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•••Sur Rune (29)••• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Io Rune**
+**Outputs:** **•••Lo Rune (28)•••**
 
 ---
 
-## 1 Io + Standard Gem -> Hel Rune ✅
+## 1 Lo + Standard Gem -> Ohm Rune
 
-**Inputs:** **Io Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•••Lo Rune (28)••• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Hel Rune**
+**Outputs:** **•••Ohm Rune (27)•••**
 
 ---
 
-## 1 Hel + Standard Gem -> Dol  Rune ✅
+## 1 Ohm + Standard Gem -> Vex Rune
 
-**Inputs:** **Hel Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•••Ohm Rune (27)••• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Dol Rune**
+**Outputs:** **•••Vex Rune (26)•••**
 
 ---
 
-## 1 Dol + Standard Gem -> Shael Rune ✅
+## 1 Vex + Standard Gem -> Gul Rune
 
-**Inputs:** **Dol Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•••Vex Rune (26)••• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Shael Rune**
+**Outputs:** **•••Gul Rune (25)•••**
 
 ---
 
-## 1 Shael + Standard Gem -> Sol Rune ✅
+## 1 Gul + Standard Gem -> Ist Rune
 
-**Inputs:** **Shael Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•••Gul Rune (25)••• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Sol Rune**
+**Outputs:** **•••Ist Rune (24)•••**
 
 ---
 
-## 1 Sol + Standard Gem -> Amn Rune ✅
+## 1 Ist + Standard Gem -> Mal Rune
 
-**Inputs:** **Sol Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•••Ist Rune (24)••• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Amn Rune**
+**Outputs:** **•Mal Rune (23)•**
 
 ---
 
-## 1 Amn + Standard Gem -> Thul Rune ✅
+## 1 Mal + Standard Gem -> Um Rune
 
-**Inputs:** **Amn Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•Mal Rune (23)• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Thul Rune**
+**Outputs:** **•Um Rune (22)•**
 
 ---
 
-## 1 Thul + Standard Gem -> Ort Rune ✅
+## 1 Um + Standard Gem -> Pul Rune
 
-**Inputs:** **Thul Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•Um Rune (22)• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Ort Rune**
+**Outputs:** **•Pul Rune (21)•**
 
 ---
 
-## 1 Ort + Standard Gem -> Ral Rune ✅
+## 1 Pul + Standard Gem -> Lem Rune
 
-**Inputs:** **Ort Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•Pul Rune (21)• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Ral Rune**
+**Outputs:** **•Lem Rune (20)•**
 
 ---
 
-## 1 Ral + Standard Gem -> Tal Rune ✅
+## 1 Lem + Standard Gem -> Fal Rune
 
-**Inputs:** **Ral Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **•Lem Rune (20)• (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Tal Rune**
+**Outputs:** **Fal Rune (19)**
 
 ---
 
-## 1 Tal + Standard Gem -> Ith Rune ✅
+## 1 Fal + Standard Gem -> Ko Rune
 
-**Inputs:** **Tal Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Fal Rune (19) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Ith Rune**
+**Outputs:** **Ko Rune (18)**
 
 ---
 
-## 1 Ith + Standard Gem -> Eth Rune ✅
+## 1 Ko + Standard Gem -> Lum Rune
 
-**Inputs:** **Ith Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Ko Rune (18) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Eth Rune**
+**Outputs:** **Lum Rune (17)**
 
 ---
 
-## 1 Eth + Standard Gem -> Nef Rune ✅
+## 1 Lum + Standard Gem -> Io Rune
 
-**Inputs:** **Eth Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Lum Rune (17) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Nef Rune**
+**Outputs:** **Io Rune (16)**
 
 ---
 
-## 1 Nef + Standard Gem -> Tir Rune ✅
+## 1 Io + Standard Gem -> Hel Rune
 
-**Inputs:** **Nef Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Io Rune (16) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Tir Rune**
+**Outputs:** **Hel Rune (15)**
 
 ---
 
-## 1 Tir + Standard Gem -> Eld Rune ✅
+## 1 Hel + Standard Gem -> Dol  Rune
 
-**Inputs:** **Tir Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Hel Rune (15) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Eld Rune**
+**Outputs:** **Dol Rune (14)**
 
 ---
 
-## 1 Eld + Standard Gem -> El Rune ✅
+## 1 Dol + Standard Gem -> Shael Rune
 
-**Inputs:** **Eld Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Dol Rune (14) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**El Rune**
+**Outputs:** **Shael Rune (13)**
 
 ---
 
-## 1 El + Standard Gem -> Rejuv ✅
+## 1 Shael + Standard Gem -> Sol Rune
 
-**Inputs:** **El Rune** (Qty: 1) + **Standard Gem**
+**Inputs:** **Shael Rune (13) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Full Rejuvenation Potion**
+**Outputs:** **Sol Rune (12)**
 
 ---
 
-## 3 El Runes -> Eld Rune ✅
+## 1 Sol + Standard Gem -> Amn Rune
 
-**Inputs:** **El Rune** (Qty: 3)
+**Inputs:** **Sol Rune (12) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Eld Rune**
+**Outputs:** **Amn Rune (11)**
 
 ---
 
-## 3 Eld Runes -> Tir Rune ✅
+## 1 Amn + Standard Gem -> Thul Rune
 
-**Inputs:** **Eld Rune** (Qty: 3)
+**Inputs:** **Amn Rune (11) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Tir Rune**
+**Outputs:** **Thul Rune (10)**
 
 ---
 
-## 3 Tir Runes -> Nef Rune ✅
+## 1 Thul + Standard Gem -> Ort Rune
 
-**Inputs:** **Tir Rune** (Qty: 3)
+**Inputs:** **Thul Rune (10) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Nef Rune**
+**Outputs:** **Ort Rune (9)**
 
 ---
 
-## 3 Nef Runes -> Eth Rune ✅
+## 1 Ort + Standard Gem -> Ral Rune
 
-**Inputs:** **Nef Rune** (Qty: 3)
+**Inputs:** **Ort Rune (9) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Eth Rune**
+**Outputs:** **Ral Rune (8)**
 
 ---
 
-## 3 Eth Runes -> Ith Rune ✅
+## 1 Ral + Standard Gem -> Tal Rune
 
-**Inputs:** **Eth Rune** (Qty: 3)
+**Inputs:** **Ral Rune (8) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Ith Rune**
+**Outputs:** **Tal Rune (7)**
 
 ---
 
-## 3 Ith Runes -> Tal Rune ✅
+## 1 Tal + Standard Gem -> Ith Rune
 
-**Inputs:** **Ith Rune** (Qty: 3)
+**Inputs:** **Tal Rune (7) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Tal Rune**
+**Outputs:** **Ith Rune (6)**
 
 ---
 
-## 3 Tal Runes -> Ral Rune ✅
+## 1 Ith + Standard Gem -> Eth Rune
 
-**Inputs:** **Tal Rune** (Qty: 3)
+**Inputs:** **Ith Rune (6) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Ral Rune**
+**Outputs:** **Eth Rune (5)**
 
 ---
 
-## 3 Ral Runes -> Ort Rune ✅
+## 1 Eth + Standard Gem -> Nef Rune
 
-**Inputs:** **Ral Rune** (Qty: 3)
+**Inputs:** **Eth Rune (5) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Ort Rune**
+**Outputs:** **Nef Rune (4)**
 
 ---
 
-## 3 Ort Runes -> Thul Rune ✅
+## 1 Nef + Standard Gem -> Tir Rune
 
-**Inputs:** **Ort Rune** (Qty: 3)
+**Inputs:** **Nef Rune (4) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Thul Rune**
+**Outputs:** **Tir Rune (3)**
 
 ---
 
-## 3 Thul Runes -> Amn Rune ✅
+## 1 Tir + Standard Gem -> Eld Rune
 
-**Inputs:** **Thul Rune** (Qty: 3)
+**Inputs:** **Tir Rune (3) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Amn Rune**
+**Outputs:** **Eld Rune (2)**
 
 ---
 
-## 3 Amn Runes -> Sol Rune ✅
+## 1 Eld + Standard Gem -> El Rune
 
-**Inputs:** **Amn Rune** (Qty: 3)
+**Inputs:** **Eld Rune (2) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Sol Rune**
+**Outputs:** **El Rune (1)**
 
 ---
 
-## 3 Sol Runes -> Shael Rune ✅
+## 1 El + Standard Gem -> Rejuv
 
-**Inputs:** **Sol Rune** (Qty: 3)
+**Inputs:** **El Rune (1) (Qty: 1)** + **Standard Gem**
 
-**Outputs:**
-**Shael Rune**
+**Outputs:** **•FULL•**
 
 ---
 
-## 3 Shael Runes  -> Dol Rune ✅
+## 3 El Runes -> Eld Rune
 
-**Inputs:** **Shael Rune** (Qty: 3)
+**Inputs:** **El Rune (1) (Qty: 3)**
 
-**Outputs:**
-**Dol Rune**
+**Outputs:** **Eld Rune (2)**
 
 ---
 
-## 3 Dol Runes  -> Hel Rune ✅
+## 3 Eld Runes -> Tir Rune
 
-**Inputs:** **Dol Rune** (Qty: 3)
+**Inputs:** **Eld Rune (2) (Qty: 3)**
 
-**Outputs:**
-**Hel Rune**
+**Outputs:** **Tir Rune (3)**
 
 ---
 
-## 3 Hel Runes -> Io Rune ✅
+## 3 Tir Runes -> Nef Rune
 
-**Inputs:** **Hel Rune** (Qty: 3)
+**Inputs:** **Tir Rune (3) (Qty: 3)**
 
-**Outputs:**
-**Io Rune**
+**Outputs:** **Nef Rune (4)**
 
 ---
 
-## 3 Io Runes -> Lum Rune ✅
+## 3 Nef Runes -> Eth Rune
 
-**Inputs:** **Io Rune** (Qty: 3)
+**Inputs:** **Nef Rune (4) (Qty: 3)**
 
-**Outputs:**
-**Lum Rune**
+**Outputs:** **Eth Rune (5)**
 
 ---
 
-## 3 Lum Runes  -> Ko Rune ✅
+## 3 Eth Runes -> Ith Rune
 
-**Inputs:** **Lum Rune** (Qty: 3)
+**Inputs:** **Eth Rune (5) (Qty: 3)**
 
-**Outputs:**
-**Ko Rune**
+**Outputs:** **Ith Rune (6)**
 
 ---
 
-## 3 Ko Runes -> Fal Rune ✅
+## 3 Ith Runes -> Tal Rune
 
-**Inputs:** **Ko Rune** (Qty: 3)
+**Inputs:** **Ith Rune (6) (Qty: 3)**
 
-**Outputs:**
-**Fal Rune**
+**Outputs:** **Tal Rune (7)**
 
 ---
 
-## 3 Fal Runes -> Lem Rune ✅
+## 3 Tal Runes -> Ral Rune
 
-**Inputs:** **Fal Rune** (Qty: 3)
+**Inputs:** **Tal Rune (7) (Qty: 3)**
 
-**Outputs:**
-**Pul Rune**
+**Outputs:** **Ral Rune (8)**
 
 ---
 
-## 3 Lem Runes -> Pul Rune ✅
+## 3 Ral Runes -> Ort Rune
 
-**Inputs:** **Pul Rune** (Qty: 3)
+**Inputs:** **Ral Rune (8) (Qty: 3)**
 
-**Outputs:**
-**Um Rune**
+**Outputs:** **Ort Rune (9)**
 
 ---
 
-## 2 Pul Runes -> Um Rune ✅
+## 3 Ort Runes -> Thul Rune
 
-**Inputs:** **Um Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Ort Rune (9) (Qty: 3)**
 
-**Outputs:**
-**Mal Rune**
+**Outputs:** **Thul Rune (10)**
 
 ---
 
-## 2 Um Runes -> Mal Rune ✅
+## 3 Thul Runes -> Amn Rune
 
-**Inputs:** **Mal Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Thul Rune (10) (Qty: 3)**
 
-**Outputs:**
-**Ist Rune**
+**Outputs:** **Amn Rune (11)**
 
 ---
 
-## 2 Mal Runes -> Ist Rune ✅
+## 3 Amn Runes -> Sol Rune
 
-**Inputs:** **Ist Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Amn Rune (11) (Qty: 3)**
 
-**Outputs:**
-**Gul Rune**
+**Outputs:** **Sol Rune (12)**
 
 ---
 
-## 2 Ist Runes -> Gul Rune ✅
+## 3 Sol Runes -> Shael Rune
 
-**Inputs:** **Gul Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Sol Rune (12) (Qty: 3)**
 
-**Outputs:**
-**Vex Rune**
+**Outputs:** **Shael Rune (13)**
 
 ---
 
-## 2 Gul Runes -> Vex Rune ✅
+## 3 Shael Runes  -> Dol Rune
 
-**Inputs:** **Vex Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Shael Rune (13) (Qty: 3)**
 
-**Outputs:**
-**Ohm Rune**
+**Outputs:** **Dol Rune (14)**
 
 ---
 
-## 2 Vex Runes -> Ohm Rune ✅
+## 3 Dol Runes  -> Hel Rune
 
-**Inputs:** **Ohm Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Dol Rune (14) (Qty: 3)**
 
-**Outputs:**
-**Lo Rune**
+**Outputs:** **Hel Rune (15)**
 
 ---
 
-## 2 Ohm Runes -> Lo Rune ✅
+## 3 Hel Runes -> Io Rune
 
-**Inputs:** **Lo Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Hel Rune (15) (Qty: 3)**
 
-**Outputs:**
-**Sur Rune**
+**Outputs:** **Io Rune (16)**
 
 ---
 
-## 2 Lo Runes -> Sur Rune ✅
+## 3 Io Runes -> Lum Rune
 
-**Inputs:** **Sur Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Io Rune (16) (Qty: 3)**
 
-**Outputs:**
-**Ber Rune**
+**Outputs:** **Lum Rune (17)**
 
 ---
 
-## 2 Sur Runes -> Ber Rune ✅
+## 3 Lum Runes  -> Ko Rune
 
-**Inputs:** **Ber Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Lum Rune (17) (Qty: 3)**
 
-**Outputs:**
-**Jah Rune**
+**Outputs:** **Ko Rune (18)**
 
 ---
 
-## 2 Ber Runes -> Jah Rune ✅
+## 3 Ko Runes -> Fal Rune
 
-**Inputs:** **Jah Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Ko Rune (18) (Qty: 3)**
 
-**Outputs:**
-**Cham Rune**
+**Outputs:** **Fal Rune (19)**
 
 ---
 
-## 2 Jah Runes  -> Cham Rune ✅
+## 3 Fal Runes -> Lem Rune
 
-**Inputs:** **Cham Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **Fal Rune (19) (Qty: 3)**
 
-**Outputs:**
-**Zod Rune**
+**Outputs:** **•Lem Rune (20)•**
 
 ---
 
-## 2 Cham Runes -> Zod Rune ✅
+## 3 Lem Runes -> Pul Rune
 
-**Inputs:** **Zod Rune** (Qty: 2) + **Thawing Potion**
+**Inputs:** **•Lem Rune (20)• (Qty: 3)**
 
-**Outputs:**
-**Zod Rune**
+**Outputs:** **•Pul Rune (21)•**
 
 ---
 
-## 9 El Runes -> 3 Eld Rune ✅
+## 2 Pul Runes -> Um Rune
 
-**Inputs:** **El Rune** (Qty: 9)
+**Inputs:** **•Pul Rune (21)• (Qty: 2)** + **Thaw**
 
-**Outputs:**
-**Eld Rune**
+**Outputs:** **•Um Rune (22)•**
 
-**Eld Rune**
-
-**Eld Rune**
-
 ---
-
-## 9 Eld Runes -> 3 Tir Rune ✅
-
-**Inputs:** **Eld Rune** (Qty: 9)
 
-**Outputs:**
-**Tir Rune**
+## 2 Um Runes -> Mal Rune
 
-**Tir Rune**
+**Inputs:** **•Um Rune (22)• (Qty: 2)** + **Thaw**
 
-**Tir Rune**
+**Outputs:** **•Mal Rune (23)•**
 
 ---
 
-## 9 Tir Runes -> 3 Nef Rune ✅
+## 2 Mal Runes -> Ist Rune
 
-**Inputs:** **Tir Rune** (Qty: 9)
+**Inputs:** **•Mal Rune (23)• (Qty: 2)** + **Thaw**
 
-**Outputs:**
-**Nef Rune**
+**Outputs:** **•••Ist Rune (24)•••**
 
-**Nef Rune**
-
-**Nef Rune**
-
 ---
-
-## 9 Nef Runes -> 3 Eth Rune ✅
 
-**Inputs:** **Nef Rune** (Qty: 9)
+## 2 Ist Runes -> Gul Rune
 
-**Outputs:**
-**Eth Rune**
+**Inputs:** **•••Ist Rune (24)••• (Qty: 2)** + **Thaw**
 
-**Eth Rune**
+**Outputs:** **•••Gul Rune (25)•••**
 
-**Eth Rune**
-
 ---
-
-## 9 Eth Runes -> 3 Ith Rune ✅
 
-**Inputs:** **Eth Rune** (Qty: 9)
+## 2 Gul Runes -> Vex Rune
 
-**Outputs:**
-**Ith Rune**
+**Inputs:** **•••Gul Rune (25)••• (Qty: 2)** + **Thaw**
 
-**Ith Rune**
+**Outputs:** **•••Vex Rune (26)•••**
 
-**Ith Rune**
-
 ---
-
-## 9 Ith Runes -> 3 Tal Rune ✅
 
-**Inputs:** **Ith Rune** (Qty: 9)
+## 2 Vex Runes -> Ohm Rune
 
-**Outputs:**
-**Tal Rune**
+**Inputs:** **•••Vex Rune (26)••• (Qty: 2)** + **Thaw**
 
-**Tal Rune**
+**Outputs:** **•••Ohm Rune (27)•••**
 
-**Tal Rune**
-
 ---
-
-## 9 Tal Runes -> 3 Ral Rune ✅
-
-**Inputs:** **Tal Rune** (Qty: 9)
 
-**Outputs:**
-**Ral Rune**
+## 2 Ohm Runes -> Lo Rune
 
-**Ral Rune**
+**Inputs:** **•••Ohm Rune (27)••• (Qty: 2)** + **Thaw**
 
-**Ral Rune**
+**Outputs:** **•••Lo Rune (28)•••**
 
 ---
 
-## 9 Ral Runes -> 3 Ort Rune ✅
+## 2 Lo Runes -> Sur Rune
 
-**Inputs:** **Ral Rune** (Qty: 9)
+**Inputs:** **•••Lo Rune (28)••• (Qty: 2)** + **Thaw**
 
-**Outputs:**
-**Ort Rune**
+**Outputs:** **•••Sur Rune (29)•••**
 
-**Ort Rune**
-
-**Ort Rune**
-
 ---
-
-## 9 Ort Runes -> 3 Thul Rune ✅
-
-**Inputs:** **Ort Rune** (Qty: 9)
 
-**Outputs:**
-**Thul Rune**
+## 2 Sur Runes -> Ber Rune
 
-**Thul Rune**
+**Inputs:** **•••Sur Rune (29)••• (Qty: 2)** + **Thaw**
 
-**Thul Rune**
+**Outputs:** **•••Ber Rune (30)•••**
 
 ---
 
-## 9 Thul Runes -> 3 Amn Rune ✅
+## 2 Ber Runes -> Jah Rune
 
-**Inputs:** **Thul Rune** (Qty: 9)
+**Inputs:** **•••Ber Rune (30)••• (Qty: 2)** + **Thaw**
 
-**Outputs:**
-**Amn Rune**
+**Outputs:** **•••Jah Rune (31)•••**
 
-**Amn Rune**
-
-**Amn Rune**
-
 ---
-
-## 9 Amn Runes -> 3 Sol Rune ✅
 
-**Inputs:** **Amn Rune** (Qty: 9)
+## 2 Jah Runes  -> Cham Rune
 
-**Outputs:**
-**Sol Rune**
+**Inputs:** **•••Jah Rune (31)••• (Qty: 2)** + **Thaw**
 
-**Sol Rune**
+**Outputs:** **•••Cham Rune (32)•••**
 
-**Sol Rune**
-
 ---
-
-## 9 Sol Runes -> 3 Shael Rune ✅
 
-**Inputs:** **Sol Rune** (Qty: 9)
+## 2 Cham Runes -> Zod Rune
 
-**Outputs:**
-**Shael Rune**
+**Inputs:** **•••Cham Rune (32)••• (Qty: 2)** + **Thaw**
 
-**Shael Rune**
+**Outputs:** **•••Zod Rune  (33)•••**
 
-**Shael Rune**
-
 ---
-
-## 9 Shael Runes -> 3 Dol Rune ✅
 
-**Inputs:** **Shael Rune** (Qty: 9)
+## 9 El Runes -> 3 Eld Rune
 
-**Outputs:**
-**Dol Rune**
+**Inputs:** **El Rune (1) (Qty: 9)**
 
-**Dol Rune**
+**Outputs:** **Eld Rune (2)**
 
-**Dol Rune**
-
 ---
-
-## 9 Dol Runes -> 3 Hel Rune ✅
-
-**Inputs:** **Dol Rune** (Qty: 9)
 
-**Outputs:**
-**Hel Rune**
+## 9 Eld Runes -> 3 Tir Rune
 
-**Hel Rune**
+**Inputs:** **Eld Rune (2) (Qty: 9)**
 
-**Hel Rune**
+**Outputs:** **Tir Rune (3)**
 
 ---
 
-## 9 Hel Runes -> 3 Io Rune ✅
+## 9 Tir Runes -> 3 Nef Rune
 
-**Inputs:** **Hel Rune** (Qty: 9)
+**Inputs:** **Tir Rune (3) (Qty: 9)**
 
-**Outputs:**
-**Io Rune**
+**Outputs:** **Nef Rune (4)**
 
-**Io Rune**
-
-**Io Rune**
-
 ---
-
-## 9 Io Runes -> 3 Lum Rune ✅
-
-**Inputs:** **Io Rune** (Qty: 9)
 
-**Outputs:**
-**Lum Rune**
+## 9 Nef Runes -> 3 Eth Rune
 
-**Lum Rune**
+**Inputs:** **Nef Rune (4) (Qty: 9)**
 
-**Lum Rune**
+**Outputs:** **Eth Rune (5)**
 
 ---
 
-## 9 Lum Runes -> 3 Ko Rune ✅
+## 9 Eth Runes -> 3 Ith Rune
 
-**Inputs:** **Lum Rune** (Qty: 9)
+**Inputs:** **Eth Rune (5) (Qty: 9)**
 
-**Outputs:**
-**Ko Rune**
+**Outputs:** **Ith Rune (6)**
 
-**Ko Rune**
-
-**Ko Rune**
-
 ---
-
-## 9 Ko Runes -> 3 Fal Rune ✅
 
-**Inputs:** **Ko Rune** (Qty: 9)
+## 9 Ith Runes -> 3 Tal Rune
 
-**Outputs:**
-**Fal Rune**
+**Inputs:** **Ith Rune (6) (Qty: 9)**
 
-**Fal Rune**
+**Outputs:** **Tal Rune (7)**
 
-**Fal Rune**
-
 ---
-
-## 9 Fal Runes -> 3 Lem Rune ✅
 
-**Inputs:** **Fal Rune** (Qty: 9)
+## 9 Tal Runes -> 3 Ral Rune
 
-**Outputs:**
-**Pul Rune**
+**Inputs:** **Tal Rune (7) (Qty: 9)**
 
-**Pul Rune**
+**Outputs:** **Ral Rune (8)**
 
-**Pul Rune**
-
 ---
-
-## 9 Lem Runes -> 3 Pul Rune ✅
 
-**Inputs:** **Pul Rune** (Qty: 9)
+## 9 Ral Runes -> 3 Ort Rune
 
-**Outputs:**
-**Um Rune**
+**Inputs:** **Ral Rune (8) (Qty: 9)**
 
-**Um Rune**
+**Outputs:** **Ort Rune (9)**
 
-**Um Rune**
-
 ---
-
-## 6 Pul Runes -> 3 Um Rune ✅
-
-**Inputs:** **Um Rune** (Qty: 6) + **Thawing Potion**
 
-**Outputs:**
-**Mal Rune**
+## 9 Ort Runes -> 3 Thul Rune
 
-**Mal Rune**
+**Inputs:** **Ort Rune (9) (Qty: 9)**
 
-**Mal Rune**
+**Outputs:** **Thul Rune (10)**
 
 ---
 
-## 6 Um Runes -> 3 Mal Rune ✅
+## 9 Thul Runes -> 3 Amn Rune
 
-**Inputs:** **Mal Rune** (Qty: 6) + **Thawing Potion**
+**Inputs:** **Thul Rune (10) (Qty: 9)**
 
-**Outputs:**
-**Ist Rune**
+**Outputs:** **Amn Rune (11)**
 
-**Ist Rune**
-
-**Ist Rune**
-
 ---
-
-## 6 Mal Runes -> 3 Ist Rune ✅
-
-**Inputs:** **Ist Rune** (Qty: 6) + **Thawing Potion**
 
-**Outputs:**
-**Gul Rune**
+## 9 Amn Runes -> 3 Sol Rune
 
-**Gul Rune**
+**Inputs:** **Amn Rune (11) (Qty: 9)**
 
-**Gul Rune**
+**Outputs:** **Sol Rune (12)**
 
 ---
 
-## 6 Ist Runes -> 3 Gul Rune ✅
+## 9 Sol Runes -> 3 Shael Rune
 
-**Inputs:** **Gul Rune** (Qty: 6) + **Thawing Potion**
+**Inputs:** **Sol Rune (12) (Qty: 9)**
 
-**Outputs:**
-**Vex Rune**
+**Outputs:** **Shael Rune (13)**
 
-**Vex Rune**
-
-**Vex Rune**
-
 ---
-
-## 6 Gul Runes -> 3 Vex Rune ✅
 
-**Inputs:** **Vex Rune** (Qty: 6) + **Thawing Potion**
+## 9 Shael Runes -> 3 Dol Rune
 
-**Outputs:**
-**Ohm Rune**
+**Inputs:** **Shael Rune (13) (Qty: 9)**
 
-**Ohm Rune**
+**Outputs:** **Dol Rune (14)**
 
-**Ohm Rune**
-
 ---
-
-## 6 Vex Runes -> 3 Ohm Rune ✅
 
-**Inputs:** **Ohm Rune** (Qty: 6) + **Thawing Potion**
+## 9 Dol Runes -> 3 Hel Rune
 
-**Outputs:**
-**Lo Rune**
+**Inputs:** **Dol Rune (14) (Qty: 9)**
 
-**Lo Rune**
+**Outputs:** **Hel Rune (15)**
 
-**Lo Rune**
-
 ---
-
-## 6 Ohm Runes -> 3 Lo Rune ✅
 
-**Inputs:** **Lo Rune** (Qty: 6) + **Thawing Potion**
+## 9 Hel Runes -> 3 Io Rune
 
-**Outputs:**
-**Sur Rune**
+**Inputs:** **Hel Rune (15) (Qty: 9)**
 
-**Sur Rune**
+**Outputs:** **Io Rune (16)**
 
-**Sur Rune**
-
 ---
-
-## 6 Lo Runes -> 3 Sur Rune ✅
-
-**Inputs:** **Sur Rune** (Qty: 6) + **Thawing Potion**
 
-**Outputs:**
-**Ber Rune**
+## 9 Io Runes -> 3 Lum Rune
 
-**Ber Rune**
+**Inputs:** **Io Rune (16) (Qty: 9)**
 
-**Ber Rune**
+**Outputs:** **Lum Rune (17)**
 
 ---
 
-## 6 Sur Runes -> 3 Ber Rune ✅
+## 9 Lum Runes -> 3 Ko Rune
 
-**Inputs:** **Ber Rune** (Qty: 6) + **Thawing Potion**
+**Inputs:** **Lum Rune (17) (Qty: 9)**
 
-**Outputs:**
-**Jah Rune**
+**Outputs:** **Ko Rune (18)**
 
-**Jah Rune**
-
-**Jah Rune**
-
 ---
-
-## 6 Ber Runes -> 3 Jah Rune ✅
-
-**Inputs:** **Jah Rune** (Qty: 6) + **Thawing Potion**
 
-**Outputs:**
-**Cham Rune**
+## 9 Ko Runes -> 3 Fal Rune
 
-**Cham Rune**
+**Inputs:** **Ko Rune (18) (Qty: 9)**
 
-**Cham Rune**
+**Outputs:** **Fal Rune (19)**
 
 ---
 
-## 6 Jah Runes -> 3 Cham Rune ✅
+## 9 Fal Runes -> 3 Lem Rune
 
-**Inputs:** **Cham Rune** (Qty: 6) + **Thawing Potion**
+**Inputs:** **Fal Rune (19) (Qty: 9)**
 
-**Outputs:**
-**Zod Rune**
+**Outputs:** **•Lem Rune (20)•**
 
-**Zod Rune**
-
-**Zod Rune**
-
 ---
-
-## 6 Cham Runes -> 3 Zod Rune ✅
 
-**Inputs:** **Zod Rune** (Qty: 6) + **Thawing Potion**
+## 9 Lem Runes -> 3 Pul Rune
 
-**Outputs:**
-**Zod Rune**
+**Inputs:** **•Lem Rune (20)• (Qty: 9)**
 
-**Zod Rune**
+**Outputs:** **•Pul Rune (21)•**
 
-**Zod Rune**
-
 ---
 
-## 1 Magic Full Helm + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm ✅
+## 6 Pul Runes -> 3 Um Rune
 
-**Inputs:** **Helm** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Sapphire**
+**Inputs:** **•Pul Rune (21)• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- + to Attack Rating 150-200 (% chance)
+**Outputs:** **•Um Rune (22)•**
 
 ---
 
-## 1 Magic Full Helm + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Helm ✅
+## 6 Um Runes -> 3 Mal Rune
 
-**Inputs:** **Helm** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Sapphire** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **•Um Rune (22)• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- + to Attack Rating 150-200 (% chance)
-- Ethereal 1
+**Outputs:** **•Mal Rune (23)•**
 
 ---
 
-## 1 Magic Full Helm + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm ✅
+## 6 Mal Runes -> 3 Ist Rune
 
-**Inputs:** **Helm** (Mag, Eth) + **Jewel** + **Ith Rune** + **Perfect Sapphire**
+**Inputs:** **•Mal Rune (23)• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- + to Attack Rating 150-200 (% chance)
-- Ethereal 1
+**Outputs:** **•••Ist Rune (24)•••**
 
 ---
 
-## 1 Magic Chain Boots + 1 Jewel + 1 Ral Rune + 1 Perfect Sapphire -> Hit Power Boots ✅
+## 6 Ist Runes -> 3 Gul Rune
 
-**Inputs:** **Boots** (Mag, Noe) + **Jewel** + **Ral Rune** + **Perfect Sapphire**
+**Inputs:** **•••Ist Rune (24)••• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 10 (% chance)
-- + to Dexterity 10-15 (% chance)
+**Outputs:** **•••Gul Rune (25)•••**
 
 ---
 
-## 1 Magic Chain Boots + 1 Jewel + 1 Ral Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Boots ✅
+## 6 Gul Runes -> 3 Vex Rune
 
-**Inputs:** **Boots** (Mag, Noe) + **Jewel** + **Ral Rune** + **Perfect Sapphire** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **•••Gul Rune (25)••• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 10 (% chance)
-- + to Dexterity 10-15 (% chance)
-- Ethereal 1
+**Outputs:** **•••Vex Rune (26)•••**
 
 ---
 
-## 1 Magic Chain Boots + 1 Jewel + 1 Ral Rune + 1 Perfect Sapphire -> Hit Power Boots ✅
+## 6 Vex Runes -> 3 Ohm Rune
 
-**Inputs:** **Boots** (Mag, Eth) + **Jewel** + **Ral Rune** + **Perfect Sapphire**
+**Inputs:** **•••Vex Rune (26)••• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 10 (% chance)
-- + to Dexterity 10-15 (% chance)
-- Ethereal 1
+**Outputs:** **•••Ohm Rune (27)•••**
 
 ---
 
-## 1 Magic Chain Gloves + 1 Jewel + 1 Ort Rune + 1 Perfect Sapphire -> Hit Power Gloves ✅
+## 6 Ohm Runes -> 3 Lo Rune
 
-**Inputs:** **Gloves** (Mag, Noe) + **Jewel** + **Ort Rune** + **Perfect Sapphire**
+**Inputs:** **•••Ohm Rune (27)••• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- Knockback 1 (% chance)
+**Outputs:** **•••Lo Rune (28)•••**
 
 ---
 
-## 1 Magic Chain Gloves + 1 Jewel + 1 Ort Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Gloves ✅
+## 6 Lo Runes -> 3 Sur Rune
 
-**Inputs:** **Gloves** (Mag, Noe) + **Jewel** + **Ort Rune** + **Perfect Sapphire** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **•••Lo Rune (28)••• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- Knockback 1 (% chance)
-- Ethereal 1
+**Outputs:** **•••Sur Rune (29)•••**
 
 ---
 
-## 1 Magic Chain Gloves + 1 Jewel + 1 Ort Rune + 1 Perfect Sapphire -> Hit Power Gloves ✅
+## 6 Sur Runes -> 3 Ber Rune
 
-**Inputs:** **Gloves** (Mag, Eth) + **Jewel** + **Ort Rune** + **Perfect Sapphire**
+**Inputs:** **•••Sur Rune (29)••• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- Knockback 1 (% chance)
-- Ethereal 1
+**Outputs:** **•••Ber Rune (30)•••**
 
 ---
 
-## 1 Magic Heavy Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Sapphire -> Hit Power Belt ✅
+## 6 Ber Runes -> 3 Jah Rune
 
-**Inputs:** **Belt** (Mag, Noe) + **Jewel** + **Tal Rune** + **Perfect Sapphire**
+**Inputs:** **•••Ber Rune (30)••• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- % Damage Taken Goes To Mana 20 (% chance)
+**Outputs:** **•••Jah Rune (31)•••**
 
 ---
 
-## 1 Magic Heavy Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Belt ✅
+## 6 Jah Runes -> 3 Cham Rune
 
-**Inputs:** **Belt** (Mag, Noe) + **Jewel** + **Tal Rune** + **Perfect Sapphire** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **•••Jah Rune (31)••• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- % Damage Taken Goes To Mana 20 (% chance)
-- Ethereal 1
+**Outputs:** **•••Cham Rune (32)•••**
 
 ---
 
-## 1 Magic Heavy Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Sapphire -> Hit Power Belt ✅
+## 6 Cham Runes -> 3 Zod Rune
 
-**Inputs:** **Belt** (Mag, Eth) + **Jewel** + **Tal Rune** + **Perfect Sapphire**
+**Inputs:** **•••Cham Rune (32)••• (Qty: 6)** + **Thaw**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- % Damage Taken Goes To Mana 20 (% chance)
-- Ethereal 1
+**Outputs:** **•••Zod Rune  (33)•••**
 
 ---
 
-## 1 Magic Gothic Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Sapphire -> Hit Power Shield ✅
+## 1 Magic Full Helm + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Jewel** + **Eth Rune** + **Perfect Sapphire**
+**Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Block Rate 30 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Gothic Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Shield ✅
+## 1 Magic Full Helm + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Jewel** + **Eth Rune** + **Perfect Sapphire** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Block Rate 30 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Gothic Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Sapphire -> Hit Power Shield ✅
+## 1 Magic Full Helm + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm
 
-**Inputs:** **Shield** (Mag, Eth) + **Jewel** + **Eth Rune** + **Perfect Sapphire**
+**Inputs:** **Merc Equip (Magic, eth)** + **Jewel** + **Ith Rune (6)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Block Rate 30 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Field Plate + 1 Jewel + 1 Nef Rune + 1 Perfect Sapphire -> Hit Power Body ✅
+## 1 Magic Chain Boots + 1 Jewel + 1 Ral Rune + 1 Perfect Sapphire -> Hit Power Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Jewel** + **Nef Rune** + **Perfect Sapphire**
+**Inputs:** **Boots (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Enhanced Damage 35-60 (% chance)
-- +% Faster Hit Recovery 30-40 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Field Plate + 1 Jewel + 1 Nef Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Body ✅
+## 1 Magic Chain Boots + 1 Jewel + 1 Ral Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Jewel** + **Nef Rune** + **Perfect Sapphire** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Boots (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Enhanced Damage 35-60 (% chance)
-- +% Faster Hit Recovery 30-40 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Field Plate + 1 Jewel + 1 Nef Rune + 1 Perfect Sapphire -> Hit Power Body ✅
+## 1 Magic Chain Boots + 1 Jewel + 1 Ral Rune + 1 Perfect Sapphire -> Hit Power Boots
 
-**Inputs:** **Body Armor** (Mag, Eth) + **Jewel** + **Nef Rune** + **Perfect Sapphire**
+**Inputs:** **Boots (Magic, eth)** + **Jewel** + **Ral Rune (8)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Enhanced Damage 35-60 (% chance)
-- +% Faster Hit Recovery 30-40 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Amulet + 1 Jewel + Thul Rune + 1 Perfect Sapphire -> Hit Power Amulet ✅
+## 1 Magic Chain Gloves + 1 Jewel + 1 Ort Rune + 1 Perfect Sapphire -> Hit Power Gloves
 
-**Inputs:** **Amulet** (Mag) + **Jewel** + **Thul Rune** + **Perfect Sapphire**
+**Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- + to Attack Rating 200-250 (% chance)
-- +% Faster Hit Recovery 15-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Sapphire -> Hit Power Ring ✅
+## 1 Magic Chain Gloves + 1 Jewel + 1 Ort Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Gloves
 
-**Inputs:** **Ring** (Mag) + **Jewel** + **Amn Rune** + **Perfect Sapphire**
+**Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- + to Maximum Damage 3-5 (% chance)
-- + to Dexterity 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Blunt Weapon + 1 Jewel + 1 Tir Rune + 1 Perfect Sapphire -> Hit Power Weapon ✅
+## 1 Magic Chain Gloves + 1 Jewel + 1 Ort Rune + 1 Perfect Sapphire -> Hit Power Gloves
 
-**Inputs:** **Weapon** (Mag, Noe) + **Jewel** + **Tir Rune** + **Perfect Sapphire**
+**Inputs:** **Gloves (Magic, eth)** + **Jewel** + **Ort Rune (9)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Blunt Weapon + 1 Jewel + 1 Tir Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Weapon ✅
+## 1 Magic Heavy Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Sapphire -> Hit Power Belt
 
-**Inputs:** **Weapon** (Mag, Noe) + **Jewel** + **Tir Rune** + **Perfect Sapphire** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Blunt Weapon + 1 Jewel + 1 Tir Rune + 1 Perfect Sapphire -> Hit Power Weapon ✅
+## 1 Magic Heavy Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Belt
 
-**Inputs:** **Weapon** (Mag, Eth) + **Jewel** + **Tir Rune** + **Perfect Sapphire**
+**Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Helm + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm ✅
+## 1 Magic Heavy Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Sapphire -> Hit Power Belt
 
-**Inputs:** **Helm** (Mag, Noe) + **Jewel** + **Ral Rune** + **Perfect Ruby**
+**Inputs:** **Belt (Magic, eth)** + **Jewel** + **Tal Rune (7)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Deadly Strike 15-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Helm + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby  + 1 Eth Rune + 1 Chasi's Malus -> Blood Helm ✅
+## 1 Magic Gothic Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Sapphire -> Hit Power Shield
 
-**Inputs:** **Helm** (Mag, Noe) + **Jewel** + **Ral Rune** + **Perfect Ruby** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Deadly Strike 15-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Helm + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm ✅
+## 1 Magic Gothic Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Shield
 
-**Inputs:** **Helm** (Mag, Eth) + **Jewel** + **Ral Rune** + **Perfect Ruby**
+**Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Deadly Strike 15-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Light Plated Boots + 1 Jewel + 1 Eth Rune + 1 Perfect Ruby -> Blood Boots ✅
+## 1 Magic Gothic Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Sapphire -> Hit Power Shield
 
-**Inputs:** **Boots** (Mag, Noe) + **Jewel** + **Eth Rune** + **Perfect Ruby**
+**Inputs:** **Any Shield (Magic, eth)** + **Jewel** + **Eth Rune (5)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- + Life after each Kill 3-6 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Light Plated Boots + 1 Jewel + 1 Eth Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Boots ✅
+## 1 Magic Field Plate + 1 Jewel + 1 Nef Rune + 1 Perfect Sapphire -> Hit Power Body
 
-**Inputs:** **Boots** (Mag, Noe) + **Jewel** + **Eth Rune** + **Perfect Ruby** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Armor (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- + Life after each Kill 3-6 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Light Plated Boots + 1 Jewel + 1 Eth Rune + 1 Perfect Ruby -> Blood Boots ✅
+## 1 Magic Field Plate + 1 Jewel + 1 Nef Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Body
 
-**Inputs:** **Boots** (Mag, Eth) + **Jewel** + **Eth Rune** + **Perfect Ruby**
+**Inputs:** **Armor (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- + Life after each Kill 3-6 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Heavy Gloves + 1 Jewel + 1 Nef Rune + 1 Perfect Ruby -> Blood Gloves ✅
+## 1 Magic Field Plate + 1 Jewel + 1 Nef Rune + 1 Perfect Sapphire -> Hit Power Body
 
-**Inputs:** **Gloves** (Mag, Noe) + **Jewel** + **Nef Rune** + **Perfect Ruby**
+**Inputs:** **Armor (Magic, eth)** + **Jewel** + **Nef Rune (4)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Crushing Blow 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Heavy Gloves + 1 Jewel + 1 Nef Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Gloves ✅
+## 1 Magic Amulet + 1 Jewel + Thul Rune + 1 Perfect Sapphire -> Hit Power Amulet
 
-**Inputs:** **Gloves** (Mag, Noe) + **Jewel** + **Nef Rune** + **Perfect Ruby** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Amulet (Magic)** + **Jewel** + **Thul Rune (10)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Crushing Blow 5-10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Heavy Gloves + 1 Jewel + 1 Nef Rune + 1 Perfect Ruby -> Blood Gloves ✅
+## 1 Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Sapphire -> Hit Power Ring
 
-**Inputs:** **Gloves** (Mag, Eth) + **Jewel** + **Nef Rune** + **Perfect Ruby**
+**Inputs:** **Ring (Magic)** + **Jewel** + **Amn Rune (11)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Crushing Blow 5-10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Ruby -> Blood Belt ✅
+## 1 Magic Blunt Weapon + 1 Jewel + 1 Tir Rune + 1 Perfect Sapphire -> Hit Power Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Jewel** + **Tal Rune** + **Perfect Ruby**
+**Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Tir Rune (3)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Open Wounds 15-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Belt ✅
+## 1 Magic Blunt Weapon + 1 Jewel + 1 Tir Rune + 1 Perfect Sapphire + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Jewel** + **Tal Rune** + **Perfect Ruby** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Tir Rune (3)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Open Wounds 15-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Ruby -> Blood Belt ✅
+## 1 Magic Blunt Weapon + 1 Jewel + 1 Tir Rune + 1 Perfect Sapphire -> Hit Power Weapon
 
-**Inputs:** **Belt** (Mag, Eth) + **Jewel** + **Tal Rune** + **Perfect Ruby**
+**Inputs:** **Weapon (Magic, eth)** + **Jewel** + **Tir Rune (3)** + **• Perfect Sapphire**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Open Wounds 15-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Spiked Shield + 1 Jewel + 1 Ith Rune + 1 Perfect Ruby -> Blood Shield ✅
+## 1 Magic Helm + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Ruby**
+**Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Spiked Shield + 1 Jewel + 1 Ith Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Shield ✅
+## 1 Magic Helm + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby  + 1 Eth Rune + 1 Chasi's Malus -> Blood Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Ruby** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Spiked Shield + 1 Jewel + 1 Ith Rune + 1 Perfect Ruby -> Blood Shield ✅
+## 1 Magic Helm + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm
 
-**Inputs:** **Shield** (Mag, Eth) + **Jewel** + **Ith Rune** + **Perfect Ruby**
+**Inputs:** **Merc Equip (Magic, eth)** + **Jewel** + **Ral Rune (8)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Plate Mail + 1 Jewel + 1 Thul Rune + 1 Perfect Ruby -> Blood Body ✅
+## 1 Magic Light Plated Boots + 1 Jewel + 1 Eth Rune + 1 Perfect Ruby -> Blood Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Jewel** + **Thul Rune** + **Perfect Ruby**
+**Inputs:** **Boots (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- + Life after each Kill 3-6 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Plate Mail + 1 Jewel + 1 Thul Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Body ✅
+## 1 Magic Light Plated Boots + 1 Jewel + 1 Eth Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Jewel** + **Thul Rune** + **Perfect Ruby** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Boots (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- + Life after each Kill 3-6 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Plate Mail + 1 Jewel + 1 Thul Rune + 1 Perfect Ruby -> Blood Body ✅
+## 1 Magic Light Plated Boots + 1 Jewel + 1 Eth Rune + 1 Perfect Ruby -> Blood Boots
 
-**Inputs:** **Body Armor** (Mag, Eth) + **Jewel** + **Thul Rune** + **Perfect Ruby**
+**Inputs:** **Boots (Magic, eth)** + **Jewel** + **Eth Rune (5)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- + Life after each Kill 3-6 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Amulet + 1 Jewel + 1 Amn Rune + 1 Perfect Ruby -> Blood Amulet ✅
+## 1 Magic Heavy Gloves + 1 Jewel + 1 Nef Rune + 1 Perfect Ruby -> Blood Gloves
 
-**Inputs:** **Amulet** (Mag) + **Jewel** + **Amn Rune** + **Perfect Ruby**
+**Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- +% Faster Run/Walk 10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Ring + 1 Jewel + 1 Sol Rune + 1 Perfect Ruby -> Blood Ring ✅
+## 1 Magic Heavy Gloves + 1 Jewel + 1 Nef Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Gloves
 
-**Inputs:** **Ring** (Mag) + **Jewel** + **Sol Rune** + **Perfect Ruby**
+**Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- + to Strength 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Axe + 1 Jewel + Ort Rune + 1 Perfect Ruby -> Blood Weapon ✅
+## 1 Magic Heavy Gloves + 1 Jewel + 1 Nef Rune + 1 Perfect Ruby -> Blood Gloves
 
-**Inputs:** **Weapon** (Mag, Noe) + **Jewel** + **Ort Rune** + **Perfect Ruby**
+**Inputs:** **Gloves (Magic, eth)** + **Jewel** + **Nef Rune (4)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 30-40 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Axe + 1 Jewel + Ort Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Weapon ✅
+## 1 Magic Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Ruby -> Blood Belt
 
-**Inputs:** **Weapon** (Mag, Noe) + **Jewel** + **Ort Rune** + **Perfect Ruby** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 30-40 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Axe + 1 Jewel + Ort Rune + 1 Perfect Ruby -> Blood Weapon ✅
+## 1 Magic Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Belt
 
-**Inputs:** **Weapon** (Mag, Eth) + **Jewel** + **Ort Rune** + **Perfect Ruby**
+**Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 30-40 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Mask + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm ✅
+## 1 Magic Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Ruby -> Blood Belt
 
-**Inputs:** **Helm** (Mag, Noe) + **Jewel** + **Nef Rune** + **Perfect Amethyst**
+**Inputs:** **Belt (Magic, eth)** + **Jewel** + **Tal Rune (7)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Mask + 1 Jewel + Nef Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Helm ✅
+## 1 Magic Spiked Shield + 1 Jewel + 1 Ith Rune + 1 Perfect Ruby -> Blood Shield
 
-**Inputs:** **Helm** (Mag, Noe) + **Jewel** + **Nef Rune** + **Perfect Amethyst** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Mask + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm ✅
+## 1 Magic Spiked Shield + 1 Jewel + 1 Ith Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Shield
 
-**Inputs:** **Helm** (Mag, Eth) + **Jewel** + **Nef Rune** + **Perfect Amethyst**
+**Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Boots + 1 Jewel + Thul Rune + 1 Perfect Amethyst -> Caster Boots ✅
+## 1 Magic Spiked Shield + 1 Jewel + 1 Ith Rune + 1 Perfect Ruby -> Blood Shield
 
-**Inputs:** **Boots** (Mag, Noe) + **Jewel** + **Thul Rune** + **Perfect Amethyst**
+**Inputs:** **Any Shield (Magic, eth)** + **Jewel** + **Ith Rune (6)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- Increase Maximum Mana % 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Boots + 1 Jewel + Thul Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Boots ✅
+## 1 Magic Plate Mail + 1 Jewel + 1 Thul Rune + 1 Perfect Ruby -> Blood Body
 
-**Inputs:** **Boots** (Mag, Noe) + **Jewel** + **Thul Rune** + **Perfect Amethyst** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Armor (Magic, noe)** + **Jewel** + **Thul Rune (10)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- Increase Maximum Mana % 5-10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Boots + 1 Jewel + Thul Rune + 1 Perfect Amethyst -> Caster Boots ✅
+## 1 Magic Plate Mail + 1 Jewel + 1 Thul Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Body
 
-**Inputs:** **Boots** (Mag, Eth) + **Jewel** + **Thul Rune** + **Perfect Amethyst**
+**Inputs:** **Armor (Magic, noe)** + **Jewel** + **Thul Rune (10)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- Increase Maximum Mana % 5-10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Leather Gloves + 1 Jewel + Ort Rune + 1 Perfect Amethyst -> Caster Gloves ✅
+## 1 Magic Plate Mail + 1 Jewel + 1 Thul Rune + 1 Perfect Ruby -> Blood Body
 
-**Inputs:** **Gloves** (Mag, Noe) + **Jewel** + **Ort Rune** + **Perfect Amethyst**
+**Inputs:** **Armor (Magic, eth)** + **Jewel** + **Thul Rune (10)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- + to Mana after each Kill 1-3 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Leather Gloves + 1 Jewel + Ort Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Gloves ✅
+## 1 Magic Amulet + 1 Jewel + 1 Amn Rune + 1 Perfect Ruby -> Blood Amulet
 
-**Inputs:** **Gloves** (Mag, Noe) + **Jewel** + **Ort Rune** + **Perfect Amethyst** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Amulet (Magic)** + **Jewel** + **Amn Rune (11)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- + to Mana after each Kill 1-3 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Leather Gloves + 1 Jewel + Ort Rune + 1 Perfect Amethyst -> Caster Gloves ✅
+## 1 Magic Ring + 1 Jewel + 1 Sol Rune + 1 Perfect Ruby -> Blood Ring
 
-**Inputs:** **Gloves** (Mag, Eth) + **Jewel** + **Ort Rune** + **Perfect Amethyst**
+**Inputs:** **Ring (Magic)** + **Jewel** + **Sol Rune (12)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- + to Mana after each Kill 1-3 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Light Belt + 1 Jewel + Ith Rune + 1 Perfect Amethyst -> Caster Belt ✅
+## 1 Magic Axe + 1 Jewel + Ort Rune + 1 Perfect Ruby -> Blood Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Amethyst**
+**Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Light Belt + 1 Jewel + Ith Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Belt ✅
+## 1 Magic Axe + 1 Jewel + Ort Rune + 1 Perfect Ruby + 1 Eth Rune + 1 Chasi's Malus -> Blood Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Amethyst** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Light Belt + 1 Jewel + Ith Rune + 1 Perfect Amethyst -> Caster Belt ✅
+## 1 Magic Axe + 1 Jewel + Ort Rune + 1 Perfect Ruby -> Blood Weapon
 
-**Inputs:** **Belt** (Mag, Eth) + **Jewel** + **Ith Rune** + **Perfect Amethyst**
+**Inputs:** **Weapon (Magic, eth)** + **Jewel** + **Ort Rune (9)** + **• Perfect Ruby**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Small Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Amethyst -> Caster Shield ✅
+## 1 Magic Mask + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Jewel** + **Eth Rune** + **Perfect Amethyst**
+**Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 10 (% chance)
-- + to Mana 10-20 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- + to All Skills 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Small Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Shield ✅
+## 1 Magic Mask + 1 Jewel + Nef Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Jewel** + **Eth Rune** (Qty: 2) + **Perfect Amethyst** + **Charsi's Malus**
+**Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 15 (% chance)
-- + to Mana 10-20 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
-- + to All Skills 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Small Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Amethyst -> Caster Shield ✅
+## 1 Magic Mask + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm
 
-**Inputs:** **Shield** (Mag, Eth) + **Jewel** + **Eth Rune** + **Perfect Amethyst**
+**Inputs:** **Merc Equip (Magic, eth)** + **Jewel** + **Nef Rune (4)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 15 (% chance)
-- + to Mana 10-20 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
-- + to All Skills 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Light Plate + 1 Jewel + 1 Tal Rune + 1 Perfect Amethyst -> Caster Body ✅
+## 1 Magic Boots + 1 Jewel + Thul Rune + 1 Perfect Amethyst -> Caster Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Jewel** + **Tal Rune** + **Perfect Amethyst**
+**Inputs:** **Boots (Magic, noe)** + **Jewel** + **Thul Rune (10)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 20 (% chance)
-- + to Mana 10-20 (% chance)
-- + to Mana after each Kill 5-8 (% chance)
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Light Plate + 1 Jewel + 1 Tal Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Body ✅
+## 1 Magic Boots + 1 Jewel + Thul Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Jewel** + **Tal Rune** + **Perfect Amethyst** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Boots (Magic, noe)** + **Jewel** + **Thul Rune (10)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 20 (% chance)
-- + to Mana 10-20 (% chance)
-- + to Mana after each Kill 5-8 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Light Plate + 1 Jewel + 1 Tal Rune + 1 Perfect Amethyst -> Caster Body ✅
+## 1 Magic Boots + 1 Jewel + Thul Rune + 1 Perfect Amethyst -> Caster Boots
 
-**Inputs:** **Body Armor** (Mag, Eth) + **Jewel** + **Tal Rune** + **Perfect Amethyst**
+**Inputs:** **Boots (Magic, eth)** + **Jewel** + **Thul Rune (10)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 20 (% chance)
-- + to Mana 10-20 (% chance)
-- + to Mana after each Kill 5-8 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Amulet + 1 Jewel + 1 Ral Rune + 1 Perfect Amethyst -> Caster Amulet ✅
+## 1 Magic Leather Gloves + 1 Jewel + Ort Rune + 1 Perfect Amethyst -> Caster Gloves
 
-**Inputs:** **Amulet** (Mag) + **Jewel** + **Ral Rune** + **Perfect Amethyst**
+**Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: mana-kill]**
 
 ---
 
-## 1 Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Amethyst -> Caster Ring ✅
+## 1 Magic Leather Gloves + 1 Jewel + Ort Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Gloves
 
-**Inputs:** **Ring** (Mag) + **Jewel** + **Amn Rune** + **Perfect Amethyst**
+**Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- + to Mana after each Kill 1-2 (% chance)
-- + to Mana 10-20 (% chance)
-- + to Energy 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: mana-kill]**
 
 ---
 
-## 1 Magic Rod + 1 Jewel + 1 Tir Rune + 1 Perfect Amethyst -> Caster Weapon ✅
+## 1 Magic Leather Gloves + 1 Jewel + Ort Rune + 1 Perfect Amethyst -> Caster Gloves
 
-**Inputs:** **Weapon** (Mag, Noe) + **Jewel** + **Tir Rune** + **Perfect Amethyst**
+**Inputs:** **Gloves (Magic, eth)** + **Jewel** + **Ort Rune (9)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- + to All Skills 1 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: mana-kill]**
 
 ---
 
-## 1 Magic Rod + 1 Jewel + 1 Tir Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Weapon ✅
+## 1 Magic Light Belt + 1 Jewel + Ith Rune + 1 Perfect Amethyst -> Caster Belt
 
-**Inputs:** **Weapon** (Mag, Noe) + **Jewel** + **Tir Rune** + **Perfect Amethyst** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Belt (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- + to All Skills 1 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Rod + 1 Jewel + 1 Tir Rune + 1 Perfect Amethyst -> Caster Weapon ✅
+## 1 Magic Light Belt + 1 Jewel + Ith Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Belt
 
-**Inputs:** **Weapon** (Mag, Eth) + **Jewel** + **Tir Rune** + **Perfect Amethyst**
+**Inputs:** **Belt (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- + to All Skills 1 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Crown + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm ✅
+## 1 Magic Light Belt + 1 Jewel + Ith Rune + 1 Perfect Amethyst -> Caster Belt
 
-**Inputs:** **Helm** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Emerald**
+**Inputs:** **Belt (Magic, eth)** + **Jewel** + **Ith Rune (6)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Lightning Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Crown + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Helm ✅
+## 1 Magic Small Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Amethyst -> Caster Shield
 
-**Inputs:** **Helm** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Emerald** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Lightning Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Crown + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm ✅
+## 1 Magic Small Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Shield
 
-**Inputs:** **Helm** (Mag, Eth) + **Jewel** + **Ith Rune** + **Perfect Emerald**
+**Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Eth Rune (5) (Qty: 2)** + **• Perfect Amethyst** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Lightning Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Plated Boots + 1 Jewel + 1 Ort Rune + 1 Perfect Emerald -> Safety Boots ✅
+## 1 Magic Small Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Amethyst -> Caster Shield
 
-**Inputs:** **Boots** (Mag, Noe) + **Jewel** + **Ort Rune** + **Perfect Emerald**
+**Inputs:** **Any Shield (Magic, eth)** + **Jewel** + **Eth Rune (5)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Fire Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Plated Boots + 1 Jewel + 1 Ort Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Boots ✅
+## 1 Magic Light Plate + 1 Jewel + 1 Tal Rune + 1 Perfect Amethyst -> Caster Body
 
-**Inputs:** **Boots** (Mag, Noe) + **Jewel** + **Ort Rune** + **Perfect Emerald** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Armor (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Fire Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Plated Boots + 1 Jewel + 1 Ort Rune + 1 Perfect Emerald -> Safety Boots ✅
+## 1 Magic Light Plate + 1 Jewel + 1 Tal Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Body
 
-**Inputs:** **Boots** (Mag, Eth) + **Jewel** + **Ort Rune** + **Perfect Emerald**
+**Inputs:** **Armor (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Fire Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Gauntlets + 1 Jewel + 1 Ral Rune + 1 Perfect Emerald -> Safety Gloves ✅
+## 1 Magic Light Plate + 1 Jewel + 1 Tal Rune + 1 Perfect Amethyst -> Caster Body
 
-**Inputs:** **Gloves** (Mag, Noe) + **Jewel** + **Ral Rune** + **Perfect Emerald**
+**Inputs:** **Armor (Magic, eth)** + **Jewel** + **Tal Rune (7)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Cold Resist +% 10-20 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Gauntlets + 1 Jewel + 1 Ral Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Gloves ✅
+## 1 Magic Amulet + 1 Jewel + 1 Ral Rune + 1 Perfect Amethyst -> Caster Amulet
 
-**Inputs:** **Gloves** (Mag, Noe) + **Jewel** + **Ral Rune** + **Perfect Emerald** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Amulet (Magic)** + **Jewel** + **Ral Rune (8)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Cold Resist +% 10-20 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Gauntlets + 1 Jewel + 1 Ral Rune + 1 Perfect Emerald -> Safety Gloves ✅
+## 1 Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Amethyst -> Caster Ring
 
-**Inputs:** **Gloves** (Mag, Eth) + **Jewel** + **Ral Rune** + **Perfect Emerald**
+**Inputs:** **Ring (Magic)** + **Jewel** + **Amn Rune (11)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Cold Resist +% 10-20 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: mana-kill]**
 
 ---
 
-## 1 Magic Sash + 1 Jewel + 1 Tal Rune + 1 Perfect Emerald -> Safety Belt ✅
+## 1 Magic Rod + 1 Jewel + 1 Tir Rune + 1 Perfect Amethyst -> Caster Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Jewel** + **Tal Rune** + **Perfect Emerald**
+**Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Tir Rune (3)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Poison Length Reduced by % 75-100 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
+**Outputs:** **Use Type (crf) [Extra: allskills]**
 
 ---
 
-## 1 Magic Sash + 1 Jewel + 1 Tal Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Belt ✅
+## 1 Magic Rod + 1 Jewel + 1 Tir Rune + 1 Perfect Amethyst + 1 Eth Rune + 1 Chasi's Malus -> Caster Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Jewel** + **Tal Rune** + **Perfect Emerald** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Tir Rune (3)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Poison Length Reduced by % 75-100 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: allskills]**
 
 ---
 
-## 1 Magic Sash + 1 Jewel + 1 Tal Rune + 1 Perfect Emerald -> Safety Belt ✅
+## 1 Magic Rod + 1 Jewel + 1 Tir Rune + 1 Perfect Amethyst -> Caster Weapon
 
-**Inputs:** **Belt** (Mag, Eth) + **Jewel** + **Tal Rune** + **Perfect Emerald**
+**Inputs:** **Weapon (Magic, eth)** + **Jewel** + **Tir Rune (3)** + **• Perfect Amethyst**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Poison Length Reduced by % 75-100 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: allskills]**
 
 ---
 
-## 1 Magic Kite Shield + 1 Jewel + 1 Nef Rune + 1 Perfect Emerald -> Safety Shield ✅
+## 1 Magic Crown + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Jewel** + **Nef Rune** + **Perfect Emerald**
+**Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- Magic Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Kite Shield + 1 Jewel + 1 Nef Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Shield ✅
+## 1 Magic Crown + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Jewel** + **Nef Rune** + **Perfect Emerald** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Merc Equip (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- Magic Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Kite Shield + 1 Jewel + 1 Nef Rune + 1 Perfect Emerald -> Safety Shield ✅
+## 1 Magic Crown + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm
 
-**Inputs:** **Shield** (Mag, Eth) + **Jewel** + **Nef Rune** + **Perfect Emerald**
+**Inputs:** **Merc Equip (Magic, eth)** + **Jewel** + **Ith Rune (6)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- Magic Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Breast Plate + 1 Jewel + 1 Eth Rune + 1 Perfect Emerald -> Safety Body ✅
+## 1 Magic Plated Boots + 1 Jewel + 1 Ort Rune + 1 Perfect Emerald -> Safety Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Jewel** + **Eth Rune** + **Perfect Emerald**
+**Inputs:** **Boots (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- + Defense 25-50 (% chance)
-- Half Freeze Duration 1 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Breast Plate + 1 Jewel + 1 Eth Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Body ✅
+## 1 Magic Plated Boots + 1 Jewel + 1 Ort Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Jewel** + **Eth Rune** (Qty: 2) + **Perfect Emerald** + **Charsi's Malus**
+**Inputs:** **Boots (Magic, noe)** + **Jewel** + **Ort Rune (9)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- + Defense 25-50 (% chance)
-- Half Freeze Duration 1 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Breast Plate + 1 Jewel + 1 Eth Rune + 1 Perfect Emerald -> Safety Body ✅
+## 1 Magic Plated Boots + 1 Jewel + 1 Ort Rune + 1 Perfect Emerald -> Safety Boots
 
-**Inputs:** **Body Armor** (Mag, Eth) + **Jewel** + **Eth Rune** + **Perfect Emerald**
+**Inputs:** **Boots (Magic, eth)** + **Jewel** + **Ort Rune (9)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- + Defense 25-50 (% chance)
-- Half Freeze Duration 1 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Amulet + 1 Jewel + 1 Thul Rune + 1 Perfect Emerald -> Safety Amulet ✅
+## 1 Magic Gauntlets + 1 Jewel + 1 Ral Rune + 1 Perfect Emerald -> Safety Gloves
 
-**Inputs:** **Amulet** (Mag) + **Jewel** + **Thul Rune** + **Perfect Emerald**
+**Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- % Increased Chance of Blocking 10 (% chance)
-- +% Enhanced Defense 10-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Emerald -> Safety Ring ✅
+## 1 Magic Gauntlets + 1 Jewel + 1 Ral Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Gloves
 
-**Inputs:** **Ring** (Mag) + **Jewel** + **Amn Rune** + **Perfect Emerald**
+**Inputs:** **Gloves (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- + to Vitality 5-10 (% chance)
-- +% Enhanced Defense 10-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Spear + 1 Jewel + 1 Sol Rune + 1 Perfect Emerald -> Safety Weapon ✅
+## 1 Magic Gauntlets + 1 Jewel + 1 Ral Rune + 1 Perfect Emerald -> Safety Gloves
 
-**Inputs:** **Weapon** (Mag, Noe) + **Jewel** + **Sol Rune** + **Perfect Emerald**
+**Inputs:** **Gloves (Magic, eth)** + **Jewel** + **Ral Rune (8)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- +% Increased Attack Speed 10-20 (% chance)
-- +% Enhanced Damage 30-50 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Spear + 1 Jewel + 1 Sol Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Weapon ✅
+## 1 Magic Sash + 1 Jewel + 1 Tal Rune + 1 Perfect Emerald -> Safety Belt
 
-**Inputs:** **Weapon** (Mag, Noe) + **Jewel** + **Sol Rune** + **Perfect Emerald** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- +% Increased Attack Speed 10-20 (% chance)
-- +% Enhanced Damage 30-50 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Spear + 1 Jewel + 1 Sol Rune + 1 Perfect Emerald -> Safety Weapon ✅
+## 1 Magic Sash + 1 Jewel + 1 Tal Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Belt
 
-**Inputs:** **Weapon** (Mag, Eth) + **Jewel** + **Sol Rune** + **Perfect Emerald**
+**Inputs:** **Belt (Magic, noe)** + **Jewel** + **Tal Rune (7)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- +% Increased Attack Speed 10-20 (% chance)
-- +% Enhanced Damage 30-50 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Full Helm + Power Crafting Tablet  -> Hit Power Helm ✅
+## 1 Magic Sash + 1 Jewel + 1 Tal Rune + 1 Perfect Emerald -> Safety Belt
 
-**Inputs:** **Helm** (Mag, Noe) + **Power Crafting Tablet**
+**Inputs:** **Belt (Magic, eth)** + **Jewel** + **Tal Rune (7)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- + to Attack Rating 150-200 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Full Helm + Power Crafting Tablet  + 1 Eth Rune + 1 Chasi's Malus  -> Hit Power Helm ✅
+## 1 Magic Kite Shield + 1 Jewel + 1 Nef Rune + 1 Perfect Emerald -> Safety Shield
 
-**Inputs:** **Helm** (Mag, Noe) + **Power Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- + to Attack Rating 150-200 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
 ---
 
-## 1 Magic Full Helm + Power Crafting Tablet  -> Hit Power Helm ✅
+## 1 Magic Kite Shield + 1 Jewel + 1 Nef Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Shield
 
-**Inputs:** **Helm** (Mag, Eth) + **Power Crafting Tablet**
+**Inputs:** **Any Shield (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- + to Attack Rating 150-200 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
 ---
 
-## 1 Magic Chain Boots + Power Crafting Tablet -> Hit Power Boots ✅
+## 1 Magic Kite Shield + 1 Jewel + 1 Nef Rune + 1 Perfect Emerald -> Safety Shield
 
-**Inputs:** **Boots** (Mag, Noe) + **Power Crafting Tablet**
+**Inputs:** **Any Shield (Magic, eth)** + **Jewel** + **Nef Rune (4)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 10 (% chance)
-- + to Dexterity 10-15 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
 ---
 
-## 1 Magic Chain Boots + Power Crafting Tablet  + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Boots ✅
+## 1 Magic Breast Plate + 1 Jewel + 1 Eth Rune + 1 Perfect Emerald -> Safety Body
 
-**Inputs:** **Boots** (Mag, Noe) + **Power Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Armor (Magic, noe)** + **Jewel** + **Eth Rune (5)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 10 (% chance)
-- + to Dexterity 10-15 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
 ---
 
-## 1 Magic Chain Boots + Power Crafting Tablet -> Hit Power Boots ✅
+## 1 Magic Breast Plate + 1 Jewel + 1 Eth Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Body
 
-**Inputs:** **Boots** (Mag, Eth) + **Power Crafting Tablet**
+**Inputs:** **Armor (Magic, noe)** + **Jewel** + **Eth Rune (5) (Qty: 2)** + **• Perfect Emerald** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 10 (% chance)
-- + to Dexterity 10-15 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
 ---
 
-## 1 Magic Chain Gloves +  Power Crafting Tablet  -> Hit Power Gloves ✅
+## 1 Magic Breast Plate + 1 Jewel + 1 Eth Rune + 1 Perfect Emerald -> Safety Body
 
-**Inputs:** **Gloves** (Mag, Noe) + **Power Crafting Tablet**
+**Inputs:** **Armor (Magic, eth)** + **Jewel** + **Eth Rune (5)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- Knockback 1 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
 ---
 
-## 1 Magic Chain Gloves +  Power Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus  -> Hit Power Gloves ✅
+## 1 Magic Amulet + 1 Jewel + 1 Thul Rune + 1 Perfect Emerald -> Safety Amulet
 
-**Inputs:** **Gloves** (Mag, Noe) + **Power Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Amulet (Magic)** + **Jewel** + **Thul Rune (10)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- Knockback 1 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Chain Gloves +  Power Crafting Tablet  -> Hit Power Gloves ✅
+## 1 Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Emerald -> Safety Ring
 
-**Inputs:** **Gloves** (Mag, Eth) + **Power Crafting Tablet**
+**Inputs:** **Ring (Magic)** + **Jewel** + **Amn Rune (11)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- Knockback 1 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Heavy Belt + Power Crafting Tablet -> Hit Power Belt ✅
+## 1 Magic Spear + 1 Jewel + 1 Sol Rune + 1 Perfect Emerald -> Safety Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Power Crafting Tablet**
+**Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Sol Rune (12)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- % Damage Taken Goes To Mana 20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Heavy Belt + Power Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Belt ✅
+## 1 Magic Spear + 1 Jewel + 1 Sol Rune + 1 Perfect Emerald + 1 Eth Rune + 1 Chasi's Malus -> Safety Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Power Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Weapon (Magic, noe)** + **Jewel** + **Sol Rune (12)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- % Damage Taken Goes To Mana 20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Heavy Belt + Power Crafting Tablet -> Hit Power Belt ✅
+## 1 Magic Spear + 1 Jewel + 1 Sol Rune + 1 Perfect Emerald -> Safety Weapon
 
-**Inputs:** **Belt** (Mag, Eth) + **Power Crafting Tablet**
+**Inputs:** **Weapon (Magic, eth)** + **Jewel** + **Sol Rune (12)** + **• Perfect Emerald**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Hit Recovery 20 (% chance)
-- % Damage Taken Goes To Mana 20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Gothic Shield + Power Crafting Tablet -> Hit Power Shield ✅
+## 1 Magic Full Helm + Power Crafting Tablet  -> Hit Power Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Power Crafting Tablet**
+**Inputs:** **Merc Equip (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Block Rate 30 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Gothic Shield + Power Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Shield ✅
+## 1 Magic Full Helm + Power Crafting Tablet  + 1 Eth Rune + 1 Chasi's Malus  -> Hit Power Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Power Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Merc Equip (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Block Rate 30 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Gothic Shield + Power Crafting Tablet -> Hit Power Shield ✅
+## 1 Magic Full Helm + Power Crafting Tablet  -> Hit Power Helm
 
-**Inputs:** **Shield** (Mag, Eth) + **Power Crafting Tablet**
+**Inputs:** **Merc Equip (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Faster Block Rate 30 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Field Plate + Power Crafting Tablet -> Hit Power Body ✅
+## 1 Magic Chain Boots + Power Crafting Tablet -> Hit Power Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Power Crafting Tablet**
+**Inputs:** **Boots (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Enhanced Damage 35-60 (% chance)
-- +% Faster Hit Recovery 30-40 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Field Plate + Power Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Body ✅
+## 1 Magic Chain Boots + Power Crafting Tablet  + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Power Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Boots (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Enhanced Damage 35-60 (% chance)
-- +% Faster Hit Recovery 30-40 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Field Plate + Power Crafting Tablet -> Hit Power Body ✅
+## 1 Magic Chain Boots + Power Crafting Tablet -> Hit Power Boots
 
-**Inputs:** **Body Armor** (Mag, Eth) + **Power Crafting Tablet**
+**Inputs:** **Boots (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- +% Enhanced Damage 35-60 (% chance)
-- +% Faster Hit Recovery 30-40 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Amulet + Power Crafting Tablet -> Hit Power Amulet ✅
+## 1 Magic Chain Gloves +  Power Crafting Tablet  -> Hit Power Gloves
 
-**Inputs:** **Amulet** (Mag) + **Power Crafting Tablet**
+**Inputs:** **Gloves (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- + to Attack Rating 200-250 (% chance)
-- +% Faster Hit Recovery 15-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Ring + Power Crafting Tablet  -> Hit Power Ring ✅
+## 1 Magic Chain Gloves +  Power Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus  -> Hit Power Gloves
 
-**Inputs:** **Ring** (Mag) + **Power Crafting Tablet**
+**Inputs:** **Gloves (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- + to Maximum Damage 3-5 (% chance)
-- + to Dexterity 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Blunt Weapon + Power Crafting Tablet -> Hit Power Weapon ✅
+## 1 Magic Chain Gloves +  Power Crafting Tablet  -> Hit Power Gloves
 
-**Inputs:** **Weapon** (Mag, Noe) + **Power Crafting Tablet**
+**Inputs:** **Gloves (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Blunt Weapon + Power Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Weapon ✅
+## 1 Magic Heavy Belt + Power Crafting Tablet -> Hit Power Belt
 
-**Inputs:** **Weapon** (Mag, Noe) + **Power Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Belt (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Blunt Weapon + Power Crafting Tablet -> Hit Power Weapon ✅
+## 1 Magic Heavy Belt + Power Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Belt
 
-**Inputs:** **Weapon** (Mag, Eth) + **Power Crafting Tablet**
+**Inputs:** **Belt (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Chance to cast level # [Skill] when struck 5-4 (% chance)
-- -% Target Defense 15-20 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Helm + Blood Crafting Tablet -> Blood Helm ✅
+## 1 Magic Heavy Belt + Power Crafting Tablet -> Hit Power Belt
 
-**Inputs:** **Helm** (Mag, Noe) + **Blood Crafting Tablet**
+**Inputs:** **Belt (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Deadly Strike 15-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Helm + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Blood Helm ✅
+## 1 Magic Gothic Shield + Power Crafting Tablet -> Hit Power Shield
 
-**Inputs:** **Helm** (Mag, Noe) + **Blood Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Any Shield (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Deadly Strike 15-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Helm + Blood Crafting Tablet -> Blood Helm ✅
+## 1 Magic Gothic Shield + Power Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Shield
 
-**Inputs:** **Helm** (Mag, Eth) + **Blood Crafting Tablet**
+**Inputs:** **Any Shield (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Deadly Strike 15-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Light Plated Boots + Blood Crafting Tablet -> Blood Boots ✅
+## 1 Magic Gothic Shield + Power Crafting Tablet -> Hit Power Shield
 
-**Inputs:** **Boots** (Mag, Noe) + **Blood Crafting Tablet**
+**Inputs:** **Any Shield (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- + Life after each Kill 3-6 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Light Plated Boots + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Blood Boots ✅
+## 1 Magic Field Plate + Power Crafting Tablet -> Hit Power Body
 
-**Inputs:** **Boots** (Mag, Noe) + **Blood Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Armor (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- + Life after each Kill 3-6 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Light Plated Boots + Blood Crafting Tablet -> Blood Boots ✅
+## 1 Magic Field Plate + Power Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Body
 
-**Inputs:** **Boots** (Mag, Eth) + **Blood Crafting Tablet**
+**Inputs:** **Armor (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- + Life after each Kill 3-6 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Heavy Gloves + Blood Crafting Tablet -> Blood Gloves ✅
+## 1 Magic Field Plate + Power Crafting Tablet -> Hit Power Body
 
-**Inputs:** **Gloves** (Mag, Noe) + **Blood Crafting Tablet**
+**Inputs:** **Armor (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Crushing Blow 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Heavy Gloves + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Blood Gloves ✅
+## 1 Magic Amulet + Power Crafting Tablet -> Hit Power Amulet
 
-**Inputs:** **Gloves** (Mag, Noe) + **Blood Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Amulet (Magic)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Crushing Blow 5-10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Heavy Gloves + Blood Crafting Tablet -> Blood Gloves ✅
+## 1 Magic Ring + Power Crafting Tablet  -> Hit Power Ring
 
-**Inputs:** **Gloves** (Mag, Eth) + **Blood Crafting Tablet**
+**Inputs:** **Ring (Magic)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Crushing Blow 5-10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Belt + Blood Crafting Tablet -> Blood Belt ✅
+## 1 Magic Blunt Weapon + Power Crafting Tablet -> Hit Power Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Blood Crafting Tablet**
+**Inputs:** **Weapon (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Open Wounds 15-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Belt + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Blood Belt ✅
+## 1 Magic Blunt Weapon + Power Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Hit Power Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Blood Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Weapon (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Open Wounds 15-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Belt + Blood Crafting Tablet -> Blood Belt ✅
+## 1 Magic Blunt Weapon + Power Crafting Tablet -> Hit Power Weapon
 
-**Inputs:** **Belt** (Mag, Eth) + **Blood Crafting Tablet**
+**Inputs:** **Weapon (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- % Chance of Open Wounds 15-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: gethit-skill]**
 
 ---
 
-## 1 Magic Spiked Shield + Blood Crafting Tablet  -> Blood Shield ✅
+## 1 Magic Helm + Blood Crafting Tablet -> Blood Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Blood Crafting Tablet**
+**Inputs:** **Merc Equip (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Spiked Shield + Blood Crafting Tablet  + 1 Eth Rune + 1 Chasi's Malus -> Blood Shield ✅
+## 1 Magic Helm + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Blood Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Blood Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Merc Equip (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Spiked Shield + Blood Crafting Tablet  -> Blood Shield ✅
+## 1 Magic Helm + Blood Crafting Tablet -> Blood Helm
 
-**Inputs:** **Shield** (Mag, Eth) + **Blood Crafting Tablet**
+**Inputs:** **Merc Equip (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Plate Mail + Blood Crafting Tablet  -> Blood Body ✅
+## 1 Magic Light Plated Boots + Blood Crafting Tablet -> Blood Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Blood Crafting Tablet**
+**Inputs:** **Boots (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- + Life after each Kill 3-6 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Plate Mail + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus  -> Blood Body ✅
+## 1 Magic Light Plated Boots + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Blood Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Blood Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Boots (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- + Life after each Kill 3-6 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Plate Mail + Blood Crafting Tablet  -> Blood Body ✅
+## 1 Magic Light Plated Boots + Blood Crafting Tablet -> Blood Boots
 
-**Inputs:** **Body Armor** (Mag, Eth) + **Blood Crafting Tablet**
+**Inputs:** **Boots (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 50-60 (% chance)
-- + Life after each Kill 3-6 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Amulet + Blood Crafting Tablet -> Blood Amulet ✅
+## 1 Magic Heavy Gloves + Blood Crafting Tablet -> Blood Gloves
 
-**Inputs:** **Amulet** (Mag) + **Blood Crafting Tablet**
+**Inputs:** **Gloves (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- +% Faster Run/Walk 10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Ring + Blood Crafting Tablet -> Blood Ring ✅
+## 1 Magic Heavy Gloves + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Blood Gloves
 
-**Inputs:** **Ring** (Mag) + **Blood Crafting Tablet**
+**Inputs:** **Gloves (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 2-4 (% chance)
-- + to Life 30-40 (% chance)
-- + to Strength 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Axe + Blood Crafting Tablet -> Blood Weapon ✅
+## 1 Magic Heavy Gloves + Blood Crafting Tablet -> Blood Gloves
 
-**Inputs:** **Weapon** (Mag, Noe) + **Blood Crafting Tablet**
+**Inputs:** **Gloves (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 30-40 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Axe + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Blood Weapon ✅
+## 1 Magic Belt + Blood Crafting Tablet -> Blood Belt
 
-**Inputs:** **Weapon** (Mag, Noe) + **Blood Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Belt (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 30-40 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Axe + Blood Crafting Tablet -> Blood Weapon ✅
+## 1 Magic Belt + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Blood Belt
 
-**Inputs:** **Weapon** (Mag, Eth) + **Blood Crafting Tablet**
+**Inputs:** **Belt (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- % Life stolen per hit 3-6 (% chance)
-- + to Life 30-40 (% chance)
-- +% Enhanced Damage 50-80 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Mask + Caster Crafting Tablet -> Caster Helm ✅
+## 1 Magic Belt + Blood Crafting Tablet -> Blood Belt
 
-**Inputs:** **Helm** (Mag, Noe) + **Caster Crafting Tablet**
+**Inputs:** **Belt (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Mask + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Helm ✅
+## 1 Magic Spiked Shield + Blood Crafting Tablet  -> Blood Shield
 
-**Inputs:** **Helm** (Mag, Noe) + **Caster Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Any Shield (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Mask + Caster Crafting Tablet -> Caster Helm ✅
+## 1 Magic Spiked Shield + Blood Crafting Tablet  + 1 Eth Rune + 1 Chasi's Malus -> Blood Shield
 
-**Inputs:** **Helm** (Mag, Eth) + **Caster Crafting Tablet**
+**Inputs:** **Any Shield (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Boots + Caster Crafting Tablet  -> Caster Boots ✅
+## 1 Magic Spiked Shield + Blood Crafting Tablet  -> Blood Shield
 
-**Inputs:** **Boots** (Mag, Noe) + **Caster Crafting Tablet**
+**Inputs:** **Any Shield (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- Increase Maximum Mana % 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Boots + Caster Crafting Tablet  + 1 Eth Rune + 1 Chasi's Malus -> Caster Boots ✅
+## 1 Magic Plate Mail + Blood Crafting Tablet  -> Blood Body
 
-**Inputs:** **Boots** (Mag, Noe) + **Caster Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Armor (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- Increase Maximum Mana % 5-10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Boots + Caster Crafting Tablet  -> Caster Boots ✅
+## 1 Magic Plate Mail + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus  -> Blood Body
 
-**Inputs:** **Boots** (Mag, Eth) + **Caster Crafting Tablet**
+**Inputs:** **Armor (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- Increase Maximum Mana % 5-10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Leather Gloves + Caster Crafting Tablet -> Caster Gloves ✅
+## 1 Magic Plate Mail + Blood Crafting Tablet  -> Blood Body
 
-**Inputs:** **Gloves** (Mag, Noe) + **Caster Crafting Tablet**
+**Inputs:** **Armor (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- + to Mana after each Kill 1-3 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Leather Gloves + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Gloves ✅
+## 1 Magic Amulet + Blood Crafting Tablet -> Blood Amulet
 
-**Inputs:** **Gloves** (Mag, Noe) + **Caster Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Amulet (Magic)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- + to Mana after each Kill 1-3 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Leather Gloves + Caster Crafting Tablet -> Caster Gloves ✅
+## 1 Magic Ring + Blood Crafting Tablet -> Blood Ring
 
-**Inputs:** **Gloves** (Mag, Eth) + **Caster Crafting Tablet**
+**Inputs:** **Ring (Magic)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- + to Mana after each Kill 1-3 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Light Belt + Caster Crafting Tablet -> Caster Belt ✅
+## 1 Magic Axe + Blood Crafting Tablet -> Blood Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Caster Crafting Tablet**
+**Inputs:** **Weapon (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Light Belt + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Belt ✅
+## 1 Magic Axe + Blood Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Blood Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Caster Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Weapon (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Light Belt + Caster Crafting Tablet -> Caster Belt ✅
+## 1 Magic Axe + Blood Crafting Tablet -> Blood Weapon
 
-**Inputs:** **Belt** (Mag, Eth) + **Caster Crafting Tablet**
+**Inputs:** **Weapon (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: lifesteal]**
 
 ---
 
-## 1 Magic Small Shield + Caster Crafting Tablet -> Caster Shield ✅
+## 1 Magic Mask + Caster Crafting Tablet -> Caster Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Caster Crafting Tablet**
+**Inputs:** **Merc Equip (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 10 (% chance)
-- + to Mana 10-20 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- + to All Skills 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Small Shield + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Shield ✅
+## 1 Magic Mask + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Caster Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Merc Equip (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 15 (% chance)
-- + to Mana 10-20 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
-- + to All Skills 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Small Shield + Caster Crafting Tablet -> Caster Shield ✅
+## 1 Magic Mask + Caster Crafting Tablet -> Caster Helm
 
-**Inputs:** **Shield** (Mag, Eth) + **Caster Crafting Tablet**
+**Inputs:** **Merc Equip (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 15 (% chance)
-- + to Mana 10-20 (% chance)
-- % Increased Chance of Blocking 20 (% chance)
-- Ethereal 1
-- + to All Skills 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Light Plate + Caster Crafting Tablet -> Caster Body ✅
+## 1 Magic Boots + Caster Crafting Tablet  -> Caster Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Caster Crafting Tablet**
+**Inputs:** **Boots (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 20 (% chance)
-- + to Mana 10-20 (% chance)
-- + to Mana after each Kill 5-8 (% chance)
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Light Plate + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Body ✅
+## 1 Magic Boots + Caster Crafting Tablet  + 1 Eth Rune + 1 Chasi's Malus -> Caster Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Caster Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Boots (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 20 (% chance)
-- + to Mana 10-20 (% chance)
-- + to Mana after each Kill 5-8 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Light Plate + Caster Crafting Tablet -> Caster Body ✅
+## 1 Magic Boots + Caster Crafting Tablet  -> Caster Boots
 
-**Inputs:** **Body Armor** (Mag, Eth) + **Caster Crafting Tablet**
+**Inputs:** **Boots (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- +% Faster Cast Rate 20 (% chance)
-- + to Mana 10-20 (% chance)
-- + to Mana after each Kill 5-8 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Amulet + Caster Crafting Tablet -> Caster Amulet ✅
+## 1 Magic Leather Gloves + Caster Crafting Tablet -> Caster Gloves
 
-**Inputs:** **Amulet** (Mag) + **Caster Crafting Tablet**
+**Inputs:** **Gloves (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Regenerate Mana % 4-10 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: mana-kill]**
 
 ---
 
-## 1 Magic Ring + Caster Crafting Tablet -> Caster Ring ✅
+## 1 Magic Leather Gloves + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Gloves
 
-**Inputs:** **Ring** (Mag) + **Caster Crafting Tablet**
+**Inputs:** **Gloves (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- + to Mana after each Kill 1-2 (% chance)
-- + to Mana 10-20 (% chance)
-- + to Energy 5-10 (% chance)
+**Outputs:** **Use Type (crf) [Extra: mana-kill]**
 
 ---
 
-## 1 Magic Rod + Caster Crafting Tablet -> Caster Weapon ✅
+## 1 Magic Leather Gloves + Caster Crafting Tablet -> Caster Gloves
 
-**Inputs:** **Weapon** (Mag, Noe) + **Caster Crafting Tablet**
+**Inputs:** **Gloves (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- + to All Skills 1 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: mana-kill]**
 
 ---
 
-## 1 Magic Rod + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Weapon ✅
+## 1 Magic Light Belt + Caster Crafting Tablet -> Caster Belt
 
-**Inputs:** **Weapon** (Mag, Noe) + **Caster Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Belt (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- + to All Skills 1 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Rod + Caster Crafting Tablet -> Caster Weapon ✅
+## 1 Magic Light Belt + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Belt
 
-**Inputs:** **Weapon** (Mag, Eth) + **Caster Crafting Tablet**
+**Inputs:** **Belt (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- + to All Skills 1 (% chance)
-- + to Mana 10-20 (% chance)
-- +% Faster Cast Rate 10-20 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Crown + Saftey Crafting Tablet -> Safety Helm ✅
+## 1 Magic Light Belt + Caster Crafting Tablet -> Caster Belt
 
-**Inputs:** **Helm** (Mag, Noe) + **Saftey Crafting Tablet**
+**Inputs:** **Belt (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Lightning Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Crown + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Helm ✅
+## 1 Magic Small Shield + Caster Crafting Tablet -> Caster Shield
 
-**Inputs:** **Helm** (Mag, Noe) + **Saftey Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Any Shield (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Lightning Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Crown + Saftey Crafting Tablet -> Safety Helm ✅
+## 1 Magic Small Shield + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Shield
 
-**Inputs:** **Helm** (Mag, Eth) + **Saftey Crafting Tablet**
+**Inputs:** **Any Shield (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Lightning Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Plated Boots + Saftey Crafting Tablet -> Safety Boots ✅
+## 1 Magic Small Shield + Caster Crafting Tablet -> Caster Shield
 
-**Inputs:** **Boots** (Mag, Noe) + **Saftey Crafting Tablet**
+**Inputs:** **Any Shield (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Fire Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Plated Boots + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Boots ✅
+## 1 Magic Light Plate + Caster Crafting Tablet -> Caster Body
 
-**Inputs:** **Boots** (Mag, Noe) + **Saftey Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Armor (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Fire Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Plated Boots + Saftey Crafting Tablet -> Safety Boots ✅
+## 1 Magic Light Plate + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Body
 
-**Inputs:** **Boots** (Mag, Eth) + **Saftey Crafting Tablet**
+**Inputs:** **Armor (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Fire Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Gauntlets + Saftey Crafting Tablet -> Safety Gloves ✅
+## 1 Magic Light Plate + Caster Crafting Tablet -> Caster Body
 
-**Inputs:** **Gloves** (Mag, Noe) + **Saftey Crafting Tablet**
+**Inputs:** **Armor (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Cold Resist +% 10-20 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
+**Outputs:** **Use Type (crf) [Extra: cast1]**
 
 ---
 
-## 1 Magic Gauntlets + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Gloves ✅
+## 1 Magic Amulet + Caster Crafting Tablet -> Caster Amulet
 
-**Inputs:** **Gloves** (Mag, Noe) + **Saftey Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Amulet (Magic)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Cold Resist +% 10-20 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: regen-mana]**
 
 ---
 
-## 1 Magic Gauntlets + Saftey Crafting Tablet -> Safety Gloves ✅
+## 1 Magic Ring + Caster Crafting Tablet -> Caster Ring
 
-**Inputs:** **Gloves** (Mag, Eth) + **Saftey Crafting Tablet**
+**Inputs:** **Ring (Magic)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Cold Resist +% 10-20 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: mana-kill]**
 
 ---
 
-## 1 Magic Sash + Saftey Crafting Tablet -> Safety Belt ✅
+## 1 Magic Rod + Caster Crafting Tablet -> Caster Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Saftey Crafting Tablet**
+**Inputs:** **Weapon (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Poison Length Reduced by % 75-100 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
+**Outputs:** **Use Type (crf) [Extra: allskills]**
 
 ---
 
-## 1 Magic Sash + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Belt ✅
+## 1 Magic Rod + Caster Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Caster Weapon
 
-**Inputs:** **Belt** (Mag, Noe) + **Saftey Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Weapon (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Poison Length Reduced by % 75-100 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: allskills]**
 
 ---
 
-## 1 Magic Sash + Saftey Crafting Tablet -> Safety Belt ✅
+## 1 Magic Rod + Caster Crafting Tablet -> Caster Weapon
 
-**Inputs:** **Belt** (Mag, Eth) + **Saftey Crafting Tablet**
+**Inputs:** **Weapon (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- Poison Length Reduced by % 75-100 (% chance)
-- +% Enhanced Defense 10-30 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: allskills]**
 
 ---
 
-## 1 Magic Kite Shield + Saftey Crafting Tablet -> Safety Shield ✅
+## 1 Magic Crown + Saftey Crafting Tablet -> Safety Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Saftey Crafting Tablet**
+**Inputs:** **Merc Equip (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- Magic Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Kite Shield + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Shield ✅
+## 1 Magic Crown + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Helm
 
-**Inputs:** **Shield** (Mag, Noe) + **Saftey Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Merc Equip (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- Magic Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Kite Shield + Saftey Crafting Tablet -> Safety Shield ✅
+## 1 Magic Crown + Saftey Crafting Tablet -> Safety Helm
 
-**Inputs:** **Shield** (Mag, Eth) + **Saftey Crafting Tablet**
+**Inputs:** **Merc Equip (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- Magic Resist +% 10-20 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Breast Plate + Saftey Crafting Tablet -> Safety Body ✅
+## 1 Magic Plated Boots + Saftey Crafting Tablet -> Safety Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Saftey Crafting Tablet**
+**Inputs:** **Boots (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- + Defense 25-50 (% chance)
-- Half Freeze Duration 1 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Breast Plate + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Body ✅
+## 1 Magic Plated Boots + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Boots
 
-**Inputs:** **Body Armor** (Mag, Noe) + **Saftey Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Boots (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- + Defense 25-50 (% chance)
-- Half Freeze Duration 1 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Breast Plate + Saftey Crafting Tablet -> Safety Body ✅
+## 1 Magic Plated Boots + Saftey Crafting Tablet -> Safety Boots
 
-**Inputs:** **Body Armor** (Mag, Eth) + **Saftey Crafting Tablet**
+**Inputs:** **Boots (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by % 5-10 (% chance)
-- + Defense 25-50 (% chance)
-- Half Freeze Duration 1 (% chance)
-- +% Enhanced Defense 50-60 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Amulet + Saftey Crafting Tablet -> Safety Amulet ✅
+## 1 Magic Gauntlets + Saftey Crafting Tablet -> Safety Gloves
 
-**Inputs:** **Amulet** (Mag) + **Saftey Crafting Tablet**
+**Inputs:** **Gloves (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- % Increased Chance of Blocking 10 (% chance)
-- +% Enhanced Defense 10-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Ring + Saftey Crafting Tablet -> Safety Ring ✅
+## 1 Magic Gauntlets + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Gloves
 
-**Inputs:** **Ring** (Mag) + **Saftey Crafting Tablet**
+**Inputs:** **Gloves (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- + to Vitality 5-10 (% chance)
-- +% Enhanced Defense 10-20 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Spear + Saftey Crafting Tablet -> Safety Weapon ✅
+## 1 Magic Gauntlets + Saftey Crafting Tablet -> Safety Gloves
 
-**Inputs:** **Weapon** (Mag, Noe) + **Saftey Crafting Tablet**
+**Inputs:** **Gloves (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- +% Increased Attack Speed 10-20 (% chance)
-- +% Enhanced Damage 30-50 (% chance)
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Spear + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Weapon ✅
+## 1 Magic Sash + Saftey Crafting Tablet -> Safety Belt
 
-**Inputs:** **Weapon** (Mag, Noe) + **Saftey Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Belt (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- +% Increased Attack Speed 10-20 (% chance)
-- +% Enhanced Damage 30-50 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Spear + Saftey Crafting Tablet -> Safety Weapon ✅
+## 1 Magic Sash + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Belt
 
-**Inputs:** **Weapon** (Mag, Eth) + **Saftey Crafting Tablet**
+**Inputs:** **Belt (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Crf)
-- Damage Reduced by # 3-5 (% chance)
-- Magic Damage Reduced by # 3-5 (% chance)
-- +% Increased Attack Speed 10-20 (% chance)
-- +% Enhanced Damage 30-50 (% chance)
-- Ethereal 1
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
-
-## 1 Magic Circlet + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm ✅
 
-**Inputs:** **Circlet** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Emerald**
+## 1 Magic Sash + Saftey Crafting Tablet -> Safety Belt
 
-**Outputs:**
+**Inputs:** **Belt (Magic, eth)** + **(S)Crafting Tablet**
 
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Circlet + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm ✅
+## 1 Magic Kite Shield + Saftey Crafting Tablet -> Safety Shield
 
-**Inputs:** **Circlet** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Emerald** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Any Shield (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:**
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
-
 ---
-
-## 1 Magic Circlet + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm ✅
 
-**Inputs:** **Circlet** (Mag, Eth) + **Jewel** + **Ith Rune** + **Perfect Emerald**
+## 1 Magic Kite Shield + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Shield
 
-**Outputs:**
+**Inputs:** **Any Shield (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
 ---
 
-## 1 Magic Circlet + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm ✅
+## 1 Magic Kite Shield + Saftey Crafting Tablet -> Safety Shield
 
-**Inputs:** **Circlet** (Mag, Noe) + **Jewel** + **Nef Rune** + **Perfect Amethyst**
+**Inputs:** **Any Shield (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:**
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
-
 ---
 
-## 1 Magic Circlet + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm ✅
+## 1 Magic Breast Plate + Saftey Crafting Tablet -> Safety Body
 
-**Inputs:** **Circlet** (Mag, Noe) + **Jewel** + **Nef Rune** + **Perfect Amethyst** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Armor (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:**
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
-
 ---
-
-## 1 Magic Circlet + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm ✅
 
-**Inputs:** **Circlet** (Mag, Eth) + **Jewel** + **Nef Rune** + **Perfect Amethyst**
+## 1 Magic Breast Plate + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Body
 
-**Outputs:**
+**Inputs:** **Armor (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
 ---
 
-## 1 Magic Circlet + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm ✅
+## 1 Magic Breast Plate + Saftey Crafting Tablet -> Safety Body
 
-**Inputs:** **Circlet** (Mag, Noe) + **Jewel** + **Ral Rune** + **Perfect Ruby**
+**Inputs:** **Armor (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:**
+**Outputs:** **Use Type (crf) [Extra: red-dmg%]**
 
-
 ---
-
-## 1 Magic Circlet + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm ✅
 
-**Inputs:** **Circlet** (Mag, Noe) + **Jewel** + **Ral Rune** + **Perfect Ruby** + **Eth Rune** + **Charsi's Malus**
+## 1 Magic Amulet + Saftey Crafting Tablet -> Safety Amulet
 
-**Outputs:**
+**Inputs:** **Amulet (Magic)** + **(S)Crafting Tablet**
 
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Circlet + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm ✅
+## 1 Magic Ring + Saftey Crafting Tablet -> Safety Ring
 
-**Inputs:** **Circlet** (Mag, Eth) + **Jewel** + **Ral Rune** + **Perfect Ruby**
+**Inputs:** **Ring (Magic)** + **(S)Crafting Tablet**
 
-**Outputs:**
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
-
 ---
-
-## 1 Magic Circlet + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm ✅
 
-**Inputs:** **Circlet** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Sapphire**
+## 1 Magic Spear + Saftey Crafting Tablet -> Safety Weapon
 
-**Outputs:**
+**Inputs:** **Weapon (Magic, noe)** + **(S)Crafting Tablet**
 
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
 ---
 
-## 1 Magic Circlet+ 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm ✅
+## 1 Magic Spear + Saftey Crafting Tablet + 1 Eth Rune + 1 Chasi's Malus -> Safety Weapon
 
-**Inputs:** **Circlet** (Mag, Noe) + **Jewel** + **Ith Rune** + **Perfect Sapphire** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Weapon (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
-
 ---
 
-## 1 Magic Circlet + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm ✅
+## 1 Magic Spear + Saftey Crafting Tablet -> Safety Weapon
 
-**Inputs:** **Circlet** (Mag, Eth) + **Jewel** + **Ith Rune** + **Perfect Sapphire**
+**Inputs:** **Weapon (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:**
+**Outputs:** **Use Type (crf) [Extra: red-dmg]**
 
-
 ---
-
-## 1 Magic Circlet + Saftey Crafting Tablet  ->  Safety Helm ✅
 
-**Inputs:** **Circlet** (Mag, Noe) + **Saftey Crafting Tablet**
+## 1 Magic Circlet + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm
 
-**Outputs:**
+**Inputs:** **Circlet (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Emerald**
 
+**Outputs:** 
 
 ---
 
-## 1 Magic Circlet + Saftey Crafting Tablet  -> Safety Helm ✅
+## 1 Magic Circlet + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm
 
-**Inputs:** **Circlet** (Mag, Noe) + **Saftey Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Circlet (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Emerald** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
+**Outputs:** 
 
-
 ---
-
-## 1 Magic Circlet + Saftey Crafting Tablet  -> Safety Helm ✅
 
-**Inputs:** **Circlet** (Mag, Eth) + **Saftey Crafting Tablet**
+## 1 Magic Circlet + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm
 
-**Outputs:**
+**Inputs:** **Circlet (Magic, eth)** + **Jewel** + **Ith Rune (6)** + **• Perfect Emerald**
 
+**Outputs:** 
 
 ---
 
-## 1 Magic Circlet + Caster Crafting Tablet  -> Caster Helm ✅
+## 1 Magic Circlet + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm
 
-**Inputs:** **Circlet** (Mag, Noe) + **Caster Crafting Tablet**
+**Inputs:** **Circlet (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Amethyst**
 
-**Outputs:**
+**Outputs:** 
 
-
 ---
-
-## 1 Magic Circlet + Caster  Crafting Tablet  -> Caster Helm ✅
 
-**Inputs:** **Circlet** (Mag, Noe) + **Caster Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+## 1 Magic Circlet + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm
 
-**Outputs:**
+**Inputs:** **Circlet (Magic, noe)** + **Jewel** + **Nef Rune (4)** + **• Perfect Amethyst** + **Eth Rune (5)** + **Charsi's Malus**
 
+**Outputs:** 
 
 ---
 
-## 1 Magic Circlet + Caster Crafting Tablet  -> Caster Helm ✅
+## 1 Magic Circlet + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm
 
-**Inputs:** **Circlet** (Mag, Eth) + **Caster Crafting Tablet**
+**Inputs:** **Circlet (Magic, eth)** + **Jewel** + **Nef Rune (4)** + **• Perfect Amethyst**
 
-**Outputs:**
+**Outputs:** 
 
-
 ---
 
-## 1 Magic Circlet + Blood Crafting Tablet  -> Blood Helm ✅
+## 1 Magic Circlet + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm
 
-**Inputs:** **Circlet** (Mag, Noe) + **Blood Crafting Tablet**
+**Inputs:** **Circlet (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Ruby**
 
-**Outputs:**
+**Outputs:** 
 
-
 ---
-
-## 1 Magic Circlet + Blood  Crafting Tablet  ->  Blood Helm ✅
 
-**Inputs:** **Circlet** (Mag, Noe) + **Blood Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+## 1 Magic Circlet + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm
 
-**Outputs:**
+**Inputs:** **Circlet (Magic, noe)** + **Jewel** + **Ral Rune (8)** + **• Perfect Ruby** + **Eth Rune (5)** + **Charsi's Malus**
 
+**Outputs:** 
 
 ---
 
-## 1 Magic Circlet + Blood  Crafting Tablet  -> Blood Helm ✅
+## 1 Magic Circlet + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm
 
-**Inputs:** **Circlet** (Mag, Eth) + **Blood Crafting Tablet**
+**Inputs:** **Circlet (Magic, eth)** + **Jewel** + **Ral Rune (8)** + **• Perfect Ruby**
 
-**Outputs:**
+**Outputs:** 
 
-
 ---
-
-## 1 Magic Circlet + Hit Power Crafting Tablet  -> Hit Power Helm ✅
 
-**Inputs:** **Circlet** (Mag, Noe) + **Power Crafting Tablet**
+## 1 Magic Circlet + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm
 
-**Outputs:**
+**Inputs:** **Circlet (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Sapphire**
 
+**Outputs:** 
 
 ---
 
-## 1 Magic Circlet + Hit Power Crafting Tablet  -> Hit Power Helm ✅
+## 1 Magic Circlet+ 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm
 
-**Inputs:** **Circlet** (Mag, Noe) + **Power Crafting Tablet** + **Eth Rune** + **Charsi's Malus**
+**Inputs:** **Circlet (Magic, noe)** + **Jewel** + **Ith Rune (6)** + **• Perfect Sapphire** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
+**Outputs:** 
 
-
 ---
-
-## 1 Magic Circlet + Hit Power Crafting Tablet  -> Hit Power Helm ✅
 
-**Inputs:** **Circlet** (Mag, Eth) + **Power Crafting Tablet**
+## 1 Magic Circlet + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm
 
-**Outputs:**
+**Inputs:** **Circlet (Magic, eth)** + **Jewel** + **Ith Rune (6)** + **• Perfect Sapphire**
 
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer + 1 Normal Unique Weapon -> Exceptional Unique Weapon ✅
+## 1 Magic Circlet + Saftey Crafting Tablet  ->  Safety Helm
 
-**Inputs:** **Weapon** (bas, Uni) + **Charsi's Malus** + **Larzuk's Forging Hammer**
+**Inputs:** **Circlet (Magic, noe)** + **(S)Crafting Tablet**
 
-**Outputs:**
-**useitem** (mod, exc)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer + 1 Normal Unique Armor -> Exceptional Unique Armor ✅
+## 1 Magic Circlet + Saftey Crafting Tablet  -> Safety Helm
 
-**Inputs:** **Armor** (bas, Uni) + **Charsi's Malus** + **Larzuk's Forging Hammer**
+**Inputs:** **Circlet (Magic, noe)** + **(S)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**useitem** (mod, exc)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  + Standard of Heros + 1 Exceptional Unique Weapon -> Elite Unique Weapon ✅
+## 1 Magic Circlet + Saftey Crafting Tablet  -> Safety Helm
 
-**Inputs:** **Weapon** (exc, Uni) + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
+**Inputs:** **Circlet (Magic, eth)** + **(S)Crafting Tablet**
 
-**Outputs:**
-**useitem** (mod, eli)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  + Standard of Heros + 1 Exceptional Unique Armor -> Elite Unique Armor ✅
+## 1 Magic Circlet + Caster Crafting Tablet  -> Caster Helm
 
-**Inputs:** **Armor** (exc, Uni) + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
+**Inputs:** **Circlet (Magic, noe)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**useitem** (mod, eli)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  + 1 Normal Rare Weapon -> Exceptional Rare Weapon ✅
+## 1 Magic Circlet + Caster  Crafting Tablet  -> Caster Helm
 
-**Inputs:** **Weapon** (bas, Rar) + **Charsi's Malus** + **Larzuk's Forging Hammer**
+**Inputs:** **Circlet (Magic, noe)** + **(C)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**useitem** (mod, exc)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  + 1 Normal Crafted Weapon -> Exceptional Crafted Weapon ✅
+## 1 Magic Circlet + Caster Crafting Tablet  -> Caster Helm
 
-**Inputs:** **Weapon** (bas, Crf) + **Charsi's Malus** + **Larzuk's Forging Hammer**
+**Inputs:** **Circlet (Magic, eth)** + **(C)Crafting Tablet**
 
-**Outputs:**
-**useitem** (mod, exc)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  + 1 Normal Rare Armor -> Exceptional Rare Armor ✅
+## 1 Magic Circlet + Blood Crafting Tablet  -> Blood Helm
 
-**Inputs:** **Armor** (bas, Rar) + **Charsi's Malus** + **Larzuk's Forging Hammer**
+**Inputs:** **Circlet (Magic, noe)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**useitem** (mod, exc)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  + 1 Normal Crafted Armor -> Exceptional Crafted Armor ✅
+## 1 Magic Circlet + Blood  Crafting Tablet  ->  Blood Helm
 
-**Inputs:** **Armor** (bas, Crf) + **Charsi's Malus** + **Larzuk's Forging Hammer**
+**Inputs:** **Circlet (Magic, noe)** + **(B)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**useitem** (mod, exc)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  + Standard of Heros + 1 Exceptional Rare Weapon -> Elite Rare Weapon ✅
+## 1 Magic Circlet + Blood  Crafting Tablet  -> Blood Helm
 
-**Inputs:** **Weapon** (exc, Rar) + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
+**Inputs:** **Circlet (Magic, eth)** + **(B)Crafting Tablet**
 
-**Outputs:**
-**useitem** (mod, eli)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  + Standard of Heros + 1 Exceptional Crafted Weapon -> Elite Crafted Weapon ✅
+## 1 Magic Circlet + Hit Power Crafting Tablet  -> Hit Power Helm
 
-**Inputs:** **Weapon** (exc, Crf) + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
+**Inputs:** **Circlet (Magic, noe)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**useitem** (mod, eli)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer +  Standard of Heros + 1 Exceptional Rare Armor -> Elite Rare Armor ✅
+## 1 Magic Circlet + Hit Power Crafting Tablet  -> Hit Power Helm
 
-**Inputs:** **Armor** (exc, Rar) + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
+**Inputs:** **Circlet (Magic, noe)** + **(P)Crafting Tablet** + **Eth Rune (5)** + **Charsi's Malus**
 
-**Outputs:**
-**useitem** (mod, eli)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  + Standard of Heros + 1 Exceptional Crafted Armor -> Elite Crafted Armor ✅
+## 1 Magic Circlet + Hit Power Crafting Tablet  -> Hit Power Helm
 
-**Inputs:** **Armor** (exc, Crf) + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
+**Inputs:** **Circlet (Magic, eth)** + **(P)Crafting Tablet**
 
-**Outputs:**
-**useitem** (mod, eli)
+**Outputs:** 
 
 ---
 
-## Charsi Hammer + Larzuk Hammer + 1 Normal Set Weapon -> Exceptional Set Weapon ✅
+## Charsi Hammer + Larzuk Hammer + 1 Normal Unique Weapon -> Exceptional Unique Weapon
 
-**Inputs:** **Weapon** (bas, Set) + **Charsi's Malus** + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (bas, Unique)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem** (mod, exc)
+**Outputs:** **Use Item (mod, exc)**
 
 ---
 
-## Charsi Hammer + Larzuk Hammer + 1 Normal Set Armor -> Exceptional Set Armor ✅
+## Charsi Hammer + Larzuk Hammer + 1 Normal Unique Armor -> Exceptional Unique Armor
 
-**Inputs:** **Armor** (bas, Set) + **Charsi's Malus** + **Larzuk's Forging Hammer**
+**Inputs:** **Any Armor (bas, Unique)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem** (mod, exc)
+**Outputs:** **Use Item (mod, exc)**
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  +  Standard of Heros + 1 Exceptional Set Weapon -> Elite Set Weapon ✅
+## Charsi Hammer + Larzuk Hammer  + Standard of Heros + 1 Exceptional Unique Weapon -> Elite Unique Weapon
 
-**Inputs:** **Weapon** (exc, Set) + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
+**Inputs:** **Weapon (exc, Unique)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:**
-**useitem** (mod, eli)
+**Outputs:** **Use Item (mod, eli)**
 
 ---
 
-## Charsi Hammer + Larzuk Hammer  +  Standard of Heros + 1 Exceptional Set Armor -> Elite Set Armor ✅
+## Charsi Hammer + Larzuk Hammer  + Standard of Heros + 1 Exceptional Unique Armor -> Elite Unique Armor
 
-**Inputs:** **Armor** (exc, Set) + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
+**Inputs:** **Any Armor (exc, Unique)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:**
-**useitem** (mod, eli)
+**Outputs:** **Use Item (mod, eli)**
 
 ---
 
-## 1 Ral Rune + 1 Sol Rune + 1 Perfect Emerald + 1 Normal Set Weapon -> Exceptional Set Weapon ❌
+## Charsi Hammer + Larzuk Hammer  + 1 Normal Rare Weapon -> Exceptional Rare Weapon
 
-**Inputs:** **Weapon** (bas, Set) + **Ral Rune** + **Sol Rune** + **Perfect Emerald**
+**Inputs:** **Weapon (bas, Rare)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem** (mod, exc)
-- Required Level: # 5 (% chance)
+**Outputs:** **Use Item (mod, exc)**
 
 ---
 
-## 1 Tal Rune + 1 Shael Rune + 1 Perfect Diamond + 1 Normal Set Armor -> Exceptional Set Armor ❌
+## Charsi Hammer + Larzuk Hammer  + 1 Normal Crafted Weapon -> Exceptional Crafted Weapon
 
-**Inputs:** **Armor** (bas, Set) + **Tal Rune** + **Shael Rune** + **Perfect Diamond**
+**Inputs:** **Weapon (bas, crf)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem** (mod, exc)
-- Required Level: # 5 (% chance)
+**Outputs:** **Use Item (mod, exc)**
 
 ---
 
-## 1 Lum Rune + 1 Pul Rune + 1 Perfect Emerald + 1 Exceptional Set Weapon -> Elite Set Weapon ❌
+## Charsi Hammer + Larzuk Hammer  + 1 Normal Rare Armor -> Exceptional Rare Armor
 
-**Inputs:** **Weapon** (exc, Set) + **Lum Rune** + **Um Rune** + **Perfect Emerald**
+**Inputs:** **Any Armor (bas, Rare)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem** (mod, eli)
-- Required Level: # 7 (% chance)
+**Outputs:** **Use Item (mod, exc)**
 
 ---
 
-## 1 Ko Rune + 1 Lem Rune + 1 Perfect Diamond + 1 Exceptional Set Armor -> Elite Set Armor ❌
+## Charsi Hammer + Larzuk Hammer  + 1 Normal Crafted Armor -> Exceptional Crafted Armor
 
-**Inputs:** **Armor** (exc, Set) + **Ko Rune** + **Pul Rune** + **Perfect Diamond**
+**Inputs:** **Any Armor (bas, crf)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem** (mod, eli)
-- Required Level: # 7 (% chance)
+**Outputs:** **Use Item (mod, exc)**
 
 ---
 
-## 1 Ral Rune + 1 Sol Rune + 1 Perfect Emerald + 1 Normal Unique Weapon -> Exceptional Unique Weapon ❌
+## Charsi Hammer + Larzuk Hammer  + Standard of Heros + 1 Exceptional Rare Weapon -> Elite Rare Weapon
 
-**Inputs:** **Weapon** (bas, Uni) + **Ral Rune** + **Sol Rune** + **Perfect Emerald**
+**Inputs:** **Weapon (exc, Rare)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:**
-**useitem** (mod, exc)
-- Required Level: # 5 (% chance)
+**Outputs:** **Use Item (mod, eli)**
 
 ---
 
-## 1 Tal Rune + 1 Shael Rune + 1 Perfect Diamond + 1 Normal Unique Armor -> Exceptional Unique Armor ❌
+## Charsi Hammer + Larzuk Hammer  + Standard of Heros + 1 Exceptional Crafted Weapon -> Elite Crafted Weapon
 
-**Inputs:** **Armor** (bas, Uni) + **Tal Rune** + **Shael Rune** + **Perfect Diamond**
+**Inputs:** **Weapon (exc, crf)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:**
-**useitem** (mod, exc)
-- Required Level: # 5 (% chance)
+**Outputs:** **Use Item (mod, eli)**
 
 ---
 
-## 1 Lum Rune + 1 Pul Rune + 1 Perfect Emerald + 1 Exceptional Unique Weapon -> Elite Unique Weapon ❌
+## Charsi Hammer + Larzuk Hammer +  Standard of Heros + 1 Exceptional Rare Armor -> Elite Rare Armor
 
-**Inputs:** **Weapon** (exc, Uni) + **Lum Rune** + **Um Rune** + **Perfect Emerald**
+**Inputs:** **Any Armor (exc, Rare)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:**
-**useitem** (mod, eli)
-- Required Level: # 7 (% chance)
+**Outputs:** **Use Item (mod, eli)**
 
 ---
 
-## 1 Ko Rune + 1 Lem Rune + 1 Perfect Diamond + 1 Exceptional Unique Armor -> Elite Unique Armor ❌
+## Charsi Hammer + Larzuk Hammer  + Standard of Heros + 1 Exceptional Crafted Armor -> Elite Crafted Armor
 
-**Inputs:** **Armor** (exc, Uni) + **Ko Rune** + **Pul Rune** + **Perfect Diamond**
+**Inputs:** **Any Armor (exc, crf)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:**
-**useitem** (mod, eli)
-- Required Level: # 7 (% chance)
+**Outputs:** **Use Item (mod, eli)**
 
 ---
 
-## 1 Ort Rune + 1 Amn Rune + 1 Perfect Sapphire + 1 Normal Rare Weapon -> Exceptional Rare Weapon ❌
+## Charsi Hammer + Larzuk Hammer + 1 Normal Set Weapon -> Exceptional Set Weapon
 
-**Inputs:** **Weapon** (bas, Rar) + **Ort Rune** + **Amn Rune** + **Perfect Sapphire**
+**Inputs:** **Weapon (bas, Set)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem** (mod, exc)
-- Required Level: # 5 (% chance)
+**Outputs:** **Use Item (mod, exc)**
 
 ---
 
-## 1 Ral Rune + 1 Thul Rune + 1 Perfect Amethyst + 1 Normal Rare Armor -> Exceptional Rare Armor ❌
+## Charsi Hammer + Larzuk Hammer + 1 Normal Set Armor -> Exceptional Set Armor
 
-**Inputs:** **Armor** (bas, Rar) + **Ral Rune** + **Thul Rune** + **Perfect Amethyst**
+**Inputs:** **Any Armor (bas, Set)** + **Charsi's Malus** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem** (mod, exc)
-- Required Level: # 5 (% chance)
+**Outputs:** **Use Item (mod, exc)**
 
 ---
 
-## 1 Fal Rune + 1 Um Rune + 1 Perfect Sapphire + 1 Exceptional Rare Weapon -> Elite Rare Weapon ❌
+## Charsi Hammer + Larzuk Hammer  +  Standard of Heros + 1 Exceptional Set Weapon -> Elite Set Weapon
 
-**Inputs:** **Weapon** (exc, Rar) + **Fal Rune** + **Mal Rune** + **Perfect Sapphire**
+**Inputs:** **Weapon (exc, Set)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:**
-**useitem** (mod, eli)
-- Required Level: # 7 (% chance)
+**Outputs:** **Use Item (mod, eli)**
 
 ---
 
-## 1 Ko Rune + 1 Pul Rune + 1 Perfect Amethyst + 1 Exceptional Rare Armor -> Elite Rare Armor ❌
+## Charsi Hammer + Larzuk Hammer  +  Standard of Heros + 1 Exceptional Set Armor -> Elite Set Armor
 
-**Inputs:** **Armor** (exc, Rar) + **Ko Rune** + **Um Rune** + **Perfect Amethyst**
+**Inputs:** **Any Armor (exc, Set)** + **Charsi's Malus** + **Larzuk's Forging Hammer** + **Standard of Heroes**
 
-**Outputs:**
-**useitem** (mod, eli)
-- Required Level: # 7 (% chance)
+**Outputs:** **Use Item (mod, eli)**
 
 ---
 
-## 1 Ral Rune + 1 Jewel + 1 Superior Armor -> Tempered Armor ✅
+## 1 Ral Rune + 1 Jewel + 1 Superior Armor -> Tempered Armor
 
-**Inputs:** **Armor** (hiq, Nos) + **Jewel** + **Ral Rune**
+**Inputs:** **Any Armor (hiq, nos)** + **Jewel** + **Ral Rune (8)**
 
-**Outputs:**
-**useitem** (tmp)
+**Outputs:** **Use Item (Tempered)**
 
 ---
 
-## 1 Ral Rune + 1 Jewel + 1 Superior Weapon -> Tempered Weapon ✅
+## 1 Ral Rune + 1 Jewel + 1 Superior Weapon -> Tempered Weapon
 
-**Inputs:** **Weapon** (hiq, Nos) + **Jewel** + **Ral Rune**
+**Inputs:** **Weapon (hiq, nos)** + **Jewel** + **Ral Rune (8)**
 
-**Outputs:**
-**useitem** (tmp)
+**Outputs:** **Use Item (Tempered)**
 
 ---
 
-## 1 Ral Rune + 1 Jewel + Magic Ring -> Tempered Ring ✅
+## 1 Ral Rune + 1 Jewel + Magic Ring -> Tempered Ring
 
-**Inputs:** **Ring** (Mag) + **Jewel** + **Ral Rune**
+**Inputs:** **Ring (Magic)** + **Jewel** + **Ral Rune (8)**
 
-**Outputs:**
-**usetype** (tmp)
-- Required Level: # 3 (% chance)
+**Outputs:** **Use Type (Tempered) [Extra: levelreq]**
 
 ---
 
-## 1 Ral Rune + 1 Jewel + 1 Magic Amulet -> Tempered Amulet ✅
+## 1 Ral Rune + 1 Jewel + 1 Magic Amulet -> Tempered Amulet
 
-**Inputs:** **Amulet** (Mag) + **Jewel** + **Ral Rune**
+**Inputs:** **Amulet (Magic)** + **Jewel** + **Ral Rune (8)**
 
-**Outputs:**
-**usetype** (tmp)
-- Required Level: # 5 (% chance)
+**Outputs:** **Use Type (Tempered) [Extra: levelreq]**
 
 ---
 
-## 1 El Rune + 1 Chipped Gem (Any) + 1 Tempered Weapon -> Weapon With Extra Attack Rating ✅
+## 1 El Rune + 1 Chipped Gem (Any) + 1 Tempered Weapon -> Weapon With Extra Attack Rating
 
-**Inputs:** **Weapon** (tmp) + **El Rune** + **Chipped Amethyst**
+**Inputs:** **Weapon (Tempered)** + **El Rune (1)** + **• Chipped Amethyst**
 
-**Outputs:**
-**useitem**
-- Required Level: # 2 (% chance)
-- + to Attack Rating 30-50 (% chance)
+**Outputs:** **Use Item [Extra: levelreq]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Amulet -> Virulent Amulet ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Amulet -> Virulent Amulet
 
-**Inputs:** **Amulet** (Mag) + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **Amulet (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 674)
-- -% to Enemy Poison Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Ring -> Virulent Ring ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Ring -> Virulent Ring
 
-**Inputs:** **Ring** (Mag) + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **Ring (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 673)
-- -% to Enemy Poison Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Virulent (673)) [Extra: pierce-pois]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Helm -> Virulent Helm ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Helm -> Virulent Helm
 
-**Inputs:** **Helm** (Mag) + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **Merc Equip (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 674)
-- -% to Enemy Poison Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Boots -> Virulent Boots ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Boots -> Virulent Boots
 
-**Inputs:** **Boots** (Mag) + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **Boots (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 674)
-- -% to Enemy Poison Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Gloves -> Virulent Gloves ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Gloves -> Virulent Gloves
 
-**Inputs:** **Gloves** (Mag) + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **Gloves (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 674)
-- -% to Enemy Poison Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Virulent (674)) [Extra: pierce-pois]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Armor -> Virulent Armor ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Armor -> Virulent Armor
 
-**Inputs:** **Body Armor** (Mag) + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **Armor (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 676)
-- -% to Enemy Poison Resistance 2-8 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (676)) [Extra: pierce-pois]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Weapon -> Virulent Weapon ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Weapon -> Virulent Weapon
 
-**Inputs:** **Weapon** (Mag) + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **Weapon (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 675)
-- -% to Enemy Poison Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (675)) [Extra: pierce-pois]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Shield -> Virulent Shield ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Shield -> Virulent Shield
 
-**Inputs:** **Shield** (Mag) + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **Shield (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 675)
-- -% to Enemy Poison Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (675)) [Extra: pierce-pois]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Small Charm -> Virulent Small Charm ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Small Charm -> Virulent Small Charm
 
-**Inputs:** **Small Charm** (Mag) + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **Small Charm (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 671)
-- -% to Enemy Poison Resistance 1 (% chance)
+**Outputs:** **Use Item (Prefix: Virulent (671)) [Extra: pierce-pois]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Large Charm -> Virulent Large Charm ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Large Charm -> Virulent Large Charm
 
-**Inputs:** **Medium Charm** (Mag) + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **Medium Charm (Magic)** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 673)
-- -% to Enemy Poison Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Virulent (673)) [Extra: pierce-pois]**
 
 ---
 
-## 1 Ko Rune + 1 Perfect Emerald + 1 Uber Ancient Summon Material Act1 + 1 Rotting Fissure -> Virulent Rotting Fissure ✅
+## 1 Ko Rune + 1 Perfect Emerald + 1 Uber Ancient Summon Material Act1 + 1 Rotting Fissure -> Virulent Rotting Fissure
 
-**Inputs:** **PreCrafted Rotting Fissure** + **Ko Rune** + **Perfect Emerald** + **Western Worldstone Shard**
+**Inputs:** **PreCrafted Rotting Fissure** + **Ko Rune (18)** + **• Perfect Emerald** + **Western Worldstone Shard**
 
-**Outputs:**
-**Crafted Rotting Fissure**
+**Outputs:** **Crafted Rotting Fissure**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Amulet -> Gelid Amulet ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Amulet -> Gelid Amulet
 
-**Inputs:** **Amulet** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Amulet (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 684)
-- -% to Enemy Cold Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Ring -> Gelid Ring ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Ring -> Gelid Ring
 
-**Inputs:** **Ring** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Ring (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 683)
-- -% to Enemy Cold Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (683)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Helm -> Gelid Helm ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Helm -> Gelid Helm
 
-**Inputs:** **Helm** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Merc Equip (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 684)
-- -% to Enemy Cold Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Boots -> Gelid Boots ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Boots -> Gelid Boots
 
-**Inputs:** **Boots** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Boots (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 684)
-- -% to Enemy Cold Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Gloves -> Gelid Gloves ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Gloves -> Gelid Gloves
 
-**Inputs:** **Gloves** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Gloves (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 684)
-- -% to Enemy Cold Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Armor -> Gelid Armor ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Armor -> Gelid Armor
 
-**Inputs:** **Body Armor** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Armor (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 686)
-- -% to Enemy Cold Resistance 2-8 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (686)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Weapon -> Gelid Weapon ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Weapon -> Gelid Weapon
 
-**Inputs:** **Weapon** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Weapon (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 685)
-- -% to Enemy Cold Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (685)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Shield -> Gelid Shield ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Shield -> Gelid Shield
 
-**Inputs:** **Shield** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Shield (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 685)
-- -% to Enemy Cold Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (685)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Small Charm -> Gelid Small Charm ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Small Charm -> Gelid Small Charm
 
-**Inputs:** **Small Charm** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Small Charm (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 682)
-- -% to Enemy Cold Resistance 1 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (682)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Large Charm -> Gelid Large Charm ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Large Charm -> Gelid Large Charm
 
-**Inputs:** **Medium Charm** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Medium Charm (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 683)
-- -% to Enemy Cold Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (683)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Grand Charm -> Gelid Grand Charm ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Grand Charm -> Gelid Grand Charm
 
-**Inputs:** **Large Charm** (Mag) + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **Large Charm (Magic)** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 684)
-- -% to Enemy Cold Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (684)) [Extra: pierce-cold]**
 
 ---
 
-## 1 Lum Rune + 1 Perfect Sapphire + 1 Uber Ancient Summon Material Act2 + 1 Cold Rupture -> Gelid Cold Rupture ✅
+## 1 Lum Rune + 1 Perfect Sapphire + 1 Uber Ancient Summon Material Act2 + 1 Cold Rupture -> Gelid Cold Rupture
 
-**Inputs:** **PreCrafted Cold Rupture** + **Lum Rune** + **Perfect Sapphire** + **Eastern Worldstone Shard**
+**Inputs:** **PreCrafted Cold Rupture** + **Lum Rune (17)** + **• Perfect Sapphire** + **Eastern Worldstone Shard**
 
-**Outputs:**
-**Crafted Cold Rupture**
+**Outputs:** **Crafted Cold Rupture**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Amulet -> Magnetic Amulet ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Amulet -> Magnetic Amulet
 
-**Inputs:** **Amulet** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Amulet (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 689)
-- -% to Enemy Lightning Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Ring -> Magnetic Ring ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Ring -> Magnetic Ring
 
-**Inputs:** **Ring** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Ring (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 688)
-- -% to Enemy Lightning Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (688)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Helm -> Magnetic Helm ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Helm -> Magnetic Helm
 
-**Inputs:** **Helm** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Merc Equip (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 689)
-- -% to Enemy Lightning Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Boots -> Magnetic Boots ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Boots -> Magnetic Boots
 
-**Inputs:** **Boots** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Boots (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 689)
-- -% to Enemy Lightning Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Gloves -> Magnetic Gloves ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Gloves -> Magnetic Gloves
 
-**Inputs:** **Gloves** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Gloves (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 689)
-- -% to Enemy Lightning Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Armor -> Magnetic Armor ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Armor -> Magnetic Armor
 
-**Inputs:** **Body Armor** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Armor (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 691)
-- -% to Enemy Lightning Resistance 2-8 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (691)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Weapon -> Magnetic Weapon ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Weapon -> Magnetic Weapon
 
-**Inputs:** **Weapon** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Weapon (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 690)
-- -% to Enemy Lightning Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (690)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Shield -> Magnetic Shield ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Shield -> Magnetic Shield
 
-**Inputs:** **Shield** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Shield (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 690)
-- -% to Enemy Lightning Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (690)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Small Charm -> Magnetic Small Charm ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Small Charm -> Magnetic Small Charm
 
-**Inputs:** **Small Charm** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Small Charm (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 687)
-- -% to Enemy Lightning Resistance 1 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (687)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Large Charm -> Magnetic Large Charm ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Large Charm -> Magnetic Large Charm
 
-**Inputs:** **Medium Charm** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Medium Charm (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 688)
-- -% to Enemy Lightning Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (688)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Grand Charm -> Magnetic Grand Charm ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Grand Charm -> Magnetic Grand Charm
 
-**Inputs:** **Large Charm** (Mag) + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **Large Charm (Magic)** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 689)
-- -% to Enemy Lightning Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Magnetic (689)) [Extra: pierce-ltng]**
 
 ---
 
-## 1 Fal Rune + 1 Perfect Topaz + 1 Uber Ancient Summon Material Act3 + 1 Crack of the Heavens -> Magnetic Crack of the Heavens ✅
+## 1 Fal Rune + 1 Perfect Topaz + 1 Uber Ancient Summon Material Act3 + 1 Crack of the Heavens -> Magnetic Crack of the Heavens
 
-**Inputs:** **PreCrafted Crack of the Heavens** + **Fal Rune** + **Perfect Topaz** + **Southern Worldstone Shard**
+**Inputs:** **PreCrafted Crack of the Heavens** + **Fal Rune (19)** + **• Perfect Topaz** + **Southern Worldstone Shard**
 
-**Outputs:**
-**Crafted Crack of the Heavens**
+**Outputs:** **Crafted Crack of the Heavens**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Amulet -> Incendiary Amulet ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Amulet -> Incendiary Amulet
 
-**Inputs:** **Amulet** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Amulet (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 679)
-- -% to Enemy Fire Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Ring -> Incendiary Ring ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Ring -> Incendiary Ring
 
-**Inputs:** **Ring** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Ring (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 678)
-- -% to Enemy Fire Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (678)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Helm -> Incendiary Helm ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Helm -> Incendiary Helm
 
-**Inputs:** **Helm** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Merc Equip (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 679)
-- -% to Enemy Fire Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Boots -> Incendiary Boots ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Boots -> Incendiary Boots
 
-**Inputs:** **Boots** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Boots (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 679)
-- -% to Enemy Fire Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Gloves -> Incendiary Gloves ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Gloves -> Incendiary Gloves
 
-**Inputs:** **Gloves** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Gloves (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 679)
-- -% to Enemy Fire Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Armor -> Incendiary Armor ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Armor -> Incendiary Armor
 
-**Inputs:** **Body Armor** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Armor (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 681)
-- -% to Enemy Fire Resistance 2-8 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (681)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Weapon -> Incendiary Weapon ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Weapon -> Incendiary Weapon
 
-**Inputs:** **Weapon** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Weapon (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 680)
-- -% to Enemy Fire Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (680)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Shield -> Incendiary Shield ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Shield -> Incendiary Shield
 
-**Inputs:** **Shield** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Shield (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 680)
-- -% to Enemy Fire Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Gelid (680)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Small Charm -> Incendiary Small Charm ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Small Charm -> Incendiary Small Charm
 
-**Inputs:** **Small Charm** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Small Charm (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 677)
-- -% to Enemy Fire Resistance 1 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (677)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Large Charm -> Incendiary Large Charm ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Large Charm -> Incendiary Large Charm
 
-**Inputs:** **Medium Charm** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Medium Charm (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 678)
-- -% to Enemy Fire Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (678)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Grand Charm -> Incendiary Grand Charm ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Grand Charm -> Incendiary Grand Charm
 
-**Inputs:** **Large Charm** (Mag) + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **Large Charm (Magic)** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 679)
-- -% to Enemy Fire Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Incendiary (679)) [Extra: pierce-fire]**
 
 ---
 
-## 1 Io Rune + 1 Perfect Ruby + 1 Uber Ancient Summon Material Act4 + 1 Flame Rift -> Incendiary Flame Rift ✅
+## 1 Io Rune + 1 Perfect Ruby + 1 Uber Ancient Summon Material Act4 + 1 Flame Rift -> Incendiary Flame Rift
 
-**Inputs:** **PreCrafted Flame Rift** + **Io Rune** + **Perfect Ruby** + **Deep Worldstone Shard**
+**Inputs:** **PreCrafted Flame Rift** + **Io Rune (16)** + **• Perfect Ruby** + **Deep Worldstone Shard**
 
-**Outputs:**
-**Crafted Flame Rift**
+**Outputs:** **Crafted Flame Rift**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Amulet -> Breaching Amulet ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Amulet -> Breaching Amulet
 
-**Inputs:** **Amulet** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Amulet (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 699)
-- -% to Enemy Physical Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Ring -> Breaching Ring ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Ring -> Breaching Ring
 
-**Inputs:** **Ring** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Ring (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 698)
-- -% to Enemy Physical Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (698)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Helm -> Breaching Helm ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Helm -> Breaching Helm
 
-**Inputs:** **Helm** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Merc Equip (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 699)
-- -% to Enemy Physical Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Boots -> Breaching Boots ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Boots -> Breaching Boots
 
-**Inputs:** **Boots** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Boots (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 699)
-- -% to Enemy Physical Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Gloves -> Breaching Gloves ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Gloves -> Breaching Gloves
 
-**Inputs:** **Gloves** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Gloves (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 699)
-- -% to Enemy Physical Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Armor -> Breaching Armor ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Armor -> Breaching Armor
 
-**Inputs:** **Body Armor** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Armor (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 701)
-- -% to Enemy Physical Resistance 1-8 (% chance)
+**Outputs:** **Use Item (Prefix: Sullied (701)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Weapon -> Breaching Weapon ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Weapon -> Breaching Weapon
 
-**Inputs:** **Weapon** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Weapon (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 700)
-- -% to Enemy Physical Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Chaotic (700)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Shield -> Breaching Shield ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Shield -> Breaching Shield
 
-**Inputs:** **Shield** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Shield (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 700)
-- -% to Enemy Physical Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Chaotic (700)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Small Charm -> Breaching Small Charm ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Small Charm -> Breaching Small Charm
 
-**Inputs:** **Small Charm** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Small Charm (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 697)
-- -% to Enemy Physical Resistance 1 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (697)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Large Charm -> Breaching Large Charm ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Large Charm -> Breaching Large Charm
 
-**Inputs:** **Medium Charm** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Medium Charm (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 698)
-- -% to Enemy Physical Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (698)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Grand Charm -> Breaching Grand Charm ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Grand Charm -> Breaching Grand Charm
 
-**Inputs:** **Large Charm** (Mag) + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **Large Charm (Magic)** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 699)
-- -% to Enemy Physical Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (699)) [Extra: pierce-dmg]**
 
 ---
 
-## 1 Pul Rune + 1 Perfect Amethyst + 1 Uber Ancient Summon Material Act5 + 1 Bone Break -> Breaching Bone Break ✅
+## 1 Pul Rune + 1 Perfect Amethyst + 1 Uber Ancient Summon Material Act5 + 1 Bone Break -> Breaching Bone Break
 
-**Inputs:** **PreCrafted Bone Break** + **Um Rune** + **Perfect Amethyst** + **Northern Worldstone Shard**
+**Inputs:** **PreCrafted Bone Break** + **•Pul Rune (21)•** + **• Perfect Amethyst** + **Northern Worldstone Shard**
 
-**Outputs:**
-**Crafted Bone Break**
+**Outputs:** **Crafted Bone Break**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Amulet -> Mystical Amulet ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Amulet -> Mystical Amulet
 
-**Inputs:** **Amulet** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Amulet (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 694)
-- -% to Enemy Magic Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Ring -> Mystical Ring ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Ring -> Mystical Ring
 
-**Inputs:** **Ring** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Ring (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 693)
-- -% to Enemy Magic Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (693)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Helm -> Mystical Helm ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Helm -> Mystical Helm
 
-**Inputs:** **Helm** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Merc Equip (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 694)
-- -% to Enemy Magic Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Boots -> Mystical Boots ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Boots -> Mystical Boots
 
-**Inputs:** **Boots** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Boots (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 694)
-- -% to Enemy Magic Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Gloves -> Mystical Gloves ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Gloves -> Mystical Gloves
 
-**Inputs:** **Gloves** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Gloves (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 694)
-- -% to Enemy Magic Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Armor -> Mystical Armor ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Armor -> Mystical Armor
 
-**Inputs:** **Body Armor** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Armor (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 696)
-- -% to Enemy Magic Resistance 2-8 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (696)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Weapon -> Mystical Weapon ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Weapon -> Mystical Weapon
 
-**Inputs:** **Weapon** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Weapon (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 695)
-- -% to Enemy Magic Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (695)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Shield -> Mystical Shield ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Shield -> Mystical Shield
 
-**Inputs:** **Shield** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Shield (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 695)
-- -% to Enemy Magic Resistance 1-4 (% chance)
+**Outputs:** **Use Item (Prefix: Breaching (695)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Small Charm -> Mystical Small Charm ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Small Charm -> Mystical Small Charm
 
-**Inputs:** **Small Charm** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Small Charm (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 692)
-- -% to Enemy Magic Resistance 1 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (692)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Large Charm -> Mystical Large Charm ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Large Charm -> Mystical Large Charm
 
-**Inputs:** **Medium Charm** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Medium Charm (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 693)
-- -% to Enemy Magic Resistance 1-2 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (693)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Grand Charm -> Mystical Grand Charm ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Grand Charm -> Mystical Grand Charm
 
-**Inputs:** **Large Charm** (Mag) + **Ist Rune** + **Perfect Diamond** + **Northern Worldstone Shard**
+**Inputs:** **Large Charm (Magic)** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Northern Worldstone Shard**
 
-**Outputs:**
-**useitem** (Prefix: 694)
-- -% to Enemy Magic Resistance 1-3 (% chance)
+**Outputs:** **Use Item (Prefix: Mystical (694)) [Extra: pierce-mag]**
 
 ---
 
-## 1 Mal Rune + 1 Perfect Diamond + 1 Uber Ancient Summon Material Act5 + 1 Black Cleft -> Mystical Black Cleft ✅
+## 1 Mal Rune + 1 Perfect Diamond + 1 Uber Ancient Summon Material Act5 + 1 Black Cleft -> Mystical Black Cleft
 
-**Inputs:** **PreCrafted Black Cleft** + **Ist Rune** + **Perfect Diamond** + **Southern Worldstone Shard** + **Deep Worldstone Shard** + **Northern Worldstone Shard**
+**Inputs:** **PreCrafted Black Cleft** + **•Mal Rune (23)•** + **• Perfect Diamond** + **Southern Worldstone Shard** + **Deep Worldstone Shard** + **Northern Worldstone Shard**
 
-**Outputs:**
-**Crafted Black Cleft**
+**Outputs:** **Crafted Black Cleft**
 
 ---
 
-## 9 Magic Jewels + Charsi's Malus = 1 Rare Jewel ✅
+## 9 Magic Jewels + Charsi's Malus = 1 Rare Jewel
 
-**Inputs:** **Jewel** (Qty: 9) + **Charsi's Malus**
+**Inputs:** **Jewel (Qty: 9)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Helm ✅
+## Helm
 
-**Inputs:** **Helm** (Nor, Nos) + **Charsi's Malus**
+**Inputs:** **Merc Equip (Normal, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Helm Inf ✅
+## Helm Inf
 
-**Inputs:** **Helm** (Low) + **Charsi's Malus**
+**Inputs:** **Merc Equip (Low Quality)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Helm Sup ✅
+## Helm Sup
 
-**Inputs:** **Helm** (hiq, Noe, Nos) + **Charsi's Malus**
+**Inputs:** **Merc Equip (hiq, noe, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Helm Eth ✅
+## Helm Eth
 
-**Inputs:** **Helm** (Nor, Eth, Nos) + **Charsi's Malus**
+**Inputs:** **Merc Equip (Normal, eth, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## circ Eth ✅
+## circ Eth
 
-**Inputs:** **Circlet** (Nor, Eth, Nos) + **Charsi's Malus**
+**Inputs:** **Circlet (Normal, eth, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Helm Eth Sup ✅
+## Helm Eth Sup
 
-**Inputs:** **Helm** (hiq, Eth, Nos) + **Charsi's Malus**
+**Inputs:** **Merc Equip (hiq, eth, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## circ Eth Sup ✅
+## circ Eth Sup
 
-**Inputs:** **Circlet** (hiq, Eth, Nos) + **Charsi's Malus**
+**Inputs:** **Circlet (hiq, eth, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Weapon ✅
+## Weapon
 
-**Inputs:** **Weapon** (Nor, Noe, Nos) + **Charsi's Malus**
+**Inputs:** **Weapon (Normal, noe, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Weapon Inf ✅
+## Weapon Inf
 
-**Inputs:** **Weapon** (Low) + **Charsi's Malus**
+**Inputs:** **Weapon (Low Quality)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Weapon Sup ✅
+## Weapon Sup
 
-**Inputs:** **Weapon** (hiq, Noe, Nos) + **Charsi's Malus**
+**Inputs:** **Weapon (hiq, noe, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Weapon Eth ✅
+## Weapon Eth
 
-**Inputs:** **Weapon** (Nor, Eth, Nos) + **Charsi's Malus**
+**Inputs:** **Weapon (Normal, eth, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Weapon Eth Sup ✅
+## Weapon Eth Sup
 
-**Inputs:** **Weapon** (hiq, Eth, Nos) + **Charsi's Malus**
+**Inputs:** **Weapon (hiq, eth, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Armor ✅
+## Armor
 
-**Inputs:** **Body Armor** (Nor, Noe, Nos) + **Charsi's Malus**
+**Inputs:** **Armor (Normal, noe, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Armor Inf ✅
+## Armor Inf
 
-**Inputs:** **Body Armor** (Low) + **Charsi's Malus**
+**Inputs:** **Armor (Low Quality)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Armor Sup ✅
+## Armor Sup
 
-**Inputs:** **Body Armor** (hiq, Noe, Nos) + **Charsi's Malus**
+**Inputs:** **Armor (hiq, noe, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Armor Eth ✅
+## Armor Eth
 
-**Inputs:** **Body Armor** (Nor, Eth, Nos) + **Charsi's Malus**
+**Inputs:** **Armor (Normal, eth, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Armor Eth Sup ✅
+## Armor Eth Sup
 
-**Inputs:** **Body Armor** (hiq, Eth, Nos) + **Charsi's Malus**
+**Inputs:** **Armor (hiq, eth, nos)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Shield ✅
+## Shield
 
-**Inputs:** **Shield** (Nor, Noe) + **Charsi's Malus**
+**Inputs:** **Any Shield (Normal, noe)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Shield Inf ✅
+## Shield Inf
 
-**Inputs:** **Shield** (Low) + **Charsi's Malus**
+**Inputs:** **Any Shield (Low Quality)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Shield Sup ✅
+## Shield Sup
 
-**Inputs:** **Shield** (hiq, Noe) + **Charsi's Malus**
+**Inputs:** **Any Shield (hiq, noe)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Shield Eth ✅
+## Shield Eth
 
-**Inputs:** **Shield** (Nor, Eth) + **Charsi's Malus**
+**Inputs:** **Any Shield (Normal, eth)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Shield Eth Sup ✅
+## Shield Eth Sup
 
-**Inputs:** **Shield** (hiq, Eth) + **Charsi's Malus**
+**Inputs:** **Any Shield (hiq, eth)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Gloves ✅
+## Gloves
 
-**Inputs:** **Gloves** (Nor, Noe) + **Charsi's Malus**
+**Inputs:** **Gloves (Normal, noe)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Gloves Inf ✅
+## Gloves Inf
 
-**Inputs:** **Gloves** (Low) + **Charsi's Malus**
+**Inputs:** **Gloves (Low Quality)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Gloves Sup ✅
+## Gloves Sup
 
-**Inputs:** **Gloves** (hiq, Noe) + **Charsi's Malus**
+**Inputs:** **Gloves (hiq, noe)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Gloves Eth ✅
+## Gloves Eth
 
-**Inputs:** **Gloves** (Nor, Eth) + **Charsi's Malus**
+**Inputs:** **Gloves (Normal, eth)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Gloves Eth Sup ✅
+## Gloves Eth Sup
 
-**Inputs:** **Gloves** (hiq, Eth) + **Charsi's Malus**
+**Inputs:** **Gloves (hiq, eth)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Belt ✅
+## Belt
 
-**Inputs:** **Belt** (Nor, Noe) + **Charsi's Malus**
+**Inputs:** **Belt (Normal, noe)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Belt Inf ✅
+## Belt Inf
 
-**Inputs:** **Belt** (Low) + **Charsi's Malus**
+**Inputs:** **Belt (Low Quality)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Belt Sup ✅
+## Belt Sup
 
-**Inputs:** **Belt** (hiq, Noe) + **Charsi's Malus**
+**Inputs:** **Belt (hiq, noe)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Belt Eth ✅
+## Belt Eth
 
-**Inputs:** **Belt** (Nor, Eth) + **Charsi's Malus**
+**Inputs:** **Belt (Normal, eth)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Belt Eth Sup ✅
+## Belt Eth Sup
 
-**Inputs:** **Belt** (hiq, Eth) + **Charsi's Malus**
+**Inputs:** **Belt (hiq, eth)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Boots ✅
+## Boots
 
-**Inputs:** **Boots** (Nor, Noe) + **Charsi's Malus**
+**Inputs:** **Boots (Normal, noe)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Boots Inf ✅
+## Boots Inf
 
-**Inputs:** **Boots** (Low) + **Charsi's Malus**
+**Inputs:** **Boots (Low Quality)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Boots Sup ✅
+## Boots Sup
 
-**Inputs:** **Boots** (hiq, Noe) + **Charsi's Malus**
+**Inputs:** **Boots (hiq, noe)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
+**Outputs:** **Use Type (Rare)**
 
 ---
 
-## Boots Eth ✅
+## Boots Eth
 
-**Inputs:** **Boots** (Nor, Eth) + **Charsi's Malus**
+**Inputs:** **Boots (Normal, eth)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## Boots Eth Sup ✅
+## Boots Eth Sup
 
-**Inputs:** **Boots** (hiq, Eth) + **Charsi's Malus**
+**Inputs:** **Boots (hiq, eth)** + **Charsi's Malus**
 
-**Outputs:**
-**usetype** (Rar)
-- Ethereal 1
+**Outputs:** **Use Type (Rare) [Extra: ethereal]**
 
 ---
 
-## SUP 1 Tal Rune + 1 Thul Rune + 1 Perfect Topaz + 1 Normal Torso Armor -> Socketed Torso Armor ✅
+## SUP 1 Tal Rune + 1 Thul Rune + 1 Perfect Topaz + 1 Normal Torso Armor -> Socketed Torso Armor
 
-**Inputs:** **Body Armor** (hiq, Nos) + **Tal Rune** + **Thul Rune** + **Perfect Topaz**
+**Inputs:** **Armor (hiq, nos)** + **Tal Rune (7)** + **Thul Rune (10)** + **• Perfect Topaz**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## 1 Tal Rune + 1 Thul Rune + 1 Perfect Topaz + 1 Normal Torso Armor -> Socketed Torso Armor ✅
+## 1 Tal Rune + 1 Thul Rune + 1 Perfect Topaz + 1 Normal Torso Armor -> Socketed Torso Armor
 
-**Inputs:** **Body Armor** (Nor, Nos) + **Tal Rune** + **Thul Rune** + **Perfect Topaz**
+**Inputs:** **Armor (Normal, nos)** + **Tal Rune (7)** + **Thul Rune (10)** + **• Perfect Topaz**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## SUP 1 Ral Rune + 1 Amn Rune + 1 Perfect Amethyst + 1 Normal Weapon -> Socketed Weapon ✅
+## SUP 1 Ral Rune + 1 Amn Rune + 1 Perfect Amethyst + 1 Normal Weapon -> Socketed Weapon
 
-**Inputs:** **Weapon** (hiq, Nos) + **Ral Rune** + **Amn Rune** + **Perfect Amethyst**
+**Inputs:** **Weapon (hiq, nos)** + **Ral Rune (8)** + **Amn Rune (11)** + **• Perfect Amethyst**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## 1 Ral Rune + 1 Amn Rune + 1 Perfect Amethyst + 1 Normal Weapon -> Socketed Weapon ✅
+## 1 Ral Rune + 1 Amn Rune + 1 Perfect Amethyst + 1 Normal Weapon -> Socketed Weapon
 
-**Inputs:** **Weapon** (Nor, Nos) + **Ral Rune** + **Amn Rune** + **Perfect Amethyst**
+**Inputs:** **Weapon (Normal, nos)** + **Ral Rune (8)** + **Amn Rune (11)** + **• Perfect Amethyst**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## SUP 1 Ral Rune + 1 Thul Rune + 1 Perfect Sapphire + 1 Normal Helm -> Socketed Helm ✅
+## SUP 1 Ral Rune + 1 Thul Rune + 1 Perfect Sapphire + 1 Normal Helm -> Socketed Helm
 
-**Inputs:** **Helm** (hiq, Nos) + **Ral Rune** + **Thul Rune** + **Perfect Sapphire**
+**Inputs:** **Merc Equip (hiq, nos)** + **Ral Rune (8)** + **Thul Rune (10)** + **• Perfect Sapphire**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## 1 Ral Rune + 1 Thul Rune + 1 Perfect Sapphire + 1 Normal Helm -> Socketed Helm ✅
+## 1 Ral Rune + 1 Thul Rune + 1 Perfect Sapphire + 1 Normal Helm -> Socketed Helm
 
-**Inputs:** **Helm** (Nor, Nos) + **Ral Rune** + **Thul Rune** + **Perfect Sapphire**
+**Inputs:** **Merc Equip (Normal, nos)** + **Ral Rune (8)** + **Thul Rune (10)** + **• Perfect Sapphire**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## SUP 1 Tal Rune + 1 Amn Rune + 1 Perfect Ruby + 1 Normal Shield -> Socketed Shield ✅
+## SUP 1 Tal Rune + 1 Amn Rune + 1 Perfect Ruby + 1 Normal Shield -> Socketed Shield
 
-**Inputs:** **Shield** (hiq, Nos) + **Tal Rune** + **Amn Rune** + **Perfect Ruby**
+**Inputs:** **Any Shield (hiq, nos)** + **Tal Rune (7)** + **Amn Rune (11)** + **• Perfect Ruby**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## 1 Tal Rune + 1 Amn Rune + 1 Perfect Ruby + 1 Normal Shield -> Socketed Shield ✅
+## 1 Tal Rune + 1 Amn Rune + 1 Perfect Ruby + 1 Normal Shield -> Socketed Shield
 
-**Inputs:** **Shield** (Nor, Nos) + **Tal Rune** + **Amn Rune** + **Perfect Ruby**
+**Inputs:** **Any Shield (Normal, nos)** + **Tal Rune (7)** + **Amn Rune (11)** + **• Perfect Ruby**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Arrows ✅
+## Arrows
 
-**Inputs:** **Arrows** + **Scroll of Town Portal**
+**Inputs:** **A** + **TP**
 
-**Outputs:**
-**Arrows**
-- Socketed (#) 1-3
-- % Better Chance of Getting Magic Items (Based on Character Level) 4
+**Outputs:** **A [Extra: sock]**
 
 ---
 
-## Bolts ✅
+## Bolts
 
-**Inputs:** **Bolts** + **Scroll of Town Portal**
+**Inputs:** **B** + **TP**
 
-**Outputs:**
-**Bolts**
-- Socketed (#) 1-3
-- % Better Chance of Getting Magic Items (Based on Character Level) 4
+**Outputs:** **B [Extra: sock]**
 
 ---
 
-## Helm ✅
+## Helm
 
-**Inputs:** **Helm** (Nor, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Merc Equip (Normal, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Helm Inf ✅
+## Helm Inf
 
-**Inputs:** **Helm** (Low) + **Larzuk's Forging Hammer**
+**Inputs:** **Merc Equip (Low Quality)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Helm Sup ✅
+## Helm Sup
 
-**Inputs:** **Helm** (hiq, Noe, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Merc Equip (hiq, noe, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Helm Eth ✅
+## Helm Eth
 
-**Inputs:** **Helm** (Nor, Eth, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Merc Equip (Normal, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Helm Eth Sup ✅
+## Helm Eth Sup
 
-**Inputs:** **Helm** (hiq, Eth, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Merc Equip (hiq, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Weapon ✅
+## Weapon
 
-**Inputs:** **Weapon** (Nor, Noe, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (Normal, noe, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Weapon Inf ✅
+## Weapon Inf
 
-**Inputs:** **Weapon** (Low) + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (Low Quality)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Weapon Sup ✅
+## Weapon Sup
 
-**Inputs:** **Weapon** (hiq, Noe, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (hiq, noe, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Weapon Eth ✅
+## Weapon Eth
 
-**Inputs:** **Weapon** (Nor, Eth, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (Normal, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Weapon Eth Sup ✅
+## Weapon Eth Sup
 
-**Inputs:** **Weapon** (hiq, Eth, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (hiq, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Armor ✅
+## Armor
 
-**Inputs:** **Body Armor** (Nor, Noe, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Armor (Normal, noe, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Armor Inf ✅
+## Armor Inf
 
-**Inputs:** **Body Armor** (Low) + **Larzuk's Forging Hammer**
+**Inputs:** **Armor (Low Quality)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Armor Sup ✅
+## Armor Sup
 
-**Inputs:** **Body Armor** (hiq, Noe, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Armor (hiq, noe, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Armor Eth ✅
+## Armor Eth
 
-**Inputs:** **Body Armor** (Nor, Eth, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Armor (Normal, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Armor Eth Sup ✅
+## Armor Eth Sup
 
-**Inputs:** **Body Armor** (hiq, Eth, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Armor (hiq, eth, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Shield ✅
+## Shield
 
-**Inputs:** **Shield** (Nor, Noe) + **Larzuk's Forging Hammer**
+**Inputs:** **Any Shield (Normal, noe)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Shield Inf ✅
+## Shield Inf
 
-**Inputs:** **Shield** (Low) + **Larzuk's Forging Hammer**
+**Inputs:** **Any Shield (Low Quality)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Shield Sup ✅
+## Shield Sup
 
-**Inputs:** **Shield** (hiq, Noe) + **Larzuk's Forging Hammer**
+**Inputs:** **Any Shield (hiq, noe)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Shield Eth ✅
+## Shield Eth
 
-**Inputs:** **Shield** (Nor, Eth) + **Larzuk's Forging Hammer**
+**Inputs:** **Any Shield (Normal, eth)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Shield Eth Sup ✅
+## Shield Eth Sup
 
-**Inputs:** **Shield** (hiq, Eth) + **Larzuk's Forging Hammer**
+**Inputs:** **Any Shield (hiq, eth)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 6 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Helm ✅
+## Helm
 
-**Inputs:** **Helm** (Mag, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Merc Equip (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-2 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Weapon ✅
+## Weapon
 
-**Inputs:** **Weapon** (Mag, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-2 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Armor ✅
+## Armor
 
-**Inputs:** **Body Armor** (Mag, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Armor (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-2 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Shield ✅
+## Shield
 
-**Inputs:** **Shield** (Mag, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Any Shield (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-2 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Knives ✅
+## Throwing Knives
 
-**Inputs:** **Throwing Knife** (Mag, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Throwing Knife (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-2 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Axes ✅
+## Throwing Axes
 
-**Inputs:** **Throwing Axe** (Mag, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Throwing Axe (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-2 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Javelins ✅
+## Throwing Javelins
 
-**Inputs:** **Javelin** (Mag, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Javelin (Magic, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1-2 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Helm ✅
+## Helm
 
-**Inputs:** **Helm** (Rar, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Merc Equip (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Weapon ✅
+## Weapon
 
-**Inputs:** **Weapon** (Rar, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Armor ✅
+## Armor
 
-**Inputs:** **Body Armor** (Rar, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Armor (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Shield ✅
+## Shield
 
-**Inputs:** **Shield** (Rar, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Any Shield (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Knives ✅
+## Throwing Knives
 
-**Inputs:** **Throwing Knife** (Rar, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Throwing Knife (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Axes ✅
+## Throwing Axes
 
-**Inputs:** **Throwing Axe** (Rar, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Throwing Axe (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Javelins ✅
+## Throwing Javelins
 
-**Inputs:** **Javelin** (Rar, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Javelin (Rare, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Helm ✅
+## Helm
 
-**Inputs:** **Helm** (Set, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Merc Equip (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Weapon ✅
+## Weapon
 
-**Inputs:** **Weapon** (Set, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Armor ✅
+## Armor
 
-**Inputs:** **Body Armor** (Set, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Armor (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Shield ✅
+## Shield
 
-**Inputs:** **Shield** (Set, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Any Shield (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Knives ✅
+## Throwing Knives
 
-**Inputs:** **Throwing Knife** (Set, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Throwing Knife (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Axes ✅
+## Throwing Axes
 
-**Inputs:** **Throwing Axe** (Set, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Throwing Axe (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Javelins ✅
+## Throwing Javelins
 
-**Inputs:** **Javelin** (Set, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Javelin (Set, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Helm ✅
+## Helm
 
-**Inputs:** **Helm** (Uni, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Merc Equip (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Weapon ✅
+## Weapon
 
-**Inputs:** **Weapon** (Uni, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Armor ✅
+## Armor
 
-**Inputs:** **Body Armor** (Uni, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Armor (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Shield ✅
+## Shield
 
-**Inputs:** **Shield** (Uni, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Any Shield (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Knives ✅
+## Throwing Knives
 
-**Inputs:** **Throwing Knife** (Uni, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Throwing Knife (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Axes ✅
+## Throwing Axes
 
-**Inputs:** **Throwing Axe** (Uni, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Throwing Axe (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Javelins ✅
+## Throwing Javelins
 
-**Inputs:** **Javelin** (Uni, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Javelin (Unique, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Helm ✅
+## Helm
 
-**Inputs:** **Helm** (Crf, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Merc Equip (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Weapon ✅
+## Weapon
 
-**Inputs:** **Weapon** (Crf, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Armor ✅
+## Armor
 
-**Inputs:** **Body Armor** (Crf, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Armor (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Shield ✅
+## Shield
 
-**Inputs:** **Shield** (Crf, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Any Shield (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Knives ✅
+## Throwing Knives
 
-**Inputs:** **Throwing Knife** (Crf, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Throwing Knife (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Axes ✅
+## Throwing Axes
 
-**Inputs:** **Throwing Axe** (Crf, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Throwing Axe (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Throwing Javelins ✅
+## Throwing Javelins
 
-**Inputs:** **Javelin** (Crf, Nos) + **Larzuk's Forging Hammer**
+**Inputs:** **Javelin (crf, nos)** + **Larzuk's Forging Hammer**
 
-**Outputs:**
-**useitem**
-- Socketed (#) 1 (% chance)
+**Outputs:** **Use Item [Extra: sock]**
 
 ---
 
-## Block Bows ✅
+## Block Bows
 
 **Inputs:** **Bow** + **Flask of Etheric Light**
 
-**Outputs:**
-**useitem**
-
-**Flask of Etheric Light**
+**Outputs:** **Use Item**
 
 ---
 
-## Weapon + Flask = Ethereal Weapon ✅
+## BLOCK CHARMS
 
-**Inputs:** **Weapon** (Noe) + **Flask of Etheric Light**
+**Inputs:** **Small Charm (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
-- Ethereal 1
+**Outputs:** **Use Item**
 
 ---
 
-## Armor + Flask = Ethereal Armor ✅
+## BLOCK CHARMS
 
-**Inputs:** **Armor** (Noe) + **Flask of Etheric Light**
+**Inputs:** **Large Charm (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
-- Ethereal 1
+**Outputs:** **Use Item**
 
 ---
 
-## MF + GF on Helm ✅
+## BLOCK CHARMS
 
-**Inputs:** **Helm** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
+**Inputs:** **Grand Charm (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
+**Outputs:** **Use Item**
 
 ---
 
-## MF + GF on Weapon ✅
-
-**Inputs:** **Weapon** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
-
----
-
-## MF + GF on Amulet ✅
-
-**Inputs:** **Amulet** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
-
----
-
-## MF + GF on Shield ✅
-
-**Inputs:** **Shield** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
-
----
-
-## MF + GF on Ring ✅
-
-**Inputs:** **Ring** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
-
----
-
-## MF + GF on Gloves ✅
-
-**Inputs:** **Gloves** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
-
----
-
-## MF + GF on Boots ✅
-
-**Inputs:** **Boots** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
-
----
-
-## MF + GF on Armor ✅
-
-**Inputs:** **Body Armor** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
-
----
-
-## MF + GF on Belt ✅
-
-**Inputs:** **Belt** + **Zod Rune** + **Gul Rune** + **Pul Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- % Better Chance of Getting Magic Items 50 (% chance)
-- % Extra Gold from Monsters 100 (% chance)
-- +% to Experience Gained 2 (% chance)
-
----
-
-## Melee Augment on Helm ✅
-
-**Inputs:** **Helm** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
-
----
-
-## Melee Augment on Weapon ✅
-
-**Inputs:** **Weapon** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
-
----
-
-## Melee Augment on Amulet ✅
-
-**Inputs:** **Amulet** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
-
----
-
-## Melee Augment on Shield ✅
-
-**Inputs:** **Shield** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
-
----
-
-## Melee Augment on Ring ✅
-
-**Inputs:** **Ring** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
-
----
-
-## Melee Augment on Gloves ✅
-
-**Inputs:** **Gloves** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
-
----
-
-## Melee Augment on Boots ✅
-
-**Inputs:** **Boots** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
-
----
-
-## Melee Augment on Armor ✅
-
-**Inputs:** **Body Armor** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
-
----
-
-## Melee Augment on Belt ✅
-
-**Inputs:** **Belt** + **Vex Rune** + **Fal Rune** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
-- + to Attack Rating 200 (% chance)
-- % Bonus to Attack Rating 10 (% chance)
-
----
-
-## Teleport + MF + GF on Armor ✅
-
-**Inputs:** **Body Armor** + **Zod Rune** + **Ber Rune** + **The Stone of Jordan** + **Standard of Heroes** + **Charsi's Malus**
-
-**Outputs:**
-**useitem**
-- + to [Skill] 1 (% chance)
--  1 (% chance)
-- % Better Chance of Getting Magic Items (Based on Character Level)  (% chance)
-- % Extra Gold from Monsters (Based on Character Level)  (% chance)
-- +% to Experience Gained 2 (% chance)
-
----
-
-## Break Down Hellfire Torch -> 1 Hellfire Ashes ✅
-
-**Inputs:** **Hellfire Torch** + **Charsi's Malus**
-
-**Outputs:**
-**Hellfire Ashes**
-
----
-
-## Hellfire Ash + Stamina Potion -> 2 Standard of Heroes ✅
-
-**Inputs:** **Hellfire Ashes** + **Thawing Potion**
-
-**Outputs:**
-**Standard of Heroes**
-
-**Standard of Heroes**
-
----
-
-## Break Down Annihilus -> 3 Standard of Heroes ✅
-
-**Inputs:** **Annihilus** + **Charsi's Malus**
-
-**Outputs:**
-**Standard of Heroes**
-
-**Standard of Heroes**
-
-**Standard of Heroes**
-
----
-
-## Break Down Gheed's Fortune -> 3 MF Potions ✅
-
-**Inputs:** **Gheed's Fortune** + **Charsi's Malus**
-
-**Outputs:**
-**Magic Find Potion**
-
-**Magic Find Potion**
-
-**Magic Find Potion**
-
----
-
-## Replenishing TP Book ✅
-
-**Inputs:** **Tome of Town Portal** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Replenishes quantity  (% chance)
-
----
-
-## Replenishing ID Book ✅
-
-**Inputs:** **Tome of Identify** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Replenishes quantity  (% chance)
-
----
-
-## Repair Augment on Throwing Knife ✅
-
-**Inputs:** **Throwing Knife** + **Standard of Heroes** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Replenishes quantity  (% chance)
-
----
-
-## Repair Augment on Throwing Axe ✅
-
-**Inputs:** **Throwing Axe** + **Standard of Heroes** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Replenishes quantity  (% chance)
-
----
-
-## Repair Augment on Javelin ✅
-
-**Inputs:** **Javelin** + **Standard of Heroes** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Replenishes quantity  (% chance)
-
----
-
-## Repair Augment on Magic Item ✅
-
-**Inputs:** **Any Item** (Mag) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
-
----
-
-## Repair Augment on Rare Item ✅
-
-**Inputs:** **Any Item** (Rar) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
-
----
-
-## Repair Augment on Set Armor ✅
-
-**Inputs:** **Armor** (Set) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
-
----
-
-## Repair Augment on Set Weapon ✅
-
-**Inputs:** **Weapon** (Set) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
-
----
-
-## Repair Augment on Unique Armor ✅
-
-**Inputs:** **Armor** (Uni) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
-
----
-
-## Repair Augment on Unique Weapon ✅
-
-**Inputs:** **Weapon** (Uni) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
-
----
-
-## Repair Augment on Crafted Item ✅
-
-**Inputs:** **Any Item** (Crf) + **Standard of Heroes** + **Hratli's Sprirtual Herb**
-
-**Outputs:**
-**useitem**
-- Repairs 1 durability in # seconds  (% chance)
-
----
-
-## BLOCK CHARMS ✅
-
-**Inputs:** **Small Charm** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
-
-**Standard of Heroes**
-
----
-
-## BLOCK CHARMS ✅
-
-**Inputs:** **Large Charm** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
-
-**Standard of Heroes**
-
----
-
-## BLOCK CHARMS ✅
-
-**Inputs:** **Grand Charm** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
-
-**Standard of Heroes**
-
----
-
-## BLOCK JEWELS ✅
+## BLOCK JEWELS
 
 **Inputs:** **Jewel** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
+**Outputs:** **Use Item**
 
-**Standard of Heroes**
-
----
-
-## Magic Corruptor ✅
-
-**Inputs:** **Any Item** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
-
-**Standard of Heroes**
-
----
-
-## Brick (Outcome Weight: 300) ✅
-
-**Inputs:** **Any Item** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Brick**
-
----
-
-## 6 Socket Bows ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 468) ✅
-
-**Inputs:** **Bow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 2 Socket (Outcome Weight: 622) ✅
-
-**Inputs:** **Bow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 3 Socket (Outcome Weight: 748) ✅
-
-**Inputs:** **Bow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 4 Socket (Outcome Weight: 860) ✅
-
-**Inputs:** **Bow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 5 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Bow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 6 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Bow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 6 Socket Crossbows ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 468) ✅
-
-**Inputs:** **Crossbow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 2 Socket (Outcome Weight: 622) ✅
-
-**Inputs:** **Crossbow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 3 Socket (Outcome Weight: 748) ✅
-
-**Inputs:** **Crossbow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 4 Socket (Outcome Weight: 860) ✅
-
-**Inputs:** **Crossbow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 5 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Crossbow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 6 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Crossbow** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 2 Handed Sockets ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 468) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 2 Socket (Outcome Weight: 622) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 3 Socket (Outcome Weight: 748) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 4 Socket (Outcome Weight: 860) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 5 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 6 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 1 Socket ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## Rings (Outcome Weight: 1000) ✅
-
-**Inputs:** **Ring** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## Amulet (Outcome Weight: 1000) ✅
-
-**Inputs:** **Amulet** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 2 Socket Belts ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 895) ✅
-
-**Inputs:** **Belt** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 2 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Belt** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 3 Socket Gloves ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Gloves** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Gloves** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Gloves** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 3 Socket Boots ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Boots** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Boots** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Boots** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 3 Socket Helm ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Helm** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Helm** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Helm** (Mag) + **Standard of Heroes**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
----
-
-## 3 Socket Chest ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## Magic Corruptor
 
-**Inputs:** **Body Armor** (Mag) + **Standard of Heroes**
+**Inputs:** **any (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## Brick
 
-**Inputs:** **Body Armor** (Mag) + **Standard of Heroes**
+**Inputs:** **any (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Body Armor** (Mag) + **Standard of Heroes**
+**Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Shield ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 3 Socket
 
-**Inputs:** **Shield** (Mag) + **Standard of Heroes**
+**Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 4 Socket
 
-**Inputs:** **Shield** (Mag) + **Standard of Heroes**
+**Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 5 Socket
 
-**Inputs:** **Shield** (Mag) + **Standard of Heroes**
+**Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 4 Socket Weapons ❌
 
-**Inputs:** 
+## 6 Socket
 
-**Outputs:**
+**Inputs:** **Bow (Magic)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 580) ✅
+## 1 Socket
 
-**Inputs:** **Weapon** (Mag) + **Standard of Heroes**
+**Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 804) ✅
+## 2 Socket
 
-**Inputs:** **Weapon** (Mag) + **Standard of Heroes**
+**Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 916) ✅
+## 3 Socket
 
-**Inputs:** **Weapon** (Mag) + **Standard of Heroes**
+**Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 1000) ✅
+## 4 Socket
 
-**Inputs:** **Weapon** (Mag) + **Standard of Heroes**
+**Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 5 Socket
 
-**Inputs:** 
+**Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## RARE CORRUPTIONS ---------------- ❌
 
-**Inputs:** 
+## 6 Socket
 
-**Outputs:**
+**Inputs:** **Crossbow (Magic)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## Rare Corruptor ✅
 
-**Inputs:** **Any Item** (Rar) + **Standard of Heroes**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
+**Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Standard of Heroes**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## 3 Socket
 
-**Inputs:** **Any Item** (Rar) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Brick**
-
 ---
-
-## 6 Socket Bows ❌
 
-**Inputs:** 
+## 4 Socket
 
-**Outputs:**
+**Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 5 Socket
 
-**Inputs:** **Bow** (Rar) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 6 Socket
 
-**Inputs:** **Bow** (Rar) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## Rings
 
-**Inputs:** **Bow** (Rar) + **Standard of Heroes**
+**Inputs:** **Ring (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## Amulet
 
-**Inputs:** **Bow** (Rar) + **Standard of Heroes**
+**Inputs:** **Amulet (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **Bow** (Rar) + **Standard of Heroes**
+**Inputs:** **Belt (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Bow** (Rar) + **Standard of Heroes**
+**Inputs:** **Belt (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket Crossbows ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **Gloves (Magic)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 2 Socket
 
-**Inputs:** **Crossbow** (Rar) + **Standard of Heroes**
+**Inputs:** **Gloves (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 3 Socket
 
-**Inputs:** **Crossbow** (Rar) + **Standard of Heroes**
+**Inputs:** **Gloves (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 1 Socket
 
-**Inputs:** **Crossbow** (Rar) + **Standard of Heroes**
+**Inputs:** **Boots (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 2 Socket
 
-**Inputs:** **Crossbow** (Rar) + **Standard of Heroes**
+**Inputs:** **Boots (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 3 Socket
 
-**Inputs:** **Crossbow** (Rar) + **Standard of Heroes**
+**Inputs:** **Boots (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Crossbow** (Rar) + **Standard of Heroes**
+**Inputs:** **Merc Equip (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 2 Handed Sockets ❌
 
-**Inputs:** 
+## 2 Socket
 
-**Outputs:**
+**Inputs:** **Merc Equip (Magic)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 3 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Standard of Heroes**
+**Inputs:** **Merc Equip (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 1 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Standard of Heroes**
+**Inputs:** **Armor (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 2 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Standard of Heroes**
+**Inputs:** **Armor (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 3 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Standard of Heroes**
+**Inputs:** **Armor (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Standard of Heroes**
+**Inputs:** **Any Shield (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Standard of Heroes**
+**Inputs:** **Any Shield (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Any Shield (Magic)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## Rings (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Ring** (Rar) + **Standard of Heroes**
+**Inputs:** **Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Amulet (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Amulet** (Rar) + **Standard of Heroes**
+**Inputs:** **Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 2 Socket Belts ❌
 
-**Inputs:** 
+## 3 Socket
 
-**Outputs:**
+**Inputs:** **Weapon (Magic)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 895) ✅
+## 4 Socket
 
-**Inputs:** **Belt** (Rar) + **Standard of Heroes**
+**Inputs:** **Weapon (Magic)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 1000) ✅
+## Rare Corruptor
 
-**Inputs:** **Belt** (Rar) + **Standard of Heroes**
+**Inputs:** **any (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Gloves ❌
+## Brick
 
-**Inputs:** 
+**Inputs:** **any (Rare)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 1 Socket
 
-**Inputs:** **Gloves** (Rar) + **Standard of Heroes**
+**Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 2 Socket
 
-**Inputs:** **Gloves** (Rar) + **Standard of Heroes**
+**Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Gloves** (Rar) + **Standard of Heroes**
+**Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 3 Socket Boots ❌
 
-**Inputs:** 
+## 4 Socket
 
-**Outputs:**
+**Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 5 Socket
 
-**Inputs:** **Boots** (Rar) + **Standard of Heroes**
+**Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 6 Socket
 
-**Inputs:** **Boots** (Rar) + **Standard of Heroes**
+**Inputs:** **Bow (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Boots** (Rar) + **Standard of Heroes**
+**Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Helm ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 3 Socket
 
-**Inputs:** **Helm** (Rar) + **Standard of Heroes**
+**Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 4 Socket
 
-**Inputs:** **Helm** (Rar) + **Standard of Heroes**
+**Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 5 Socket
 
-**Inputs:** **Helm** (Rar) + **Standard of Heroes**
+**Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 3 Socket Chest ❌
 
-**Inputs:** 
+## 6 Socket
 
-**Outputs:**
+**Inputs:** **Crossbow (Rare)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 1 Socket
 
-**Inputs:** **Body Armor** (Rar) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 2 Socket
 
-**Inputs:** **Body Armor** (Rar) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Body Armor** (Rar) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Shield ❌
+## 4 Socket
 
-**Inputs:** 
+**Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 5 Socket
 
-**Inputs:** **Shield** (Rar) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 6 Socket
 
-**Inputs:** **Shield** (Rar) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## Rings
 
-**Inputs:** **Shield** (Rar) + **Standard of Heroes**
+**Inputs:** **Ring (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 4 Socket Weapons ❌
 
-**Inputs:** 
+## Amulet
 
-**Outputs:**
+**Inputs:** **Amulet (Rare)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 580) ✅
+## 1 Socket
 
-**Inputs:** **Weapon** (Rar) + **Standard of Heroes**
+**Inputs:** **Belt (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 804) ✅
+## 2 Socket
 
-**Inputs:** **Weapon** (Rar) + **Standard of Heroes**
+**Inputs:** **Belt (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 916) ✅
+## 1 Socket
 
-**Inputs:** **Weapon** (Rar) + **Standard of Heroes**
+**Inputs:** **Gloves (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Weapon** (Rar) + **Standard of Heroes**
+**Inputs:** **Gloves (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Gloves (Rare)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## SET CORRUPTIONS ---------------- ❌
 
-**Inputs:** 
+## 1 Socket
 
-**Outputs:**
+**Inputs:** **Boots (Rare)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Boots (Rare)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## Set Corruptor ✅
 
-**Inputs:** **Any Item** (Set) + **Standard of Heroes**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
+**Inputs:** **Boots (Rare)** + **Standard of Heroes**
 
-**Standard of Heroes**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## 1 Socket
 
-**Inputs:** **Any Item** (Set) + **Standard of Heroes**
+**Inputs:** **Merc Equip (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Brick**
-
 ---
-
-## 6 Socket Bows ❌
 
-**Inputs:** 
+## 2 Socket
 
-**Outputs:**
+**Inputs:** **Merc Equip (Rare)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 3 Socket
 
-**Inputs:** **Bow** (Set) + **Standard of Heroes**
+**Inputs:** **Merc Equip (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 1 Socket
 
-**Inputs:** **Bow** (Set) + **Standard of Heroes**
+**Inputs:** **Armor (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 2 Socket
 
-**Inputs:** **Bow** (Set) + **Standard of Heroes**
+**Inputs:** **Armor (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 3 Socket
 
-**Inputs:** **Bow** (Set) + **Standard of Heroes**
+**Inputs:** **Armor (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **Bow** (Set) + **Standard of Heroes**
+**Inputs:** **Any Shield (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Bow** (Set) + **Standard of Heroes**
+**Inputs:** **Any Shield (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket Crossbows ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Any Shield (Rare)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 1 Socket
 
-**Inputs:** **Crossbow** (Set) + **Standard of Heroes**
+**Inputs:** **Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 2 Socket
 
-**Inputs:** **Crossbow** (Set) + **Standard of Heroes**
+**Inputs:** **Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 3 Socket
 
-**Inputs:** **Crossbow** (Set) + **Standard of Heroes**
+**Inputs:** **Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 4 Socket
 
-**Inputs:** **Crossbow** (Set) + **Standard of Heroes**
+**Inputs:** **Weapon (Rare)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## Set Corruptor
 
-**Inputs:** **Crossbow** (Set) + **Standard of Heroes**
+**Inputs:** **any (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## Brick
 
-**Inputs:** **Crossbow** (Set) + **Standard of Heroes**
+**Inputs:** **any (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
-
-## 2 Handed Sockets ❌
 
-**Inputs:** 
+## 1 Socket
 
-**Outputs:**
+**Inputs:** **Bow (Set)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 2 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Standard of Heroes**
+**Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 3 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Standard of Heroes**
+**Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 4 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Standard of Heroes**
+**Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 5 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Standard of Heroes**
+**Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 6 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Standard of Heroes**
+**Inputs:** **Bow (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Standard of Heroes**
+**Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## Rings (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Ring** (Set) + **Standard of Heroes**
+**Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Amulet (Outcome Weight: 1000) ✅
+## 4 Socket
 
-**Inputs:** **Amulet** (Set) + **Standard of Heroes**
+**Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 2 Socket Belts ❌
 
-**Inputs:** 
+## 5 Socket
 
-**Outputs:**
+**Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 895) ✅
+## 6 Socket
 
-**Inputs:** **Belt** (Set) + **Standard of Heroes**
+**Inputs:** **Crossbow (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Belt** (Set) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Gloves ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 3 Socket
 
-**Inputs:** **Gloves** (Set) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 4 Socket
 
-**Inputs:** **Gloves** (Set) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 5 Socket
 
-**Inputs:** **Gloves** (Set) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 3 Socket Boots ❌
 
-**Inputs:** 
+## 6 Socket
 
-**Outputs:**
+**Inputs:** **2Handed Melee Weapon (Set)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## Rings
 
-**Inputs:** **Boots** (Set) + **Standard of Heroes**
+**Inputs:** **Ring (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## Amulet
 
-**Inputs:** **Boots** (Set) + **Standard of Heroes**
+**Inputs:** **Amulet (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Boots** (Set) + **Standard of Heroes**
+**Inputs:** **Belt (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Helm ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Belt (Set)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 1 Socket
 
-**Inputs:** **Helm** (Set) + **Standard of Heroes**
+**Inputs:** **Gloves (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 2 Socket
 
-**Inputs:** **Helm** (Set) + **Standard of Heroes**
+**Inputs:** **Gloves (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Helm** (Set) + **Standard of Heroes**
+**Inputs:** **Gloves (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 3 Socket Chest ❌
 
-**Inputs:** 
+## 1 Socket
 
-**Outputs:**
+**Inputs:** **Boots (Set)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 2 Socket
 
-**Inputs:** **Body Armor** (Set) + **Standard of Heroes**
+**Inputs:** **Boots (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 3 Socket
 
-**Inputs:** **Body Armor** (Set) + **Standard of Heroes**
+**Inputs:** **Boots (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Body Armor** (Set) + **Standard of Heroes**
+**Inputs:** **Merc Equip (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Shield ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Merc Equip (Set)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 3 Socket
 
-**Inputs:** **Shield** (Set) + **Standard of Heroes**
+**Inputs:** **Merc Equip (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **Shield** (Set) + **Standard of Heroes**
+**Inputs:** **Armor (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Shield** (Set) + **Standard of Heroes**
+**Inputs:** **Armor (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 4 Socket Weapons ❌
 
-**Inputs:** 
+## 3 Socket
 
-**Outputs:**
+**Inputs:** **Armor (Set)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 580) ✅
+## 1 Socket
 
-**Inputs:** **Weapon** (Set) + **Standard of Heroes**
+**Inputs:** **Any Shield (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 804) ✅
+## 2 Socket
 
-**Inputs:** **Weapon** (Set) + **Standard of Heroes**
+**Inputs:** **Any Shield (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 916) ✅
+## 3 Socket
 
-**Inputs:** **Weapon** (Set) + **Standard of Heroes**
+**Inputs:** **Any Shield (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Weapon** (Set) + **Standard of Heroes**
+**Inputs:** **Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## UNIQUE CORRUPTIONS ---------------- ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Weapon (Set)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## Unnamed Recipe ❌
 
-**Inputs:** 
+## 4 Socket
 
-**Outputs:**
+**Inputs:** **Weapon (Set)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unique Corruptor ✅
+## Unique Corruptor
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
-
-**Hellfire Ashes**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unique Corruptor ✅
+## Unique Corruptor
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
-
-**Hellfire Ashes**
-
-**Hellfire Ashes**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unique Corruptor ✅
+## Unique Corruptor
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
-
-**Hellfire Ashes**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unique Corruptor ✅
+## Unique Corruptor
 
-**Inputs:** **Armor** (Uni) + **Standard of Heroes**
+**Inputs:** **Any Armor (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
-
-**Standard of Heroes**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unique Corruptor ✅
+## Unique Corruptor
 
-**Inputs:** **Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
-
-**Standard of Heroes**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unique Corruptor ✅
+## Unique Corruptor
 
-**Inputs:** **Ring** (Uni) + **Standard of Heroes**
+**Inputs:** **Ring (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
-
-**Standard of Heroes**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unique Corruptor ✅
+## Unique Corruptor
 
-**Inputs:** **Amulet** (Uni) + **Standard of Heroes**
+**Inputs:** **Amulet (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
-
-**Standard of Heroes**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## Brick
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**usetype** (Mag)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Brick**
+**Outputs:** **Use Type (Magic) [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## Brick
 
-**Inputs:** **Armor** (Uni) + **Standard of Heroes**
+**Inputs:** **Any Armor (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Brick**
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## Brick
 
-**Inputs:** **Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Brick**
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## Brick
 
-**Inputs:** **Ring** (Uni) + **Standard of Heroes**
+**Inputs:** **Ring (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Brick**
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## Brick
 
-**Inputs:** **Amulet** (Uni) + **Standard of Heroes**
+**Inputs:** **Amulet (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Brick**
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
 
-## Annihilus ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## MF +  GF (Outcome Weight: 125) ✅
+## MF +  GF
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Extra Gold from Monsters 10 (% chance)
-- 1 through 1000 1 (% chance)
-- % Better Chance of Getting Magic Items 7 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## FHR+ FRW (Outcome Weight: 250) ✅
+## FHR+ FRW
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- +% Faster Hit Recovery 5 (% chance)
-- 1 through 1000 1 (% chance)
-- +% Faster Run/Walk 5 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Attributes (Outcome Weight: 375) ✅
+## Attributes
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to all Attributes 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Life + Mana (Outcome Weight: 500) ✅
+## Life + Mana
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to Life 20 (% chance)
-- 1 through 1000 1 (% chance)
-- + to Mana 17 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Increased Attack Speed (Outcome Weight: 625) ✅
+## Increased Attack Speed
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- +% Increased Attack Speed 5-10 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Faster Cast Rate (Outcome Weight: 750) ✅
+## Faster Cast Rate
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- +% Faster Cast Rate 5-10 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## All Resistance (Outcome Weight: 875) ✅
+## All Resistance
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- All Resistances + 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Experience (Outcome Weight: 1000) ✅
+## Experience
 
 **Inputs:** **Annihilus** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- +% to Experience Gained 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Hellfire Torch ❌
+## Amplify Damage
 
-**Inputs:** 
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-
-
----
-
-## Amplify Damage (Outcome Weight: 83) ✅
-
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Chance to cast level # [Skill] when struck 40-22 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Lower Resist (Outcome Weight: 167) ✅
+## Lower Resist
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Chance to cast level # [Skill] when struck 75-18 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Life Tap (Outcome Weight: 250) ✅
+## Life Tap
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Chance to cast level # [Skill] when struck 25-21 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Weaken (Outcome Weight: 333) ✅
+## Weaken
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Chance to cast level # [Skill] when struck 50-18 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Decrepify (Outcome Weight: 417) ✅
+## Decrepify
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Chance to cast level # [Skill] when struck 60-20 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Bone Armor (Outcome Weight: 500) ✅
+## Bone Armor
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Chance to cast level # [Skill] when struck 60-21 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Cyclone Armor (Outcome Weight: 583) ✅
+## Cyclone Armor
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Chance to cast level # [Skill] when struck 60-21 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Static (Outcome Weight: 667) ✅
+## Static
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Chance to cast level # [Skill] when struck 60-20 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Frost Nova (Outcome Weight: 750) ✅
+## Frost Nova
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Chance to cast level # [Skill] when struck 75-24 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Prayer (Outcome Weight: 833) ✅
+## Prayer
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Level # [Skill] Aura When Equipped 31 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Blessed Aim (Outcome Weight: 917) ✅
+## Blessed Aim
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Level # [Skill] Aura When Equipped 10 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Vigor (Outcome Weight: 1000) ✅
+## Vigor
 
-**Inputs:** **Hellfire Torch** + **Hellfire Ashes** (Qty: 2)
+**Inputs:** **Hellfire Torch** + **Hellfire Ashes (Qty: 2)**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Level # [Skill] Aura When Equipped 10 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Gheed's Fortune ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## Gheed's Blessing (Outcome Weight: 350) ✅
+## Gheed's Blessing
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- % Extra Gold from Monsters 20-40 (% chance)
-- 1 through 1000 1 (% chance)
-- % Better Chance of Getting Magic Items 5-10 (% chance)
-- Reduces all Vendor Prices % 5 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Faster Hit Recovery (Outcome Weight: 376) ✅
+## Faster Hit Recovery
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- +% Faster Hit Recovery 12 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## All Resistances (Outcome Weight: 402) ✅
+## All Resistances
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- All Resistances + 15 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Faster Run/Walk (Outcome Weight: 428) ✅
+## Faster Run/Walk
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- +% Faster Run/Walk 7 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Maximum Damage and AR (Outcome Weight: 454) ✅
+## Maximum Damage and AR
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to Attack Rating 76 (% chance)
-- + to Maximum Damage 10 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Bow and Crossbow (Outcome Weight: 480) ✅
+## Bow and Crossbow
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Passive and Magic (Outcome Weight: 506) ✅
+## Passive and Magic
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Jav and Spear (Outcome Weight: 532) ✅
+## Jav and Spear
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Traps (Outcome Weight: 558) ✅
+## Traps
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Martial Arts (Outcome Weight: 584) ✅
+## Martial Arts
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Shadow Disciplines (Outcome Weight: 610) ✅
+## Shadow Disciplines
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Curses (Outcome Weight: 636) ✅
+## Curses
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Necro Summoning Skills (Outcome Weight: 662) ✅
+## Necro Summoning Skills
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Poison and Bone (Outcome Weight: 688) ✅
+## Poison and Bone
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Masteries (Outcome Weight: 714) ✅
+## Masteries
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Barb Combat (Outcome Weight: 740) ✅
+## Barb Combat
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Warcries (Outcome Weight: 766) ✅
+## Warcries
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Offensive Auras (Outcome Weight: 792) ✅
+## Offensive Auras
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Defensive Auras (Outcome Weight: 818) ✅
+## Defensive Auras
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Pally Combat (Outcome Weight: 844) ✅
+## Pally Combat
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Fire Skills (Outcome Weight: 870) ✅
+## Fire Skills
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Lightning Skills (Outcome Weight: 896) ✅
+## Lightning Skills
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Cold Skills (Outcome Weight: 922) ✅
+## Cold Skills
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Druid Summoning (Outcome Weight: 948) ✅
+## Druid Summoning
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Elemental Skills (Outcome Weight: 974) ✅
+## Elemental Skills
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Shapeshifting Skills (Outcome Weight: 1000) ✅
+## Shapeshifting Skills
 
 **Inputs:** **Gheed's Fortune** + **Hellfire Ashes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- + to [Class Skill Tab] Skills 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 6 Socket Bows ❌
 
-**Inputs:** 
+## 2 Socket
 
-**Outputs:**
+**Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 3 Socket
 
-**Inputs:** **Bow** (Uni) + **Standard of Heroes**
+**Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 4 Socket
 
-**Inputs:** **Bow** (Uni) + **Standard of Heroes**
+**Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 5 Socket
 
-**Inputs:** **Bow** (Uni) + **Standard of Heroes**
+**Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 6 Socket
 
-**Inputs:** **Bow** (Uni) + **Standard of Heroes**
+**Inputs:** **Bow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **Bow** (Uni) + **Standard of Heroes**
+**Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Bow** (Uni) + **Standard of Heroes**
+**Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket Crossbows ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 4 Socket
 
-**Inputs:** **Crossbow** (Uni) + **Standard of Heroes**
+**Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 5 Socket
 
-**Inputs:** **Crossbow** (Uni) + **Standard of Heroes**
+**Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 6 Socket
 
-**Inputs:** **Crossbow** (Uni) + **Standard of Heroes**
+**Inputs:** **Crossbow (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 1 Socket
 
-**Inputs:** **Crossbow** (Uni) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 2 Socket
 
-**Inputs:** **Crossbow** (Uni) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Crossbow** (Uni) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 2 Handed Sockets ❌
 
-**Inputs:** 
+## 4 Socket
 
-**Outputs:**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 5 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 6 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## Rings
 
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **Ring (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## Amulet
 
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **Amulet (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **Belt (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **Belt (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **Gloves (Unique)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## Rings (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Ring** (Uni) + **Standard of Heroes**
+**Inputs:** **Gloves (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Amulet (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Amulet** (Uni) + **Standard of Heroes**
+**Inputs:** **Gloves (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 2 Socket Belts ❌
 
-**Inputs:** 
+## 1 Socket
 
-**Outputs:**
+**Inputs:** **Boots (Unique)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 895) ✅
+## 2 Socket
 
-**Inputs:** **Belt** (Uni) + **Standard of Heroes**
+**Inputs:** **Boots (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Belt** (Uni) + **Standard of Heroes**
+**Inputs:** **Boots (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Gloves ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **Merc Equip (Unique)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 2 Socket
 
-**Inputs:** **Gloves** (Uni) + **Standard of Heroes**
+**Inputs:** **Merc Equip (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 3 Socket
 
-**Inputs:** **Gloves** (Uni) + **Standard of Heroes**
+**Inputs:** **Merc Equip (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Gloves** (Uni) + **Standard of Heroes**
+**Inputs:** **Armor (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 3 Socket Boots ❌
 
-**Inputs:** 
+## 2 Socket
 
-**Outputs:**
+**Inputs:** **Armor (Unique)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 3 Socket
 
-**Inputs:** **Boots** (Uni) + **Standard of Heroes**
+**Inputs:** **Armor (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **Boots** (Uni) + **Standard of Heroes**
+**Inputs:** **Any Shield (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Boots** (Uni) + **Standard of Heroes**
+**Inputs:** **Any Shield (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Helm ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Any Shield (Unique)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 1 Socket
 
-**Inputs:** **Helm** (Uni) + **Standard of Heroes**
+**Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 2 Socket
 
-**Inputs:** **Helm** (Uni) + **Standard of Heroes**
+**Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Helm** (Uni) + **Standard of Heroes**
+**Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 3 Socket Chest ❌
 
-**Inputs:** 
+## 4 Socket
 
-**Outputs:**
+**Inputs:** **Weapon (Unique)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## Craft Corruptor
 
-**Inputs:** **Body Armor** (Uni) + **Standard of Heroes**
+**Inputs:** **any (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## Brick
 
-**Inputs:** **Body Armor** (Uni) + **Standard of Heroes**
+**Inputs:** **any (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Body Armor** (Uni) + **Standard of Heroes**
+**Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Shield ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 3 Socket
 
-**Inputs:** **Shield** (Uni) + **Standard of Heroes**
+**Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 4 Socket
 
-**Inputs:** **Shield** (Uni) + **Standard of Heroes**
+**Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 5 Socket
 
-**Inputs:** **Shield** (Uni) + **Standard of Heroes**
+**Inputs:** **Bow (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 4 Socket Weapons ❌
 
-**Inputs:** 
+## 6 Socket
 
-**Outputs:**
+**Inputs:** **Bow (crf)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 580) ✅
+## 1 Socket
 
-**Inputs:** **Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 804) ✅
+## 2 Socket
 
-**Inputs:** **Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 916) ✅
+## 3 Socket
 
-**Inputs:** **Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 1000) ✅
+## 4 Socket
 
-**Inputs:** **Weapon** (Uni) + **Standard of Heroes**
+**Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 5 Socket
 
-**Inputs:** 
+**Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## CRAFT CORRUPTIONS ---------------- ❌
 
-**Inputs:** 
+## 6 Socket
 
-**Outputs:**
+**Inputs:** **Crossbow (crf)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## Craft Corruptor ✅
 
-**Inputs:** **Any Item** (Crf) + **Standard of Heroes**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
+**Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Standard of Heroes**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## 3 Socket
 
-**Inputs:** **Any Item** (Crf) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Brick**
-
 ---
-
-## 6 Socket Bows ❌
 
-**Inputs:** 
+## 4 Socket
 
-**Outputs:**
+**Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 5 Socket
 
-**Inputs:** **Bow** (Crf) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 6 Socket
 
-**Inputs:** **Bow** (Crf) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## Rings
 
-**Inputs:** **Bow** (Crf) + **Standard of Heroes**
+**Inputs:** **Ring (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## Amulet
 
-**Inputs:** **Bow** (Crf) + **Standard of Heroes**
+**Inputs:** **Amulet (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **Bow** (Crf) + **Standard of Heroes**
+**Inputs:** **Belt (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Bow** (Crf) + **Standard of Heroes**
+**Inputs:** **Belt (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket Crossbows ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **Gloves (crf)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 2 Socket
 
-**Inputs:** **Crossbow** (Crf) + **Standard of Heroes**
+**Inputs:** **Gloves (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 3 Socket
 
-**Inputs:** **Crossbow** (Crf) + **Standard of Heroes**
+**Inputs:** **Gloves (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 1 Socket
 
-**Inputs:** **Crossbow** (Crf) + **Standard of Heroes**
+**Inputs:** **Boots (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 2 Socket
 
-**Inputs:** **Crossbow** (Crf) + **Standard of Heroes**
+**Inputs:** **Boots (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 3 Socket
 
-**Inputs:** **Crossbow** (Crf) + **Standard of Heroes**
+**Inputs:** **Boots (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Crossbow** (Crf) + **Standard of Heroes**
+**Inputs:** **Merc Equip (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 2 Handed Sockets ❌
 
-**Inputs:** 
+## 2 Socket
 
-**Outputs:**
+**Inputs:** **Merc Equip (crf)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 3 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Standard of Heroes**
+**Inputs:** **Merc Equip (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 1 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Standard of Heroes**
+**Inputs:** **Armor (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 2 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Standard of Heroes**
+**Inputs:** **Armor (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 3 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Standard of Heroes**
+**Inputs:** **Armor (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Standard of Heroes**
+**Inputs:** **Any Shield (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Standard of Heroes**
+**Inputs:** **Any Shield (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Any Shield (crf)** + **Standard of Heroes**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## Rings (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Ring** (Crf) + **Standard of Heroes**
+**Inputs:** **Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Amulet (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Amulet** (Crf) + **Standard of Heroes**
+**Inputs:** **Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 2 Socket Belts ❌
 
-**Inputs:** 
+## 3 Socket
 
-**Outputs:**
+**Inputs:** **Weapon (crf)** + **Standard of Heroes**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 895) ✅
+## 4 Socket
 
-**Inputs:** **Belt** (Crf) + **Standard of Heroes**
+**Inputs:** **Weapon (crf)** + **Standard of Heroes**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 1000) ✅
+## BLOCK CHARMS
 
-**Inputs:** **Belt** (Crf) + **Standard of Heroes**
+**Inputs:** **Small Charm (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item**
 
 ---
 
-## 3 Socket Gloves ❌
+## BLOCK CHARMS
 
-**Inputs:** 
+**Inputs:** **Large Charm (Magic)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## BLOCK CHARMS
 
-**Inputs:** **Gloves** (Crf) + **Standard of Heroes**
+**Inputs:** **Grand Charm (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## BLOCK JEWELS
 
-**Inputs:** **Gloves** (Crf) + **Standard of Heroes**
+**Inputs:** **Jewel** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## Magic Corruptor
 
-**Inputs:** **Gloves** (Crf) + **Standard of Heroes**
+**Inputs:** **any (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 3 Socket Boots ❌
 
-**Inputs:** 
+## Brick
 
-**Outputs:**
+**Inputs:** **any (Magic)** + **The Divine Standard**
 
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 1 Socket
 
-**Inputs:** **Boots** (Crf) + **Standard of Heroes**
+**Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 2 Socket
 
-**Inputs:** **Boots** (Crf) + **Standard of Heroes**
+**Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Boots** (Crf) + **Standard of Heroes**
+**Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Helm ❌
+## 4 Socket
 
-**Inputs:** 
+**Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 5 Socket
 
-**Inputs:** **Helm** (Crf) + **Standard of Heroes**
+**Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 6 Socket
 
-**Inputs:** **Helm** (Crf) + **Standard of Heroes**
+**Inputs:** **Bow (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Helm** (Crf) + **Standard of Heroes**
+**Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 3 Socket Chest ❌
 
-**Inputs:** 
+## 2 Socket
 
-**Outputs:**
+**Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 3 Socket
 
-**Inputs:** **Body Armor** (Crf) + **Standard of Heroes**
+**Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 4 Socket
 
-**Inputs:** **Body Armor** (Crf) + **Standard of Heroes**
+**Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 5 Socket
 
-**Inputs:** **Body Armor** (Crf) + **Standard of Heroes**
+**Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Shield ❌
+## 6 Socket
 
-**Inputs:** 
+**Inputs:** **Crossbow (Magic)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 1 Socket
 
-**Inputs:** **Shield** (Crf) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 2 Socket
 
-**Inputs:** **Shield** (Crf) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Shield** (Crf) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
-
-## 4 Socket Weapons ❌
 
-**Inputs:** 
+## 4 Socket
 
-**Outputs:**
+**Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 580) ✅
+## 5 Socket
 
-**Inputs:** **Weapon** (Crf) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 804) ✅
+## 6 Socket
 
-**Inputs:** **Weapon** (Crf) + **Standard of Heroes**
+**Inputs:** **2Handed Melee Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 916) ✅
+## Rings
 
-**Inputs:** **Weapon** (Crf) + **Standard of Heroes**
+**Inputs:** **Ring (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 1000) ✅
+## Amulet
 
-**Inputs:** **Weapon** (Crf) + **Standard of Heroes**
+**Inputs:** **Amulet (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **Belt (Magic)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## DIVINE CORRUPTIONS ❌
 
-**Inputs:** 
+## 2 Socket
 
-**Outputs:**
+**Inputs:** **Belt (Magic)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **Gloves (Magic)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## MAGIC CORRUPTIONS ❌
 
-**Inputs:** 
+## 2 Socket
 
-**Outputs:**
+**Inputs:** **Gloves (Magic)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## BLOCK CHARMS ✅
+## 3 Socket
 
-**Inputs:** **Small Charm** (Mag) + **Dark Soul**
+**Inputs:** **Gloves (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## BLOCK CHARMS ✅
 
-**Inputs:** **Large Charm** (Mag) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
+**Inputs:** **Boots (Magic)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## BLOCK CHARMS ✅
+## 2 Socket
 
-**Inputs:** **Grand Charm** (Mag) + **Dark Soul**
+**Inputs:** **Boots (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## BLOCK JEWELS ✅
 
-**Inputs:** **Jewel** + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
+**Inputs:** **Boots (Magic)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Magic Corruptor ✅
+## 1 Socket
 
-**Inputs:** **Any Item** (Mag) + **Dark Soul**
+**Inputs:** **Merc Equip (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## Brick (Outcome Weight: 300) ✅
 
-**Inputs:** **Any Item** (Mag) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Merc Equip (Magic)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket Bows ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Merc Equip (Magic)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 468) ✅
 
-**Inputs:** **Bow** (Mag) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Armor (Magic)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 2 Socket
 
-**Inputs:** **Bow** (Mag) + **Dark Soul**
+**Inputs:** **Armor (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 748) ✅
 
-**Inputs:** **Bow** (Mag) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Armor (Magic)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 1 Socket
 
-**Inputs:** **Bow** (Mag) + **Dark Soul**
+**Inputs:** **Any Shield (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 5 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Bow** (Mag) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Any Shield (Magic)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Bow** (Mag) + **Dark Soul**
+**Inputs:** **Any Shield (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 6 Socket Crossbows ❌
 
-**Inputs:** 
+## 1 Socket
 
-**Outputs:**
+**Inputs:** **Weapon (Magic)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 2 Socket
 
-**Inputs:** **Crossbow** (Mag) + **Dark Soul**
+**Inputs:** **Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 622) ✅
 
-**Inputs:** **Crossbow** (Mag) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Weapon (Magic)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 4 Socket
 
-**Inputs:** **Crossbow** (Mag) + **Dark Soul**
+**Inputs:** **Weapon (Magic)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 4 Socket (Outcome Weight: 860) ✅
 
-**Inputs:** **Crossbow** (Mag) + **Dark Soul**
+## Rare Corruptor
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **any (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## Brick
 
-**Inputs:** **Crossbow** (Mag) + **Dark Soul**
+**Inputs:** **any (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 6 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Crossbow** (Mag) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Handed Sockets ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 468) ✅
 
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 4 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Dark Soul**
+**Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 748) ✅
 
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Dark Soul**
+## 5 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 6 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Dark Soul**
+**Inputs:** **Bow (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 5 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Mag) + **Dark Soul**
+**Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 1 Socket ❌
 
-**Inputs:** 
+## 3 Socket
 
-**Outputs:**
+**Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Rings (Outcome Weight: 1000) ✅
+## 4 Socket
 
-**Inputs:** **Ring** (Mag) + **Dark Soul**
+**Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## Amulet (Outcome Weight: 1000) ✅
 
-**Inputs:** **Amulet** (Mag) + **Dark Soul**
+## 5 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket Belts ❌
+## 6 Socket
 
-**Inputs:** 
+**Inputs:** **Crossbow (Rare)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 895) ✅
 
-**Inputs:** **Belt** (Mag) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Belt** (Mag) + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket Gloves ❌
 
-**Inputs:** 
+## 3 Socket
 
-**Outputs:**
+**Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 4 Socket
 
-**Inputs:** **Gloves** (Mag) + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Gloves** (Mag) + **Dark Soul**
+## 5 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 6 Socket
 
-**Inputs:** **Gloves** (Mag) + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket Boots ❌
 
-**Inputs:** 
+## Rings
 
-**Outputs:**
+**Inputs:** **Ring (Rare)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## Amulet
 
-**Inputs:** **Boots** (Mag) + **Dark Soul**
+**Inputs:** **Amulet (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Boots** (Mag) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Belt (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Boots** (Mag) + **Dark Soul**
+**Inputs:** **Belt (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket Helm ❌
 
-**Inputs:** 
+## 1 Socket
 
-**Outputs:**
+**Inputs:** **Gloves (Rare)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 2 Socket
 
-**Inputs:** **Helm** (Mag) + **Dark Soul**
+**Inputs:** **Gloves (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Helm** (Mag) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Gloves (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Helm** (Mag) + **Dark Soul**
+**Inputs:** **Boots (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket Chest ❌
 
-**Inputs:** 
+## 2 Socket
 
-**Outputs:**
+**Inputs:** **Boots (Rare)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 3 Socket
 
-**Inputs:** **Body Armor** (Mag) + **Dark Soul**
+**Inputs:** **Boots (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Body Armor** (Mag) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Merc Equip (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Body Armor** (Mag) + **Dark Soul**
+**Inputs:** **Merc Equip (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket Shield ❌
 
-**Inputs:** 
+## 3 Socket
 
-**Outputs:**
+**Inputs:** **Merc Equip (Rare)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 1 Socket
 
-**Inputs:** **Shield** (Mag) + **Dark Soul**
+**Inputs:** **Armor (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Shield** (Mag) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Armor (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Shield** (Mag) + **Dark Soul**
+**Inputs:** **Armor (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 4 Socket Weapons ❌
 
-**Inputs:** 
+## 1 Socket
 
-**Outputs:**
+**Inputs:** **Any Shield (Rare)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 580) ✅
+## 2 Socket
 
-**Inputs:** **Weapon** (Mag) + **Dark Soul**
+**Inputs:** **Any Shield (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 804) ✅
 
-**Inputs:** **Weapon** (Mag) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Any Shield (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 916) ✅
+## 1 Socket
 
-**Inputs:** **Weapon** (Mag) + **Dark Soul**
+**Inputs:** **Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 4 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Weapon** (Mag) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Weapon (Rare)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Weapon (Rare)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## RARE CORRUPTIONS ---------------- ❌
 
-**Inputs:** 
+## 4 Socket
 
-**Outputs:**
+**Inputs:** **Weapon (Rare)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## Set Corruptor
 
-**Inputs:** 
+**Inputs:** **any (Set)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## Rare Corruptor ✅
 
-**Inputs:** **Any Item** (Rar) + **Dark Soul**
+## Brick
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
+**Inputs:** **any (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## 1 Socket
 
-**Inputs:** **Any Item** (Rar) + **Dark Soul**
+**Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 6 Socket Bows ❌
 
-**Inputs:** 
+## 2 Socket
 
-**Outputs:**
+**Inputs:** **Bow (Set)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 3 Socket
 
-**Inputs:** **Bow** (Rar) + **Dark Soul**
+**Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 622) ✅
 
-**Inputs:** **Bow** (Rar) + **Dark Soul**
+## 4 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## 5 Socket
 
-**Inputs:** **Bow** (Rar) + **Dark Soul**
+**Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 4 Socket (Outcome Weight: 860) ✅
 
-**Inputs:** **Bow** (Rar) + **Dark Soul**
+## 6 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Bow (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **Bow** (Rar) + **Dark Soul**
+**Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 6 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Bow** (Rar) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket Crossbows ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 468) ✅
 
-**Inputs:** **Crossbow** (Rar) + **Dark Soul**
+## 4 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## 5 Socket
 
-**Inputs:** **Crossbow** (Rar) + **Dark Soul**
+**Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 748) ✅
 
-**Inputs:** **Crossbow** (Rar) + **Dark Soul**
+## 6 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Crossbow (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## 1 Socket
 
-**Inputs:** **Crossbow** (Rar) + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 5 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Crossbow** (Rar) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Crossbow** (Rar) + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Handed Sockets ❌
 
-**Inputs:** 
+## 4 Socket
 
-**Outputs:**
+**Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## 5 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 622) ✅
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Dark Soul**
+## 6 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **2Handed Melee Weapon (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## Rings
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Dark Soul**
+**Inputs:** **Ring (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 4 Socket (Outcome Weight: 860) ✅
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Dark Soul**
+## Amulet
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Amulet (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Dark Soul**
+**Inputs:** **Belt (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 6 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **2Handed Melee Weapon** (Rar) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Belt (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **Gloves (Set)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## Rings (Outcome Weight: 1000) ✅
 
-**Inputs:** **Ring** (Rar) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Gloves (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Amulet (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Amulet** (Rar) + **Dark Soul**
+**Inputs:** **Gloves (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket Belts ❌
 
-**Inputs:** 
+## 1 Socket
 
-**Outputs:**
+**Inputs:** **Boots (Set)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 895) ✅
+## 2 Socket
 
-**Inputs:** **Belt** (Rar) + **Dark Soul**
+**Inputs:** **Boots (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Belt** (Rar) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Boots (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Gloves ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **Merc Equip (Set)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 804) ✅
 
-**Inputs:** **Gloves** (Rar) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Merc Equip (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 3 Socket
 
-**Inputs:** **Gloves** (Rar) + **Dark Soul**
+**Inputs:** **Merc Equip (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Gloves** (Rar) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Armor (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Boots ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Armor (Set)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 804) ✅
 
-**Inputs:** **Boots** (Rar) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Armor (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 1 Socket
 
-**Inputs:** **Boots** (Rar) + **Dark Soul**
+**Inputs:** **Any Shield (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Boots** (Rar) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Any Shield (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Helm ❌
+## 3 Socket
 
-**Inputs:** 
+**Inputs:** **Any Shield (Set)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 804) ✅
 
-**Inputs:** **Helm** (Rar) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Weapon (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## 2 Socket
 
-**Inputs:** **Helm** (Rar) + **Dark Soul**
+**Inputs:** **Weapon (Set)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Helm** (Rar) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Weapon (Set)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Chest ❌
+## 4 Socket
 
-**Inputs:** 
+**Inputs:** **Weapon (Set)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 804) ✅
 
-**Inputs:** **Body Armor** (Rar) + **Dark Soul**
+## Unique Corruptor
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Any Armor (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## Unique Corruptor
 
-**Inputs:** **Body Armor** (Rar) + **Dark Soul**
+**Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Body Armor** (Rar) + **Dark Soul**
+## Unique Corruptor
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Ring (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket Shield ❌
+## Unique Corruptor
 
-**Inputs:** 
+**Inputs:** **Amulet (Unique)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 804) ✅
 
-**Inputs:** **Shield** (Rar) + **Dark Soul**
+## Brick
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Any Armor (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 944) ✅
+## Brick
 
-**Inputs:** **Shield** (Rar) + **Dark Soul**
+**Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Shield** (Rar) + **Dark Soul**
+## Brick
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Ring (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
 ---
 
-## 4 Socket Weapons ❌
+## Brick
 
-**Inputs:** 
+**Inputs:** **Amulet (Unique)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 580) ✅
 
-**Inputs:** **Weapon** (Rar) + **Dark Soul**
+## Dragonscale
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Dragonscale** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 804) ✅
+## Spirit Ward
 
-**Inputs:** **Weapon** (Rar) + **Dark Soul**
+**Inputs:** **Spirit Ward** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 916) ✅
 
-**Inputs:** **Weapon** (Rar) + **Dark Soul**
+## Ravenlore
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Ravenlore** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 1000) ✅
+## Steel Carapace
 
-**Inputs:** **Weapon** (Rar) + **Dark Soul**
+**Inputs:** **Steel Carapice** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## Unnamed Recipe ❌
 
-**Inputs:** 
+## Stone Crusher
 
-**Outputs:**
+**Inputs:** **Stone Crusher** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## SET CORRUPTIONS ---------------- ❌
+## Schaefer's Hammer
 
-**Inputs:** 
+**Inputs:** **Schaefer's Hammer** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## Unnamed Recipe ❌
 
-**Inputs:** 
+## Fleshripper
 
-**Outputs:**
+**Inputs:** **Fleshripper** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Set Corruptor ✅
+## Gut Siphon
 
-**Inputs:** **Any Item** (Set) + **Dark Soul**
+**Inputs:** **Gutsiphon** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## Brick (Outcome Weight: 300) ✅
 
-**Inputs:** **Any Item** (Set) + **Dark Soul**
+## Frostwind
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Frostwind** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket Bows ❌
+## Messerschmidt's Reaver
 
-**Inputs:** 
+**Inputs:** **Messerschmidt's Reaver** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 468) ✅
 
-**Inputs:** **Bow** (Set) + **Dark Soul**
+## Giant Skull
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Giantskull** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## Gargoyle's Bite
 
-**Inputs:** **Bow** (Set) + **Dark Soul**
+**Inputs:** **Gargoyle's Bite** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 748) ✅
 
-**Inputs:** **Bow** (Set) + **Dark Soul**
+## Steel Pillar
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Steelpillar** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## Death's Web
 
-**Inputs:** **Bow** (Set) + **Dark Soul**
+**Inputs:** **Deaths's Web** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 5 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Bow** (Set) + **Dark Soul**
+## Earth Shifter
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Earthshifter** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## The Cranium Basher
 
-**Inputs:** **Bow** (Set) + **Dark Soul**
+**Inputs:** **Dragonscale** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 6 Socket Crossbows ❌
 
-**Inputs:** 
+## Templar's Might
 
-**Outputs:**
+**Inputs:** **Templar's Might** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 468) ✅
+## Tyrael's Might
 
-**Inputs:** **Crossbow** (Set) + **Dark Soul**
+**Inputs:** **Tyrael's Might** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 622) ✅
 
-**Inputs:** **Crossbow** (Set) + **Dark Soul**
+## Steelrend
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Steelrend** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 748) ✅
+## Shadow Dancer
 
-**Inputs:** **Crossbow** (Set) + **Dark Soul**
+**Inputs:** **Shadowdancer** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 4 Socket (Outcome Weight: 860) ✅
 
-**Inputs:** **Crossbow** (Set) + **Dark Soul**
+## Ghostflame
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Ghostflame** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 5 Socket (Outcome Weight: 944) ✅
+## Windforce
 
-**Inputs:** **Crossbow** (Set) + **Dark Soul**
+**Inputs:** **Windforce** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 6 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Crossbow** (Set) + **Dark Soul**
+## Executioner's Justice
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Executioner's Justice** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Handed Sockets ❌
+## Stormspire
 
-**Inputs:** 
+**Inputs:** **Stormspire** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 468) ✅
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Dark Soul**
+## Death's Fathom
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Fathom** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 622) ✅
+## Griffon's Eye
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Dark Soul**
+**Inputs:** **Griffon's Eye** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket (Outcome Weight: 748) ✅
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Dark Soul**
+## Crown of Ages
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Crown of Ages** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 4 Socket (Outcome Weight: 860) ✅
+## The Grandfather
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Dark Soul**
+**Inputs:** **The Grandfather** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 5 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Dark Soul**
+## Astreon's Iron Ward
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Ironward** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 6 Socket (Outcome Weight: 1000) ✅
+## Darkforce Spawn
 
-**Inputs:** **2Handed Melee Weapon** (Set) + **Dark Soul**
+**Inputs:** **Darkforge Spawn** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 1 Socket ❌
 
-**Inputs:** 
+## Death Cleaver
 
-**Outputs:**
+**Inputs:** **Deathcleaver** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Rings (Outcome Weight: 1000) ✅
+## Mang Song's Lesson
 
-**Inputs:** **Ring** (Set) + **Dark Soul**
+**Inputs:** **Mang Song's Lesson** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## Amulet (Outcome Weight: 1000) ✅
 
-**Inputs:** **Amulet** (Set) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket Belts ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## 1 Socket (Outcome Weight: 895) ✅
 
-**Inputs:** **Belt** (Set) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 2 Socket (Outcome Weight: 1000) ✅
+## 4 Socket
 
-**Inputs:** **Belt** (Set) + **Dark Soul**
+**Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket Gloves ❌
 
-**Inputs:** 
+## 5 Socket
 
-**Outputs:**
+**Inputs:** **Bow (Unique)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 6 Socket
 
-**Inputs:** **Gloves** (Set) + **Dark Soul**
+**Inputs:** **Bow (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Gloves** (Set) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Gloves** (Set) + **Dark Soul**
+**Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket Boots ❌
 
-**Inputs:** 
+## 3 Socket
 
-**Outputs:**
+**Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 4 Socket
 
-**Inputs:** **Boots** (Set) + **Dark Soul**
+**Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Boots** (Set) + **Dark Soul**
+## 5 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 6 Socket
 
-**Inputs:** **Boots** (Set) + **Dark Soul**
+**Inputs:** **Crossbow (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket Helm ❌
 
-**Inputs:** 
+## 1 Socket
 
-**Outputs:**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 2 Socket
 
-**Inputs:** **Helm** (Set) + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Helm** (Set) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 4 Socket
 
-**Inputs:** **Helm** (Set) + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket Chest ❌
 
-**Inputs:** 
+## 5 Socket
 
-**Outputs:**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 6 Socket
 
-**Inputs:** **Body Armor** (Set) + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Body Armor** (Set) + **Dark Soul**
+## Rings
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Ring (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## Amulet
 
-**Inputs:** **Body Armor** (Set) + **Dark Soul**
+**Inputs:** **Amulet (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 3 Socket Shield ❌
 
-**Inputs:** 
+## 1 Socket
 
-**Outputs:**
+**Inputs:** **Belt (Unique)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 2 Socket
 
-**Inputs:** **Shield** (Set) + **Dark Soul**
+**Inputs:** **Belt (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 944) ✅
 
-**Inputs:** **Shield** (Set) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Gloves (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Shield** (Set) + **Dark Soul**
+**Inputs:** **Gloves (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 4 Socket Weapons ❌
 
-**Inputs:** 
+## 3 Socket
 
-**Outputs:**
+**Inputs:** **Gloves (Unique)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 1 Socket (Outcome Weight: 580) ✅
+## 1 Socket
 
-**Inputs:** **Weapon** (Set) + **Dark Soul**
+**Inputs:** **Boots (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 2 Socket (Outcome Weight: 804) ✅
 
-**Inputs:** **Weapon** (Set) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Boots (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## 3 Socket (Outcome Weight: 916) ✅
+## 3 Socket
 
-**Inputs:** **Weapon** (Set) + **Dark Soul**
+**Inputs:** **Boots (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## 4 Socket (Outcome Weight: 1000) ✅
 
-**Inputs:** **Weapon** (Set) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Merc Equip (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 2 Socket
 
-**Inputs:** 
+**Inputs:** **Merc Equip (Unique)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## UNIQUE CORRUPTIONS ---------------- ❌
 
-**Inputs:** 
+## 3 Socket
 
-**Outputs:**
+**Inputs:** **Merc Equip (Unique)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unnamed Recipe ❌
+## 1 Socket
 
-**Inputs:** 
+**Inputs:** **Armor (Unique)** + **The Divine Standard**
 
-**Outputs:**
+**Outputs:** **Use Item [Extra: corruption2]**
 
-
 ---
-
-## Unique Corruptor ✅
 
-**Inputs:** **Armor** (Uni) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
+**Inputs:** **Armor (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unique Corruptor ✅
+## 3 Socket
 
-**Inputs:** **Weapon** (Uni) + **Dark Soul**
+**Inputs:** **Armor (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## Unique Corruptor ✅
 
-**Inputs:** **Ring** (Uni) + **Dark Soul**
+## 1 Socket
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
+**Inputs:** **Any Shield (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Unique Corruptor ✅
+## 2 Socket
 
-**Inputs:** **Amulet** (Uni) + **Dark Soul**
+**Inputs:** **Any Shield (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## Brick (Outcome Weight: 300) ✅
 
-**Inputs:** **Armor** (Uni) + **Dark Soul**
+## 3 Socket
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Any Shield (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## 1 Socket
 
-**Inputs:** **Weapon** (Uni) + **Dark Soul**
+**Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## Brick (Outcome Weight: 300) ✅
 
-**Inputs:** **Ring** (Uni) + **Dark Soul**
+## 2 Socket
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
+**Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Dark Soul**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Brick (Outcome Weight: 300) ✅
+## 3 Socket
 
-**Inputs:** **Amulet** (Uni) + **Dark Soul**
+**Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
 ---
-
-## Unnamed Recipe ❌
 
-**Inputs:** 
+## 4 Socket
 
-**Outputs:**
+**Inputs:** **Weapon (Unique)** + **The Divine Standard**
 
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Dragonscale (Outcome Weight: 1000) ✅
+## Craft Corruptor
 
-**Inputs:** **Dragonscale** + **Dark Soul**
+**Inputs:** **any (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
-**Zod Rune**
-
 ---
 
-## Spirit Ward (Outcome Weight: 1000) ✅
+## Brick
 
-**Inputs:** **Spirit Ward** + **Dark Soul**
+**Inputs:** **any (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Type (Rare) [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 1 Socket
 
----
+**Inputs:** **Bow (crf)** + **The Divine Standard**
 
-## Ravenlore (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Ravenlore** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+## 2 Socket
 
-**Dark Soul**
+**Inputs:** **Bow (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Steel Carapace (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Steel Carapice** + **Dark Soul**
+**Inputs:** **Bow (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 4 Socket
 
----
+**Inputs:** **Bow (crf)** + **The Divine Standard**
 
-## Stone Crusher (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Stone Crusher** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+## 5 Socket
 
-**Dark Soul**
+**Inputs:** **Bow (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Schaefer's Hammer (Outcome Weight: 1000) ✅
+## 6 Socket
 
-**Inputs:** **Schaefer's Hammer** + **Dark Soul**
+**Inputs:** **Bow (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 1 Socket
 
----
+**Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-## Fleshripper (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Fleshripper** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+## 2 Socket
 
-**Dark Soul**
+**Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Gut Siphon (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Gutsiphon** + **Dark Soul**
+**Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 4 Socket
 
----
+**Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-## Frostwind (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Frostwind** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+## 5 Socket
 
-**Dark Soul**
+**Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Messerschmidt's Reaver (Outcome Weight: 1000) ✅
+## 6 Socket
 
-**Inputs:** **Messerschmidt's Reaver** + **Dark Soul**
+**Inputs:** **Crossbow (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 1 Socket
 
----
+**Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-## Giant Skull (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Giantskull** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+## 2 Socket
 
-**Dark Soul**
+**Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Gargoyle's Bite (Outcome Weight: 1000) ✅
+## 3 Socket
 
-**Inputs:** **Gargoyle's Bite** + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 4 Socket
 
----
+**Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-## Steel Pillar (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Steelpillar** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+## 5 Socket
 
-**Dark Soul**
+**Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Death's Web (Outcome Weight: 1000) ✅
+## 6 Socket
 
-**Inputs:** **Deaths's Web** + **Dark Soul**
+**Inputs:** **2Handed Melee Weapon (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## Rings
 
----
+**Inputs:** **Ring (crf)** + **The Divine Standard**
 
-## Earth Shifter (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Earthshifter** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+## Amulet
 
-**Dark Soul**
+**Inputs:** **Amulet (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## The Cranium Basher (Outcome Weight: 1000) ✅
+## 1 Socket
 
-**Inputs:** **Dragonscale** + **Dark Soul**
+**Inputs:** **Belt (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 2 Socket
 
----
+**Inputs:** **Belt (crf)** + **The Divine Standard**
 
-## Templar's Might (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Templar's Might** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+## 1 Socket
 
-**Dark Soul**
+**Inputs:** **Gloves (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Tyrael's Might (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Tyrael's Might** + **Dark Soul**
+**Inputs:** **Gloves (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 3 Socket
 
----
+**Inputs:** **Gloves (crf)** + **The Divine Standard**
 
-## Steelrend (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Steelrend** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+## 1 Socket
 
-**Dark Soul**
+**Inputs:** **Boots (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Shadow Dancer (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Shadowdancer** + **Dark Soul**
+**Inputs:** **Boots (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 3 Socket
 
----
+**Inputs:** **Boots (crf)** + **The Divine Standard**
 
-## Ghostflame (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Ghostflame** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+## 1 Socket
 
-**Dark Soul**
+**Inputs:** **Merc Equip (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Windforce (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Windforce** + **Dark Soul**
+**Inputs:** **Merc Equip (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 3 Socket
 
----
+**Inputs:** **Merc Equip (crf)** + **The Divine Standard**
 
-## Executioner's Justice (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Executioner's Justice** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+## 1 Socket
 
-**Dark Soul**
+**Inputs:** **Armor (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Stormspire (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Stormspire** + **Dark Soul**
+**Inputs:** **Armor (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 3 Socket
 
----
+**Inputs:** **Armor (crf)** + **The Divine Standard**
 
-## Death's Fathom (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Fathom** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+## 1 Socket
 
-**Dark Soul**
+**Inputs:** **Any Shield (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Griffon's Eye (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **Griffon's Eye** + **Dark Soul**
+**Inputs:** **Any Shield (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
+---
 
-**Zod Rune**
+## 3 Socket
 
----
+**Inputs:** **Any Shield (crf)** + **The Divine Standard**
 
-## Crown of Ages (Outcome Weight: 1000) ✅
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Inputs:** **Crown of Ages** + **Dark Soul**
+---
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
+## 1 Socket
 
-**Dark Soul**
+**Inputs:** **Weapon (crf)** + **The Divine Standard**
 
-**Zod Rune**
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## The Grandfather (Outcome Weight: 1000) ✅
+## 2 Socket
 
-**Inputs:** **The Grandfather** + **Dark Soul**
+**Inputs:** **Weapon (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
-**Zod Rune**
-
----
-
-## Astreon's Iron Ward (Outcome Weight: 1000) ✅
-
-**Inputs:** **Ironward** + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
-**Zod Rune**
-
----
-
-## Darkforce Spawn (Outcome Weight: 1000) ✅
-
-**Inputs:** **Darkforge Spawn** + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
-**Zod Rune**
-
----
-
-## Death Cleaver (Outcome Weight: 1000) ✅
-
-**Inputs:** **Deathcleaver** + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
-**Zod Rune**
-
----
-
-## Mang Song's Lesson (Outcome Weight: 1000) ✅
-
-**Inputs:** **Mang Song's Lesson** + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
-**Zod Rune**
-
----
-
-## Unnamed Recipe ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 6 Socket Bows ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 468) ✅
-
-**Inputs:** **Bow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 622) ✅
-
-**Inputs:** **Bow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 748) ✅
-
-**Inputs:** **Bow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 4 Socket (Outcome Weight: 860) ✅
-
-**Inputs:** **Bow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 5 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Bow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 6 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Bow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 6 Socket Crossbows ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 468) ✅
-
-**Inputs:** **Crossbow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 622) ✅
-
-**Inputs:** **Crossbow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 748) ✅
-
-**Inputs:** **Crossbow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 4 Socket (Outcome Weight: 860) ✅
-
-**Inputs:** **Crossbow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 5 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Crossbow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 6 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Crossbow** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Handed Sockets ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 468) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 622) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 748) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 4 Socket (Outcome Weight: 860) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 5 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 6 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 1 Socket ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## Rings (Outcome Weight: 1000) ✅
-
-**Inputs:** **Ring** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## Amulet (Outcome Weight: 1000) ✅
-
-**Inputs:** **Amulet** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket Belts ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 895) ✅
-
-**Inputs:** **Belt** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Belt** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket Gloves ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Gloves** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Gloves** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Gloves** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket Boots ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Boots** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Boots** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Boots** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket Helm ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Helm** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Helm** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Helm** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket Chest ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Body Armor** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Body Armor** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Body Armor** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket Shield ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Shield** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Shield** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Shield** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 4 Socket Weapons ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 580) ✅
-
-**Inputs:** **Weapon** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Weapon** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 916) ✅
-
-**Inputs:** **Weapon** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 4 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Weapon** (Uni) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## Unnamed Recipe ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## CRAFT CORRUPTIONS ---------------- ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## Unnamed Recipe ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## Craft Corruptor ✅
-
-**Inputs:** **Any Item** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1-1000 (% chance)
-
-**Dark Soul**
-
----
-
-## Brick (Outcome Weight: 300) ✅
-
-**Inputs:** **Any Item** (Crf) + **Dark Soul**
-
-**Outputs:**
-**usetype** (Rar)
--  1001 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 6 Socket Bows ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 468) ✅
-
-**Inputs:** **Bow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 622) ✅
-
-**Inputs:** **Bow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 748) ✅
-
-**Inputs:** **Bow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 4 Socket (Outcome Weight: 860) ✅
-
-**Inputs:** **Bow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 5 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Bow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 6 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Bow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 6 Socket Crossbows ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 468) ✅
-
-**Inputs:** **Crossbow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 622) ✅
-
-**Inputs:** **Crossbow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 748) ✅
-
-**Inputs:** **Crossbow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 4 Socket (Outcome Weight: 860) ✅
-
-**Inputs:** **Crossbow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 5 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Crossbow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 6 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Crossbow** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Handed Sockets ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 468) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 622) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 748) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 4 Socket (Outcome Weight: 860) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 5 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 5 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 6 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **2Handed Melee Weapon** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 6 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 1 Socket ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## Rings (Outcome Weight: 1000) ✅
-
-**Inputs:** **Ring** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## Amulet (Outcome Weight: 1000) ✅
-
-**Inputs:** **Amulet** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket Belts ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 895) ✅
-
-**Inputs:** **Belt** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Belt** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket Gloves ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Gloves** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Gloves** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Gloves** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket Boots ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Boots** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Boots** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Boots** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket Helm ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Helm** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Helm** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Helm** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket Chest ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
 ---
 
-## 1 Socket (Outcome Weight: 804) ✅
+## 3 Socket
 
-**Inputs:** **Body Armor** (Crf) + **Dark Soul**
+**Inputs:** **Weapon (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Body Armor** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Body Armor** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket Shield ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Shield** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 944) ✅
-
-**Inputs:** **Shield** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Shield** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 4 Socket Weapons ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## 1 Socket (Outcome Weight: 580) ✅
-
-**Inputs:** **Weapon** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 1 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 2 Socket (Outcome Weight: 804) ✅
-
-**Inputs:** **Weapon** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 2 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 3 Socket (Outcome Weight: 916) ✅
-
-**Inputs:** **Weapon** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 3 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## 4 Socket (Outcome Weight: 1000) ✅
-
-**Inputs:** **Weapon** (Crf) + **Dark Soul**
-
-**Outputs:**
-**useitem**
--  1001 (% chance)
-- Socketed (#) 4 (% chance)
-- 1 through 1000 1 (% chance)
-
-**Dark Soul**
-
----
-
-## Unnamed Recipe ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## TRANSMOGIFY ❌
-
-**Inputs:** 
-
-**Outputs:**
-
-
----
-
-## White ✅
-
-**Inputs:** **Body Armor** + **White dye**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
--  1 (% chance)
--  1 (% chance)
-
----
-
-## Black ✅
-
-**Inputs:** **Body Armor** + **Black dye**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
--  1 (% chance)
--  1 (% chance)
-
----
-
-## Remove White (Outcome Weight: 1) ✅
-
-**Inputs:** **Body Armor** + **White dye remover**
-
-**Outputs:**
-**useitem**
--  -1 (% chance)
--  -1 (% chance)
--  -1 (% chance)
-
----
-
-## Remove Black (Outcome Weight: 1) ✅
-
-**Inputs:** **Body Armor** + **White dye remover**
-
-**Outputs:**
-**useitem**
--  -1 (% chance)
--  -1 (% chance)
--  -1 (% chance)
-
----
-
-## White ✅
-
-**Inputs:** **Helm** + **White dye**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
--  1 (% chance)
--  1 (% chance)
-
----
-
-## Black ✅
-
-**Inputs:** **Helm** + **Black dye**
-
-**Outputs:**
-**useitem**
--  1 (% chance)
--  1 (% chance)
--  1 (% chance)
-
----
-
-## Remove White (Outcome Weight: 1) ✅
-
-**Inputs:** **Helm** + **White dye remover**
-
-**Outputs:**
-**useitem**
--  -1 (% chance)
--  -1 (% chance)
--  -1 (% chance)
-
----
-
-## Remove Black (Outcome Weight: 1) ✅
-
-**Inputs:** **Helm** + **White dye remover**
-
-**Outputs:**
-**useitem**
--  -1 (% chance)
--  -1 (% chance)
--  -1 (% chance)
-
 ---
 
-## White ✅
+## 4 Socket
 
-**Inputs:** **Shield** + **White dye**
+**Inputs:** **Weapon (crf)** + **The Divine Standard**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
--  1 (% chance)
--  1 (% chance)
+**Outputs:** **Use Item [Extra: corruption2]**
 
 ---
 
-## Black ✅
+## White
 
-**Inputs:** **Shield** + **Black dye**
+**Inputs:** **Armor** + **Dyed: White**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
--  1 (% chance)
--  1 (% chance)
+**Outputs:** **Use Item [Extra: state]**
 
 ---
 
-## Remove White (Outcome Weight: 1) ✅
+## Black
 
-**Inputs:** **Shield** + **White dye remover**
+**Inputs:** **Armor** + **Dyed: Black**
 
-**Outputs:**
-**useitem**
--  -1 (% chance)
--  -1 (% chance)
--  -1 (% chance)
+**Outputs:** **Use Item [Extra: state]**
 
 ---
 
-## Remove Black (Outcome Weight: 1) ✅
+## Remove White
 
-**Inputs:** **Shield** + **White dye remover**
+**Inputs:** **Armor** + **Dye Cleanser**
 
-**Outputs:**
-**useitem**
--  -1 (% chance)
--  -1 (% chance)
--  -1 (% chance)
+**Outputs:** **Use Item [Extra: state]**
 
 ---
 
-## White ✅
+## Remove Black
 
-**Inputs:** **Weapon** + **White dye**
+**Inputs:** **Armor** + **Dye Cleanser**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
--  1 (% chance)
--  1 (% chance)
+**Outputs:** **Use Item [Extra: state]**
 
 ---
 
-## Black ✅
+## White
 
-**Inputs:** **Weapon** + **Black dye**
+**Inputs:** **Merc Equip** + **Dyed: White**
 
-**Outputs:**
-**useitem**
--  1 (% chance)
--  1 (% chance)
--  1 (% chance)
+**Outputs:** **Use Item [Extra: state]**
 
 ---
 
-## Remove White (Outcome Weight: 1) ✅
+## Black
 
-**Inputs:** **Weapon** + **White dye remover**
+**Inputs:** **Merc Equip** + **Dyed: Black**
 
-**Outputs:**
-**useitem**
--  -1 (% chance)
--  -1 (% chance)
--  -1 (% chance)
+**Outputs:** **Use Item [Extra: state]**
 
 ---
 
-## Remove Black (Outcome Weight: 1) ✅
+## Remove White
 
-**Inputs:** **Weapon** + **White dye remover**
+**Inputs:** **Merc Equip** + **Dye Cleanser**
 
-**Outputs:**
-**useitem**
--  -1 (% chance)
--  -1 (% chance)
--  -1 (% chance)
+**Outputs:** **Use Item [Extra: state]**
 
 ---
-
-## SPLASH CHARM UPGRADES WIP ❌
 
-**Inputs:** 
+## Remove Black
 
-**Outputs:**
+**Inputs:** **Merc Equip** + **Dye Cleanser**
 
+**Outputs:** **Use Item [Extra: state]**
 
 ---
 
-## UPGRADE SPLASH CHARM TIER - T1 Splash Charm & El-Rune = T2 Splash Charm ❌
+## White
 
-**Inputs:** **Ravaging T1** + **El Rune**
+**Inputs:** **Any Shield** + **Dyed: White**
 
-**Outputs:**
-**Ravaging T2**
+**Outputs:** **Use Item [Extra: state]**
 
-**Ravaging T2**
-
 ---
-
-## UPGRADE SPLASH CHARM TIER - T2 Splash Charm & Nef-Rune  = T3 Splash Charm ❌
 
-**Inputs:** **Ravaging T2** + **Nef Rune**
+## Black
 
-**Outputs:**
-**Ravaging T3**
+**Inputs:** **Any Shield** + **Dyed: Black**
 
-**Ravaging T3**
+**Outputs:** **Use Item [Extra: state]**
 
 ---
 
-## UPGRADE SPLASH CHARM TIER - T3 Splash Charm & Sol-Rune & Flawless Skull = T4 Splash Charm ❌
+## Remove White
 
-**Inputs:** **Ravaging T3** + **Sol Rune** + **1kl**
+**Inputs:** **Any Shield** + **Dye Cleanser**
 
-**Outputs:**
-**Ravaging T4**
+**Outputs:** **Use Item [Extra: state]**
 
-**Ravaging T4**
-
 ---
-
-## UPGRADE SPLASH CHARM TIER - T4 Splash Charm & Hel-Rune & Flawless Skull = T5 Splash Charm ❌
 
-**Inputs:** **Ravaging T4** + **Hel Rune** + **1kl**
+## Remove Black
 
-**Outputs:**
-**Ravaging T5**
+**Inputs:** **Any Shield** + **Dye Cleanser**
 
-**Ravaging T5**
+**Outputs:** **Use Item [Extra: state]**
 
 ---
 
-## UPGRADE SPLASH CHARM TIER - T5 Splash Charm & Fal-Rune & Perfect Skull = T6 Splash Charm ❌
+## White
 
-**Inputs:** **Ravaging T5** + **Fal Rune** + **1kz**
+**Inputs:** **Weapon** + **Dyed: White**
 
-**Outputs:**
-**Ravaging T6**
+**Outputs:** **Use Item [Extra: state]**
 
-**Ravaging T6**
-
 ---
-
-## UPGRADE SPLASH CHARM TIER - T6 Splash Charm & Pul-Rune & Eth-Rune & Perfect Skull = T7 Splash Charm ❌
 
-**Inputs:** **Ravaging T6** + **Um Rune** + **Eth Rune**
+## Black
 
-**Outputs:**
-**Ravaging T7**
+**Inputs:** **Weapon** + **Dyed: Black**
 
-**Ravaging T7**
+**Outputs:** **Use Item [Extra: state]**
 
 ---
 
-## UPGRADE SPLASH CHARM TIER - T7 Splash Charm & Mal-Rune & Tal-Rune & Perfect Skull = T8 Splash Charm ❌
+## Remove White
 
-**Inputs:** **Ravaging T7** + **Ist Rune** + **Tal Rune**
+**Inputs:** **Weapon** + **Dye Cleanser**
 
-**Outputs:**
-**Ravaging T8**
+**Outputs:** **Use Item [Extra: state]**
 
-**Ravaging T8**
-
 ---
 
-## UPGRADE SPLASH CHARM TIER - T8 Splash Charm & Ohm-Rune & Ral-Rune & Charsi Malus & Larzuk Malus = T9 Splash Charm ❌
+## Remove Black
 
-**Inputs:** **Ravaging T8** + **Lo Rune** + **Ral Rune** + **Charsi's Malus** + **Larzuk's Forging Hammer**
+**Inputs:** **Weapon** + **Dye Cleanser**
 
-**Outputs:**
-**Ravaging T9**
+**Outputs:** **Use Item [Extra: state]**
 
-**Ravaging T9**
-
 ---
-

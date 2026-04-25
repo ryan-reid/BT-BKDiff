@@ -1,7 +1,8 @@
 import os
+import re
 from typing import List, Dict, Optional, Any
 from d2_repository import D2Repository, normalize_d2_value
-from d2_models import PropertyDTO, AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, ExcelDiffRowDTO
+from d2_models import PropertyDTO, AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, ExcelDiffRowDTO, CubeRecipeDTO
 
 class PropertyResolverService:
     def __init__(self, repo: D2Repository, property_groups: Optional[List[Dict[str, str]]] = None):
@@ -151,8 +152,6 @@ class PropertyResolverService:
         prop = self.properties.get(code_lower)
         if not prop:
             range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
-            if "-affix" in code_lower:
-                return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
         
         func1 = prop.get('func1', '0').strip()
@@ -167,15 +166,15 @@ class PropertyResolverService:
         # Check if it's a level scaling stat to prefer format_desc over tooltip
         stat1_code = prop.get('stat1', '').lower()
         stat1 = self.stats.get(stat1_code)
-        is_level_stat = stat1 and stat1.get('op base') == 'level'
+        is_level_stat = stat1 and stat1.get('op base', '').strip().lower() == 'level'
 
         tooltip = prop.get('*Tooltip', '').strip()
         if tooltip and tooltip != '0' and not is_level_stat:
-            # Handle standard tooltips
+            func, val1 = prop.get('func1', '0').strip(), prop.get('val1', '0').strip()
             res_text = tooltip
             # Correct D2 placeholder logic: Handle multiple '#' symbols
-            if func1 in ['36', '14']:
-                res_text = res_text.replace('#', prop.get('val1', '0').strip())
+            if func in ['36', '14']:
+                res_text = res_text.replace('#', val1)
             else:
                 if res_text.count('#') > 1 and '-' in range_str:
                     parts = range_str.split('-')
@@ -186,14 +185,16 @@ class PropertyResolverService:
 
             if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(str(param), f"Tab {param}"))
             if '[Class]' in res_text:
-                if func1 == '36': cls = 'Random Class' if actual_min != actual_max else self.class_names.get(actual_min, f"Class {actual_min}")
+                if func == '36': cls = 'Random Class' if actual_min != actual_max else self.class_names.get(actual_min, f"Class {actual_min}")
                 else: 
                     set1 = prop.get('set1', '').strip()
                     cls_id = set1 if set1 and set1 != '0' else param
                     cls = self.class_names.get(str(cls_id))
                     if not cls:
+                        # Try lookup by skill class
                         skill_cls_abbr = self.skill_to_class.get(str(param).strip().lower())
-                        if skill_cls_abbr: cls = self.class_abbr_map.get(skill_cls_abbr)
+                        if skill_cls_abbr:
+                            cls = self.class_abbr_map.get(skill_cls_abbr)
                     if not cls: cls = "Class"
                 res_text = res_text.replace('[Class]', cls)
             if '[Skill]' in res_text or '%s' in res_text:
@@ -270,6 +271,146 @@ class ItemAnalyzerService:
         return {
             "name": name, "runes": runes, "base_items": [self.repo.get_string(self.item_types.get(row.get('itype1', '').strip(), {}).get('ItemType', '')) or row.get('itype1', '')],
             "properties": props, "raw_row": row
+        }
+
+class CubeAnalyzerService:
+    def __init__(self, repo: D2Repository):
+        self.repo = repo
+        self.armor = {row['code']: row for row in repo.get_excel_table('armor')}
+        self.weapons = {row['code']: row for row in repo.get_excel_table('weapons')}
+        self.misc = {row['code']: row for row in repo.get_excel_table('misc')}
+        self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
+        
+        # Prefixes and Suffixes use row index as ID
+        prefix_data = repo.get_excel_table('magicprefix')
+        self.prefixes = {str(i): row for i, row in enumerate(prefix_data)}
+        
+        suffix_data = repo.get_excel_table('magicsuffix')
+        self.suffixes = {str(i): row for i, row in enumerate(suffix_data)}
+
+    def get_item_name(self, code: str) -> str:
+        if not code: return ""
+        code = code.strip()
+        code_lower = code.lower()
+        if code_lower == "usetype": return "Use Type"
+        if code_lower == "useitem": return "Use Item"
+        
+        item = self.armor.get(code) or self.weapons.get(code) or self.misc.get(code)
+        if item:
+            name = self.repo.get_string(item.get('namestr', '').strip() or item.get('name', '').strip())
+            return name or code
+        
+        # Check item types
+        it = self.item_types.get(code)
+        if it:
+            return self.repo.get_string(it.get('ItemType', '').strip()) or code
+            
+        return code
+
+    def resolve_token(self, token: str) -> str:
+        if not token: return ""
+        token = token.strip().strip('"')
+        
+        # Handle quantity: "code,qty=3"
+        qty = ""
+        if ",qty=" in token:
+            parts = token.split(",qty=", 1)
+            token = parts[0]
+            qty = f" (Qty: {parts[1]})"
+        
+        # Handle complex codes: "amu,mag" or "rin,mag,pre=372"
+        parts = token.split(',')
+        base_code = parts[0]
+        name = self.get_item_name(base_code)
+        
+        qualities = {
+            "low": "Low Quality", "nor": "Normal", "hi": "Superior", "mag": "Magic",
+            "set": "Set", "uni": "Unique", "rar": "Rare", "ora": "Crafted", "tmp": "Tempered"
+        }
+        
+        mods = []
+        for p in parts[1:]:
+            p = p.strip().lower()
+            if p in qualities:
+                mods.append(qualities[p])
+            elif p.startswith("pre="):
+                val = p.split("=")[1]
+                pre = self.prefixes.get(val)
+                pre_name = self.repo.get_string(pre.get('Name', '')) if pre else val
+                mods.append(f"Prefix: {pre_name} ({val})")
+            elif p.startswith("suf="):
+                val = p.split("=")[1]
+                suf = self.suffixes.get(val)
+                suf_name = self.repo.get_string(suf.get('Name', '')) if suf else val
+                mods.append(f"Suffix: {suf_name} ({val})")
+            else:
+                mods.append(p)
+                
+        res = name
+        if mods:
+            res += f" ({', '.join(mods)})"
+        return f"{res}{qty}"
+
+    def resolve_output(self, out: str, mod_str: str = "", mod_val: str = "") -> str:
+        if not out: return ""
+        
+        # Reuse resolve_token for the 'out' part as it handles rin,mag,pre=372
+        res = self.resolve_token(out)
+        
+        qualities = {
+            "low": "Low Quality", "nor": "Normal", "hi": "Superior", "mag": "Magic",
+            "set": "Set", "uni": "Unique", "rar": "Rare", "ora": "Crafted", "tmp": "Tempered"
+        }
+        
+        # Handle additional mod columns
+        extra_mods = []
+        if mod_str:
+            parts = mod_str.split(',')
+            for p in parts:
+                p = p.strip().lower()
+                if p in qualities:
+                    extra_mods.append(qualities[p])
+                elif p == "pre":
+                    pre = self.prefixes.get(mod_val)
+                    pre_name = self.repo.get_string(pre.get('Name', '')) if pre else mod_val
+                    extra_mods.append(f"Prefix: {pre_name} ({mod_val})")
+                elif p == "suf":
+                    suf = self.suffixes.get(mod_val)
+                    suf_name = self.repo.get_string(suf.get('Name', '')) if suf else mod_val
+                    extra_mods.append(f"Suffix: {suf_name} ({mod_val})")
+                else:
+                    extra_mods.append(p)
+                    
+        if extra_mods:
+            # Avoid duplicate mods if already resolved via token
+            res += f" [Extra: {', '.join(extra_mods)}]"
+        return res
+
+    def analyze_recipe(self, row: Dict[str, str]) -> CubeRecipeDTO:
+        desc = row.get('description', 'Unknown Recipe').strip()
+        enabled = row.get('enabled', '1').strip() == '1'
+        
+        actual_inputs = []
+        for i in range(1, 8):
+            val = row.get(f'input {i}', '').strip()
+            if val and val != '0':
+                actual_inputs.append(self.resolve_token(val))
+                
+        outputs = []
+        for i in range(1, 4):
+            out = row.get('output' if i == 1 else f'output {i}', '').strip()
+            if out and out != '0':
+                mod_str = row.get(f'mod {i}', '').strip()
+                mod_val = row.get(f'mod {i} param', '').strip()
+                outputs.append(self.resolve_output(out, mod_str, mod_val))
+                
+        return {
+            "id": desc,
+            "description": desc,
+            "enabled": enabled,
+            "inputs": actual_inputs,
+            "outputs": outputs,
+            "raw_row": row
         }
 
 class ExcelComparisonService:
