@@ -5,7 +5,7 @@
 * **Level Requirement:** 42
 * **Properties:**
     * +1-3 to Assassin Skill Levels
-    * +1-3 to Tab 20 Skills
+    * +1-3 to Martial Arts Skills
     * +200-250% Enhanced Damage
     * +30% Faster Hit Recovery
     * -5-10% to Enemy Lightning Resistance
@@ -26,7 +26,7 @@
     * All Resistances +40-50
     * +30% Faster Hit Recovery
     * +3-4 to Shadow Disciplines Skills
-    * +3-4 to Tab 20 Skills
+    * +3-4 to Martial Arts Skills
     * +3 to Dragon Flight (Assassin only)
 
 ### Shadow Killer (Shadowkiller)
@@ -49,7 +49,7 @@
 * **Properties:**
     * +250-290% Enhanced Damage
     * +20% Increased Attack Speed
-    * +3 to Tab 20 Skills
+    * +3 to Martial Arts Skills
     * Adds 236-480 Fire Damage
     * -8-10% to Enemy Fire Resistance
     * +4 to Wake of Fire (Assassin only)
