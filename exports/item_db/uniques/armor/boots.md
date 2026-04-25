@@ -15,7 +15,7 @@
 * **Base Item:** Heavy Boots
 * **Level Requirement:** 9
 * **Properties:**
-    * item_extrablood: 3-5
+    * Unknown Prop: bloody
     * +25% Faster Run/Walk
     * 2% Mana stolen per hit
     * Cold Resist +20%
@@ -64,14 +64,14 @@
 * **Base Item:** Demonhide Boots
 * **Level Requirement:** 29
 * **Properties:**
-    * Adds 12-33-12-33 Fire Damage
+    * Adds 12-33-# Fire Damage
     * +20% Faster Run/Walk
     * +10% to Maximum Fire Resist
     * Fire Resist +30%
     * +120-150% Enhanced Defense
     * 60-100% Extra Gold from Monsters
     * +15 Defense
-    * 75-25% Chance to cast level 75-25 Blaze when struck
+    * 75-25% Chance to cast level # Blaze when struck
     * +20% Faster Hit Recovery
 
 ### Waterwalk (Waterwalk)
@@ -105,10 +105,10 @@
     * +10 to Vitality
     * +10 to Strength
     * 30-50% Better Chance of Getting Magic Items
-    * Durability: 30 of 30
+    * Durability: 30 of #
     * +35% Faster Run/Walk
     * +150-190% Enhanced Defense
-    * Adds 15-25-15-25 Damage
+    * Adds 15-25-# Damage
     * Attacker Takes Damage of 5-10
 
 ### Gore Rider (Gorerider)
@@ -121,7 +121,7 @@
     * 15% Chance of Crushing Blow
     * 10% Chance of Open Wounds
     * +160-200% Enhanced Defense
-    * Durability: 10 of 10
+    * Durability: 10 of #
 
 ### Shadow Dancer (Shadowdancer)
 * **Base Item:** Myrmidon Greaves
@@ -203,7 +203,7 @@
 * **Base Item:** Boots
 * **Level Requirement:** 10
 * **Properties:**
-    * 5-20% Chance to cast level 5-20 Static Field when struck
+    * 5-20% Chance to cast level # Static Field when struck
     * +10% Faster Run/Walk
     * Socketed ()
     * +1-10% Energy

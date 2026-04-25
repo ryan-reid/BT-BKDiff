@@ -47,13 +47,13 @@
 * **Base Item:** Battle Hammer
 * **Level Requirement:** 43
 * **Properties:**
-    * 50-20% Chance to cast level 50-20 Fissure on striking
+    * 50-20% Chance to cast level # Fissure on striking
     * Knockback
     * +30% Increased Attack Speed
     * +180% Enhanced Damage
     * Hit Blinds Target +1
     * +3-4 to Elemental Skills
-    * Durability: 50 of 50
+    * Durability: 50 of #
     * +30% Faster Cast Rate
 
 ### Bloodtree Stump (Bloodtree Stump)
@@ -66,17 +66,17 @@
     * +50 to Life
     * +4-6 to Combat Masteries Skills
     * 5% Life stolen per hit
-    * Durability: 40 of 40
+    * Durability: 40 of #
     * +50% Increased Attack Speed
 
 ### The Gavel of Pain (The Gavel of Pain)
 * **Base Item:** Martel de Fer
 * **Level Requirement:** 45
 * **Properties:**
-    * 20-22% Chance to cast level 20-22 Amplify Damage on striking
+    * 20-22% Chance to cast level # Amplify Damage on striking
     * Attacker Takes Damage of 26
     * Repairs 1 durability in  seconds
-    * Adds 12-30-12-30 Damage
+    * Adds 12-30-# Damage
     * +200-250% Enhanced Damage
     * +8 to Amplify Damage
 
@@ -84,7 +84,7 @@
 * **Base Item:** Legendary Mallet
 * **Level Requirement:** 79
 * **Properties:**
-    * 20-50% Chance to cast level 20-50 Static Field on striking
+    * 20-50% Chance to cast level # Static Field on striking
     * +100 to Life
     * + to Attack Rating (Based on Character Level)
     * Lightning Resist +75%
@@ -103,9 +103,9 @@
     * +25-30 to Strength
     * All Resistances +25-35
     * 75% Chance of Crushing Blow
-    * 100-50% Chance to cast level 100-50 Twister when you Kill an Enemy
+    * 100-50% Chance to cast level # Twister when you Kill an Enemy
     * +250-300% Enhanced Damage
-    * 30-22% Chance to cast level 30-22 Amplify Damage on striking
+    * 30-22% Chance to cast level # Amplify Damage on striking
     * Requirements --50--20%
     * 4-6% Life stolen per hit
 
@@ -129,9 +129,9 @@
     * +200-300% Enhanced Damage
     * 50% Chance of Crushing Blow
     * +60% Increased Attack Speed
-    * 40-44% Chance to cast level 40-44 Twister on striking
+    * 40-44% Chance to cast level # Twister on striking
     * +30% Faster Run/Walk
-    * 50-40% Chance to cast level 50-40 Tornado when you Kill an Enemy
+    * 50-40% Chance to cast level # Tornado when you Kill an Enemy
     * -5-15% to Enemy Physical Resistance
 
 ### Earth Shifter (Earthshifter)
@@ -139,13 +139,13 @@
 * **Level Requirement:** 69
 * **Properties:**
     * +250-300% Enhanced Damage
-    * 50% Chance to cast level 50 Volcano on striking
+    * 50% Chance to cast level # Volcano on striking
     * 35% Chance of Crushing Blow
     * +60% Increased Attack Speed
     * +14 to Volcano
     * +7 to Elemental Skills
     * +60% Faster Cast Rate
-    * 10-5% Chance to cast level 10-5 Lower Resist on striking
+    * 10-5% Chance to cast level # Lower Resist on striking
     * Requirements --50--30%
     * 6% Mana stolen per hit
 

@@ -12,7 +12,7 @@
     * +20 to Strength
     * +20 to Dexterity
     * 5-9% Life stolen per hit
-    * Adds 25-50-25-50 Damage
+    * Adds 25-50-# Damage
     * +30% Increased Attack Speed
     * -5-10% to Enemy Cold Resistance
     * -5-10% to Enemy Fire Resistance
@@ -50,7 +50,7 @@
     * +250-290% Enhanced Damage
     * +20% Increased Attack Speed
     * +3 to Tab 20 Skills
-    * Adds 236-480-236-480 Fire Damage
+    * Adds 236-480-# Fire Damage
     * -8-10% to Enemy Fire Resistance
     * +4 to Wake of Fire (Class only)
     * +4 to Wake of Inferno (Class only)
