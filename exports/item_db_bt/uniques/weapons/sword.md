@@ -31,7 +31,7 @@
     * +10 to Dexterity
     * 7% Mana stolen per hit
     * +190% Enhanced Damage
-    * Adds 20-40-# Damage
+    * Adds 20-40 Damage
     * +40% Increased Attack Speed
     * +10 to Vitality
 
@@ -43,7 +43,7 @@
     * +25 to Strength
     * +35% Increased Attack Speed
     * +150% Enhanced Damage
-    * Adds 100-# Cold Damage
+    * Adds 100-100 Cold Damage
 
 ### Azurewrath (Azurewrath)
 * **Base Item:** Crystal Sword
@@ -51,10 +51,10 @@
 * **Properties:**
     * 50% Deadly Strike
     * 10% Better Chance of Getting Magic Items
-    * Adds 3-6-# Cold Damage
+    * Adds 3-6 Cold Damage
     * +100% Enhanced Damage
-    * Durability: 25 of #
-    * Adds 5-10-# Magic Damage
+    * Durability: 25 of 25
+    * Adds 5-10 Magic Damage
 
 ### Griswold's Edge (Griswolds Edge)
 * **Base Item:** Broad Sword
@@ -72,9 +72,9 @@
 * **Properties:**
     * 5% Mana stolen per hit
     * 5% Life stolen per hit
-    * Adds 150-# Poison Damage Over # Seconds
+    * Adds 150-150 Poison Damage Over 150 Seconds
     * +20% Increased Attack Speed
-    * Adds 100-# Fire Damage
+    * Adds 100-100 Fire Damage
     * +1-3 to Fire Skills
     * +20% Faster Cast Rate
 
@@ -96,7 +96,7 @@
 * **Properties:**
     * 9% Mana stolen per hit
     * Cold Resist +20%
-    * Adds 100-# Cold Damage
+    * Adds 100-100 Cold Damage
     * +200% Enhanced Damage
     * 9% Life stolen per hit
     * +40% Increased Attack Speed
@@ -127,7 +127,7 @@
 * **Base Item:** Bastard Sword
 * **Level Requirement:** 26
 * **Properties:**
-    * Adds 192-# Poison Damage Over # Seconds
+    * Adds 192-192 Poison Damage Over 192 Seconds
     * Prevent Monster Heal
     * +30% Increased Attack Speed
     * Poison Resist +50%
@@ -163,14 +163,14 @@
 * **Base Item:** Gladius
 * **Level Requirement:** 30
 * **Properties:**
-    * Adds 50-80-# Damage
+    * Adds 50-80 Damage
     * +20% Faster Run/Walk
     * 8% Life stolen per hit
     * +30% Increased Attack Speed
     * +200% Enhanced Damage
     * +2-4 to Whirlwind (Class only)
     * +1-3 to Combat Masteries Skills
-    * Durability: 30 of #
+    * Durability: 30 of 30
 
 ### Coldsteel Eye (Coldsteel Eye)
 * **Base Item:** Cutlass
@@ -179,7 +179,7 @@
     * Hit Blinds Target +1
     * Slows Target by 30%
     * 50% Deadly Strike
-    * Durability: 50 of #
+    * Durability: 50 of 50
     * +250% Enhanced Damage
     * +35% Increased Attack Speed
     * 6% Mana stolen per hit
@@ -195,7 +195,7 @@
     * +30% Increased Attack Speed
     * -10% to Enemy Fire Resistance
     * +3 to Fire Skills
-    * Adds 300-# Fire Damage
+    * Adds 300-300 Fire Damage
     * +20% Faster Cast Rate
 
 ### Blade of Ali Baba (Blade of Ali Baba)
@@ -216,7 +216,7 @@
     * Magic Damage Reduced by 7-12
     * +40% Increased Attack Speed
     * Repairs 1 durability in  seconds
-    * Durability: 40 of #
+    * Durability: 40 of 40
     * Damage +100
     * +200% Enhanced Damage
     * 15% Deadly Strike
@@ -236,8 +236,8 @@
 * **Base Item:** Rune Sword
 * **Level Requirement:** 41
 * **Properties:**
-    * 40-20% Chance to cast level # Poison Nova on striking
-    * Adds 491-# Poison Damage Over # Seconds
+    * 40% Chance to cast level 20 Poison Nova on striking
+    * Adds 491-491 Poison Damage Over 491 Seconds
     * -5-15% to Enemy Poison Resistance
     * +20% Increased Attack Speed
     * Poison Resist +45%
@@ -247,7 +247,7 @@
 * **Base Item:** Ancient Sword
 * **Level Requirement:** 42
 * **Properties:**
-    * Durability: 100 of #
+    * Durability: 100 of 100
     * +35% Increased Attack Speed
     * Level 8-12 Holy Freeze Aura When Equipped
     * +10-20 to all Attributes
@@ -273,10 +273,10 @@
 * **Level Requirement:** 43
 * **Properties:**
     * Requirements --30%
-    * Adds 100-200-# Cold Damage
+    * Adds 100-200 Cold Damage
     * +20 to Strength
     * Freezes Target +2
-    * 50-17% Chance to cast level # Frozen Orb on striking
+    * 50% Chance to cast level 17 Frozen Orb on striking
     * +150-200% Enhanced Damage
     * +20% Increased Attack Speed
 
@@ -284,10 +284,10 @@
 * **Base Item:** Tusk Sword
 * **Level Requirement:** 44
 * **Properties:**
-    * 20-22% Chance to cast level # Amplify Damage on striking
+    * 20% Chance to cast level 22 Amplify Damage on striking
     * +% Damage to Undead (Based on Character Level)
     * Poison Resist +50%
-    * Adds 426-# Poison Damage Over # Seconds
+    * Adds 426-426 Poison Damage Over 426 Seconds
     * +200% Enhanced Damage
     * +20% Increased Attack Speed
 
@@ -295,8 +295,8 @@
 * **Base Item:** Gothic Sword
 * **Level Requirement:** 45
 * **Properties:**
-    * 50-25% Chance to cast level # Fist of the Heavens on striking
-    * Adds 1-400-# Lightning Damage
+    * 50% Chance to cast level 25 Fist of the Heavens on striking
+    * Adds 1-400 Lightning Damage
     * +200 Defense vs. Melee
     * +10% to Maximum Lightning Resist
     * +150-200% Enhanced Damage
@@ -309,7 +309,7 @@
 * **Base Item:** Zweihander
 * **Level Requirement:** 46
 * **Properties:**
-    * Adds 50-200-# Fire Damage
+    * Adds 50-200 Fire Damage
     * Fire Resist +40%
     * Fire Absorb 10%
     * Level 10-12 Holy Fire Aura When Equipped
@@ -339,7 +339,7 @@
 * **Base Item:** Phase Blade
 * **Level Requirement:** 58
 * **Properties:**
-    * 50-35% Chance to cast level # Chain Lightning on attack
+    * 50% Chance to cast level 35 Chain Lightning on attack
     * Ignore Target's Defense
     * +25 Lightning Absorb
     * +40% Increased Attack Speed
@@ -347,7 +347,7 @@
     * +1 to Resist Lightning
     * 5-7% Mana stolen per hit
     * +150-200% Enhanced Damage
-    * Adds 75-100-# Damage
+    * Adds 75-100 Damage
     * -10% to Enemy Lightning Resistance
 
 ### Doombringer (Doombringer)
@@ -358,11 +358,11 @@
     * +200-280% Enhanced Damage
     * 40% Bonus to Attack Rating
     * Repairs 1 durability in  seconds
-    * Adds 100-200-# Damage
-    * 33-35% Chance to cast level # Glacial Spike on striking
+    * Adds 100-200 Damage
+    * 33% Chance to cast level 35 Glacial Spike on striking
     * 5-7% Life stolen per hit
     * +40% Increased Attack Speed
-    * 10-60% Chance to cast level # Chilling Armor when struck
+    * 10% Chance to cast level 60 Chilling Armor when struck
 
 ### The Grandfather (The Grandfather)
 * **Base Item:** Colossus Blade
@@ -391,7 +391,7 @@
 * **Level Requirement:** 65
 * **Properties:**
     * +300-400% Damage to Demons
-    * Adds 500-# Magic Damage
+    * Adds 500-500 Magic Damage
     * 25% Chance of Crushing Blow
     * +200-300 to Attack Rating against Demons
     * +20% Increased Attack Speed
@@ -404,23 +404,23 @@
     * -10% to Enemy Cold Resistance
     * +230-270% Enhanced Damage
     * Level 10-18 Holy Freeze Aura When Equipped
-    * Adds 500-# Cold Damage
+    * Adds 500-500 Cold Damage
     * +30% Increased Attack Speed
     * +5-10 to all Attributes
     * +2 to All Skills
     * Cold Absorb 25%
-    * 40% Chance to cast level # Blizzard on attack
-    * Adds 250-500-# Magic Damage
+    * 40% Chance to cast level 40 Blizzard on attack
+    * Adds 250-500 Magic Damage
 
 ### Flamebellow (Flamebellow)
 * **Base Item:** Balrog Blade
 * **Level Requirement:** 71
 * **Properties:**
     * +170-240% Enhanced Damage
-    * 100-60% Chance to cast level # Molten Boulder when you Kill an Enemy
+    * 100% Chance to cast level 60 Molten Boulder when you Kill an Enemy
     * +1-3 to Fire Skills
     * +20-30 Fire Absorb
-    * 20-60% Chance to cast level # Firestorm on attack
+    * 20% Chance to cast level 60 Firestorm on attack
     * +1 to Fire Mastery
     * +15-20 to all Attributes
     * +12-18 to Inferno
@@ -434,11 +434,11 @@
     * +180-230% Enhanced Damage
     * Freezes Target +4
     * Cannot Be Frozen
-    * Adds 237-486-# Cold Damage
+    * Adds 237-486 Cold Damage
     * +25% Increased Attack Speed
     * +7-15 Cold Absorb
-    * 25-10% Chance to cast level # Lower Resist on attack
-    * 25-30% Chance to cast level # Frozen Orb on attack
+    * 25% Chance to cast level 10 Lower Resist on attack
+    * 25% Chance to cast level 30 Frozen Orb on attack
     * -25-40% to Enemy Cold Resistance
 
 ### Mistiltein (Mistiltein)
@@ -459,11 +459,11 @@
 * **Properties:**
     * +20% Increased Attack Speed
     * +200-250% Enhanced Damage
-    * Adds 1-480-# Lightning Damage
+    * Adds 1-480 Lightning Damage
     * +1 to Zeal
     * Prevent Monster Heal
-    * 30-40% Chance to cast level # Chain Lightning on striking
-    * 20-12% Chance to cast level # Static Field on striking
+    * 30% Chance to cast level 40 Chain Lightning on striking
+    * 20% Chance to cast level 12 Static Field on striking
     * -10-15% to Enemy Lightning Resistance
 
 ### Slayer's Edge (Slayer's Edge)
@@ -499,9 +499,9 @@
 * **Properties:**
     * 50% Deadly Strike
     * 25% Better Chance of Getting Magic Items
-    * Adds 30-60-# Cold Damage
+    * Adds 30-60 Cold Damage
     * +100-200% Enhanced Damage
-    * Durability: 25 of #
-    * Adds 50-100-# Magic Damage
+    * Durability: 25 of 25
+    * Adds 50-100 Magic Damage
     * 10-15% Better Chance of Getting Magic Items
 

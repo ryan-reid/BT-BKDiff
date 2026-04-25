@@ -96,8 +96,18 @@ class PropertyResolverService:
         tooltip = prop.get('*Tooltip', '').strip()
         if tooltip and tooltip != '0':
             func, val1 = prop.get('func1', '0').strip(), prop.get('val1', '0').strip()
-            # Fix duplicate replacement bug: replace '#' only once
-            res_text = tooltip.replace('#', val1 if func in ['36', '14'] else range_str, 1)
+            res_text = tooltip
+            # Correct D2 placeholder logic: Handle multiple '#' symbols
+            if func in ['36', '14']:
+                res_text = res_text.replace('#', val1)
+            else:
+                if res_text.count('#') > 1 and '-' in range_str:
+                    parts = range_str.split('-')
+                    for part in parts:
+                        res_text = res_text.replace('#', part, 1)
+                else:
+                    res_text = res_text.replace('#', range_str)
+
             if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(str(param), f"Tab {param}"))
             if '[Class]' in res_text:
                 if func == '36': cls = 'Random Class' if min_val != max_val else self.class_names.get(min_val, f"Class {min_val}")

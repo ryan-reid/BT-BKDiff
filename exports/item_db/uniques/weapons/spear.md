@@ -7,7 +7,7 @@
     * +10 to Maximum Damage
     * +10 to Minimum Damage
     * +20% Increased Attack Speed
-    * Adds 200-# Fire Damage
+    * Adds 200-200 Fire Damage
     * +10 to Inferno
     * +5 to Mana after each Kill
 
@@ -75,11 +75,11 @@
     * Slows Target by 75%
     * Fire Resist +50%
     * + to Life (Based on Character Level)
-    * Adds 30-50-# Damage
+    * Adds 30-50 Damage
     * +10 to Strength
     * +200% Enhanced Damage
     * +30% Increased Attack Speed
-    * 20-3% Chance to cast level # Decrepify on striking
+    * 20% Chance to cast level 3 Decrepify on striking
 
 ### Soulfeast Tine (Soulfeast Tine)
 * **Base Item:** War Fork
@@ -90,7 +90,7 @@
     * 7% Mana stolen per hit
     * +180-200% Enhanced Damage
     * +40% Increased Attack Speed
-    * Durability: 15 of #
+    * Durability: 15 of 15
     * 20% Chance of Open Wounds
 
 ### Hone Sundan (Hone Sundan)
@@ -98,7 +98,7 @@
 * **Level Requirement:** 37
 * **Properties:**
     * +20-25% Increased Attack Speed
-    * Adds 40-# Damage
+    * Adds 40-40 Damage
     * 45% Chance of Crushing Blow
     * Ethereal
     * +200-250% Enhanced Damage
@@ -110,7 +110,7 @@
     * 25% Bonus to Attack Rating
     * Replenish Life +20
     * +20% Faster Hit Recovery
-    * Adds 30-50-# Damage
+    * Adds 30-50 Damage
     * +% Damage to Demons (Based on Character Level)
     * +200% Enhanced Damage
     * +20% Increased Attack Speed
@@ -120,10 +120,10 @@
 * **Level Requirement:** 71
 * **Properties:**
     * +190-240% Enhanced Damage
-    * 66-5% Chance to cast level # Lower Resist on striking
+    * 66% Chance to cast level 5 Lower Resist on striking
     * +50% Increased Attack Speed
-    * 33-60% Chance to cast level # Poison Nova when struck
-    * 25-60% Chance to cast level # Poison Nova on striking
+    * 33% Chance to cast level 60 Poison Nova when struck
+    * 25% Chance to cast level 60 Poison Nova on striking
     * Poison Resist +75%
 
 ### Steel Pillar (Steelpillar)
@@ -137,7 +137,7 @@
     * Repairs 1 durability in  seconds
     * 44% Chance of Crushing Blow
     * 7-12% Life stolen per hit
-    * 15-33% Chance to cast level # Amplify Damage on striking
+    * 15% Chance to cast level 33 Amplify Damage on striking
     * +1-3 to Iron Skin
 
 ### Arioc's Needle (Arioc's Needle)
