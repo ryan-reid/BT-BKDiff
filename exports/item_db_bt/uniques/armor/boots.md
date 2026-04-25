@@ -15,7 +15,7 @@
 * **Base Item:** Heavy Boots
 * **Level Requirement:** 9
 * **Properties:**
-    * : 3-5
+    * Unknown property: bloody (3-5)
     * +25% Faster Run/Walk
     * 2% Mana stolen per hit
     * Cold Resist +20%
