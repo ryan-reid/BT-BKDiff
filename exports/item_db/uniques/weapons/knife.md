@@ -53,7 +53,7 @@
     * +30% Increased Attack Speed
     * +30 to Dexterity
     * +250% Enhanced Damage
-    * Adds 30-54 Damage
+    * Adds 30-54-30-54 Damage
     * +2 to Necromancer Skill Levels
     * +3 to Poison Strike
 
@@ -63,7 +63,7 @@
 * **Properties:**
     * 35% Deadly Strike
     * Ignore Target's Defense
-    * Adds 15-35 Damage
+    * Adds 15-35-15-35 Damage
     * +190-240% Enhanced Damage
     * +1-3 to Find Potion
     * +1-3 to Find Item
@@ -79,16 +79,16 @@
     * -15% to Enemy Poison Resistance
     * +60% Increased Attack Speed
     * Adds 500-500 Poison Damage Over 500 Seconds
-    * +6 to Poison Strike (Class 73 only)
-    * +6 to Poison Explosion (Class 83 only)
-    * +6 to Poison Nova (Class 92 only)
+    * +6 to Poison Strike (Class only)
+    * +6 to Poison Explosion (Class only)
+    * +6 to Poison Nova (Class only)
 
 ### Stormspike (Stormspike)
 * **Base Item:** Stiletto
 * **Level Requirement:** 41
 * **Properties:**
-    * Adds 1-120 Lightning Damage
-    * 25% Chance to cast level 50 Lightning when struck
+    * Adds 1-120-1-120 Lightning Damage
+    * 25-50% Chance to cast level 25-50 Lightning when struck
     * +30% Increased Attack Speed
     * Lightning Resist +% (Based on Character Level)
     * -5-10% to Enemy Lightning Resistance
@@ -141,8 +141,9 @@
     * +1-2 to All Skills
     * +30% Faster Cast Rate
     * Increase Maximum Life 10-15%
-    * +2-3 to Blood Oath (Class Blood Oath only)
-    * +2-3 to Blood Boil (Class Blood Boil only)
-    * +1-3 to Bind Demon (Class Bind Demon only)
+    * +2-3 to Blood Oath (Class only)
+    * +2-3 to Blood Boil (Class only)
+    * +1-3 to Bind Demon (Class only)
     * 20-35% Better Chance of Getting Magic Items
     * Slows Target by 25%
+

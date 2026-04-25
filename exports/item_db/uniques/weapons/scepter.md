@@ -23,14 +23,14 @@
     * 8% Life stolen per hit
     * +180% Enhanced Damage
     * Level 5 Might Aura When Equipped
-    * +3 to Sacrifice (Class 96 only)
-    * +3 to Zeal (Class 106 only)
+    * +3 to Sacrifice (Class only)
+    * +3 to Zeal (Class only)
 
 ### Stormeye (Stormeye)
 * **Base Item:** War Scepter
 * **Level Requirement:** 23
 * **Properties:**
-    * Adds 1-400 Lightning Damage
+    * Adds 1-400-1-400 Lightning Damage
     * +20% Faster Cast Rate
     * Replenish Life +10
     * +40% Increased Attack Speed
@@ -46,11 +46,11 @@
     * Ignore Target's Defense
     * Regenerate Mana 10-20%
     * Replenish Life +15-20
-    * 60% Chance to cast level 25 Blizzard on striking
+    * 60-25% Chance to cast level 60-25 Blizzard on striking
     * +180-220% Enhanced Damage
     * +30% Increased Attack Speed
-    * +2-3 to Holy Freeze (Class 114 only)
-    * +2-3 to Holy Shock (Class 118 only)
+    * +2-3 to Holy Freeze (Class only)
+    * +2-3 to Holy Shock (Class only)
     * +1-2 to Paladin Skill Levels
 
 ### The Fetid Sprinkler (The Fetid Sprinkler)
@@ -58,11 +58,11 @@
 * **Level Requirement:** 38
 * **Properties:**
     * +2 to Paladin Skill Levels
-    * 33% Chance to cast level 1 Decrepify on striking
+    * 33-1% Chance to cast level 33-1 Decrepify on striking
     * +25% Increased Attack Speed
     * Adds 409-409 Poison Damage Over 409 Seconds
     * +200% Enhanced Damage
-    * Adds 30-50 Damage
+    * Adds 30-50-30-50 Damage
 
 ### Hand of Blessed Light (Hand of Blessed Light)
 * **Base Item:** Divine Scepter
@@ -72,8 +72,8 @@
     * +30% Faster Cast Rate
     * Regenerate Mana 15%
     * +20% Increased Attack Speed
-    * +1-3 to Holy Bolt (Class 101 only)
-    * +1-3 to Fist of the Heavens (Class 121 only)
+    * +1-3 to Holy Bolt (Class only)
+    * +1-3 to Fist of the Heavens (Class only)
 
 ### Heaven's Light (Heaven's Light)
 * **Base Item:** Mighty Scepter
@@ -94,7 +94,7 @@
     * Slows Target by 25%
     * 150-200% Bonus to Attack Rating
     * +40% Increased Attack Speed
-    * Adds 80-240 Magic Damage
+    * Adds 80-240-80-240 Magic Damage
     * Damage Reduced by 7
     * Damage +60-85
     * +1-2 to Combat Skills
@@ -112,7 +112,7 @@
     * +2 to Paladin Skill Levels
     * Requirements --60%
     * Level 5 Redemption Aura When Equipped
-    * +2-4 to Holy Bolt (Class Holy Bolt only)
+    * +2-4 to Holy Bolt (Class only)
     * -33% Target Defense
     * Damage +60-120
     * +200% Damage to Undead
@@ -121,7 +121,7 @@
 * **Base Item:** Seraph Rod
 * **Level Requirement:** 85
 * **Properties:**
-    * 50% Chance to cast level 40 Blessed Hammer on attack
+    * 50-40% Chance to cast level 50-40 Blessed Hammer on attack
     * +30% Increased Attack Speed
     * +2 to All Skills
     * Level 20 Concentration Aura When Equipped
@@ -140,5 +140,6 @@
     * +1 to All Skills
     * +5-10% to Magic Skill Damage
     * +40% Increased Attack Speed
-    * 100% Chance to cast level 20 Blessed Hammer when you Kill an Enemy
+    * 100-20% Chance to cast level 100-20 Blessed Hammer when you Kill an Enemy
     * Lightning Resist +20-25%
+

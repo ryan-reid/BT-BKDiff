@@ -5,7 +5,7 @@
 * **Level Requirement:** 42
 * **Properties:**
     * +3 to Sorceress Skill Levels
-    * 5% Chance to cast level 1 Teleport when struck
+    * 5-1% Chance to cast level 5-1 Teleport when struck
     * All Resistances +20
     * +30% Faster Cast Rate
     * +20% Enhanced Defense
@@ -42,7 +42,7 @@
 * **Level Requirement:** 85
 * **Properties:**
     * +3 to Sorceress Skill Levels
-    * +7 to Thunder Storm (Class Thunder Storm only)
+    * +7 to Thunder Storm (Class only)
     * +30% Faster Cast Rate
     * -10-20% to Enemy Lightning Resistance
     * +20% to Lightning Skill Damage
@@ -60,3 +60,4 @@
     * +40 to Mana
     * +40 to Life
     * -4% to Enemy Lightning Resistance
+

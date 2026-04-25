@@ -23,16 +23,17 @@
     * +30% Increased Attack Speed
     * Prevent Monster Heal
     * 33% Chance of Open Wounds
-    * 33% Chance to cast level 22 Amplify Damage on striking
+    * 33-22% Chance to cast level 33-22 Amplify Damage on striking
 
 ### Gimmershred (Gimmershred)
 * **Base Item:** Flying Axe
 * **Level Requirement:** 70
 * **Properties:**
     * +200-230% Enhanced Damage
-    * Adds 250-500 Fire Damage
-    * Adds 250-500 Cold Damage
-    * Adds 61-511 Lightning Damage
+    * Adds 250-500-250-500 Fire Damage
+    * Adds 250-500-250-500 Cold Damage
+    * Adds 61-511-61-511 Lightning Damage
     * Increased Stack Size
     * +30% Increased Attack Speed
     * 20% Chance to cast level 20 Lower Resist on striking
+

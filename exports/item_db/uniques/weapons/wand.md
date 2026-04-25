@@ -21,10 +21,10 @@
     * Lightning Resist +40%
     * +80 to Mana
     * +30% Faster Cast Rate
-    * +1-3 to Corpse Explosion (Class 74 only)
-    * +1-3 to Bone Armor (Class 68 only)
-    * +1-3 to Amplify Damage (Class 66 only)
-    * +1-3 to Dim Vision (Class 71 only)
+    * +1-3 to Corpse Explosion (Class only)
+    * +1-3 to Bone Armor (Class only)
+    * +1-3 to Amplify Damage (Class only)
+    * +1-3 to Dim Vision (Class only)
     * +1-2 to Necromancer Skill Levels
 
 ### Gravenspine (Gravenspine)
@@ -45,8 +45,8 @@
     * +2-3 to Necromancer Skill Levels
     * +80 to Mana
     * +40% Faster Cast Rate
-    * +3 to Skeleton Mastery (Class 69 only)
-    * +2-3 to Decrepify (Class 87 only)
+    * +3 to Skeleton Mastery (Class only)
+    * +2-3 to Decrepify (Class only)
 
 ### Suicide Branch (Suicide Branch)
 * **Base Item:** Burnt Wand
@@ -78,15 +78,15 @@
 * **Level Requirement:** 36
 * **Properties:**
     * +1-4 to Summoning Skills
-    * 15% Chance to cast level 40 Bone Spirit when struck
+    * 15-40% Chance to cast level 15-40 Bone Spirit when struck
     * + to Mana (Based on Character Level)
-    * 15% Chance to cast level 30 Bone Armor when struck
+    * 15-30% Chance to cast level 15-30 Bone Armor when struck
     * +30% Faster Cast Rate
     * +1-2 to Poison and Bone Skills
-    * +2 to Corpse Explosion (Class 74 only)
-    * +2 to Summon Resist (Class 89 only)
-    * +3 to Skeleton Mastery (Class 69 only)
-    * +3 to Raise Skeleton (Class 70 only)
+    * +2 to Corpse Explosion (Class only)
+    * +2 to Summon Resist (Class only)
+    * +3 to Skeleton Mastery (Class only)
+    * +3 to Raise Skeleton (Class only)
 
 ### Blackhand Key (Blackhand Key)
 * **Base Item:** Grave Wand
@@ -110,7 +110,7 @@
     * +7-12 to Mana after each Kill
     * +1-2 to Poison and Bone Skills
     * +20% Faster Cast Rate
-    * 50% Chance to cast level 10 Lower Resist when you Kill an Enemy
+    * 50-10% Chance to cast level 50-10 Lower Resist when you Kill an Enemy
 
 ### Boneshade (Boneshade)
 * **Base Item:** Lich Wand
@@ -118,11 +118,11 @@
 * **Properties:**
     * +2 to Necromancer Skill Levels
     * +30% Faster Cast Rate
-    * +4-5 to Teeth (Class Teeth only)
-    * +4-5 to Bone Armor (Class Bone Armor only)
-    * +2-3 to Bone Spear (Class Bone Spear only)
-    * +1-2 to Bone Spirit (Class Bone Spirit only)
-    * +2-3 to Bone Wall (Class Bone Wall only)
+    * +4-5 to Teeth (Class only)
+    * +4-5 to Bone Armor (Class only)
+    * +2-3 to Bone Spear (Class only)
+    * +1-2 to Bone Spirit (Class only)
+    * +2-3 to Bone Wall (Class only)
 
 ### Resistbreaker (Resistbreaker)
 * **Base Item:** Polished Wand
@@ -145,3 +145,4 @@
     * Curse Resist +50%
     * Piercing Attack
     * Increase Maximum Mana 10-20%
+

@@ -87,7 +87,7 @@
     * All Resistances +30
     * +6 to Mana after each Kill
     * +40% Increased Attack Speed
-    * Adds 1-250 Lightning Damage
+    * Adds 1-250-1-250 Lightning Damage
 
 ### Brainhew (Brainhew)
 * **Base Item:** Great Axe
@@ -119,8 +119,8 @@
     * Cold Resist +15%
     * +15% to Maximum Cold Resist
     * +30% Increased Attack Speed
-    * 25% Chance to cast level 10 Glacial Spike on striking
-    * 25% Chance to cast level 40 Frost Nova when struck
+    * 25-10% Chance to cast level 25-10 Glacial Spike on striking
+    * 25-40% Chance to cast level 25-40 Frost Nova when struck
     * +200% Enhanced Damage
 
 ### Butcher's Pupil (Butcher's Pupil)
@@ -132,7 +132,7 @@
     * +200% Enhanced Damage
     * Repairs 1 durability in  seconds
     * +30% Increased Attack Speed
-    * Adds 30-50 Damage
+    * Adds 30-50-30-50 Damage
     * +8 to Mana after each Kill
 
 ### Islestrike (Islestrike)
@@ -153,9 +153,9 @@
 * **Base Item:** Crowbill
 * **Level Requirement:** 45
 * **Properties:**
-    * 35% Chance to cast level 10 Fissure on striking
+    * 35-10% Chance to cast level 35-10 Fissure on striking
     * Slows Target by 50%
-    * Adds 35-150 Fire Damage
+    * Adds 35-150-35-150 Fire Damage
     * -10% to Enemy Fire Resistance
     * +180-190% Enhanced Damage
     * +30% Increased Attack Speed
@@ -164,7 +164,7 @@
 * **Base Item:** Naga
 * **Level Requirement:** 48
 * **Properties:**
-    * 33% Chance to cast level 10 Poison Nova on striking
+    * 33-10% Chance to cast level 33-10 Poison Nova on striking
     * 7% Life stolen per hit
     * Poison Resist +30%
     * +180-200% Enhanced Damage
@@ -207,13 +207,13 @@
 * **Base Item:** Tabar
 * **Level Requirement:** 41
 * **Properties:**
-    * 45% Chance to cast level 30 Chain Lightning on striking
-    * 40% Chance to cast level 30 Nova on striking
-    * Adds 1-200 Lightning Damage
+    * 45-30% Chance to cast level 45-30 Chain Lightning on striking
+    * 40-30% Chance to cast level 40-30 Nova on striking
+    * Adds 1-200-1-200 Lightning Damage
     * +30% Increased Attack Speed
     * Durability: 50 of 50
     * +20 to Thunder Storm
-    * 15% Chance to cast level 10 Lower Resist when struck
+    * 15-10% Chance to cast level 15-10 Lower Resist when struck
 
 ### Boneslayer Blade (Boneslayer Blade)
 * **Base Item:** Gothic Axe
@@ -225,7 +225,7 @@
     * +60% Increased Attack Speed
     * 35% Bonus to Attack Rating
     * +180-220% Enhanced Damage
-    * 75% Chance to cast level 20 Holy Bolt on striking
+    * 75-20% Chance to cast level 75-20 Holy Bolt on striking
 
 ### The Minotaur (The Minataur)
 * **Base Item:** Ancient Axe
@@ -236,7 +236,7 @@
     * +15-20 to Strength
     * Slows Target by 50%
     * 30% Chance of Crushing Blow
-    * Adds 20-30 Damage
+    * Adds 20-30-20-30 Damage
     * +200-250% Enhanced Damage
     * +50% Increased Attack Speed
 
@@ -249,7 +249,7 @@
     * +% Enhanced Maximum Damage (Based on Character Level)
     * +100 to Life
     * +200% Enhanced Damage
-    * 50% Chance to cast level 40 Fire Ball on attack
+    * 50-40% Chance to cast level 50-40 Fire Ball on attack
     * Level 30 Holy Fire Aura When Equipped
     * +30% Increased Attack Speed
 
@@ -263,7 +263,7 @@
     * Level 8-10 Might Aura When Equipped
     * % Deadly Strike (Based on Character Level)
     * Absorbs Fire Damage (Based on Character Level)
-    * Adds 200-500 Fire Damage
+    * Adds 200-500-200-500 Fire Damage
     * Durability: 25 of 25
     * 100% Bonus to Attack Rating
     * Prevent Monster Heal
@@ -307,11 +307,11 @@
     * +280-340% Enhanced Damage
     * 50% Chance of Crushing Blow
     * -50% Target Defense
-    * 35% Chance to cast level 8 Decrepify on striking
+    * 35-8% Chance to cast level 35-8 Decrepify on striking
     * +50% Increased Attack Speed
     * 50% Deadly Strike
     * 4-6% Mana stolen per hit
-    * 60% Chance to cast level 40 Fist of the Heavens on attack
+    * 60-40% Chance to cast level 60-40 Fist of the Heavens on attack
     * +3 to Zeal
     * Slows Target by 20%
 
@@ -324,7 +324,7 @@
     * Fire Absorb 10-12%
     * +150-200% Damage to Demons
     * +5-10 Life after each Kill
-    * 5% Chance to cast level 10 Fade when you Kill an Enemy
+    * 5-10% Chance to cast level 5-10 Fade when you Kill an Enemy
     * Ethereal
     * Indestructible
     * +150-200% Damage to Undead
@@ -341,3 +341,4 @@
     * + to Maximum Damage (Based on Character Level)
     * +50 to Minimum Damage
     * +1 to Lightning Mastery
+

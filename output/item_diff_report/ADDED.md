@@ -1,7 +1,7 @@
 # Added Items
 
-- $\color{gray}{\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\text{Blue text}}$: Added/New Value
+- $\color{{gray}}{\text{Gray text}}$: Removed/Old Value
+- $\color{{blue}}{\text{Blue text}}$: Added/New Value
 
 ## Uniques
 
@@ -14,7 +14,7 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 54 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\\% Chance to cast level 25 Miasma Chain on striking}}$ |
+| | $\color{blue}{\text{20-25\\% Chance to cast level 20-25 Miasma Chain on striking}}$ |
 | | $\color{blue}{\text{+5-10\\% to Magic Skill Damage}}$ |
 | | $\color{blue}{\text{+10\\% Faster Cast Rate}}$ |
 | | $\color{blue}{\text{Lightning Resist +25-40\\%}}$ |
@@ -40,7 +40,7 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\\% Chance to cast level 25 Bone Armor when struck}}$ |
+| | $\color{blue}{\text{10-25\\% Chance to cast level 10-25 Bone Armor when struck}}$ |
 | | $\color{blue}{\text{+5-10\\% to Poison Skill Damage}}$ |
 | | $\color{blue}{\text{Adds 975-975 Poison Damage Over 975 Seconds}}$ |
 | | $\color{blue}{\text{-5-10\\% to Enemy Poison Resistance}}$ |
@@ -55,9 +55,9 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\\% Chance to cast level 25 Cyclone Armor when struck}}$ |
+| | $\color{blue}{\text{10-25\\% Chance to cast level 10-25 Cyclone Armor when struck}}$ |
 | | $\color{blue}{\text{+5-10\\% to Lightning Skill Damage}}$ |
-| | $\color{blue}{\text{Adds 1-200 Lightning Damage}}$ |
+| | $\color{blue}{\text{Adds 1-200-1-200 Lightning Damage}}$ |
 | | $\color{blue}{\text{-5-10\\% to Enemy Lightning Resistance}}$ |
 | | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
 | | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
@@ -70,9 +70,9 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\\% Chance to cast level 25 Frozen Armor when struck}}$ |
+| | $\color{blue}{\text{10-25\\% Chance to cast level 10-25 Frozen Armor when struck}}$ |
 | | $\color{blue}{\text{+5-10\\% to Cold Skill Damage}}$ |
-| | $\color{blue}{\text{Adds 50-150 Cold Damage}}$ |
+| | $\color{blue}{\text{Adds 50-150-50-150 Cold Damage}}$ |
 | | $\color{blue}{\text{-5-10\\% to Enemy Cold Resistance}}$ |
 | | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
 | | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
@@ -85,9 +85,9 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\\% Chance to cast level 25 Blaze when struck}}$ |
+| | $\color{blue}{\text{10-25\\% Chance to cast level 10-25 Blaze when struck}}$ |
 | | $\color{blue}{\text{+5-10\\% to Fire Skill Damage}}$ |
-| | $\color{blue}{\text{Adds 100-250 Fire Damage}}$ |
+| | $\color{blue}{\text{Adds 100-250-100-250 Fire Damage}}$ |
 | | $\color{blue}{\text{-5-10\\% to Enemy Fire Resistance}}$ |
 | | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
 | | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
@@ -100,9 +100,9 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\\% Chance to cast level 15 Fade when struck}}$ |
+| | $\color{blue}{\text{10-15\\% Chance to cast level 10-15 Fade when struck}}$ |
 | | $\color{blue}{\text{+30-50\\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Adds 20-50 Damage}}$ |
+| | $\color{blue}{\text{Adds 20-50-20-50 Damage}}$ |
 | | $\color{blue}{\text{-5-10\\% to Enemy Physical Resistance}}$ |
 | | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
 | | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
@@ -115,9 +115,9 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\\% Chance to cast level 25 Psychic Ward when struck}}$ |
+| | $\color{blue}{\text{10-25\\% Chance to cast level 10-25 Psychic Ward when struck}}$ |
 | | $\color{blue}{\text{+5-10\\% to Magic Skill Damage}}$ |
-| | $\color{blue}{\text{Adds 100-200 Magic Damage}}$ |
+| | $\color{blue}{\text{Adds 100-200-100-200 Magic Damage}}$ |
 | | $\color{blue}{\text{-5-10\\% to Enemy Magic Resistance}}$ |
 | | $\color{blue}{\text{+3-5\\% to Experience Gained}}$ |
 | | $\color{blue}{\text{15-35\\% Better Chance of Getting Magic Items}}$ |
@@ -138,7 +138,7 @@
 | | $\color{blue}{\text{ (Random: 14-25\\% Better Chance of Getting Magic Items OR 20-55\\% Extra Gold from Monsters)}}$ |
 | | $\color{blue}{\text{ (Random: +10-65 to Life OR +10-75 to Mana)}}$ |
 | | $\color{blue}{\text{ (Random: +5-10\\% Faster Run/Walk OR +12-24\\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
-| | $\color{blue}{\text{Unknown Prop: Gelid-Affix5 (, 1-1)}}$ |
+| | $\color{blue}{\text{Unknown Prop: Gelid-Affix5}}$ |
 | | $\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}$ |
 
 **Renewed Flame Rift** (Crafted Flame Rift)
@@ -372,7 +372,7 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 50 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\\% Chance to cast level 30 Flame Wave on attack}}$ |
+| | $\color{blue}{\text{20-30\\% Chance to cast level 20-30 Flame Wave on attack}}$ |
 | | $\color{blue}{\text{+3-5\\% to Magic Skill Damage / +20-40\\% Enhanced Damage / +3-5\\% to Fire Skill Damage / +3-5\\% to Cold Skill Damage / +3-5\\% to Lightning Skill Damage / +3-5\\% to Poison Skill Damage}}$ |
 | | $\color{blue}{\text{+10\\% Faster Cast Rate}}$ |
 | | $\color{blue}{\text{All Resistances +6-11}}$ |
@@ -460,15 +460,15 @@
 | | **Level Requirement:** 80 |
 | | **Properties:** |
 | | $\color{blue}{\text{+2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{15\\% Chance to cast level 1 Terror when struck}}$ |
+| | $\color{blue}{\text{15-1\\% Chance to cast level 15-1 Terror when struck}}$ |
 | | $\color{blue}{\text{+30\\% Faster Cast Rate}}$ |
 | | $\color{blue}{\text{+170-200\\% Enhanced Defense}}$ |
 | | $\color{blue}{\text{+15-25\\% to Fire Skill Damage}}$ |
 | | $\color{blue}{\text{+5-10 to Mana after each Kill}}$ |
 | | $\color{blue}{\text{Fire Resist +10-50\\%}}$ |
-| | $\color{blue}{\text{+3-5 to Apocalypse (Class Apocalypse only)}}$ |
-| | $\color{blue}{\text{+1-2 to Flame Wave (Class Flame Wave only)}}$ |
-| | $\color{blue}{\text{+1-2 to Ring of Fire (Class Ring of Fire only)}}$ |
+| | $\color{blue}{\text{+3-5 to Apocalypse (Class only)}}$ |
+| | $\color{blue}{\text{+1-2 to Flame Wave (Class only)}}$ |
+| | $\color{blue}{\text{+1-2 to Ring of Fire (Class only)}}$ |
 | | $\color{blue}{\text{10-25\\% Better Chance of Getting Magic Items}}$ |
 
 **Ars Tor'Baalos** (Ars Tor'Baalos)
@@ -479,11 +479,11 @@
 | | **Level Requirement:** 73 |
 | | **Properties:** |
 | | $\color{blue}{\text{+4 to Warlock Skills}}$ |
-| | $\color{blue}{\text{15\\% Chance to cast level 1 Decrepify when struck}}$ |
-| | $\color{blue}{\text{+1-2 to Demonic Mastery (Class Demonic Mastery only)}}$ |
-| | $\color{blue}{\text{+1-2 to Blood Boil (Class Blood Boil only)}}$ |
-| | $\color{blue}{\text{+1-2 to Engorge (Class Engorge only)}}$ |
-| | $\color{blue}{\text{+1-2 to Consume (Class Consume only)}}$ |
+| | $\color{blue}{\text{15-1\\% Chance to cast level 15-1 Decrepify when struck}}$ |
+| | $\color{blue}{\text{+1-2 to Demonic Mastery (Class only)}}$ |
+| | $\color{blue}{\text{+1-2 to Blood Boil (Class only)}}$ |
+| | $\color{blue}{\text{+1-2 to Engorge (Class only)}}$ |
+| | $\color{blue}{\text{+1-2 to Consume (Class only)}}$ |
 | | $\color{blue}{\text{+120-150\\% Enhanced Defense}}$ |
 | | $\color{blue}{\text{+80-150 to Life}}$ |
 | | $\color{blue}{\text{Damage Reduced by 5-15\\%}}$ |
@@ -497,11 +497,11 @@
 | | **Level Requirement:** 78 |
 | | **Properties:** |
 | | $\color{blue}{\text{+2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{15\\% Chance to cast level 40 Blizzard when struck}}$ |
+| | $\color{blue}{\text{15-40\\% Chance to cast level 15-40 Blizzard when struck}}$ |
 | | $\color{blue}{\text{+25-35\\% Faster Cast Rate}}$ |
 | | $\color{blue}{\text{+30\\% Faster Hit Recovery}}$ |
 | | $\color{blue}{\text{+100-200\\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+1-3 to Psychic Ward (Class Psychic Ward only)}}$ |
+| | $\color{blue}{\text{+1-3 to Psychic Ward (Class only)}}$ |
 | | $\color{blue}{\text{+140-200\\% Enhanced Defense}}$ |
 | | $\color{blue}{\text{-10-20\\% to Enemy Magic Resistance}}$ |
 | | $\color{blue}{\text{10-25\\% Better Chance of Getting Magic Items}}$ |
@@ -514,12 +514,12 @@
 | | **Level Requirement:** 52 |
 | | **Properties:** |
 | | $\color{blue}{\text{+1-2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{30\\% Chance to cast level 25 Ring of Fire when struck}}$ |
+| | $\color{blue}{\text{30-25\\% Chance to cast level 30-25 Ring of Fire when struck}}$ |
 | | $\color{blue}{\text{+25-30\\% Faster Cast Rate}}$ |
 | | $\color{blue}{\text{+130-180\\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+1-3 to Summon Tainted (Class Summon Tainted only)}}$ |
-| | $\color{blue}{\text{+1-3 to Ring of Fire (Class Ring of Fire only)}}$ |
-| | $\color{blue}{\text{+1-3 to Flame Wave (Class Flame Wave only)}}$ |
+| | $\color{blue}{\text{+1-3 to Summon Tainted (Class only)}}$ |
+| | $\color{blue}{\text{+1-3 to Ring of Fire (Class only)}}$ |
+| | $\color{blue}{\text{+1-3 to Flame Wave (Class only)}}$ |
 | | $\color{blue}{\text{+10-20 to Vitality}}$ |
 | | $\color{blue}{\text{+3-5 Life after each Kill}}$ |
 | | $\color{blue}{\text{All Resistances +20-30}}$ |
@@ -536,9 +536,9 @@
 | | $\color{blue}{\text{+1-2 to All Skills}}$ |
 | | $\color{blue}{\text{+30\\% Faster Cast Rate}}$ |
 | | $\color{blue}{\text{Increase Maximum Life 10-15\\%}}$ |
-| | $\color{blue}{\text{+2-3 to Blood Oath (Class Blood Oath only)}}$ |
-| | $\color{blue}{\text{+2-3 to Blood Boil (Class Blood Boil only)}}$ |
-| | $\color{blue}{\text{+1-3 to Bind Demon (Class Bind Demon only)}}$ |
+| | $\color{blue}{\text{+2-3 to Blood Oath (Class only)}}$ |
+| | $\color{blue}{\text{+2-3 to Blood Boil (Class only)}}$ |
+| | $\color{blue}{\text{+1-3 to Bind Demon (Class only)}}$ |
 | | $\color{blue}{\text{20-35\\% Better Chance of Getting Magic Items}}$ |
 | | $\color{blue}{\text{Slows Target by 25\\%}}$ |
 
@@ -551,12 +551,12 @@
 | | **Base Item:** Legend Sword |
 | | **Level Requirement:** 61 |
 | | **Properties:** |
-| | $\color{blue}{\text{33\\% Chance to cast level 22 Amplify Damage on striking}}$ |
+| | $\color{blue}{\text{33-22\\% Chance to cast level 33-22 Amplify Damage on striking}}$ |
 | | $\color{blue}{\text{+33\\% Increased Attack Speed}}$ |
 | | $\color{blue}{\text{+150-280\\% Enhanced Damage}}$ |
 | | $\color{blue}{\text{3-6\\% Mana stolen per hit}}$ |
 | | $\color{blue}{\text{33\\% Deadly Strike}}$ |
-| | $\color{blue}{\text{+3 to Mirrored Blades (Class Mirrored Blades only)}}$ |
+| | $\color{blue}{\text{+3 to Mirrored Blades (Class only)}}$ |
 | | $\color{blue}{\text{33\\% Bonus to Attack Rating}}$ |
 | | $\color{blue}{\text{Requirements --33\\%}}$ |
 

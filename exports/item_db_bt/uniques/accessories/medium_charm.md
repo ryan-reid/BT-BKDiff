@@ -4,8 +4,9 @@
 * **Base Item:** Large ÿc1Charmÿc3
 * **Level Requirement:** 75
 * **Properties:**
-    * +3 to Original Class Skill Levels
+    * +3 to Random Class Skill Levels
     * +10-25 to all Attributes
     * All Resistances +10-25
     * +8 to Light Radius
-    * Level 10 Hydra (30/# Charges)
+    * Level 10-30 Hydra (10-30/10-30 Charges)
+

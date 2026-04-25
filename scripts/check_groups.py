@@ -1,27 +1,31 @@
-import re
+import os
+import sys
+from d2_repository import D2Repository
 
-def get_group_for_category(category: str) -> str:
-    category_lower = category.lower()
-    if category_lower in ['expansion', 'other']:
-        return 'other'
+def main() -> None:
+    groups_path = os.path.join("..", "data", "propertygroups.txt")
+    repo = D2Repository(".")
+    data = repo.load_tsv(groups_path)
     
-    # Weapons
-    if any(w in category_lower for w in ['axe', 'bow', 'club', 'crossbow', 'hammer', 'javelin', 'knife', 'mace', 'polearm', 'scepter', 'spear', 'staff', 'sword', 'throwing', 'wand', 'weapon']):
-        return 'weapons'
-    
-    # Armor
-    if any(a in category_lower for a in ['armor', 'belt', 'boots', 'gloves', 'circlet', 'helm', 'shield']):
-        return 'armor'
-        
-    # Accessories
-    if any(acc in category_lower for acc in ['amulet', 'ring', 'charm', 'jewel']):
-        return 'accessories'
-        
-    # Class Specific
-    if any(cls in category_lower for cls in ['amazon', 'auric', 'grimoire', 'hand to hand', 'orb', 'pelt', 'primal', 'voodoo']):
-        return 'class_specific'
-        
-    return 'other'
+    if not data:
+        print(f"Error: propertygroups.txt not found or empty at {groups_path}", file=sys.stderr)
+        return
 
-print(f"Merc Equip -> {get_group_for_category('Merc Equip')}")
-print(f"Helm -> {get_group_for_category('Helm')}")
+    print(f"Checking {len(data)} property groups...")
+    unique_codes = set()
+    duplicates = []
+    
+    for row in data:
+        code = row.get('code', '').strip().lower()
+        if not code: continue
+        if code in unique_codes: duplicates.append(code)
+        else: unique_codes.add(code)
+            
+    if duplicates:
+        print(f"Found {len(duplicates)} duplicate codes:", file=sys.stderr)
+        for d in duplicates: print(f"  - {d}", file=sys.stderr)
+    else:
+        print("No duplicate codes found. Property groups are clean.")
+
+if __name__ == "__main__":
+    main()

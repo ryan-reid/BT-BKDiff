@@ -76,7 +76,7 @@
 * **Level Requirement:** 17
 * **Properties:**
     * +100-120% Enhanced Defense
-    * Adds 1-69 Lightning Damage
+    * Adds 1-69-1-69 Lightning Damage
     * Lightning Absorb 10-15%
     * Lightning Resist +50%
     * 100% Extra Gold from Monsters
@@ -104,7 +104,7 @@
     * Cold Resist +30-50%
     * Magic Damage Reduced by 6-9
     * +100-130% Enhanced Defense
-    * Adds 25-50 Cold Damage
+    * Adds 25-50-25-50 Cold Damage
     * +50 to Mana
     * Requirements --25%
     * Cold Absorb 10-20%
@@ -223,13 +223,13 @@
 * **Properties:**
     * --100 to Monster Defense Per Hit
     * Prevent Monster Heal
-    * Adds 50-75 Damage
+    * Adds 50-75-50-75 Damage
     * 8-12% Life stolen per hit
     * +160-200% Enhanced Defense
     * +50-75 to Life
     * +20% Increased Attack Speed
     * +14% Faster Hit Recovery
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
 
 ### Iron Pelt (Ironpelt)
 * **Base Item:** Trellised Armor
@@ -320,7 +320,7 @@
     * +30% Faster Block Rate
     * +10% Increased Attack Speed
     * Requirements --40--30%
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
 
 ### Toothrow (Toothrow)
 * **Base Item:** Sharktooth Armor
@@ -375,7 +375,7 @@
     * +150-180% Enhanced Defense
     * +5 to Corpse Explosion
     * +50% Faster Hit Recovery
-    * 35% Chance to cast level 10 Amplify Damage when you Kill an Enemy
+    * 35-10% Chance to cast level 35-10 Amplify Damage when you Kill an Enemy
 
 ### Que-Hegan's Wisdom (Que-Hegan's Wisdon)
 * **Base Item:** Mage Plate
@@ -417,7 +417,7 @@
     * Damage Reduced by 10-15
     * + to Vitality (Based on Character Level)
     * Requirements --20%
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
 
 ### Tyrael's Might (Tyrael's Might)
 * **Base Item:** Sacred Armor
@@ -503,7 +503,7 @@
     * +40% Faster Hit Recovery
     * +25% Faster Run/Walk
     * +30% Increased Attack Speed
-    * 15% Chance to cast level 25 Amplify Damage on striking
+    * 15-25% Chance to cast level 15-25 Amplify Damage on striking
     * +300-400 Defense
 
 ### Unsullied's Legacy (Unsullied's Legacy)
@@ -564,7 +564,8 @@
     * +15-25% Faster Cast Rate
     * Increase Maximum Mana 5-8%
     * +20-55% Energy
-    * +2 to Original Class Skill Levels
+    * +2 to Random Class Skill Levels
     * Magic Damage Reduced by 10
     * +4 to Mana (Based on Character Level)
     * +5-15% to Magic Skill Damage
+

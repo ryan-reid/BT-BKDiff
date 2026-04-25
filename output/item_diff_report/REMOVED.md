@@ -1,7 +1,7 @@
 # Removed Items
 
-- $\color{gray}{\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\text{Blue text}}$: Added/New Value
+- $\color{{gray}}{\text{Gray text}}$: Removed/Old Value
+- $\color{{blue}}{\text{Blue text}}$: Added/New Value
 
 ## Uniques
 

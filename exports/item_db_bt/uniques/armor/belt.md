@@ -95,7 +95,7 @@
 * **Base Item:** Battle Belt
 * **Level Requirement:** 42
 * **Properties:**
-    * 50% Chance to cast level 40 Blizzard when struck
+    * 50-40% Chance to cast level 50-40 Blizzard when struck
     * Cold Absorb 15%
     * +15% to Maximum Cold Resist
     * +2 to Cold Skills
@@ -105,8 +105,8 @@
 * **Base Item:** War Belt
 * **Level Requirement:** 47
 * **Properties:**
-    * 20% Chance to cast level 25 Fist of the Heavens when struck
-    * Adds 1-50 Lightning Damage
+    * 20-25% Chance to cast level 20-25 Fist of the Heavens when struck
+    * Adds 1-50-1-50 Lightning Damage
     * +10% to Maximum Lightning Resist
     * Lightning Absorb 20%
     * +160-200% Enhanced Defense
@@ -151,7 +151,7 @@
 * **Base Item:** Colossus Girdle
 * **Level Requirement:** 93
 * **Properties:**
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
     * Damage Reduced by 25-35
     * Magic Damage Reduced by 25-35
     * +5 to Cyclone Armor
@@ -159,3 +159,4 @@
     * +10-15 to Strength
     * +-15% Faster Run/Walk
     * +80-100% Enhanced Defense
+

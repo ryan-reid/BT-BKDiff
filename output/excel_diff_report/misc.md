@@ -1,849 +1,844 @@
 # Differences for misc.txt
 
-*Key column used: `name`*
-
-## Added Columns in BK (New)
-`DropConditionCalc, EventItem, UICatOverride, AdvancedStashStackable, UsageConditionCalc`  
-
-## Removed Columns in BK (New)
-`durability`  
-
-## Added Rows in BK (New) (18)
-- colossal jewel
-- crafted sunder charm
-- deep worldstone shard
-- eastern worldstone shard
-- northern worldstone shard
-- southern worldstone shard
-- uber ancient summon material act 1
-- uber ancient summon material act 2
-- uber ancient summon material act 3
-- uber ancient summon material act 4
-- uber ancient summon material act5
-- uber ancient upgrade material  cold
-- uber ancient upgrade material  fire
-- uber ancient upgrade material lightning
-- uber ancient upgrade material magic
-- uber ancient upgrade material physical
-- uber ancient upgrade material poison
-- western worldstone shard
-
-## Removed Rows in BK (New) (80)
-- amethyst stack
-- amn rune stack
-- ber rune stack
-- blood crafting tablet stack
-- caster crafting tablet stack
-- cham rune stack
-- charm unused
-- chipped amethyst stack
-- chipped diamond stack
-- chipped emerald stack
-- chipped ruby stack
-- chipped sapphire stack
-- chipped skull stack
-- chipped topaz stack
-- crystal blue dye
-- crystal red dye
-- dark purple dye
-- dark yellow dye
-- diamond stack
-- dol rune stack
-- el rune stack
-- eld rune stack
-- emerald stack
-- eth rune stack
-- fal rune stack
-- flawed amethyst stack
-- flawed diamond stack
-- flawed emerald stack
-- flawed ruby stack
-- flawed sapphire stack
-- flawed skull stack
-- flawed topaz stack
-- flawless amethyst stack
-- flawless diamond stack
-- flawless emerald stack
-- flawless ruby stack
-- flawless sapphire stack
-- flawless skull stack
-- flawless topaz stack
-- gul rune stack
-- hel rune stack
-- io rune stack
-- ist rune stack
-- ith rune stack
-- jah rune stack
-- ko rune stack
-- lem rune stack
-- light green dye
-- light purple dye
-- lo rune stack
-- lum rune stack
-- mal rune stack
-- nef rune stack
-- ohm rune stack
-- orange dye
-- ort rune stack
-- perfect amethyst stack
-- perfect diamond stack
-- perfect emerald stack
-- perfect ruby stack
-- perfect sapphire stack
-- perfect skull stack
-- perfect topaz stack
-- power crafting tablet stack
-- pul rune stack
-- ral rune stack
-- ruby stack
-- saftey crafting tablet stack
-- sapphire stack
-- shael rune stack
-- skull stack
-- sol rune stack
-- sur rune stack
-- tal rune stack
-- thul rune stack
-- tir rune stack
-- topaz stack
-- um rune stack
-- vex rune stack
-- zod rune stack
-
-## Modified Rows (133)
-### amethyst
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg2a}}$ (Old) &rarr; $\color{blue}{\text{gem2}}$ (New)
-
-### amulet
-- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### antidote potion
-- `OrmusMin`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `OrmusMax`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### arrows
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `auto prefix`: $\color{gray}{\text{306}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### baal's eye
-- `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dropsound`: $\color{gray}{\text{item\\_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item\\_baals\\_eye\\_hd}}$ (New)
-- `usesound`: $\color{gray}{\text{item\\_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item\\_baals\\_eye\\_hd}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `CharsiMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `CharsiMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### ber rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### bigdinn
-- `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{BigDinnDesc}}$ (New)
-
-### black dye
-- `cost`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{4999}}$ (New)
-- `useable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{Dyedesc}}$ (New)
-
-### blood crafting tablet
-- `version`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cost`: $\color{gray}{\text{7950}}$ (Old) &rarr; $\color{blue}{\text{19999}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{bctd}}$ (New)
-
-### bolts
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `auto prefix`: $\color{gray}{\text{306}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### brain
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### brick
-- `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `cost`: $\color{gray}{\text{125000}}$ (Old) &rarr; $\color{blue}{\text{750}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{BrickDesc}}$ (New)
-
-### burning essence of terror
-- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### caster crafting tablet
-- `version`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cost`: $\color{gray}{\text{7950}}$ (Old) &rarr; $\color{blue}{\text{19999}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{cctd}}$ (New)
-
-### cham rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### charged essense of hatred
-- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### charm blank
-- `levelreq`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `rarity`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `cost`: $\color{gray}{\text{600}}$ (Old) &rarr; $\color{blue}{\text{666}}$ (New)
-- `type2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{jwly}}$ (New)
-- `unique`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `PermStoreItem`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `multibuy`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### charm level reward
-- `levelreq`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{90}}$ (New)
-- `rarity`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `cost`: $\color{gray}{\text{600}}$ (Old) &rarr; $\color{blue}{\text{666}}$ (New)
-- `type2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{jwly}}$ (New)
-- `unique`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `PermStoreItem`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `multibuy`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### charm modifiers
-- `levelreq`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `rarity`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `cost`: $\color{gray}{\text{600}}$ (Old) &rarr; $\color{blue}{\text{666}}$ (New)
-- `type2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{jwly}}$ (New)
-- `unique`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `PermStoreItem`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `multibuy`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### charsi's malus
-- `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{CharsiMalusDesc}}$ (New)
-
-### chipped amethyst
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg0a}}$ (Old) &rarr; $\color{blue}{\text{gem0}}$ (New)
-
-### chipped diamond
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg0d}}$ (Old) &rarr; $\color{blue}{\text{gem0}}$ (New)
-
-### chipped emerald
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg0e}}$ (Old) &rarr; $\color{blue}{\text{gem0}}$ (New)
-
-### chipped ruby
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg0r}}$ (Old) &rarr; $\color{blue}{\text{gem0}}$ (New)
-
-### chipped sapphire
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg0s}}$ (Old) &rarr; $\color{blue}{\text{gem0}}$ (New)
-
-### chipped skull
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg0z}}$ (Old) &rarr; $\color{blue}{\text{gem0}}$ (New)
-
-### chipped topaz
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg0t}}$ (Old) &rarr; $\color{blue}{\text{gem0}}$ (New)
-
-### diablo's horn
-- `flippyfile`: $\color{gray}{\text{flpear}}$ (Old) &rarr; $\color{blue}{\text{flpfang}}$ (New)
-- `invfile`: $\color{gray}{\text{invear}}$ (Old) &rarr; $\color{blue}{\text{invfang}}$ (New)
-- `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dropsound`: $\color{gray}{\text{item\\_monsterguts}}$ (Old) &rarr; $\color{blue}{\text{item\\_diablos\\_horn\\_hd}}$ (New)
-- `dropsfxframe`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `usesound`: $\color{gray}{\text{item\\_monsterguts}}$ (Old) &rarr; $\color{blue}{\text{item\\_diablos\\_horn\\_hd}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `CharsiMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `CharsiMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### diablo's soulstone
-- `cost`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{50000}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{DiabloDesc}}$ (New)
-
-### diamond
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg2d}}$ (Old) &rarr; $\color{blue}{\text{gem2}}$ (New)
-
-### divine standard
-- `cost`: $\color{gray}{\text{200000}}$ (Old) &rarr; $\color{blue}{\text{50000}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{DivineDesc}}$ (New)
-
-### elixir
-- `rarity`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
-- `cost`: $\color{gray}{\text{7000}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
-- `useable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `stat1`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{experience}}$ (New)
-- `calc1`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `spelldesc`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{ElixirDesc}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### emerald
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg2e}}$ (Old) &rarr; $\color{blue}{\text{gem2}}$ (New)
-
-### event gift
-- `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `cost`: $\color{gray}{\text{134540}}$ (Old) &rarr; $\color{blue}{\text{50000}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{EventDesc}}$ (New)
-
-### expansion
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### eye
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### fang
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### festering essence of destruction
-- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### flag
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### flask of etheric light
-- `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `cost`: $\color{gray}{\text{200000}}$ (Old) &rarr; $\color{blue}{\text{50000}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{FlaskDesc}}$ (New)
-
-### flawed amethyst
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg1a}}$ (Old) &rarr; $\color{blue}{\text{gem1}}$ (New)
-
-### flawed diamond
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg1d}}$ (Old) &rarr; $\color{blue}{\text{gem1}}$ (New)
-
-### flawed emerald
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg1e}}$ (Old) &rarr; $\color{blue}{\text{gem1}}$ (New)
-
-### flawed ruby
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg1r}}$ (Old) &rarr; $\color{blue}{\text{gem1}}$ (New)
-
-### flawed sapphire
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg1s}}$ (Old) &rarr; $\color{blue}{\text{gem1}}$ (New)
-
-### flawed skull
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg1z}}$ (Old) &rarr; $\color{blue}{\text{gem1}}$ (New)
-
-### flawed topaz
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg1t}}$ (Old) &rarr; $\color{blue}{\text{gem1}}$ (New)
-
-### flawless amethyst
-- `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg3a}}$ (Old) &rarr; $\color{blue}{\text{gem3}}$ (New)
-
-### flawless diamond
-- `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg3d}}$ (Old) &rarr; $\color{blue}{\text{gem3}}$ (New)
-
-### flawless emerald
-- `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg3e}}$ (Old) &rarr; $\color{blue}{\text{gem3}}$ (New)
-
-### flawless ruby
-- `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg3r}}$ (Old) &rarr; $\color{blue}{\text{gem3}}$ (New)
-
-### flawless sapphire
-- `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg3s}}$ (Old) &rarr; $\color{blue}{\text{gem3}}$ (New)
-
-### flawless skull
-- `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{30000}}$ (New)
-- `type2`: $\color{gray}{\text{gg3z}}$ (Old) &rarr; $\color{blue}{\text{gem3}}$ (New)
-
-### flawless topaz
-- `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg3t}}$ (Old) &rarr; $\color{blue}{\text{gem3}}$ (New)
-
-### fracture halo
-- `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{rtrDesc}}$ (New)
-
-### full rejuvenation potion
-- `transtbl`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `lightradius`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `belt`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `stackable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `quest`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### grand charm
-- `uniqueinvfile`: $\color{gray}{\text{invsst}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `Transform`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `InvTrans`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### greater healing potion
-- `normcode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp4}}$ (New)
-- `ubercode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp4}}$ (New)
-- `ultracode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp4}}$ (New)
-- `OrmusMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `OrmusMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### greater mana potion
-- `normcode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp4}}$ (New)
-- `ubercode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp4}}$ (New)
-- `ultracode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp4}}$ (New)
-- `OrmusMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `OrmusMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### griswold's heirloom
-- `cost`: $\color{gray}{\text{200000}}$ (Old) &rarr; $\color{blue}{\text{2500000}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{Griswold's Heirloom Desc}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{Griswold's Heirloom Desc}}$ (New)
-- `GheedMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `GheedMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-- `PermStoreItem`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `multibuy`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### gul rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### healing potion
-- `normcode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp3}}$ (New)
-- `ubercode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp3}}$ (New)
-- `ultracode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp3}}$ (New)
-- `LysanderMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `LysanderMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `DrognanMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `DrognanMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### heart
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### hellfire ashes
-- `cost`: $\color{gray}{\text{325000}}$ (Old) &rarr; $\color{blue}{\text{50000}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{HAshDesc}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{HAshDesc}}$ (New)
-
-### herb
-- `useable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### horadric cube
-- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### horn
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
-
-### hratli's sprirtual herb
-- `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `cost`: $\color{gray}{\text{2250000}}$ (Old) &rarr; $\color{blue}{\text{1900000}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{HratliHerbDesc}}$ (New)
-
-### infernal mawstone
-- `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{rrrDesc}}$ (New)
-
-### ist rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### jah rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### jawbone
-- `compactsave`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cost`: $\color{gray}{\text{2760000}}$ (Old) &rarr; $\color{blue}{\text{75}}$ (New)
-- `TMogType`: $\color{gray}{\text{xxx}}$ (Old) &rarr; $\color{blue}{\text{cqv}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
-- `type`: $\color{gray}{\text{hpot}}$ (Old) &rarr; $\color{blue}{\text{body}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{JawboneDesc}}$ (Old) &rarr; $\color{blue}{\text{convertsto}}$ (New)
-
-### jewel
-- `gamble cost`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{60000}}$ (New)
-- `PermStoreItem`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `multibuy`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### key of destruction
-- `type2`: $\color{gray}{\text{ukey}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `CharsiMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `CharsiMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### key of hate
-- `type2`: $\color{gray}{\text{ukey}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `CharsiMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `CharsiMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### key of terror
-- `type2`: $\color{gray}{\text{ukey}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `CharsiMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `CharsiMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### large charm
-- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### larzuk's forging hammer
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{LarzukHammerDesc}}$ (New)
-
-### lem rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### light healing potion
-- `normcode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp2}}$ (New)
-- `ubercode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp2}}$ (New)
-- `ultracode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp2}}$ (New)
-- `MalahMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `MalahMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### light mana potion
-- `normcode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp2}}$ (New)
-- `ubercode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp2}}$ (New)
-- `ultracode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp2}}$ (New)
-- `MalahMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `MalahMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### lo rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### magic find potion
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{PotionMagicFindDesc}}$ (New)
-
-### mal rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### malah's potion
-- `CharsiMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `CharsiMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### mana potion
-- `normcode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp3}}$ (New)
-- `ubercode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp3}}$ (New)
-- `ultracode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp3}}$ (New)
-- `LysanderMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `LysanderMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `DrognanMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `DrognanMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### mephisto's brain
-- `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `dropsound`: $\color{gray}{\text{item\\_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item\\_mephistos\\_brain\\_hd}}$ (New)
-- `usesound`: $\color{gray}{\text{item\\_monsterbone}}$ (Old) &rarr; $\color{blue}{\text{item\\_mephistos\\_brain\\_hd}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `CharsiMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `CharsiMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### minor healing potion
-- `normcode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp1}}$ (New)
-- `ubercode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp1}}$ (New)
-- `ultracode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp1}}$ (New)
-- `MalahMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `MalahMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### minor mana potion
-- `normcode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp1}}$ (New)
-- `ubercode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp1}}$ (New)
-- `ultracode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp1}}$ (New)
-- `MalahMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `MalahMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### ohm rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### perfect amethyst
-- `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg4a}}$ (Old) &rarr; $\color{blue}{\text{gem4}}$ (New)
-
-### perfect diamond
-- `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg4d}}$ (Old) &rarr; $\color{blue}{\text{gem4}}$ (New)
-
-### perfect emerald
-- `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg4e}}$ (Old) &rarr; $\color{blue}{\text{gem4}}$ (New)
-
-### perfect ruby
-- `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg4r}}$ (Old) &rarr; $\color{blue}{\text{gem4}}$ (New)
-
-### perfect sapphire
-- `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg4s}}$ (Old) &rarr; $\color{blue}{\text{gem4}}$ (New)
-
-### perfect skull
-- `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `cost`: $\color{gray}{\text{30000}}$ (Old) &rarr; $\color{blue}{\text{100000}}$ (New)
-- `type2`: $\color{gray}{\text{gg4z}}$ (Old) &rarr; $\color{blue}{\text{gem4}}$ (New)
-
-### perfect topaz
-- `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg4t}}$ (Old) &rarr; $\color{blue}{\text{gem4}}$ (New)
-
-### power crafting tablet
-- `version`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cost`: $\color{gray}{\text{7950}}$ (Old) &rarr; $\color{blue}{\text{19999}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{pctd}}$ (New)
-
-### pul rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### quill
-- `compactsave`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cost`: $\color{gray}{\text{2760000}}$ (Old) &rarr; $\color{blue}{\text{32}}$ (New)
-- `TMogType`: $\color{gray}{\text{xxx}}$ (Old) &rarr; $\color{blue}{\text{aqv}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
-- `type`: $\color{gray}{\text{hpot}}$ (Old) &rarr; $\color{blue}{\text{body}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{QuillDesc}}$ (Old) &rarr; $\color{blue}{\text{convertsto}}$ (New)
-
-### rejuvenation potion
-- `AkaraMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `AkaraMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### ring
-- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### ruby
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg2r}}$ (Old) &rarr; $\color{blue}{\text{gem2}}$ (New)
-
-### saftey crafting tablet
-- `version`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{100}}$ (New)
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cost`: $\color{gray}{\text{7950}}$ (Old) &rarr; $\color{blue}{\text{19999}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{sctd}}$ (New)
-
-### sapphire
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg2s}}$ (Old) &rarr; $\color{blue}{\text{gem2}}$ (New)
-
-### scalp
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### scroll of knowledge
-- `CharsiMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `CharsiMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### scroll of resistance
-- `CharsiMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `CharsiMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### skull
-- `levelreq`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{10000}}$ (New)
-- `type2`: $\color{gray}{\text{gg2z}}$ (Old) &rarr; $\color{blue}{\text{gem2}}$ (New)
-
-### small charm
-- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### soul
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### splash charm
-- `cost`: $\color{gray}{\text{600}}$ (Old) &rarr; $\color{blue}{\text{7999}}$ (New)
-
-### spleen
-- `compactsave`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cost`: $\color{gray}{\text{2760000}}$ (Old) &rarr; $\color{blue}{\text{85}}$ (New)
-- `TMogType`: $\color{gray}{\text{xxx}}$ (Old) &rarr; $\color{blue}{\text{gps}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type`: $\color{gray}{\text{hpot}}$ (Old) &rarr; $\color{blue}{\text{body}}$ (New)
-- `spelldescstr`: $\color{gray}{\text{SpleenDesc}}$ (Old) &rarr; $\color{blue}{\text{convertsto}}$ (New)
-
-### stamina potion
-- `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `AkaraMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-- `AkaraMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
-- `LysanderMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
-- `LysanderMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `LysanderMagicMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
-- `LysanderMagicMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `AlkorMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
-- `AlkorMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `CainMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-- `CainMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
-- `MalahMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-- `MalahMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
-- `JamellaMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-- `JamellaMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
-- `PermStoreItem`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `multibuy`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### standard of heroes
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### super healing potion
-- `normcode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp5}}$ (New)
-- `ubercode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp5}}$ (New)
-- `ultracode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{hp5}}$ (New)
-- `MalahMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `MalahMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### super mana potion
-- `normcode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp5}}$ (New)
-- `ubercode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp5}}$ (New)
-- `ultracode`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{mp5}}$ (New)
-- `MalahMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `MalahMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### sur rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### tail
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `TMogMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `TMogMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### thawing potion
-- `OrmusMin`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-- `OrmusMax`: $\color{gray}{\text{9}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### the black tower key
-- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### token of absolution
-- `level`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `levelreq`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `rarity`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{999}}$ (New)
-- `cost`: $\color{gray}{\text{250000}}$ (Old) &rarr; $\color{blue}{\text{250256}}$ (New)
-- `AkaraMagicMin`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `AkaraMagicMax`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{2}}$ (New)
-
-### tome of identify
-- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### tome of town portal
-- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(empty)}}$ (New)
-
-### topaz
-- `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg2t}}$ (Old) &rarr; $\color{blue}{\text{gem2}}$ (New)
-
-### torch
-- `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-
-### twisted essence of suffering
-- `spawnable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spawnstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### um rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### vex rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-
-### viper of the amulet
-- `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{ViperDesc}}$ (New)
-
-### white dye
-- `cost`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{4999}}$ (New)
-- `useable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{Dyedesc}}$ (New)
-
-### white dye remover
-- `cost`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{250}}$ (New)
-- `useable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `spelldescstr2`: $\color{gray}{\text{(empty)}}$ (Old) &rarr; $\color{blue}{\text{Dyerdesc}}$ (New)
-
-### zod rune
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+*Key column used: `code`*
+
+## Added Columns: `DropConditionCalc, EventItem, UICatOverride, AdvancedStashStackable, UsageConditionCalc`  
+
+## Removed Columns: `durability`  
+
+## Added Rows (18)
+- cjw
+- cs2
+- ua1
+- ua2
+- ua3
+- ua4
+- ua5
+- um1
+- um2
+- um3
+- um4
+- um5
+- um6
+- xa1
+- xa2
+- xa3
+- xa4
+- xa5
+
+## Removed Rows (80)
+- 101
+- 102
+- 103
+- 104
+- 105
+- 106
+- 107
+- 108
+- 109
+- 110
+- 111
+- 112
+- 113
+- 114
+- 115
+- 116
+- 117
+- 118
+- 119
+- 120
+- 121
+- 122
+- 123
+- 124
+- 125
+- 126
+- 127
+- 128
+- 129
+- 130
+- 131
+- 132
+- 133
+- 1cb
+- 1cg
+- 1cr
+- 1cv
+- 1cw
+- 1cy
+- 1fb
+- 1fg
+- 1fr
+- 1fv
+- 1fw
+- 1fy
+- 1kc
+- 1kf
+- 1kl
+- 1ku
+- 1kz
+- 1lb
+- 1lg
+- 1lr
+- 1lw
+- 1ly
+- 1pb
+- 1pg
+- 1pr
+- 1pv
+- 1pw
+- 1py
+- 1sb
+- 1sg
+- 1sr
+- 1sv
+- 1sw
+- 1sy
+- 1zv
+- bcs
+- ccs
+- dc1
+- dc2
+- dd4
+- dd6
+- dl3
+- dl6
+- do1
+- mfe
+- pcs
+- scs
+
+## Modified Rows (132)
+### 0sc
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### 1dr
+- `cost`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{250}}$ (New)
+- `useable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{Dyerdesc}}$ (New)
+
+### amu
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### aqv
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `auto prefix`: $\color{gray}{\text{306}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### bct
+- `version`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `cost`: $\\color{gray}{\\text{7950}}$ (Old) &rarr; $\\color{blue}{\\text{19999}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{bctd}}$ (New)
+
+### bet
+- `spawnable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### bey
+- `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `dropsound`: $\\text{item}\\color{gray}{\\text{monsterbone}}$ (Old) &rarr; $\\text{item}\\color{blue}{\\text{baalseyehd}}$ (New)
+- `usesound`: $\\text{item}\\color{gray}{\\text{monsterbone}}$ (Old) &rarr; $\\text{item}\\color{blue}{\\text{baalseyehd}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### bgn
+- `compactsave`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{BigDinnDesc}}$ (New)
+
+### box
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### brk
+- `compactsave`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `cost`: $\\color{gray}{\\text{125000}}$ (Old) &rarr; $\\color{blue}{\\text{750}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{BrickDesc}}$ (New)
+
+### brz
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+
+### cct
+- `version`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `cost`: $\\color{gray}{\\text{7950}}$ (Old) &rarr; $\\color{blue}{\\text{19999}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{cctd}}$ (New)
+
+### ceh
+- `spawnable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### cm1
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### cm2
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### cm3
+- `uniqueinvfile`: $\color{gray}{\text{invsst}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Transform`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
+- `InvTrans`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### cqv
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `auto prefix`: $\color{gray}{\text{306}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### db1
+- `cost`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{4999}}$ (New)
+- `useable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{Dyedesc}}$ (New)
+
+### dhn
+- `flippyfile`: $\\color{gray}{\\text{flpear}}$ (Old) &rarr; $\\color{blue}{\\text{flpfang}}$ (New)
+- `invfile`: $\\color{gray}{\\text{invear}}$ (Old) &rarr; $\\color{blue}{\\text{invfang}}$ (New)
+- `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `dropsound`: $\\text{item}\\color{gray}{\\text{monsterguts}}$ (Old) &rarr; $\\text{item}\\color{blue}{\\text{diabloshornhd}}$ (New)
+- `dropsfxframe`: $\\color{gray}{\\text{14}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
+- `usesound`: $\\text{item}\\color{gray}{\\text{monsterguts}}$ (Old) &rarr; $\\text{item}\\color{blue}{\\text{diabloshornhd}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### dsd
+- `cost`: $\\color{gray}{\\text{200000}}$ (Old) &rarr; $\\color{blue}{\\text{50000}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{DivineDesc}}$ (New)
+
+### dss
+- `cost`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{50000}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{DiabloDesc}}$ (New)
+
+### dw1
+- `cost`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{4999}}$ (New)
+- `useable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{Dyedesc}}$ (New)
+
+### elx
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
+- `cost`: $\\color{gray}{\\text{7000}}$ (Old) &rarr; $\\color{blue}{\\text{20}}$ (New)
+- `useable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `stat1`:  (Old) &rarr; $\color{blue}{\text{experience}}$ (New)
+- `calc1`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `spelldesc`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{ElixirDesc}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### eyz
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+
+### fed
+- `spawnable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### fel
+- `compactsave`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `cost`: $\\color{gray}{\\text{200000}}$ (Old) &rarr; $\\color{blue}{\\text{50000}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{FlaskDesc}}$ (New)
+
+### flg
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+
+### fng
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+
+### gcb
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{0}\\color{gray}{\\text{s}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{0}$ (New)
+
+### gcg
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{0}\\color{gray}{\\text{e}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{0}$ (New)
+
+### gcr
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{0}\\color{gray}{\\text{r}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{0}$ (New)
+
+### gcv
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{0}\\color{gray}{\\text{a}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{0}$ (New)
+
+### gcw
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{0}\\color{gray}{\\text{d}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{0}$ (New)
+
+### gcy
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{0}\\color{gray}{\\text{t}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{0}$ (New)
+
+### gfb
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{1}\\color{gray}{\\text{s}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{1}$ (New)
+
+### gfg
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{1}\\color{gray}{\\text{e}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{1}$ (New)
+
+### gfr
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{1}\\color{gray}{\\text{r}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{1}$ (New)
+
+### gft
+- `compactsave`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `cost`: $\\color{gray}{\\text{134540}}$ (Old) &rarr; $\\color{blue}{\\text{50000}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{EventDesc}}$ (New)
+
+### gfv
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{1}\\color{gray}{\\text{a}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{1}$ (New)
+
+### gfw
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{1}\\color{gray}{\\text{d}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{1}$ (New)
+
+### gfy
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{1}\\color{gray}{\\text{t}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{1}$ (New)
+
+### glb
+- `levelreq`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
+- `cost`: $\\color{gray}{\\text{10000}}$ (Old) &rarr; $\\color{blue}{\\text{15000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{3}\\color{gray}{\\text{s}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{3}$ (New)
+
+### glg
+- `levelreq`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
+- `cost`: $\\color{gray}{\\text{10000}}$ (Old) &rarr; $\\color{blue}{\\text{15000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{3}\\color{gray}{\\text{e}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{3}$ (New)
+
+### glr
+- `levelreq`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
+- `cost`: $\\color{gray}{\\text{10000}}$ (Old) &rarr; $\\color{blue}{\\text{15000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{3}\\color{gray}{\\text{r}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{3}$ (New)
+
+### glw
+- `levelreq`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
+- `cost`: $\\color{gray}{\\text{10000}}$ (Old) &rarr; $\\color{blue}{\\text{15000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{3}\\color{gray}{\\text{d}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{3}$ (New)
+
+### gly
+- `levelreq`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
+- `cost`: $\\color{gray}{\\text{10000}}$ (Old) &rarr; $\\color{blue}{\\text{15000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{3}\\color{gray}{\\text{t}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{3}$ (New)
+
+### gpb
+- `levelreq`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{18}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{4}\\color{gray}{\\text{s}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{4}$ (New)
+
+### gpg
+- `levelreq`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{18}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{4}\\color{gray}{\\text{e}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{4}$ (New)
+
+### gpr
+- `levelreq`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{18}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{4}\\color{gray}{\\text{r}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{4}$ (New)
+
+### gpv
+- `levelreq`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{18}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{4}\\color{gray}{\\text{a}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{4}$ (New)
+
+### gpw
+- `levelreq`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{18}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{4}\\color{gray}{\\text{d}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{4}$ (New)
+
+### gpy
+- `levelreq`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{18}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{4}\\color{gray}{\\text{t}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{4}$ (New)
+
+### gsb
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
+- `cost`: $\\color{gray}{\\text{3000}}$ (Old) &rarr; $\\color{blue}{\\text{5000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{2}\\color{gray}{\\text{s}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{2}$ (New)
+
+### gsg
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
+- `cost`: $\\color{gray}{\\text{3000}}$ (Old) &rarr; $\\color{blue}{\\text{5000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{2}\\color{gray}{\\text{e}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{2}$ (New)
+
+### gsr
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
+- `cost`: $\\color{gray}{\\text{3000}}$ (Old) &rarr; $\\color{blue}{\\text{5000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{2}\\color{gray}{\\text{r}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{2}$ (New)
+
+### gsv
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
+- `cost`: $\\color{gray}{\\text{3000}}$ (Old) &rarr; $\\color{blue}{\\text{5000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{2}\\color{gray}{\\text{a}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{2}$ (New)
+
+### gsw
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
+- `cost`: $\\color{gray}{\\text{3000}}$ (Old) &rarr; $\\color{blue}{\\text{5000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{2}\\color{gray}{\\text{d}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{2}$ (New)
+
+### gsy
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
+- `cost`: $\\color{gray}{\\text{3000}}$ (Old) &rarr; $\\color{blue}{\\text{5000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{2}\\color{gray}{\\text{t}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{2}$ (New)
+
+### gwh
+- `cost`: $\\color{gray}{\\text{200000}}$ (Old) &rarr; $\\color{blue}{\\text{2500000}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldesc`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `spelldescstr`: $\\color{gray}{\\text{StackDescTwo}}$ (Old) &rarr; $\\color{blue}{\\text{Griswold's Heirloom Desc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{Griswold's Heirloom Desc}}$ (New)
+- `GheedMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `GheedMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `PermStoreItem`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `multibuy`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+
+### gzv
+- `levelreq`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
+- `cost`: $\\color{gray}{\\text{10000}}$ (Old) &rarr; $\\color{blue}{\\text{15000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{3}\\color{gray}{\\text{a}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{3}$ (New)
+
+### hp1
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{hp1}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{hp1}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{hp1}}$ (New)
+- `MalahMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `MalahMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+
+### hp2
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{hp2}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{hp2}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{hp2}}$ (New)
+- `MalahMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `MalahMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+
+### hp3
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{hp3}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{hp3}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{hp3}}$ (New)
+- `LysanderMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `LysanderMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `DrognanMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `DrognanMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### hp4
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{hp4}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{hp4}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{hp4}}$ (New)
+- `OrmusMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `OrmusMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### hp5
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{hp5}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{hp5}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{hp5}}$ (New)
+- `MalahMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `MalahMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### hrb
+- `useable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### hrn
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{40}}$ (New)
+
+### hrt
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+
+### hsm
+- `compactsave`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `cost`: $\\color{gray}{\\text{2250000}}$ (Old) &rarr; $\\color{blue}{\\text{1900000}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{HratliHerbDesc}}$ (New)
+
+### ibk
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### ice
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### jaw
+- `compactsave`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `cost`: $\\color{gray}{\\text{2760000}}$ (Old) &rarr; $\\color{blue}{\\text{75}}$ (New)
+- `TMogType`: $\\color{gray}{\\text{xxx}}$ (Old) &rarr; $\\color{blue}{\\text{cqv}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{40}}$ (New)
+- `type`: $\\color{gray}{\\text{hpot}}$ (Old) &rarr; $\\color{blue}{\\text{body}}$ (New)
+- `spelldescstr`: $\\color{gray}{\\text{JawboneDesc}}$ (Old) &rarr; $\\color{blue}{\\text{convertsto}}$ (New)
+
+### jew
+- `gamble cost`:  (Old) &rarr; $\color{blue}{\text{60000}}$ (New)
+- `PermStoreItem`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `multibuy`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+
+### lmr
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{LarzukHammerDesc}}$ (New)
+
+### luv
+- `spawnable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### mbr
+- `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `dropsound`: $\\text{item}\\color{gray}{\\text{monsterbone}}$ (Old) &rarr; $\\text{item}\\color{blue}{\\text{mephistosbrainhd}}$ (New)
+- `usesound`: $\\text{item}\\color{gray}{\\text{monsterbone}}$ (Old) &rarr; $\\text{item}\\color{blue}{\\text{mephistosbrainhd}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### mfc
+- `levelreq`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `rarity`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `cost`: $\\color{gray}{\\text{600}}$ (Old) &rarr; $\\color{blue}{\\text{666}}$ (New)
+- `type2`:  (Old) &rarr; $\color{blue}{\text{jwly}}$ (New)
+- `unique`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `PermStoreItem`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `multibuy`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### mfd
+- `levelreq`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `rarity`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `cost`: $\\color{gray}{\\text{600}}$ (Old) &rarr; $\\color{blue}{\\text{666}}$ (New)
+- `type2`:  (Old) &rarr; $\color{blue}{\text{jwly}}$ (New)
+- `unique`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `PermStoreItem`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `multibuy`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### mff
+- `levelreq`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{90}}$ (New)
+- `rarity`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `cost`: $\\color{gray}{\\text{600}}$ (Old) &rarr; $\\color{blue}{\\text{666}}$ (New)
+- `type2`:  (Old) &rarr; $\color{blue}{\text{jwly}}$ (New)
+- `unique`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `PermStoreItem`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `multibuy`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### mfg
+- `cost`: $\\color{gray}{\\text{600}}$ (Old) &rarr; $\\color{blue}{\\text{7999}}$ (New)
+
+### mfp
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{PotionMagicFindDesc}}$ (New)
+
+### mls
+- `compactsave`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{CharsiMalusDesc}}$ (New)
+
+### mp1
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{mp1}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{mp1}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{mp1}}$ (New)
+- `MalahMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `MalahMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+
+### mp2
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{mp2}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{mp2}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{mp2}}$ (New)
+- `MalahMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `MalahMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+
+### mp3
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{mp3}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{mp3}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{mp3}}$ (New)
+- `LysanderMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `LysanderMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `DrognanMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `DrognanMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### mp4
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{mp4}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{mp4}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{mp4}}$ (New)
+- `OrmusMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `OrmusMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### mp5
+- `normcode`:  (Old) &rarr; $\color{blue}{\text{mp5}}$ (New)
+- `ubercode`:  (Old) &rarr; $\color{blue}{\text{mp5}}$ (New)
+- `ultracode`:  (Old) &rarr; $\color{blue}{\text{mp5}}$ (New)
+- `MalahMin`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `MalahMax`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### pct
+- `version`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `cost`: $\\color{gray}{\\text{7950}}$ (Old) &rarr; $\\color{blue}{\\text{19999}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{pctd}}$ (New)
+
+### pk1
+- `type2`: $\color{gray}{\text{ukey}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### pk2
+- `type2`: $\color{gray}{\text{ukey}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### pk3
+- `type2`: $\color{gray}{\text{ukey}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldesc`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `spelldescstr`: $\color{gray}{\text{StackDescTwo}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### qll
+- `compactsave`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `cost`: $\\color{gray}{\\text{2760000}}$ (Old) &rarr; $\\color{blue}{\\text{32}}$ (New)
+- `TMogType`: $\\color{gray}{\\text{xxx}}$ (Old) &rarr; $\\color{blue}{\\text{aqv}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{40}}$ (New)
+- `type`: $\\color{gray}{\\text{hpot}}$ (Old) &rarr; $\\color{blue}{\\text{body}}$ (New)
+- `spelldescstr`: $\\color{gray}{\\text{QuillDesc}}$ (Old) &rarr; $\\color{blue}{\\text{convertsto}}$ (New)
+
+### r20
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r21
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r22
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r23
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r24
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r25
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r26
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r27
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r28
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r29
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r30
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r31
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r32
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### r33
+- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### rin
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### rrr
+- `compactsave`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{rrrDesc}}$ (New)
+
+### rtr
+- `compactsave`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{rtrDesc}}$ (New)
+
+### rvl
+- `transtbl`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `lightradius`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
+- `belt`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `stackable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `quest`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+
+### rvs
+- `AkaraMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `AkaraMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### sct
+- `version`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
+- `levelreq`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `cost`: $\\color{gray}{\\text{7950}}$ (Old) &rarr; $\\color{blue}{\\text{19999}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{sctd}}$ (New)
+
+### scz
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+
+### skc
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{0}\\color{gray}{\\text{z}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{0}$ (New)
+
+### skf
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{1}\\color{gray}{\\text{z}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{1}$ (New)
+
+### skl
+- `levelreq`: $\\color{gray}{\\text{12}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
+- `cost`: $\\color{gray}{\\text{10000}}$ (Old) &rarr; $\\color{blue}{\\text{30000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{3}\\color{gray}{\\text{z}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{3}$ (New)
+
+### sku
+- `levelreq`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
+- `cost`: $\\color{gray}{\\text{3000}}$ (Old) &rarr; $\\color{blue}{\\text{10000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{2}\\color{gray}{\\text{z}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{2}$ (New)
+
+### skz
+- `levelreq`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{18}}$ (New)
+- `cost`: $\\color{gray}{\\text{30000}}$ (Old) &rarr; $\\color{blue}{\\text{100000}}$ (New)
+- `type2`: $\\color{gray}{\\text{gg}}\\text{4}\\color{gray}{\\text{z}}$ (Old) &rarr; $\\color{blue}{\\text{gem}}\\text{4}$ (New)
+
+### sol
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+
+### spe
+- `compactsave`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `spawnable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `cost`: $\\color{gray}{\\text{2760000}}$ (Old) &rarr; $\\color{blue}{\\text{85}}$ (New)
+- `TMogType`: $\\color{gray}{\\text{xxx}}$ (Old) &rarr; $\\color{blue}{\\text{gps}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `type`: $\\color{gray}{\\text{hpot}}$ (Old) &rarr; $\\color{blue}{\\text{body}}$ (New)
+- `spelldescstr`: $\\color{gray}{\\text{SpleenDesc}}$ (Old) &rarr; $\\color{blue}{\\text{convertsto}}$ (New)
+
+### std
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### tal
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `TMogMin`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `TMogMax`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+
+### tbk
+- `Nameable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### tch
+- `ShowLevel`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+
+### tds
+- `cost`: $\\color{gray}{\\text{325000}}$ (Old) &rarr; $\\color{blue}{\\text{50000}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spelldesc`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `spelldescstr`: $\\color{gray}{\\text{StackDescTwo}}$ (Old) &rarr; $\\color{blue}{\\text{HAshDesc}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{HAshDesc}}$ (New)
+
+### tes
+- `spawnable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `stackable`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `minstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `maxstack`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `spawnstack`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+
+### toa
+- `level`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `levelreq`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{999}}$ (New)
+- `cost`: $\\color{gray}{\\text{250000}}$ (Old) &rarr; $\\color{blue}{\\text{250256}}$ (New)
+- `AkaraMagicMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `AkaraMagicMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### tr2
+- `CharsiMin`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `CharsiMax`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+
+### voa
+- `compactsave`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `spelldescstr2`:  (Old) &rarr; $\color{blue}{\text{ViperDesc}}$ (New)
+
+### vps
+- `spawnable`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `AkaraMin`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `AkaraMax`:  (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `LysanderMin`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `LysanderMax`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `LysanderMagicMin`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `LysanderMagicMax`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `AlkorMin`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `AlkorMax`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `CainMin`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `CainMax`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `MalahMin`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `MalahMax`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `JamellaMin`:  (Old) &rarr; $\color{blue}{\text{2}}$ (New)
+- `JamellaMax`:  (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `PermStoreItem`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `multibuy`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+
+### wms
+- `OrmusMin`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `OrmusMax`: $\color{gray}{\text{9}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+
+### yps
+- `OrmusMin`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `OrmusMax`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 

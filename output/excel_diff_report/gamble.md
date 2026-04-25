@@ -2,14 +2,14 @@
 
 *Key column used: `name`*
 
-## Added Rows in BK (New) (5)
+## Added Rows (5)
 - codex
 - compendium
 - grimoire
 - old book
 - tome
 
-## Removed Rows in BK (New) (7)
+## Removed Rows (7)
 - bone wand
 - grand scepter
 - grim wand

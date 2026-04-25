@@ -15,13 +15,13 @@
 * **Base Item:** Heavy Boots
 * **Level Requirement:** 9
 * **Properties:**
-    * item_extrablood: 3-5 (param: )
+    * item_extrablood: 3-5
     * +25% Faster Run/Walk
     * 2% Mana stolen per hit
     * Cold Resist +20%
     * +12 Defense
     * +20-30% Enhanced Defense
-    * +2 to Leap Attack (Class 143 only)
+    * +2 to Leap Attack (Class only)
     * +5-10% to Maximum Cold Resist
 
 ### Treads of Cthon (Treads of Cthon)
@@ -64,14 +64,14 @@
 * **Base Item:** Demonhide Boots
 * **Level Requirement:** 29
 * **Properties:**
-    * Adds 12-33 Fire Damage
+    * Adds 12-33-12-33 Fire Damage
     * +20% Faster Run/Walk
     * +10% to Maximum Fire Resist
     * Fire Resist +30%
     * +120-150% Enhanced Defense
     * 60-100% Extra Gold from Monsters
     * +15 Defense
-    * 75% Chance to cast level 25 Blaze when struck
+    * 75-25% Chance to cast level 75-25 Blaze when struck
     * +20% Faster Hit Recovery
 
 ### Waterwalk (Waterwalk)
@@ -108,7 +108,7 @@
     * Durability: 30 of 30
     * +35% Faster Run/Walk
     * +150-190% Enhanced Defense
-    * Adds 15-25 Damage
+    * Adds 15-25-15-25 Damage
     * Attacker Takes Damage of 5-10
 
 ### Gore Rider (Gorerider)
@@ -131,7 +131,7 @@
     * +40% Faster Run/Walk
     * +30% Faster Hit Recovery
     * +15-25 to Dexterity
-    * +2 to Original Class Skill Levels
+    * +2 to Random Class Skill Levels
     * Requirements --20%
 
 ### Sandstorm Trek (Sandstorm Trek)
@@ -160,7 +160,7 @@
     * Cannot Be Frozen
     * +10-20 to Strength
     * +17 to Dexterity
-    * +1-2 to Skeleton Mastery (Class Skeleton Mastery only)
+    * +1-2 to Skeleton Mastery (Class only)
     * Magic Damage Reduced by 20
 
 ### Meshif's Travellers (Meshif's Travellers)
@@ -174,7 +174,7 @@
     * Level 3 Resist Cold Aura When Equipped
     * +10% Faster Hit Recovery
     * +80-100% Enhanced Defense
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
 
 ### Jym's Swift Journey (Jym's Swift Journey)
 * **Base Item:** Wyrmhide Boots
@@ -193,5 +193,6 @@
 * **Properties:**
     * Socketed ()
     * +1-10% Energy
-    * 5% Chance to cast level 20 Static Field when struck
+    * 5-20% Chance to cast level 5-20 Static Field when struck
     * +5-10% Faster Run/Walk
+

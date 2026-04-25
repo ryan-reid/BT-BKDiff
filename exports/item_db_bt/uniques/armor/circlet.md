@@ -18,7 +18,7 @@
     * All Resistances +50-70
     * Cannot Be Frozen
     * +20% Faster Hit Recovery
-    * +2 to Original Class Skill Levels
+    * +2 to Random Class Skill Levels
     * -8-15% to Enemy Fire Resistance
     * +1-5% to Maximum Fire Resist
 
@@ -27,8 +27,8 @@
 * **Level Requirement:** 90
 * **Properties:**
     * +1 to All Skills
-    * +1 to Original Class Skill Levels
-    * 20% Chance to cast level 1 Lower Resist when you Kill an Enemy
+    * +1 to Random Class Skill Levels
+    * 20-1% Chance to cast level 20-1 Lower Resist when you Kill an Enemy
     * +10-15 to Mana after each Kill
     * +10-15 Life after each Kill
     * +5-10% to Experience Gained
@@ -42,9 +42,10 @@
     * +1-2 to All Skills
     * Increase Maximum Life 10%
     * Increase Maximum Mana 10%
-    * +1 to Original Class Skill Levels
+    * +1 to Random Class Skill Levels
     * +98% chance for finishing moves to not consume charges
     * Reduces all Vendor Prices 15%
     * +10-25% Faster Cast Rate
     * +10-25% Increased Attack Speed
     * +200-300% Enhanced Defense
+
