@@ -48,12 +48,16 @@
 * **Level Requirement:** 90
 * **Properties:**
     * Level 15-20 Holy Freeze Aura When Equipped
-    * 85% Chance to cast level 55 Nova on striking
-    * 25% Chance to cast level 50 Enchant when you Kill an Enemy
+    * 85-55% Chance to cast level 85-55 Nova on striking
+    * 25-50% Chance to cast level 25-50 Enchant when you Kill an Enemy
     * +20% Faster Block Rate
     * +20% Faster Block Rate
     * +2 to Paladin Skill Levels
+<<<<<<< HEAD
     * +4-5 to Vengeance (Paladin only)
+=======
+    * +4-5 to Vengeance (Class only)
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * All Resistances +25-45
     * Adds 300-300 Fire Damage
     * Adds 300-300 Cold Damage
@@ -69,3 +73,4 @@
     * +30% Faster Cast Rate
     * +50% Enhanced Defense
     * Damage Reduced by 3-5
+

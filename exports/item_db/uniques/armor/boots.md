@@ -15,13 +15,21 @@
 * **Base Item:** Heavy Boots
 * **Level Requirement:** 9
 * **Properties:**
+<<<<<<< HEAD
     * Unknown property: bloody (3-5)
+=======
+    * item_extrablood: 3-5
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * +25% Faster Run/Walk
     * 2% Mana stolen per hit
     * Cold Resist +20%
     * +12 Defense
     * +20-30% Enhanced Defense
+<<<<<<< HEAD
     * +2 to Leap Attack (Barbarian only)
+=======
+    * +2 to Leap Attack (Class only)
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * +5-10% to Maximum Cold Resist
 
 ### Treads of Cthon (Treads of Cthon)
@@ -64,14 +72,14 @@
 * **Base Item:** Demonhide Boots
 * **Level Requirement:** 29
 * **Properties:**
-    * Adds 12-33 Fire Damage
+    * Adds 12-33-12-33 Fire Damage
     * +20% Faster Run/Walk
     * +10% to Maximum Fire Resist
     * Fire Resist +30%
     * +120-150% Enhanced Defense
     * 60-100% Extra Gold from Monsters
     * +15 Defense
-    * 75% Chance to cast level 25 Blaze when struck
+    * 75-25% Chance to cast level 75-25 Blaze when struck
     * +20% Faster Hit Recovery
 
 ### Waterwalk (Waterwalk)
@@ -108,7 +116,7 @@
     * Durability: 30 of 30
     * +35% Faster Run/Walk
     * +150-190% Enhanced Defense
-    * Adds 15-25 Damage
+    * Adds 15-25-15-25 Damage
     * Attacker Takes Damage of 5-10
 
 ### Gore Rider (Gorerider)
@@ -160,7 +168,11 @@
     * Cannot Be Frozen
     * +10-20 to Strength
     * +17 to Dexterity
+<<<<<<< HEAD
     * +1-2 to Skeleton Mastery (Necromancer only)
+=======
+    * +1-2 to Skeleton Mastery (Class only)
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * Magic Damage Reduced by 20
 
 ### Wraithstep (Wraithstep)
@@ -203,7 +215,8 @@
 * **Base Item:** Boots
 * **Level Requirement:** 10
 * **Properties:**
-    * 5% Chance to cast level 20 Static Field when struck
+    * 5-20% Chance to cast level 5-20 Static Field when struck
     * +10% Faster Run/Walk
     * Socketed ()
     * +1-10% Energy
+

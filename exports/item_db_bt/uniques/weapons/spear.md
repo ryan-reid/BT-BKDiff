@@ -75,11 +75,11 @@
     * Slows Target by 75%
     * Fire Resist +50%
     * + to Life (Based on Character Level)
-    * Adds 30-50 Damage
+    * Adds 30-50-30-50 Damage
     * +10 to Strength
     * +200% Enhanced Damage
     * +30% Increased Attack Speed
-    * 20% Chance to cast level 3 Decrepify on striking
+    * 20-3% Chance to cast level 20-3 Decrepify on striking
 
 ### Soulfeast Tine (Soulfeast Tine)
 * **Base Item:** War Fork
@@ -110,7 +110,7 @@
     * 25% Bonus to Attack Rating
     * Replenish Life +20
     * +20% Faster Hit Recovery
-    * Adds 30-50 Damage
+    * Adds 30-50-30-50 Damage
     * +% Damage to Demons (Based on Character Level)
     * +200% Enhanced Damage
     * +20% Increased Attack Speed
@@ -120,10 +120,10 @@
 * **Level Requirement:** 71
 * **Properties:**
     * +190-240% Enhanced Damage
-    * 66% Chance to cast level 5 Lower Resist on striking
+    * 66-5% Chance to cast level 66-5 Lower Resist on striking
     * +50% Increased Attack Speed
-    * 33% Chance to cast level 60 Poison Nova when struck
-    * 25% Chance to cast level 60 Poison Nova on striking
+    * 33-60% Chance to cast level 33-60 Poison Nova when struck
+    * 25-60% Chance to cast level 25-60 Poison Nova on striking
     * Poison Resist +75%
 
 ### Steel Pillar (Steelpillar)
@@ -137,7 +137,7 @@
     * Repairs 1 durability in  seconds
     * 44% Chance of Crushing Blow
     * 7-12% Life stolen per hit
-    * 15% Chance to cast level 33 Amplify Damage on striking
+    * 15-33% Chance to cast level 15-33 Amplify Damage on striking
     * +1 to Iron Skin
 
 ### Arioc's Needle (Arioc's Needle)
@@ -151,3 +151,4 @@
     * +3-5 to All Skills
     * +30% Increased Attack Speed
     * Damage +100-150
+

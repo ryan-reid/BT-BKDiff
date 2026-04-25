@@ -57,13 +57,13 @@
 * **Base Item:** Short Battle Bow
 * **Level Requirement:** 25
 * **Properties:**
-    * Adds 1-300 Lightning Damage
+    * Adds 1-300-1-300 Lightning Damage
     * +15 to Strength
     * +50% Increased Attack Speed
     * Piercing Attack
     * Lightning Resist +25%
-    * 50% Chance to cast level 30 Chain Lightning on striking
-    * 15% Chance to cast level 1 Lower Resist on striking
+    * 50-30% Chance to cast level 50-30 Chain Lightning on striking
+    * 15-1% Chance to cast level 15-1 Lower Resist on striking
 
 ### Wizendraw (Wizendraw)
 * **Base Item:** Long Battle Bow
@@ -106,12 +106,12 @@
 * **Base Item:** Edge Bow
 * **Level Requirement:** 28
 * **Properties:**
-    * Adds 1-301 Lightning Damage
+    * Adds 1-301-1-301 Lightning Damage
     * +20 to Minimum Damage
     * +10 to Energy
     * +40% Increased Attack Speed
     * +150-200% Enhanced Damage
-    * 33% Chance to cast level 18 Meteor on striking
+    * 33-18% Chance to cast level 33-18 Meteor on striking
     * +2 to Amazon Skill Levels
     * +1 to Bow and Crossbow Skills
 
@@ -132,11 +132,16 @@
 * **Base Item:** Cedar Bow
 * **Level Requirement:** 33
 * **Properties:**
+<<<<<<< HEAD
     * +2-3 to Immolation Arrow (Amazon only)
     * +2-3 to Exploding Arrow (Amazon only)
+=======
+    * +2-3 to Immolation Arrow (Class only)
+    * +2-3 to Exploding Arrow (Class only)
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * +150-180% Enhanced Damage
     * Piercing Attack
-    * Adds 40-180 Fire Damage
+    * Adds 40-180-40-180 Fire Damage
     * +3 to Bow and Crossbow Skills
     * +20% Increased Attack Speed
 
@@ -151,14 +156,14 @@
     * 45% Chance to cast level 45 Glacial Spike on striking
     * Adds 300-300 Cold Damage
     * +30% Increased Attack Speed
-    * 5% Chance to cast level 1 Lower Resist on striking
+    * 5-1% Chance to cast level 5-1 Lower Resist on striking
     * Knockback
 
 ### Witchwild String (Whichwild String)
 * **Base Item:** Short Siege Bow
 * **Level Requirement:** 39
 * **Properties:**
-    * 20% Chance to cast level 22 Amplify Damage on striking
+    * 20-22% Chance to cast level 20-22 Amplify Damage on striking
     * All Resistances +40
     * % Deadly Strike (Based on Character Level)
     * +180-200% Enhanced Damage
@@ -184,11 +189,15 @@
 * **Properties:**
     * 15% Mana stolen per hit
     * Magic Damage Reduced by 9-13
+<<<<<<< HEAD
     * +3 to Guided Arrow (Amazon only)
+=======
+    * +3 to Guided Arrow (Class only)
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * +20% Increased Attack Speed
     * +25 to Dexterity
     * Hit Blinds Target +1
-    * Adds 25-50 Damage
+    * Adds 25-50-25-50 Damage
     * +150-200% Enhanced Damage
     * +1-3 to Amazon Skill Levels
 
@@ -215,7 +224,11 @@
     * +250% Enhanced Damage
     * +2 to Amazon Skill Levels
     * +25 to Dexterity
+<<<<<<< HEAD
     * +7 to Valkyrie (Amazon only)
+=======
+    * +7 to Valkyrie (Class only)
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
     * +30% Increased Attack Speed
     * Level 6 Blessed Aim Aura When Equipped
 
@@ -230,7 +243,7 @@
     * +250-300% Enhanced Damage
     * +20% Increased Attack Speed
     * +20 to Strength
-    * 50% Chance to cast level 40 Twister on striking
+    * 50-40% Chance to cast level 50-40 Twister on striking
 
 ### Widowmaker (Widowmaker)
 * **Base Item:** Ward Bow
@@ -243,15 +256,15 @@
     * +3-5 to Guided Arrow
     * +30% Increased Attack Speed
     * Piercing Attack
-    * 75% Chance to cast level 20 Slow Missiles when struck
+    * 75-20% Chance to cast level 75-20 Slow Missiles when struck
     * 15% Chance of Open Wounds
-    * 50% Chance to cast level 55 Bone Spirit on striking
+    * 50-55% Chance to cast level 50-55 Bone Spirit on striking
 
 ### Wrath of the High Heavens (Wrath of the High Heavens)
 * **Base Item:** Hydra Bow
 * **Level Requirement:** 99
 * **Properties:**
-    * 50% Chance to cast level 40 Fist of the Heavens on striking
+    * 50-40% Chance to cast level 50-40 Fist of the Heavens on striking
     * +30% Increased Attack Speed
     * +100% Damage to Demons
     * +100% Damage to Undead
@@ -259,3 +272,4 @@
     * +250% Enhanced Damage
     * +100 to Minimum Damage
     * Level 10 Redemption Aura When Equipped
+

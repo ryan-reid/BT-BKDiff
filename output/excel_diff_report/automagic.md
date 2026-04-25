@@ -85,3 +85,7 @@
 - `group`: $\\color{gray}{\\text{307}}$ (Old) &rarr; $\\color{blue}{\\text{309}}$ (New)
 - `multiply`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `add`:  (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+<<<<<<< HEAD
+=======
+
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)

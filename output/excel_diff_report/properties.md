@@ -53,3 +53,7 @@
 ### splash
 - `*Min`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `*Max`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+<<<<<<< HEAD
+=======
+
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)

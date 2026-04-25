@@ -57,7 +57,7 @@
 * **Base Item:** Flanged Mace
 * **Level Requirement:** 39
 * **Properties:**
-    * Adds 255-400 Cold Damage
+    * Adds 255-400-255-400 Cold Damage
     * Cannot Be Frozen
     * +20% Increased Attack Speed
     * -10-15% to Enemy Cold Resistance
@@ -67,7 +67,7 @@
 * **Base Item:** Jagged Star
 * **Level Requirement:** 42
 * **Properties:**
-    * 40% Chance to cast level 30 Meteor on striking
+    * 40-30% Chance to cast level 40-30 Meteor on striking
     * Adds 300-300 Fire Damage
     * Magic Damage Reduced by 9-12
     * +180-200% Enhanced Damage
@@ -78,8 +78,8 @@
 * **Base Item:** Knout
 * **Level Requirement:** 45
 * **Properties:**
-    * 20% Chance to cast level 30 Nova on striking
-    * Adds 1-300 Lightning Damage
+    * 20-30% Chance to cast level 20-30 Nova on striking
+    * Adds 1-300-1-300 Lightning Damage
     * +100 to Mana
     * Lightning Resist +25%
     * +200% Enhanced Damage
@@ -95,10 +95,10 @@
     * +15-20 to all Attributes
     * +50% Increased Attack Speed
     * Durability: 100 of 100
-    * Adds 1-500 Lightning Damage
-    * Adds 1-500 Fire Damage
-    * Adds 1-500 Cold Damage
-    * 10% Chance to cast level 1 Lower Resist on attack
+    * Adds 1-500-1-500 Lightning Damage
+    * Adds 1-500-1-500 Fire Damage
+    * Adds 1-500-1-500 Cold Damage
+    * 10-1% Chance to cast level 10-1 Lower Resist on attack
 
 ### Horizon's Tornado (Horizon's Tornado)
 * **Base Item:** Scourge
@@ -107,7 +107,7 @@
     * +230-280% Enhanced Damage
     * +50% Increased Attack Speed
     * Slows Target by 20%
-    * 20% Chance to cast level 30 Tornado on striking
+    * 20-30% Chance to cast level 20-30 Tornado on striking
     * Requirements --20%
     * 33% Deadly Strike
     * +30 to Tornado
@@ -119,8 +119,9 @@
     * +269-300% Enhanced Damage
     * +30% Increased Attack Speed
     * 20% Chance to cast level 20 Static Field on striking
-    * 20% Chance to cast level 44 Lightning on striking
-    * Adds 1-473 Lightning Damage
+    * 20-44% Chance to cast level 20-44 Lightning on striking
+    * Adds 1-473-1-473 Lightning Damage
     * Attacker Takes Lightning Damage of 30
     * 33% Chance of Crushing Blow
     * Lightning Absorb 3-9%
+

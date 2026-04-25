@@ -5,14 +5,14 @@
 * **Level Requirement:** 42
 * **Properties:**
     * +1-3 to Assassin Skill Levels
-    * +1-3 to Martial Arts Skills
+    * +1-3 to Tab 20 Skills
     * +200-250% Enhanced Damage
     * +30% Faster Hit Recovery
     * -5-10% to Enemy Lightning Resistance
     * +20 to Strength
     * +20 to Dexterity
     * 5-9% Life stolen per hit
-    * Adds 25-50 Damage
+    * Adds 25-50-25-50 Damage
     * +30% Increased Attack Speed
     * -5-10% to Enemy Cold Resistance
     * -5-10% to Enemy Fire Resistance
@@ -26,8 +26,13 @@
     * All Resistances +40-50
     * +30% Faster Hit Recovery
     * +3-4 to Shadow Disciplines Skills
+<<<<<<< HEAD
     * +3-4 to Martial Arts Skills
     * +3 to Dragon Flight (Assassin only)
+=======
+    * +3-4 to Tab 20 Skills
+    * +3 to Dragon Flight (Class only)
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
 
 ### Shadow Killer (Shadowkiller)
 * **Base Item:** Battle Cestus
@@ -49,12 +54,18 @@
 * **Properties:**
     * +250-290% Enhanced Damage
     * +20% Increased Attack Speed
-    * +3 to Martial Arts Skills
-    * Adds 236-480 Fire Damage
+    * +3 to Tab 20 Skills
+    * Adds 236-480-236-480 Fire Damage
     * -8-10% to Enemy Fire Resistance
+<<<<<<< HEAD
     * +4 to Wake of Fire (Assassin only)
     * +4 to Wake of Inferno (Assassin only)
     * +3 to Death Sentry (Assassin only)
+=======
+    * +4 to Wake of Fire (Class only)
+    * +4 to Wake of Inferno (Class only)
+    * +3 to Death Sentry (Class only)
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
 
 ### Saboteurs Blade (Saboteurs Blade)
 * **Base Item:** Scissors Suwayyah
@@ -67,7 +78,11 @@
     * +30% Increased Attack Speed
     * +250-300% Enhanced Damage
     * Level 5 Vigor Aura When Equipped
+<<<<<<< HEAD
     * +3 to Weapon Block (Assassin only)
+=======
+    * +3 to Weapon Block (Class only)
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)
 
 ### Wind God Fist (Wind God Fist)
 * **Base Item:** War Fist
@@ -85,3 +100,4 @@
     * 7% Mana stolen per hit
     * 7% Life stolen per hit
     * Slain Monsters Rest in Peace
+

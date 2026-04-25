@@ -154,3 +154,7 @@
 ### skill_cooldown
 - `Send Bits`: $\color{gray}{\text{32}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `Send Param Bits`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+<<<<<<< HEAD
+=======
+
+>>>>>>> af411cc (Refactor scripts to SOLID layered architecture)

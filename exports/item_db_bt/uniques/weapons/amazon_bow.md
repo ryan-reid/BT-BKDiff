@@ -12,7 +12,7 @@
     * +20 to Dexterity
     * +20 to Energy
     * 5-8% Mana stolen per hit
-    * Adds 25-50 Damage
+    * Adds 25-50-25-50 Damage
     * Piercing Attack
 
 ### Blood Raven's Charge (Bloodraven's Charge)
@@ -26,3 +26,4 @@
     * +5 to Revive
     * +30% Increased Attack Speed
     * +50% Faster Run/Walk
+
