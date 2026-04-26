@@ -36,7 +36,6 @@
 | [setitems.txt](setitems.md) | 0 | 0 | 75 | 0 | 138 |
 | [sets.txt](sets.md) | 0 | 0 | 19 | 0 | 33 |
 | [shrines.txt](shrines.md) | 0 | 0 | 0 | 6 | 1 |
-| [skillcalc.txt](skillcalc.md) | 0 | 0 | 0 | 0 | 0 |
 | [skilldesc.txt](skilldesc.md) | 0 | 0 | 3 | 1 | 76 |
 | [skills.txt](skills.md) | 0 | 0 | 5 | 1 | 193 |
 | [states.txt](states.md) | 0 | 0 | 13 | 1 | 14 |
