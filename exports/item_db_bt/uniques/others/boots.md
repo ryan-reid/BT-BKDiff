@@ -4,17 +4,27 @@
 * **Base Item:** Boots
 * **Level Requirement:** 5
 * **Properties:**
+<<<<<<< HEAD
     * \+15% to Maximum Fire Resist
     * \+30 to Life
     * \+25% Faster Run/Walk
     * Fire Absorb 15%
     * Level 3 Resist Fire Aura When Equipped
     * \+10\-20% Enhanced Defense
+=======
+    * +15% to Maximum Fire Resist
+    * +30 to Life
+    * +25% Faster Run/Walk
+    * Fire Absorb 15%
+    * Level 3 Resist Fire Aura When Equipped
+    * +10-20% Enhanced Defense
+>>>>>>> origin/main
 
 ### Gorefoot (Gorefoot)
 * **Base Item:** Heavy Boots
 * **Level Requirement:** 9
 * **Properties:**
+<<<<<<< HEAD
     * Unknown property: bloody \(3\-5\)
     * \+25% Faster Run/Walk
     * 2% Mana stolen per hit
@@ -23,11 +33,22 @@
     * \+20\-30% Enhanced Defense
     * \+2 to Leap Attack \(Barbarian only\)
     * \+5\-10% to Maximum Cold Resist
+=======
+    * Unknown property: bloody (3-5)
+    * +25% Faster Run/Walk
+    * 2% Mana stolen per hit
+    * Cold Resist +20%
+    * +12 Defense
+    * +20-30% Enhanced Defense
+    * +2 to Leap Attack (Barbarian only)
+    * +5-10% to Maximum Cold Resist
+>>>>>>> origin/main
 
 ### Treads of Cthon (Treads of Cthon)
 * **Base Item:** Chain Boots
 * **Level Requirement:** 15
 * **Properties:**
+<<<<<<< HEAD
     * \+30% Faster Run/Walk
     * \+150 Defense vs\. Missile
     * \+30\-40 to Life
@@ -36,6 +57,16 @@
     * Poison Length Reduced by 50%
     * \+1 to Pierce
     * \+150 Defense vs\. Melee
+=======
+    * +30% Faster Run/Walk
+    * +150 Defense vs. Missile
+    * +30-40 to Life
+    * +12 Defense
+    * +30-40% Enhanced Defense
+    * Poison Length Reduced by 50%
+    * +1 to Pierce
+    * +150 Defense vs. Melee
+>>>>>>> origin/main
 
 ### Goblin Toe (Goblin Toe)
 * **Base Item:** Light Plated Boots
@@ -44,26 +75,42 @@
     * 25% Chance of Crushing Blow
     * Damage Reduced by 7
     * Magic Damage Reduced by 7
+<<<<<<< HEAD
     * \+15 Defense
     * \+50\-60% Enhanced Defense
     * \+25% Faster Run/Walk
+=======
+    * +15 Defense
+    * +50-60% Enhanced Defense
+    * +25% Faster Run/Walk
+>>>>>>> origin/main
 
 ### Tearhaunch (Tearhaunch)
 * **Base Item:** Greaves
 * **Level Requirement:** 29
 * **Properties:**
+<<<<<<< HEAD
     * \+35 Defense
     * \+5 to Strength
     * \+5 to Dexterity
     * \+30% Faster Run/Walk
     * All Resistances \+10\-20
     * \+60\-80% Enhanced Defense
+=======
+    * +35 Defense
+    * +5 to Strength
+    * +5 to Dexterity
+    * +30% Faster Run/Walk
+    * All Resistances +10-20
+    * +60-80% Enhanced Defense
+>>>>>>> origin/main
     * Level 6 Sanctuary Aura When Equipped
 
 ### Infernostride (Infernostride)
 * **Base Item:** Demonhide Boots
 * **Level Requirement:** 29
 * **Properties:**
+<<<<<<< HEAD
     * Adds 12\-33 Fire Damage
     * \+20% Faster Run/Walk
     * \+10% to Maximum Fire Resist
@@ -73,11 +120,23 @@
     * \+15 Defense
     * 75% Chance to cast level 25 Blaze when struck
     * \+20% Faster Hit Recovery
+=======
+    * Adds 12-33 Fire Damage
+    * +20% Faster Run/Walk
+    * +10% to Maximum Fire Resist
+    * Fire Resist +30%
+    * +120-150% Enhanced Defense
+    * 60-100% Extra Gold from Monsters
+    * +15 Defense
+    * 75% Chance to cast level 25 Blaze when struck
+    * +20% Faster Hit Recovery
+>>>>>>> origin/main
 
 ### Waterwalk (Waterwalk)
 * **Base Item:** Sharkskin Boots
 * **Level Requirement:** 32
 * **Properties:**
+<<<<<<< HEAD
     * \+100 Defense vs\. Missile
     * \+40% Faster Run/Walk
     * \+15 to Dexterity
@@ -85,11 +144,21 @@
     * \+45\-65 to Life
     * \+5% to Maximum Fire Resist
     * \+100 Defense vs\. Melee
+=======
+    * +100 Defense vs. Missile
+    * +40% Faster Run/Walk
+    * +15 to Dexterity
+    * +180-210% Enhanced Defense
+    * +45-65 to Life
+    * +5% to Maximum Fire Resist
+    * +100 Defense vs. Melee
+>>>>>>> origin/main
 
 ### Silkweave (Silkweave)
 * **Base Item:** Mesh Boots
 * **Level Requirement:** 36
 * **Properties:**
+<<<<<<< HEAD
     * \+150\-190% Enhanced Defense
     * \+20\-30 to Mana after each Kill
     * \+200 Defense vs\. Missile
@@ -97,11 +166,21 @@
     * \+30% Faster Run/Walk
     * \+10 to Energy
     * \+200 Defense vs\. Melee
+=======
+    * +150-190% Enhanced Defense
+    * +20-30 to Mana after each Kill
+    * +200 Defense vs. Missile
+    * Increase Maximum Mana 20%
+    * +30% Faster Run/Walk
+    * +10 to Energy
+    * +200 Defense vs. Melee
+>>>>>>> origin/main
 
 ### War Traveler (Wartraveler)
 * **Base Item:** Battle Boots
 * **Level Requirement:** 42
 * **Properties:**
+<<<<<<< HEAD
     * \+10 to Vitality
     * \+10 to Strength
     * 30\-50% Better Chance of Getting Magic Items
@@ -110,34 +189,63 @@
     * \+150\-190% Enhanced Defense
     * Adds 15\-25 Damage
     * Attacker Takes Damage of 5\-10
+=======
+    * +10 to Vitality
+    * +10 to Strength
+    * 30-50% Better Chance of Getting Magic Items
+    * Durability: 30 of 30
+    * +35% Faster Run/Walk
+    * +150-190% Enhanced Defense
+    * Adds 15-25 Damage
+    * Attacker Takes Damage of 5-10
+>>>>>>> origin/main
 
 ### Gore Rider (Gorerider)
 * **Base Item:** War Boots
 * **Level Requirement:** 47
 * **Properties:**
+<<<<<<< HEAD
     * Requirements \-\-25%
     * 15% Deadly Strike
     * \+30% Faster Run/Walk
     * 15% Chance of Crushing Blow
     * 10% Chance of Open Wounds
     * \+160\-200% Enhanced Defense
+=======
+    * Requirements --25%
+    * 15% Deadly Strike
+    * +30% Faster Run/Walk
+    * 15% Chance of Crushing Blow
+    * 10% Chance of Open Wounds
+    * +160-200% Enhanced Defense
+>>>>>>> origin/main
     * Durability: 10 of 10
 
 ### Shadow Dancer (Shadowdancer)
 * **Base Item:** Myrmidon Greaves
 * **Level Requirement:** 71
 * **Properties:**
+<<<<<<< HEAD
     * \+70\-100% Enhanced Defense
     * \+40% Faster Run/Walk
     * \+30% Faster Hit Recovery
     * \+15\-25 to Dexterity
     * \+2 to Random Class Skill Levels
     * Requirements \-\-20%
+=======
+    * +70-100% Enhanced Defense
+    * +40% Faster Run/Walk
+    * +30% Faster Hit Recovery
+    * +15-25 to Dexterity
+    * +2 to Random Class Skill Levels
+    * Requirements --20%
+>>>>>>> origin/main
 
 ### Sandstorm Trek (Sandstorm Trek)
 * **Base Item:** Scarabshell Boots
 * **Level Requirement:** 64
 * **Properties:**
+<<<<<<< HEAD
     * \+140\-170% Enhanced Defense
     * \+40% Faster Run/Walk
     * \+20% Faster Hit Recovery
@@ -146,12 +254,23 @@
     * \+10\-15 to all Attributes
     * Level 1 Cleansing Aura When Equipped
     * Replenish Life \+15
+=======
+    * +140-170% Enhanced Defense
+    * +40% Faster Run/Walk
+    * +20% Faster Hit Recovery
+    * Poison Resist +40-70%
+    * Repairs 1 durability in 5 seconds
+    * +10-15 to all Attributes
+    * Level 1 Cleansing Aura When Equipped
+    * Replenish Life +15
+>>>>>>> origin/main
     * Attacker Takes Damage of 100
 
 ### Marrowwalk (Marrowwalk)
 * **Base Item:** Boneweave Boots
 * **Level Requirement:** 66
 * **Properties:**
+<<<<<<< HEAD
     * \+170\-200% Enhanced Defense
     * \+40% Faster Run/Walk
     * \+33 to Bone Prison
@@ -161,12 +280,24 @@
     * \+10\-20 to Strength
     * \+17 to Dexterity
     * \+1\-2 to Skeleton Mastery \(Necromancer only\)
+=======
+    * +170-200% Enhanced Defense
+    * +40% Faster Run/Walk
+    * +33 to Bone Prison
+    * +10-12 to Life Tap
+    * Regenerate Mana 10%
+    * Cannot Be Frozen
+    * +10-20 to Strength
+    * +17 to Dexterity
+    * +1-2 to Skeleton Mastery (Necromancer only)
+>>>>>>> origin/main
     * Magic Damage Reduced by 20
 
 ### Meshif's Travellers (Meshif's Travellers)
 * **Base Item:** Mirrored Boots
 * **Level Requirement:** 92
 * **Properties:**
+<<<<<<< HEAD
     * \+50% Faster Run/Walk
     * 10% Deadly Strike
     * \+100\-150 Defense
@@ -175,15 +306,32 @@
     * \+10% Faster Hit Recovery
     * \+80\-100% Enhanced Defense
     * \+1 to Random Class Skill Levels
+=======
+    * +50% Faster Run/Walk
+    * 10% Deadly Strike
+    * +100-150 Defense
+    * +75-100 to Life
+    * Level 3 Resist Cold Aura When Equipped
+    * +10% Faster Hit Recovery
+    * +80-100% Enhanced Defense
+    * +1 to Random Class Skill Levels
+>>>>>>> origin/main
 
 ### Jym's Swift Journey (Jym's Swift Journey)
 * **Base Item:** Wyrmhide Boots
 * **Level Requirement:** 45
 * **Properties:**
+<<<<<<< HEAD
     * Level 3\-14 Vigor Aura When Equipped
     * \+30% Faster Hit Recovery
     * \+10 to Strength
     * Requirements \-\-100%
+=======
+    * Level 3-14 Vigor Aura When Equipped
+    * +30% Faster Hit Recovery
+    * +10 to Strength
+    * Requirements --100%
+>>>>>>> origin/main
     * 80% Extra Gold from Monsters
     * Increase Maximum Life 5%
 
@@ -191,7 +339,14 @@
 * **Base Item:** Boots
 * **Level Requirement:** 10
 * **Properties:**
+<<<<<<< HEAD
     * Socketed \(\)
     * \+1\-10% Energy
     * 5% Chance to cast level 20 Static Field when struck
     * \+5\-10% Faster Run/Walk
+=======
+    * Socketed ()
+    * +1-10% Energy
+    * 5% Chance to cast level 20 Static Field when struck
+    * +5-10% Faster Run/Walk
+>>>>>>> origin/main

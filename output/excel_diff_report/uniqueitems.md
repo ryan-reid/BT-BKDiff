@@ -157,11 +157,20 @@
 - `min10`:  (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `max10`:  (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 ### deathcleaver
+<<<<<<< HEAD
 - `prop7`: $\\text{dmg}\\color{gray}{\\text{-norm}}$ (Old) &rarr; $\\text{dmg}$ (New)
 - `min7`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{50}}$ (New)
 - `prop8`:  (Old) &rarr; $\\color{blue}{\\text{pierce-dmg}}$ (New)
 - `min8`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `max8`:  (Old) &rarr; $\\color{blue}{\\text{20}}$ (New)
+=======
+- `prop7`: $\text{dmg}}\color{gray}{\text{-norm}}$ (Old) &rarr; $\text{dmg}}$ (New)
+- `min7`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
+- `prop8`:  (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
+- `min8`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `max8`:  (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+
+>>>>>>> origin/main
 ### destiny
 - `\*ID`: $\\color{gray}{\\text{445}}$ (Old) &rarr; $\\color{blue}{\\text{483}}$ (New)
 ### dimoaks hew
@@ -217,6 +226,7 @@
 ### honor
 - `\*ID`: $\\color{gray}{\\text{444}}$ (Old) &rarr; $\\color{blue}{\\text{482}}$ (New)
 ### horadric staff
+<<<<<<< HEAD
 - `min1`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `max1`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `prop2`: $\\text{res-}\\color{gray}{\\text{all}}$ (Old) &rarr; $\\text{res-}\\color{blue}{\\text{pois}}$ (New)
@@ -230,6 +240,22 @@
 - `prop6`: $\\color{gray}{\\text{dmg-norm}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
 - `min6`: $\\color{gray}{\\text{30}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
 - `max6`: $\\color{gray}{\\text{30}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+=======
+- `min1`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `max1`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `prop2`: $\text{res-}}\color{gray}{\text{all}}$ (Old) &rarr; $\text{res-}}\color{blue}{\text{pois}}$ (New)
+- `min2`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{25}}$ (New)
+- `max2`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{25}}$ (New)
+- `min3`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `max3`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `prop4`: $\color{gray}{\text{cast3}}$ (Old) &rarr; $\color{blue}{\text{res-all}}$ (New)
+- `min4`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `max4`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `prop6`: $\color{gray}{\text{dmg-norm}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `min6`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `max6`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+
+>>>>>>> origin/main
 ### jym's swift journey
 - `\*ID`: $\\color{gray}{\\text{431}}$ (Old) &rarr; $\\color{blue}{\\text{469}}$ (New)
 ### killing intent
@@ -263,17 +289,31 @@
 - `max6`: $\\color{gray}{\\text{85}}$ (Old) &rarr; $\\color{blue}{\\text{115}}$ (New)
 - `max7`: $\\color{gray}{\\text{40}}$ (Old) &rarr; $\\color{blue}{\\text{50}}$ (New)
 ### medusa's gaze
+<<<<<<< HEAD
 - `max10`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `par11`: $\\color{gray}{\\text{frost}}\\text{ }\\color{gray}{\\text{nova}}$ (Old) &rarr; $\\color{blue}{\\text{Frost}}\\text{ }\\color{blue}{\\text{Nova}}$ (New)
+=======
+- `max10`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
+- `par11`: $\color{gray}{\text{frost}}\text{ }}\color{gray}{\text{nova}}$ (Old) &rarr; $\color{blue}{\text{Frost}}\text{ }}\color{blue}{\text{Nova}}$ (New)
+
+>>>>>>> origin/main
 ### meshif's travellers
 - `\*ID`: $\\color{gray}{\\text{408}}$ (Old) &rarr; $\\color{blue}{\\text{446}}$ (New)
 - `prop5`: $\\color{gray}{\\text{Aura}}$ (Old) &rarr; $\\color{blue}{\\text{aura}}$ (New)
 - `max8`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 ### mindnumb
+<<<<<<< HEAD
 - `\*ID`: $\\color{gray}{\\text{451}}$ (Old) &rarr; $\\color{blue}{\\text{489}}$ (New)
 - `firstLadderSeason`: $\\color{gray}{\\text{Magic Conviction}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
 - `par1`: $\\color{gray}{\\text{376}}$ (Old) &rarr; $\\color{blue}{\\text{Magic Conviction}}$ (New)
 - `prop5`: $\\text{cold}\\color{gray}{\\text{-res}}$ (Old) &rarr; $\\color{blue}{\\text{res-}}\\text{cold}$ (New)
+=======
+- `*ID`: $\color{gray}{\text{451}}$ (Old) &rarr; $\color{blue}{\text{489}}$ (New)
+- `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `par1`: $\color{gray}{\text{376}}$ (Old) &rarr; $\color{blue}{\text{Magic Conviction}}$ (New)
+- `prop5`: $\text{cold}}\color{gray}{\text{-res}}$ (Old) &rarr; $\color{blue}{\text{res-}}\text{cold}}$ (New)
+
+>>>>>>> origin/main
 ### mistiltein
 - `\*ID`: $\\color{gray}{\\text{415}}$ (Old) &rarr; $\\color{blue}{\\text{453}}$ (New)
 - `prop1`: $\\color{gray}{\\text{Aura}}$ (Old) &rarr; $\\color{blue}{\\text{aura}}$ (New)
@@ -299,10 +339,18 @@
 ### saracen's chance
 - `max4`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 ### schaefer's hammer
+<<<<<<< HEAD
 - `max1`: $\\color{gray}{\\text{20}}$ (Old) &rarr; $\\color{blue}{\\text{50}}$ (New)
 - `prop9`: $\\text{dmg}\\color{gray}{\\text{-ltng}}$ (Old) &rarr; $\\color{blue}{\\text{pierce-}}\\text{dmg}$ (New)
 - `min9`: $\\color{gray}{\\text{50}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `max9`: $\\color{gray}{\\text{200}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
+=======
+- `max1`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
+- `prop9`: $\text{dmg}}\color{gray}{\text{-ltng}}$ (Old) &rarr; $\color{blue}{\text{pierce-}}\text{dmg}}$ (New)
+- `min9`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
+- `max9`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+
+>>>>>>> origin/main
 ### shadowdancer
 - `max5`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 ### shaftstop
@@ -324,8 +372,14 @@
 - `\*ID`: $\\color{gray}{\\text{419}}$ (Old) &rarr; $\\color{blue}{\\text{457}}$ (New)
 - `max4`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 ### simple solution
+<<<<<<< HEAD
 - `\*ID`: $\\color{gray}{\\text{422}}$ (Old) &rarr; $\\color{blue}{\\text{460}}$ (New)
 - `prop8`: $\\text{res-}\\color{gray}{\\text{poi}}\\text{-len}$ (Old) &rarr; $\\text{res-}\\color{blue}{\\text{pois}}\\text{-len}$ (New)
+=======
+- `*ID`: $\color{gray}{\text{422}}$ (Old) &rarr; $\color{blue}{\text{460}}$ (New)
+- `prop8`: $\text{res-}}\color{gray}{\text{poi}}\text{-len}}$ (Old) &rarr; $\text{res-}}\color{blue}{\text{pois}}\text{-len}}$ (New)
+
+>>>>>>> origin/main
 ### skin of the flayerd one
 - `max9`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 ### skorn
@@ -388,12 +442,22 @@
 - `rarity`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{99}}$ (New)
 - `prop9`: $\\color{gray}{\\text{gethit-skill}}$ (Old) &rarr; $\\color{blue}{\\text{91}}$ (New)
 ### superkhalimflail
+<<<<<<< HEAD
 - `prop4`: $\\text{att}\\color{gray}{\\text{\\%}}$ (Old) &rarr; $\\text{att}$ (New)
 - `min4`: $\\color{gray}{\\text{200}}$ (Old) &rarr; $\\color{blue}{\\text{40}}$ (New)
 - `max4`: $\\color{gray}{\\text{200}}$ (Old) &rarr; $\\color{blue}{\\text{40}}$ (New)
 - `prop7`: $\\color{gray}{\\text{dmg-norm}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
 - `min7`: $\\color{gray}{\\text{50}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
 - `max7`: $\\color{gray}{\\text{50}}$ (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+=======
+- `prop4`: $\text{att}}\color{gray}{\text{\%}}$ (Old) &rarr; $\text{att}}$ (New)
+- `min4`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
+- `max4`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
+- `prop7`: $\color{gray}{\text{dmg-norm}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `min7`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `max7`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+
+>>>>>>> origin/main
 ### the corrupted grandfather
 - `\*ID`: $\\color{gray}{\\text{426}}$ (Old) &rarr; $\\color{blue}{\\text{464}}$ (New)
 - `min2`: $\\color{gray}{\\text{250}}$ (Old) &rarr; $\\color{blue}{\\text{300}}$ (New)
@@ -447,7 +511,12 @@
 ### unsullied's legacy
 - `\*ID`: $\\color{gray}{\\text{407}}$ (Old) &rarr; $\\color{blue}{\\text{445}}$ (New)
 ### viperfork
+<<<<<<< HEAD
 - `prop4`: $\\color{gray}{\\text{get-hit}}\\text{-skill}$ (Old) &rarr; $\\color{blue}{\\text{gethit}}\\text{-skill}$ (New)
+=======
+- `prop4`: $\color{gray}{\text{get-hit}}\text{-skill}}$ (Old) &rarr; $\color{blue}{\text{gethit}}\text{-skill}}$ (New)
+
+>>>>>>> origin/main
 ### wind god fist
 - `\*ID`: $\\color{gray}{\\text{434}}$ (Old) &rarr; $\\color{blue}{\\text{472}}$ (New)
 ### windhammer

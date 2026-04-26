@@ -63,8 +63,14 @@
 - `descstrpos`:  (Old) &rarr; $\\color{blue}{\\text{strModEnhancedDamage}}$ (New)
 - `descstrneg`:  (Old) &rarr; $\\color{blue}{\\text{strModEnhancedDamage}}$ (New)
 ### damageresist
+<<<<<<< HEAD
 - `descfunc`: $\\color{gray}{\\text{19}}$ (Old) &rarr; $\\color{blue}{\\text{29}}$ (New)
 - `descstrneg`: $\\text{ModStr2}\\color{gray}{\\text{uPercent}}$ (Old) &rarr; $\\text{ModStr2}\\color{blue}{\\text{uPercentNegative}}$ (New)
+=======
+- `descfunc`: $\color{gray}{\text{19}}$ (Old) &rarr; $\color{blue}{\text{29}}$ (New)
+- `descstrneg`: $\text{ModStr2}}\color{gray}{\text{uPercent}}$ (Old) &rarr; $\text{ModStr2}}\color{blue}{\text{uPercentNegative}}$ (New)
+
+>>>>>>> origin/main
 ### dyeblack
 - `\*ID`: $\\color{gray}{\\text{365}}$ (Old) &rarr; $\\color{blue}{\\text{372}}$ (New)
 ### dyewhite

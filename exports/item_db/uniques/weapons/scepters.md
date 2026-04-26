@@ -5,6 +5,7 @@
 * **Level Requirement:** 5
 * **Properties:**
     * 25% Chance of Crushing Blow
+<<<<<<< HEAD
     * Fire Resist \+20%
     * Poison Resist \+20%
     * \+15 to Mana after each Kill
@@ -12,11 +13,21 @@
     * \+170\-180% Enhanced Damage
     * 6% Life stolen per hit
     * \+1 to All Skills
+=======
+    * Fire Resist +20%
+    * Poison Resist +20%
+    * +15 to Mana after each Kill
+    * +20% Increased Attack Speed
+    * +170-180% Enhanced Damage
+    * 6% Life stolen per hit
+    * +1 to All Skills
+>>>>>>> origin/main
 
 ### Rusthandle (Rusthandle)
 * **Base Item:** Grand Scepter
 * **Level Requirement:** 17
 * **Properties:**
+<<<<<<< HEAD
     * \+1\-2 to Paladin Skill Levels
     * Damage Reduced by 7
     * Magic Damage Reduced by 7
@@ -25,11 +36,22 @@
     * Level 5 Might Aura When Equipped
     * \+3 to Sacrifice \(Paladin only\)
     * \+3 to Zeal \(Paladin only\)
+=======
+    * +1-2 to Paladin Skill Levels
+    * Damage Reduced by 7
+    * Magic Damage Reduced by 7
+    * 8% Life stolen per hit
+    * +180% Enhanced Damage
+    * Level 5 Might Aura When Equipped
+    * +3 to Sacrifice (Paladin only)
+    * +3 to Zeal (Paladin only)
+>>>>>>> origin/main
 
 ### Stormeye (Stormeye)
 * **Base Item:** War Scepter
 * **Level Requirement:** 23
 * **Properties:**
+<<<<<<< HEAD
     * Adds 1\-400 Lightning Damage
     * \+20% Faster Cast Rate
     * Replenish Life \+10
@@ -37,6 +59,15 @@
     * \+3\-5 to Resist Lightning
     * \+3\-5 to Holy Shock
     * \+3 to Fist of the Heavens
+=======
+    * Adds 1-400 Lightning Damage
+    * +20% Faster Cast Rate
+    * Replenish Life +10
+    * +40% Increased Attack Speed
+    * +3-5 to Resist Lightning
+    * +3-5 to Holy Shock
+    * +3 to Fist of the Heavens
+>>>>>>> origin/main
 
 ### Zakarum's Hand (Zakarum's Hand)
 * **Base Item:** Rune Scepter
@@ -44,6 +75,7 @@
 * **Properties:**
     * 8% Mana stolen per hit
     * Ignore Target's Defense
+<<<<<<< HEAD
     * Regenerate Mana 10\-20%
     * Replenish Life \+15\-20
     * 60% Chance to cast level 25 Blizzard on striking
@@ -52,44 +84,81 @@
     * \+2\-3 to Holy Freeze \(Paladin only\)
     * \+2\-3 to Holy Shock \(Paladin only\)
     * \+1\-2 to Paladin Skill Levels
+=======
+    * Regenerate Mana 10-20%
+    * Replenish Life +15-20
+    * 60% Chance to cast level 25 Blizzard on striking
+    * +180-220% Enhanced Damage
+    * +30% Increased Attack Speed
+    * +2-3 to Holy Freeze (Paladin only)
+    * +2-3 to Holy Shock (Paladin only)
+    * +1-2 to Paladin Skill Levels
+>>>>>>> origin/main
 
 ### The Fetid Sprinkler (The Fetid Sprinkler)
 * **Base Item:** Holy Water Sprinkler
 * **Level Requirement:** 38
 * **Properties:**
+<<<<<<< HEAD
     * \+2 to Paladin Skill Levels
     * 33% Chance to cast level 1 Decrepify on striking
     * \+25% Increased Attack Speed
     * Adds 409\-409 Poison Damage Over 409 Seconds
     * \+200% Enhanced Damage
     * Adds 30\-50 Damage
+=======
+    * +2 to Paladin Skill Levels
+    * 33% Chance to cast level 1 Decrepify on striking
+    * +25% Increased Attack Speed
+    * Adds 409-409 Poison Damage Over 409 Seconds
+    * +200% Enhanced Damage
+    * Adds 30-50 Damage
+>>>>>>> origin/main
 
 ### Hand of Blessed Light (Hand of Blessed Light)
 * **Base Item:** Divine Scepter
 * **Level Requirement:** 42
 * **Properties:**
+<<<<<<< HEAD
     * \+1\-3 to Paladin Skill Levels
     * \+30% Faster Cast Rate
     * Regenerate Mana 15%
     * \+20% Increased Attack Speed
     * \+1\-3 to Holy Bolt \(Paladin only\)
     * \+1\-3 to Fist of the Heavens \(Paladin only\)
+=======
+    * +1-3 to Paladin Skill Levels
+    * +30% Faster Cast Rate
+    * Regenerate Mana 15%
+    * +20% Increased Attack Speed
+    * +1-3 to Holy Bolt (Paladin only)
+    * +1-3 to Fist of the Heavens (Paladin only)
+>>>>>>> origin/main
 
 ### Heaven's Light (Heaven's Light)
 * **Base Item:** Mighty Scepter
 * **Level Requirement:** 61
 * **Properties:**
+<<<<<<< HEAD
     * \+300\-350% Enhanced Damage
     * \+30% Increased Attack Speed
     * \-66% Target Defense
     * \+3 to Paladin Skill Levels
     * \+15\-20 Life after each Kill
+=======
+    * +300-350% Enhanced Damage
+    * +30% Increased Attack Speed
+    * -66% Target Defense
+    * +3 to Paladin Skill Levels
+    * +15-20 Life after each Kill
+>>>>>>> origin/main
     * 33% Chance of Crushing Blow
 
 ### Astreon's Iron Ward (Ironward)
 * **Base Item:** Caduceus
 * **Level Requirement:** 60
 * **Properties:**
+<<<<<<< HEAD
     * \+250\-300% Enhanced Damage
     * Slows Target by 25%
     * 150\-200% Bonus to Attack Rating
@@ -101,12 +170,26 @@
     * 33% Chance of Crushing Blow
     * \+40% Faster Cast Rate
     * \+3 to All Skills
+=======
+    * +250-300% Enhanced Damage
+    * Slows Target by 25%
+    * 150-200% Bonus to Attack Rating
+    * +40% Increased Attack Speed
+    * Adds 80-240 Magic Damage
+    * Damage Reduced by 7
+    * Damage +60-85
+    * +1-2 to Combat Skills
+    * 33% Chance of Crushing Blow
+    * +40% Faster Cast Rate
+    * +3 to All Skills
+>>>>>>> origin/main
     * Ignore Target's Defense
 
 ### The Redeemer (The Reedeemer)
 * **Base Item:** Mighty Scepter
 * **Level Requirement:** 72
 * **Properties:**
+<<<<<<< HEAD
     * \+250\-300% Enhanced Damage
     * \+200\-250% Damage to Demons
     * \+2 to Paladin Skill Levels
@@ -116,17 +199,36 @@
     * \-33% Target Defense
     * Damage \+60\-120
     * \+200% Damage to Undead
+=======
+    * +250-300% Enhanced Damage
+    * +200-250% Damage to Demons
+    * +2 to Paladin Skill Levels
+    * Requirements --60%
+    * Level 5 Redemption Aura When Equipped
+    * +2-4 to Holy Bolt (Paladin only)
+    * -33% Target Defense
+    * Damage +60-120
+    * +200% Damage to Undead
+>>>>>>> origin/main
 
 ### Simple Solution (Simple Solution)
 * **Base Item:** Seraph Rod
 * **Level Requirement:** 85
 * **Properties:**
     * 50% Chance to cast level 40 Blessed Hammer on attack
+<<<<<<< HEAD
     * \+30% Increased Attack Speed
     * \+2 to All Skills
     * Level 20 Concentration Aura When Equipped
     * \+50 to Life
     * \+5 Life after each Kill
+=======
+    * +30% Increased Attack Speed
+    * +2 to All Skills
+    * Level 20 Concentration Aura When Equipped
+    * +50 to Life
+    * +5 Life after each Kill
+>>>>>>> origin/main
     * 5% Life stolen per hit
     * Poison Length Reduced by 100%
     * Ignore Target's Defense
@@ -135,6 +237,7 @@
 * **Base Item:** Seraph Rod
 * **Level Requirement:** 60
 * **Properties:**
+<<<<<<< HEAD
     * Level 3\-5 Magic Conviction Aura When Equipped
     * \+30% Faster Cast Rate
     * \+1 to All Skills
@@ -142,3 +245,12 @@
     * \+40% Increased Attack Speed
     * 100% Chance to cast level 20 Blessed Hammer when you Kill an Enemy
     * Lightning Resist \+20\-25%
+=======
+    * Level 3-5 Magic Conviction Aura When Equipped
+    * +30% Faster Cast Rate
+    * +1 to All Skills
+    * +5-10% to Magic Skill Damage
+    * +40% Increased Attack Speed
+    * 100% Chance to cast level 20 Blessed Hammer when you Kill an Enemy
+    * Lightning Resist +20-25%
+>>>>>>> origin/main

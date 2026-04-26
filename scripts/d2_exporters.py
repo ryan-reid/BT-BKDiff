@@ -80,9 +80,14 @@ class MarkdownExporter(BaseExporter):
                     color = 'gray' if is_old else 'blue'
                     parts.append(r"\\color{" + color + r"}{\\text{" + escaped + r"}}")
                 elif tag == 'equal': 
+<<<<<<< HEAD
                     parts.append(r"\\text{" + escaped + r"}")
             if not parts: return ""
             return "$" + "".join(parts) + "$"
+=======
+                    res += r"\text{" + MarkdownExporter.escape_latex(part) + r"}}"
+            return res + "$"
+>>>>>>> origin/main
         return render(old_toks, True), render(new_toks, False)
 
     def export_item_db(self, items: List[AnalyzedItemDTO], title: str, output_path: str):
@@ -231,20 +236,48 @@ class MarkdownExporter(BaseExporter):
                 added_toc.append(f"- [{cat}]({rel})\n")
 
         with open(os.path.join(output_dir, "ADDED.md"), 'w', encoding='utf-8') as f:
+<<<<<<< HEAD
             f.write("".join(added_toc))
+=======
+            f.write("# Added Items\n\n")
+            for k, item in sorted(diff['added'].items()):
+                name = item.get('display_name') or item.get('name')
+                base = item.get('base_item') or ', '.join(item.get('base_items', []))
+                lvl = item.get('lvl_req', '0')
+                
+                f.write(f"**{name}** ({k})\n\n")
+                f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
+                f.write(f"| | **Base Item:** {base} |\n")
+                f.write(f"| | **Level Requirement:** {lvl} |\n")
+                f.write("| | **Properties:** |\n")
+                for prop in item['properties']:
+                    _, new_fmt = self.get_styled_diffs("", prop['resolved_text'])
+                    f.write(f"| | {new_fmt} |\n")
+                f.write("\n")
+>>>>>>> origin/main
 
         # 3. REMOVED.md
         with open(os.path.join(output_dir, "REMOVED.md"), 'w', encoding='utf-8') as f:
             f.write("# Removed Items\n\n")
             for k, item in sorted(diff['removed'].items()):
+<<<<<<< HEAD
                 name = self.escape_markdown(item.get('display_name') or item.get('name'))
                 f.write(f"- **{name}** ({self.escape_markdown(str(k))})\n")
+=======
+                name = item.get('display_name') or item.get('name')
+                f.write(f"- **{name}** ({k})\n")
+>>>>>>> origin/main
 
         # 4. MODIFIED.md
         with open(os.path.join(output_dir, "MODIFIED.md"), 'w', encoding='utf-8') as f:
             f.write("# Modified Items\n\n")
+<<<<<<< HEAD
             f.write(r"- $\\color{gray}{\\text{Gray text}}$: Removed/Old Value" + "\n")
             f.write(r"- $\\color{blue}{\\text{Blue text}}$: Added/New Value" + "\n\n")
+=======
+            f.write(r"- $\color{gray}{\text{Gray text}}$: Removed/Old Value" + "\n")
+            f.write(r"- $\color{blue}{\text{Blue text}}$: Added/New Value" + "\n\n")
+>>>>>>> origin/main
             for k, mod in sorted(diff['modified'].items()):
                 f.write(f"**{self.escape_markdown(mod['name'])}** ({self.escape_markdown(str(k))})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
