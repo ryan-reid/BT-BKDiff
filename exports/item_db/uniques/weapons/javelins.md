@@ -66,4 +66,4 @@
     * \+30 to Dexterity
     * \+30 to Strength
     * \+40% Increased Attack Speed
-    * 200% Bonus to Attack Rating
+    * Unknown property: ar% \(200\)

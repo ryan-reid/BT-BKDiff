@@ -15,5 +15,5 @@
 | | $\color{blue}{\\text{+30 to Dexterity}}$ |
 | | $\color{blue}{\\text{+30 to Strength}}$ |
 | | $\color{blue}{\\text{+40\\% Increased Attack Speed}}$ |
-| | $\color{blue}{\\text{200\\% Bonus to Attack Rating}}$ |
+| | $\color{blue}{\\text{Unknown property: ar\\% (200)}}$ |
 

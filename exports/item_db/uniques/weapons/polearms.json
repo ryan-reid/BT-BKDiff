@@ -2241,7 +2241,7 @@
         "param": "",
         "min_val": "200",
         "max_val": "200",
-        "resolved_text": "200% Bonus to Attack Rating"
+        "resolved_text": "Unknown property: ar% (200)"
       },
       {
         "code": "gold%",
