@@ -155,7 +155,7 @@
         "param": "Critical Strike",
         "min_val": "1",
         "max_val": "6",
-        "resolved_text": "+1-6 to Dangerous Strike"
+        "resolved_text": "+1-6 to Critical Strike"
       },
       {
         "code": "cast2",

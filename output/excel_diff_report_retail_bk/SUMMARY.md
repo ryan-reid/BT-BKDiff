@@ -1,0 +1,47 @@
+# Excel Diff Summary
+
+| File | Added Cols | Removed Cols | Added Rows | Removed Rows | Modified Rows |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| [armor.txt](armor.md) | 0 | 0 | 0 | 0 | 216 |
+| [automagic.txt](automagic.md) | 0 | 0 | 27 | 0 | 1 |
+| [charstats.txt](charstats.md) | 0 | 0 | 0 | 0 | 9 |
+| [cubemain.txt](cubemain.md) | 0 | 0 | 509 | 35 | 162 |
+| [difficultylevels.txt](difficultylevels.md) | 0 | 0 | 0 | 0 | 3 |
+| [experience.txt](experience.md) | 0 | 0 | 26 | 0 | 2 |
+| [gamble.txt](gamble.md) | 0 | 0 | 51 | 0 | 0 |
+| [gems.txt](gems.md) | 0 | 0 | 0 | 0 | 46 |
+| [hireling.txt](hireling.md) | 0 | 0 | 0 | 0 | 0 |
+| [inventory.txt](inventory.md) | 0 | 0 | 0 | 0 | 0 |
+| [itemstatcost.txt](itemstatcost.md) | 0 | 0 | 17 | 0 | 41 |
+| [itemtypes.txt](itemtypes.md) | 2 | 0 | 13005 | 0 | 23 |
+| [levels.txt](levels.md) | 0 | 0 | 9 | 0 | 130 |
+| [lvlmaze.txt](lvlmaze.md) | 0 | 0 | 0 | 0 | 0 |
+| [lvlprest.txt](lvlprest.md) | 0 | 0 | 0 | 0 | 0 |
+| [lvlwarp.txt](lvlwarp.md) | 0 | 0 | 0 | 0 | 0 |
+| [magicprefix.txt](magicprefix.md) | 0 | 0 | 0 | 0 | 0 |
+| [magicsuffix.txt](magicsuffix.md) | 0 | 0 | 0 | 0 | 0 |
+| [misc.txt](misc.md) | 4 | 0 | 26 | 0 | 46 |
+| [missiles.txt](missiles.md) | 0 | 0 | 9 | 0 | 75 |
+| [monai.txt](monai.md) | 0 | 0 | 0 | 0 | 0 |
+| [monlvl.txt](monlvl.md) | 0 | 0 | 0 | 0 | 0 |
+| [monprop.txt](monprop.md) | 0 | 0 | 0 | 0 | 0 |
+| [monstats.txt](monstats.md) | 0 | 0 | 45 | 0 | 752 |
+| [monstats2.txt](monstats2.md) | 0 | 0 | 0 | 0 | 0 |
+| [monumod.txt](monumod.md) | 0 | 0 | 0 | 0 | 0 |
+| [npc.txt](npc.md) | 0 | 0 | 0 | 0 | 0 |
+| [objects.txt](objects.md) | 0 | 0 | 0 | 0 | 0 |
+| [overlay.txt](overlay.md) | 0 | 0 | 0 | 0 | 0 |
+| [properties.txt](properties.md) | 0 | 0 | 20 | 1 | 5 |
+| [runes.txt](runes.md) | 0 | 0 | 0 | 0 | 0 |
+| [setitems.txt](setitems.md) | 0 | 0 | 0 | 0 | 0 |
+| [sets.txt](sets.md) | 0 | 0 | 0 | 0 | 0 |
+| [shrines.txt](shrines.md) | 0 | 0 | 0 | 0 | 0 |
+| [skillcalc.txt](skillcalc.md) | 0 | 0 | 0 | 0 | 0 |
+| [skilldesc.txt](skilldesc.md) | 0 | 0 | 0 | 0 | 0 |
+| [skills.txt](skills.md) | 0 | 0 | 5 | 1 | 193 |
+| [states.txt](states.md) | 0 | 0 | 0 | 0 | 0 |
+| [superuniques.txt](superuniques.md) | 0 | 0 | 0 | 0 | 0 |
+| [treasureclassex.txt](treasureclassex.md) | 0 | 0 | 0 | 0 | 0 |
+| [uniqueitems.txt](uniqueitems.md) | 0 | 0 | 67 | 0 | 425 |
+| [weapons.txt](weapons.md) | 0 | 0 | 0 | 0 | 306 |
+| **Total** | **6** | **0** | **13816** | **37** | **2435** |

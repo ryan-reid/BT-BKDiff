@@ -8,7 +8,7 @@
     * Damage Reduced by 3
     * \+50\-75 to Attack Rating
     * 15\-30% Better Chance of Getting Magic Items
-    * \+1 to Dangerous Strike
+    * \+1 to Critical Strike
 
 ### Manald Heal (Manald Heal)
 * **Base Item:** Ring

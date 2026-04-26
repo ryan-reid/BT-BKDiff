@@ -1,7 +1,7 @@
 # Unique Class Armors
 
 ### Arreat's Face (Arreat's Face)
-* **Base Item:** Violator Guard
+* **Base Item:** Slayer Guard
 * **Level Requirement:** 42
 * **Properties:**
     * \+2  to Barbarian Skill Levels
@@ -64,8 +64,9 @@
     * \+130\-140% Enhanced Defense
     * \+4\-6 to Shape Shifting Skills
     * 7\-10% Life stolen per hit
-    * Level 6\-12 Fanaticism Aura When Equipped
+    * 60\-120% Bonus to Attack Rating
     * 33% Chance of Open Wounds
+    * \+1\-2 to Feral Rage \(Druid only\)
 
 ### Demonhorn's Edge (Demonhorn's Edge)
 * **Base Item:** Destroyer Helm
@@ -107,7 +108,7 @@
     * Freezes Target \+1
 
 ### Darkforce Spawn (Darkforge Spawn)
-* **Base Item:** Evil Lord Head
+* **Base Item:** Bloodlord Skull
 * **Level Requirement:** 64
 * **Properties:**
     * \+140\-180% Enhanced Defense
@@ -117,13 +118,13 @@
     * \+2\-3 to Poison and Bone Skills
     * \+2\-3 to Summoning Skills
     * \+5 to Teeth \(Necromancer only\)
-    * \+5 to Spike Armor \(Necromancer only\)
+    * \+5 to Bone Armor \(Necromancer only\)
     * \+5 to Bone Spear \(Necromancer only\)
     * \+5 to Bone Spirit \(Necromancer only\)
     * Piercing Attack
 
 ### Boneflame (Boneflame)
-* **Base Item:** Succubus Head
+* **Base Item:** Succubus Skull
 * **Level Requirement:** 72
 * **Properties:**
     * \+120\-150% Enhanced Defense
@@ -143,6 +144,7 @@
     * \+15\-25 to Strength
     * Level 15\-20 Holy Fire Aura When Equipped
     * \+10 to Hydra
+    * \+15% to Fire Skill Damage
     * \+30% Faster Cast Rate
     * \+1 to Fire Mastery
     * \+20% Faster Block Rate
@@ -270,18 +272,3 @@
     * \+20% Faster Run/Walk
     * \+50% Enhanced Defense
     * 10% Life stolen per hit
-
-### Trophy of the Lichking Toudi (Trophy of the Lichking Toudi)
-* **Base Item:** Hierophant Trophy
-* **Level Requirement:** 80
-* **Properties:**
-    * \+3 to Necromancer Skill Levels
-    * \+30% Faster Cast Rate
-    * Damage Reduced by 10\-20%
-    * Level 5\-10 Vigor Aura When Equipped
-    * Increase Maximum Life 10\-15%
-    * Increase Maximum Mana 10\-15%
-    * All Resistances \+10\-25
-    * \+50% Faster Block Rate
-    * \+50% Faster Block Rate
-    * \+200\-300% Enhanced Defense

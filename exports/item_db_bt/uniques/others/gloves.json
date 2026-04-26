@@ -1349,10 +1349,10 @@
       },
       {
         "code": "hit-skill",
-        "param": "Decrepify",
+        "param": "Weaken",
         "min_val": "25",
         "max_val": "18",
-        "resolved_text": "25% Chance to cast level 18 Decrepify on striking"
+        "resolved_text": "25% Chance to cast level 18 Weaken on striking"
       },
       {
         "code": "dmg-ac",
@@ -1405,7 +1405,7 @@
       "min3": "4",
       "max3": "7",
       "prop4": "hit-skill",
-      "par4": "Decrepify",
+      "par4": "Weaken",
       "min4": "25",
       "max4": "18",
       "prop5": "dmg-ac",
@@ -1492,13 +1492,6 @@
         "min_val": "10",
         "max_val": "15",
         "resolved_text": "+10-15 to Strength"
-      },
-      {
-        "code": "ignore-ac",
-        "param": "",
-        "min_val": "1",
-        "max_val": "1",
-        "resolved_text": "Ignore Target's Defense"
       }
     ],
     "raw_row": {
@@ -1548,10 +1541,10 @@
       "par6": "",
       "min6": "10",
       "max6": "15",
-      "prop7": "ignore-ac",
+      "prop7": "",
       "par7": "",
-      "min7": "1",
-      "max7": "1",
+      "min7": "",
+      "max7": "",
       "prop8": "",
       "par8": "",
       "min8": "",

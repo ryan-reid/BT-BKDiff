@@ -979,7 +979,7 @@
         "param": "68",
         "min_val": "10",
         "max_val": "25",
-        "resolved_text": "10% Chance to cast level 25 Spike Armor when struck"
+        "resolved_text": "10% Chance to cast level 25 Bone Armor when struck"
       },
       {
         "code": "extra-pois",
@@ -1924,7 +1924,7 @@
         "param": "Bone Armor",
         "min_val": "100",
         "max_val": "51",
-        "resolved_text": "100% Chance to cast level 51 Spike Armor when you Level-Up"
+        "resolved_text": "100% Chance to cast level 51 Bone Armor when you Level-Up"
       },
       {
         "code": "addxp",

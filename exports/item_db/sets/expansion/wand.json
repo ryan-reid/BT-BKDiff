@@ -18,7 +18,7 @@
         "param": "78",
         "min_val": "2",
         "max_val": "2",
-        "resolved_text": "+2 to Spike Wall (Necromancer only)"
+        "resolved_text": "+2 to Bone Wall (Necromancer only)"
       },
       {
         "code": "skill",
@@ -32,7 +32,7 @@
         "param": "88",
         "min_val": "2",
         "max_val": "2",
-        "resolved_text": "+2 to Spike Prison (Necromancer only)"
+        "resolved_text": "+2 to Bone Prison (Necromancer only)"
       },
       {
         "code": "mana",

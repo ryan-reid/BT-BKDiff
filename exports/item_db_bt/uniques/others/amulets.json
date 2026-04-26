@@ -384,16 +384,23 @@
       {
         "code": "mana",
         "param": "",
-        "min_val": "100",
-        "max_val": "100",
-        "resolved_text": "+100 to Mana"
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Mana"
+      },
+      {
+        "code": "res-pois",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "Poison Resist +25%"
       },
       {
         "code": "hp",
         "param": "",
-        "min_val": "100",
-        "max_val": "100",
-        "resolved_text": "+100 to Life"
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Life"
       }
     ],
     "raw_row": {
@@ -421,16 +428,16 @@
       "usesound": "",
       "prop1": "mana",
       "par1": "",
-      "min1": "100",
-      "max1": "100",
-      "prop2": "",
+      "min1": "10",
+      "max1": "10",
+      "prop2": "res-pois",
       "par2": "",
-      "min2": "",
-      "max2": "",
+      "min2": "25",
+      "max2": "25",
       "prop3": "hp",
       "par3": "",
-      "min3": "100",
-      "max3": "100",
+      "min3": "10",
+      "max3": "10",
       "prop4": "",
       "par4": "",
       "min4": "0",

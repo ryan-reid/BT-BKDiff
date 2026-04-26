@@ -143,10 +143,11 @@
     * \+20% Faster Hit Recovery
     * Poison Resist \+40\-70%
     * Repairs 1 durability in 5 seconds
-    * \+10\-15 to all Attributes
-    * Level 1 Cleansing Aura When Equipped
+    * \+10\-15 to Strength
+    * \+10\-15 to Vitality
     * Replenish Life \+15
     * Attacker Takes Damage of 100
+    * Poison Length Reduced by 75%
 
 ### Marrowwalk (Marrowwalk)
 * **Base Item:** Boneweave Boots
@@ -154,13 +155,13 @@
 * **Properties:**
     * \+170\-200% Enhanced Defense
     * \+40% Faster Run/Walk
-    * \+33 to Spike Prison
+    * \+33 to Bone Prison
     * \+10\-12 to Life Tap
     * Regenerate Mana 10%
     * Cannot Be Frozen
     * \+10\-20 to Strength
     * \+17 to Dexterity
-    * \+1\-2 to Undead Mastery \(Necromancer only\)
+    * \+1\-2 to Skeleton Mastery \(Necromancer only\)
     * Magic Damage Reduced by 20
 
 ### Meshif's Travellers (Meshif's Travellers)
@@ -194,4 +195,4 @@
     * Socketed \(\)
     * \+1\-10% Energy
     * 5% Chance to cast level 20 Static Field when struck
-    * \+5\-10% Faster Run/Walk
+    * \+10% Faster Run/Walk

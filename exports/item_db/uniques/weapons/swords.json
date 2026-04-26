@@ -4231,7 +4231,7 @@
         "param": "BloodGolem",
         "min_val": "15",
         "max_val": "15",
-        "resolved_text": "+15 to Dark Golem"
+        "resolved_text": "+15 to Blood Golem"
       },
       {
         "code": "heal-kill",

@@ -2,12 +2,14 @@
 
 ## Raven
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Max Ravens}$ | $\\text{Complex}$ | $\\text{min(lvl,5)}$ | $\\text{min(lvl,5)}$ | $\\text{min(lvl,5)}$ | $\\text{min(lvl,5)}$ | $\\text{--}$ |
-| $\\text{hits}$ | $\\text{Linear (+0)}$ | $\\text{7}$ | $\\text{7}$ | $\\text{7}$ | $\\text{7}$ | $\\text{Static: 7.0}$ |
-| $\\text{Damage}$ | $\\text{Variable}$ | $\\text{2-7}$ | $\\text{17-42}$ | $\\text{73-128}$ | $\\text{239-308}$ | $\\text{--}$ |
-| $\\text{Cold Damage}$ | $\\text{Variable}$ | $\\text{2.00-7.00}$ | $\\text{17.00-42.00}$ | $\\text{73.00-128.00}$ | $\\text{239.00-308.00}$ | $\\text{--}$ |
+| Max Ravens | Diminishing (+1 -> +0) | 1 | 5 | 5 | 5 | 5.0 |
+| hits | Linear (+0) | 7 | 7 | 7 | 7 | Static: 7.0 |
+| Damage | Variable | 2-7 | 17-42 | 73-128 | 239-308 | -- |
+| Cold Damage | Variable | 2.72-9.52 | 78.20-193.20 | 598.60-1049.60 | 1959.80-2525.60 | -- |
 
 ### Synergies
 * **Summon Spirit Wolf**: \+12% Damage per Level
@@ -18,11 +20,13 @@
 
 ## Poison Creeper
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{over}$ | $\\text{Linear (+0s)}$ | $\\text{100s}$ | $\\text{100s}$ | $\\text{100s}$ | $\\text{100s}$ | $\\text{Static: 100.0s}$ |
-| $\\text{Poison Damage}$ | $\\text{Variable}$ | $\\text{2.44-3.66}$ | $\\text{24.41-26.25}$ | $\\text{58.59-64.70}$ | $\\text{151.37-163.57}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Linear (+50)}$ | $\\text{0}$ | $\\text{450}$ | $\\text{950}$ | $\\text{1450}$ | $\\text{--}$ |
+| Poison Duration | Linear (+0s) | 100s | 100s | 100s | 100s | Static: 100.0s |
+| Poison Damage | Variable | 2.69-4.03 | 48.83-52.49 | 175.78-194.09 | 454.10-490.72 | -- |
+| Life | Linear (+50) | 0 | 450 | 950 | 1450 | -- |
 
 ### Synergies
 * **Rabies**: \+10% Poison Damage per Level
@@ -31,26 +35,32 @@
 
 ## Werewolf
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Attack Speed}$ | $\\text{Accelerating (-2 -> -1\\%)}$ | $\\text{+96\\%}$ | $\\text{+86\\%}$ | $\\text{+83\\%}$ | $\\text{+81\\%}$ | $\\text{--}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+15\\%)}$ | $\\text{+50\\%}$ | $\\text{+185\\%}$ | $\\text{+335\\%}$ | $\\text{+485\\%}$ | $\\text{--}$ |
+| Attack Speed | Accelerating (-2 -> -1%) | +96% | +86% | +83% | +81% | -- |
+| Attack Rating | Linear (+15%) | +50% | +185% | +335% | +485% | -- |
 
 ---
 
 ## Lycanthropy
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Max Life}$ | $\\text{Linear (+2\\%)}$ | $\\text{+20\\%}$ | $\\text{+38\\%}$ | $\\text{+58\\%}$ | $\\text{+78\\%}$ | $\\text{--}$ |
+| Max Life | Linear (+2%) | +20% | +38% | +58% | +78% | -- |
 
 ---
 
 ## Firestorm
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Average Fire Damage}$ | $\\text{Linear (+0) dmg/s}$ | $\\text{0.00-0.00 dmg/s}$ | $\\text{0.00-0.00 dmg/s}$ | $\\text{0.00-0.00 dmg/s}$ | $\\text{0.00-0.00 dmg/s}$ | $\\text{--}$ |
+| Average Fire Damage | Linear (+0) dmg/s | 0.00-0.00 dmg/s | 0.00-0.00 dmg/s | 0.00-0.00 dmg/s | 0.00-0.00 dmg/s | -- |
 
 ### Synergies
 * **Molten Boulder**: \+23% Damage per Level
@@ -60,24 +70,28 @@
 
 ## Oak Sage
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+1)}$ | $\\text{15.00}$ | $\\text{24.00}$ | $\\text{34.00}$ | $\\text{44.00}$ | $\\text{--}$ |
-| $\\text{Radius}$ | $\\text{Linear (+4y)}$ | $\\text{60y}$ | $\\text{96y}$ | $\\text{136y}$ | $\\text{176y}$ | $\\text{--}$ |
-| $\\text{Max Life}$ | $\\text{Linear (+5\\%)}$ | $\\text{+30\\%}$ | $\\text{+75\\%}$ | $\\text{+125\\%}$ | $\\text{+175\\%}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Linear (+30)}$ | $\\text{0}$ | $\\text{270}$ | $\\text{570}$ | $\\text{870}$ | $\\text{--}$ |
+| Mana Cost | Linear (+1) | 15.00 | 24.00 | 34.00 | 44.00 | -- |
+| Radius | Linear (+4y) | 60y | 96y | 136y | 176y | -- |
+| Max Life | Linear (+5%) | +30% | +75% | +125% | +175% | -- |
+| Life | Linear (+30) | 0 | 270 | 570 | 870 | -- |
 
 ---
 
 ## Summon Spirit Wolf
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Defense}$ | $\\text{Linear (+10\\%)}$ | $\\text{+50\\%}$ | $\\text{+140\\%}$ | $\\text{+240\\%}$ | $\\text{+340\\%}$ | $\\text{--}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+25\\%)}$ | $\\text{+50\\%}$ | $\\text{+275\\%}$ | $\\text{+525\\%}$ | $\\text{+775\\%}$ | $\\text{--}$ |
-| $\\text{Max Wolves}$ | $\\text{Complex}$ | $\\text{min(lvl,1)}$ | $\\text{min(lvl,1)}$ | $\\text{min(lvl,1)}$ | $\\text{min(lvl,1)}$ | $\\text{--}$ |
-| $\\text{Cold Damage}$ | $\\text{Variable}$ | $\\text{2.44-7.32}$ | $\\text{23.70-30.02}$ | $\\text{97.02-104.94}$ | $\\text{203.94-211.86}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Linear (+10)}$ | $\\text{10}$ | $\\text{100}$ | $\\text{200}$ | $\\text{300}$ | $\\text{--}$ |
+| Defense | Linear (+10%) | +50% | +140% | +240% | +340% | -- |
+| Attack Rating | Linear (+25%) | +50% | +275% | +525% | +775% | -- |
+| Max Wolves | Linear (+0) | 1 | 1 | 1 | 1 | Static: 1.0 |
+| Cold Damage | Variable | 2.44-7.32 | 23.70-30.02 | 97.02-104.94 | 203.94-211.86 | -- |
+| Life | Linear (+10) | 10 | 100 | 200 | 300 | -- |
 
 ### Synergies
 * **Summon Dire Wolf**: \+0% Damage per Level
@@ -87,21 +101,25 @@
 
 ## Werebear
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Defense}$ | $\\text{Linear (+10\\%)}$ | $\\text{+40\\%}$ | $\\text{+130\\%}$ | $\\text{+230\\%}$ | $\\text{+330\\%}$ | $\\text{--}$ |
-| $\\text{Damage}$ | $\\text{Linear (+15\\%)}$ | $\\text{+55\\%}$ | $\\text{+190\\%}$ | $\\text{+340\\%}$ | $\\text{+490\\%}$ | $\\text{--}$ |
+| Defense | Linear (+10%) | +40% | +130% | +230% | +330% | -- |
+| Damage | Linear (+15%) | +55% | +190% | +340% | +490% | -- |
 
 ---
 
 ## Molten Boulder
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+0.5)}$ | $\\text{10.00}$ | $\\text{14.50}$ | $\\text{19.50}$ | $\\text{24.50}$ | $\\text{--}$ |
-| $\\text{Average Fire Damage}$ | $\\text{Linear (+0) dmg/s}$ | $\\text{2.93-4.10 dmg/s}$ | $\\text{2.93-4.10 dmg/s}$ | $\\text{2.93-4.10 dmg/s}$ | $\\text{2.93-4.10 dmg/s}$ | $\\text{Static: 2.93/Static: 4.1}$ |
-| $\\text{Fire Damage}$ | $\\text{Variable}$ | $\\text{6.00-12.00}$ | $\\text{48.00-63.00}$ | $\\text{130.00-155.00}$ | $\\text{260.00-295.00}$ | $\\text{--}$ |
-| $\\text{Damage}$ | $\\text{Variable}$ | $\\text{6-12}$ | $\\text{48-63}$ | $\\text{130-155}$ | $\\text{260-295}$ | $\\text{--}$ |
+| Mana Cost | Linear (+0.5) | 10.00 | 14.50 | 19.50 | 24.50 | -- |
+| Average Fire Damage | Linear (+0) dmg/s | 2.93-4.10 dmg/s | 2.93-4.10 dmg/s | 2.93-4.10 dmg/s | 2.93-4.10 dmg/s | Static: 2.93/Static: 4.1 |
+| Fire Damage | Variable | 6.72-13.44 | 105.60-138.60 | 442.00-527.00 | 884.00-1003.00 | -- |
+| Damage | Variable | 6-12 | 48-63 | 130-155 | 260-295 | -- |
 
 ### Synergies
 * **Volcano**: \+12% Damage per Level
@@ -111,12 +129,14 @@
 
 ## Arctic Blast
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+0.01 dmg/s) [Soft: +0.02 dmg/s]}$ | $\\text{0.38 dmg/s}$ | $\\text{0.52 dmg/s}$ | $\\text{0.67 dmg/s}$ | $\\text{0.83 dmg/s}$ | $\\text{--}$ |
-| $\\text{Range}$ | $\\text{Linear (+1y)}$ | $\\text{17.50y}$ | $\\text{26.50y}$ | $\\text{36.50y}$ | $\\text{46.50y}$ | $\\text{--}$ |
-| $\\text{Cold Length}$ | $\\text{Linear (+45s)}$ | $\\text{100s}$ | $\\text{505s}$ | $\\text{955s}$ | $\\text{1405s}$ | $\\text{--}$ |
-| $\\text{Average Cold Damage}$ | $\\text{Accelerating (+0.5 -> +1.8) [Soft: +3.41] dmg/s}$ | $\\text{0.59-0.59 dmg/s}$ | $\\text{9.64-9.64 dmg/s}$ | $\\text{34.68-34.68 dmg/s}$ | $\\text{79.54-79.54 dmg/s}$ | $\\text{--}$ |
+| Mana Cost | Linear (+0.01 dmg/s) [Soft: +0.02 dmg/s] | 0.38 dmg/s | 0.52 dmg/s | 0.67 dmg/s | 0.83 dmg/s | -- |
+| Range | Linear (+1y) | 17.50y | 26.50y | 36.50y | 46.50y | -- |
+| Cold Duration | Linear (+45s) | 100s | 505s | 955s | 1405s | -- |
+| Average Cold Damage | Accelerating (+0.75 -> +6.23) [Soft: +13.6] dmg/s | 0.67-0.67 dmg/s | 24.10-24.10 dmg/s | 138.74-138.74 dmg/s | 318.18-318.18 dmg/s | -- |
 
 ### Synergies
 * **Cyclone Armor**: \+15% Damage per Level
@@ -125,40 +145,48 @@
 
 ## Carrion Vine
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Heals}$ | $\\text{Linear (+1\\%)}$ | $\\text{+4\\%}$ | $\\text{+13\\%}$ | $\\text{+23\\%}$ | $\\text{+33\\%}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Linear (+25)}$ | $\\text{0}$ | $\\text{225}$ | $\\text{475}$ | $\\text{725}$ | $\\text{--}$ |
+| Heals | Linear (+1%) | +4% | +13% | +23% | +33% | -- |
+| Life | Linear (+25) | 0 | 225 | 475 | 725 | -- |
 
 ---
 
 ## Feral Rage
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Damage}$ | $\\text{Linear (+5\\%)}$ | $\\text{+50\\%}$ | $\\text{+95\\%}$ | $\\text{+145\\%}$ | $\\text{+195\\%}$ | $\\text{--}$ |
-| $\\text{Life Steal}$ | $\\text{Linear (+0\\%)}$ | $\\text{+4\\%}$ | $\\text{+4\\%}$ | $\\text{+4\\%}$ | $\\text{+4\\%}$ | $\\text{Static: 4.0\\%}$ |
-| $\\text{Run/Walk Speed}$ | $\\text{Linear (+0\\%)}$ | $\\text{+19\\%}$ | $\\text{+19\\%}$ | $\\text{+19\\%}$ | $\\text{+19\\%}$ | $\\text{Static: 19.0\\%}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+10\\%)}$ | $\\text{+20\\%}$ | $\\text{+110\\%}$ | $\\text{+210\\%}$ | $\\text{+310\\%}$ | $\\text{--}$ |
+| Damage | Linear (+5%) | +50% | +95% | +145% | +195% | -- |
+| Life Steal | Linear (+0%) | +4% | +4% | +4% | +4% | Static: 4.0% |
+| Run/Walk Speed | Linear (+0%) | +19% | +19% | +19% | +19% | Static: 19.0% |
+| Attack Rating | Linear (+10%) | +20% | +110% | +210% | +310% | -- |
 
 ---
 
 ## Maul
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Stun Length}$ | $\\text{Complex}$ | $\\text{min(250,18)s}$ | $\\text{min(250,69)s}$ | $\\text{min(250,85)s}$ | $\\text{min(250,91)s}$ | $\\text{--}$ |
-| $\\text{Damage}$ | $\\text{Linear (+0\\%)}$ | $\\text{+30\\%}$ | $\\text{+30\\%}$ | $\\text{+30\\%}$ | $\\text{+30\\%}$ | $\\text{Static: 30.0\\%}$ |
-| $\\text{Attack Speed}$ | $\\text{Linear (+0\\%)}$ | $\\text{+3\\%}$ | $\\text{+3\\%}$ | $\\text{+3\\%}$ | $\\text{+3\\%}$ | $\\text{Static: 3.0\\%}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+15\\%)}$ | $\\text{+40\\%}$ | $\\text{+175\\%}$ | $\\text{+325\\%}$ | $\\text{+475\\%}$ | $\\text{--}$ |
+| Stun Length | Diminishing (+11 -> +3s) [Soft: +0s] | 18s | 69s | 85s | 91s | 103.0s |
+| Damage | Linear (+0%) | +30% | +30% | +30% | +30% | Static: 30.0% |
+| Attack Speed | Linear (+0%) | +3% | +3% | +3% | +3% | Static: 3.0% |
+| Attack Rating | Linear (+15%) | +40% | +175% | +325% | +475% | -- |
 
 ---
 
 ## Fissure
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Fire Damage}$ | $\\text{Accelerating (+6 -> +12) [Soft: +16]}$ | $\\text{15.00-25.00}$ | $\\text{81.00-91.00}$ | $\\text{217.00-227.00}$ | $\\text{401.00-419.00}$ | $\\text{--}$ |
+| Fire Damage | Variable | 18.00-30.00 | 243.00-273.00 | 1085.00-1135.00 | 2005.00-2095.00 | -- |
 
 ### Synergies
 * **Firestorm**: \+10% Damage per Level
@@ -168,10 +196,12 @@
 
 ## Cyclone Armor
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+1)}$ | $\\text{5.00}$ | $\\text{14.00}$ | $\\text{24.00}$ | $\\text{34.00}$ | $\\text{--}$ |
-| $\\text{Absorbs damage}$ | $\\text{Complex}$ | $\\text{(40*(100+(blvl+blvl+blvl)*7)/100)}$ | $\\text{(148*(100+(blvl+blvl+blvl)*7)/100)}$ | $\\text{(268*(100+(blvl+blvl+blvl)*7)/100)}$ | $\\text{(388*(100+(blvl+blvl+blvl)*7)/100)}$ | $\\text{--}$ |
+| Mana Cost | Linear (+1) | 5.00 | 14.00 | 24.00 | 34.00 | -- |
+| Absorbs damage | Accelerating (+25.44 -> +70.8) [Soft: +62.4] | 48.40 | 458.80 | 1393.60 | 2017.60 | -- |
 
 ### Synergies
 * **Twister**: \+7% Damage per Level
@@ -182,25 +212,29 @@
 
 ## Heart of Wolverine
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+1)}$ | $\\text{20.00}$ | $\\text{29.00}$ | $\\text{39.00}$ | $\\text{49.00}$ | $\\text{--}$ |
-| $\\text{Radius}$ | $\\text{Linear (+4y)}$ | $\\text{60y}$ | $\\text{96y}$ | $\\text{136y}$ | $\\text{176y}$ | $\\text{--}$ |
-| $\\text{Damage}$ | $\\text{Linear (+7\\%)}$ | $\\text{+20\\%}$ | $\\text{+83\\%}$ | $\\text{+153\\%}$ | $\\text{+223\\%}$ | $\\text{--}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+7\\%)}$ | $\\text{+25\\%}$ | $\\text{+88\\%}$ | $\\text{+158\\%}$ | $\\text{+228\\%}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Linear (+25)}$ | $\\text{0}$ | $\\text{225}$ | $\\text{475}$ | $\\text{725}$ | $\\text{--}$ |
+| Mana Cost | Linear (+1) | 20.00 | 29.00 | 39.00 | 49.00 | -- |
+| Radius | Linear (+4y) | 60y | 96y | 136y | 176y | -- |
+| Damage | Linear (+7%) | +20% | +83% | +153% | +223% | -- |
+| Attack Rating | Linear (+7%) | +25% | +88% | +158% | +228% | -- |
+| Life | Linear (+25) | 0 | 225 | 475 | 725 | -- |
 
 ---
 
 ## Summon Dire Wolf
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Defense}$ | $\\text{Linear (+4\\%)}$ | $\\text{+4\\%}$ | $\\text{+40\\%}$ | $\\text{+80\\%}$ | $\\text{+120\\%}$ | $\\text{--}$ |
-| $\\text{Max Life}$ | $\\text{Linear (+4\\%)}$ | $\\text{+50\\%}$ | $\\text{+86\\%}$ | $\\text{+126\\%}$ | $\\text{+166\\%}$ | $\\text{--}$ |
-| $\\text{Max Wolves}$ | $\\text{Complex}$ | $\\text{min(lvl,5)}$ | $\\text{min(lvl,5)}$ | $\\text{min(lvl,5)}$ | $\\text{min(lvl,5)}$ | $\\text{--}$ |
-| $\\text{Damage}$ | $\\text{Variable}$ | $\\text{8.54-14.64}$ | $\\text{45.82-67.94}$ | $\\text{168.30-215.82}$ | $\\text{440.30-521.22}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Linear (+14)}$ | $\\text{60}$ | $\\text{186}$ | $\\text{326}$ | $\\text{466}$ | $\\text{--}$ |
+| Defense | Linear (+4%) | +4% | +40% | +80% | +120% | -- |
+| Max Life | Linear (+4%) | +50% | +86% | +126% | +166% | -- |
+| Max Wolves | Diminishing (+1 -> +0) | 1 | 5 | 5 | 5 | 5.0 |
+| Damage | Variable | 8.54-14.64 | 45.82-67.94 | 168.30-215.82 | 440.30-521.22 | -- |
+| Life | Linear (+14) | 60 | 186 | 326 | 466 | -- |
 
 ### Synergies
 * **Summon Spirit Wolf**: \+0% Damage per Level
@@ -213,11 +247,13 @@
 
 ## Rabies
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{over}$ | $\\text{Linear (+0s)}$ | $\\text{200s}$ | $\\text{200s}$ | $\\text{200s}$ | $\\text{200s}$ | $\\text{Static: 200.0s}$ |
-| $\\text{Poison Damage}$ | $\\text{Variable}$ | $\\text{3.66-8.54}$ | $\\text{26.86-31.74}$ | $\\text{62.26-67.14}$ | $\\text{130.62-135.50}$ | $\\text{--}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+10\\%)}$ | $\\text{+50\\%}$ | $\\text{+140\\%}$ | $\\text{+240\\%}$ | $\\text{+340\\%}$ | $\\text{--}$ |
+| Poison Duration | Linear (+0s) | 200s | 200s | 200s | 200s | Static: 200.0s |
+| Poison Damage | Variable | 5.57-12.99 | 166.50-196.78 | 709.72-765.38 | 1489.01-1544.68 | -- |
+| Attack Rating | Linear (+10%) | +50% | +140% | +240% | +340% | -- |
 
 ### Synergies
 * **Poison Creeper**: \+26% Poison Damage per Level
@@ -227,10 +263,12 @@
 
 ## Fire Claws
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Fire Damage}$ | $\\text{Variable}$ | $\\text{32.00-48.00}$ | $\\text{192.00-217.00}$ | $\\text{464.00-499.00}$ | $\\text{864.00-909.00}$ | $\\text{--}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+15\\%)}$ | $\\text{+50\\%}$ | $\\text{+185\\%}$ | $\\text{+335\\%}$ | $\\text{+485\\%}$ | $\\text{--}$ |
+| Fire Damage | Variable | 53.12-79.68 | 1459.20-1649.20 | 6588.80-7085.80 | 12268.80-12907.80 | -- |
+| Attack Rating | Linear (+15%) | +50% | +185% | +335% | +485% | -- |
 
 ### Synergies
 * **Firestorm**: \+33% Damage per Level
@@ -240,9 +278,11 @@
 
 ## Twister
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Damage}$ | $\\text{Accelerating (+7 -> +11) [Soft: +15]}$ | $\\text{12-16}$ | $\\text{83-87}$ | $\\text{209-213}$ | $\\text{389-393}$ | $\\text{--}$ |
+| Damage | Accelerating (+7 -> +11) [Soft: +15] | 12-16 | 83-87 | 209-213 | 389-393 | -- |
 
 ### Synergies
 * **Arctic Blast**: \+20\.00% Damage per Level
@@ -254,31 +294,37 @@
 
 ## Solar Creeper
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+1)}$ | $\\text{14.00}$ | $\\text{23.00}$ | $\\text{33.00}$ | $\\text{43.00}$ | $\\text{--}$ |
-| $\\text{Mana Recovery Rate}$ | $\\text{Linear (+1\\%)}$ | $\\text{+4\\%}$ | $\\text{+13\\%}$ | $\\text{+23\\%}$ | $\\text{+33\\%}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Linear (+20)}$ | $\\text{0}$ | $\\text{180}$ | $\\text{380}$ | $\\text{580}$ | $\\text{--}$ |
+| Mana Cost | Linear (+1) | 14.00 | 23.00 | 33.00 | 43.00 | -- |
+| Mana Recovery Rate | Linear (+1%) | +4% | +13% | +23% | +33% | -- |
+| Life | Linear (+20) | 0 | 180 | 380 | 580 | -- |
 
 ---
 
 ## Hunger
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Steal}$ | $\\text{Diminishing (+18 -> +3\\%) [Soft: +2\\%]}$ | $\\text{+73\\%}$ | $\\text{+153\\%}$ | $\\text{+176\\%}$ | $\\text{+187\\%}$ | $\\text{Max: 205.0\\%}$ |
-| $\\text{Life Steal}$ | $\\text{Diminishing (+18 -> +3\\%) [Soft: +2\\%]}$ | $\\text{+73\\%}$ | $\\text{+153\\%}$ | $\\text{+176\\%}$ | $\\text{+187\\%}$ | $\\text{Max: 205.0\\%}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+10\\%)}$ | $\\text{+50\\%}$ | $\\text{+140\\%}$ | $\\text{+240\\%}$ | $\\text{+340\\%}$ | $\\text{--}$ |
-| $\\text{Always Hits}$ | $\\text{Linear (+0)}$ | $\\text{0}$ | $\\text{0}$ | $\\text{0}$ | $\\text{0}$ | $\\text{--}$ |
+| Mana Steal | Diminishing (+18 -> +3%) [Soft: +2%] | +73% | +153% | +176% | +187% | 205.0% |
+| Life Steal | Diminishing (+18 -> +3%) [Soft: +2%] | +73% | +153% | +176% | +187% | 205.0% |
+| Attack Rating | Linear (+10%) | +50% | +140% | +240% | +340% | -- |
+| Always Hits | Linear (+0) | 0 | 0 | 0 | 0 | -- |
 
 ---
 
 ## Shock Wave
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Stun Length}$ | $\\text{Linear (+1s)}$ | $\\text{1s}$ | $\\text{10s}$ | $\\text{20s}$ | $\\text{30s}$ | $\\text{--}$ |
-| $\\text{Damage}$ | $\\text{Accelerating (+6 -> +10) [Soft: +14]}$ | $\\text{20-40}$ | $\\text{82-102}$ | $\\text{198-218}$ | $\\text{338-358}$ | $\\text{--}$ |
+| Stun Length | Linear (+1s) | 1s | 10s | 20s | 30s | -- |
+| Damage | Accelerating (+6 -> +10) [Soft: +14] | 20-40 | 82-102 | 198-218 | 338-358 | -- |
 
 ### Synergies
 * **Maul**: \+8% Damage per Level
@@ -289,10 +335,12 @@
 
 ## Volcano
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Fire Damage}$ | $\\text{Accelerating (+2 -> +4) [Soft: +6]}$ | $\\text{8.00-10.00}$ | $\\text{30.00-32.00}$ | $\\text{78.00-80.00}$ | $\\text{160.00-166.00}$ | $\\text{--}$ |
-| $\\text{Damage}$ | $\\text{Accelerating (+2 -> +4) [Soft: +6]}$ | $\\text{8-10}$ | $\\text{30-32}$ | $\\text{78-80}$ | $\\text{158-160}$ | $\\text{--}$ |
+| Fire Damage | Variable | 9.60-12.00 | 90.00-96.00 | 390.00-400.00 | 800.00-830.00 | -- |
+| Damage | Accelerating (+2 -> +4) [Soft: +6] | 8-10 | 30-32 | 78-80 | 158-160 | -- |
 
 ### Synergies
 * **Molten Boulder**: \+20% Damage per Level
@@ -303,9 +351,11 @@
 
 ## Tornado
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Damage}$ | $\\text{Variable}$ | $\\text{25-35}$ | $\\text{109-121}$ | $\\text{273-295}$ | $\\text{513-545}$ | $\\text{--}$ |
+| Damage | Variable | 25-35 | 109-121 | 273-295 | 513-545 | -- |
 
 ### Synergies
 * **Cyclone Armor**: \+9% Damage per Level
@@ -316,22 +366,26 @@
 
 ## Spirit of Barbs
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+1)}$ | $\\text{25.00}$ | $\\text{34.00}$ | $\\text{44.00}$ | $\\text{54.00}$ | $\\text{--}$ |
-| $\\text{Radius}$ | $\\text{Linear (+4y)}$ | $\\text{0y}$ | $\\text{36y}$ | $\\text{76y}$ | $\\text{116y}$ | $\\text{--}$ |
-| $\\text{Attacker Takes Damage of}$ | $\\text{Accelerating (+9 -> +18) [Soft: +27]}$ | $\\text{32}$ | $\\text{131}$ | $\\text{347}$ | $\\text{707}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Linear (+25)}$ | $\\text{0}$ | $\\text{225}$ | $\\text{475}$ | $\\text{725}$ | $\\text{--}$ |
+| Mana Cost | Linear (+1) | 25.00 | 34.00 | 44.00 | 54.00 | -- |
+| Radius | Linear (+4y) | 0y | 36y | 76y | 116y | -- |
+| Attacker Takes Damage of | Accelerating (+9 -> +18) [Soft: +27] | 32 | 131 | 347 | 707 | -- |
+| Life | Linear (+25) | 0 | 225 | 475 | 725 | -- |
 
 ---
 
 ## Summon Grizzly
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Damage}$ | $\\text{Linear (+4\\%)}$ | $\\text{+22\\%}$ | $\\text{+58\\%}$ | $\\text{+98\\%}$ | $\\text{+138\\%}$ | $\\text{--}$ |
-| $\\text{Damage}$ | $\\text{Variable}$ | $\\text{36.60-73.20}$ | $\\text{205.40-252.80}$ | $\\text{594.00-653.40}$ | $\\text{1323.28-1394.68}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Linear (+12)}$ | $\\text{12}$ | $\\text{120}$ | $\\text{240}$ | $\\text{360}$ | $\\text{--}$ |
+| Damage | Linear (+4%) | +22% | +58% | +98% | +138% | -- |
+| Damage | Variable | 36.60-73.20 | 205.40-252.80 | 594.00-653.40 | 1323.28-1394.68 | -- |
+| Life | Linear (+12) | 12 | 120 | 240 | 360 | -- |
 
 ### Synergies
 * **Summon Spirit Wolf**: \+0% Damage per Level
@@ -345,21 +399,25 @@
 
 ## Fury
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Damage}$ | $\\text{Linear (+17\\%)}$ | $\\text{+100\\%}$ | $\\text{+253\\%}$ | $\\text{+423\\%}$ | $\\text{+593\\%}$ | $\\text{--}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+10\\%)}$ | $\\text{+50\\%}$ | $\\text{+140\\%}$ | $\\text{+240\\%}$ | $\\text{+340\\%}$ | $\\text{--}$ |
-| $\\text{hits}$ | $\\text{Complex}$ | $\\text{min((3+lvl-1),3)}$ | $\\text{min((3+lvl-1),3)}$ | $\\text{min((3+lvl-1),3)}$ | $\\text{min((3+lvl-1),3)}$ | $\\text{--}$ |
+| Damage | Linear (+17%) | +100% | +253% | +423% | +593% | -- |
+| Attack Rating | Linear (+10%) | +50% | +140% | +240% | +340% | -- |
+| hits | Linear (+0) | 3 | 3 | 3 | 3 | Static: 3.0 |
 
 ---
 
 ## Armageddon
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Average Fire Damage}$ | $\\text{Linear (+0) dmg/s}$ | $\\text{2.93-4.10 dmg/s}$ | $\\text{2.93-4.10 dmg/s}$ | $\\text{2.93-4.10 dmg/s}$ | $\\text{2.93-4.10 dmg/s}$ | $\\text{Static: 2.93/Static: 4.1}$ |
-| $\\text{Fire Damage}$ | $\\text{Variable}$ | $\\text{25.00-75.00}$ | $\\text{170.00-231.00}$ | $\\text{390.00-471.00}$ | $\\text{702.00-809.00}$ | $\\text{--}$ |
-| $\\text{Damage}$ | $\\text{Variable}$ | $\\text{18-26}$ | $\\text{112-129}$ | $\\text{244-271}$ | $\\text{426-463}$ | $\\text{--}$ |
+| Average Fire Damage | Linear (+0) dmg/s | 2.93-4.10 dmg/s | 2.93-4.10 dmg/s | 2.93-4.10 dmg/s | 2.93-4.10 dmg/s | Static: 2.93/Static: 4.1 |
+| Fire Damage | Variable | 29.50-88.50 | 476.00-646.80 | 1794.00-2166.60 | 3229.20-3721.40 | -- |
+| Damage | Variable | 18-26 | 112-129 | 244-271 | 426-463 | -- |
 
 ### Synergies
 * **Firestorm**: \+14% Damage per Level
@@ -370,9 +428,11 @@
 
 ## Hurricane
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Cold Damage}$ | $\\text{Accelerating (+7 -> +10) [Soft: +12]}$ | $\\text{25.00-50.00}$ | $\\text{94.00-119.00}$ | $\\text{202.00-227.00}$ | $\\text{342.00-367.00}$ | $\\text{--}$ |
+| Cold Damage | Variable | 27.00-54.00 | 169.20-214.20 | 525.20-590.20 | 889.20-954.20 | -- |
 
 ### Synergies
 * **Cyclone Armor**: \+2% Damage per Level

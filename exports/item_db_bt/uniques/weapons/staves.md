@@ -62,21 +62,18 @@
 * **Base Item:** Shaft of the Horadric Staff
 * **Level Requirement:** 0
 * **Properties:**
-    * All Resistances \+30
+    * All Resistances \+10
     * \+50% Increased Attack Speed
-    * \+30% Faster Cast Rate
-    * Adds 30\-30 Damage
 
 ### Horadric Staff (Horadric Staff)
 * **Base Item:** Horadric Staff
 * **Level Requirement:** 0
 * **Properties:**
-    * \+100 to Mana
-    * All Resistances \+30
-    * \+100 to Life
-    * \+30% Faster Cast Rate
+    * \+10 to Mana
+    * Poison Resist \+25%
+    * \+10 to Life
+    * All Resistances \+10
     * \+50% Increased Attack Speed
-    * Adds 30\-30 Damage
 
 ### Razorswitch (Razorswitch)
 * **Base Item:** Jo Staff
@@ -128,7 +125,7 @@
     * \+40% Faster Cast Rate
     * \+150 to Mana
 
-### Soul Collector (Skullcollector)
+### Skull Collector (Skullcollector)
 * **Base Item:** Rune Staff
 * **Level Requirement:** 41
 * **Properties:**
@@ -143,7 +140,9 @@
 * **Level Requirement:** 82
 * **Properties:**
     * \+6 to All Skills
-    * Level 1 Conviction Aura When Equipped
+    * \-20\-25% to Enemy Fire Resistance
+    * \-20\-25% to Enemy Lightning Resistance
+    * \-20\-25% to Enemy Cold Resistance
     * Regenerate Mana 30%
     * \+85% Faster Cast Rate
     * Increase Maximum Mana 40%

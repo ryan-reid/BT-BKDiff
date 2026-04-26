@@ -43,8 +43,8 @@
     * \+15 to Dexterity
     * \+40 to Life
 
-### Wormsteel (Wormskull)
-* **Base Item:** Spiked Helm
+### Wormskull (Wormskull)
+* **Base Item:** Bone Helm
 * **Level Requirement:** 21
 * **Properties:**
     * \+1\-2 to Necromancer Skill Levels
@@ -77,8 +77,8 @@
     * Cannot Be Frozen
     * \+30\-60% Enhanced Defense
     * \+150% Damage to Undead
-    * \+3\-5 to Raise Undead
-    * \+3\-5 to Undead Mastery
+    * \+3\-5 to Raise Skeleton
+    * \+3\-5 to Skeleton Mastery
 
 ### The Face of Horror (The Face of Horror)
 * **Base Item:** Mask
@@ -235,7 +235,7 @@
     * \+25% Faster Cast Rate
     * \+1 to All Skills
     * \+10\-15% to Lightning Skill Damage
-    * \-8\-15% to Enemy Lightning Resistance
+    * \-15\-20% to Enemy Lightning Resistance
 
 ### Nightwing's Veil (Nightwing's Veil)
 * **Base Item:** Spired Helm
@@ -248,7 +248,7 @@
     * Half Freeze Duration
     * \+8\-12% to Cold Skill Damage
     * Requirements \-\-50%
-    * \-8\-15% to Enemy Cold Resistance
+    * \-10\-20% to Enemy Cold Resistance
 
 ### Crown of Ages (Crown of Ages)
 * **Base Item:** Corona
@@ -256,7 +256,7 @@
 * **Properties:**
     * \+30% Faster Hit Recovery
     * All Resistances \+20\-30
-    * \+1\-3 to All Skills
+    * \+1\-2 to All Skills
     * \+100\-150 Defense
     * Repairs 1 durability in 5 seconds
     * Damage Reduced by 10\-15%
@@ -293,11 +293,11 @@
     * Cannot Be Frozen
     * \+20% Faster Hit Recovery
     * \+2 to Random Class Skill Levels
-    * \-8\-15% to Enemy Fire Resistance
+    * \-10\-20% to Enemy Fire Resistance
     * \+1\-5% to Maximum Fire Resist
 
 ### Giant Skull (Giantskull)
-* **Base Item:** Spiked Visage
+* **Base Item:** Bone Visage
 * **Level Requirement:** 65
 * **Properties:**
     * \+250\-320 Defense
@@ -306,7 +306,6 @@
     * Damage Reduced by 12\-21
     * \+30\-60% Enhanced Damage
     * \+25\-35 to Dexterity
-    * Ignore Target's Defense
 
 ### King's Absolution (King's Absolution)
 * **Base Item:** Coronet
@@ -367,18 +366,3 @@
     * \+40% Enhanced Damage
     * Magic Resist \+\-25%
     * \-10\-15% to Enemy Magic  Resistance
-
-### Ciris's Guidance (Ciris's Guidance)
-* **Base Item:** Tiara
-* **Level Requirement:** 80
-* **Properties:**
-    * \+1 to Teleport
-    * \+1\-2 to All Skills
-    * Increase Maximum Life 10%
-    * Increase Maximum Mana 10%
-    * \+1 to Random Class Skill Levels
-    * \+98% chance for finishing moves to not consume charges
-    * Reduces all Vendor Prices 15%
-    * \+10\-25% Faster Cast Rate
-    * \+10\-25% Increased Attack Speed
-    * \+200\-300% Enhanced Defense

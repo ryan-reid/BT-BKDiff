@@ -5,4 +5,4 @@
 [submodule "BTDiablo"]
 	path = mods/BTDiablo
 	url = https://github.com/BTNeandertha1/BTDiablo
-	branch = BTD-Brutality-Sets+Runeword-ON
+	branch = BTDiablo

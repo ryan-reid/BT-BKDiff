@@ -44,7 +44,7 @@
     * Increase Maximum Life 5%
 
 ### Wall of the Eyeless (Wall of the Eyeless)
-* **Base Item:** Spiny Shield
+* **Base Item:** Bone Shield
 * **Level Requirement:** 20
 * **Properties:**
     * \+7\-10 to Mana after each Kill
@@ -53,7 +53,7 @@
     * Poison Resist \+20%
     * \+30\-40% Enhanced Defense
     * \+10 Defense
-    * \+20 to Spike Wall
+    * \+20 to Bone Wall
     * \+10% to Experience Gained
 
 ### Swordback Hold (Swordback Hold)
@@ -198,7 +198,7 @@
 * **Level Requirement:** 41
 * **Properties:**
     * \+1\-2 to All Skills
-    * \+20\-30% Faster Cast Rate
+    * \+20% Faster Cast Rate
     * \+3\-5 to Mana after each Kill
     * \+80\-130% Enhanced Defense
     * \+10 to Energy
@@ -262,7 +262,6 @@
     * Damage Reduced by 20\-30%
     * \+1 to All Skills
     * \+2 to Random Class Skill Levels
-    * 33% Chance to cast level 40 Frost Nova when struck
 
 ### Spirit Ward (Spirit Ward)
 * **Base Item:** Ward
@@ -276,7 +275,6 @@
     * 35% Chance to cast level 8 Fade when struck
     * Requirements \-\-30%
     * \+2 to Random Class Skill Levels
-    * \+25% Faster Cast Rate
 
 ### Spike Thorn (Spike Thorn)
 * **Base Item:** Blade Barrier
@@ -291,7 +289,6 @@
     * \+25% Faster Block Rate
     * \+30% Faster Block Rate
     * Damage \+40\-65
-    * Level 20 Thorns Aura When Equipped
 
 ### Head Hunter's Glory (Headhunter's Glory)
 * **Base Item:** Troll Nest

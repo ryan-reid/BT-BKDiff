@@ -42,7 +42,7 @@
         "param": "68",
         "min_val": "3",
         "max_val": "3",
-        "resolved_text": "+3 to Spike Armor (Necromancer only)"
+        "resolved_text": "+3 to Bone Armor (Necromancer only)"
       },
       {
         "code": "skill",
@@ -56,7 +56,7 @@
         "param": "69",
         "min_val": "4",
         "max_val": "4",
-        "resolved_text": "+4 to Undead Mastery (Necromancer only)"
+        "resolved_text": "+4 to Skeleton Mastery (Necromancer only)"
       }
     ],
     "raw_row": {

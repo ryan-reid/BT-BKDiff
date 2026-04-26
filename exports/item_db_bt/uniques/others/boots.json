@@ -1508,18 +1508,18 @@
         "resolved_text": "Repairs 1 durability in 5 seconds"
       },
       {
-        "code": "all-stats",
+        "code": "str",
         "param": "",
         "min_val": "10",
         "max_val": "15",
-        "resolved_text": "+10-15 to all Attributes"
+        "resolved_text": "+10-15 to Strength"
       },
       {
-        "code": "aura",
-        "param": "cleansing",
-        "min_val": "1",
-        "max_val": "1",
-        "resolved_text": "Level 1 Cleansing Aura When Equipped"
+        "code": "vit",
+        "param": "",
+        "min_val": "10",
+        "max_val": "15",
+        "resolved_text": "+10-15 to Vitality"
       },
       {
         "code": "regen",
@@ -1534,6 +1534,13 @@
         "min_val": "100",
         "max_val": "100",
         "resolved_text": "Attacker Takes Damage of 100"
+      },
+      {
+        "code": "res-pois-len",
+        "param": "",
+        "min_val": "75",
+        "max_val": "75",
+        "resolved_text": "Poison Length Reduced by 75%"
       }
     ],
     "raw_row": {
@@ -1579,14 +1586,14 @@
       "par5": "5",
       "min5": "",
       "max5": "",
-      "prop6": "all-stats",
+      "prop6": "str",
       "par6": "",
       "min6": "10",
       "max6": "15",
-      "prop7": "aura",
-      "par7": "cleansing",
-      "min7": "1",
-      "max7": "1",
+      "prop7": "vit",
+      "par7": "",
+      "min7": "10",
+      "max7": "15",
       "prop8": "regen",
       "par8": "",
       "min8": "15",
@@ -1595,10 +1602,10 @@
       "par9": "",
       "min9": "100",
       "max9": "100",
-      "prop10": "",
+      "prop10": "res-pois-len",
       "par10": "",
-      "min10": "",
-      "max10": "",
+      "min10": "75",
+      "max10": "75",
       "prop11": "",
       "par11": "",
       "min11": "",
@@ -1637,7 +1644,7 @@
         "param": "Bone Prison",
         "min_val": "33",
         "max_val": "33",
-        "resolved_text": "+33 to Spike Prison"
+        "resolved_text": "+33 to Bone Prison"
       },
       {
         "code": "oskill",
@@ -1679,7 +1686,7 @@
         "param": "Skeleton Mastery",
         "min_val": "1",
         "max_val": "2",
-        "resolved_text": "+1-2 to Undead Mastery (Necromancer only)"
+        "resolved_text": "+1-2 to Skeleton Mastery (Necromancer only)"
       },
       {
         "code": "red-mag",
@@ -2059,9 +2066,9 @@
       {
         "code": "move1",
         "param": "",
-        "min_val": "5",
+        "min_val": "10",
         "max_val": "10",
-        "resolved_text": "+5-10% Faster Run/Walk"
+        "resolved_text": "+10% Faster Run/Walk"
       }
     ],
     "raw_row": {
@@ -2101,7 +2108,7 @@
       "max3": "20",
       "prop4": "move1",
       "par4": "",
-      "min4": "5",
+      "min4": "10",
       "max4": "10",
       "prop5": "",
       "par5": "",

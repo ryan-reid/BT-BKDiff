@@ -37,8 +37,9 @@
 * **Base Item:** Top of the Horadric Staff
 * **Level Requirement:** 0
 * **Properties:**
-    * \+100 to Mana
-    * \+100 to Life
+    * \+10 to Mana
+    * Poison Resist \+25%
+    * \+10 to Life
 
 ### The Cat's Eye (The Cat's Eye)
 * **Base Item:** Amulet

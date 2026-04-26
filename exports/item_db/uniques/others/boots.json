@@ -1673,7 +1673,7 @@
         "param": "Bone Prison",
         "min_val": "33",
         "max_val": "33",
-        "resolved_text": "+33 to Spike Prison"
+        "resolved_text": "+33 to Bone Prison"
       },
       {
         "code": "oskill",
@@ -1715,7 +1715,7 @@
         "param": "Skeleton Mastery",
         "min_val": "1",
         "max_val": "2",
-        "resolved_text": "+1-2 to Undead Mastery (Necromancer only)"
+        "resolved_text": "+1-2 to Skeleton Mastery (Necromancer only)"
       },
       {
         "code": "red-mag",

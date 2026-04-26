@@ -447,7 +447,7 @@
   {
     "id": "Wall of the Eyeless",
     "display_name": "Wall of the Eyeless",
-    "base_item": "Spiny Shield",
+    "base_item": "Bone Shield",
     "item_type": "Shield",
     "lvl_req": "20",
     "properties": [
@@ -498,7 +498,7 @@
         "param": "Bone Wall",
         "min_val": "20",
         "max_val": "20",
-        "resolved_text": "+20 to Spike Wall"
+        "resolved_text": "+20 to Bone Wall"
       },
       {
         "code": "addxp",
@@ -2040,8 +2040,8 @@
         "code": "cast2",
         "param": "",
         "min_val": "20",
-        "max_val": "30",
-        "resolved_text": "+20-30% Faster Cast Rate"
+        "max_val": "20",
+        "resolved_text": "+20% Faster Cast Rate"
       },
       {
         "code": "mana-kill",
@@ -2102,7 +2102,7 @@
       "prop2": "cast2",
       "par2": "",
       "min2": "20",
-      "max2": "30",
+      "max2": "20",
       "prop3": "mana-kill",
       "par3": "",
       "min3": "3",
@@ -2675,13 +2675,6 @@
         "min_val": "0",
         "max_val": "6",
         "resolved_text": "+2 to Random Class Skill Levels"
-      },
-      {
-        "code": "gethit-skill",
-        "param": "frost nova",
-        "min_val": "33",
-        "max_val": "40",
-        "resolved_text": "33% Chance to cast level 40 Frost Nova when struck"
       }
     ],
     "raw_row": {
@@ -2747,10 +2740,10 @@
       "par10": "",
       "min10": "0",
       "max10": "6",
-      "prop11": "gethit-skill",
-      "par11": "frost nova",
-      "min11": "33",
-      "max11": "40",
+      "prop11": "",
+      "par11": "",
+      "min11": "",
+      "max11": "",
       "prop12": "",
       "par12": "",
       "min12": "",
@@ -2821,13 +2814,6 @@
         "min_val": "0",
         "max_val": "6",
         "resolved_text": "+2 to Random Class Skill Levels"
-      },
-      {
-        "code": "cast2",
-        "param": "",
-        "min_val": "25",
-        "max_val": "25",
-        "resolved_text": "+25% Faster Cast Rate"
       }
     ],
     "raw_row": {
@@ -2885,10 +2871,10 @@
       "par8": "",
       "min8": "0",
       "max8": "6",
-      "prop9": "cast2",
+      "prop9": "",
       "par9": "",
-      "min9": "25",
-      "max9": "25",
+      "min9": "",
+      "max9": "",
       "prop10": "",
       "par10": "",
       "min10": "",
@@ -2974,13 +2960,6 @@
         "min_val": "40",
         "max_val": "65",
         "resolved_text": "Damage +40-65"
-      },
-      {
-        "code": "aura",
-        "param": "Thorns",
-        "min_val": "20",
-        "max_val": "20",
-        "resolved_text": "Level 20 Thorns Aura When Equipped"
       }
     ],
     "raw_row": {
@@ -3042,10 +3021,10 @@
       "par9": "",
       "min9": "40",
       "max9": "65",
-      "prop10": "aura",
-      "par10": "Thorns",
-      "min10": "20",
-      "max10": "20",
+      "prop10": "",
+      "par10": "",
+      "min10": "",
+      "max10": "",
       "prop11": "",
       "par11": "",
       "min11": "",

@@ -22,7 +22,7 @@
     * \+80 to Mana
     * \+30% Faster Cast Rate
     * \+1\-3 to Corpse Explosion \(Necromancer only\)
-    * \+1\-3 to Spike Armor \(Necromancer only\)
+    * \+1\-3 to Bone Armor \(Necromancer only\)
     * \+1\-3 to Amplify Damage \(Necromancer only\)
     * \+1\-3 to Dim Vision \(Necromancer only\)
     * \+1\-2 to Necromancer Skill Levels
@@ -45,7 +45,7 @@
     * \+2\-3 to Necromancer Skill Levels
     * \+80 to Mana
     * \+40% Faster Cast Rate
-    * \+3 to Undead Mastery \(Necromancer only\)
+    * \+3 to Skeleton Mastery \(Necromancer only\)
     * \+2\-3 to Decrepify \(Necromancer only\)
 
 ### Suicide Branch (Suicide Branch)
@@ -80,13 +80,13 @@
     * \+1\-4 to Summoning Skills
     * 15% Chance to cast level 40 Bone Spirit when struck
     * \(1\.2 per clvl\) to Mana \(Based on Character Level\)
-    * 15% Chance to cast level 30 Spike Armor when struck
+    * 15% Chance to cast level 30 Bone Armor when struck
     * \+30% Faster Cast Rate
     * \+1\-2 to Poison and Bone Skills
     * \+2 to Corpse Explosion \(Necromancer only\)
     * \+2 to Summon Resist \(Necromancer only\)
-    * \+3 to Undead Mastery \(Necromancer only\)
-    * \+3 to Raise Undead \(Necromancer only\)
+    * \+3 to Skeleton Mastery \(Necromancer only\)
+    * \+3 to Raise Skeleton \(Necromancer only\)
 
 ### Blackhand Key (Blackhand Key)
 * **Base Item:** Grave Wand
@@ -119,10 +119,10 @@
     * \+2 to Necromancer Skill Levels
     * \+30% Faster Cast Rate
     * \+4\-5 to Teeth \(Necromancer only\)
-    * \+4\-5 to Spike Armor \(Necromancer only\)
+    * \+4\-5 to Bone Armor \(Necromancer only\)
     * \+2\-3 to Bone Spear \(Necromancer only\)
     * \+1\-2 to Bone Spirit \(Necromancer only\)
-    * \+2\-3 to Spike Wall \(Necromancer only\)
+    * \+2\-3 to Bone Wall \(Necromancer only\)
 
 ### Resistbreaker (Resistbreaker)
 * **Base Item:** Polished Wand

@@ -2,7 +2,7 @@
   {
     "id": "Natalya's Totem",
     "display_name": "Natalya's Totem",
-    "base_item": "Spiked Visage",
+    "base_item": "Bone Visage",
     "item_type": "Merc Equip",
     "lvl_req": "59",
     "properties": [
@@ -484,7 +484,7 @@
   {
     "id": "Trang-Oul's Guise",
     "display_name": "Trang-Oul's Guise",
-    "base_item": "Spiked Visage",
+    "base_item": "Bone Visage",
     "item_type": "Merc Equip",
     "lvl_req": "65",
     "properties": [
@@ -1832,7 +1832,7 @@
   {
     "id": "Devil's Bargain",
     "display_name": "Devil's Bargain",
-    "base_item": "Spiked Visage",
+    "base_item": "Bone Visage",
     "item_type": "Merc Equip",
     "lvl_req": "85",
     "properties": [
@@ -2144,7 +2144,7 @@
   {
     "id": "Natalya's Visage",
     "display_name": "Natalya's Visage",
-    "base_item": "Spiked Visage",
+    "base_item": "Bone Visage",
     "item_type": "Merc Equip",
     "lvl_req": "85",
     "properties": [
@@ -2633,7 +2633,7 @@
   {
     "id": "Trang-Oul's True Guise",
     "display_name": "Trang-Oul's True Guise",
-    "base_item": "Spiked Visage",
+    "base_item": "Bone Visage",
     "item_type": "Merc Equip",
     "lvl_req": "85",
     "properties": [

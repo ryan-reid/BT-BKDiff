@@ -2,19 +2,23 @@
 
 ## Amplify Damage
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Radius}$ | $\\text{Linear (+2y)}$ | $\\text{6y}$ | $\\text{24y}$ | $\\text{44y}$ | $\\text{64y}$ | $\\text{--}$ |
+| Radius | Linear (+2y) | 6y | 24y | 44y | 64y | -- |
 
 ---
 
 ## Teeth
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+0)}$ | $\\text{6.00}$ | $\\text{6.00}$ | $\\text{6.00}$ | $\\text{6.00}$ | $\\text{Static: 6.0}$ |
-| $\\text{Magic Damage}$ | $\\text{Linear (+6)}$ | $\\text{12.00-16.00}$ | $\\text{66.00-70.00}$ | $\\text{126.00-130.00}$ | $\\text{186.00-190.00}$ | $\\text{--}$ |
-| $\\text{teeth}$ | $\\text{Complex}$ | $\\text{min(3,24)}$ | $\\text{min(12,24)}$ | $\\text{min(22,24)}$ | $\\text{min(32,24)}$ | $\\text{--}$ |
+| Mana Cost | Linear (+0) | 6.00 | 6.00 | 6.00 | 6.00 | Static: 6.0 |
+| Magic Damage | Variable | 13.92-18.56 | 171.60-182.00 | 529.20-546.00 | 781.20-798.00 | -- |
+| teeth | Linear (+1) | 3 | 12 | 22 | 24 | 24.0 |
 
 ### Synergies
 * **Bone Spear**: \+8% Magic Damage per Level
@@ -22,74 +26,86 @@
 
 ---
 
-## Spike Armor
+## Bone Armor
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+1)}$ | $\\text{11.00}$ | $\\text{20.00}$ | $\\text{30.00}$ | $\\text{40.00}$ | $\\text{--}$ |
-| $\\text{Absorbs damage}$ | $\\text{Complex}$ | $\\text{(20 + (blvl + blvl) * 15)}$ | $\\text{(155 + (blvl + blvl) * 15)}$ | $\\text{(305 + (blvl + blvl) * 15)}$ | $\\text{(455 + (blvl + blvl) * 15)}$ | $\\text{--}$ |
+| Mana Cost | Linear (+1) | 11.00 | 20.00 | 30.00 | 40.00 | -- |
+| Absorbs damage | Linear (+45) [Soft: +15] | 50 | 455 | 905 | 1055 | -- |
 
 ### Synergies
-* **Spike Wall**: \+15% Damage per Level
-* **Spike Prison**: \+15% Damage per Level
+* **Bone Wall**: \+15% Damage per Level
+* **Bone Prison**: \+15% Damage per Level
 
 ---
 
-## Undead Mastery
+## Skeleton Mastery
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Monsters: Damage}$ | $\\text{Linear (+10\\%)}$ | $\\text{+10\\%}$ | $\\text{+100\\%}$ | $\\text{+200\\%}$ | $\\text{+300\\%}$ | $\\text{--}$ |
-| $\\text{Monsters: Life}$ | $\\text{Linear (+5\\%)}$ | $\\text{+5\\%}$ | $\\text{+50\\%}$ | $\\text{+100\\%}$ | $\\text{+150\\%}$ | $\\text{--}$ |
-| $\\text{Magi: Improved Missile Damage}$ | $\\text{Diminishing (+2 -> +1)}$ | $\\text{0}$ | $\\text{10}$ | $\\text{20}$ | $\\text{30}$ | $\\text{Max: 99.0}$ |
-| $\\text{Magi: Life}$ | $\\text{Linear (+25)}$ | $\\text{+25}$ | $\\text{+250}$ | $\\text{+500}$ | $\\text{+750}$ | $\\text{--}$ |
-| $\\text{Skeletons: Damage}$ | $\\text{Linear (+10)}$ | $\\text{+10}$ | $\\text{+100}$ | $\\text{+200}$ | $\\text{+300}$ | $\\text{--}$ |
-| $\\text{Skeletons: Life}$ | $\\text{Linear (+25)}$ | $\\text{+25}$ | $\\text{+250}$ | $\\text{+500}$ | $\\text{+750}$ | $\\text{--}$ |
+| Monsters: Damage | Linear (+10%) | +10% | +100% | +200% | +300% | -- |
+| Monsters: Life | Linear (+5%) | +5% | +50% | +100% | +150% | -- |
+| Magi: Improved Missile Damage | Diminishing (+2 -> +1) | 0 | 10 | 20 | 30 | 99.0 |
+| Magi: Life | Linear (+25) | +25 | +250 | +500 | +750 | -- |
+| Skeletons: Damage | Linear (+10) | +10 | +100 | +200 | +300 | -- |
+| Skeletons: Life | Linear (+25) | +25 | +250 | +500 | +750 | -- |
 
 ---
 
-## Raise Undead
+## Raise Skeleton
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+1)}$ | $\\text{6.00}$ | $\\text{15.00}$ | $\\text{25.00}$ | $\\text{35.00}$ | $\\text{--}$ |
-| $\\text{skeleton total}$ | $\\text{Diminishing (+1 -> +0.34) [Soft: +0.33]}$ | $\\text{1}$ | $\\text{5.33}$ | $\\text{8.67}$ | $\\text{12.00}$ | $\\text{Max: 35.0}$ |
-| $\\text{Defense}$ | $\\text{Linear (+100)}$ | $\\text{105}$ | $\\text{1005}$ | $\\text{2005}$ | $\\text{3005}$ | $\\text{--}$ |
-| $\\text{Damage}$ | $\\text{Complex}$ | $\\text{+( 0  if (((lvl < 4) ) else  ((lvl-3)*10)))\\%}$ | $\\text{+( 0  if (((lvl < 4) ) else  ((lvl-3)*10)))\\%}$ | $\\text{+( 0  if (((lvl < 4) ) else  ((lvl-3)*10)))\\%}$ | $\\text{+( 0  if (((lvl < 4) ) else  ((lvl-3)*10)))\\%}$ | $\\text{--}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+100)}$ | $\\text{105}$ | $\\text{1005}$ | $\\text{2005}$ | $\\text{3005}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Accelerating (+0 -> +50)}$ | $\\text{0}$ | $\\text{350}$ | $\\text{850}$ | $\\text{1350}$ | $\\text{--}$ |
+| Mana Cost | Linear (+1) | 6.00 | 15.00 | 25.00 | 35.00 | -- |
+| skeleton total | Diminishing (+1 -> +0.34) [Soft: +0.33] | 1 | 5.33 | 8.67 | 12.00 | 35.0 |
+| Defense | Linear (+100) | 105 | 1005 | 2005 | 3005 | -- |
+| Damage | Complex | ( 0 if (((1 < 4) ) else ((1-3)*10))) = +( 0  if (((1 < 4) ) else  ((1-3)*10)))% | ( 0 if (((10 < 4) ) else ((10-3)*10))) = +( 0  if (((10 < 4) ) else  ((10-3)*10)))% | ( 0 if (((20 < 4) ) else ((20-3)*10))) = +( 0  if (((20 < 4) ) else  ((20-3)*10)))% | ( 0 if (((30 < 4) ) else ((30-3)*10))) = +( 0  if (((30 < 4) ) else  ((30-3)*10)))% | -- |
+| Attack Rating | Linear (+100) | 105 | 1005 | 2005 | 3005 | -- |
+| Life | Accelerating (+0 -> +50) | 0 | 350 | 850 | 1350 | -- |
 
 ---
 
 ## Dim Vision
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Duration}$ | $\\text{Linear (+50s)}$ | $\\text{175s}$ | $\\text{625s}$ | $\\text{1125s}$ | $\\text{1625s}$ | $\\text{--}$ |
-| $\\text{Radius}$ | $\\text{Linear (+2y)}$ | $\\text{8y}$ | $\\text{26y}$ | $\\text{46y}$ | $\\text{66y}$ | $\\text{--}$ |
+| Duration | Linear (+50s) | 175s | 625s | 1125s | 1625s | -- |
+| Radius | Linear (+2y) | 8y | 26y | 46y | 66y | -- |
 
 ---
 
 ## Weaken
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Duration}$ | $\\text{Linear (+60s)}$ | $\\text{350s}$ | $\\text{890s}$ | $\\text{1490s}$ | $\\text{2090s}$ | $\\text{--}$ |
-| $\\text{Radius}$ | $\\text{Linear (+2y)}$ | $\\text{18y}$ | $\\text{36y}$ | $\\text{56y}$ | $\\text{76y}$ | $\\text{--}$ |
-| $\\text{Enemy Damage}$ | $\\text{Linear (-1\\%)}$ | $\\text{-33\\%}$ | $\\text{-42\\%}$ | $\\text{-52\\%}$ | $\\text{-62\\%}$ | $\\text{--}$ |
+| Duration | Linear (+60s) | 350s | 890s | 1490s | 2090s | -- |
+| Radius | Linear (+2y) | 18y | 36y | 56y | 76y | -- |
+| Enemy Damage | Linear (-1%) | -33% | -42% | -52% | -62% | -- |
 
 ---
 
 ## Poison Strike
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Accelerating (+0.62 -> +0.63) [Soft: +0.62]}$ | $\\text{2.50}$ | $\\text{8.12}$ | $\\text{14.38}$ | $\\text{20.62}$ | $\\text{--}$ |
-| $\\text{over}$ | $\\text{Linear (+30s)}$ | $\\text{50s}$ | $\\text{320s}$ | $\\text{620s}$ | $\\text{920s}$ | $\\text{--}$ |
-| $\\text{Poison Damage}$ | $\\text{Variable}$ | $\\text{0.69-1.53}$ | $\\text{80.66-95.70}$ | $\\text{653.91-703.86}$ | $\\text{2472.39-2577.39}$ | $\\text{--}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+20\\%)}$ | $\\text{+30\\%}$ | $\\text{+210\\%}$ | $\\text{+410\\%}$ | $\\text{+610\\%}$ | $\\text{--}$ |
-| $\\text{Uninterruptable}$ | $\\text{Linear (+0)}$ | $\\text{0}$ | $\\text{0}$ | $\\text{0}$ | $\\text{0}$ | $\\text{--}$ |
-| $\\text{Always Hits}$ | $\\text{Linear (+0)}$ | $\\text{0}$ | $\\text{0}$ | $\\text{0}$ | $\\text{0}$ | $\\text{--}$ |
+| Mana Cost | Accelerating (+0.62 -> +0.63) [Soft: +0.62] | 2.50 | 8.12 | 14.38 | 20.62 | -- |
+| Poison Duration | Linear (+30s) | 50s | 320s | 620s | 920s | -- |
+| Poison Damage | Variable | 0.96-2.14 | 403.32-478.52 | 5885.16-6334.72 | 22251.49-23196.53 | -- |
+| Attack Rating | Linear (+20%) | +30% | +210% | +410% | +610% | -- |
+| Uninterruptable | Linear (+0) | 0 | 0 | 0 | 0 | -- |
+| Always Hits | Linear (+0) | 0 | 0 | 0 | 0 | -- |
 
 ### Synergies
 * **Poison Explosion**: \+20% Poison Damage per Level
@@ -99,25 +115,29 @@
 
 ## Corpse Explosion
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+1)}$ | $\\text{15.00}$ | $\\text{24.00}$ | $\\text{34.00}$ | $\\text{44.00}$ | $\\text{--}$ |
-| $\\text{Radius}$ | $\\text{Linear (+1y)}$ | $\\text{8y}$ | $\\text{17y}$ | $\\text{27y}$ | $\\text{37y}$ | $\\text{--}$ |
+| Mana Cost | Linear (+1) | 15.00 | 24.00 | 34.00 | 44.00 | -- |
+| Radius | Linear (+1y) | 8y | 17y | 27y | 37y | -- |
 
 ---
 
 ## Clay Golem
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+0)}$ | $\\text{15.00}$ | $\\text{15.00}$ | $\\text{15.00}$ | $\\text{15.00}$ | $\\text{Static: 15.0}$ |
-| $\\text{Damage}$ | $\\text{Linear (+0)}$ | $\\text{0-0}$ | $\\text{0-0}$ | $\\text{0-0}$ | $\\text{0-0}$ | $\\text{--}$ |
-| $\\text{Slows Enemies}$ | $\\text{Diminishing (+5 -> +1\\%)}$ | $\\text{41\\%}$ | $\\text{62\\%}$ | $\\text{68\\%}$ | $\\text{71\\%}$ | $\\text{Max: 76.0\\%}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+185)}$ | $\\text{+185}$ | $\\text{+1850}$ | $\\text{+3700}$ | $\\text{+5550}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Complex}$ | $\\text{(100+(35 * (lvl - 1)))*(100+20 + (blvl*0))/100-100}$ | $\\text{(100+(35 * (lvl - 1)))*(100+200 + (blvl*0))/100-100}$ | $\\text{(100+(35 * (lvl - 1)))*(100+400 + (blvl*0))/100-100}$ | $\\text{(100+(35 * (lvl - 1)))*(100+600 + (blvl*0))/100-100}$ | $\\text{--}$ |
+| Mana Cost | Linear (+0) | 15.00 | 15.00 | 15.00 | 15.00 | Static: 15.0 |
+| Damage | Linear (+0) | 0-0 | 0-0 | 0-0 | 0-0 | -- |
+| Slows Enemies | Diminishing (+5 -> +1%) | 41% | 62% | 68% | 71% | 76.0% |
+| Attack Rating | Linear (+185) | +185 | +1850 | +3700 | +5550 | -- |
+| Life | Accelerating (+69 -> +195) [Soft: +335] | 20.00 | 1145.00 | 3725.00 | 7705.00 | -- |
 
 ### Synergies
-* **Dark Golem**: \+0% Damage per Level
+* **Blood Golem**: \+0% Damage per Level
 * **Iron Golem**: \+0% Damage per Level
 * **Fire Golem**: \+0% Damage per Level
 
@@ -125,78 +145,94 @@
 
 ## Iron Maiden
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Duration}$ | $\\text{Linear (+60s)}$ | $\\text{300s}$ | $\\text{840s}$ | $\\text{1440s}$ | $\\text{2040s}$ | $\\text{--}$ |
-| $\\text{damage returned}$ | $\\text{Linear (+25\\%)}$ | $\\text{200\\%}$ | $\\text{425\\%}$ | $\\text{675\\%}$ | $\\text{925\\%}$ | $\\text{--}$ |
+| Duration | Linear (+60s) | 300s | 840s | 1440s | 2040s | -- |
+| damage returned | Linear (+25%) | 200% | 425% | 675% | 925% | -- |
 
 ---
 
 ## Terror
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Duration}$ | $\\text{Linear (+25s)}$ | $\\text{200s}$ | $\\text{425s}$ | $\\text{675s}$ | $\\text{925s}$ | $\\text{--}$ |
+| Duration | Linear (+25s) | 200s | 425s | 675s | 925s | -- |
 
 ---
 
-## Spike Wall
+## Bone Wall
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Life}$ | $\\text{Complex}$ | $\\text{(25 * (lvl-1)) + ((blvl+blvl)*10)}$ | $\\text{(25 * (lvl-1)) + ((blvl+blvl)*10)}$ | $\\text{(25 * (lvl-1)) + ((blvl+blvl)*10)}$ | $\\text{(25 * (lvl-1)) + ((blvl+blvl)*10)}$ | $\\text{--}$ |
+| Life | Linear (+45) [Soft: +25] | 20 | 425 | 875 | 1125 | -- |
 
 ### Synergies
-* **Spike Armor**: \+10% Damage per Level
-* **Spike Prison**: \+10% Damage per Level
+* **Bone Armor**: \+10% Damage per Level
+* **Bone Prison**: \+10% Damage per Level
 
 ---
 
 ## Golem Mastery
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Run/Walk Speed}$ | $\\text{Diminishing (+2 -> +1\\%)}$ | $\\text{+23\\%}$ | $\\text{+33\\%}$ | $\\text{+36\\%}$ | $\\text{+38\\%}$ | $\\text{Max: 40.0\\%}$ |
-| $\\text{Attack Rating}$ | $\\text{Linear (+85)}$ | $\\text{+105}$ | $\\text{+870}$ | $\\text{+1720}$ | $\\text{+2570}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Linear (+20\\%)}$ | $\\text{+20\\%}$ | $\\text{+200\\%}$ | $\\text{+400\\%}$ | $\\text{+600\\%}$ | $\\text{--}$ |
+| Run/Walk Speed | Diminishing (+2 -> +1%) | +23% | +33% | +36% | +38% | 40.0% |
+| Attack Rating | Linear (+85) | +105 | +870 | +1720 | +2570 | -- |
+| Life | Linear (+20%) | +20% | +200% | +400% | +600% | -- |
 
 ---
 
-## Raise Undead Mage
+## Raise Skeletal Mage
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+1)}$ | $\\text{8.00}$ | $\\text{17.00}$ | $\\text{27.00}$ | $\\text{37.00}$ | $\\text{--}$ |
-| $\\text{undead mage}$ | $\\text{Diminishing (+1 -> +0.34) [Soft: +0.33]}$ | $\\text{1}$ | $\\text{5.33}$ | $\\text{8.67}$ | $\\text{12.00}$ | $\\text{Max: 35.0}$ |
-| $\\text{Defense}$ | $\\text{Linear (+20)}$ | $\\text{20}$ | $\\text{200}$ | $\\text{400}$ | $\\text{600}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Accelerating (+0 -> +10)}$ | $\\text{0}$ | $\\text{70}$ | $\\text{170}$ | $\\text{270}$ | $\\text{--}$ |
+| Mana Cost | Linear (+1) | 8.00 | 17.00 | 27.00 | 37.00 | -- |
+| skeleton mage | Diminishing (+1 -> +0.34) [Soft: +0.33] | 1 | 5.33 | 8.67 | 12.00 | 35.0 |
+| Defense | Linear (+20) | 20 | 200 | 400 | 600 | -- |
+| Life | Accelerating (+0 -> +10) | 0 | 70 | 170 | 270 | -- |
 
 ---
 
 ## Confuse
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Duration}$ | $\\text{Linear (+50s)}$ | $\\text{250s}$ | $\\text{700s}$ | $\\text{1200s}$ | $\\text{1700s}$ | $\\text{--}$ |
-| $\\text{Radius}$ | $\\text{Linear (+2y)}$ | $\\text{12y}$ | $\\text{30y}$ | $\\text{50y}$ | $\\text{70y}$ | $\\text{--}$ |
+| Duration | Linear (+50s) | 250s | 700s | 1200s | 1700s | -- |
+| Radius | Linear (+2y) | 12y | 30y | 50y | 70y | -- |
 
 ---
 
 ## Life Tap
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Duration}$ | $\\text{Linear (+60s)}$ | $\\text{400s}$ | $\\text{940s}$ | $\\text{1540s}$ | $\\text{2140s}$ | $\\text{--}$ |
-| $\\text{Radius}$ | $\\text{Linear (+2y)}$ | $\\text{8y}$ | $\\text{26y}$ | $\\text{46y}$ | $\\text{66y}$ | $\\text{--}$ |
+| Duration | Linear (+60s) | 400s | 940s | 1540s | 2140s | -- |
+| Radius | Linear (+2y) | 8y | 26y | 46y | 66y | -- |
 
 ---
 
 ## Poison Explosion
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{over}$ | $\\text{Linear (+30s)}$ | $\\text{50s}$ | $\\text{320s}$ | $\\text{620s}$ | $\\text{920s}$ | $\\text{--}$ |
-| $\\text{Poison Damage}$ | $\\text{Variable}$ | $\\text{0.31-0.92}$ | $\\text{20.51-31.45}$ | $\\text{177.10-213.43}$ | $\\text{754.13-830.49}$ | $\\text{--}$ |
+| Poison Duration | Linear (+30s) | 50s | 320s | 620s | 920s | -- |
+| Poison Damage | Variable | 0.40-1.19 | 82.03-125.78 | 1239.70-1493.99 | 5278.88-5813.45 | -- |
 
 ### Synergies
 * **Poison Strike**: \+15% Poison Damage per Level
@@ -206,11 +242,13 @@
 
 ## Bone Spear
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+0)}$ | $\\text{15.00}$ | $\\text{15.00}$ | $\\text{15.00}$ | $\\text{15.00}$ | $\\text{Static: 15.0}$ |
-| $\\text{Magic Damage}$ | $\\text{Variable}$ | $\\text{16.00-24.00}$ | $\\text{63.00-64.00}$ | $\\text{147.00-152.00}$ | $\\text{327.00-340.00}$ | $\\text{--}$ |
-| $\\text{Bonespears}$ | $\\text{Complex}$ | $\\text{min(3, 1 + blvl/10) + ((lvl - blvl) / 5)}$ | $\\text{min(3, 1 + blvl/10) + ((lvl - blvl) / 5)}$ | $\\text{min(3, 1 + blvl/10) + ((lvl - blvl) / 5)}$ | $\\text{min(3, 1 + blvl/10) + ((lvl - blvl) / 5)}$ | $\\text{--}$ |
+| Mana Cost | Linear (+0) | 15.00 | 15.00 | 15.00 | 15.00 | Static: 15.0 |
+| Magic Damage | Variable | 20.80-31.20 | 252.00-256.00 | 1029.00-1064.00 | 2289.00-2380.00 | -- |
+| Bonespears | Linear (+0.1) [Soft: +0.2] | 1.10 | 2.00 | 3.00 | 5.00 | 3.0 |
 
 ### Synergies
 * **2**: \+0% Damage per Level
@@ -218,14 +256,16 @@
 
 ---
 
-## Dark Golem
+## Blood Golem
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+0)}$ | $\\text{25.00}$ | $\\text{25.00}$ | $\\text{25.00}$ | $\\text{25.00}$ | $\\text{Static: 25.0}$ |
-| $\\text{Damage}$ | $\\text{Linear (+0)}$ | $\\text{0-0}$ | $\\text{0-0}$ | $\\text{0-0}$ | $\\text{0-0}$ | $\\text{--}$ |
-| $\\text{Converts damage to life}$ | $\\text{Diminishing (+9 -> +2\\%) [Soft: +1\\%]}$ | $\\text{86\\%}$ | $\\text{126\\%}$ | $\\text{138\\%}$ | $\\text{143\\%}$ | $\\text{Max: 152.0\\%}$ |
-| $\\text{Life}$ | $\\text{Accelerating (+48 -> +120) [Soft: +200]}$ | $\\text{20.00}$ | $\\text{740.00}$ | $\\text{2300.00}$ | $\\text{4660.00}$ | $\\text{--}$ |
+| Mana Cost | Linear (+0) | 25.00 | 25.00 | 25.00 | 25.00 | Static: 25.0 |
+| Damage | Linear (+0) | 0-0 | 0-0 | 0-0 | 0-0 | -- |
+| Converts damage to life | Diminishing (+9 -> +2%) [Soft: +1%] | 86% | 126% | 138% | 143% | 152.0% |
+| Life | Accelerating (+48 -> +120) [Soft: +200] | 20.00 | 740.00 | 2300.00 | 4660.00 | -- |
 
 ### Synergies
 * **Clay Golem**: \+0% Damage per Level
@@ -236,73 +276,87 @@
 
 ## Attract
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Duration}$ | $\\text{Linear (+90s)}$ | $\\text{300s}$ | $\\text{1110s}$ | $\\text{2010s}$ | $\\text{2910s}$ | $\\text{--}$ |
+| Duration | Linear (+90s) | 300s | 1110s | 2010s | 2910s | -- |
 
 ---
 
 ## Decrepify
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+0)}$ | $\\text{11.00}$ | $\\text{11.00}$ | $\\text{11.00}$ | $\\text{11.00}$ | $\\text{Static: 11.0}$ |
-| $\\text{Duration}$ | $\\text{Linear (+15s)}$ | $\\text{100s}$ | $\\text{235s}$ | $\\text{385s}$ | $\\text{535s}$ | $\\text{--}$ |
+| Mana Cost | Linear (+0) | 11.00 | 11.00 | 11.00 | 11.00 | Static: 11.0 |
+| Duration | Linear (+15s) | 100s | 235s | 385s | 535s | -- |
 
 ---
 
-## Spike Prison
+## Bone Prison
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Complex}$ | $\\text{max(27.0, 1)}$ | $\\text{max(18.0, 1)}$ | $\\text{max(8.0, 1)}$ | $\\text{max(1.0, 1)}$ | $\\text{--}$ |
-| $\\text{Life}$ | $\\text{Complex}$ | $\\text{(25 * (lvl-1)) + ((blvl+blvl)*8)}$ | $\\text{(25 * (lvl-1)) + ((blvl+blvl)*8)}$ | $\\text{(25 * (lvl-1)) + ((blvl+blvl)*8)}$ | $\\text{(25 * (lvl-1)) + ((blvl+blvl)*8)}$ | $\\text{--}$ |
+| Mana Cost | Linear (-1) | 27.00 | 18.00 | 8.00 | 1.00 | -- |
+| Life | Linear (+41) [Soft: +25] | 16 | 385 | 795 | 1045 | -- |
 
 ### Synergies
-* **Spike Armor**: \+8% Damage per Level
-* **Spike Wall**: \+8% Damage per Level
+* **Bone Armor**: \+8% Damage per Level
+* **Bone Wall**: \+8% Damage per Level
 
 ---
 
 ## Summon Resist
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Resist All}$ | $\\text{Diminishing (+7 -> +2\\%) [Soft: +1\\%]}$ | $\\text{+28\\%}$ | $\\text{+57\\%}$ | $\\text{+66\\%}$ | $\\text{+70\\%}$ | $\\text{Max: 77.0\\%}$ |
+| Resist All | Diminishing (+7 -> +2%) [Soft: +1%] | +28% | +57% | +66% | +70% | 77.0% |
 
 ---
 
 ## Iron Golem
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Defense}$ | $\\text{Linear (+350)}$ | $\\text{+350}$ | $\\text{+3500}$ | $\\text{+7000}$ | $\\text{+10500}$ | $\\text{--}$ |
-| $\\text{damage returned}$ | $\\text{Linear (+0\\%)}$ | $\\text{0\\%}$ | $\\text{0\\%}$ | $\\text{0\\%}$ | $\\text{0\\%}$ | $\\text{--}$ |
-| $\\text{Thorns damage}$ | $\\text{Linear (+0)}$ | $\\text{0}$ | $\\text{0}$ | $\\text{0}$ | $\\text{0}$ | $\\text{--}$ |
+| Defense | Linear (+350) | +350 | +3500 | +7000 | +10500 | -- |
+| damage returned | Linear (+0%) | 0% | 0% | 0% | 0% | -- |
+| Thorns damage | Linear (+0) | 0 | 0 | 0 | 0 | -- |
 
 ### Synergies
 * **Clay Golem**: \+0% Damage per Level
-* **Dark Golem**: \+0% Damage per Level
+* **Blood Golem**: \+0% Damage per Level
 * **Fire Golem**: \+0% Damage per Level
 
 ---
 
 ## Lower Resist
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Duration}$ | $\\text{Linear (+50s)}$ | $\\text{500s}$ | $\\text{950s}$ | $\\text{1450s}$ | $\\text{1950s}$ | $\\text{--}$ |
-| $\\text{Radius}$ | $\\text{Linear (+2y)}$ | $\\text{14y}$ | $\\text{32y}$ | $\\text{52y}$ | $\\text{72y}$ | $\\text{--}$ |
-| $\\text{Resist All}$ | $\\text{Accelerating (-8 -> -1\\%) [Soft: +0\\%]}$ | $\\text{-16\\%}$ | $\\text{-50\\%}$ | $\\text{-60\\%}$ | $\\text{-64\\%}$ | $\\text{--}$ |
+| Duration | Linear (+50s) | 500s | 950s | 1450s | 1950s | -- |
+| Radius | Linear (+2y) | 14y | 32y | 52y | 72y | -- |
+| Resist All | Accelerating (-8 -> -1%) [Soft: +0%] | -16% | -50% | -60% | -64% | -- |
 
 ---
 
 ## Poison Nova
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{over}$ | $\\text{Linear (+0s)}$ | $\\text{50s}$ | $\\text{50s}$ | $\\text{50s}$ | $\\text{50s}$ | $\\text{Static: 50.0s}$ |
-| $\\text{Poison Damage}$ | $\\text{Variable}$ | $\\text{0.61-1.11}$ | $\\text{2.14-2.63}$ | $\\text{4.88-5.38}$ | $\\text{9.99-10.49}$ | $\\text{--}$ |
+| Poison Duration | Linear (+0s) | 50s | 50s | 50s | 50s | Static: 50.0s |
+| Poison Damage | Variable | 0.79-1.44 | 8.54-10.53 | 34.18-37.65 | 69.96-73.43 | -- |
 
 ### Synergies
 * **Poison Strike**: \+15% Poison Damage per Level
@@ -312,10 +366,12 @@
 
 ## Bone Spirit
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+0.5)}$ | $\\text{5.00}$ | $\\text{9.50}$ | $\\text{14.50}$ | $\\text{19.50}$ | $\\text{--}$ |
-| $\\text{Magic Damage}$ | $\\text{Linear (+20)}$ | $\\text{20.00-32.00}$ | $\\text{200.00-212.00}$ | $\\text{400.00-412.00}$ | $\\text{600.00-612.00}$ | $\\text{--}$ |
+| Mana Cost | Linear (+0.5) | 5.00 | 9.50 | 14.50 | 19.50 | -- |
+| Magic Damage | Variable | 34.00-54.40 | 1600.00-1696.00 | 6000.00-6180.00 | 9000.00-9180.00 | -- |
 
 ### Synergies
 * **2**: \+0% Damage per Level
@@ -325,25 +381,29 @@
 
 ## Fire Golem
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Mana Cost}$ | $\\text{Linear (+0)}$ | $\\text{20.00}$ | $\\text{20.00}$ | $\\text{20.00}$ | $\\text{20.00}$ | $\\text{Static: 20.0}$ |
-| $\\text{Holy Fire}$ | $\\text{Variable}$ | $\\text{906-5368.36}$ | $\\text{9206-24320.36}$ | $\\text{19606-47804.36}$ | $\\text{31606-74584.36}$ | $\\text{--}$ |
-| $\\text{Fire Damage}$ | $\\text{Variable}$ | $\\text{1002046-2882263}$ | $\\text{10181929-13057555}$ | $\\text{21684433-25666069}$ | $\\text{34956553-40044199}$ | $\\text{--}$ |
-| $\\text{Absorbs fire damage}$ | $\\text{Diminishing (+9 -> +2\\%) [Soft: +1\\%]}$ | $\\text{36\\%}$ | $\\text{76\\%}$ | $\\text{88\\%}$ | $\\text{93\\%}$ | $\\text{Max: 102.0\\%}$ |
+| Mana Cost | Linear (+0) | 20.00 | 20.00 | 20.00 | 20.00 | Static: 20.0 |
+| Holy Fire | Variable | 906-5368.36 | 9206-24320.36 | 19606-47804.36 | 31606-74584.36 | -- |
+| Fire Damage | Variable | 1002046-2882263 | 10181929-13057555 | 21684433-25666069 | 34956553-40044199 | -- |
+| Absorbs fire damage | Diminishing (+9 -> +2%) [Soft: +1%] | 36% | 76% | 88% | 93% | 102.0% |
 
 ### Synergies
 * **Clay Golem**: \+0% Damage per Level
-* **Dark Golem**: \+0% Damage per Level
+* **Blood Golem**: \+0% Damage per Level
 * **Iron Golem**: \+0% Damage per Level
 
 ---
 
 ## Revive
 
-| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |
+> Work in Progress
+
+| Effect | Scaling | L1 | L10 | L20 | L20+10 | Limit |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| $\\text{Monsters}$ | $\\text{Linear (+1)}$ | $\\text{1}$ | $\\text{10}$ | $\\text{20}$ | $\\text{30}$ | $\\text{--}$ |
+| Monsters | Linear (+1) | 1 | 10 | 20 | 30 | -- |
 
 ---
 

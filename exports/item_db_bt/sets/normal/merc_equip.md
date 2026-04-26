@@ -30,7 +30,7 @@
     * Cold Resist \+25%
 
 ### Tancred's Skull (Tancred's Skull)
-* **Base Item:** Spiked Helm
+* **Base Item:** Bone Helm
 * **Level Requirement:** 1
 * **Properties:**
     * \+25% Enhanced Damage

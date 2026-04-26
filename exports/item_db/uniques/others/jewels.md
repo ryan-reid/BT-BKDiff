@@ -84,7 +84,7 @@
 * **Base Item:** Jewel
 * **Level Requirement:** 75
 * **Properties:**
-    * 10% Chance to cast level 25 Spike Armor when struck
+    * 10% Chance to cast level 25 Bone Armor when struck
     * \+5\-10% to Poison Skill Damage
     * Adds 975\-975 Poison Damage Over 975 Seconds
     * \-5\-10% to Enemy Poison Resistance
@@ -168,7 +168,7 @@
     * Adds 30\-43 Magic Damage
     * \-4\-5% to Enemy Magic Resistance
     * \+4\-5% to Magic Skill Damage
-    * 100% Chance to cast level 51 Spike Armor when you Level\-Up
+    * 100% Chance to cast level 51 Bone Armor when you Level\-Up
     * \+2% to Experience Gained
 
 ### Rainbow Facet (Rainbow Facet)

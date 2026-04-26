@@ -655,9 +655,9 @@
       {
         "code": "res-all",
         "param": "",
-        "min_val": "30",
-        "max_val": "30",
-        "resolved_text": "All Resistances +30"
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "All Resistances +10"
       },
       {
         "code": "swing3",
@@ -665,20 +665,6 @@
         "min_val": "50",
         "max_val": "50",
         "resolved_text": "+50% Increased Attack Speed"
-      },
-      {
-        "code": "cast3",
-        "param": "",
-        "min_val": "30",
-        "max_val": "30",
-        "resolved_text": "+30% Faster Cast Rate"
-      },
-      {
-        "code": "dmg-norm",
-        "param": "",
-        "min_val": "30",
-        "max_val": "30",
-        "resolved_text": "Adds 30-30 Damage"
       }
     ],
     "raw_row": {
@@ -706,20 +692,20 @@
       "usesound": "",
       "prop1": "res-all",
       "par1": "",
-      "min1": "30",
-      "max1": "30",
+      "min1": "10",
+      "max1": "10",
       "prop2": "swing3",
       "par2": "",
       "min2": "50",
       "max2": "50",
-      "prop3": "cast3",
+      "prop3": "",
       "par3": "",
-      "min3": "30",
-      "max3": "30",
-      "prop4": "dmg-norm",
+      "min3": "0",
+      "max3": "0",
+      "prop4": "",
       "par4": "",
-      "min4": "30",
-      "max4": "30",
+      "min4": "0",
+      "max4": "0",
       "prop5": "",
       "par5": "",
       "min5": "0",
@@ -766,30 +752,30 @@
       {
         "code": "mana",
         "param": "",
-        "min_val": "100",
-        "max_val": "100",
-        "resolved_text": "+100 to Mana"
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Mana"
       },
       {
-        "code": "res-all",
+        "code": "res-pois",
         "param": "",
-        "min_val": "30",
-        "max_val": "30",
-        "resolved_text": "All Resistances +30"
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "Poison Resist +25%"
       },
       {
         "code": "hp",
         "param": "",
-        "min_val": "100",
-        "max_val": "100",
-        "resolved_text": "+100 to Life"
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Life"
       },
       {
-        "code": "cast3",
+        "code": "res-all",
         "param": "",
-        "min_val": "30",
-        "max_val": "30",
-        "resolved_text": "+30% Faster Cast Rate"
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "All Resistances +10"
       },
       {
         "code": "swing3",
@@ -797,13 +783,6 @@
         "min_val": "50",
         "max_val": "50",
         "resolved_text": "+50% Increased Attack Speed"
-      },
-      {
-        "code": "dmg-norm",
-        "param": "",
-        "min_val": "30",
-        "max_val": "30",
-        "resolved_text": "Adds 30-30 Damage"
       }
     ],
     "raw_row": {
@@ -831,28 +810,28 @@
       "usesound": "",
       "prop1": "mana",
       "par1": "",
-      "min1": "100",
-      "max1": "100",
-      "prop2": "res-all",
+      "min1": "10",
+      "max1": "10",
+      "prop2": "res-pois",
       "par2": "",
-      "min2": "30",
-      "max2": "30",
+      "min2": "25",
+      "max2": "25",
       "prop3": "hp",
       "par3": "",
-      "min3": "100",
-      "max3": "100",
-      "prop4": "cast3",
+      "min3": "10",
+      "max3": "10",
+      "prop4": "res-all",
       "par4": "",
-      "min4": "30",
-      "max4": "30",
+      "min4": "10",
+      "max4": "10",
       "prop5": "swing3",
       "par5": "",
       "min5": "50",
       "max5": "50",
-      "prop6": "dmg-norm",
+      "prop6": "",
       "par6": "",
-      "min6": "30",
-      "max6": "30",
+      "min6": "0",
+      "max6": "0",
       "prop7": "",
       "par7": "",
       "min7": "0",
@@ -1425,7 +1404,7 @@
   },
   {
     "id": "Skullcollector",
-    "display_name": "Soul Collector",
+    "display_name": "Skull Collector",
     "base_item": "Rune Staff",
     "item_type": "Staff",
     "lvl_req": "41",
@@ -1556,11 +1535,25 @@
         "resolved_text": "+6 to All Skills"
       },
       {
-        "code": "aura",
-        "param": "conviction",
-        "min_val": "1",
-        "max_val": "1",
-        "resolved_text": "Level 1 Conviction Aura When Equipped"
+        "code": "pierce-fire",
+        "param": "",
+        "min_val": "20",
+        "max_val": "25",
+        "resolved_text": "-20-25% to Enemy Fire Resistance"
+      },
+      {
+        "code": "pierce-ltng",
+        "param": "",
+        "min_val": "20",
+        "max_val": "25",
+        "resolved_text": "-20-25% to Enemy Lightning Resistance"
+      },
+      {
+        "code": "pierce-cold",
+        "param": "",
+        "min_val": "20",
+        "max_val": "25",
+        "resolved_text": "-20-25% to Enemy Cold Resistance"
       },
       {
         "code": "regen-mana",
@@ -1618,18 +1611,18 @@
       "par1": "",
       "min1": "6",
       "max1": "6",
-      "prop2": "aura",
-      "par2": "conviction",
-      "min2": "1",
-      "max2": "1",
-      "prop3": "",
+      "prop2": "pierce-fire",
+      "par2": "",
+      "min2": "20",
+      "max2": "25",
+      "prop3": "pierce-ltng",
       "par3": "",
-      "min3": "",
-      "max3": "",
-      "prop4": "",
+      "min3": "20",
+      "max3": "25",
+      "prop4": "pierce-cold",
       "par4": "",
-      "min4": "",
-      "max4": "",
+      "min4": "20",
+      "max4": "25",
       "prop5": "regen-mana",
       "par5": "",
       "min5": "30",

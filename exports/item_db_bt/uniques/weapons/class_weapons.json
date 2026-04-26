@@ -1059,9 +1059,9 @@
       {
         "code": "dmg%",
         "param": "",
-        "min_val": "200",
-        "max_val": "300",
-        "resolved_text": "+200-300% Enhanced Damage"
+        "min_val": "180",
+        "max_val": "230",
+        "resolved_text": "+180-230% Enhanced Damage"
       },
       {
         "code": "att%",
@@ -1097,13 +1097,6 @@
         "min_val": "30",
         "max_val": "30",
         "resolved_text": "+30% Increased Attack Speed"
-      },
-      {
-        "code": "move2",
-        "param": "",
-        "min_val": "50",
-        "max_val": "50",
-        "resolved_text": "+50% Faster Run/Walk"
       }
     ],
     "raw_row": {
@@ -1131,8 +1124,8 @@
       "usesound": "",
       "prop1": "dmg%",
       "par1": "",
-      "min1": "200",
-      "max1": "300",
+      "min1": "180",
+      "max1": "230",
       "prop2": "att%",
       "par2": "",
       "min2": "200",
@@ -1153,10 +1146,10 @@
       "par6": "",
       "min6": "30",
       "max6": "30",
-      "prop7": "move2",
+      "prop7": "",
       "par7": "",
-      "min7": "50",
-      "max7": "50",
+      "min7": "",
+      "max7": "",
       "prop8": "",
       "par8": "",
       "min8": "",

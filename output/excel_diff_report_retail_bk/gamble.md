@@ -1,0 +1,56 @@
+# Differences for gamble.txt
+
+*Key column used: `name`*
+
+## Added Rows (51)
+- aerin shield
+- antlers
+- assault helmet
+- avenger guard
+- blade
+- bone wand
+- clasped orb
+- codex
+- compendium
+- crown shield
+- dagger
+- demon head
+- dirk
+- eagle orb
+- falcon mask
+- fanged helm
+- gargoyle head
+- grand charm
+- grand scepter
+- grim wand
+- grimoire
+- hatchet hands
+- hawk helm
+- heraldic shield
+- horned helm
+- jared's stone
+- jawbone cap
+- jewel
+- kriss
+- large charm
+- maiden javelin
+- maiden pike
+- maiden spear
+- old book
+- preserved head
+- reflex bow
+- rondache
+- sacred globe
+- scepter
+- small charm
+- smoked sphere
+- spirit mask
+- stag bow
+- targe
+- tome
+- unraveller head
+- wand
+- war scepter
+- wolf head
+- yew wand
+- zombie head

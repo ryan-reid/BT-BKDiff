@@ -58,7 +58,6 @@
     * Prevent Monster Heal
     * \+200% Enhanced Damage
     * \+30% Increased Attack Speed
-    * Level 12\-17 Meditation Aura When Equipped
 
 ### The Grim Reaper (The Grim Reaper)
 * **Base Item:** War Scythe
@@ -131,7 +130,7 @@
     * Adds 50\-75 Damage
     * \+160\-200% Enhanced Damage
     * \+20% Increased Attack Speed
-    * \+5 to Dangerous Strike
+    * \+5 to Critical Strike
 
 ### Grim's Burning Dead (Grim's Burning Dead)
 * **Base Item:** Grim Scythe
@@ -158,7 +157,7 @@
     * \+30% Increased Attack Speed
     * Repairs 1 durability in 5 seconds
     * Adds 1\-237 Lightning Damage
-    * 30% Chance to cast level 10 Lower Resist when struck
+    * Unknown property: 91 \(30\-10\)
     * 8\-10% Life stolen per hit
     * 150% Bonus to Attack Rating
 
@@ -180,8 +179,8 @@
 * **Base Item:** Thresher
 * **Level Requirement:** 75
 * **Properties:**
-    * \+200\-300% Enhanced Damage
-    * 33% Chance to cast level 15 Decrepify on striking
+    * \+190\-240% Enhanced Damage
+    * 33% Chance to cast level 1 Decrepify on striking
     * Ignore Target's Defense
     * 11\-15% Life stolen per hit
     * Requirements \-\-25%

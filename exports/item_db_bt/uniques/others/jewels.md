@@ -96,7 +96,7 @@
     * Adds 30\-43 Magic Damage
     * \-4\-5% to Enemy Magic  Resistance
     * \+4\-5% to Magic Skill Damage
-    * 100% Chance to cast level 51 Spike Armor when you Level\-Up
+    * 100% Chance to cast level 51 Bone Armor when you Level\-Up
     * \+2% to Experience Gained
 
 ### Rainbow Facet (Rainbow Facet)
@@ -109,6 +109,12 @@
     * 100% Chance to cast level 60 Blessed Hammer when you Die
     * \+2% to Experience Gained
 
+### Titan's Echo (Titan's Echo)
+* **Base Item:** •• Jewel ••
+* **Level Requirement:** 1
+* **Properties:**
+    * splash
+
 ### Killing Intent (Killing Intent)
 * **Base Item:** •• Jewel ••
 * **Level Requirement:** 29
@@ -116,7 +122,6 @@
     * 10% Chance to cast level 10 Amplify Damage on attack
     * \+1 to Amplify Damage
     * \+5\-10% Increased Attack Speed
-    * \+2% to Experience Gained
 
 ### Elemental Exposure (Elemental Exposure)
 * **Base Item:** •• Jewel ••
@@ -125,4 +130,3 @@
     * 10% Chance to cast level 10 Lower Resist when you Kill an Enemy
     * \+1 to Lower Resist
     * \+3\-5% Faster Cast Rate
-    * \+2% to Experience Gained

@@ -185,7 +185,7 @@
         "param": "68",
         "min_val": "1",
         "max_val": "3",
-        "resolved_text": "+1-3 to Spike Armor (Necromancer only)"
+        "resolved_text": "+1-3 to Bone Armor (Necromancer only)"
       },
       {
         "code": "skill",
@@ -442,7 +442,7 @@
         "param": "69",
         "min_val": "3",
         "max_val": "3",
-        "resolved_text": "+3 to Undead Mastery (Necromancer only)"
+        "resolved_text": "+3 to Skeleton Mastery (Necromancer only)"
       },
       {
         "code": "skill",
@@ -831,7 +831,7 @@
         "param": "68",
         "min_val": "15",
         "max_val": "30",
-        "resolved_text": "15% Chance to cast level 30 Spike Armor when struck"
+        "resolved_text": "15% Chance to cast level 30 Bone Armor when struck"
       },
       {
         "code": "cast2",
@@ -866,14 +866,14 @@
         "param": "69",
         "min_val": "3",
         "max_val": "3",
-        "resolved_text": "+3 to Undead Mastery (Necromancer only)"
+        "resolved_text": "+3 to Skeleton Mastery (Necromancer only)"
       },
       {
         "code": "skill",
         "param": "70",
         "min_val": "3",
         "max_val": "3",
-        "resolved_text": "+3 to Raise Undead (Necromancer only)"
+        "resolved_text": "+3 to Raise Skeleton (Necromancer only)"
       }
     ],
     "raw_row": {
@@ -1131,13 +1131,6 @@
         "min_val": "20",
         "max_val": "20",
         "resolved_text": "+20% Faster Cast Rate"
-      },
-      {
-        "code": "kill-skill",
-        "param": "Lower Resist",
-        "min_val": "50",
-        "max_val": "10",
-        "resolved_text": "50% Chance to cast level 10 Lower Resist when you Kill an Enemy"
       }
     ],
     "raw_row": {
@@ -1187,10 +1180,10 @@
       "par6": "",
       "min6": "20",
       "max6": "20",
-      "prop7": "kill-skill",
-      "par7": "Lower Resist",
-      "min7": "50",
-      "max7": "10",
+      "prop7": "",
+      "par7": "",
+      "min7": "",
+      "max7": "",
       "prop8": "",
       "par8": "",
       "min8": "",
@@ -1248,7 +1241,7 @@
         "param": "Bone Armor",
         "min_val": "4",
         "max_val": "5",
-        "resolved_text": "+4-5 to Spike Armor (Necromancer only)"
+        "resolved_text": "+4-5 to Bone Armor (Necromancer only)"
       },
       {
         "code": "skill",
@@ -1269,7 +1262,7 @@
         "param": "Bone Wall",
         "min_val": "2",
         "max_val": "3",
-        "resolved_text": "+2-3 to Spike Wall (Necromancer only)"
+        "resolved_text": "+2-3 to Bone Wall (Necromancer only)"
       }
     ],
     "raw_row": {

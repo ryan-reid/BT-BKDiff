@@ -77,7 +77,7 @@
     * Cold Resist \+30%
     * \+50% Damage to Undead
     * Ethereal
-    * \+1\-3 to Spike Armor
+    * \+1\-3 to Bone Armor
 
 ### Steeldriver (Steeldriver)
 * **Base Item:** Great Maul

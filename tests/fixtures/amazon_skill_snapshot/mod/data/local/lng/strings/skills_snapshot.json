@@ -1,0 +1,526 @@
+[
+  {
+    "Key": "afdimm",
+    "enUS": "%s: %+d%% Average Fire Damage per Second per Level"
+  },
+  {
+    "Key": "attrateplev",
+    "enUS": "%s: %+d%% Attack Rating per Level"
+  },
+  {
+    "Key": "avoid",
+    "enUS": "avoid"
+  },
+  {
+    "Key": "charged strike",
+    "enUS": "charged strike"
+  },
+  {
+    "Key": "cold arrow",
+    "enUS": "cold arrow"
+  },
+  {
+    "Key": "colddplev",
+    "enUS": "%s: %+d%% Cold Damage per Level"
+  },
+  {
+    "Key": "convphy2elemalt",
+    "enUS": "Converts %d%% Physical Damage to Magic Damage"
+  },
+  {
+    "Key": "convphy2magalt",
+    "enUS": "Converts %d%% Physical Damage to Elemental Damage"
+  },
+  {
+    "Key": "critical strike",
+    "enUS": "critical strike"
+  },
+  {
+    "Key": "damplev",
+    "enUS": "%s: %+d%% Damage per Level"
+  },
+  {
+    "Key": "dodge",
+    "enUS": "dodge"
+  },
+  {
+    "Key": "dopplezon",
+    "enUS": "Decoy"
+  },
+  {
+    "Key": "evade",
+    "enUS": "evade"
+  },
+  {
+    "Key": "exploding arrow",
+    "enUS": "exploding arrow"
+  },
+  {
+    "Key": "fire arrow",
+    "enUS": "fire arrow"
+  },
+  {
+    "Key": "firedplev",
+    "enUS": "%s: %+d%% Fire Damage per Level"
+  },
+  {
+    "Key": "freezing arrow",
+    "enUS": "freezing arrow"
+  },
+  {
+    "Key": "frezlenplev",
+    "enUS": "%s: %+d%% Freeze Length per Level"
+  },
+  {
+    "Key": "guided arrow",
+    "enUS": "guided arrow"
+  },
+  {
+    "Key": "hpplev",
+    "enUS": "%s: %+d%% Life per Level"
+  },
+  {
+    "Key": "ice arrow",
+    "enUS": "ice arrow"
+  },
+  {
+    "Key": "immolation arrow",
+    "enUS": "immolation arrow"
+  },
+  {
+    "Key": "inner sight",
+    "enUS": "inner sight"
+  },
+  {
+    "Key": "jab",
+    "enUS": "jab"
+  },
+  {
+    "Key": "lightning bolt",
+    "enUS": "lightning bolt"
+  },
+  {
+    "Key": "lightning fury",
+    "enUS": "lightning fury"
+  },
+  {
+    "Key": "lightning strike",
+    "enUS": "lightning strike"
+  },
+  {
+    "Key": "ltngdplev",
+    "enUS": "%s: %+d%% Lightning Damage per Level"
+  },
+  {
+    "Key": "magic arrow",
+    "enUS": "magic arrow"
+  },
+  {
+    "Key": "multiple shot",
+    "enUS": "multiple shot"
+  },
+  {
+    "Key": "penetrate",
+    "enUS": "penetrate"
+  },
+  {
+    "Key": "plague javelin",
+    "enUS": "plague javelin"
+  },
+  {
+    "Key": "poisdplev",
+    "enUS": "%s: %+d%% Poison Damage per Level"
+  },
+  {
+    "Key": "poison javelin",
+    "enUS": "poison javelin"
+  },
+  {
+    "Key": "power strike",
+    "enUS": "power strike"
+  },
+  {
+    "Key": "skillld10",
+    "enUS": "attacks with a series of rapid thrusts\nusing a javelin or spear class weapon"
+  },
+  {
+    "Key": "skillld12",
+    "enUS": "magically splits one arrow\nor bolt into many"
+  },
+  {
+    "Key": "skillld13",
+    "enUS": "passive - you have a chance to dodge\na melee attack when attacking\nor standing still"
+  },
+  {
+    "Key": "skillld14",
+    "enUS": "adds lightning damage to attacks with\njavelin and spear class weapons"
+  },
+  {
+    "Key": "skillld15",
+    "enUS": "magically enhances your javelin\nto leave a trail of poison clouds"
+  },
+  {
+    "Key": "skillld18",
+    "enUS": "passive - you have a chance to dodge enemy missiles\nwhen attacking or standing still"
+  },
+  {
+    "Key": "skillld20",
+    "enUS": "magically converts your javelin into a bolt of lightning"
+  },
+  {
+    "Key": "skillld22",
+    "enUS": "enhances your arrows and bolts\nto track your target\nor seek one of its own"
+  },
+  {
+    "Key": "skillld23",
+    "enUS": "passive - increases your attack rating"
+  },
+  {
+    "Key": "skillld24",
+    "enUS": "adds lightning damage to javelin and spear class weapons\nand releases charged bolts upon impact"
+  },
+  {
+    "Key": "skillld25",
+    "enUS": "magically enhances your javelin to release\nexpanding clouds of poison upon impact"
+  },
+  {
+    "Key": "skillld26",
+    "enUS": "magically splits one arrow into several\nthat target multiple nearby enemies"
+  },
+  {
+    "Key": "skillld28",
+    "enUS": "creates a duplicate of yourself\nthat draws fire from enemies"
+  },
+  {
+    "Key": "skillld29",
+    "enUS": "passive - you have a chance to dodge\na melee or missile attack\nwhen walking or running"
+  },
+  {
+    "Key": "skillld32",
+    "enUS": "summons a powerful Valkyrie ally"
+  },
+  {
+    "Key": "skillld34",
+    "enUS": "adds lightning damage to javelin and spear class weapons\nand releases chain lightning upon impact"
+  },
+  {
+    "Key": "skillld35",
+    "enUS": "changes a thrown javelin into a powerful\nbolt of lightning that splits on impact"
+  },
+  {
+    "Key": "skillld6",
+    "enUS": "creates a magical arrow or bolt\nthat does extra damage"
+  },
+  {
+    "Key": "skillld8",
+    "enUS": "illuminates nearby enemies\nmaking them easier to hit\nfor you and your party"
+  },
+  {
+    "Key": "skillld9",
+    "enUS": "passive - your attacks have a chance to do double damage"
+  },
+  {
+    "Key": "skillname10",
+    "enUS": "Jab"
+  },
+  {
+    "Key": "skillname11",
+    "enUS": "Cold Arrow"
+  },
+  {
+    "Key": "skillname12",
+    "enUS": "Multiple Shot"
+  },
+  {
+    "Key": "skillname13",
+    "enUS": "Dodge"
+  },
+  {
+    "Key": "skillname14",
+    "enUS": "Power Strike"
+  },
+  {
+    "Key": "skillname15",
+    "enUS": "Poison Javelin"
+  },
+  {
+    "Key": "skillname16",
+    "enUS": "Exploding Arrow"
+  },
+  {
+    "Key": "skillname18",
+    "enUS": "Avoid"
+  },
+  {
+    "Key": "skillname20",
+    "enUS": "Lightning Bolt"
+  },
+  {
+    "Key": "skillname21",
+    "enUS": "Ice Arrow"
+  },
+  {
+    "Key": "skillname22",
+    "enUS": "Guided Arrow"
+  },
+  {
+    "Key": "skillname23",
+    "enUS": "Penetrate"
+  },
+  {
+    "Key": "skillname24",
+    "enUS": "Charged Strike"
+  },
+  {
+    "Key": "skillname25",
+    "enUS": "Plague Javelin"
+  },
+  {
+    "Key": "skillname26",
+    "enUS": "Strafe"
+  },
+  {
+    "Key": "skillname27",
+    "enUS": "Immolation Arrow"
+  },
+  {
+    "Key": "skillname28",
+    "enUS": "Decoy"
+  },
+  {
+    "Key": "skillname29",
+    "enUS": "Evade"
+  },
+  {
+    "Key": "skillname31",
+    "enUS": "Freezing Arrow"
+  },
+  {
+    "Key": "skillname32",
+    "enUS": "Valkyrie"
+  },
+  {
+    "Key": "skillname34",
+    "enUS": "Lightning Strike"
+  },
+  {
+    "Key": "skillname35",
+    "enUS": "Lightning Fury"
+  },
+  {
+    "Key": "skillname6",
+    "enUS": "Magic Arrow"
+  },
+  {
+    "Key": "skillname7",
+    "enUS": "Fire Arrow"
+  },
+  {
+    "Key": "skillname8",
+    "enUS": "Inner Sight"
+  },
+  {
+    "Key": "skillname9",
+    "enUS": "Critical Strike"
+  },
+  {
+    "Key": "skillxld11",
+    "enUS": "magically enhances your arrows or bolts\nby adding cold damage and a slowing effect\ncold arrows only do half of their regular damage"
+  },
+  {
+    "Key": "skillxld16",
+    "enUS": "enchants an arrow or bolt that explodes on\ncontact, damaging all nearby enemies"
+  },
+  {
+    "Key": "skillxld21",
+    "enUS": "magically enhances your arrow or bolt\nto freeze your enemies"
+  },
+  {
+    "Key": "skillxld27",
+    "enUS": "enhances arrows or bolts to\ncause severe fire damage and\ncreates a pyre upon impact"
+  },
+  {
+    "Key": "skillxld31",
+    "enUS": "magically enhances an arrow or bolt\nto freeze entire groups of monsters"
+  },
+  {
+    "Key": "skillxld7",
+    "enUS": "magically enhances your arrows\nor bolts with fire"
+  },
+  {
+    "Key": "sksyn",
+    "enUS": "%s Receives Bonuses From:"
+  },
+  {
+    "Key": "strafe",
+    "enUS": "strafe"
+  },
+  {
+    "Key": "strskill11",
+    "enUS": "%d hits"
+  },
+  {
+    "Key": "strskill13",
+    "enUS": "Cold Length: %d seconds"
+  },
+  {
+    "Key": "strskill18",
+    "enUS": "Radius: %d yards"
+  },
+  {
+    "Key": "strskill20",
+    "enUS": "Duration: %d seconds"
+  },
+  {
+    "Key": "strskill21",
+    "enUS": "Defense: %+d%%"
+  },
+  {
+    "Key": "strskill22",
+    "enUS": "Attack Rating: %+d%%"
+  },
+  {
+    "Key": "strskill24",
+    "enUS": "%d%% chance"
+  },
+  {
+    "Key": "strskill3",
+    "enUS": "Mana Cost: %d"
+  },
+  {
+    "Key": "strskill42",
+    "enUS": "Life: %d"
+  },
+  {
+    "Key": "strskill5",
+    "enUS": "Fire Damage: %d-%d"
+  },
+  {
+    "Key": "strskill6",
+    "enUS": "Cold Damage: %d-%d"
+  },
+  {
+    "Key": "strskill61",
+    "enUS": "Multiple Hits"
+  },
+  {
+    "Key": "strskill62",
+    "enUS": "Freezes for %d seconds"
+  },
+  {
+    "Key": "strskill63",
+    "enUS": "over %d seconds"
+  },
+  {
+    "Key": "strskill7",
+    "enUS": "Lightning Damage: %d-%d"
+  },
+  {
+    "Key": "strskill72",
+    "enUS": "Releases %d charged bolts"
+  },
+  {
+    "Key": "strskill8",
+    "enUS": "Poison Damage: %d-%d"
+  },
+  {
+    "Key": "strskill82",
+    "enUS": "Fire Duration: %d seconds"
+  },
+  {
+    "Key": "strskill83",
+    "enUS": "Fire Explosion Damage: %d-%d"
+  },
+  {
+    "Key": "strskill86",
+    "enUS": "Attacks up to %d targets"
+  },
+  {
+    "Key": "strskill9",
+    "enUS": "%d arrows"
+  },
+  {
+    "Key": "strskillalwayshits",
+    "enUS": "Always Hits"
+  },
+  {
+    "Key": "strskillcastingdelayplural",
+    "enUS": "Casting Delay: %d seconds"
+  },
+  {
+    "Key": "strskillcastingdelaysingular",
+    "enUS": "Casting Delay: %d second"
+  },
+  {
+    "Key": "strskillcoldlengthsingular",
+    "enUS": "Cold Length: %d second"
+  },
+  {
+    "Key": "strskilldamageflat",
+    "enUS": "Damage: %+d"
+  },
+  {
+    "Key": "strskilldamagepercent",
+    "enUS": "Damage: %+d%%"
+  },
+  {
+    "Key": "strskilldurationsingular",
+    "enUS": "Duration: %d second"
+  },
+  {
+    "Key": "strskillea",
+    "enUS": "%d Exploding Arrows"
+  },
+  {
+    "Key": "strskillenemydefenseflatbonus",
+    "enUS": "Enemy Defense: %+d"
+  },
+  {
+    "Key": "strskillfa",
+    "enUS": "%d Freezing Arrows"
+  },
+  {
+    "Key": "strskillfiredamageaveragepersecond",
+    "enUS": "Average Fire Damage: %d-%d per second"
+  },
+  {
+    "Key": "strskillfiredurationsingular",
+    "enUS": "Fire Duration: %d second"
+  },
+  {
+    "Key": "strskillfreezelengthsingular",
+    "enUS": "Freezes for %d second"
+  },
+  {
+    "Key": "strskilllifepercent",
+    "enUS": "Life: %+d%%"
+  },
+  {
+    "Key": "strskillnoconsumechance",
+    "enUS": "%d%% Chance to not consume Quantity"
+  },
+  {
+    "Key": "strskillpoisonlengthsingular",
+    "enUS": "over %d second"
+  },
+  {
+    "Key": "strskillradiussingular",
+    "enUS": "Radius: %d yard"
+  },
+  {
+    "Key": "strskillreleasesbolts",
+    "enUS": "Releases %d bolts"
+  },
+  {
+    "Key": "strskillreplenishoncrit",
+    "enUS": "Replenish Quantity on Critical Strike"
+  },
+  {
+    "Key": "valkyrie",
+    "enUS": "Valkyrie"
+  },
+  {
+    "Key": "weapdamsk",
+    "enUS": "%d%% Weapon Damage"
+  }
+]

@@ -506,8 +506,8 @@
   },
   {
     "id": "Wormskull",
-    "display_name": "Wormsteel",
-    "base_item": "Spiked Helm",
+    "display_name": "Wormskull",
+    "base_item": "Bone Helm",
     "item_type": "Merc Equip",
     "lvl_req": "21",
     "properties": [
@@ -828,14 +828,14 @@
         "param": "70",
         "min_val": "3",
         "max_val": "5",
-        "resolved_text": "+3-5 to Raise Undead"
+        "resolved_text": "+3-5 to Raise Skeleton"
       },
       {
         "code": "oskill",
         "param": "69",
         "min_val": "3",
         "max_val": "5",
-        "resolved_text": "+3-5 to Undead Mastery"
+        "resolved_text": "+3-5 to Skeleton Mastery"
       }
     ],
     "raw_row": {
@@ -3362,7 +3362,7 @@
   {
     "id": "Giantskull",
     "display_name": "Giant Skull",
-    "base_item": "Spiked Visage",
+    "base_item": "Bone Visage",
     "item_type": "Merc Equip",
     "lvl_req": "65",
     "properties": [

@@ -149,7 +149,7 @@
         "param": "Sacrifice",
         "min_val": "11",
         "max_val": "11",
-        "resolved_text": "+11 to Life Contributor"
+        "resolved_text": "+11 to Sacrifice"
       },
       {
         "code": "gethit-skill",
