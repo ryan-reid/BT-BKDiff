@@ -21,7 +21,7 @@ class MarkdownExporter(BaseExporter):
         if not s: return ""
         # Escape characters that have special meaning in Markdown
         # Backslash first to avoid double-escaping
-        for char in r'\_ *[]()#+-.!':
+        for char in r'\_*[]()#+-.!':
             s = s.replace(char, '\\' + char)
         return s
 

@@ -17,8 +17,8 @@
 - bladewarp
 - bladewarpexplode
 - bloodboilexplode
-- coldfissure\ center
-- colossal\ throwing\ axe
+- coldfissure center
+- colossal throwing axe
 - colossalchargedbolt
 - echoingstrike
 - echoingstrike\_detonate
@@ -31,10 +31,10 @@
 - flamewavelingerfire
 - flamewaveunveiling
 - hexpurgeexplode
-- ice\ crack\ 1
-- ice\ crack\ 2
-- ice\ vapor\ 1
-- ice\ vapor\ 2
+- ice crack 1
+- ice crack 2
+- ice vapor 1
+- ice vapor 2
 - miasmabolt
 - miasmaboltcloud
 - miasmaboltdot

@@ -15,18 +15,18 @@
 - fcr\_wand1
 - fcr\_wand2
 - fcr\_wand3
-- of\ anthrax
-- of\ blight
-- of\ cinders
-- of\ darkness
-- of\ despair
-- of\ ember
-- of\ flames
-- of\ inferno
-- of\ nightmares
-- of\ pestilence
-- of\ shadows
-- of\ venom
+- of anthrax
+- of blight
+- of cinders
+- of darkness
+- of despair
+- of ember
+- of flames
+- of inferno
+- of nightmares
+- of pestilence
+- of shadows
+- of venom
 ## Removed Rows (4)
 - fcr\_orb
 - fcr\_scep

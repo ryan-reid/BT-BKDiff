@@ -5,111 +5,111 @@
 ## Added Columns: `UICategory, RunewordCategory1, RunewordCategory2, Restricted`  
 
 ## Added Rows (4)
-- colossal\ jewel
-- crafted\ sunder\ charm
+- colossal jewel
+- crafted sunder charm
 - grimoire
-- warlock\ item
+- warlock item
 ## Removed Rows (98)
-- amn\ rune\ generic
-- ber\ rune\ generic
-- cham\ rune\ generic
-- dol\ rune\ generic
-- el\ rune\ generic
-- eld\ rune\ generic
-- eth\ rune\ generic
-- fal\ rune\ generic
-- gem\ stack
-- generic\ amethyst
-- generic\ c\ amethyst
-- generic\ c\ diamond
-- generic\ c\ emerald
-- generic\ c\ ruby
-- generic\ c\ sapphire
-- generic\ c\ skull
-- generic\ c\ topaz
-- generic\ chipped\ gem
-- generic\ diamond
-- generic\ emerald
-- generic\ f\ amethyst
-- generic\ f\ diamond
-- generic\ f\ emerald
-- generic\ f\ ruby
-- generic\ f\ sapphire
-- generic\ f\ skull
-- generic\ f\ topaz
-- generic\ flawed\ gem
-- generic\ flawless\ gem
-- generic\ gem
-- generic\ p\ amethyst
-- generic\ p\ diamond
-- generic\ p\ emerald
-- generic\ p\ ruby
-- generic\ p\ sapphire
-- generic\ p\ skull
-- generic\ p\ topaz
-- generic\ perfect\ gem
-- generic\ ruby
-- generic\ rune
-- generic\ s\ amethyst
-- generic\ s\ diamond
-- generic\ s\ emerald
-- generic\ s\ ruby
-- generic\ s\ sapphire
-- generic\ s\ skull
-- generic\ s\ topaz
-- generic\ sapphire
-- generic\ skull
-- generic\ standard\ gem
-- generic\ topaz
-- generic\ w\ amethyst
-- generic\ w\ diamond
-- generic\ w\ emerald
-- generic\ w\ ruby
-- generic\ w\ sapphire
-- generic\ w\ skull
-- generic\ w\ topaz
-- gul\ rune\ generic
-- hel\ rune\ generic
-- io\ rune\ generic
-- ist\ rune\ generic
-- ith\ rune\ generic
-- jah\ rune\ generic
+- amn rune generic
+- ber rune generic
+- cham rune generic
+- dol rune generic
+- el rune generic
+- eld rune generic
+- eth rune generic
+- fal rune generic
+- gem stack
+- generic amethyst
+- generic c amethyst
+- generic c diamond
+- generic c emerald
+- generic c ruby
+- generic c sapphire
+- generic c skull
+- generic c topaz
+- generic chipped gem
+- generic diamond
+- generic emerald
+- generic f amethyst
+- generic f diamond
+- generic f emerald
+- generic f ruby
+- generic f sapphire
+- generic f skull
+- generic f topaz
+- generic flawed gem
+- generic flawless gem
+- generic gem
+- generic p amethyst
+- generic p diamond
+- generic p emerald
+- generic p ruby
+- generic p sapphire
+- generic p skull
+- generic p topaz
+- generic perfect gem
+- generic ruby
+- generic rune
+- generic s amethyst
+- generic s diamond
+- generic s emerald
+- generic s ruby
+- generic s sapphire
+- generic s skull
+- generic s topaz
+- generic sapphire
+- generic skull
+- generic standard gem
+- generic topaz
+- generic w amethyst
+- generic w diamond
+- generic w emerald
+- generic w ruby
+- generic w sapphire
+- generic w skull
+- generic w topaz
+- gul rune generic
+- hel rune generic
+- io rune generic
+- ist rune generic
+- ith rune generic
+- jah rune generic
 - keys
-- ko\ rune\ generic
-- lem\ rune\ generic
-- lo\ rune\ generic
-- lum\ rune\ generic
-- mal\ rune\ generic
-- nef\ rune\ generic
-- ohm\ rune\ generic
+- ko rune generic
+- lem rune generic
+- lo rune generic
+- lum rune generic
+- mal rune generic
+- nef rune generic
+- ohm rune generic
 - organ
-- ort\ rune\ generic
-- pul\ rune\ generic
-- ral\ rune\ generic
-- rune\ stack
-- shael\ rune\ generic
-- sol\ rune\ generic
-- stack\ amethyst
-- stack\ chipped\ gem
-- stack\ diamond
-- stack\ emerald
-- stack\ flawed\ gem
-- stack\ flawless\ gem
-- stack\ perfect\ gem
-- stack\ ruby
-- stack\ sapphire
-- stack\ skull
-- stack\ standard\ gem
-- stack\ topaz
-- sur\ rune\ generic
-- tal\ rune\ generic
-- thul\ rune\ generic
-- tir\ rune\ generic
-- um\ rune\ generic
-- vex\ rune\ generic
-- zod\ rune\ generic
+- ort rune generic
+- pul rune generic
+- ral rune generic
+- rune stack
+- shael rune generic
+- sol rune generic
+- stack amethyst
+- stack chipped gem
+- stack diamond
+- stack emerald
+- stack flawed gem
+- stack flawless gem
+- stack perfect gem
+- stack ruby
+- stack sapphire
+- stack skull
+- stack standard gem
+- stack topaz
+- sur rune generic
+- tal rune generic
+- thul rune generic
+- tir rune generic
+- um rune generic
+- vex rune generic
+- zod rune generic
 ## Modified Rows (13044)
-### 2handed\ melee\ weapon
+### 2handed melee weapon
 - `*skillID`: $`\color{gray}{\text{107}}`$ (Old) &rarr; $`\color{blue}{\text{111}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{44}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{48}}`$ (New)
 ### a000
@@ -2112,26 +2112,26 @@
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{33}}`$$`\text{ lev}`$$`\color{gray}{\text{0}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{31}}`$$`\text{ lev}`$$`\color{blue}{\text{34}}`$ (New)
 ### a999
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{33}}`$$`\text{ lev}`$$`\color{gray}{\text{1}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{31}}`$$`\text{ lev}`$$`\color{blue}{\text{35}}`$ (New)
-### act\ 3\ and\ 5\ weapons
+### act 3 and 5 weapons
 - `*skillID`: $`\color{gray}{\text{206}}`$ (Old) &rarr; $`\color{blue}{\text{112}}`$ (New)
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{3}}`$$`\text{ lev}`$$`\color{gray}{\text{15}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{1}}`$$`\text{ lev}`$$`\color{blue}{\text{49}}`$ (New)
-### amazon\ bow
+### amazon bow
 - `*skillID`: $`\color{gray}{\text{85}}`$ (Old) &rarr; $`\color{blue}{\text{86}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{22}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{23}}`$ (New)
-### amazon\ javelin
+### amazon javelin
 - `*skillID`: $`\color{gray}{\text{87}}`$ (Old) &rarr; $`\color{blue}{\text{88}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{24}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{25}}`$ (New)
-### amazon\ spear
+### amazon spear
 - `*skillID`: $`\color{gray}{\text{86}}`$ (Old) &rarr; $`\color{blue}{\text{87}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{23}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{24}}`$ (New)
 ### amethyst
 - `Equiv2`: $`\color{gray}{\text{ggma}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `*skillID`: $`\color{gray}{\text{96}}`$ (Old) &rarr; $`\color{blue}{\text{97}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{33}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{34}}`$ (New)
-### antidote\ potion
+### antidote potion
 - `*skillID`: $`\color{gray}{\text{80}}`$ (Old) &rarr; $`\color{blue}{\text{81}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{17}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{18}}`$ (New)
-### auric\ shields
+### auric shields
 - `*skillID`: $`\color{gray}{\text{70}}`$ (Old) &rarr; $`\color{blue}{\text{71}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{7}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{8}}`$ (New)
 ### b000
@@ -6137,7 +6137,7 @@
 ### charms
 - `*skillID`: $`\color{gray}{\text{106}}`$ (Old) &rarr; $`\color{blue}{\text{110}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{43}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{47}}`$ (New)
-### chipped\ gem
+### chipped gem
 - `Equiv2`: $`\color{gray}{\text{ggm0}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `*skillID`: $`\color{gray}{\text{91}}`$ (Old) &rarr; $`\color{blue}{\text{92}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{28}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{29}}`$ (New)
@@ -12155,11 +12155,11 @@
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{189}}`$$`\text{ lev}`$$`\color{gray}{\text{16}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{187}}`$$`\text{ lev}`$$`\color{blue}{\text{50}}`$ (New)
 ### f999
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{189}}`$$`\text{ lev}`$$`\color{gray}{\text{17}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{187}}`$$`\text{ lev}`$$`\color{blue}{\text{51}}`$ (New)
-### flawed\ gem
+### flawed gem
 - `Equiv2`: $`\color{gray}{\text{ggm1}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `*skillID`: $`\color{gray}{\text{92}}`$ (Old) &rarr; $`\color{blue}{\text{93}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{29}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{30}}`$ (New)
-### flawless\ gem
+### flawless gem
 - `Equiv2`: $`\color{gray}{\text{ggm3}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `*skillID`: $`\color{gray}{\text{94}}`$ (Old) &rarr; $`\color{blue}{\text{95}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{31}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{32}}`$ (New)
@@ -16163,13 +16163,13 @@
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{251}}`$$`\text{ lev}`$$`\color{gray}{\text{48}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{250}}`$$`\text{ lev}`$$`\color{blue}{\text{18}}`$ (New)
 ### h999
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{251}}`$$`\text{ lev}`$$`\color{gray}{\text{49}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{250}}`$$`\text{ lev}`$$`\color{blue}{\text{19}}`$ (New)
-### hand\ to\ hand
+### hand to hand
 - `*skillID`: $`\color{gray}{\text{67}}`$ (Old) &rarr; $`\color{blue}{\text{68}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{4}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{5}}`$ (New)
-### hand\ to\ hand\ 2
+### hand to hand 2
 - `*skillID`: $`\color{gray}{\text{88}}`$ (Old) &rarr; $`\color{blue}{\text{89}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{25}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{26}}`$ (New)
-### healing\ potion
+### healing potion
 - `*skillID`: $`\color{gray}{\text{76}}`$ (Old) &rarr; $`\color{blue}{\text{77}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{13}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{14}}`$ (New)
 ### i000
@@ -24177,7 +24177,7 @@
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{376}}`$$`\text{ lev}`$$`\color{gray}{\text{48}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{375}}`$$`\text{ lev}`$$`\color{blue}{\text{18}}`$ (New)
 ### l999
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{376}}`$$`\text{ lev}`$$`\color{gray}{\text{49}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{375}}`$$`\text{ lev}`$$`\color{blue}{\text{19}}`$ (New)
-### large\ charm
+### large charm
 - `*skillID`: $`\color{gray}{\text{84}}`$ (Old) &rarr; $`\color{blue}{\text{85}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{21}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{22}}`$ (New)
 ### m000
@@ -26368,19 +26368,19 @@
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{392}}`$$`\text{ lev}`$$`\color{gray}{\text{24}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{390}}`$$`\text{ lev}`$$`\color{blue}{\text{58}}`$ (New)
 ### m999
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{392}}`$$`\text{ lev}`$$`\color{gray}{\text{25}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{390}}`$$`\text{ lev}`$$`\color{blue}{\text{59}}`$ (New)
-### magic\ bow\ quiv
+### magic bow quiv
 - `*skillID`: $`\color{gray}{\text{89}}`$ (Old) &rarr; $`\color{blue}{\text{90}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{26}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{27}}`$ (New)
-### magic\ xbow\ quiv
+### magic xbow quiv
 - `*skillID`: $`\color{gray}{\text{90}}`$ (Old) &rarr; $`\color{blue}{\text{91}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{27}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{28}}`$ (New)
-### mana\ potion
+### mana potion
 - `*skillID`: $`\color{gray}{\text{77}}`$ (Old) &rarr; $`\color{blue}{\text{78}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{14}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{15}}`$ (New)
-### medium\ charm
+### medium charm
 - `*skillID`: $`\color{gray}{\text{83}}`$ (Old) &rarr; $`\color{blue}{\text{84}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{20}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{21}}`$ (New)
-### merc\ equip
+### merc equip
 - `*skillID`: $`\color{gray}{\text{207}}`$ (Old) &rarr; $`\color{blue}{\text{113}}`$ (New)
 - `*CTC`: $`\text{id }`$$`\color{gray}{\text{3}}`$$`\text{ lev}`$$`\color{gray}{\text{16}}`$ (Old) &rarr; $`\text{id }`$$`\color{blue}{\text{1}}`$$`\text{ lev}`$$`\color{blue}{\text{50}}`$ (New)
 ### orb
@@ -26389,14 +26389,14 @@
 ### pelt
 - `*skillID`: $`\color{gray}{\text{72}}`$ (Old) &rarr; $`\color{blue}{\text{73}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{9}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{10}}`$ (New)
-### perfect\ gem
+### perfect gem
 - `Equiv2`: $`\color{gray}{\text{ggm4}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `*skillID`: $`\color{gray}{\text{95}}`$ (Old) &rarr; $`\color{blue}{\text{96}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{32}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{33}}`$ (New)
-### primal\ helm
+### primal helm
 - `*skillID`: $`\color{gray}{\text{71}}`$ (Old) &rarr; $`\color{blue}{\text{72}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{8}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{9}}`$ (New)
-### rejuv\ potion
+### rejuv potion
 - `*skillID`: $`\color{gray}{\text{78}}`$ (Old) &rarr; $`\color{blue}{\text{79}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{15}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{16}}`$ (New)
 ### ruby
@@ -26414,29 +26414,29 @@
 - `Equiv2`: $`\color{gray}{\text{ggmz}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `*skillID`: $`\color{gray}{\text{102}}`$ (Old) &rarr; $`\color{blue}{\text{103}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{39}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{40}}`$ (New)
-### small\ charm
+### small charm
 - `*skillID`: $`\color{gray}{\text{82}}`$ (Old) &rarr; $`\color{blue}{\text{83}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{19}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{20}}`$ (New)
-### spears\ and\ polearms
+### spears and polearms
 - `*skillID`: $`\color{gray}{\text{104}}`$ (Old) &rarr; $`\color{blue}{\text{105}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{41}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{42}}`$ (New)
-### stamina\ potion
+### stamina potion
 - `*skillID`: $`\color{gray}{\text{79}}`$ (Old) &rarr; $`\color{blue}{\text{80}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{16}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{17}}`$ (New)
-### standard\ gem
+### standard gem
 - `Equiv2`: $`\color{gray}{\text{ggm2}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `*skillID`: $`\color{gray}{\text{93}}`$ (Old) &rarr; $`\color{blue}{\text{94}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{30}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{31}}`$ (New)
-### swords\ and\ knives
+### swords and knives
 - `*skillID`: $`\color{gray}{\text{103}}`$ (Old) &rarr; $`\color{blue}{\text{104}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{40}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{41}}`$ (New)
-### thawing\ potion
+### thawing potion
 - `*skillID`: $`\color{gray}{\text{81}}`$ (Old) &rarr; $`\color{blue}{\text{82}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{18}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{19}}`$ (New)
 ### topaz
 - `Equiv2`: $`\color{gray}{\text{ggmt}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `*skillID`: $`\color{gray}{\text{101}}`$ (Old) &rarr; $`\color{blue}{\text{102}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{38}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{39}}`$ (New)
-### voodoo\ heads
+### voodoo heads
 - `*skillID`: $`\color{gray}{\text{69}}`$ (Old) &rarr; $`\color{blue}{\text{70}}`$ (New)
 - `*CTC`: $`\text{id 1 lev}`$$`\color{gray}{\text{6}}`$ (Old) &rarr; $`\text{id 1 lev}`$$`\color{blue}{\text{7}}`$ (New)

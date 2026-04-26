@@ -3,7 +3,7 @@
 - $`\color{gray}{\text{Gray text}}`$: Removed/Old Value
 - $`\color{blue}{\text{Blue text}}`$: Added/New Value
 
-**Aldur's\ Advance** (Aldur's\ Advance)
+**Aldur's Advance** (Aldur's Advance)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -18,7 +18,7 @@
 | $`\text{Replenish Life +10}`$ | $`\text{Replenish Life +10}`$ |
 | $`\text{Fire Resist +40-50\%}`$ | $`\text{Fire Resist +40-50\%}`$ |
 
-**Aldur's\ Rhythm** (Aldur's\ Gauntlet)
+**Aldur's Rhythm** (Aldur's Gauntlet)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -33,7 +33,7 @@
 | $`\text{5\% Mana stolen per hit}`$ | $`\text{5\% Mana stolen per hit}`$ |
 | $`\text{+30\% Faster Cast Rate}`$ | $`\text{+30\% Faster Cast Rate}`$ |
 
-**Aldur's\ Icy\ Gaze** (Aldur's\ Icy\ Gaze)
+**Aldur's Icy Gaze** (Aldur's Icy Gaze)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -50,7 +50,7 @@
 | $`\text{+5-10\% to Cold Skill Damage}`$ | $`\text{+5-10\% to Cold Skill Damage}`$ |
 | $`\text{-3-5\% to Enemy Cold Resistance}`$ | $`\text{-3-5\% to Enemy Cold Resistance}`$ |
 
-**Aldur's\ Momentum** (Aldur's\ Momentum)
+**Aldur's Momentum** (Aldur's Momentum)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -64,7 +64,7 @@
 | $`\text{All Resistances +10-20}`$ | $`\text{All Resistances +10-20}`$ |
 | $`\text{Increase Maximum Mana 5\%}`$ | $`\text{Increase Maximum Mana 5\%}`$ |
 
-**Aldur's\ Onslaught** (Aldur's\ Onslaught)
+**Aldur's Onslaught** (Aldur's Onslaught)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -80,7 +80,7 @@
 | $`\text{10\% Life stolen per hit}`$ | $`\text{10\% Life stolen per hit}`$ |
 | $`\text{35\% Chance of Crushing Blow}`$ | $`\text{35\% Chance of Crushing Blow}`$ |
 
-**Aldur's\ Stony\ Gaze** (Aldur's\ Stony\ Gaze)
+**Aldur's Stony Gaze** (Aldur's Stony Gaze)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -94,7 +94,7 @@
 | $`\text{+1-2 to All Skills}`$ | $`\text{+1-2 to All Skills}`$ |
 | $`\text{Cold Resist +40-50\%}`$ | $`\text{Cold Resist +40-50\%}`$ |
 
-**Amazon's\ Teaching** (Amazon's\ Teaching)
+**Amazon's Teaching** (Amazon's Teaching)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -109,7 +109,7 @@
 | $`\text{+10 to Dexterity}`$ | $`\text{+10 to Dexterity}`$ |
 |  | $`\color{blue}{\text{-4-5\% to Enemy Physical Resistance}}`$ |
 
-**Amulet\ of\ the\ Viper** (Amulet\ of\ the\ Viper)
+**Amulet of the Viper** (Amulet of the Viper)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -164,7 +164,7 @@
 | $`\text{40\% Chance to cast level 40 Blizzard on attack}`$ | $`\text{40\% Chance to cast level 40 Blizzard on attack}`$ |
 | $`\text{Adds 250-500 Magic Damage}`$ | $`\text{Adds 250-500 Magic Damage}`$ |
 
-**Blackbog's\ Sharp** (Blackbog's\ Sharp)
+**Blackbog's Sharp** (Blackbog's Sharp)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -210,7 +210,7 @@
 | $`\color{gray}{\text{+13 Life after each Kill}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 |  | $`\color{blue}{\text{-10-20\% to Enemy Poison Resistance}}`$ |
 
-**Bul\ Katho's\ Mind** (Bul\ Katho's\ Mind)
+**Bul Katho's Mind** (Bul Katho's Mind)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -226,7 +226,7 @@
 | $`\text{+150-200\% Enhanced Defense}`$ | $`\text{+150-200\% Enhanced Defense}`$ |
 |  | $`\color{blue}{\text{-5-10\% to Enemy Physical Resistance}}`$ |
 
-**Cerebus'\ Bite** (Cerebus)
+**Cerebus' Bite** (Cerebus)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -240,7 +240,7 @@
 | $`\text{33\% Chance of Open Wounds}`$ | $`\text{33\% Chance of Open Wounds}`$ |
 |  | $`\color{blue}{\text{-5-10\% to Enemy Physical Resistance}}`$ |
 
-**Game\ Modifers** (Charm\ Modifiers)
+**Game Modifers** (Charm Modifiers)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -253,7 +253,7 @@
 | $`\color{gray}{\text{Level 1 Magic Pierce Aura When Equipped}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 | $`\color{gray}{\text{+-50\% to Experience Gained}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 
-**Corrupted\ Azurewrath** (Corrupted\ Azurewrath)
+**Corrupted Azurewrath** (Corrupted Azurewrath)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -268,7 +268,7 @@
 | $`\text{Adds 50-100 Magic Damage}`$ | $`\text{Adds 50-100 Magic Damage}`$ |
 | $`\color{gray}{\text{10-15\% Better Chance of Getting Magic Items}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 
-**Crown\ of\ Ages** (Crown\ of\ Ages)
+**Crown of Ages** (Crown of Ages)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -286,7 +286,7 @@
 | $`\color{gray}{\text{+7-9}}`$$`\text{ Life after each Kill}`$ | $`\color{blue}{\text{+5-9}}`$$`\text{ Life after each Kill}`$ |
 |  | $`\color{blue}{\text{+5-9 to Mana after each Kill}}`$ |
 
-**Death\ Cleaver** (Deathcleaver)
+**Death Cleaver** (Deathcleaver)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -337,7 +337,7 @@
 | $`\text{(1.0-1.5 per clvl) to Life (Based on Character Level)}`$ | $`\text{(1.0-1.5 per clvl) to Life (Based on Character Level)}`$ |
 | $`\text{All Resistances +25-30}`$ | $`\text{All Resistances +25-30}`$ |
 
-**Gaia's\ Precision** (Gaia's\ Precision)
+**Gaia's Precision** (Gaia's Precision)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -370,7 +370,7 @@
 | $`\text{+30\% Increased Attack Speed}`$ | $`\text{+30\% Increased Attack Speed}`$ |
 | $`\text{20\% Chance to cast level 20 Lower Resist on striking}`$ | $`\text{20\% Chance to cast level 20 Lower Resist on striking}`$ |
 
-**Griffon's\ Eye** (Griffon's\ Eye)
+**Griffon's Eye** (Griffon's Eye)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -384,7 +384,7 @@
 | $`\text{-8-15\% to Enemy Lightning Resistance}`$ | $`\text{-8-15\% to Enemy Lightning Resistance}`$ |
 |  | $`\color{blue}{\text{+7 to Thunder Storm}}`$ |
 
-**Griswold's\ Heart** (Griswold's\ Heart)
+**Griswold's Heart** (Griswold's Heart)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -399,7 +399,7 @@
 | $`\text{+1-3 to Defensive Auras Skills}`$ | $`\text{+1-3 to Defensive Auras Skills}`$ |
 | $`\text{+6-9 to Mana after each Kill}`$ | $`\text{+6-9 to Mana after each Kill}`$ |
 
-**Hell\ Forge\ Hammer** (Hell\ Forge\ Hammer)
+**Hell Forge Hammer** (Hell Forge Hammer)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -412,7 +412,7 @@
 | $`\color{gray}{\text{+66}}`$$`\text{ Defense}`$ | $`\color{blue}{\text{+35}}`$$`\text{ Defense}`$ |
 | $`\color{gray}{\text{Adds 66-66 Damage}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 
-**Hellfire\ Torch** (Hellfire\ Torch)
+**Hellfire Torch** (Hellfire Torch)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -425,7 +425,7 @@
 | $`\text{+8 to Light Radius}`$ | $`\text{+8 to Light Radius}`$ |
 | $`\text{Level 10 Hydra (30/\# Charges)}`$ | $`\text{Level 10 Hydra (30/\# Charges)}`$ |
 
-**Horadric\ Staff** (Horadric\ Staff)
+**Horadric Staff** (Horadric Staff)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -440,7 +440,7 @@
 | $`\color{gray}{\text{Adds 30-30 Damage}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 |  | $`\color{blue}{\text{Poison Resist +25\%}}`$ |
 
-**Immortal\ King's\ Detail** (Immortal\ King's\ Detail)
+**Immortal King's Detail** (Immortal King's Detail)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -452,7 +452,7 @@
 | $`\text{Lightning Resist +31\%}`$ | $`\text{Lightning Resist +31\%}`$ |
 | $`\text{+25 to Strength}`$ | $`\text{+25 to Strength}`$ |
 
-**Immortal\ King's\ Forge** (Immortal\ King's\ Forge)
+**Immortal King's Forge** (Immortal King's Forge)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -465,7 +465,7 @@
 | $`\text{12\% Chance to cast level 20 Static Field when struck}`$ | $`\text{12\% Chance to cast level 20 Static Field when struck}`$ |
 | $`\text{+40 to Life}`$ | $`\text{+40 to Life}`$ |
 
-**Immortal\ King's\ Irons** (Immortal\ King's\ Irons)
+**Immortal King's Irons** (Immortal King's Irons)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -481,7 +481,7 @@
 | $`\text{Damage Reduced by 10-20\%}`$ | $`\text{Damage Reduced by 10-20\%}`$ |
 | $`\text{+3-5\% Strength}`$ | $`\text{+3-5\% Strength}`$ |
 
-**Immortal\ King's\ Pillar** (Immortal\ King's\ Pillar)
+**Immortal King's Pillar** (Immortal King's Pillar)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -496,7 +496,7 @@
 | $`\text{+10\% Faster Cast Rate}`$ | $`\text{+10\% Faster Cast Rate}`$ |
 | $`\text{+10-15 to Vitality}`$ | $`\text{+10-15 to Vitality}`$ |
 
-**Immortal\ King's\ Statue** (Immortal\ King's\ Statue)
+**Immortal King's Statue** (Immortal King's Statue)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -510,7 +510,7 @@
 | $`\text{Damage Reduced by 10-15\%}`$ | $`\text{Damage Reduced by 10-15\%}`$ |
 | $`\text{+40\% Faster Hit Recovery}`$ | $`\text{+40\% Faster Hit Recovery}`$ |
 
-**Immortal\ King's\ Tribal\ Binding** (Immortal\ King's\ Tribal\ Binding)
+**Immortal King's Tribal Binding** (Immortal King's Tribal Binding)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -527,7 +527,7 @@
 | $`\text{+3-5\% Dexterity}`$ | $`\text{+3-5\% Dexterity}`$ |
 | $`\text{+3-5\% Energy}`$ | $`\text{+3-5\% Energy}`$ |
 
-**Immortal\ King's\ Triumph** (Immortal\ King's\ Triumph)
+**Immortal King's Triumph** (Immortal King's Triumph)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -541,7 +541,7 @@
 | $`\text{+20-30 to all Attributes}`$ | $`\text{+20-30 to all Attributes}`$ |
 | $`\text{50-75\% Better Chance of Getting Magic Items}`$ | $`\text{50-75\% Better Chance of Getting Magic Items}`$ |
 
-**Immortal\ King's\ Will** (Immortal\ King's\ Will)
+**Immortal King's Will** (Immortal King's Will)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -554,7 +554,7 @@
 | $`\text{30-45\% Better Chance of Getting Magic Items}`$ | $`\text{30-45\% Better Chance of Getting Magic Items}`$ |
 | $`\text{Fire Resist +30\%}`$ | $`\text{Fire Resist +30\%}`$ |
 
-**Lidless\ Wall** (Lidless\ Wall)
+**Lidless Wall** (Lidless Wall)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -583,7 +583,7 @@
 | $`\color{gray}{\text{+15 to Dexterity}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 |  | $`\color{blue}{\text{+15-30 to all Attributes}}`$ |
 
-**M'avina's\ Guidance** (M'avina's\ Guidance)
+**M'avina's Guidance** (M'avina's Guidance)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -599,7 +599,7 @@
 | $`\text{20\% Chance to cast level 50 Slow Missiles when struck}`$ | $`\text{20\% Chance to cast level 50 Slow Missiles when struck}`$ |
 | $`\text{Increase Maximum Life 5-10\%}`$ | $`\text{Increase Maximum Life 5-10\%}`$ |
 
-**M'avina's\ Icy\ Clutch** (M'avina's\ Icy\ Clutch)
+**M'avina's Icy Clutch** (M'avina's Icy Clutch)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -613,7 +613,7 @@
 | $`\text{+20-30 to Strength}`$ | $`\text{+20-30 to Strength}`$ |
 | $`\text{+20-30 to Dexterity}`$ | $`\text{+20-30 to Dexterity}`$ |
 
-**M'avina's\ Principle** (M'avina's\ Principle)
+**M'avina's Principle** (M'avina's Principle)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -629,7 +629,7 @@
 | $`\text{Damage Reduced by 5-10\%}`$ | $`\text{Damage Reduced by 5-10\%}`$ |
 | $`\text{All Resistances +10-20}`$ | $`\text{All Resistances +10-20}`$ |
 
-**M'avina's\ Tenet** (M'avina's\ Tenet)
+**M'avina's Tenet** (M'avina's Tenet)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -642,7 +642,7 @@
 | $`\text{All Resistances +10-15}`$ | $`\text{All Resistances +10-15}`$ |
 | $`\text{+3-5 to Mana after each Kill}`$ | $`\text{+3-5 to Mana after each Kill}`$ |
 
-**Mang\ Song's\ Lesson** (Mang\ Song's\ Lesson)
+**Mang Song's Lesson** (Mang Song's Lesson)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -701,7 +701,7 @@
 |  | $`\color{blue}{\text{+100-150 to Life}}`$ |
 |  | $`\color{blue}{\text{+100\% Enhanced Defense}}`$ |
 
-**Natalya's\ Footprints** (Natalya's\ Footprints)
+**Natalya's Footprints** (Natalya's Footprints)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -716,7 +716,7 @@
 | $`\text{+5\% to Poison Skill Damage}`$ | $`\text{+5\% to Poison Skill Damage}`$ |
 | $`\text{+7 to Venom (Assassin only)}`$ | $`\text{+7 to Venom (Assassin only)}`$ |
 
-**Natalya's\ Soul** (Natalya's\ Soul)
+**Natalya's Soul** (Natalya's Soul)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -732,7 +732,7 @@
 | $`\text{-3-5\% to Enemy Cold Resistance}`$ | $`\text{-3-5\% to Enemy Cold Resistance}`$ |
 | $`\text{-3-5\% to Enemy Poison Resistance}`$ | $`\text{-3-5\% to Enemy Poison Resistance}`$ |
 
-**Natalya's\ Totem** (Natalya's\ Totem)
+**Natalya's Totem** (Natalya's Totem)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -746,7 +746,7 @@
 | $`\text{Magic Damage Reduced by 6-9}`$ | $`\text{Magic Damage Reduced by 6-9}`$ |
 | $`\text{+1-2 to All Skills}`$ | $`\text{+1-2 to All Skills}`$ |
 
-**Natalya's\ Visage** (Natalya's\ Visage)
+**Natalya's Visage** (Natalya's Visage)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -760,7 +760,7 @@
 | $`\text{+30-40 to all Attributes}`$ | $`\text{+30-40 to all Attributes}`$ |
 | $`\text{+270-350 Defense}`$ | $`\text{+270-350 Defense}`$ |
 
-**Nightwing's\ Veil** (Nightwing's\ Veil)
+**Nightwing's Veil** (Nightwing's Veil)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -820,7 +820,7 @@
 | $`\color{gray}{\text{33\% Chance to cast level 8 Fireball on striking}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 |  | $`\color{blue}{\text{33\% Chance to cast level 8 Fire Ball on striking}}`$ |
 
-**Saboteurs\ Blade** (Saboteurs\ Blade)
+**Saboteurs Blade** (Saboteurs Blade)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -836,7 +836,7 @@
 | $`\text{Level 5 Vigor Aura When Equipped}`$ | $`\text{Level 5 Vigor Aura When Equipped}`$ |
 | $`\text{+3 to Weapon Block (Assassin only)}`$ | $`\text{+3 to Weapon Block (Assassin only)}`$ |
 
-**Schaefer's\ Hammer** (Schaefer's\ Hammer)
+**Schaefer's Hammer** (Schaefer's Hammer)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -932,7 +932,7 @@
 | $`\color{gray}{\text{+3 to Poison Dagger}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 |  | $`\color{blue}{\text{+3 to Poison Strike}}`$ |
 
-**Staff\ of\ Kings** (Staff\ of\ Kings)
+**Staff of Kings** (Staff of Kings)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -944,7 +944,7 @@
 | $`\color{gray}{\text{+30\% Faster Cast Rate}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 | $`\color{gray}{\text{Adds 30-30 Damage}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 
-**Static\ Accumulator** (Static\ Accumulator)
+**Static Accumulator** (Static Accumulator)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -956,7 +956,7 @@
 | $`\text{5\% Chance to cast level 20 Static Field when struck}`$ | $`\text{5\% Chance to cast level 20 Static Field when struck}`$ |
 | $`\color{gray}{\text{+5-10\%}}`$$`\text{ Faster Run/Walk}`$ | $`\color{blue}{\text{+10\%}}`$$`\text{ Faster Run/Walk}`$ |
 
-**Steel\ Carapace** (Steel\ Carapice)
+**Steel Carapace** (Steel Carapice)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -975,7 +975,7 @@
 |  | $`\color{blue}{\text{+1-2 to All Skills}}`$ |
 |  | $`\color{blue}{\text{Requirements --50\%}}`$ |
 
-**Steel\ Pillar** (Steelpillar)
+**Steel Pillar** (Steelpillar)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -992,7 +992,7 @@
 | $`\text{15\% Chance to cast level 33 Amplify Damage on striking}`$ | $`\text{15\% Chance to cast level 33 Amplify Damage on striking}`$ |
 | $`\color{gray}{\text{+1}}`$$`\text{ to Iron Skin}`$ | $`\color{blue}{\text{+1-3}}`$$`\text{ to Iron Skin}`$ |
 
-**Stone\ Crusher** (Stone\ Crusher)
+**Stone Crusher** (Stone Crusher)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1028,7 +1028,7 @@
 | $`\color{gray}{\text{30\% Chance to cast level 10 Lower Resist when struck}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 |  | $`\color{blue}{\text{Unknown property: 91 (30-10)}}`$ |
 
-**Khalim's\ Will** (SuperKhalimFlail)
+**Khalim's Will** (SuperKhalimFlail)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1044,7 +1044,7 @@
 | $`\color{gray}{\text{Adds 50-50 Damage}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 |  | $`\color{blue}{\text{+40 to Attack Rating}}`$ |
 
-**Tal\ Rasha's\ Brace** (Tal\ Rasha's\ Brace)
+**Tal Rasha's Brace** (Tal Rasha's Brace)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1061,7 +1061,7 @@
 | $`\text{25-50\% Better Chance of Getting Magic Items}`$ | $`\text{25-50\% Better Chance of Getting Magic Items}`$ |
 | $`\text{+3-7 to Mana after each Kill}`$ | $`\text{+3-7 to Mana after each Kill}`$ |
 
-**Tal\ Rasha's\ Fine\-Spun\ Cloth** (Tal\ Rasha's\ Fire\-Spun\ Cloth)
+**Tal Rasha's Fine\-Spun Cloth** (Tal Rasha's Fire\-Spun Cloth)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1074,7 +1074,7 @@
 | $`\text{37\% Damage Taken Goes To Mana}`$ | $`\text{37\% Damage Taken Goes To Mana}`$ |
 | $`\text{10-15\% Better Chance of Getting Magic Items}`$ | $`\text{10-15\% Better Chance of Getting Magic Items}`$ |
 
-**Tal\ Rasha's\ Horadric\ Crest** (Tal\ Rasha's\ Horadric\ Crest)
+**Tal Rasha's Horadric Crest** (Tal Rasha's Horadric Crest)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1088,7 +1088,7 @@
 | $`\text{10\% Life stolen per hit}`$ | $`\text{10\% Life stolen per hit}`$ |
 | $`\text{10\% Mana stolen per hit}`$ | $`\text{10\% Mana stolen per hit}`$ |
 
-**Tal\ Rasha's\ Lidless\ Eye** (Tal\ Rasha's\ Lidless\ Eye)
+**Tal Rasha's Lidless Eye** (Tal Rasha's Lidless Eye)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1101,7 +1101,7 @@
 | $`\text{+20\% Faster Cast Rate}`$ | $`\text{+20\% Faster Cast Rate}`$ |
 | $`\text{+2-3 to Sorceress Skill Levels}`$ | $`\text{+2-3 to Sorceress Skill Levels}`$ |
 
-**Tal\ Rasha's\ Omniscience** (Tal\ Rasha's\ Omniscience)
+**Tal Rasha's Omniscience** (Tal Rasha's Omniscience)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1117,7 +1117,7 @@
 | $`\text{+50 to Mana}`$ | $`\text{+50 to Mana}`$ |
 | $`\text{+5 to Evade}`$ | $`\text{+5 to Evade}`$ |
 
-**Tal\ Rasha's\ Wisdom** (Tal\ Rasha's\ Wisdom)
+**Tal Rasha's Wisdom** (Tal Rasha's Wisdom)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1131,7 +1131,7 @@
 | $`\text{-3-5\% to Enemy Cold Resistance}`$ | $`\text{-3-5\% to Enemy Cold Resistance}`$ |
 | $`\text{+1-3 to Blizzard (Sorceress only)}`$ | $`\text{+1-3 to Blizzard (Sorceress only)}`$ |
 
-**The\ Corrupted\ Grandfather** (The\ Corrupted\ Grandfather)
+**The Corrupted Grandfather** (The Corrupted Grandfather)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1149,7 +1149,7 @@
 | $`\text{Increase Maximum Life }`$$`\color{gray}{\text{25\%}}`$ | $`\text{Increase Maximum Life }`$$`\color{blue}{\text{40-50\%}}`$ |
 |  | $`\color{blue}{\text{-15-30\% to Enemy Physical Resistance}}`$ |
 
-**The\ Gnasher** (The\ Gnasher)
+**The Gnasher** (The Gnasher)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1164,7 +1164,7 @@
 | $`\text{10\% Deadly Strike}`$ | $`\text{10\% Deadly Strike}`$ |
 | $`\color{gray}{\text{Adds 20-20 Damage}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 
-**The\ Grandfather** (The\ Grandfather)
+**The Grandfather** (The Grandfather)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1179,7 +1179,7 @@
 | $`\color{gray}{\text{50\% Bonus to Attack Rating}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 |  | $`\color{blue}{\text{-10-20\% to Enemy Physical Resistance}}`$ |
 
-**Trang\-Oul's\ Appendage** (Trang\-Oul's\ Appendage)
+**Trang\-Oul's Appendage** (Trang\-Oul's Appendage)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1196,7 +1196,7 @@
 | $`\text{+5-10\% Energy}`$ | $`\text{+5-10\% Energy}`$ |
 | $`\text{Magic Resist +15-25\%}`$ | $`\text{Magic Resist +15-25\%}`$ |
 
-**Trang\-Oul's\ Claws** (Trang\-Oul's\ Claws)
+**Trang\-Oul's Claws** (Trang\-Oul's Claws)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1208,7 +1208,7 @@
 | $`\text{Cold Resist +30\%}`$ | $`\text{Cold Resist +30\%}`$ |
 | $`\text{+2 to Curses Skills}`$ | $`\text{+2 to Curses Skills}`$ |
 
-**Trang\-Oul's\ Sharp\ Claws** (Trang\-Oul's\ Sharp\ Claws)
+**Trang\-Oul's Sharp Claws** (Trang\-Oul's Sharp Claws)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1224,7 +1224,7 @@
 | $`\text{33\% Chance to cast level 55 Bone Spear on striking}`$ | $`\text{33\% Chance to cast level 55 Bone Spear on striking}`$ |
 | $`\text{+3-7 to Mana after each Kill}`$ | $`\text{+3-7 to Mana after each Kill}`$ |
 
-**Trang\-Oul's\ Wing** (Trang\-Oul's\ Wing)
+**Trang\-Oul's Wing** (Trang\-Oul's Wing)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1288,7 +1288,7 @@
 | $`\text{+30\% Increased Attack Speed}`$ | $`\text{+30\% Increased Attack Speed}`$ |
 | $`\color{gray}{\text{Level 12-17 Meditation Aura When Equipped}}`$ | $`\color{blue}{\text{(removed)}}`$ |
 
-**Wraith\ Flight** (Wraithflight)
+**Wraith Flight** (Wraithflight)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |

@@ -1,10 +1,10 @@
 # Added Items
 
-**Ars\ Al'Diabolos** (Ars\ Al'Diablolos)
+**Ars Al'Diabolos** (Ars Al'Diablolos)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Blasphemous\ Grimoire |
+| | **Base Item:** Blasphemous Grimoire |
 | | **Level Requirement:** 80 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+2 to Warlock Skill Levels}}`$ |
@@ -19,11 +19,11 @@
 | | $`\color{blue}{\text{+1-2 to Ring of Fire (Warlock only)}}`$ |
 | | $`\color{blue}{\text{10-25\% Better Chance of Getting Magic Items}}`$ |
 
-**Ars\ Dul'Mephistos** (Ars\ Dul'Mephistos)
+**Ars Dul'Mephistos** (Ars Dul'Mephistos)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Occult\ Tome |
+| | **Base Item:** Occult Tome |
 | | **Level Requirement:** 78 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+2 to Warlock Skill Levels}}`$ |
@@ -36,11 +36,11 @@
 | | $`\color{blue}{\text{-10-20\% to Enemy Magic Resistance}}`$ |
 | | $`\color{blue}{\text{10-25\% Better Chance of Getting Magic Items}}`$ |
 
-**Ars\ Tor'Baalos** (Ars\ Tor'Baalos)
+**Ars Tor'Baalos** (Ars Tor'Baalos)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Blasphemous\ Compendium |
+| | **Base Item:** Blasphemous Compendium |
 | | **Level Requirement:** 73 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+4 to Warlock Skills}}`$ |
@@ -68,17 +68,17 @@
 | | $`\color{blue}{\text{+2 Life after each Kill}}`$ |
 | | $`\color{blue}{\text{+50 Defense}}`$ |
 
-**Bane's\ Authority** (Bane's\ Authority)
+**Bane's Authority** (Bane's Authority)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Light\ Belt |
+| | **Base Item:** Light Belt |
 | | **Level Requirement:** 8 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+10\% Faster Cast Rate}}`$ |
 | | $`\color{blue}{\text{+20 to Life}}`$ |
 
-**Bane's\ Oathmaker** (Bane's\ Oathmaker)
+**Bane's Oathmaker** (Bane's Oathmaker)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -88,31 +88,31 @@
 | | $`\color{blue}{\text{+20\% Faster Run/Walk}}`$ |
 | | $`\color{blue}{\text{(1.0 per clvl) to Maximum Damage (Based on Character Level)}}`$ |
 
-**Bane's\ Wraithskin** (Bane's\ Wraithskin)
+**Bane's Wraithskin** (Bane's Wraithskin)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Hard\ Leather\ Armor |
+| | **Base Item:** Hard Leather Armor |
 | | **Level Requirement:** 8 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+50 Defense}}`$ |
 | | $`\color{blue}{\text{Magic Resist +30\%}}`$ |
 
-**Black\ Cleft** (Black\ Cleft)
+**Black Cleft** (Black Cleft)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Magic Immunity is Sundered}}`$ |
 | | $`\color{blue}{\text{Magic Resist +-65--45\%}}`$ |
 
-**Blood\ Thirst** (Blood\ Thirst)
+**Blood Thirst** (Blood Thirst)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Feral\ Claws |
+| | **Base Item:** Feral Claws |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+3 to Assassin Skill Levels}}`$ |
@@ -126,11 +126,11 @@
 | | $`\color{blue}{\text{3-6\% Life stolen per hit}}`$ |
 | | $`\color{blue}{\text{3-6\% Mana stolen per hit}}`$ |
 
-**Bloodpact\ Shard** (Bloodpact\ Shard)
+**Bloodpact Shard** (Bloodpact Shard)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Mithril\ Point |
+| | **Base Item:** Mithril Point |
 | | **Level Requirement:** 67 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1-2 to All Skills}}`$ |
@@ -142,25 +142,25 @@
 | | $`\color{blue}{\text{20-35\% Better Chance of Getting Magic Items}}`$ |
 | | $`\color{blue}{\text{Slows Target by 25\%}}`$ |
 
-**Bone\ Break** (Bone\ Break)
+**Bone Break** (Bone Break)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Physical Immunity is Sundered}}`$ |
 | | $`\color{blue}{\text{Damage Reduced by -20--10\%}}`$ |
 
-**Blank\ Charm** (Charm\ Blank)
+**Blank Charm** (Charm Blank)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Small\ Charm |
+| | **Base Item:** Small Charm |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
 
-**Cirilka's\ Guidance** (Cirilkas\ Guidance)
+**Cirilka's Guidance** (Cirilkas Guidance)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -178,11 +178,11 @@
 | | $`\color{blue}{\text{+10-25\% Increased Attack Speed}}`$ |
 | | $`\color{blue}{\text{+200-300\% Enhanced Defense}}`$ |
 
-**Cold\ Rupture** (Cold\ Rupture)
+**Cold Rupture** (Cold Rupture)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Cold Immunity is Sundered}}`$ |
@@ -192,7 +192,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Merc\ Equip |
+| | **Base Item:** Merc Equip |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $`\color{blue}{\text{5\% Chance to cast level 20 Sigil: Lethargy when struck}}`$ |
@@ -202,21 +202,21 @@
 | | $`\color{blue}{\text{10-25\% Better Chance of Getting Magic Items}}`$ |
 | | $`\color{blue}{\text{+1-5 Life after each Kill}}`$ |
 
-**Crack\ of\ the\ Heavens** (Crack\ of\ the\ Heavens)
+**Crack of the Heavens** (Crack of the Heavens)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Lightning Immunity is Sundered}}`$ |
 | | $`\color{blue}{\text{Lightning Resist +-90--70\%}}`$ |
 
-**Renewed\ Black\ Cleft** (Crafted\ Black\ Cleft)
+**Renewed Black Cleft** (Crafted Black Cleft)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Magic Immunity is Sundered}}`$ |
@@ -227,11 +227,11 @@
 | | $`\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}`$ |
 | | $`\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}`$ |
 
-**Renewed\ Bone\ Break** (Crafted\ Bone\ Break)
+**Renewed Bone Break** (Crafted Bone Break)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Physical Immunity is Sundered}}`$ |
@@ -242,11 +242,11 @@
 | | $`\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}`$ |
 | | $`\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}`$ |
 
-**Renewed\ Cold\ Rupture** (Crafted\ Cold\ Rupture)
+**Renewed Cold Rupture** (Crafted Cold Rupture)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Cold Immunity is Sundered}}`$ |
@@ -258,11 +258,11 @@
 | | $`\color{blue}{\text{Unknown property: Gelid-Affix5 (1)}}`$ |
 | | $`\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}`$ |
 
-**Renewed\ Crack\ of\ the\ Heavens** (Crafted\ Crack\ of\ the\ Heavens)
+**Renewed Crack of the Heavens** (Crafted Crack of the Heavens)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Lightning Immunity is Sundered}}`$ |
@@ -273,11 +273,11 @@
 | | $`\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}`$ |
 | | $`\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}`$ |
 
-**Renewed\ Flame\ Rift** (Crafted\ Flame\ Rift)
+**Renewed Flame Rift** (Crafted Flame Rift)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Fire Immunity is Sundered}}`$ |
@@ -288,11 +288,11 @@
 | | $`\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}`$ |
 | | $`\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}`$ |
 
-**Renewed\ Rotting\ Fissure** (Crafted\ Rotting\ Fissure)
+**Renewed Rotting Fissure** (Crafted Rotting Fissure)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Poison Immunity is Sundered}}`$ |
@@ -303,7 +303,7 @@
 | | $`\color{blue}{\text{ (Random: +5-10\% Faster Run/Walk OR +12-24\% Faster Hit Recovery OR +3-8 to all Attributes)}}`$ |
 | | $`\color{blue}{\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}`$ |
 
-**Defender's\ Bile** (Defender's\ Bile)
+**Defender's Bile** (Defender's Bile)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -318,7 +318,7 @@
 | | $`\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}`$ |
 | | $`\color{blue}{\text{25-50\% Extra Gold from Monsters}}`$ |
 
-**Defender's\ Fire** (Defender's\ Fire)
+**Defender's Fire** (Defender's Fire)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -333,11 +333,11 @@
 | | $`\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}`$ |
 | | $`\color{blue}{\text{25-50\% Extra Gold from Monsters}}`$ |
 
-**Diamond\ Dust** (Diamond\ Dust)
+**Diamond Dust** (Diamond Dust)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Diamond\ Mail |
+| | **Base Item:** Diamond Mail |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+150-250\% Enhanced Defense}}`$ |
@@ -353,7 +353,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Legend\ Sword |
+| | **Base Item:** Legend Sword |
 | | **Level Requirement:** 61 |
 | | **Properties:** |
 | | $`\color{blue}{\text{33\% Chance to cast level 22 Amplify Damage on striking}}`$ |
@@ -365,11 +365,11 @@
 | | $`\color{blue}{\text{33\% Bonus to Attack Rating}}`$ |
 | | $`\color{blue}{\text{Requirements --33\%}}`$ |
 
-**Elder\ Blood\ Boots** (Elder\ Blood\ Boots)
+**Elder Blood Boots** (Elder Blood Boots)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Scarabshell\ Boots |
+| | **Base Item:** Scarabshell Boots |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+40\% Faster Run/Walk}}`$ |
@@ -383,7 +383,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Mesh\ Armor |
+| | **Base Item:** Mesh Armor |
 | | **Level Requirement:** 38 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+10-15 Lightning Absorb}}`$ |
@@ -398,7 +398,7 @@
 | | $`\color{blue}{\text{Adds 1-501 Lightning Damage}}`$ |
 | | $`\color{blue}{\text{+10-25\% to Lightning Skill Damage}}`$ |
 
-**Entropy\ Locket** (Entropy\ Locket)
+**Entropy Locket** (Entropy Locket)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -412,11 +412,11 @@
 | | $`\color{blue}{\text{Increase Maximum Mana 10-15\%}}`$ |
 | | $`\color{blue}{\text{Magic Damage Reduced by 8-12}}`$ |
 
-**Flame\ Rift** (Flame\ Rift)
+**Flame Rift** (Flame Rift)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Fire Immunity is Sundered}}`$ |
@@ -426,7 +426,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Great\ Bow |
+| | **Base Item:** Great Bow |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
 | | $`\color{blue}{\text{50\% Chance to cast level 30 Fire Ball on striking}}`$ |
@@ -438,11 +438,11 @@
 | | $`\color{blue}{\text{Adds 250-500 Magic Damage}}`$ |
 | | $`\color{blue}{\text{Adds 50-100 Damage}}`$ |
 
-**Gheed's\ Wager** (Gheed's\ Wager)
+**Gheed's Wager** (Gheed's Wager)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Troll\ Belt |
+| | **Base Item:** Troll Belt |
 | | **Level Requirement:** 71 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+10-20\% Faster Cast Rate}}`$ |
@@ -453,7 +453,7 @@
 | | $`\color{blue}{\text{All Resistances +5-15}}`$ |
 | | $`\color{blue}{\text{50-150\% Extra Gold from Monsters}}`$ |
 
-**Guardian's\ Light** (Guardian's\ Light)
+**Guardian's Light** (Guardian's Light)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -468,7 +468,7 @@
 | | $`\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}`$ |
 | | $`\color{blue}{\text{25-50\% Extra Gold from Monsters}}`$ |
 
-**Guardian's\ Thunder** (Guardian's\ Thunder)
+**Guardian's Thunder** (Guardian's Thunder)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -483,11 +483,11 @@
 | | $`\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}`$ |
 | | $`\color{blue}{\text{25-50\% Extra Gold from Monsters}}`$ |
 
-**Hellfire\ Death** (Hellfire\ Death)
+**Hellfire Death** (Hellfire Death)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Unearthed\ Wand |
+| | **Base Item:** Unearthed Wand |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1-2 to All Skills}}`$ |
@@ -496,11 +496,11 @@
 | | $`\color{blue}{\text{Curse Resist +20\%}}`$ |
 | | $`\color{blue}{\text{100\% Extra Gold from Monsters}}`$ |
 
-**Horazon's\ Arcane** (Horazon's\ Arcane)
+**Horazon's Arcane** (Horazon's Arcane)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Bramble\ Mitts |
+| | **Base Item:** Bramble Mitts |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
 | | $`\color{blue}{\text{20\% Chance of Crushing Blow}}`$ |
@@ -511,7 +511,7 @@
 | | $`\color{blue}{\text{+20-30\% Faster Cast Rate}}`$ |
 | | $`\color{blue}{\text{+100-300\% Enhanced Defense}}`$ |
 
-**Horazon's\ Countenance** (Horazon's\ Countenance)
+**Horazon's Countenance** (Horazon's Countenance)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -525,11 +525,11 @@
 | | $`\color{blue}{\text{+10\% Faster Hit Recovery}}`$ |
 | | $`\color{blue}{\text{+25-50 to Life}}`$ |
 
-**Horazon's\ Dominion** (Horazon's\ Dominion)
+**Horazon's Dominion** (Horazon's Dominion)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Balrog\ Skin |
+| | **Base Item:** Balrog Skin |
 | | **Level Requirement:** 55 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+2 to Warlock Skill Levels}}`$ |
@@ -539,11 +539,11 @@
 | | $`\color{blue}{\text{Fire Resist +15-25\%}}`$ |
 | | $`\color{blue}{\text{Lightning Resist +15-25\%}}`$ |
 
-**Horazon's\ Earth** (Horazon's\ Earth)
+**Horazon's Earth** (Horazon's Earth)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Balrog\ Skin |
+| | **Base Item:** Balrog Skin |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+2-3 to Warlock Skill Levels}}`$ |
@@ -554,11 +554,11 @@
 | | $`\color{blue}{\text{Lightning Resist +25-50\%}}`$ |
 | | $`\color{blue}{\text{Requirements --50\%}}`$ |
 
-**Horazon's\ Hold** (Horazon's\ Hold)
+**Horazon's Hold** (Horazon's Hold)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Bramble\ Mitts |
+| | **Base Item:** Bramble Mitts |
 | | **Level Requirement:** 55 |
 | | **Properties:** |
 | | $`\color{blue}{\text{10\% Chance of Crushing Blow}}`$ |
@@ -568,11 +568,11 @@
 | | $`\color{blue}{\text{+25-50 to Life}}`$ |
 | | $`\color{blue}{\text{+10\% Faster Cast Rate}}`$ |
 
-**Horazon's\ Legacy** (Horazon's\ Legacy)
+**Horazon's Legacy** (Horazon's Legacy)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Mirrored\ Boots |
+| | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 67 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+30\% Faster Run/Walk}}`$ |
@@ -582,7 +582,7 @@
 | | $`\color{blue}{\text{Cannot Be Frozen}}`$ |
 | | $`\color{blue}{\text{Requirements --30\%}}`$ |
 
-**Horazon's\ Madness** (Horazon's\ Madness)
+**Horazon's Madness** (Horazon's Madness)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -597,11 +597,11 @@
 | | $`\color{blue}{\text{Increase Maximum Life 10-20\%}}`$ |
 | | $`\color{blue}{\text{+100-300\% Enhanced Defense}}`$ |
 
-**Horazon's\ Sanctuary** (Horazon's\ Sanctuary)
+**Horazon's Sanctuary** (Horazon's Sanctuary)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Blasphemous\ Grimoire |
+| | **Base Item:** Blasphemous Grimoire |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1-3 to Warlock Skill Levels}}`$ |
@@ -613,11 +613,11 @@
 | | $`\color{blue}{\text{+30\% Increased Attack Speed}}`$ |
 | | $`\color{blue}{\text{+100-300\% Enhanced Defense}}`$ |
 
-**Horazon's\ Secrets** (Horazon's\ Secrets)
+**Horazon's Secrets** (Horazon's Secrets)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Blasphemous\ Grimoire |
+| | **Base Item:** Blasphemous Grimoire |
 | | **Level Requirement:** 57 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1-2 to Warlock Skill Levels}}`$ |
@@ -628,11 +628,11 @@
 | | $`\color{blue}{\text{+15\% Faster Cast Rate}}`$ |
 | | $`\color{blue}{\text{+15\% Increased Attack Speed}}`$ |
 
-**Horazon's\ Stone** (Horazon's\ Stone)
+**Horazon's Stone** (Horazon's Stone)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Mirrored\ Boots |
+| | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+50\% Faster Run/Walk}}`$ |
@@ -647,7 +647,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Merc\ Equip |
+| | **Base Item:** Merc Equip |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Damage Reduced by 5-8\%}}`$ |
@@ -658,11 +658,11 @@
 | | $`\color{blue}{\text{+8 Life after each Kill}}`$ |
 | | $`\color{blue}{\text{+25\% Faster Run/Walk}}`$ |
 
-**Measured\ Wrath** (Measured\ Wrath)
+**Measured Wrath** (Measured Wrath)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Burnt\ Text |
+| | **Base Item:** Burnt Text |
 | | **Level Requirement:** 52 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1-2 to Warlock Skill Levels}}`$ |
@@ -690,71 +690,71 @@
 | | $`\color{blue}{\text{+1-3 Life after each Kill}}`$ |
 | | $`\color{blue}{\text{+1-3 to Mana after each Kill}}`$ |
 
-**Latent\ Black\ Cleft** (PreCrafted\ Black\ Cleft)
+**Latent Black Cleft** (PreCrafted Black Cleft)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Magic Immunity is Sundered}}`$ |
 | | $`\color{blue}{\text{Magic Resist +-65\%}}`$ |
 
-**Latent\ Bone\ Break** (PreCrafted\ Bone\ Break)
+**Latent Bone Break** (PreCrafted Bone Break)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Physical Immunity is Sundered}}`$ |
 | | $`\color{blue}{\text{Damage Reduced by -20\%}}`$ |
 
-**Latent\ Cold\ Rupture** (PreCrafted\ Cold\ Rupture)
+**Latent Cold Rupture** (PreCrafted Cold Rupture)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Cold Immunity is Sundered}}`$ |
 | | $`\color{blue}{\text{Cold Resist +-100\%}}`$ |
 
-**Latent\ Crack\ of\ the\ Heavens** (PreCrafted\ Crack\ of\ the\ Heavens)
+**Latent Crack of the Heavens** (PreCrafted Crack of the Heavens)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Lightning Immunity is Sundered}}`$ |
 | | $`\color{blue}{\text{Lightning Resist +-100\%}}`$ |
 
-**Latent\ Flame\ Rift** (PreCrafted\ Flame\ Rift)
+**Latent Flame Rift** (PreCrafted Flame Rift)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Fire Immunity is Sundered}}`$ |
 | | $`\color{blue}{\text{Fire Resist +-100\%}}`$ |
 
-**Latent\ Rotting\ Fissure** (PreCrafted\ Rotting\ Fissure)
+**Latent Rotting Fissure** (PreCrafted Rotting Fissure)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Poison Immunity is Sundered}}`$ |
 | | $`\color{blue}{\text{Poison Resist +-100\%}}`$ |
 
-**Primal\ Archmage\ Fist** (Primal\ Archmage\ Fist)
+**Primal Archmage Fist** (Primal Archmage Fist)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Crusader\ Gauntlets |
+| | **Base Item:** Crusader Gauntlets |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1 to Fire Mastery}}`$ |
@@ -765,11 +765,11 @@
 | | $`\color{blue}{\text{Curse Resist +30\%}}`$ |
 | | $`\color{blue}{\text{15\% Chance to cast level 50 Hydra on striking}}`$ |
 
-**Primal\ Aries\ Relic** (Primal\ Aries\ Relic)
+**Primal Aries Relic** (Primal Aries Relic)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Great\ Bow |
+| | **Base Item:** Great Bow |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Cold Immunity is Sundered}}`$ |
@@ -783,11 +783,11 @@
 | | $`\color{blue}{\text{10\% Chance to cast level 40 Meteor on striking}}`$ |
 | | $`\color{blue}{\text{10\% Chance to cast level 40 Frost Nova on striking}}`$ |
 
-**Primal\ Diamond\ Carapace** (Primal\ Diamond\ Carapace)
+**Primal Diamond Carapace** (Primal Diamond Carapace)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Diamond\ Mail |
+| | **Base Item:** Diamond Mail |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+2 to All Skills}}`$ |
@@ -800,7 +800,7 @@
 | | $`\color{blue}{\text{+300\% Enhanced Defense}}`$ |
 | | $`\color{blue}{\text{100\% Chance to cast level 50 Frost Nova when struck}}`$ |
 
-**Primal\ Divine\ Judgement** (Primal\ Divine\ Judgement)
+**Primal Divine Judgement** (Primal Divine Judgement)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -816,11 +816,11 @@
 | | $`\color{blue}{\text{All Resistances +20}}`$ |
 | | $`\color{blue}{\text{+20 to all Attributes}}`$ |
 
-**Primal\ Gae\ Bolg** (Primal\ Gae\ Bolg)
+**Primal Gae Bolg** (Primal Gae Bolg)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Winged\ Harpoon |
+| | **Base Item:** Winged Harpoon |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Physical Immunity is Sundered}}`$ |
@@ -833,7 +833,7 @@
 | | $`\color{blue}{\text{+40\% Increased Attack Speed}}`$ |
 | | $`\color{blue}{\text{Unknown property: ar\% (200)}}`$ |
 
-**Primal\ Lilith's\ Visage** (Primal\ Lilith's\ Visage)
+**Primal Lilith's Visage** (Primal Lilith's Visage)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -853,11 +853,11 @@
 | | $`\color{blue}{\text{Increase Maximum Life 20\%}}`$ |
 | | $`\color{blue}{\text{100\% Chance to cast level 35 Poison Nova on striking}}`$ |
 
-**Primal\ Manslaughter** (Primal\ Manslaughter)
+**Primal Manslaughter** (Primal Manslaughter)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Hydra\ Edge |
+| | **Base Item:** Hydra Edge |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Physical Immunity is Sundered}}`$ |
@@ -872,7 +872,7 @@
 | | $`\color{blue}{\text{15\% Life stolen per hit}}`$ |
 | | $`\color{blue}{\text{+10 Life after each Kill}}`$ |
 
-**Primal\ Shaftstop** (Primal\ Shaftstop)
+**Primal Shaftstop** (Primal Shaftstop)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -891,11 +891,11 @@
 | | $`\color{blue}{\text{+20 to all Attributes}}`$ |
 | | $`\color{blue}{\text{+300 Defense}}`$ |
 
-**Primal\ Sickle\ of\ Perseus** (Primal\ Sickle\ of\ Perseus)
+**Primal Sickle of Perseus** (Primal Sickle of Perseus)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Giant\ Thresher |
+| | **Base Item:** Giant Thresher |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+450\% Enhanced Damage}}`$ |
@@ -910,7 +910,7 @@
 | | $`\color{blue}{\text{Ethereal}}`$ |
 | | $`\color{blue}{\text{+7 to Psychic Ward (Warlock only)}}`$ |
 
-**Primal\ Stormshield** (Primal\ Stormshield)
+**Primal Stormshield** (Primal Stormshield)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -927,11 +927,11 @@
 | | $`\color{blue}{\text{+20 Cold Absorb}}`$ |
 | | $`\color{blue}{\text{+20 Lightning Absorb}}`$ |
 
-**Primal\ Warlords\ Thirst** (Primal\ Warlords\ Thirst)
+**Primal Warlords Thirst** (Primal Warlords Thirst)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Feral\ Claws |
+| | **Base Item:** Feral Claws |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+3 to Assassin Skill Levels}}`$ |
@@ -944,7 +944,7 @@
 | | $`\color{blue}{\text{+2 to Wake of Fire (Assassin only)}}`$ |
 | | $`\color{blue}{\text{-10\% to Enemy Fire Resistance}}`$ |
 
-**Protector's\ Frost** (Protector's\ Frost)
+**Protector's Frost** (Protector's Frost)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -959,7 +959,7 @@
 | | $`\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}`$ |
 | | $`\color{blue}{\text{25-50\% Extra Gold from Monsters}}`$ |
 
-**Protector's\ Stone** (Protector's\ Stone)
+**Protector's Stone** (Protector's Stone)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -974,11 +974,11 @@
 | | $`\color{blue}{\text{15-35\% Better Chance of Getting Magic Items}}`$ |
 | | $`\color{blue}{\text{25-50\% Extra Gold from Monsters}}`$ |
 
-**Reaper's\ Cloak** (Reaper's\ Cloak)
+**Reaper's Cloak** (Reaper's Cloak)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Dusk\ Shroud |
+| | **Base Item:** Dusk Shroud |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1-2 to All Skills}}`$ |
@@ -991,7 +991,7 @@
 | | $`\color{blue}{\text{+5 to Mana after each Kill}}`$ |
 | | $`\color{blue}{\text{+5 Life after each Kill}}`$ |
 
-**Restless\ Will** (Restless\ Will)
+**Restless Will** (Restless Will)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1018,21 +1018,21 @@
 | | $`\color{blue}{\text{+3-5 Life after each Kill}}`$ |
 | | $`\color{blue}{\text{Requirements --50\%}}`$ |
 
-**Rotting\ Fissure** (Rotting\ Fissure)
+**Rotting Fissure** (Rotting Fissure)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Grand\ Charm |
+| | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Monster Poison Immunity is Sundered}}`$ |
 | | $`\color{blue}{\text{Poison Resist +-90--70\%}}`$ |
 
-**Sandro's\ Skull** (Sandro's\ Skull)
+**Sandro's Skull** (Sandro's Skull)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Bloodlord\ Skull |
+| | **Base Item:** Bloodlord Skull |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1-2 to All Skills}}`$ |
@@ -1058,7 +1058,7 @@
 | | $`\color{blue}{\text{Slows Target by 15\%}}`$ |
 | | $`\color{blue}{\text{10-20\% Better Chance of Getting Magic Items}}`$ |
 
-**Swallow's\ Grace** (Swallow's\ Grace)
+**Swallow's Grace** (Swallow's Grace)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1075,7 +1075,7 @@
 | | $`\color{blue}{\text{+2 Life after each Kill}}`$ |
 | | $`\color{blue}{\text{+100-200 Defense}}`$ |
 
-**Titan's\ Echo** (Titan's\ Echo)
+**Titan's Echo** (Titan's Echo)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1084,11 +1084,11 @@
 | | **Properties:** |
 | | $`\color{blue}{\text{splash}}`$ |
 
-**Hellwarden's\ Will** (Unique\ Warlock\ Helm)
+**Hellwarden's Will** (Unique Warlock Helm)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Death\ Mask |
+| | **Base Item:** Death Mask |
 | | **Level Requirement:** 50 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1-2 to All Skills}}`$ |
@@ -1114,7 +1114,7 @@
 | | $`\color{blue}{\text{All Resistances +25-35}}`$ |
 | | $`\color{blue}{\text{+75-100\% Enhanced Defense}}`$ |
 
-**Warlock\ Class\ Pack** (Warlock\ Class\ Pack)
+**Warlock Class Pack** (Warlock Class Pack)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1122,17 +1122,17 @@
 | | **Level Requirement:**  |
 | | **Properties:** |
 
-**Warlord's\ Authority** (Warlord's\ Authority)
+**Warlord's Authority** (Warlord's Authority)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Plated\ Belt |
+| | **Base Item:** Plated Belt |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
 | | $`\color{blue}{\text{Lightning Resist +20\%}}`$ |
 | | $`\color{blue}{\text{+25 to Life}}`$ |
 
-**Warlord's\ Conquest** (Warlord's\ Conquest)
+**Warlord's Conquest** (Warlord's Conquest)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1142,7 +1142,7 @@
 | | $`\color{blue}{\text{+15 to Strength}}`$ |
 | | $`\color{blue}{\text{+45 to Attack Rating}}`$ |
 
-**Warlord's\ Crushers** (Warlord's\ Crushers)
+**Warlord's Crushers** (Warlord's Crushers)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1152,27 +1152,27 @@
 | | $`\color{blue}{\text{+20\% Faster Run/Walk}}`$ |
 | | $`\color{blue}{\text{Fire Resist +20\%}}`$ |
 
-**Warlord's\ Lust** (Warlord's\ Lust)
+**Warlord's Lust** (Warlord's Lust)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Great\ Helm |
+| | **Base Item:** Great Helm |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+30 to Life}}`$ |
 | | $`\color{blue}{\text{+15 Defense}}`$ |
 
-**Warlord's\ Mantle** (Warlord's\ Mantle)
+**Warlord's Mantle** (Warlord's Mantle)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Full\ Plate\ Mail |
+| | **Base Item:** Full Plate Mail |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+25\% Enhanced Defense}}`$ |
 | | $`\color{blue}{\text{Cold Resist +30\%}}`$ |
 
-**Witcher's\ Medallion** (Witcher's\ Medallion)
+**Witcher's Medallion** (Witcher's Medallion)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
@@ -1192,7 +1192,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Mirrored\ Boots |
+| | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 67 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1 to Warlock Skills}}`$ |
@@ -1207,7 +1207,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| | **Base Item:** Cryptic\ Sword |
+| | **Base Item:** Cryptic Sword |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
 | | $`\color{blue}{\text{+1-2 to All Skills}}`$ |

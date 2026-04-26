@@ -6,19 +6,19 @@
 ### amethyst
 - `weaponMod1Min`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
 - `weaponMod1Max`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### ber\ rune
+### ber rune
 - `helmMod1Min`: $`\color{gray}{\text{10}}`$ (Old) &rarr; $`\color{blue}{\text{8}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{10}}`$ (Old) &rarr; $`\color{blue}{\text{8}}`$ (New)
 - `shieldMod1Min`: $`\color{gray}{\text{10}}`$ (Old) &rarr; $`\color{blue}{\text{8}}`$ (New)
 - `shieldMod1Max`: $`\color{gray}{\text{10}}`$ (Old) &rarr; $`\color{blue}{\text{8}}`$ (New)
-### cham\ rune
+### cham rune
 - `weaponMod1Code`: $`\color{gray}{\text{cast}}`$ (Old) &rarr; $`\color{blue}{\text{slow}}`$ (New)
 - `weaponMod1Min`: $`\color{gray}{\text{10}}`$ (Old) &rarr; $`\color{blue}{\text{20}}`$ (New)
 - `weaponMod1Max`: $`\color{gray}{\text{10}}`$ (Old) &rarr; $`\color{blue}{\text{20}}`$ (New)
-### chipped\ amethyst
+### chipped amethyst
 - `helmMod1Min`: $`\color{gray}{\text{3}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{3}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
-### chipped\ diamond
+### chipped diamond
 - `weaponMod1Min`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{2}}`$ (New)
 - `weaponMod1Max`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
 - `weaponMod2Code`: $`\color{gray}{\text{move2}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
@@ -27,22 +27,22 @@
 - `weaponMod3Code`: $`\color{gray}{\text{regen}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `weaponMod3Param`: $`\color{gray}{\text{0}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `weaponMod3Min`: $`\color{gray}{\text{0}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
-### chipped\ ruby
+### chipped ruby
 - `helmMod1Code`: $`\color{gray}{\text{hp}}`$ (Old) &rarr; $`\color{blue}{\text{vit}}`$ (New)
 - `helmMod1Min`: $`\color{gray}{\text{10}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{10}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
-### chipped\ sapphire
+### chipped sapphire
 - `helmMod1Code`: $`\color{gray}{\text{mana}}`$ (Old) &rarr; $`\color{blue}{\text{enr}}`$ (New)
 - `helmMod1Min`: $`\color{gray}{\text{10}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{10}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
 ### diamond
 - `weaponMod1Min`: $`\color{gray}{\text{3}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
-### dol\ rune
+### dol rune
 - `helmMod1Min`: $`\color{gray}{\text{2}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{2}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
 - `shieldMod1Min`: $`\color{gray}{\text{2}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
 - `shieldMod1Max`: $`\color{gray}{\text{2}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### el\ rune
+### el rune
 - `weaponMod1Min`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{5}}`$ (New)
 - `weaponMod1Max`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{5}}`$ (New)
 - `helmMod1Min`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{5}}`$ (New)
@@ -53,12 +53,12 @@
 - `shieldMod1Max`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{5}}`$ (New)
 - `shieldMod2Min`: $`\color{gray}{\text{30}}`$ (Old) &rarr; $`\color{blue}{\text{15}}`$ (New)
 - `shieldMod2Max`: $`\color{gray}{\text{30}}`$ (Old) &rarr; $`\color{blue}{\text{15}}`$ (New)
-### flawed\ amethyst
+### flawed amethyst
 - `weaponMod1Min`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{2}}`$ (New)
 - `weaponMod1Max`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{2}}`$ (New)
 - `helmMod1Min`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{8}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{8}}`$ (New)
-### flawed\ diamond
+### flawed diamond
 - `weaponMod1Min`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
 - `weaponMod1Max`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
 - `weaponMod2Code`: $`\color{gray}{\text{move2}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
@@ -67,50 +67,50 @@
 - `weaponMod3Code`: $`\color{gray}{\text{regen}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `weaponMod3Param`: $`\color{gray}{\text{0}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
 - `weaponMod3Min`: $`\color{gray}{\text{0}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
-### flawed\ ruby
+### flawed ruby
 - `helmMod1Code`: $`\color{gray}{\text{hp}}`$ (Old) &rarr; $`\color{blue}{\text{vit}}`$ (New)
 - `helmMod1Min`: $`\color{gray}{\text{17}}`$ (Old) &rarr; $`\color{blue}{\text{8}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{17}}`$ (Old) &rarr; $`\color{blue}{\text{8}}`$ (New)
-### flawed\ sapphire
+### flawed sapphire
 - `helmMod1Code`: $`\color{gray}{\text{mana}}`$ (Old) &rarr; $`\color{blue}{\text{enr}}`$ (New)
 - `helmMod1Min`: $`\color{gray}{\text{17}}`$ (Old) &rarr; $`\color{blue}{\text{8}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{17}}`$ (Old) &rarr; $`\color{blue}{\text{8}}`$ (New)
-### flawless\ amethyst
+### flawless amethyst
 - `weaponMod1Min`: $`\color{gray}{\text{2}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
 - `weaponMod1Max`: $`\color{gray}{\text{2}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
-### flawless\ ruby
+### flawless ruby
 - `helmMod1Code`: $`\color{gray}{\text{hp}}`$ (Old) &rarr; $`\color{blue}{\text{vit}}`$ (New)
 - `helmMod1Min`: $`\color{gray}{\text{46}}`$ (Old) &rarr; $`\color{blue}{\text{16}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{46}}`$ (Old) &rarr; $`\color{blue}{\text{16}}`$ (New)
-### flawless\ sapphire
+### flawless sapphire
 - `helmMod1Code`: $`\color{gray}{\text{mana}}`$ (Old) &rarr; $`\color{blue}{\text{enr}}`$ (New)
 - `helmMod1Min`: $`\color{gray}{\text{46}}`$ (Old) &rarr; $`\color{blue}{\text{24}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{46}}`$ (Old) &rarr; $`\color{blue}{\text{24}}`$ (New)
-### flawless\ skull
+### flawless skull
 - `helmMod1Min`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{6}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{6}}`$ (New)
-### jah\ rune
+### jah rune
 - `weaponMod1Code`: $`\color{gray}{\text{slow}}`$ (Old) &rarr; $`\color{blue}{\text{ignore-ac}}`$ (New)
 - `weaponMod1Min`: $`\color{gray}{\text{20}}`$ (Old) &rarr; $`\color{blue}{\text{1}}`$ (New)
 - `weaponMod1Max`: $`\color{gray}{\text{20}}`$ (Old) &rarr; $`\color{blue}{\text{1}}`$ (New)
 - `shieldMod1Code`: $`\text{hp}`$$`\color{gray}{\text{\%}}`$ (Old) &rarr; $`\text{hp}`$ (New)
 - `shieldMod1Min`: $`\color{gray}{\text{5}}`$ (Old) &rarr; $`\color{blue}{\text{50}}`$ (New)
 - `shieldMod1Max`: $`\color{gray}{\text{5}}`$ (Old) &rarr; $`\color{blue}{\text{50}}`$ (New)
-### perfect\ amethyst
+### perfect amethyst
 - `weaponMod1Min`: $`\color{gray}{\text{3}}`$ (Old) &rarr; $`\color{blue}{\text{5}}`$ (New)
 - `weaponMod1Max`: $`\color{gray}{\text{3}}`$ (Old) &rarr; $`\color{blue}{\text{5}}`$ (New)
-### perfect\ ruby
+### perfect ruby
 - `helmMod1Code`: $`\color{gray}{\text{hp}}`$ (Old) &rarr; $`\color{blue}{\text{vit}}`$ (New)
 - `helmMod1Min`: $`\color{gray}{\text{56}}`$ (Old) &rarr; $`\color{blue}{\text{20}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{56}}`$ (Old) &rarr; $`\color{blue}{\text{20}}`$ (New)
-### perfect\ sapphire
+### perfect sapphire
 - `helmMod1Code`: $`\color{gray}{\text{mana}}`$ (Old) &rarr; $`\color{blue}{\text{enr}}`$ (New)
 - `helmMod1Min`: $`\color{gray}{\text{56}}`$ (Old) &rarr; $`\color{blue}{\text{28}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{56}}`$ (Old) &rarr; $`\color{blue}{\text{28}}`$ (New)
-### perfect\ skull
+### perfect skull
 - `helmMod1Min`: $`\color{gray}{\text{5}}`$ (Old) &rarr; $`\color{blue}{\text{7}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{5}}`$ (Old) &rarr; $`\color{blue}{\text{7}}`$ (New)
-### pul\ rune
+### pul rune
 - `helmMod1Min`: $`\color{gray}{\text{50}}`$ (Old) &rarr; $`\color{blue}{\text{30}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{50}}`$ (Old) &rarr; $`\color{blue}{\text{30}}`$ (New)
 - `shieldMod1Min`: $`\color{gray}{\text{50}}`$ (Old) &rarr; $`\color{blue}{\text{30}}`$ (New)
@@ -126,10 +126,10 @@
 ### skull
 - `helmMod1Min`: $`\color{gray}{\text{3}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
 - `helmMod1Max`: $`\color{gray}{\text{3}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
-### sur\ rune
+### sur rune
 - `shieldMod1Code`: $`\text{mana}`$$`\color{gray}{\text{\%}}`$ (Old) &rarr; $`\text{mana}`$ (New)
 - `shieldMod1Min`: $`\color{gray}{\text{5}}`$ (Old) &rarr; $`\color{blue}{\text{50}}`$ (New)
 - `shieldMod1Max`: $`\color{gray}{\text{5}}`$ (Old) &rarr; $`\color{blue}{\text{50}}`$ (New)
-### tir\ rune
+### tir rune
 - `weaponMod1Min`: $`\color{gray}{\text{3}}`$ (Old) &rarr; $`\color{blue}{\text{2}}`$ (New)
 - `weaponMod1Max`: $`\color{gray}{\text{3}}`$ (Old) &rarr; $`\color{blue}{\text{2}}`$ (New)

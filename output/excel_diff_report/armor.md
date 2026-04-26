@@ -5,155 +5,155 @@
 ## Added Columns: `DropConditionCalc, UICatOverride`  
 
 ## Added Rows (15)
-- blasphemous\ compendium
-- blasphemous\ grimoire
-- burnt\ text
+- blasphemous compendium
+- blasphemous grimoire
+- burnt text
 - codex
 - compendium
-- dark\ codex
-- dark\ tome
-- forgotten\ volume
+- dark codex
+- dark tome
+- forgotten volume
 - grimoire
-- occult\ codex
-- occult\ tome
-- old\ book
-- possessed\ compendium
-- possessed\ grimoire
+- occult codex
+- occult tome
+- old book
+- possessed compendium
+- possessed grimoire
 - tome
 ## Modified Rows (61)
-### ancient\ armor
+### ancient armor
 - `auto prefix`: $`\color{gray}{\text{226}}`$ (Old) &rarr; $`\color{blue}{\text{426}}`$ (New)
-### archon\ plate
+### archon plate
 - `auto prefix`: $`\color{gray}{\text{218}}`$ (Old) &rarr; $`\color{blue}{\text{418}}`$ (New)
-### balrog\ skin
+### balrog skin
 - `auto prefix`: $`\color{gray}{\text{221}}`$ (Old) &rarr; $`\color{blue}{\text{421}}`$ (New)
-### bloodlord\ skull
+### bloodlord skull
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 ### boneweave
 - `auto prefix`: $`\color{gray}{\text{220}}`$ (Old) &rarr; $`\color{blue}{\text{420}}`$ (New)
-### breast\ plate
+### breast plate
 - `auto prefix`: $`\color{gray}{\text{216}}`$ (Old) &rarr; $`\color{blue}{\text{416}}`$ (New)
-### cantor\ trophy
+### cantor trophy
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### chain\ mail
+### chain mail
 - `auto prefix`: $`\color{gray}{\text{220}}`$ (Old) &rarr; $`\color{blue}{\text{420}}`$ (New)
-### chaos\ armor
+### chaos armor
 - `auto prefix`: $`\color{gray}{\text{225}}`$ (Old) &rarr; $`\color{blue}{\text{425}}`$ (New)
 ### cuirass
 - `auto prefix`: $`\color{gray}{\text{216}}`$ (Old) &rarr; $`\color{blue}{\text{416}}`$ (New)
-### demon\ head
+### demon head
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### demonhide\ armor
+### demonhide armor
 - `auto prefix`: $`\color{gray}{\text{214}}`$ (Old) &rarr; $`\color{blue}{\text{414}}`$ (New)
-### diamond\ mail
+### diamond mail
 - `auto prefix`: $`\color{gray}{\text{217}}`$ (Old) &rarr; $`\color{blue}{\text{417}}`$ (New)
-### dusk\ shroud
+### dusk shroud
 - `auto prefix`: $`\color{gray}{\text{212}}`$ (Old) &rarr; $`\color{blue}{\text{412}}`$ (New)
-### embossed\ plate
+### embossed plate
 - `reqstr`: $`\color{gray}{\text{125}}`$ (Old) &rarr; $`\color{blue}{\text{150}}`$ (New)
 - `auto prefix`: $`\color{gray}{\text{224}}`$ (Old) &rarr; $`\color{blue}{\text{424}}`$ (New)
 ### expansion
 - `ShowLevel`: $`\color{gray}{\text{1}}`$ (Old) &rarr; $`\color{blue}{\text{(removed)}}`$ (New)
-### fetish\ trophy
+### fetish trophy
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### field\ plate
+### field plate
 - `auto prefix`: $`\color{gray}{\text{222}}`$ (Old) &rarr; $`\color{blue}{\text{422}}`$ (New)
-### full\ plate\ mail
+### full plate mail
 - `auto prefix`: $`\color{gray}{\text{225}}`$ (Old) &rarr; $`\color{blue}{\text{425}}`$ (New)
-### gargoyle\ head
+### gargoyle head
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### ghost\ armor
+### ghost armor
 - `auto prefix`: $`\color{gray}{\text{212}}`$ (Old) &rarr; $`\color{blue}{\text{412}}`$ (New)
-### gothic\ plate
+### gothic plate
 - `reqstr`: $`\color{gray}{\text{100}}`$ (Old) &rarr; $`\color{blue}{\text{110}}`$ (New)
 - `auto prefix`: $`\color{gray}{\text{224}}`$ (Old) &rarr; $`\color{blue}{\text{424}}`$ (New)
-### great\ hauberk
+### great hauberk
 - `auto prefix`: $`\color{gray}{\text{216}}`$ (Old) &rarr; $`\color{blue}{\text{416}}`$ (New)
-### hard\ leather\ armor
+### hard leather armor
 - `auto prefix`: $`\color{gray}{\text{214}}`$ (Old) &rarr; $`\color{blue}{\text{414}}`$ (New)
-### heirophant\ trophy
+### heirophant trophy
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### hellforge\ plate
+### hellforge plate
 - `auto prefix`: $`\color{gray}{\text{223}}`$ (Old) &rarr; $`\color{blue}{\text{423}}`$ (New)
-### hellspawn\ skull
+### hellspawn skull
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
-### kraken\ shell
+### kraken shell
 - `auto prefix`: $`\color{gray}{\text{222}}`$ (Old) &rarr; $`\color{blue}{\text{422}}`$ (New)
-### lacquered\ plate
+### lacquered plate
 - `reqstr`: $`\color{gray}{\text{208}}`$ (Old) &rarr; $`\color{blue}{\text{220}}`$ (New)
 - `auto prefix`: $`\color{gray}{\text{224}}`$ (Old) &rarr; $`\color{blue}{\text{424}}`$ (New)
-### leather\ armor
+### leather armor
 - `auto prefix`: $`\color{gray}{\text{213}}`$ (Old) &rarr; $`\color{blue}{\text{413}}`$ (New)
-### light\ plate
+### light plate
 - `auto prefix`: $`\color{gray}{\text{218}}`$ (Old) &rarr; $`\color{blue}{\text{418}}`$ (New)
-### linked\ mail
+### linked mail
 - `auto prefix`: $`\color{gray}{\text{217}}`$ (Old) &rarr; $`\color{blue}{\text{417}}`$ (New)
-### loricated\ mail
+### loricated mail
 - `auto prefix`: $`\color{gray}{\text{219}}`$ (Old) &rarr; $`\color{blue}{\text{419}}`$ (New)
-### mage\ plate
+### mage plate
 - `auto prefix`: $`\color{gray}{\text{218}}`$ (Old) &rarr; $`\color{blue}{\text{418}}`$ (New)
-### mesh\ armor
+### mesh armor
 - `auto prefix`: $`\color{gray}{\text{220}}`$ (Old) &rarr; $`\color{blue}{\text{420}}`$ (New)
-### minion\ skull
+### minion skull
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
-### mummified\ trophy
+### mummified trophy
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### ornate\ armor
+### ornate armor
 - `auto prefix`: $`\color{gray}{\text{226}}`$ (Old) &rarr; $`\color{blue}{\text{426}}`$ (New)
-### overseer\ skull
+### overseer skull
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
-### plate\ mail
+### plate mail
 - `auto prefix`: $`\color{gray}{\text{223}}`$ (Old) &rarr; $`\color{blue}{\text{423}}`$ (New)
-### preserved\ head
+### preserved head
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### quilted\ armor
+### quilted armor
 - `auto prefix`: $`\color{gray}{\text{212}}`$ (Old) &rarr; $`\color{blue}{\text{412}}`$ (New)
-### ring\ mail
+### ring mail
 - `auto prefix`: $`\color{gray}{\text{217}}`$ (Old) &rarr; $`\color{blue}{\text{417}}`$ (New)
-### russet\ armor
+### russet armor
 - `auto prefix`: $`\color{gray}{\text{221}}`$ (Old) &rarr; $`\color{blue}{\text{421}}`$ (New)
-### sacred\ armor
+### sacred armor
 - `auto prefix`: $`\color{gray}{\text{226}}`$ (Old) &rarr; $`\color{blue}{\text{426}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{6}}`$ (Old) &rarr; $`\color{blue}{\text{4}}`$ (New)
-### scale\ mail
+### scale mail
 - `auto prefix`: $`\color{gray}{\text{219}}`$ (Old) &rarr; $`\color{blue}{\text{419}}`$ (New)
-### scarab\ husk
+### scarab husk
 - `auto prefix`: $`\color{gray}{\text{214}}`$ (Old) &rarr; $`\color{blue}{\text{414}}`$ (New)
-### serpentskin\ armor
+### serpentskin armor
 - `auto prefix`: $`\color{gray}{\text{213}}`$ (Old) &rarr; $`\color{blue}{\text{413}}`$ (New)
-### sexton\ trophy
+### sexton trophy
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### shadow\ plate
+### shadow plate
 - `auto prefix`: $`\color{gray}{\text{225}}`$ (Old) &rarr; $`\color{blue}{\text{425}}`$ (New)
-### sharktooth\ armor
+### sharktooth armor
 - `auto prefix`: $`\color{gray}{\text{222}}`$ (Old) &rarr; $`\color{blue}{\text{422}}`$ (New)
-### splint\ mail
+### splint mail
 - `auto prefix`: $`\color{gray}{\text{221}}`$ (Old) &rarr; $`\color{blue}{\text{421}}`$ (New)
-### studded\ leather
+### studded leather
 - `auto prefix`: $`\color{gray}{\text{215}}`$ (Old) &rarr; $`\color{blue}{\text{415}}`$ (New)
-### succubus\ skull
+### succubus skull
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
-### templar\ coat
+### templar coat
 - `auto prefix`: $`\color{gray}{\text{223}}`$ (Old) &rarr; $`\color{blue}{\text{423}}`$ (New)
-### tigulated\ mail
+### tigulated mail
 - `auto prefix`: $`\color{gray}{\text{219}}`$ (Old) &rarr; $`\color{blue}{\text{419}}`$ (New)
-### trellised\ armor
+### trellised armor
 - `auto prefix`: $`\color{gray}{\text{215}}`$ (Old) &rarr; $`\color{blue}{\text{415}}`$ (New)
-### unraveller\ head
+### unraveller head
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)
-### wire\ fleece
+### wire fleece
 - `auto prefix`: $`\color{gray}{\text{215}}`$ (Old) &rarr; $`\color{blue}{\text{415}}`$ (New)
 ### wyrmhide
 - `auto prefix`: $`\color{gray}{\text{213}}`$ (Old) &rarr; $`\color{blue}{\text{413}}`$ (New)
-### zombie\ head
+### zombie head
 - `auto prefix`: $`\color{gray}{\text{305}}`$ (Old) &rarr; $`\color{blue}{\text{307}}`$ (New)
 - `gemsockets`: $`\color{gray}{\text{4}}`$ (Old) &rarr; $`\color{blue}{\text{3}}`$ (New)

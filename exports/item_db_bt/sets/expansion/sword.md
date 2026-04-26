@@ -1,51 +1,51 @@
 # Set Sword
 
-### Sazabi's\ Cobalt\ Redeemer (Sazabi's\ Cobalt\ Redeemer)
-* **Base Item:** Cryptic\ Sword
+### Sazabi's Cobalt Redeemer (Sazabi's Cobalt Redeemer)
+* **Base Item:** Cryptic Sword
 * **Level Requirement:** 61
 * **Properties:**
-    * \+250%\ Enhanced\ Damage
-    * 25%\ Deadly\ Strike
-    * \+40%\ Increased\ Attack\ Speed
-    * \+318%\ Damage\ to\ Demons
-    * Repairs\ 1\ durability\ in\ 5\ seconds
-    * \+15\ to\ Dexterity
-    * \+5\ to\ Strength
+    * \+250% Enhanced Damage
+    * 25% Deadly Strike
+    * \+40% Increased Attack Speed
+    * \+318% Damage to Demons
+    * Repairs 1 durability in 5 seconds
+    * \+15 to Dexterity
+    * \+5 to Strength
 
-### Bul\-Kathos'\ Sacred\ Charge (Bul\-Kathos'\ Sacred\ Charge)
-* **Base Item:** Colossus\ Blade
+### Bul\-Kathos' Sacred Charge (Bul\-Kathos' Sacred Charge)
+* **Base Item:** Colossus Blade
 * **Level Requirement:** 64
 * **Properties:**
-    * 35%\ Chance\ of\ Crushing\ Blow
-    * All\ Resistances\ \+10\-20
-    * \+20%\ Increased\ Attack\ Speed
-    * \+200\-250%\ Enhanced\ Damage
-    * 5%\ Mana\ stolen\ per\ hit
-    * \+20\-30\ to\ Dexterity
-    * Hit\ Blinds\ Target\ \+1
+    * 35% Chance of Crushing Blow
+    * All Resistances \+10\-20
+    * \+20% Increased Attack Speed
+    * \+200\-250% Enhanced Damage
+    * 5% Mana stolen per hit
+    * \+20\-30 to Dexterity
+    * Hit Blinds Target \+1
 
-### Bul\-Kathos'\ Tribal\ Guardian (Bul\-Kathos'\ Tribal\ Guardian)
-* **Base Item:** Colossus\ Sword
+### Bul\-Kathos' Tribal Guardian (Bul\-Kathos' Tribal Guardian)
+* **Base Item:** Colossus Sword
 * **Level Requirement:** 64
 * **Properties:**
-    * All\ Resistances\ \+10\-20
-    * 20%\ Chance\ to\ cast\ level\ 10\ Poison\ Nova\ on\ striking
-    * \+20%\ Increased\ Attack\ Speed
-    * \+20\-30\ to\ Strength
-    * \+200\-250%\ Enhanced\ Damage
-    * 5%\ Life\ stolen\ per\ hit
-    * 15%\ Chance\ of\ Open\ Wounds
+    * All Resistances \+10\-20
+    * 20% Chance to cast level 10 Poison Nova on striking
+    * \+20% Increased Attack Speed
+    * \+20\-30 to Strength
+    * \+200\-250% Enhanced Damage
+    * 5% Life stolen per hit
+    * 15% Chance of Open Wounds
 
-### Immortal\ King's\ Savager (Immortal\ King's\ Savager)
-* **Base Item:** Colossus\ Blade
+### Immortal King's Savager (Immortal King's Savager)
+* **Base Item:** Colossus Blade
 * **Level Requirement:** 95
 * **Properties:**
-    * \+40%\ Increased\ Attack\ Speed
-    * Level\ 9\ Fanaticism\ Aura\ When\ Equipped
-    * \+2\-3\ \ to\ Barbarian\ Skill\ Levels
-    * \+40\-50%\ Faster\ Cast\ Rate
-    * \+200\-300%\ Enhanced\ Damage
-    * \+100\-200\ to\ Maximum\ Damage
-    * Damage\ \+100\-200
-    * 100%\ Bonus\ to\ Attack\ Rating
-    * Ignore\ Target's\ Defense
+    * \+40% Increased Attack Speed
+    * Level 9 Fanaticism Aura When Equipped
+    * \+2\-3  to Barbarian Skill Levels
+    * \+40\-50% Faster Cast Rate
+    * \+200\-300% Enhanced Damage
+    * \+100\-200 to Maximum Damage
+    * Damage \+100\-200
+    * 100% Bonus to Attack Rating
+    * Ignore Target's Defense
