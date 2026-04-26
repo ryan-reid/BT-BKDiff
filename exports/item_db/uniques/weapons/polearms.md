@@ -206,7 +206,7 @@
     * \-20% to Enemy Physical Resistance
     * \+80% Increased Attack Speed
     * Monster Physical Immunity is Sundered
-    * Unknown property: ar% \(200\)
+    * 200% Bonus to Attack Rating
     * 300% Extra Gold from Monsters
     * Reduces all Vendor Prices 15%
     * Curse Resist \+100%

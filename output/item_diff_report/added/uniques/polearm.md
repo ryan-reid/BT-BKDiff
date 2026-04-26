@@ -11,7 +11,7 @@
 | | $\color{blue}{\\text{-20\\% to Enemy Physical Resistance}}$ |
 | | $\color{blue}{\\text{+80\\% Increased Attack Speed}}$ |
 | | $\color{blue}{\\text{Monster Physical Immunity is Sundered}}$ |
-| | $\color{blue}{\\text{Unknown property: ar\\% (200)}}$ |
+| | $\color{blue}{\\text{200\\% Bonus to Attack Rating}}$ |
 | | $\color{blue}{\\text{300\\% Extra Gold from Monsters}}$ |
 | | $\color{blue}{\\text{Reduces all Vendor Prices 15\\%}}$ |
 | | $\color{blue}{\\text{Curse Resist +100\\%}}$ |
