@@ -2,7 +2,7 @@
 
 *Key column used: `skill`*
 
-## Added Columns: `auraevent4, auraeventfunc4, requirespettype, requiresweapon, periodicClearAura, calc7, *calc7desc, calc8, *calc8desc, calc9, *calc9desc, calc10, *calc10desc, Param13, *Param13Description, Param14, *Param14Description, Param15, *Param15Description, Param16, *Param16Description, Param17, *Param17Description, Param18, *Param18Description, Param19, *Param19Description, Param20, *Param20Description`  
+## Added Columns: `auraevent4, auraeventfunc4, requirespettype, requiresweapon, periodicClearAura, calc7, \*calc7desc, calc8, \*calc8desc, calc9, \*calc9desc, calc10, \*calc10desc, Param13, \*Param13Description, Param14, \*Param14Description, Param15, \*Param15Description, Param16, \*Param16Description, Param17, \*Param17Description, Param18, \*Param18Description, Param19, \*Param19Description, Param20, \*Param20Description`  
 
 ## Added Rows (56)
 - abyss
@@ -109,7 +109,7 @@
 - `passivecalc5`:  (Old) &rarr; $`\color{blue}{\text{stat('item\_pierce\_cold\_immunity'.accr)}}`$ (New)
 - `passivestat6`:  (Old) &rarr; $`\color{blue}{\text{item\_pierce\_fire\_immunity}}`$ (New)
 ### magic conviction
-- `*Id`: $`\color{gray}{\text{376}}`$ (Old) &rarr; $`\color{blue}{\text{431}}`$ (New)
+- `\*Id`: $`\color{gray}{\text{376}}`$ (Old) &rarr; $`\color{blue}{\text{431}}`$ (New)
 - `aurastatcalc1`: $`\text{-}`$$`\text{(}`$$`\color{gray}{\text{lvl*5+15}}`$$`\text{)}`$$`\color{gray}{\text{-stat('passivemagpierce'.accr)}}`$ (Old) &rarr; $`\text{-}`$$`\color{blue}{\text{min}}`$$`\text{(}`$$`\color{blue}{\text{ln34,150}}`$$`\text{)}`$ (New)
 - `Param3`: $`\color{gray}{\text{0}}`$ (Old) &rarr; $`\color{blue}{\text{20}}`$ (New)
 - `Param4`: $`\color{gray}{\text{0}}`$ (Old) &rarr; $`\color{blue}{\text{5}}`$ (New)
@@ -157,7 +157,7 @@
 - `passivecalc5`:  (Old) &rarr; $`\color{blue}{\text{stat('item\_pierce\_cold\_immunity'.accr)}}`$ (New)
 - `passivestat6`:  (Old) &rarr; $`\color{blue}{\text{item\_pierce\_fire\_immunity}}`$ (New)
 ### splash
-- `*Id`: $`\color{gray}{\text{375}}`$ (Old) &rarr; $`\color{blue}{\text{430}}`$ (New)
+- `\*Id`: $`\color{gray}{\text{375}}`$ (Old) &rarr; $`\color{blue}{\text{430}}`$ (New)
 ### summon fenris
 - `passivestat4`:  (Old) &rarr; $`\color{blue}{\text{item\_pierce\_damage\_immunity}}`$ (New)
 - `passivecalc4`:  (Old) &rarr; $`\color{blue}{\text{stat('item\_pierce\_damage\_immunity'.accr)}}`$ (New)
@@ -167,9 +167,9 @@
 ### summon spirit wolf
 - `passivestat6`:  (Old) &rarr; $`\color{blue}{\text{item\_pierce\_cold\_immunity}}`$ (New)
 ### summon splash
-- `*Id`: $`\color{gray}{\text{378}}`$ (Old) &rarr; $`\color{blue}{\text{432}}`$ (New)
+- `\*Id`: $`\color{gray}{\text{378}}`$ (Old) &rarr; $`\color{blue}{\text{432}}`$ (New)
 ### unused0001
-- `*Id`: $`\color{gray}{\text{374}}`$ (Old) &rarr; $`\color{blue}{\text{429}}`$ (New)
+- `\*Id`: $`\color{gray}{\text{374}}`$ (Old) &rarr; $`\color{blue}{\text{429}}`$ (New)
 ### valkyrie
 - `passivestat3`:  (Old) &rarr; $`\color{blue}{\text{item\_pierce\_cold\_immunity}}`$ (New)
 - `passivecalc3`:  (Old) &rarr; $`\color{blue}{\text{stat('item\_pierce\_cold\_immunity'.accr)}}`$ (New)

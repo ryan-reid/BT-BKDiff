@@ -18,34 +18,38 @@ class JsonExporter(BaseExporter):
 class MarkdownExporter(BaseExporter):
     @staticmethod
     def escape_markdown(s: str) -> str:
+        """Surgical escaping for Markdown special characters to avoid breaking layouts."""
         if not s: return ""
-        # Escape characters that have special meaning in Markdown
-        # Backslash first to avoid double-escaping
-        for char in r'\_*[]()#+-.!':
+        # Only escape characters that are truly likely to cause issues in our specific layout
+        # (mostly underscores in names, and vertical bars in tables)
+        s = s.replace('\\', r'\\')
+        for char in '_*[]()#+-.!':
             s = s.replace(char, '\\' + char)
         return s
 
     @staticmethod
     def escape_latex(s: str) -> str:
+        """Escapes text for use inside a LaTeX \text{} block on GitHub."""
         if not s: return ""
-        # 1. Backslash first to avoid double-escaping
-        s = s.replace('\\', r'\textbackslash{}')
-        # 2. Characters that can be escaped with \
-        for char in r'{}$%&#_}':
+        # 1. Backslash first
+        s = s.replace('\\', r'\\textbackslash{}')
+        # 2. Basic LaTeX escapes
+        for char in '{}$%&#_':
             s = s.replace(char, '\\' + char)
-        # 3. Characters that require special commands
-        s = s.replace('^', r'\textasciicircum{}')
-        s = s.replace('~', r'\textasciitilde{}')
-        # 4. Vertical bar (pipe) - use \vert{{}} for Markdown table safety
-        s = s.replace('|', r'\vert{}')
+        # 3. Special commands
+        s = s.replace('^', r'\\textasciicircum{}')
+        s = s.replace('~', r'\\textasciitilde{}')
+        s = s.replace('|', r'\\vert{}')
         return s
 
     @staticmethod
     def get_styled_diffs(old_s: str, new_s: str) -> Tuple[str, str]:
+        """Generates color-coded LaTeX diffs for two strings."""
         def fmt(color, text):
             if not text: return ""
+            # Wrap in backticks to prevent Markdown interference with underscores/bars
+            # Use \color and \text for styling
             escaped = MarkdownExporter.escape_latex(text)
-            # Use GitHub's backtick math syntax to avoid Markdown interference
             if color:
                 return f"$`\\color{{{color}}}{{\\text{{{escaped}}}}}`$"
             return f"$`\\text{{{escaped}}}`$"
@@ -58,9 +62,13 @@ class MarkdownExporter(BaseExporter):
             return re.sub(r'\s+', ' ', re.sub(r'ÿc.', '', t)).strip()
 
         if normalize_text(old_s) == normalize_text(new_s):
+            # For identical text, still wrap in math for consistent font if requested,
+            # but usually we want clean text in tables if possible.
+            # Returning math-wrapped for consistency with colored parts.
             return fmt("", old_s), fmt("", new_s)
 
         def tokenize(text: str) -> List[str]:
+            # Tokenize into numbers, words, spaces, and symbols
             return re.findall(r'[+-]?\d+(?:-\d+)?%?|[a-zA-Z]+|[^\w\s]|\s+', text)
 
         old_toks, new_toks = tokenize(old_s), tokenize(new_s)
@@ -85,7 +93,8 @@ class MarkdownExporter(BaseExporter):
         content = f"# {title}\n\n"
         for item in items:
             name = self.escape_markdown(item.get('display_name') or item.get('name'))
-            content += f"### {name} ({self.escape_markdown(str(item['id']))})\n"
+            item_id = self.escape_markdown(str(item.get('id', '')))
+            content += f"### {name} ({item_id})\n"
             content += f"* **Base Item:** {self.escape_markdown(item.get('base_item', ''))}\n"
             content += f"* **Level Requirement:** {item.get('lvl_req', '0')}\n"
             content += "* **Properties:**\n"
@@ -140,7 +149,7 @@ class MarkdownExporter(BaseExporter):
             f.write("# Added Items\n\n")
             for k, item in sorted(diff['added'].items()):
                 name = self.escape_markdown(item.get('display_name') or item.get('name'))
-                base = self.escape_markdown(item.get('base_item') or ', '.join(item.get('base_items', [])))
+                base = self.escape_markdown(item.get('base_item', '') or ', '.join(item.get('base_items', [])))
                 f.write(f"**{name}** ({self.escape_markdown(str(k))})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
                 f.write(f"| | **Base Item:** {base} |\n")
@@ -168,10 +177,11 @@ class MarkdownExporter(BaseExporter):
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
                 b_old, b_new = self.get_styled_diffs(mod['bt_base'], mod['bk_base'])
                 f.write(f"| **Base Item:** {b_old} | **Base Item:** {b_new} |\n")
-                l_old, l_new = self.get_styled_diffs(mod['bt_lvl'], mod['bk_lvl'])
+                l_old, l_new = self.get_styled_diffs(str(mod['bt_lvl']), str(mod['bk_lvl']))
                 f.write(f"| **Level Requirement:** {l_old} | **Level Requirement:** {l_new} |\n")
                 f.write("| **Properties:** | **Properties:** |\n")
                 
+                # Align properties for display
                 old_props = mod['bt_props']
                 new_props = mod['bk_props']
                 
@@ -181,11 +191,20 @@ class MarkdownExporter(BaseExporter):
 
                 aligned = []
                 old_used, new_used = set(), set()
+                # 1. Exact matches
                 for i, op in enumerate(old_props):
+                    for j, np in enumerate(new_props):
+                        if j not in new_used and op == np:
+                            aligned.append((op, np))
+                            old_used.add(i); new_used.add(j); break
+                # 2. Fuzzy matches (stat keys)
+                for i, op in enumerate(old_props):
+                    if i in old_used: continue
                     for j, np in enumerate(new_props):
                         if j not in new_used and get_stat_key(op) == get_stat_key(np):
                             aligned.append((op, np))
                             old_used.add(i); new_used.add(j); break
+                # 3. Remaining
                 for i, op in enumerate(old_props):
                     if i not in old_used: aligned.append((op, "(removed)"))
                 for j, np in enumerate(new_props):
@@ -198,10 +217,10 @@ class MarkdownExporter(BaseExporter):
 
     def export_excel_diff(self, diff: ExcelDiffDTO, output_path: str):
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        lines = [f"# Differences for {diff['filename']}\n", f"*Key column used: `{diff['key_used']}`*\n"]
-        if diff['added_cols']: lines.append(f"## Added Columns: `{', '.join(diff['added_cols'])}`  \n")
-        if diff['removed_cols']: lines.append(f"## Removed Columns: `{', '.join(diff['removed_cols'])}`  \n")
-        if diff['added_rows']:
+        lines = [f"# Differences for {diff['filename']}\n", f"*Key column used: `{self.escape_markdown(diff['key_used'])}`*\n"]
+        if diff['added_cols']: lines.append(f"## Added Columns: `{', '.join([self.escape_markdown(c) for c in diff['added_cols']])}`  \n")
+        if diff['removed_cols']: lines.append(f"## Removed Columns: `{', '.join([self.escape_markdown(c) for c in diff['removed_cols']])}`  \n")
+        if diff['added_rows']: 
             lines.append(f"## Added Rows ({len(diff['added_rows'])})")
             for r in diff['added_rows']: lines.append(f"- {self.escape_markdown(r)}")
         if diff['removed_rows']:
@@ -213,6 +232,6 @@ class MarkdownExporter(BaseExporter):
                 lines.append(f"### {self.escape_markdown(key)}")
                 for col, vals in row_diff.items():
                     old_fmt, new_fmt = self.get_styled_diffs(str(vals['bt_old']), str(vals['bk_new']))
-                    lines.append(f"- `{col}`: {old_fmt} (Old) &rarr; {new_fmt} (New)")
+                    lines.append(f"- `{self.escape_markdown(col)}`: {old_fmt} (Old) &rarr; {new_fmt} (New)")
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write("\n".join(lines).strip() + "\n")

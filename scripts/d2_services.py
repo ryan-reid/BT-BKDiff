@@ -116,8 +116,15 @@ class PropertyResolverService:
         fmt_string = self.repo.get_string(str_pos if v_min >= 0 else str_neg)
         if not fmt_string: return None
         sign = "+" if v_min >= 0 else ""
-        if "%+d" in fmt_string: fmt_string = fmt_string.replace("%+d", f"{sign}{range_str}")
-        elif "%d" in fmt_string: fmt_string = fmt_string.replace("%d", f"{range_str}")
+        if "%+d" in fmt_string: 
+            # Avoid double signs if range_str already has one
+            display_range = range_str
+            if range_str.startswith('+') or range_str.startswith('-'):
+                fmt_string = fmt_string.replace("%+d", display_range)
+            else:
+                fmt_string = fmt_string.replace("%+d", f"{sign}{display_range}")
+        elif "%d" in fmt_string: 
+            fmt_string = fmt_string.replace("%d", range_str)
         fmt_string = fmt_string.replace("%%", "%")
         if str_2: fmt_string += " " + self.repo.get_string(str_2)
         return fmt_string
