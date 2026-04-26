@@ -29,17 +29,19 @@ class MarkdownExporter(BaseExporter):
 
     @staticmethod
     def escape_latex(s: str) -> str:
-        """Escapes text for use inside a LaTeX block on GitHub ($` ... `$)."""
+        """Escapes text for use inside a LaTeX block on GitHub ($ ... $)."""
         if not s: return ""
-        # 1. Escape literal backslashes: \ -> \textbackslash{}
-        s = s.replace('\\', r'\textbackslash{}')
-        # 2. Escape { } $ % & # _ with single backslash: \{ etc.
+        # 0. Remove D2 color codes
+        s = re.sub(r'ÿc.', '', s)
+        # 1. Escape literal backslashes
+        s = s.replace('\\', r'\\textbackslash ')
+        # 2. Escape { } $ % & # _ with double backslash
         for char in r'{}$%&#_':
-            s = s.replace(char, '\\' + char)
+            s = s.replace(char, r'\\' + char)
         # 3. Special commands
-        s = s.replace('^', r'\textasciicircum{}')
-        s = s.replace('~', r'\textasciitilde{}')
-        s = s.replace('|', r'\vert{}')
+        s = s.replace('^', r'\\textasciicircum ')
+        s = s.replace('~', r'\\textasciitilde ')
+        s = s.replace('|', r'\\vert ')
         return s
 
     @staticmethod
@@ -48,10 +50,9 @@ class MarkdownExporter(BaseExporter):
         def fmt(color, text):
             if not text: return ""
             escaped = MarkdownExporter.escape_latex(text)
-            # Use the $` ... `$ syntax and single backslashes for commands
             if color:
-                return f"$`\\color{{{color}}}{{\\text{{{escaped}}}}}`$"
-            return f"$`\\text{{{escaped}}}`$"
+                return r"$\\color{" + color + r"}{\\text{" + escaped + r"}}$"
+            return r"$\\text{" + escaped + r"}$"
 
         if not old_s: return "", fmt("blue", new_s)
         if not new_s or new_s == "(removed)": 
@@ -70,17 +71,18 @@ class MarkdownExporter(BaseExporter):
         matcher = difflib.SequenceMatcher(None, old_toks, new_toks)
         
         def render(tokens: List[str], is_old: bool) -> str:
-            res = ""
+            parts = []
             for tag, i1, i2, j1, j2 in matcher.get_opcodes():
                 part = "".join(tokens[i1:i2] if is_old else tokens[j1:j2])
                 if not part: continue
                 escaped = MarkdownExporter.escape_latex(part)
                 if (is_old and tag in ['replace', 'delete']) or (not is_old and tag in ['replace', 'insert']):
                     color = 'gray' if is_old else 'blue'
-                    res += f"$`\\color{{{color}}}{{\\text{{{escaped}}}}}`$"
+                    parts.append(r"\\color{" + color + r"}{\\text{" + escaped + r"}}")
                 elif tag == 'equal': 
-                    res += f"$`\\text{{{escaped}}}`$"
-            return res
+                    parts.append(r"\\text{" + escaped + r"}")
+            if not parts: return ""
+            return "$" + "".join(parts) + "$"
         return render(old_toks, True), render(new_toks, False)
 
     def export_item_db(self, items: List[AnalyzedItemDTO], title: str, output_path: str):
@@ -165,8 +167,8 @@ class MarkdownExporter(BaseExporter):
         # 4. MODIFIED.md
         with open(os.path.join(output_dir, "MODIFIED.md"), 'w', encoding='utf-8') as f:
             f.write("# Modified Items\n\n")
-            f.write(r"- $`\color{gray}{\text{Gray text}}`$: Removed/Old Value" + "\n")
-            f.write(r"- $`\color{blue}{\text{Blue text}}`$: Added/New Value" + "\n\n")
+            f.write(r"- $\\color{gray}{\\text{Gray text}}$: Removed/Old Value" + "\n")
+            f.write(r"- $\\color{blue}{\\text{Blue text}}$: Added/New Value" + "\n\n")
             for k, mod in sorted(diff['modified'].items()):
                 f.write(f"**{self.escape_markdown(mod['name'])}** ({self.escape_markdown(str(k))})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
