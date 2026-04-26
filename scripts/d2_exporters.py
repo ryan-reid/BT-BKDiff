@@ -21,7 +21,7 @@ class MarkdownExporter(BaseExporter):
         """Surgical escaping for Markdown special characters."""
         if not s: return ""
         # 1. Escape literal backslashes
-        s = s.replace('\\', r'\\')
+        s = s.replace('\\', '\\\\')
         # 2. Escape these characters: _, *, [, ], (, ), #, +, -, ., !
         for char in r'_*[]()#+-.!':
             s = s.replace(char, '\\' + char)
@@ -29,18 +29,17 @@ class MarkdownExporter(BaseExporter):
 
     @staticmethod
     def escape_latex(s: str) -> str:
-        """Escapes text for use inside a LaTeX block on GitHub."""
+        """Escapes text for use inside a LaTeX block on GitHub ($` ... `$)."""
         if not s: return ""
         # 1. Escape literal backslashes: \ -> \textbackslash{}
-        # We need double backslashes for the file to handle GitHub's consumption.
-        s = s.replace('\\', r'\\textbackslash{}')
-        # 2. Escape { } $ % & # _ with DOUBLE backslash: \\{ etc.
+        s = s.replace('\\', r'\textbackslash{}')
+        # 2. Escape { } $ % & # _ with single backslash: \{ etc.
         for char in r'{}$%&#_':
-            s = s.replace(char, r'\\' + char)
+            s = s.replace(char, '\\' + char)
         # 3. Special commands
-        s = s.replace('^', r'\\textasciicircum{}')
-        s = s.replace('~', r'\\textasciitilde{}')
-        s = s.replace('|', r'\\vert{}')
+        s = s.replace('^', r'\textasciicircum{}')
+        s = s.replace('~', r'\textasciitilde{}')
+        s = s.replace('|', r'\vert{}')
         return s
 
     @staticmethod
@@ -49,10 +48,10 @@ class MarkdownExporter(BaseExporter):
         def fmt(color, text):
             if not text: return ""
             escaped = MarkdownExporter.escape_latex(text)
-            # Use the $` ... `$ syntax and double backslashes for commands
+            # Use the $` ... `$ syntax and single backslashes for commands
             if color:
-                return f"$`\\\\color{{{color}}}{{\\\\text{{{escaped}}}}}`$"
-            return f"$`\\\\text{{{escaped}}}`$"
+                return f"$`\\color{{{color}}}{{\\text{{{escaped}}}}}`$"
+            return f"$`\\text{{{escaped}}}`$"
 
         if not old_s: return "", fmt("blue", new_s)
         if not new_s or new_s == "(removed)": 
@@ -78,9 +77,9 @@ class MarkdownExporter(BaseExporter):
                 escaped = MarkdownExporter.escape_latex(part)
                 if (is_old and tag in ['replace', 'delete']) or (not is_old and tag in ['replace', 'insert']):
                     color = 'gray' if is_old else 'blue'
-                    res += f"$`\\\\color{{{color}}}{{\\\\text{{{escaped}}}}}`$"
+                    res += f"$`\\color{{{color}}}{{\\text{{{escaped}}}}}`$"
                 elif tag == 'equal': 
-                    res += f"$`\\\\text{{{escaped}}}`$"
+                    res += f"$`\\text{{{escaped}}}`$"
             return res
         return render(old_toks, True), render(new_toks, False)
 
@@ -166,8 +165,8 @@ class MarkdownExporter(BaseExporter):
         # 4. MODIFIED.md
         with open(os.path.join(output_dir, "MODIFIED.md"), 'w', encoding='utf-8') as f:
             f.write("# Modified Items\n\n")
-            f.write(r"- $`\\color{gray}{\\text{Gray text}}`$: Removed/Old Value" + "\n")
-            f.write(r"- $`\\color{blue}{\\text{Blue text}}`$: Added/New Value" + "\n\n")
+            f.write(r"- $`\color{gray}{\text{Gray text}}`$: Removed/Old Value" + "\n")
+            f.write(r"- $`\color{blue}{\text{Blue text}}`$: Added/New Value" + "\n\n")
             for k, mod in sorted(diff['modified'].items()):
                 f.write(f"**{self.escape_markdown(mod['name'])}** ({self.escape_markdown(str(k))})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
