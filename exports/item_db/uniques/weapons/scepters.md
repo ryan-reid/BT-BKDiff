@@ -23,7 +23,7 @@
     * 8% Life stolen per hit
     * \+180% Enhanced Damage
     * Level 5 Might Aura When Equipped
-    * \+3 to Sacrifice \(Paladin only\)
+    * \+3 to Life Contributor \(Paladin only\)
     * \+3 to Zeal \(Paladin only\)
 
 ### Stormeye (Stormeye)

@@ -466,7 +466,7 @@
   {
     "id": "Trang-Oul's Guise",
     "display_name": "Trang-Oul's Guise",
-    "base_item": "Bone Visage",
+    "base_item": "Spiked Visage",
     "item_type": "Merc Equip",
     "lvl_req": "65",
     "properties": [
@@ -1488,7 +1488,7 @@
   {
     "id": "Devil's Bargain",
     "display_name": "Devil's Bargain",
-    "base_item": "Bone Visage",
+    "base_item": "Spiked Visage",
     "item_type": "Merc Equip",
     "lvl_req": "85",
     "properties": [
@@ -2259,7 +2259,7 @@
   {
     "id": "Trang-Oul's True Guise",
     "display_name": "Trang-Oul's True Guise",
-    "base_item": "Bone Visage",
+    "base_item": "Spiked Visage",
     "item_type": "Merc Equip",
     "lvl_req": "85",
     "properties": [

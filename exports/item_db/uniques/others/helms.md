@@ -43,8 +43,8 @@
     * \+15 to Dexterity
     * \+40 to Life
 
-### Wormskull (Wormskull)
-* **Base Item:** Bone Helm
+### Wormsteel (Wormskull)
+* **Base Item:** Spiked Helm
 * **Level Requirement:** 21
 * **Properties:**
     * \+1\-2 to Necromancer Skill Levels
@@ -77,8 +77,8 @@
     * Cannot Be Frozen
     * \+30\-60% Enhanced Defense
     * \+150% Damage to Undead
-    * \+3\-5 to Raise Skeleton
-    * \+3\-5 to Skeleton Mastery
+    * \+3\-5 to Raise Undead
+    * \+3\-5 to Undead Mastery
 
 ### The Face of Horror (The Face of Horror)
 * **Base Item:** Mask
@@ -299,7 +299,7 @@
     * \+1\-5% to Maximum Fire Resist
 
 ### Giant Skull (Giantskull)
-* **Base Item:** Bone Visage
+* **Base Item:** Spiked Visage
 * **Level Requirement:** 65
 * **Properties:**
     * \+250\-320 Defense

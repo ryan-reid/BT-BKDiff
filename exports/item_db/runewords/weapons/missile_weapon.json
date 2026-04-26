@@ -618,7 +618,7 @@
         "param": "9",
         "min_val": "3",
         "max_val": "3",
-        "resolved_text": "+3 to Critical Strike (Amazon only)"
+        "resolved_text": "+3 to Dangerous Strike (Amazon only)"
       },
       {
         "code": "skill",

@@ -48,3 +48,27 @@ class CubeRecipeDTO(TypedDict):
     inputs: List[str]
     outputs: List[str]
     raw_row: Dict[str, str]
+
+class SkillEffectDTO(TypedDict):
+    label: str
+    scaling: str
+    l1: str
+    l10: str
+    l20: str
+    l30: str
+    limit: str
+
+class SkillSynergyDTO(TypedDict):
+    name: str
+    effect: str
+
+class SkillDTO(TypedDict):
+    id: str
+    name: str
+    effects: List[SkillEffectDTO]
+    synergies: List[SkillSynergyDTO]
+    raw_row: Dict[str, str]
+
+class SkillTreeDTO(TypedDict):
+    class_name: str
+    skills: List[SkillDTO]

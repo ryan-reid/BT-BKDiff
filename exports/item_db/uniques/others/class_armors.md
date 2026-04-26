@@ -1,7 +1,7 @@
 # Unique Class Armors
 
 ### Arreat's Face (Arreat's Face)
-* **Base Item:** Slayer Guard
+* **Base Item:** Violator Guard
 * **Level Requirement:** 42
 * **Properties:**
     * \+2  to Barbarian Skill Levels
@@ -108,7 +108,7 @@
     * Freezes Target \+1
 
 ### Darkforce Spawn (Darkforge Spawn)
-* **Base Item:** Bloodlord Skull
+* **Base Item:** Evil Lord Head
 * **Level Requirement:** 64
 * **Properties:**
     * \+140\-180% Enhanced Defense
@@ -118,13 +118,13 @@
     * \+2\-3 to Poison and Bone Skills
     * \+2\-3 to Summoning Skills
     * \+5 to Teeth \(Necromancer only\)
-    * \+5 to Bone Armor \(Necromancer only\)
+    * \+5 to Spike Armor \(Necromancer only\)
     * \+5 to Bone Spear \(Necromancer only\)
     * \+5 to Bone Spirit \(Necromancer only\)
     * Piercing Attack
 
 ### Boneflame (Boneflame)
-* **Base Item:** Succubus Skull
+* **Base Item:** Succubus Head
 * **Level Requirement:** 72
 * **Properties:**
     * \+120\-150% Enhanced Defense

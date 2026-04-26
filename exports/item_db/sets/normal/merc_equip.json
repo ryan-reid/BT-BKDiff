@@ -521,7 +521,7 @@
   {
     "id": "Tancred's Skull",
     "display_name": "Tancred's Skull",
-    "base_item": "Bone Helm",
+    "base_item": "Spiked Helm",
     "item_type": "Merc Equip",
     "lvl_req": "1",
     "properties": [

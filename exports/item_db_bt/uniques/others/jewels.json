@@ -1087,7 +1087,7 @@
         "param": "Bone Armor",
         "min_val": "100",
         "max_val": "51",
-        "resolved_text": "100% Chance to cast level 51 Bone Armor when you Level-Up"
+        "resolved_text": "100% Chance to cast level 51 Spike Armor when you Level-Up"
       },
       {
         "code": "addxp",

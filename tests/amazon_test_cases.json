@@ -1,0 +1,152 @@
+{
+  "class": "amazon",
+  "equipment_bonus": 4,
+  "groups": {
+    "Fire Bow Tree": {
+      "Fire Arrow": {
+        "synergies": {"Exploding Arrow": 20, "Immolation Arrow": 20},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "3", "Fire Damage": "3-13", "Attack Rating": "10"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "3", "Fire Damage": "214-238", "Attack Rating": "181"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "3", "Fire Damage": "336-380", "Attack Rating": "217"}}
+        ]
+      },
+      "Exploding Arrow": {
+        "synergies": {"Fire Arrow": 20, "Immolation Arrow": 20},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "5", "Fire Damage": "15-39", "Explosion Damage": "", "Attack Rating": "20", "Exploding Arrows": "1"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "9.7", "Fire Damage": "597-678", "Explosion Damage": "", "Attack Rating": "191", "Exploding Arrows": "4"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "10.7", "Fire Damage": "777-876", "Explosion Damage": "", "Attack Rating": "227", "Exploding Arrows": "4"}}
+        ]
+      },
+      "Immolation Arrow": {
+        "synergies": {"Fire Arrow": 20, "Exploding Arrow": 20},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "6", "Fire Damage per Second": "84-168", "Explosion Damage": "9-15", "Fire Duration": "4"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "10.7", "Fire Damage per Second": "731-843", "Explosion Damage": "288-294", "Fire Duration": "4"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "11.7", "Fire Damage per Second": "900-1040", "Explosion Damage": "390-396", "Fire Duration": "4"}}
+        ]
+      }
+    },
+    "Cold Bow Tree": {
+      "Cold Arrow": {
+        "synergies": {"Ice Arrow": 20, "Freezing Arrow": 20},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "3.5", "Cold Damage": "10-13", "Cold Duration": "4", "Attack Rating": "10", "Converts Physical Damage To Elemental Damage" : "3"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "5.8", "Cold Damage": "180-190", "Cold Duration": "26.8", "Attack Rating": "181", "Converts Physical Damage To Elemental Damage" : "41"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "6.3", "Cold Damage": "261-278", "Cold Duration": "31.6", "Attack Rating": "217", "Converts Physical Damage To Elemental Damage" : "49"}}
+        ]
+      },
+      "Ice Arrow": {
+        "synergies": {"Cold Arrow": 20, "Freezing Arrow": 20},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "4", "Cold Damage": "15-26", "Freeze Duration": "4", "Attack Rating": "20"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "8.7", "Cold Damage": "561-603", "Freeze Duration": "11.6", "Attack Rating": "191"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "9.7", "Cold Damage": "790-842", "Freeze Duration": "13.2", "Attack Rating": "227"}}
+        ]
+      },
+      "Freezing Arrow": {
+        "synergies": {"Cold Arrow": 20, "Ice Arrow": 20},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "9", "Cold Damage": "77-121", "Freeze Duration": "4", "Attack Rating": "40", "Freezing Arrows": "1"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "13.7", "Cold Damage": "671-715", "Freeze Duration": "4", "Attack Rating": "211", "Freezing Arrows": "4"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "14.7", "Cold Damage": "869-913", "Freeze Duration": "4", "Attack Rating": "247", "Freezing Arrows": "4"}}
+        ]
+      }
+    },
+    "Physical Bow & Utility": {
+      "Magic Arrow": {
+        "synergies": {},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "1.5", "Damage": "1", "Attack Rating": "10", "Converts % Physical Damage to Magic Damage": "5"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "0", "Damage": "20", "Attack Rating": "181", "Converts % Physical Damage to Magic Damage": "43"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "0", "Damage": "24", "Attack Rating": "217", "Converts % Physical Damage to Magic Damage": "51"}}
+        ]
+      },
+      "Multiple Shot": {
+        "synergies": {},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "4", "Damage": "75", "Arrows": "2"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "6.3", "Damage": "75", "Arrows": "21"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "6.8", "Damage": "75", "Arrows": "24"}}
+        ]
+      },
+      "Guided Arrow": {
+        "synergies": {"Multiple Shot": 20},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "8", "Damage": "240"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "3.2", "Damage": "373"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "2.2", "Damage": "401"}}
+        ]
+      },
+      "Strafe": {
+        "synergies": {"Multiple Shot": 20, "Guided Arrow": 20},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "11", "Damage": "305", "Attack Rating": "30", "Attacks Up to X Targets": 5}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "11", "Damage": "400", "Attack Rating": "201", "Attacks Up to X Targets": 10}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "11", "Damage": "420", "Attack Rating": "237", "Attacks Up to X Targets": 10}}
+        ]
+      }
+    },
+    "Javelin Tree": {
+      "Poison Javelin": {
+        "synergies": {"Plague Javelin": 20},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "4", "Poison Damage": "84-127", "Poison Duration": "8"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "8.7", "Poison Damage": "9038-10017", "Poison Duration": "46"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "9.7", "Poison Damage": "14628-16062", "Poison Duration": "54"}}
+        ]
+      },
+      "Plague Javelin": {
+        "synergies": {"Poison Javelin": 20},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "7", "Poison Damage": "106-160", "Poison Duration": "3"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "16.5", "Poison Damage": "6056-6177", "Poison Duration": "6.8"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "18.5", "Poison Damage": "10423-10559", "Poison Duration": "7.6"}}
+        ]
+      },
+      "Lightning Fury": {
+        "synergies": {"Power Strike": 20, "Lightning Bolt": 20, "Charged Strike": 20, "Lightning Strike": 4},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "10", "Lightning Damage": "1-65", "Bolts": "2"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "19.5", "Lightning Damage": "1-951", "Bolts": "21"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "21.5", "Lightning Damage": "1-1246", "Bolts": "25"}}
+        ]
+      }
+    },
+    "Passive & Melee": {
+      "Inner Sight": {
+        "synergies": {},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "5", "Radius": "18", "Enemy Defense": "-40", "Duration": "8"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "5", "Radius": "18", "Enemy Defense": "-815", "Duration": "84"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "5", "Radius": "18", "Enemy Defense": "-1095", "Duration": "100"}}
+        ]
+      },
+      "Critical Strike": {
+        "synergies": {},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"% Chance": "16"}},
+          {"lvl": 20, "blvl": 20, "ui": {"% Chance": "68"}},
+          {"lvl": 24, "blvl": 20, "ui": {"% Chance": "71"}}
+        ]
+      },
+      "Jab": {
+        "synergies": {},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "2", "Damage": "-15", "Attack Rating": "10"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "6.7", "Damage": "42", "Attack Rating": "181"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "7.7", "Damage": "54", "Attack Rating": "217"}}
+        ]
+      },
+      "Valkyrie": {
+        "synergies": {"Decoy": 20, "Penetrate": 5, "Critical Strike": 5, "Dodge": 5, "Avoid": 5, "Evade": 5},
+        "scenarios": [
+          {"lvl": 1, "blvl": 1, "ui": {"Mana": "25", "Life": "2200", "Resistances": "NOT_SHOWN", "Attack Rating": "240", "Defense": "0"}},
+          {"lvl": 20, "blvl": 20, "ui": {"Mana": "44", "Life": "3872", "Resistances": "NOT_SHOWN", "Attack Rating": "1000", "Defense": "190"}},
+          {"lvl": 24, "blvl": 20, "ui": {"Mana": "48", "Life": "4224", "Resistances": "NOT_SHOWN", "Attack Rating": "1160", "Defense": "230"}}
+        ]
+      }
+    }
+  }
+}

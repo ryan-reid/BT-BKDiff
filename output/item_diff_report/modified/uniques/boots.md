@@ -7,11 +7,11 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Boots}$ | **Base Item:** $\text{Boots}$ |
-| **Level Requirement:** $\text{10}$ | **Level Requirement:** $\text{10}$ |
+| **Base Item:** $	ext{Boots}$ | **Base Item:** $	ext{Boots}$ |
+| **Level Requirement:** $	ext{10}$ | **Level Requirement:** $	ext{10}$ |
 | **Properties:** | **Properties:** |
-| $\text{Socketed ()}$ | $\text{Socketed ()}$ |
-| $\text{+1-10\\% Energy}$ | $\text{+1-10\\% Energy}$ |
-| $\text{5\\% Chance to cast level 20 Static Field when struck}$ | $\text{5\\% Chance to cast level 20 Static Field when struck}$ |
+| $	ext{Socketed ()}$ | $	ext{Socketed ()}$ |
+| $	ext{+1-10\\% Energy}$ | $	ext{+1-10\\% Energy}$ |
+| $	ext{5\\% Chance to cast level 20 Static Field when struck}$ | $	ext{5\\% Chance to cast level 20 Static Field when struck}$ |
 | $\\color{gray}{\\text{+5-10\\%}}\\text{ Faster Run/Walk}$ | $\\color{blue}{\\text{+10\\%}}\\text{ Faster Run/Walk}$ |
 

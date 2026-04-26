@@ -7,8 +7,8 @@
 | | **Base Item:** Light Belt |
 | | **Level Requirement:** 8 |
 | | **Properties:** |
-| | $\color{blue}{\\text{+10\\% Faster Cast Rate}}$ |
-| | $\color{blue}{\\text{+20 to Life}}$ |
+| | $\color{blue}{	ext{+10\\% Faster Cast Rate}}$ |
+| | $\color{blue}{	ext{+20 to Life}}$ |
 
 **Warlord's Authority** (Warlord's Authority)
 
@@ -17,6 +17,6 @@
 | | **Base Item:** Plated Belt |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\\text{Lightning Resist +20\\%}}$ |
-| | $\color{blue}{\\text{+25 to Life}}$ |
+| | $\color{blue}{	ext{Lightning Resist +20\\%}}$ |
+| | $\color{blue}{	ext{+25 to Life}}$ |
 

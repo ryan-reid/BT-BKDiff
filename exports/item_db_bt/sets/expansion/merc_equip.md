@@ -36,7 +36,7 @@
     * Poison Length Reduced by 100%
 
 ### Trang\-Oul's Guise (Trang\-Oul's Guise)
-* **Base Item:** Bone Visage
+* **Base Item:** Spiked Visage
 * **Level Requirement:** 65
 * **Properties:**
     * \+100 Defense
@@ -109,7 +109,7 @@
     * Piercing Attack
 
 ### Devil's Bargain (Devil's Bargain)
-* **Base Item:** Bone Visage
+* **Base Item:** Spiked Visage
 * **Level Requirement:** 85
 * **Properties:**
     * \+20\-26% Faster Cast Rate
@@ -167,7 +167,7 @@
     * \+3\-7 Life after each Kill
 
 ### Trang\-Oul's True Guise (Trang\-Oul's True Guise)
-* **Base Item:** Bone Visage
+* **Base Item:** Spiked Visage
 * **Level Requirement:** 85
 * **Properties:**
     * \+2 to Necromancer Skill Levels

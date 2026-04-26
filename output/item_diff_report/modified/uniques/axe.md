@@ -7,31 +7,31 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Berserker Axe}$ | **Base Item:** $\text{Berserker Axe}$ |
-| **Level Requirement:** $\text{70}$ | **Level Requirement:** $\text{70}$ |
+| **Base Item:** $	ext{Berserker Axe}$ | **Base Item:** $	ext{Berserker Axe}$ |
+| **Level Requirement:** $	ext{70}$ | **Level Requirement:** $	ext{70}$ |
 | **Properties:** | **Properties:** |
-| $\text{+250-330\\% Enhanced Damage}$ | $\text{+250-330\\% Enhanced Damage}$ |
-| $\text{66\\% Deadly Strike}$ | $\text{66\\% Deadly Strike}$ |
-| $\text{-50\\% Target Defense}$ | $\text{-50\\% Target Defense}$ |
-| $\text{+40\\% Increased Attack Speed}$ | $\text{+40\\% Increased Attack Speed}$ |
-| $\text{+6-9 Life after each Kill}$ | $\text{+6-9 Life after each Kill}$ |
-| $\text{10-15\\% Chance of Crushing Blow}$ | $\text{10-15\\% Chance of Crushing Blow}$ |
-| $\color{gray}{\\text{Adds 100-100 Damage}}$ | $\color{blue}{\\text{(removed)}}$ |
-|  | $\color{blue}{\\text{Damage +50-100}}$ |
-|  | $\color{blue}{\\text{-10-20\\% to Enemy Physical Resistance}}$ |
+| $	ext{+250-330\\% Enhanced Damage}$ | $	ext{+250-330\\% Enhanced Damage}$ |
+| $	ext{66\\% Deadly Strike}$ | $	ext{66\\% Deadly Strike}$ |
+| $	ext{-50\\% Target Defense}$ | $	ext{-50\\% Target Defense}$ |
+| $	ext{+40\\% Increased Attack Speed}$ | $	ext{+40\\% Increased Attack Speed}$ |
+| $	ext{+6-9 Life after each Kill}$ | $	ext{+6-9 Life after each Kill}$ |
+| $	ext{10-15\\% Chance of Crushing Blow}$ | $	ext{10-15\\% Chance of Crushing Blow}$ |
+| $\color{gray}{	ext{Adds 100-100 Damage}}$ | $\color{blue}{	ext{(removed)}}$ |
+|  | $\color{blue}{	ext{Damage +50-100}}$ |
+|  | $\color{blue}{	ext{-10-20\\% to Enemy Physical Resistance}}$ |
 
 **The Gnasher** (The Gnasher)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Hand Axe}$ | **Base Item:** $\text{Hand Axe}$ |
-| **Level Requirement:** $\text{5}$ | **Level Requirement:** $\text{5}$ |
+| **Base Item:** $	ext{Hand Axe}$ | **Base Item:** $	ext{Hand Axe}$ |
+| **Level Requirement:** $	ext{5}$ | **Level Requirement:** $	ext{5}$ |
 | **Properties:** | **Properties:** |
-| $\text{+15 to Strength}$ | $\text{+15 to Strength}$ |
-| $\text{50\\% Chance of Open Wounds}$ | $\text{50\\% Chance of Open Wounds}$ |
-| $\text{20\\% Chance of Crushing Blow}$ | $\text{20\\% Chance of Crushing Blow}$ |
-| $\text{+180-200\\% Enhanced Damage}$ | $\text{+180-200\\% Enhanced Damage}$ |
-| $\text{+25\\% Increased Attack Speed}$ | $\text{+25\\% Increased Attack Speed}$ |
-| $\text{10\\% Deadly Strike}$ | $\text{10\\% Deadly Strike}$ |
-| $\color{gray}{\\text{Adds 20-20 Damage}}$ | $\color{blue}{\\text{(removed)}}$ |
+| $	ext{+15 to Strength}$ | $	ext{+15 to Strength}$ |
+| $	ext{50\\% Chance of Open Wounds}$ | $	ext{50\\% Chance of Open Wounds}$ |
+| $	ext{20\\% Chance of Crushing Blow}$ | $	ext{20\\% Chance of Crushing Blow}$ |
+| $	ext{+180-200\\% Enhanced Damage}$ | $	ext{+180-200\\% Enhanced Damage}$ |
+| $	ext{+25\\% Increased Attack Speed}$ | $	ext{+25\\% Increased Attack Speed}$ |
+| $	ext{10\\% Deadly Strike}$ | $	ext{10\\% Deadly Strike}$ |
+| $\color{gray}{	ext{Adds 20-20 Damage}}$ | $\color{blue}{	ext{(removed)}}$ |
 

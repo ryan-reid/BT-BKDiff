@@ -456,7 +456,7 @@
   {
     "id": "Wall of the Eyeless",
     "display_name": "Wall of the Eyeless",
-    "base_item": "Bone Shield",
+    "base_item": "Spiny Shield",
     "item_type": "Shield",
     "lvl_req": "20",
     "properties": [
@@ -507,7 +507,7 @@
         "param": "Bone Wall",
         "min_val": "20",
         "max_val": "20",
-        "resolved_text": "+20 to Bone Wall"
+        "resolved_text": "+20 to Spike Wall"
       },
       {
         "code": "addxp",

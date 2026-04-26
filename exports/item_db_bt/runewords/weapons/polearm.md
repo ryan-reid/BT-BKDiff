@@ -19,7 +19,7 @@
     * \+200\-260% Enhanced Damage
     * 180\-250% Bonus to Attack Rating
     * 23% Better Chance of Getting Magic Items
-    * \+1\-6 to Critical Strike
+    * \+1\-6 to Dangerous Strike
     * \+35% Faster Cast Rate
     * Level 12\-17 Meditation Aura When Equipped
     * \+5 to all Attributes

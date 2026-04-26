@@ -1380,7 +1380,7 @@
         "param": "Critical Strike",
         "min_val": "5",
         "max_val": "5",
-        "resolved_text": "+5 to Critical Strike"
+        "resolved_text": "+5 to Dangerous Strike"
       }
     ],
     "raw_row": {

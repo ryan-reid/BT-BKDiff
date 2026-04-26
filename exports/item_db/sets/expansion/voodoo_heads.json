@@ -2,7 +2,7 @@
   {
     "id": "Trang-Oul's Wing",
     "display_name": "Trang-Oul's Wing",
-    "base_item": "Succubus Skull",
+    "base_item": "Succubus Head",
     "item_type": "Voodoo Heads",
     "lvl_req": "54",
     "properties": [
@@ -172,7 +172,7 @@
   {
     "id": "Trang-Oul's Appendage",
     "display_name": "Trang-Oul's Appendage",
-    "base_item": "Succubus Skull",
+    "base_item": "Succubus Head",
     "item_type": "Voodoo Heads",
     "lvl_req": "85",
     "properties": [
@@ -349,7 +349,7 @@
   {
     "id": "Sandro's Skull",
     "display_name": "Sandro's Skull",
-    "base_item": "Bloodlord Skull",
+    "base_item": "Evil Lord Head",
     "item_type": "Voodoo Heads",
     "lvl_req": "85",
     "properties": [

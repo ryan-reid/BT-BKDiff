@@ -16,7 +16,7 @@
 * **Base Items:** Armor
 * **Properties:**
     * \+15\-20% Faster Cast Rate
-    * 15% Chance to cast level 10 Bone Armor when struck
+    * 15% Chance to cast level 10 Spike Armor when struck
     * \+2 to Necromancer Skill Levels
     * \+100\-150 to Mana
     * All Resistances \+15
@@ -142,7 +142,7 @@
     * \+25% Faster Run/Walk
     * 15% Chance to cast level 10 Slow Missiles when struck
     * \+2 to Amazon Skill Levels
-    * \+2 to Critical Strike
+    * \+2 to Dangerous Strike
     * \+2 to Evade \(Amazon only\)
     * \+2 to Avoid \(Amazon only\)
     * \+2 to Dodge \(Amazon only\)

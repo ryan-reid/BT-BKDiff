@@ -34,22 +34,25 @@ class D2Repository:
 
     def _load_strings(self) -> None:
         """Loads string JSON files with strict file-level precedence."""
-        # 1. Map all available string files in the mod path
+        all_files = {}
+
+        # 3. Lowest Priority: Retail strings (from data/retail/strings)
+        retail_string_dir = os.path.join(self.supplemental_path, "strings")
+        if os.path.exists(retail_string_dir):
+            for f in os.listdir(retail_string_dir):
+                if f.endswith(".json"): all_files[f] = os.path.join(retail_string_dir, f)
+
+        # 2. Medium Priority: Base strings (from data/base/strings)
+        base_string_dir = os.path.join(os.path.dirname(__file__), "..", "data", "base", "strings")
+        if os.path.exists(base_string_dir):
+            for f in os.listdir(base_string_dir):
+                if f.endswith(".json"): all_files[f] = os.path.join(base_string_dir, f)
+
+        # 1. Highest Priority: Mod strings (from MPQ path)
         mod_string_dir = os.path.join(self.mpq_path, "data", "local", "lng", "strings")
-        mod_files = {}
         if os.path.exists(mod_string_dir):
-            mod_files = {f: os.path.join(mod_string_dir, f) for f in os.listdir(mod_string_dir) if f.endswith(".json")}
-
-        # 2. Map supplemental files from local data/retail that don't exist in the mod
-        supp_files = {}
-        supp_string_dir = os.path.join(self.supplemental_path, "local", "lng", "strings")
-        if os.path.exists(supp_string_dir):
-            supp_files = {f: os.path.join(supp_string_dir, f) for f in os.listdir(supp_string_dir) 
-                            if f.endswith(".json") and f not in mod_files}
-
-        # 3. Load all files. Files present in the mod are used exclusively for their filename.
-        # Supplemental files are only used if the filename is missing from the mod.
-        all_files = {**supp_files, **mod_files}
+            for f in os.listdir(mod_string_dir):
+                if f.endswith(".json"): all_files[f] = os.path.join(mod_string_dir, f)
         
         for filename, filepath in all_files.items():
             try:
@@ -59,8 +62,9 @@ class D2Repository:
                     data = json.loads(clean_content)
                     for entry in data:
                         if "Key" in entry and "enUS" in entry:
-                            if entry["Key"] not in self.strings:
-                                self.strings[entry["Key"]] = entry["enUS"]
+                            key_lower = entry["Key"].lower()
+                            if key_lower not in self.strings:
+                                self.strings[key_lower] = entry["enUS"]
             except Exception as e:
                 print(f"Error loading strings from {filename}: {e}", file=sys.stderr)
 
@@ -114,6 +118,6 @@ class D2Repository:
     def get_string(self, key: str) -> str:
         """Resolves a D2 string key to its localized value and strips color codes."""
         if not key: return ""
-        raw = self.strings.get(key, key)
+        raw = self.strings.get(key.lower(), key)
         # Strip D2 color codes like ÿc0, ÿc;, etc.
         return re.sub(r'ÿc[0-9:;<=>?@A-Z]', '', raw)

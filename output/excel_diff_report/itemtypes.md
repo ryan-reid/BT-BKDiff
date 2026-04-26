@@ -2125,7 +2125,7 @@
 - `\*skillID`: $\\color{gray}{\\text{86}}$ (Old) &rarr; $\\color{blue}{\\text{87}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{23}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{24}}$ (New)
 ### amethyst
-- `Equiv2`: $\color{gray}{\\text{ggma}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggma}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{96}}$ (Old) &rarr; $\\color{blue}{\\text{97}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{33}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{34}}$ (New)
 ### antidote potion
@@ -6138,7 +6138,7 @@
 - `\*skillID`: $\\color{gray}{\\text{106}}$ (Old) &rarr; $\\color{blue}{\\text{110}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{43}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{47}}$ (New)
 ### chipped gem
-- `Equiv2`: $\color{gray}{\\text{ggm0}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggm0}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{91}}$ (Old) &rarr; $\\color{blue}{\\text{92}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{28}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{29}}$ (New)
 ### circlet
@@ -8148,7 +8148,7 @@
 ### d999
 - `\*CTC`: $\\text{id }\\color{gray}{\\text{126}}\\text{ lev}\\color{gray}{\\text{49}}$ (Old) &rarr; $\\text{id }\\color{blue}{\\text{125}}\\text{ lev}\\color{blue}{\\text{19}}$ (New)
 ### diamond
-- `Equiv2`: $\color{gray}{\\text{ggmd}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggmd}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{97}}$ (Old) &rarr; $\\color{blue}{\\text{98}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{34}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{35}}$ (New)
 ### e000
@@ -10152,7 +10152,7 @@
 ### e999
 - `\*CTC`: $\\text{id }\\color{gray}{\\text{158}}\\text{ lev}\\color{gray}{\\text{1}}$ (Old) &rarr; $\\text{id }\\color{blue}{\\text{156}}\\text{ lev}\\color{blue}{\\text{35}}$ (New)
 ### emerald
-- `Equiv2`: $\color{gray}{\\text{ggme}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggme}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{98}}$ (Old) &rarr; $\\color{blue}{\\text{99}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{35}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{36}}$ (New)
 ### f000
@@ -12156,11 +12156,11 @@
 ### f999
 - `\*CTC`: $\\text{id }\\color{gray}{\\text{189}}\\text{ lev}\\color{gray}{\\text{17}}$ (Old) &rarr; $\\text{id }\\color{blue}{\\text{187}}\\text{ lev}\\color{blue}{\\text{51}}$ (New)
 ### flawed gem
-- `Equiv2`: $\color{gray}{\\text{ggm1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggm1}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{92}}$ (Old) &rarr; $\\color{blue}{\\text{93}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{29}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{30}}$ (New)
 ### flawless gem
-- `Equiv2`: $\color{gray}{\\text{ggm3}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggm3}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{94}}$ (Old) &rarr; $\\color{blue}{\\text{95}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{31}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{32}}$ (New)
 ### g000
@@ -22176,7 +22176,7 @@
 ### k999
 - `\*CTC`: $\\text{id }\\color{gray}{\\text{345}}\\text{ lev}\\color{gray}{\\text{33}}$ (Old) &rarr; $\\text{id }\\color{blue}{\\text{344}}\\text{ lev}\\color{blue}{\\text{3}}$ (New)
 ### knife
-- `StaffMods`:  (Old) &rarr; $\color{blue}{\\text{war}}$ (New)
+- `StaffMods`:  (Old) &rarr; $\color{blue}{	ext{war}}$ (New)
 ### l000
 - `\*CTC`: $\\text{id }\\color{gray}{\\text{361}}\\text{ lev}\\color{gray}{\\text{10}}$ (Old) &rarr; $\\text{id }\\color{blue}{\\text{359}}\\text{ lev}\\color{blue}{\\text{44}}$ (New)
 ### l001
@@ -26390,7 +26390,7 @@
 - `\*skillID`: $\\color{gray}{\\text{72}}$ (Old) &rarr; $\\color{blue}{\\text{73}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{9}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{10}}$ (New)
 ### perfect gem
-- `Equiv2`: $\color{gray}{\\text{ggm4}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggm4}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{95}}$ (Old) &rarr; $\\color{blue}{\\text{96}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{32}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{33}}$ (New)
 ### primal helm
@@ -26400,18 +26400,18 @@
 - `\*skillID`: $\\color{gray}{\\text{78}}$ (Old) &rarr; $\\color{blue}{\\text{79}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{15}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{16}}$ (New)
 ### ruby
-- `Equiv2`: $\color{gray}{\\text{ggmr}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggmr}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{99}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{36}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{37}}$ (New)
 ### rune
 - `\*skillID`: $\\color{gray}{\\text{74}}$ (Old) &rarr; $\\color{blue}{\\text{75}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{11}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{12}}$ (New)
 ### sapphire
-- `Equiv2`: $\color{gray}{\\text{ggms}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggms}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{101}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{37}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{38}}$ (New)
 ### skull
-- `Equiv2`: $\color{gray}{\\text{ggmz}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggmz}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{102}}$ (Old) &rarr; $\\color{blue}{\\text{103}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{39}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{40}}$ (New)
 ### small charm
@@ -26424,7 +26424,7 @@
 - `\*skillID`: $\\color{gray}{\\text{79}}$ (Old) &rarr; $\\color{blue}{\\text{80}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{16}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{17}}$ (New)
 ### standard gem
-- `Equiv2`: $\color{gray}{\\text{ggm2}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggm2}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{93}}$ (Old) &rarr; $\\color{blue}{\\text{94}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{30}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{31}}$ (New)
 ### swords and knives
@@ -26434,7 +26434,7 @@
 - `\*skillID`: $\\color{gray}{\\text{81}}$ (Old) &rarr; $\\color{blue}{\\text{82}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{18}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{19}}$ (New)
 ### topaz
-- `Equiv2`: $\color{gray}{\\text{ggmt}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Equiv2`: $\color{gray}{	ext{ggmt}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 - `\*skillID`: $\\color{gray}{\\text{101}}$ (Old) &rarr; $\\color{blue}{\\text{102}}$ (New)
 - `\*CTC`: $\\text{id 1 lev}\\color{gray}{\\text{38}}$ (Old) &rarr; $\\text{id 1 lev}\\color{blue}{\\text{39}}$ (New)
 ### voodoo heads

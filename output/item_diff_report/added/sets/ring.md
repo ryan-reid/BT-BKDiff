@@ -7,8 +7,8 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\\text{+15\\% Faster Cast Rate}}$ |
-| | $\color{blue}{\\text{+15\\% Increased Attack Speed}}$ |
-| | $\color{blue}{\\text{+15\\% Faster Run/Walk}}$ |
-| | $\color{blue}{\\text{+15\\% Faster Hit Recovery}}$ |
+| | $\color{blue}{	ext{+15\\% Faster Cast Rate}}$ |
+| | $\color{blue}{	ext{+15\\% Increased Attack Speed}}$ |
+| | $\color{blue}{	ext{+15\\% Faster Run/Walk}}$ |
+| | $\color{blue}{	ext{+15\\% Faster Hit Recovery}}$ |
 

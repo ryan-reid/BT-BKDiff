@@ -3,7 +3,7 @@ import json
 import re
 import difflib
 from typing import List, Dict, Any, Tuple
-from d2_models import AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, CubeRecipeDTO, ItemDiffDTO
+from d2_models import AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, CubeRecipeDTO, ItemDiffDTO, SkillTreeDTO
 
 class BaseExporter:
     def export(self, data: Any, output_path: str):
@@ -18,49 +18,40 @@ class JsonExporter(BaseExporter):
 class MarkdownExporter(BaseExporter):
     @staticmethod
     def escape_markdown(s: str) -> str:
-        """Surgical escaping for Markdown special characters."""
         if not s: return ""
-        # 1. Escape literal backslashes
         s = s.replace('\\', '\\\\')
-        # 2. Escape these characters: _, *, [, ], (, ), #, +, -, ., !
         for char in r'_*[]()#+-.!':
             s = s.replace(char, '\\' + char)
         return s
 
     @staticmethod
     def escape_latex(s: str) -> str:
-        """Escapes text for use inside a LaTeX block on GitHub ($ ... $)."""
+        """Escapes text for use inside a LaTeX \text{} block."""
         if not s: return ""
-        # 0. Remove D2 color codes
-        s = re.sub(r'ÿc.', '', s)
-        # 1. Escape literal backslashes
+        # Remove color codes
+        s = re.sub(r'ÿc.', '', str(s))
+        # Remove any existing LaTeX markup from strings if present
+        s = s.replace(r'$', '').replace(r'{', '').replace(r'}', '').replace(r'\\', '')
+        # Basic escapes
         s = s.replace('\\', r'\\textbackslash ')
-        # 2. Escape { } $ % & # _ with double backslash
         for char in r'{}$%&#_':
             s = s.replace(char, r'\\' + char)
-        # 3. Special commands
-        s = s.replace('^', r'\\textasciicircum ')
-        s = s.replace('~', r'\\textasciitilde ')
-        s = s.replace('|', r'\\vert ')
         return s
 
     @staticmethod
     def get_styled_diffs(old_s: str, new_s: str) -> Tuple[str, str]:
-        """Generates color-coded LaTeX diffs for two strings."""
         def fmt(color, text):
             if not text: return ""
             escaped = MarkdownExporter.escape_latex(text)
             if color:
-                return r"$\color{" + color + r"}{\\text{" + escaped + r"}}$"
-            return r"$\text{" + escaped + r"}$"
+                return f"$\color{{{color}}}{{\text{{{escaped}}}}}$"
+            return f"$\text{{{escaped}}}$"
 
         if not old_s: return "", fmt("blue", new_s)
         if not new_s or new_s == "(removed)": 
             return fmt("gray", old_s), fmt("blue", "(removed)")
         
-        def normalize_text(t):
-            return re.sub(r'\s+', ' ', re.sub(r'ÿc.', '', t)).strip()
-
+        def normalize_text(t): return re.sub(r'\s+', ' ', re.sub(r'ÿc.', '', t)).strip()
         if normalize_text(old_s) == normalize_text(new_s):
             return fmt("", old_s), fmt("", new_s)
 
@@ -84,6 +75,32 @@ class MarkdownExporter(BaseExporter):
             if not parts: return ""
             return "$" + "".join(parts) + "$"
         return render(old_toks, True), render(new_toks, False)
+
+    def export_skill_tree(self, tree: SkillTreeDTO, output_path: str):
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        content = f"# {self.escape_markdown(tree['class_name'])} Skill Tree\n\n"
+        for skill in tree['skills']:
+            content += f"## {self.escape_markdown(skill['name'])}\n\n"
+            content += "| Effect | Scaling | L1 | L10 | L20 | L30 | Limit |\n"
+            content += "| :--- | :--- | :---: | :---: | :---: | :---: | :---: |\n"
+            for effect in skill['effects']:
+                row = [
+                    f"$\text{{{self.escape_latex(effect['label'])}}}$",
+                    f"$\text{{{self.escape_latex(effect['scaling'])}}}$",
+                    f"$\text{{{self.escape_latex(effect['l1'])}}}$",
+                    f"$\text{{{self.escape_latex(effect['l10'])}}}$",
+                    f"$\text{{{self.escape_latex(effect['l20'])}}}$",
+                    f"$\text{{{self.escape_latex(effect['l30'])}}}$",
+                    f"$\text{{{self.escape_latex(effect['limit'])}}}$"
+                ]
+                content += f"| {' | '.join(row)} |\n"
+
+            if skill['synergies']:
+                content += "\n### Synergies\n"
+                for syn in skill['synergies']:
+                    content += f"* **{self.escape_markdown(syn['name'])}**: {self.escape_markdown(syn['effect'])}\n"
+            content += "\n---\n\n"
+        with open(output_path, 'w', encoding='utf-8') as f: f.write(content)
 
     def export_item_db(self, items: List[AnalyzedItemDTO], title: str, output_path: str):
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -228,7 +245,7 @@ class MarkdownExporter(BaseExporter):
                             f_out.write("\n")
                 return rel_path
 
-            # Sub-categorize Uniques
+            # Sub-categorize
             if uniques:
                 toc.append("## Uniques\n")
                 unique_groups = {}
@@ -241,7 +258,6 @@ class MarkdownExporter(BaseExporter):
                     rel = write_items_to_file(items, f"{base_name} Unique {cat}", safe_name, "uniques")
                     toc.append(f"- [{cat}]({rel})\n")
 
-            # Sub-categorize Runewords
             if runewords:
                 toc.append("\n## Runewords\n")
                 rw_groups = {}
@@ -254,7 +270,6 @@ class MarkdownExporter(BaseExporter):
                     rel = write_items_to_file(items, f"{base_name} {cat} Runewords", safe_name, "runewords")
                     toc.append(f"- [{cat}]({rel})\n")
 
-            # Sub-categorize Sets
             if sets:
                 toc.append("\n## Sets\n")
                 set_groups = {}
@@ -270,17 +285,12 @@ class MarkdownExporter(BaseExporter):
             with open(os.path.join(output_dir, f"{base_name.upper()}.md"), 'w', encoding='utf-8') as f:
                 f.write("".join(toc))
 
-        # 2. ADDED.md
         write_category_files(diff['added'], "Added")
-
-        # 3. REMOVED.md
         with open(os.path.join(output_dir, "REMOVED.md"), 'w', encoding='utf-8') as f:
             f.write("# Removed Items\n\n")
             for k, item in sorted(diff['removed'].items()):
                 name = self.escape_markdown(item.get('display_name') or item.get('name'))
                 f.write(f"- **{name}** ({self.escape_markdown(str(k))})\n")
-
-        # 4. MODIFIED.md
         write_category_files(diff['modified'], "Modified", is_modified=True)
 
     def export_excel_diff(self, diff: ExcelDiffDTO, output_path: str):

@@ -2,7 +2,7 @@
   {
     "id": "Arreat's Face",
     "display_name": "Arreat's Face",
-    "base_item": "Slayer Guard",
+    "base_item": "Violator Guard",
     "item_type": "Primal Helm",
     "lvl_req": "42",
     "properties": [
@@ -1159,7 +1159,7 @@
   {
     "id": "Darkforge Spawn",
     "display_name": "Darkforce Spawn",
-    "base_item": "Bloodlord Skull",
+    "base_item": "Evil Lord Head",
     "item_type": "Voodoo Heads",
     "lvl_req": "64",
     "properties": [
@@ -1217,7 +1217,7 @@
         "param": "Bone Armor",
         "min_val": "5",
         "max_val": "5",
-        "resolved_text": "+5 to Bone Armor (Necromancer only)"
+        "resolved_text": "+5 to Spike Armor (Necromancer only)"
       },
       {
         "code": "skill",
@@ -1322,7 +1322,7 @@
   {
     "id": "Boneflame",
     "display_name": "Boneflame",
-    "base_item": "Succubus Skull",
+    "base_item": "Succubus Head",
     "item_type": "Voodoo Heads",
     "lvl_req": "72",
     "properties": [

@@ -1,7 +1,7 @@
 # Set Voodoo Heads
 
 ### Trang\-Oul's Wing (Trang\-Oul's Wing)
-* **Base Item:** Succubus Skull
+* **Base Item:** Succubus Head
 * **Level Requirement:** 54
 * **Properties:**
     * \+125 Defense
@@ -14,7 +14,7 @@
     * \+35% Faster Cast Rate
 
 ### Trang\-Oul's Appendage (Trang\-Oul's Appendage)
-* **Base Item:** Succubus Skull
+* **Base Item:** Succubus Head
 * **Level Requirement:** 85
 * **Properties:**
     * \+3 to Necromancer Skill Levels
@@ -28,7 +28,7 @@
     * Magic Resist \+15\-25%
 
 ### Sandro's Skull (Sandro's Skull)
-* **Base Item:** Bloodlord Skull
+* **Base Item:** Evil Lord Head
 * **Level Requirement:** 85
 * **Properties:**
     * \+1\-2 to All Skills

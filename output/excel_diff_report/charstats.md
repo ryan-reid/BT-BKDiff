@@ -18,7 +18,7 @@
 - `ToHitFactor`: $\\color{gray}{\\text{750}}$ (Old) &rarr; $\\color{blue}{\\text{1000}}$ (New)
 - `RunDrain`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{20}}$ (New)
 ### expansion
-- `item10count`: $\color{gray}{\\text{0}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `item10count`: $\color{gray}{	ext{0}}$ (Old) &rarr; $\color{blue}{	ext{(removed)}}$ (New)
 ### necromancer
 - `ToHitFactor`: $\\color{gray}{\\text{750}}$ (Old) &rarr; $\\color{blue}{\\text{1000}}$ (New)
 - `RunDrain`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{20}}$ (New)

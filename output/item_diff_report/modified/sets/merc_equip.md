@@ -7,55 +7,55 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\\color{gray}{\\text{Grim}}\\text{ }\\color{gray}{\\text{Helm}}$ | **Base Item:** $\\color{blue}{\\text{Bone}}\\text{ }\\color{blue}{\\text{Visage}}$ |
-| **Level Requirement:** $\text{59}$ | **Level Requirement:** $\text{59}$ |
+| **Base Item:** $\\color{gray}{\\text{Grim}}\\text{ }\\color{gray}{\\text{Helm}}$ | **Base Item:** $\\color{blue}{\\text{Spiked}}\\text{ }\\color{blue}{\\text{Visage}}$ |
+| **Level Requirement:** $	ext{59}$ | **Level Requirement:** $	ext{59}$ |
 | **Properties:** | **Properties:** |
-| $\text{+135-175 Defense}$ | $\text{+135-175 Defense}$ |
-| $\text{+20-30 to Dexterity}$ | $\text{+20-30 to Dexterity}$ |
-| $\text{+20-30 to Strength}$ | $\text{+20-30 to Strength}$ |
-| $\text{All Resistances +10-20}$ | $\text{All Resistances +10-20}$ |
-| $\text{Magic Damage Reduced by 6-9}$ | $\text{Magic Damage Reduced by 6-9}$ |
-| $\text{+1-2 to All Skills}$ | $\text{+1-2 to All Skills}$ |
+| $	ext{+135-175 Defense}$ | $	ext{+135-175 Defense}$ |
+| $	ext{+20-30 to Dexterity}$ | $	ext{+20-30 to Dexterity}$ |
+| $	ext{+20-30 to Strength}$ | $	ext{+20-30 to Strength}$ |
+| $	ext{All Resistances +10-20}$ | $	ext{All Resistances +10-20}$ |
+| $	ext{Magic Damage Reduced by 6-9}$ | $	ext{Magic Damage Reduced by 6-9}$ |
+| $	ext{+1-2 to All Skills}$ | $	ext{+1-2 to All Skills}$ |
 
 **Natalya's Visage** (Natalya's Visage)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\\color{gray}{\\text{Grim}}\\text{ }\\color{gray}{\\text{Helm}}$ | **Base Item:** $\\color{blue}{\\text{Bone}}\\text{ }\\color{blue}{\\text{Visage}}$ |
-| **Level Requirement:** $\text{85}$ | **Level Requirement:** $\text{85}$ |
+| **Base Item:** $\\color{gray}{\\text{Grim}}\\text{ }\\color{gray}{\\text{Helm}}$ | **Base Item:** $\\color{blue}{\\text{Spiked}}\\text{ }\\color{blue}{\\text{Visage}}$ |
+| **Level Requirement:** $	ext{85}$ | **Level Requirement:** $	ext{85}$ |
 | **Properties:** | **Properties:** |
-| $\text{+2 to Assassin Skill Levels}$ | $\text{+2 to Assassin Skill Levels}$ |
-| $\text{+25\\% Increased Attack Speed}$ | $\text{+25\\% Increased Attack Speed}$ |
-| $\text{+25\\% Faster Cast Rate}$ | $\text{+25\\% Faster Cast Rate}$ |
-| $\text{All Resistances +20-30}$ | $\text{All Resistances +20-30}$ |
-| $\text{+30-40 to all Attributes}$ | $\text{+30-40 to all Attributes}$ |
-| $\text{+270-350 Defense}$ | $\text{+270-350 Defense}$ |
+| $	ext{+2 to Assassin Skill Levels}$ | $	ext{+2 to Assassin Skill Levels}$ |
+| $	ext{+25\\% Increased Attack Speed}$ | $	ext{+25\\% Increased Attack Speed}$ |
+| $	ext{+25\\% Faster Cast Rate}$ | $	ext{+25\\% Faster Cast Rate}$ |
+| $	ext{All Resistances +20-30}$ | $	ext{All Resistances +20-30}$ |
+| $	ext{+30-40 to all Attributes}$ | $	ext{+30-40 to all Attributes}$ |
+| $	ext{+270-350 Defense}$ | $	ext{+270-350 Defense}$ |
 
 **Tal Rasha's Horadric Crest** (Tal Rasha's Horadric Crest)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
 | **Base Item:** $\\color{gray}{\\text{Death Mask}}$ | **Base Item:** $\\color{blue}{\\text{Demonhead}}$ |
-| **Level Requirement:** $\text{66}$ | **Level Requirement:** $\text{66}$ |
+| **Level Requirement:** $	ext{66}$ | **Level Requirement:** $	ext{66}$ |
 | **Properties:** | **Properties:** |
-| $\text{+30 to Mana}$ | $\text{+30 to Mana}$ |
-| $\text{+60 to Life}$ | $\text{+60 to Life}$ |
-| $\text{+45 Defense}$ | $\text{+45 Defense}$ |
-| $\text{All Resistances +15}$ | $\text{All Resistances +15}$ |
-| $\text{10\\% Life stolen per hit}$ | $\text{10\\% Life stolen per hit}$ |
-| $\text{10\\% Mana stolen per hit}$ | $\text{10\\% Mana stolen per hit}$ |
+| $	ext{+30 to Mana}$ | $	ext{+30 to Mana}$ |
+| $	ext{+60 to Life}$ | $	ext{+60 to Life}$ |
+| $	ext{+45 Defense}$ | $	ext{+45 Defense}$ |
+| $	ext{All Resistances +15}$ | $	ext{All Resistances +15}$ |
+| $	ext{10\\% Life stolen per hit}$ | $	ext{10\\% Life stolen per hit}$ |
+| $	ext{10\\% Mana stolen per hit}$ | $	ext{10\\% Mana stolen per hit}$ |
 
 **Tal Rasha's Wisdom** (Tal Rasha's Wisdom)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
 | **Base Item:** $\\color{gray}{\\text{Death Mask}}$ | **Base Item:** $\\color{blue}{\\text{Demonhead}}$ |
-| **Level Requirement:** $\text{85}$ | **Level Requirement:** $\text{85}$ |
+| **Level Requirement:** $	ext{85}$ | **Level Requirement:** $	ext{85}$ |
 | **Properties:** | **Properties:** |
-| $\text{+1-2 to Sorceress Skill Levels}$ | $\text{+1-2 to Sorceress Skill Levels}$ |
-| $\text{+5-10\\% Vitality}$ | $\text{+5-10\\% Vitality}$ |
-| $\text{+5-10\\% Energy}$ | $\text{+5-10\\% Energy}$ |
-| $\text{+20-25\\% Faster Cast Rate}$ | $\text{+20-25\\% Faster Cast Rate}$ |
-| $\text{-3-5\\% to Enemy Cold Resistance}$ | $\text{-3-5\\% to Enemy Cold Resistance}$ |
-| $\text{+1-3 to Blizzard (Sorceress only)}$ | $\text{+1-3 to Blizzard (Sorceress only)}$ |
+| $	ext{+1-2 to Sorceress Skill Levels}$ | $	ext{+1-2 to Sorceress Skill Levels}$ |
+| $	ext{+5-10\\% Vitality}$ | $	ext{+5-10\\% Vitality}$ |
+| $	ext{+5-10\\% Energy}$ | $	ext{+5-10\\% Energy}$ |
+| $	ext{+20-25\\% Faster Cast Rate}$ | $	ext{+20-25\\% Faster Cast Rate}$ |
+| $	ext{-3-5\\% to Enemy Cold Resistance}$ | $	ext{-3-5\\% to Enemy Cold Resistance}$ |
+| $	ext{+1-3 to Blizzard (Sorceress only)}$ | $	ext{+1-3 to Blizzard (Sorceress only)}$ |
 

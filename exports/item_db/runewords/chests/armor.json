@@ -132,7 +132,7 @@
         "param": "Bone Armor",
         "min_val": "15",
         "max_val": "10",
-        "resolved_text": "15% Chance to cast level 10 Bone Armor when struck"
+        "resolved_text": "15% Chance to cast level 10 Spike Armor when struck"
       },
       {
         "code": "nec",
@@ -1380,7 +1380,7 @@
         "param": "Critical Strike",
         "min_val": "2",
         "max_val": "2",
-        "resolved_text": "+2 to Critical Strike"
+        "resolved_text": "+2 to Dangerous Strike"
       },
       {
         "code": "skill",

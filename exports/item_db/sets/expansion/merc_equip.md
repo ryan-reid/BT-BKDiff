@@ -1,7 +1,7 @@
 # Set Merc Equip
 
 ### Natalya's Totem (Natalya's Totem)
-* **Base Item:** Bone Visage
+* **Base Item:** Spiked Visage
 * **Level Requirement:** 59
 * **Properties:**
     * \+135\-175 Defense
@@ -36,7 +36,7 @@
     * Poison Length Reduced by 100%
 
 ### Trang\-Oul's Guise (Trang\-Oul's Guise)
-* **Base Item:** Bone Visage
+* **Base Item:** Spiked Visage
 * **Level Requirement:** 65
 * **Properties:**
     * \+100 Defense
@@ -127,7 +127,7 @@
     * \+25\-50 to Life
 
 ### Devil's Bargain (Devil's Bargain)
-* **Base Item:** Bone Visage
+* **Base Item:** Spiked Visage
 * **Level Requirement:** 85
 * **Properties:**
     * \+20\-26% Faster Cast Rate
@@ -149,7 +149,7 @@
     * Level 10\-16 Holy Shock Aura When Equipped
 
 ### Natalya's Visage (Natalya's Visage)
-* **Base Item:** Bone Visage
+* **Base Item:** Spiked Visage
 * **Level Requirement:** 85
 * **Properties:**
     * \+2 to Assassin Skill Levels
@@ -185,7 +185,7 @@
     * \+3\-7 Life after each Kill
 
 ### Trang\-Oul's True Guise (Trang\-Oul's True Guise)
-* **Base Item:** Bone Visage
+* **Base Item:** Spiked Visage
 * **Level Requirement:** 85
 * **Properties:**
     * \+2 to Necromancer Skill Levels

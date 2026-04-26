@@ -21,9 +21,9 @@ Categorized by type to ensure optimal rendering.
 - [Primal Helm](modified/uniques/primal_helm.md)
 - [Shield](modified/uniques/shield.md)
 - [Small Charm](modified/uniques/small_charm.md)
-- [Spear](modified/uniques/spear.md)
+- [Spears](modified/uniques/spears.md)
 - [Staff](modified/uniques/staff.md)
-- [Sword](modified/uniques/sword.md)
+- [Swords](modified/uniques/swords.md)
 - [Throwing Axe](modified/uniques/throwing_axe.md)
 - [Wand](modified/uniques/wand.md)
 

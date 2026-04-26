@@ -56,7 +56,7 @@
     * \+100\-130% Enhanced Damage
     * 15% Chance of Open Wounds
 
-### The Impaler (The Impaler)
+### the Impaler (The Impaler)
 * **Base Item:** War Spear
 * **Level Requirement:** 31
 * **Properties:**
