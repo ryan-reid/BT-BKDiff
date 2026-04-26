@@ -20,7 +20,7 @@
 * **Level Requirement:** 
 * **Properties:**
 
-### Class-specific (Class Specific)
+### Class\-specific (Class Specific)
 * **Base Item:** Expansion
 * **Level Requirement:** 
 * **Properties:**

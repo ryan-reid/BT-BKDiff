@@ -21,7 +21,7 @@
 - colossal throwing axe
 - colossalchargedbolt
 - echoingstrike
-- echoingstrike_detonate
+- echoingstrike\_detonate
 - eldritchblastnova
 - engorge
 - engorgecorpseeffect
@@ -57,37 +57,27 @@
 - sigilrancorsmall
 - taintedfireball
 - taintedfirebolt
-
 ## Removed Rows (1)
 - frostnovamsl
-
 ## Modified Rows (9)
 ### firenovaarrow
-- `*ID`: $\color{gray}{\text{691}}$ (Old) &rarr; $\color{blue}{\text{740}}$ (New)
-
+- `\*ID`: $\\color{gray}{\\text{691}}$ (Old) &rarr; $\\color{blue}{\\text{740}}$ (New)
 ### frostnovaarrow
-- `*ID`: $\color{gray}{\text{690}}$ (Old) &rarr; $\color{blue}{\text{739}}$ (New)
-
+- `\*ID`: $\\color{gray}{\\text{690}}$ (Old) &rarr; $\\color{blue}{\\text{739}}$ (New)
 ### poisondagger
-- `*ID`: $\color{gray}{\text{693}}$ (Old) &rarr; $\color{blue}{\text{742}}$ (New)
-
+- `\*ID`: $\\color{gray}{\\text{693}}$ (Old) &rarr; $\\color{blue}{\\text{742}}$ (New)
 ### poisondaggeractivator
-- `*ID`: $\color{gray}{\text{694}}$ (Old) &rarr; $\color{blue}{\text{743}}$ (New)
-
+- `\*ID`: $\\color{gray}{\\text{694}}$ (Old) &rarr; $\\color{blue}{\\text{743}}$ (New)
 ### poisondaggernova
-- `*ID`: $\color{gray}{\text{695}}$ (Old) &rarr; $\color{blue}{\text{744}}$ (New)
-
+- `\*ID`: $\\color{gray}{\\text{695}}$ (Old) &rarr; $\\color{blue}{\\text{744}}$ (New)
 ### powerstrikenova
-- `*ID`: $\color{gray}{\text{692}}$ (Old) &rarr; $\color{blue}{\text{741}}$ (New)
-
-### proc_splashdamage
-- `*ID`: $\color{gray}{\text{688}}$ (Old) &rarr; $\color{blue}{\text{737}}$ (New)
-- `Range`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
-
-### proc_splashinit
-- `*ID`: $\color{gray}{\text{689}}$ (Old) &rarr; $\color{blue}{\text{738}}$ (New)
-- `Range`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
-- `NextDelay`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-
+- `\*ID`: $\\color{gray}{\\text{692}}$ (Old) &rarr; $\\color{blue}{\\text{741}}$ (New)
+### proc\_splashdamage
+- `\*ID`: $\\color{gray}{\\text{688}}$ (Old) &rarr; $\\color{blue}{\\text{737}}$ (New)
+- `Range`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
+### proc\_splashinit
+- `\*ID`: $\\color{gray}{\\text{689}}$ (Old) &rarr; $\\color{blue}{\\text{738}}$ (New)
+- `Range`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
+- `NextDelay`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### thunderstormnova
-- `*ID`: $\color{gray}{\text{686}}$ (Old) &rarr; $\color{blue}{\text{736}}$ (New)
+- `\*ID`: $\\color{gray}{\\text{686}}$ (Old) &rarr; $\\color{blue}{\\text{736}}$ (New)
