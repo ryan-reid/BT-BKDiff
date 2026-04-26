@@ -1,0 +1,1143 @@
+{
+  "class": "warlock",
+  "equipment_bonus": null,
+  "groups": {
+    "Demonic Summoning": {
+      "Summon Goatman": {
+        "synergies": {
+          "Death Mark": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "15",
+              "Defense": "100",
+              "Life": "275",
+              "Attack Rating": "40",
+              "Attack Speed": "10",
+              "Damage": "254-303",
+              "+ Chance of Crushing Blow": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "24.5",
+              "Defense": "480",
+              "Life": "2103",
+              "Attack Rating": "800",
+              "Attack Speed": "25",
+              "Damage": "807-942",
+              "+ Chance of Crushing Blow": ""
+            }
+          },
+          {
+            "lvl": 26,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "27.5",
+              "Defense": "600",
+              "Life": "2681",
+              "Attack Rating": "1040",
+              "Attack Speed": "25",
+              "Damage": "1011-1173",
+              "+ Chance of Crushing Blow": ""
+            }
+          }
+        ]
+      },
+      "Demonic Mastery": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 7,
+            "blvl": 1,
+            "ui": {
+              "Run/Walk Speed": "25",
+              "Damage": "70",
+              "Attack Speed": "11",
+              "Attack Rating": "175",
+              "Max Demons": "1"
+            }
+          },
+          {
+            "lvl": 26,
+            "blvl": 20,
+            "ui": {
+              "Run/Walk Speed": "35",
+              "Damage": "260",
+              "Attack Speed": "30",
+              "Attack Rating": "650",
+              "Max Demons": "3"
+            }
+          }
+        ]
+      },
+      "Death Mark": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 7,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "3.7",
+              "Duration": "8.1",
+              "Defense": "-260",
+              "Magic Damage Increased by": "17",
+              "Damage Increased by": "17",
+              "Casting Delay": ".8"
+            }
+          },
+          {
+            "lvl": 26,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "8.5",
+              "Duration": "18",
+              "Defense": "-925",
+              "Magic Damage Increased by": "55",
+              "Damage Increased by": "55",
+              "Casting Delay": ".8"
+            }
+          }
+        ]
+      },
+      "Summon Tainted": {
+        "synergies": {
+          "Blood Boil": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 7,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "28",
+              "Defense": "195",
+              "Life": "3581",
+              "Resist Fire": "47",
+              "Fire Damage": "202-297"
+            }
+          },
+          {
+            "lvl": 25,
+            "blvl": 19,
+            "ui": {
+              "Mana Cost": "37",
+              "Defense": "555",
+              "Life": "5408",
+              "Resist Fire": "63",
+              "Fire Damage": "2748-3129"
+            }
+          }
+        ]
+      },
+      "Summon Defiler": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 7,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "38",
+              "Defense": "245",
+              "Life": "930",
+              "Damage Shared Between Bound Targets": "43",
+              "Max Bound Souls": "4"
+            }
+          },
+          {
+            "lvl": 26,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "47.5",
+              "Defense": "625",
+              "Life": "2925",
+              "Damage Shared Between Bound Targets": "55",
+              "Max Bound Souls": "5"
+            }
+          }
+        ]
+      },
+      "Blood Oath": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 7,
+            "blvl": 1,
+            "ui": {
+              "Damage Taken Goes To your demon": "17",
+              "Physical Damage to your demon Reduced by": "7",
+              "Resist All for your demon": "47",
+              "Life of your demon": "260"
+            }
+          },
+          {
+            "lvl": 26,
+            "blvl": 20,
+            "ui": {
+              "Damage Taken Goes To your demon": "55",
+              "Physical Damage to your demon Reduced by": "10",
+              "Resist All for your demon": "70",
+              "Life of your demon": "925"
+            }
+          }
+        ]
+      },
+      "Engorge": {
+        "synergies": {
+          "Blood Oath": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 7,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "4.5",
+              "Duration": "23",
+              "Life Steal": "27",
+              "Heal Demon's Life": "36",
+              "Attack Speed": "21",
+              "Physical Damage to your demon Reduced by": "5",
+              "Defense": "500",
+              "Replenish Life": "100"
+            }
+          },
+          {
+            "lvl": 26,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "9.2",
+              "Duration": "80",
+              "Life Steal": "65",
+              "Heal Demon's Life": "55",
+              "Attack Speed": "35",
+              "Physical Damage to your demon Reduced by": "5",
+              "Defense": "500",
+              "Replenish Life": "100"
+            }
+          }
+        ]
+      },
+      "Blood Boil": {
+        "synergies": {
+          "Blood Oath": 20,
+          "Engorge": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 8,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "5.5",
+              "Demon's Life Cost": "8",
+              "Radius": "6.3",
+              "Fire Damage": "330-450",
+              "Damage": "330-450"
+            }
+          },
+          {
+            "lvl": 27,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "10.2",
+              "Demon's Life Cost": "5",
+              "Radius": "12.6",
+              "Fire Damage": "1490-2120",
+              "Damage": "1490-2120"
+            }
+          }
+        ]
+      },
+      "Consume": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 7,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "31",
+              "Duration": "160",
+              "Run/Walk Speed": "31",
+              "Max Life": "11",
+              "Bonus from": "N/A"
+            }
+          },
+          {
+            "lvl": 26,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "50",
+              "Duration": "540",
+              "Run/Walk Speed": "42",
+              "Max Life": "30",
+              "Bonus from": "N/A"
+            }
+          }
+        ]
+      },
+      "Bind Demon": {
+        "synergies": {
+          "Death Mark": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 7,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "31",
+              "Chance to Bind": "39",
+              "Life of your demon": "N/A",
+              "Flat Damage": "181",
+              "Damage Percentage": "105",
+              "Bound demons gain Extra Strong": "",
+              "Bound demons gain Extra Fast": "",
+              "Bound demons gain Spectral Hit": "",
+              "Bound demons gain Aura Enchanted": ""
+            }
+          },
+          {
+            "lvl": 26,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "50",
+              "Chance to Bind": "46",
+              "Life of your demon": "N/A",
+              "Flat Damage": "732",
+              "Damage Percentage": "200",
+              "Bound demons gain Extra Strong": "",
+              "Bound demons gain Extra Fast": "",
+              "Bound demons gain Spectral Hit": "",
+              "Bound demons gain Aura Enchanted": ""
+            }
+          }
+        ]
+      }
+    },
+    "Hexcraft & Blades": {
+      "Levitation Mastery": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 7,
+            "blvl": 1,
+            "ui": {
+              "Weapon Requirements": "-14",
+              "Critical Strike Chance": "20",
+              "Attack Rating": "70",
+              "Damage": "49"
+            }
+          },
+          {
+            "lvl": 26,
+            "blvl": 20,
+            "ui": {
+              "Weapon Requirements": "-50",
+              "Critical Strike Chance": "31",
+              "Attack Rating": "165",
+              "Damage": "125"
+            }
+          }
+        ]
+      },
+      "Eldritch Blast": {
+        "synergies": {
+          "Hex: Purge": null,
+          "Blade Warp": null,
+          "Psychic Ward": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Mana Steal": "",
+              "Life Steal": "",
+              "Magic Damage": "",
+              "Duration": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Mana Steal": "",
+              "Life Steal": "",
+              "Magic Damage": "",
+              "Duration": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Mana Steal": "",
+              "Life Steal": "",
+              "Magic Damage": "",
+              "Duration": ""
+            }
+          }
+        ]
+      },
+      "Hex: Bane": {
+        "synergies": {
+          "Mirrored Blades": null,
+          "Hex: Purge": null,
+          "Consume": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "[PH] Effect Length": "",
+              "Magic Damage": "",
+              "Attack Rating": "",
+              "Hex Duration: s": "",
+              "to Enemy Defense": "",
+              "to Enemy Attack Rating": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "[PH] Effect Length": "",
+              "Magic Damage": "",
+              "Attack Rating": "",
+              "Hex Duration: s": "",
+              "to Enemy Defense": "",
+              "to Enemy Attack Rating": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "[PH] Effect Length": "",
+              "Magic Damage": "",
+              "Attack Rating": "",
+              "Hex Duration: s": "",
+              "to Enemy Defense": "",
+              "to Enemy Attack Rating": ""
+            }
+          }
+        ]
+      },
+      "Hex: Siphon": {
+        "synergies": {
+          "Engorge": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Life After Each Kill": "",
+              "Mana After Each Kill": "",
+              "Attack Rating": "",
+              "Hex Duration: s": "",
+              "Enemy Damage": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Life After Each Kill": "",
+              "Mana After Each Kill": "",
+              "Attack Rating": "",
+              "Hex Duration: s": "",
+              "Enemy Damage": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Life After Each Kill": "",
+              "Mana After Each Kill": "",
+              "Attack Rating": "",
+              "Hex Duration: s": "",
+              "Enemy Damage": ""
+            }
+          }
+        ]
+      },
+      "Psychic Ward": {
+        "synergies": {
+          "Cleave": null,
+          "Levitation Mastery": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Stun Length": "",
+              "Absorbs damage": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Stun Length": "",
+              "Absorbs damage": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Stun Length": "",
+              "Absorbs damage": ""
+            }
+          }
+        ]
+      },
+      "Echoing Strike": {
+        "synergies": {
+          "Mirrored Blades": null,
+          "Blade Warp": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Attack Rating": "",
+              "Damage": "",
+              "Damage: +": "",
+              "Echo": "",
+              "Weapon Damage": "",
+              "Additional echoes created every fifth level": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Attack Rating": "",
+              "Damage": "",
+              "Damage: +": "",
+              "Echo": "",
+              "Weapon Damage": "",
+              "Additional echoes created every fifth level": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Attack Rating": "",
+              "Damage": "",
+              "Damage: +": "",
+              "Echo": "",
+              "Weapon Damage": "",
+              "Additional echoes created every fifth level": ""
+            }
+          }
+        ]
+      },
+      "Hex: Purge": {
+        "synergies": {
+          "Hex: Bane": null,
+          "Eldritch Blast": null,
+          "Sigil: Death": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Magic Explosion Damage": "",
+              "Attack Speed": "",
+              "Attack Rating": "",
+              "Range: s": "",
+              "Hex Duration: s": "",
+              "Hex Removed after Explosion": "",
+              "Chance to Erupt": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Magic Explosion Damage": "",
+              "Attack Speed": "",
+              "Attack Rating": "",
+              "Range: s": "",
+              "Hex Duration: s": "",
+              "Hex Removed after Explosion": "",
+              "Chance to Erupt": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Magic Explosion Damage": "",
+              "Attack Speed": "",
+              "Attack Rating": "",
+              "Range: s": "",
+              "Hex Duration: s": "",
+              "Hex Removed after Explosion": "",
+              "Chance to Erupt": ""
+            }
+          }
+        ]
+      },
+      "Blade Warp": {
+        "synergies": {
+          "Mirrored Blades": null,
+          "Echoing Strike": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Radius: s": "",
+              "Magic Damage": "",
+              "Casting Delay": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Radius: s": "",
+              "Magic Damage": "",
+              "Casting Delay": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Radius: s": "",
+              "Magic Damage": "",
+              "Casting Delay": ""
+            }
+          }
+        ]
+      },
+      "Cleave": {
+        "synergies": {
+          "Mirrored Blades": null,
+          "Hex: Purge": null,
+          "Eldritch Blast": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Cleave Arc: Degrees": "",
+              "Damage": "",
+              "Attack Speed": "",
+              "Attack Rating": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Cleave Arc: Degrees": "",
+              "Damage": "",
+              "Attack Speed": "",
+              "Attack Rating": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Cleave Arc: Degrees": "",
+              "Damage": "",
+              "Attack Speed": "",
+              "Attack Rating": ""
+            }
+          }
+        ]
+      },
+      "Mirrored Blades": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Attack Speed": "",
+              "Mirrored Blade Damage": "",
+              "Mirrored Weapons Created": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Attack Speed": "",
+              "Mirrored Blade Damage": "",
+              "Mirrored Weapons Created": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Attack Speed": "",
+              "Mirrored Blade Damage": "",
+              "Mirrored Weapons Created": ""
+            }
+          }
+        ]
+      }
+    },
+    "Sigils & Cataclysm": {
+      "Sigil: Lethargy": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Radius: s": "",
+              "Enemy Defense": "",
+              "Damage Taken": "",
+              "Run/Walk Speed": "",
+              "Attack Speed": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Radius: s": "",
+              "Enemy Defense": "",
+              "Damage Taken": "",
+              "Run/Walk Speed": "",
+              "Attack Speed": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Radius: s": "",
+              "Enemy Defense": "",
+              "Damage Taken": "",
+              "Run/Walk Speed": "",
+              "Attack Speed": ""
+            }
+          }
+        ]
+      },
+      "Ring of Fire": {
+        "synergies": {
+          "Flame Wave": null,
+          "Apocalypse": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Fire Damage": "",
+              "+ Fire Damage per": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Fire Damage": "",
+              "+ Fire Damage per": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Fire Damage": "",
+              "+ Fire Damage per": ""
+            }
+          }
+        ]
+      },
+      "Miasma Bolt": {
+        "synergies": {
+          "Miasma Chain": null,
+          "Abyss": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Average Magic Damage": "",
+              "Magic Damage": "",
+              "Duration": "",
+              "Miasma Radius: Yards": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Average Magic Damage": "",
+              "Magic Damage": "",
+              "Duration": "",
+              "Miasma Radius: Yards": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Average Magic Damage": "",
+              "Magic Damage": "",
+              "Duration": "",
+              "Miasma Radius: Yards": ""
+            }
+          }
+        ]
+      },
+      "Sigil: Rancor": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Radius: s": "",
+              "Attack Speed": "",
+              "Damage": "",
+              "Chance to Enrage": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Radius: s": "",
+              "Attack Speed": "",
+              "Damage": "",
+              "Chance to Enrage": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Radius: s": "",
+              "Attack Speed": "",
+              "Damage": "",
+              "Chance to Enrage": ""
+            }
+          }
+        ]
+      },
+      "Enhanced Entropy": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Bonus Abyss Radius: + Yards": "",
+              "+ Seconds to Miasma Duration": "",
+              "Miasma Radius: Yards": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Bonus Abyss Radius: + Yards": "",
+              "+ Seconds to Miasma Duration": "",
+              "Miasma Radius: Yards": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Bonus Abyss Radius: + Yards": "",
+              "+ Seconds to Miasma Duration": "",
+              "Miasma Radius: Yards": ""
+            }
+          }
+        ]
+      },
+      "Flame Wave": {
+        "synergies": {
+          "Ring of Fire": null,
+          "Apocalypse": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Width: s": "",
+              "Average Fire Damage": "",
+              "Fire Damage": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Width: s": "",
+              "Average Fire Damage": "",
+              "Fire Damage": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Width: s": "",
+              "Average Fire Damage": "",
+              "Fire Damage": ""
+            }
+          }
+        ]
+      },
+      "Miasma Chain": {
+        "synergies": {
+          "Miasma Bolt": null,
+          "Abyss": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Average Magic Damage": "",
+              "Magic Damage": "",
+              "hits": "",
+              "Casting Delay": "",
+              "Duration": "",
+              "Miasma Radius: Yards": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Average Magic Damage": "",
+              "Magic Damage": "",
+              "hits": "",
+              "Casting Delay": "",
+              "Duration": "",
+              "Miasma Radius: Yards": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Average Magic Damage": "",
+              "Magic Damage": "",
+              "hits": "",
+              "Casting Delay": "",
+              "Duration": "",
+              "Miasma Radius: Yards": ""
+            }
+          }
+        ]
+      },
+      "Sigil: Death": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Radius: s": "",
+              "Slays enemies with less than health": "",
+              "Fire Explosion Damage: - of slain enemy's health": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Radius: s": "",
+              "Slays enemies with less than health": "",
+              "Fire Explosion Damage: - of slain enemy's health": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Duration": "",
+              "Radius: s": "",
+              "Slays enemies with less than health": "",
+              "Fire Explosion Damage: - of slain enemy's health": ""
+            }
+          }
+        ]
+      },
+      "Apocalypse": {
+        "synergies": {
+          "Ring of Fire": null,
+          "Flame Wave": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Radius: s": "",
+              "Resist Fire": "",
+              "Fire Damage": "",
+              "Casting Delay": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Radius: s": "",
+              "Resist Fire": "",
+              "Fire Damage": "",
+              "Casting Delay": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Radius: s": "",
+              "Resist Fire": "",
+              "Fire Damage": "",
+              "Casting Delay": ""
+            }
+          }
+        ]
+      },
+      "Abyss": {
+        "synergies": {
+          "Miasma Bolt": null,
+          "Miasma Chain": null
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "",
+              "Average Magic Damage": "",
+              "Magic Damage": "",
+              "Radius: s": "",
+              "Casting Delay": "",
+              "Duration": ""
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Average Magic Damage": "",
+              "Magic Damage": "",
+              "Radius: s": "",
+              "Casting Delay": "",
+              "Duration": ""
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "",
+              "Average Magic Damage": "",
+              "Magic Damage": "",
+              "Radius: s": "",
+              "Casting Delay": "",
+              "Duration": ""
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -574,6 +574,7 @@ class SkillAnalyzerService:
         self.skills = {row.get('skill', '').strip().lower(): row for row in repo.get_excel_table('skills')}
         self.missiles = {row.get('Missile', '').strip().lower(): row for row in repo.get_excel_table('missiles')}
         self.skilldesc = {row.get('skilldesc', '').strip().lower(): row for row in repo.get_excel_table('skilldesc')}
+        self.monstats = {row.get('Id', '').strip().lower(): row for row in repo.get_excel_table('monstats')}
         self.class_map = {"nec":"Necromancer", "bar":"Barbarian", "ama":"Amazon", "sor":"Sorceress", "pal":"Paladin", "dru":"Druid", "asn":"Assassin", "war":"Warlock"}
 
     def get_dam_generic(self, s, lvl, prefix):
@@ -759,7 +760,11 @@ class SkillAnalyzerService:
         return re.sub(r"\s+", " ", s.replace("-%d", "").replace("-%+d", "").replace("per second", "").replace("second", "").replace("yard", "")).strip(": -").strip()
 
     def build_effect_label(self, desc_row, line_index, raw_text, block="desc"):
+        text_col = f"{block}texta{line_index}" if block != "desc" else f"desctexta{line_index}"
+        text_key = desc_row.get(text_col, "")
         label = self.format_generic_label(raw_text)
+        if label == "Damage" and ("percent" in raw_text.lower() or "damagepercent" in text_key.lower()):
+            return "Damage %"
         if label == "Cold Length":
             return "Cold Duration"
         if label != "over":
@@ -790,15 +795,87 @@ class SkillAnalyzerService:
         key = re.sub(r"[\s']", "", skill_name.strip().lower())
         return int(scenario_skill_levels.get(key, fallback))
 
-    def get_display_synergy_bonus_mult(self, skill, scenario_skill_levels: Optional[Dict[str, int]]) -> float:
-        syn_calc = skill.get('EDmgSymPerCalc') or skill.get('DmgSymPerCalc')
-        if not syn_calc or syn_calc == '0':
+    def get_display_skill_levels(
+        self,
+        source_skill,
+        target_skill_name: str,
+        lvl: int,
+        blvl: int,
+        scenario_skill_levels: Optional[Dict[str, int]],
+    ) -> Tuple[int, int]:
+        source_names = {source_skill.get('skill', '').strip().lower()}
+        desc_key = source_skill.get("skilldesc", "").lower()
+        if desc_key in self.skilldesc:
+            str_name_key = self.skilldesc[desc_key].get("str name", "").lower()
+            display_name = (self.repo.get_string(str_name_key) or "").strip().lower()
+            if display_name:
+                source_names.add(display_name)
+
+        target_name = target_skill_name.strip().lower()
+        if target_name in source_names:
+            return lvl, blvl
+
+        ref_blvl = self.get_display_skill_level(target_skill_name, scenario_skill_levels, 0)
+        soft_bonus = max(0, int(lvl) - int(blvl))
+        return ref_blvl + soft_bonus, ref_blvl
+
+    def get_display_damage_bonus_mult(self, skill, scenario_skill_levels: Optional[Dict[str, int]], damage_kind: str) -> float:
+        if damage_kind == "physical":
+            calc = skill.get('DmgSymPerCalc')
+        elif damage_kind == "elemental":
+            calc = skill.get('EDmgSymPerCalc') or skill.get('DmgSymPerCalc')
+        else:
+            calc = skill.get('EDmgSymPerCalc') or skill.get('DmgSymPerCalc')
+        if not calc or calc == '0':
             return 1.0
         try:
-            bonus = float(self.evaluate_display_formula(syn_calc, skill, 1, 1, None, scenario_skill_levels, use_synergy=True))
+            bonus = float(self.evaluate_display_formula(calc, skill, 1, 1, None, scenario_skill_levels, use_synergy=True))
             return 1.0 + (bonus / 100.0)
         except:
             return 1.0
+
+    def get_summon_base_life(self, skill) -> float:
+        summon_id = (skill.get('summon') or "").strip().lower()
+        if not summon_id:
+            return 0.0
+        mon = self.monstats.get(summon_id)
+        if not mon:
+            return 0.0
+
+        candidates = []
+        for key in ['minHP', 'MinHP(N)', 'MinHP(H)', 'maxHP', 'MaxHP(N)', 'MaxHP(H)']:
+            raw = mon.get(key, '')
+            if raw in ('', '0'):
+                continue
+            try:
+                candidates.append(float(raw))
+            except ValueError:
+                continue
+        return max(candidates) if candidates else 0.0
+
+    def get_display_missile(self, missile_name: str):
+        key = (missile_name or "").strip().lower()
+        if not key:
+            return None
+        row = self.missiles.get(key)
+        if row:
+            return row
+
+        compact = key.replace(" ", "")
+        row = self.missiles.get(compact)
+        if row:
+            return row
+
+        aliases = {
+            "eruption center": "coldfissure center",
+        }
+        alias_key = aliases.get(key)
+        if alias_key:
+            return self.missiles.get(alias_key)
+        return None
+
+    def get_display_synergy_bonus_mult(self, skill, scenario_skill_levels: Optional[Dict[str, int]]) -> float:
+        return self.get_display_damage_bonus_mult(skill, scenario_skill_levels, "generic")
 
     def get_display_elen_synergy_bonus_mult(self, skill, scenario_skill_levels: Optional[Dict[str, int]]) -> float:
         syn_calc = skill.get('ELenSymPerCalc')
@@ -915,7 +992,8 @@ class SkillAnalyzerService:
                 shift = int(s.get('HitShift', '8') or '8')
                 res = val * (2.0 ** shift)
                 if use_synergy:
-                    res *= self.get_display_synergy_bonus_mult(s, scenario_skill_levels)
+                    damage_kind = "elemental" if var in ['enma', 'edmn', 'exma', 'edmx', 'enms', 'exms'] else "physical"
+                    res *= self.get_display_damage_bonus_mult(s, scenario_skill_levels, damage_kind)
                 return res
             if var in ['edln', 'len']:
                 res = self.get_display_raw_value(s, lvl, 'ELen')
@@ -925,7 +1003,7 @@ class SkillAnalyzerService:
             if desc_row and var.startswith('m') and len(var) == 4:
                 m_name = desc_row.get(f'descmissile{var[1]}')
                 if m_name:
-                    m = self.missiles.get(m_name.lower())
+                    m = self.get_display_missile(m_name)
                     if m:
                         value_map = {'nm': 'MinDamage', 'xm': 'MaxDamage', 'eo': 'EMin', 'ey': 'EMax', 'rn': 'Range'}
                         val = self.get_display_raw_value(m, lvl, value_map.get(var[2:], ''))
@@ -934,7 +1012,8 @@ class SkillAnalyzerService:
                         shift = int(m.get('HitShift', '8') or '8')
                         res = val * (2.0 ** shift)
                         if use_synergy and var[2:] in ['eo', 'ey', 'nm', 'xm']:
-                            res *= self.get_display_synergy_bonus_mult(s, scenario_skill_levels)
+                            damage_kind = "elemental" if var[2:] in ['eo', 'ey'] else "physical"
+                            res *= self.get_display_damage_bonus_mult(s, scenario_skill_levels, damage_kind)
                         return res
             return 0.0
         except:
@@ -966,8 +1045,7 @@ class SkillAnalyzerService:
                 self.resolve_display_symbol(
                     m.group(2),
                     self.skills.get(m.group(1).lower(), skill),
-                    lvl,
-                    self.get_display_skill_level(m.group(1), scenario_skill_levels, 0),
+                    *self.get_display_skill_levels(skill, m.group(1), lvl, blvl, scenario_skill_levels),
                     None,
                     scenario_skill_levels,
                     use_synergy
@@ -1023,28 +1101,61 @@ class SkillAnalyzerService:
                 return 0.0
             val = self.evaluate_display_formula(calc, skill, lvl, blvl, desc_row, scenario_skill_levels, use_synergy=True)
             calc_str = str(calc).replace(' ', '')
+            calc_str_lower = calc_str.lower()
+            text_raw_lower = text_raw.lower()
             if '/256' not in calc_str and abs(val) > 100 and any(x in str(calc) for x in ['enma', 'exma', 'edmn', 'edmx', 'm1eo', 'm1ey', 'pnma', 'pxma', 'enms', 'exms']):
                 val /= 256.0
-            if 'poison damage' in text_raw.lower():
+            if (
+                skill.get('skill', '').lower() == 'armageddon'
+                and 'average fire damage' in text_raw_lower
+                and any(token in calc_str_lower for token in ['m1eo', 'm1ey'])
+            ):
+                missile_name = desc_row.get('descmissile1', '')
+                missile = self.get_display_missile(missile_name)
+                if missile:
+                    missile_range = self.get_display_raw_value(missile, lvl, 'Range')
+                    if missile_range:
+                        val *= (missile_range / 64.0)
+            if 'poison damage' in text_raw_lower:
                 elen = self.get_display_raw_value(skill, lvl, 'ELen')
                 if 'm1' in str(calc):
                     m_name = desc_row.get('descmissile1')
-                    m = self.missiles.get(m_name.lower()) if m_name else None
+                    m = self.get_display_missile(m_name) if m_name else None
                     if m:
                         elen = self.get_display_raw_value(m, lvl, 'ELen')
                 if 'edln' not in str(calc).lower() and 'len' not in str(calc).lower():
                     val *= (elen / 256.0)
-            if desc_row.get(line_prefix + str(line_idx)) in ['12', '31'] or ('second' in text_raw.lower() and 'per second' not in text_raw.lower()):
-                if val > 15:
+            if 'mana cost' in text_raw_lower and 'per second' in text_raw_lower:
+                val *= 12.0
+            line_type = desc_row.get(line_prefix + str(line_idx))
+            if skill.get('skill', '').lower() == 'eruption' and 'duration' in text_raw_lower and "miss('eruptioncenter'.rang)" in calc_str_lower:
+                val /= 50.0
+            elif line_type in ['12', '31'] or ('second' in text_raw_lower and 'per second' not in text_raw_lower):
+                if val >= 15:
                     val /= 25.0
-            if desc_row.get(line_prefix + str(line_idx)) == '36' and 'radius' in text_raw.lower():
-                if c2 == '3':
-                    val /= 3.0
-            if 'life' in text_raw.lower() and desc_row.get(line_prefix + str(line_idx)) == '13':
-                val = 440.0 * (1.0 + (val + 400.0) / 100.0)
+            if line_type == '36' and any(token in text_raw_lower for token in ['radius', 'range']):
+                if 'par3*2' in calc_str_lower:
+                    val /= 2.0
+                elif c2:
+                    try:
+                        divisor = float(c2)
+                        if divisor:
+                            val /= divisor
+                    except ValueError:
+                        pass
+            if 'life' in text_raw_lower and line_type == '13':
+                base_life = self.get_summon_base_life(skill)
+                if base_life > 0 and skill.get('charclass') == 'dru':
+                    val = base_life * (1.0 + (val / 100.0))
+                else:
+                    val = 440.0 * (1.0 + (val + 400.0) / 100.0)
             return val
 
         v_min = get_val(c1)
+        if 'mana cost' in text_raw.lower() and 'per second' in text_raw.lower():
+            if is_range and c2:
+                return f"{round(v_min):.0f}-{round(get_val(c2)):.0f}"
+            return f"{round(v_min):.0f}"
         if is_range and c2:
             return f"{v_min:.2f}-{get_val(c2):.2f}"
         return f"{v_min:.2f}"
@@ -1065,7 +1176,9 @@ class SkillAnalyzerService:
                 label = self.build_effect_label(desc_row, i, text_label, "desc" if not block else block)
                 value = self.calculate_display_effect_value(skill, desc_row, i, lvl, blvl, block, scenario_skill_levels)
                 unit = "%" if "%%" in text_label or "percent" in text_label.lower() else ("s" if "second" in text_label.lower() else ("y" if "yard" in text_label.lower() else ""))
-                if "per second" in text_label.lower():
+                if "mana cost" in text_label.lower() and "per second" in text_label.lower():
+                    unit = ""
+                elif "per second" in text_label.lower():
                     unit = " dmg/s"
                 prefix = "+" if "%+" in text_label and not str(value).startswith("-") else ""
                 if "%d-%d" in text_label or '-' in value[1:]:

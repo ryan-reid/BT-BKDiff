@@ -1,0 +1,1150 @@
+{
+  "class": "druid",
+  "equipment_bonus": 10,
+  "groups": {
+    "Summoning": {
+      "Raven": {
+        "synergies": {
+          "Summon Spirit Wolf": 20,
+          "Summon Dire Wolf": 20,
+          "Summon Grizzly": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Max Ravens": "1",
+              "hits": "7",
+              "Damage": "16-57",
+              "Cold Damage": "16-57",
+              "Mana Cost Per Raven": "6"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Max Ravens": "5",
+              "hits": "7",
+              "Damage": "598-1049",
+              "Cold Damage": "598-1049",
+              "Mana Cost Per Raven": "6"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Max Ravens": "5",
+              "hits": "7",
+              "Damage": "1959-2525",
+              "Cold Damage": "1959-2525",
+              "Mana Cost Per Raven": "6"
+            }
+          }
+        ]
+      },
+      "Poison Creeper": {
+        "synergies": {
+          "Rabies": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Poison Duration": "4",
+              "Poison Damage": "75-93",
+              "Life": "50",
+              "Mana Cost": "8"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Poison Duration": "4",
+              "Poison Damage": "900-993",
+              "Life": "525",
+              "Mana Cost": "8"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Poison Duration": "4",
+              "Poison Damage": "3022-3266",
+              "Life": "775",
+              "Mana Cost": "8"
+            }
+          }
+        ]
+      },
+      "Oak Sage": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "15",
+              "Radius": "20",
+              "Max Life": "30",
+              "Life": "500"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "34",
+              "Radius": "45.3",
+              "Max Life": "125",
+              "Life": "3350"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "44",
+              "Radius": "58.6",
+              "Max Life": "175",
+              "Life": "4850"
+            }
+          }
+        ]
+      },
+      "Summon Spirit Wolf": {
+        "synergies": {
+          "Summon Dire Wolf": 20,
+          "Summon Grizzly": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Defense": "50",
+              "Attack Rating": "50",
+              "Max Wolves": "1",
+              "Cold Damage": "3-11",
+              "Life": "247",
+              "Mana Cost": "15"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Defense": "240",
+              "Attack Rating": "525",
+              "Max Wolves": "1",
+              "Cold Damage": "97-104",
+              "Life": "494",
+              "Mana Cost": "15"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Defense": "340",
+              "Attack Rating": "775",
+              "Max Wolves": "1",
+              "Cold Damage": "245-254",
+              "Life": "676",
+              "Mana Cost": "15"
+            }
+          }
+        ]
+      },
+      "Carrion Vine": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Heals": "4",
+              "Life": "95",
+              "Mana Cost": "10"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Heals": "23",
+              "Life": "546",
+              "Mana Cost": "10"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Heals": "33",
+              "Life": "783",
+              "Mana Cost": "10"
+            }
+          }
+        ]
+      },
+      "Heart of Wolverine": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "20",
+              "Radius": "20",
+              "Damage": "20",
+              "Attack Rating": "25",
+              "Life": "500"
+            }
+          },
+          {
+            "lvl": 18,
+            "blvl": 18,
+            "ui": {
+              "Mana Cost": "37",
+              "Radius": "42.6",
+              "Damage": "139",
+              "Attack Rating": "144",
+              "Life": "2625"
+            }
+          },
+          {
+            "lvl": 28,
+            "blvl": 18,
+            "ui": {
+              "Mana Cost": "47",
+              "Radius": "56",
+              "Damage": "209",
+              "Attack Rating": "214",
+              "Life": "3875"
+            }
+          }
+        ]
+      },
+      "Summon Dire Wolf": {
+        "synergies": {
+          "Summon Spirit Wolf": 20,
+          "Raven": 20,
+          "Summon Grizzly": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Defense": "204",
+              "Max Life": "50",
+              "Max Wolves": "1",
+              "Damage": "45-79",
+              "Life": "345",
+              "Attack Rating": "500",
+              "Mana Cost": "20"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Defense": "280",
+              "Max Life": "126",
+              "Max Wolves": "5",
+              "Damage": "572-732",
+              "Life": "920",
+              "Attack Rating": "500",
+              "Mana Cost": "20"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Defense": "420",
+              "Max Life": "166",
+              "Max Wolves": "5",
+              "Damage": "1497-1770",
+              "Life": "1222",
+              "Attack Rating": "750",
+              "Mana Cost": "20"
+            }
+          }
+        ]
+      },
+      "Solar Creeper": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "14",
+              "Mana Recovery Rate": "4",
+              "Life": "165"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "33",
+              "Mana Recovery Rate": "23",
+              "Life": "792"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "43",
+              "Mana Recovery Rate": "33",
+              "Life": "1122"
+            }
+          }
+        ]
+      },
+      "Spirit of Barbs": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "25",
+              "Radius": "NOT_SHOWN",
+              "Attacker Takes Damage of": "32",
+              "Life": "500"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "44",
+              "Radius": "25.3",
+              "Attacker Takes Damage of": "347",
+              "Life": "2875"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "54",
+              "Radius": "38.6",
+              "Attacker Takes Damage of": "707",
+              "Life": "4125"
+            }
+          }
+        ]
+      },
+      "Summon Grizzly": {
+        "synergies": {
+          "Summon Spirit Wolf": 20,
+          "Summon Dire Wolf": 20,
+          "Raven": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Damage": "798-963",
+              "Life": "2288",
+              "Defense": "300",
+              "Attack Rating": "750",
+              "Mana Cost": "40"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Damage": "2019-2221",
+              "Life": "2730",
+              "Defense": "200",
+              "Attack Rating": "500",
+              "Mana Cost": "40"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Damage": "4498-4740",
+              "Life": "3770",
+              "Defense": "300",
+              "Attack Rating": "750",
+              "Mana Cost": "40"
+            }
+          }
+        ]
+      }
+    },
+    "Shape Shifting": {
+      "Werewolf": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Attack Speed": "20",
+              "Attack Rating": "50",
+              "Mana Cost": "15",
+              "Casting Delay": "1",
+              "Max Life": "25",
+              "Lycanthropy": "N/A"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Attack Speed": "68",
+              "Attack Rating": "335",
+              "Mana Cost": "15",
+              "Casting Delay": "1",
+              "Max Life": "25",
+              "Lycanthropy": "N/A"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Attack Speed": "73",
+              "Attack Rating": "485",
+              "Mana Cost": "15",
+              "Casting Delay": "1",
+              "Max Life": "103",
+              "Lycanthropy": "N/A"
+            }
+          }
+        ]
+      },
+      "Lycanthropy": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Max Life": "20"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Max Life": "58"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Max Life": "78"
+            }
+          }
+        ]
+      },
+      "Werebear": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Defense": "40",
+              "Damage": "55",
+              "Mana Cost": "15",
+              "Casting Delay": "1",
+              "Max Life": "108",
+              "Lycanthropy": "N/A"
+            }
+          },
+          {
+            "lvl": 16,
+            "blvl": 16,
+            "ui": {
+              "Defense": "190",
+              "Damage": "280",
+              "Mana Cost": "15",
+              "Casting Delay": "1",
+              "Max Life": "108",
+              "Lycanthropy": "N/A"
+            }
+          },
+          {
+            "lvl": 26,
+            "blvl": 16,
+            "ui": {
+              "Defense": "290",
+              "Damage": "430",
+              "Mana Cost": "15",
+              "Casting Delay": "1",
+              "Max Life": "128",
+              "Lycanthropy": "N/A"
+            }
+          }
+        ]
+      },
+      "Feral Rage": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Damage": "50",
+              "Life Steal": "4-12",
+              "Run/Walk Speed": "19-32",
+              "Attack Rating": "20",
+              "Duration": "30",
+              "Mana Cost": "3"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Damage": "145",
+              "Life Steal": "4-88",
+              "Run/Walk Speed": "19-55",
+              "Attack Rating": "210",
+              "Duration": "30",
+              "Mana Cost": "3"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Damage": "195",
+              "Life Steal": "4-128",
+              "Run/Walk Speed": "19-59",
+              "Attack Rating": "310",
+              "Duration": "30",
+              "Mana Cost": "3"
+            }
+          }
+        ]
+      },
+      "Maul": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Stun Length": ".9",
+              "Damage": "30-90",
+              "Attack Speed": "3-9",
+              "Attack Rating": "40",
+              "Duration": "20",
+              "Mana Cost": "3"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Stun Length": "3.4",
+              "Damage": "30-390",
+              "Attack Speed": "3-39",
+              "Attack Rating": "325",
+              "Duration": "20",
+              "Mana Cost": "3"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Stun Length": "3.6",
+              "Damage": "30-540",
+              "Attack Speed": "3-54",
+              "Attack Rating": "475",
+              "Duration": "20",
+              "Mana Cost": "3"
+            }
+          }
+        ]
+      },
+      "Rabies": {
+        "synergies": {
+          "Poison Creeper": 20,
+          "Feral Rage": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Poison Duration": "8",
+              "Poison Damage": "427-996",
+              "Attack Rating": "50",
+              "Mana Cost": "10"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Poison Duration": "8",
+              "Poison Damage": "7267-7837",
+              "Attack Rating": "240",
+              "Mana Cost": "10"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Poison Duration": "8",
+              "Poison Damage": "19820-20561",
+              "Attack Rating": "340",
+              "Mana Cost": "10"
+            }
+          }
+        ]
+      },
+      "Fire Claws": {
+        "synergies": {
+          "Firestorm": 20,
+          "Molten Boulder": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Fire Damage": "1363-1647",
+              "Attack Rating": "110",
+              "Mana Cost": "4"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Fire Damage": "8633-9187",
+              "Attack Rating": "395",
+              "Mana Cost": "4"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Fire Damage": "12268-12907",
+              "Attack Rating": "485",
+              "Mana Cost": "4"
+            }
+          }
+        ]
+      },
+      "Hunger": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Mana Steal": "72",
+              "Life Steal": "72",
+              "Attack Rating": "50",
+              "Always Hits": "TRUE",
+              "Mana Cost": "3",
+              "Damage": "50"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Mana Steal": "176",
+              "Life Steal": "176",
+              "Attack Rating": "240",
+              "Always Hits": "TRUE",
+              "Mana Cost": "3",
+              "Damage": "50"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Steal": "186",
+              "Life Steal": "186",
+              "Attack Rating": "340",
+              "Always Hits": "TRUE",
+              "Mana Cost": "3",
+              "Damage": "50"
+            }
+          }
+        ]
+      },
+      "Shock Wave": {
+        "synergies": {
+          "Maul": 20,
+          "Lycanthropy": 20,
+          "Werebear": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Stun Length": ".2",
+              "Damage": "255-371",
+              "Mana Cost": "15"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 24,
+            "ui": {
+              "Stun Length": ".9",
+              "Damage": "1473-1589",
+              "Mana Cost": "15"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Stun Length": "1.2",
+              "Damage": "1960-2076",
+              "Mana Cost": "15"
+            }
+          }
+        ]
+      },
+      "Fury": {
+        "synergies": {},
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Damage": "100",
+              "Attack Rating": "50",
+              "hits": "3",
+              "Mana Cost": "4"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Damage": "423",
+              "Attack Rating": "240",
+              "hits": "3",
+              "Mana Cost": "4"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Damage": "593",
+              "Attack Rating": "340",
+              "hits": "3",
+              "Mana Cost": "4"
+            }
+          }
+        ]
+      }
+    },
+    "Elemental": {
+      "Firestorm": {
+        "synergies": {
+          "Molten Boulder": 20,
+          "Fissure": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Average Fire Damage": "179-215",
+              "Mana Cost": "4",
+              "Casting Delay": ".6"
+            }
+          },
+          {
+            "lvl": 20,
+            "blvl": 20,
+            "ui": {
+              "Average Fire Damage": "1601-1828",
+              "Mana Cost": "4",
+              "Casting Delay": ".6"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Average Fire Damage": "2772-3095",
+              "Mana Cost": "4",
+              "Casting Delay": ".6"
+            }
+          }
+        ]
+      },
+      "Molten Boulder": {
+        "synergies": {
+          "Volcano": 20,
+          "Firestorm": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "12",
+              "Average Fire Damage": "103-114",
+              "Fire Damage": "57-83",
+              "Damage": "74-108",
+              "Casting Delay": "1"
+            }
+          },
+          {
+            "lvl": 24,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "21.5",
+              "Average Fire Damage": "529-541",
+              "Fire Damage": "457-533",
+              "Damage": "598-697",
+              "Casting Delay": "1"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "24.5",
+              "Average Fire Damage": "700-712",
+              "Fire Damage": "676-767",
+              "Damage": "884-1003",
+              "Casting Delay": "1"
+            }
+          }
+        ]
+      },
+      "Arctic Blast": {
+        "synergies": {
+          "Cyclone Armor": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "5",
+              "Range": "6.6",
+              "Cold Duration": "6.4",
+              "Average Cold Damage": "168-168",
+              "Minimum Mana Required to Cast": "4"
+            }
+          },
+          {
+            "lvl": 24,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "9",
+              "Range": "13.3",
+              "Cold Duration": "17.8",
+              "Average Cold Damage": "918-918",
+              "Minimum Mana Required to Cast": "4"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "10",
+              "Range": "15.3",
+              "Cold Duration": "21.4",
+              "Average Cold Damage": "1218-1218",
+              "Minimum Mana Required to Cast": "4"
+            }
+          }
+        ]
+      },
+      "Fissure": {
+        "synergies": {
+          "Firestorm": 20,
+          "Volcano": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Fire Damage": "195-245",
+              "Mana Cost": "15",
+              "Casting Delay": ".6",
+              "Duration": "1.6"
+            }
+          },
+          {
+            "lvl": 24,
+            "blvl": 20,
+            "ui": {
+              "Fire Damage": "1425-1485",
+              "Mana Cost": "15",
+              "Casting Delay": ".6",
+              "Duration": "1.6"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Fire Damage": "2005-2095",
+              "Mana Cost": "15",
+              "Casting Delay": ".6",
+              "Duration": "1.6"
+            }
+          }
+        ]
+      },
+      "Cyclone Armor": {
+        "synergies": {
+          "Twister": 20,
+          "Tornado": 20,
+          "Hurricane": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Mana Cost": "9",
+              "Absorbs damage": "457"
+            }
+          },
+          {
+            "lvl": 24,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "28",
+              "Absorbs damage": "1643"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Mana Cost": "34",
+              "Absorbs damage": "2017"
+            }
+          }
+        ]
+      },
+      "Twister": {
+        "synergies": {
+          "Arctic Blast": 20,
+          "Tornado": 20,
+          "Hurricane": 20,
+          "Cyclone Armor": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Damage": "500-550",
+              "Mana Cost": "7",
+              "Stun Length": "2"
+            }
+          },
+          {
+            "lvl": 24,
+            "blvl": 20,
+            "ui": {
+              "Damage": "3437-3487",
+              "Mana Cost": "7",
+              "Stun Length": "2"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Damage": "4862-4912",
+              "Mana Cost": "7",
+              "Stun Length": "2"
+            }
+          }
+        ]
+      },
+      "Volcano": {
+        "synergies": {
+          "Molten Boulder": 20,
+          "Fissure": 20,
+          "Armageddon": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Fire Damage": "240-270",
+              "Damage": "80-90",
+              "Mana Cost": "25",
+              "Casting Delay": "N/A",
+              "Duration": "6"
+            }
+          },
+          {
+            "lvl": 24,
+            "blvl": 20,
+            "ui": {
+              "Fire Damage": "1590-1620",
+              "Damage": "530-540",
+              "Mana Cost": "25",
+              "Casting Delay": "N/A",
+              "Duration": "6"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Fire Damage": "2400-2490",
+              "Damage": "790-800",
+              "Mana Cost": "25",
+              "Casting Delay": "N/A",
+              "Duration": "6"
+            }
+          }
+        ]
+      },
+      "Tornado": {
+        "synergies": {
+          "Cyclone Armor": 20,
+          "Twister": 20,
+          "Hurricane": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Damage": "364-428",
+              "Mana Cost": "10"
+            }
+          },
+          {
+            "lvl": 24,
+            "blvl": 20,
+            "ui": {
+              "Damage": "2310-2476",
+              "Mana Cost": "10"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Damage": "3283-3488",
+              "Mana Cost": "10"
+            }
+          }
+        ]
+      },
+      "Armageddon": {
+        "synergies": {
+          "Firestorm": 20,
+          "Molten Boulder": 20,
+          "Volcano": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 5,
+            "blvl": 1,
+            "ui": {
+              "Average Fire Damage": "151-168",
+              "Fire Damage": "561-917",
+              "Damage": "266-322",
+              "Mana Cost": "35",
+              "Radius": "12"
+            }
+          },
+          {
+            "lvl": 24,
+            "blvl": 20,
+            "ui": {
+              "Average Fire Damage": "774-792",
+              "Fire Damage": "3313-3913",
+              "Damage": "1426-1568",
+              "Mana Cost": "35",
+              "Radius": "12"
+            }
+          },
+          {
+            "lvl": 30,
+            "blvl": 20,
+            "ui": {
+              "Average Fire Damage": "1024-1041",
+              "Fire Damage": "4633-5339",
+              "Damage": "1959-2129",
+              "Mana Cost": "35",
+              "Radius": "12"
+            }
+          }
+        ]
+      },
+      "Hurricane": {
+        "synergies": {
+          "Cyclone Armor": 20,
+          "Oak Sage": 20,
+          "Twister": 20,
+          "Tornado": 20
+        },
+        "scenarios": [
+          {
+            "lvl": 1,
+            "blvl": 1,
+            "ui": {
+              "Cold Damage": "137-202",
+              "Mana Cost": "10",
+              "Radius": "12"
+            }
+          },
+          {
+            "lvl": 23,
+            "blvl": 19,
+            "ui": {
+              "Cold Damage": "624-689",
+              "Mana Cost": "10",
+              "Radius": "12"
+            }
+          },
+          {
+            "lvl": 29,
+            "blvl": 19,
+            "ui": {
+              "Cold Damage": "847-912",
+              "Mana Cost": "10",
+              "Radius": "12"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
