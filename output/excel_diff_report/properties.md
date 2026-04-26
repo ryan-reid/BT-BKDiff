@@ -36,8 +36,8 @@
 - `*Max`: $\color{gray}{\text{Max \%}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 
 ### hit-skill-splash
-- `*Min`: $\color{gray}{\text{"}}\text{\%}\color{gray}{\text{ Chance (If 0, then default to 5)"}}$ (Old) &rarr; $\color{blue}{\text{Min }}\text{\%}$ (New)
-- `*Max`: $\color{gray}{\text{Skill}}\text{ }\color{gray}{\text{Level}}$ (Old) &rarr; $\color{blue}{\text{Max}}\text{ }\color{blue}{\text{\%}}$ (New)
+- `*Min`: $\color{gray}{\text{"}}\text{\%}}\color{gray}{\text{ Chance (If 0, then default to 5)"}}$ (Old) &rarr; $\color{blue}{\text{Min }}\text{\%}}$ (New)
+- `*Max`: $\color{gray}{\text{Skill}}\text{ }}\color{gray}{\text{Level}}$ (Old) &rarr; $\color{blue}{\text{Max}}\text{ }}\color{blue}{\text{\%}}$ (New)
 
 ### noconsume
 - `*Enabled`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
@@ -46,8 +46,8 @@
 - `*Tooltip`: -#% to Enemy Magic  Resistance (Old) &rarr; -#% to Enemy Magic Resistance (New)
 
 ### randclassskill3
-- `*Min`: $\text{Min }\color{gray}{\text{Class ID}}$ (Old) &rarr; $\text{Min }\color{blue}{\text{\#}}$ (New)
-- `*Max`: $\text{Max }\color{gray}{\text{Class ID}}$ (Old) &rarr; $\text{Max }\color{blue}{\text{\#}}$ (New)
+- `*Min`: $\text{Min }}\color{gray}{\text{Class ID}}$ (Old) &rarr; $\text{Min }}\color{blue}{\text{\#}}$ (New)
+- `*Max`: $\text{Max }}\color{gray}{\text{Class ID}}$ (Old) &rarr; $\text{Max }}\color{blue}{\text{\#}}$ (New)
 - `*Notes`: $\color{gray}{\text{val1 = \# of Skill levels}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### splash

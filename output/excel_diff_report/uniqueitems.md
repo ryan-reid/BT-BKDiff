@@ -180,7 +180,7 @@
 - `max10`:  (Old) &rarr; $\color{blue}{\text{9}}$ (New)
 
 ### deathcleaver
-- `prop7`: $\text{dmg}\color{gray}{\text{-norm}}$ (Old) &rarr; $\text{dmg}$ (New)
+- `prop7`: $\text{dmg}}\color{gray}{\text{-norm}}$ (Old) &rarr; $\text{dmg}}$ (New)
 - `min7`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
 - `prop8`:  (Old) &rarr; $\color{blue}{\text{pierce-dmg}}$ (New)
 - `min8`:  (Old) &rarr; $\color{blue}{\text{10}}$ (New)
@@ -259,7 +259,7 @@
 ### horadric staff
 - `min1`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `max1`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `prop2`: $\text{res-}\color{gray}{\text{all}}$ (Old) &rarr; $\text{res-}\color{blue}{\text{pois}}$ (New)
+- `prop2`: $\text{res-}}\color{gray}{\text{all}}$ (Old) &rarr; $\text{res-}}\color{blue}{\text{pois}}$ (New)
 - `min2`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{25}}$ (New)
 - `max2`: $\color{gray}{\text{30}}$ (Old) &rarr; $\color{blue}{\text{25}}$ (New)
 - `min3`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
@@ -313,7 +313,7 @@
 
 ### medusa's gaze
 - `max10`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
-- `par11`: $\color{gray}{\text{frost}}\text{ }\color{gray}{\text{nova}}$ (Old) &rarr; $\color{blue}{\text{Frost}}\text{ }\color{blue}{\text{Nova}}$ (New)
+- `par11`: $\color{gray}{\text{frost}}\text{ }}\color{gray}{\text{nova}}$ (Old) &rarr; $\color{blue}{\text{Frost}}\text{ }}\color{blue}{\text{Nova}}$ (New)
 
 ### meshif's travellers
 - `*ID`: $\color{gray}{\text{408}}$ (Old) &rarr; $\color{blue}{\text{446}}$ (New)
@@ -324,7 +324,7 @@
 - `*ID`: $\color{gray}{\text{451}}$ (Old) &rarr; $\color{blue}{\text{489}}$ (New)
 - `firstLadderSeason`: $\color{gray}{\text{Magic Conviction}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `par1`: $\color{gray}{\text{376}}$ (Old) &rarr; $\color{blue}{\text{Magic Conviction}}$ (New)
-- `prop5`: $\text{cold}\color{gray}{\text{-res}}$ (Old) &rarr; $\color{blue}{\text{res-}}\text{cold}$ (New)
+- `prop5`: $\text{cold}}\color{gray}{\text{-res}}$ (Old) &rarr; $\color{blue}{\text{res-}}\text{cold}}$ (New)
 
 ### mistiltein
 - `*ID`: $\color{gray}{\text{415}}$ (Old) &rarr; $\color{blue}{\text{453}}$ (New)
@@ -362,7 +362,7 @@
 
 ### schaefer's hammer
 - `max1`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
-- `prop9`: $\text{dmg}\color{gray}{\text{-ltng}}$ (Old) &rarr; $\color{blue}{\text{pierce-}}\text{dmg}$ (New)
+- `prop9`: $\text{dmg}}\color{gray}{\text{-ltng}}$ (Old) &rarr; $\color{blue}{\text{pierce-}}\text{dmg}}$ (New)
 - `min9`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
 - `max9`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
 
@@ -391,7 +391,7 @@
 
 ### simple solution
 - `*ID`: $\color{gray}{\text{422}}$ (Old) &rarr; $\color{blue}{\text{460}}$ (New)
-- `prop8`: $\text{res-}\color{gray}{\text{poi}}\text{-len}$ (Old) &rarr; $\text{res-}\color{blue}{\text{pois}}\text{-len}$ (New)
+- `prop8`: $\text{res-}}\color{gray}{\text{poi}}\text{-len}}$ (Old) &rarr; $\text{res-}}\color{blue}{\text{pois}}\text{-len}}$ (New)
 
 ### skin of the flayerd one
 - `max9`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
@@ -469,7 +469,7 @@
 - `prop9`: $\color{gray}{\text{gethit-skill}}$ (Old) &rarr; $\color{blue}{\text{91}}$ (New)
 
 ### superkhalimflail
-- `prop4`: $\text{att}\color{gray}{\text{\%}}$ (Old) &rarr; $\text{att}$ (New)
+- `prop4`: $\text{att}}\color{gray}{\text{\%}}$ (Old) &rarr; $\text{att}}$ (New)
 - `min4`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `max4`: $\color{gray}{\text{200}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
 - `prop7`: $\color{gray}{\text{dmg-norm}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
@@ -539,7 +539,7 @@
 - `*ID`: $\color{gray}{\text{407}}$ (Old) &rarr; $\color{blue}{\text{445}}$ (New)
 
 ### viperfork
-- `prop4`: $\color{gray}{\text{get-hit}}\text{-skill}$ (Old) &rarr; $\color{blue}{\text{gethit}}\text{-skill}$ (New)
+- `prop4`: $\color{gray}{\text{get-hit}}\text{-skill}}$ (Old) &rarr; $\color{blue}{\text{gethit}}\text{-skill}}$ (New)
 
 ### wind god fist
 - `*ID`: $\color{gray}{\text{434}}$ (Old) &rarr; $\color{blue}{\text{472}}$ (New)

@@ -51,7 +51,7 @@ class MarkdownExporter(BaseExporter):
                     color = 'gray' if is_old else 'blue'
                     res += r"\color{" + color + r"}{\text{" + MarkdownExporter.escape_latex(part) + r"}}"
                 elif tag == 'equal': 
-                    res += r"\text{" + MarkdownExporter.escape_latex(part) + r"}"
+                    res += r"\text{" + MarkdownExporter.escape_latex(part) + r"}}"
             return res + "$"
         return render(old_toks, True), render(new_toks, False)
 
@@ -116,10 +116,14 @@ class MarkdownExporter(BaseExporter):
         with open(os.path.join(output_dir, "ADDED.md"), 'w', encoding='utf-8') as f:
             f.write("# Added Items\n\n")
             for k, item in sorted(diff['added'].items()):
-                f.write(f"**{item['display_name']}** ({k})\n\n")
+                name = item.get('display_name') or item.get('name')
+                base = item.get('base_item') or ', '.join(item.get('base_items', []))
+                lvl = item.get('lvl_req', '0')
+                
+                f.write(f"**{name}** ({k})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
-                f.write(f"| | **Base Item:** {item['base_item']} |\n")
-                f.write(f"| | **Level Requirement:** {item['lvl_req']} |\n")
+                f.write(f"| | **Base Item:** {base} |\n")
+                f.write(f"| | **Level Requirement:** {lvl} |\n")
                 f.write("| | **Properties:** |\n")
                 for prop in item['properties']:
                     _, new_fmt = self.get_styled_diffs("", prop['resolved_text'])
@@ -130,13 +134,14 @@ class MarkdownExporter(BaseExporter):
         with open(os.path.join(output_dir, "REMOVED.md"), 'w', encoding='utf-8') as f:
             f.write("# Removed Items\n\n")
             for k, item in sorted(diff['removed'].items()):
-                f.write(f"- **{item['display_name']}** ({k})\n")
+                name = item.get('display_name') or item.get('name')
+                f.write(f"- **{name}** ({k})\n")
 
         # 4. MODIFIED.md
         with open(os.path.join(output_dir, "MODIFIED.md"), 'w', encoding='utf-8') as f:
             f.write("# Modified Items\n\n")
-            f.write("- $\color{gray}{\text{Gray text}}$: Removed/Old Value\n")
-            f.write("- $\color{blue}{\text{Blue text}}$: Added/New Value\n\n")
+            f.write(r"- $\color{gray}{\text{Gray text}}$: Removed/Old Value" + "\n")
+            f.write(r"- $\color{blue}{\text{Blue text}}$: Added/New Value" + "\n\n")
             for k, mod in sorted(diff['modified'].items()):
                 f.write(f"**{mod['name']}** ({k})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
@@ -146,6 +151,7 @@ class MarkdownExporter(BaseExporter):
                 f.write(f"| **Level Requirement:** {l_old} | **Level Requirement:** {l_new} |\n")
                 f.write("| **Properties:** | **Properties:** |\n")
                 
+                # Align properties for display
                 old_props = mod['bt_props']
                 new_props = mod['bk_props']
                 

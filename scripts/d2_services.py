@@ -233,6 +233,7 @@ class ItemAnalyzerService:
         self.weapons = {row['code']: row for row in repo.get_excel_table('weapons')}
         self.misc = {row['code']: row for row in repo.get_excel_table('misc')}
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
+        self.sets = {row['name']: row for row in repo.get_excel_table('sets')}
 
     def get_item_name(self, code: str) -> str:
         item = self.armor.get(code) or self.weapons.get(code) or self.misc.get(code)
@@ -248,14 +249,42 @@ class ItemAnalyzerService:
 
     def get_granular_group(self, category: str) -> str:
         cat_lower = category.lower()
-        if any(w in cat_lower for w in ['axe', 'bow', 'club', 'crossbow', 'hammer', 'javelin', 'knife', 'mace', 'polearm', 'scepter', 'spear', 'staff', 'sword', 'throwing', 'wand', 'weapon']): return 'weapons'
-        if any(h in cat_lower for h in ['helm', 'circlet', 'pelt', 'primal']): return 'helms'
-        if any(s in cat_lower for s in ['shield', 'auric', 'voodoo']): return 'shields'
-        if any(c in cat_lower for c in ['armor', 'tors']): return 'chests'
-        if any(b in cat_lower for b in ['belt', 'boots', 'gloves']): return 'armor'
-        if any(acc in cat_lower for acc in ['amulet', 'ring', 'charm', 'jewel']): return 'accessories'
-        if any(cls in cat_lower for cls in ['amazon', 'auric', 'grimoire', 'hand to hand', 'orb', 'pelt', 'primal', 'voodoo']): return 'class_specific'
-        return 'other'
+        # Weapons
+        if any(cls in cat_lower for cls in ['amazon', 'assassin', 'orb', 'hand to hand', 'grimoire']): return 'Class Weapons'
+        if 'axe' in cat_lower: return 'Axes'
+        if 'bow' in cat_lower: return 'Bows'
+        if 'crossbow' in cat_lower: return 'Crossbows'
+        if 'dagger' in cat_lower or 'knife' in cat_lower: return 'Daggers'
+        if 'javelin' in cat_lower: return 'Javelins'
+        if 'mace' in cat_lower or 'club' in cat_lower or 'hammer' in cat_lower: return 'Maces'
+        if 'polearm' in cat_lower: return 'Polearms'
+        if 'scepter' in cat_lower: return 'Scepters'
+        if 'spear' in cat_lower: return 'Spears'
+        if 'staff' in cat_lower: return 'Staves'
+        if 'sword' in cat_lower: return 'Swords'
+        if 'throwing' in cat_lower: return 'Throwing'
+        if 'wand' in cat_lower: return 'Wands'
+        
+        # Others
+        if any(cls in cat_lower for cls in ['voodoo', 'pelt', 'primal', 'auric']): return 'Class Armors'
+        if 'amulet' in cat_lower: return 'Amulets'
+        if 'ring' in cat_lower: return 'Rings'
+        if 'charm' in cat_lower: return 'Charms'
+        if 'jewel' in cat_lower: return 'Jewels'
+        if any(h in cat_lower for h in ['helm', 'circlet', 'merc']): return 'Helms'
+        if any(c in cat_lower for c in ['armor', 'tors']): return 'Chests'
+        if 'shield' in cat_lower: return 'Shields'
+        if 'glove' in cat_lower: return 'Gloves'
+        if 'belt' in cat_lower: return 'Belts'
+        if 'boot' in cat_lower: return 'Boots'
+        
+        return 'Others'
+
+    def get_top_level_group(self, granular_group: str) -> str:
+        weapons = ['Class Weapons', 'Axes', 'Bows', 'Crossbows', 'Daggers', 'Javelins', 'Maces', 'Polearms', 'Scepters', 'Spears', 'Staves', 'Swords', 'Throwing', 'Wands']
+        if granular_group in weapons:
+            return "Weapons"
+        return "Others"
 
     def analyze_unique(self, row: Dict[str, str]) -> AnalyzedItemDTO:
         idx = row.get('index', '').strip()
@@ -280,8 +309,12 @@ class ItemAnalyzerService:
             code = row.get(f'T1Code{i}', '').strip()
             if code and code != 'xxx':
                 props.append(self.resolver.resolve_property(code, row.get(f'T1Param{i}', ''), row.get(f'T1Min{i}', ''), row.get(f'T1Max{i}', '')))
+        
+        itype = row.get('itype1', '').strip()
+        base_items = [self.repo.get_string(self.item_types.get(itype, {}).get('ItemType', '')) or itype]
+        
         return {
-            "name": name, "runes": runes, "base_items": [self.repo.get_string(self.item_types.get(row.get('itype1', '').strip(), {}).get('ItemType', '')) or row.get('itype1', '')],
+            "name": name, "runes": runes, "base_items": base_items,
             "properties": props, "raw_row": row
         }
 
@@ -292,9 +325,16 @@ class ItemAnalyzerService:
             code = row.get(f'prop{i}', '').strip()
             if code and code != 'xxx':
                 props.append(self.resolver.resolve_property(code, row.get(f'par{i}', ''), row.get(f'min{i}', ''), row.get(f'max{i}', '')))
+        
+        set_name = row.get('set', '').strip()
+        set_info = self.sets.get(set_name, {})
+        is_expansion = set_info.get('version', '0') != '0'
+        
+        item_code = row.get('item', '').strip()
         return {
-            "id": idx, "display_name": self.repo.get_string(idx), "base_item": self.get_item_name(row.get('item', '').strip()),
-            "item_type": self.get_item_category(row.get('item', '').strip()), "lvl_req": row.get('lvl req', '0'), "properties": props, "raw_row": row
+            "id": idx, "display_name": self.repo.get_string(idx), "base_item": self.get_item_name(item_code),
+            "item_type": self.get_item_category(item_code), "lvl_req": row.get('lvl req', '0'), "properties": props, 
+            "raw_row": {**row, "is_expansion": is_expansion}
         }
 
 class CubeAnalyzerService:
@@ -455,21 +495,29 @@ class ItemComparisonService:
             if j not in new_used: aligned.append(("", np))
         return aligned
 
-    def compare_item_lists(self, bk_items: Dict[str, AnalyzedItemDTO], bt_items: Dict[str, AnalyzedItemDTO]) -> ItemDiffDTO:
+    def compare_item_lists(self, bk_items: Dict[str, Any], bt_items: Dict[str, Any]) -> ItemDiffDTO:
         added_ids = [k for k in bk_items if k not in bt_items]
         removed_ids = [k for k in bt_items if k not in bk_items]
         modified = {}
         common = [k for k in bk_items if k in bt_items]
         for k in common:
             bk, bt = bk_items[k], bt_items[k]
-            header_diff = (self.normalize_text(bk['base_item']) != self.normalize_text(bt['base_item']) or 
-                           self.normalize_text(bk['lvl_req']) != self.normalize_text(bt['lvl_req']))
+            
+            bk_base = bk.get('base_item') or ', '.join(bk.get('base_items', []))
+            bt_base = bt.get('base_item') or ', '.join(bt.get('base_items', []))
+            bk_lvl = bk.get('lvl_req', '0')
+            bt_lvl = bt.get('lvl_req', '0')
+
+            header_diff = (self.normalize_text(bk_base) != self.normalize_text(bt_base) or 
+                           self.normalize_text(bk_lvl) != self.normalize_text(bt_lvl))
+            
             bk_norm = sorted([self.normalize_text(p['resolved_text']) for p in bk['properties']])
             bt_norm = sorted([self.normalize_text(p['resolved_text']) for p in bt['properties']])
             if header_diff or bk_norm != bt_norm:
                 modified[k] = {
-                    'name': bk['display_name'], 'bk_base': bk['base_item'], 'bt_base': bt['base_item'],
-                    'bk_lvl': bk['lvl_req'], 'bt_lvl': bt['lvl_req'],
+                    'name': bk.get('display_name') or bk.get('name'), 
+                    'bk_base': bk_base, 'bt_base': bt_base,
+                    'bk_lvl': bk_lvl, 'bt_lvl': bt_lvl,
                     'bk_props': [p['resolved_text'] for p in bk['properties']],
                     'bt_props': [p['resolved_text'] for p in bt['properties']]
                 }

@@ -140,8 +140,8 @@
 
 ### bey
 - `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `dropsound`: $\text{item}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}\color{blue}{\text{baalseyehd}}$ (New)
-- `usesound`: $\text{item}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}\color{blue}{\text{baalseyehd}}$ (New)
+- `dropsound`: $\text{item}}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}}\color{blue}{\text{baalseyehd}}$ (New)
+- `usesound`: $\text{item}}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}}\color{blue}{\text{baalseyehd}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -211,9 +211,9 @@
 - `flippyfile`: $\color{gray}{\text{flpear}}$ (Old) &rarr; $\color{blue}{\text{flpfang}}$ (New)
 - `invfile`: $\color{gray}{\text{invear}}$ (Old) &rarr; $\color{blue}{\text{invfang}}$ (New)
 - `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `dropsound`: $\text{item}\color{gray}{\text{monsterguts}}$ (Old) &rarr; $\text{item}\color{blue}{\text{diabloshornhd}}$ (New)
+- `dropsound`: $\text{item}}\color{gray}{\text{monsterguts}}$ (Old) &rarr; $\text{item}}\color{blue}{\text{diabloshornhd}}$ (New)
 - `dropsfxframe`: $\color{gray}{\text{14}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `usesound`: $\text{item}\color{gray}{\text{monsterguts}}$ (Old) &rarr; $\text{item}\color{blue}{\text{diabloshornhd}}$ (New)
+- `usesound`: $\text{item}}\color{gray}{\text{monsterguts}}$ (Old) &rarr; $\text{item}}\color{blue}{\text{diabloshornhd}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -272,42 +272,42 @@
 
 ### gcb
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{0}\color{gray}{\text{s}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{0}}\color{gray}{\text{s}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}}$ (New)
 
 ### gcg
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{0}\color{gray}{\text{e}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{0}}\color{gray}{\text{e}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}}$ (New)
 
 ### gcr
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{0}\color{gray}{\text{r}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{0}}\color{gray}{\text{r}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}}$ (New)
 
 ### gcv
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{0}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{0}}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}}$ (New)
 
 ### gcw
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{0}\color{gray}{\text{d}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{0}}\color{gray}{\text{d}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}}$ (New)
 
 ### gcy
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{0}\color{gray}{\text{t}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{0}}\color{gray}{\text{t}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}}$ (New)
 
 ### gfb
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{1}\color{gray}{\text{s}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{1}}\color{gray}{\text{s}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}}$ (New)
 
 ### gfg
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{1}\color{gray}{\text{e}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{1}}\color{gray}{\text{e}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}}$ (New)
 
 ### gfr
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{1}\color{gray}{\text{r}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{1}}\color{gray}{\text{r}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}}$ (New)
 
 ### gft
 - `compactsave`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
@@ -317,96 +317,96 @@
 ### gfv
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{1}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{1}}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}}$ (New)
 
 ### gfw
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{1}\color{gray}{\text{d}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{1}}\color{gray}{\text{d}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}}$ (New)
 
 ### gfy
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{1}\color{gray}{\text{t}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{1}}\color{gray}{\text{t}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}}$ (New)
 
 ### glb
 - `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
 - `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{3}\color{gray}{\text{s}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{3}}\color{gray}{\text{s}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}}$ (New)
 
 ### glg
 - `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
 - `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{3}\color{gray}{\text{e}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{3}}\color{gray}{\text{e}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}}$ (New)
 
 ### glr
 - `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
 - `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{3}\color{gray}{\text{r}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{3}}\color{gray}{\text{r}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}}$ (New)
 
 ### glw
 - `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
 - `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{3}\color{gray}{\text{d}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{3}}\color{gray}{\text{d}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}}$ (New)
 
 ### gly
 - `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
 - `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{3}\color{gray}{\text{t}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{3}}\color{gray}{\text{t}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}}$ (New)
 
 ### gpb
 - `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{4}\color{gray}{\text{s}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{4}}\color{gray}{\text{s}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}}$ (New)
 
 ### gpg
 - `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{4}\color{gray}{\text{e}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{4}}\color{gray}{\text{e}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}}$ (New)
 
 ### gpr
 - `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{4}\color{gray}{\text{r}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{4}}\color{gray}{\text{r}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}}$ (New)
 
 ### gpv
 - `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{4}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{4}}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}}$ (New)
 
 ### gpw
 - `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{4}\color{gray}{\text{d}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{4}}\color{gray}{\text{d}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}}$ (New)
 
 ### gpy
 - `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{4}\color{gray}{\text{t}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{4}}\color{gray}{\text{t}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}}$ (New)
 
 ### gsb
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
 - `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{2}\color{gray}{\text{s}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{2}}\color{gray}{\text{s}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}}$ (New)
 
 ### gsg
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
 - `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{2}\color{gray}{\text{e}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{2}}\color{gray}{\text{e}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}}$ (New)
 
 ### gsr
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
 - `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{2}\color{gray}{\text{r}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{2}}\color{gray}{\text{r}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}}$ (New)
 
 ### gsv
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
 - `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{2}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{2}}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}}$ (New)
 
 ### gsw
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
 - `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{2}\color{gray}{\text{d}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{2}}\color{gray}{\text{d}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}}$ (New)
 
 ### gsy
 - `levelreq`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
 - `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{5000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{2}\color{gray}{\text{t}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{2}}\color{gray}{\text{t}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}}$ (New)
 
 ### gwh
 - `cost`: $\color{gray}{\text{200000}}$ (Old) &rarr; $\color{blue}{\text{2500000}}$ (New)
@@ -425,7 +425,7 @@
 ### gzv
 - `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
 - `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{15000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{3}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{3}}\color{gray}{\text{a}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}}$ (New)
 
 ### hp1
 - `normcode`:  (Old) &rarr; $\color{blue}{\text{hp1}}$ (New)
@@ -514,8 +514,8 @@
 
 ### mbr
 - `type2`: $\color{gray}{\text{orgn}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `dropsound`: $\text{item}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}\color{blue}{\text{mephistosbrainhd}}$ (New)
-- `usesound`: $\text{item}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}\color{blue}{\text{mephistosbrainhd}}$ (New)
+- `dropsound`: $\text{item}}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}}\color{blue}{\text{mephistosbrainhd}}$ (New)
+- `usesound`: $\text{item}}\color{gray}{\text{monsterbone}}$ (Old) &rarr; $\text{item}}\color{blue}{\text{mephistosbrainhd}}$ (New)
 - `stackable`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `minstack`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
 - `maxstack`: $\color{gray}{\text{100}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
@@ -728,26 +728,26 @@
 
 ### skc
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{0}\color{gray}{\text{z}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{0}}\color{gray}{\text{z}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{0}}$ (New)
 
 ### skf
 - `spawnable`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{1}\color{gray}{\text{z}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{1}}\color{gray}{\text{z}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{1}}$ (New)
 
 ### skl
 - `levelreq`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
 - `cost`: $\color{gray}{\text{10000}}$ (Old) &rarr; $\color{blue}{\text{30000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{3}\color{gray}{\text{z}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{3}}\color{gray}{\text{z}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{3}}$ (New)
 
 ### sku
 - `levelreq`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
 - `cost`: $\color{gray}{\text{3000}}$ (Old) &rarr; $\color{blue}{\text{10000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{2}\color{gray}{\text{z}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{2}}\color{gray}{\text{z}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{2}}$ (New)
 
 ### skz
 - `levelreq`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
 - `cost`: $\color{gray}{\text{30000}}$ (Old) &rarr; $\color{blue}{\text{100000}}$ (New)
-- `type2`: $\color{gray}{\text{gg}}\text{4}\color{gray}{\text{z}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}$ (New)
+- `type2`: $\color{gray}{\text{gg}}\text{4}}\color{gray}{\text{z}}$ (Old) &rarr; $\color{blue}{\text{gem}}\text{4}}$ (New)
 
 ### sol
 - `ShowLevel`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)

@@ -17,13 +17,19 @@ def load_json_db(db_dir: str) -> Dict[str, Dict[str, Any]]:
                 with open(filepath, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                     if isinstance(data, list):
-                        for item in data: types[t][item['id']] = item
+                        for item in data:
+                            item_id = item.get('id') or item.get('name')
+                            types[t][item_id] = item
                     elif isinstance(data, dict):
+                        # Some files might be dict of items directly
                         for k, v in data.items():
                             if isinstance(v, list):
-                                for item in v: types[t][item['id']] = item
+                                for item in v:
+                                    item_id = item.get('id') or item.get('name')
+                                    types[t][item_id] = item
                             else:
-                                types[t][v['id']] = v
+                                item_id = v.get('id') or v.get('name')
+                                types[t][item_id] = v
             except Exception as e:
                 print(f"Error loading {filepath}: {e}", file=sys.stderr)
     return types
@@ -64,7 +70,6 @@ def main() -> None:
     }
     
     exporter = MarkdownExporter()
-    # Update SUMMARY.md with breakdown
     exporter.export_item_diff(combined_diff, out_dir)
     
     # Inject breakdown into SUMMARY.md

@@ -24,12 +24,12 @@
 - `MonLvlEx(H)`: $\color{gray}{\text{85}}$ (Old) &rarr; $\color{blue}{\text{87}}$ (New)
 
 ### act 1 - wilderness 1
-- `mon1`: $\color{gray}{\text{fallen}}\text{1}$ (Old) &rarr; $\color{blue}{\text{zombie}}\text{1}$ (New)
-- `mon2`: $\color{gray}{\text{zombie}}\text{1}$ (Old) &rarr; $\color{blue}{\text{fallen}}\text{1}$ (New)
-- `nmon1`: $\color{gray}{\text{fallen}}\text{1}$ (Old) &rarr; $\color{blue}{\text{zombie}}\text{1}$ (New)
-- `nmon2`: $\color{gray}{\text{zombie}}\text{1}$ (Old) &rarr; $\color{blue}{\text{fallen}}\text{1}$ (New)
-- `umon1`: $\color{gray}{\text{fallen}}\text{1}$ (Old) &rarr; $\color{blue}{\text{zombie}}\text{1}$ (New)
-- `umon2`: $\color{gray}{\text{zombie}}\text{1}$ (Old) &rarr; $\color{blue}{\text{fallen}}\text{1}$ (New)
+- `mon1`: $\color{gray}{\text{fallen}}\text{1}}$ (Old) &rarr; $\color{blue}{\text{zombie}}\text{1}}$ (New)
+- `mon2`: $\color{gray}{\text{zombie}}\text{1}}$ (Old) &rarr; $\color{blue}{\text{fallen}}\text{1}}$ (New)
+- `nmon1`: $\color{gray}{\text{fallen}}\text{1}}$ (Old) &rarr; $\color{blue}{\text{zombie}}\text{1}}$ (New)
+- `nmon2`: $\color{gray}{\text{zombie}}\text{1}}$ (Old) &rarr; $\color{blue}{\text{fallen}}\text{1}}$ (New)
+- `umon1`: $\color{gray}{\text{fallen}}\text{1}}$ (Old) &rarr; $\color{blue}{\text{zombie}}\text{1}}$ (New)
+- `umon2`: $\color{gray}{\text{zombie}}\text{1}}$ (Old) &rarr; $\color{blue}{\text{fallen}}\text{1}}$ (New)
 
 ### act 2 - tomb tal 1
 - `MonLvlEx(H)`: $\color{gray}{\text{85}}$ (Old) &rarr; $\color{blue}{\text{87}}$ (New)
@@ -69,19 +69,19 @@
 ### act 3 - jungle 2
 - `NumMon`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
 - `mon1`: $\color{gray}{\text{zombie4}}$ (Old) &rarr; $\color{blue}{\text{frogdemon1}}$ (New)
-- `mon2`: $\color{gray}{\text{fetishshaman}}\text{2}$ (Old) &rarr; $\color{blue}{\text{frogdemon}}\text{2}$ (New)
+- `mon2`: $\color{gray}{\text{fetishshaman}}\text{2}}$ (Old) &rarr; $\color{blue}{\text{frogdemon}}\text{2}}$ (New)
 - `mon3`: $\color{gray}{\text{willowisp1}}$ (Old) &rarr; $\color{blue}{\text{thornhulk2}}$ (New)
 - `mon4`: $\color{gray}{\text{wraith5}}$ (Old) &rarr; $\color{blue}{\text{zombie4}}$ (New)
 - `mon5`:  (Old) &rarr; $\color{blue}{\text{fetishshaman2}}$ (New)
 - `mon6`:  (Old) &rarr; $\color{blue}{\text{willowisp1}}$ (New)
 - `nmon1`: $\color{gray}{\text{zombie4}}$ (Old) &rarr; $\color{blue}{\text{frogdemon1}}$ (New)
-- `nmon2`: $\color{gray}{\text{fetishshaman}}\text{2}$ (Old) &rarr; $\color{blue}{\text{frogdemon}}\text{2}$ (New)
+- `nmon2`: $\color{gray}{\text{fetishshaman}}\text{2}}$ (Old) &rarr; $\color{blue}{\text{frogdemon}}\text{2}}$ (New)
 - `nmon3`: $\color{gray}{\text{willowisp1}}$ (Old) &rarr; $\color{blue}{\text{thornhulk2}}$ (New)
 - `nmon4`: $\color{gray}{\text{wraith5}}$ (Old) &rarr; $\color{blue}{\text{zombie4}}$ (New)
 - `nmon5`:  (Old) &rarr; $\color{blue}{\text{fetishshaman2}}$ (New)
 - `nmon6`:  (Old) &rarr; $\color{blue}{\text{willowisp1}}$ (New)
 - `umon1`: $\color{gray}{\text{zombie4}}$ (Old) &rarr; $\color{blue}{\text{frogdemon1}}$ (New)
-- `umon2`: $\color{gray}{\text{fetishshaman}}\text{2}$ (Old) &rarr; $\color{blue}{\text{frogdemon}}\text{2}$ (New)
+- `umon2`: $\color{gray}{\text{fetishshaman}}\text{2}}$ (Old) &rarr; $\color{blue}{\text{frogdemon}}\text{2}}$ (New)
 - `umon3`: $\color{gray}{\text{willowisp1}}$ (Old) &rarr; $\color{blue}{\text{thornhulk2}}$ (New)
 - `umon4`: $\color{gray}{\text{wraith5}}$ (Old) &rarr; $\color{blue}{\text{zombie4}}$ (New)
 - `umon5`:  (Old) &rarr; $\color{blue}{\text{fetishshaman2}}$ (New)
@@ -106,38 +106,38 @@
 - `umon1`: $\color{gray}{\text{sandraider4}}$ (Old) &rarr; $\color{blue}{\text{councilmember2}}$ (New)
 
 ### act 3 - temple 1
-- `umon1`: $\color{gray}{\text{brute}}\text{5}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}$ (New)
-- `umon2`: $\color{gray}{\text{corruptrogue}}\text{5}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}$ (New)
+- `umon1`: $\color{gray}{\text{brute}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}}$ (New)
+- `umon2`: $\color{gray}{\text{corruptrogue}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}}$ (New)
 - `umon3`: $\color{gray}{\text{arach5}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `umon4`: $\color{gray}{\text{vampire2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### act 3 - temple 2
-- `umon1`: $\color{gray}{\text{brute}}\text{5}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}$ (New)
-- `umon2`: $\color{gray}{\text{corruptrogue}}\text{5}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}$ (New)
+- `umon1`: $\color{gray}{\text{brute}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}}$ (New)
+- `umon2`: $\color{gray}{\text{corruptrogue}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}}$ (New)
 - `umon3`: $\color{gray}{\text{arach5}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `umon4`: $\color{gray}{\text{vampire2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### act 3 - temple 3
-- `umon1`: $\color{gray}{\text{brute}}\text{5}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}$ (New)
-- `umon2`: $\color{gray}{\text{corruptrogue}}\text{5}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}$ (New)
+- `umon1`: $\color{gray}{\text{brute}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}}$ (New)
+- `umon2`: $\color{gray}{\text{corruptrogue}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}}$ (New)
 - `umon3`: $\color{gray}{\text{arach5}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `umon4`: $\color{gray}{\text{vampire2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### act 3 - temple 4
-- `umon1`: $\color{gray}{\text{clawviper}}\text{5}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}$ (New)
-- `umon2`: $\color{gray}{\text{scarab}}\text{5}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}$ (New)
+- `umon1`: $\color{gray}{\text{clawviper}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}}$ (New)
+- `umon2`: $\color{gray}{\text{scarab}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}}$ (New)
 - `umon3`: $\color{gray}{\text{batdemon4}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `umon4`: $\color{gray}{\text{cr\_archer5}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### act 3 - temple 5
-- `umon1`: $\color{gray}{\text{clawviper}}\text{5}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}$ (New)
-- `umon2`: $\color{gray}{\text{scarab}}\text{5}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}$ (New)
+- `umon1`: $\color{gray}{\text{clawviper}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}}$ (New)
+- `umon2`: $\color{gray}{\text{scarab}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}}$ (New)
 - `umon3`: $\color{gray}{\text{batdemon4}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `umon4`: $\color{gray}{\text{cr\_archer5}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### act 3 - temple 6
-- `umon1`: $\color{gray}{\text{clawviper}}\text{5}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}$ (New)
-- `umon2`: $\color{gray}{\text{scarab}}\text{5}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}$ (New)
+- `umon1`: $\color{gray}{\text{clawviper}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{wraith}}\text{5}}$ (New)
+- `umon2`: $\color{gray}{\text{scarab}}\text{5}}$ (Old) &rarr; $\color{blue}{\text{arach}}\text{5}}$ (New)
 - `umon3`: $\color{gray}{\text{batdemon4}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 - `umon4`: $\color{gray}{\text{cr\_archer5}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
@@ -150,7 +150,7 @@
 - `mon3`: $\color{gray}{\text{vampire2}}$ (Old) &rarr; $\color{blue}{\text{councilmember1}}$ (New)
 - `nmon1`: $\color{gray}{\text{cantor3}}$ (Old) &rarr; $\color{blue}{\text{councilmember1}}$ (New)
 - `nmon2`: $\color{gray}{\text{cantor3}}$ (Old) &rarr; $\color{blue}{\text{councilmember1}}$ (New)
-- `nmon3`: $\color{gray}{\text{vampire}}\text{2}$ (Old) &rarr; $\color{blue}{\text{councilmember}}\text{2}$ (New)
+- `nmon3`: $\color{gray}{\text{vampire}}\text{2}}$ (Old) &rarr; $\color{blue}{\text{councilmember}}\text{2}}$ (New)
 - `umon1`: $\color{gray}{\text{cantor3}}$ (Old) &rarr; $\color{blue}{\text{councilmember2}}$ (New)
 - `umon2`: $\color{gray}{\text{cantor3}}$ (Old) &rarr; $\color{blue}{\text{councilmember2}}$ (New)
 - `umon3`: $\color{gray}{\text{vampire2}}$ (Old) &rarr; $\color{blue}{\text{councilmember3}}$ (New)
@@ -161,7 +161,7 @@
 - `mon3`: $\color{gray}{\text{vilemother3}}$ (Old) &rarr; $\color{blue}{\text{fingermage2}}$ (New)
 - `mon4`: $\color{gray}{\text{fingermage2}}$ (Old) &rarr; $\color{blue}{\text{regurgitator3}}$ (New)
 - `mon5`: $\color{gray}{\text{regurgitator3}}$ (Old) &rarr; $\color{blue}{\text{doomknight2}}$ (New)
-- `mon6`: $\color{gray}{\text{doomknight}}\text{2}$ (Old) &rarr; $\color{blue}{\text{megademon}}\text{2}$ (New)
+- `mon6`: $\color{gray}{\text{doomknight}}\text{2}}$ (Old) &rarr; $\color{blue}{\text{megademon}}\text{2}}$ (New)
 - `mon7`: $\color{gray}{\text{megademon2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
 
 ### act 4 - mesa 3
@@ -169,8 +169,8 @@
 - `mon2`: $\color{gray}{\text{batdemon5}}$ (Old) &rarr; $\color{blue}{\text{doomknight3}}$ (New)
 
 ### act 5 - baal temple 2
-- `mon1`: $\text{suicideminion}\color{gray}{\text{5}}$ (Old) &rarr; $\text{suicideminion}\color{blue}{\text{6}}$ (New)
-- `nmon1`: $\text{suicideminion}\color{gray}{\text{5}}$ (Old) &rarr; $\text{suicideminion}\color{blue}{\text{6}}$ (New)
+- `mon1`: $\text{suicideminion}}\color{gray}{\text{5}}$ (Old) &rarr; $\text{suicideminion}}\color{blue}{\text{6}}$ (New)
+- `nmon1`: $\text{suicideminion}}\color{gray}{\text{5}}$ (Old) &rarr; $\text{suicideminion}}\color{blue}{\text{6}}$ (New)
 
 ### act 5 - hell 1
 - `MonLvlEx(N)`: $\color{gray}{\text{60}}$ (Old) &rarr; $\color{blue}{\text{70}}$ (New)

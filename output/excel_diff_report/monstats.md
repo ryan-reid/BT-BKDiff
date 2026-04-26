@@ -1256,9 +1256,9 @@
 ### fenris
 - `Velocity`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
 - `Run`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `Skill1`: $\color{gray}{\text{fenris}}\text{ }\color{gray}{\text{rage}}$ (Old) &rarr; $\color{blue}{\text{Summon}}\text{ }\color{blue}{\text{Splash}}$ (New)
-- `Skill2`: $\color{gray}{\text{Teleport}}\text{ }\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{fenris}}\text{ }\color{blue}{\text{rage}}$ (New)
-- `Sk2mode`: $\color{gray}{\text{S}}\text{1}$ (Old) &rarr; $\color{blue}{\text{A}}\text{1}$ (New)
+- `Skill1`: $\color{gray}{\text{fenris}}\text{ }}\color{gray}{\text{rage}}$ (Old) &rarr; $\color{blue}{\text{Summon}}\text{ }}\color{blue}{\text{Splash}}$ (New)
+- `Skill2`: $\color{gray}{\text{Teleport}}\text{ }}\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{fenris}}\text{ }}\color{blue}{\text{rage}}$ (New)
+- `Sk2mode`: $\color{gray}{\text{S}}\text{1}}$ (Old) &rarr; $\color{blue}{\text{A}}\text{1}}$ (New)
 - `Skill3`:  (Old) &rarr; $\color{blue}{\text{Teleport 2}}$ (New)
 - `Sk3mode`:  (Old) &rarr; $\color{blue}{\text{S1}}$ (New)
 - `Sk3lvl`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
@@ -2930,8 +2930,8 @@
 ### spiritwolf
 - `Velocity`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
 - `Run`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `Skill1`: $\color{gray}{\text{Teleport}}\text{ }\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{Summon}}\text{ }\color{blue}{\text{Splash}}$ (New)
-- `Sk1mode`: $\color{gray}{\text{S}}\text{1}$ (Old) &rarr; $\color{blue}{\text{A}}\text{1}$ (New)
+- `Skill1`: $\color{gray}{\text{Teleport}}\text{ }}\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{Summon}}\text{ }}\color{blue}{\text{Splash}}$ (New)
+- `Sk1mode`: $\color{gray}{\text{S}}\text{1}}$ (Old) &rarr; $\color{blue}{\text{A}}\text{1}}$ (New)
 - `Skill2`:  (Old) &rarr; $\color{blue}{\text{Teleport 2}}$ (New)
 - `Sk2mode`:  (Old) &rarr; $\color{blue}{\text{S1}}$ (New)
 - `Sk2lvl`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
