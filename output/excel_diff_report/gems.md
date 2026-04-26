@@ -111,7 +111,7 @@
 - `weaponMod1Code`: $\color{gray}{\text{slow}}$ (Old) &rarr; $\color{blue}{\text{ignore-ac}}$ (New)
 - `weaponMod1Min`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
 - `weaponMod1Max`: $\color{gray}{\text{20}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `shieldMod1Code`: $\text{hp}\color{gray}{\text{\%}}$ (Old) &rarr; $\text{hp}$ (New)
+- `shieldMod1Code`: $\text{hp}}\color{gray}{\text{\%}}$ (Old) &rarr; $\text{hp}}$ (New)
 - `shieldMod1Min`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
 - `shieldMod1Max`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
 
@@ -154,7 +154,7 @@
 - `helmMod1Max`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
 
 ### sur rune
-- `shieldMod1Code`: $\text{mana}\color{gray}{\text{\%}}$ (Old) &rarr; $\text{mana}$ (New)
+- `shieldMod1Code`: $\text{mana}}\color{gray}{\text{\%}}$ (Old) &rarr; $\text{mana}}$ (New)
 - `shieldMod1Min`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
 - `shieldMod1Max`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{50}}$ (New)
 

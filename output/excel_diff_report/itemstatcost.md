@@ -72,7 +72,7 @@
 
 ### damageresist
 - `descfunc`: $\color{gray}{\text{19}}$ (Old) &rarr; $\color{blue}{\text{29}}$ (New)
-- `descstrneg`: $\text{ModStr2}\color{gray}{\text{uPercent}}$ (Old) &rarr; $\text{ModStr2}\color{blue}{\text{uPercentNegative}}$ (New)
+- `descstrneg`: $\text{ModStr2}}\color{gray}{\text{uPercent}}$ (Old) &rarr; $\text{ModStr2}}\color{blue}{\text{uPercentNegative}}$ (New)
 
 ### dyeblack
 - `*ID`: $\color{gray}{\text{365}}$ (Old) &rarr; $\color{blue}{\text{372}}$ (New)
