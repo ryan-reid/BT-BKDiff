@@ -53,7 +53,12 @@ class PropertyResolverService:
         
         self.manual_overrides = {
             'bloody': 'Unknown property: bloody',
-            'gelid-affix5': 'Unknown property: Gelid-Affix5'
+            'gelid-affix5': '(Missing Affix 5 data)',
+            'incendiary-affix5': '(Missing Affix 5 data)',
+            'magnetic-affix5': '(Missing Affix 5 data)',
+            'virulent-affix5': '(Missing Affix 5 data)',
+            'breaching-affix5': '(Missing Affix 5 data)',
+            'mystical-affix5': '(Missing Affix 5 data)'
         }
 
     def resolve_skill_name(self, skill_name_or_id: str) -> str:
@@ -124,7 +129,11 @@ class PropertyResolverService:
             else:
                 fmt_string = fmt_string.replace("%+d", f"{sign}{display_range}")
         elif "%d" in fmt_string: 
-            fmt_string = fmt_string.replace("%d", range_str)
+            # Avoid double negative if fmt_string has -%d and range_str starts with -
+            if fmt_string.find("-%d") != -1 and display_range.startswith('-'):
+                fmt_string = fmt_string.replace("-%d", display_range)
+            else:
+                fmt_string = fmt_string.replace("%d", display_range)
         fmt_string = fmt_string.replace("%%", "%")
         if str_2: fmt_string += " " + self.repo.get_string(str_2)
         return fmt_string

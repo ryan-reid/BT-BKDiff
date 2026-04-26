@@ -43,7 +43,7 @@
 | | $\color{blue}{\\text{ (Random: 14-25\\% Better Chance of Getting Magic Items OR 20-55\\% Extra Gold from Monsters)}}$ |
 | | $\color{blue}{\\text{ (Random: +10-65 to Life OR +10-75 to Mana)}}$ |
 | | $\color{blue}{\\text{ (Random: +5-10\\% Faster Run/Walk OR +12-24\\% Faster Hit Recovery OR +3-8 to all Attributes)}}$ |
-| | $\color{blue}{\\text{Unknown property: Gelid-Affix5 (1)}}$ |
+| | $\color{blue}{\\text{(Missing Affix 5 data) (1)}}$ |
 | | $\color{blue}{\\text{ (Random: Magic Damage Reduced by 5-10 OR Damage Reduced by 5-10)}}$ |
 
 **Renewed Crack of the Heavens** (Crafted Crack of the Heavens)

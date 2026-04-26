@@ -86,7 +86,7 @@
     *  \(Random: 14\-25% Better Chance of Getting Magic Items OR 20\-55% Extra Gold from Monsters\)
     *  \(Random: \+10\-65 to Life OR \+10\-75 to Mana\)
     *  \(Random: \+5\-10% Faster Run/Walk OR \+12\-24% Faster Hit Recovery OR \+3\-8 to all Attributes\)
-    * Unknown property: Gelid\-Affix5 \(1\)
+    * \(Missing Affix 5 data\) \(1\)
     *  \(Random: Magic Damage Reduced by 5\-10 OR Damage Reduced by 5\-10\)
 
 ### Latent Flame Rift (PreCrafted Flame Rift)
