@@ -6,5 +6,5 @@
 - codex
 - compendium
 - grimoire
-- old book
+- old\ book
 - tome
