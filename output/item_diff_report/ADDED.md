@@ -1,5 +1,5 @@
 # Added Items Breakdown
-New items categorized by type to ensure optimal rendering.
+Categorized by type to ensure optimal rendering.
 ## Uniques
 - [Amulet](added/uniques/amulet.md)
 - [Armor](added/uniques/armor.md)

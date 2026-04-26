@@ -526,7 +526,9 @@ class ItemComparisonService:
                     'bk_base': bk_base, 'bt_base': bt_base,
                     'bk_lvl': bk_lvl, 'bt_lvl': bt_lvl,
                     'bk_props': [p['resolved_text'] for p in bk['properties']],
-                    'bt_props': [p['resolved_text'] for p in bt['properties']]
+                    'bt_props': [p['resolved_text'] for p in bt['properties']],
+                    'item_type': bk.get('item_type', 'Other'),
+                    'raw_row': bk.get('raw_row', {})
                 }
         return {
             'added': {k: bk_items[k] for k in added_ids},
