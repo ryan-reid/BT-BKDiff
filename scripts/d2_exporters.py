@@ -18,24 +18,25 @@ class JsonExporter(BaseExporter):
 class MarkdownExporter(BaseExporter):
     @staticmethod
     def escape_markdown(s: str) -> str:
-        """Surgical escaping for Markdown special characters to avoid breaking layouts."""
+        """Surgical escaping for Markdown special characters."""
         if not s: return ""
-        # Only escape characters that are truly likely to cause issues in our specific layout
-        # (mostly underscores in names, and vertical bars in tables)
+        # 1. Escape literal backslashes
         s = s.replace('\\', r'\\')
-        for char in '_*[]()#+-.!':
+        # 2. Escape these characters: _, *, [, ], (, ), #, +, -, ., !
+        for char in r'_*[]()#+-.!':
             s = s.replace(char, '\\' + char)
         return s
 
     @staticmethod
     def escape_latex(s: str) -> str:
-        """Escapes text for use inside a LaTeX \text{} block on GitHub."""
+        """Escapes text for use inside a LaTeX block on GitHub."""
         if not s: return ""
-        # 1. Backslash first
+        # 1. Escape literal backslashes: \ -> \textbackslash{}
+        # We need double backslashes for the file to handle GitHub's consumption.
         s = s.replace('\\', r'\\textbackslash{}')
-        # 2. Basic LaTeX escapes
-        for char in '{}$%&#_':
-            s = s.replace(char, '\\' + char)
+        # 2. Escape { } $ % & # _ with DOUBLE backslash: \\{ etc.
+        for char in r'{}$%&#_':
+            s = s.replace(char, r'\\' + char)
         # 3. Special commands
         s = s.replace('^', r'\\textasciicircum{}')
         s = s.replace('~', r'\\textasciitilde{}')
@@ -47,12 +48,11 @@ class MarkdownExporter(BaseExporter):
         """Generates color-coded LaTeX diffs for two strings."""
         def fmt(color, text):
             if not text: return ""
-            # Wrap in backticks to prevent Markdown interference with underscores/bars
-            # Use \color and \text for styling
             escaped = MarkdownExporter.escape_latex(text)
+            # Use the $` ... `$ syntax and double backslashes for commands
             if color:
-                return f"$`\\color{{{color}}}{{\\text{{{escaped}}}}}`$"
-            return f"$`\\text{{{escaped}}}`$"
+                return f"$`\\\\color{{{color}}}{{\\\\text{{{escaped}}}}}`$"
+            return f"$`\\\\text{{{escaped}}}`$"
 
         if not old_s: return "", fmt("blue", new_s)
         if not new_s or new_s == "(removed)": 
@@ -62,13 +62,9 @@ class MarkdownExporter(BaseExporter):
             return re.sub(r'\s+', ' ', re.sub(r'ÿc.', '', t)).strip()
 
         if normalize_text(old_s) == normalize_text(new_s):
-            # For identical text, still wrap in math for consistent font if requested,
-            # but usually we want clean text in tables if possible.
-            # Returning math-wrapped for consistency with colored parts.
             return fmt("", old_s), fmt("", new_s)
 
         def tokenize(text: str) -> List[str]:
-            # Tokenize into numbers, words, spaces, and symbols
             return re.findall(r'[+-]?\d+(?:-\d+)?%?|[a-zA-Z]+|[^\w\s]|\s+', text)
 
         old_toks, new_toks = tokenize(old_s), tokenize(new_s)
@@ -82,9 +78,9 @@ class MarkdownExporter(BaseExporter):
                 escaped = MarkdownExporter.escape_latex(part)
                 if (is_old and tag in ['replace', 'delete']) or (not is_old and tag in ['replace', 'insert']):
                     color = 'gray' if is_old else 'blue'
-                    res += f"$`\\color{{{color}}}{{\\text{{{escaped}}}}}`$"
+                    res += f"$`\\\\color{{{color}}}{{\\\\text{{{escaped}}}}}`$"
                 elif tag == 'equal': 
-                    res += f"$`\\text{{{escaped}}}`$"
+                    res += f"$`\\\\text{{{escaped}}}`$"
             return res
         return render(old_toks, True), render(new_toks, False)
 
@@ -170,8 +166,8 @@ class MarkdownExporter(BaseExporter):
         # 4. MODIFIED.md
         with open(os.path.join(output_dir, "MODIFIED.md"), 'w', encoding='utf-8') as f:
             f.write("# Modified Items\n\n")
-            f.write(r"- $`\color{gray}{\text{Gray text}}`$: Removed/Old Value" + "\n")
-            f.write(r"- $`\color{blue}{\text{Blue text}}`$: Added/New Value" + "\n\n")
+            f.write(r"- $`\\color{gray}{\\text{Gray text}}`$: Removed/Old Value" + "\n")
+            f.write(r"- $`\\color{blue}{\\text{Blue text}}`$: Added/New Value" + "\n\n")
             for k, mod in sorted(diff['modified'].items()):
                 f.write(f"**{self.escape_markdown(mod['name'])}** ({self.escape_markdown(str(k))})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
