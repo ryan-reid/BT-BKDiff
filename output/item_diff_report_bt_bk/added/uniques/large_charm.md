@@ -7,8 +7,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Magic Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Magic Resist +-65--45\%}}$ |
+| | <ins><code>Monster Magic Immunity is Sundered</code></ins> |
+| | <ins><code>Magic Resist +-65--45%</code></ins> |
 
 **Bone Break** (Bone Break)
 
@@ -17,8 +17,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Physical Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Damage Reduced by -20--10\%}}$ |
+| | <ins><code>Monster Physical Immunity is Sundered</code></ins> |
+| | <ins><code>Damage Reduced by -20--10%</code></ins> |
 
 **Cold Rupture** (Cold Rupture)
 
@@ -27,8 +27,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Cold Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Cold Resist +-90--70\%}}$ |
+| | <ins><code>Monster Cold Immunity is Sundered</code></ins> |
+| | <ins><code>Cold Resist +-90--70%</code></ins> |
 
 **Crack of the Heavens** (Crack of the Heavens)
 
@@ -37,8 +37,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Lightning Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Lightning Resist +-90--70\%}}$ |
+| | <ins><code>Monster Lightning Immunity is Sundered</code></ins> |
+| | <ins><code>Lightning Resist +-90--70%</code></ins> |
 
 **Flame Rift** (Flame Rift)
 
@@ -47,8 +47,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Fire Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Fire Resist +-90--70\%}}$ |
+| | <ins><code>Monster Fire Immunity is Sundered</code></ins> |
+| | <ins><code>Fire Resist +-90--70%</code></ins> |
 
 **Latent Black Cleft** (PreCrafted Black Cleft)
 
@@ -57,8 +57,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Magic Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Magic Resist +-65\%}}$ |
+| | <ins><code>Monster Magic Immunity is Sundered</code></ins> |
+| | <ins><code>Magic Resist +-65%</code></ins> |
 
 **Latent Bone Break** (PreCrafted Bone Break)
 
@@ -67,8 +67,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Physical Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Damage Reduced by -20\%}}$ |
+| | <ins><code>Monster Physical Immunity is Sundered</code></ins> |
+| | <ins><code>Damage Reduced by -20%</code></ins> |
 
 **Latent Cold Rupture** (PreCrafted Cold Rupture)
 
@@ -77,8 +77,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Cold Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Cold Resist +-100\%}}$ |
+| | <ins><code>Monster Cold Immunity is Sundered</code></ins> |
+| | <ins><code>Cold Resist +-100%</code></ins> |
 
 **Latent Crack of the Heavens** (PreCrafted Crack of the Heavens)
 
@@ -87,8 +87,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Lightning Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Lightning Resist +-100\%}}$ |
+| | <ins><code>Monster Lightning Immunity is Sundered</code></ins> |
+| | <ins><code>Lightning Resist +-100%</code></ins> |
 
 **Latent Flame Rift** (PreCrafted Flame Rift)
 
@@ -97,8 +97,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Fire Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Fire Resist +-100\%}}$ |
+| | <ins><code>Monster Fire Immunity is Sundered</code></ins> |
+| | <ins><code>Fire Resist +-100%</code></ins> |
 
 **Latent Rotting Fissure** (PreCrafted Rotting Fissure)
 
@@ -107,8 +107,8 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Poison Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Poison Resist +-100\%}}$ |
+| | <ins><code>Monster Poison Immunity is Sundered</code></ins> |
+| | <ins><code>Poison Resist +-100%</code></ins> |
 
 **Rotting Fissure** (Rotting Fissure)
 
@@ -117,6 +117,6 @@
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Poison Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Poison Resist +-90--70\%}}$ |
+| | <ins><code>Monster Poison Immunity is Sundered</code></ins> |
+| | <ins><code>Poison Resist +-90--70%</code></ins> |
 

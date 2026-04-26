@@ -1,54 +1,54 @@
 # Modified Unique Merc Equip
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Crown of Ages** (Crown of Ages)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Corona}$ | **Base Item:** $\text{Corona}$ |
-| **Level Requirement:** $\text{82}$ | **Level Requirement:** $\text{82}$ |
+| **Base Item:** <code>Corona</code> | **Base Item:** <code>Corona</code> |
+| **Level Requirement:** <code>82</code> | **Level Requirement:** <code>82</code> |
 | **Properties:** | **Properties:** |
-| $\text{+30\% Faster Hit Recovery}$ | $\text{+30\% Faster Hit Recovery}$ |
-| $\text{All Resistances +20-30}$ | $\text{All Resistances +20-30}$ |
-| $\text{Repairs 1 durability in 5 seconds}$ | $\text{Repairs 1 durability in 5 seconds}$ |
-| $\color{gray}{\text{+1-2}}$	ext{ to All Skills}$$ | $\color{blue}{\text{+1-3}}$	ext{ to All Skills}$$ |
-| $\color{gray}{\text{+100-150}}$	ext{ Defense}$$ | $\color{blue}{\text{+100-200}}$	ext{ Defense}$$ |
-| $$	ext{Damage Reduced by }$\color{gray}{\text{10-15\%}}$ | $$	ext{Damage Reduced by }$\color{blue}{\text{10-20\%}}$ |
-| $\color{gray}{\text{+50\%}}$	ext{ Enhanced Defense}$$ | $\color{blue}{\text{+50-100\%}}$	ext{ Enhanced Defense}$$ |
-| $$	ext{Magic Damage Reduced by }$\color{gray}{\text{12-15}}$ | $$	ext{Magic Damage Reduced by }$\color{blue}{\text{10-30}}$ |
-| $\color{gray}{\text{+7-9}}$	ext{ Life after each Kill}$$ | $\color{blue}{\text{+5-9}}$	ext{ Life after each Kill}$$ |
-|  | $\color{blue}{\text{+5-9 to Mana after each Kill}}$ |
+| <code>+30% Faster Hit Recovery</code> | <code>+30% Faster Hit Recovery</code> |
+| <code>All Resistances +20-30</code> | <code>All Resistances +20-30</code> |
+| <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
+| <del><code>+1-2</code></del><code> to All Skills</code> | <ins><code>+1-3</code></ins><code> to All Skills</code> |
+| <del><code>+100-150</code></del><code> Defense</code> | <ins><code>+100-200</code></ins><code> Defense</code> |
+| <code>Damage Reduced by </code><del><code>10-15%</code></del> | <code>Damage Reduced by </code><ins><code>10-20%</code></ins> |
+| <del><code>+50%</code></del><code> Enhanced Defense</code> | <ins><code>+50-100%</code></ins><code> Enhanced Defense</code> |
+| <code>Magic Damage Reduced by </code><del><code>12-15</code></del> | <code>Magic Damage Reduced by </code><ins><code>10-30</code></ins> |
+| <del><code>+7-9</code></del><code> Life after each Kill</code> | <ins><code>+5-9</code></ins><code> Life after each Kill</code> |
+|  | <ins><code>+5-9 to Mana after each Kill</code></ins> |
 
 **Giant Skull** (Giantskull)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Bone Visage}$ | **Base Item:** $\text{Bone Visage}$ |
-| **Level Requirement:** $\text{65}$ | **Level Requirement:** $\text{65}$ |
+| **Base Item:** <code>Bone Visage</code> | **Base Item:** <code>Bone Visage</code> |
+| **Level Requirement:** <code>65</code> | **Level Requirement:** <code>65</code> |
 | **Properties:** | **Properties:** |
-| $\text{+250-320 Defense}$ | $\text{+250-320 Defense}$ |
-| $\text{+25-35 to Strength}$ | $\text{+25-35 to Strength}$ |
-| $\text{25\% Chance of Crushing Blow}$ | $\text{25\% Chance of Crushing Blow}$ |
-| $\text{Damage Reduced by 12-21}$ | $\text{Damage Reduced by 12-21}$ |
-| $\text{+30-60\% Enhanced Damage}$ | $\text{+30-60\% Enhanced Damage}$ |
-| $\text{+25-35 to Dexterity}$ | $\text{+25-35 to Dexterity}$ |
-|  | $\color{blue}{\text{Ignore Target's Defense}}$ |
+| <code>+250-320 Defense</code> | <code>+250-320 Defense</code> |
+| <code>+25-35 to Strength</code> | <code>+25-35 to Strength</code> |
+| <code>25% Chance of Crushing Blow</code> | <code>25% Chance of Crushing Blow</code> |
+| <code>Damage Reduced by 12-21</code> | <code>Damage Reduced by 12-21</code> |
+| <code>+30-60% Enhanced Damage</code> | <code>+30-60% Enhanced Damage</code> |
+| <code>+25-35 to Dexterity</code> | <code>+25-35 to Dexterity</code> |
+|  | <ins><code>Ignore Target's Defense</code></ins> |
 
 **Nightwing's Veil** (Nightwing's Veil)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Spired Helm}$ | **Base Item:** $\text{Spired Helm}$ |
-| **Level Requirement:** $\text{67}$ | **Level Requirement:** $\text{67}$ |
+| **Base Item:** <code>Spired Helm</code> | **Base Item:** <code>Spired Helm</code> |
+| **Level Requirement:** <code>67</code> | **Level Requirement:** <code>67</code> |
 | **Properties:** | **Properties:** |
-| $\text{+90-120\% Enhanced Defense}$ | $\text{+90-120\% Enhanced Defense}$ |
-| $\text{+2 to All Skills}$ | $\text{+2 to All Skills}$ |
-| $\text{+10-20 to Dexterity}$ | $\text{+10-20 to Dexterity}$ |
-| $\text{Cold Absorb 5-9\%}$ | $\text{Cold Absorb 5-9\%}$ |
-| $\text{Half Freeze Duration}$ | $\text{Half Freeze Duration}$ |
-| $\text{Requirements --50\%}$ | $\text{Requirements --50\%}$ |
-| $\color{gray}{\text{+8-12\%}}$	ext{ to Cold Skill Damage}$$ | $\color{blue}{\text{+8-15\%}}$	ext{ to Cold Skill Damage}$$ |
-| $\color{gray}{\text{-10-20\%}}$	ext{ to Enemy Cold Resistance}$$ | $\color{blue}{\text{-8-15\%}}$	ext{ to Enemy Cold Resistance}$$ |
+| <code>+90-120% Enhanced Defense</code> | <code>+90-120% Enhanced Defense</code> |
+| <code>+2 to All Skills</code> | <code>+2 to All Skills</code> |
+| <code>+10-20 to Dexterity</code> | <code>+10-20 to Dexterity</code> |
+| <code>Cold Absorb 5-9%</code> | <code>Cold Absorb 5-9%</code> |
+| <code>Half Freeze Duration</code> | <code>Half Freeze Duration</code> |
+| <code>Requirements --50%</code> | <code>Requirements --50%</code> |
+| <del><code>+8-12%</code></del><code> to Cold Skill Damage</code> | <ins><code>+8-15%</code></ins><code> to Cold Skill Damage</code> |
+| <del><code>-10-20%</code></del><code> to Enemy Cold Resistance</code> | <ins><code>-8-15%</code></ins><code> to Enemy Cold Resistance</code> |
 

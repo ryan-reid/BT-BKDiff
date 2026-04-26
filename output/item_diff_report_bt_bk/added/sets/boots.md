@@ -7,12 +7,12 @@
 | | **Base Item:** Scarabshell Boots |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+40\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+100-150 Defense}}$ |
-| | $\color{blue}{\text{+100-150\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+10-20 to Strength}}$ |
-| | $\color{blue}{\text{Magic Absorb 5-15\%}}$ |
-| | $\color{blue}{\text{Curse Resist +30-40\%}}$ |
+| | <ins><code>+40% Faster Run/Walk</code></ins> |
+| | <ins><code>+100-150 Defense</code></ins> |
+| | <ins><code>+100-150% Enhanced Defense</code></ins> |
+| | <ins><code>+10-20 to Strength</code></ins> |
+| | <ins><code>Magic Absorb 5-15%</code></ins> |
+| | <ins><code>Curse Resist +30-40%</code></ins> |
 
 **Horazon's Legacy** (Horazon's Legacy)
 
@@ -21,12 +21,12 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 67 |
 | | **Properties:** |
-| | $\color{blue}{\text{+30\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+10-15 to Strength}}$ |
-| | $\color{blue}{\text{+10-15 to Dexterity}}$ |
-| | $\color{blue}{\text{Magic Resist +20-30\%}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Requirements --30\%}}$ |
+| | <ins><code>+30% Faster Run/Walk</code></ins> |
+| | <ins><code>+10-15 to Strength</code></ins> |
+| | <ins><code>+10-15 to Dexterity</code></ins> |
+| | <ins><code>Magic Resist +20-30%</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Requirements --30%</code></ins> |
 
 **Horazon's Stone** (Horazon's Stone)
 
@@ -35,13 +35,13 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+50\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+10-20 to Strength}}$ |
-| | $\color{blue}{\text{+10-20 to Dexterity}}$ |
-| | $\color{blue}{\text{Magic Resist +75\%}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Requirements --50\%}}$ |
-| | $\color{blue}{\text{+100-300\% Enhanced Defense}}$ |
+| | <ins><code>+50% Faster Run/Walk</code></ins> |
+| | <ins><code>+10-20 to Strength</code></ins> |
+| | <ins><code>+10-20 to Dexterity</code></ins> |
+| | <ins><code>Magic Resist +75%</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Requirements --50%</code></ins> |
+| | <ins><code>+100-300% Enhanced Defense</code></ins> |
 
 **Warlord's Crushers** (Warlord's Crushers)
 
@@ -50,6 +50,6 @@
 | | **Base Item:** Greaves |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+20\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{Fire Resist +20\%}}$ |
+| | <ins><code>+20% Faster Run/Walk</code></ins> |
+| | <ins><code>Fire Resist +20%</code></ins> |
 

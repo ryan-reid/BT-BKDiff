@@ -1,36 +1,36 @@
 # Modified Set Mace
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Aldur's Onslaught** (Aldur's Onslaught)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{Jagged}}$	ext{ Star}$$ | **Base Item:** $\color{blue}{\text{Devil}}$	ext{ Star}$$ |
-| **Level Requirement:** $\text{85}$ | **Level Requirement:** $\text{85}$ |
+| **Base Item:** <del><code>Jagged</code></del><code> Star</code> | **Base Item:** <ins><code>Devil</code></ins><code> Star</code> |
+| **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
-| $\text{+2-3 to Druid Skill Levels}$ | $\text{+2-3 to Druid Skill Levels}$ |
-| $\text{+40-50\% Increased Attack Speed}$ | $\text{+40-50\% Increased Attack Speed}$ |
-| $\text{+40-50\% Faster Cast Rate}$ | $\text{+40-50\% Faster Cast Rate}$ |
-| $\text{+300-350\% Enhanced Damage}$ | $\text{+300-350\% Enhanced Damage}$ |
-| $\text{+200-300 to Maximum Damage}$ | $\text{+200-300 to Maximum Damage}$ |
-| $\text{50\% Bonus to Attack Rating}$ | $\text{50\% Bonus to Attack Rating}$ |
-| $\text{10\% Life stolen per hit}$ | $\text{10\% Life stolen per hit}$ |
-| $\text{35\% Chance of Crushing Blow}$ | $\text{35\% Chance of Crushing Blow}$ |
+| <code>+2-3 to Druid Skill Levels</code> | <code>+2-3 to Druid Skill Levels</code> |
+| <code>+40-50% Increased Attack Speed</code> | <code>+40-50% Increased Attack Speed</code> |
+| <code>+40-50% Faster Cast Rate</code> | <code>+40-50% Faster Cast Rate</code> |
+| <code>+300-350% Enhanced Damage</code> | <code>+300-350% Enhanced Damage</code> |
+| <code>+200-300 to Maximum Damage</code> | <code>+200-300 to Maximum Damage</code> |
+| <code>50% Bonus to Attack Rating</code> | <code>50% Bonus to Attack Rating</code> |
+| <code>10% Life stolen per hit</code> | <code>10% Life stolen per hit</code> |
+| <code>35% Chance of Crushing Blow</code> | <code>35% Chance of Crushing Blow</code> |
 
 **Aldur's Rhythm** (Aldur's Gauntlet)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{Jagged}}$	ext{ Star}$$ | **Base Item:** $\color{blue}{\text{Devil}}$	ext{ Star}$$ |
-| **Level Requirement:** $\text{55}$ | **Level Requirement:** $\text{55}$ |
+| **Base Item:** <del><code>Jagged</code></del><code> Star</code> | **Base Item:** <ins><code>Devil</code></ins><code> Star</code> |
+| **Level Requirement:** <code>55</code> | **Level Requirement:** <code>55</code> |
 | **Properties:** | **Properties:** |
-| $\text{Adds 50-100 Damage}$ | $\text{Adds 50-100 Damage}$ |
-| $\text{Damage +50-75}$ | $\text{Damage +50-75}$ |
-| $\text{10\% Life stolen per hit}$ | $\text{10\% Life stolen per hit}$ |
-| $\text{+45\% Increased Attack Speed}$ | $\text{+45\% Increased Attack Speed}$ |
-| $\text{+300\% Enhanced Damage}$ | $\text{+300\% Enhanced Damage}$ |
-| $\text{5\% Mana stolen per hit}$ | $\text{5\% Mana stolen per hit}$ |
-| $\text{+30\% Faster Cast Rate}$ | $\text{+30\% Faster Cast Rate}$ |
+| <code>Adds 50-100 Damage</code> | <code>Adds 50-100 Damage</code> |
+| <code>Damage +50-75</code> | <code>Damage +50-75</code> |
+| <code>10% Life stolen per hit</code> | <code>10% Life stolen per hit</code> |
+| <code>+45% Increased Attack Speed</code> | <code>+45% Increased Attack Speed</code> |
+| <code>+300% Enhanced Damage</code> | <code>+300% Enhanced Damage</code> |
+| <code>5% Mana stolen per hit</code> | <code>5% Mana stolen per hit</code> |
+| <code>+30% Faster Cast Rate</code> | <code>+30% Faster Cast Rate</code> |
 

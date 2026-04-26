@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import html
 import difflib
 from typing import List, Dict, Any, Tuple
 from d2lib.models import AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, CubeRecipeDTO, ItemDiffDTO, SkillTreeDTO
@@ -43,6 +44,13 @@ class MarkdownExporter(BaseExporter):
         return s
 
     @staticmethod
+    def escape_inline_html(s: Any) -> str:
+        if s is None:
+            return ""
+        text = re.sub(r'Ãƒ(?:Æ’Ã‚)?Â¿c.', '', str(s))
+        return html.escape(text, quote=False)
+
+    @staticmethod
     def escape_table_cell(s: Any) -> str:
         """Escapes plain-text content for safe Markdown table rendering."""
         if s is None:
@@ -63,16 +71,20 @@ class MarkdownExporter(BaseExporter):
 
     @staticmethod
     def get_styled_diffs(old_s: str, new_s: str) -> Tuple[str, str]:
-        def fmt(color, text):
-            if not text: return ""
-            escaped = MarkdownExporter.escape_latex(text)
-            if color:
-                return f"$\\color{{{color}}}{{\\text{{{escaped}}}}}$"
-            return f"$\\text{{{escaped}}}$"
+        def fmt(kind, text):
+            if not text:
+                return ""
+            escaped = MarkdownExporter.escape_inline_html(text)
+            if kind == "added":
+                return f"<ins><code>{escaped}</code></ins>"
+            if kind == "removed":
+                return f"<del><code>{escaped}</code></del>"
+            return f"<code>{escaped}</code>"
 
-        if not old_s: return "", fmt("blue", new_s)
-        if not new_s or new_s == "(removed)": 
-            return fmt("gray", old_s), fmt("blue", "(removed)")
+        if not old_s:
+            return "", fmt("added", new_s)
+        if not new_s or new_s == "(removed)":
+            return fmt("removed", old_s), fmt("added", "(removed)")
         
         def normalize_text(t): return re.sub(r'\s+', ' ', re.sub(r'ÿc.', '', t)).strip()
         if normalize_text(old_s) == normalize_text(new_s):
@@ -89,14 +101,14 @@ class MarkdownExporter(BaseExporter):
             for tag, i1, i2, j1, j2 in matcher.get_opcodes():
                 part = "".join(tokens[i1:i2] if is_old else tokens[j1:j2])
                 if not part: continue
-                escaped = MarkdownExporter.escape_latex(part)
+                escaped = MarkdownExporter.escape_inline_html(part)
                 if (is_old and tag in ['replace', 'delete']) or (not is_old and tag in ['replace', 'insert']):
-                    color = 'gray' if is_old else 'blue'
-                    parts.append(f"\\color{{{color}}}{{\\text{{{escaped}}}}}")
+                    tag_name = "del" if is_old else "ins"
+                    parts.append(f"<{tag_name}><code>{escaped}</code></{tag_name}>")
                 elif tag == 'equal': 
-                    parts.append(f"$\text{{{escaped}}}$")
+                    parts.append(f"<code>{escaped}</code>")
             if not parts: return ""
-            return "$" + "".join(parts) + "$"
+            return "".join(parts)
         return render(old_toks, True), render(new_toks, False)
 
     def export_skill_tree(self, tree: SkillTreeDTO, output_path: str):
@@ -210,8 +222,8 @@ class MarkdownExporter(BaseExporter):
                 with open(path, 'w', encoding='utf-8') as f_out:
                     f_out.write(f"# {title}\n\n")
                     if is_modified:
-                        f_out.write(r"- $\color{gray}{\\text{Gray text}}$: Removed/Old Value" + "\n")
-                        f_out.write(r"- $\color{blue}{\\text{Blue text}}$: Added/New Value" + "\n\n")
+                        f_out.write("- `<del><code>old</code></del>`: Removed/Old Value\n")
+                        f_out.write("- `<ins><code>new</code></ins>`: Added/New Value\n\n")
 
                     for item in sorted(items_list, key=lambda x: x.get('display_name') or x.get('name', '')):
                         k = item['original_key']

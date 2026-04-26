@@ -7,12 +7,12 @@
 | | **Base Item:** Mithril Point |
 | | **Level Requirement:** 67 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 10-15\%}}$ |
-| | $\color{blue}{\text{+2-3 to Blood Oath (Warlock only)}}$ |
-| | $\color{blue}{\text{+2-3 to Blood Boil (Warlock only)}}$ |
-| | $\color{blue}{\text{+1-3 to Bind Demon (Warlock only)}}$ |
-| | $\color{blue}{\text{20-35\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{Slows Target by 25\%}}$ |
+| | <ins><code>+1-2 to All Skills</code></ins> |
+| | <ins><code>+30% Faster Cast Rate</code></ins> |
+| | <ins><code>Increase Maximum Life 10-15%</code></ins> |
+| | <ins><code>+2-3 to Blood Oath (Warlock only)</code></ins> |
+| | <ins><code>+2-3 to Blood Boil (Warlock only)</code></ins> |
+| | <ins><code>+1-3 to Bind Demon (Warlock only)</code></ins> |
+| | <ins><code>20-35% Better Chance of Getting Magic Items</code></ins> |
+| | <ins><code>Slows Target by 25%</code></ins> |
 

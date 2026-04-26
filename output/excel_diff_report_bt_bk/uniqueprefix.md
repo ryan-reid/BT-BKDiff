@@ -1,3 +1,3 @@
 # Differences for uniqueprefix.txt
 
-*Key column used: `code`*
+*Key column used: `Name`*

@@ -7,15 +7,15 @@
 | | **Base Item:** Blade Talons |
 | | **Level Requirement:** 28 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to Shadow Disciplines Skills}}$ |
-| | $\color{blue}{\text{+2 to Assassin Skill Levels}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+100-200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{-35\% Target Defense}}$ |
-| | $\color{blue}{\text{25\% Deadly Strike}}$ |
-| | $\color{blue}{\text{Hit Blinds Target +50}}$ |
-| | $\color{blue}{\text{+10 to Dexterity}}$ |
-| | $\color{blue}{\text{+25 to Mana}}$ |
+| | <ins><code>+1 to Shadow Disciplines Skills</code></ins> |
+| | <ins><code>+2 to Assassin Skill Levels</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>+100-200% Enhanced Damage</code></ins> |
+| | <ins><code>-35% Target Defense</code></ins> |
+| | <ins><code>25% Deadly Strike</code></ins> |
+| | <ins><code>Hit Blinds Target +50</code></ins> |
+| | <ins><code>+10 to Dexterity</code></ins> |
+| | <ins><code>+25 to Mana</code></ins> |
 
 **Slanderer** (Slanderer)
 
@@ -24,10 +24,10 @@
 | | **Base Item:** Katar |
 | | **Level Requirement:** 27 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{+3 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+20 to Dexterity}}$ |
-| | $\color{blue}{\text{-4\% to Enemy Fire Resistance}}$ |
-| | $\color{blue}{\text{+50 Kick Damage}}$ |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>+3 to Mana after each Kill</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>+20 to Dexterity</code></ins> |
+| | <ins><code>-4% to Enemy Fire Resistance</code></ins> |
+| | <ins><code>+50 Kick Damage</code></ins> |
 

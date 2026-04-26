@@ -7,14 +7,14 @@
 | | **Base Item:** Battle Dart |
 | | **Level Requirement:** 44 |
 | | **Properties:** |
-| | $\color{blue}{\text{50\% Deadly Strike}}$ |
-| | $\color{blue}{\text{+200-269\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{-50\% Target Defense}}$ |
-| | $\color{blue}{\text{7-9\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{4-6\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{Replenishes quantity}}$ |
-| | $\color{blue}{\text{Hit Blinds Target +1}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
+| | <ins><code>50% Deadly Strike</code></ins> |
+| | <ins><code>+200-269% Enhanced Damage</code></ins> |
+| | <ins><code>-50% Target Defense</code></ins> |
+| | <ins><code>7-9% Life stolen per hit</code></ins> |
+| | <ins><code>4-6% Mana stolen per hit</code></ins> |
+| | <ins><code>Replenishes quantity</code></ins> |
+| | <ins><code>Hit Blinds Target +1</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
 
 **Warshrike** (Warshrike)
 
@@ -23,10 +23,10 @@
 | | **Base Item:** Winged Knife |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{+269-320\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Piercing Attack}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{50\% Deadly Strike}}$ |
-| | $\color{blue}{\text{Replenishes quantity}}$ |
-| | $\color{blue}{\text{40\% Chance to cast level 20 Nova on striking}}$ |
+| | <ins><code>+269-320% Enhanced Damage</code></ins> |
+| | <ins><code>Piercing Attack</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>50% Deadly Strike</code></ins> |
+| | <ins><code>Replenishes quantity</code></ins> |
+| | <ins><code>40% Chance to cast level 20 Nova on striking</code></ins> |
 

@@ -6,230 +6,230 @@
 
 ## Modified Rows (105)
 ### 6bs
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{402}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>402</code></ins> (New)
 ### 6cs
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{402}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>402</code></ins> (New)
 ### 6ls
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{402}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>402</code></ins> (New)
 ### 6ss
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{402}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>402</code></ins> (New)
 ### 6ws
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{402}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>402</code></ins> (New)
 ### 7bl
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 7bw
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{411}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>411</code></ins> (New)
 ### 7gw
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{411}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>411</code></ins> (New)
 ### 7la
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `gemsockets`: <del><code>4</code></del> (Old) &rarr; <ins><code>5</code></ins> (New)
 ### 7ma
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 7qs
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{408}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>408</code></ins> (New)
 ### 7sc
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{408}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>408</code></ins> (New)
 ### 7wh
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `gemsockets`: <del><code>4</code></del> (Old) &rarr; <ins><code>5</code></ins> (New)
 ### 7wn
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{411}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>411</code></ins> (New)
 ### 7ws
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{408}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>408</code></ins> (New)
 ### 7yw
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{411}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>411</code></ins> (New)
 ### 8bs
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{401}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>401</code></ins> (New)
 ### 8cs
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{401}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>401</code></ins> (New)
 ### 8ls
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{401}}$ (New)
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>401</code></ins> (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### 8lx
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>6</code></ins> (New)
 ### 8mx
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+- `gemsockets`: <del><code>4</code></del> (Old) &rarr; <ins><code>6</code></ins> (New)
 ### 8rx
-- `gemsockets`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+- `gemsockets`: <del><code>5</code></del> (Old) &rarr; <ins><code>6</code></ins> (New)
 ### 8sb
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### 8ss
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{401}}$ (New)
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>401</code></ins> (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 8ws
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{401}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>401</code></ins> (New)
 ### 92h
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### 9b7
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### 9bl
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 9bw
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{410}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>410</code></ins> (New)
 ### 9cl
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 9gl
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### 9gw
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{410}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>410</code></ins> (New)
 ### 9ha
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 9la
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `gemsockets`: <del><code>4</code></del> (Old) &rarr; <ins><code>5</code></ins> (New)
 ### 9ma
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 9qs
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{407}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>407</code></ins> (New)
 ### 9sb
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 9sc
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{407}}$ (New)
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>407</code></ins> (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 9sm
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 9sr
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### 9ss
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### 9ts
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### 9wh
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `gemsockets`: <del><code>4</code></del> (Old) &rarr; <ins><code>5</code></ins> (New)
 ### 9wn
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{410}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>410</code></ins> (New)
 ### 9ws
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{407}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>407</code></ins> (New)
 ### 9yw
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{410}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>410</code></ins> (New)
 ### am1
-- `gemsockets`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `gemsockets`: <del><code>5</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### bar
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### bld
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### bst
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{400}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>400</code></ins> (New)
 ### bwn
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{409}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>409</code></ins> (New)
 ### clb
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### cst
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{400}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>400</code></ins> (New)
 ### d33
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### flc
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### g33
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### gpl
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `minstack`: <del><code>3</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `spawnstack`: <del><code>6</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
 ### gpm
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `minstack`: <del><code>3</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `spawnstack`: <del><code>6</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
 ### gps
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `minstack`: <del><code>3</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `spawnstack`: <del><code>6</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
 ### gsc
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{406}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>406</code></ins> (New)
 ### gwn
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{409}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>409</code></ins> (New)
 ### hdm
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### hfh
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### hst
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### lax
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `gemsockets`: <del><code>4</code></del> (Old) &rarr; <ins><code>5</code></ins> (New)
 ### leg
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### lst
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{400}}$ (New)
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>400</code></ins> (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### lxb
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>6</code></ins> (New)
 ### mac
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### msf
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### mxb
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+- `gemsockets`: <del><code>4</code></del> (Old) &rarr; <ins><code>6</code></ins> (New)
 ### ob1
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{403}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>403</code></ins> (New)
 ### ob2
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{403}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>403</code></ins> (New)
 ### ob3
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{403}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>403</code></ins> (New)
 ### ob4
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{403}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>403</code></ins> (New)
 ### ob5
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{403}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>403</code></ins> (New)
 ### ob6
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{404}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>404</code></ins> (New)
 ### ob7
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{404}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>404</code></ins> (New)
 ### ob8
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{404}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>404</code></ins> (New)
 ### ob9
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{404}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>404</code></ins> (New)
 ### oba
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{404}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>404</code></ins> (New)
 ### obb
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{405}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>405</code></ins> (New)
 ### obc
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{405}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>405</code></ins> (New)
 ### obd
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{405}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>405</code></ins> (New)
 ### obe
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{405}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>405</code></ins> (New)
 ### obf
-- `auto prefix`: $\color{gray}{\text{303}}$ (Old) &rarr; $\color{blue}{\text{405}}$ (New)
+- `auto prefix`: <del><code>303</code></del> (Old) &rarr; <ins><code>405</code></ins> (New)
 ### opl
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `minstack`: <del><code>3</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `spawnstack`: <del><code>6</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
 ### opm
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `minstack`: <del><code>3</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `spawnstack`: <del><code>6</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
 ### ops
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `minstack`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `spawnstack`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{9}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `minstack`: <del><code>3</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `spawnstack`: <del><code>6</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
 ### qf1
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### qf2
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### rxb
-- `gemsockets`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{6}}$ (New)
+- `gemsockets`: <del><code>5</code></del> (Old) &rarr; <ins><code>6</code></ins> (New)
 ### sbr
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### sbw
-- `gemsockets`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `gemsockets`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### scm
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### scp
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{406}}$ (New)
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>406</code></ins> (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### spc
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### ssd
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### ssp
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### sst
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{400}}$ (New)
-- `gemsockets`: $\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{3}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>400</code></ins> (New)
+- `gemsockets`: <del><code>2</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
 ### whm
-- `gemsockets`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{5}}$ (New)
+- `gemsockets`: <del><code>4</code></del> (Old) &rarr; <ins><code>5</code></ins> (New)
 ### wnd
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{409}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>409</code></ins> (New)
 ### wsp
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{406}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>406</code></ins> (New)
 ### wst
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{400}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>400</code></ins> (New)
 ### ywn
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{409}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>409</code></ins> (New)

@@ -7,6 +7,6 @@
 | | **Base Item:** Kris |
 | | **Level Requirement:** 8 |
 | | **Properties:** |
-| | $\color{blue}{\text{+20\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{(1.0 per clvl) to Maximum Damage (Based on Character Level)}}$ |
+| | <ins><code>+20% Faster Run/Walk</code></ins> |
+| | <ins><code>(1.0 per clvl) to Maximum Damage (Based on Character Level)</code></ins> |
 

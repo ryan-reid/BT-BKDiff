@@ -1,36 +1,36 @@
 # Modified Set Pelt
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Aldur's Icy Gaze** (Aldur's Icy Gaze)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{Hunter's}}$	ext{ }$\color{gray}{\text{Guise}}$ | **Base Item:** $\color{blue}{\text{Earth}}$	ext{ }$\color{blue}{\text{Spirit}}$ |
-| **Level Requirement:** $\text{85}$ | **Level Requirement:** $\text{85}$ |
+| **Base Item:** <del><code>Hunter's</code></del><code> </code><del><code>Guise</code></del> | **Base Item:** <ins><code>Earth</code></ins><code> </code><ins><code>Spirit</code></ins> |
+| **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
-| $\text{+2 to Druid Skill Levels}$ | $\text{+2 to Druid Skill Levels}$ |
-| $\text{+45-90\% Enhanced Damage}$ | $\text{+45-90\% Enhanced Damage}$ |
-| $\text{+500 Defense}$ | $\text{+500 Defense}$ |
-| $\text{All Resistances +15-25}$ | $\text{All Resistances +15-25}$ |
-| $\text{+7 to Cyclone Armor (Druid only)}$ | $\text{+7 to Cyclone Armor (Druid only)}$ |
-| $\text{+5-10\% to Fire Skill Damage}$ | $\text{+5-10\% to Fire Skill Damage}$ |
-| $\text{-3-5\% to Enemy Fire Resistance}$ | $\text{-3-5\% to Enemy Fire Resistance}$ |
-| $\text{+5-10\% to Cold Skill Damage}$ | $\text{+5-10\% to Cold Skill Damage}$ |
-| $\text{-3-5\% to Enemy Cold Resistance}$ | $\text{-3-5\% to Enemy Cold Resistance}$ |
+| <code>+2 to Druid Skill Levels</code> | <code>+2 to Druid Skill Levels</code> |
+| <code>+45-90% Enhanced Damage</code> | <code>+45-90% Enhanced Damage</code> |
+| <code>+500 Defense</code> | <code>+500 Defense</code> |
+| <code>All Resistances +15-25</code> | <code>All Resistances +15-25</code> |
+| <code>+7 to Cyclone Armor (Druid only)</code> | <code>+7 to Cyclone Armor (Druid only)</code> |
+| <code>+5-10% to Fire Skill Damage</code> | <code>+5-10% to Fire Skill Damage</code> |
+| <code>-3-5% to Enemy Fire Resistance</code> | <code>-3-5% to Enemy Fire Resistance</code> |
+| <code>+5-10% to Cold Skill Damage</code> | <code>+5-10% to Cold Skill Damage</code> |
+| <code>-3-5% to Enemy Cold Resistance</code> | <code>-3-5% to Enemy Cold Resistance</code> |
 
 **Aldur's Stony Gaze** (Aldur's Stony Gaze)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{Hunter's}}$	ext{ }$\color{gray}{\text{Guise}}$ | **Base Item:** $\color{blue}{\text{Earth}}$	ext{ }$\color{blue}{\text{Spirit}}$ |
-| **Level Requirement:** $\text{36}$ | **Level Requirement:** $\text{36}$ |
+| **Base Item:** <del><code>Hunter's</code></del><code> </code><del><code>Guise</code></del> | **Base Item:** <ins><code>Earth</code></ins><code> </code><ins><code>Spirit</code></ins> |
+| **Level Requirement:** <code>36</code> | **Level Requirement:** <code>36</code> |
 | **Properties:** | **Properties:** |
-| $\text{+90 Defense}$ | $\text{+90 Defense}$ |
-| $\text{+75 to Mana}$ | $\text{+75 to Mana}$ |
-| $\text{+25\% Faster Hit Recovery}$ | $\text{+25\% Faster Hit Recovery}$ |
-| $\text{Lightning Resist +40-50\%}$ | $\text{Lightning Resist +40-50\%}$ |
-| $\text{+1-2 to All Skills}$ | $\text{+1-2 to All Skills}$ |
-| $\text{Cold Resist +40-50\%}$ | $\text{Cold Resist +40-50\%}$ |
+| <code>+90 Defense</code> | <code>+90 Defense</code> |
+| <code>+75 to Mana</code> | <code>+75 to Mana</code> |
+| <code>+25% Faster Hit Recovery</code> | <code>+25% Faster Hit Recovery</code> |
+| <code>Lightning Resist +40-50%</code> | <code>Lightning Resist +40-50%</code> |
+| <code>+1-2 to All Skills</code> | <code>+1-2 to All Skills</code> |
+| <code>Cold Resist +40-50%</code> | <code>Cold Resist +40-50%</code> |
 

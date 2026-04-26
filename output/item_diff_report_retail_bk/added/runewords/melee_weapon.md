@@ -7,13 +7,13 @@
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Level 9 Fanaticism Aura When Equipped}}$ |
-| | $\color{blue}{\text{+240-270\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+25-40 to Strength}}$ |
-| | $\color{blue}{\text{+3 to Hunger}}$ |
-| | $\color{blue}{\text{+3 to Werebear}}$ |
-| | $\color{blue}{\text{+3 to Lycanthropy}}$ |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>Level 9 Fanaticism Aura When Equipped</code></ins> |
+| | <ins><code>+240-270% Enhanced Damage</code></ins> |
+| | <ins><code>+25-40 to Strength</code></ins> |
+| | <ins><code>+3 to Hunger</code></ins> |
+| | <ins><code>+3 to Werebear</code></ins> |
+| | <ins><code>+3 to Lycanthropy</code></ins> |
 
 **Death** (Death)
 
@@ -22,13 +22,13 @@
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+300-385\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{(0.5\% per clvl) Deadly Strike (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+25\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{25\% Chance to cast level 18 Glacial Spike on attack}}$ |
-| | $\color{blue}{\text{100\% Chance to cast level 44 Chain Lightning when you Die}}$ |
-| | $\color{blue}{\text{50\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{Indestructible}}$ |
+| | <ins><code>+300-385% Enhanced Damage</code></ins> |
+| | <ins><code>(0.5% per clvl) Deadly Strike (Based on Character Level)</code></ins> |
+| | <ins><code>+25% Increased Attack Speed</code></ins> |
+| | <ins><code>25% Chance to cast level 18 Glacial Spike on attack</code></ins> |
+| | <ins><code>100% Chance to cast level 44 Chain Lightning when you Die</code></ins> |
+| | <ins><code>50% Chance of Crushing Blow</code></ins> |
+| | <ins><code>Indestructible</code></ins> |
 
 **Doom** (Doom)
 
@@ -37,13 +37,13 @@
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+280-320\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Level 12 Holy Freeze Aura When Equipped}}$ |
-| | $\color{blue}{\text{+45\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Prevent Monster Heal}}$ |
-| | $\color{blue}{\text{-50-75\% to Enemy Cold Resistance}}$ |
-| | $\color{blue}{\text{+2 to All Skills}}$ |
-| | $\color{blue}{\text{20\% Chance to cast level 40 Blizzard on striking}}$ |
+| | <ins><code>+280-320% Enhanced Damage</code></ins> |
+| | <ins><code>Level 12 Holy Freeze Aura When Equipped</code></ins> |
+| | <ins><code>+45% Increased Attack Speed</code></ins> |
+| | <ins><code>Prevent Monster Heal</code></ins> |
+| | <ins><code>-50-75% to Enemy Cold Resistance</code></ins> |
+| | <ins><code>+2 to All Skills</code></ins> |
+| | <ins><code>20% Chance to cast level 40 Blizzard on striking</code></ins> |
 
 **Eternity** (Eternity)
 
@@ -52,13 +52,13 @@
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+260-310\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Indestructible}}$ |
-| | $\color{blue}{\text{Slows Target by 33\%}}$ |
-| | $\color{blue}{\text{Level 88 Revive (8/\# Charges)}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+9\% to Experience Gained}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
+| | <ins><code>+260-310% Enhanced Damage</code></ins> |
+| | <ins><code>Indestructible</code></ins> |
+| | <ins><code>Slows Target by 33%</code></ins> |
+| | <ins><code>Level 88 Revive (8/# Charges)</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+9% to Experience Gained</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
 
 **Holy Thunder** (Holy Thunder)
 
@@ -67,13 +67,13 @@
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+100\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Adds 20-60 Lightning Damage}}$ |
-| | $\color{blue}{\text{+15 to Maximum Damage}}$ |
-| | $\color{blue}{\text{Lightning Resist +60\%}}$ |
-| | $\color{blue}{\text{+5\% to Maximum Lightning Resist}}$ |
-| | $\color{blue}{\text{Level 5 Holy Shock Aura When Equipped}}$ |
-| | $\color{blue}{\text{Poison Length Reduced by 75\%}}$ |
+| | <ins><code>+100% Enhanced Damage</code></ins> |
+| | <ins><code>Adds 20-60 Lightning Damage</code></ins> |
+| | <ins><code>+15 to Maximum Damage</code></ins> |
+| | <ins><code>Lightning Resist +60%</code></ins> |
+| | <ins><code>+5% to Maximum Lightning Resist</code></ins> |
+| | <ins><code>Level 5 Holy Shock Aura When Equipped</code></ins> |
+| | <ins><code>Poison Length Reduced by 75%</code></ins> |
 
 **Honor** (Honor)
 
@@ -82,12 +82,12 @@
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+160-190\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 25 seconds}}$ |
-| | $\color{blue}{\text{20\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{25\% Deadly Strike}}$ |
-| | $\color{blue}{\text{+55\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+25\% Increased Attack Speed}}$ |
+| | <ins><code>+160-190% Enhanced Damage</code></ins> |
+| | <ins><code>Repairs 1 durability in 25 seconds</code></ins> |
+| | <ins><code>20% Bonus to Attack Rating</code></ins> |
+| | <ins><code>25% Deadly Strike</code></ins> |
+| | <ins><code>+55% Faster Hit Recovery</code></ins> |
+| | <ins><code>+25% Increased Attack Speed</code></ins> |
 
 **Kingslayer** (Kingslayer)
 
@@ -96,13 +96,13 @@
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+260-300\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{-25\% Target Defense}}$ |
-| | $\color{blue}{\text{33\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{25\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{+1 to Berserk}}$ |
-| | $\color{blue}{\text{350\% Extra Gold from Monsters}}$ |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+260-300% Enhanced Damage</code></ins> |
+| | <ins><code>-25% Target Defense</code></ins> |
+| | <ins><code>33% Chance of Crushing Blow</code></ins> |
+| | <ins><code>25% Chance of Open Wounds</code></ins> |
+| | <ins><code>+1 to Berserk</code></ins> |
+| | <ins><code>350% Extra Gold from Monsters</code></ins> |
 
 **Malice** (Malice)
 
@@ -111,13 +111,13 @@
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{100\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{--100 to Monster Defense Per Hit}}$ |
-| | $\color{blue}{\text{Prevent Monster Heal}}$ |
-| | $\color{blue}{\text{+33\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 25 seconds}}$ |
-| | $\color{blue}{\text{Replenish Life +-5}}$ |
-| | $\color{blue}{\text{7\% Life stolen per hit}}$ |
+| | <ins><code>100% Chance of Open Wounds</code></ins> |
+| | <ins><code>--100 to Monster Defense Per Hit</code></ins> |
+| | <ins><code>Prevent Monster Heal</code></ins> |
+| | <ins><code>+33% Enhanced Damage</code></ins> |
+| | <ins><code>Repairs 1 durability in 25 seconds</code></ins> |
+| | <ins><code>Replenish Life +-5</code></ins> |
+| | <ins><code>7% Life stolen per hit</code></ins> |
 
 **Steel** (Steel)
 
@@ -126,12 +126,12 @@
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+25\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Damage +3}}$ |
-| | $\color{blue}{\text{50\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{+20\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{5\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 25 seconds}}$ |
+| | <ins><code>+25% Increased Attack Speed</code></ins> |
+| | <ins><code>Damage +3</code></ins> |
+| | <ins><code>50% Chance of Open Wounds</code></ins> |
+| | <ins><code>+20% Enhanced Damage</code></ins> |
+| | <ins><code>5% Chance of Crushing Blow</code></ins> |
+| | <ins><code>Repairs 1 durability in 25 seconds</code></ins> |
 
 **Strength** (Strength)
 
@@ -140,9 +140,9 @@
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+20 to Strength}}$ |
-| | $\color{blue}{\text{+90-110\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+10 to Vitality}}$ |
-| | $\color{blue}{\text{25\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 25 seconds}}$ |
+| | <ins><code>+20 to Strength</code></ins> |
+| | <ins><code>+90-110% Enhanced Damage</code></ins> |
+| | <ins><code>+10 to Vitality</code></ins> |
+| | <ins><code>25% Chance of Crushing Blow</code></ins> |
+| | <ins><code>Repairs 1 durability in 25 seconds</code></ins> |
 

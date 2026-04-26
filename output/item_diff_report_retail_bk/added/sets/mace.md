@@ -7,14 +7,14 @@
 | | **Base Item:** Devil Star |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2-3 to Druid Skill Levels}}$ |
-| | $\color{blue}{\text{+40-50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+40-50\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+300-350\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+200-300 to Maximum Damage}}$ |
-| | $\color{blue}{\text{50\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{10\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{35\% Chance of Crushing Blow}}$ |
+| | <ins><code>+2-3 to Druid Skill Levels</code></ins> |
+| | <ins><code>+40-50% Increased Attack Speed</code></ins> |
+| | <ins><code>+40-50% Faster Cast Rate</code></ins> |
+| | <ins><code>+300-350% Enhanced Damage</code></ins> |
+| | <ins><code>+200-300 to Maximum Damage</code></ins> |
+| | <ins><code>50% Bonus to Attack Rating</code></ins> |
+| | <ins><code>10% Life stolen per hit</code></ins> |
+| | <ins><code>35% Chance of Crushing Blow</code></ins> |
 
 **Aldur's Rhythm** (Aldur's Gauntlet)
 
@@ -23,13 +23,13 @@
 | | **Base Item:** Devil Star |
 | | **Level Requirement:** 55 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 50-100 Damage}}$ |
-| | $\color{blue}{\text{Damage +50-75}}$ |
-| | $\color{blue}{\text{10\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{+45\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+300\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{5\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
+| | <ins><code>Adds 50-100 Damage</code></ins> |
+| | <ins><code>Damage +50-75</code></ins> |
+| | <ins><code>10% Life stolen per hit</code></ins> |
+| | <ins><code>+45% Increased Attack Speed</code></ins> |
+| | <ins><code>+300% Enhanced Damage</code></ins> |
+| | <ins><code>5% Mana stolen per hit</code></ins> |
+| | <ins><code>+30% Faster Cast Rate</code></ins> |
 
 **Dangoon's Teaching** (Dangoon's Teaching)
 
@@ -38,11 +38,11 @@
 | | **Base Item:** Reinforced Mace |
 | | **Level Requirement:** 65 |
 | | **Properties:** |
-| | $\color{blue}{\text{(1.5 per clvl) to Maximum Damage (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{10\% Chance to cast level 20 Meteor on striking}}$ |
-| | $\color{blue}{\text{Adds 20-30 Fire Damage}}$ |
-| | $\color{blue}{\text{25\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{+1 to Zeal}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
+| | <ins><code>(1.5 per clvl) to Maximum Damage (Based on Character Level)</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>10% Chance to cast level 20 Meteor on striking</code></ins> |
+| | <ins><code>Adds 20-30 Fire Damage</code></ins> |
+| | <ins><code>25% Chance of Crushing Blow</code></ins> |
+| | <ins><code>+1 to Zeal</code></ins> |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
 

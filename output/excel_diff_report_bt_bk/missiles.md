@@ -64,43 +64,43 @@
 - frostnovamsl
 ## Modified Rows (15)
 ### bonespirit
-- `Vel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
-- `MaxVel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
+- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
 ### firenovaarrow
-- `\*ID`: $\color{gray}{\text{691}}$ (Old) &rarr; $\color{blue}{\text{740}}$ (New)
+- `\*ID`: <del><code>691</code></del> (Old) &rarr; <ins><code>740</code></ins> (New)
 ### fistoftheheavensbolt
-- `sHitPar2`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cHitPar1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cHitPar2`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `sHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `cHitPar1`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `cHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
 ### frostnovaarrow
-- `\*ID`: $\color{gray}{\text{690}}$ (Old) &rarr; $\color{blue}{\text{739}}$ (New)
+- `\*ID`: <del><code>690</code></del> (Old) &rarr; <ins><code>739</code></ins> (New)
 ### frozenorb
-- `Vel`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
-- `MaxVel`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
+- `Vel`: <del><code>10</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `MaxVel`: <del><code>10</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
 ### frozenorbbolt
-- `Vel`: $\color{gray}{\text{18}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
-- `MaxVel`: $\color{gray}{\text{18}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
+- `Vel`: <del><code>18</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `MaxVel`: <del><code>18</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
 ### frozenorbnova
-- `Vel`: $\color{gray}{\text{24}}$ (Old) &rarr; $\color{blue}{\text{30}}$ (New)
-- `MaxVel`: $\color{gray}{\text{24}}$ (Old) &rarr; $\color{blue}{\text{30}}$ (New)
+- `Vel`: <del><code>24</code></del> (Old) &rarr; <ins><code>30</code></ins> (New)
+- `MaxVel`: <del><code>24</code></del> (Old) &rarr; <ins><code>30</code></ins> (New)
 ### holybolt
-- `sHitPar2`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cHitPar1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cHitPar2`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `sHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `cHitPar1`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `cHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
 ### hydra
-- `Vel`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
-- `MaxVel`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
+- `Vel`: <del><code>16</code></del> (Old) &rarr; <ins><code>40</code></ins> (New)
+- `MaxVel`: <del><code>16</code></del> (Old) &rarr; <ins><code>40</code></ins> (New)
 ### iceblast
-- `Vel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `MaxVel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
+- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
 ### poisonnova
-- `Vel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `MaxVel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
+- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
 ### powerstrikenova
-- `\*ID`: $\color{gray}{\text{692}}$ (Old) &rarr; $\color{blue}{\text{741}}$ (New)
+- `\*ID`: <del><code>692</code></del> (Old) &rarr; <ins><code>741</code></ins> (New)
 ### proc\_splashdamage
-- `\*ID`: $\color{gray}{\text{688}}$ (Old) &rarr; $\color{blue}{\text{737}}$ (New)
+- `\*ID`: <del><code>688</code></del> (Old) &rarr; <ins><code>737</code></ins> (New)
 ### proc\_splashinit
-- `\*ID`: $\color{gray}{\text{689}}$ (Old) &rarr; $\color{blue}{\text{738}}$ (New)
+- `\*ID`: <del><code>689</code></del> (Old) &rarr; <ins><code>738</code></ins> (New)
 ### thunderstormnova
-- `\*ID`: $\color{gray}{\text{686}}$ (Old) &rarr; $\color{blue}{\text{736}}$ (New)
+- `\*ID`: <del><code>686</code></del> (Old) &rarr; <ins><code>736</code></ins> (New)

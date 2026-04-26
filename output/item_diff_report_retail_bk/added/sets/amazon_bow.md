@@ -7,9 +7,9 @@
 | | **Base Item:** Grand Matron Bow |
 | | **Level Requirement:** 70 |
 | | **Properties:** |
-| | $\color{blue}{\text{+188\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+4-5 to Bow and Crossbow Skills}}$ |
-| | $\color{blue}{\text{+50 to Attack Rating}}$ |
-| | $\color{blue}{\text{Piercing Attack}}$ |
+| | <ins><code>+188% Enhanced Damage</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>+4-5 to Bow and Crossbow Skills</code></ins> |
+| | <ins><code>+50 to Attack Rating</code></ins> |
+| | <ins><code>Piercing Attack</code></ins> |
 

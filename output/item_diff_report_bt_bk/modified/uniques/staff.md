@@ -1,23 +1,23 @@
 # Modified Unique Staff
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Mang Song's Lesson** (Mang Song's Lesson)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Archon Staff}$ | **Base Item:** $\text{Archon Staff}$ |
-| **Level Requirement:** $\text{82}$ | **Level Requirement:** $\text{82}$ |
+| **Base Item:** <code>Archon Staff</code> | **Base Item:** <code>Archon Staff</code> |
+| **Level Requirement:** <code>82</code> | **Level Requirement:** <code>82</code> |
 | **Properties:** | **Properties:** |
-| $\text{All Resistances +40-50}$ | $\text{All Resistances +40-50}$ |
-| $\color{gray}{\text{+6}}$	ext{ to All Skills}$$ | $\color{blue}{\text{+7}}$	ext{ to All Skills}$$ |
-| $$	ext{Regenerate Mana }$\color{gray}{\text{30\%}}$ | $$	ext{Regenerate Mana }$\color{blue}{\text{30-80\%}}$ |
-| $\color{gray}{\text{+85\%}}$	ext{ Faster Cast Rate}$$ | $\color{blue}{\text{+115\%}}$	ext{ Faster Cast Rate}$$ |
-| $$	ext{Increase Maximum Mana }$\color{gray}{\text{40\%}}$ | $$	ext{Increase Maximum Mana }$\color{blue}{\text{40-50\%}}$ |
-| $\color{gray}{\text{-20-25\% to Enemy Fire Resistance}}$ | $\color{blue}{\text{(removed)}}$ |
-| $\color{gray}{\text{-20-25\% to Enemy Lightning Resistance}}$ | $\color{blue}{\text{(removed)}}$ |
-| $\color{gray}{\text{-20-25\% to Enemy Cold Resistance}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{Level 5-10 Conviction Aura When Equipped}}$ |
-|  | $\color{blue}{\text{Increase Maximum Life 40-50\%}}$ |
+| <code>All Resistances +40-50</code> | <code>All Resistances +40-50</code> |
+| <del><code>+6</code></del><code> to All Skills</code> | <ins><code>+7</code></ins><code> to All Skills</code> |
+| <code>Regenerate Mana </code><del><code>30%</code></del> | <code>Regenerate Mana </code><ins><code>30-80%</code></ins> |
+| <del><code>+85%</code></del><code> Faster Cast Rate</code> | <ins><code>+115%</code></ins><code> Faster Cast Rate</code> |
+| <code>Increase Maximum Mana </code><del><code>40%</code></del> | <code>Increase Maximum Mana </code><ins><code>40-50%</code></ins> |
+| <del><code>-20-25% to Enemy Fire Resistance</code></del> | <ins><code>(removed)</code></ins> |
+| <del><code>-20-25% to Enemy Lightning Resistance</code></del> | <ins><code>(removed)</code></ins> |
+| <del><code>-20-25% to Enemy Cold Resistance</code></del> | <ins><code>(removed)</code></ins> |
+|  | <ins><code>Level 5-10 Conviction Aura When Equipped</code></ins> |
+|  | <ins><code>Increase Maximum Life 40-50%</code></ins> |
 

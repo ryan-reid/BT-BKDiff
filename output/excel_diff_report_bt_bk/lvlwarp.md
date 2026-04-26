@@ -1,3 +1,3 @@
 # Differences for lvlwarp.txt
 
-*Key column used: `code`*
+*Key column used: `Name`*

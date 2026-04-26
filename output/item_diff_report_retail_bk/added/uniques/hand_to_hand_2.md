@@ -7,18 +7,18 @@
 | | **Base Item:** Greater Talons |
 | | **Level Requirement:** 42 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-3 to Assassin Skill Levels}}$ |
-| | $\color{blue}{\text{+1-3 to Martial Arts Skills}}$ |
-| | $\color{blue}{\text{+200-250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+30\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Lightning Resistance}}$ |
-| | $\color{blue}{\text{+20 to Strength}}$ |
-| | $\color{blue}{\text{+20 to Dexterity}}$ |
-| | $\color{blue}{\text{5-9\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{Adds 25-50 Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Cold Resistance}}$ |
-| | $\color{blue}{\text{-5-10\% to Enemy Fire Resistance}}$ |
+| | <ins><code>+1-3 to Assassin Skill Levels</code></ins> |
+| | <ins><code>+1-3 to Martial Arts Skills</code></ins> |
+| | <ins><code>+200-250% Enhanced Damage</code></ins> |
+| | <ins><code>+30% Faster Hit Recovery</code></ins> |
+| | <ins><code>-5-10% to Enemy Lightning Resistance</code></ins> |
+| | <ins><code>+20 to Strength</code></ins> |
+| | <ins><code>+20 to Dexterity</code></ins> |
+| | <ins><code>5-9% Life stolen per hit</code></ins> |
+| | <ins><code>Adds 25-50 Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>-5-10% to Enemy Cold Resistance</code></ins> |
+| | <ins><code>-5-10% to Enemy Fire Resistance</code></ins> |
 
 **Blood Thirst** (Blood Thirst)
 
@@ -27,16 +27,16 @@
 | | **Base Item:** Feral Claws |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
-| | $\color{blue}{\text{+3 to Assassin Skill Levels}}$ |
-| | $\color{blue}{\text{+200-400\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+3 to Whirlwind}}$ |
-| | $\color{blue}{\text{+2 to Weapon Block (Assassin only)}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+3-10\% Dexterity}}$ |
-| | $\color{blue}{\text{+3-10\% Strength}}$ |
-| | $\color{blue}{\text{Adds 100-150 Damage}}$ |
-| | $\color{blue}{\text{3-6\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{3-6\% Mana stolen per hit}}$ |
+| | <ins><code>+3 to Assassin Skill Levels</code></ins> |
+| | <ins><code>+200-400% Enhanced Damage</code></ins> |
+| | <ins><code>+3 to Whirlwind</code></ins> |
+| | <ins><code>+2 to Weapon Block (Assassin only)</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+3-10% Dexterity</code></ins> |
+| | <ins><code>+3-10% Strength</code></ins> |
+| | <ins><code>Adds 100-150 Damage</code></ins> |
+| | <ins><code>3-6% Life stolen per hit</code></ins> |
+| | <ins><code>3-6% Mana stolen per hit</code></ins> |
 
 **Firelizard's Talons** (Firelizard's Talons)
 
@@ -45,14 +45,14 @@
 | | **Base Item:** Feral Claws |
 | | **Level Requirement:** 67 |
 | | **Properties:** |
-| | $\color{blue}{\text{+250-290\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+3 to Martial Arts Skills}}$ |
-| | $\color{blue}{\text{Adds 236-480 Fire Damage}}$ |
-| | $\color{blue}{\text{-8-10\% to Enemy Fire Resistance}}$ |
-| | $\color{blue}{\text{+4 to Wake of Fire (Assassin only)}}$ |
-| | $\color{blue}{\text{+4 to Wake of Inferno (Assassin only)}}$ |
-| | $\color{blue}{\text{+3 to Death Sentry (Assassin only)}}$ |
+| | <ins><code>+250-290% Enhanced Damage</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>+3 to Martial Arts Skills</code></ins> |
+| | <ins><code>Adds 236-480 Fire Damage</code></ins> |
+| | <ins><code>-8-10% to Enemy Fire Resistance</code></ins> |
+| | <ins><code>+4 to Wake of Fire (Assassin only)</code></ins> |
+| | <ins><code>+4 to Wake of Inferno (Assassin only)</code></ins> |
+| | <ins><code>+3 to Death Sentry (Assassin only)</code></ins> |
 
 **Jade Talon** (Jadetalon)
 
@@ -61,13 +61,13 @@
 | | **Base Item:** Wrist Sword |
 | | **Level Requirement:** 66 |
 | | **Properties:** |
-| | $\color{blue}{\text{+190-240\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{10-15\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{All Resistances +40-50}}$ |
-| | $\color{blue}{\text{+30\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+3-4 to Shadow Disciplines Skills}}$ |
-| | $\color{blue}{\text{+3-4 to Martial Arts Skills}}$ |
-| | $\color{blue}{\text{+3 to Dragon Flight (Assassin only)}}$ |
+| | <ins><code>+190-240% Enhanced Damage</code></ins> |
+| | <ins><code>10-15% Mana stolen per hit</code></ins> |
+| | <ins><code>All Resistances +40-50</code></ins> |
+| | <ins><code>+30% Faster Hit Recovery</code></ins> |
+| | <ins><code>+3-4 to Shadow Disciplines Skills</code></ins> |
+| | <ins><code>+3-4 to Martial Arts Skills</code></ins> |
+| | <ins><code>+3 to Dragon Flight (Assassin only)</code></ins> |
 
 **Primal Warlords Thirst** (Primal Warlords Thirst)
 
@@ -76,15 +76,15 @@
 | | **Base Item:** Feral Claws |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
-| | $\color{blue}{\text{+3 to Assassin Skill Levels}}$ |
-| | $\color{blue}{\text{+2 to Fire Mastery}}$ |
-| | $\color{blue}{\text{+10 to Corpse Explosion}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Damage Reduced by 15\%}}$ |
-| | $\color{blue}{\text{+2 to Death Sentry (Assassin only)}}$ |
-| | $\color{blue}{\text{+2 to Wake of Fire (Assassin only)}}$ |
-| | $\color{blue}{\text{-10\% to Enemy Fire Resistance}}$ |
+| | <ins><code>+3 to Assassin Skill Levels</code></ins> |
+| | <ins><code>+2 to Fire Mastery</code></ins> |
+| | <ins><code>+10 to Corpse Explosion</code></ins> |
+| | <ins><code>+30% Faster Cast Rate</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>Damage Reduced by 15%</code></ins> |
+| | <ins><code>+2 to Death Sentry (Assassin only)</code></ins> |
+| | <ins><code>+2 to Wake of Fire (Assassin only)</code></ins> |
+| | <ins><code>-10% to Enemy Fire Resistance</code></ins> |
 
 **Saboteurs Blade** (Saboteurs Blade)
 
@@ -93,14 +93,14 @@
 | | **Base Item:** Scissors Suwayyah |
 | | **Level Requirement:** 95 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2 to Traps Skills}}$ |
-| | $\color{blue}{\text{+2 to Assassin Skill Levels}}$ |
-| | $\color{blue}{\text{-20-30\% to Enemy Lightning Resistance}}$ |
-| | $\color{blue}{\text{-20-30\% to Enemy Fire Resistance}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+250-300\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Level 5 Vigor Aura When Equipped}}$ |
-| | $\color{blue}{\text{+3 to Weapon Block (Assassin only)}}$ |
+| | <ins><code>+2 to Traps Skills</code></ins> |
+| | <ins><code>+2 to Assassin Skill Levels</code></ins> |
+| | <ins><code>-20-30% to Enemy Lightning Resistance</code></ins> |
+| | <ins><code>-20-30% to Enemy Fire Resistance</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+250-300% Enhanced Damage</code></ins> |
+| | <ins><code>Level 5 Vigor Aura When Equipped</code></ins> |
+| | <ins><code>+3 to Weapon Block (Assassin only)</code></ins> |
 
 **Shadow Killer** (Shadowkiller)
 
@@ -109,15 +109,15 @@
 | | **Base Item:** Battle Cestus |
 | | **Level Requirement:** 78 |
 | | **Properties:** |
-| | $\color{blue}{\text{+250-290\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{-25\% Target Defense}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{6-9\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{+4-5 to Shadow Disciplines Skills}}$ |
-| | $\color{blue}{\text{Ethereal}}$ |
-| | $\color{blue}{\text{Indestructible}}$ |
-| | $\color{blue}{\text{+1 to Berserk}}$ |
-| | $\color{blue}{\text{Ignore Target's Defense}}$ |
+| | <ins><code>+250-290% Enhanced Damage</code></ins> |
+| | <ins><code>-25% Target Defense</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>6-9% Mana stolen per hit</code></ins> |
+| | <ins><code>+4-5 to Shadow Disciplines Skills</code></ins> |
+| | <ins><code>Ethereal</code></ins> |
+| | <ins><code>Indestructible</code></ins> |
+| | <ins><code>+1 to Berserk</code></ins> |
+| | <ins><code>Ignore Target's Defense</code></ins> |
 
 **Wind God Fist** (Wind God Fist)
 
@@ -126,16 +126,16 @@
 | | **Base Item:** War Fist |
 | | **Level Requirement:** 90 |
 | | **Properties:** |
-| | $\color{blue}{\text{(0.6\% per clvl) Deadly Strike (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+40-50 to Hurricane}}$ |
-| | $\color{blue}{\text{+290-355\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Indestructible}}$ |
-| | $\color{blue}{\text{+20\% Dexterity}}$ |
-| | $\color{blue}{\text{+20\% Strength}}$ |
-| | $\color{blue}{\text{+35-50\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{Damage +66-99}}$ |
-| | $\color{blue}{\text{Level 12 Holy Freeze Aura When Equipped}}$ |
-| | $\color{blue}{\text{7\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{7\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{Slain Monsters Rest in Peace}}$ |
+| | <ins><code>(0.6% per clvl) Deadly Strike (Based on Character Level)</code></ins> |
+| | <ins><code>+40-50 to Hurricane</code></ins> |
+| | <ins><code>+290-355% Enhanced Damage</code></ins> |
+| | <ins><code>Indestructible</code></ins> |
+| | <ins><code>+20% Dexterity</code></ins> |
+| | <ins><code>+20% Strength</code></ins> |
+| | <ins><code>+35-50% Faster Hit Recovery</code></ins> |
+| | <ins><code>Damage +66-99</code></ins> |
+| | <ins><code>Level 12 Holy Freeze Aura When Equipped</code></ins> |
+| | <ins><code>7% Mana stolen per hit</code></ins> |
+| | <ins><code>7% Life stolen per hit</code></ins> |
+| | <ins><code>Slain Monsters Rest in Peace</code></ins> |
 

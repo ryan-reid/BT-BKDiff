@@ -1,20 +1,20 @@
 # Modified Unique Amazon Bow
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Blood Raven's Charge** (Bloodraven's Charge)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Matriarchal Bow}$ | **Base Item:** $\text{Matriarchal Bow}$ |
-| **Level Requirement:** $\text{71}$ | **Level Requirement:** $\text{71}$ |
+| **Base Item:** <code>Matriarchal Bow</code> | **Base Item:** <code>Matriarchal Bow</code> |
+| **Level Requirement:** <code>71</code> | **Level Requirement:** <code>71</code> |
 | **Properties:** | **Properties:** |
-| $\text{200-300\% Bonus to Attack Rating}$ | $\text{200-300\% Bonus to Attack Rating}$ |
-| $\text{Fires Explosive Arrows or Bolts}$ | $\text{Fires Explosive Arrows or Bolts}$ |
-| $\text{+4-6 to Bow and Crossbow Skills}$ | $\text{+4-6 to Bow and Crossbow Skills}$ |
-| $\text{+5 to Revive}$ | $\text{+5 to Revive}$ |
-| $\text{+30\% Increased Attack Speed}$ | $\text{+30\% Increased Attack Speed}$ |
-| $\color{gray}{\text{+180-230\%}}$	ext{ Enhanced Damage}$$ | $\color{blue}{\text{+200-300\%}}$	ext{ Enhanced Damage}$$ |
-|  | $\color{blue}{\text{+50\% Faster Run/Walk}}$ |
+| <code>200-300% Bonus to Attack Rating</code> | <code>200-300% Bonus to Attack Rating</code> |
+| <code>Fires Explosive Arrows or Bolts</code> | <code>Fires Explosive Arrows or Bolts</code> |
+| <code>+4-6 to Bow and Crossbow Skills</code> | <code>+4-6 to Bow and Crossbow Skills</code> |
+| <code>+5 to Revive</code> | <code>+5 to Revive</code> |
+| <code>+30% Increased Attack Speed</code> | <code>+30% Increased Attack Speed</code> |
+| <del><code>+180-230%</code></del><code> Enhanced Damage</code> | <ins><code>+200-300%</code></ins><code> Enhanced Damage</code> |
+|  | <ins><code>+50% Faster Run/Walk</code></ins> |
 

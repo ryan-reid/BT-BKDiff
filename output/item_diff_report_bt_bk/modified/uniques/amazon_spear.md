@@ -1,23 +1,23 @@
 # Modified Unique Amazon Spear
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Gaia's Precision** (Gaia's Precision)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Matriarchal Pike}$ | **Base Item:** $\text{Matriarchal Pike}$ |
-| **Level Requirement:** $\text{91}$ | **Level Requirement:** $\text{91}$ |
+| **Base Item:** <code>Matriarchal Pike</code> | **Base Item:** <code>Matriarchal Pike</code> |
+| **Level Requirement:** <code>91</code> | **Level Requirement:** <code>91</code> |
 | **Properties:** | **Properties:** |
-| $\text{+3-4 to Amazon Skill Levels}$ | $\text{+3-4 to Amazon Skill Levels}$ |
-| $\text{+3-4 to Javelin and Spear Skills}$ | $\text{+3-4 to Javelin and Spear Skills}$ |
-| $\text{-20-30\% to Enemy Lightning Resistance}$ | $\text{-20-30\% to Enemy Lightning Resistance}$ |
-| $\text{+10-20 to all Attributes}$ | $\text{+10-20 to all Attributes}$ |
-| $\text{+40\% Increased Attack Speed}$ | $\text{+40\% Increased Attack Speed}$ |
-| $$	ext{Level }$\color{gray}{\text{3-6}}$	ext{ Conviction Aura When Equipped}$$ | $$	ext{Level }$\color{blue}{\text{6-10}}$	ext{ Conviction Aura When Equipped}$$ |
-| $\color{gray}{\text{+200-300}}$	ext{ Defense}$$ | $\color{blue}{\text{+1000}}$	ext{ Defense}$$ |
-| $\color{gray}{\text{Damage Reduced by 15-20}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{Increase Maximum Life 5-15\%}}$ |
-|  | $\color{blue}{\text{20\% Chance to cast level 40 Lightning Strike on striking}}$ |
+| <code>+3-4 to Amazon Skill Levels</code> | <code>+3-4 to Amazon Skill Levels</code> |
+| <code>+3-4 to Javelin and Spear Skills</code> | <code>+3-4 to Javelin and Spear Skills</code> |
+| <code>-20-30% to Enemy Lightning Resistance</code> | <code>-20-30% to Enemy Lightning Resistance</code> |
+| <code>+10-20 to all Attributes</code> | <code>+10-20 to all Attributes</code> |
+| <code>+40% Increased Attack Speed</code> | <code>+40% Increased Attack Speed</code> |
+| <code>Level </code><del><code>3-6</code></del><code> Conviction Aura When Equipped</code> | <code>Level </code><ins><code>6-10</code></ins><code> Conviction Aura When Equipped</code> |
+| <del><code>+200-300</code></del><code> Defense</code> | <ins><code>+1000</code></ins><code> Defense</code> |
+| <del><code>Damage Reduced by 15-20</code></del> | <ins><code>(removed)</code></ins> |
+|  | <ins><code>Increase Maximum Life 5-15%</code></ins> |
+|  | <ins><code>20% Chance to cast level 40 Lightning Strike on striking</code></ins> |
 

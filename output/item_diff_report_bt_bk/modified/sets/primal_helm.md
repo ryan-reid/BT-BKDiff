@@ -1,32 +1,32 @@
 # Modified Set Primal Helm
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Immortal King's Triumph** (Immortal King's Triumph)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{Avenger}}$	ext{ }$\color{gray}{\text{Guard}}$ | **Base Item:** $\color{blue}{\text{Guardian}}$	ext{ }$\color{blue}{\text{Crown}}$ |
-| **Level Requirement:** $\text{95}$ | **Level Requirement:** $\text{95}$ |
+| **Base Item:** <del><code>Avenger</code></del><code> </code><del><code>Guard</code></del> | **Base Item:** <ins><code>Guardian</code></ins><code> </code><ins><code>Crown</code></ins> |
+| **Level Requirement:** <code>95</code> | **Level Requirement:** <code>95</code> |
 | **Properties:** | **Properties:** |
-| $\text{+2  to Barbarian Skill Levels}$ | $\text{+2  to Barbarian Skill Levels}$ |
-| $\text{+25\% Increased Attack Speed}$ | $\text{+25\% Increased Attack Speed}$ |
-| $\text{+40\% Faster Cast Rate}$ | $\text{+40\% Faster Cast Rate}$ |
-| $\text{+750 Defense}$ | $\text{+750 Defense}$ |
-| $\text{+20-30 to all Attributes}$ | $\text{+20-30 to all Attributes}$ |
-| $\text{50-75\% Better Chance of Getting Magic Items}$ | $\text{50-75\% Better Chance of Getting Magic Items}$ |
+| <code>+2  to Barbarian Skill Levels</code> | <code>+2  to Barbarian Skill Levels</code> |
+| <code>+25% Increased Attack Speed</code> | <code>+25% Increased Attack Speed</code> |
+| <code>+40% Faster Cast Rate</code> | <code>+40% Faster Cast Rate</code> |
+| <code>+750 Defense</code> | <code>+750 Defense</code> |
+| <code>+20-30 to all Attributes</code> | <code>+20-30 to all Attributes</code> |
+| <code>50-75% Better Chance of Getting Magic Items</code> | <code>50-75% Better Chance of Getting Magic Items</code> |
 
 **Immortal King's Will** (Immortal King's Will)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{Avenger}}$	ext{ }$\color{gray}{\text{Guard}}$ | **Base Item:** $\color{blue}{\text{Guardian}}$	ext{ }$\color{blue}{\text{Crown}}$ |
-| **Level Requirement:** $\text{47}$ | **Level Requirement:** $\text{47}$ |
+| **Base Item:** <del><code>Avenger</code></del><code> </code><del><code>Guard</code></del> | **Base Item:** <ins><code>Guardian</code></ins><code> </code><ins><code>Crown</code></ins> |
+| **Level Requirement:** <code>47</code> | **Level Requirement:** <code>47</code> |
 | **Properties:** | **Properties:** |
-| $\text{+125 Defense}$ | $\text{+125 Defense}$ |
-| $\text{40-50\% Extra Gold from Monsters}$ | $\text{40-50\% Extra Gold from Monsters}$ |
-| $\text{+1-3 to Warcries Skills}$ | $\text{+1-3 to Warcries Skills}$ |
-| $\text{30-45\% Better Chance of Getting Magic Items}$ | $\text{30-45\% Better Chance of Getting Magic Items}$ |
-| $\text{Fire Resist +30\%}$ | $\text{Fire Resist +30\%}$ |
+| <code>+125 Defense</code> | <code>+125 Defense</code> |
+| <code>40-50% Extra Gold from Monsters</code> | <code>40-50% Extra Gold from Monsters</code> |
+| <code>+1-3 to Warcries Skills</code> | <code>+1-3 to Warcries Skills</code> |
+| <code>30-45% Better Chance of Getting Magic Items</code> | <code>30-45% Better Chance of Getting Magic Items</code> |
+| <code>Fire Resist +30%</code> | <code>Fire Resist +30%</code> |
 

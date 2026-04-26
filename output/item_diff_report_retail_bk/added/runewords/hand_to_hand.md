@@ -7,13 +7,13 @@
 | | **Base Item:** Hand to Hand |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+15 Life after each Demon Kill}}$ |
-| | $\color{blue}{\text{+240-290\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Adds 216-471 Magic Damage}}$ |
-| | $\color{blue}{\text{+5 to Whirlwind}}$ |
-| | $\color{blue}{\text{+35-40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{25\% Chance to cast level 26 Frozen Orb when struck}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 100 seconds}}$ |
+| | <ins><code>+15 Life after each Demon Kill</code></ins> |
+| | <ins><code>+240-290% Enhanced Damage</code></ins> |
+| | <ins><code>Adds 216-471 Magic Damage</code></ins> |
+| | <ins><code>+5 to Whirlwind</code></ins> |
+| | <ins><code>+35-40% Increased Attack Speed</code></ins> |
+| | <ins><code>25% Chance to cast level 26 Frozen Orb when struck</code></ins> |
+| | <ins><code>Repairs 1 durability in 100 seconds</code></ins> |
 
 **Pattern** (Pattern)
 
@@ -22,11 +22,11 @@
 | | **Base Item:** Hand to Hand |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+15\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+80-120\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Adds 100-100 Fire/Lightning/Cold Damage}}$ |
-| | $\color{blue}{\text{All Resistances +15}}$ |
-| | $\color{blue}{\text{+15 to Strength}}$ |
-| | $\color{blue}{\text{+15 to Dexterity}}$ |
-| | $\color{blue}{\text{+1 to Martial Arts Skills}}$ |
+| | <ins><code>+15% Increased Attack Speed</code></ins> |
+| | <ins><code>+80-120% Enhanced Damage</code></ins> |
+| | <ins><code>Adds 100-100 Fire/Lightning/Cold Damage</code></ins> |
+| | <ins><code>All Resistances +15</code></ins> |
+| | <ins><code>+15 to Strength</code></ins> |
+| | <ins><code>+15 to Dexterity</code></ins> |
+| | <ins><code>+1 to Martial Arts Skills</code></ins> |
 

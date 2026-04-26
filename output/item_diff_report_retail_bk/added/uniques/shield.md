@@ -7,15 +7,15 @@
 | | **Base Item:** Luna |
 | | **Level Requirement:** 61 |
 | | **Properties:** |
-| | $\color{blue}{\text{(0.5 per clvl) to Dexterity (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+160-200\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{(0.6 per clvl) Absorbs Cold Damage (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+1 to Weaken}}$ |
-| | $\color{blue}{\text{Durability: 45 of 45}}$ |
-| | $\color{blue}{\text{(1.2 per clvl) to Life (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+50\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{+50 to Strength}}$ |
+| | <ins><code>(0.5 per clvl) to Dexterity (Based on Character Level)</code></ins> |
+| | <ins><code>+160-200% Enhanced Defense</code></ins> |
+| | <ins><code>(0.6 per clvl) Absorbs Cold Damage (Based on Character Level)</code></ins> |
+| | <ins><code>+1 to Weaken</code></ins> |
+| | <ins><code>Durability: 45 of 45</code></ins> |
+| | <ins><code>(1.2 per clvl) to Life (Based on Character Level)</code></ins> |
+| | <ins><code>+50% Faster Block Rate</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>+50 to Strength</code></ins> |
 
 **Bverrit Keep** (Bverrit Keep)
 
@@ -24,15 +24,15 @@
 | | **Base Item:** Tower Shield |
 | | **Level Requirement:** 19 |
 | | **Properties:** |
-| | $\color{blue}{\text{+30 Defense}}$ |
-| | $\color{blue}{\text{Fire Resist +75\%}}$ |
-| | $\color{blue}{\text{+15 to Strength}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 10}}$ |
-| | $\color{blue}{\text{+80-120\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Durability: 80 of 100}}$ |
-| | $\color{blue}{\text{Damage Reduced by 10}}$ |
-| | $\color{blue}{\text{Requirements --20\%}}$ |
+| | <ins><code>+30 Defense</code></ins> |
+| | <ins><code>Fire Resist +75%</code></ins> |
+| | <ins><code>+15 to Strength</code></ins> |
+| | <ins><code>Magic Damage Reduced by 10</code></ins> |
+| | <ins><code>+80-120% Enhanced Defense</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>Durability: 80 of 100</code></ins> |
+| | <ins><code>Damage Reduced by 10</code></ins> |
+| | <ins><code>Requirements --20%</code></ins> |
 
 **Gerke's Sanctuary** (Kerke's Sanctuary)
 
@@ -41,15 +41,15 @@
 | | **Base Item:** Pavise |
 | | **Level Requirement:** 44 |
 | | **Properties:** |
-| | $\color{blue}{\text{Damage Reduced by 11-16}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 14-18}}$ |
-| | $\color{blue}{\text{Replenish Life +15}}$ |
-| | $\color{blue}{\text{+180-240\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{Durability: 100 of 100}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{All Resistances +20-30}}$ |
-| | $\color{blue}{\text{+20\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Requirements --50\%}}$ |
+| | <ins><code>Damage Reduced by 11-16</code></ins> |
+| | <ins><code>Magic Damage Reduced by 14-18</code></ins> |
+| | <ins><code>Replenish Life +15</code></ins> |
+| | <ins><code>+180-240% Enhanced Defense</code></ins> |
+| | <ins><code>Durability: 100 of 100</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>All Resistances +20-30</code></ins> |
+| | <ins><code>+20% Faster Block Rate</code></ins> |
+| | <ins><code>Requirements --50%</code></ins> |
 
 **Head Hunter's Glory** (Headhunter's Glory)
 
@@ -58,14 +58,14 @@
 | | **Base Item:** Troll Nest |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{+320-420 Defense}}$ |
-| | $\color{blue}{\text{+300-350 Defense vs. Missile}}$ |
-| | $\color{blue}{\text{All Resistances +15-25}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+10-15 Life after each Kill}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Hit Blinds Target +1}}$ |
-| | $\color{blue}{\text{+50\% Faster Run/Walk}}$ |
+| | <ins><code>+320-420 Defense</code></ins> |
+| | <ins><code>+300-350 Defense vs. Missile</code></ins> |
+| | <ins><code>All Resistances +15-25</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>+10-15 Life after each Kill</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Hit Blinds Target +1</code></ins> |
+| | <ins><code>+50% Faster Run/Walk</code></ins> |
 
 **Lance Guard** (Lance Guard)
 
@@ -74,16 +74,16 @@
 | | **Base Item:** Barbed Shield |
 | | **Level Requirement:** 35 |
 | | **Properties:** |
-| | $\color{blue}{\text{+75-100 to Life}}$ |
-| | $\color{blue}{\text{+40\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{15\% Damage Taken Goes To Mana}}$ |
-| | $\color{blue}{\text{Attacker Takes Damage of 127}}$ |
-| | $\color{blue}{\text{+70-120\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{20\% Deadly Strike}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+25\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+50 to Vitality}}$ |
-| | $\color{blue}{\text{Damage Reduced by 25\%}}$ |
+| | <ins><code>+75-100 to Life</code></ins> |
+| | <ins><code>+40% Faster Hit Recovery</code></ins> |
+| | <ins><code>15% Damage Taken Goes To Mana</code></ins> |
+| | <ins><code>Attacker Takes Damage of 127</code></ins> |
+| | <ins><code>+70-120% Enhanced Defense</code></ins> |
+| | <ins><code>20% Deadly Strike</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>+25% Faster Block Rate</code></ins> |
+| | <ins><code>+50 to Vitality</code></ins> |
+| | <ins><code>Damage Reduced by 25%</code></ins> |
 
 **Lidless Wall** (Lidless Wall)
 
@@ -92,12 +92,12 @@
 | | **Base Item:** Grim Shield |
 | | **Level Requirement:** 41 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{+20\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+3-5 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{+80-130\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+10 to Energy}}$ |
-| | $\color{blue}{\text{Increase Maximum Mana 10\%}}$ |
+| | <ins><code>+1-2 to All Skills</code></ins> |
+| | <ins><code>+20% Faster Cast Rate</code></ins> |
+| | <ins><code>+3-5 to Mana after each Kill</code></ins> |
+| | <ins><code>+80-130% Enhanced Defense</code></ins> |
+| | <ins><code>+10 to Energy</code></ins> |
+| | <ins><code>Increase Maximum Mana 10%</code></ins> |
 
 **Medusa's Gaze** (Medusa's Gaze)
 
@@ -106,17 +106,17 @@
 | | **Base Item:** Aegis |
 | | **Level Requirement:** 76 |
 | | **Properties:** |
-| | $\color{blue}{\text{+150-180\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{Slows Target by 40\%}}$ |
-| | $\color{blue}{\text{33\% Chance to cast level 20 Decrepify when struck}}$ |
-| | $\color{blue}{\text{5-9\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{100\% Chance to cast level 44 Nova when you Die}}$ |
-| | $\color{blue}{\text{Cold Resist +40-80\%}}$ |
-| | $\color{blue}{\text{Requirements --30\%}}$ |
-| | $\color{blue}{\text{Damage Reduced by 20-30\%}}$ |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{+2 to Random Class Skill Levels}}$ |
-| | $\color{blue}{\text{33\% Chance to cast level 40 Frost Nova when struck}}$ |
+| | <ins><code>+150-180% Enhanced Defense</code></ins> |
+| | <ins><code>Slows Target by 40%</code></ins> |
+| | <ins><code>33% Chance to cast level 20 Decrepify when struck</code></ins> |
+| | <ins><code>5-9% Life stolen per hit</code></ins> |
+| | <ins><code>100% Chance to cast level 44 Nova when you Die</code></ins> |
+| | <ins><code>Cold Resist +40-80%</code></ins> |
+| | <ins><code>Requirements --30%</code></ins> |
+| | <ins><code>Damage Reduced by 20-30%</code></ins> |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>+2 to Random Class Skill Levels</code></ins> |
+| | <ins><code>33% Chance to cast level 40 Frost Nova when struck</code></ins> |
 
 **Moser's Blessed Circle** (Mosers Blessed Circle)
 
@@ -125,12 +125,12 @@
 | | **Base Item:** Round Shield |
 | | **Level Requirement:** 31 |
 | | **Properties:** |
-| | $\color{blue}{\text{All Resistances +40-55}}$ |
-| | $\color{blue}{\text{+55\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+60\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+180-220\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 20}}$ |
+| | <ins><code>All Resistances +40-55</code></ins> |
+| | <ins><code>+55% Faster Block Rate</code></ins> |
+| | <ins><code>+60% Faster Block Rate</code></ins> |
+| | <ins><code>+180-220% Enhanced Defense</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Magic Damage Reduced by 20</code></ins> |
 
 **Pelta Lunata** (Pelta Lunata)
 
@@ -139,16 +139,16 @@
 | | **Base Item:** Buckler |
 | | **Level Requirement:** 2 |
 | | **Properties:** |
-| | $\color{blue}{\text{+30 to Life}}$ |
-| | $\color{blue}{\text{+20 to Vitality}}$ |
-| | $\color{blue}{\text{+20 to Strength}}$ |
-| | $\color{blue}{\text{+25-30 to Energy}}$ |
-| | $\color{blue}{\text{+30-40\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+20\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+40\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Durability: 8 of 12}}$ |
-| | $\color{blue}{\text{Damage Reduced by 6-8}}$ |
-| | $\color{blue}{\text{Replenish Life +15}}$ |
+| | <ins><code>+30 to Life</code></ins> |
+| | <ins><code>+20 to Vitality</code></ins> |
+| | <ins><code>+20 to Strength</code></ins> |
+| | <ins><code>+25-30 to Energy</code></ins> |
+| | <ins><code>+30-40% Enhanced Defense</code></ins> |
+| | <ins><code>+20% Faster Block Rate</code></ins> |
+| | <ins><code>+40% Faster Block Rate</code></ins> |
+| | <ins><code>Durability: 8 of 12</code></ins> |
+| | <ins><code>Damage Reduced by 6-8</code></ins> |
+| | <ins><code>Replenish Life +15</code></ins> |
 
 **Primal Stormshield** (Primal Stormshield)
 
@@ -157,15 +157,15 @@
 | | **Base Item:** Monarch |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to Lightning Mastery}}$ |
-| | $\color{blue}{\text{+2 to All Skills}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 20\%}}$ |
-| | $\color{blue}{\text{Damage Reduced by 30\%}}$ |
-| | $\color{blue}{\text{+35\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+35\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+35\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+20 Cold Absorb}}$ |
-| | $\color{blue}{\text{+20 Lightning Absorb}}$ |
+| | <ins><code>+1 to Lightning Mastery</code></ins> |
+| | <ins><code>+2 to All Skills</code></ins> |
+| | <ins><code>Increase Maximum Life 20%</code></ins> |
+| | <ins><code>Damage Reduced by 30%</code></ins> |
+| | <ins><code>+35% Faster Hit Recovery</code></ins> |
+| | <ins><code>+35% Faster Block Rate</code></ins> |
+| | <ins><code>+35% Faster Block Rate</code></ins> |
+| | <ins><code>+20 Cold Absorb</code></ins> |
+| | <ins><code>+20 Lightning Absorb</code></ins> |
 
 **Radament's Sphere** (Radimant's Sphere)
 
@@ -174,13 +174,13 @@
 | | **Base Item:** Ancient Shield |
 | | **Level Requirement:** 50 |
 | | **Properties:** |
-| | $\color{blue}{\text{25\% Chance to cast level 30 Poison Nova when you Kill an Enemy}}$ |
-| | $\color{blue}{\text{Poison Resist +75\%}}$ |
-| | $\color{blue}{\text{+160-200\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+20\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+20\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+6 to Poison Nova}}$ |
-| | $\color{blue}{\text{Durability: 20 of 20}}$ |
+| | <ins><code>25% Chance to cast level 30 Poison Nova when you Kill an Enemy</code></ins> |
+| | <ins><code>Poison Resist +75%</code></ins> |
+| | <ins><code>+160-200% Enhanced Defense</code></ins> |
+| | <ins><code>+20% Faster Block Rate</code></ins> |
+| | <ins><code>+20% Faster Block Rate</code></ins> |
+| | <ins><code>+6 to Poison Nova</code></ins> |
+| | <ins><code>Durability: 20 of 20</code></ins> |
 
 **Spike Thorn** (Spike Thorn)
 
@@ -189,16 +189,16 @@
 | | **Base Item:** Blade Barrier |
 | | **Level Requirement:** 70 |
 | | **Properties:** |
-| | $\color{blue}{\text{+120-150\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{(1.4 per clvl) Attacker Takes Damage of (Based on Character Level)}}$ |
-| | $\color{blue}{\text{Durability: 250 of 250}}$ |
-| | $\color{blue}{\text{+30\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{Damage Reduced by 15-20\%}}$ |
-| | $\color{blue}{\text{Requirements --30\%}}$ |
-| | $\color{blue}{\text{+25\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Damage +40-65}}$ |
-| | $\color{blue}{\text{Level 20 Thorns Aura When Equipped}}$ |
+| | <ins><code>+120-150% Enhanced Defense</code></ins> |
+| | <ins><code>(1.4 per clvl) Attacker Takes Damage of (Based on Character Level)</code></ins> |
+| | <ins><code>Durability: 250 of 250</code></ins> |
+| | <ins><code>+30% Faster Hit Recovery</code></ins> |
+| | <ins><code>Damage Reduced by 15-20%</code></ins> |
+| | <ins><code>Requirements --30%</code></ins> |
+| | <ins><code>+25% Faster Block Rate</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>Damage +40-65</code></ins> |
+| | <ins><code>Level 20 Thorns Aura When Equipped</code></ins> |
 
 **Spirit Ward** (Spirit Ward)
 
@@ -207,15 +207,15 @@
 | | **Base Item:** Ward |
 | | **Level Requirement:** 68 |
 | | **Properties:** |
-| | $\color{blue}{\text{+130-180\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{Cold Absorb 6-11\%}}$ |
-| | $\color{blue}{\text{All Resistances +30-40}}$ |
-| | $\color{blue}{\text{+20-30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+25\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{35\% Chance to cast level 8 Fade when struck}}$ |
-| | $\color{blue}{\text{Requirements --30\%}}$ |
-| | $\color{blue}{\text{+2 to Random Class Skill Levels}}$ |
-| | $\color{blue}{\text{+25\% Faster Cast Rate}}$ |
+| | <ins><code>+130-180% Enhanced Defense</code></ins> |
+| | <ins><code>Cold Absorb 6-11%</code></ins> |
+| | <ins><code>All Resistances +30-40</code></ins> |
+| | <ins><code>+20-30% Faster Block Rate</code></ins> |
+| | <ins><code>+25% Faster Block Rate</code></ins> |
+| | <ins><code>35% Chance to cast level 8 Fade when struck</code></ins> |
+| | <ins><code>Requirements --30%</code></ins> |
+| | <ins><code>+2 to Random Class Skill Levels</code></ins> |
+| | <ins><code>+25% Faster Cast Rate</code></ins> |
 
 **Steelclash** (Steelclash)
 
@@ -224,15 +224,15 @@
 | | **Base Item:** Kite Shield |
 | | **Level Requirement:** 17 |
 | | **Properties:** |
-| | $\color{blue}{\text{+25\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{Damage Reduced by 7-9}}$ |
-| | $\color{blue}{\text{+60-100\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+20\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{All Resistances +25-35}}$ |
-| | $\color{blue}{\text{+50-75 Defense}}$ |
-| | $\color{blue}{\text{Durability: 15 of 20}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 3-5\%}}$ |
+| | <ins><code>+25% Faster Block Rate</code></ins> |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>Damage Reduced by 7-9</code></ins> |
+| | <ins><code>+60-100% Enhanced Defense</code></ins> |
+| | <ins><code>+20% Faster Block Rate</code></ins> |
+| | <ins><code>All Resistances +25-35</code></ins> |
+| | <ins><code>+50-75 Defense</code></ins> |
+| | <ins><code>Durability: 15 of 20</code></ins> |
+| | <ins><code>Increase Maximum Life 3-5%</code></ins> |
 
 **Stormchaser** (Stormchaser)
 
@@ -241,17 +241,17 @@
 | | **Base Item:** Scutum |
 | | **Level Requirement:** 35 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 1-501 Lightning Damage}}$ |
-| | $\color{blue}{\text{+20\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Lightning Resist +50\%}}$ |
-| | $\color{blue}{\text{150\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{+160-220\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+10\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{75\% Chance to cast level 30 Blizzard when struck}}$ |
-| | $\color{blue}{\text{50\% Chance to cast level 40 Twister when struck}}$ |
-| | $\color{blue}{\text{+60\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+25 to Vitality}}$ |
+| | <ins><code>Adds 1-501 Lightning Damage</code></ins> |
+| | <ins><code>+20% Faster Block Rate</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Lightning Resist +50%</code></ins> |
+| | <ins><code>150% Bonus to Attack Rating</code></ins> |
+| | <ins><code>+160-220% Enhanced Defense</code></ins> |
+| | <ins><code>+10% Faster Block Rate</code></ins> |
+| | <ins><code>75% Chance to cast level 30 Blizzard when struck</code></ins> |
+| | <ins><code>50% Chance to cast level 40 Twister when struck</code></ins> |
+| | <ins><code>+60% Faster Run/Walk</code></ins> |
+| | <ins><code>+25 to Vitality</code></ins> |
 
 **Stormguild** (Stormguild)
 
@@ -260,15 +260,15 @@
 | | **Base Item:** Large Shield |
 | | **Level Requirement:** 13 |
 | | **Properties:** |
-| | $\color{blue}{\text{Magic Damage Reduced by 7}}$ |
-| | $\color{blue}{\text{Level 3 Resist Lightning Aura When Equipped}}$ |
-| | $\color{blue}{\text{+100 Defense}}$ |
-| | $\color{blue}{\text{Adds 1-150 Lightning Damage}}$ |
-| | $\color{blue}{\text{+50-60\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Attacker Takes Damage of 100}}$ |
-| | $\color{blue}{\text{Durability: 10 of 15}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 5\%}}$ |
+| | <ins><code>Magic Damage Reduced by 7</code></ins> |
+| | <ins><code>Level 3 Resist Lightning Aura When Equipped</code></ins> |
+| | <ins><code>+100 Defense</code></ins> |
+| | <ins><code>Adds 1-150 Lightning Damage</code></ins> |
+| | <ins><code>+50-60% Enhanced Defense</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>Attacker Takes Damage of 100</code></ins> |
+| | <ins><code>Durability: 10 of 15</code></ins> |
+| | <ins><code>Increase Maximum Life 5%</code></ins> |
 
 **Stormshield** (Stormshield)
 
@@ -277,16 +277,16 @@
 | | **Base Item:** Monarch |
 | | **Level Requirement:** 73 |
 | | **Properties:** |
-| | $\color{blue}{\text{(3.8 per clvl) Defense (Based on Character Level)}}$ |
-| | $\color{blue}{\text{Damage Reduced by 35\%}}$ |
-| | $\color{blue}{\text{+30 to Strength}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 5 seconds}}$ |
-| | $\color{blue}{\text{+40\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Lightning Resist +40-60\%}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Cold Resist +60\%}}$ |
-| | $\color{blue}{\text{Attacker Takes Damage of 100}}$ |
-| | $\color{blue}{\text{Requirements --20\%}}$ |
+| | <ins><code>(3.8 per clvl) Defense (Based on Character Level)</code></ins> |
+| | <ins><code>Damage Reduced by 35%</code></ins> |
+| | <ins><code>+30 to Strength</code></ins> |
+| | <ins><code>Repairs 1 durability in 5 seconds</code></ins> |
+| | <ins><code>+40% Faster Block Rate</code></ins> |
+| | <ins><code>Lightning Resist +40-60%</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>Cold Resist +60%</code></ins> |
+| | <ins><code>Attacker Takes Damage of 100</code></ins> |
+| | <ins><code>Requirements --20%</code></ins> |
 
 **Swordback Hold** (Swordback Hold)
 
@@ -295,15 +295,15 @@
 | | **Base Item:** Spiked Shield |
 | | **Level Requirement:** 15 |
 | | **Properties:** |
-| | $\color{blue}{\text{Attacker Takes Damage of 50}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{50\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{5\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{+30-60\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{Damage Reduced by 12}}$ |
-| | $\color{blue}{\text{+10 Defense}}$ |
-| | $\color{blue}{\text{+60\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{Damage +25-50}}$ |
+| | <ins><code>Attacker Takes Damage of 50</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>50% Chance of Open Wounds</code></ins> |
+| | <ins><code>5% Chance of Crushing Blow</code></ins> |
+| | <ins><code>+30-60% Enhanced Defense</code></ins> |
+| | <ins><code>Damage Reduced by 12</code></ins> |
+| | <ins><code>+10 Defense</code></ins> |
+| | <ins><code>+60% Faster Hit Recovery</code></ins> |
+| | <ins><code>Damage +25-50</code></ins> |
 
 **The Ward** (The Ward)
 
@@ -312,13 +312,13 @@
 | | **Base Item:** Gothic Shield |
 | | **Level Requirement:** 26 |
 | | **Properties:** |
-| | $\color{blue}{\text{+150 Defense}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 7-14}}$ |
-| | $\color{blue}{\text{+10 to all Attributes}}$ |
-| | $\color{blue}{\text{+50\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+100\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{All Resistances +30-50}}$ |
-| | $\color{blue}{\text{Requirements --20\%}}$ |
+| | <ins><code>+150 Defense</code></ins> |
+| | <ins><code>Magic Damage Reduced by 7-14</code></ins> |
+| | <ins><code>+10 to all Attributes</code></ins> |
+| | <ins><code>+50% Faster Block Rate</code></ins> |
+| | <ins><code>+100% Enhanced Defense</code></ins> |
+| | <ins><code>All Resistances +30-50</code></ins> |
+| | <ins><code>Requirements --20%</code></ins> |
 
 **Tiamat's Rebuke** (Tiamat's Rebuke)
 
@@ -327,17 +327,17 @@
 | | **Base Item:** Dragon Shield |
 | | **Level Requirement:** 38 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 200-250 Cold Damage}}$ |
-| | $\color{blue}{\text{Adds 200-250 Fire Damage}}$ |
-| | $\color{blue}{\text{Adds 1-301 Lightning Damage}}$ |
-| | $\color{blue}{\text{All Resistances +35-45}}$ |
-| | $\color{blue}{\text{+140-200\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{50\% Chance to cast level 50 Frost Nova when struck}}$ |
-| | $\color{blue}{\text{50\% Chance to cast level 40 Nova when struck}}$ |
-| | $\color{blue}{\text{33\% Chance to cast level 63 Hydra when struck}}$ |
-| | $\color{blue}{\text{Durability: 40 of 40}}$ |
-| | $\color{blue}{\text{+55\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{Damage Reduced by 12-16}}$ |
+| | <ins><code>Adds 200-250 Cold Damage</code></ins> |
+| | <ins><code>Adds 200-250 Fire Damage</code></ins> |
+| | <ins><code>Adds 1-301 Lightning Damage</code></ins> |
+| | <ins><code>All Resistances +35-45</code></ins> |
+| | <ins><code>+140-200% Enhanced Defense</code></ins> |
+| | <ins><code>50% Chance to cast level 50 Frost Nova when struck</code></ins> |
+| | <ins><code>50% Chance to cast level 40 Nova when struck</code></ins> |
+| | <ins><code>33% Chance to cast level 63 Hydra when struck</code></ins> |
+| | <ins><code>Durability: 40 of 40</code></ins> |
+| | <ins><code>+55% Faster Hit Recovery</code></ins> |
+| | <ins><code>Damage Reduced by 12-16</code></ins> |
 
 **Umbral Disk** (Umbral Disk)
 
@@ -346,15 +346,15 @@
 | | **Base Item:** Small Shield |
 | | **Level Requirement:** 9 |
 | | **Properties:** |
-| | $\color{blue}{\text{Hit Blinds Target +1}}$ |
-| | $\color{blue}{\text{+20 to Dexterity}}$ |
-| | $\color{blue}{\text{+30 to Mana}}$ |
-| | $\color{blue}{\text{+30 to Life}}$ |
-| | $\color{blue}{\text{+40-50\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Durability: 10 of 15}}$ |
-| | $\color{blue}{\text{Damage Reduced by 15\%}}$ |
-| | $\color{blue}{\text{(25.0 per clvl) Defense (Based on Character Level)}}$ |
+| | <ins><code>Hit Blinds Target +1</code></ins> |
+| | <ins><code>+20 to Dexterity</code></ins> |
+| | <ins><code>+30 to Mana</code></ins> |
+| | <ins><code>+30 to Life</code></ins> |
+| | <ins><code>+40-50% Enhanced Defense</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>Durability: 10 of 15</code></ins> |
+| | <ins><code>Damage Reduced by 15%</code></ins> |
+| | <ins><code>(25.0 per clvl) Defense (Based on Character Level)</code></ins> |
 
 **Visceratuant** (Visceratuant)
 
@@ -363,15 +363,15 @@
 | | **Base Item:** Defender |
 | | **Level Requirement:** 28 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+100-150\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{Attacker Takes Damage of 150}}$ |
-| | $\color{blue}{\text{+50 to Energy}}$ |
-| | $\color{blue}{\text{+10-15 to Strength}}$ |
-| | $\color{blue}{\text{Unknown property: pois-len (100)}}$ |
-| | $\color{blue}{\text{Damage Reduced by 5-10\%}}$ |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>+100-150% Enhanced Defense</code></ins> |
+| | <ins><code>Attacker Takes Damage of 150</code></ins> |
+| | <ins><code>+50 to Energy</code></ins> |
+| | <ins><code>+10-15 to Strength</code></ins> |
+| | <ins><code>Unknown property: pois-len (100)</code></ins> |
+| | <ins><code>Damage Reduced by 5-10%</code></ins> |
 
 **Wall of the Eyeless** (Wall of the Eyeless)
 
@@ -380,12 +380,12 @@
 | | **Base Item:** Bone Shield |
 | | **Level Requirement:** 20 |
 | | **Properties:** |
-| | $\color{blue}{\text{+7-10 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{3\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{+25\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{Poison Resist +20\%}}$ |
-| | $\color{blue}{\text{+30-40\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+10 Defense}}$ |
-| | $\color{blue}{\text{+20 to Bone Wall}}$ |
-| | $\color{blue}{\text{+10\% to Experience Gained}}$ |
+| | <ins><code>+7-10 to Mana after each Kill</code></ins> |
+| | <ins><code>3% Mana stolen per hit</code></ins> |
+| | <ins><code>+25% Faster Cast Rate</code></ins> |
+| | <ins><code>Poison Resist +20%</code></ins> |
+| | <ins><code>+30-40% Enhanced Defense</code></ins> |
+| | <ins><code>+10 Defense</code></ins> |
+| | <ins><code>+20 to Bone Wall</code></ins> |
+| | <ins><code>+10% to Experience Gained</code></ins> |
 

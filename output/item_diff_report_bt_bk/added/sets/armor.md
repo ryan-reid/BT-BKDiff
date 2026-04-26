@@ -7,8 +7,8 @@
 | | **Base Item:** Hard Leather Armor |
 | | **Level Requirement:** 8 |
 | | **Properties:** |
-| | $\color{blue}{\text{+50 Defense}}$ |
-| | $\color{blue}{\text{Magic Resist +30\%}}$ |
+| | <ins><code>+50 Defense</code></ins> |
+| | <ins><code>Magic Resist +30%</code></ins> |
 
 **Horazon's Dominion** (Horazon's Dominion)
 
@@ -17,12 +17,12 @@
 | | **Base Item:** Balrog Skin |
 | | **Level Requirement:** 55 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{+150-200\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+75-100 to Mana}}$ |
-| | $\color{blue}{\text{Cold Resist +15-25\%}}$ |
-| | $\color{blue}{\text{Fire Resist +15-25\%}}$ |
-| | $\color{blue}{\text{Lightning Resist +15-25\%}}$ |
+| | <ins><code>+2 to Warlock Skill Levels</code></ins> |
+| | <ins><code>+150-200% Enhanced Defense</code></ins> |
+| | <ins><code>+75-100 to Mana</code></ins> |
+| | <ins><code>Cold Resist +15-25%</code></ins> |
+| | <ins><code>Fire Resist +15-25%</code></ins> |
+| | <ins><code>Lightning Resist +15-25%</code></ins> |
 
 **Horazon's Earth** (Horazon's Earth)
 
@@ -31,13 +31,13 @@
 | | **Base Item:** Balrog Skin |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2-3 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{+200-300\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+75-100 to Mana}}$ |
-| | $\color{blue}{\text{Cold Resist +25-50\%}}$ |
-| | $\color{blue}{\text{Fire Resist +25-50\%}}$ |
-| | $\color{blue}{\text{Lightning Resist +25-50\%}}$ |
-| | $\color{blue}{\text{Requirements --50\%}}$ |
+| | <ins><code>+2-3 to Warlock Skill Levels</code></ins> |
+| | <ins><code>+200-300% Enhanced Defense</code></ins> |
+| | <ins><code>+75-100 to Mana</code></ins> |
+| | <ins><code>Cold Resist +25-50%</code></ins> |
+| | <ins><code>Fire Resist +25-50%</code></ins> |
+| | <ins><code>Lightning Resist +25-50%</code></ins> |
+| | <ins><code>Requirements --50%</code></ins> |
 
 **Reaper's Cloak** (Reaper's Cloak)
 
@@ -46,15 +46,15 @@
 | | **Base Item:** Dusk Shroud |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 5-10\%}}$ |
-| | $\color{blue}{\text{Increase Maximum Mana 5-10\%}}$ |
-| | $\color{blue}{\text{5\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{5\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{Regenerate Mana 20\%}}$ |
-| | $\color{blue}{\text{Replenish Life +20}}$ |
-| | $\color{blue}{\text{+5 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{+5 Life after each Kill}}$ |
+| | <ins><code>+1-2 to All Skills</code></ins> |
+| | <ins><code>Increase Maximum Life 5-10%</code></ins> |
+| | <ins><code>Increase Maximum Mana 5-10%</code></ins> |
+| | <ins><code>5% Mana stolen per hit</code></ins> |
+| | <ins><code>5% Life stolen per hit</code></ins> |
+| | <ins><code>Regenerate Mana 20%</code></ins> |
+| | <ins><code>Replenish Life +20</code></ins> |
+| | <ins><code>+5 to Mana after each Kill</code></ins> |
+| | <ins><code>+5 Life after each Kill</code></ins> |
 
 **Warlord's Mantle** (Warlord's Mantle)
 
@@ -63,6 +63,6 @@
 | | **Base Item:** Full Plate Mail |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+25\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{Cold Resist +30\%}}$ |
+| | <ins><code>+25% Enhanced Defense</code></ins> |
+| | <ins><code>Cold Resist +30%</code></ins> |
 

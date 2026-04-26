@@ -13110,28 +13110,28 @@
 - zod rune generic
 ## Modified Rows (13)
 ### amethyst
-- `Equiv2`: $\color{gray}{\text{ggma}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggma</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### chipped gem
-- `Equiv2`: $\color{gray}{\text{ggm0}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggm0</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### diamond
-- `Equiv2`: $\color{gray}{\text{ggmd}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggmd</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### emerald
-- `Equiv2`: $\color{gray}{\text{ggme}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggme</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### flawed gem
-- `Equiv2`: $\color{gray}{\text{ggm1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggm1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### flawless gem
-- `Equiv2`: $\color{gray}{\text{ggm3}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggm3</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### knife
-- `StaffMods`:  (Old) &rarr; $\color{blue}{\text{war}}$ (New)
+- `StaffMods`:  (Old) &rarr; <ins><code>war</code></ins> (New)
 ### perfect gem
-- `Equiv2`: $\color{gray}{\text{ggm4}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggm4</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### ruby
-- `Equiv2`: $\color{gray}{\text{ggmr}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggmr</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### sapphire
-- `Equiv2`: $\color{gray}{\text{ggms}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggms</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### skull
-- `Equiv2`: $\color{gray}{\text{ggmz}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggmz</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### standard gem
-- `Equiv2`: $\color{gray}{\text{ggm2}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggm2</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### topaz
-- `Equiv2`: $\color{gray}{\text{ggmt}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `Equiv2`: <del><code>ggmt</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)

@@ -1,36 +1,36 @@
 # Modified Unique Spears
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Steel Pillar** (Steelpillar)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{War Pike}$ | **Base Item:** $\text{War Pike}$ |
-| **Level Requirement:** $\text{69}$ | **Level Requirement:** $\text{69}$ |
+| **Base Item:** <code>War Pike</code> | **Base Item:** <code>War Pike</code> |
+| **Level Requirement:** <code>69</code> | **Level Requirement:** <code>69</code> |
 | **Properties:** | **Properties:** |
-| $\text{+300-350\% Enhanced Damage}$ | $\text{+300-350\% Enhanced Damage}$ |
-| $\text{+40\% Increased Attack Speed}$ | $\text{+40\% Increased Attack Speed}$ |
-| $\text{-66\% Target Defense}$ | $\text{-66\% Target Defense}$ |
-| $\text{35-40\% Deadly Strike}$ | $\text{35-40\% Deadly Strike}$ |
-| $\text{Repairs 1 durability in 12 seconds}$ | $\text{Repairs 1 durability in 12 seconds}$ |
-| $\text{44\% Chance of Crushing Blow}$ | $\text{44\% Chance of Crushing Blow}$ |
-| $\text{7-12\% Life stolen per hit}$ | $\text{7-12\% Life stolen per hit}$ |
-| $\text{15\% Chance to cast level 33 Amplify Damage on striking}$ | $\text{15\% Chance to cast level 33 Amplify Damage on striking}$ |
-|  | $\color{blue}{\text{+1-3 to Iron Skin}}$ |
+| <code>+300-350% Enhanced Damage</code> | <code>+300-350% Enhanced Damage</code> |
+| <code>+40% Increased Attack Speed</code> | <code>+40% Increased Attack Speed</code> |
+| <code>-66% Target Defense</code> | <code>-66% Target Defense</code> |
+| <code>35-40% Deadly Strike</code> | <code>35-40% Deadly Strike</code> |
+| <code>Repairs 1 durability in 12 seconds</code> | <code>Repairs 1 durability in 12 seconds</code> |
+| <code>44% Chance of Crushing Blow</code> | <code>44% Chance of Crushing Blow</code> |
+| <code>7-12% Life stolen per hit</code> | <code>7-12% Life stolen per hit</code> |
+| <code>15% Chance to cast level 33 Amplify Damage on striking</code> | <code>15% Chance to cast level 33 Amplify Damage on striking</code> |
+|  | <ins><code>+1-3 to Iron Skin</code></ins> |
 
 **Viperfork** (Viperfork)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Mancatcher}$ | **Base Item:** $\text{Mancatcher}$ |
-| **Level Requirement:** $\text{71}$ | **Level Requirement:** $\text{71}$ |
+| **Base Item:** <code>Mancatcher</code> | **Base Item:** <code>Mancatcher</code> |
+| **Level Requirement:** <code>71</code> | **Level Requirement:** <code>71</code> |
 | **Properties:** | **Properties:** |
-| $\text{+190-240\% Enhanced Damage}$ | $\text{+190-240\% Enhanced Damage}$ |
-| $\text{+50\% Increased Attack Speed}$ | $\text{+50\% Increased Attack Speed}$ |
-| $\text{33\% Chance to cast level 60 Poison Nova when struck}$ | $\text{33\% Chance to cast level 60 Poison Nova when struck}$ |
-| $\text{25\% Chance to cast level 60 Poison Nova on striking}$ | $\text{25\% Chance to cast level 60 Poison Nova on striking}$ |
-| $\text{Poison Resist +75\%}$ | $\text{Poison Resist +75\%}$ |
-| $\color{gray}{\text{15\%}}$	ext{ Chance to cast level 5 Lower Resist on striking}$$ | $\color{blue}{\text{66\%}}$	ext{ Chance to cast level 5 Lower Resist on striking}$$ |
+| <code>+190-240% Enhanced Damage</code> | <code>+190-240% Enhanced Damage</code> |
+| <code>+50% Increased Attack Speed</code> | <code>+50% Increased Attack Speed</code> |
+| <code>33% Chance to cast level 60 Poison Nova when struck</code> | <code>33% Chance to cast level 60 Poison Nova when struck</code> |
+| <code>25% Chance to cast level 60 Poison Nova on striking</code> | <code>25% Chance to cast level 60 Poison Nova on striking</code> |
+| <code>Poison Resist +75%</code> | <code>Poison Resist +75%</code> |
+| <del><code>15%</code></del><code> Chance to cast level 5 Lower Resist on striking</code> | <ins><code>66%</code></ins><code> Chance to cast level 5 Lower Resist on striking</code> |
 

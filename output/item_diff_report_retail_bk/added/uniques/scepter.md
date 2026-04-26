@@ -7,18 +7,18 @@
 | | **Base Item:** Caduceus |
 | | **Level Requirement:** 60 |
 | | **Properties:** |
-| | $\color{blue}{\text{+250-300\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Slows Target by 25\%}}$ |
-| | $\color{blue}{\text{150-200\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Adds 80-240 Magic Damage}}$ |
-| | $\color{blue}{\text{Damage Reduced by 7}}$ |
-| | $\color{blue}{\text{Damage +60-85}}$ |
-| | $\color{blue}{\text{+1-2 to Combat Skills}}$ |
-| | $\color{blue}{\text{33\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{+40\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+3 to All Skills}}$ |
-| | $\color{blue}{\text{Ignore Target's Defense}}$ |
+| | <ins><code>+250-300% Enhanced Damage</code></ins> |
+| | <ins><code>Slows Target by 25%</code></ins> |
+| | <ins><code>150-200% Bonus to Attack Rating</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>Adds 80-240 Magic Damage</code></ins> |
+| | <ins><code>Damage Reduced by 7</code></ins> |
+| | <ins><code>Damage +60-85</code></ins> |
+| | <ins><code>+1-2 to Combat Skills</code></ins> |
+| | <ins><code>33% Chance of Crushing Blow</code></ins> |
+| | <ins><code>+40% Faster Cast Rate</code></ins> |
+| | <ins><code>+3 to All Skills</code></ins> |
+| | <ins><code>Ignore Target's Defense</code></ins> |
 
 **Hand of Blessed Light** (Hand of Blessed Light)
 
@@ -27,12 +27,12 @@
 | | **Base Item:** Divine Scepter |
 | | **Level Requirement:** 42 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-3 to Paladin Skill Levels}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{Regenerate Mana 15\%}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+1-3 to Holy Bolt (Paladin only)}}$ |
-| | $\color{blue}{\text{+1-3 to Fist of the Heavens (Paladin only)}}$ |
+| | <ins><code>+1-3 to Paladin Skill Levels</code></ins> |
+| | <ins><code>+30% Faster Cast Rate</code></ins> |
+| | <ins><code>Regenerate Mana 15%</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>+1-3 to Holy Bolt (Paladin only)</code></ins> |
+| | <ins><code>+1-3 to Fist of the Heavens (Paladin only)</code></ins> |
 
 **Heaven's Light** (Heaven's Light)
 
@@ -41,12 +41,12 @@
 | | **Base Item:** Mighty Scepter |
 | | **Level Requirement:** 61 |
 | | **Properties:** |
-| | $\color{blue}{\text{+300-350\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{-66\% Target Defense}}$ |
-| | $\color{blue}{\text{+3 to Paladin Skill Levels}}$ |
-| | $\color{blue}{\text{+15-20 Life after each Kill}}$ |
-| | $\color{blue}{\text{33\% Chance of Crushing Blow}}$ |
+| | <ins><code>+300-350% Enhanced Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>-66% Target Defense</code></ins> |
+| | <ins><code>+3 to Paladin Skill Levels</code></ins> |
+| | <ins><code>+15-20 Life after each Kill</code></ins> |
+| | <ins><code>33% Chance of Crushing Blow</code></ins> |
 
 **Knell Striker** (Knell Striker)
 
@@ -55,14 +55,14 @@
 | | **Base Item:** Scepter |
 | | **Level Requirement:** 5 |
 | | **Properties:** |
-| | $\color{blue}{\text{25\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{Fire Resist +20\%}}$ |
-| | $\color{blue}{\text{Poison Resist +20\%}}$ |
-| | $\color{blue}{\text{+15 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+170-180\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{6\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
+| | <ins><code>25% Chance of Crushing Blow</code></ins> |
+| | <ins><code>Fire Resist +20%</code></ins> |
+| | <ins><code>Poison Resist +20%</code></ins> |
+| | <ins><code>+15 to Mana after each Kill</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>+170-180% Enhanced Damage</code></ins> |
+| | <ins><code>6% Life stolen per hit</code></ins> |
+| | <ins><code>+1 to All Skills</code></ins> |
 
 **Rusthandle** (Rusthandle)
 
@@ -71,14 +71,14 @@
 | | **Base Item:** Grand Scepter |
 | | **Level Requirement:** 17 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-2 to Paladin Skill Levels}}$ |
-| | $\color{blue}{\text{Damage Reduced by 7}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 7}}$ |
-| | $\color{blue}{\text{8\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{+180\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Level 5 Might Aura When Equipped}}$ |
-| | $\color{blue}{\text{+3 to Sacrifice (Paladin only)}}$ |
-| | $\color{blue}{\text{+3 to Zeal (Paladin only)}}$ |
+| | <ins><code>+1-2 to Paladin Skill Levels</code></ins> |
+| | <ins><code>Damage Reduced by 7</code></ins> |
+| | <ins><code>Magic Damage Reduced by 7</code></ins> |
+| | <ins><code>8% Life stolen per hit</code></ins> |
+| | <ins><code>+180% Enhanced Damage</code></ins> |
+| | <ins><code>Level 5 Might Aura When Equipped</code></ins> |
+| | <ins><code>+3 to Sacrifice (Paladin only)</code></ins> |
+| | <ins><code>+3 to Zeal (Paladin only)</code></ins> |
 
 **Simple Solution** (Simple Solution)
 
@@ -87,15 +87,15 @@
 | | **Base Item:** Seraph Rod |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{50\% Chance to cast level 40 Blessed Hammer on attack}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+2 to All Skills}}$ |
-| | $\color{blue}{\text{Level 20 Concentration Aura When Equipped}}$ |
-| | $\color{blue}{\text{+50 to Life}}$ |
-| | $\color{blue}{\text{+5 Life after each Kill}}$ |
-| | $\color{blue}{\text{5\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{Poison Length Reduced by 100\%}}$ |
-| | $\color{blue}{\text{Ignore Target's Defense}}$ |
+| | <ins><code>50% Chance to cast level 40 Blessed Hammer on attack</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+2 to All Skills</code></ins> |
+| | <ins><code>Level 20 Concentration Aura When Equipped</code></ins> |
+| | <ins><code>+50 to Life</code></ins> |
+| | <ins><code>+5 Life after each Kill</code></ins> |
+| | <ins><code>5% Life stolen per hit</code></ins> |
+| | <ins><code>Poison Length Reduced by 100%</code></ins> |
+| | <ins><code>Ignore Target's Defense</code></ins> |
 
 **Stormeye** (Stormeye)
 
@@ -104,13 +104,13 @@
 | | **Base Item:** War Scepter |
 | | **Level Requirement:** 23 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 1-400 Lightning Damage}}$ |
-| | $\color{blue}{\text{+20\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{Replenish Life +10}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+3-5 to Resist Lightning}}$ |
-| | $\color{blue}{\text{+3-5 to Holy Shock}}$ |
-| | $\color{blue}{\text{+3 to Fist of the Heavens}}$ |
+| | <ins><code>Adds 1-400 Lightning Damage</code></ins> |
+| | <ins><code>+20% Faster Cast Rate</code></ins> |
+| | <ins><code>Replenish Life +10</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>+3-5 to Resist Lightning</code></ins> |
+| | <ins><code>+3-5 to Holy Shock</code></ins> |
+| | <ins><code>+3 to Fist of the Heavens</code></ins> |
 
 **The Fetid Sprinkler** (The Fetid Sprinkler)
 
@@ -119,12 +119,12 @@
 | | **Base Item:** Holy Water Sprinkler |
 | | **Level Requirement:** 38 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2 to Paladin Skill Levels}}$ |
-| | $\color{blue}{\text{33\% Chance to cast level 1 Decrepify on striking}}$ |
-| | $\color{blue}{\text{+25\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Adds 409-409 Poison Damage Over 409 Seconds}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Adds 30-50 Damage}}$ |
+| | <ins><code>+2 to Paladin Skill Levels</code></ins> |
+| | <ins><code>33% Chance to cast level 1 Decrepify on striking</code></ins> |
+| | <ins><code>+25% Increased Attack Speed</code></ins> |
+| | <ins><code>Adds 409-409 Poison Damage Over 409 Seconds</code></ins> |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
+| | <ins><code>Adds 30-50 Damage</code></ins> |
 
 **The Redeemer** (The Reedeemer)
 
@@ -133,15 +133,15 @@
 | | **Base Item:** Mighty Scepter |
 | | **Level Requirement:** 72 |
 | | **Properties:** |
-| | $\color{blue}{\text{+250-300\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+200-250\% Damage to Demons}}$ |
-| | $\color{blue}{\text{+2 to Paladin Skill Levels}}$ |
-| | $\color{blue}{\text{Requirements --60\%}}$ |
-| | $\color{blue}{\text{Level 5 Redemption Aura When Equipped}}$ |
-| | $\color{blue}{\text{+2-4 to Holy Bolt (Paladin only)}}$ |
-| | $\color{blue}{\text{-33\% Target Defense}}$ |
-| | $\color{blue}{\text{Damage +60-120}}$ |
-| | $\color{blue}{\text{+200\% Damage to Undead}}$ |
+| | <ins><code>+250-300% Enhanced Damage</code></ins> |
+| | <ins><code>+200-250% Damage to Demons</code></ins> |
+| | <ins><code>+2 to Paladin Skill Levels</code></ins> |
+| | <ins><code>Requirements --60%</code></ins> |
+| | <ins><code>Level 5 Redemption Aura When Equipped</code></ins> |
+| | <ins><code>+2-4 to Holy Bolt (Paladin only)</code></ins> |
+| | <ins><code>-33% Target Defense</code></ins> |
+| | <ins><code>Damage +60-120</code></ins> |
+| | <ins><code>+200% Damage to Undead</code></ins> |
 
 **Undeniable** (Undeniable)
 
@@ -150,13 +150,13 @@
 | | **Base Item:** Seraph Rod |
 | | **Level Requirement:** 60 |
 | | **Properties:** |
-| | $\color{blue}{\text{Level 3-5 Magic Conviction Aura When Equipped}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{+5-10\% to Magic Skill Damage}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{100\% Chance to cast level 20 Blessed Hammer when you Kill an Enemy}}$ |
-| | $\color{blue}{\text{Lightning Resist +20-25\%}}$ |
+| | <ins><code>Level 3-5 Magic Conviction Aura When Equipped</code></ins> |
+| | <ins><code>+30% Faster Cast Rate</code></ins> |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>+5-10% to Magic Skill Damage</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>100% Chance to cast level 20 Blessed Hammer when you Kill an Enemy</code></ins> |
+| | <ins><code>Lightning Resist +20-25%</code></ins> |
 
 **Zakarum's Hand** (Zakarum's Hand)
 
@@ -165,14 +165,14 @@
 | | **Base Item:** Rune Scepter |
 | | **Level Requirement:** 37 |
 | | **Properties:** |
-| | $\color{blue}{\text{8\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{Ignore Target's Defense}}$ |
-| | $\color{blue}{\text{Regenerate Mana 10-20\%}}$ |
-| | $\color{blue}{\text{Replenish Life +15-20}}$ |
-| | $\color{blue}{\text{60\% Chance to cast level 25 Blizzard on striking}}$ |
-| | $\color{blue}{\text{+180-220\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+2-3 to Holy Freeze (Paladin only)}}$ |
-| | $\color{blue}{\text{+2-3 to Holy Shock (Paladin only)}}$ |
-| | $\color{blue}{\text{+1-2 to Paladin Skill Levels}}$ |
+| | <ins><code>8% Mana stolen per hit</code></ins> |
+| | <ins><code>Ignore Target's Defense</code></ins> |
+| | <ins><code>Regenerate Mana 10-20%</code></ins> |
+| | <ins><code>Replenish Life +15-20</code></ins> |
+| | <ins><code>60% Chance to cast level 25 Blizzard on striking</code></ins> |
+| | <ins><code>+180-220% Enhanced Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+2-3 to Holy Freeze (Paladin only)</code></ins> |
+| | <ins><code>+2-3 to Holy Shock (Paladin only)</code></ins> |
+| | <ins><code>+1-2 to Paladin Skill Levels</code></ins> |
 

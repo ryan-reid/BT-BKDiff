@@ -7,9 +7,9 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\% Damage Taken Goes To Mana}}$ |
-| | $\color{blue}{\text{+30 to Mana}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
+| | <ins><code>20% Damage Taken Goes To Mana</code></ins> |
+| | <ins><code>+30 to Mana</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
 
 **Arcanna's Sign** (Arcanna's Sign)
 
@@ -18,9 +18,9 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+40 to Mana}}$ |
-| | $\color{blue}{\text{Regenerate Mana 20\%}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
+| | <ins><code>+40 to Mana</code></ins> |
+| | <ins><code>Regenerate Mana 20%</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
 
 **Cathan's Sigil** (Cathan's Sigil)
 
@@ -29,9 +29,9 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+23\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{Attacker Takes Lightning Damage of 10}}$ |
-| | $\color{blue}{\text{Regenerate Mana 15\%}}$ |
+| | <ins><code>+23% Faster Hit Recovery</code></ins> |
+| | <ins><code>Attacker Takes Lightning Damage of 10</code></ins> |
+| | <ins><code>Regenerate Mana 15%</code></ins> |
 
 **Civerb's Icon** (Civerb's Icon)
 
@@ -40,9 +40,9 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{Regenerate Mana 40\%}}$ |
-| | $\color{blue}{\text{Replenish Life +7-12}}$ |
-| | $\color{blue}{\text{(1.5-1.8 per clvl) to Mana (Based on Character Level)}}$ |
+| | <ins><code>Regenerate Mana 40%</code></ins> |
+| | <ins><code>Replenish Life +7-12</code></ins> |
+| | <ins><code>(1.5-1.8 per clvl) to Mana (Based on Character Level)</code></ins> |
 
 **Equilibrium Caster** (Equilibrium Caster)
 
@@ -51,11 +51,11 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{Magic Resist +25\%}}$ |
-| | $\color{blue}{\text{+10-20 to all Attributes}}$ |
-| | $\color{blue}{\text{+15\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{All Resistances +-20}}$ |
+| | <ins><code>+1-2 to All Skills</code></ins> |
+| | <ins><code>Magic Resist +25%</code></ins> |
+| | <ins><code>+10-20 to all Attributes</code></ins> |
+| | <ins><code>+15% Faster Cast Rate</code></ins> |
+| | <ins><code>All Resistances +-20</code></ins> |
 
 **Equilibrium Melee** (Equilibrium Melee)
 
@@ -64,11 +64,11 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{Magic Resist +25\%}}$ |
-| | $\color{blue}{\text{+10-20 to all Attributes}}$ |
-| | $\color{blue}{\text{+15\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{All Resistances +-20}}$ |
+| | <ins><code>+1-2 to All Skills</code></ins> |
+| | <ins><code>Magic Resist +25%</code></ins> |
+| | <ins><code>+10-20 to all Attributes</code></ins> |
+| | <ins><code>+15% Faster Cast Rate</code></ins> |
+| | <ins><code>All Resistances +-20</code></ins> |
 
 **Inner Peace** (Inner Peace)
 
@@ -77,9 +77,9 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 95 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2 to All Skills}}$ |
-| | $\color{blue}{\text{+20\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{Replenish Life +5-20}}$ |
+| | <ins><code>+2 to All Skills</code></ins> |
+| | <ins><code>+20% Faster Cast Rate</code></ins> |
+| | <ins><code>Replenish Life +5-20</code></ins> |
 
 **Iratha's Collar** (Iratha's Collar)
 
@@ -88,9 +88,9 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{Poison Resist +30\%}}$ |
-| | $\color{blue}{\text{Poison Length Reduced by 75\%}}$ |
-| | $\color{blue}{\text{+20 to Mana}}$ |
+| | <ins><code>Poison Resist +30%</code></ins> |
+| | <ins><code>Poison Length Reduced by 75%</code></ins> |
+| | <ins><code>+20 to Mana</code></ins> |
 
 **Nadin's Determination** (Nadin's Determination)
 
@@ -99,10 +99,10 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 90 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to Random Class Skill Levels}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{All Resistances +10}}$ |
-| | $\color{blue}{\text{+3 to Mana after each Kill}}$ |
+| | <ins><code>+1 to Random Class Skill Levels</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
+| | <ins><code>All Resistances +10</code></ins> |
+| | <ins><code>+3 to Mana after each Kill</code></ins> |
 
 **Tal Rasha's Adjudication** (Tal Rasha's Adjudication)
 
@@ -111,11 +111,11 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 67 |
 | | **Properties:** |
-| | $\color{blue}{\text{Lightning Resist +33\%}}$ |
-| | $\color{blue}{\text{+2 to Sorceress Skill Levels}}$ |
-| | $\color{blue}{\text{+50 to Life}}$ |
-| | $\color{blue}{\text{Adds 3-32 Lightning Damage}}$ |
-| | $\color{blue}{\text{+42 to Mana}}$ |
+| | <ins><code>Lightning Resist +33%</code></ins> |
+| | <ins><code>+2 to Sorceress Skill Levels</code></ins> |
+| | <ins><code>+50 to Life</code></ins> |
+| | <ins><code>Adds 3-32 Lightning Damage</code></ins> |
+| | <ins><code>+42 to Mana</code></ins> |
 
 **Tal Rasha's Allegiance** (Tal Rasha's Allegiance)
 
@@ -124,12 +124,12 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 99 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2-3 to Sorceress Skill Levels}}$ |
-| | $\color{blue}{\text{+60-90 to Mana}}$ |
-| | $\color{blue}{\text{+1-3\% to Maximum Fire Resist}}$ |
-| | $\color{blue}{\text{+3-7 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{All Resistances +10-20}}$ |
-| | $\color{blue}{\text{+10-15\% Faster Cast Rate}}$ |
+| | <ins><code>+2-3 to Sorceress Skill Levels</code></ins> |
+| | <ins><code>+60-90 to Mana</code></ins> |
+| | <ins><code>+1-3% to Maximum Fire Resist</code></ins> |
+| | <ins><code>+3-7 to Mana after each Kill</code></ins> |
+| | <ins><code>All Resistances +10-20</code></ins> |
+| | <ins><code>+10-15% Faster Cast Rate</code></ins> |
 
 **Tancred's Weird** (Tancred's Weird)
 
@@ -138,9 +138,9 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{Damage Reduced by 5}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 5}}$ |
-| | $\color{blue}{\text{Adds 20-20 Lightning Damage}}$ |
+| | <ins><code>Damage Reduced by 5</code></ins> |
+| | <ins><code>Magic Damage Reduced by 5</code></ins> |
+| | <ins><code>Adds 20-20 Lightning Damage</code></ins> |
 
 **Telling of Beads** (Telling of Beads)
 
@@ -149,10 +149,10 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 56 |
 | | **Properties:** |
-| | $\color{blue}{\text{Poison Resist +35-50\%}}$ |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{Cold Resist +30\%}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
+| | <ins><code>Poison Resist +35-50%</code></ins> |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>Cold Resist +30%</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
 
 **Vidala's Snare** (Vidala's Snare)
 
@@ -161,9 +161,9 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+15 to Life}}$ |
-| | $\color{blue}{\text{Cold Resist +20\%}}$ |
-| | $\color{blue}{\text{Poison Resist +20\%}}$ |
+| | <ins><code>+15 to Life</code></ins> |
+| | <ins><code>Cold Resist +20%</code></ins> |
+| | <ins><code>Poison Resist +20%</code></ins> |
 
 **Witcher's Medallion** (Witcher's Medallion)
 
@@ -172,12 +172,12 @@
 | | **Base Item:** Amulet |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{+50-125 to Mana}}$ |
-| | $\color{blue}{\text{+10-20 to Energy}}$ |
-| | $\color{blue}{\text{50\% Damage Taken Goes To Mana}}$ |
-| | $\color{blue}{\text{3-6\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{+2 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{Regenerate Mana 20\%}}$ |
-| | $\color{blue}{\text{Cold Absorb 5-15\%}}$ |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>+50-125 to Mana</code></ins> |
+| | <ins><code>+10-20 to Energy</code></ins> |
+| | <ins><code>50% Damage Taken Goes To Mana</code></ins> |
+| | <ins><code>3-6% Mana stolen per hit</code></ins> |
+| | <ins><code>+2 to Mana after each Kill</code></ins> |
+| | <ins><code>Regenerate Mana 20%</code></ins> |
+| | <ins><code>Cold Absorb 5-15%</code></ins> |
 

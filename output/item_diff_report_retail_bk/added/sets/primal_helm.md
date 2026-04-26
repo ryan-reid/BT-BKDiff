@@ -7,12 +7,12 @@
 | | **Base Item:** Guardian Crown |
 | | **Level Requirement:** 95 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2  to Barbarian Skill Levels}}$ |
-| | $\color{blue}{\text{+25\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+40\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+750 Defense}}$ |
-| | $\color{blue}{\text{+20-30 to all Attributes}}$ |
-| | $\color{blue}{\text{50-75\% Better Chance of Getting Magic Items}}$ |
+| | <ins><code>+2  to Barbarian Skill Levels</code></ins> |
+| | <ins><code>+25% Increased Attack Speed</code></ins> |
+| | <ins><code>+40% Faster Cast Rate</code></ins> |
+| | <ins><code>+750 Defense</code></ins> |
+| | <ins><code>+20-30 to all Attributes</code></ins> |
+| | <ins><code>50-75% Better Chance of Getting Magic Items</code></ins> |
 
 **Immortal King's Will** (Immortal King's Will)
 
@@ -21,9 +21,9 @@
 | | **Base Item:** Guardian Crown |
 | | **Level Requirement:** 47 |
 | | **Properties:** |
-| | $\color{blue}{\text{+125 Defense}}$ |
-| | $\color{blue}{\text{40-50\% Extra Gold from Monsters}}$ |
-| | $\color{blue}{\text{+1-3 to Warcries Skills}}$ |
-| | $\color{blue}{\text{30-45\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{Fire Resist +30\%}}$ |
+| | <ins><code>+125 Defense</code></ins> |
+| | <ins><code>40-50% Extra Gold from Monsters</code></ins> |
+| | <ins><code>+1-3 to Warcries Skills</code></ins> |
+| | <ins><code>30-45% Better Chance of Getting Magic Items</code></ins> |
+| | <ins><code>Fire Resist +30%</code></ins> |
 

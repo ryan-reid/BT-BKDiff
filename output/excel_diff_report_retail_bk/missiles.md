@@ -14,204 +14,204 @@
 - thunderstormnova
 ## Modified Rows (75)
 ### acidspray
-- `Range`: $$	ext{6}$\color{gray}{\text{ +  (lvl *  2)}}$ (Old) &rarr; $$	ext{6}$$ (New)
+- `Range`: <code>6</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>6</code> (New)
 ### baal taunt lightning
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  2)}}$ (Old) &rarr; $$	ext{10}$$ (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>10</code> (New)
 ### battlecry
-- `Vel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `MaxVel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `Accel`: $\color{gray}{\text{-1000}}$ (Old) &rarr; $\color{blue}{\text{-500}}$ (New)
-- `Range`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
+- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
+- `Accel`: <del><code>-1000</code></del> (Old) &rarr; <ins><code>-500</code></ins> (New)
+- `Range`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
 ### blade creeper
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  5)}}$ (Old) &rarr; $$	ext{10}$$ (New)
-- `NextDelay`: $\color{gray}{\text{25}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  5)</code></del> (Old) &rarr; <code>10</code> (New)
+- `NextDelay`: <del><code>25</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
 ### blade shield attachment
-- `Range`: $$	ext{500}$\color{gray}{\text{ +  (lvl *  100)}}$ (Old) &rarr; $$	ext{500}$$ (New)
+- `Range`: <code>500</code><del><code> +  (lvl *  100)</code></del> (Old) &rarr; <code>500</code> (New)
 ### blaze
-- `Range`: $$	ext{90}$\color{gray}{\text{ +  (lvl *  25)}}$ (Old) &rarr; $$	ext{90}$$ (New)
+- `Range`: <code>90</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>90</code> (New)
 ### bluelightmissile
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  10)}}$ (Old) &rarr; $$	ext{10}$$ (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  10)</code></del> (Old) &rarr; <code>10</code> (New)
 ### bonespirit
-- `Vel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
-- `MaxVel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
+- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
 ### bonewallmaker
-- `Range`: $$	ext{7}$\color{gray}{\text{ +  (lvl *  2)}}$ (Old) &rarr; $$	ext{7}$$ (New)
+- `Range`: <code>7</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>7</code> (New)
 ### catapult meteor fire
-- `Range`: $$	ext{90}$\color{gray}{\text{ +  (lvl *  25)}}$ (Old) &rarr; $$	ext{90}$$ (New)
+- `Range`: <code>90</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>90</code> (New)
 ### coldarrow
-- `pCltHitFunc`:  (Old) &rarr; $\color{blue}{\text{4}}$ (New)
-- `pSrvHitFunc`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `sHitPar1`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `HitSubMissile1`:  (Old) &rarr; $\color{blue}{\text{frostnovaarrow}}$ (New)
-- `CltHitSubMissile1`:  (Old) &rarr; $\color{blue}{\text{frostnovaarrow}}$ (New)
+- `pCltHitFunc`:  (Old) &rarr; <ins><code>4</code></ins> (New)
+- `pSrvHitFunc`:  (Old) &rarr; <ins><code>5</code></ins> (New)
+- `sHitPar1`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `HitSubMissile1`:  (Old) &rarr; <ins><code>frostnovaarrow</code></ins> (New)
+- `CltHitSubMissile1`:  (Old) &rarr; <ins><code>frostnovaarrow</code></ins> (New)
 ### coldfissure center
-- `\*ID`: $\color{gray}{\text{726}}$ (Old) &rarr; $\color{blue}{\text{725}}$ (New)
+- `\*ID`: <del><code>726</code></del> (Old) &rarr; <ins><code>725</code></ins> (New)
 ### colossal throwing axe
-- `\*ID`: $\color{gray}{\text{732}}$ (Old) &rarr; $\color{blue}{\text{731}}$ (New)
+- `\*ID`: <del><code>732</code></del> (Old) &rarr; <ins><code>731</code></ins> (New)
 ### colossalchargedbolt
-- `\*ID`: $\color{gray}{\text{723}}$ (Old) &rarr; $\color{blue}{\text{735}}$ (New)
+- `\*ID`: <del><code>723</code></del> (Old) &rarr; <ins><code>735</code></ins> (New)
 ### countessfirewall
-- `Range`: $$	ext{1000}$\color{gray}{\text{ +  (lvl *  1)}}$ (Old) &rarr; $$	ext{1000}$$ (New)
+- `Range`: <code>1000</code><del><code> +  (lvl *  1)</code></del> (Old) &rarr; <code>1000</code> (New)
 ### distraction fog
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  5)}}$ (Old) &rarr; $$	ext{10}$$ (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  5)</code></del> (Old) &rarr; <code>10</code> (New)
 ### explodingarrowexp2
-- `sHitPar1`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
+- `sHitPar1`: <del><code>5</code></del> (Old) &rarr; <ins><code>7</code></ins> (New)
 ### firearrow
-- `pCltHitFunc`:  (Old) &rarr; $\color{blue}{\text{4}}$ (New)
-- `pSrvHitFunc`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `sHitPar1`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `HitSubMissile1`:  (Old) &rarr; $\color{blue}{\text{firenovaarrow}}$ (New)
-- `CltHitSubMissile1`:  (Old) &rarr; $\color{blue}{\text{firenovaarrow}}$ (New)
+- `pCltHitFunc`:  (Old) &rarr; <ins><code>4</code></ins> (New)
+- `pSrvHitFunc`:  (Old) &rarr; <ins><code>5</code></ins> (New)
+- `sHitPar1`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `HitSubMissile1`:  (Old) &rarr; <ins><code>firenovaarrow</code></ins> (New)
+- `CltHitSubMissile1`:  (Old) &rarr; <ins><code>firenovaarrow</code></ins> (New)
 ### fireball
-- `sHitPar1`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{4}}$ (New)
+- `sHitPar1`: <del><code>0</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
 ### firemedium
-- `Range`: $$	ext{90}$\color{gray}{\text{ +  (lvl *  25)}}$ (Old) &rarr; $$	ext{90}$$ (New)
+- `Range`: <code>90</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>90</code> (New)
 ### firesmall
-- `Range`: $$	ext{90}$\color{gray}{\text{ +  (lvl *  25)}}$ (Old) &rarr; $$	ext{90}$$ (New)
+- `Range`: <code>90</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>90</code> (New)
 ### firetwister
-- `\*ID`: $\color{gray}{\text{720}}$ (Old) &rarr; $\color{blue}{\text{732}}$ (New)
+- `\*ID`: <del><code>720</code></del> (Old) &rarr; <ins><code>732</code></ins> (New)
 ### firewallmaker
-- `Range`: $$	ext{7}$\color{gray}{\text{ +  (lvl *  2)}}$ (Old) &rarr; $$	ext{7}$$ (New)
+- `Range`: <code>7</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>7</code> (New)
 ### fistoftheheavensbolt
-- `sHitPar2`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cHitPar1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cHitPar2`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `EDmgSymPerCalc`: $$	ext{skill('Holy Bolt'.blvl) *}$\color{gray}{\text{ 15}}$ (Old) &rarr; $$	ext{skill('Holy Bolt'.blvl) *}$\color{blue}{\text{6}}$ (New)
+- `sHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `cHitPar1`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `cHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `EDmgSymPerCalc`: <code>skill('Holy Bolt'.blvl) *</code><del><code> 15</code></del> (Old) &rarr; <code>skill('Holy Bolt'.blvl) *</code><ins><code>6</code></ins> (New)
 ### frozenorb
-- `Vel`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
-- `MaxVel`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
+- `Vel`: <del><code>10</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `MaxVel`: <del><code>10</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
 ### frozenorbbolt
-- `Vel`: $\color{gray}{\text{18}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
-- `MaxVel`: $\color{gray}{\text{18}}$ (Old) &rarr; $\color{blue}{\text{16}}$ (New)
+- `Vel`: <del><code>18</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `MaxVel`: <del><code>18</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
 ### frozenorbnova
-- `Vel`: $\color{gray}{\text{24}}$ (Old) &rarr; $\color{blue}{\text{30}}$ (New)
-- `MaxVel`: $\color{gray}{\text{24}}$ (Old) &rarr; $\color{blue}{\text{30}}$ (New)
+- `Vel`: <del><code>24</code></del> (Old) &rarr; <ins><code>30</code></ins> (New)
+- `MaxVel`: <del><code>24</code></del> (Old) &rarr; <ins><code>30</code></ins> (New)
 ### greenlightmissile
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  10)}}$ (Old) &rarr; $$	ext{10}$$ (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  10)</code></del> (Old) &rarr; <code>10</code> (New)
 ### grimwardscare
-- `Range`: $$	ext{24}$\color{gray}{\text{ +  (lvl *  12)}}$ (Old) &rarr; $$	ext{24}$$ (New)
+- `Range`: <code>24</code><del><code> +  (lvl *  12)</code></del> (Old) &rarr; <code>24</code> (New)
 ### guidedarrow
-- `Pierce`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `Pierce`:  (Old) &rarr; <ins><code>1</code></ins> (New)
 ### healing vortex
-- `Range`: $$	ext{100}$\color{gray}{\text{ +  (lvl *  25)}}$ (Old) &rarr; $$	ext{100}$$ (New)
+- `Range`: <code>100</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>100</code> (New)
 ### holybolt
-- `sHitPar1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `sHitPar2`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cHitPar1`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
-- `cHitPar2`: $\color{gray}{\text{3}}$ (Old) &rarr; $\color{blue}{\text{0}}$ (New)
+- `sHitPar1`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `sHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `cHitPar1`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `cHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
 ### hydra
-- `Vel`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
-- `MaxVel`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{40}}$ (New)
+- `Vel`: <del><code>16</code></del> (Old) &rarr; <ins><code>40</code></ins> (New)
+- `MaxVel`: <del><code>16</code></del> (Old) &rarr; <ins><code>40</code></ins> (New)
 ### ice crack 1
-- `\*ID`: $\color{gray}{\text{727}}$ (Old) &rarr; $\color{blue}{\text{726}}$ (New)
+- `\*ID`: <del><code>727</code></del> (Old) &rarr; <ins><code>726</code></ins> (New)
 ### ice crack 2
-- `\*ID`: $\color{gray}{\text{728}}$ (Old) &rarr; $\color{blue}{\text{727}}$ (New)
+- `\*ID`: <del><code>728</code></del> (Old) &rarr; <ins><code>727</code></ins> (New)
 ### ice vapor 1
-- `\*ID`: $\color{gray}{\text{729}}$ (Old) &rarr; $\color{blue}{\text{728}}$ (New)
+- `\*ID`: <del><code>729</code></del> (Old) &rarr; <ins><code>728</code></ins> (New)
 ### ice vapor 2
-- `\*ID`: $\color{gray}{\text{730}}$ (Old) &rarr; $\color{blue}{\text{729}}$ (New)
+- `\*ID`: <del><code>730</code></del> (Old) &rarr; <ins><code>729</code></ins> (New)
 ### iceblast
-- `Vel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `MaxVel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
+- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
 ### immolationfire
-- `EMin`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{24}}$ (New)
-- `MinELev1`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `MinELev2`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `MinELev3`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `MinELev4`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `MinELev5`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `EMax`: $\color{gray}{\text{24}}$ (Old) &rarr; $\color{blue}{\text{48}}$ (New)
-- `MaxELev1`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
-- `MaxELev2`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-- `MaxELev3`: $\color{gray}{\text{7}}$ (Old) &rarr; $\color{blue}{\text{14}}$ (New)
-- `MaxELev4`: $\color{gray}{\text{7}}$ (Old) &rarr; $\color{blue}{\text{14}}$ (New)
-- `MaxELev5`: $\color{gray}{\text{7}}$ (Old) &rarr; $\color{blue}{\text{14}}$ (New)
-- `EDmgSymPerCalc`: $$	ext{skill('Fire Arrow'.blvl)}$$	ext{ * 5}$$ (Old) &rarr; $\color{blue}{\text{(}}$	ext{skill('Fire Arrow'.blvl)}$\color{blue}{\text{+skill('Exploding Arrow'.blvl))}}$	ext{ * 5}$$ (New)
+- `EMin`: <del><code>12</code></del> (Old) &rarr; <ins><code>24</code></ins> (New)
+- `MinELev1`: <del><code>4</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `MinELev2`: <del><code>5</code></del> (Old) &rarr; <ins><code>10</code></ins> (New)
+- `MinELev3`: <del><code>6</code></del> (Old) &rarr; <ins><code>12</code></ins> (New)
+- `MinELev4`: <del><code>6</code></del> (Old) &rarr; <ins><code>12</code></ins> (New)
+- `MinELev5`: <del><code>6</code></del> (Old) &rarr; <ins><code>12</code></ins> (New)
+- `EMax`: <del><code>24</code></del> (Old) &rarr; <ins><code>48</code></ins> (New)
+- `MaxELev1`: <del><code>4</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `MaxELev2`: <del><code>5</code></del> (Old) &rarr; <ins><code>10</code></ins> (New)
+- `MaxELev3`: <del><code>7</code></del> (Old) &rarr; <ins><code>14</code></ins> (New)
+- `MaxELev4`: <del><code>7</code></del> (Old) &rarr; <ins><code>14</code></ins> (New)
+- `MaxELev5`: <del><code>7</code></del> (Old) &rarr; <ins><code>14</code></ins> (New)
+- `EDmgSymPerCalc`: <code>skill('Fire Arrow'.blvl)</code><code> * 5</code> (Old) &rarr; <ins><code>(</code></ins><code>skill('Fire Arrow'.blvl)</code><ins><code>+skill('Exploding Arrow'.blvl))</code></ins><code> * 5</code> (New)
 ### mephistoflyingrocksbig
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  3)}}$ (Old) &rarr; $$	ext{10}$$ (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  3)</code></del> (Old) &rarr; <code>10</code> (New)
 ### mephistoflyingrockssmall
-- `Range`: $$	ext{5}$\color{gray}{\text{ +  (lvl *  3)}}$ (Old) &rarr; $$	ext{5}$$ (New)
+- `Range`: <code>5</code><del><code> +  (lvl *  3)</code></del> (Old) &rarr; <code>5</code> (New)
 ### meteor
-- `Range`: $\color{gray}{\text{60}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
+- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
 ### meteorcenter
-- `CltParam1`: $\color{gray}{\text{59}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `Range`: $\color{gray}{\text{60}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
+- `CltParam1`: <del><code>59</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
 ### meteorexplode
-- `Range`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{13}}$ (New)
+- `Range`: <del><code>16</code></del> (Old) &rarr; <ins><code>13</code></ins> (New)
 ### meteortail
-- `Range`: $\color{gray}{\text{60}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
+- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
 ### monblizcenter
-- `Range`: $$	ext{25}$\color{gray}{\text{ +  (lvl *  15)}}$ (Old) &rarr; $$	ext{25}$$ (New)
+- `Range`: <code>25</code><del><code> +  (lvl *  15)</code></del> (Old) &rarr; <code>25</code> (New)
 ### multipleshotarrow
-- `Range`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{27}}$ (New)
+- `Range`: <del><code>50</code></del> (Old) &rarr; <ins><code>27</code></ins> (New)
 ### multipleshotbolt
-- `Range`: $\color{gray}{\text{50}}$ (Old) &rarr; $\color{blue}{\text{27}}$ (New)
+- `Range`: <del><code>50</code></del> (Old) &rarr; <ins><code>27</code></ins> (New)
 ### phoenixtrail
-- `Range`: $$	ext{90}$\color{gray}{\text{ +  (lvl *  25)}}$ (Old) &rarr; $$	ext{90}$$ (New)
+- `Range`: <code>90</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>90</code> (New)
 ### plague vines trail
-- `Range`: $$	ext{100}$\color{gray}{\text{ +  (lvl *  25)}}$ (Old) &rarr; $$	ext{100}$$ (New)
+- `Range`: <code>100</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>100</code> (New)
 ### poisonnova
-- `Vel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
-- `MaxVel`: $\color{gray}{\text{12}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
+- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
 ### rabiesplague
-- `Param1`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `Param2`: $\color{gray}{\text{7}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  5)}}$ (Old) &rarr; $$	ext{10}$$ (New)
+- `Param1`: <del><code>4</code></del> (Old) &rarr; <ins><code>1</code></ins> (New)
+- `Param2`: <del><code>7</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  5)</code></del> (Old) &rarr; <code>10</code> (New)
 ### redlightmissile
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  10)}}$ (Old) &rarr; $$	ext{10}$$ (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  10)</code></del> (Old) &rarr; <code>10</code> (New)
 ### ringoffireexplode
-- `\*ID`: $\color{gray}{\text{731}}$ (Old) &rarr; $\color{blue}{\text{730}}$ (New)
+- `\*ID`: <del><code>731</code></del> (Old) &rarr; <ins><code>730</code></ins> (New)
 ### royalstrikechainlightning
-- `pCltHitFunc`:  (Old) &rarr; $\color{blue}{\text{*16}}$ (New)
-- `pSrvHitFunc`:  (Old) &rarr; $\color{blue}{\text{*12}}$ (New)
+- `pCltHitFunc`:  (Old) &rarr; <ins><code>*16</code></ins> (New)
+- `pSrvHitFunc`:  (Old) &rarr; <ins><code>*12</code></ins> (New)
 ### royalstrikemeteor
-- `Range`: $\color{gray}{\text{60}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
+- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
 ### royalstrikemeteorcenter
-- `CltParam1`: $\color{gray}{\text{59}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `Range`: $\color{gray}{\text{60}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
-- `ProgSound`:  (Old) &rarr; $\color{blue}{\text{sorceress\_meteor\_impact}}$ (New)
+- `CltParam1`: <del><code>59</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `ProgSound`:  (Old) &rarr; <ins><code>sorceress_meteor_impact</code></ins> (New)
 ### royalstrikemeteorexplode
-- `Range`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{13}}$ (New)
+- `Range`: <del><code>16</code></del> (Old) &rarr; <ins><code>13</code></ins> (New)
 ### royalstrikemeteortail
-- `Range`: $\color{gray}{\text{60}}$ (Old) &rarr; $\color{blue}{\text{18}}$ (New)
+- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
 ### sentrylightningbolt
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  2)}}$ (Old) &rarr; $$	ext{10}$$ (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>10</code> (New)
 ### sentrylightningbolt2
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  2)}}$ (Old) &rarr; $$	ext{10}$$ (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>10</code> (New)
 ### sentryspikeonground
-- `Range`: $$	ext{180}$\color{gray}{\text{ +  (lvl *  60)}}$ (Old) &rarr; $$	ext{180}$$ (New)
+- `Range`: <code>180</code><del><code> +  (lvl *  60)</code></del> (Old) &rarr; <code>180</code> (New)
 ### shockwave
-- `NextHit`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `NextDelay`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `NextHit`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `NextDelay`: <del><code>4</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### taintedfireball
-- `\*ID`: $\color{gray}{\text{722}}$ (Old) &rarr; $\color{blue}{\text{734}}$ (New)
+- `\*ID`: <del><code>722</code></del> (Old) &rarr; <ins><code>734</code></ins> (New)
 ### taintedfirebolt
-- `\*ID`: $\color{gray}{\text{721}}$ (Old) &rarr; $\color{blue}{\text{733}}$ (New)
+- `\*ID`: <del><code>721</code></del> (Old) &rarr; <ins><code>733</code></ins> (New)
 ### teeth
-- `NextDelay`: $\color{gray}{\text{4}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
-- `Pierce`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
+- `NextDelay`: <del><code>4</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Pierce`:  (Old) &rarr; <ins><code>1</code></ins> (New)
 ### throwingstar
-- `Range`: $$	ext{100}$\color{gray}{\text{ +  (lvl *  50)}}$ (Old) &rarr; $$	ext{100}$$ (New)
+- `Range`: <code>100</code><del><code> +  (lvl *  50)</code></del> (Old) &rarr; <code>100</code> (New)
 ### thunderstorm1
-- `pCltHitFunc`:  (Old) &rarr; $\color{blue}{\text{4}}$ (New)
-- `pSrvHitFunc`:  (Old) &rarr; $\color{blue}{\text{5}}$ (New)
-- `HitSubMissile1`:  (Old) &rarr; $\color{blue}{\text{thunderstormnova}}$ (New)
-- `CltHitSubMissile1`:  (Old) &rarr; $\color{blue}{\text{thunderstormnova}}$ (New)
+- `pCltHitFunc`:  (Old) &rarr; <ins><code>4</code></ins> (New)
+- `pSrvHitFunc`:  (Old) &rarr; <ins><code>5</code></ins> (New)
+- `HitSubMissile1`:  (Old) &rarr; <ins><code>thunderstormnova</code></ins> (New)
+- `CltHitSubMissile1`:  (Old) &rarr; <ins><code>thunderstormnova</code></ins> (New)
 ### tornado
-- `Vel`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
-- `MaxVel`: $\color{gray}{\text{8}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
-- `NextDelay`: $\color{gray}{\text{25}}$ (Old) &rarr; $\color{blue}{\text{15}}$ (New)
+- `Vel`: <del><code>8</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `MaxVel`: <del><code>8</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `NextDelay`: <del><code>25</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
 ### towerchestspawner
-- `Range`: $$	ext{400}$\color{gray}{\text{ +  (lvl *  1)}}$ (Old) &rarr; $$	ext{400}$$ (New)
+- `Range`: <code>400</code><del><code> +  (lvl *  1)</code></del> (Old) &rarr; <code>400</code> (New)
 ### towermistfade
-- `Range`: $$	ext{128}$\color{gray}{\text{ +  (lvl *  1)}}$ (Old) &rarr; $$	ext{128}$$ (New)
+- `Range`: <code>128</code><del><code> +  (lvl *  1)</code></del> (Old) &rarr; <code>128</code> (New)
 ### twister
-- `Vel`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
-- `MaxVel`: $\color{gray}{\text{10}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
-- `AnimSpeed`: $\color{gray}{\text{16}}$ (Old) &rarr; $\color{blue}{\text{8}}$ (New)
+- `Vel`: <del><code>10</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `MaxVel`: <del><code>10</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `AnimSpeed`: <del><code>16</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
 ### vines trail
-- `Range`: $$	ext{100}$\color{gray}{\text{ +  (lvl *  25)}}$ (Old) &rarr; $$	ext{100}$$ (New)
+- `Range`: <code>100</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>100</code> (New)
 ### wake of destruction maker
-- `Range`: $$	ext{25}$\color{gray}{\text{ +  (lvl *  2)}}$ (Old) &rarr; $$	ext{25}$$ (New)
+- `Range`: <code>25</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>25</code> (New)
 ### whitelightmissile
-- `Range`: $$	ext{10}$\color{gray}{\text{ +  (lvl *  10)}}$ (Old) &rarr; $$	ext{10}$$ (New)
+- `Range`: <code>10</code><del><code> +  (lvl *  10)</code></del> (Old) &rarr; <code>10</code> (New)

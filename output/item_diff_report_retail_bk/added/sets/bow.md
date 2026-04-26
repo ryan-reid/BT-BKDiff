@@ -7,9 +7,9 @@
 | | **Base Item:** Short War Bow |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{+135\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Adds 10-10 Cold Damage}}$ |
+| | <ins><code>20% Bonus to Attack Rating</code></ins> |
+| | <ins><code>+135% Enhanced Damage</code></ins> |
+| | <ins><code>Adds 10-10 Cold Damage</code></ins> |
 
 **Vidala's Barb** (Vidala's Barb)
 
@@ -18,7 +18,7 @@
 | | **Base Item:** Long Battle Bow |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 256-256 Poison Damage Over 256 Seconds}}$ |
-| | $\color{blue}{\text{20\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{+60-75\% Enhanced Damage}}$ |
+| | <ins><code>Adds 256-256 Poison Damage Over 256 Seconds</code></ins> |
+| | <ins><code>20% Chance of Open Wounds</code></ins> |
+| | <ins><code>+60-75% Enhanced Damage</code></ins> |
 

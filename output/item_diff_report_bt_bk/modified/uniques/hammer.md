@@ -1,54 +1,54 @@
 # Modified Unique Hammer
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Schaefer's Hammer** (Schaefer's Hammer)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Legendary Mallet}$ | **Base Item:** $\text{Legendary Mallet}$ |
-| **Level Requirement:** $\text{79}$ | **Level Requirement:** $\text{79}$ |
+| **Base Item:** <code>Legendary Mallet</code> | **Base Item:** <code>Legendary Mallet</code> |
+| **Level Requirement:** <code>79</code> | **Level Requirement:** <code>79</code> |
 | **Properties:** | **Properties:** |
-| $\text{(8.0 per clvl) to Attack Rating (Based on Character Level)}$ | $\text{(8.0 per clvl) to Attack Rating (Based on Character Level)}$ |
-| $\text{Lightning Resist +75\%}$ | $\text{Lightning Resist +75\%}$ |
-| $\text{+60\% Increased Attack Speed}$ | $\text{+60\% Increased Attack Speed}$ |
-| $\text{(2.0 per clvl) to Maximum Damage (Based on Character Level)}$ | $\text{(2.0 per clvl) to Maximum Damage (Based on Character Level)}$ |
-| $\text{Repairs 1 durability in 5 seconds}$ | $\text{Repairs 1 durability in 5 seconds}$ |
-| $$	ext{20\% Chance to cast level }$\color{gray}{\text{20}}$	ext{ Static Field on striking}$$ | $$	ext{20\% Chance to cast level }$\color{blue}{\text{50}}$	ext{ Static Field on striking}$$ |
-| $\color{gray}{\text{+50}}$	ext{ to Life}$$ | $\color{blue}{\text{+100}}$	ext{ to Life}$$ |
-| $\color{gray}{\text{+200-230\%}}$	ext{ Enhanced Damage}$$ | $\color{blue}{\text{+350\%}}$	ext{ Enhanced Damage}$$ |
-| $\color{gray}{\text{Adds 50-200 Lightning Damage}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{-10-15\% to Enemy Physical Resistance}}$ |
+| <code>(8.0 per clvl) to Attack Rating (Based on Character Level)</code> | <code>(8.0 per clvl) to Attack Rating (Based on Character Level)</code> |
+| <code>Lightning Resist +75%</code> | <code>Lightning Resist +75%</code> |
+| <code>+60% Increased Attack Speed</code> | <code>+60% Increased Attack Speed</code> |
+| <code>(2.0 per clvl) to Maximum Damage (Based on Character Level)</code> | <code>(2.0 per clvl) to Maximum Damage (Based on Character Level)</code> |
+| <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
+| <code>20% Chance to cast level </code><del><code>20</code></del><code> Static Field on striking</code> | <code>20% Chance to cast level </code><ins><code>50</code></ins><code> Static Field on striking</code> |
+| <del><code>+50</code></del><code> to Life</code> | <ins><code>+100</code></ins><code> to Life</code> |
+| <del><code>+200-230%</code></del><code> Enhanced Damage</code> | <ins><code>+350%</code></ins><code> Enhanced Damage</code> |
+| <del><code>Adds 50-200 Lightning Damage</code></del> | <ins><code>(removed)</code></ins> |
+|  | <ins><code>-10-15% to Enemy Physical Resistance</code></ins> |
 
 **Stone Crusher** (Stone Crusher)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Legendary Mallet}$ | **Base Item:** $\text{Legendary Mallet}$ |
-| **Level Requirement:** $\text{68}$ | **Level Requirement:** $\text{68}$ |
+| **Base Item:** <code>Legendary Mallet</code> | **Base Item:** <code>Legendary Mallet</code> |
+| **Level Requirement:** <code>68</code> | **Level Requirement:** <code>68</code> |
 | **Properties:** | **Properties:** |
-| $\text{+300-320\% Enhanced Damage}$ | $\text{+300-320\% Enhanced Damage}$ |
-| $\text{+20-30 to Strength}$ | $\text{+20-30 to Strength}$ |
-| $\text{40\% Chance of Crushing Blow}$ | $\text{40\% Chance of Crushing Blow}$ |
-| $\text{-50\% Target Defense}$ | $\text{-50\% Target Defense}$ |
-| $\text{--100 to Monster Defense Per Hit}$ | $\text{--100 to Monster Defense Per Hit}$ |
-| $\text{+40\% Increased Attack Speed}$ | $\text{+40\% Increased Attack Speed}$ |
-| $$	ext{Damage }$\color{gray}{\text{+42-69}}$ | $$	ext{Damage }$\color{blue}{\text{+50-85}}$ |
-|  | $\color{blue}{\text{-5-10\% to Enemy Physical Resistance}}$ |
+| <code>+300-320% Enhanced Damage</code> | <code>+300-320% Enhanced Damage</code> |
+| <code>+20-30 to Strength</code> | <code>+20-30 to Strength</code> |
+| <code>40% Chance of Crushing Blow</code> | <code>40% Chance of Crushing Blow</code> |
+| <code>-50% Target Defense</code> | <code>-50% Target Defense</code> |
+| <code>--100 to Monster Defense Per Hit</code> | <code>--100 to Monster Defense Per Hit</code> |
+| <code>+40% Increased Attack Speed</code> | <code>+40% Increased Attack Speed</code> |
+| <code>Damage </code><del><code>+42-69</code></del> | <code>Damage </code><ins><code>+50-85</code></ins> |
+|  | <ins><code>-5-10% to Enemy Physical Resistance</code></ins> |
 
 **Windhammer** (Windhammer)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Ogre Maul}$ | **Base Item:** $\text{Ogre Maul}$ |
-| **Level Requirement:** $\text{68}$ | **Level Requirement:** $\text{68}$ |
+| **Base Item:** <code>Ogre Maul</code> | **Base Item:** <code>Ogre Maul</code> |
+| **Level Requirement:** <code>68</code> | **Level Requirement:** <code>68</code> |
 | **Properties:** | **Properties:** |
-| $\text{50\% Chance of Crushing Blow}$ | $\text{50\% Chance of Crushing Blow}$ |
-| $\text{+60\% Increased Attack Speed}$ | $\text{+60\% Increased Attack Speed}$ |
-| $\text{40\% Chance to cast level 44 Twister on striking}$ | $\text{40\% Chance to cast level 44 Twister on striking}$ |
-| $\text{+30\% Faster Run/Walk}$ | $\text{+30\% Faster Run/Walk}$ |
-| $\color{gray}{\text{+180-230\%}}$	ext{ Enhanced Damage}$$ | $\color{blue}{\text{+200-300\%}}$	ext{ Enhanced Damage}$$ |
-|  | $\color{blue}{\text{50\% Chance to cast level 40 Tornado when you Kill an Enemy}}$ |
-|  | $\color{blue}{\text{-5-15\% to Enemy Physical Resistance}}$ |
+| <code>50% Chance of Crushing Blow</code> | <code>50% Chance of Crushing Blow</code> |
+| <code>+60% Increased Attack Speed</code> | <code>+60% Increased Attack Speed</code> |
+| <code>40% Chance to cast level 44 Twister on striking</code> | <code>40% Chance to cast level 44 Twister on striking</code> |
+| <code>+30% Faster Run/Walk</code> | <code>+30% Faster Run/Walk</code> |
+| <del><code>+180-230%</code></del><code> Enhanced Damage</code> | <ins><code>+200-300%</code></ins><code> Enhanced Damage</code> |
+|  | <ins><code>50% Chance to cast level 40 Tornado when you Kill an Enemy</code></ins> |
+|  | <ins><code>-5-15% to Enemy Physical Resistance</code></ins> |
 

@@ -7,14 +7,14 @@
 | | **Base Item:** Vortex Shield |
 | | **Level Requirement:** 68 |
 | | **Properties:** |
-| | $\color{blue}{\text{Damage Reduced by 20-30}}$ |
-| | $\color{blue}{\text{+3 to All Skills}}$ |
-| | $\color{blue}{\text{+65\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+60\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{All Resistances +45}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 20-30}}$ |
-| | $\color{blue}{\text{+45\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+150-200\% Enhanced Defense}}$ |
+| | <ins><code>Damage Reduced by 20-30</code></ins> |
+| | <ins><code>+3 to All Skills</code></ins> |
+| | <ins><code>+65% Faster Block Rate</code></ins> |
+| | <ins><code>+60% Faster Block Rate</code></ins> |
+| | <ins><code>All Resistances +45</code></ins> |
+| | <ins><code>Magic Damage Reduced by 20-30</code></ins> |
+| | <ins><code>+45% Faster Cast Rate</code></ins> |
+| | <ins><code>+150-200% Enhanced Defense</code></ins> |
 
 **Griswold's Pride** (Griswold's Pride)
 
@@ -23,13 +23,13 @@
 | | **Base Item:** Vortex Shield |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+3 to Paladin Skill Levels}}$ |
-| | $\color{blue}{\text{Level 15-18 Holy Freeze Aura When Equipped}}$ |
-| | $\color{blue}{\text{+300\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+40\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+40\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Damage Reduced by 20-30}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 20-30}}$ |
+| | <ins><code>+3 to Paladin Skill Levels</code></ins> |
+| | <ins><code>Level 15-18 Holy Freeze Aura When Equipped</code></ins> |
+| | <ins><code>+300% Enhanced Defense</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+30% Faster Cast Rate</code></ins> |
+| | <ins><code>+40% Faster Block Rate</code></ins> |
+| | <ins><code>+40% Faster Block Rate</code></ins> |
+| | <ins><code>Damage Reduced by 20-30</code></ins> |
+| | <ins><code>Magic Damage Reduced by 20-30</code></ins> |
 

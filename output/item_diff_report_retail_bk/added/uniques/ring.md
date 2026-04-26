@@ -7,10 +7,10 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 58 |
 | | **Properties:** |
-| | $\color{blue}{\text{(0.5 per clvl) to Life (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{3-5\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 1-5\%}}$ |
+| | <ins><code>(0.5 per clvl) to Life (Based on Character Level)</code></ins> |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>3-5% Life stolen per hit</code></ins> |
+| | <ins><code>Increase Maximum Life 1-5%</code></ins> |
 
 **Carrion Wind** (Carrion Wind)
 
@@ -19,15 +19,15 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 60 |
 | | **Properties:** |
-| | $\color{blue}{\text{+100-160 Defense vs. Missile}}$ |
-| | $\color{blue}{\text{6-9\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{Poison Resist +55\%}}$ |
-| | $\color{blue}{\text{20\% Chance to cast level 30 Poison Nova on striking}}$ |
-| | $\color{blue}{\text{+21 to Poison Creeper}}$ |
-| | $\color{blue}{\text{20\% Chance to cast level 25 Twister on striking}}$ |
-| | $\color{blue}{\text{40\% Damage Taken Goes To Mana}}$ |
-| | $\color{blue}{\text{+150-250 to Attack Rating}}$ |
-| | $\color{blue}{\text{Poison Length Reduced by 100\%}}$ |
+| | <ins><code>+100-160 Defense vs. Missile</code></ins> |
+| | <ins><code>6-9% Life stolen per hit</code></ins> |
+| | <ins><code>Poison Resist +55%</code></ins> |
+| | <ins><code>20% Chance to cast level 30 Poison Nova on striking</code></ins> |
+| | <ins><code>+21 to Poison Creeper</code></ins> |
+| | <ins><code>20% Chance to cast level 25 Twister on striking</code></ins> |
+| | <ins><code>40% Damage Taken Goes To Mana</code></ins> |
+| | <ins><code>+150-250 to Attack Rating</code></ins> |
+| | <ins><code>Poison Length Reduced by 100%</code></ins> |
 
 **Constricting Ring** (Constricting Ring)
 
@@ -36,10 +36,10 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 95 |
 | | **Properties:** |
-| | $\color{blue}{\text{All Resistances +20}}$ |
-| | $\color{blue}{\text{Replenish Life +-10}}$ |
-| | $\color{blue}{\text{20\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{+1-3\% to Maximum Fire Resist}}$ |
+| | <ins><code>All Resistances +20</code></ins> |
+| | <ins><code>Replenish Life +-10</code></ins> |
+| | <ins><code>20% Better Chance of Getting Magic Items</code></ins> |
+| | <ins><code>+1-3% to Maximum Fire Resist</code></ins> |
 
 **Dwarf Star** (Dwarf Star)
 
@@ -48,11 +48,11 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 45 |
 | | **Properties:** |
-| | $\color{blue}{\text{100\% Extra Gold from Monsters}}$ |
-| | $\color{blue}{\text{+40 to Life}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 12-15}}$ |
-| | $\color{blue}{\text{+15 Fire Absorb}}$ |
-| | $\color{blue}{\text{Replenish Life +10}}$ |
+| | <ins><code>100% Extra Gold from Monsters</code></ins> |
+| | <ins><code>+40 to Life</code></ins> |
+| | <ins><code>Magic Damage Reduced by 12-15</code></ins> |
+| | <ins><code>+15 Fire Absorb</code></ins> |
+| | <ins><code>Replenish Life +10</code></ins> |
 
 **Manald Heal** (Manald Heal)
 
@@ -61,12 +61,12 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 15 |
 | | **Properties:** |
-| | $\color{blue}{\text{4-7\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{Replenish Life +5-8}}$ |
-| | $\color{blue}{\text{+20 to Life}}$ |
-| | $\color{blue}{\text{Regenerate Mana 20\%}}$ |
-| | $\color{blue}{\text{+1 to Warmth}}$ |
-| | $\color{blue}{\text{Level 1 Prayer Aura When Equipped}}$ |
+| | <ins><code>4-7% Mana stolen per hit</code></ins> |
+| | <ins><code>Replenish Life +5-8</code></ins> |
+| | <ins><code>+20 to Life</code></ins> |
+| | <ins><code>Regenerate Mana 20%</code></ins> |
+| | <ins><code>+1 to Warmth</code></ins> |
+| | <ins><code>Level 1 Prayer Aura When Equipped</code></ins> |
 
 **Nagelring** (Nagelring)
 
@@ -75,11 +75,11 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 7 |
 | | **Properties:** |
-| | $\color{blue}{\text{Magic Damage Reduced by 3}}$ |
-| | $\color{blue}{\text{Damage Reduced by 3}}$ |
-| | $\color{blue}{\text{+50-75 to Attack Rating}}$ |
-| | $\color{blue}{\text{15-30\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{+1 to Critical Strike}}$ |
+| | <ins><code>Magic Damage Reduced by 3</code></ins> |
+| | <ins><code>Damage Reduced by 3</code></ins> |
+| | <ins><code>+50-75 to Attack Rating</code></ins> |
+| | <ins><code>15-30% Better Chance of Getting Magic Items</code></ins> |
+| | <ins><code>+1 to Critical Strike</code></ins> |
 
 **Nature's Peace** (Nature's Peace)
 
@@ -88,12 +88,12 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 69 |
 | | **Properties:** |
-| | $\color{blue}{\text{Prevent Monster Heal}}$ |
-| | $\color{blue}{\text{Slain Monsters Rest in Peace}}$ |
-| | $\color{blue}{\text{Damage Reduced by 7-11}}$ |
-| | $\color{blue}{\text{Poison Resist +20-30\%}}$ |
-| | $\color{blue}{\text{+5 to Oak Sage}}$ |
-| | $\color{blue}{\text{20\% Chance of Open Wounds}}$ |
+| | <ins><code>Prevent Monster Heal</code></ins> |
+| | <ins><code>Slain Monsters Rest in Peace</code></ins> |
+| | <ins><code>Damage Reduced by 7-11</code></ins> |
+| | <ins><code>Poison Resist +20-30%</code></ins> |
+| | <ins><code>+5 to Oak Sage</code></ins> |
+| | <ins><code>20% Chance of Open Wounds</code></ins> |
 
 **Opalvein** (Opalvein)
 
@@ -102,12 +102,12 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 50 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\% Chance to cast level 30 Flame Wave on attack}}$ |
-| | $\color{blue}{\text{+3-5\% to Magic Skill Damage / +20-40\% Enhanced Damage / +3-5\% to Fire Skill Damage / +3-5\% to Cold Skill Damage / +3-5\% to Lightning Skill Damage / +3-5\% to Poison Skill Damage}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{All Resistances +6-11}}$ |
-| | $\color{blue}{\text{+1-3 Life after each Kill}}$ |
-| | $\color{blue}{\text{+1-3 to Mana after each Kill}}$ |
+| | <ins><code>20% Chance to cast level 30 Flame Wave on attack</code></ins> |
+| | <ins><code>+3-5% to Magic Skill Damage / +20-40% Enhanced Damage / +3-5% to Fire Skill Damage / +3-5% to Cold Skill Damage / +3-5% to Lightning Skill Damage / +3-5% to Poison Skill Damage</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
+| | <ins><code>All Resistances +6-11</code></ins> |
+| | <ins><code>+1-3 Life after each Kill</code></ins> |
+| | <ins><code>+1-3 to Mana after each Kill</code></ins> |
 
 **Raven Frost** (Raven Frost)
 
@@ -116,12 +116,12 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 45 |
 | | **Properties:** |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{+1 to Frozen Armor}}$ |
-| | $\color{blue}{\text{+20 Cold Absorb}}$ |
-| | $\color{blue}{\text{+40 to Mana}}$ |
-| | $\color{blue}{\text{+15-20 to Dexterity}}$ |
-| | $\color{blue}{\text{+150-250 to Attack Rating}}$ |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>+1 to Frozen Armor</code></ins> |
+| | <ins><code>+20 Cold Absorb</code></ins> |
+| | <ins><code>+40 to Mana</code></ins> |
+| | <ins><code>+15-20 to Dexterity</code></ins> |
+| | <ins><code>+150-250 to Attack Rating</code></ins> |
 
 **Sling** (Sling)
 
@@ -130,12 +130,12 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 50 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to Town Portal}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{-4-5\% to Enemy Magic Resistance}}$ |
-| | $\color{blue}{\text{+10-20 to Energy}}$ |
-| | $\color{blue}{\text{Slows Target by 15\%}}$ |
-| | $\color{blue}{\text{10-20\% Better Chance of Getting Magic Items}}$ |
+| | <ins><code>+1 to Town Portal</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
+| | <ins><code>-4-5% to Enemy Magic Resistance</code></ins> |
+| | <ins><code>+10-20 to Energy</code></ins> |
+| | <ins><code>Slows Target by 15%</code></ins> |
+| | <ins><code>10-20% Better Chance of Getting Magic Items</code></ins> |
 
 **The Stone of Jordan** (The Stone of Jordan)
 
@@ -144,10 +144,10 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 29 |
 | | **Properties:** |
-| | $\color{blue}{\text{+50 to Mana}}$ |
-| | $\color{blue}{\text{Increase Maximum Mana 25\%}}$ |
-| | $\color{blue}{\text{+3-5 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
+| | <ins><code>+50 to Mana</code></ins> |
+| | <ins><code>Increase Maximum Mana 25%</code></ins> |
+| | <ins><code>+3-5 to Mana after each Kill</code></ins> |
+| | <ins><code>+1 to All Skills</code></ins> |
 
 **Wisp Projector** (Wisp)
 
@@ -156,9 +156,9 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 76 |
 | | **Properties:** |
-| | $\color{blue}{\text{+10-20 Lightning Absorb}}$ |
-| | $\color{blue}{\text{25\% Chance to cast level 32 Lightning on striking}}$ |
-| | $\color{blue}{\text{10-20\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{+5 to Heart of Wolverine}}$ |
-| | $\color{blue}{\text{Lightning Resist +10-30\%}}$ |
+| | <ins><code>+10-20 Lightning Absorb</code></ins> |
+| | <ins><code>25% Chance to cast level 32 Lightning on striking</code></ins> |
+| | <ins><code>10-20% Better Chance of Getting Magic Items</code></ins> |
+| | <ins><code>+5 to Heart of Wolverine</code></ins> |
+| | <ins><code>Lightning Resist +10-30%</code></ins> |
 

@@ -7,10 +7,10 @@
 | | **Base Item:** Large Shield |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+55 Defense}}$ |
-| | $\color{blue}{\text{+20\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+25\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{Cold Resist +30\%}}$ |
+| | <ins><code>+55 Defense</code></ins> |
+| | <ins><code>+20% Faster Block Rate</code></ins> |
+| | <ins><code>+25% Faster Hit Recovery</code></ins> |
+| | <ins><code>Cold Resist +30%</code></ins> |
 
 **Cleglaw's Claw** (Cleglaw's Claw)
 
@@ -19,10 +19,10 @@
 | | **Base Item:** Small Shield |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+55 Defense}}$ |
-| | $\color{blue}{\text{Poison Length Reduced by 75\%}}$ |
-| | $\color{blue}{\text{Cold Resist +10\%}}$ |
-| | $\color{blue}{\text{Damage Reduced by 5}}$ |
+| | <ins><code>+55 Defense</code></ins> |
+| | <ins><code>Poison Length Reduced by 75%</code></ins> |
+| | <ins><code>Cold Resist +10%</code></ins> |
+| | <ins><code>Damage Reduced by 5</code></ins> |
 
 **Hsarus' Iron Fist** (Hsarus' Iron Fist)
 
@@ -31,10 +31,10 @@
 | | **Base Item:** Buckler |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{Damage Reduced by 10}}$ |
-| | $\color{blue}{\text{Poison Length Reduced by 75\%}}$ |
-| | $\color{blue}{\text{+25 to Life}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 10}}$ |
+| | <ins><code>Damage Reduced by 10</code></ins> |
+| | <ins><code>Poison Length Reduced by 75%</code></ins> |
+| | <ins><code>+25 to Life</code></ins> |
+| | <ins><code>Magic Damage Reduced by 10</code></ins> |
 
 **Isenhart's Parry** (Isenhart's Parry)
 
@@ -43,10 +43,10 @@
 | | **Base Item:** Gothic Shield |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{Attacker Takes Lightning Damage of 13-16}}$ |
-| | $\color{blue}{\text{Lightning Resist +20\%}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>Attacker Takes Lightning Damage of 13-16</code></ins> |
+| | <ins><code>Lightning Resist +20%</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
 
 **Milabrega's Orb** (Milabrega's Orb)
 
@@ -55,9 +55,9 @@
 | | **Base Item:** Kite Shield |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{(0.6\% per clvl) Better Chance of Getting Magic Items (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+60 Defense}}$ |
-| | $\color{blue}{\text{+25\% Faster Block Rate}}$ |
+| | <ins><code>(0.6% per clvl) Better Chance of Getting Magic Items (Based on Character Level)</code></ins> |
+| | <ins><code>+60 Defense</code></ins> |
+| | <ins><code>+25% Faster Block Rate</code></ins> |
 
 **Polished Safety** (Polished Safety)
 
@@ -66,14 +66,14 @@
 | | **Base Item:** Aegis |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{Damage Reduced by 20-30\%}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+10-30 to Dexterity}}$ |
-| | $\color{blue}{\text{Cold Resist +40\%}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{-3-5\% to Enemy Cold Resistance}}$ |
-| | $\color{blue}{\text{Requirements --50\%}}$ |
-| | $\color{blue}{\text{Level 12-15 Holy Freeze Aura When Equipped}}$ |
+| | <ins><code>Damage Reduced by 20-30%</code></ins> |
+| | <ins><code>+200% Enhanced Defense</code></ins> |
+| | <ins><code>+10-30 to Dexterity</code></ins> |
+| | <ins><code>Cold Resist +40%</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>-3-5% to Enemy Cold Resistance</code></ins> |
+| | <ins><code>Requirements --50%</code></ins> |
+| | <ins><code>Level 12-15 Holy Freeze Aura When Equipped</code></ins> |
 
 **Sigon's Guard** (Sigon's Guard)
 
@@ -82,9 +82,9 @@
 | | **Base Item:** Tower Shield |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+1 to Frozen Armor}}$ |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>+1 to Frozen Armor</code></ins> |
 
 **Sigurd's Deflector** (Sigurd's Deflector)
 
@@ -93,12 +93,12 @@
 | | **Base Item:** Monarch |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+50\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+50\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Damage Reduced by 5-20\%}}$ |
-| | $\color{blue}{\text{+100-150\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{Level 1 Salvation Aura When Equipped}}$ |
+| | <ins><code>+50% Faster Block Rate</code></ins> |
+| | <ins><code>+50% Faster Block Rate</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Damage Reduced by 5-20%</code></ins> |
+| | <ins><code>+100-150% Enhanced Defense</code></ins> |
+| | <ins><code>Level 1 Salvation Aura When Equipped</code></ins> |
 
 **Taebaek's Glory** (Heaven's Taebaek)
 
@@ -107,14 +107,14 @@
 | | **Base Item:** Ward |
 | | **Level Requirement:** 65 |
 | | **Properties:** |
-| | $\color{blue}{\text{+500 Defense}}$ |
-| | $\color{blue}{\text{+100 to Mana}}$ |
-| | $\color{blue}{\text{Lightning Resist +30\%}}$ |
-| | $\color{blue}{\text{Attacker Takes Damage of 30}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 5 seconds}}$ |
-| | $\color{blue}{\text{+25\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+40\% Faster Cast Rate}}$ |
+| | <ins><code>+500 Defense</code></ins> |
+| | <ins><code>+100 to Mana</code></ins> |
+| | <ins><code>Lightning Resist +30%</code></ins> |
+| | <ins><code>Attacker Takes Damage of 30</code></ins> |
+| | <ins><code>Repairs 1 durability in 5 seconds</code></ins> |
+| | <ins><code>+25% Faster Block Rate</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>+40% Faster Cast Rate</code></ins> |
 
 **Underworlds Mirror** (Underworlds Mirror)
 
@@ -123,12 +123,12 @@
 | | **Base Item:** Troll Nest |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{All Resistances +-40--10}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 15-40\%}}$ |
-| | $\color{blue}{\text{Increase Maximum Mana 15-40\%}}$ |
-| | $\color{blue}{\text{Level 1-3 Conviction Aura When Equipped}}$ |
-| | $\color{blue}{\text{+666 Defense}}$ |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>All Resistances +-40--10</code></ins> |
+| | <ins><code>Increase Maximum Life 15-40%</code></ins> |
+| | <ins><code>Increase Maximum Mana 15-40%</code></ins> |
+| | <ins><code>Level 1-3 Conviction Aura When Equipped</code></ins> |
+| | <ins><code>+666 Defense</code></ins> |
 
 **Whitstan's Guard** (Wihtstan's Guard)
 
@@ -137,10 +137,10 @@
 | | **Base Item:** Round Shield |
 | | **Level Requirement:** 35 |
 | | **Properties:** |
-| | $\color{blue}{\text{+175\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+40\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+55\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Poison Resist +50\%}}$ |
-| | $\color{blue}{\text{Lightning Resist +50\%}}$ |
+| | <ins><code>+175% Enhanced Defense</code></ins> |
+| | <ins><code>+40% Faster Block Rate</code></ins> |
+| | <ins><code>+55% Faster Block Rate</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Poison Resist +50%</code></ins> |
+| | <ins><code>Lightning Resist +50%</code></ins> |
 

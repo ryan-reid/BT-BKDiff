@@ -7,12 +7,12 @@
 | | **Base Item:** Long War Bow |
 | | **Level Requirement:** 28 |
 | | **Properties:** |
-| | $\color{blue}{\text{+200-260\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+20 to Strength}}$ |
-| | $\color{blue}{\text{+1-3 to Amazon Skill Levels}}$ |
-| | $\color{blue}{\text{3\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{+30 to Dexterity}}$ |
-| | $\color{blue}{\text{+3 to Burst of Speed}}$ |
+| | <ins><code>+200-260% Enhanced Damage</code></ins> |
+| | <ins><code>+20 to Strength</code></ins> |
+| | <ins><code>+1-3 to Amazon Skill Levels</code></ins> |
+| | <ins><code>3% Mana stolen per hit</code></ins> |
+| | <ins><code>+30 to Dexterity</code></ins> |
+| | <ins><code>+3 to Burst of Speed</code></ins> |
 
 **Cliffkiller** (Cliffkiller)
 
@@ -21,14 +21,14 @@
 | | **Base Item:** Large Siege Bow |
 | | **Level Requirement:** 41 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2-3 to Amazon Skill Levels}}$ |
-| | $\color{blue}{\text{+190-230\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+200 Defense vs. Missile}}$ |
-| | $\color{blue}{\text{Knockback}}$ |
-| | $\color{blue}{\text{+100 to Life}}$ |
-| | $\color{blue}{\text{+20-30 to Minimum Damage}}$ |
-| | $\color{blue}{\text{+40-50 to Maximum Damage}}$ |
-| | $\color{blue}{\text{+20\% Faster Hit Recovery}}$ |
+| | <ins><code>+2-3 to Amazon Skill Levels</code></ins> |
+| | <ins><code>+190-230% Enhanced Damage</code></ins> |
+| | <ins><code>+200 Defense vs. Missile</code></ins> |
+| | <ins><code>Knockback</code></ins> |
+| | <ins><code>+100 to Life</code></ins> |
+| | <ins><code>+20-30 to Minimum Damage</code></ins> |
+| | <ins><code>+40-50 to Maximum Damage</code></ins> |
+| | <ins><code>+20% Faster Hit Recovery</code></ins> |
 
 **Eaglehorn** (Eaglehorn)
 
@@ -37,15 +37,15 @@
 | | **Base Item:** Crusader Bow |
 | | **Level Requirement:** 69 |
 | | **Properties:** |
-| | $\color{blue}{\text{Ignore Target's Defense}}$ |
-| | $\color{blue}{\text{6-8\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{(2.5\% per clvl) Enhanced Maximum Damage (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+2 to Amazon Skill Levels}}$ |
-| | $\color{blue}{\text{+25 to Dexterity}}$ |
-| | $\color{blue}{\text{+7 to Valkyrie (Amazon only)}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Level 6 Blessed Aim Aura When Equipped}}$ |
+| | <ins><code>Ignore Target's Defense</code></ins> |
+| | <ins><code>6-8% Life stolen per hit</code></ins> |
+| | <ins><code>(2.5% per clvl) Enhanced Maximum Damage (Based on Character Level)</code></ins> |
+| | <ins><code>+250% Enhanced Damage</code></ins> |
+| | <ins><code>+2 to Amazon Skill Levels</code></ins> |
+| | <ins><code>+25 to Dexterity</code></ins> |
+| | <ins><code>+7 to Valkyrie (Amazon only)</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>Level 6 Blessed Aim Aura When Equipped</code></ins> |
 
 **Endlesshail** (Endlesshail)
 
@@ -54,15 +54,15 @@
 | | **Base Item:** Double Bow |
 | | **Level Requirement:** 36 |
 | | **Properties:** |
-| | $\color{blue}{\text{45\% Chance to cast level 45 Ice Bolt on striking}}$ |
-| | $\color{blue}{\text{+80 to Mana}}$ |
-| | $\color{blue}{\text{+150 Defense vs. Missile}}$ |
-| | $\color{blue}{\text{+3 to Strafe}}$ |
-| | $\color{blue}{\text{45\% Chance to cast level 45 Glacial Spike on striking}}$ |
-| | $\color{blue}{\text{Adds 300-300 Cold Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{5\% Chance to cast level 1 Lower Resist on striking}}$ |
-| | $\color{blue}{\text{Knockback}}$ |
+| | <ins><code>45% Chance to cast level 45 Ice Bolt on striking</code></ins> |
+| | <ins><code>+80 to Mana</code></ins> |
+| | <ins><code>+150 Defense vs. Missile</code></ins> |
+| | <ins><code>+3 to Strafe</code></ins> |
+| | <ins><code>45% Chance to cast level 45 Glacial Spike on striking</code></ins> |
+| | <ins><code>Adds 300-300 Cold Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>5% Chance to cast level 1 Lower Resist on striking</code></ins> |
+| | <ins><code>Knockback</code></ins> |
 
 **Flamestrikes** (Flamestrikes)
 
@@ -71,14 +71,14 @@
 | | **Base Item:** Great Bow |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
-| | $\color{blue}{\text{50\% Chance to cast level 30 Fire Ball on striking}}$ |
-| | $\color{blue}{\text{+10 to Multiple Shot}}$ |
-| | $\color{blue}{\text{+10-20 to all Attributes}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+40\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{Adds 250-500 Fire Damage}}$ |
-| | $\color{blue}{\text{Adds 250-500 Magic Damage}}$ |
-| | $\color{blue}{\text{Adds 50-100 Damage}}$ |
+| | <ins><code>50% Chance to cast level 30 Fire Ball on striking</code></ins> |
+| | <ins><code>+10 to Multiple Shot</code></ins> |
+| | <ins><code>+10-20 to all Attributes</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>+40% Faster Run/Walk</code></ins> |
+| | <ins><code>Adds 250-500 Fire Damage</code></ins> |
+| | <ins><code>Adds 250-500 Magic Damage</code></ins> |
+| | <ins><code>Adds 50-100 Damage</code></ins> |
 
 **Goldstrike Arch** (Godstrike Arch)
 
@@ -87,14 +87,14 @@
 | | **Base Item:** Gothic Bow |
 | | **Level Requirement:** 46 |
 | | **Properties:** |
-| | $\color{blue}{\text{+250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Hit Blinds Target +1}}$ |
-| | $\color{blue}{\text{+200\% Damage to Undead}}$ |
-| | $\color{blue}{\text{+200\% Damage to Demons}}$ |
-| | $\color{blue}{\text{+2 to Amazon Skill Levels}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Replenish Life +12}}$ |
-| | $\color{blue}{\text{200\% Extra Gold from Monsters}}$ |
+| | <ins><code>+250% Enhanced Damage</code></ins> |
+| | <ins><code>Hit Blinds Target +1</code></ins> |
+| | <ins><code>+200% Damage to Undead</code></ins> |
+| | <ins><code>+200% Damage to Demons</code></ins> |
+| | <ins><code>+2 to Amazon Skill Levels</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>Replenish Life +12</code></ins> |
+| | <ins><code>200% Extra Gold from Monsters</code></ins> |
 
 **Hellclap** (Hellclap)
 
@@ -103,14 +103,14 @@
 | | **Base Item:** Short War Bow |
 | | **Level Requirement:** 27 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to Exploding Arrow}}$ |
-| | $\color{blue}{\text{+90 to Mana}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Fire Resist +40\%}}$ |
-| | $\color{blue}{\text{+25\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+10-15 Fire Absorb}}$ |
-| | $\color{blue}{\text{+15-25 to Energy}}$ |
-| | $\color{blue}{\text{-25-35\% to Enemy Fire Resistance}}$ |
+| | <ins><code>+1 to Exploding Arrow</code></ins> |
+| | <ins><code>+90 to Mana</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>Fire Resist +40%</code></ins> |
+| | <ins><code>+25% Faster Run/Walk</code></ins> |
+| | <ins><code>+10-15 Fire Absorb</code></ins> |
+| | <ins><code>+15-25 to Energy</code></ins> |
+| | <ins><code>-25-35% to Enemy Fire Resistance</code></ins> |
 
 **Kuko Shakaku** (Kuko Shakaku)
 
@@ -119,13 +119,13 @@
 | | **Base Item:** Cedar Bow |
 | | **Level Requirement:** 33 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2-3 to Immolation Arrow (Amazon only)}}$ |
-| | $\color{blue}{\text{+2-3 to Exploding Arrow (Amazon only)}}$ |
-| | $\color{blue}{\text{+150-180\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Piercing Attack}}$ |
-| | $\color{blue}{\text{Adds 40-180 Fire Damage}}$ |
-| | $\color{blue}{\text{+3 to Bow and Crossbow Skills}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
+| | <ins><code>+2-3 to Immolation Arrow (Amazon only)</code></ins> |
+| | <ins><code>+2-3 to Exploding Arrow (Amazon only)</code></ins> |
+| | <ins><code>+150-180% Enhanced Damage</code></ins> |
+| | <ins><code>Piercing Attack</code></ins> |
+| | <ins><code>Adds 40-180 Fire Damage</code></ins> |
+| | <ins><code>+3 to Bow and Crossbow Skills</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
 
 **Magewrath** (Magewrath)
 
@@ -134,15 +134,15 @@
 | | **Base Item:** Rune Bow |
 | | **Level Requirement:** 43 |
 | | **Properties:** |
-| | $\color{blue}{\text{15\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 9-13}}$ |
-| | $\color{blue}{\text{+3 to Guided Arrow (Amazon only)}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+25 to Dexterity}}$ |
-| | $\color{blue}{\text{Hit Blinds Target +1}}$ |
-| | $\color{blue}{\text{Adds 25-50 Damage}}$ |
-| | $\color{blue}{\text{+150-200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+1-3 to Amazon Skill Levels}}$ |
+| | <ins><code>15% Mana stolen per hit</code></ins> |
+| | <ins><code>Magic Damage Reduced by 9-13</code></ins> |
+| | <ins><code>+3 to Guided Arrow (Amazon only)</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>+25 to Dexterity</code></ins> |
+| | <ins><code>Hit Blinds Target +1</code></ins> |
+| | <ins><code>Adds 25-50 Damage</code></ins> |
+| | <ins><code>+150-200% Enhanced Damage</code></ins> |
+| | <ins><code>+1-3 to Amazon Skill Levels</code></ins> |
 
 **Pluckeye** (Pluckeye)
 
@@ -151,13 +151,13 @@
 | | **Base Item:** Short Bow |
 | | **Level Requirement:** 7 |
 | | **Properties:** |
-| | $\color{blue}{\text{+250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+80 to Life}}$ |
-| | $\color{blue}{\text{3\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{+2 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+40 to Minimum Damage}}$ |
-| | $\color{blue}{\text{+40 to Maximum Damage}}$ |
+| | <ins><code>+250% Enhanced Damage</code></ins> |
+| | <ins><code>+80 to Life</code></ins> |
+| | <ins><code>3% Mana stolen per hit</code></ins> |
+| | <ins><code>+2 to Mana after each Kill</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+40 to Minimum Damage</code></ins> |
+| | <ins><code>+40 to Maximum Damage</code></ins> |
 
 **Primal Aries Relic** (Primal Aries Relic)
 
@@ -166,16 +166,16 @@
 | | **Base Item:** Great Bow |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
-| | $\color{blue}{\text{Monster Cold Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Monster Fire Immunity is Sundered}}$ |
-| | $\color{blue}{\text{+6 to Amazon Skill Levels}}$ |
-| | $\color{blue}{\text{5\% Chance to cast level 35 Enchant on striking}}$ |
-| | $\color{blue}{\text{25\% Chance to cast level 20 Lower Resist on striking}}$ |
-| | $\color{blue}{\text{-20\% to Enemy Cold Resistance}}$ |
-| | $\color{blue}{\text{-20\% to Enemy Fire Resistance}}$ |
-| | $\color{blue}{\text{Fires Explosive Arrows or Bolts}}$ |
-| | $\color{blue}{\text{10\% Chance to cast level 40 Meteor on striking}}$ |
-| | $\color{blue}{\text{10\% Chance to cast level 40 Frost Nova on striking}}$ |
+| | <ins><code>Monster Cold Immunity is Sundered</code></ins> |
+| | <ins><code>Monster Fire Immunity is Sundered</code></ins> |
+| | <ins><code>+6 to Amazon Skill Levels</code></ins> |
+| | <ins><code>5% Chance to cast level 35 Enchant on striking</code></ins> |
+| | <ins><code>25% Chance to cast level 20 Lower Resist on striking</code></ins> |
+| | <ins><code>-20% to Enemy Cold Resistance</code></ins> |
+| | <ins><code>-20% to Enemy Fire Resistance</code></ins> |
+| | <ins><code>Fires Explosive Arrows or Bolts</code></ins> |
+| | <ins><code>10% Chance to cast level 40 Meteor on striking</code></ins> |
+| | <ins><code>10% Chance to cast level 40 Frost Nova on striking</code></ins> |
 
 **Raven Claw** (Rimeraven)
 
@@ -184,13 +184,13 @@
 | | **Base Item:** Long Bow |
 | | **Level Requirement:** 15 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 100-100 Fire Damage}}$ |
-| | $\color{blue}{\text{+15 to Dexterity}}$ |
-| | $\color{blue}{\text{Fires Explosive Arrows or Bolts}}$ |
-| | $\color{blue}{\text{+15 to Strength}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+20\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+8 Life after each Kill}}$ |
+| | <ins><code>Adds 100-100 Fire Damage</code></ins> |
+| | <ins><code>+15 to Dexterity</code></ins> |
+| | <ins><code>Fires Explosive Arrows or Bolts</code></ins> |
+| | <ins><code>+15 to Strength</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+20% Faster Run/Walk</code></ins> |
+| | <ins><code>+8 Life after each Kill</code></ins> |
 
 **Riphook** (Riphook)
 
@@ -199,14 +199,14 @@
 | | **Base Item:** Razor Bow |
 | | **Level Requirement:** 31 |
 | | **Properties:** |
-| | $\color{blue}{\text{5-50\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{+180-220\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Slows Target by 30\%}}$ |
-| | $\color{blue}{\text{+90 to Mana}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{7-10\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{5-40\% Deadly Strike}}$ |
-| | $\color{blue}{\text{5-40\% Chance of Crushing Blow}}$ |
+| | <ins><code>5-50% Chance of Open Wounds</code></ins> |
+| | <ins><code>+180-220% Enhanced Damage</code></ins> |
+| | <ins><code>Slows Target by 30%</code></ins> |
+| | <ins><code>+90 to Mana</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>7-10% Life stolen per hit</code></ins> |
+| | <ins><code>5-40% Deadly Strike</code></ins> |
+| | <ins><code>5-40% Chance of Crushing Blow</code></ins> |
 
 **Rogue's Bow** (Piercerib)
 
@@ -215,16 +215,16 @@
 | | **Base Item:** Composite Bow |
 | | **Level Requirement:** 20 |
 | | **Properties:** |
-| | $\color{blue}{\text{All Resistances +30}}$ |
-| | $\color{blue}{\text{30\% Deadly Strike}}$ |
-| | $\color{blue}{\text{+150\% Damage to Demons}}$ |
-| | $\color{blue}{\text{+150\% Damage to Undead}}$ |
-| | $\color{blue}{\text{+160\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+3 to Bow and Crossbow Skills}}$ |
-| | $\color{blue}{\text{+3 to Valkyrie}}$ |
-| | $\color{blue}{\text{+30 to Minimum Damage}}$ |
-| | $\color{blue}{\text{+30 to Maximum Damage}}$ |
+| | <ins><code>All Resistances +30</code></ins> |
+| | <ins><code>30% Deadly Strike</code></ins> |
+| | <ins><code>+150% Damage to Demons</code></ins> |
+| | <ins><code>+150% Damage to Undead</code></ins> |
+| | <ins><code>+160% Enhanced Damage</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>+3 to Bow and Crossbow Skills</code></ins> |
+| | <ins><code>+3 to Valkyrie</code></ins> |
+| | <ins><code>+30 to Minimum Damage</code></ins> |
+| | <ins><code>+30 to Maximum Damage</code></ins> |
 
 **Skystrike** (Skystrike)
 
@@ -233,14 +233,14 @@
 | | **Base Item:** Edge Bow |
 | | **Level Requirement:** 28 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 1-301 Lightning Damage}}$ |
-| | $\color{blue}{\text{+20 to Minimum Damage}}$ |
-| | $\color{blue}{\text{+10 to Energy}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+150-200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{33\% Chance to cast level 18 Meteor on striking}}$ |
-| | $\color{blue}{\text{+2 to Amazon Skill Levels}}$ |
-| | $\color{blue}{\text{+1 to Bow and Crossbow Skills}}$ |
+| | <ins><code>Adds 1-301 Lightning Damage</code></ins> |
+| | <ins><code>+20 to Minimum Damage</code></ins> |
+| | <ins><code>+10 to Energy</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>+150-200% Enhanced Damage</code></ins> |
+| | <ins><code>33% Chance to cast level 18 Meteor on striking</code></ins> |
+| | <ins><code>+2 to Amazon Skill Levels</code></ins> |
+| | <ins><code>+1 to Bow and Crossbow Skills</code></ins> |
 
 **Stormstrike** (Pullspite)
 
@@ -249,13 +249,13 @@
 | | **Base Item:** Short Battle Bow |
 | | **Level Requirement:** 25 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 1-300 Lightning Damage}}$ |
-| | $\color{blue}{\text{+15 to Strength}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Piercing Attack}}$ |
-| | $\color{blue}{\text{Lightning Resist +25\%}}$ |
-| | $\color{blue}{\text{50\% Chance to cast level 30 Chain Lightning on striking}}$ |
-| | $\color{blue}{\text{15\% Chance to cast level 1 Lower Resist on striking}}$ |
+| | <ins><code>Adds 1-300 Lightning Damage</code></ins> |
+| | <ins><code>+15 to Strength</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>Piercing Attack</code></ins> |
+| | <ins><code>Lightning Resist +25%</code></ins> |
+| | <ins><code>50% Chance to cast level 30 Chain Lightning on striking</code></ins> |
+| | <ins><code>15% Chance to cast level 1 Lower Resist on striking</code></ins> |
 
 **Widowmaker** (Widowmaker)
 
@@ -264,16 +264,16 @@
 | | **Base Item:** Ward Bow |
 | | **Level Requirement:** 65 |
 | | **Properties:** |
-| | $\color{blue}{\text{+200-250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{33\% Deadly Strike}}$ |
-| | $\color{blue}{\text{Ignore Target's Defense}}$ |
-| | $\color{blue}{\text{Fires Magic Arrows}}$ |
-| | $\color{blue}{\text{+3-5 to Guided Arrow}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Piercing Attack}}$ |
-| | $\color{blue}{\text{75\% Chance to cast level 20 Slow Missiles when struck}}$ |
-| | $\color{blue}{\text{15\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{50\% Chance to cast level 55 Bone Spirit on striking}}$ |
+| | <ins><code>+200-250% Enhanced Damage</code></ins> |
+| | <ins><code>33% Deadly Strike</code></ins> |
+| | <ins><code>Ignore Target's Defense</code></ins> |
+| | <ins><code>Fires Magic Arrows</code></ins> |
+| | <ins><code>+3-5 to Guided Arrow</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>Piercing Attack</code></ins> |
+| | <ins><code>75% Chance to cast level 20 Slow Missiles when struck</code></ins> |
+| | <ins><code>15% Chance of Open Wounds</code></ins> |
+| | <ins><code>50% Chance to cast level 55 Bone Spirit on striking</code></ins> |
 
 **Windforce** (Windforce)
 
@@ -282,14 +282,14 @@
 | | **Base Item:** Hydra Bow |
 | | **Level Requirement:** 73 |
 | | **Properties:** |
-| | $\color{blue}{\text{+20 to Dexterity}}$ |
-| | $\color{blue}{\text{(3.1 per clvl) to Maximum Damage (Based on Character Level)}}$ |
-| | $\color{blue}{\text{6-8\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{Knockback}}$ |
-| | $\color{blue}{\text{+250-300\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+20 to Strength}}$ |
-| | $\color{blue}{\text{50\% Chance to cast level 40 Twister on striking}}$ |
+| | <ins><code>+20 to Dexterity</code></ins> |
+| | <ins><code>(3.1 per clvl) to Maximum Damage (Based on Character Level)</code></ins> |
+| | <ins><code>6-8% Mana stolen per hit</code></ins> |
+| | <ins><code>Knockback</code></ins> |
+| | <ins><code>+250-300% Enhanced Damage</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>+20 to Strength</code></ins> |
+| | <ins><code>50% Chance to cast level 40 Twister on striking</code></ins> |
 
 **Witchwild String** (Whichwild String)
 
@@ -298,12 +298,12 @@
 | | **Base Item:** Short Siege Bow |
 | | **Level Requirement:** 39 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\% Chance to cast level 22 Amplify Damage on striking}}$ |
-| | $\color{blue}{\text{All Resistances +40}}$ |
-| | $\color{blue}{\text{(0.5\% per clvl) Deadly Strike (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+180-200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Fires Magic Arrows}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
+| | <ins><code>20% Chance to cast level 22 Amplify Damage on striking</code></ins> |
+| | <ins><code>All Resistances +40</code></ins> |
+| | <ins><code>(0.5% per clvl) Deadly Strike (Based on Character Level)</code></ins> |
+| | <ins><code>+180-200% Enhanced Damage</code></ins> |
+| | <ins><code>Fires Magic Arrows</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
 
 **Witherstring** (Witherstring)
 
@@ -312,15 +312,15 @@
 | | **Base Item:** Hunter's Bow |
 | | **Level Requirement:** 13 |
 | | **Properties:** |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+3 to Magic Arrow}}$ |
-| | $\color{blue}{\text{+150\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+50 to Minimum Cold Damage}}$ |
-| | $\color{blue}{\text{+50 to Maximum Cold Damage}}$ |
-| | $\color{blue}{\text{+50 to Minimum Fire Damage}}$ |
-| | $\color{blue}{\text{+50 to Maximum Fire Damage}}$ |
-| | $\color{blue}{\text{+1 to Minimum Lightning Damage}}$ |
-| | $\color{blue}{\text{+100 to Maximum Lightning Damage}}$ |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+3 to Magic Arrow</code></ins> |
+| | <ins><code>+150% Enhanced Damage</code></ins> |
+| | <ins><code>+50 to Minimum Cold Damage</code></ins> |
+| | <ins><code>+50 to Maximum Cold Damage</code></ins> |
+| | <ins><code>+50 to Minimum Fire Damage</code></ins> |
+| | <ins><code>+50 to Maximum Fire Damage</code></ins> |
+| | <ins><code>+1 to Minimum Lightning Damage</code></ins> |
+| | <ins><code>+100 to Maximum Lightning Damage</code></ins> |
 
 **Wizendraw** (Wizendraw)
 
@@ -329,14 +329,14 @@
 | | **Base Item:** Long Battle Bow |
 | | **Level Requirement:** 26 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to Freezing Arrow}}$ |
-| | $\color{blue}{\text{+90 to Mana}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Cold Resist +40\%}}$ |
-| | $\color{blue}{\text{+25\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+10-15 Cold Absorb}}$ |
-| | $\color{blue}{\text{+15-25 to Energy}}$ |
-| | $\color{blue}{\text{-25-35\% to Enemy Cold Resistance}}$ |
+| | <ins><code>+1 to Freezing Arrow</code></ins> |
+| | <ins><code>+90 to Mana</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>Cold Resist +40%</code></ins> |
+| | <ins><code>+25% Faster Run/Walk</code></ins> |
+| | <ins><code>+10-15 Cold Absorb</code></ins> |
+| | <ins><code>+15-25 to Energy</code></ins> |
+| | <ins><code>-25-35% to Enemy Cold Resistance</code></ins> |
 
 **Wrath of the High Heavens** (Wrath of the High Heavens)
 
@@ -345,12 +345,12 @@
 | | **Base Item:** Hydra Bow |
 | | **Level Requirement:** 99 |
 | | **Properties:** |
-| | $\color{blue}{\text{50\% Chance to cast level 40 Fist of the Heavens on striking}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+100\% Damage to Demons}}$ |
-| | $\color{blue}{\text{+100\% Damage to Undead}}$ |
-| | $\color{blue}{\text{+10 to all Attributes}}$ |
-| | $\color{blue}{\text{+250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+100 to Minimum Damage}}$ |
-| | $\color{blue}{\text{Level 10 Redemption Aura When Equipped}}$ |
+| | <ins><code>50% Chance to cast level 40 Fist of the Heavens on striking</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+100% Damage to Demons</code></ins> |
+| | <ins><code>+100% Damage to Undead</code></ins> |
+| | <ins><code>+10 to all Attributes</code></ins> |
+| | <ins><code>+250% Enhanced Damage</code></ins> |
+| | <ins><code>+100 to Minimum Damage</code></ins> |
+| | <ins><code>Level 10 Redemption Aura When Equipped</code></ins> |
 

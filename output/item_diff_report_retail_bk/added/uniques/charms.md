@@ -15,9 +15,9 @@
 | | **Base Item:** Small Charm |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{All Resistances +-30}}$ |
-| | $\color{blue}{\text{-199\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{(0.5\% per clvl) Better Chance of Getting Magic Items (Based on Character Level)}}$ |
+| | <ins><code>All Resistances +-30</code></ins> |
+| | <ins><code>-199% Better Chance of Getting Magic Items</code></ins> |
+| | <ins><code>(0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level)</code></ins> |
 
 **Level 90 Reward** (Charm Level Reward)
 
@@ -26,5 +26,5 @@
 | | **Base Item:** Small Charm |
 | | **Level Requirement:** 90 |
 | | **Properties:** |
-| | $\color{blue}{\text{35\% Better Chance of Getting Magic Items}}$ |
+| | <ins><code>35% Better Chance of Getting Magic Items</code></ins> |
 

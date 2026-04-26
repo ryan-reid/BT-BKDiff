@@ -1,25 +1,25 @@
 # Modified Unique Boots
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Sandstorm Trek** (Sandstorm Trek)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Scarabshell Boots}$ | **Base Item:** $\text{Scarabshell Boots}$ |
-| **Level Requirement:** $\text{64}$ | **Level Requirement:** $\text{64}$ |
+| **Base Item:** <code>Scarabshell Boots</code> | **Base Item:** <code>Scarabshell Boots</code> |
+| **Level Requirement:** <code>64</code> | **Level Requirement:** <code>64</code> |
 | **Properties:** | **Properties:** |
-| $\text{+140-170\% Enhanced Defense}$ | $\text{+140-170\% Enhanced Defense}$ |
-| $\text{+40\% Faster Run/Walk}$ | $\text{+40\% Faster Run/Walk}$ |
-| $\text{+20\% Faster Hit Recovery}$ | $\text{+20\% Faster Hit Recovery}$ |
-| $\text{Poison Resist +40-70\%}$ | $\text{Poison Resist +40-70\%}$ |
-| $\text{Repairs 1 durability in 5 seconds}$ | $\text{Repairs 1 durability in 5 seconds}$ |
-| $\text{Replenish Life +15}$ | $\text{Replenish Life +15}$ |
-| $\text{Attacker Takes Damage of 100}$ | $\text{Attacker Takes Damage of 100}$ |
-| $\color{gray}{\text{+10-15 to Strength}}$ | $\color{blue}{\text{(removed)}}$ |
-| $\color{gray}{\text{+10-15 to Vitality}}$ | $\color{blue}{\text{(removed)}}$ |
-| $\color{gray}{\text{Poison Length Reduced by 75\%}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{+10-15 to all Attributes}}$ |
-|  | $\color{blue}{\text{Level 1 Cleansing Aura When Equipped}}$ |
+| <code>+140-170% Enhanced Defense</code> | <code>+140-170% Enhanced Defense</code> |
+| <code>+40% Faster Run/Walk</code> | <code>+40% Faster Run/Walk</code> |
+| <code>+20% Faster Hit Recovery</code> | <code>+20% Faster Hit Recovery</code> |
+| <code>Poison Resist +40-70%</code> | <code>Poison Resist +40-70%</code> |
+| <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
+| <code>Replenish Life +15</code> | <code>Replenish Life +15</code> |
+| <code>Attacker Takes Damage of 100</code> | <code>Attacker Takes Damage of 100</code> |
+| <del><code>+10-15 to Strength</code></del> | <ins><code>(removed)</code></ins> |
+| <del><code>+10-15 to Vitality</code></del> | <ins><code>(removed)</code></ins> |
+| <del><code>Poison Length Reduced by 75%</code></del> | <ins><code>(removed)</code></ins> |
+|  | <ins><code>+10-15 to all Attributes</code></ins> |
+|  | <ins><code>Level 1 Cleansing Aura When Equipped</code></ins> |
 

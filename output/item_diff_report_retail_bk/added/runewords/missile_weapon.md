@@ -7,13 +7,13 @@
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+260-340\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+280-330\% Damage to Demons}}$ |
-| | $\color{blue}{\text{100\% Chance to cast level 18 Bone Spear on striking}}$ |
-| | $\color{blue}{\text{35\% Chance to cast level 14 Amplify Damage when struck}}$ |
-| | $\color{blue}{\text{Knockback}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Fires Explosive Arrows or Bolts}}$ |
+| | <ins><code>+260-340% Enhanced Damage</code></ins> |
+| | <ins><code>+280-330% Damage to Demons</code></ins> |
+| | <ins><code>100% Chance to cast level 18 Bone Spear on striking</code></ins> |
+| | <ins><code>35% Chance to cast level 14 Amplify Damage when struck</code></ins> |
+| | <ins><code>Knockback</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>Fires Explosive Arrows or Bolts</code></ins> |
 
 **Edge** (Edge)
 
@@ -22,13 +22,13 @@
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+280-320\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Piercing Attack}}$ |
-| | $\color{blue}{\text{+35\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Prevent Monster Heal}}$ |
-| | $\color{blue}{\text{Level 15 Thorns Aura When Equipped}}$ |
-| | $\color{blue}{\text{+5-10 to all Attributes}}$ |
-| | $\color{blue}{\text{Reduces all Vendor Prices 15\%}}$ |
+| | <ins><code>+280-320% Enhanced Damage</code></ins> |
+| | <ins><code>Piercing Attack</code></ins> |
+| | <ins><code>+35% Increased Attack Speed</code></ins> |
+| | <ins><code>Prevent Monster Heal</code></ins> |
+| | <ins><code>Level 15 Thorns Aura When Equipped</code></ins> |
+| | <ins><code>+5-10 to all Attributes</code></ins> |
+| | <ins><code>Reduces all Vendor Prices 15%</code></ins> |
 
 **Faith** (Faith)
 
@@ -37,13 +37,13 @@
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+280\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{300\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{Adds 50-100 Damage}}$ |
-| | $\color{blue}{\text{All Resistances +15}}$ |
-| | $\color{blue}{\text{Level 12-15 Fanaticism Aura When Equipped}}$ |
-| | $\color{blue}{\text{Reanimate As: [Returned]}}$ |
-| | $\color{blue}{\text{+2 to All Skills}}$ |
+| | <ins><code>+280% Enhanced Damage</code></ins> |
+| | <ins><code>300% Bonus to Attack Rating</code></ins> |
+| | <ins><code>Adds 50-100 Damage</code></ins> |
+| | <ins><code>All Resistances +15</code></ins> |
+| | <ins><code>Level 12-15 Fanaticism Aura When Equipped</code></ins> |
+| | <ins><code>Reanimate As: [Returned]</code></ins> |
+| | <ins><code>+2 to All Skills</code></ins> |
 
 **Harmony** (Harmony)
 
@@ -52,13 +52,13 @@
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+275-325\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Adds 55-160 Fire/Lightning/Cold Damage}}$ |
-| | $\color{blue}{\text{Level 25 Revive (20/\# Charges)}}$ |
-| | $\color{blue}{\text{Level 10 Vigor Aura When Equipped}}$ |
-| | $\color{blue}{\text{+2-6 to Valkyrie}}$ |
-| | $\color{blue}{\text{Regenerate Mana 20\%}}$ |
-| | $\color{blue}{\text{+2 to Light Radius}}$ |
+| | <ins><code>+275-325% Enhanced Damage</code></ins> |
+| | <ins><code>Adds 55-160 Fire/Lightning/Cold Damage</code></ins> |
+| | <ins><code>Level 25 Revive (20/# Charges)</code></ins> |
+| | <ins><code>Level 10 Vigor Aura When Equipped</code></ins> |
+| | <ins><code>+2-6 to Valkyrie</code></ins> |
+| | <ins><code>Regenerate Mana 20%</code></ins> |
+| | <ins><code>+2 to Light Radius</code></ins> |
 
 **Ice** (Ice)
 
@@ -67,13 +67,13 @@
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+140-210\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Level 18 Holy Freeze Aura When Equipped}}$ |
-| | $\color{blue}{\text{+25-30\% to Cold Skill Damage}}$ |
-| | $\color{blue}{\text{25\% Chance to cast level 35 Frost Nova on striking}}$ |
-| | $\color{blue}{\text{100\% Chance to cast level 40 Blizzard when you Level-Up}}$ |
-| | $\color{blue}{\text{-25-30\% to Enemy Cold Resistance}}$ |
-| | $\color{blue}{\text{(3.1\% per clvl) Extra Gold from Monsters (Based on Character Level)}}$ |
+| | <ins><code>+140-210% Enhanced Damage</code></ins> |
+| | <ins><code>Level 18 Holy Freeze Aura When Equipped</code></ins> |
+| | <ins><code>+25-30% to Cold Skill Damage</code></ins> |
+| | <ins><code>25% Chance to cast level 35 Frost Nova on striking</code></ins> |
+| | <ins><code>100% Chance to cast level 40 Blizzard when you Level-Up</code></ins> |
+| | <ins><code>-25-30% to Enemy Cold Resistance</code></ins> |
+| | <ins><code>(3.1% per clvl) Extra Gold from Monsters (Based on Character Level)</code></ins> |
 
 **Melody** (Melody)
 
@@ -82,12 +82,12 @@
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+50\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+3 to Bow and Crossbow Skills}}$ |
-| | $\color{blue}{\text{+3 to Critical Strike (Amazon only)}}$ |
-| | $\color{blue}{\text{+3 to Dodge (Amazon only)}}$ |
-| | $\color{blue}{\text{+3 to Slow Missiles (Amazon only)}}$ |
-| | $\color{blue}{\text{+300\% Damage to Undead}}$ |
+| | <ins><code>+50% Enhanced Damage</code></ins> |
+| | <ins><code>+3 to Bow and Crossbow Skills</code></ins> |
+| | <ins><code>+3 to Critical Strike (Amazon only)</code></ins> |
+| | <ins><code>+3 to Dodge (Amazon only)</code></ins> |
+| | <ins><code>+3 to Slow Missiles (Amazon only)</code></ins> |
+| | <ins><code>+300% Damage to Undead</code></ins> |
 
 **Mist** (Mist)
 
@@ -96,12 +96,12 @@
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+3 to All Skills}}$ |
-| | $\color{blue}{\text{+325-375\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Level 8-12 Concentration Aura When Equipped}}$ |
-| | $\color{blue}{\text{Piercing Attack}}$ |
-| | $\color{blue}{\text{+24 to Vitality}}$ |
-| | $\color{blue}{\text{All Resistances +40}}$ |
+| | <ins><code>+3 to All Skills</code></ins> |
+| | <ins><code>+325-375% Enhanced Damage</code></ins> |
+| | <ins><code>Level 8-12 Concentration Aura When Equipped</code></ins> |
+| | <ins><code>Piercing Attack</code></ins> |
+| | <ins><code>+24 to Vitality</code></ins> |
+| | <ins><code>All Resistances +40</code></ins> |
 
 **Wrath** (Wrath)
 
@@ -110,13 +110,13 @@
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+300-375\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Adds 50-300 Lightning Damage}}$ |
-| | $\color{blue}{\text{Adds 200-300 Magic Damage}}$ |
-| | $\color{blue}{\text{10-20\% Deadly Strike}}$ |
-| | $\color{blue}{\text{30\% Chance to cast level 7 Decrepify on striking}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
+| | <ins><code>+300-375% Enhanced Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>Adds 50-300 Lightning Damage</code></ins> |
+| | <ins><code>Adds 200-300 Magic Damage</code></ins> |
+| | <ins><code>10-20% Deadly Strike</code></ins> |
+| | <ins><code>30% Chance to cast level 7 Decrepify on striking</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
 
 **Zephyr** (Zephyr)
 
@@ -125,11 +125,11 @@
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+25\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+25\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+100\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{20\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{14\% Chance to cast level 2 Twister on striking}}$ |
-| | $\color{blue}{\text{Piercing Attack}}$ |
-| | $\color{blue}{\text{+30 to Mana}}$ |
+| | <ins><code>+25% Faster Run/Walk</code></ins> |
+| | <ins><code>+25% Increased Attack Speed</code></ins> |
+| | <ins><code>+100% Enhanced Damage</code></ins> |
+| | <ins><code>20% Bonus to Attack Rating</code></ins> |
+| | <ins><code>14% Chance to cast level 2 Twister on striking</code></ins> |
+| | <ins><code>Piercing Attack</code></ins> |
+| | <ins><code>+30 to Mana</code></ins> |
 

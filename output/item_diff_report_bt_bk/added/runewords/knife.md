@@ -7,11 +7,11 @@
 | | **Base Item:** Knife |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\% Chance to cast level 16 Sigil: Death when struck}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+200-270\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+150-250\% Damage to Demons}}$ |
-| | $\color{blue}{\text{200-260\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{+3-5 Life after each Kill}}$ |
-| | $\color{blue}{\text{Requirements --50\%}}$ |
+| | <ins><code>20% Chance to cast level 16 Sigil: Death when struck</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>+200-270% Enhanced Damage</code></ins> |
+| | <ins><code>+150-250% Damage to Demons</code></ins> |
+| | <ins><code>200-260% Bonus to Attack Rating</code></ins> |
+| | <ins><code>+3-5 Life after each Kill</code></ins> |
+| | <ins><code>Requirements --50%</code></ins> |
 

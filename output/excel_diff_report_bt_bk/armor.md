@@ -22,127 +22,127 @@
 - tome
 ## Modified Rows (61)
 ### ancient armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{426}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>426</code></ins> (New)
 ### archon plate
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{418}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>418</code></ins> (New)
 ### balrog skin
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{421}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>421</code></ins> (New)
 ### bloodlord skull
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### boneweave
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{420}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>420</code></ins> (New)
 ### breast plate
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{416}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>416</code></ins> (New)
 ### cantor trophy
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### chain mail
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{420}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>420</code></ins> (New)
 ### chaos armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{425}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>425</code></ins> (New)
 ### cuirass
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{416}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>416</code></ins> (New)
 ### demon head
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### demonhide armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{414}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>414</code></ins> (New)
 ### diamond mail
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{417}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>417</code></ins> (New)
 ### dusk shroud
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{412}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>412</code></ins> (New)
 ### embossed plate
-- `reqstr`: $\color{gray}{\text{125}}$ (Old) &rarr; $\color{blue}{\text{150}}$ (New)
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{424}}$ (New)
+- `reqstr`: <del><code>125</code></del> (Old) &rarr; <ins><code>150</code></ins> (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>424</code></ins> (New)
 ### expansion
-- `ShowLevel`: $\color{gray}{\text{1}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### fetish trophy
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### field plate
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{422}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>422</code></ins> (New)
 ### full plate mail
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{425}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>425</code></ins> (New)
 ### gargoyle head
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### ghost armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{412}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>412</code></ins> (New)
 ### gothic plate
-- `reqstr`: $\color{gray}{\text{70}}$ (Old) &rarr; $\color{blue}{\text{110}}$ (New)
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{424}}$ (New)
+- `reqstr`: <del><code>70</code></del> (Old) &rarr; <ins><code>110</code></ins> (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>424</code></ins> (New)
 ### great hauberk
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{416}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>416</code></ins> (New)
 ### hard leather armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{414}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>414</code></ins> (New)
 ### heirophant trophy
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### hellforge plate
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{423}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>423</code></ins> (New)
 ### hellspawn skull
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### kraken shell
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{422}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>422</code></ins> (New)
 ### lacquered plate
-- `reqstr`: $\color{gray}{\text{208}}$ (Old) &rarr; $\color{blue}{\text{220}}$ (New)
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{424}}$ (New)
+- `reqstr`: <del><code>208</code></del> (Old) &rarr; <ins><code>220</code></ins> (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>424</code></ins> (New)
 ### leather armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{413}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>413</code></ins> (New)
 ### light plate
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{418}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>418</code></ins> (New)
 ### linked mail
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{417}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>417</code></ins> (New)
 ### loricated mail
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{419}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>419</code></ins> (New)
 ### mage plate
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{418}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>418</code></ins> (New)
 ### mesh armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{420}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>420</code></ins> (New)
 ### minion skull
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### mummified trophy
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### ornate armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{426}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>426</code></ins> (New)
 ### overseer skull
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### plate mail
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{423}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>423</code></ins> (New)
 ### preserved head
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### quilted armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{412}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>412</code></ins> (New)
 ### ring mail
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{417}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>417</code></ins> (New)
 ### russet armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{421}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>421</code></ins> (New)
 ### sacred armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{426}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>426</code></ins> (New)
 ### scale mail
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{419}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>419</code></ins> (New)
 ### scarab husk
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{414}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>414</code></ins> (New)
 ### serpentskin armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{413}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>413</code></ins> (New)
 ### sexton trophy
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### shadow plate
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{425}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>425</code></ins> (New)
 ### sharktooth armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{422}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>422</code></ins> (New)
 ### splint mail
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{421}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>421</code></ins> (New)
 ### studded leather
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{415}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>415</code></ins> (New)
 ### succubus skull
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### templar coat
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{423}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>423</code></ins> (New)
 ### tigulated mail
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{419}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>419</code></ins> (New)
 ### trellised armor
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{415}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>415</code></ins> (New)
 ### unraveller head
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
 ### wire fleece
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{415}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>415</code></ins> (New)
 ### wyrmhide
-- `auto prefix`:  (Old) &rarr; $\color{blue}{\text{413}}$ (New)
+- `auto prefix`:  (Old) &rarr; <ins><code>413</code></ins> (New)
 ### zombie head
-- `auto prefix`: $\color{gray}{\text{305}}$ (Old) &rarr; $\color{blue}{\text{307}}$ (New)
+- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)

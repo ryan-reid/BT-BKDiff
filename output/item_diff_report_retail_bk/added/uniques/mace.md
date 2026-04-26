@@ -7,13 +7,13 @@
 | | **Base Item:** Knout |
 | | **Level Requirement:** 45 |
 | | **Properties:** |
-| | $\color{blue}{\text{20\% Chance to cast level 30 Nova on striking}}$ |
-| | $\color{blue}{\text{Adds 1-300 Lightning Damage}}$ |
-| | $\color{blue}{\text{+100 to Mana}}$ |
-| | $\color{blue}{\text{Lightning Resist +25\%}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+15 to Nova}}$ |
+| | <ins><code>20% Chance to cast level 30 Nova on striking</code></ins> |
+| | <ins><code>Adds 1-300 Lightning Damage</code></ins> |
+| | <ins><code>+100 to Mana</code></ins> |
+| | <ins><code>Lightning Resist +25%</code></ins> |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>+15 to Nova</code></ins> |
 
 **Baranar's Star** (Baranar's Star)
 
@@ -22,15 +22,15 @@
 | | **Base Item:** Devil Star |
 | | **Level Requirement:** 65 |
 | | **Properties:** |
-| | $\color{blue}{\text{200\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+15-20 to all Attributes}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Durability: 100 of 100}}$ |
-| | $\color{blue}{\text{Adds 1-500 Lightning Damage}}$ |
-| | $\color{blue}{\text{Adds 1-500 Fire Damage}}$ |
-| | $\color{blue}{\text{Adds 1-500 Cold Damage}}$ |
-| | $\color{blue}{\text{10\% Chance to cast level 1 Lower Resist on attack}}$ |
+| | <ins><code>200% Bonus to Attack Rating</code></ins> |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
+| | <ins><code>+15-20 to all Attributes</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>Durability: 100 of 100</code></ins> |
+| | <ins><code>Adds 1-500 Lightning Damage</code></ins> |
+| | <ins><code>Adds 1-500 Fire Damage</code></ins> |
+| | <ins><code>Adds 1-500 Cold Damage</code></ins> |
+| | <ins><code>10% Chance to cast level 1 Lower Resist on attack</code></ins> |
 
 **Bloodrise** (Bloodrise)
 
@@ -39,11 +39,11 @@
 | | **Base Item:** Morning Star |
 | | **Level Requirement:** 15 |
 | | **Properties:** |
-| | $\color{blue}{\text{+220\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+1 to Corpse Explosion}}$ |
-| | $\color{blue}{\text{25\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{5\% Life stolen per hit}}$ |
+| | <ins><code>+220% Enhanced Damage</code></ins> |
+| | <ins><code>+1 to Corpse Explosion</code></ins> |
+| | <ins><code>25% Chance of Open Wounds</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>5% Life stolen per hit</code></ins> |
 
 **Crushflange** (Crushflange)
 
@@ -52,13 +52,13 @@
 | | **Base Item:** Mace |
 | | **Level Requirement:** 9 |
 | | **Properties:** |
-| | $\color{blue}{\text{+15 to Strength}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Fire Resist +50\%}}$ |
-| | $\color{blue}{\text{10\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{33\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{+50 to Minimum Damage}}$ |
-| | $\color{blue}{\text{+50 to Maximum Damage}}$ |
+| | <ins><code>+15 to Strength</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>Fire Resist +50%</code></ins> |
+| | <ins><code>10% Chance of Open Wounds</code></ins> |
+| | <ins><code>33% Chance of Crushing Blow</code></ins> |
+| | <ins><code>+50 to Minimum Damage</code></ins> |
+| | <ins><code>+50 to Maximum Damage</code></ins> |
 
 **Horizon's Tornado** (Horizon's Tornado)
 
@@ -67,13 +67,13 @@
 | | **Base Item:** Scourge |
 | | **Level Requirement:** 64 |
 | | **Properties:** |
-| | $\color{blue}{\text{+230-280\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Slows Target by 20\%}}$ |
-| | $\color{blue}{\text{20\% Chance to cast level 30 Tornado on striking}}$ |
-| | $\color{blue}{\text{Requirements --20\%}}$ |
-| | $\color{blue}{\text{33\% Deadly Strike}}$ |
-| | $\color{blue}{\text{+30 to Tornado}}$ |
+| | <ins><code>+230-280% Enhanced Damage</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>Slows Target by 20%</code></ins> |
+| | <ins><code>20% Chance to cast level 30 Tornado on striking</code></ins> |
+| | <ins><code>Requirements --20%</code></ins> |
+| | <ins><code>33% Deadly Strike</code></ins> |
+| | <ins><code>+30 to Tornado</code></ins> |
 
 **Khalim's Flail** (KhalimFlail)
 
@@ -82,10 +82,10 @@
 | | **Base Item:** Khalim's Flail |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to Minimum Lightning Damage}}$ |
-| | $\color{blue}{\text{+20 to Maximum Lightning Damage}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+40 to Attack Rating}}$ |
+| | <ins><code>+1 to Minimum Lightning Damage</code></ins> |
+| | <ins><code>+20 to Maximum Lightning Damage</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>+40 to Attack Rating</code></ins> |
 
 **Khalim's Will** (SuperKhalimFlail)
 
@@ -94,12 +94,12 @@
 | | **Base Item:** Khalim's Will |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to Minimum Lightning Damage}}$ |
-| | $\color{blue}{\text{+40 to Maximum Lightning Damage}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+40 to Attack Rating}}$ |
-| | $\color{blue}{\text{6\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{6\% Life stolen per hit}}$ |
+| | <ins><code>+1 to Minimum Lightning Damage</code></ins> |
+| | <ins><code>+40 to Maximum Lightning Damage</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>+40 to Attack Rating</code></ins> |
+| | <ins><code>6% Mana stolen per hit</code></ins> |
+| | <ins><code>6% Life stolen per hit</code></ins> |
 
 **Moonfall** (Moonfall)
 
@@ -108,12 +108,12 @@
 | | **Base Item:** Jagged Star |
 | | **Level Requirement:** 42 |
 | | **Properties:** |
-| | $\color{blue}{\text{40\% Chance to cast level 30 Meteor on striking}}$ |
-| | $\color{blue}{\text{Adds 300-300 Fire Damage}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 9-12}}$ |
-| | $\color{blue}{\text{+180-200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+11 to Meteor}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
+| | <ins><code>40% Chance to cast level 30 Meteor on striking</code></ins> |
+| | <ins><code>Adds 300-300 Fire Damage</code></ins> |
+| | <ins><code>Magic Damage Reduced by 9-12</code></ins> |
+| | <ins><code>+180-200% Enhanced Damage</code></ins> |
+| | <ins><code>+11 to Meteor</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
 
 **Stormlash** (Stormlash)
 
@@ -122,14 +122,14 @@
 | | **Base Item:** Scourge |
 | | **Level Requirement:** 82 |
 | | **Properties:** |
-| | $\color{blue}{\text{+269-300\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{20\% Chance to cast level 20 Static Field on striking}}$ |
-| | $\color{blue}{\text{20\% Chance to cast level 44 Lightning on striking}}$ |
-| | $\color{blue}{\text{Adds 1-473 Lightning Damage}}$ |
-| | $\color{blue}{\text{Attacker Takes Lightning Damage of 30}}$ |
-| | $\color{blue}{\text{33\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{Lightning Absorb 3-9\%}}$ |
+| | <ins><code>+269-300% Enhanced Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>20% Chance to cast level 20 Static Field on striking</code></ins> |
+| | <ins><code>20% Chance to cast level 44 Lightning on striking</code></ins> |
+| | <ins><code>Adds 1-473 Lightning Damage</code></ins> |
+| | <ins><code>Attacker Takes Lightning Damage of 30</code></ins> |
+| | <ins><code>33% Chance of Crushing Blow</code></ins> |
+| | <ins><code>Lightning Absorb 3-9%</code></ins> |
 
 **Sureshrill Frost** (Sureshrill Frost)
 
@@ -138,11 +138,11 @@
 | | **Base Item:** Flanged Mace |
 | | **Level Requirement:** 39 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 255-400 Cold Damage}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{-10-15\% to Enemy Cold Resistance}}$ |
-| | $\color{blue}{\text{+9 to Frozen Orb}}$ |
+| | <ins><code>Adds 255-400 Cold Damage</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>-10-15% to Enemy Cold Resistance</code></ins> |
+| | <ins><code>+9 to Frozen Orb</code></ins> |
 
 **The General's Tan Do Li Ga** (The Generals Tan Do Li Ga)
 
@@ -151,10 +151,10 @@
 | | **Base Item:** Flail |
 | | **Level Requirement:** 21 |
 | | **Properties:** |
-| | $\color{blue}{\text{+10 to all Attributes}}$ |
-| | $\color{blue}{\text{+30 to Minimum Damage}}$ |
-| | $\color{blue}{\text{Slows Target by 50\%}}$ |
-| | $\color{blue}{\text{5\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{+150-170\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
+| | <ins><code>+10 to all Attributes</code></ins> |
+| | <ins><code>+30 to Minimum Damage</code></ins> |
+| | <ins><code>Slows Target by 50%</code></ins> |
+| | <ins><code>5% Mana stolen per hit</code></ins> |
+| | <ins><code>+150-170% Enhanced Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
 

@@ -1,34 +1,34 @@
 # Modified Unique Circlet
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Griffon's Eye** (Griffon's Eye)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Diadem}$ | **Base Item:** $\text{Diadem}$ |
-| **Level Requirement:** $\text{76}$ | **Level Requirement:** $\text{76}$ |
+| **Base Item:** <code>Diadem</code> | **Base Item:** <code>Diadem</code> |
+| **Level Requirement:** <code>76</code> | **Level Requirement:** <code>76</code> |
 | **Properties:** | **Properties:** |
-| $\text{+100-200 Defense}$ | $\text{+100-200 Defense}$ |
-| $\text{+25\% Faster Cast Rate}$ | $\text{+25\% Faster Cast Rate}$ |
-| $\text{+1 to All Skills}$ | $\text{+1 to All Skills}$ |
-| $\text{+10-15\% to Lightning Skill Damage}$ | $\text{+10-15\% to Lightning Skill Damage}$ |
-| $\color{gray}{\text{-15-20\%}}$	ext{ to Enemy Lightning Resistance}$$ | $\color{blue}{\text{-8-15\%}}$	ext{ to Enemy Lightning Resistance}$$ |
-|  | $\color{blue}{\text{+7 to Thunder Storm}}$ |
+| <code>+100-200 Defense</code> | <code>+100-200 Defense</code> |
+| <code>+25% Faster Cast Rate</code> | <code>+25% Faster Cast Rate</code> |
+| <code>+1 to All Skills</code> | <code>+1 to All Skills</code> |
+| <code>+10-15% to Lightning Skill Damage</code> | <code>+10-15% to Lightning Skill Damage</code> |
+| <del><code>-15-20%</code></del><code> to Enemy Lightning Resistance</code> | <ins><code>-8-15%</code></ins><code> to Enemy Lightning Resistance</code> |
+|  | <ins><code>+7 to Thunder Storm</code></ins> |
 
 **Kira's Guardian** (Kira's Guardian)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Tiara}$ | **Base Item:** $\text{Tiara}$ |
-| **Level Requirement:** $\text{84}$ | **Level Requirement:** $\text{84}$ |
+| **Base Item:** <code>Tiara</code> | **Base Item:** <code>Tiara</code> |
+| **Level Requirement:** <code>84</code> | **Level Requirement:** <code>84</code> |
 | **Properties:** | **Properties:** |
-| $\text{+50-120 Defense}$ | $\text{+50-120 Defense}$ |
-| $\text{All Resistances +50-70}$ | $\text{All Resistances +50-70}$ |
-| $\text{Cannot Be Frozen}$ | $\text{Cannot Be Frozen}$ |
-| $\text{+20\% Faster Hit Recovery}$ | $\text{+20\% Faster Hit Recovery}$ |
-| $\text{+2 to Random Class Skill Levels}$ | $\text{+2 to Random Class Skill Levels}$ |
-| $\text{+1-5\% to Maximum Fire Resist}$ | $\text{+1-5\% to Maximum Fire Resist}$ |
-| $\color{gray}{\text{-10-20\%}}$	ext{ to Enemy Fire Resistance}$$ | $\color{blue}{\text{-8-15\%}}$	ext{ to Enemy Fire Resistance}$$ |
+| <code>+50-120 Defense</code> | <code>+50-120 Defense</code> |
+| <code>All Resistances +50-70</code> | <code>All Resistances +50-70</code> |
+| <code>Cannot Be Frozen</code> | <code>Cannot Be Frozen</code> |
+| <code>+20% Faster Hit Recovery</code> | <code>+20% Faster Hit Recovery</code> |
+| <code>+2 to Random Class Skill Levels</code> | <code>+2 to Random Class Skill Levels</code> |
+| <code>+1-5% to Maximum Fire Resist</code> | <code>+1-5% to Maximum Fire Resist</code> |
+| <del><code>-10-20%</code></del><code> to Enemy Fire Resistance</code> | <ins><code>-8-15%</code></ins><code> to Enemy Fire Resistance</code> |
 

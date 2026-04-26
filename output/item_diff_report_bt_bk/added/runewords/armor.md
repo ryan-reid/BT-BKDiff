@@ -7,10 +7,10 @@
 | | **Base Item:** Armor |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2 to Warlock Skill Levels}}$ |
-| | $\color{blue}{\text{+50\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+2 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{+2 Life after each Kill}}$ |
-| | $\color{blue}{\text{+50 Defense}}$ |
+| | <ins><code>+2 to Warlock Skill Levels</code></ins> |
+| | <ins><code>+50% Enhanced Damage</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
+| | <ins><code>+2 to Mana after each Kill</code></ins> |
+| | <ins><code>+2 Life after each Kill</code></ins> |
+| | <ins><code>+50 Defense</code></ins> |
 

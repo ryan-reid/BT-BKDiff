@@ -7,13 +7,13 @@
 | | **Base Item:** Monarch |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to Lightning Mastery}}$ |
-| | $\color{blue}{\text{+2 to All Skills}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 20\%}}$ |
-| | $\color{blue}{\text{Damage Reduced by 30\%}}$ |
-| | $\color{blue}{\text{+35\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+35\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+35\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+20 Cold Absorb}}$ |
-| | $\color{blue}{\text{+20 Lightning Absorb}}$ |
+| | <ins><code>+1 to Lightning Mastery</code></ins> |
+| | <ins><code>+2 to All Skills</code></ins> |
+| | <ins><code>Increase Maximum Life 20%</code></ins> |
+| | <ins><code>Damage Reduced by 30%</code></ins> |
+| | <ins><code>+35% Faster Hit Recovery</code></ins> |
+| | <ins><code>+35% Faster Block Rate</code></ins> |
+| | <ins><code>+35% Faster Block Rate</code></ins> |
+| | <ins><code>+20 Cold Absorb</code></ins> |
+| | <ins><code>+20 Lightning Absorb</code></ins> |
 

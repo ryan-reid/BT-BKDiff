@@ -6,25 +6,25 @@
 - warlock
 ## Modified Rows (8)
 ### amazon
-- `ToHitFactor`: $\color{gray}{\text{750}}$ (Old) &rarr; $\color{blue}{\text{1000}}$ (New)
-- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
+- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
 ### assassin
-- `ToHitFactor`: $\color{gray}{\text{750}}$ (Old) &rarr; $\color{blue}{\text{1000}}$ (New)
-- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
+- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
 ### barbarian
-- `ToHitFactor`: $\color{gray}{\text{750}}$ (Old) &rarr; $\color{blue}{\text{1000}}$ (New)
-- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
+- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
 ### druid
-- `ToHitFactor`: $\color{gray}{\text{750}}$ (Old) &rarr; $\color{blue}{\text{1000}}$ (New)
-- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
+- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
 ### expansion
-- `item10count`: $\color{gray}{\text{0}}$ (Old) &rarr; $\color{blue}{\text{(removed)}}$ (New)
+- `item10count`: <del><code>0</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
 ### necromancer
-- `ToHitFactor`: $\color{gray}{\text{750}}$ (Old) &rarr; $\color{blue}{\text{1000}}$ (New)
-- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
+- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
 ### paladin
-- `ToHitFactor`: $\color{gray}{\text{750}}$ (Old) &rarr; $\color{blue}{\text{1000}}$ (New)
-- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
+- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
 ### sorceress
-- `ToHitFactor`: $\color{gray}{\text{750}}$ (Old) &rarr; $\color{blue}{\text{1000}}$ (New)
-- `RunDrain`: $\color{gray}{\text{15}}$ (Old) &rarr; $\color{blue}{\text{20}}$ (New)
+- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
+- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)

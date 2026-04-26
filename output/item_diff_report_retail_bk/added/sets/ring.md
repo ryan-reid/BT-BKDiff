@@ -7,9 +7,9 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{Replenish Life +8}}$ |
-| | $\color{blue}{\text{+30 to Life}}$ |
-| | $\color{blue}{\text{+5 to Strength}}$ |
+| | <ins><code>Replenish Life +8</code></ins> |
+| | <ins><code>+30 to Life</code></ins> |
+| | <ins><code>+5 to Strength</code></ins> |
 
 **Cathan's Seal** (Cathan's Seal)
 
@@ -18,9 +18,9 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2 Life after each Kill}}$ |
-| | $\color{blue}{\text{Damage Reduced by 2}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
+| | <ins><code>+2 Life after each Kill</code></ins> |
+| | <ins><code>Damage Reduced by 2</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
 
 **Despair Caster** (Despair Caster)
 
@@ -29,12 +29,12 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+100 to Mana}}$ |
-| | $\color{blue}{\text{+10\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+100 Defense vs. Missile}}$ |
-| | $\color{blue}{\text{+100 Defense vs. Melee}}$ |
-| | $\color{blue}{\text{+10-30 to Energy}}$ |
-| | $\color{blue}{\text{Damage Reduced by 10}}$ |
+| | <ins><code>+100 to Mana</code></ins> |
+| | <ins><code>+10% Faster Hit Recovery</code></ins> |
+| | <ins><code>+100 Defense vs. Missile</code></ins> |
+| | <ins><code>+100 Defense vs. Melee</code></ins> |
+| | <ins><code>+10-30 to Energy</code></ins> |
+| | <ins><code>Damage Reduced by 10</code></ins> |
 
 **Despair Melee** (Despair Melee)
 
@@ -43,12 +43,12 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+100 to Mana}}$ |
-| | $\color{blue}{\text{+10\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+100 Defense vs. Missile}}$ |
-| | $\color{blue}{\text{+100 Defense vs. Melee}}$ |
-| | $\color{blue}{\text{+10-30 to Energy}}$ |
-| | $\color{blue}{\text{Damage Reduced by 10}}$ |
+| | <ins><code>+100 to Mana</code></ins> |
+| | <ins><code>+10% Faster Hit Recovery</code></ins> |
+| | <ins><code>+100 Defense vs. Missile</code></ins> |
+| | <ins><code>+100 Defense vs. Melee</code></ins> |
+| | <ins><code>+10-30 to Energy</code></ins> |
+| | <ins><code>Damage Reduced by 10</code></ins> |
 
 **Hope Caster** (Hope Caster)
 
@@ -57,11 +57,11 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+100 to Life}}$ |
-| | $\color{blue}{\text{+10-20\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 10}}$ |
-| | $\color{blue}{\text{+10-20 to Vitality}}$ |
+| | <ins><code>+100 to Life</code></ins> |
+| | <ins><code>+10-20% Faster Run/Walk</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
+| | <ins><code>Magic Damage Reduced by 10</code></ins> |
+| | <ins><code>+10-20 to Vitality</code></ins> |
 
 **Hope Melee** (Hope Melee)
 
@@ -70,11 +70,11 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+100 to Life}}$ |
-| | $\color{blue}{\text{+10-20\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+10\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 10}}$ |
-| | $\color{blue}{\text{+10-20 to Vitality}}$ |
+| | <ins><code>+100 to Life</code></ins> |
+| | <ins><code>+10-20% Faster Run/Walk</code></ins> |
+| | <ins><code>+10% Increased Attack Speed</code></ins> |
+| | <ins><code>Magic Damage Reduced by 10</code></ins> |
+| | <ins><code>+10-20 to Vitality</code></ins> |
 
 **Nadin's Passion** (Nadin's Passion)
 
@@ -83,11 +83,11 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 90 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1 to Random Class Skill Levels}}$ |
-| | $\color{blue}{\text{5\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{5\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{+3 Life after each Kill}}$ |
-| | $\color{blue}{\text{+5 to all Attributes}}$ |
+| | <ins><code>+1 to Random Class Skill Levels</code></ins> |
+| | <ins><code>5% Mana stolen per hit</code></ins> |
+| | <ins><code>5% Life stolen per hit</code></ins> |
+| | <ins><code>+3 Life after each Kill</code></ins> |
+| | <ins><code>+5 to all Attributes</code></ins> |
 
 **Restless Will** (Restless Will)
 
@@ -96,10 +96,10 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+15\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+15\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+15\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+15\% Faster Hit Recovery}}$ |
+| | <ins><code>+15% Faster Cast Rate</code></ins> |
+| | <ins><code>+15% Increased Attack Speed</code></ins> |
+| | <ins><code>+15% Faster Run/Walk</code></ins> |
+| | <ins><code>+15% Faster Hit Recovery</code></ins> |
 
 **Stolen Jewelry** (Stolen Jewelry)
 
@@ -108,9 +108,9 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{20-30\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{+1-3\% to Maximum Fire Resist}}$ |
-| | $\color{blue}{\text{+10-15\% Vitality}}$ |
+| | <ins><code>20-30% Better Chance of Getting Magic Items</code></ins> |
+| | <ins><code>+1-3% to Maximum Fire Resist</code></ins> |
+| | <ins><code>+10-15% Vitality</code></ins> |
 
 **Yang** (Yang)
 
@@ -119,10 +119,10 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 95 |
 | | **Properties:** |
-| | $\color{blue}{\text{Increase Maximum Life 1-10\%}}$ |
-| | $\color{blue}{\text{Increase Maximum Mana 1-10\%}}$ |
-| | $\color{blue}{\text{+5-20 Life after each Kill}}$ |
-| | $\color{blue}{\text{+20- to Mana after each Kill}}$ |
+| | <ins><code>Increase Maximum Life 1-10%</code></ins> |
+| | <ins><code>Increase Maximum Mana 1-10%</code></ins> |
+| | <ins><code>+5-20 Life after each Kill</code></ins> |
+| | <ins><code>+20- to Mana after each Kill</code></ins> |
 
 **Ying** (Ying)
 
@@ -131,7 +131,7 @@
 | | **Base Item:** Ring |
 | | **Level Requirement:** 95 |
 | | **Properties:** |
-| | $\color{blue}{\text{All Resistances +10-20}}$ |
-| | $\color{blue}{\text{+1-10\% Strength}}$ |
-| | $\color{blue}{\text{+1-10\% Dexterity}}$ |
+| | <ins><code>All Resistances +10-20</code></ins> |
+| | <ins><code>+1-10% Strength</code></ins> |
+| | <ins><code>+1-10% Dexterity</code></ins> |
 

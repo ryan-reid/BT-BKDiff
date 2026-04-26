@@ -1,21 +1,21 @@
 # Modified Unique Hand to Hand 2
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Saboteurs Blade** (Saboteurs Blade)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Scissors Suwayyah}$ | **Base Item:** $\text{Scissors Suwayyah}$ |
-| **Level Requirement:** $\text{95}$ | **Level Requirement:** $\text{95}$ |
+| **Base Item:** <code>Scissors Suwayyah</code> | **Base Item:** <code>Scissors Suwayyah</code> |
+| **Level Requirement:** <code>95</code> | **Level Requirement:** <code>95</code> |
 | **Properties:** | **Properties:** |
-| $\text{+2 to Traps Skills}$ | $\text{+2 to Traps Skills}$ |
-| $\text{-20-30\% to Enemy Lightning Resistance}$ | $\text{-20-30\% to Enemy Lightning Resistance}$ |
-| $\text{-20-30\% to Enemy Fire Resistance}$ | $\text{-20-30\% to Enemy Fire Resistance}$ |
-| $\text{+30\% Increased Attack Speed}$ | $\text{+30\% Increased Attack Speed}$ |
-| $\text{+250-300\% Enhanced Damage}$ | $\text{+250-300\% Enhanced Damage}$ |
-| $\text{Level 5 Vigor Aura When Equipped}$ | $\text{Level 5 Vigor Aura When Equipped}$ |
-| $\text{+3 to Weapon Block (Assassin only)}$ | $\text{+3 to Weapon Block (Assassin only)}$ |
-| $\color{gray}{\text{+1-2}}$	ext{ to Assassin Skill Levels}$$ | $\color{blue}{\text{+2}}$	ext{ to Assassin Skill Levels}$$ |
+| <code>+2 to Traps Skills</code> | <code>+2 to Traps Skills</code> |
+| <code>-20-30% to Enemy Lightning Resistance</code> | <code>-20-30% to Enemy Lightning Resistance</code> |
+| <code>-20-30% to Enemy Fire Resistance</code> | <code>-20-30% to Enemy Fire Resistance</code> |
+| <code>+30% Increased Attack Speed</code> | <code>+30% Increased Attack Speed</code> |
+| <code>+250-300% Enhanced Damage</code> | <code>+250-300% Enhanced Damage</code> |
+| <code>Level 5 Vigor Aura When Equipped</code> | <code>Level 5 Vigor Aura When Equipped</code> |
+| <code>+3 to Weapon Block (Assassin only)</code> | <code>+3 to Weapon Block (Assassin only)</code> |
+| <del><code>+1-2</code></del><code> to Assassin Skill Levels</code> | <ins><code>+2</code></ins><code> to Assassin Skill Levels</code> |
 

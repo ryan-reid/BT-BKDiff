@@ -7,11 +7,11 @@
 | | **Base Item:** Grimoire |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{5\% Chance to cast level 35 Ring of Fire when struck}}$ |
-| | $\color{blue}{\text{+10\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{+50-75 to Life}}$ |
-| | $\color{blue}{\text{+50-75 to Mana}}$ |
-| | $\color{blue}{\text{All Resistances +25-35}}$ |
-| | $\color{blue}{\text{+75-100\% Enhanced Defense}}$ |
+| | <ins><code>5% Chance to cast level 35 Ring of Fire when struck</code></ins> |
+| | <ins><code>+10% Faster Run/Walk</code></ins> |
+| | <ins><code>+30% Faster Block Rate</code></ins> |
+| | <ins><code>+50-75 to Life</code></ins> |
+| | <ins><code>+50-75 to Mana</code></ins> |
+| | <ins><code>All Resistances +25-35</code></ins> |
+| | <ins><code>+75-100% Enhanced Defense</code></ins> |
 

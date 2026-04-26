@@ -6,10 +6,10 @@
 
 ## Modified Rows (2)
 ### hell
-- `ResistPenalty`: $\color{gray}{\text{-110}}$ (Old) &rarr; $\color{blue}{\text{-70}}$ (New)
-- `UniqueDamageBonus`: $\color{gray}{\text{66}}$ (Old) &rarr; $\color{blue}{\text{75}}$ (New)
-- `ChampionDamageBonus`: $\color{gray}{\text{66}}$ (Old) &rarr; $\color{blue}{\text{75}}$ (New)
+- `ResistPenalty`: <del><code>-110</code></del> (Old) &rarr; <ins><code>-70</code></ins> (New)
+- `UniqueDamageBonus`: <del><code>66</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
+- `ChampionDamageBonus`: <del><code>66</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
 ### nightmare
-- `ResistPenalty`: $\color{gray}{\text{-45}}$ (Old) &rarr; $\color{blue}{\text{-40}}$ (New)
-- `UniqueDamageBonus`: $\color{gray}{\text{75}}$ (Old) &rarr; $\color{blue}{\text{85}}$ (New)
-- `ChampionDamageBonus`: $\color{gray}{\text{75}}$ (Old) &rarr; $\color{blue}{\text{85}}$ (New)
+- `ResistPenalty`: <del><code>-45</code></del> (Old) &rarr; <ins><code>-40</code></ins> (New)
+- `UniqueDamageBonus`: <del><code>75</code></del> (Old) &rarr; <ins><code>85</code></ins> (New)
+- `ChampionDamageBonus`: <del><code>75</code></del> (Old) &rarr; <ins><code>85</code></ins> (New)

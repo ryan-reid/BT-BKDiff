@@ -7,15 +7,15 @@
 | | **Base Item:** Giant Thresher |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
-| | $\color{blue}{\text{+450\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{-20\% to Enemy Physical Resistance}}$ |
-| | $\color{blue}{\text{+80\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Monster Physical Immunity is Sundered}}$ |
-| | $\color{blue}{\text{Unknown property: ar\% (200)}}$ |
-| | $\color{blue}{\text{300\% Extra Gold from Monsters}}$ |
-| | $\color{blue}{\text{Reduces all Vendor Prices 15\%}}$ |
-| | $\color{blue}{\text{Curse Resist +100\%}}$ |
-| | $\color{blue}{\text{+3 to Random Class Skill Levels}}$ |
-| | $\color{blue}{\text{Ethereal}}$ |
-| | $\color{blue}{\text{+7 to Psychic Ward (Warlock only)}}$ |
+| | <ins><code>+450% Enhanced Damage</code></ins> |
+| | <ins><code>-20% to Enemy Physical Resistance</code></ins> |
+| | <ins><code>+80% Increased Attack Speed</code></ins> |
+| | <ins><code>Monster Physical Immunity is Sundered</code></ins> |
+| | <ins><code>Unknown property: ar% (200)</code></ins> |
+| | <ins><code>300% Extra Gold from Monsters</code></ins> |
+| | <ins><code>Reduces all Vendor Prices 15%</code></ins> |
+| | <ins><code>Curse Resist +100%</code></ins> |
+| | <ins><code>+3 to Random Class Skill Levels</code></ins> |
+| | <ins><code>Ethereal</code></ins> |
+| | <ins><code>+7 to Psychic Ward (Warlock only)</code></ins> |
 

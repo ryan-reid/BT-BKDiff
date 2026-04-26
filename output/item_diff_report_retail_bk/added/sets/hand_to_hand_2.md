@@ -7,14 +7,14 @@
 | | **Base Item:** Scissors Suwayyah |
 | | **Level Requirement:** 79 |
 | | **Properties:** |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+200-250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Ignore Target's Defense}}$ |
-| | $\color{blue}{\text{Adds 100-100 Cold Damage}}$ |
-| | $\color{blue}{\text{Adds 100-100 Fire Damage}}$ |
-| | $\color{blue}{\text{+200\% Damage to Undead}}$ |
-| | $\color{blue}{\text{+200\% Damage to Demons}}$ |
-| | $\color{blue}{\text{+2-3 to All Skills}}$ |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>+200-250% Enhanced Damage</code></ins> |
+| | <ins><code>Ignore Target's Defense</code></ins> |
+| | <ins><code>Adds 100-100 Cold Damage</code></ins> |
+| | <ins><code>Adds 100-100 Fire Damage</code></ins> |
+| | <ins><code>+200% Damage to Undead</code></ins> |
+| | <ins><code>+200% Damage to Demons</code></ins> |
+| | <ins><code>+2-3 to All Skills</code></ins> |
 
 **Natalya's Scar** (Natalya's Scar)
 
@@ -23,15 +23,15 @@
 | | **Base Item:** Scissors Suwayyah |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2-3 to Assassin Skill Levels}}$ |
-| | $\color{blue}{\text{Level 12 Thorns Aura When Equipped}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+40\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{-3-5\% to Enemy Fire Resistance}}$ |
-| | $\color{blue}{\text{-3-5\% to Enemy Lightning Resistance}}$ |
-| | $\color{blue}{\text{-3-5\% to Enemy Cold Resistance}}$ |
-| | $\color{blue}{\text{All Resistances +20-30}}$ |
-| | $\color{blue}{\text{Damage Reduced by 10-20\%}}$ |
+| | <ins><code>+2-3 to Assassin Skill Levels</code></ins> |
+| | <ins><code>Level 12 Thorns Aura When Equipped</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>+40% Faster Cast Rate</code></ins> |
+| | <ins><code>-3-5% to Enemy Fire Resistance</code></ins> |
+| | <ins><code>-3-5% to Enemy Lightning Resistance</code></ins> |
+| | <ins><code>-3-5% to Enemy Cold Resistance</code></ins> |
+| | <ins><code>All Resistances +20-30</code></ins> |
+| | <ins><code>Damage Reduced by 10-20%</code></ins> |
 
 **Natalya's Slayer** (Natalya's Slayer)
 
@@ -40,13 +40,13 @@
 | | **Base Item:** Scissors Suwayyah |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+2-3 to Assassin Skill Levels}}$ |
-| | $\color{blue}{\text{Level 9 Fanaticism Aura When Equipped}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+40\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+280-350\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+200-300 to Maximum Damage}}$ |
-| | $\color{blue}{\text{Damage +200-300}}$ |
-| | $\color{blue}{\text{All Resistances +20-30}}$ |
-| | $\color{blue}{\text{Damage Reduced by 10-20\%}}$ |
+| | <ins><code>+2-3 to Assassin Skill Levels</code></ins> |
+| | <ins><code>Level 9 Fanaticism Aura When Equipped</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>+40% Faster Cast Rate</code></ins> |
+| | <ins><code>+280-350% Enhanced Damage</code></ins> |
+| | <ins><code>+200-300 to Maximum Damage</code></ins> |
+| | <ins><code>Damage +200-300</code></ins> |
+| | <ins><code>All Resistances +20-30</code></ins> |
+| | <ins><code>Damage Reduced by 10-20%</code></ins> |
 

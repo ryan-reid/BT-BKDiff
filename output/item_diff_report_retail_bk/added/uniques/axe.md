@@ -7,12 +7,12 @@
 | | **Base Item:** Large Axe |
 | | **Level Requirement:** 8 |
 | | **Properties:** |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+1 to Frozen Armor}}$ |
-| | $\color{blue}{\text{Cold Resist +50\%}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+50\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+20 to Maximum Damage}}$ |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
+| | <ins><code>+1 to Frozen Armor</code></ins> |
+| | <ins><code>Cold Resist +50%</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>+50% Faster Hit Recovery</code></ins> |
+| | <ins><code>+20 to Maximum Damage</code></ins> |
 
 **Bladebone** (Bladebone)
 
@@ -21,12 +21,12 @@
 | | **Base Item:** Double Axe |
 | | **Level Requirement:** 15 |
 | | **Properties:** |
-| | $\color{blue}{\text{+150-180\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+20\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{10\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{+3 to Blade Shield}}$ |
-| | $\color{blue}{\text{+3 to Blade Fury}}$ |
+| | <ins><code>+150-180% Enhanced Damage</code></ins> |
+| | <ins><code>+20% Faster Cast Rate</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>10% Chance of Open Wounds</code></ins> |
+| | <ins><code>+3 to Blade Shield</code></ins> |
+| | <ins><code>+3 to Blade Fury</code></ins> |
 
 **Boneslayer Blade** (Boneslayer Blade)
 
@@ -35,13 +35,13 @@
 | | **Base Item:** Gothic Axe |
 | | **Level Requirement:** 42 |
 | | **Properties:** |
-| | $\color{blue}{\text{Requirements --50\%}}$ |
-| | $\color{blue}{\text{(2.5\% per clvl) Damage to Undead (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+20 to Strength}}$ |
-| | $\color{blue}{\text{+60\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{35\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{+180-220\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{75\% Chance to cast level 20 Holy Bolt on striking}}$ |
+| | <ins><code>Requirements --50%</code></ins> |
+| | <ins><code>(2.5% per clvl) Damage to Undead (Based on Character Level)</code></ins> |
+| | <ins><code>+20 to Strength</code></ins> |
+| | <ins><code>+60% Increased Attack Speed</code></ins> |
+| | <ins><code>35% Bonus to Attack Rating</code></ins> |
+| | <ins><code>+180-220% Enhanced Damage</code></ins> |
+| | <ins><code>75% Chance to cast level 20 Holy Bolt on striking</code></ins> |
 
 **Brainhew** (Brainhew)
 
@@ -50,11 +50,11 @@
 | | **Base Item:** Great Axe |
 | | **Level Requirement:** 25 |
 | | **Properties:** |
-| | $\color{blue}{\text{+30 to Minimum Damage}}$ |
-| | $\color{blue}{\text{+25 to Mana}}$ |
-| | $\color{blue}{\text{10-13\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{+180\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
+| | <ins><code>+30 to Minimum Damage</code></ins> |
+| | <ins><code>+25 to Mana</code></ins> |
+| | <ins><code>10-13% Mana stolen per hit</code></ins> |
+| | <ins><code>+180% Enhanced Damage</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
 
 **Butcher's Pupil** (Butcher's Pupil)
 
@@ -63,13 +63,13 @@
 | | **Base Item:** Cleaver |
 | | **Level Requirement:** 39 |
 | | **Properties:** |
-| | $\color{blue}{\text{35\% Deadly Strike}}$ |
-| | $\color{blue}{\text{25\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 5 seconds}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Adds 30-50 Damage}}$ |
-| | $\color{blue}{\text{+8 to Mana after each Kill}}$ |
+| | <ins><code>35% Deadly Strike</code></ins> |
+| | <ins><code>25% Chance of Open Wounds</code></ins> |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
+| | <ins><code>Repairs 1 durability in 5 seconds</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>Adds 30-50 Damage</code></ins> |
+| | <ins><code>+8 to Mana after each Kill</code></ins> |
 
 **Coldkill** (Coldkill)
 
@@ -78,13 +78,13 @@
 | | **Base Item:** Hatchet |
 | | **Level Requirement:** 36 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 250-250 Cold Damage}}$ |
-| | $\color{blue}{\text{Cold Resist +15\%}}$ |
-| | $\color{blue}{\text{+15\% to Maximum Cold Resist}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{25\% Chance to cast level 10 Glacial Spike on striking}}$ |
-| | $\color{blue}{\text{25\% Chance to cast level 40 Frost Nova when struck}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
+| | <ins><code>Adds 250-250 Cold Damage</code></ins> |
+| | <ins><code>Cold Resist +15%</code></ins> |
+| | <ins><code>+15% to Maximum Cold Resist</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>25% Chance to cast level 10 Glacial Spike on striking</code></ins> |
+| | <ins><code>25% Chance to cast level 40 Frost Nova when struck</code></ins> |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
 
 **Cranebeak** (Cranebeak)
 
@@ -93,14 +93,14 @@
 | | **Base Item:** War Spike |
 | | **Level Requirement:** 63 |
 | | **Properties:** |
-| | $\color{blue}{\text{+240-300\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{-25\% Target Defense}}$ |
-| | $\color{blue}{\text{30-65\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{+20 to Raven}}$ |
-| | $\color{blue}{\text{(2.5 per clvl) to Maximum Damage (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+50 to Minimum Damage}}$ |
-| | $\color{blue}{\text{+1 to Lightning Mastery}}$ |
+| | <ins><code>+240-300% Enhanced Damage</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>-25% Target Defense</code></ins> |
+| | <ins><code>30-65% Better Chance of Getting Magic Items</code></ins> |
+| | <ins><code>+20 to Raven</code></ins> |
+| | <ins><code>(2.5 per clvl) to Maximum Damage (Based on Character Level)</code></ins> |
+| | <ins><code>+50 to Minimum Damage</code></ins> |
+| | <ins><code>+1 to Lightning Mastery</code></ins> |
 
 **Death Cleaver** (Deathcleaver)
 
@@ -109,14 +109,14 @@
 | | **Base Item:** Berserker Axe |
 | | **Level Requirement:** 70 |
 | | **Properties:** |
-| | $\color{blue}{\text{+250-330\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{66\% Deadly Strike}}$ |
-| | $\color{blue}{\text{-50\% Target Defense}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+6-9 Life after each Kill}}$ |
-| | $\color{blue}{\text{10-15\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{Damage +50-100}}$ |
-| | $\color{blue}{\text{-10-20\% to Enemy Physical Resistance}}$ |
+| | <ins><code>+250-330% Enhanced Damage</code></ins> |
+| | <ins><code>66% Deadly Strike</code></ins> |
+| | <ins><code>-50% Target Defense</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>+6-9 Life after each Kill</code></ins> |
+| | <ins><code>10-15% Chance of Crushing Blow</code></ins> |
+| | <ins><code>Damage +50-100</code></ins> |
+| | <ins><code>-10-20% to Enemy Physical Resistance</code></ins> |
 
 **Deathspade** (Deathspade)
 
@@ -125,13 +125,13 @@
 | | **Base Item:** Axe |
 | | **Level Requirement:** 9 |
 | | **Properties:** |
-| | $\color{blue}{\text{Hit Blinds Target +1}}$ |
-| | $\color{blue}{\text{+8 to Minimum Damage}}$ |
-| | $\color{blue}{\text{15\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{+4 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{+250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{40\% Deadly Strike}}$ |
+| | <ins><code>Hit Blinds Target +1</code></ins> |
+| | <ins><code>+8 to Minimum Damage</code></ins> |
+| | <ins><code>15% Bonus to Attack Rating</code></ins> |
+| | <ins><code>+4 to Mana after each Kill</code></ins> |
+| | <ins><code>+250% Enhanced Damage</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>40% Deadly Strike</code></ins> |
 
 **Ethereal Edge** (Ethereal Edge)
 
@@ -140,15 +140,15 @@
 | | **Base Item:** Silver\-edged Axe |
 | | **Level Requirement:** 74 |
 | | **Properties:** |
-| | $\color{blue}{\text{+200-240\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+25\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Fire Absorb 10-12\%}}$ |
-| | $\color{blue}{\text{+150-200\% Damage to Demons}}$ |
-| | $\color{blue}{\text{+5-10 Life after each Kill}}$ |
-| | $\color{blue}{\text{5\% Chance to cast level 10 Fade when you Kill an Enemy}}$ |
-| | $\color{blue}{\text{Ethereal}}$ |
-| | $\color{blue}{\text{Indestructible}}$ |
-| | $\color{blue}{\text{+150-200\% Damage to Undead}}$ |
+| | <ins><code>+200-240% Enhanced Damage</code></ins> |
+| | <ins><code>+25% Increased Attack Speed</code></ins> |
+| | <ins><code>Fire Absorb 10-12%</code></ins> |
+| | <ins><code>+150-200% Damage to Demons</code></ins> |
+| | <ins><code>+5-10 Life after each Kill</code></ins> |
+| | <ins><code>5% Chance to cast level 10 Fade when you Kill an Enemy</code></ins> |
+| | <ins><code>Ethereal</code></ins> |
+| | <ins><code>Indestructible</code></ins> |
+| | <ins><code>+150-200% Damage to Undead</code></ins> |
 
 **Executioner's Justice** (Executioner's Justice)
 
@@ -157,16 +157,16 @@
 | | **Base Item:** Glorious Axe |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | $\color{blue}{\text{+280-340\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{50\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{-50\% Target Defense}}$ |
-| | $\color{blue}{\text{35\% Chance to cast level 8 Decrepify on striking}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{50\% Deadly Strike}}$ |
-| | $\color{blue}{\text{4-6\% Mana stolen per hit}}$ |
-| | $\color{blue}{\text{60\% Chance to cast level 40 Fist of the Heavens on attack}}$ |
-| | $\color{blue}{\text{+3 to Zeal}}$ |
-| | $\color{blue}{\text{Slows Target by 20\%}}$ |
+| | <ins><code>+280-340% Enhanced Damage</code></ins> |
+| | <ins><code>50% Chance of Crushing Blow</code></ins> |
+| | <ins><code>-50% Target Defense</code></ins> |
+| | <ins><code>35% Chance to cast level 8 Decrepify on striking</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>50% Deadly Strike</code></ins> |
+| | <ins><code>4-6% Mana stolen per hit</code></ins> |
+| | <ins><code>60% Chance to cast level 40 Fist of the Heavens on attack</code></ins> |
+| | <ins><code>+3 to Zeal</code></ins> |
+| | <ins><code>Slows Target by 20%</code></ins> |
 
 **Goreshovel** (Goreshovel)
 
@@ -175,12 +175,12 @@
 | | **Base Item:** Broad Axe |
 | | **Level Requirement:** 14 |
 | | **Properties:** |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+25 to Strength}}$ |
-| | $\color{blue}{\text{60\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{+180\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+20 to Maximum Damage}}$ |
-| | $\color{blue}{\text{+20 to Minimum Damage}}$ |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+25 to Strength</code></ins> |
+| | <ins><code>60% Chance of Open Wounds</code></ins> |
+| | <ins><code>+180% Enhanced Damage</code></ins> |
+| | <ins><code>+20 to Maximum Damage</code></ins> |
+| | <ins><code>+20 to Minimum Damage</code></ins> |
 
 **Guardian Naga** (Guardian Naga)
 
@@ -189,14 +189,14 @@
 | | **Base Item:** Naga |
 | | **Level Requirement:** 48 |
 | | **Properties:** |
-| | $\color{blue}{\text{33\% Chance to cast level 10 Poison Nova on striking}}$ |
-| | $\color{blue}{\text{7\% Life stolen per hit}}$ |
-| | $\color{blue}{\text{Poison Resist +30\%}}$ |
-| | $\color{blue}{\text{+180-200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Adds 256-256 Poison Damage Over 256 Seconds}}$ |
-| | $\color{blue}{\text{+20 to Maximum Damage}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{-10-20\% to Enemy Poison Resistance}}$ |
+| | <ins><code>33% Chance to cast level 10 Poison Nova on striking</code></ins> |
+| | <ins><code>7% Life stolen per hit</code></ins> |
+| | <ins><code>Poison Resist +30%</code></ins> |
+| | <ins><code>+180-200% Enhanced Damage</code></ins> |
+| | <ins><code>Adds 256-256 Poison Damage Over 256 Seconds</code></ins> |
+| | <ins><code>+20 to Maximum Damage</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>-10-20% to Enemy Poison Resistance</code></ins> |
 
 **Hellslayer** (Hellslayer)
 
@@ -205,14 +205,14 @@
 | | **Base Item:** Decapitator |
 | | **Level Requirement:** 66 |
 | | **Properties:** |
-| | $\color{blue}{\text{(0.5 per clvl) to Strength (Based on Character Level)}}$ |
-| | $\color{blue}{\text{(0.5 per clvl) to Vitality (Based on Character Level)}}$ |
-| | $\color{blue}{\text{(3.0\% per clvl) Enhanced Maximum Damage (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+100 to Life}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{50\% Chance to cast level 40 Fire Ball on attack}}$ |
-| | $\color{blue}{\text{Level 30 Holy Fire Aura When Equipped}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
+| | <ins><code>(0.5 per clvl) to Strength (Based on Character Level)</code></ins> |
+| | <ins><code>(0.5 per clvl) to Vitality (Based on Character Level)</code></ins> |
+| | <ins><code>(3.0% per clvl) Enhanced Maximum Damage (Based on Character Level)</code></ins> |
+| | <ins><code>+100 to Life</code></ins> |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
+| | <ins><code>50% Chance to cast level 40 Fire Ball on attack</code></ins> |
+| | <ins><code>Level 30 Holy Fire Aura When Equipped</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
 
 **Humongous** (The Humongous)
 
@@ -221,13 +221,13 @@
 | | **Base Item:** Giant Axe |
 | | **Level Requirement:** 29 |
 | | **Properties:** |
-| | $\color{blue}{\text{+20-30 to Strength}}$ |
-| | $\color{blue}{\text{+40 to Minimum Damage}}$ |
-| | $\color{blue}{\text{+40 to Maximum Damage}}$ |
-| | $\color{blue}{\text{33\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{Requirements --50\%}}$ |
-| | $\color{blue}{\text{+200-230\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
+| | <ins><code>+20-30 to Strength</code></ins> |
+| | <ins><code>+40 to Minimum Damage</code></ins> |
+| | <ins><code>+40 to Maximum Damage</code></ins> |
+| | <ins><code>33% Chance of Crushing Blow</code></ins> |
+| | <ins><code>Requirements --50%</code></ins> |
+| | <ins><code>+200-230% Enhanced Damage</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
 
 **Islestrike** (Islestrike)
 
@@ -236,15 +236,15 @@
 | | **Base Item:** Twin Axe |
 | | **Level Requirement:** 43 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-3 to All Skills}}$ |
-| | $\color{blue}{\text{+10 to Strength}}$ |
-| | $\color{blue}{\text{+10 to Dexterity}}$ |
-| | $\color{blue}{\text{+10 to Vitality}}$ |
-| | $\color{blue}{\text{+10 to Energy}}$ |
-| | $\color{blue}{\text{+50 Defense vs. Missile}}$ |
-| | $\color{blue}{\text{25\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
+| | <ins><code>+1-3 to All Skills</code></ins> |
+| | <ins><code>+10 to Strength</code></ins> |
+| | <ins><code>+10 to Dexterity</code></ins> |
+| | <ins><code>+10 to Vitality</code></ins> |
+| | <ins><code>+10 to Energy</code></ins> |
+| | <ins><code>+50 Defense vs. Missile</code></ins> |
+| | <ins><code>25% Chance of Crushing Blow</code></ins> |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
 
 **Messerschmidt's Reaver** (Messerschmidt's Reaver)
 
@@ -253,16 +253,16 @@
 | | **Base Item:** Champion Axe |
 | | **Level Requirement:** 70 |
 | | **Properties:** |
-| | $\color{blue}{\text{(2.5\% per clvl) Enhanced Maximum Damage (Based on Character Level)}}$ |
-| | $\color{blue}{\text{+200-300\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+15-30 to all Attributes}}$ |
-| | $\color{blue}{\text{Level 8-10 Might Aura When Equipped}}$ |
-| | $\color{blue}{\text{(0.5\% per clvl) Deadly Strike (Based on Character Level)}}$ |
-| | $\color{blue}{\text{(1.0 per clvl) Absorbs Fire Damage (Based on Character Level)}}$ |
-| | $\color{blue}{\text{Adds 200-500 Fire Damage}}$ |
-| | $\color{blue}{\text{Durability: 25 of 25}}$ |
-| | $\color{blue}{\text{100\% Bonus to Attack Rating}}$ |
-| | $\color{blue}{\text{Prevent Monster Heal}}$ |
+| | <ins><code>(2.5% per clvl) Enhanced Maximum Damage (Based on Character Level)</code></ins> |
+| | <ins><code>+200-300% Enhanced Damage</code></ins> |
+| | <ins><code>+15-30 to all Attributes</code></ins> |
+| | <ins><code>Level 8-10 Might Aura When Equipped</code></ins> |
+| | <ins><code>(0.5% per clvl) Deadly Strike (Based on Character Level)</code></ins> |
+| | <ins><code>(1.0 per clvl) Absorbs Fire Damage (Based on Character Level)</code></ins> |
+| | <ins><code>Adds 200-500 Fire Damage</code></ins> |
+| | <ins><code>Durability: 25 of 25</code></ins> |
+| | <ins><code>100% Bonus to Attack Rating</code></ins> |
+| | <ins><code>Prevent Monster Heal</code></ins> |
 
 **Pompeii's Wrath** (Pompe's Wrath)
 
@@ -271,12 +271,12 @@
 | | **Base Item:** Crowbill |
 | | **Level Requirement:** 45 |
 | | **Properties:** |
-| | $\color{blue}{\text{35\% Chance to cast level 10 Fissure on striking}}$ |
-| | $\color{blue}{\text{Slows Target by 50\%}}$ |
-| | $\color{blue}{\text{Adds 35-150 Fire Damage}}$ |
-| | $\color{blue}{\text{-10\% to Enemy Fire Resistance}}$ |
-| | $\color{blue}{\text{+180-190\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
+| | <ins><code>35% Chance to cast level 10 Fissure on striking</code></ins> |
+| | <ins><code>Slows Target by 50%</code></ins> |
+| | <ins><code>Adds 35-150 Fire Damage</code></ins> |
+| | <ins><code>-10% to Enemy Fire Resistance</code></ins> |
+| | <ins><code>+180-190% Enhanced Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
 
 **Rakescar** (Rakescar)
 
@@ -285,12 +285,12 @@
 | | **Base Item:** War Axe |
 | | **Level Requirement:** 27 |
 | | **Properties:** |
-| | $\color{blue}{\text{+3 to Venom}}$ |
-| | $\color{blue}{\text{+20\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+20\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{Poison Resist +50\%}}$ |
-| | $\color{blue}{\text{+200-250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
+| | <ins><code>+3 to Venom</code></ins> |
+| | <ins><code>+20% Faster Hit Recovery</code></ins> |
+| | <ins><code>+20% Faster Run/Walk</code></ins> |
+| | <ins><code>Poison Resist +50%</code></ins> |
+| | <ins><code>+200-250% Enhanced Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
 
 **Razor's Edge** (Razoredge)
 
@@ -299,11 +299,11 @@
 | | **Base Item:** Tomahawk |
 | | **Level Requirement:** 67 |
 | | **Properties:** |
-| | $\color{blue}{\text{+175-225\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{-33\% Target Defense}}$ |
-| | $\color{blue}{\text{50\% Deadly Strike}}$ |
-| | $\color{blue}{\text{50\% Chance of Open Wounds}}$ |
+| | <ins><code>+175-225% Enhanced Damage</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>-33% Target Defense</code></ins> |
+| | <ins><code>50% Deadly Strike</code></ins> |
+| | <ins><code>50% Chance of Open Wounds</code></ins> |
 
 **Rune Master** (Runemaster)
 
@@ -312,11 +312,11 @@
 | | **Base Item:** Ettin Axe |
 | | **Level Requirement:** 72 |
 | | **Properties:** |
-| | $\color{blue}{\text{+350\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+5\% to Maximum Cold Resist}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Ignore Target's Defense}}$ |
+| | <ins><code>+350% Enhanced Damage</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>+5% to Maximum Cold Resist</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Ignore Target's Defense</code></ins> |
 
 **Skull Splitter** (Mindrend)
 
@@ -325,12 +325,12 @@
 | | **Base Item:** Military Pick |
 | | **Level Requirement:** 21 |
 | | **Properties:** |
-| | $\color{blue}{\text{Hit Blinds Target +2}}$ |
-| | $\color{blue}{\text{Regenerate Mana 20\%}}$ |
-| | $\color{blue}{\text{15\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{50\% Deadly Strike}}$ |
-| | $\color{blue}{\text{+20\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+180-200\% Enhanced Damage}}$ |
+| | <ins><code>Hit Blinds Target +2</code></ins> |
+| | <ins><code>Regenerate Mana 20%</code></ins> |
+| | <ins><code>15% Chance of Crushing Blow</code></ins> |
+| | <ins><code>50% Deadly Strike</code></ins> |
+| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <ins><code>+180-200% Enhanced Damage</code></ins> |
 
 **Spellsteel** (Spellsteel)
 
@@ -339,16 +339,16 @@
 | | **Base Item:** Bearded Axe |
 | | **Level Requirement:** 39 |
 | | **Properties:** |
-| | $\color{blue}{\text{Requirements --60\%}}$ |
-| | $\color{blue}{\text{+100 to Mana}}$ |
-| | $\color{blue}{\text{Magic Damage Reduced by 12-15}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+165\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Regenerate Mana 25\%}}$ |
-| | $\color{blue}{\text{+1 to Teleport}}$ |
-| | $\color{blue}{\text{+3 to Decrepify}}$ |
-| | $\color{blue}{\text{+100-10 to Holy Bolt}}$ |
-| | $\color{blue}{\text{+12 to Firestorm}}$ |
+| | <ins><code>Requirements --60%</code></ins> |
+| | <ins><code>+100 to Mana</code></ins> |
+| | <ins><code>Magic Damage Reduced by 12-15</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
+| | <ins><code>+165% Enhanced Damage</code></ins> |
+| | <ins><code>Regenerate Mana 25%</code></ins> |
+| | <ins><code>+1 to Teleport</code></ins> |
+| | <ins><code>+3 to Decrepify</code></ins> |
+| | <ins><code>+100-10 to Holy Bolt</code></ins> |
+| | <ins><code>+12 to Firestorm</code></ins> |
 
 **Stormrider** (Stormrider)
 
@@ -357,13 +357,13 @@
 | | **Base Item:** Tabar |
 | | **Level Requirement:** 41 |
 | | **Properties:** |
-| | $\color{blue}{\text{45\% Chance to cast level 30 Chain Lightning on striking}}$ |
-| | $\color{blue}{\text{40\% Chance to cast level 30 Nova on striking}}$ |
-| | $\color{blue}{\text{Adds 1-200 Lightning Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Durability: 50 of 50}}$ |
-| | $\color{blue}{\text{+20 to Thunder Storm}}$ |
-| | $\color{blue}{\text{15\% Chance to cast level 10 Lower Resist when struck}}$ |
+| | <ins><code>45% Chance to cast level 30 Chain Lightning on striking</code></ins> |
+| | <ins><code>40% Chance to cast level 30 Nova on striking</code></ins> |
+| | <ins><code>Adds 1-200 Lightning Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>Durability: 50 of 50</code></ins> |
+| | <ins><code>+20 to Thunder Storm</code></ins> |
+| | <ins><code>15% Chance to cast level 10 Lower Resist when struck</code></ins> |
 
 **The Chieftain** (The Chieftan)
 
@@ -372,11 +372,11 @@
 | | **Base Item:** Battle Axe |
 | | **Level Requirement:** 19 |
 | | **Properties:** |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{All Resistances +30}}$ |
-| | $\color{blue}{\text{+6 to Mana after each Kill}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Adds 1-250 Lightning Damage}}$ |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
+| | <ins><code>All Resistances +30</code></ins> |
+| | <ins><code>+6 to Mana after each Kill</code></ins> |
+| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <ins><code>Adds 1-250 Lightning Damage</code></ins> |
 
 **The Gnasher** (The Gnasher)
 
@@ -385,12 +385,12 @@
 | | **Base Item:** Hand Axe |
 | | **Level Requirement:** 5 |
 | | **Properties:** |
-| | $\color{blue}{\text{+15 to Strength}}$ |
-| | $\color{blue}{\text{50\% Chance of Open Wounds}}$ |
-| | $\color{blue}{\text{20\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{+180-200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+25\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{10\% Deadly Strike}}$ |
+| | <ins><code>+15 to Strength</code></ins> |
+| | <ins><code>50% Chance of Open Wounds</code></ins> |
+| | <ins><code>20% Chance of Crushing Blow</code></ins> |
+| | <ins><code>+180-200% Enhanced Damage</code></ins> |
+| | <ins><code>+25% Increased Attack Speed</code></ins> |
+| | <ins><code>10% Deadly Strike</code></ins> |
 
 **The Minotaur** (The Minataur)
 
@@ -399,14 +399,14 @@
 | | **Base Item:** Ancient Axe |
 | | **Level Requirement:** 45 |
 | | **Properties:** |
-| | $\color{blue}{\text{Hit Blinds Target +2}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{+15-20 to Strength}}$ |
-| | $\color{blue}{\text{Slows Target by 50\%}}$ |
-| | $\color{blue}{\text{30\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{Adds 20-30 Damage}}$ |
-| | $\color{blue}{\text{+200-250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
+| | <ins><code>Hit Blinds Target +2</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>+15-20 to Strength</code></ins> |
+| | <ins><code>Slows Target by 50%</code></ins> |
+| | <ins><code>30% Chance of Crushing Blow</code></ins> |
+| | <ins><code>Adds 20-30 Damage</code></ins> |
+| | <ins><code>+200-250% Enhanced Damage</code></ins> |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
 
 **Warlord's Trust** (Warlord's Trust)
 
@@ -415,14 +415,14 @@
 | | **Base Item:** Military Axe |
 | | **Level Requirement:** 35 |
 | | **Properties:** |
-| | $\color{blue}{\text{+50\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Replenish Life +20}}$ |
-| | $\color{blue}{\text{(0.5 per clvl) to Vitality (Based on Character Level)}}$ |
-| | $\color{blue}{\text{All Resistances +25}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 25 seconds}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+150 Defense vs. Melee}}$ |
-| | $\color{blue}{\text{+30-40\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+40 to Minimum Damage}}$ |
-| | $\color{blue}{\text{+40 to Maximum Damage}}$ |
+| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <ins><code>Replenish Life +20</code></ins> |
+| | <ins><code>(0.5 per clvl) to Vitality (Based on Character Level)</code></ins> |
+| | <ins><code>All Resistances +25</code></ins> |
+| | <ins><code>Repairs 1 durability in 25 seconds</code></ins> |
+| | <ins><code>+200% Enhanced Damage</code></ins> |
+| | <ins><code>+150 Defense vs. Melee</code></ins> |
+| | <ins><code>+30-40% Faster Hit Recovery</code></ins> |
+| | <ins><code>+40 to Minimum Damage</code></ins> |
+| | <ins><code>+40 to Maximum Damage</code></ins> |
 

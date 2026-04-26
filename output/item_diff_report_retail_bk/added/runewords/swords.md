@@ -7,13 +7,13 @@
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{33\% Deadly Strike}}$ |
-| | $\color{blue}{\text{+30-40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+300-350 to Maximum Damage}}$ |
-| | $\color{blue}{\text{+300-350 to Minimum Damage}}$ |
-| | $\color{blue}{\text{-20-25\% to Enemy Poison Resistance}}$ |
-| | $\color{blue}{\text{Ignore Target's Defense}}$ |
-| | $\color{blue}{\text{+10-15 Life after each Kill}}$ |
+| | <ins><code>33% Deadly Strike</code></ins> |
+| | <ins><code>+30-40% Increased Attack Speed</code></ins> |
+| | <ins><code>+300-350 to Maximum Damage</code></ins> |
+| | <ins><code>+300-350 to Minimum Damage</code></ins> |
+| | <ins><code>-20-25% to Enemy Poison Resistance</code></ins> |
+| | <ins><code>Ignore Target's Defense</code></ins> |
+| | <ins><code>+10-15 Life after each Kill</code></ins> |
 
 **Last Wish** (Last Wish)
 
@@ -22,13 +22,13 @@
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+330-375\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 25 seconds}}$ |
-| | $\color{blue}{\text{+11 to Sacrifice}}$ |
-| | $\color{blue}{\text{50\% Chance to cast level 17 Fade when struck}}$ |
-| | $\color{blue}{\text{40-50\% Chance of Crushing Blow}}$ |
-| | $\color{blue}{\text{(0.5\% per clvl) Better Chance of Getting Magic Items (Based on Character Level)}}$ |
-| | $\color{blue}{\text{Level 17 Might Aura When Equipped}}$ |
+| | <ins><code>+330-375% Enhanced Damage</code></ins> |
+| | <ins><code>Repairs 1 durability in 25 seconds</code></ins> |
+| | <ins><code>+11 to Sacrifice</code></ins> |
+| | <ins><code>50% Chance to cast level 17 Fade when struck</code></ins> |
+| | <ins><code>40-50% Chance of Crushing Blow</code></ins> |
+| | <ins><code>(0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level)</code></ins> |
+| | <ins><code>Level 17 Might Aura When Equipped</code></ins> |
 
 **Lawbringer** (Lawbringer)
 
@@ -37,13 +37,13 @@
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 200-210 Cold Damage}}$ |
-| | $\color{blue}{\text{Adds 200-210 Fire Damage}}$ |
-| | $\color{blue}{\text{Level 30-31 Sanctuary Aura When Equipped}}$ |
-| | $\color{blue}{\text{25\% Chance to cast level 30 Decrepify on striking}}$ |
-| | $\color{blue}{\text{+200-250 Defense vs. Missile}}$ |
-| | $\color{blue}{\text{+200-250 Defense vs. Melee}}$ |
-| | $\color{blue}{\text{-50\% Target Defense}}$ |
+| | <ins><code>Adds 200-210 Cold Damage</code></ins> |
+| | <ins><code>Adds 200-210 Fire Damage</code></ins> |
+| | <ins><code>Level 30-31 Sanctuary Aura When Equipped</code></ins> |
+| | <ins><code>25% Chance to cast level 30 Decrepify on striking</code></ins> |
+| | <ins><code>+200-250 Defense vs. Missile</code></ins> |
+| | <ins><code>+200-250 Defense vs. Melee</code></ins> |
+| | <ins><code>-50% Target Defense</code></ins> |
 
 **Oath** (Oath)
 
@@ -52,13 +52,13 @@
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+210-340\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{30\% Chance to cast level 20 Bone Spirit on striking}}$ |
-| | $\color{blue}{\text{--100 to Monster Defense Per Hit}}$ |
-| | $\color{blue}{\text{Level 20 Heart of Wolverine (16/\# Charges)}}$ |
-| | $\color{blue}{\text{Magic Absorb 10-15\%}}$ |
-| | $\color{blue}{\text{Indestructible}}$ |
+| | <ins><code>+210-340% Enhanced Damage</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>30% Chance to cast level 20 Bone Spirit on striking</code></ins> |
+| | <ins><code>--100 to Monster Defense Per Hit</code></ins> |
+| | <ins><code>Level 20 Heart of Wolverine (16/# Charges)</code></ins> |
+| | <ins><code>Magic Absorb 10-15%</code></ins> |
+| | <ins><code>Indestructible</code></ins> |
 
 **Plague** (Plague)
 
@@ -67,13 +67,13 @@
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+220-320\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{20\% Chance to cast level 12 Lower Resist when struck}}$ |
-| | $\color{blue}{\text{25\% Chance to cast level 54 Poison Nova on attack}}$ |
-| | $\color{blue}{\text{-25-35\% to Enemy Poison Resistance}}$ |
-| | $\color{blue}{\text{(0.4\% per clvl) Deadly Strike (Based on Character Level)}}$ |
-| | $\color{blue}{\text{Level 13-17 Cleansing Aura When Equipped}}$ |
-| | $\color{blue}{\text{+2 to All Skills}}$ |
+| | <ins><code>+220-320% Enhanced Damage</code></ins> |
+| | <ins><code>20% Chance to cast level 12 Lower Resist when struck</code></ins> |
+| | <ins><code>25% Chance to cast level 54 Poison Nova on attack</code></ins> |
+| | <ins><code>-25-35% to Enemy Poison Resistance</code></ins> |
+| | <ins><code>(0.4% per clvl) Deadly Strike (Based on Character Level)</code></ins> |
+| | <ins><code>Level 13-17 Cleansing Aura When Equipped</code></ins> |
+| | <ins><code>+2 to All Skills</code></ins> |
 
 **Unbending Will** (Unbending Will)
 
@@ -82,11 +82,11 @@
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | $\color{blue}{\text{+3 to Combat Skills}}$ |
-| | $\color{blue}{\text{18\% Chance to cast level 18 Taunt on striking}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+300-350\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Damage Reduced by 8}}$ |
-| | $\color{blue}{\text{Prevent Monster Heal}}$ |
-| | $\color{blue}{\text{8-10\% Life stolen per hit}}$ |
+| | <ins><code>+3 to Combat Skills</code></ins> |
+| | <ins><code>18% Chance to cast level 18 Taunt on striking</code></ins> |
+| | <ins><code>+30% Increased Attack Speed</code></ins> |
+| | <ins><code>+300-350% Enhanced Damage</code></ins> |
+| | <ins><code>Damage Reduced by 8</code></ins> |
+| | <ins><code>Prevent Monster Heal</code></ins> |
+| | <ins><code>8-10% Life stolen per hit</code></ins> |
 

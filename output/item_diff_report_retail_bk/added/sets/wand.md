@@ -7,11 +7,11 @@
 | | **Base Item:** Unearthed Wand |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Curse Resist +20\%}}$ |
-| | $\color{blue}{\text{100\% Extra Gold from Monsters}}$ |
+| | <ins><code>+1-2 to All Skills</code></ins> |
+| | <ins><code>+30% Faster Cast Rate</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Curse Resist +20%</code></ins> |
+| | <ins><code>100% Extra Gold from Monsters</code></ins> |
 
 **Infernal Torch** (Infernal Torch)
 
@@ -20,8 +20,8 @@
 | | **Base Item:** Grim Wand |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+20\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+2 to Necromancer Skill Levels}}$ |
+| | <ins><code>+20% Faster Cast Rate</code></ins> |
+| | <ins><code>+2 to Necromancer Skill Levels</code></ins> |
 
 **Sander's Superstition** (McAuley's Superstition)
 
@@ -30,9 +30,9 @@
 | | **Base Item:** Bone Wand |
 | | **Level Requirement:** 24 |
 | | **Properties:** |
-| | $\color{blue}{\text{+45\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+2 to Bone Wall (Necromancer only)}}$ |
-| | $\color{blue}{\text{+2 to Bone Spear (Necromancer only)}}$ |
-| | $\color{blue}{\text{+2 to Bone Prison (Necromancer only)}}$ |
-| | $\color{blue}{\text{+50 to Mana}}$ |
+| | <ins><code>+45% Faster Cast Rate</code></ins> |
+| | <ins><code>+2 to Bone Wall (Necromancer only)</code></ins> |
+| | <ins><code>+2 to Bone Spear (Necromancer only)</code></ins> |
+| | <ins><code>+2 to Bone Prison (Necromancer only)</code></ins> |
+| | <ins><code>+50 to Mana</code></ins> |
 

@@ -7,10 +7,10 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 29 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\% Chance to cast level 10 Lower Resist when you Kill an Enemy}}$ |
-| | $\color{blue}{\text{+1 to Lower Resist}}$ |
-| | $\color{blue}{\text{+3-5\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+2\% to Experience Gained}}$ |
+| | <ins><code>10% Chance to cast level 10 Lower Resist when you Kill an Enemy</code></ins> |
+| | <ins><code>+1 to Lower Resist</code></ins> |
+| | <ins><code>+3-5% Faster Cast Rate</code></ins> |
+| | <ins><code>+2% to Experience Gained</code></ins> |
 
 **Killing Intent** (Killing Intent)
 
@@ -19,10 +19,10 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 29 |
 | | **Properties:** |
-| | $\color{blue}{\text{10\% Chance to cast level 10 Amplify Damage on attack}}$ |
-| | $\color{blue}{\text{+1 to Amplify Damage}}$ |
-| | $\color{blue}{\text{+5-10\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+2\% to Experience Gained}}$ |
+| | <ins><code>10% Chance to cast level 10 Amplify Damage on attack</code></ins> |
+| | <ins><code>+1 to Amplify Damage</code></ins> |
+| | <ins><code>+5-10% Increased Attack Speed</code></ins> |
+| | <ins><code>+2% to Experience Gained</code></ins> |
 
 **Neverfrost** (Neverfrost)
 
@@ -31,10 +31,10 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 29 |
 | | **Properties:** |
-| | $\color{blue}{\text{+1-3\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+5-10\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{+2\% to Experience Gained}}$ |
+| | <ins><code>+1-3% Faster Cast Rate</code></ins> |
+| | <ins><code>+5-10% Increased Attack Speed</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>+2% to Experience Gained</code></ins> |
 
 **Rainbow Facet** (Rainbow Facet)
 
@@ -43,11 +43,11 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 49 |
 | | **Properties:** |
-| | $\color{blue}{\text{Adds 30-43 Magic Damage}}$ |
-| | $\color{blue}{\text{-4-5\% to Enemy Magic Resistance}}$ |
-| | $\color{blue}{\text{+4-5\% to Magic Skill Damage}}$ |
-| | $\color{blue}{\text{100\% Chance to cast level 60 Blessed Hammer when you Die}}$ |
-| | $\color{blue}{\text{+2\% to Experience Gained}}$ |
+| | <ins><code>Adds 30-43 Magic Damage</code></ins> |
+| | <ins><code>-4-5% to Enemy Magic Resistance</code></ins> |
+| | <ins><code>+4-5% to Magic Skill Damage</code></ins> |
+| | <ins><code>100% Chance to cast level 60 Blessed Hammer when you Die</code></ins> |
+| | <ins><code>+2% to Experience Gained</code></ins> |
 
 **Titan's Echo** (Titan's Echo)
 
@@ -56,5 +56,5 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{splash}}$ |
+| | <ins><code>splash</code></ins> |
 

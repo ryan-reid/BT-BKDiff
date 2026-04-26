@@ -1,38 +1,38 @@
 # Modified Set Voodoo Heads
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Trang\-Oul's Appendage** (Trang\-Oul's Appendage)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{Cantor}}$	ext{ }$\color{gray}{\text{Trophy}}$ | **Base Item:** $\color{blue}{\text{Succubus}}$	ext{ }$\color{blue}{\text{Skull}}$ |
-| **Level Requirement:** $\text{85}$ | **Level Requirement:** $\text{85}$ |
+| **Base Item:** <del><code>Cantor</code></del><code> </code><del><code>Trophy</code></del> | **Base Item:** <ins><code>Succubus</code></ins><code> </code><ins><code>Skull</code></ins> |
+| **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
-| $\text{+3 to Necromancer Skill Levels}$ | $\text{+3 to Necromancer Skill Levels}$ |
-| $\text{+7 to Teeth (Necromancer only)}$ | $\text{+7 to Teeth (Necromancer only)}$ |
-| $\text{35\% Chance to cast level 60 Teeth when you Kill an Enemy}$ | $\text{35\% Chance to cast level 60 Teeth when you Kill an Enemy}$ |
-| $\text{+35\% Faster Block Rate}$ | $\text{+35\% Faster Block Rate}$ |
-| $\text{+35\% Faster Block Rate}$ | $\text{+35\% Faster Block Rate}$ |
-| $\text{+35\% Faster Cast Rate}$ | $\text{+35\% Faster Cast Rate}$ |
-| $\text{+5-10\% Energy}$ | $\text{+5-10\% Energy}$ |
-| $\text{Magic Resist +15-25\%}$ | $\text{Magic Resist +15-25\%}$ |
-| $\text{-10-15\% to Enemy Magic  Resistance}$ | $\text{-10-15\% to Enemy Magic Resistance}$ |
+| <code>+3 to Necromancer Skill Levels</code> | <code>+3 to Necromancer Skill Levels</code> |
+| <code>+7 to Teeth (Necromancer only)</code> | <code>+7 to Teeth (Necromancer only)</code> |
+| <code>35% Chance to cast level 60 Teeth when you Kill an Enemy</code> | <code>35% Chance to cast level 60 Teeth when you Kill an Enemy</code> |
+| <code>+35% Faster Block Rate</code> | <code>+35% Faster Block Rate</code> |
+| <code>+35% Faster Block Rate</code> | <code>+35% Faster Block Rate</code> |
+| <code>+35% Faster Cast Rate</code> | <code>+35% Faster Cast Rate</code> |
+| <code>+5-10% Energy</code> | <code>+5-10% Energy</code> |
+| <code>Magic Resist +15-25%</code> | <code>Magic Resist +15-25%</code> |
+| <code>-10-15% to Enemy Magic  Resistance</code> | <code>-10-15% to Enemy Magic Resistance</code> |
 
 **Trang\-Oul's Wing** (Trang\-Oul's Wing)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{Cantor}}$	ext{ }$\color{gray}{\text{Trophy}}$ | **Base Item:** $\color{blue}{\text{Succubus}}$	ext{ }$\color{blue}{\text{Skull}}$ |
-| **Level Requirement:** $\text{54}$ | **Level Requirement:** $\text{54}$ |
+| **Base Item:** <del><code>Cantor</code></del><code> </code><del><code>Trophy</code></del> | **Base Item:** <ins><code>Succubus</code></ins><code> </code><ins><code>Skull</code></ins> |
+| **Level Requirement:** <code>54</code> | **Level Requirement:** <code>54</code> |
 | **Properties:** | **Properties:** |
-| $\text{+125 Defense}$ | $\text{+125 Defense}$ |
-| $\text{+20-30 to Strength}$ | $\text{+20-30 to Strength}$ |
-| $\text{+20-30 to Dexterity}$ | $\text{+20-30 to Dexterity}$ |
-| $\text{Fire Resist +35-50\%}$ | $\text{Fire Resist +35-50\%}$ |
-| $\text{+30\% Faster Block Rate}$ | $\text{+30\% Faster Block Rate}$ |
-| $\text{Poison Resist +40\%}$ | $\text{Poison Resist +40\%}$ |
-| $\text{+2 to Poison and Bone Skills}$ | $\text{+2 to Poison and Bone Skills}$ |
-| $\text{+35\% Faster Cast Rate}$ | $\text{+35\% Faster Cast Rate}$ |
+| <code>+125 Defense</code> | <code>+125 Defense</code> |
+| <code>+20-30 to Strength</code> | <code>+20-30 to Strength</code> |
+| <code>+20-30 to Dexterity</code> | <code>+20-30 to Dexterity</code> |
+| <code>Fire Resist +35-50%</code> | <code>Fire Resist +35-50%</code> |
+| <code>+30% Faster Block Rate</code> | <code>+30% Faster Block Rate</code> |
+| <code>Poison Resist +40%</code> | <code>Poison Resist +40%</code> |
+| <code>+2 to Poison and Bone Skills</code> | <code>+2 to Poison and Bone Skills</code> |
+| <code>+35% Faster Cast Rate</code> | <code>+35% Faster Cast Rate</code> |
 

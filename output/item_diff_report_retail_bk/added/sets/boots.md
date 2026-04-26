@@ -7,13 +7,13 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 45 |
 | | **Properties:** |
-| | $\color{blue}{\text{Repairs 1 durability in 5 seconds}}$ |
-| | $\color{blue}{\text{Regenerate Mana 10\%}}$ |
-| | $\color{blue}{\text{+50 to Life}}$ |
-| | $\color{blue}{\text{10\% Damage Taken Goes To Mana}}$ |
-| | $\color{blue}{\text{+40\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{Replenish Life +10}}$ |
-| | $\color{blue}{\text{Fire Resist +40-50\%}}$ |
+| | <ins><code>Repairs 1 durability in 5 seconds</code></ins> |
+| | <ins><code>Regenerate Mana 10%</code></ins> |
+| | <ins><code>+50 to Life</code></ins> |
+| | <ins><code>10% Damage Taken Goes To Mana</code></ins> |
+| | <ins><code>+40% Faster Run/Walk</code></ins> |
+| | <ins><code>Replenish Life +10</code></ins> |
+| | <ins><code>Fire Resist +40-50%</code></ins> |
 
 **Aldur's Momentum** (Aldur's Momentum)
 
@@ -22,12 +22,12 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+50\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+1 to Druid Skill Levels}}$ |
-| | $\color{blue}{\text{+25-50\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Increase Maximum Life 5\%}}$ |
-| | $\color{blue}{\text{All Resistances +10-20}}$ |
-| | $\color{blue}{\text{Increase Maximum Mana 5\%}}$ |
+| | <ins><code>+50% Faster Run/Walk</code></ins> |
+| | <ins><code>+1 to Druid Skill Levels</code></ins> |
+| | <ins><code>+25-50% Enhanced Damage</code></ins> |
+| | <ins><code>Increase Maximum Life 5%</code></ins> |
+| | <ins><code>All Resistances +10-20</code></ins> |
+| | <ins><code>Increase Maximum Mana 5%</code></ins> |
 
 **Cow King's Hooves** (Cow King's Hoofs)
 
@@ -36,11 +36,11 @@
 | | **Base Item:** Sharkskin Boots |
 | | **Level Requirement:** 22 |
 | | **Properties:** |
-| | $\color{blue}{\text{+25-35 Defense}}$ |
-| | $\color{blue}{\text{+30\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{25\% Better Chance of Getting Magic Items}}$ |
-| | $\color{blue}{\text{+20 to Dexterity}}$ |
-| | $\color{blue}{\text{Adds 1-450 Lightning Damage}}$ |
+| | <ins><code>+25-35 Defense</code></ins> |
+| | <ins><code>+30% Faster Run/Walk</code></ins> |
+| | <ins><code>25% Better Chance of Getting Magic Items</code></ins> |
+| | <ins><code>+20 to Dexterity</code></ins> |
+| | <ins><code>Adds 1-450 Lightning Damage</code></ins> |
 
 **Elder Blood Boots** (Elder Blood Boots)
 
@@ -49,12 +49,12 @@
 | | **Base Item:** Scarabshell Boots |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+40\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+100-150 Defense}}$ |
-| | $\color{blue}{\text{+100-150\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{+10-20 to Strength}}$ |
-| | $\color{blue}{\text{Magic Absorb 5-15\%}}$ |
-| | $\color{blue}{\text{Curse Resist +30-40\%}}$ |
+| | <ins><code>+40% Faster Run/Walk</code></ins> |
+| | <ins><code>+100-150 Defense</code></ins> |
+| | <ins><code>+100-150% Enhanced Defense</code></ins> |
+| | <ins><code>+10-20 to Strength</code></ins> |
+| | <ins><code>Magic Absorb 5-15%</code></ins> |
+| | <ins><code>Curse Resist +30-40%</code></ins> |
 
 **Horazon's Legacy** (Horazon's Legacy)
 
@@ -63,12 +63,12 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 67 |
 | | **Properties:** |
-| | $\color{blue}{\text{+30\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+10-15 to Strength}}$ |
-| | $\color{blue}{\text{+10-15 to Dexterity}}$ |
-| | $\color{blue}{\text{Magic Resist +20-30\%}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Requirements --30\%}}$ |
+| | <ins><code>+30% Faster Run/Walk</code></ins> |
+| | <ins><code>+10-15 to Strength</code></ins> |
+| | <ins><code>+10-15 to Dexterity</code></ins> |
+| | <ins><code>Magic Resist +20-30%</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Requirements --30%</code></ins> |
 
 **Horazon's Stone** (Horazon's Stone)
 
@@ -77,13 +77,13 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+50\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+10-20 to Strength}}$ |
-| | $\color{blue}{\text{+10-20 to Dexterity}}$ |
-| | $\color{blue}{\text{Magic Resist +75\%}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{Requirements --50\%}}$ |
-| | $\color{blue}{\text{+100-300\% Enhanced Defense}}$ |
+| | <ins><code>+50% Faster Run/Walk</code></ins> |
+| | <ins><code>+10-20 to Strength</code></ins> |
+| | <ins><code>+10-20 to Dexterity</code></ins> |
+| | <ins><code>Magic Resist +75%</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>Requirements --50%</code></ins> |
+| | <ins><code>+100-300% Enhanced Defense</code></ins> |
 
 **Hsarus' Iron Heel** (Hsarus' Iron Heel)
 
@@ -92,8 +92,8 @@
 | | **Base Item:** Chain Boots |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{Fire Resist +25\%}}$ |
-| | $\color{blue}{\text{+25\% Faster Run/Walk}}$ |
+| | <ins><code>Fire Resist +25%</code></ins> |
+| | <ins><code>+25% Faster Run/Walk</code></ins> |
 
 **Immortal King's Pillar** (Immortal King's Pillar)
 
@@ -102,13 +102,13 @@
 | | **Base Item:** Myrmidon Greaves |
 | | **Level Requirement:** 31 |
 | | **Properties:** |
-| | $\color{blue}{\text{+75 Defense}}$ |
-| | $\color{blue}{\text{+40\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+110 to Attack Rating}}$ |
-| | $\color{blue}{\text{Damage Reduced by 3-5\%}}$ |
-| | $\color{blue}{\text{Magic Resist +30-40\%}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+10-15 to Vitality}}$ |
+| | <ins><code>+75 Defense</code></ins> |
+| | <ins><code>+40% Faster Run/Walk</code></ins> |
+| | <ins><code>+110 to Attack Rating</code></ins> |
+| | <ins><code>Damage Reduced by 3-5%</code></ins> |
+| | <ins><code>Magic Resist +30-40%</code></ins> |
+| | <ins><code>+10% Faster Cast Rate</code></ins> |
+| | <ins><code>+10-15 to Vitality</code></ins> |
 
 **Immortal King's Statue** (Immortal King's Statue)
 
@@ -117,12 +117,12 @@
 | | **Base Item:** Myrmidon Greaves |
 | | **Level Requirement:** 95 |
 | | **Properties:** |
-| | $\color{blue}{\text{+40\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+1-3\% to Maximum Fire Resist}}$ |
-| | $\color{blue}{\text{All Resistances +10-20}}$ |
-| | $\color{blue}{\text{Magic Resist +25\%}}$ |
-| | $\color{blue}{\text{Damage Reduced by 10-15\%}}$ |
-| | $\color{blue}{\text{+40\% Faster Hit Recovery}}$ |
+| | <ins><code>+40% Faster Run/Walk</code></ins> |
+| | <ins><code>+1-3% to Maximum Fire Resist</code></ins> |
+| | <ins><code>All Resistances +10-20</code></ins> |
+| | <ins><code>Magic Resist +25%</code></ins> |
+| | <ins><code>Damage Reduced by 10-15%</code></ins> |
+| | <ins><code>+40% Faster Hit Recovery</code></ins> |
 
 **Journey's End** (Journey's End)
 
@@ -131,12 +131,12 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+42 Defense}}$ |
-| | $\color{blue}{\text{+30-40\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{Magic Resist +30-55\%}}$ |
-| | $\color{blue}{\text{+1 to All Skills}}$ |
-| | $\color{blue}{\text{-5-8\% to Enemy Magic Resistance}}$ |
-| | $\color{blue}{\text{25\% Chance to cast level 55 Blessed Hammer on striking}}$ |
+| | <ins><code>+42 Defense</code></ins> |
+| | <ins><code>+30-40% Faster Run/Walk</code></ins> |
+| | <ins><code>Magic Resist +30-55%</code></ins> |
+| | <ins><code>+1 to All Skills</code></ins> |
+| | <ins><code>-5-8% to Enemy Magic Resistance</code></ins> |
+| | <ins><code>25% Chance to cast level 55 Blessed Hammer on striking</code></ins> |
 
 **Natalya's Footprints** (Natalya's Footprints)
 
@@ -145,13 +145,13 @@
 | | **Base Item:** Boneweave Boots |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | $\color{blue}{\text{+40\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+35\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+10-20 to all Attributes}}$ |
-| | $\color{blue}{\text{All Resistances +10-20}}$ |
-| | $\color{blue}{\text{-3-5\% to Enemy Poison Resistance}}$ |
-| | $\color{blue}{\text{+5\% to Poison Skill Damage}}$ |
-| | $\color{blue}{\text{+7 to Venom (Assassin only)}}$ |
+| | <ins><code>+40% Faster Run/Walk</code></ins> |
+| | <ins><code>+35% Faster Hit Recovery</code></ins> |
+| | <ins><code>+10-20 to all Attributes</code></ins> |
+| | <ins><code>All Resistances +10-20</code></ins> |
+| | <ins><code>-3-5% to Enemy Poison Resistance</code></ins> |
+| | <ins><code>+5% to Poison Skill Damage</code></ins> |
+| | <ins><code>+7 to Venom (Assassin only)</code></ins> |
 
 **Natalya's Soul** (Natalya's Soul)
 
@@ -160,14 +160,14 @@
 | | **Base Item:** Boneweave Boots |
 | | **Level Requirement:** 25 |
 | | **Properties:** |
-| | $\color{blue}{\text{+75-125 Defense}}$ |
-| | $\color{blue}{\text{+40\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{-3-5\% to Enemy Fire Resistance}}$ |
-| | $\color{blue}{\text{-3-5\% to Enemy Lightning Resistance}}$ |
-| | $\color{blue}{\text{Cold Resist +15-25\%}}$ |
-| | $\color{blue}{\text{Lightning Resist +15-25\%}}$ |
-| | $\color{blue}{\text{-3-5\% to Enemy Cold Resistance}}$ |
-| | $\color{blue}{\text{-3-5\% to Enemy Poison Resistance}}$ |
+| | <ins><code>+75-125 Defense</code></ins> |
+| | <ins><code>+40% Faster Run/Walk</code></ins> |
+| | <ins><code>-3-5% to Enemy Fire Resistance</code></ins> |
+| | <ins><code>-3-5% to Enemy Lightning Resistance</code></ins> |
+| | <ins><code>Cold Resist +15-25%</code></ins> |
+| | <ins><code>Lightning Resist +15-25%</code></ins> |
+| | <ins><code>-3-5% to Enemy Cold Resistance</code></ins> |
+| | <ins><code>-3-5% to Enemy Poison Resistance</code></ins> |
 
 **Rite of Passage** (Rite of Passage)
 
@@ -176,10 +176,10 @@
 | | **Base Item:** Demonhide Boots |
 | | **Level Requirement:** 56 |
 | | **Properties:** |
-| | $\color{blue}{\text{+25 Defense}}$ |
-| | $\color{blue}{\text{+30\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{Cannot Be Frozen}}$ |
-| | $\color{blue}{\text{20\% Better Chance of Getting Magic Items}}$ |
+| | <ins><code>+25 Defense</code></ins> |
+| | <ins><code>+30% Faster Run/Walk</code></ins> |
+| | <ins><code>Cannot Be Frozen</code></ins> |
+| | <ins><code>20% Better Chance of Getting Magic Items</code></ins> |
 
 **Sander's Riprap** (McAuley's Riprap)
 
@@ -188,10 +188,10 @@
 | | **Base Item:** Heavy Boots |
 | | **Level Requirement:** 24 |
 | | **Properties:** |
-| | $\color{blue}{\text{+40\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{Fire Resist +15\%}}$ |
-| | $\color{blue}{\text{+5 to Strength}}$ |
-| | $\color{blue}{\text{+10 to Dexterity}}$ |
+| | <ins><code>+40% Faster Run/Walk</code></ins> |
+| | <ins><code>Fire Resist +15%</code></ins> |
+| | <ins><code>+5 to Strength</code></ins> |
+| | <ins><code>+10 to Dexterity</code></ins> |
 
 **Sigon's Sabot** (Sigon's Sabot)
 
@@ -200,8 +200,8 @@
 | | **Base Item:** Greaves |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+25\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{Cold Resist +40\%}}$ |
+| | <ins><code>+25% Faster Run/Walk</code></ins> |
+| | <ins><code>Cold Resist +40%</code></ins> |
 
 **Tancred's Hobnails** (Tancred's Hobnails)
 
@@ -210,8 +210,8 @@
 | | **Base Item:** Boots |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+25 to Life}}$ |
-| | $\color{blue}{\text{+10 to Dexterity}}$ |
+| | <ins><code>+25 to Life</code></ins> |
+| | <ins><code>+10 to Dexterity</code></ins> |
 
 **Vidala's Fetlock** (Vidala's Fetlock)
 
@@ -220,8 +220,8 @@
 | | **Base Item:** Light Plated Boots |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+10 to Vitality}}$ |
-| | $\color{blue}{\text{+30\% Faster Run/Walk}}$ |
+| | <ins><code>+10 to Vitality</code></ins> |
+| | <ins><code>+30% Faster Run/Walk</code></ins> |
 
 **Warlord's Crushers** (Warlord's Crushers)
 
@@ -230,6 +230,6 @@
 | | **Base Item:** Greaves |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\color{blue}{\text{+20\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{Fire Resist +20\%}}$ |
+| | <ins><code>+20% Faster Run/Walk</code></ins> |
+| | <ins><code>Fire Resist +20%</code></ins> |
 

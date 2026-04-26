@@ -1,24 +1,24 @@
 # Modified Unique Auric Shields
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Dragonscale** (Dragonscale)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Zakarum Shield}$ | **Base Item:** $\text{Zakarum Shield}$ |
-| **Level Requirement:** $\text{80}$ | **Level Requirement:** $\text{80}$ |
+| **Base Item:** <code>Zakarum Shield</code> | **Base Item:** <code>Zakarum Shield</code> |
+| **Level Requirement:** <code>80</code> | **Level Requirement:** <code>80</code> |
 | **Properties:** | **Properties:** |
-| $\text{+170-200\% Enhanced Defense}$ | $\text{+170-200\% Enhanced Defense}$ |
-| $\text{+10-20 Fire Absorb}$ | $\text{+10-20 Fire Absorb}$ |
-| $\text{+5\% to Maximum Fire Resist}$ | $\text{+5\% to Maximum Fire Resist}$ |
-| $\text{+15-25 to Strength}$ | $\text{+15-25 to Strength}$ |
-| $\text{Level 15-20 Holy Fire Aura When Equipped}$ | $\text{Level 15-20 Holy Fire Aura When Equipped}$ |
-| $\text{+10 to Hydra}$ | $\text{+10 to Hydra}$ |
-| $\text{+30\% Faster Cast Rate}$ | $\text{+30\% Faster Cast Rate}$ |
-| $\text{+1 to Fire Mastery}$ | $\text{+1 to Fire Mastery}$ |
-| $\text{+20\% Faster Block Rate}$ | $\text{+20\% Faster Block Rate}$ |
-| $\text{+20\% Faster Block Rate}$ | $\text{+20\% Faster Block Rate}$ |
-| $\color{gray}{\text{+15\% to Fire Skill Damage}}$ | $\color{blue}{\text{(removed)}}$ |
+| <code>+170-200% Enhanced Defense</code> | <code>+170-200% Enhanced Defense</code> |
+| <code>+10-20 Fire Absorb</code> | <code>+10-20 Fire Absorb</code> |
+| <code>+5% to Maximum Fire Resist</code> | <code>+5% to Maximum Fire Resist</code> |
+| <code>+15-25 to Strength</code> | <code>+15-25 to Strength</code> |
+| <code>Level 15-20 Holy Fire Aura When Equipped</code> | <code>Level 15-20 Holy Fire Aura When Equipped</code> |
+| <code>+10 to Hydra</code> | <code>+10 to Hydra</code> |
+| <code>+30% Faster Cast Rate</code> | <code>+30% Faster Cast Rate</code> |
+| <code>+1 to Fire Mastery</code> | <code>+1 to Fire Mastery</code> |
+| <code>+20% Faster Block Rate</code> | <code>+20% Faster Block Rate</code> |
+| <code>+20% Faster Block Rate</code> | <code>+20% Faster Block Rate</code> |
+| <del><code>+15% to Fire Skill Damage</code></del> | <ins><code>(removed)</code></ins> |
 

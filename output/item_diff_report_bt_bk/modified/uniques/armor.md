@@ -1,80 +1,80 @@
 # Modified Unique Armor
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Shaftstop** (Shaftstop)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{Mesh Armor}}$ | **Base Item:** $\color{blue}{\text{Boneweave}}$ |
-| **Level Requirement:** $\text{38}$ | **Level Requirement:** $\text{38}$ |
+| **Base Item:** <del><code>Mesh Armor</code></del> | **Base Item:** <ins><code>Boneweave</code></ins> |
+| **Level Requirement:** <code>38</code> | **Level Requirement:** <code>38</code> |
 | **Properties:** | **Properties:** |
-| $\text{+250 Defense vs. Missile}$ | $\text{+250 Defense vs. Missile}$ |
-| $\text{Damage Reduced by 25-30\%}$ | $\text{Damage Reduced by 25-30\%}$ |
-| $\text{+200-250\% Enhanced Defense}$ | $\text{+200-250\% Enhanced Defense}$ |
-| $\text{+250 Defense vs. Melee}$ | $\text{+250 Defense vs. Melee}$ |
-| $\text{+125-150\% Damage to Demons}$ | $\text{+125-150\% Damage to Demons}$ |
-| $\text{+125-150\% Damage to Undead}$ | $\text{+125-150\% Damage to Undead}$ |
-| $\color{gray}{\text{+85-140}}$	ext{ to Life}$$ | $\color{blue}{\text{+100-200}}$	ext{ to Life}$$ |
-| $$	ext{Damage Reduced by }$\color{gray}{\text{6-12}}$ | $$	ext{Damage Reduced by }$\color{blue}{\text{10-15}}$ |
-|  | $\color{blue}{\text{Magic Damage Reduced by 10-15}}$ |
-|  | $\color{blue}{\text{+1 to All Skills}}$ |
+| <code>+250 Defense vs. Missile</code> | <code>+250 Defense vs. Missile</code> |
+| <code>Damage Reduced by 25-30%</code> | <code>Damage Reduced by 25-30%</code> |
+| <code>+200-250% Enhanced Defense</code> | <code>+200-250% Enhanced Defense</code> |
+| <code>+250 Defense vs. Melee</code> | <code>+250 Defense vs. Melee</code> |
+| <code>+125-150% Damage to Demons</code> | <code>+125-150% Damage to Demons</code> |
+| <code>+125-150% Damage to Undead</code> | <code>+125-150% Damage to Undead</code> |
+| <del><code>+85-140</code></del><code> to Life</code> | <ins><code>+100-200</code></ins><code> to Life</code> |
+| <code>Damage Reduced by </code><del><code>6-12</code></del> | <code>Damage Reduced by </code><ins><code>10-15</code></ins> |
+|  | <ins><code>Magic Damage Reduced by 10-15</code></ins> |
+|  | <ins><code>+1 to All Skills</code></ins> |
 
 **Steel Carapace** (Steel Carapice)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Shadow Plate}$ | **Base Item:** $\text{Shadow Plate}$ |
-| **Level Requirement:** $\text{66}$ | **Level Requirement:** $\text{66}$ |
+| **Base Item:** <code>Shadow Plate</code> | **Base Item:** <code>Shadow Plate</code> |
+| **Level Requirement:** <code>66</code> | **Level Requirement:** <code>66</code> |
 | **Properties:** | **Properties:** |
-| $\text{+190-220\% Enhanced Defense}$ | $\text{+190-220\% Enhanced Defense}$ |
-| $\text{Damage Reduced by 9-14}$ | $\text{Damage Reduced by 9-14}$ |
-| $\text{Cold Resist +40-60\%}$ | $\text{Cold Resist +40-60\%}$ |
-| $\text{Repairs 1 durability in 5 seconds}$ | $\text{Repairs 1 durability in 5 seconds}$ |
-| $\text{Damage Reduced by 30-40\%}$ | $\text{Damage Reduced by 30-40\%}$ |
-| $\text{+15\% Faster Run/Walk}$ | $\text{+15\% Faster Run/Walk}$ |
-| $\color{gray}{\text{+20\%}}$	ext{ Faster Hit Recovery}$$ | $\color{blue}{\text{+20-40\%}}$	ext{ Faster Hit Recovery}$$ |
-| $$	ext{Regenerate Mana }$\color{gray}{\text{10-15\%}}$ | $$	ext{Regenerate Mana }$\color{blue}{\text{50-100\%}}$ |
-|  | $\color{blue}{\text{Level 8-10 Defiance Aura When Equipped}}$ |
-|  | $\color{blue}{\text{+1-2 to All Skills}}$ |
-|  | $\color{blue}{\text{Requirements --50\%}}$ |
+| <code>+190-220% Enhanced Defense</code> | <code>+190-220% Enhanced Defense</code> |
+| <code>Damage Reduced by 9-14</code> | <code>Damage Reduced by 9-14</code> |
+| <code>Cold Resist +40-60%</code> | <code>Cold Resist +40-60%</code> |
+| <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
+| <code>Damage Reduced by 30-40%</code> | <code>Damage Reduced by 30-40%</code> |
+| <code>+15% Faster Run/Walk</code> | <code>+15% Faster Run/Walk</code> |
+| <del><code>+20%</code></del><code> Faster Hit Recovery</code> | <ins><code>+20-40%</code></ins><code> Faster Hit Recovery</code> |
+| <code>Regenerate Mana </code><del><code>10-15%</code></del> | <code>Regenerate Mana </code><ins><code>50-100%</code></ins> |
+|  | <ins><code>Level 8-10 Defiance Aura When Equipped</code></ins> |
+|  | <ins><code>+1-2 to All Skills</code></ins> |
+|  | <ins><code>Requirements --50%</code></ins> |
 
 **Templar's Might** (Templar's Might)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Sacred Armor}$ | **Base Item:** $\text{Sacred Armor}$ |
-| **Level Requirement:** $\text{74}$ | **Level Requirement:** $\text{74}$ |
+| **Base Item:** <code>Sacred Armor</code> | **Base Item:** <code>Sacred Armor</code> |
+| **Level Requirement:** <code>74</code> | **Level Requirement:** <code>74</code> |
 | **Properties:** | **Properties:** |
-| $\text{+180-230\% Enhanced Defense}$ | $\text{+180-230\% Enhanced Defense}$ |
-| $\text{+24-30\% Faster Hit Recovery}$ | $\text{+24-30\% Faster Hit Recovery}$ |
-| $\text{+250-300 Defense vs. Missile}$ | $\text{+250-300 Defense vs. Missile}$ |
-| $\text{+20-30 to Strength}$ | $\text{+20-30 to Strength}$ |
-| $\text{+4-6 to Offensive Auras Skills}$ | $\text{+4-6 to Offensive Auras Skills}$ |
-| $\text{Requirements --50\%}$ | $\text{Requirements --50\%}$ |
-| $\text{Poison Length Reduced by 75\%}$ | $\text{Poison Length Reduced by 75\%}$ |
-| $\color{gray}{\text{+30-40}}$	ext{ to Life}$$ | $\color{blue}{\text{+100}}$	ext{ to Life}$$ |
-| $$	ext{Level }$\color{gray}{\text{6}}$	ext{ Conviction Aura When Equipped}$$ | $$	ext{Level }$\color{blue}{\text{6-12}}$	ext{ Conviction Aura When Equipped}$$ |
+| <code>+180-230% Enhanced Defense</code> | <code>+180-230% Enhanced Defense</code> |
+| <code>+24-30% Faster Hit Recovery</code> | <code>+24-30% Faster Hit Recovery</code> |
+| <code>+250-300 Defense vs. Missile</code> | <code>+250-300 Defense vs. Missile</code> |
+| <code>+20-30 to Strength</code> | <code>+20-30 to Strength</code> |
+| <code>+4-6 to Offensive Auras Skills</code> | <code>+4-6 to Offensive Auras Skills</code> |
+| <code>Requirements --50%</code> | <code>Requirements --50%</code> |
+| <code>Poison Length Reduced by 75%</code> | <code>Poison Length Reduced by 75%</code> |
+| <del><code>+30-40</code></del><code> to Life</code> | <ins><code>+100</code></ins><code> to Life</code> |
+| <code>Level </code><del><code>6</code></del><code> Conviction Aura When Equipped</code> | <code>Level </code><ins><code>6-12</code></ins><code> Conviction Aura When Equipped</code> |
 
 **Tyrael's Might** (Tyrael's Might)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Sacred Armor}$ | **Base Item:** $\text{Sacred Armor}$ |
-| **Level Requirement:** $\text{1}$ | **Level Requirement:** $\text{1}$ |
+| **Base Item:** <code>Sacred Armor</code> | **Base Item:** <code>Sacred Armor</code> |
+| **Level Requirement:** <code>1</code> | **Level Requirement:** <code>1</code> |
 | **Properties:** | **Properties:** |
-| $\text{Requirements --100\%}$ | $\text{Requirements --100\%}$ |
-| $\text{Repairs 1 durability in 5 seconds}$ | $\text{Repairs 1 durability in 5 seconds}$ |
-| $\text{+200-250\% Enhanced Defense}$ | $\text{+200-250\% Enhanced Defense}$ |
-| $\text{+200-250\% Damage to Undead}$ | $\text{+200-250\% Damage to Undead}$ |
-| $\text{+200-250\% Damage to Demons}$ | $\text{+200-250\% Damage to Demons}$ |
-| $\text{Cannot Be Frozen}$ | $\text{Cannot Be Frozen}$ |
-| $\text{+45\% Faster Run/Walk}$ | $\text{+45\% Faster Run/Walk}$ |
-| $\text{All Resistances +20-30}$ | $\text{All Resistances +20-30}$ |
-| $\text{+1 to Teleport}$ | $\text{+1 to Teleport}$ |
-| $\text{+2 to All Skills}$ | $\text{+2 to All Skills}$ |
-| $\color{gray}{\text{+20-30 to Strength}}$ | $\color{blue}{\text{(removed)}}$ |
-|  | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-|  | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
+| <code>Requirements --100%</code> | <code>Requirements --100%</code> |
+| <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
+| <code>+200-250% Enhanced Defense</code> | <code>+200-250% Enhanced Defense</code> |
+| <code>+200-250% Damage to Undead</code> | <code>+200-250% Damage to Undead</code> |
+| <code>+200-250% Damage to Demons</code> | <code>+200-250% Damage to Demons</code> |
+| <code>Cannot Be Frozen</code> | <code>Cannot Be Frozen</code> |
+| <code>+45% Faster Run/Walk</code> | <code>+45% Faster Run/Walk</code> |
+| <code>All Resistances +20-30</code> | <code>All Resistances +20-30</code> |
+| <code>+1 to Teleport</code> | <code>+1 to Teleport</code> |
+| <code>+2 to All Skills</code> | <code>+2 to All Skills</code> |
+| <del><code>+20-30 to Strength</code></del> | <ins><code>(removed)</code></ins> |
+|  | <ins><code>+30% Increased Attack Speed</code></ins> |
+|  | <ins><code>+30% Faster Cast Rate</code></ins> |
 

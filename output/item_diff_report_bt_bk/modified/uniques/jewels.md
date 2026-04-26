@@ -1,29 +1,29 @@
 # Modified Unique Jewels
 
-- $\color{gray}{\\text{Gray text}}$: Removed/Old Value
-- $\color{blue}{\\text{Blue text}}$: Added/New Value
+- `<del><code>old</code></del>`: Removed/Old Value
+- `<ins><code>new</code></ins>`: Added/New Value
 
 **Elemental Exposure** (Elemental Exposure)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{•• }}$	ext{Jewel}$\color{gray}{\text{ ••}}$ | **Base Item:** $$	ext{Jewel}$$ |
-| **Level Requirement:** $\text{29}$ | **Level Requirement:** $\text{29}$ |
+| **Base Item:** <del><code>•• </code></del><code>Jewel</code><del><code> ••</code></del> | **Base Item:** <code>Jewel</code> |
+| **Level Requirement:** <code>29</code> | **Level Requirement:** <code>29</code> |
 | **Properties:** | **Properties:** |
-| $\text{10\% Chance to cast level 10 Lower Resist when you Kill an Enemy}$ | $\text{10\% Chance to cast level 10 Lower Resist when you Kill an Enemy}$ |
-| $\text{+1 to Lower Resist}$ | $\text{+1 to Lower Resist}$ |
-| $\text{+3-5\% Faster Cast Rate}$ | $\text{+3-5\% Faster Cast Rate}$ |
-|  | $\color{blue}{\text{+2\% to Experience Gained}}$ |
+| <code>10% Chance to cast level 10 Lower Resist when you Kill an Enemy</code> | <code>10% Chance to cast level 10 Lower Resist when you Kill an Enemy</code> |
+| <code>+1 to Lower Resist</code> | <code>+1 to Lower Resist</code> |
+| <code>+3-5% Faster Cast Rate</code> | <code>+3-5% Faster Cast Rate</code> |
+|  | <ins><code>+2% to Experience Gained</code></ins> |
 
 **Killing Intent** (Killing Intent)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\color{gray}{\text{•• }}$	ext{Jewel}$\color{gray}{\text{ ••}}$ | **Base Item:** $$	ext{Jewel}$$ |
-| **Level Requirement:** $\text{29}$ | **Level Requirement:** $\text{29}$ |
+| **Base Item:** <del><code>•• </code></del><code>Jewel</code><del><code> ••</code></del> | **Base Item:** <code>Jewel</code> |
+| **Level Requirement:** <code>29</code> | **Level Requirement:** <code>29</code> |
 | **Properties:** | **Properties:** |
-| $\text{10\% Chance to cast level 10 Amplify Damage on attack}$ | $\text{10\% Chance to cast level 10 Amplify Damage on attack}$ |
-| $\text{+1 to Amplify Damage}$ | $\text{+1 to Amplify Damage}$ |
-| $\text{+5-10\% Increased Attack Speed}$ | $\text{+5-10\% Increased Attack Speed}$ |
-|  | $\color{blue}{\text{+2\% to Experience Gained}}$ |
+| <code>10% Chance to cast level 10 Amplify Damage on attack</code> | <code>10% Chance to cast level 10 Amplify Damage on attack</code> |
+| <code>+1 to Amplify Damage</code> | <code>+1 to Amplify Damage</code> |
+| <code>+5-10% Increased Attack Speed</code> | <code>+5-10% Increased Attack Speed</code> |
+|  | <ins><code>+2% to Experience Gained</code></ins> |
 

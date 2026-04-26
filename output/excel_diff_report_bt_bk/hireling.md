@@ -1,3 +1,3 @@
 # Differences for hireling.txt
 
-*Key column used: `code`*
+*Key column used: `Hireling`*

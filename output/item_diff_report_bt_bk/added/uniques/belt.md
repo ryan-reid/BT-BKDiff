@@ -7,11 +7,11 @@
 | | **Base Item:** Troll Belt |
 | | **Level Requirement:** 71 |
 | | **Properties:** |
-| | $\color{blue}{\text{+10-20\% Faster Cast Rate}}$ |
-| | $\color{blue}{\text{+10-20\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{+10-20\% Faster Run/Walk}}$ |
-| | $\color{blue}{\text{+90-150\% Enhanced Defense}}$ |
-| | $\color{blue}{\text{-4-10\% to Enemy Magic Resistance}}$ |
-| | $\color{blue}{\text{All Resistances +5-15}}$ |
-| | $\color{blue}{\text{50-150\% Extra Gold from Monsters}}$ |
+| | <ins><code>+10-20% Faster Cast Rate</code></ins> |
+| | <ins><code>+10-20% Faster Hit Recovery</code></ins> |
+| | <ins><code>+10-20% Faster Run/Walk</code></ins> |
+| | <ins><code>+90-150% Enhanced Defense</code></ins> |
+| | <ins><code>-4-10% to Enemy Magic Resistance</code></ins> |
+| | <ins><code>All Resistances +5-15</code></ins> |
+| | <ins><code>50-150% Extra Gold from Monsters</code></ins> |
 
