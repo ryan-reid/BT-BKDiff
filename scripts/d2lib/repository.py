@@ -32,6 +32,22 @@ class D2Repository:
         self.excel_cache: Dict[str, List[Dict[str, str]]] = {}
         self._load_strings()
 
+    def _get_excel_roots(self) -> List[str]:
+        """Returns candidate roots that may contain D2 excel tables."""
+        return [
+            os.path.join(self.mpq_path, "data", "global", "excel"),
+            os.path.join(self.mpq_path, "global", "excel"),
+            os.path.join(self.mpq_path, "excel"),
+        ]
+
+    def _get_string_roots(self) -> List[str]:
+        """Returns candidate roots that may contain localized string JSON files."""
+        return [
+            os.path.join(self.mpq_path, "data", "local", "lng", "strings"),
+            os.path.join(self.mpq_path, "local", "lng", "strings"),
+            os.path.join(self.mpq_path, "strings"),
+        ]
+
     def _load_strings(self) -> None:
         """Loads string JSON files with strict file-level precedence."""
         all_files = {}
@@ -49,10 +65,11 @@ class D2Repository:
                 if f.endswith(".json"): all_files[f] = os.path.join(base_string_dir, f)
 
         # 1. Highest Priority: Mod strings (from MPQ path)
-        mod_string_dir = os.path.join(self.mpq_path, "data", "local", "lng", "strings")
-        if os.path.exists(mod_string_dir):
-            for f in os.listdir(mod_string_dir):
-                if f.endswith(".json"): all_files[f] = os.path.join(mod_string_dir, f)
+        for mod_string_dir in self._get_string_roots():
+            if os.path.exists(mod_string_dir):
+                for f in os.listdir(mod_string_dir):
+                    if f.endswith(".json"):
+                        all_files[f] = os.path.join(mod_string_dir, f)
         
         for filename, filepath in all_files.items():
             try:
@@ -101,10 +118,13 @@ class D2Repository:
             return self.excel_cache[table_name]
         
         # 1. Try Mod Path
-        filepath = os.path.join(self.mpq_path, "data", "global", "excel", f"{table_name}.txt")
         data = []
-        if os.path.exists(filepath):
-            data = self.load_tsv(filepath)
+        for excel_root in self._get_excel_roots():
+            filepath = os.path.join(excel_root, f"{table_name}.txt")
+            if os.path.exists(filepath):
+                data = self.load_tsv(filepath)
+                if data:
+                    break
         
         # 2. Try Supplemental Fallback ONLY if file is missing from mod
         if not data:

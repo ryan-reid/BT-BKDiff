@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Black",
+    "runes": [
+      "Thul Rune",
+      "Io Rune",
+      "Nef Rune"
+    ],
+    "base_items": [
+      "Club"
+    ],
+    "properties": [
+      {
+        "code": "crush",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "40% Chance of Crushing Blow"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "120",
+        "max_val": "120",
+        "resolved_text": "+120% Enhanced Damage"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15% Increased Attack Speed"
+      },
+      {
+        "code": "red-mag",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "Magic Damage Reduced by 2"
+      },
+      {
+        "code": "att",
+        "param": "",
+        "min_val": "200",
+        "max_val": "200",
+        "resolved_text": "+200 to Attack Rating"
+      },
+      {
+        "code": "charged",
+        "param": "74",
+        "min_val": "12",
+        "max_val": "4",
+        "resolved_text": "Level 12 Corpse Explosion (4/# Charges)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword6",
+      "*Rune Name": "Black",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "club",
+      "itype2": "hamm",
+      "itype3": "mace",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ThulIoNef",
+      "Rune1": "r10",
+      "Rune2": "r16",
+      "Rune3": "r04",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "crush",
+      "T1Param1": "",
+      "T1Min1": "40",
+      "T1Max1": "40",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "120",
+      "T1Max2": "120",
+      "T1Code3": "swing2",
+      "T1Param3": "",
+      "T1Min3": "15",
+      "T1Max3": "15",
+      "T1Code4": "red-mag",
+      "T1Param4": "",
+      "T1Min4": "2",
+      "T1Max4": "2",
+      "T1Code5": "att",
+      "T1Param5": "",
+      "T1Min5": "200",
+      "T1Max5": "200",
+      "T1Code6": "charged",
+      "T1Param6": "74",
+      "T1Min6": "12",
+      "T1Max6": "4",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  }
+]

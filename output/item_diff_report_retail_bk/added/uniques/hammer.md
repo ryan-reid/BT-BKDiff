@@ -2,7 +2,7 @@
 
 **Bloodtree Stump** (Bloodtree Stump)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** War Club |
 | | **Level Requirement:** 48 |
@@ -18,7 +18,7 @@
 
 **Bonesnap** (Bonesob)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Maul |
 | | **Level Requirement:** 24 |
@@ -33,7 +33,7 @@
 
 **Earth Shifter** (Earthshifter)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Thunder Maul |
 | | **Level Requirement:** 69 |
@@ -51,7 +51,7 @@
 
 **Earthshaker** (Earthshaker)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Battle Hammer |
 | | **Level Requirement:** 43 |
@@ -67,7 +67,7 @@
 
 **Hell Forge Hammer** (Hell Forge Hammer)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Hell Forge Hammer |
 | | **Level Requirement:** 0 |
@@ -79,7 +79,7 @@
 
 **Ironstone** (Ironstone)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** War Hammer |
 | | **Level Requirement:** 27 |
@@ -93,7 +93,7 @@
 
 **Schaefer's Hammer** (Schaefer's Hammer)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Legendary Mallet |
 | | **Level Requirement:** 79 |
@@ -110,7 +110,7 @@
 
 **Steeldriver** (Steeldriver)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Great Maul |
 | | **Level Requirement:** 29 |
@@ -124,7 +124,7 @@
 
 **Stone Crusher** (Stone Crusher)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Legendary Mallet |
 | | **Level Requirement:** 68 |
@@ -140,7 +140,7 @@
 
 **The Cranium Basher** (The Cranium Basher)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Thunder Maul |
 | | **Level Requirement:** 87 |
@@ -158,7 +158,7 @@
 
 **The Gavel of Pain** (The Gavel of Pain)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Martel de Fer |
 | | **Level Requirement:** 45 |
@@ -172,7 +172,7 @@
 
 **Windhammer** (Windhammer)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ogre Maul |
 | | **Level Requirement:** 68 |

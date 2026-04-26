@@ -2,7 +2,7 @@
 
 **Annihilus** (Annihilus)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Small Charm |
 | | **Level Requirement:** 70 |

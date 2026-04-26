@@ -163,7 +163,7 @@ class MarkdownExporter(BaseExporter):
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(content.strip() + "\n")
 
-    def export_item_diff(self, diff: ItemDiffDTO, output_dir: str):
+    def export_item_diff(self, diff: ItemDiffDTO, output_dir: str, old_label: str = "BT Diablo", new_label: str = "BK Diablo"):
         os.makedirs(output_dir, exist_ok=True)
         
         # 1. SUMMARY.md
@@ -208,7 +208,9 @@ class MarkdownExporter(BaseExporter):
                         if is_modified:
                             name = self.escape_markdown(item.get('name', ''))
                             f_out.write(f"**{name}** ({self.escape_markdown(str(k))})\n\n")
-                            f_out.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
+                            f_out.write(
+                                f"| {self.escape_inline_html(old_label)} (Old) | {self.escape_inline_html(new_label)} (New) |\n| :--- | :--- |\n"
+                            )
                             b_old, b_new = self.get_styled_diffs(item['bt_base'], item['bk_base'])
                             f_out.write(f"| **Base Item:** {b_old} | **Base Item:** {b_new} |\n")
                             l_old, l_new = self.get_styled_diffs(str(item['bt_lvl']), str(item['bk_lvl']))
@@ -250,7 +252,9 @@ class MarkdownExporter(BaseExporter):
                             item_id = self.escape_markdown(str(item.get('id', item.get('name', ''))))
                             
                             f_out.write(f"**{name}** ({item_id})\n\n")
-                            f_out.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
+                            f_out.write(
+                                f"| {self.escape_inline_html(old_label)} (Old) | {self.escape_inline_html(new_label)} (New) |\n| :--- | :--- |\n"
+                            )
                             f_out.write(f"| | **Base Item:** {base} |\n")
                             f_out.write(f"| | **Level Requirement:** {item.get('lvl_req', '0')} |\n")
                             f_out.write("| | **Properties:** |\n")

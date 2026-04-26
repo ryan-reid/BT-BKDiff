@@ -2,7 +2,7 @@
 
 **Grief** (Grief)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
@@ -17,7 +17,7 @@
 
 **Last Wish** (Last Wish)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
@@ -32,7 +32,7 @@
 
 **Lawbringer** (Lawbringer)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
@@ -47,7 +47,7 @@
 
 **Oath** (Oath)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
@@ -62,7 +62,7 @@
 
 **Plague** (Plague)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |
@@ -77,7 +77,7 @@
 
 **Unbending Will** (Unbending Will)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Swords |
 | | **Level Requirement:** 0 |

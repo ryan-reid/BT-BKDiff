@@ -1,0 +1,120 @@
+[
+  {
+    "name": "Holy Thunder",
+    "runes": [
+      "Eth Rune",
+      "Ral Rune",
+      "Ort Rune",
+      "Tal Rune"
+    ],
+    "base_items": [
+      "Scepter"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "60",
+        "max_val": "60",
+        "resolved_text": "+60% Enhanced Damage"
+      },
+      {
+        "code": "dmg-ltng",
+        "param": "",
+        "min_val": "20",
+        "max_val": "60",
+        "resolved_text": "Adds 20-60 Lightning Damage"
+      },
+      {
+        "code": "dmg-max",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Maximum Damage"
+      },
+      {
+        "code": "res-ltng",
+        "param": "",
+        "min_val": "60",
+        "max_val": "60",
+        "resolved_text": "Lightning Resist +60%"
+      },
+      {
+        "code": "res-ltng-max",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5% to Maximum Lightning Resist"
+      },
+      {
+        "code": "skill",
+        "param": "118",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Holy Shock (Paladin only)"
+      },
+      {
+        "code": "charged",
+        "param": "53",
+        "min_val": "60",
+        "max_val": "7",
+        "resolved_text": "Level 60 Chain Lightning (7/# Charges)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword54",
+      "*Rune Name": "Holy Thunder",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "scep",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "EthRalOrtTal",
+      "Rune1": "r05",
+      "Rune2": "r08",
+      "Rune3": "r09",
+      "Rune4": "r07",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "60",
+      "T1Max1": "60",
+      "T1Code2": "dmg-ltng",
+      "T1Param2": "",
+      "T1Min2": "20",
+      "T1Max2": "60",
+      "T1Code3": "dmg-max",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "10",
+      "T1Code4": "res-ltng",
+      "T1Param4": "",
+      "T1Min4": "60",
+      "T1Max4": "60",
+      "T1Code5": "res-ltng-max",
+      "T1Param5": "",
+      "T1Min5": "5",
+      "T1Max5": "5",
+      "T1Code6": "skill",
+      "T1Param6": "118",
+      "T1Min6": "3",
+      "T1Max6": "3",
+      "T1Code7": "charged",
+      "T1Param7": "53",
+      "T1Min7": "60",
+      "T1Max7": "7",
+      "*eol": "0"
+    }
+  }
+]

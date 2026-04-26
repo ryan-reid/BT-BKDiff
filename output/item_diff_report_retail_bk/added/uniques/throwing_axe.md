@@ -2,7 +2,7 @@
 
 **Gimmershred** (Gimmershred)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Flying Axe |
 | | **Level Requirement:** 70 |
@@ -17,7 +17,7 @@
 
 **Lacerator** (Lacerator)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Winged Axe |
 | | **Level Requirement:** 68 |
@@ -31,7 +31,7 @@
 
 **The Scalper** (The Scalper)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Francisca |
 | | **Level Requirement:** 57 |

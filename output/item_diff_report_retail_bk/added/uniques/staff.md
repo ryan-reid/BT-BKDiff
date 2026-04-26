@@ -2,7 +2,7 @@
 
 **Bane Ash** (Bane Ash)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Short Staff |
 | | **Level Requirement:** 5 |
@@ -17,7 +17,7 @@
 
 **Chromatic Ire** (Chromatic Ire)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Cedar Staff |
 | | **Level Requirement:** 35 |
@@ -32,7 +32,7 @@
 
 **Horadric Staff** (Horadric Staff)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Horadric Staff |
 | | **Level Requirement:** 0 |
@@ -45,7 +45,7 @@
 
 **Mang Song's Lesson** (Mang Song's Lesson)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Archon Staff |
 | | **Level Requirement:** 82 |
@@ -60,7 +60,7 @@
 
 **Ondal's Wisdom** (Ondal's Wisdom)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Elder Staff |
 | | **Level Requirement:** 66 |
@@ -74,7 +74,7 @@
 
 **Razorswitch** (Razorswitch)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Jo Staff |
 | | **Level Requirement:** 28 |
@@ -88,7 +88,7 @@
 
 **Ribcracker** (Ribcracker)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Quarterstaff |
 | | **Level Requirement:** 31 |
@@ -105,7 +105,7 @@
 
 **Serpent Lord** (Serpent Lord)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Long Staff |
 | | **Level Requirement:** 9 |
@@ -120,7 +120,7 @@
 
 **Skull Collector** (Skullcollector)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Rune Staff |
 | | **Level Requirement:** 41 |
@@ -133,7 +133,7 @@
 
 **Spire of Lazarus** (Lazarus Spire)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Gnarled Staff |
 | | **Level Requirement:** 18 |
@@ -149,7 +149,7 @@
 
 **Staff of Kings** (Staff of Kings)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Shaft of the Horadric Staff |
 | | **Level Requirement:** 0 |
@@ -159,7 +159,7 @@
 
 **The Iron Jang Bong** (The Iron Jang Bong)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** War Staff |
 | | **Level Requirement:** 28 |
@@ -172,7 +172,7 @@
 
 **The Salamander** (The Salamander)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Battle Staff |
 | | **Level Requirement:** 21 |
@@ -186,7 +186,7 @@
 
 **Warpspear** (Warpspear)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Gothic Staff |
 | | **Level Requirement:** 39 |

@@ -2,7 +2,7 @@
 
 **Dark Clan Crusher** (Dark Clan Crusher)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Cudgel |
 | | **Level Requirement:** 34 |
@@ -17,7 +17,7 @@
 
 **Demon Limb** (Demonlimb)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Tyrant Club |
 | | **Level Requirement:** 63 |
@@ -32,7 +32,7 @@
 
 **Felloak** (Felloak)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Club |
 | | **Level Requirement:** 3 |
@@ -46,7 +46,7 @@
 
 **Fleshrender** (Fleshrender)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Barbed Club |
 | | **Level Requirement:** 38 |
@@ -64,7 +64,7 @@
 
 **Nord's Tenderizer** (Nord's Tenderizer)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Truncheon |
 | | **Level Requirement:** 68 |
@@ -79,7 +79,7 @@
 
 **Stoutnail** (Stoutnail)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Spiked Club |
 | | **Level Requirement:** 5 |

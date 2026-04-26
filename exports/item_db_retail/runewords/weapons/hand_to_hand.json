@@ -1,0 +1,353 @@
+[
+  {
+    "name": "Chaos",
+    "runes": [
+      "Fal Rune",
+      "Ohm Rune",
+      "Um Rune"
+    ],
+    "base_items": [
+      "Hand to Hand"
+    ],
+    "properties": [
+      {
+        "code": "demon-heal",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15 Life after each Demon Kill"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "240",
+        "max_val": "290",
+        "resolved_text": "+240-290% Enhanced Damage"
+      },
+      {
+        "code": "dmg-mag",
+        "param": "",
+        "min_val": "216",
+        "max_val": "471",
+        "resolved_text": "Adds 216-471 Magic Damage"
+      },
+      {
+        "code": "oskill",
+        "param": "Whirlwind",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to Whirlwind"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "35",
+        "max_val": "35",
+        "resolved_text": "+35% Increased Attack Speed"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Frozen Orb",
+        "min_val": "9",
+        "max_val": "11",
+        "resolved_text": "9% Chance to cast level 11 Frozen Orb on striking"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Charged Bolt",
+        "min_val": "11",
+        "max_val": "9",
+        "resolved_text": "11% Chance to cast level 9 Charged Bolt on striking"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword16",
+      "*Rune Name": "Chaos",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "h2h",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "FalOhmUm",
+      "Rune1": "r19",
+      "Rune2": "r27",
+      "Rune3": "r22",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "demon-heal",
+      "T1Param1": "",
+      "T1Min1": "15",
+      "T1Max1": "15",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "240",
+      "T1Max2": "290",
+      "T1Code3": "dmg-mag",
+      "T1Param3": "",
+      "T1Min3": "216",
+      "T1Max3": "471",
+      "T1Code4": "oskill",
+      "T1Param4": "Whirlwind",
+      "T1Min4": "1",
+      "T1Max4": "1",
+      "T1Code5": "swing2",
+      "T1Param5": "",
+      "T1Min5": "35",
+      "T1Max5": "35",
+      "T1Code6": "hit-skill",
+      "T1Param6": "Frozen Orb",
+      "T1Min6": "9",
+      "T1Max6": "11",
+      "T1Code7": "hit-skill",
+      "T1Param7": "Charged Bolt",
+      "T1Min7": "11",
+      "T1Max7": "9",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Pattern",
+    "runes": [
+      "Tal Rune",
+      "Ort Rune",
+      "Thul Rune"
+    ],
+    "base_items": [
+      "Hand to Hand"
+    ],
+    "properties": [
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "10% Bonus to Attack Rating"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "40",
+        "max_val": "80",
+        "resolved_text": "+40-80% Enhanced Damage"
+      },
+      {
+        "code": "dmg-fire",
+        "param": "",
+        "min_val": "12",
+        "max_val": "32",
+        "resolved_text": "Adds 12-32 Fire Damage"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "All Resistances +15"
+      },
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "6",
+        "max_val": "6",
+        "resolved_text": "+6 to Strength"
+      },
+      {
+        "code": "dex",
+        "param": "",
+        "min_val": "6",
+        "max_val": "6",
+        "resolved_text": "+6 to Dexterity"
+      },
+      {
+        "code": "block2",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30% Faster Block Rate"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword97",
+      "*Rune Name": "Pattern",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "1",
+      "lastLadderSeason": "2",
+      "*Patch Release": "D2R Ladder 1",
+      "itype1": "h2h",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "TalOrtThul",
+      "Rune1": "r07",
+      "Rune2": "r09",
+      "Rune3": "r10",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "att%",
+      "T1Param1": "",
+      "T1Min1": "10",
+      "T1Max1": "10",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "40",
+      "T1Max2": "80",
+      "T1Code3": "dmg-fire",
+      "T1Param3": "",
+      "T1Min3": "12",
+      "T1Max3": "32",
+      "T1Code4": "res-all",
+      "T1Param4": "",
+      "T1Min4": "15",
+      "T1Max4": "15",
+      "T1Code5": "str",
+      "T1Param5": "",
+      "T1Min5": "6",
+      "T1Max5": "6",
+      "T1Code6": "dex",
+      "T1Param6": "",
+      "T1Min6": "6",
+      "T1Max6": "6",
+      "T1Code7": "block2",
+      "T1Param7": "",
+      "T1Min7": "30",
+      "T1Max7": "30",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Mosaic",
+    "runes": [
+      "Mal Rune",
+      "Gul Rune",
+      "Amn Rune"
+    ],
+    "base_items": [
+      "Hand to Hand"
+    ],
+    "properties": [
+      {
+        "code": "skilltab",
+        "param": "20",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Martial Arts Skills"
+      },
+      {
+        "code": "charge-noconsume",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50% chance for finishing moves to not consume charges"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Increased Attack Speed"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "250",
+        "resolved_text": "+200-250% Enhanced Damage"
+      },
+      {
+        "code": "extra-fire",
+        "param": "",
+        "min_val": "8",
+        "max_val": "15",
+        "resolved_text": "+8-15% to Fire Skill Damage"
+      },
+      {
+        "code": "extra-cold",
+        "param": "",
+        "min_val": "8",
+        "max_val": "15",
+        "resolved_text": "+8-15% to Cold Skill Damage"
+      },
+      {
+        "code": "extra-ltng",
+        "param": "",
+        "min_val": "8",
+        "max_val": "15",
+        "resolved_text": "+8-15% to Lightning Skill Damage"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword173",
+      "*Rune Name": "Mosaic",
+      "complete": "1",
+      "disallowCraftingInLadder": "1",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "3",
+      "lastLadderSeason": "12",
+      "*Patch Release": "D2R Ladder 3",
+      "itype1": "h2h",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "MalGulAmn",
+      "Rune1": "r23",
+      "Rune2": "r25",
+      "Rune3": "r11",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "skilltab",
+      "T1Param1": "20",
+      "T1Min1": "2",
+      "T1Max1": "2",
+      "T1Code2": "charge-noconsume",
+      "T1Param2": "",
+      "T1Min2": "50",
+      "T1Max2": "50",
+      "T1Code3": "swing2",
+      "T1Param3": "",
+      "T1Min3": "20",
+      "T1Max3": "20",
+      "T1Code4": "dmg%",
+      "T1Param4": "",
+      "T1Min4": "200",
+      "T1Max4": "250",
+      "T1Code5": "extra-fire",
+      "T1Param5": "",
+      "T1Min5": "8",
+      "T1Max5": "15",
+      "T1Code6": "extra-cold",
+      "T1Param6": "",
+      "T1Min6": "8",
+      "T1Max6": "15",
+      "T1Code7": "extra-ltng",
+      "T1Param7": "",
+      "T1Min7": "8",
+      "T1Max7": "15",
+      "*eol": "0"
+    }
+  }
+]

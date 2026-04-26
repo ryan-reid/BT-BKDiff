@@ -2,7 +2,7 @@
 
 **Berserker's Hatchet** (Berserker's Hatchet)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Double Axe |
 | | **Level Requirement:** 1 |
@@ -15,7 +15,7 @@
 
 **Tancred's Crowbill** (Tancred's Crowbill)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Military Pick |
 | | **Level Requirement:** 1 |

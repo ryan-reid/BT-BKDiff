@@ -40,6 +40,8 @@ def main() -> None:
     parser.add_argument("--new-db", default="../exports/item_db", help="Path to the new/target exported JSON item database")
     parser.add_argument("--old-db", default="../exports/item_db_bt", help="Path to the old/base exported JSON item database")
     parser.add_argument("--out", default="../output/item_diff_report", help="Output directory for generated markdown diffs")
+    parser.add_argument("--new-label", default="BK Diablo", help="Display label for the new/target database in markdown reports")
+    parser.add_argument("--old-label", default="BT Diablo", help="Display label for the old/base database in markdown reports")
     args = parser.parse_args()
 
     bk_json_dir = args.new_db
@@ -77,7 +79,7 @@ def main() -> None:
     }
     
     exporter = MarkdownExporter()
-    exporter.export_item_diff(combined_diff, out_dir)
+    exporter.export_item_diff(combined_diff, out_dir, old_label=args.old_label, new_label=args.new_label)
     
     # Inject breakdown into SUMMARY.md
     summary_path = os.path.join(out_dir, "SUMMARY.md")

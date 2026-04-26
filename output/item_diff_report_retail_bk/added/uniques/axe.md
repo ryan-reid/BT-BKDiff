@@ -2,7 +2,7 @@
 
 **Axe of Fechmar** (Fechmars Axe)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Large Axe |
 | | **Level Requirement:** 8 |
@@ -16,7 +16,7 @@
 
 **Bladebone** (Bladebone)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Double Axe |
 | | **Level Requirement:** 15 |
@@ -30,7 +30,7 @@
 
 **Boneslayer Blade** (Boneslayer Blade)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Gothic Axe |
 | | **Level Requirement:** 42 |
@@ -45,7 +45,7 @@
 
 **Brainhew** (Brainhew)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Great Axe |
 | | **Level Requirement:** 25 |
@@ -58,7 +58,7 @@
 
 **Butcher's Pupil** (Butcher's Pupil)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Cleaver |
 | | **Level Requirement:** 39 |
@@ -73,7 +73,7 @@
 
 **Coldkill** (Coldkill)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Hatchet |
 | | **Level Requirement:** 36 |
@@ -88,7 +88,7 @@
 
 **Cranebeak** (Cranebeak)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** War Spike |
 | | **Level Requirement:** 63 |
@@ -104,7 +104,7 @@
 
 **Death Cleaver** (Deathcleaver)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Berserker Axe |
 | | **Level Requirement:** 70 |
@@ -120,7 +120,7 @@
 
 **Deathspade** (Deathspade)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Axe |
 | | **Level Requirement:** 9 |
@@ -135,7 +135,7 @@
 
 **Ethereal Edge** (Ethereal Edge)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Silver\-edged Axe |
 | | **Level Requirement:** 74 |
@@ -152,7 +152,7 @@
 
 **Executioner's Justice** (Executioner's Justice)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Glorious Axe |
 | | **Level Requirement:** 75 |
@@ -170,7 +170,7 @@
 
 **Goreshovel** (Goreshovel)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Broad Axe |
 | | **Level Requirement:** 14 |
@@ -184,7 +184,7 @@
 
 **Guardian Naga** (Guardian Naga)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Naga |
 | | **Level Requirement:** 48 |
@@ -200,7 +200,7 @@
 
 **Hellslayer** (Hellslayer)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Decapitator |
 | | **Level Requirement:** 66 |
@@ -216,7 +216,7 @@
 
 **Humongous** (The Humongous)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Giant Axe |
 | | **Level Requirement:** 29 |
@@ -231,7 +231,7 @@
 
 **Islestrike** (Islestrike)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Twin Axe |
 | | **Level Requirement:** 43 |
@@ -248,7 +248,7 @@
 
 **Messerschmidt's Reaver** (Messerschmidt's Reaver)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Champion Axe |
 | | **Level Requirement:** 70 |
@@ -266,7 +266,7 @@
 
 **Pompeii's Wrath** (Pompe's Wrath)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Crowbill |
 | | **Level Requirement:** 45 |
@@ -280,7 +280,7 @@
 
 **Rakescar** (Rakescar)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** War Axe |
 | | **Level Requirement:** 27 |
@@ -294,7 +294,7 @@
 
 **Razor's Edge** (Razoredge)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Tomahawk |
 | | **Level Requirement:** 67 |
@@ -307,7 +307,7 @@
 
 **Rune Master** (Runemaster)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ettin Axe |
 | | **Level Requirement:** 72 |
@@ -320,7 +320,7 @@
 
 **Skull Splitter** (Mindrend)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Military Pick |
 | | **Level Requirement:** 21 |
@@ -334,7 +334,7 @@
 
 **Spellsteel** (Spellsteel)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Bearded Axe |
 | | **Level Requirement:** 39 |
@@ -352,7 +352,7 @@
 
 **Stormrider** (Stormrider)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Tabar |
 | | **Level Requirement:** 41 |
@@ -367,7 +367,7 @@
 
 **The Chieftain** (The Chieftan)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Battle Axe |
 | | **Level Requirement:** 19 |
@@ -380,7 +380,7 @@
 
 **The Gnasher** (The Gnasher)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Hand Axe |
 | | **Level Requirement:** 5 |
@@ -394,7 +394,7 @@
 
 **The Minotaur** (The Minataur)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ancient Axe |
 | | **Level Requirement:** 45 |
@@ -410,7 +410,7 @@
 
 **Warlord's Trust** (Warlord's Trust)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Military Axe |
 | | **Level Requirement:** 35 |

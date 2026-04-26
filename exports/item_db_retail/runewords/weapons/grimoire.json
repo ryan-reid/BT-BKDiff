@@ -1,0 +1,118 @@
+[
+  {
+    "name": "Vigilance",
+    "runes": [
+      "Dol Rune",
+      "Gul Rune"
+    ],
+    "base_items": [
+      "Grimoire"
+    ],
+    "properties": [
+      {
+        "code": "gethit-skill",
+        "param": "Ring of Fire",
+        "min_val": "5",
+        "max_val": "10",
+        "resolved_text": "5% Chance to cast level 10 Ring of Fire when struck"
+      },
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10% Faster Run/Walk"
+      },
+      {
+        "code": "block2",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30% Faster Block Rate"
+      },
+      {
+        "code": "hp",
+        "param": "",
+        "min_val": "20",
+        "max_val": "40",
+        "resolved_text": "+20-40 to Life"
+      },
+      {
+        "code": "mana",
+        "param": "",
+        "min_val": "20",
+        "max_val": "40",
+        "resolved_text": "+20-40 to Mana"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "25",
+        "max_val": "35",
+        "resolved_text": "All Resistances +25-35"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "75",
+        "max_val": "100",
+        "resolved_text": "+75-100% Enhanced Defense"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword181",
+      "*Rune Name": "Vigilance",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "grim",
+      "itype2": "shld",
+      "itype3": "head",
+      "itype4": "ashd",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "DolGul",
+      "Rune1": "r14",
+      "Rune2": "r25",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "gethit-skill",
+      "T1Param1": "Ring of Fire",
+      "T1Min1": "5",
+      "T1Max1": "10",
+      "T1Code2": "move2",
+      "T1Param2": "",
+      "T1Min2": "10",
+      "T1Max2": "10",
+      "T1Code3": "block2",
+      "T1Param3": "",
+      "T1Min3": "30",
+      "T1Max3": "30",
+      "T1Code4": "hp",
+      "T1Param4": "",
+      "T1Min4": "20",
+      "T1Max4": "40",
+      "T1Code5": "mana",
+      "T1Param5": "",
+      "T1Min5": "20",
+      "T1Max5": "40",
+      "T1Code6": "res-all",
+      "T1Param6": "",
+      "T1Min6": "25",
+      "T1Max6": "35",
+      "T1Code7": "ac%",
+      "T1Param7": "",
+      "T1Min7": "75",
+      "T1Max7": "100",
+      "*eol": "0"
+    }
+  }
+]

@@ -2,7 +2,7 @@
 
 **Blackbog's Sharp** (Blackbog's Sharp)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Cinquedeas |
 | | **Level Requirement:** 38 |
@@ -17,7 +17,7 @@
 
 **Bloodpact Shard** (Bloodpact Shard)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Mithril Point |
 | | **Level Requirement:** 67 |
@@ -33,7 +33,7 @@
 
 **Fleshripper** (Fleshripper)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Fanged Knife |
 | | **Level Requirement:** 68 |
@@ -49,7 +49,7 @@
 
 **Ghostflame** (Ghostflame)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Legend Spike |
 | | **Level Requirement:** 62 |
@@ -65,7 +65,7 @@
 
 **Gull** (Gull)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Dagger |
 | | **Level Requirement:** 12 |
@@ -77,7 +77,7 @@
 
 **Heart Carver** (Heart Carver)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Rondel |
 | | **Level Requirement:** 95 |
@@ -94,7 +94,7 @@
 
 **Spectral Shard** (Irices Shard)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Blade |
 | | **Level Requirement:** 25 |
@@ -106,7 +106,7 @@
 
 **Spineripper** (Spineripper)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Poignard |
 | | **Level Requirement:** 32 |
@@ -123,7 +123,7 @@
 
 **Stormspike** (Stormspike)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Stiletto |
 | | **Level Requirement:** 41 |
@@ -139,7 +139,7 @@
 
 **The Diggler** (The Diggler)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Dirk |
 | | **Level Requirement:** 11 |
@@ -155,7 +155,7 @@
 
 **The Jade Tan Do** (The Jade Tan Do)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Kris |
 | | **Level Requirement:** 19 |
@@ -170,7 +170,7 @@
 
 **Wizardspike** (Wizardspike)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Bone Knife |
 | | **Level Requirement:** 61 |

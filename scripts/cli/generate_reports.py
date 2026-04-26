@@ -60,7 +60,9 @@ def main() -> None:
         sys.executable, os.path.join(SCRIPTS_ROOT, "compare_item_db.py"),
         "--new-db", "../exports/item_db",
         "--old-db", "../exports/item_db_bt",
-        "--out", "../output/item_diff_report_bt_bk"
+        "--out", "../output/item_diff_report_bt_bk",
+        "--old-label", "BT Diablo",
+        "--new-label", "BK Diablo"
     ], "Generating BK vs BT Item Comparison Reports"):
         failures.append("Generating BK vs BT Item Comparison Reports")
 
@@ -69,7 +71,9 @@ def main() -> None:
         sys.executable, os.path.join(SCRIPTS_ROOT, "compare_item_db.py"),
         "--new-db", "../exports/item_db",
         "--old-db", "../exports/item_db_retail",
-        "--out", "../output/item_diff_report_retail_bk"
+        "--out", "../output/item_diff_report_retail_bk",
+        "--old-label", "Retail",
+        "--new-label", "BK Diablo"
     ], "Generating BK vs Retail Item Comparison Reports"):
         failures.append("Generating BK vs Retail Item Comparison Reports")
 

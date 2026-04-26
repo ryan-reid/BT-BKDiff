@@ -2,7 +2,7 @@
 
 **Baezil's Vortex** (Baezil's Vortex)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Knout |
 | | **Level Requirement:** 45 |
@@ -17,7 +17,7 @@
 
 **Baranar's Star** (Baranar's Star)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Devil Star |
 | | **Level Requirement:** 65 |
@@ -34,7 +34,7 @@
 
 **Bloodrise** (Bloodrise)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Morning Star |
 | | **Level Requirement:** 15 |
@@ -47,7 +47,7 @@
 
 **Crushflange** (Crushflange)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Mace |
 | | **Level Requirement:** 9 |
@@ -62,7 +62,7 @@
 
 **Horizon's Tornado** (Horizon's Tornado)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Scourge |
 | | **Level Requirement:** 64 |
@@ -77,7 +77,7 @@
 
 **Khalim's Flail** (KhalimFlail)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Khalim's Flail |
 | | **Level Requirement:** 0 |
@@ -89,7 +89,7 @@
 
 **Khalim's Will** (SuperKhalimFlail)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Khalim's Will |
 | | **Level Requirement:** 0 |
@@ -103,7 +103,7 @@
 
 **Moonfall** (Moonfall)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Jagged Star |
 | | **Level Requirement:** 42 |
@@ -117,7 +117,7 @@
 
 **Stormlash** (Stormlash)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Scourge |
 | | **Level Requirement:** 82 |
@@ -133,7 +133,7 @@
 
 **Sureshrill Frost** (Sureshrill Frost)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Flanged Mace |
 | | **Level Requirement:** 39 |
@@ -146,7 +146,7 @@
 
 **The General's Tan Do Li Ga** (The Generals Tan Do Li Ga)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Flail |
 | | **Level Requirement:** 21 |

@@ -2,7 +2,7 @@
 
 **Beast** (Beast)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
@@ -17,7 +17,7 @@
 
 **Death** (Death)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
@@ -32,7 +32,7 @@
 
 **Doom** (Doom)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
@@ -47,7 +47,7 @@
 
 **Eternity** (Eternity)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
@@ -62,7 +62,7 @@
 
 **Holy Thunder** (Holy Thunder)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
@@ -77,7 +77,7 @@
 
 **Honor** (Honor)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
@@ -91,7 +91,7 @@
 
 **Kingslayer** (Kingslayer)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
@@ -106,7 +106,7 @@
 
 **Malice** (Malice)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
@@ -121,7 +121,7 @@
 
 **Steel** (Steel)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |
@@ -135,7 +135,7 @@
 
 **Strength** (Strength)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Melee Weapon |
 | | **Level Requirement:** 0 |

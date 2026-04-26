@@ -2,7 +2,7 @@
 
 **Black** (Black)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Club |
 | | **Level Requirement:** 0 |

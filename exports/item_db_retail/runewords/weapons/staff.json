@@ -1,0 +1,467 @@
+[
+  {
+    "name": "Heart of the Oak",
+    "runes": [
+      "Ko Rune",
+      "Vex Rune",
+      "Pul Rune",
+      "Thul Rune"
+    ],
+    "base_items": [
+      "Staff"
+    ],
+    "properties": [
+      {
+        "code": "cast2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Faster Cast Rate"
+      },
+      {
+        "code": "charged",
+        "param": "Oak Sage",
+        "min_val": "25",
+        "max_val": "4",
+        "resolved_text": "Level 25 Oak Sage (4/# Charges)"
+      },
+      {
+        "code": "mana%",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "Increase Maximum Mana 15%"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to All Skills"
+      },
+      {
+        "code": "regen",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "Replenish Life +20"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "30",
+        "max_val": "40",
+        "resolved_text": "All Resistances +30-40"
+      },
+      {
+        "code": "charged",
+        "param": "Raven",
+        "min_val": "60",
+        "max_val": "14",
+        "resolved_text": "Level 60 Raven (14/# Charges)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword51",
+      "*Rune Name": "Heart of the Oak",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "staf",
+      "itype2": "mace",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "KoVexPulThul",
+      "Rune1": "r18",
+      "Rune2": "r26",
+      "Rune3": "r21",
+      "Rune4": "r10",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "cast2",
+      "T1Param1": "",
+      "T1Min1": "40",
+      "T1Max1": "40",
+      "T1Code2": "charged",
+      "T1Param2": "Oak Sage",
+      "T1Min2": "25",
+      "T1Max2": "4",
+      "T1Code3": "mana%",
+      "T1Param3": "",
+      "T1Min3": "15",
+      "T1Max3": "15",
+      "T1Code4": "allskills",
+      "T1Param4": "",
+      "T1Min4": "3",
+      "T1Max4": "3",
+      "T1Code5": "regen",
+      "T1Param5": "",
+      "T1Min5": "20",
+      "T1Max5": "20",
+      "T1Code6": "res-all",
+      "T1Param6": "",
+      "T1Min6": "30",
+      "T1Max6": "40",
+      "T1Code7": "charged",
+      "T1Param7": "Raven",
+      "T1Min7": "60",
+      "T1Max7": "14",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Leaf",
+    "runes": [
+      "Tir Rune",
+      "Ral Rune"
+    ],
+    "base_items": [
+      "Staff"
+    ],
+    "properties": [
+      {
+        "code": "fireskill",
+        "param": "",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Fire Skills"
+      },
+      {
+        "code": "ac/lvl",
+        "param": "",
+        "min_val": "16",
+        "max_val": "16",
+        "resolved_text": "(2.0 per clvl) Defense (Based on Character Level)"
+      },
+      {
+        "code": "res-cold",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "Cold Resist +33%"
+      },
+      {
+        "code": "skill",
+        "param": "41",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Inferno (Sorceress only)"
+      },
+      {
+        "code": "skill",
+        "param": "36",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Fire Bolt (Sorceress only)"
+      },
+      {
+        "code": "skill",
+        "param": "37",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Warmth (Sorceress only)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword72",
+      "*Rune Name": "Leaf",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "staf",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "TirRal",
+      "Rune1": "r03",
+      "Rune2": "r08",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "fireskill",
+      "T1Param1": "",
+      "T1Min1": "3",
+      "T1Max1": "3",
+      "T1Code2": "ac/lvl",
+      "T1Param2": "",
+      "T1Min2": "16",
+      "T1Max2": "16",
+      "T1Code3": "res-cold",
+      "T1Param3": "",
+      "T1Min3": "33",
+      "T1Max3": "33",
+      "T1Code4": "skill",
+      "T1Param4": "41",
+      "T1Min4": "3",
+      "T1Max4": "3",
+      "T1Code5": "skill",
+      "T1Param5": "36",
+      "T1Min5": "3",
+      "T1Max5": "3",
+      "T1Code6": "skill",
+      "T1Param6": "37",
+      "T1Min6": "3",
+      "T1Max6": "3",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Memory",
+    "runes": [
+      "Lum Rune",
+      "Io Rune",
+      "Sol Rune",
+      "Eth Rune"
+    ],
+    "base_items": [
+      "Staff"
+    ],
+    "properties": [
+      {
+        "code": "mana%",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "Increase Maximum Mana 20%"
+      },
+      {
+        "code": "red-mag",
+        "param": "",
+        "min_val": "7",
+        "max_val": "7",
+        "resolved_text": "Magic Damage Reduced by 7"
+      },
+      {
+        "code": "ac%",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "+50% Enhanced Defense"
+      },
+      {
+        "code": "cast2",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "+33% Faster Cast Rate"
+      },
+      {
+        "code": "sor",
+        "param": "",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Sorceress Skill Levels"
+      },
+      {
+        "code": "skill",
+        "param": "58",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Energy Shield (Sorceress only)"
+      },
+      {
+        "code": "skill",
+        "param": "42",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Static Field (Sorceress only)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword83",
+      "*Rune Name": "Memory",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "staf",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "LumIoSolEth",
+      "Rune1": "r17",
+      "Rune2": "r16",
+      "Rune3": "r12",
+      "Rune4": "r05",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "mana%",
+      "T1Param1": "",
+      "T1Min1": "20",
+      "T1Max1": "20",
+      "T1Code2": "red-mag",
+      "T1Param2": "",
+      "T1Min2": "7",
+      "T1Max2": "7",
+      "T1Code3": "ac%",
+      "T1Param3": "",
+      "T1Min3": "50",
+      "T1Max3": "50",
+      "T1Code4": "cast2",
+      "T1Param4": "",
+      "T1Min4": "33",
+      "T1Max4": "33",
+      "T1Code5": "sor",
+      "T1Param5": "",
+      "T1Min5": "3",
+      "T1Max5": "3",
+      "T1Code6": "skill",
+      "T1Param6": "58",
+      "T1Min6": "3",
+      "T1Max6": "3",
+      "T1Code7": "skill",
+      "T1Param7": "42",
+      "T1Min7": "2",
+      "T1Max7": "2",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Obsession",
+    "runes": [
+      "Zod Rune",
+      "Ist Rune",
+      "Lem Rune",
+      "Lum Rune",
+      "Io Rune",
+      "Nef Rune"
+    ],
+    "base_items": [
+      "Staff"
+    ],
+    "properties": [
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "4",
+        "max_val": "4",
+        "resolved_text": "+4 to All Skills"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Weaken",
+        "min_val": "24",
+        "max_val": "10",
+        "resolved_text": "24% Chance to cast level 10 Weaken when struck"
+      },
+      {
+        "code": "cast3",
+        "param": "",
+        "min_val": "65",
+        "max_val": "65",
+        "resolved_text": "+65% Faster Cast Rate"
+      },
+      {
+        "code": "balance3",
+        "param": "",
+        "min_val": "60",
+        "max_val": "60",
+        "resolved_text": "+60% Faster Hit Recovery"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "60",
+        "max_val": "70",
+        "resolved_text": "All Resistances +60-70"
+      },
+      {
+        "code": "hp%",
+        "param": "",
+        "min_val": "15",
+        "max_val": "25",
+        "resolved_text": "Increase Maximum Life 15-25%"
+      },
+      {
+        "code": "regen-mana",
+        "param": "",
+        "min_val": "15",
+        "max_val": "30",
+        "resolved_text": "Regenerate Mana 15-30%"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword94",
+      "*Rune Name": "Obsession",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "1",
+      "lastLadderSeason": "2",
+      "*Patch Release": "D2R Ladder 1",
+      "itype1": "staf",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ZodIstLemLumIoNef",
+      "Rune1": "r33",
+      "Rune2": "r24",
+      "Rune3": "r20",
+      "Rune4": "r17",
+      "Rune5": "r16",
+      "Rune6": "r04",
+      "T1Code1": "allskills",
+      "T1Param1": "",
+      "T1Min1": "4",
+      "T1Max1": "4",
+      "T1Code2": "gethit-skill",
+      "T1Param2": "Weaken",
+      "T1Min2": "24",
+      "T1Max2": "10",
+      "T1Code3": "cast3",
+      "T1Param3": "",
+      "T1Min3": "65",
+      "T1Max3": "65",
+      "T1Code4": "balance3",
+      "T1Param4": "",
+      "T1Min4": "60",
+      "T1Max4": "60",
+      "T1Code5": "res-all",
+      "T1Param5": "",
+      "T1Min5": "60",
+      "T1Max5": "70",
+      "T1Code6": "hp%",
+      "T1Param6": "",
+      "T1Min6": "15",
+      "T1Max6": "25",
+      "T1Code7": "regen-mana",
+      "T1Param7": "",
+      "T1Min7": "15",
+      "T1Max7": "30",
+      "*eol": "0"
+    }
+  }
+]

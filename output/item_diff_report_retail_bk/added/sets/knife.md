@@ -2,7 +2,7 @@
 
 **Bane's Oathmaker** (Bane's Oathmaker)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Kris |
 | | **Level Requirement:** 8 |

@@ -2,7 +2,7 @@
 
 **Black Cleft** (Black Cleft)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -12,7 +12,7 @@
 
 **Bone Break** (Bone Break)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -22,7 +22,7 @@
 
 **Cold Rupture** (Cold Rupture)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -32,7 +32,7 @@
 
 **Crack of the Heavens** (Crack of the Heavens)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -42,7 +42,7 @@
 
 **Flame Rift** (Flame Rift)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -52,7 +52,7 @@
 
 **Gheed's Fortune** (Gheed's Fortune)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 62 |
@@ -63,7 +63,7 @@
 
 **Latent Black Cleft** (PreCrafted Black Cleft)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -73,7 +73,7 @@
 
 **Latent Bone Break** (PreCrafted Bone Break)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -83,7 +83,7 @@
 
 **Latent Cold Rupture** (PreCrafted Cold Rupture)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -93,7 +93,7 @@
 
 **Latent Crack of the Heavens** (PreCrafted Crack of the Heavens)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -103,7 +103,7 @@
 
 **Latent Flame Rift** (PreCrafted Flame Rift)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -113,7 +113,7 @@
 
 **Latent Rotting Fissure** (PreCrafted Rotting Fissure)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -123,7 +123,7 @@
 
 **Rotting Fissure** (Rotting Fissure)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |

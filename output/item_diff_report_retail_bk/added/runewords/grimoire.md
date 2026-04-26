@@ -2,7 +2,7 @@
 
 **Vigilance** (Vigilance)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grimoire |
 | | **Level Requirement:** 0 |

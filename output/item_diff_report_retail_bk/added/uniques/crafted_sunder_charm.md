@@ -2,7 +2,7 @@
 
 **Renewed Black Cleft** (Crafted Black Cleft)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -17,7 +17,7 @@
 
 **Renewed Bone Break** (Crafted Bone Break)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -32,7 +32,7 @@
 
 **Renewed Cold Rupture** (Crafted Cold Rupture)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -48,7 +48,7 @@
 
 **Renewed Crack of the Heavens** (Crafted Crack of the Heavens)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -63,7 +63,7 @@
 
 **Renewed Flame Rift** (Crafted Flame Rift)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |
@@ -78,7 +78,7 @@
 
 **Renewed Rotting Fissure** (Crafted Rotting Fissure)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Charm |
 | | **Level Requirement:** 75 |

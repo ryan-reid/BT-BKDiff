@@ -2,7 +2,7 @@
 
 **Buriza\-Do Kyanon** (Buriza\-Do Kyanon)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ballista |
 | | **Level Requirement:** 41 |
@@ -18,7 +18,7 @@
 
 **Demon Machine** (Demon Machine)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Chu\-Ko\-Nu |
 | | **Level Requirement:** 49 |
@@ -34,7 +34,7 @@
 
 **Doomslinger** (Doomspittle)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Repeating Crossbow |
 | | **Level Requirement:** 28 |
@@ -50,7 +50,7 @@
 
 **Gut Siphon** (Gutsiphon)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Demon Crossbow |
 | | **Level Requirement:** 71 |
@@ -67,7 +67,7 @@
 
 **Hellcast** (Hellcast)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Heavy Crossbow |
 | | **Level Requirement:** 27 |
@@ -82,7 +82,7 @@
 
 **Hellrack** (Hellrack)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Colossus Crossbow |
 | | **Level Requirement:** 76 |
@@ -97,7 +97,7 @@
 
 **Ichorsting** (Ichorsting)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Crossbow |
 | | **Level Requirement:** 18 |
@@ -111,7 +111,7 @@
 
 **Langer Briser** (Langer Briser)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Arbalest |
 | | **Level Requirement:** 32 |
@@ -127,7 +127,7 @@
 
 **Leadcrow** (Leadcrow)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Light Crossbow |
 | | **Level Requirement:** 9 |
@@ -142,7 +142,7 @@
 
 **Pus Spitter** (Pus Spiter)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Siege Crossbow |
 | | **Level Requirement:** 36 |

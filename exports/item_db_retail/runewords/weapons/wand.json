@@ -1,0 +1,118 @@
+[
+  {
+    "name": "White",
+    "runes": [
+      "Dol Rune",
+      "Io Rune"
+    ],
+    "base_items": [
+      "Wand"
+    ],
+    "properties": [
+      {
+        "code": "skilltab",
+        "param": "7",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Poison and Bone Skills"
+      },
+      {
+        "code": "red-mag",
+        "param": "",
+        "min_val": "4",
+        "max_val": "4",
+        "resolved_text": "Magic Damage Reduced by 4"
+      },
+      {
+        "code": "cast2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Cast Rate"
+      },
+      {
+        "code": "mana",
+        "param": "",
+        "min_val": "13",
+        "max_val": "13",
+        "resolved_text": "+13 to Mana"
+      },
+      {
+        "code": "skill",
+        "param": "68",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Bone Armor (Necromancer only)"
+      },
+      {
+        "code": "skill",
+        "param": "84",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to Bone Spear (Necromancer only)"
+      },
+      {
+        "code": "skill",
+        "param": "69",
+        "min_val": "4",
+        "max_val": "4",
+        "resolved_text": "+4 to Skeleton Mastery (Necromancer only)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword162",
+      "*Rune Name": "White",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "wand",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "DolIo",
+      "Rune1": "r14",
+      "Rune2": "r16",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "skilltab",
+      "T1Param1": "7",
+      "T1Min1": "3",
+      "T1Max1": "3",
+      "T1Code2": "red-mag",
+      "T1Param2": "",
+      "T1Min2": "4",
+      "T1Max2": "4",
+      "T1Code3": "cast2",
+      "T1Param3": "",
+      "T1Min3": "20",
+      "T1Max3": "20",
+      "T1Code4": "mana",
+      "T1Param4": "",
+      "T1Min4": "13",
+      "T1Max4": "13",
+      "T1Code5": "skill",
+      "T1Param5": "68",
+      "T1Min5": "3",
+      "T1Max5": "3",
+      "T1Code6": "skill",
+      "T1Param6": "84",
+      "T1Min6": "2",
+      "T1Max6": "2",
+      "T1Code7": "skill",
+      "T1Param7": "69",
+      "T1Min7": "4",
+      "T1Max7": "4",
+      "*eol": "0"
+    }
+  }
+]

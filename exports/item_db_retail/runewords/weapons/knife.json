@@ -1,0 +1,229 @@
+[
+  {
+    "name": "Void",
+    "runes": [
+      "Thul Rune",
+      "Zod Rune",
+      "Ist Rune"
+    ],
+    "base_items": [
+      "Knife"
+    ],
+    "properties": [
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to All Skills"
+      },
+      {
+        "code": "cast2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Faster Cast Rate"
+      },
+      {
+        "code": "extra-mag",
+        "param": "",
+        "min_val": "10",
+        "max_val": "15",
+        "resolved_text": "+10-15% to Magic Skill Damage"
+      },
+      {
+        "code": "oskill",
+        "param": "Abyss",
+        "min_val": "1",
+        "max_val": "3",
+        "resolved_text": "+1-3 to Abyss"
+      },
+      {
+        "code": "all-stats",
+        "param": "",
+        "min_val": "8",
+        "max_val": "12",
+        "resolved_text": "+8-12 to all Attributes"
+      },
+      {
+        "code": "charged",
+        "param": "Decrepify",
+        "min_val": "35",
+        "max_val": "4",
+        "resolved_text": "Level 35 Decrepify (4/# Charges)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword157",
+      "*Rune Name": "Void",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "knif",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ThulZodIst",
+      "Rune1": "r10",
+      "Rune2": "r33",
+      "Rune3": "r24",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "allskills",
+      "T1Param1": "",
+      "T1Min1": "2",
+      "T1Max1": "2",
+      "T1Code2": "cast2",
+      "T1Param2": "",
+      "T1Min2": "40",
+      "T1Max2": "40",
+      "T1Code3": "extra-mag",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "15",
+      "T1Code4": "oskill",
+      "T1Param4": "Abyss",
+      "T1Min4": "1",
+      "T1Max4": "3",
+      "T1Code5": "all-stats",
+      "T1Param5": "",
+      "T1Min5": "8",
+      "T1Max5": "12",
+      "T1Code6": "charged",
+      "T1Param6": "Decrepify",
+      "T1Min6": "35",
+      "T1Max6": "4",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Ritual",
+    "runes": [
+      "Amn Rune",
+      "Shael Rune",
+      "Ohm Rune"
+    ],
+    "base_items": [
+      "Knife"
+    ],
+    "properties": [
+      {
+        "code": "gethit-skill",
+        "param": "Sigil Death",
+        "min_val": "13",
+        "max_val": "1",
+        "resolved_text": "13% Chance to cast level 1 Sigil: Death when struck"
+      },
+      {
+        "code": "swing1",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Increased Attack Speed"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "270",
+        "resolved_text": "+200-270% Enhanced Damage"
+      },
+      {
+        "code": "dmg-demon",
+        "param": "",
+        "min_val": "150",
+        "max_val": "250",
+        "resolved_text": "+150-250% Damage to Demons"
+      },
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "260",
+        "resolved_text": "200-260% Bonus to Attack Rating"
+      },
+      {
+        "code": "heal-kill",
+        "param": "",
+        "min_val": "3",
+        "max_val": "5",
+        "resolved_text": "+3-5 Life after each Kill"
+      },
+      {
+        "code": "rip",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Slain Monsters Rest in Peace"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword182",
+      "*Rune Name": "Ritual",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "knif",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "AmnShaelOhm",
+      "Rune1": "r11",
+      "Rune2": "r13",
+      "Rune3": "r27",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "gethit-skill",
+      "T1Param1": "Sigil Death",
+      "T1Min1": "13",
+      "T1Max1": "1",
+      "T1Code2": "swing1",
+      "T1Param2": "",
+      "T1Min2": "20",
+      "T1Max2": "20",
+      "T1Code3": "dmg%",
+      "T1Param3": "",
+      "T1Min3": "200",
+      "T1Max3": "270",
+      "T1Code4": "dmg-demon",
+      "T1Param4": "",
+      "T1Min4": "150",
+      "T1Max4": "250",
+      "T1Code5": "att%",
+      "T1Param5": "",
+      "T1Min5": "200",
+      "T1Max5": "260",
+      "T1Code6": "heal-kill",
+      "T1Param6": "",
+      "T1Min6": "3",
+      "T1Max6": "5",
+      "T1Code7": "rip",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  }
+]

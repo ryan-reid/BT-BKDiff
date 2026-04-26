@@ -2,7 +2,7 @@
 
 **Deathbit** (Deathbit)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Battle Dart |
 | | **Level Requirement:** 44 |
@@ -18,7 +18,7 @@
 
 **Warshrike** (Warshrike)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Winged Knife |
 | | **Level Requirement:** 75 |

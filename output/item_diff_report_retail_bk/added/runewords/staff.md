@@ -2,7 +2,7 @@
 
 **Heart of the Oak** (Heart of the Oak)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Staff |
 | | **Level Requirement:** 0 |
@@ -16,7 +16,7 @@
 
 **Leaf** (Leaf)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Staff |
 | | **Level Requirement:** 0 |
@@ -30,7 +30,7 @@
 
 **Memory** (Memory)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Staff |
 | | **Level Requirement:** 0 |
@@ -45,7 +45,7 @@
 
 **Obsession** (Obsession)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Staff |
 | | **Level Requirement:** 0 |

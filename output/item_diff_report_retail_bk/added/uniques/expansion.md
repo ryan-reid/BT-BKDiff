@@ -2,7 +2,7 @@
 
 **Armor** (Armor)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -10,7 +10,7 @@
 
 **Class\-specific** (Class Specific)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -18,7 +18,7 @@
 
 **Elite Uniques** (Elite Uniques)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -26,7 +26,7 @@
 
 **Giant Maimer** (Giantmaimer)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -34,7 +34,7 @@
 
 **Gore Ripper** (Gore Ripper)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -42,7 +42,7 @@
 
 **Larzuk's Champion** (Larzuk's Champion)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -50,7 +50,7 @@
 
 **Merman's Sprocket** (Merman's Speed)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -58,7 +58,7 @@
 
 **Nethercrow** (Nethercrow)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -66,7 +66,7 @@
 
 **Odium** (Odium)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -74,7 +74,7 @@
 
 **Rings** (Rings)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -82,7 +82,7 @@
 
 **Siggard's Stealth** (Sigurd's Staunch)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -90,7 +90,7 @@
 
 **Warlock Class Pack** (Warlock Class Pack)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -98,7 +98,7 @@
 
 **Warriv's Warder** (Warriv's Warder)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |
@@ -106,7 +106,7 @@
 
 **Zakarum's Salvation** (Zakarum's Salvation)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Expansion |
 | | **Level Requirement:**  |

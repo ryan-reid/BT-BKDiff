@@ -1,0 +1,671 @@
+[
+  {
+    "name": "Eternity",
+    "runes": [
+      "Amn Rune",
+      "Ber Rune",
+      "Ist Rune",
+      "Sol Rune",
+      "Sur Rune"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "260",
+        "max_val": "310",
+        "resolved_text": "+260-310% Enhanced Damage"
+      },
+      {
+        "code": "indestruct",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Indestructible"
+      },
+      {
+        "code": "slow",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "Slows Target by 33%"
+      },
+      {
+        "code": "charged",
+        "param": "Revive",
+        "min_val": "88",
+        "max_val": "8",
+        "resolved_text": "Level 88 Revive (8/# Charges)"
+      },
+      {
+        "code": "regen",
+        "param": "",
+        "min_val": "16",
+        "max_val": "16",
+        "resolved_text": "Replenish Life +16"
+      },
+      {
+        "code": "regen-mana",
+        "param": "",
+        "min_val": "16",
+        "max_val": "16",
+        "resolved_text": "Regenerate Mana 16%"
+      },
+      {
+        "code": "nofreeze",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Cannot Be Frozen"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword36",
+      "*Rune Name": "Eternity",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "AmnBerIstSolSur",
+      "Rune1": "r11",
+      "Rune2": "r30",
+      "Rune3": "r24",
+      "Rune4": "r12",
+      "Rune5": "r29",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "260",
+      "T1Max1": "310",
+      "T1Code2": "indestruct",
+      "T1Param2": "",
+      "T1Min2": "1",
+      "T1Max2": "1",
+      "T1Code3": "slow",
+      "T1Param3": "",
+      "T1Min3": "33",
+      "T1Max3": "33",
+      "T1Code4": "charged",
+      "T1Param4": "Revive",
+      "T1Min4": "88",
+      "T1Max4": "8",
+      "T1Code5": "regen",
+      "T1Param5": "",
+      "T1Min5": "16",
+      "T1Max5": "16",
+      "T1Code6": "regen-mana",
+      "T1Param6": "",
+      "T1Min6": "16",
+      "T1Max6": "16",
+      "T1Code7": "nofreeze",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Fury",
+    "runes": [
+      "Jah Rune",
+      "Gul Rune",
+      "Eth Rune"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "209",
+        "max_val": "209",
+        "resolved_text": "+209% Enhanced Damage"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Increased Attack Speed"
+      },
+      {
+        "code": "noheal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Prevent Monster Heal"
+      },
+      {
+        "code": "openwounds",
+        "param": "",
+        "min_val": "66",
+        "max_val": "66",
+        "resolved_text": "66% Chance of Open Wounds"
+      },
+      {
+        "code": "lifesteal",
+        "param": "",
+        "min_val": "6",
+        "max_val": "6",
+        "resolved_text": "6% Life stolen per hit"
+      },
+      {
+        "code": "deadly",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "33% Deadly Strike"
+      },
+      {
+        "code": "skill",
+        "param": "147",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5 to Frenzy (Barbarian only)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword44",
+      "*Rune Name": "Fury",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "JahGulEth",
+      "Rune1": "r31",
+      "Rune2": "r25",
+      "Rune3": "r05",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "209",
+      "T1Max1": "209",
+      "T1Code2": "swing2",
+      "T1Param2": "",
+      "T1Min2": "40",
+      "T1Max2": "40",
+      "T1Code3": "noheal",
+      "T1Param3": "",
+      "T1Min3": "1",
+      "T1Max3": "1",
+      "T1Code4": "openwounds",
+      "T1Param4": "",
+      "T1Min4": "66",
+      "T1Max4": "66",
+      "T1Code5": "lifesteal",
+      "T1Param5": "",
+      "T1Min5": "6",
+      "T1Max5": "6",
+      "T1Code6": "deadly",
+      "T1Param6": "",
+      "T1Min6": "33",
+      "T1Max6": "33",
+      "T1Code7": "skill",
+      "T1Param7": "147",
+      "T1Min7": "5",
+      "T1Max7": "5",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Honor",
+    "runes": [
+      "Amn Rune",
+      "El Rune",
+      "Ith Rune",
+      "Tir Rune",
+      "Sol Rune"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "160",
+        "max_val": "160",
+        "resolved_text": "+160% Enhanced Damage"
+      },
+      {
+        "code": "regen",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "Replenish Life +10"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "+1 to All Skills"
+      },
+      {
+        "code": "att",
+        "param": "",
+        "min_val": "200",
+        "max_val": "200",
+        "resolved_text": "+200 to Attack Rating"
+      },
+      {
+        "code": "deadly",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "25% Deadly Strike"
+      },
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Strength"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword55",
+      "*Rune Name": "Honor",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "AmnElIthTirSol",
+      "Rune1": "r11",
+      "Rune2": "r01",
+      "Rune3": "r06",
+      "Rune4": "r03",
+      "Rune5": "r12",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "160",
+      "T1Max1": "160",
+      "T1Code2": "regen",
+      "T1Param2": "",
+      "T1Min2": "10",
+      "T1Max2": "10",
+      "T1Code3": "allskills",
+      "T1Param3": "",
+      "T1Min3": "1",
+      "T1Max3": "1",
+      "T1Code4": "att",
+      "T1Param4": "",
+      "T1Min4": "200",
+      "T1Max4": "200",
+      "T1Code5": "deadly",
+      "T1Param5": "",
+      "T1Min5": "25",
+      "T1Max5": "25",
+      "T1Code6": "str",
+      "T1Param6": "",
+      "T1Min6": "10",
+      "T1Max6": "10",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Malice",
+    "runes": [
+      "Ith Rune",
+      "El Rune",
+      "Eth Rune"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "openwounds",
+        "param": "",
+        "min_val": "100",
+        "max_val": "100",
+        "resolved_text": "100% Chance of Open Wounds"
+      },
+      {
+        "code": "dmg-ac",
+        "param": "",
+        "min_val": "-100",
+        "max_val": "-100",
+        "resolved_text": "--100 to Monster Defense Per Hit"
+      },
+      {
+        "code": "noheal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Prevent Monster Heal"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "33",
+        "max_val": "33",
+        "resolved_text": "+33% Enhanced Damage"
+      },
+      {
+        "code": "light",
+        "param": "",
+        "min_val": "-1",
+        "max_val": "-1",
+        "resolved_text": "+-1 to Light Radius"
+      },
+      {
+        "code": "regen",
+        "param": "",
+        "min_val": "-5",
+        "max_val": "-5",
+        "resolved_text": "Replenish Life +-5"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword81",
+      "*Rune Name": "Malice",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "IthElEth",
+      "Rune1": "r06",
+      "Rune2": "r01",
+      "Rune3": "r05",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "openwounds",
+      "T1Param1": "",
+      "T1Min1": "100",
+      "T1Max1": "100",
+      "T1Code2": "dmg-ac",
+      "T1Param2": "",
+      "T1Min2": "-100",
+      "T1Max2": "-100",
+      "T1Code3": "noheal",
+      "T1Param3": "",
+      "T1Min3": "1",
+      "T1Max3": "1",
+      "T1Code4": "dmg%",
+      "T1Param4": "",
+      "T1Min4": "33",
+      "T1Max4": "33",
+      "T1Code5": "light",
+      "T1Param5": "",
+      "T1Min5": "-1",
+      "T1Max5": "-1",
+      "T1Code6": "regen",
+      "T1Param6": "",
+      "T1Min6": "-5",
+      "T1Max6": "-5",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Strength",
+    "runes": [
+      "Amn Rune",
+      "Tir Rune"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20 to Strength"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "35",
+        "max_val": "35",
+        "resolved_text": "+35% Enhanced Damage"
+      },
+      {
+        "code": "vit",
+        "param": "",
+        "min_val": "10",
+        "max_val": "10",
+        "resolved_text": "+10 to Vitality"
+      },
+      {
+        "code": "crush",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "25% Chance of Crushing Blow"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword139",
+      "*Rune Name": "Strength",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "109",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "AmnTir",
+      "Rune1": "r11",
+      "Rune2": "r03",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "str",
+      "T1Param1": "",
+      "T1Min1": "20",
+      "T1Max1": "20",
+      "T1Code2": "dmg%",
+      "T1Param2": "",
+      "T1Min2": "35",
+      "T1Max2": "35",
+      "T1Code3": "vit",
+      "T1Param3": "",
+      "T1Min3": "10",
+      "T1Max3": "10",
+      "T1Code4": "crush",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "25",
+      "T1Code5": "",
+      "T1Param5": "",
+      "T1Min5": "",
+      "T1Max5": "",
+      "T1Code6": "",
+      "T1Param6": "",
+      "T1Min6": "",
+      "T1Max6": "",
+      "T1Code7": "",
+      "T1Param7": "",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Wind",
+    "runes": [
+      "Sur Rune",
+      "El Rune"
+    ],
+    "base_items": [
+      "Melee Weapon"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "120",
+        "max_val": "160",
+        "resolved_text": "+120-160% Enhanced Damage"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Increased Attack Speed"
+      },
+      {
+        "code": "move2",
+        "param": "",
+        "min_val": "20",
+        "max_val": "20",
+        "resolved_text": "+20% Faster Run/Walk"
+      },
+      {
+        "code": "reduce-ac",
+        "param": "",
+        "min_val": "50",
+        "max_val": "50",
+        "resolved_text": "-50% Target Defense"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Tornado",
+        "min_val": "10",
+        "max_val": "9",
+        "resolved_text": "10% Chance to cast level 9 Tornado on striking"
+      },
+      {
+        "code": "charged",
+        "param": "240",
+        "min_val": "127",
+        "max_val": "13",
+        "resolved_text": "Level 127 Twister (13/# Charges)"
+      },
+      {
+        "code": "balance2",
+        "param": "",
+        "min_val": "15",
+        "max_val": "15",
+        "resolved_text": "+15% Faster Hit Recovery"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword163",
+      "*Rune Name": "Wind",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "mele",
+      "itype2": "",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "SurEl",
+      "Rune1": "r29",
+      "Rune2": "r01",
+      "Rune3": "",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "120",
+      "T1Max1": "160",
+      "T1Code2": "swing2",
+      "T1Param2": "",
+      "T1Min2": "40",
+      "T1Max2": "40",
+      "T1Code3": "move2",
+      "T1Param3": "",
+      "T1Min3": "20",
+      "T1Max3": "20",
+      "T1Code4": "reduce-ac",
+      "T1Param4": "",
+      "T1Min4": "50",
+      "T1Max4": "50",
+      "T1Code5": "hit-skill",
+      "T1Param5": "Tornado",
+      "T1Min5": "10",
+      "T1Max5": "9",
+      "T1Code6": "charged",
+      "T1Param6": "240",
+      "T1Min6": "127",
+      "T1Max6": "13",
+      "T1Code7": "balance2",
+      "T1Param7": "",
+      "T1Min7": "15",
+      "T1Max7": "15",
+      "*eol": "0"
+    }
+  }
+]

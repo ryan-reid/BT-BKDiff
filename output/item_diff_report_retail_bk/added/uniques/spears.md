@@ -2,7 +2,7 @@
 
 **Arioc's Needle** (Arioc's Needle)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Hyperion Spear |
 | | **Level Requirement:** 81 |
@@ -17,7 +17,7 @@
 
 **Bloodthief** (Bloodthief)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Brandistock |
 | | **Level Requirement:** 17 |
@@ -31,7 +31,7 @@
 
 **Hone Sundan** (Hone Sundan)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Yari |
 | | **Level Requirement:** 37 |
@@ -44,7 +44,7 @@
 
 **Kelpie Snare** (Kelpie Snare)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Fuscina |
 | | **Level Requirement:** 33 |
@@ -60,7 +60,7 @@
 
 **Lance of Yaggai** (Lance of Yaggai)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Spetum |
 | | **Level Requirement:** 22 |
@@ -74,7 +74,7 @@
 
 **Razortine** (Razortine)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Trident |
 | | **Level Requirement:** 12 |
@@ -89,7 +89,7 @@
 
 **Soulfeast Tine** (Soulfeast Tine)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** War Fork |
 | | **Level Requirement:** 35 |
@@ -104,7 +104,7 @@
 
 **Spire of Honor** (Spire of Honor)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Lance |
 | | **Level Requirement:** 39 |
@@ -119,7 +119,7 @@
 
 **Steel Pillar** (Steelpillar)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** War Pike |
 | | **Level Requirement:** 69 |
@@ -136,7 +136,7 @@
 
 **The Dragon Chang** (The Dragon Chang)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Spear |
 | | **Level Requirement:** 8 |
@@ -150,7 +150,7 @@
 
 **The Tannr Gorerod** (The Tannr Gorerod)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Pike |
 | | **Level Requirement:** 27 |
@@ -164,7 +164,7 @@
 
 **Viperfork** (Viperfork)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Mancatcher |
 | | **Level Requirement:** 71 |
@@ -178,7 +178,7 @@
 
 **the Impaler** (The Impaler)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** War Spear |
 | | **Level Requirement:** 31 |

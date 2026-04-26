@@ -1,0 +1,475 @@
+[
+  {
+    "name": "Beast",
+    "runes": [
+      "Ber Rune",
+      "Tir Rune",
+      "Um Rune",
+      "Mal Rune",
+      "Lum Rune"
+    ],
+    "base_items": [
+      "Axe"
+    ],
+    "properties": [
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Increased Attack Speed"
+      },
+      {
+        "code": "aura",
+        "param": "Fanaticism",
+        "min_val": "9",
+        "max_val": "9",
+        "resolved_text": "Level 9 Fanaticism Aura When Equipped"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "240",
+        "max_val": "270",
+        "resolved_text": "+240-270% Enhanced Damage"
+      },
+      {
+        "code": "str",
+        "param": "",
+        "min_val": "25",
+        "max_val": "40",
+        "resolved_text": "+25-40 to Strength"
+      },
+      {
+        "code": "charged",
+        "param": "Summon Grizzly",
+        "min_val": "5",
+        "max_val": "13",
+        "resolved_text": "Level 5 Summon Grizzly (13/# Charges)"
+      },
+      {
+        "code": "oskill",
+        "param": "Wearbear",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Werebear"
+      },
+      {
+        "code": "oskill",
+        "param": "Shape Shifting",
+        "min_val": "3",
+        "max_val": "3",
+        "resolved_text": "+3 to Lycanthropy"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword4",
+      "*Rune Name": "Beast",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "axe",
+      "itype2": "scep",
+      "itype3": "hamm",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "BerTirUmMalLum",
+      "Rune1": "r30",
+      "Rune2": "r03",
+      "Rune3": "r22",
+      "Rune4": "r23",
+      "Rune5": "r17",
+      "Rune6": "",
+      "T1Code1": "swing2",
+      "T1Param1": "",
+      "T1Min1": "40",
+      "T1Max1": "40",
+      "T1Code2": "aura",
+      "T1Param2": "Fanaticism",
+      "T1Min2": "9",
+      "T1Max2": "9",
+      "T1Code3": "dmg%",
+      "T1Param3": "",
+      "T1Min3": "240",
+      "T1Max3": "270",
+      "T1Code4": "str",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "40",
+      "T1Code5": "charged",
+      "T1Param5": "Summon Grizzly",
+      "T1Min5": "5",
+      "T1Max5": "13",
+      "T1Code6": "oskill",
+      "T1Param6": "Wearbear",
+      "T1Min6": "3",
+      "T1Max6": "3",
+      "T1Code7": "oskill",
+      "T1Param7": "Shape Shifting",
+      "T1Min7": "3",
+      "T1Max7": "3",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Crescent Moon",
+    "runes": [
+      "Shael Rune",
+      "Um Rune",
+      "Tir Rune"
+    ],
+    "base_items": [
+      "Axe"
+    ],
+    "properties": [
+      {
+        "code": "pierce-ltng",
+        "param": "",
+        "min_val": "35",
+        "max_val": "35",
+        "resolved_text": "-35% to Enemy Lightning Resistance"
+      },
+      {
+        "code": "ignore-ac",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Ignore Target's Defense"
+      },
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "180",
+        "max_val": "220",
+        "resolved_text": "+180-220% Enhanced Damage"
+      },
+      {
+        "code": "abs-mag",
+        "param": "",
+        "min_val": "9",
+        "max_val": "11",
+        "resolved_text": "Magic Absorb 9-11%"
+      },
+      {
+        "code": "charged",
+        "param": "Summon Spirit Wolf",
+        "min_val": "30",
+        "max_val": "18",
+        "resolved_text": "Level 30 Summon Spirit Wolf (18/# Charges)"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Static Field",
+        "min_val": "7",
+        "max_val": "13",
+        "resolved_text": "7% Chance to cast level 13 Static Field on striking"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Chain Lightning",
+        "min_val": "10",
+        "max_val": "17",
+        "resolved_text": "10% Chance to cast level 17 Chain Lightning on striking"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword17",
+      "*Rune Name": "Crescent Moon",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "axe",
+      "itype2": "swor",
+      "itype3": "pole",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ShaelUmTir",
+      "Rune1": "r13",
+      "Rune2": "r22",
+      "Rune3": "r03",
+      "Rune4": "",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "pierce-ltng",
+      "T1Param1": "",
+      "T1Min1": "35",
+      "T1Max1": "35",
+      "T1Code2": "ignore-ac",
+      "T1Param2": "",
+      "T1Min2": "1",
+      "T1Max2": "1",
+      "T1Code3": "dmg%",
+      "T1Param3": "",
+      "T1Min3": "180",
+      "T1Max3": "220",
+      "T1Code4": "abs-mag",
+      "T1Param4": "",
+      "T1Min4": "9",
+      "T1Max4": "11",
+      "T1Code5": "charged",
+      "T1Param5": "Summon Spirit Wolf",
+      "T1Min5": "30",
+      "T1Max5": "18",
+      "T1Code6": "hit-skill",
+      "T1Param6": "Static Field",
+      "T1Min6": "7",
+      "T1Max6": "13",
+      "T1Code7": "hit-skill",
+      "T1Param7": "Chain Lightning",
+      "T1Min7": "10",
+      "T1Max7": "17",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Doom",
+    "runes": [
+      "Hel Rune",
+      "Ohm Rune",
+      "Um Rune",
+      "Lo Rune",
+      "Cham Rune"
+    ],
+    "base_items": [
+      "Axe"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "280",
+        "max_val": "320",
+        "resolved_text": "+280-320% Enhanced Damage"
+      },
+      {
+        "code": "aura",
+        "param": "Holy Freeze",
+        "min_val": "12",
+        "max_val": "12",
+        "resolved_text": "Level 12 Holy Freeze Aura When Equipped"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "45",
+        "max_val": "45",
+        "resolved_text": "+45% Increased Attack Speed"
+      },
+      {
+        "code": "noheal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Prevent Monster Heal"
+      },
+      {
+        "code": "pierce-cold",
+        "param": "",
+        "min_val": "40",
+        "max_val": "60",
+        "resolved_text": "-40-60% to Enemy Cold Resistance"
+      },
+      {
+        "code": "allskills",
+        "param": "",
+        "min_val": "2",
+        "max_val": "2",
+        "resolved_text": "+2 to All Skills"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Volcano",
+        "min_val": "5",
+        "max_val": "18",
+        "resolved_text": "5% Chance to cast level 18 Volcano on striking"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword26",
+      "*Rune Name": "Doom",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "110",
+      "itype1": "axe",
+      "itype2": "pole",
+      "itype3": "hamm",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelOhmUmLoCham",
+      "Rune1": "r15",
+      "Rune2": "r27",
+      "Rune3": "r22",
+      "Rune4": "r28",
+      "Rune5": "r32",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "280",
+      "T1Max1": "320",
+      "T1Code2": "aura",
+      "T1Param2": "Holy Freeze",
+      "T1Min2": "12",
+      "T1Max2": "12",
+      "T1Code3": "swing2",
+      "T1Param3": "",
+      "T1Min3": "45",
+      "T1Max3": "45",
+      "T1Code4": "noheal",
+      "T1Param4": "",
+      "T1Min4": "1",
+      "T1Max4": "1",
+      "T1Code5": "pierce-cold",
+      "T1Param5": "",
+      "T1Min5": "40",
+      "T1Max5": "60",
+      "T1Code6": "allskills",
+      "T1Param6": "",
+      "T1Min6": "2",
+      "T1Max6": "2",
+      "T1Code7": "hit-skill",
+      "T1Param7": "Volcano",
+      "T1Min7": "5",
+      "T1Max7": "18",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Famine",
+    "runes": [
+      "Fal Rune",
+      "Ohm Rune",
+      "Ort Rune",
+      "Jah Rune"
+    ],
+    "base_items": [
+      "Axe"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "270",
+        "max_val": "320",
+        "resolved_text": "+270-320% Enhanced Damage"
+      },
+      {
+        "code": "lifesteal",
+        "param": "",
+        "min_val": "12",
+        "max_val": "12",
+        "resolved_text": "12% Life stolen per hit"
+      },
+      {
+        "code": "swing2",
+        "param": "",
+        "min_val": "30",
+        "max_val": "30",
+        "resolved_text": "+30% Increased Attack Speed"
+      },
+      {
+        "code": "noheal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Prevent Monster Heal"
+      },
+      {
+        "code": "dmg-mag",
+        "param": "",
+        "min_val": "180",
+        "max_val": "200",
+        "resolved_text": "Adds 180-200 Magic Damage"
+      },
+      {
+        "code": "dmg-elem",
+        "param": "",
+        "min_val": "50",
+        "max_val": "200",
+        "resolved_text": "Adds 50-200 Fire/Lightning/Cold Damage"
+      },
+      {
+        "code": "ethereal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Ethereal"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword39",
+      "*Rune Name": "Famine",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "",
+      "itype1": "axe",
+      "itype2": "hamm",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "FalOhmOrtJah",
+      "Rune1": "r19",
+      "Rune2": "r27",
+      "Rune3": "r09",
+      "Rune4": "r31",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "270",
+      "T1Max1": "320",
+      "T1Code2": "lifesteal",
+      "T1Param2": "",
+      "T1Min2": "12",
+      "T1Max2": "12",
+      "T1Code3": "swing2",
+      "T1Param3": "",
+      "T1Min3": "30",
+      "T1Max3": "30",
+      "T1Code4": "noheal",
+      "T1Param4": "",
+      "T1Min4": "1",
+      "T1Max4": "1",
+      "T1Code5": "dmg-mag",
+      "T1Param5": "",
+      "T1Min5": "180",
+      "T1Max5": "200",
+      "T1Code6": "dmg-elem",
+      "T1Param6": "",
+      "T1Min6": "50",
+      "T1Max6": "200",
+      "T1Code7": "ethereal",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  }
+]

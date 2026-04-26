@@ -2,7 +2,7 @@
 
 **Ars Al'Diabolos** (Ars Al'Diablolos)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Blasphemous Grimoire |
 | | **Level Requirement:** 80 |
@@ -21,7 +21,7 @@
 
 **Ars Dul'Mephistos** (Ars Dul'Mephistos)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Occult Tome |
 | | **Level Requirement:** 78 |
@@ -38,7 +38,7 @@
 
 **Ars Tor'Baalos** (Ars Tor'Baalos)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Blasphemous Compendium |
 | | **Level Requirement:** 73 |
@@ -56,7 +56,7 @@
 
 **Measured Wrath** (Measured Wrath)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Burnt Text |
 | | **Level Requirement:** 52 |

@@ -2,7 +2,7 @@
 
 **Blood Raven's Charge** (Bloodraven's Charge)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Matriarchal Bow |
 | | **Level Requirement:** 71 |
@@ -17,7 +17,7 @@
 
 **Lycander's Aim** (Lycander's Aim)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ceremonial Bow |
 | | **Level Requirement:** 42 |

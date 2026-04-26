@@ -2,7 +2,7 @@
 
 **Arcanna's Deathwand** (Arcanna's Deathwand)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** War Staff |
 | | **Level Requirement:** 1 |
@@ -12,7 +12,7 @@
 
 **Cathan's Rule** (Cathan's Rule)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Battle Staff |
 | | **Level Requirement:** 1 |
@@ -23,7 +23,7 @@
 
 **Naj's Puzzler** (Naj's Puzzler)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Elder Staff |
 | | **Level Requirement:** 59 |

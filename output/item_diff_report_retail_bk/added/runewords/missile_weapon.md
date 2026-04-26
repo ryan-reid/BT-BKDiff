@@ -2,7 +2,7 @@
 
 **Brand** (Brand)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
@@ -17,7 +17,7 @@
 
 **Edge** (Edge)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
@@ -32,7 +32,7 @@
 
 **Faith** (Faith)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
@@ -47,7 +47,7 @@
 
 **Harmony** (Harmony)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
@@ -62,7 +62,7 @@
 
 **Ice** (Ice)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
@@ -77,7 +77,7 @@
 
 **Melody** (Melody)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
@@ -91,7 +91,7 @@
 
 **Mist** (Mist)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
@@ -105,7 +105,7 @@
 
 **Wrath** (Wrath)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |
@@ -120,7 +120,7 @@
 
 **Zephyr** (Zephyr)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Missile Weapon |
 | | **Level Requirement:** 0 |

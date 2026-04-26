@@ -2,7 +2,7 @@
 
 **Ritual** (Ritual)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Knife |
 | | **Level Requirement:** 0 |

@@ -1,0 +1,712 @@
+[
+  {
+    "name": "Destruction",
+    "runes": [
+      "Vex Rune",
+      "Lo Rune",
+      "Ber Rune",
+      "Jah Rune",
+      "Ko Rune"
+    ],
+    "base_items": [
+      "Polearm"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "350",
+        "max_val": "350",
+        "resolved_text": "+350% Enhanced Damage"
+      },
+      {
+        "code": "dmg-mag",
+        "param": "",
+        "min_val": "100",
+        "max_val": "180",
+        "resolved_text": "Adds 100-180 Magic Damage"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Molten Boulder",
+        "min_val": "5",
+        "max_val": "23",
+        "resolved_text": "5% Chance to cast level 23 Molten Boulder on striking"
+      },
+      {
+        "code": "death-skill",
+        "param": "Meteor",
+        "min_val": "100",
+        "max_val": "45",
+        "resolved_text": "100% Chance to cast level 45 Meteor when you Die"
+      },
+      {
+        "code": "att-skill",
+        "param": "Nova",
+        "min_val": "15",
+        "max_val": "22",
+        "resolved_text": "15% Chance to cast level 22 Nova on attack"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Volcano",
+        "min_val": "23",
+        "max_val": "12",
+        "resolved_text": "23% Chance to cast level 12 Volcano on striking"
+      },
+      {
+        "code": "noheal",
+        "param": "",
+        "min_val": "1",
+        "max_val": "1",
+        "resolved_text": "Prevent Monster Heal"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword25",
+      "*Rune Name": "Destruction",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "pole",
+      "itype2": "swor",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "VexLoBerJahKo",
+      "Rune1": "r26",
+      "Rune2": "r28",
+      "Rune3": "r30",
+      "Rune4": "r31",
+      "Rune5": "r18",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "350",
+      "T1Max1": "350",
+      "T1Code2": "dmg-mag",
+      "T1Param2": "",
+      "T1Min2": "100",
+      "T1Max2": "180",
+      "T1Code3": "hit-skill",
+      "T1Param3": "Molten Boulder",
+      "T1Min3": "5",
+      "T1Max3": "23",
+      "T1Code4": "death-skill",
+      "T1Param4": "Meteor",
+      "T1Min4": "100",
+      "T1Max4": "45",
+      "T1Code5": "att-skill",
+      "T1Param5": "Nova",
+      "T1Min5": "15",
+      "T1Max5": "22",
+      "T1Code6": "hit-skill",
+      "T1Param6": "Volcano",
+      "T1Min6": "23",
+      "T1Max6": "12",
+      "T1Code7": "noheal",
+      "T1Param7": "",
+      "T1Min7": "1",
+      "T1Max7": "1",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Infinity",
+    "runes": [
+      "Ber Rune",
+      "Mal Rune",
+      "Ber Rune",
+      "Ist Rune"
+    ],
+    "base_items": [
+      "Polearm"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "255",
+        "max_val": "325",
+        "resolved_text": "+255-325% Enhanced Damage"
+      },
+      {
+        "code": "move3",
+        "param": "",
+        "min_val": "35",
+        "max_val": "35",
+        "resolved_text": "+35% Faster Run/Walk"
+      },
+      {
+        "code": "vit/lvl",
+        "param": "4",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(0.5 per clvl) to Vitality (Based on Character Level)"
+      },
+      {
+        "code": "aura",
+        "param": "Conviction",
+        "min_val": "12",
+        "max_val": "12",
+        "resolved_text": "Level 12 Conviction Aura When Equipped"
+      },
+      {
+        "code": "kill-skill",
+        "param": "Chain Lightning",
+        "min_val": "50",
+        "max_val": "20",
+        "resolved_text": "50% Chance to cast level 20 Chain Lightning when you Kill an Enemy"
+      },
+      {
+        "code": "pierce-ltng",
+        "param": "",
+        "min_val": "45",
+        "max_val": "55",
+        "resolved_text": "-45-55% to Enemy Lightning Resistance"
+      },
+      {
+        "code": "charged",
+        "param": "Cyclone Armor",
+        "min_val": "30",
+        "max_val": "21",
+        "resolved_text": "Level 30 Cyclone Armor (21/# Charges)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword60",
+      "*Rune Name": "Infinity",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "pole",
+      "itype2": "spea",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "BerMalBerIst",
+      "Rune1": "r30",
+      "Rune2": "r23",
+      "Rune3": "r30",
+      "Rune4": "r24",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "255",
+      "T1Max1": "325",
+      "T1Code2": "move3",
+      "T1Param2": "",
+      "T1Min2": "35",
+      "T1Max2": "35",
+      "T1Code3": "vit/lvl",
+      "T1Param3": "4",
+      "T1Min3": "",
+      "T1Max3": "",
+      "T1Code4": "aura",
+      "T1Param4": "Conviction",
+      "T1Min4": "12",
+      "T1Max4": "12",
+      "T1Code5": "kill-skill",
+      "T1Param5": "Chain Lightning",
+      "T1Min5": "50",
+      "T1Max5": "20",
+      "T1Code6": "pierce-ltng",
+      "T1Param6": "",
+      "T1Min6": "45",
+      "T1Max6": "55",
+      "T1Code7": "charged",
+      "T1Param7": "Cyclone Armor",
+      "T1Min7": "30",
+      "T1Max7": "21",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Insight",
+    "runes": [
+      "Ral Rune",
+      "Tir Rune",
+      "Tal Rune",
+      "Sol Rune"
+    ],
+    "base_items": [
+      "Polearm"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "200",
+        "max_val": "260",
+        "resolved_text": "+200-260% Enhanced Damage"
+      },
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "180",
+        "max_val": "250",
+        "resolved_text": "180-250% Bonus to Attack Rating"
+      },
+      {
+        "code": "mag%",
+        "param": "",
+        "min_val": "23",
+        "max_val": "23",
+        "resolved_text": "23% Better Chance of Getting Magic Items"
+      },
+      {
+        "code": "oskill",
+        "param": "Critical Strike",
+        "min_val": "1",
+        "max_val": "6",
+        "resolved_text": "+1-6 to Critical Strike"
+      },
+      {
+        "code": "cast2",
+        "param": "",
+        "min_val": "35",
+        "max_val": "35",
+        "resolved_text": "+35% Faster Cast Rate"
+      },
+      {
+        "code": "aura",
+        "param": "Meditation",
+        "min_val": "12",
+        "max_val": "17",
+        "resolved_text": "Level 12-17 Meditation Aura When Equipped"
+      },
+      {
+        "code": "all-stats",
+        "param": "",
+        "min_val": "5",
+        "max_val": "5",
+        "resolved_text": "+5 to all Attributes"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword62",
+      "*Rune Name": "Insight",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "pole",
+      "itype2": "staf",
+      "itype3": "miss",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "RalTirTalSol",
+      "Rune1": "r08",
+      "Rune2": "r03",
+      "Rune3": "r07",
+      "Rune4": "r12",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "200",
+      "T1Max1": "260",
+      "T1Code2": "att%",
+      "T1Param2": "",
+      "T1Min2": "180",
+      "T1Max2": "250",
+      "T1Code3": "mag%",
+      "T1Param3": "",
+      "T1Min3": "23",
+      "T1Max3": "23",
+      "T1Code4": "oskill",
+      "T1Param4": "Critical Strike",
+      "T1Min4": "1",
+      "T1Max4": "6",
+      "T1Code5": "cast2",
+      "T1Param5": "",
+      "T1Min5": "35",
+      "T1Max5": "35",
+      "T1Code6": "aura",
+      "T1Param6": "Meditation",
+      "T1Min6": "12",
+      "T1Max6": "17",
+      "T1Code7": "all-stats",
+      "T1Param7": "",
+      "T1Min7": "5",
+      "T1Max7": "5",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Obedience",
+    "runes": [
+      "Hel Rune",
+      "Ko Rune",
+      "Thul Rune",
+      "Eth Rune",
+      "Fal Rune"
+    ],
+    "base_items": [
+      "Polearm"
+    ],
+    "properties": [
+      {
+        "code": "dmg%",
+        "param": "",
+        "min_val": "370",
+        "max_val": "370",
+        "resolved_text": "+370% Enhanced Damage"
+      },
+      {
+        "code": "crush",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "40% Chance of Crushing Blow"
+      },
+      {
+        "code": "kill-skill",
+        "param": "enchant",
+        "min_val": "30",
+        "max_val": "21",
+        "resolved_text": "30% Chance to cast level 21 Enchant when you Kill an Enemy"
+      },
+      {
+        "code": "pierce-fire",
+        "param": "",
+        "min_val": "25",
+        "max_val": "25",
+        "resolved_text": "-25% to Enemy Fire Resistance"
+      },
+      {
+        "code": "ac",
+        "param": "",
+        "min_val": "200",
+        "max_val": "300",
+        "resolved_text": "+200-300 Defense"
+      },
+      {
+        "code": "balance3",
+        "param": "",
+        "min_val": "40",
+        "max_val": "40",
+        "resolved_text": "+40% Faster Hit Recovery"
+      },
+      {
+        "code": "res-all",
+        "param": "",
+        "min_val": "20",
+        "max_val": "30",
+        "resolved_text": "All Resistances +20-30"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword92",
+      "*Rune Name": "Obedience",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "pole",
+      "itype2": "spea",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelKoThulEthFal",
+      "Rune1": "r15",
+      "Rune2": "r18",
+      "Rune3": "r10",
+      "Rune4": "r05",
+      "Rune5": "r19",
+      "Rune6": "",
+      "T1Code1": "dmg%",
+      "T1Param1": "",
+      "T1Min1": "370",
+      "T1Max1": "370",
+      "T1Code2": "crush",
+      "T1Param2": "",
+      "T1Min2": "40",
+      "T1Max2": "40",
+      "T1Code3": "kill-skill",
+      "T1Param3": "enchant",
+      "T1Min3": "30",
+      "T1Max3": "21",
+      "T1Code4": "pierce-fire",
+      "T1Param4": "",
+      "T1Min4": "25",
+      "T1Max4": "25",
+      "T1Code5": "ac",
+      "T1Param5": "",
+      "T1Min5": "200",
+      "T1Max5": "300",
+      "T1Code6": "balance3",
+      "T1Param6": "",
+      "T1Min6": "40",
+      "T1Max6": "40",
+      "T1Code7": "res-all",
+      "T1Param7": "",
+      "T1Min7": "20",
+      "T1Max7": "30",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Pride",
+    "runes": [
+      "Cham Rune",
+      "Sur Rune",
+      "Io Rune",
+      "Lo Rune"
+    ],
+    "base_items": [
+      "Polearm"
+    ],
+    "properties": [
+      {
+        "code": "dmg-dem/lvl",
+        "param": "8",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(1.0% per clvl) Damage to Demons (Based on Character Level)"
+      },
+      {
+        "code": "dmg-ltng",
+        "param": "",
+        "min_val": "50",
+        "max_val": "280",
+        "resolved_text": "Adds 50-280 Lightning Damage"
+      },
+      {
+        "code": "att%",
+        "param": "",
+        "min_val": "260",
+        "max_val": "300",
+        "resolved_text": "260-300% Bonus to Attack Rating"
+      },
+      {
+        "code": "aura",
+        "param": "Concentration",
+        "min_val": "16",
+        "max_val": "20",
+        "resolved_text": "Level 16-20 Concentration Aura When Equipped"
+      },
+      {
+        "code": "gethit-skill",
+        "param": "Fire Wall",
+        "min_val": "25",
+        "max_val": "17",
+        "resolved_text": "25% Chance to cast level 17 Fire Wall when struck"
+      },
+      {
+        "code": "regen",
+        "param": "",
+        "min_val": "8",
+        "max_val": "8",
+        "resolved_text": "Replenish Life +8"
+      },
+      {
+        "code": "gold%/lvl",
+        "param": "15",
+        "min_val": "",
+        "max_val": "",
+        "resolved_text": "(1.9% per clvl) Extra Gold from Monsters (Based on Character Level)"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword109",
+      "*Rune Name": "Pride",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "pole",
+      "itype2": "spea",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "ChamSurIoLo",
+      "Rune1": "r32",
+      "Rune2": "r29",
+      "Rune3": "r16",
+      "Rune4": "r28",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg-dem/lvl",
+      "T1Param1": "8",
+      "T1Min1": "",
+      "T1Max1": "",
+      "T1Code2": "dmg-ltng",
+      "T1Param2": "",
+      "T1Min2": "50",
+      "T1Max2": "280",
+      "T1Code3": "att%",
+      "T1Param3": "",
+      "T1Min3": "260",
+      "T1Max3": "300",
+      "T1Code4": "aura",
+      "T1Param4": "Concentration",
+      "T1Min4": "16",
+      "T1Max4": "20",
+      "T1Code5": "gethit-skill",
+      "T1Param5": "Fire Wall",
+      "T1Min5": "25",
+      "T1Max5": "17",
+      "T1Code6": "regen",
+      "T1Param6": "",
+      "T1Min6": "8",
+      "T1Max6": "8",
+      "T1Code7": "gold%/lvl",
+      "T1Param7": "15",
+      "T1Min7": "",
+      "T1Max7": "",
+      "*eol": "0"
+    }
+  },
+  {
+    "name": "Rift",
+    "runes": [
+      "Hel Rune",
+      "Ko Rune",
+      "Lem Rune",
+      "Gul Rune"
+    ],
+    "base_items": [
+      "Polearm"
+    ],
+    "properties": [
+      {
+        "code": "dmg-mag",
+        "param": "",
+        "min_val": "160",
+        "max_val": "250",
+        "resolved_text": "Adds 160-250 Magic Damage"
+      },
+      {
+        "code": "dmg-fire",
+        "param": "",
+        "min_val": "60",
+        "max_val": "180",
+        "resolved_text": "Adds 60-180 Fire Damage"
+      },
+      {
+        "code": "dmg-to-mana",
+        "param": "",
+        "min_val": "38",
+        "max_val": "38",
+        "resolved_text": "38% Damage Taken Goes To Mana"
+      },
+      {
+        "code": "hit-skill",
+        "param": "Tornado",
+        "min_val": "20",
+        "max_val": "16",
+        "resolved_text": "20% Chance to cast level 16 Tornado on striking"
+      },
+      {
+        "code": "att-skill",
+        "param": "Frozen Orb",
+        "min_val": "16",
+        "max_val": "21",
+        "resolved_text": "16% Chance to cast level 21 Frozen Orb on attack"
+      },
+      {
+        "code": "charged",
+        "param": "Iron Maiden",
+        "min_val": "40",
+        "max_val": "15",
+        "resolved_text": "Level 40 Iron Maiden (15/# Charges)"
+      },
+      {
+        "code": "all-stats",
+        "param": "",
+        "min_val": "5",
+        "max_val": "10",
+        "resolved_text": "+5-10 to all Attributes"
+      }
+    ],
+    "raw_row": {
+      "Name": "Runeword121",
+      "*Rune Name": "Rift",
+      "complete": "1",
+      "disallowCraftingInLadder": "",
+      "disallowCraftingInNonLadder": "",
+      "firstLadderSeason": "",
+      "lastLadderSeason": "",
+      "*Patch Release": "Previously Ladder Only",
+      "itype1": "pole",
+      "itype2": "scep",
+      "itype3": "",
+      "itype4": "",
+      "itype5": "",
+      "itype6": "",
+      "etype1": "",
+      "etype2": "",
+      "etype3": "",
+      "*RunesUsed": "HelKoLemGul",
+      "Rune1": "r15",
+      "Rune2": "r18",
+      "Rune3": "r20",
+      "Rune4": "r25",
+      "Rune5": "",
+      "Rune6": "",
+      "T1Code1": "dmg-mag",
+      "T1Param1": "",
+      "T1Min1": "160",
+      "T1Max1": "250",
+      "T1Code2": "dmg-fire",
+      "T1Param2": "",
+      "T1Min2": "60",
+      "T1Max2": "180",
+      "T1Code3": "dmg-to-mana",
+      "T1Param3": "",
+      "T1Min3": "38",
+      "T1Max3": "38",
+      "T1Code4": "hit-skill",
+      "T1Param4": "Tornado",
+      "T1Min4": "20",
+      "T1Max4": "16",
+      "T1Code5": "att-skill",
+      "T1Param5": "Frozen Orb",
+      "T1Min5": "16",
+      "T1Max5": "21",
+      "T1Code6": "charged",
+      "T1Param6": "Iron Maiden",
+      "T1Min6": "40",
+      "T1Max6": "15",
+      "T1Code7": "all-stats",
+      "T1Param7": "",
+      "T1Min7": "5",
+      "T1Max7": "10",
+      "*eol": "0"
+    }
+  }
+]

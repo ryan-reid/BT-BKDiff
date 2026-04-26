@@ -2,7 +2,7 @@
 
 **M'avina's Caster** (M'avina's Caster)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Grand Matron Bow |
 | | **Level Requirement:** 70 |

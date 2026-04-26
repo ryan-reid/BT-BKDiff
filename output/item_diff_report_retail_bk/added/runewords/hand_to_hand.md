@@ -2,7 +2,7 @@
 
 **Chaos** (Chaos)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Hand to Hand |
 | | **Level Requirement:** 0 |
@@ -17,7 +17,7 @@
 
 **Pattern** (Pattern)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Hand to Hand |
 | | **Level Requirement:** 0 |

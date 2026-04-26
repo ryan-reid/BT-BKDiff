@@ -2,7 +2,7 @@
 
 **Bul\-Kathos' Wedding Band** (Bul Katho's Wedding Band)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 58 |
@@ -14,7 +14,7 @@
 
 **Carrion Wind** (Carrion Wind)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 60 |
@@ -31,7 +31,7 @@
 
 **Constricting Ring** (Constricting Ring)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 95 |
@@ -43,7 +43,7 @@
 
 **Dwarf Star** (Dwarf Star)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 45 |
@@ -56,7 +56,7 @@
 
 **Manald Heal** (Manald Heal)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 15 |
@@ -70,7 +70,7 @@
 
 **Nagelring** (Nagelring)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 7 |
@@ -83,7 +83,7 @@
 
 **Nature's Peace** (Nature's Peace)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 69 |
@@ -97,7 +97,7 @@
 
 **Opalvein** (Opalvein)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 50 |
@@ -111,7 +111,7 @@
 
 **Raven Frost** (Raven Frost)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 45 |
@@ -125,7 +125,7 @@
 
 **Sling** (Sling)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 50 |
@@ -139,7 +139,7 @@
 
 **The Stone of Jordan** (The Stone of Jordan)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 29 |
@@ -151,7 +151,7 @@
 
 **Wisp Projector** (Wisp)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ring |
 | | **Level Requirement:** 76 |

@@ -2,7 +2,7 @@
 
 **Arctic Horn** (Arctic Horn)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Short War Bow |
 | | **Level Requirement:** 1 |
@@ -13,7 +13,7 @@
 
 **Vidala's Barb** (Vidala's Barb)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Long Battle Bow |
 | | **Level Requirement:** 1 |

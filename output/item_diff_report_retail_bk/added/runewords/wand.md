@@ -2,7 +2,7 @@
 
 **White** (White)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Wand |
 | | **Level Requirement:** 0 |

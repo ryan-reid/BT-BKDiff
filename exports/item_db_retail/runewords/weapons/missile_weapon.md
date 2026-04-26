@@ -1,0 +1,106 @@
+# Missile Weapon Runewords
+
+### Brand
+* **Runes:** Jah Rune + Lo Rune + Mal Rune + Gul Rune
+* **Base Items:** Missile Weapon
+* **Properties:**
+    * \+260\-340% Enhanced Damage
+    * \+280\-330% Damage to Demons
+    * 100% Chance to cast level 18 Bone Spear on striking
+    * 35% Chance to cast level 14 Amplify Damage when struck
+    * Knockback
+    * Prevent Monster Heal
+    * Fires Explosive Arrows or Bolts
+
+### Edge
+* **Runes:** Tir Rune + Tal Rune + Amn Rune
+* **Base Items:** Missile Weapon
+* **Properties:**
+    * \+320\-380% Damage to Demons
+    * \+280% Damage to Undead
+    * \+35% Increased Attack Speed
+    * Prevent Monster Heal
+    * Level 15 Thorns Aura When Equipped
+    * \+5\-10 to all Attributes
+    * Reduces all Vendor Prices 15%
+
+### Faith
+* **Runes:** Ohm Rune + Jah Rune + Lem Rune + Eld Rune
+* **Base Items:** Missile Weapon
+* **Properties:**
+    * \+280% Enhanced Damage
+    * 300% Bonus to Attack Rating
+    * Adds 120\-120 Fire Damage
+    * All Resistances \+15
+    * Level 12\-15 Fanaticism Aura When Equipped
+    * Reanimate As: \[Returned\]
+    * \+1\-2 to All Skills
+
+### Harmony
+* **Runes:** Tir Rune + Ith Rune + Sol Rune + Ko Rune
+* **Base Items:** Missile Weapon
+* **Properties:**
+    * \+200\-275% Enhanced Damage
+    * Adds 55\-160 Fire/Lightning/Cold Damage
+    * Level 25 Revive \(20/\# Charges\)
+    * Level 10 Vigor Aura When Equipped
+    * \+2\-6 to Valkyrie
+    * Regenerate Mana 20%
+    * \+2 to Light Radius
+
+### Ice
+* **Runes:** Amn Rune + Shael Rune + Jah Rune + Lo Rune
+* **Base Items:** Missile Weapon
+* **Properties:**
+    * \+140\-210% Enhanced Damage
+    * Level 18 Holy Freeze Aura When Equipped
+    * \+25\-30% to Cold Skill Damage
+    * 25% Chance to cast level 22 Frost Nova on striking
+    * 100% Chance to cast level 40 Blizzard when you Level\-Up
+    * \-20% to Enemy Cold Resistance
+    * \(3\.1% per clvl\) Extra Gold from Monsters \(Based on Character Level\)
+
+### Melody
+* **Runes:** Shael Rune + Ko Rune + Nef Rune
+* **Base Items:** Missile Weapon
+* **Properties:**
+    * \+50% Enhanced Damage
+    * \+3 to Bow and Crossbow Skills
+    * \+3 to Critical Strike \(Amazon only\)
+    * \+3 to Dodge \(Amazon only\)
+    * \+3 to Slow Missiles \(Amazon only\)
+    * \+300% Damage to Undead
+
+### Mist
+* **Runes:** Cham Rune + Shael Rune + Gul Rune + Thul Rune + Ith Rune
+* **Base Items:** Missile Weapon
+* **Properties:**
+    * \+3 to All Skills
+    * \+325\-375% Enhanced Damage
+    * Level 8\-12 Concentration Aura When Equipped
+    * Piercing Attack
+    * \+24 to Vitality
+    * All Resistances \+40
+
+### Wrath
+* **Runes:** Pul Rune + Lum Rune + Ber Rune + Mal Rune
+* **Base Items:** Missile Weapon
+* **Properties:**
+    * \+300% Damage to Demons
+    * \+250\-300% Damage to Undead
+    * Adds 41\-240 Lightning Damage
+    * Adds 85\-120 Magic Damage
+    * 5% Chance to cast level 10 Life Tap on striking
+    * 30% Chance to cast level 1 Decrepify on striking
+    * Cannot Be Frozen
+
+### Zephyr
+* **Runes:** Ort Rune + Eth Rune
+* **Base Items:** Missile Weapon
+* **Properties:**
+    * \+25% Faster Run/Walk
+    * \+25% Increased Attack Speed
+    * \+33% Enhanced Damage
+    * \+66 to Attack Rating
+    * 7% Chance to cast level 1 Twister when struck
+    * \+25 Defense

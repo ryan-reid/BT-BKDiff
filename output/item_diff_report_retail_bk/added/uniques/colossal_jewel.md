@@ -2,7 +2,7 @@
 
 **Defender's Bile** (Defender's Bile)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
@@ -17,7 +17,7 @@
 
 **Defender's Fire** (Defender's Fire)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
@@ -32,7 +32,7 @@
 
 **Guardian's Light** (Guardian's Light)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
@@ -47,7 +47,7 @@
 
 **Guardian's Thunder** (Guardian's Thunder)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
@@ -62,7 +62,7 @@
 
 **Protector's Frost** (Protector's Frost)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |
@@ -77,7 +77,7 @@
 
 **Protector's Stone** (Protector's Stone)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 75 |

@@ -2,7 +2,7 @@
 
 **Immortal King's Stone Crusher** (Immortal King's Stone Crusher)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Ogre Maul |
 | | **Level Requirement:** 76 |

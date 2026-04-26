@@ -2,7 +2,7 @@
 
 **Hellfire Torch** (Hellfire Torch)
 
-| BT Diablo (Old) | BK Diablo (New) |
+| Retail (Old) | BK Diablo (New) |
 | :--- | :--- |
 | | **Base Item:** Large Charm |
 | | **Level Requirement:** 75 |
