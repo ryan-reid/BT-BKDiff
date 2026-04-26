@@ -7,14 +7,14 @@
 | | **Base Item:** Vortex Shield |
 | | **Level Requirement:** 68 |
 | | **Properties:** |
-| | <ins><code>Damage Reduced by 20-30</code></ins> |
-| | <ins><code>+3 to All Skills</code></ins> |
-| | <ins><code>+65% Faster Block Rate</code></ins> |
-| | <ins><code>+60% Faster Block Rate</code></ins> |
-| | <ins><code>All Resistances +45</code></ins> |
-| | <ins><code>Magic Damage Reduced by 20-30</code></ins> |
-| | <ins><code>+45% Faster Cast Rate</code></ins> |
-| | <ins><code>+150-200% Enhanced Defense</code></ins> |
+| | <strong><code>Damage Reduced by 20-30</code></strong> |
+| | <strong><code>+3 to All Skills</code></strong> |
+| | <strong><code>+65% Faster Block Rate</code></strong> |
+| | <strong><code>+60% Faster Block Rate</code></strong> |
+| | <strong><code>All Resistances +45</code></strong> |
+| | <strong><code>Magic Damage Reduced by 20-30</code></strong> |
+| | <strong><code>+45% Faster Cast Rate</code></strong> |
+| | <strong><code>+150-200% Enhanced Defense</code></strong> |
 
 **Griswold's Pride** (Griswold's Pride)
 
@@ -23,13 +23,13 @@
 | | **Base Item:** Vortex Shield |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+3 to Paladin Skill Levels</code></ins> |
-| | <ins><code>Level 15-18 Holy Freeze Aura When Equipped</code></ins> |
-| | <ins><code>+300% Enhanced Defense</code></ins> |
-| | <ins><code>+30% Increased Attack Speed</code></ins> |
-| | <ins><code>+30% Faster Cast Rate</code></ins> |
-| | <ins><code>+40% Faster Block Rate</code></ins> |
-| | <ins><code>+40% Faster Block Rate</code></ins> |
-| | <ins><code>Damage Reduced by 20-30</code></ins> |
-| | <ins><code>Magic Damage Reduced by 20-30</code></ins> |
+| | <strong><code>+3 to Paladin Skill Levels</code></strong> |
+| | <strong><code>Level 15-18 Holy Freeze Aura When Equipped</code></strong> |
+| | <strong><code>+300% Enhanced Defense</code></strong> |
+| | <strong><code>+30% Increased Attack Speed</code></strong> |
+| | <strong><code>+30% Faster Cast Rate</code></strong> |
+| | <strong><code>+40% Faster Block Rate</code></strong> |
+| | <strong><code>+40% Faster Block Rate</code></strong> |
+| | <strong><code>Damage Reduced by 20-30</code></strong> |
+| | <strong><code>Magic Damage Reduced by 20-30</code></strong> |
 

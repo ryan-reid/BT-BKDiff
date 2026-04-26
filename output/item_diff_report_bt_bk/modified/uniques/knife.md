@@ -1,7 +1,7 @@
 # Modified Unique Knife
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Blackbog's Sharp** (Blackbog's Sharp)
 
@@ -16,8 +16,8 @@
 | <code>Adds 500-500 Poison Damage Over 500 Seconds</code> | <code>Adds 500-500 Poison Damage Over 500 Seconds</code> |
 | <code>+6 to Poison Explosion (Necromancer only)</code> | <code>+6 to Poison Explosion (Necromancer only)</code> |
 | <code>+6 to Poison Nova (Necromancer only)</code> | <code>+6 to Poison Nova (Necromancer only)</code> |
-| <del><code>+6 to Poison Dagger (Necromancer only)</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>+6 to Poison Strike (Necromancer only)</code></ins> |
+| <strong><code>+6 to Poison Dagger (Necromancer only)</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>+6 to Poison Strike (Necromancer only)</code></strong> |
 
 **Spineripper** (Spineripper)
 
@@ -34,6 +34,6 @@
 | <code>+250% Enhanced Damage</code> | <code>+250% Enhanced Damage</code> |
 | <code>Adds 30-54 Damage</code> | <code>Adds 30-54 Damage</code> |
 | <code>+2 to Necromancer Skill Levels</code> | <code>+2 to Necromancer Skill Levels</code> |
-| <del><code>+3 to Poison Dagger</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>+3 to Poison Strike</code></ins> |
+| <strong><code>+3 to Poison Dagger</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>+3 to Poison Strike</code></strong> |
 

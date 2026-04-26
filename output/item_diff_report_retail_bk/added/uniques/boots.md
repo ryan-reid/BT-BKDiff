@@ -7,12 +7,12 @@
 | | **Base Item:** Light Plated Boots |
 | | **Level Requirement:** 22 |
 | | **Properties:** |
-| | <ins><code>25% Chance of Crushing Blow</code></ins> |
-| | <ins><code>Damage Reduced by 7</code></ins> |
-| | <ins><code>Magic Damage Reduced by 7</code></ins> |
-| | <ins><code>+15 Defense</code></ins> |
-| | <ins><code>+50-60% Enhanced Defense</code></ins> |
-| | <ins><code>+25% Faster Run/Walk</code></ins> |
+| | <strong><code>25% Chance of Crushing Blow</code></strong> |
+| | <strong><code>Damage Reduced by 7</code></strong> |
+| | <strong><code>Magic Damage Reduced by 7</code></strong> |
+| | <strong><code>+15 Defense</code></strong> |
+| | <strong><code>+50-60% Enhanced Defense</code></strong> |
+| | <strong><code>+25% Faster Run/Walk</code></strong> |
 
 **Gore Rider** (Gorerider)
 
@@ -21,13 +21,13 @@
 | | **Base Item:** War Boots |
 | | **Level Requirement:** 47 |
 | | **Properties:** |
-| | <ins><code>Requirements --25%</code></ins> |
-| | <ins><code>15% Deadly Strike</code></ins> |
-| | <ins><code>+30% Faster Run/Walk</code></ins> |
-| | <ins><code>15% Chance of Crushing Blow</code></ins> |
-| | <ins><code>10% Chance of Open Wounds</code></ins> |
-| | <ins><code>+160-200% Enhanced Defense</code></ins> |
-| | <ins><code>Durability: 10 of 10</code></ins> |
+| | <strong><code>Requirements --25%</code></strong> |
+| | <strong><code>15% Deadly Strike</code></strong> |
+| | <strong><code>+30% Faster Run/Walk</code></strong> |
+| | <strong><code>15% Chance of Crushing Blow</code></strong> |
+| | <strong><code>10% Chance of Open Wounds</code></strong> |
+| | <strong><code>+160-200% Enhanced Defense</code></strong> |
+| | <strong><code>Durability: 10 of 10</code></strong> |
 
 **Gorefoot** (Gorefoot)
 
@@ -36,14 +36,14 @@
 | | **Base Item:** Heavy Boots |
 | | **Level Requirement:** 9 |
 | | **Properties:** |
-| | <ins><code>Unknown property: bloody (3-5)</code></ins> |
-| | <ins><code>+25% Faster Run/Walk</code></ins> |
-| | <ins><code>2% Mana stolen per hit</code></ins> |
-| | <ins><code>Cold Resist +20%</code></ins> |
-| | <ins><code>+12 Defense</code></ins> |
-| | <ins><code>+20-30% Enhanced Defense</code></ins> |
-| | <ins><code>+2 to Leap Attack (Barbarian only)</code></ins> |
-| | <ins><code>+5-10% to Maximum Cold Resist</code></ins> |
+| | <strong><code>Unknown property: bloody (3-5)</code></strong> |
+| | <strong><code>+25% Faster Run/Walk</code></strong> |
+| | <strong><code>2% Mana stolen per hit</code></strong> |
+| | <strong><code>Cold Resist +20%</code></strong> |
+| | <strong><code>+12 Defense</code></strong> |
+| | <strong><code>+20-30% Enhanced Defense</code></strong> |
+| | <strong><code>+2 to Leap Attack (Barbarian only)</code></strong> |
+| | <strong><code>+5-10% to Maximum Cold Resist</code></strong> |
 
 **Hotspur** (Hotspur)
 
@@ -52,12 +52,12 @@
 | | **Base Item:** Boots |
 | | **Level Requirement:** 5 |
 | | **Properties:** |
-| | <ins><code>+15% to Maximum Fire Resist</code></ins> |
-| | <ins><code>+30 to Life</code></ins> |
-| | <ins><code>+25% Faster Run/Walk</code></ins> |
-| | <ins><code>Fire Absorb 15%</code></ins> |
-| | <ins><code>Level 3 Resist Fire Aura When Equipped</code></ins> |
-| | <ins><code>+10-20% Enhanced Defense</code></ins> |
+| | <strong><code>+15% to Maximum Fire Resist</code></strong> |
+| | <strong><code>+30 to Life</code></strong> |
+| | <strong><code>+25% Faster Run/Walk</code></strong> |
+| | <strong><code>Fire Absorb 15%</code></strong> |
+| | <strong><code>Level 3 Resist Fire Aura When Equipped</code></strong> |
+| | <strong><code>+10-20% Enhanced Defense</code></strong> |
 
 **Infernostride** (Infernostride)
 
@@ -66,15 +66,15 @@
 | | **Base Item:** Demonhide Boots |
 | | **Level Requirement:** 29 |
 | | **Properties:** |
-| | <ins><code>Adds 12-33 Fire Damage</code></ins> |
-| | <ins><code>+20% Faster Run/Walk</code></ins> |
-| | <ins><code>+10% to Maximum Fire Resist</code></ins> |
-| | <ins><code>Fire Resist +30%</code></ins> |
-| | <ins><code>+120-150% Enhanced Defense</code></ins> |
-| | <ins><code>60-100% Extra Gold from Monsters</code></ins> |
-| | <ins><code>+15 Defense</code></ins> |
-| | <ins><code>75% Chance to cast level 25 Blaze when struck</code></ins> |
-| | <ins><code>+20% Faster Hit Recovery</code></ins> |
+| | <strong><code>Adds 12-33 Fire Damage</code></strong> |
+| | <strong><code>+20% Faster Run/Walk</code></strong> |
+| | <strong><code>+10% to Maximum Fire Resist</code></strong> |
+| | <strong><code>Fire Resist +30%</code></strong> |
+| | <strong><code>+120-150% Enhanced Defense</code></strong> |
+| | <strong><code>60-100% Extra Gold from Monsters</code></strong> |
+| | <strong><code>+15 Defense</code></strong> |
+| | <strong><code>75% Chance to cast level 25 Blaze when struck</code></strong> |
+| | <strong><code>+20% Faster Hit Recovery</code></strong> |
 
 **Jym's Swift Journey** (Jym's Swift Journey)
 
@@ -83,12 +83,12 @@
 | | **Base Item:** Wyrmhide Boots |
 | | **Level Requirement:** 45 |
 | | **Properties:** |
-| | <ins><code>Level 3-14 Vigor Aura When Equipped</code></ins> |
-| | <ins><code>+30% Faster Hit Recovery</code></ins> |
-| | <ins><code>+10 to Strength</code></ins> |
-| | <ins><code>Requirements --100%</code></ins> |
-| | <ins><code>80% Extra Gold from Monsters</code></ins> |
-| | <ins><code>Increase Maximum Life 5%</code></ins> |
+| | <strong><code>Level 3-14 Vigor Aura When Equipped</code></strong> |
+| | <strong><code>+30% Faster Hit Recovery</code></strong> |
+| | <strong><code>+10 to Strength</code></strong> |
+| | <strong><code>Requirements --100%</code></strong> |
+| | <strong><code>80% Extra Gold from Monsters</code></strong> |
+| | <strong><code>Increase Maximum Life 5%</code></strong> |
 
 **Marrowwalk** (Marrowwalk)
 
@@ -97,16 +97,16 @@
 | | **Base Item:** Boneweave Boots |
 | | **Level Requirement:** 66 |
 | | **Properties:** |
-| | <ins><code>+170-200% Enhanced Defense</code></ins> |
-| | <ins><code>+40% Faster Run/Walk</code></ins> |
-| | <ins><code>+33 to Bone Prison</code></ins> |
-| | <ins><code>+10-12 to Life Tap</code></ins> |
-| | <ins><code>Regenerate Mana 10%</code></ins> |
-| | <ins><code>Cannot Be Frozen</code></ins> |
-| | <ins><code>+10-20 to Strength</code></ins> |
-| | <ins><code>+17 to Dexterity</code></ins> |
-| | <ins><code>+1-2 to Skeleton Mastery (Necromancer only)</code></ins> |
-| | <ins><code>Magic Damage Reduced by 20</code></ins> |
+| | <strong><code>+170-200% Enhanced Defense</code></strong> |
+| | <strong><code>+40% Faster Run/Walk</code></strong> |
+| | <strong><code>+33 to Bone Prison</code></strong> |
+| | <strong><code>+10-12 to Life Tap</code></strong> |
+| | <strong><code>Regenerate Mana 10%</code></strong> |
+| | <strong><code>Cannot Be Frozen</code></strong> |
+| | <strong><code>+10-20 to Strength</code></strong> |
+| | <strong><code>+17 to Dexterity</code></strong> |
+| | <strong><code>+1-2 to Skeleton Mastery (Necromancer only)</code></strong> |
+| | <strong><code>Magic Damage Reduced by 20</code></strong> |
 
 **Meshif's Travellers** (Meshif's Travellers)
 
@@ -115,14 +115,14 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 92 |
 | | **Properties:** |
-| | <ins><code>+50% Faster Run/Walk</code></ins> |
-| | <ins><code>10% Deadly Strike</code></ins> |
-| | <ins><code>+100-150 Defense</code></ins> |
-| | <ins><code>+75-100 to Life</code></ins> |
-| | <ins><code>Level 3 Resist Cold Aura When Equipped</code></ins> |
-| | <ins><code>+10% Faster Hit Recovery</code></ins> |
-| | <ins><code>+80-100% Enhanced Defense</code></ins> |
-| | <ins><code>+1 to Random Class Skill Levels</code></ins> |
+| | <strong><code>+50% Faster Run/Walk</code></strong> |
+| | <strong><code>10% Deadly Strike</code></strong> |
+| | <strong><code>+100-150 Defense</code></strong> |
+| | <strong><code>+75-100 to Life</code></strong> |
+| | <strong><code>Level 3 Resist Cold Aura When Equipped</code></strong> |
+| | <strong><code>+10% Faster Hit Recovery</code></strong> |
+| | <strong><code>+80-100% Enhanced Defense</code></strong> |
+| | <strong><code>+1 to Random Class Skill Levels</code></strong> |
 
 **Sandstorm Trek** (Sandstorm Trek)
 
@@ -131,15 +131,15 @@
 | | **Base Item:** Scarabshell Boots |
 | | **Level Requirement:** 64 |
 | | **Properties:** |
-| | <ins><code>+140-170% Enhanced Defense</code></ins> |
-| | <ins><code>+40% Faster Run/Walk</code></ins> |
-| | <ins><code>+20% Faster Hit Recovery</code></ins> |
-| | <ins><code>Poison Resist +40-70%</code></ins> |
-| | <ins><code>Repairs 1 durability in 5 seconds</code></ins> |
-| | <ins><code>+10-15 to all Attributes</code></ins> |
-| | <ins><code>Level 1 Cleansing Aura When Equipped</code></ins> |
-| | <ins><code>Replenish Life +15</code></ins> |
-| | <ins><code>Attacker Takes Damage of 100</code></ins> |
+| | <strong><code>+140-170% Enhanced Defense</code></strong> |
+| | <strong><code>+40% Faster Run/Walk</code></strong> |
+| | <strong><code>+20% Faster Hit Recovery</code></strong> |
+| | <strong><code>Poison Resist +40-70%</code></strong> |
+| | <strong><code>Repairs 1 durability in 5 seconds</code></strong> |
+| | <strong><code>+10-15 to all Attributes</code></strong> |
+| | <strong><code>Level 1 Cleansing Aura When Equipped</code></strong> |
+| | <strong><code>Replenish Life +15</code></strong> |
+| | <strong><code>Attacker Takes Damage of 100</code></strong> |
 
 **Shadow Dancer** (Shadowdancer)
 
@@ -148,12 +148,12 @@
 | | **Base Item:** Myrmidon Greaves |
 | | **Level Requirement:** 71 |
 | | **Properties:** |
-| | <ins><code>+70-100% Enhanced Defense</code></ins> |
-| | <ins><code>+40% Faster Run/Walk</code></ins> |
-| | <ins><code>+30% Faster Hit Recovery</code></ins> |
-| | <ins><code>+15-25 to Dexterity</code></ins> |
-| | <ins><code>+2 to Random Class Skill Levels</code></ins> |
-| | <ins><code>Requirements --20%</code></ins> |
+| | <strong><code>+70-100% Enhanced Defense</code></strong> |
+| | <strong><code>+40% Faster Run/Walk</code></strong> |
+| | <strong><code>+30% Faster Hit Recovery</code></strong> |
+| | <strong><code>+15-25 to Dexterity</code></strong> |
+| | <strong><code>+2 to Random Class Skill Levels</code></strong> |
+| | <strong><code>Requirements --20%</code></strong> |
 
 **Silkweave** (Silkweave)
 
@@ -162,13 +162,13 @@
 | | **Base Item:** Mesh Boots |
 | | **Level Requirement:** 36 |
 | | **Properties:** |
-| | <ins><code>+150-190% Enhanced Defense</code></ins> |
-| | <ins><code>+20-30 to Mana after each Kill</code></ins> |
-| | <ins><code>+200 Defense vs. Missile</code></ins> |
-| | <ins><code>Increase Maximum Mana 20%</code></ins> |
-| | <ins><code>+30% Faster Run/Walk</code></ins> |
-| | <ins><code>+10 to Energy</code></ins> |
-| | <ins><code>+200 Defense vs. Melee</code></ins> |
+| | <strong><code>+150-190% Enhanced Defense</code></strong> |
+| | <strong><code>+20-30 to Mana after each Kill</code></strong> |
+| | <strong><code>+200 Defense vs. Missile</code></strong> |
+| | <strong><code>Increase Maximum Mana 20%</code></strong> |
+| | <strong><code>+30% Faster Run/Walk</code></strong> |
+| | <strong><code>+10 to Energy</code></strong> |
+| | <strong><code>+200 Defense vs. Melee</code></strong> |
 
 **Static Accumulator** (Static Accumulator)
 
@@ -177,10 +177,10 @@
 | | **Base Item:** Boots |
 | | **Level Requirement:** 10 |
 | | **Properties:** |
-| | <ins><code>5% Chance to cast level 20 Static Field when struck</code></ins> |
-| | <ins><code>+10% Faster Run/Walk</code></ins> |
-| | <ins><code>Socketed ()</code></ins> |
-| | <ins><code>+1-10% Energy</code></ins> |
+| | <strong><code>5% Chance to cast level 20 Static Field when struck</code></strong> |
+| | <strong><code>+10% Faster Run/Walk</code></strong> |
+| | <strong><code>Socketed ()</code></strong> |
+| | <strong><code>+1-10% Energy</code></strong> |
 
 **Tearhaunch** (Tearhaunch)
 
@@ -189,13 +189,13 @@
 | | **Base Item:** Greaves |
 | | **Level Requirement:** 29 |
 | | **Properties:** |
-| | <ins><code>+35 Defense</code></ins> |
-| | <ins><code>+5 to Strength</code></ins> |
-| | <ins><code>+5 to Dexterity</code></ins> |
-| | <ins><code>+30% Faster Run/Walk</code></ins> |
-| | <ins><code>All Resistances +10-20</code></ins> |
-| | <ins><code>+60-80% Enhanced Defense</code></ins> |
-| | <ins><code>Level 6 Sanctuary Aura When Equipped</code></ins> |
+| | <strong><code>+35 Defense</code></strong> |
+| | <strong><code>+5 to Strength</code></strong> |
+| | <strong><code>+5 to Dexterity</code></strong> |
+| | <strong><code>+30% Faster Run/Walk</code></strong> |
+| | <strong><code>All Resistances +10-20</code></strong> |
+| | <strong><code>+60-80% Enhanced Defense</code></strong> |
+| | <strong><code>Level 6 Sanctuary Aura When Equipped</code></strong> |
 
 **Treads of Cthon** (Treads of Cthon)
 
@@ -204,14 +204,14 @@
 | | **Base Item:** Chain Boots |
 | | **Level Requirement:** 15 |
 | | **Properties:** |
-| | <ins><code>+30% Faster Run/Walk</code></ins> |
-| | <ins><code>+150 Defense vs. Missile</code></ins> |
-| | <ins><code>+30-40 to Life</code></ins> |
-| | <ins><code>+12 Defense</code></ins> |
-| | <ins><code>+30-40% Enhanced Defense</code></ins> |
-| | <ins><code>Poison Length Reduced by 50%</code></ins> |
-| | <ins><code>+1 to Pierce</code></ins> |
-| | <ins><code>+150 Defense vs. Melee</code></ins> |
+| | <strong><code>+30% Faster Run/Walk</code></strong> |
+| | <strong><code>+150 Defense vs. Missile</code></strong> |
+| | <strong><code>+30-40 to Life</code></strong> |
+| | <strong><code>+12 Defense</code></strong> |
+| | <strong><code>+30-40% Enhanced Defense</code></strong> |
+| | <strong><code>Poison Length Reduced by 50%</code></strong> |
+| | <strong><code>+1 to Pierce</code></strong> |
+| | <strong><code>+150 Defense vs. Melee</code></strong> |
 
 **War Traveler** (Wartraveler)
 
@@ -220,14 +220,14 @@
 | | **Base Item:** Battle Boots |
 | | **Level Requirement:** 42 |
 | | **Properties:** |
-| | <ins><code>+10 to Vitality</code></ins> |
-| | <ins><code>+10 to Strength</code></ins> |
-| | <ins><code>30-50% Better Chance of Getting Magic Items</code></ins> |
-| | <ins><code>Durability: 30 of 30</code></ins> |
-| | <ins><code>+35% Faster Run/Walk</code></ins> |
-| | <ins><code>+150-190% Enhanced Defense</code></ins> |
-| | <ins><code>Adds 15-25 Damage</code></ins> |
-| | <ins><code>Attacker Takes Damage of 5-10</code></ins> |
+| | <strong><code>+10 to Vitality</code></strong> |
+| | <strong><code>+10 to Strength</code></strong> |
+| | <strong><code>30-50% Better Chance of Getting Magic Items</code></strong> |
+| | <strong><code>Durability: 30 of 30</code></strong> |
+| | <strong><code>+35% Faster Run/Walk</code></strong> |
+| | <strong><code>+150-190% Enhanced Defense</code></strong> |
+| | <strong><code>Adds 15-25 Damage</code></strong> |
+| | <strong><code>Attacker Takes Damage of 5-10</code></strong> |
 
 **Waterwalk** (Waterwalk)
 
@@ -236,13 +236,13 @@
 | | **Base Item:** Sharkskin Boots |
 | | **Level Requirement:** 32 |
 | | **Properties:** |
-| | <ins><code>+100 Defense vs. Missile</code></ins> |
-| | <ins><code>+40% Faster Run/Walk</code></ins> |
-| | <ins><code>+15 to Dexterity</code></ins> |
-| | <ins><code>+180-210% Enhanced Defense</code></ins> |
-| | <ins><code>+45-65 to Life</code></ins> |
-| | <ins><code>+5% to Maximum Fire Resist</code></ins> |
-| | <ins><code>+100 Defense vs. Melee</code></ins> |
+| | <strong><code>+100 Defense vs. Missile</code></strong> |
+| | <strong><code>+40% Faster Run/Walk</code></strong> |
+| | <strong><code>+15 to Dexterity</code></strong> |
+| | <strong><code>+180-210% Enhanced Defense</code></strong> |
+| | <strong><code>+45-65 to Life</code></strong> |
+| | <strong><code>+5% to Maximum Fire Resist</code></strong> |
+| | <strong><code>+100 Defense vs. Melee</code></strong> |
 
 **Wraithstep** (Wraithstep)
 
@@ -251,11 +251,11 @@
 | | **Base Item:** Mirrored Boots |
 | | **Level Requirement:** 67 |
 | | **Properties:** |
-| | <ins><code>+1 to Warlock Skills</code></ins> |
-| | <ins><code>+30% Faster Run/Walk</code></ins> |
-| | <ins><code>+20% Faster Hit Recovery</code></ins> |
-| | <ins><code>+50-100 Defense</code></ins> |
-| | <ins><code>+10-20 to Dexterity</code></ins> |
-| | <ins><code>+10-20 to Energy</code></ins> |
-| | <ins><code>Requirements --20%</code></ins> |
+| | <strong><code>+1 to Warlock Skills</code></strong> |
+| | <strong><code>+30% Faster Run/Walk</code></strong> |
+| | <strong><code>+20% Faster Hit Recovery</code></strong> |
+| | <strong><code>+50-100 Defense</code></strong> |
+| | <strong><code>+10-20 to Dexterity</code></strong> |
+| | <strong><code>+10-20 to Energy</code></strong> |
+| | <strong><code>Requirements --20%</code></strong> |
 

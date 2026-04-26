@@ -7,13 +7,13 @@
 | | **Base Item:** Cryptic Sword |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+1-2 to All Skills</code></ins> |
-| | <ins><code>+20-30% Faster Cast Rate</code></ins> |
-| | <ins><code>+20-30% Increased Attack Speed</code></ins> |
-| | <ins><code>+100-200 Defense vs. Missile</code></ins> |
-| | <ins><code>+100-200 Defense vs. Melee</code></ins> |
-| | <ins><code>+10-20 to Dexterity</code></ins> |
-| | <ins><code>Fire Absorb 5-15%</code></ins> |
-| | <ins><code>+100-400% Enhanced Damage</code></ins> |
-| | <ins><code>Damage +50</code></ins> |
+| | <strong><code>+1-2 to All Skills</code></strong> |
+| | <strong><code>+20-30% Faster Cast Rate</code></strong> |
+| | <strong><code>+20-30% Increased Attack Speed</code></strong> |
+| | <strong><code>+100-200 Defense vs. Missile</code></strong> |
+| | <strong><code>+100-200 Defense vs. Melee</code></strong> |
+| | <strong><code>+10-20 to Dexterity</code></strong> |
+| | <strong><code>Fire Absorb 5-15%</code></strong> |
+| | <strong><code>+100-400% Enhanced Damage</code></strong> |
+| | <strong><code>Damage +50</code></strong> |
 

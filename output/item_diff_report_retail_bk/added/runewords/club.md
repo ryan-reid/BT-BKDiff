@@ -7,10 +7,10 @@
 | | **Base Item:** Club |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>40% Chance of Crushing Blow</code></ins> |
-| | <ins><code>+120% Enhanced Damage</code></ins> |
-| | <ins><code>+15% Increased Attack Speed</code></ins> |
-| | <ins><code>Magic Damage Reduced by 7</code></ins> |
-| | <ins><code>+200 to Attack Rating</code></ins> |
-| | <ins><code>Level 12 Corpse Explosion (4/# Charges)</code></ins> |
+| | <strong><code>40% Chance of Crushing Blow</code></strong> |
+| | <strong><code>+120% Enhanced Damage</code></strong> |
+| | <strong><code>+15% Increased Attack Speed</code></strong> |
+| | <strong><code>Magic Damage Reduced by 7</code></strong> |
+| | <strong><code>+200 to Attack Rating</code></strong> |
+| | <strong><code>Level 12 Corpse Explosion (4/# Charges)</code></strong> |
 

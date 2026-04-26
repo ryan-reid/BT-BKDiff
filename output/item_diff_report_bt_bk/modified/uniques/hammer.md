@@ -1,7 +1,7 @@
 # Modified Unique Hammer
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Schaefer's Hammer** (Schaefer's Hammer)
 
@@ -15,11 +15,11 @@
 | <code>+60% Increased Attack Speed</code> | <code>+60% Increased Attack Speed</code> |
 | <code>(2.0 per clvl) to Maximum Damage (Based on Character Level)</code> | <code>(2.0 per clvl) to Maximum Damage (Based on Character Level)</code> |
 | <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
-| <code>20% Chance to cast level </code><del><code>20</code></del><code> Static Field on striking</code> | <code>20% Chance to cast level </code><ins><code>50</code></ins><code> Static Field on striking</code> |
-| <del><code>+50</code></del><code> to Life</code> | <ins><code>+100</code></ins><code> to Life</code> |
-| <del><code>+200-230%</code></del><code> Enhanced Damage</code> | <ins><code>+350%</code></ins><code> Enhanced Damage</code> |
-| <del><code>Adds 50-200 Lightning Damage</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>-10-15% to Enemy Physical Resistance</code></ins> |
+| <strong><code>20% Chance to cast level 20 Static Field on striking</code></strong> | <strong><code>20% Chance to cast level 50 Static Field on striking</code></strong> |
+| <strong><code>+50 to Life</code></strong> | <strong><code>+100 to Life</code></strong> |
+| <strong><code>+200-230% Enhanced Damage</code></strong> | <strong><code>+350% Enhanced Damage</code></strong> |
+| <strong><code>Adds 50-200 Lightning Damage</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>-10-15% to Enemy Physical Resistance</code></strong> |
 
 **Stone Crusher** (Stone Crusher)
 
@@ -34,8 +34,8 @@
 | <code>-50% Target Defense</code> | <code>-50% Target Defense</code> |
 | <code>--100 to Monster Defense Per Hit</code> | <code>--100 to Monster Defense Per Hit</code> |
 | <code>+40% Increased Attack Speed</code> | <code>+40% Increased Attack Speed</code> |
-| <code>Damage </code><del><code>+42-69</code></del> | <code>Damage </code><ins><code>+50-85</code></ins> |
-|  | <ins><code>-5-10% to Enemy Physical Resistance</code></ins> |
+| <strong><code>Damage +42-69</code></strong> | <strong><code>Damage +50-85</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>-5-10% to Enemy Physical Resistance</code></strong> |
 
 **Windhammer** (Windhammer)
 
@@ -48,7 +48,7 @@
 | <code>+60% Increased Attack Speed</code> | <code>+60% Increased Attack Speed</code> |
 | <code>40% Chance to cast level 44 Twister on striking</code> | <code>40% Chance to cast level 44 Twister on striking</code> |
 | <code>+30% Faster Run/Walk</code> | <code>+30% Faster Run/Walk</code> |
-| <del><code>+180-230%</code></del><code> Enhanced Damage</code> | <ins><code>+200-300%</code></ins><code> Enhanced Damage</code> |
-|  | <ins><code>50% Chance to cast level 40 Tornado when you Kill an Enemy</code></ins> |
-|  | <ins><code>-5-15% to Enemy Physical Resistance</code></ins> |
+| <strong><code>+180-230% Enhanced Damage</code></strong> | <strong><code>+200-300% Enhanced Damage</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>50% Chance to cast level 40 Tornado when you Kill an Enemy</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>-5-15% to Enemy Physical Resistance</code></strong> |
 

@@ -19,290 +19,290 @@
 - wildfire
 ## Modified Rows (105)
 ### accursed
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### angel's
-- `itype3`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### arch\-devil's
-- `itype3`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### archer's
-- `itype3`:  (Old) &rarr; <ins><code>amul</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>circ</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>amul</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>circ</code></strong> (New)
 ### artificer's
-- `rare`:  (Old) &rarr; <ins><code>1</code></ins> (New)
-- `etype1`: <del><code>thro</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `rare`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
+- `etype1`: <strong><code>thro</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### blanched
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### blazing
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### blighting
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### bloody
-- `transformcolor`:  (Old) &rarr; <ins><code>dred</code></ins> (New)
+- `transformcolor`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>dred</code></strong> (New)
 ### bone
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### bowyer's
-- `itype3`:  (Old) &rarr; <ins><code>amul</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>circ</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>amul</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>circ</code></strong> (New)
 ### bright
-- `mod1code`: <del><code>light</code></del> (Old) &rarr; <ins><code>att</code></ins> (New)
-- `mod1min`: <del><code>1</code></del> (Old) &rarr; <ins><code>10</code></ins> (New)
-- `mod1max`: <del><code>1</code></del> (Old) &rarr; <ins><code>10</code></ins> (New)
-- `mod2code`: <del><code>att</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `mod2min`: <del><code>10</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `mod2max`: <del><code>10</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `mod1code`: <strong><code>light</code></strong> (Old) &rarr; <strong><code>att</code></strong> (New)
+- `mod1min`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
+- `mod1max`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
+- `mod2code`: <strong><code>att</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `mod2min`: <strong><code>10</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `mod2max`: <strong><code>10</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### brown
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### burgundy
-- `mod1min`: <del><code>11</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
-- `mod1max`: <del><code>20</code></del> (Old) &rarr; <ins><code>22</code></ins> (New)
+- `mod1min`: <strong><code>11</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
+- `mod1max`: <strong><code>20</code></strong> (Old) &rarr; <strong><code>22</code></strong> (New)
 ### burly
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### burning
-- `level`: <del><code>20</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
-- `levelreq`: <del><code>15</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
-- `classspecific`: <del><code>sor</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `mod1code`: <del><code>skilltab</code></del> (Old) &rarr; <ins><code>fireskill</code></ins> (New)
-- `mod1param`: <del><code>3</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>lcha</code></ins> (New)
-- `itype2`: <del><code>orb</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype3`: <del><code>amul</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype4`: <del><code>circ</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `level`: <strong><code>20</code></strong> (Old) &rarr; <strong><code>75</code></strong> (New)
+- `levelreq`: <strong><code>15</code></strong> (Old) &rarr; <strong><code>75</code></strong> (New)
+- `classspecific`: <strong><code>sor</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `mod1code`: <strong><code>skilltab</code></strong> (Old) &rarr; <strong><code>fireskill</code></strong> (New)
+- `mod1param`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>lcha</code></strong> (New)
+- `itype2`: <strong><code>orb</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype3`: <strong><code>amul</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype4`: <strong><code>circ</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### captain's
-- `etype1`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `etype1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### caretaker's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### charged
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### chestnut
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### chilling
-- `level`: <del><code>20</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
-- `levelreq`: <del><code>15</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
-- `classspecific`: <del><code>sor</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `mod1code`: <del><code>skilltab</code></del> (Old) &rarr; <ins><code>coldskill</code></ins> (New)
-- `mod1param`: <del><code>5</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>lcha</code></ins> (New)
-- `itype2`: <del><code>orb</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype3`: <del><code>amul</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype4`: <del><code>circ</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `level`: <strong><code>20</code></strong> (Old) &rarr; <strong><code>75</code></strong> (New)
+- `levelreq`: <strong><code>15</code></strong> (Old) &rarr; <strong><code>75</code></strong> (New)
+- `classspecific`: <strong><code>sor</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `mod1code`: <strong><code>skilltab</code></strong> (Old) &rarr; <strong><code>coldskill</code></strong> (New)
+- `mod1param`: <strong><code>5</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>lcha</code></strong> (New)
+- `itype2`: <strong><code>orb</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype3`: <strong><code>amul</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype4`: <strong><code>circ</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### commander's
-- `etype1`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `etype1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### communal
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### compact
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### coral
-- `mod1min`: <del><code>21</code></del> (Old) &rarr; <ins><code>23</code></ins> (New)
-- `mod1max`: <del><code>30</code></del> (Old) &rarr; <ins><code>35</code></ins> (New)
+- `mod1min`: <strong><code>21</code></strong> (Old) &rarr; <strong><code>23</code></strong> (New)
+- `mod1max`: <strong><code>30</code></strong> (Old) &rarr; <strong><code>35</code></strong> (New)
 ### cunning
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### dense
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### devil's
-- `itype3`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### eburin
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### echoing
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### entrapping
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### envenomed
-- `level`: <del><code>39</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
-- `levelreq`: <del><code>31</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
-- `group`: <del><code>140</code></del> (Old) &rarr; <ins><code>125</code></ins> (New)
-- `mod1code`: <del><code>dmg-pois</code></del> (Old) &rarr; <ins><code>poisskill</code></ins> (New)
-- `mod1param`: <del><code>100</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `mod1min`: <del><code>128</code></del> (Old) &rarr; <ins><code>1</code></ins> (New)
-- `mod1max`: <del><code>128</code></del> (Old) &rarr; <ins><code>1</code></ins> (New)
-- `itype1`: <del><code>scha</code></del> (Old) &rarr; <ins><code>lcha</code></ins> (New)
+- `level`: <strong><code>39</code></strong> (Old) &rarr; <strong><code>75</code></strong> (New)
+- `levelreq`: <strong><code>31</code></strong> (Old) &rarr; <strong><code>75</code></strong> (New)
+- `group`: <strong><code>140</code></strong> (Old) &rarr; <strong><code>125</code></strong> (New)
+- `mod1code`: <strong><code>dmg-pois</code></strong> (Old) &rarr; <strong><code>poisskill</code></strong> (New)
+- `mod1param`: <strong><code>100</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `mod1min`: <strong><code>128</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
+- `mod1max`: <strong><code>128</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
+- `itype1`: <strong><code>scha</code></strong> (Old) &rarr; <strong><code>lcha</code></strong> (New)
 ### eocene
-- `spawnable`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `spawnable`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### expert's
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### fanatic
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### feral
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### ferocious
-- `itype2`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
+- `itype2`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
 ### fletcher's
-- `itype3`:  (Old) &rarr; <ins><code>amul</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>circ</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>amul</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>circ</code></strong> (New)
 ### fortified
-- `mod1min`: <del><code>2</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
-- `mod1max`: <del><code>2</code></del> (Old) &rarr; <ins><code>5</code></ins> (New)
+- `mod1min`: <strong><code>2</code></strong> (Old) &rarr; <strong><code>4</code></strong> (New)
+- `mod1max`: <strong><code>2</code></strong> (Old) &rarr; <strong><code>5</code></strong> (New)
 ### freezing
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### fungal
-- `itype6`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype6`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### furious
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### gaea's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### glacial
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### glimmering
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### golemlord's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### graverobber's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### guardian's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### harpoonist's
-- `itype3`:  (Old) &rarr; <ins><code>amul</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>circ</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>amul</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>circ</code></strong> (New)
 ### hawk branded
-- `etype1`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `etype1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### hexing
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### howling
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### ivory
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### jeweler's
-- `etype1`: <del><code>thro</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `etype1`: <strong><code>thro</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### keeper's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### lancer's
-- `itype3`:  (Old) &rarr; <ins><code>amul</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>circ</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>amul</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>circ</code></strong> (New)
 ### lion branded
-- `etype1`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `etype1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### lucky
-- `mod1min`: <del><code>4</code></del> (Old) &rarr; <ins><code>12</code></ins> (New)
-- `mod1max`: <del><code>6</code></del> (Old) &rarr; <ins><code>14</code></ins> (New)
+- `mod1min`: <strong><code>4</code></strong> (Old) &rarr; <strong><code>12</code></strong> (New)
+- `mod1max`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>14</code></strong> (New)
 ### magekiller's
-- `itype2`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype3`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype2`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### maiden's
-- `itype3`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### maroon
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### marshal's
-- `etype1`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `etype1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### master's
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### mechanist's
-- `etype1`: <del><code>thro</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `etype1`: <strong><code>thro</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### mentalist's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### merciless
-- `itype2`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
+- `itype2`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
 ### monk's
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype5`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### nature's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### noxious
-- `itype6`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype6`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### powered
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### preserver's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### priest's
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### psychic
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### raging
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### resonant
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### rose branded
-- `etype1`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `etype1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### rugged
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### screaming
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### serrated
-- `transformcolor`:  (Old) &rarr; <ins><code>blac</code></ins> (New)
+- `transformcolor`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>blac</code></strong> (New)
 ### shadow
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### shaman's
-- `itype3`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### slayer's
-- `itype2`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype3`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype2`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### sounding
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### sparking
-- `level`: <del><code>20</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
-- `levelreq`: <del><code>15</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
-- `classspecific`: <del><code>sor</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `mod1code`: <del><code>skilltab</code></del> (Old) &rarr; <ins><code>ltngskill</code></ins> (New)
-- `mod1param`: <del><code>4</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>lcha</code></ins> (New)
-- `itype2`: <del><code>orb</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype3`: <del><code>amul</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype4`: <del><code>circ</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `level`: <strong><code>20</code></strong> (Old) &rarr; <strong><code>75</code></strong> (New)
+- `levelreq`: <strong><code>15</code></strong> (Old) &rarr; <strong><code>75</code></strong> (New)
+- `classspecific`: <strong><code>sor</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `mod1code`: <strong><code>skilltab</code></strong> (Old) &rarr; <strong><code>ltngskill</code></strong> (New)
+- `mod1param`: <strong><code>4</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>lcha</code></strong> (New)
+- `itype2`: <strong><code>orb</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype3`: <strong><code>amul</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype4`: <strong><code>circ</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### spearmaiden's
-- `itype3`:  (Old) &rarr; <ins><code>amul</code></ins> (New)
-- `itype4`:  (Old) &rarr; <ins><code>circ</code></ins> (New)
+- `itype3`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>amul</code></strong> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>circ</code></strong> (New)
 ### spiritual
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### stalwart
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### stout
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### summoner's
-- `itype4`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype5`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### terra's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### thin
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### tireless
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### trainer's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### trickster's
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### triumphant
-- `mod1max`: <del><code>1</code></del> (Old) &rarr; <ins><code>2</code></ins> (New)
+- `mod1max`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>2</code></strong> (New)
 ### turquoise
-- `rare`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `rare`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### venomous
-- `itype6`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype6`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### vermillion
-- `rare`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `rare`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### veteran's
-- `itype4`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### vigorous
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `rare`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `rare`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### viridian
-- `mod1min`: <del><code>11</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
-- `mod1max`: <del><code>20</code></del> (Old) &rarr; <ins><code>22</code></ins> (New)
+- `mod1min`: <strong><code>11</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
+- `mod1max`: <strong><code>20</code></strong> (Old) &rarr; <strong><code>22</code></strong> (New)
 ### vodoun
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### volcanic
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)
 ### wailing
-- `spawnable`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `spawnable`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### warder's
-- `itype5`:  (Old) &rarr; <ins><code>glov</code></ins> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>glov</code></strong> (New)

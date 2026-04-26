@@ -7,14 +7,14 @@
 | | **Base Item:** War Club |
 | | **Level Requirement:** 48 |
 | | **Properties:** |
-| | <ins><code>50% Chance of Crushing Blow</code></ins> |
-| | <ins><code>+180-220% Enhanced Damage</code></ins> |
-| | <ins><code>All Resistances +20</code></ins> |
-| | <ins><code>+50 to Life</code></ins> |
-| | <ins><code>+4-6 to Combat Masteries Skills</code></ins> |
-| | <ins><code>5% Life stolen per hit</code></ins> |
-| | <ins><code>Durability: 40 of 40</code></ins> |
-| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <strong><code>50% Chance of Crushing Blow</code></strong> |
+| | <strong><code>+180-220% Enhanced Damage</code></strong> |
+| | <strong><code>All Resistances +20</code></strong> |
+| | <strong><code>+50 to Life</code></strong> |
+| | <strong><code>+4-6 to Combat Masteries Skills</code></strong> |
+| | <strong><code>5% Life stolen per hit</code></strong> |
+| | <strong><code>Durability: 40 of 40</code></strong> |
+| | <strong><code>+50% Increased Attack Speed</code></strong> |
 
 **Bonesnap** (Bonesob)
 
@@ -23,13 +23,13 @@
 | | **Base Item:** Maul |
 | | **Level Requirement:** 24 |
 | | **Properties:** |
-| | <ins><code>+200-300% Enhanced Damage</code></ins> |
-| | <ins><code>40% Chance of Crushing Blow</code></ins> |
-| | <ins><code>Fire Resist +30%</code></ins> |
-| | <ins><code>Cold Resist +30%</code></ins> |
-| | <ins><code>+50% Damage to Undead</code></ins> |
-| | <ins><code>Ethereal</code></ins> |
-| | <ins><code>+1-3 to Bone Armor</code></ins> |
+| | <strong><code>+200-300% Enhanced Damage</code></strong> |
+| | <strong><code>40% Chance of Crushing Blow</code></strong> |
+| | <strong><code>Fire Resist +30%</code></strong> |
+| | <strong><code>Cold Resist +30%</code></strong> |
+| | <strong><code>+50% Damage to Undead</code></strong> |
+| | <strong><code>Ethereal</code></strong> |
+| | <strong><code>+1-3 to Bone Armor</code></strong> |
 
 **Earth Shifter** (Earthshifter)
 
@@ -38,16 +38,16 @@
 | | **Base Item:** Thunder Maul |
 | | **Level Requirement:** 69 |
 | | **Properties:** |
-| | <ins><code>+250-300% Enhanced Damage</code></ins> |
-| | <ins><code>50% Chance to cast level 50 Volcano on striking</code></ins> |
-| | <ins><code>35% Chance of Crushing Blow</code></ins> |
-| | <ins><code>+60% Increased Attack Speed</code></ins> |
-| | <ins><code>+14 to Volcano</code></ins> |
-| | <ins><code>+7 to Elemental Skills</code></ins> |
-| | <ins><code>+60% Faster Cast Rate</code></ins> |
-| | <ins><code>10% Chance to cast level 5 Lower Resist on striking</code></ins> |
-| | <ins><code>Requirements --50--30%</code></ins> |
-| | <ins><code>6% Mana stolen per hit</code></ins> |
+| | <strong><code>+250-300% Enhanced Damage</code></strong> |
+| | <strong><code>50% Chance to cast level 50 Volcano on striking</code></strong> |
+| | <strong><code>35% Chance of Crushing Blow</code></strong> |
+| | <strong><code>+60% Increased Attack Speed</code></strong> |
+| | <strong><code>+14 to Volcano</code></strong> |
+| | <strong><code>+7 to Elemental Skills</code></strong> |
+| | <strong><code>+60% Faster Cast Rate</code></strong> |
+| | <strong><code>10% Chance to cast level 5 Lower Resist on striking</code></strong> |
+| | <strong><code>Requirements --50--30%</code></strong> |
+| | <strong><code>6% Mana stolen per hit</code></strong> |
 
 **Earthshaker** (Earthshaker)
 
@@ -56,14 +56,14 @@
 | | **Base Item:** Battle Hammer |
 | | **Level Requirement:** 43 |
 | | **Properties:** |
-| | <ins><code>50% Chance to cast level 20 Fissure on striking</code></ins> |
-| | <ins><code>Knockback</code></ins> |
-| | <ins><code>+30% Increased Attack Speed</code></ins> |
-| | <ins><code>+180% Enhanced Damage</code></ins> |
-| | <ins><code>Hit Blinds Target +1</code></ins> |
-| | <ins><code>+3-4 to Elemental Skills</code></ins> |
-| | <ins><code>Durability: 50 of 50</code></ins> |
-| | <ins><code>+30% Faster Cast Rate</code></ins> |
+| | <strong><code>50% Chance to cast level 20 Fissure on striking</code></strong> |
+| | <strong><code>Knockback</code></strong> |
+| | <strong><code>+30% Increased Attack Speed</code></strong> |
+| | <strong><code>+180% Enhanced Damage</code></strong> |
+| | <strong><code>Hit Blinds Target +1</code></strong> |
+| | <strong><code>+3-4 to Elemental Skills</code></strong> |
+| | <strong><code>Durability: 50 of 50</code></strong> |
+| | <strong><code>+30% Faster Cast Rate</code></strong> |
 
 **Hell Forge Hammer** (Hell Forge Hammer)
 
@@ -72,10 +72,10 @@
 | | **Base Item:** Hell Forge Hammer |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+5 to Minimum Fire Damage</code></ins> |
-| | <ins><code>+20 to Maximum Fire Damage</code></ins> |
-| | <ins><code>Fire Resist +40%</code></ins> |
-| | <ins><code>+35 Defense</code></ins> |
+| | <strong><code>+5 to Minimum Fire Damage</code></strong> |
+| | <strong><code>+20 to Maximum Fire Damage</code></strong> |
+| | <strong><code>Fire Resist +40%</code></strong> |
+| | <strong><code>+35 Defense</code></strong> |
 
 **Ironstone** (Ironstone)
 
@@ -84,12 +84,12 @@
 | | **Base Item:** War Hammer |
 | | **Level Requirement:** 27 |
 | | **Properties:** |
-| | <ins><code>+40% Increased Attack Speed</code></ins> |
-| | <ins><code>+200% Enhanced Damage</code></ins> |
-| | <ins><code>+100% Damage to Undead</code></ins> |
-| | <ins><code>+150% Damage to Demons</code></ins> |
-| | <ins><code>+10 to Strength</code></ins> |
-| | <ins><code>Unknown property: *enr (-5)</code></ins> |
+| | <strong><code>+40% Increased Attack Speed</code></strong> |
+| | <strong><code>+200% Enhanced Damage</code></strong> |
+| | <strong><code>+100% Damage to Undead</code></strong> |
+| | <strong><code>+150% Damage to Demons</code></strong> |
+| | <strong><code>+10 to Strength</code></strong> |
+| | <strong><code>Unknown property: *enr (-5)</code></strong> |
 
 **Schaefer's Hammer** (Schaefer's Hammer)
 
@@ -98,15 +98,15 @@
 | | **Base Item:** Legendary Mallet |
 | | **Level Requirement:** 79 |
 | | **Properties:** |
-| | <ins><code>20% Chance to cast level 50 Static Field on striking</code></ins> |
-| | <ins><code>+100 to Life</code></ins> |
-| | <ins><code>(8.0 per clvl) to Attack Rating (Based on Character Level)</code></ins> |
-| | <ins><code>Lightning Resist +75%</code></ins> |
-| | <ins><code>+60% Increased Attack Speed</code></ins> |
-| | <ins><code>(2.0 per clvl) to Maximum Damage (Based on Character Level)</code></ins> |
-| | <ins><code>Repairs 1 durability in 5 seconds</code></ins> |
-| | <ins><code>+350% Enhanced Damage</code></ins> |
-| | <ins><code>-10-15% to Enemy Physical Resistance</code></ins> |
+| | <strong><code>20% Chance to cast level 50 Static Field on striking</code></strong> |
+| | <strong><code>+100 to Life</code></strong> |
+| | <strong><code>(8.0 per clvl) to Attack Rating (Based on Character Level)</code></strong> |
+| | <strong><code>Lightning Resist +75%</code></strong> |
+| | <strong><code>+60% Increased Attack Speed</code></strong> |
+| | <strong><code>(2.0 per clvl) to Maximum Damage (Based on Character Level)</code></strong> |
+| | <strong><code>Repairs 1 durability in 5 seconds</code></strong> |
+| | <strong><code>+350% Enhanced Damage</code></strong> |
+| | <strong><code>-10-15% to Enemy Physical Resistance</code></strong> |
 
 **Steeldriver** (Steeldriver)
 
@@ -115,12 +115,12 @@
 | | **Base Item:** Great Maul |
 | | **Level Requirement:** 29 |
 | | **Properties:** |
-| | <ins><code>Requirements --50%</code></ins> |
-| | <ins><code>+40% Increased Attack Speed</code></ins> |
-| | <ins><code>+25 to Life</code></ins> |
-| | <ins><code>+250% Enhanced Damage</code></ins> |
-| | <ins><code>Damage Reduced by 5%</code></ins> |
-| | <ins><code>Increase Maximum Life 10%</code></ins> |
+| | <strong><code>Requirements --50%</code></strong> |
+| | <strong><code>+40% Increased Attack Speed</code></strong> |
+| | <strong><code>+25 to Life</code></strong> |
+| | <strong><code>+250% Enhanced Damage</code></strong> |
+| | <strong><code>Damage Reduced by 5%</code></strong> |
+| | <strong><code>Increase Maximum Life 10%</code></strong> |
 
 **Stone Crusher** (Stone Crusher)
 
@@ -129,14 +129,14 @@
 | | **Base Item:** Legendary Mallet |
 | | **Level Requirement:** 68 |
 | | **Properties:** |
-| | <ins><code>+300-320% Enhanced Damage</code></ins> |
-| | <ins><code>+20-30 to Strength</code></ins> |
-| | <ins><code>40% Chance of Crushing Blow</code></ins> |
-| | <ins><code>-50% Target Defense</code></ins> |
-| | <ins><code>--100 to Monster Defense Per Hit</code></ins> |
-| | <ins><code>Damage +50-85</code></ins> |
-| | <ins><code>+40% Increased Attack Speed</code></ins> |
-| | <ins><code>-5-10% to Enemy Physical Resistance</code></ins> |
+| | <strong><code>+300-320% Enhanced Damage</code></strong> |
+| | <strong><code>+20-30 to Strength</code></strong> |
+| | <strong><code>40% Chance of Crushing Blow</code></strong> |
+| | <strong><code>-50% Target Defense</code></strong> |
+| | <strong><code>--100 to Monster Defense Per Hit</code></strong> |
+| | <strong><code>Damage +50-85</code></strong> |
+| | <strong><code>+40% Increased Attack Speed</code></strong> |
+| | <strong><code>-5-10% to Enemy Physical Resistance</code></strong> |
 
 **The Cranium Basher** (The Cranium Basher)
 
@@ -145,16 +145,16 @@
 | | **Base Item:** Thunder Maul |
 | | **Level Requirement:** 87 |
 | | **Properties:** |
-| | <ins><code>+60% Increased Attack Speed</code></ins> |
-| | <ins><code>Repairs 1 durability in 5 seconds</code></ins> |
-| | <ins><code>+25-30 to Strength</code></ins> |
-| | <ins><code>All Resistances +25-35</code></ins> |
-| | <ins><code>75% Chance of Crushing Blow</code></ins> |
-| | <ins><code>100% Chance to cast level 50 Twister when you Kill an Enemy</code></ins> |
-| | <ins><code>+250-300% Enhanced Damage</code></ins> |
-| | <ins><code>30% Chance to cast level 22 Amplify Damage on striking</code></ins> |
-| | <ins><code>Requirements --50--20%</code></ins> |
-| | <ins><code>4-6% Life stolen per hit</code></ins> |
+| | <strong><code>+60% Increased Attack Speed</code></strong> |
+| | <strong><code>Repairs 1 durability in 5 seconds</code></strong> |
+| | <strong><code>+25-30 to Strength</code></strong> |
+| | <strong><code>All Resistances +25-35</code></strong> |
+| | <strong><code>75% Chance of Crushing Blow</code></strong> |
+| | <strong><code>100% Chance to cast level 50 Twister when you Kill an Enemy</code></strong> |
+| | <strong><code>+250-300% Enhanced Damage</code></strong> |
+| | <strong><code>30% Chance to cast level 22 Amplify Damage on striking</code></strong> |
+| | <strong><code>Requirements --50--20%</code></strong> |
+| | <strong><code>4-6% Life stolen per hit</code></strong> |
 
 **The Gavel of Pain** (The Gavel of Pain)
 
@@ -163,12 +163,12 @@
 | | **Base Item:** Martel de Fer |
 | | **Level Requirement:** 45 |
 | | **Properties:** |
-| | <ins><code>20% Chance to cast level 22 Amplify Damage on striking</code></ins> |
-| | <ins><code>Attacker Takes Damage of 26</code></ins> |
-| | <ins><code>Repairs 1 durability in 5 seconds</code></ins> |
-| | <ins><code>Adds 12-30 Damage</code></ins> |
-| | <ins><code>+200-250% Enhanced Damage</code></ins> |
-| | <ins><code>+8 to Amplify Damage</code></ins> |
+| | <strong><code>20% Chance to cast level 22 Amplify Damage on striking</code></strong> |
+| | <strong><code>Attacker Takes Damage of 26</code></strong> |
+| | <strong><code>Repairs 1 durability in 5 seconds</code></strong> |
+| | <strong><code>Adds 12-30 Damage</code></strong> |
+| | <strong><code>+200-250% Enhanced Damage</code></strong> |
+| | <strong><code>+8 to Amplify Damage</code></strong> |
 
 **Windhammer** (Windhammer)
 
@@ -177,11 +177,11 @@
 | | **Base Item:** Ogre Maul |
 | | **Level Requirement:** 68 |
 | | **Properties:** |
-| | <ins><code>+200-300% Enhanced Damage</code></ins> |
-| | <ins><code>50% Chance of Crushing Blow</code></ins> |
-| | <ins><code>+60% Increased Attack Speed</code></ins> |
-| | <ins><code>40% Chance to cast level 44 Twister on striking</code></ins> |
-| | <ins><code>+30% Faster Run/Walk</code></ins> |
-| | <ins><code>50% Chance to cast level 40 Tornado when you Kill an Enemy</code></ins> |
-| | <ins><code>-5-15% to Enemy Physical Resistance</code></ins> |
+| | <strong><code>+200-300% Enhanced Damage</code></strong> |
+| | <strong><code>50% Chance of Crushing Blow</code></strong> |
+| | <strong><code>+60% Increased Attack Speed</code></strong> |
+| | <strong><code>40% Chance to cast level 44 Twister on striking</code></strong> |
+| | <strong><code>+30% Faster Run/Walk</code></strong> |
+| | <strong><code>50% Chance to cast level 40 Tornado when you Kill an Enemy</code></strong> |
+| | <strong><code>-5-15% to Enemy Physical Resistance</code></strong> |
 

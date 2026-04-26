@@ -7,14 +7,14 @@
 | | **Base Item:** Hierophant Trophy |
 | | **Level Requirement:** 80 |
 | | **Properties:** |
-| | <ins><code>+3 to Necromancer Skill Levels</code></ins> |
-| | <ins><code>+30% Faster Cast Rate</code></ins> |
-| | <ins><code>Damage Reduced by 10-20%</code></ins> |
-| | <ins><code>Level 5-10 Vigor Aura When Equipped</code></ins> |
-| | <ins><code>Increase Maximum Life 10-15%</code></ins> |
-| | <ins><code>Increase Maximum Mana 10-15%</code></ins> |
-| | <ins><code>All Resistances +10-25</code></ins> |
-| | <ins><code>+50% Faster Block Rate</code></ins> |
-| | <ins><code>+50% Faster Block Rate</code></ins> |
-| | <ins><code>+200-300% Enhanced Defense</code></ins> |
+| | <strong><code>+3 to Necromancer Skill Levels</code></strong> |
+| | <strong><code>+30% Faster Cast Rate</code></strong> |
+| | <strong><code>Damage Reduced by 10-20%</code></strong> |
+| | <strong><code>Level 5-10 Vigor Aura When Equipped</code></strong> |
+| | <strong><code>Increase Maximum Life 10-15%</code></strong> |
+| | <strong><code>Increase Maximum Mana 10-15%</code></strong> |
+| | <strong><code>All Resistances +10-25</code></strong> |
+| | <strong><code>+50% Faster Block Rate</code></strong> |
+| | <strong><code>+50% Faster Block Rate</code></strong> |
+| | <strong><code>+200-300% Enhanced Defense</code></strong> |
 

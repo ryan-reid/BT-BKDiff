@@ -7,9 +7,9 @@
 | | **Base Item:** Unearthed Wand |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+1-2 to All Skills</code></ins> |
-| | <ins><code>+30% Faster Cast Rate</code></ins> |
-| | <ins><code>Cannot Be Frozen</code></ins> |
-| | <ins><code>Curse Resist +20%</code></ins> |
-| | <ins><code>100% Extra Gold from Monsters</code></ins> |
+| | <strong><code>+1-2 to All Skills</code></strong> |
+| | <strong><code>+30% Faster Cast Rate</code></strong> |
+| | <strong><code>Cannot Be Frozen</code></strong> |
+| | <strong><code>Curse Resist +20%</code></strong> |
+| | <strong><code>100% Extra Gold from Monsters</code></strong> |
 

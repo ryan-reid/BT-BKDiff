@@ -78,48 +78,48 @@
 - magicpierce
 ## Modified Rows (20)
 ### bonearmor
-- `group`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `group`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### coldmastery
-- `sunder\-res\-reduce`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `sunder\-res\-reduce`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### confuse
-- `group`:  (Old) &rarr; <ins><code>8</code></ins> (New)
+- `group`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>8</code></strong> (New)
 ### cooldown
-- `nosend`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `nosend`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### dyeblack
-- `\*ID`: <del><code>193</code></del> (Old) &rarr; <ins><code>233</code></ins> (New)
-- `colorshift`:  (Old) &rarr; <ins><code>74</code></ins> (New)
+- `\*ID`: <strong><code>193</code></strong> (Old) &rarr; <strong><code>233</code></strong> (New)
+- `colorshift`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>74</code></strong> (New)
 ### dyeblackh
-- `\*ID`: <del><code>211</code></del> (Old) &rarr; <ins><code>235</code></ins> (New)
-- `colorshift`:  (Old) &rarr; <ins><code>74</code></ins> (New)
+- `\*ID`: <strong><code>211</code></strong> (Old) &rarr; <strong><code>235</code></strong> (New)
+- `colorshift`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>74</code></strong> (New)
 ### dyeblacks
-- `\*ID`: <del><code>202</code></del> (Old) &rarr; <ins><code>237</code></ins> (New)
-- `colorshift`:  (Old) &rarr; <ins><code>74</code></ins> (New)
+- `\*ID`: <strong><code>202</code></strong> (Old) &rarr; <strong><code>237</code></strong> (New)
+- `colorshift`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>74</code></strong> (New)
 ### dyeblackw
-- `\*ID`: <del><code>220</code></del> (Old) &rarr; <ins><code>239</code></ins> (New)
-- `colorshift`:  (Old) &rarr; <ins><code>74</code></ins> (New)
+- `\*ID`: <strong><code>220</code></strong> (Old) &rarr; <strong><code>239</code></strong> (New)
+- `colorshift`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>74</code></strong> (New)
 ### dyewhite
-- `\*ID`: <del><code>192</code></del> (Old) &rarr; <ins><code>232</code></ins> (New)
+- `\*ID`: <strong><code>192</code></strong> (Old) &rarr; <strong><code>232</code></strong> (New)
 ### dyewhiteh
-- `\*ID`: <del><code>210</code></del> (Old) &rarr; <ins><code>234</code></ins> (New)
+- `\*ID`: <strong><code>210</code></strong> (Old) &rarr; <strong><code>234</code></strong> (New)
 ### dyewhites
-- `\*ID`: <del><code>201</code></del> (Old) &rarr; <ins><code>236</code></ins> (New)
+- `\*ID`: <strong><code>201</code></strong> (Old) &rarr; <strong><code>236</code></strong> (New)
 ### dyewhitew
-- `\*ID`: <del><code>219</code></del> (Old) &rarr; <ins><code>238</code></ins> (New)
+- `\*ID`: <strong><code>219</code></strong> (Old) &rarr; <strong><code>238</code></strong> (New)
 ### fullsetgeneric
-- `noclear`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `noclear`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### magicconviction
-- `\*ID`: <del><code>230</code></del> (Old) &rarr; <ins><code>240</code></ins> (New)
+- `\*ID`: <strong><code>230</code></strong> (Old) &rarr; <strong><code>240</code></strong> (New)
 ### markbear
-- `\*ID`: <del><code>228</code></del> (Old) &rarr; <ins><code>190</code></ins> (New)
+- `\*ID`: <strong><code>228</code></strong> (Old) &rarr; <strong><code>190</code></strong> (New)
 ### markwolf
-- `\*ID`: <del><code>229</code></del> (Old) &rarr; <ins><code>191</code></ins> (New)
+- `\*ID`: <strong><code>229</code></strong> (Old) &rarr; <strong><code>191</code></strong> (New)
 ### monsterset
-- `noclear`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `noclear`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### potion\_magic\_find
-- `\*ID`: <del><code>190</code></del> (Old) &rarr; <ins><code>230</code></ins> (New)
+- `\*ID`: <strong><code>190</code></strong> (Old) &rarr; <strong><code>230</code></strong> (New)
 ### skilldelay
-- `nosend`:  (Old) &rarr; <ins><code>1</code></ins> (New)
-- `setfunc`: <del><code>19</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `remfunc`: <del><code>12</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `nosend`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
+- `setfunc`: <strong><code>19</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `remfunc`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### special\_aura
-- `\*ID`: <del><code>191</code></del> (Old) &rarr; <ins><code>231</code></ins> (New)
+- `\*ID`: <strong><code>191</code></strong> (Old) &rarr; <strong><code>231</code></strong> (New)

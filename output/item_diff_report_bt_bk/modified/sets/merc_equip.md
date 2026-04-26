@@ -1,13 +1,13 @@
 # Modified Set Merc Equip
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Natalya's Totem** (Natalya's Totem)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Grim</code></del><code> </code><del><code>Helm</code></del> | **Base Item:** <ins><code>Bone</code></ins><code> </code><ins><code>Visage</code></ins> |
+| **Base Item:** <strong><code>Grim Helm</code></strong> | **Base Item:** <strong><code>Bone Visage</code></strong> |
 | **Level Requirement:** <code>59</code> | **Level Requirement:** <code>59</code> |
 | **Properties:** | **Properties:** |
 | <code>+135-175 Defense</code> | <code>+135-175 Defense</code> |
@@ -21,7 +21,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Grim</code></del><code> </code><del><code>Helm</code></del> | **Base Item:** <ins><code>Bone</code></ins><code> </code><ins><code>Visage</code></ins> |
+| **Base Item:** <strong><code>Grim Helm</code></strong> | **Base Item:** <strong><code>Bone Visage</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+2 to Assassin Skill Levels</code> | <code>+2 to Assassin Skill Levels</code> |
@@ -35,7 +35,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Death Mask</code></del> | **Base Item:** <ins><code>Demonhead</code></ins> |
+| **Base Item:** <strong><code>Death Mask</code></strong> | **Base Item:** <strong><code>Demonhead</code></strong> |
 | **Level Requirement:** <code>66</code> | **Level Requirement:** <code>66</code> |
 | **Properties:** | **Properties:** |
 | <code>+30 to Mana</code> | <code>+30 to Mana</code> |
@@ -49,7 +49,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Death Mask</code></del> | **Base Item:** <ins><code>Demonhead</code></ins> |
+| **Base Item:** <strong><code>Death Mask</code></strong> | **Base Item:** <strong><code>Demonhead</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+1-2 to Sorceress Skill Levels</code> | <code>+1-2 to Sorceress Skill Levels</code> |

@@ -1,13 +1,13 @@
 # Modified Set Voodoo Heads
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Trang\-Oul's Appendage** (Trang\-Oul's Appendage)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Cantor</code></del><code> </code><del><code>Trophy</code></del> | **Base Item:** <ins><code>Succubus</code></ins><code> </code><ins><code>Skull</code></ins> |
+| **Base Item:** <strong><code>Cantor Trophy</code></strong> | **Base Item:** <strong><code>Succubus Skull</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+3 to Necromancer Skill Levels</code> | <code>+3 to Necromancer Skill Levels</code> |
@@ -24,7 +24,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Cantor</code></del><code> </code><del><code>Trophy</code></del> | **Base Item:** <ins><code>Succubus</code></ins><code> </code><ins><code>Skull</code></ins> |
+| **Base Item:** <strong><code>Cantor Trophy</code></strong> | **Base Item:** <strong><code>Succubus Skull</code></strong> |
 | **Level Requirement:** <code>54</code> | **Level Requirement:** <code>54</code> |
 | **Properties:** | **Properties:** |
 | <code>+125 Defense</code> | <code>+125 Defense</code> |

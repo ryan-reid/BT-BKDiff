@@ -7,11 +7,11 @@
 | | **Base Item:** Crusader Gauntlets |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
-| | <ins><code>+1 to Fire Mastery</code></ins> |
-| | <ins><code>+30% Faster Cast Rate</code></ins> |
-| | <ins><code>Level 12 Meditation Aura When Equipped</code></ins> |
-| | <ins><code>Increase Maximum Mana 25%</code></ins> |
-| | <ins><code>+200 Defense</code></ins> |
-| | <ins><code>Curse Resist +30%</code></ins> |
-| | <ins><code>15% Chance to cast level 50 Hydra on striking</code></ins> |
+| | <strong><code>+1 to Fire Mastery</code></strong> |
+| | <strong><code>+30% Faster Cast Rate</code></strong> |
+| | <strong><code>Level 12 Meditation Aura When Equipped</code></strong> |
+| | <strong><code>Increase Maximum Mana 25%</code></strong> |
+| | <strong><code>+200 Defense</code></strong> |
+| | <strong><code>Curse Resist +30%</code></strong> |
+| | <strong><code>15% Chance to cast level 50 Hydra on striking</code></strong> |
 

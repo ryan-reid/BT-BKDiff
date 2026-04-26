@@ -1,7 +1,7 @@
 # Modified Unique Pelt
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Cerebus' Bite** (Cerebus)
 
@@ -14,8 +14,8 @@
 | <code>+4-6 to Shape Shifting Skills</code> | <code>+4-6 to Shape Shifting Skills</code> |
 | <code>7-10% Life stolen per hit</code> | <code>7-10% Life stolen per hit</code> |
 | <code>33% Chance of Open Wounds</code> | <code>33% Chance of Open Wounds</code> |
-| <del><code>60-120% Bonus to Attack Rating</code></del> | <ins><code>(removed)</code></ins> |
-| <del><code>+1-2 to Feral Rage (Druid only)</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>Level 6-12 Fanaticism Aura When Equipped</code></ins> |
-|  | <ins><code>-5-10% to Enemy Physical Resistance</code></ins> |
+| <strong><code>60-120% Bonus to Attack Rating</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>+1-2 to Feral Rage (Druid only)</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>Level 6-12 Fanaticism Aura When Equipped</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>-5-10% to Enemy Physical Resistance</code></strong> |
 

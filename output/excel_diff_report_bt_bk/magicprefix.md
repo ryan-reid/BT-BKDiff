@@ -22,54 +22,54 @@
 - virulent
 ## Modified Rows (17)
 ### arch\-angel's
-- `itype3`: <del><code>tors</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `itype3`: <strong><code>tors</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### berserker's
-- `itype3`: <del><code>tors</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `itype3`: <strong><code>tors</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### blazing
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
 ### charged
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
 ### freezing
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
 ### glacial
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
 ### hierophant's
-- `itype3`: <del><code>tors</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `itype3`: <strong><code>tors</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### magekiller's
-- `itype2`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype3`: <del><code>tors</code></del> (Old) &rarr; <ins><code>shld</code></ins> (New)
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `itype2`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype3`: <strong><code>tors</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### monk's
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype5`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### powered
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
 ### priest's
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### slayer's
-- `itype2`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype3`: <del><code>tors</code></del> (Old) &rarr; <ins><code>shld</code></ins> (New)
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `itype2`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype3`: <strong><code>tors</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### summoner's
-- `itype4`:  (Old) &rarr; <ins><code>tors</code></ins> (New)
-- `itype5`:  (Old) &rarr; <ins><code>shld</code></ins> (New)
+- `itype4`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>tors</code></strong> (New)
+- `itype5`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>shld</code></strong> (New)
 ### valkyrie's
-- `itype3`: <del><code>tors</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `itype3`: <strong><code>tors</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### volcanic
-- `itype1`: <del><code>staff</code></del> (Old) &rarr; <ins><code>staf</code></ins> (New)
+- `itype1`: <strong><code>staff</code></strong> (Old) &rarr; <strong><code>staf</code></strong> (New)
 ### white
-- `level`: <del><code>75</code></del> (Old) &rarr; <ins><code>42</code></ins> (New)
-- `levelreq`: <del><code>75</code></del> (Old) &rarr; <ins><code>42</code></ins> (New)
-- `frequency`: <del><code>1</code></del> (Old) &rarr; <ins><code>2</code></ins> (New)
-- `group`: <del><code>125</code></del> (Old) &rarr; <ins><code>201</code></ins> (New)
-- `mod1code`: <del><code>magskill</code></del> (Old) &rarr; <ins><code>pierce-mag</code></ins> (New)
-- `mod1min`: <del><code>1</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
-- `mod1max`: <del><code>1</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
-- `itype1`: <del><code>lcha</code></del> (Old) &rarr; <ins><code>mcha</code></ins> (New)
+- `level`: <strong><code>75</code></strong> (Old) &rarr; <strong><code>42</code></strong> (New)
+- `levelreq`: <strong><code>75</code></strong> (Old) &rarr; <strong><code>42</code></strong> (New)
+- `frequency`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>2</code></strong> (New)
+- `group`: <strong><code>125</code></strong> (Old) &rarr; <strong><code>201</code></strong> (New)
+- `mod1code`: <strong><code>magskill</code></strong> (Old) &rarr; <strong><code>pierce-mag</code></strong> (New)
+- `mod1min`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>3</code></strong> (New)
+- `mod1max`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>3</code></strong> (New)
+- `itype1`: <strong><code>lcha</code></strong> (Old) &rarr; <strong><code>mcha</code></strong> (New)
 ### witch\-hunter's
-- `itype3`: <del><code>tors</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `itype4`: <del><code>shld</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `itype3`: <strong><code>tors</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `itype4`: <strong><code>shld</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)

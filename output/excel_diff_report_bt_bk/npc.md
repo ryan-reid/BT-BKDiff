@@ -4,6 +4,6 @@
 
 ## Modified Rows (2)
 ### halbu
-- `max buy`: <del><code>15000</code></del> (Old) &rarr; <ins><code>25000</code></ins> (New)
+- `max buy`: <strong><code>15000</code></strong> (Old) &rarr; <strong><code>25000</code></strong> (New)
 ### jamella
-- `max buy`: <del><code>15000</code></del> (Old) &rarr; <ins><code>25000</code></ins> (New)
+- `max buy`: <strong><code>15000</code></strong> (Old) &rarr; <strong><code>25000</code></strong> (New)

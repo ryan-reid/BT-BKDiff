@@ -7,12 +7,12 @@
 | | **Base Item:** Staff |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+40% Faster Cast Rate</code></ins> |
-| | <ins><code>Increase Maximum Mana 15%</code></ins> |
-| | <ins><code>+3 to All Skills</code></ins> |
-| | <ins><code>Replenish Life +20</code></ins> |
-| | <ins><code>All Resistances +30-40</code></ins> |
-| | <ins><code>Level 60 Raven (14/# Charges)</code></ins> |
+| | <strong><code>+40% Faster Cast Rate</code></strong> |
+| | <strong><code>Increase Maximum Mana 15%</code></strong> |
+| | <strong><code>+3 to All Skills</code></strong> |
+| | <strong><code>Replenish Life +20</code></strong> |
+| | <strong><code>All Resistances +30-40</code></strong> |
+| | <strong><code>Level 60 Raven (14/# Charges)</code></strong> |
 
 **Leaf** (Leaf)
 
@@ -21,12 +21,12 @@
 | | **Base Item:** Staff |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+3 to Fire Skills</code></ins> |
-| | <ins><code>(2.0 per clvl) Defense (Based on Character Level)</code></ins> |
-| | <ins><code>Cold Resist +33%</code></ins> |
-| | <ins><code>+3 to Inferno (Sorceress only)</code></ins> |
-| | <ins><code>+3 to Fire Bolt (Sorceress only)</code></ins> |
-| | <ins><code>+3 to Warmth (Sorceress only)</code></ins> |
+| | <strong><code>+3 to Fire Skills</code></strong> |
+| | <strong><code>(2.0 per clvl) Defense (Based on Character Level)</code></strong> |
+| | <strong><code>Cold Resist +33%</code></strong> |
+| | <strong><code>+3 to Inferno (Sorceress only)</code></strong> |
+| | <strong><code>+3 to Fire Bolt (Sorceress only)</code></strong> |
+| | <strong><code>+3 to Warmth (Sorceress only)</code></strong> |
 
 **Memory** (Memory)
 
@@ -35,13 +35,13 @@
 | | **Base Item:** Staff |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>Increase Maximum Mana 20%</code></ins> |
-| | <ins><code>Magic Damage Reduced by 7</code></ins> |
-| | <ins><code>+50% Enhanced Defense</code></ins> |
-| | <ins><code>+33% Faster Cast Rate</code></ins> |
-| | <ins><code>+3 to Sorceress Skill Levels</code></ins> |
-| | <ins><code>+3 to Energy Shield (Sorceress only)</code></ins> |
-| | <ins><code>+2 to Static Field (Sorceress only)</code></ins> |
+| | <strong><code>Increase Maximum Mana 20%</code></strong> |
+| | <strong><code>Magic Damage Reduced by 7</code></strong> |
+| | <strong><code>+50% Enhanced Defense</code></strong> |
+| | <strong><code>+33% Faster Cast Rate</code></strong> |
+| | <strong><code>+3 to Sorceress Skill Levels</code></strong> |
+| | <strong><code>+3 to Energy Shield (Sorceress only)</code></strong> |
+| | <strong><code>+2 to Static Field (Sorceress only)</code></strong> |
 
 **Obsession** (Obsession)
 
@@ -50,11 +50,11 @@
 | | **Base Item:** Staff |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+4 to All Skills</code></ins> |
-| | <ins><code>24% Chance to cast level 10 Weaken when struck</code></ins> |
-| | <ins><code>+100% Faster Cast Rate</code></ins> |
-| | <ins><code>+60% Faster Hit Recovery</code></ins> |
-| | <ins><code>All Resistances +60-70</code></ins> |
-| | <ins><code>Increase Maximum Life 15-25%</code></ins> |
-| | <ins><code>Regenerate Mana 15-30%</code></ins> |
+| | <strong><code>+4 to All Skills</code></strong> |
+| | <strong><code>24% Chance to cast level 10 Weaken when struck</code></strong> |
+| | <strong><code>+100% Faster Cast Rate</code></strong> |
+| | <strong><code>+60% Faster Hit Recovery</code></strong> |
+| | <strong><code>All Resistances +60-70</code></strong> |
+| | <strong><code>Increase Maximum Life 15-25%</code></strong> |
+| | <strong><code>Regenerate Mana 15-30%</code></strong> |
 

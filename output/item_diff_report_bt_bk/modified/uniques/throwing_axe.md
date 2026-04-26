@@ -1,7 +1,7 @@
 # Modified Unique Throwing Axe
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Gimmershred** (Gimmershred)
 
@@ -16,5 +16,5 @@
 | <code>Adds 61-501 Lightning Damage</code> | <code>Adds 61-501 Lightning Damage</code> |
 | <code>Increased Stack Size</code> | <code>Increased Stack Size</code> |
 | <code>+30% Increased Attack Speed</code> | <code>+30% Increased Attack Speed</code> |
-| <code>20% Chance to cast level </code><del><code>6</code></del><code> Lower Resist on striking</code> | <code>20% Chance to cast level </code><ins><code>20</code></ins><code> Lower Resist on striking</code> |
+| <strong><code>20% Chance to cast level 6 Lower Resist on striking</code></strong> | <strong><code>20% Chance to cast level 20 Lower Resist on striking</code></strong> |
 

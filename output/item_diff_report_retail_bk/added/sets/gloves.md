@@ -7,8 +7,8 @@
 | | **Base Item:** Light Gauntlets |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | <ins><code>+30 to Life</code></ins> |
-| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <strong><code>+30 to Life</code></strong> |
+| | <strong><code>+20% Increased Attack Speed</code></strong> |
 
 **Cleglaw's Pincers** (Cleglaw's Pincers)
 
@@ -17,9 +17,9 @@
 | | **Base Item:** Chain Gloves |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | <ins><code>Fire Resist +10%</code></ins> |
-| | <ins><code>Slows Target by 25%</code></ins> |
-| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <strong><code>Fire Resist +10%</code></strong> |
+| | <strong><code>Slows Target by 25%</code></strong> |
+| | <strong><code>+20% Increased Attack Speed</code></strong> |
 
 **Comfortable Mittens** (Comfortable Mittens)
 
@@ -28,14 +28,14 @@
 | | **Base Item:** Crusader Gauntlets |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+50-100% Enhanced Defense</code></ins> |
-| | <ins><code>+10-30 to Energy</code></ins> |
-| | <ins><code>100% Bonus to Attack Rating</code></ins> |
-| | <ins><code>Poison Resist +40%</code></ins> |
-| | <ins><code>Piercing Attack</code></ins> |
-| | <ins><code>-3-5% to Enemy Poison Resistance</code></ins> |
-| | <ins><code>+75-100% Damage to Demons</code></ins> |
-| | <ins><code>+75-100% Damage to Undead</code></ins> |
+| | <strong><code>+50-100% Enhanced Defense</code></strong> |
+| | <strong><code>+10-30 to Energy</code></strong> |
+| | <strong><code>100% Bonus to Attack Rating</code></strong> |
+| | <strong><code>Poison Resist +40%</code></strong> |
+| | <strong><code>Piercing Attack</code></strong> |
+| | <strong><code>-3-5% to Enemy Poison Resistance</code></strong> |
+| | <strong><code>+75-100% Damage to Demons</code></strong> |
+| | <strong><code>+75-100% Damage to Undead</code></strong> |
 
 **Death's Hand** (Death's Hand)
 
@@ -44,8 +44,8 @@
 | | **Base Item:** Leather Gloves |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | <ins><code>Poison Resist +50%</code></ins> |
-| | <ins><code>Poison Length Reduced by 75%</code></ins> |
+| | <strong><code>Poison Resist +50%</code></strong> |
+| | <strong><code>Poison Length Reduced by 75%</code></strong> |
 
 **Horazon's Arcane** (Horazon's Arcane)
 
@@ -54,13 +54,13 @@
 | | **Base Item:** Bramble Mitts |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>20% Chance of Crushing Blow</code></ins> |
-| | <ins><code>+20-30% Increased Attack Speed</code></ins> |
-| | <ins><code>+25-50 to Vitality</code></ins> |
-| | <ins><code>-20% to Enemy Magic Resistance</code></ins> |
-| | <ins><code>+100 to Life</code></ins> |
-| | <ins><code>+20-30% Faster Cast Rate</code></ins> |
-| | <ins><code>+100-300% Enhanced Defense</code></ins> |
+| | <strong><code>20% Chance of Crushing Blow</code></strong> |
+| | <strong><code>+20-30% Increased Attack Speed</code></strong> |
+| | <strong><code>+25-50 to Vitality</code></strong> |
+| | <strong><code>-20% to Enemy Magic Resistance</code></strong> |
+| | <strong><code>+100 to Life</code></strong> |
+| | <strong><code>+20-30% Faster Cast Rate</code></strong> |
+| | <strong><code>+100-300% Enhanced Defense</code></strong> |
 
 **Horazon's Hold** (Horazon's Hold)
 
@@ -69,12 +69,12 @@
 | | **Base Item:** Bramble Mitts |
 | | **Level Requirement:** 55 |
 | | **Properties:** |
-| | <ins><code>10% Chance of Crushing Blow</code></ins> |
-| | <ins><code>+10% Increased Attack Speed</code></ins> |
-| | <ins><code>+10-15 to Dexterity</code></ins> |
-| | <ins><code>Adds 250-500 Fire Damage</code></ins> |
-| | <ins><code>+25-50 to Life</code></ins> |
-| | <ins><code>+10% Faster Cast Rate</code></ins> |
+| | <strong><code>10% Chance of Crushing Blow</code></strong> |
+| | <strong><code>+10% Increased Attack Speed</code></strong> |
+| | <strong><code>+10-15 to Dexterity</code></strong> |
+| | <strong><code>Adds 250-500 Fire Damage</code></strong> |
+| | <strong><code>+25-50 to Life</code></strong> |
+| | <strong><code>+10% Faster Cast Rate</code></strong> |
 
 **Immortal King's Forge** (Immortal King's Forge)
 
@@ -83,11 +83,11 @@
 | | **Base Item:** Ogre Gauntlets |
 | | **Level Requirement:** 30 |
 | | **Properties:** |
-| | <ins><code>+65 Defense</code></ins> |
-| | <ins><code>+20-30 to Strength</code></ins> |
-| | <ins><code>+20-30 to Dexterity</code></ins> |
-| | <ins><code>12% Chance to cast level 20 Static Field when struck</code></ins> |
-| | <ins><code>+40 to Life</code></ins> |
+| | <strong><code>+65 Defense</code></strong> |
+| | <strong><code>+20-30 to Strength</code></strong> |
+| | <strong><code>+20-30 to Dexterity</code></strong> |
+| | <strong><code>12% Chance to cast level 20 Static Field when struck</code></strong> |
+| | <strong><code>+40 to Life</code></strong> |
 
 **Immortal King's Irons** (Immortal King's Irons)
 
@@ -96,14 +96,14 @@
 | | **Base Item:** Ogre Gauntlets |
 | | **Level Requirement:** 95 |
 | | **Properties:** |
-| | <ins><code>+20% Increased Attack Speed</code></ins> |
-| | <ins><code>+1-3  to Barbarian Skill Levels</code></ins> |
-| | <ins><code>+20% Faster Cast Rate</code></ins> |
-| | <ins><code>15% Chance of Crushing Blow</code></ins> |
-| | <ins><code>15% Deadly Strike</code></ins> |
-| | <ins><code>+400 Defense</code></ins> |
-| | <ins><code>Damage Reduced by 10-20%</code></ins> |
-| | <ins><code>+3-5% Strength</code></ins> |
+| | <strong><code>+20% Increased Attack Speed</code></strong> |
+| | <strong><code>+1-3  to Barbarian Skill Levels</code></strong> |
+| | <strong><code>+20% Faster Cast Rate</code></strong> |
+| | <strong><code>15% Chance of Crushing Blow</code></strong> |
+| | <strong><code>15% Deadly Strike</code></strong> |
+| | <strong><code>+400 Defense</code></strong> |
+| | <strong><code>Damage Reduced by 10-20%</code></strong> |
+| | <strong><code>+3-5% Strength</code></strong> |
 
 **Iratha's Cuff** (Iratha's Cuff)
 
@@ -112,9 +112,9 @@
 | | **Base Item:** Light Gauntlets |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | <ins><code>Cold Resist +30%</code></ins> |
-| | <ins><code>Adds 1-20 Lightning Damage</code></ins> |
-| | <ins><code>+15 to Life</code></ins> |
+| | <strong><code>Cold Resist +30%</code></strong> |
+| | <strong><code>Adds 1-20 Lightning Damage</code></strong> |
+| | <strong><code>+15 to Life</code></strong> |
 
 **Laying of Hands** (Laying of Hands)
 
@@ -123,11 +123,11 @@
 | | **Base Item:** Bramble Mitts |
 | | **Level Requirement:** 56 |
 | | **Properties:** |
-| | <ins><code>+25 Defense</code></ins> |
-| | <ins><code>+20% Increased Attack Speed</code></ins> |
-| | <ins><code>Fire Resist +50%</code></ins> |
-| | <ins><code>+150-200% Damage to Demons</code></ins> |
-| | <ins><code>10% Chance to cast level 16 Holy Bolt on striking</code></ins> |
+| | <strong><code>+25 Defense</code></strong> |
+| | <strong><code>+20% Increased Attack Speed</code></strong> |
+| | <strong><code>Fire Resist +50%</code></strong> |
+| | <strong><code>+150-200% Damage to Demons</code></strong> |
+| | <strong><code>10% Chance to cast level 16 Holy Bolt on striking</code></strong> |
 
 **M'avina's Guidance** (M'avina's Guidance)
 
@@ -136,14 +136,14 @@
 | | **Base Item:** Crusader Gauntlets |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+25% Increased Attack Speed</code></ins> |
-| | <ins><code>+50-75% Enhanced Damage</code></ins> |
-| | <ins><code>+333 Defense</code></ins> |
-| | <ins><code>+50-150% Enhanced Defense</code></ins> |
-| | <ins><code>+5-10% Dexterity</code></ins> |
-| | <ins><code>+5-10% Strength</code></ins> |
-| | <ins><code>20% Chance to cast level 50 Slow Missiles when struck</code></ins> |
-| | <ins><code>Increase Maximum Life 5-10%</code></ins> |
+| | <strong><code>+25% Increased Attack Speed</code></strong> |
+| | <strong><code>+50-75% Enhanced Damage</code></strong> |
+| | <strong><code>+333 Defense</code></strong> |
+| | <strong><code>+50-150% Enhanced Defense</code></strong> |
+| | <strong><code>+5-10% Dexterity</code></strong> |
+| | <strong><code>+5-10% Strength</code></strong> |
+| | <strong><code>20% Chance to cast level 50 Slow Missiles when struck</code></strong> |
+| | <strong><code>Increase Maximum Life 5-10%</code></strong> |
 
 **M'avina's Icy Clutch** (M'avina's Icy Clutch)
 
@@ -152,12 +152,12 @@
 | | **Base Item:** Crusader Gauntlets |
 | | **Level Requirement:** 32 |
 | | **Properties:** |
-| | <ins><code>+45-50 Defense</code></ins> |
-| | <ins><code>Adds 100-100 Cold Damage</code></ins> |
-| | <ins><code>Cannot Be Frozen</code></ins> |
-| | <ins><code>100-150% Extra Gold from Monsters</code></ins> |
-| | <ins><code>+20-30 to Strength</code></ins> |
-| | <ins><code>+20-30 to Dexterity</code></ins> |
+| | <strong><code>+45-50 Defense</code></strong> |
+| | <strong><code>Adds 100-100 Cold Damage</code></strong> |
+| | <strong><code>Cannot Be Frozen</code></strong> |
+| | <strong><code>100-150% Extra Gold from Monsters</code></strong> |
+| | <strong><code>+20-30 to Strength</code></strong> |
+| | <strong><code>+20-30 to Dexterity</code></strong> |
 
 **Magnus' Skin** (Magnus' Skin)
 
@@ -166,10 +166,10 @@
 | | **Base Item:** Sharkskin Gloves |
 | | **Level Requirement:** 35 |
 | | **Properties:** |
-| | <ins><code>+50% Enhanced Defense</code></ins> |
-| | <ins><code>Fire Resist +25%</code></ins> |
-| | <ins><code>+20% Increased Attack Speed</code></ins> |
-| | <ins><code>+500 to Attack Rating</code></ins> |
+| | <strong><code>+50% Enhanced Defense</code></strong> |
+| | <strong><code>Fire Resist +25%</code></strong> |
+| | <strong><code>+20% Increased Attack Speed</code></strong> |
+| | <strong><code>+500 to Attack Rating</code></strong> |
 
 **Sander's Taboo** (McAuley's Taboo)
 
@@ -178,10 +178,10 @@
 | | **Base Item:** Heavy Gloves |
 | | **Level Requirement:** 24 |
 | | **Properties:** |
-| | <ins><code>+10% Faster Cast Rate</code></ins> |
-| | <ins><code>+3 to Mana after each Kill</code></ins> |
-| | <ins><code>+40 to Life</code></ins> |
-| | <ins><code>+2 to Teeth (Necromancer only)</code></ins> |
+| | <strong><code>+10% Faster Cast Rate</code></strong> |
+| | <strong><code>+3 to Mana after each Kill</code></strong> |
+| | <strong><code>+40 to Life</code></strong> |
+| | <strong><code>+2 to Teeth (Necromancer only)</code></strong> |
 
 **Sigon's Gage** (Sigon's Gage)
 
@@ -190,8 +190,8 @@
 | | **Base Item:** Gauntlets |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | <ins><code>+20 to Strength</code></ins> |
-| | <ins><code>+60 to Attack Rating</code></ins> |
+| | <strong><code>+20 to Strength</code></strong> |
+| | <strong><code>+60 to Attack Rating</code></strong> |
 
 **Sigurd's Grip** (Sigurd's Grip)
 
@@ -200,14 +200,14 @@
 | | **Base Item:** Ogre Gauntlets |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+50% Strength</code></ins> |
-| | <ins><code>+30% Increased Attack Speed</code></ins> |
-| | <ins><code>10-20% Deadly Strike</code></ins> |
-| | <ins><code>35-50% Bonus to Attack Rating</code></ins> |
-| | <ins><code>Poison Resist +35-50%</code></ins> |
-| | <ins><code>+100 Defense</code></ins> |
-| | <ins><code>Adds 75-100 Damage</code></ins> |
-| | <ins><code>Requirements -20%</code></ins> |
+| | <strong><code>+50% Strength</code></strong> |
+| | <strong><code>+30% Increased Attack Speed</code></strong> |
+| | <strong><code>10-20% Deadly Strike</code></strong> |
+| | <strong><code>35-50% Bonus to Attack Rating</code></strong> |
+| | <strong><code>Poison Resist +35-50%</code></strong> |
+| | <strong><code>+100 Defense</code></strong> |
+| | <strong><code>Adds 75-100 Damage</code></strong> |
+| | <strong><code>Requirements -20%</code></strong> |
 
 **Trang\-Oul's Claws** (Trang\-Oul's Claws)
 
@@ -216,10 +216,10 @@
 | | **Base Item:** Vambraces |
 | | **Level Requirement:** 45 |
 | | **Properties:** |
-| | <ins><code>+30 Defense</code></ins> |
-| | <ins><code>+20% Faster Cast Rate</code></ins> |
-| | <ins><code>Cold Resist +30%</code></ins> |
-| | <ins><code>+2 to Curses Skills</code></ins> |
+| | <strong><code>+30 Defense</code></strong> |
+| | <strong><code>+20% Faster Cast Rate</code></strong> |
+| | <strong><code>Cold Resist +30%</code></strong> |
+| | <strong><code>+2 to Curses Skills</code></strong> |
 
 **Trang\-Oul's Sharp Claws** (Trang\-Oul's Sharp Claws)
 
@@ -228,14 +228,14 @@
 | | **Base Item:** Vambraces |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+1-3 to Necromancer Skill Levels</code></ins> |
-| | <ins><code>-10% to Enemy Poison Resistance</code></ins> |
-| | <ins><code>15% Chance to cast level 55 Poison Nova when you Kill an Enemy</code></ins> |
-| | <ins><code>+20% Faster Cast Rate</code></ins> |
-| | <ins><code>+20% Increased Attack Speed</code></ins> |
-| | <ins><code>Damage Reduced by 10-15</code></ins> |
-| | <ins><code>33% Chance to cast level 55 Bone Spear on striking</code></ins> |
-| | <ins><code>+3-7 to Mana after each Kill</code></ins> |
+| | <strong><code>+1-3 to Necromancer Skill Levels</code></strong> |
+| | <strong><code>-10% to Enemy Poison Resistance</code></strong> |
+| | <strong><code>15% Chance to cast level 55 Poison Nova when you Kill an Enemy</code></strong> |
+| | <strong><code>+20% Faster Cast Rate</code></strong> |
+| | <strong><code>+20% Increased Attack Speed</code></strong> |
+| | <strong><code>Damage Reduced by 10-15</code></strong> |
+| | <strong><code>33% Chance to cast level 55 Bone Spear on striking</code></strong> |
+| | <strong><code>+3-7 to Mana after each Kill</code></strong> |
 
 **Warlord's Conquest** (Warlord's Conquest)
 
@@ -244,6 +244,6 @@
 | | **Base Item:** Gauntlets |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | <ins><code>+15 to Strength</code></ins> |
-| | <ins><code>+45 to Attack Rating</code></ins> |
+| | <strong><code>+15 to Strength</code></strong> |
+| | <strong><code>+45 to Attack Rating</code></strong> |
 

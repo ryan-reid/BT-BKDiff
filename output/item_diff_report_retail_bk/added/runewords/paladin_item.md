@@ -7,11 +7,11 @@
 | | **Base Item:** Paladin Item |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+30% Faster Block Rate</code></ins> |
-| | <ins><code>Freezes Target +1</code></ins> |
-| | <ins><code>+220-260% Enhanced Defense</code></ins> |
-| | <ins><code>Level 13-16 Defiance Aura When Equipped</code></ins> |
-| | <ins><code>+2 to Offensive Auras Skills</code></ins> |
-| | <ins><code>15% Chance to cast level 5 Life Tap on striking</code></ins> |
-| | <ins><code>Repairs 1 durability in 25 seconds</code></ins> |
+| | <strong><code>+30% Faster Block Rate</code></strong> |
+| | <strong><code>Freezes Target +1</code></strong> |
+| | <strong><code>+220-260% Enhanced Defense</code></strong> |
+| | <strong><code>Level 13-16 Defiance Aura When Equipped</code></strong> |
+| | <strong><code>+2 to Offensive Auras Skills</code></strong> |
+| | <strong><code>15% Chance to cast level 5 Life Tap on striking</code></strong> |
+| | <strong><code>Repairs 1 durability in 25 seconds</code></strong> |
 

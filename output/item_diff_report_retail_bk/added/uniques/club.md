@@ -7,13 +7,13 @@
 | | **Base Item:** Cudgel |
 | | **Level Requirement:** 34 |
 | | **Properties:** |
-| | <ins><code>+1 to All Skills</code></ins> |
-| | <ins><code>+200% Damage to Demons</code></ins> |
-| | <ins><code>+30 to Minimum Damage</code></ins> |
-| | <ins><code>+195% Enhanced Damage</code></ins> |
-| | <ins><code>20-25% Bonus to Attack Rating</code></ins> |
-| | <ins><code>+15 Life after each Kill</code></ins> |
-| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <strong><code>+1 to All Skills</code></strong> |
+| | <strong><code>+200% Damage to Demons</code></strong> |
+| | <strong><code>+30 to Minimum Damage</code></strong> |
+| | <strong><code>+195% Enhanced Damage</code></strong> |
+| | <strong><code>20-25% Bonus to Attack Rating</code></strong> |
+| | <strong><code>+15 Life after each Kill</code></strong> |
+| | <strong><code>+20% Increased Attack Speed</code></strong> |
 
 **Demon Limb** (Demonlimb)
 
@@ -22,13 +22,13 @@
 | | **Base Item:** Tyrant Club |
 | | **Level Requirement:** 63 |
 | | **Properties:** |
-| | <ins><code>+180-230% Enhanced Damage</code></ins> |
-| | <ins><code>Adds 222-333 Fire Damage</code></ins> |
-| | <ins><code>7-13% Life stolen per hit</code></ins> |
-| | <ins><code>+23 to Enchant</code></ins> |
-| | <ins><code>Repairs 1 durability in 5 seconds</code></ins> |
-| | <ins><code>+123% Damage to Demons</code></ins> |
-| | <ins><code>Fire Resist +15-20%</code></ins> |
+| | <strong><code>+180-230% Enhanced Damage</code></strong> |
+| | <strong><code>Adds 222-333 Fire Damage</code></strong> |
+| | <strong><code>7-13% Life stolen per hit</code></strong> |
+| | <strong><code>+23 to Enchant</code></strong> |
+| | <strong><code>Repairs 1 durability in 5 seconds</code></strong> |
+| | <strong><code>+123% Damage to Demons</code></strong> |
+| | <strong><code>Fire Resist +15-20%</code></strong> |
 
 **Felloak** (Felloak)
 
@@ -37,12 +37,12 @@
 | | **Base Item:** Club |
 | | **Level Requirement:** 3 |
 | | **Properties:** |
-| | <ins><code>Lightning Resist +60%</code></ins> |
-| | <ins><code>Fire Resist +20%</code></ins> |
-| | <ins><code>+20% Increased Attack Speed</code></ins> |
-| | <ins><code>+20 to Vitality</code></ins> |
-| | <ins><code>Adds 100-100 Fire Damage</code></ins> |
-| | <ins><code>+190% Enhanced Damage</code></ins> |
+| | <strong><code>Lightning Resist +60%</code></strong> |
+| | <strong><code>Fire Resist +20%</code></strong> |
+| | <strong><code>+20% Increased Attack Speed</code></strong> |
+| | <strong><code>+20 to Vitality</code></strong> |
+| | <strong><code>Adds 100-100 Fire Damage</code></strong> |
+| | <strong><code>+190% Enhanced Damage</code></strong> |
 
 **Fleshrender** (Fleshrender)
 
@@ -51,16 +51,16 @@
 | | **Base Item:** Barbed Club |
 | | **Level Requirement:** 38 |
 | | **Properties:** |
-| | <ins><code>25% Chance of Open Wounds</code></ins> |
-| | <ins><code>Prevent Monster Heal</code></ins> |
-| | <ins><code>20% Chance of Crushing Blow</code></ins> |
-| | <ins><code>20% Deadly Strike</code></ins> |
-| | <ins><code>Adds 35-50 Damage</code></ins> |
-| | <ins><code>+130-200% Enhanced Damage</code></ins> |
-| | <ins><code>+1 to Druid Skill Levels</code></ins> |
-| | <ins><code>+2 to Shape Shifting Skills</code></ins> |
-| | <ins><code>Durability: 20 of 20</code></ins> |
-| | <ins><code>+20% Increased Attack Speed</code></ins> |
+| | <strong><code>25% Chance of Open Wounds</code></strong> |
+| | <strong><code>Prevent Monster Heal</code></strong> |
+| | <strong><code>20% Chance of Crushing Blow</code></strong> |
+| | <strong><code>20% Deadly Strike</code></strong> |
+| | <strong><code>Adds 35-50 Damage</code></strong> |
+| | <strong><code>+130-200% Enhanced Damage</code></strong> |
+| | <strong><code>+1 to Druid Skill Levels</code></strong> |
+| | <strong><code>+2 to Shape Shifting Skills</code></strong> |
+| | <strong><code>Durability: 20 of 20</code></strong> |
+| | <strong><code>+20% Increased Attack Speed</code></strong> |
 
 **Nord's Tenderizer** (Nord's Tenderizer)
 
@@ -69,13 +69,13 @@
 | | **Base Item:** Truncheon |
 | | **Level Requirement:** 68 |
 | | **Properties:** |
-| | <ins><code>+270-330% Enhanced Damage</code></ins> |
-| | <ins><code>Freezes Target +2-4</code></ins> |
-| | <ins><code>+25% Increased Attack Speed</code></ins> |
-| | <ins><code>+16 to Blizzard</code></ins> |
-| | <ins><code>150-180% Bonus to Attack Rating</code></ins> |
-| | <ins><code>+5-15 Cold Absorb</code></ins> |
-| | <ins><code>Adds 205-455 Cold Damage</code></ins> |
+| | <strong><code>+270-330% Enhanced Damage</code></strong> |
+| | <strong><code>Freezes Target +2-4</code></strong> |
+| | <strong><code>+25% Increased Attack Speed</code></strong> |
+| | <strong><code>+16 to Blizzard</code></strong> |
+| | <strong><code>150-180% Bonus to Attack Rating</code></strong> |
+| | <strong><code>+5-15 Cold Absorb</code></strong> |
+| | <strong><code>Adds 205-455 Cold Damage</code></strong> |
 
 **Stoutnail** (Stoutnail)
 
@@ -84,11 +84,11 @@
 | | **Base Item:** Spiked Club |
 | | **Level Requirement:** 5 |
 | | **Properties:** |
-| | <ins><code>Attacker Takes Damage of 50</code></ins> |
-| | <ins><code>+150% Enhanced Damage</code></ins> |
-| | <ins><code>+20 to Vitality</code></ins> |
-| | <ins><code>Magic Damage Reduced by 7</code></ins> |
-| | <ins><code>Damage Reduced by 7</code></ins> |
-| | <ins><code>+20% Increased Attack Speed</code></ins> |
-| | <ins><code>+20% Faster Run/Walk</code></ins> |
+| | <strong><code>Attacker Takes Damage of 50</code></strong> |
+| | <strong><code>+150% Enhanced Damage</code></strong> |
+| | <strong><code>+20 to Vitality</code></strong> |
+| | <strong><code>Magic Damage Reduced by 7</code></strong> |
+| | <strong><code>Damage Reduced by 7</code></strong> |
+| | <strong><code>+20% Increased Attack Speed</code></strong> |
+| | <strong><code>+20% Faster Run/Walk</code></strong> |
 

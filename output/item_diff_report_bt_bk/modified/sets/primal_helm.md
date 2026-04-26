@@ -1,13 +1,13 @@
 # Modified Set Primal Helm
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Immortal King's Triumph** (Immortal King's Triumph)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Avenger</code></del><code> </code><del><code>Guard</code></del> | **Base Item:** <ins><code>Guardian</code></ins><code> </code><ins><code>Crown</code></ins> |
+| **Base Item:** <strong><code>Avenger Guard</code></strong> | **Base Item:** <strong><code>Guardian Crown</code></strong> |
 | **Level Requirement:** <code>95</code> | **Level Requirement:** <code>95</code> |
 | **Properties:** | **Properties:** |
 | <code>+2  to Barbarian Skill Levels</code> | <code>+2  to Barbarian Skill Levels</code> |
@@ -21,7 +21,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Avenger</code></del><code> </code><del><code>Guard</code></del> | **Base Item:** <ins><code>Guardian</code></ins><code> </code><ins><code>Crown</code></ins> |
+| **Base Item:** <strong><code>Avenger Guard</code></strong> | **Base Item:** <strong><code>Guardian Crown</code></strong> |
 | **Level Requirement:** <code>47</code> | **Level Requirement:** <code>47</code> |
 | **Properties:** | **Properties:** |
 | <code>+125 Defense</code> | <code>+125 Defense</code> |

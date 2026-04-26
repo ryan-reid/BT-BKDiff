@@ -7,13 +7,13 @@
 | | **Base Item:** Winged Harpoon |
 | | **Level Requirement:** 88 |
 | | **Properties:** |
-| | <ins><code>Monster Physical Immunity is Sundered</code></ins> |
-| | <ins><code>20% Chance to cast level 20 Amplify Damage on striking</code></ins> |
-| | <ins><code>+300% Enhanced Damage</code></ins> |
-| | <ins><code>-25% to Enemy Physical Resistance</code></ins> |
-| | <ins><code>Adds 100-150 Damage</code></ins> |
-| | <ins><code>+30 to Dexterity</code></ins> |
-| | <ins><code>+30 to Strength</code></ins> |
-| | <ins><code>+40% Increased Attack Speed</code></ins> |
-| | <ins><code>Unknown property: ar% (200)</code></ins> |
+| | <strong><code>Monster Physical Immunity is Sundered</code></strong> |
+| | <strong><code>20% Chance to cast level 20 Amplify Damage on striking</code></strong> |
+| | <strong><code>+300% Enhanced Damage</code></strong> |
+| | <strong><code>-25% to Enemy Physical Resistance</code></strong> |
+| | <strong><code>Adds 100-150 Damage</code></strong> |
+| | <strong><code>+30 to Dexterity</code></strong> |
+| | <strong><code>+30 to Strength</code></strong> |
+| | <strong><code>+40% Increased Attack Speed</code></strong> |
+| | <strong><code>Unknown property: ar% (200)</code></strong> |
 

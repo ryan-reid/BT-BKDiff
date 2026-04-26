@@ -1,7 +1,7 @@
 # Modified Unique Spears
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Steel Pillar** (Steelpillar)
 
@@ -18,7 +18,7 @@
 | <code>44% Chance of Crushing Blow</code> | <code>44% Chance of Crushing Blow</code> |
 | <code>7-12% Life stolen per hit</code> | <code>7-12% Life stolen per hit</code> |
 | <code>15% Chance to cast level 33 Amplify Damage on striking</code> | <code>15% Chance to cast level 33 Amplify Damage on striking</code> |
-|  | <ins><code>+1-3 to Iron Skin</code></ins> |
+| <strong><code>empty</code></strong> | <strong><code>+1-3 to Iron Skin</code></strong> |
 
 **Viperfork** (Viperfork)
 
@@ -32,5 +32,5 @@
 | <code>33% Chance to cast level 60 Poison Nova when struck</code> | <code>33% Chance to cast level 60 Poison Nova when struck</code> |
 | <code>25% Chance to cast level 60 Poison Nova on striking</code> | <code>25% Chance to cast level 60 Poison Nova on striking</code> |
 | <code>Poison Resist +75%</code> | <code>Poison Resist +75%</code> |
-| <del><code>15%</code></del><code> Chance to cast level 5 Lower Resist on striking</code> | <ins><code>66%</code></ins><code> Chance to cast level 5 Lower Resist on striking</code> |
+| <strong><code>15% Chance to cast level 5 Lower Resist on striking</code></strong> | <strong><code>66% Chance to cast level 5 Lower Resist on striking</code></strong> |
 

@@ -1,13 +1,13 @@
 # Modified Set Gloves
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Immortal King's Forge** (Immortal King's Forge)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>War</code></del><code> Gauntlets</code> | **Base Item:** <ins><code>Ogre</code></ins><code> Gauntlets</code> |
+| **Base Item:** <strong><code>War Gauntlets</code></strong> | **Base Item:** <strong><code>Ogre Gauntlets</code></strong> |
 | **Level Requirement:** <code>30</code> | **Level Requirement:** <code>30</code> |
 | **Properties:** | **Properties:** |
 | <code>+65 Defense</code> | <code>+65 Defense</code> |
@@ -20,7 +20,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>War</code></del><code> Gauntlets</code> | **Base Item:** <ins><code>Ogre</code></ins><code> Gauntlets</code> |
+| **Base Item:** <strong><code>War Gauntlets</code></strong> | **Base Item:** <strong><code>Ogre Gauntlets</code></strong> |
 | **Level Requirement:** <code>95</code> | **Level Requirement:** <code>95</code> |
 | **Properties:** | **Properties:** |
 | <code>+20% Increased Attack Speed</code> | <code>+20% Increased Attack Speed</code> |
@@ -36,7 +36,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Battle</code></del><code> Gauntlets</code> | **Base Item:** <ins><code>Crusader</code></ins><code> Gauntlets</code> |
+| **Base Item:** <strong><code>Battle Gauntlets</code></strong> | **Base Item:** <strong><code>Crusader Gauntlets</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+25% Increased Attack Speed</code> | <code>+25% Increased Attack Speed</code> |
@@ -52,7 +52,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Battle</code></del><code> Gauntlets</code> | **Base Item:** <ins><code>Crusader</code></ins><code> Gauntlets</code> |
+| **Base Item:** <strong><code>Battle Gauntlets</code></strong> | **Base Item:** <strong><code>Crusader Gauntlets</code></strong> |
 | **Level Requirement:** <code>32</code> | **Level Requirement:** <code>32</code> |
 | **Properties:** | **Properties:** |
 | <code>+45-50 Defense</code> | <code>+45-50 Defense</code> |
@@ -66,7 +66,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Heavy Bracers</code></del> | **Base Item:** <ins><code>Vambraces</code></ins> |
+| **Base Item:** <strong><code>Heavy Bracers</code></strong> | **Base Item:** <strong><code>Vambraces</code></strong> |
 | **Level Requirement:** <code>45</code> | **Level Requirement:** <code>45</code> |
 | **Properties:** | **Properties:** |
 | <code>+30 Defense</code> | <code>+30 Defense</code> |
@@ -78,7 +78,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Heavy Bracers</code></del> | **Base Item:** <ins><code>Vambraces</code></ins> |
+| **Base Item:** <strong><code>Heavy Bracers</code></strong> | **Base Item:** <strong><code>Vambraces</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+1-3 to Necromancer Skill Levels</code> | <code>+1-3 to Necromancer Skill Levels</code> |

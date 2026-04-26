@@ -1,13 +1,13 @@
 # Modified Set Orb
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Tal Rasha's Lidless Eye** (Tal Rasha's Lidless Eye)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Swirling</code></del><code> </code><del><code>Crystal</code></del> | **Base Item:** <ins><code>Dimensional</code></ins><code> </code><ins><code>Shard</code></ins> |
+| **Base Item:** <strong><code>Swirling Crystal</code></strong> | **Base Item:** <strong><code>Dimensional Shard</code></strong> |
 | **Level Requirement:** <code>65</code> | **Level Requirement:** <code>65</code> |
 | **Properties:** | **Properties:** |
 | <code>+57 to Life</code> | <code>+57 to Life</code> |
@@ -20,7 +20,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Swirling</code></del><code> </code><del><code>Crystal</code></del> | **Base Item:** <ins><code>Dimensional</code></ins><code> </code><ins><code>Shard</code></ins> |
+| **Base Item:** <strong><code>Swirling Crystal</code></strong> | **Base Item:** <strong><code>Dimensional Shard</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+3 to Sorceress Skill Levels</code> | <code>+3 to Sorceress Skill Levels</code> |

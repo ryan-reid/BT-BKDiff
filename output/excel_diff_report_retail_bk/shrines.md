@@ -11,4 +11,4 @@
 - stamina shrine
 ## Modified Rows (1)
 ### gem shrine
-- `rarity`: <del><code>3</code></del> (Old) &rarr; <ins><code>2</code></ins> (New)
+- `rarity`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>2</code></strong> (New)

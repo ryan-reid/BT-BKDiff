@@ -7,15 +7,15 @@
 | | **Base Item:** Earth Spirit |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+2 to Druid Skill Levels</code></ins> |
-| | <ins><code>+45-90% Enhanced Damage</code></ins> |
-| | <ins><code>+500 Defense</code></ins> |
-| | <ins><code>All Resistances +15-25</code></ins> |
-| | <ins><code>+7 to Cyclone Armor (Druid only)</code></ins> |
-| | <ins><code>+5-10% to Fire Skill Damage</code></ins> |
-| | <ins><code>-3-5% to Enemy Fire Resistance</code></ins> |
-| | <ins><code>+5-10% to Cold Skill Damage</code></ins> |
-| | <ins><code>-3-5% to Enemy Cold Resistance</code></ins> |
+| | <strong><code>+2 to Druid Skill Levels</code></strong> |
+| | <strong><code>+45-90% Enhanced Damage</code></strong> |
+| | <strong><code>+500 Defense</code></strong> |
+| | <strong><code>All Resistances +15-25</code></strong> |
+| | <strong><code>+7 to Cyclone Armor (Druid only)</code></strong> |
+| | <strong><code>+5-10% to Fire Skill Damage</code></strong> |
+| | <strong><code>-3-5% to Enemy Fire Resistance</code></strong> |
+| | <strong><code>+5-10% to Cold Skill Damage</code></strong> |
+| | <strong><code>-3-5% to Enemy Cold Resistance</code></strong> |
 
 **Aldur's Stony Gaze** (Aldur's Stony Gaze)
 
@@ -24,10 +24,10 @@
 | | **Base Item:** Earth Spirit |
 | | **Level Requirement:** 36 |
 | | **Properties:** |
-| | <ins><code>+90 Defense</code></ins> |
-| | <ins><code>+75 to Mana</code></ins> |
-| | <ins><code>+25% Faster Hit Recovery</code></ins> |
-| | <ins><code>Lightning Resist +40-50%</code></ins> |
-| | <ins><code>+1-2 to All Skills</code></ins> |
-| | <ins><code>Cold Resist +40-50%</code></ins> |
+| | <strong><code>+90 Defense</code></strong> |
+| | <strong><code>+75 to Mana</code></strong> |
+| | <strong><code>+25% Faster Hit Recovery</code></strong> |
+| | <strong><code>Lightning Resist +40-50%</code></strong> |
+| | <strong><code>+1-2 to All Skills</code></strong> |
+| | <strong><code>Cold Resist +40-50%</code></strong> |
 

@@ -1,7 +1,7 @@
 # Modified Unique Merc Equip
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Crown of Ages** (Crown of Ages)
 
@@ -13,13 +13,13 @@
 | <code>+30% Faster Hit Recovery</code> | <code>+30% Faster Hit Recovery</code> |
 | <code>All Resistances +20-30</code> | <code>All Resistances +20-30</code> |
 | <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
-| <del><code>+1-2</code></del><code> to All Skills</code> | <ins><code>+1-3</code></ins><code> to All Skills</code> |
-| <del><code>+100-150</code></del><code> Defense</code> | <ins><code>+100-200</code></ins><code> Defense</code> |
-| <code>Damage Reduced by </code><del><code>10-15%</code></del> | <code>Damage Reduced by </code><ins><code>10-20%</code></ins> |
-| <del><code>+50%</code></del><code> Enhanced Defense</code> | <ins><code>+50-100%</code></ins><code> Enhanced Defense</code> |
-| <code>Magic Damage Reduced by </code><del><code>12-15</code></del> | <code>Magic Damage Reduced by </code><ins><code>10-30</code></ins> |
-| <del><code>+7-9</code></del><code> Life after each Kill</code> | <ins><code>+5-9</code></ins><code> Life after each Kill</code> |
-|  | <ins><code>+5-9 to Mana after each Kill</code></ins> |
+| <strong><code>+1-2 to All Skills</code></strong> | <strong><code>+1-3 to All Skills</code></strong> |
+| <strong><code>+100-150 Defense</code></strong> | <strong><code>+100-200 Defense</code></strong> |
+| <strong><code>Damage Reduced by 10-15%</code></strong> | <strong><code>Damage Reduced by 10-20%</code></strong> |
+| <strong><code>+50% Enhanced Defense</code></strong> | <strong><code>+50-100% Enhanced Defense</code></strong> |
+| <strong><code>Magic Damage Reduced by 12-15</code></strong> | <strong><code>Magic Damage Reduced by 10-30</code></strong> |
+| <strong><code>+7-9 Life after each Kill</code></strong> | <strong><code>+5-9 Life after each Kill</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>+5-9 to Mana after each Kill</code></strong> |
 
 **Giant Skull** (Giantskull)
 
@@ -34,7 +34,7 @@
 | <code>Damage Reduced by 12-21</code> | <code>Damage Reduced by 12-21</code> |
 | <code>+30-60% Enhanced Damage</code> | <code>+30-60% Enhanced Damage</code> |
 | <code>+25-35 to Dexterity</code> | <code>+25-35 to Dexterity</code> |
-|  | <ins><code>Ignore Target's Defense</code></ins> |
+| <strong><code>empty</code></strong> | <strong><code>Ignore Target's Defense</code></strong> |
 
 **Nightwing's Veil** (Nightwing's Veil)
 
@@ -49,6 +49,6 @@
 | <code>Cold Absorb 5-9%</code> | <code>Cold Absorb 5-9%</code> |
 | <code>Half Freeze Duration</code> | <code>Half Freeze Duration</code> |
 | <code>Requirements --50%</code> | <code>Requirements --50%</code> |
-| <del><code>+8-12%</code></del><code> to Cold Skill Damage</code> | <ins><code>+8-15%</code></ins><code> to Cold Skill Damage</code> |
-| <del><code>-10-20%</code></del><code> to Enemy Cold Resistance</code> | <ins><code>-8-15%</code></ins><code> to Enemy Cold Resistance</code> |
+| <strong><code>+8-12% to Cold Skill Damage</code></strong> | <strong><code>+8-15% to Cold Skill Damage</code></strong> |
+| <strong><code>-10-20% to Enemy Cold Resistance</code></strong> | <strong><code>-8-15% to Enemy Cold Resistance</code></strong> |
 

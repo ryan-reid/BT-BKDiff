@@ -7,8 +7,8 @@
 | | **Base Item:** War Staff |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | <ins><code>+1 to All Skills</code></ins> |
-| | <ins><code>+25% Faster Cast Rate</code></ins> |
+| | <strong><code>+1 to All Skills</code></strong> |
+| | <strong><code>+25% Faster Cast Rate</code></strong> |
 
 **Cathan's Rule** (Cathan's Rule)
 
@@ -17,9 +17,9 @@
 | | **Base Item:** Battle Staff |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | <ins><code>+2 to Fire Skills</code></ins> |
-| | <ins><code>+15% Faster Cast Rate</code></ins> |
-| | <ins><code>Adds 10-15 Fire Damage</code></ins> |
+| | <strong><code>+2 to Fire Skills</code></strong> |
+| | <strong><code>+15% Faster Cast Rate</code></strong> |
+| | <strong><code>Adds 10-15 Fire Damage</code></strong> |
 
 **Naj's Puzzler** (Naj's Puzzler)
 
@@ -28,11 +28,11 @@
 | | **Base Item:** Elder Staff |
 | | **Level Requirement:** 59 |
 | | **Properties:** |
-| | <ins><code>+35 to Energy</code></ins> |
-| | <ins><code>+150% Enhanced Damage</code></ins> |
-| | <ins><code>+1 to Teleport</code></ins> |
-| | <ins><code>+30% Faster Cast Rate</code></ins> |
-| | <ins><code>Adds 6-45 Lightning Damage</code></ins> |
-| | <ins><code>+70 to Mana</code></ins> |
-| | <ins><code>+1 to All Skills</code></ins> |
+| | <strong><code>+35 to Energy</code></strong> |
+| | <strong><code>+150% Enhanced Damage</code></strong> |
+| | <strong><code>+1 to Teleport</code></strong> |
+| | <strong><code>+30% Faster Cast Rate</code></strong> |
+| | <strong><code>Adds 6-45 Lightning Damage</code></strong> |
+| | <strong><code>+70 to Mana</code></strong> |
+| | <strong><code>+1 to All Skills</code></strong> |
 

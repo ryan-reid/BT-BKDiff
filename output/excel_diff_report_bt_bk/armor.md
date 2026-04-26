@@ -22,127 +22,127 @@
 - tome
 ## Modified Rows (61)
 ### ancient armor
-- `auto prefix`:  (Old) &rarr; <ins><code>426</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>426</code></strong> (New)
 ### archon plate
-- `auto prefix`:  (Old) &rarr; <ins><code>418</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>418</code></strong> (New)
 ### balrog skin
-- `auto prefix`:  (Old) &rarr; <ins><code>421</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>421</code></strong> (New)
 ### bloodlord skull
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### boneweave
-- `auto prefix`:  (Old) &rarr; <ins><code>420</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>420</code></strong> (New)
 ### breast plate
-- `auto prefix`:  (Old) &rarr; <ins><code>416</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>416</code></strong> (New)
 ### cantor trophy
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### chain mail
-- `auto prefix`:  (Old) &rarr; <ins><code>420</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>420</code></strong> (New)
 ### chaos armor
-- `auto prefix`:  (Old) &rarr; <ins><code>425</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>425</code></strong> (New)
 ### cuirass
-- `auto prefix`:  (Old) &rarr; <ins><code>416</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>416</code></strong> (New)
 ### demon head
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### demonhide armor
-- `auto prefix`:  (Old) &rarr; <ins><code>414</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>414</code></strong> (New)
 ### diamond mail
-- `auto prefix`:  (Old) &rarr; <ins><code>417</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>417</code></strong> (New)
 ### dusk shroud
-- `auto prefix`:  (Old) &rarr; <ins><code>412</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>412</code></strong> (New)
 ### embossed plate
-- `reqstr`: <del><code>125</code></del> (Old) &rarr; <ins><code>150</code></ins> (New)
-- `auto prefix`:  (Old) &rarr; <ins><code>424</code></ins> (New)
+- `reqstr`: <strong><code>125</code></strong> (Old) &rarr; <strong><code>150</code></strong> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>424</code></strong> (New)
 ### expansion
-- `ShowLevel`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `ShowLevel`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### fetish trophy
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### field plate
-- `auto prefix`:  (Old) &rarr; <ins><code>422</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>422</code></strong> (New)
 ### full plate mail
-- `auto prefix`:  (Old) &rarr; <ins><code>425</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>425</code></strong> (New)
 ### gargoyle head
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### ghost armor
-- `auto prefix`:  (Old) &rarr; <ins><code>412</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>412</code></strong> (New)
 ### gothic plate
-- `reqstr`: <del><code>70</code></del> (Old) &rarr; <ins><code>110</code></ins> (New)
-- `auto prefix`:  (Old) &rarr; <ins><code>424</code></ins> (New)
+- `reqstr`: <strong><code>70</code></strong> (Old) &rarr; <strong><code>110</code></strong> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>424</code></strong> (New)
 ### great hauberk
-- `auto prefix`:  (Old) &rarr; <ins><code>416</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>416</code></strong> (New)
 ### hard leather armor
-- `auto prefix`:  (Old) &rarr; <ins><code>414</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>414</code></strong> (New)
 ### heirophant trophy
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### hellforge plate
-- `auto prefix`:  (Old) &rarr; <ins><code>423</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>423</code></strong> (New)
 ### hellspawn skull
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### kraken shell
-- `auto prefix`:  (Old) &rarr; <ins><code>422</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>422</code></strong> (New)
 ### lacquered plate
-- `reqstr`: <del><code>208</code></del> (Old) &rarr; <ins><code>220</code></ins> (New)
-- `auto prefix`:  (Old) &rarr; <ins><code>424</code></ins> (New)
+- `reqstr`: <strong><code>208</code></strong> (Old) &rarr; <strong><code>220</code></strong> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>424</code></strong> (New)
 ### leather armor
-- `auto prefix`:  (Old) &rarr; <ins><code>413</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>413</code></strong> (New)
 ### light plate
-- `auto prefix`:  (Old) &rarr; <ins><code>418</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>418</code></strong> (New)
 ### linked mail
-- `auto prefix`:  (Old) &rarr; <ins><code>417</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>417</code></strong> (New)
 ### loricated mail
-- `auto prefix`:  (Old) &rarr; <ins><code>419</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>419</code></strong> (New)
 ### mage plate
-- `auto prefix`:  (Old) &rarr; <ins><code>418</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>418</code></strong> (New)
 ### mesh armor
-- `auto prefix`:  (Old) &rarr; <ins><code>420</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>420</code></strong> (New)
 ### minion skull
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### mummified trophy
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### ornate armor
-- `auto prefix`:  (Old) &rarr; <ins><code>426</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>426</code></strong> (New)
 ### overseer skull
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### plate mail
-- `auto prefix`:  (Old) &rarr; <ins><code>423</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>423</code></strong> (New)
 ### preserved head
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### quilted armor
-- `auto prefix`:  (Old) &rarr; <ins><code>412</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>412</code></strong> (New)
 ### ring mail
-- `auto prefix`:  (Old) &rarr; <ins><code>417</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>417</code></strong> (New)
 ### russet armor
-- `auto prefix`:  (Old) &rarr; <ins><code>421</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>421</code></strong> (New)
 ### sacred armor
-- `auto prefix`:  (Old) &rarr; <ins><code>426</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>426</code></strong> (New)
 ### scale mail
-- `auto prefix`:  (Old) &rarr; <ins><code>419</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>419</code></strong> (New)
 ### scarab husk
-- `auto prefix`:  (Old) &rarr; <ins><code>414</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>414</code></strong> (New)
 ### serpentskin armor
-- `auto prefix`:  (Old) &rarr; <ins><code>413</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>413</code></strong> (New)
 ### sexton trophy
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### shadow plate
-- `auto prefix`:  (Old) &rarr; <ins><code>425</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>425</code></strong> (New)
 ### sharktooth armor
-- `auto prefix`:  (Old) &rarr; <ins><code>422</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>422</code></strong> (New)
 ### splint mail
-- `auto prefix`:  (Old) &rarr; <ins><code>421</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>421</code></strong> (New)
 ### studded leather
-- `auto prefix`:  (Old) &rarr; <ins><code>415</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>415</code></strong> (New)
 ### succubus skull
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### templar coat
-- `auto prefix`:  (Old) &rarr; <ins><code>423</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>423</code></strong> (New)
 ### tigulated mail
-- `auto prefix`:  (Old) &rarr; <ins><code>419</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>419</code></strong> (New)
 ### trellised armor
-- `auto prefix`:  (Old) &rarr; <ins><code>415</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>415</code></strong> (New)
 ### unraveller head
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)
 ### wire fleece
-- `auto prefix`:  (Old) &rarr; <ins><code>415</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>415</code></strong> (New)
 ### wyrmhide
-- `auto prefix`:  (Old) &rarr; <ins><code>413</code></ins> (New)
+- `auto prefix`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>413</code></strong> (New)
 ### zombie head
-- `auto prefix`: <del><code>305</code></del> (Old) &rarr; <ins><code>307</code></ins> (New)
+- `auto prefix`: <strong><code>305</code></strong> (Old) &rarr; <strong><code>307</code></strong> (New)

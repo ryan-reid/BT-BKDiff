@@ -7,14 +7,14 @@
 | | **Base Item:** Thresher |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+3-4 to All Skills</code></ins> |
-| | <ins><code>Requirements --100%</code></ins> |
-| | <ins><code>+65-75% Faster Cast Rate</code></ins> |
-| | <ins><code>Poison Length Reduced by 100%</code></ins> |
-| | <ins><code>Level 15-20 Meditation Aura When Equipped</code></ins> |
-| | <ins><code>Increase Maximum Life 10-20%</code></ins> |
-| | <ins><code>Increase Maximum Mana 10-20%</code></ins> |
-| | <ins><code>+5-15 to Mana after each Kill</code></ins> |
+| | <strong><code>+3-4 to All Skills</code></strong> |
+| | <strong><code>Requirements --100%</code></strong> |
+| | <strong><code>+65-75% Faster Cast Rate</code></strong> |
+| | <strong><code>Poison Length Reduced by 100%</code></strong> |
+| | <strong><code>Level 15-20 Meditation Aura When Equipped</code></strong> |
+| | <strong><code>Increase Maximum Life 10-20%</code></strong> |
+| | <strong><code>Increase Maximum Mana 10-20%</code></strong> |
+| | <strong><code>+5-15 to Mana after each Kill</code></strong> |
 
 **Hwanin's Justice** (Hwanin's Justice)
 
@@ -23,12 +23,12 @@
 | | **Base Item:** Bill |
 | | **Level Requirement:** 34 |
 | | **Properties:** |
-| | <ins><code>+330 to Attack Rating</code></ins> |
-| | <ins><code>Repairs 1 durability in 5 seconds</code></ins> |
-| | <ins><code>10% Chance to cast level 14 Nova on striking</code></ins> |
-| | <ins><code>+40% Increased Attack Speed</code></ins> |
-| | <ins><code>+200% Enhanced Damage</code></ins> |
-| | <ins><code>Adds 1-300 Lightning Damage</code></ins> |
+| | <strong><code>+330 to Attack Rating</code></strong> |
+| | <strong><code>Repairs 1 durability in 5 seconds</code></strong> |
+| | <strong><code>10% Chance to cast level 14 Nova on striking</code></strong> |
+| | <strong><code>+40% Increased Attack Speed</code></strong> |
+| | <strong><code>+200% Enhanced Damage</code></strong> |
+| | <strong><code>Adds 1-300 Lightning Damage</code></strong> |
 
 **The Decimation** (The Decimation)
 
@@ -37,12 +37,12 @@
 | | **Base Item:** Thresher |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+3-4 to All Skills</code></ins> |
-| | <ins><code>+50% Increased Attack Speed</code></ins> |
-| | <ins><code>+25-35% Faster Hit Recovery</code></ins> |
-| | <ins><code>Damage Reduced by 3-10%</code></ins> |
-| | <ins><code>+220-280% Enhanced Damage</code></ins> |
-| | <ins><code>Level 10-15 Concentration Aura When Equipped</code></ins> |
-| | <ins><code>Increase Maximum Life 5-20%</code></ins> |
-| | <ins><code>22% Chance to cast level 20 Amplify Damage on attack</code></ins> |
+| | <strong><code>+3-4 to All Skills</code></strong> |
+| | <strong><code>+50% Increased Attack Speed</code></strong> |
+| | <strong><code>+25-35% Faster Hit Recovery</code></strong> |
+| | <strong><code>Damage Reduced by 3-10%</code></strong> |
+| | <strong><code>+220-280% Enhanced Damage</code></strong> |
+| | <strong><code>Level 10-15 Concentration Aura When Equipped</code></strong> |
+| | <strong><code>Increase Maximum Life 5-20%</code></strong> |
+| | <strong><code>22% Chance to cast level 20 Amplify Damage on attack</code></strong> |
 

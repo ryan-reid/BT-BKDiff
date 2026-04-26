@@ -7,11 +7,11 @@
 | | **Base Item:** Dimensional Shard |
 | | **Level Requirement:** 65 |
 | | **Properties:** |
-| | <ins><code>+57 to Life</code></ins> |
-| | <ins><code>+77 to Mana</code></ins> |
-| | <ins><code>+10 to Energy</code></ins> |
-| | <ins><code>+20% Faster Cast Rate</code></ins> |
-| | <ins><code>+2-3 to Sorceress Skill Levels</code></ins> |
+| | <strong><code>+57 to Life</code></strong> |
+| | <strong><code>+77 to Mana</code></strong> |
+| | <strong><code>+10 to Energy</code></strong> |
+| | <strong><code>+20% Faster Cast Rate</code></strong> |
+| | <strong><code>+2-3 to Sorceress Skill Levels</code></strong> |
 
 **Tal Rasha's Omniscience** (Tal Rasha's Omniscience)
 
@@ -20,12 +20,12 @@
 | | **Base Item:** Dimensional Shard |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+3 to Sorceress Skill Levels</code></ins> |
-| | <ins><code>+40% Faster Cast Rate</code></ins> |
-| | <ins><code>+2-3 to Lightning Mastery (Sorceress only)</code></ins> |
-| | <ins><code>+2-3 to Fire Mastery (Sorceress only)</code></ins> |
-| | <ins><code>+2-3 to Cold Mastery (Sorceress only)</code></ins> |
-| | <ins><code>+50 to Life</code></ins> |
-| | <ins><code>+50 to Mana</code></ins> |
-| | <ins><code>+5 to Evade</code></ins> |
+| | <strong><code>+3 to Sorceress Skill Levels</code></strong> |
+| | <strong><code>+40% Faster Cast Rate</code></strong> |
+| | <strong><code>+2-3 to Lightning Mastery (Sorceress only)</code></strong> |
+| | <strong><code>+2-3 to Fire Mastery (Sorceress only)</code></strong> |
+| | <strong><code>+2-3 to Cold Mastery (Sorceress only)</code></strong> |
+| | <strong><code>+50 to Life</code></strong> |
+| | <strong><code>+50 to Mana</code></strong> |
+| | <strong><code>+5 to Evade</code></strong> |
 

@@ -1,13 +1,13 @@
 # Modified Set Armor
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Griswold's Heart** (Griswold's Heart)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Ornate</code></del><code> </code><del><code>Plate</code></del> | **Base Item:** <ins><code>Sacred</code></ins><code> </code><ins><code>Armor</code></ins> |
+| **Base Item:** <strong><code>Ornate Plate</code></strong> | **Base Item:** <strong><code>Sacred Armor</code></strong> |
 | **Level Requirement:** <code>45</code> | **Level Requirement:** <code>45</code> |
 | **Properties:** | **Properties:** |
 | <code>+600 Defense</code> | <code>+600 Defense</code> |

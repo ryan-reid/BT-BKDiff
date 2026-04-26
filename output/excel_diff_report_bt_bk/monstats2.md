@@ -15,8 +15,8 @@
 - warputriddefiler
 ## Modified Rows (3)
 ### baron
-- `\*hcIdx`: <del><code>740</code></del> (Old) &rarr; <ins><code>752</code></ins> (New)
+- `\*hcIdx`: <strong><code>740</code></strong> (Old) &rarr; <strong><code>752</code></strong> (New)
 ### btdiablo
-- `\*hcIdx`: <del><code>739</code></del> (Old) &rarr; <ins><code>751</code></ins> (New)
+- `\*hcIdx`: <strong><code>739</code></strong> (Old) &rarr; <strong><code>751</code></strong> (New)
 ### kexicon
-- `\*hcIdx`: <del><code>741</code></del> (Old) &rarr; <ins><code>753</code></ins> (New)
+- `\*hcIdx`: <strong><code>741</code></strong> (Old) &rarr; <strong><code>753</code></strong> (New)

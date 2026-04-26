@@ -1,13 +1,13 @@
 # Modified Set Pelt
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Aldur's Icy Gaze** (Aldur's Icy Gaze)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Hunter's</code></del><code> </code><del><code>Guise</code></del> | **Base Item:** <ins><code>Earth</code></ins><code> </code><ins><code>Spirit</code></ins> |
+| **Base Item:** <strong><code>Hunter's Guise</code></strong> | **Base Item:** <strong><code>Earth Spirit</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+2 to Druid Skill Levels</code> | <code>+2 to Druid Skill Levels</code> |
@@ -24,7 +24,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Hunter's</code></del><code> </code><del><code>Guise</code></del> | **Base Item:** <ins><code>Earth</code></ins><code> </code><ins><code>Spirit</code></ins> |
+| **Base Item:** <strong><code>Hunter's Guise</code></strong> | **Base Item:** <strong><code>Earth Spirit</code></strong> |
 | **Level Requirement:** <code>36</code> | **Level Requirement:** <code>36</code> |
 | **Properties:** | **Properties:** |
 | <code>+90 Defense</code> | <code>+90 Defense</code> |

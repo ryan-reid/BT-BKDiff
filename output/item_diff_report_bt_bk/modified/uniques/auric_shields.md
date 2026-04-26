@@ -1,7 +1,7 @@
 # Modified Unique Auric Shields
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Dragonscale** (Dragonscale)
 
@@ -20,5 +20,5 @@
 | <code>+1 to Fire Mastery</code> | <code>+1 to Fire Mastery</code> |
 | <code>+20% Faster Block Rate</code> | <code>+20% Faster Block Rate</code> |
 | <code>+20% Faster Block Rate</code> | <code>+20% Faster Block Rate</code> |
-| <del><code>+15% to Fire Skill Damage</code></del> | <ins><code>(removed)</code></ins> |
+| <strong><code>+15% to Fire Skill Damage</code></strong> | <strong><code>(removed)</code></strong> |
 

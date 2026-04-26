@@ -1,7 +1,7 @@
 # Modified Unique Swords
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Azurewrath** (Azurewrath)
 
@@ -18,10 +18,10 @@
 | <code>Cold Absorb 25%</code> | <code>Cold Absorb 25%</code> |
 | <code>40% Chance to cast level 40 Blizzard on attack</code> | <code>40% Chance to cast level 40 Blizzard on attack</code> |
 | <code>Adds 250-500 Magic Damage</code> | <code>Adds 250-500 Magic Damage</code> |
-| <del><code>+1 to Holy Freeze</code></del> | <ins><code>(removed)</code></ins> |
-| <del><code>+1 to Resist Cold</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>Level 10-18 Holy Freeze Aura When Equipped</code></ins> |
-|  | <ins><code>Adds 250-500 Cold Damage</code></ins> |
+| <strong><code>+1 to Holy Freeze</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>+1 to Resist Cold</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>Level 10-18 Holy Freeze Aura When Equipped</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>Adds 250-500 Cold Damage</code></strong> |
 
 **Flamebellow** (Flamebellow)
 
@@ -38,8 +38,8 @@
 | <code>+15-20 to all Attributes</code> | <code>+15-20 to all Attributes</code> |
 | <code>+12-18 to Inferno</code> | <code>+12-18 to Inferno</code> |
 | <code>+30% Increased Attack Speed</code> | <code>+30% Increased Attack Speed</code> |
-| <del><code>+3</code></del><code> to Fire Skills</code> | <ins><code>+1-3</code></ins><code> to Fire Skills</code> |
-|  | <ins><code>Level 5-10 Conviction Aura When Equipped</code></ins> |
+| <strong><code>+3 to Fire Skills</code></strong> | <strong><code>+1-3 to Fire Skills</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>Level 5-10 Conviction Aura When Equipped</code></strong> |
 
 **Frostwind** (Frostwind)
 
@@ -54,18 +54,18 @@
 | <code>+25% Increased Attack Speed</code> | <code>+25% Increased Attack Speed</code> |
 | <code>+7-15 Cold Absorb</code> | <code>+7-15 Cold Absorb</code> |
 | <code>-25-40% to Enemy Cold Resistance</code> | <code>-25-40% to Enemy Cold Resistance</code> |
-| <del><code>Half Freeze Duration</code></del> | <ins><code>(removed)</code></ins> |
-| <del><code>20% Chance to cast level 10 Lower Resist on striking</code></del> | <ins><code>(removed)</code></ins> |
-| <del><code>20% Chance to cast level 20 Frozen Orb on striking</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>Cannot Be Frozen</code></ins> |
-|  | <ins><code>25% Chance to cast level 10 Lower Resist on attack</code></ins> |
-|  | <ins><code>25% Chance to cast level 30 Frozen Orb on attack</code></ins> |
+| <strong><code>Half Freeze Duration</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>20% Chance to cast level 10 Lower Resist on striking</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>20% Chance to cast level 20 Frozen Orb on striking</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>Cannot Be Frozen</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>25% Chance to cast level 10 Lower Resist on attack</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>25% Chance to cast level 30 Frozen Orb on attack</code></strong> |
 
 **Shadowfang** (Shadowfang)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Two-Handed</code></del><code> Sword</code> | **Base Item:** <ins><code>2H</code></ins><code> Sword</code> |
+| **Base Item:** <strong><code>Two-Handed Sword</code></strong> | **Base Item:** <strong><code>2H Sword</code></strong> |
 | **Level Requirement:** <code>12</code> | **Level Requirement:** <code>12</code> |
 | **Properties:** | **Properties:** |
 | <code>9% Mana stolen per hit</code> | <code>9% Mana stolen per hit</code> |
@@ -86,12 +86,12 @@
 | <code>(2.5 per clvl) to Maximum Damage (Based on Character Level)</code> | <code>(2.5 per clvl) to Maximum Damage (Based on Character Level)</code> |
 | <code>+20 to Strength</code> | <code>+20 to Strength</code> |
 | <code>+20 to Dexterity</code> | <code>+20 to Dexterity</code> |
-| <del><code>+250%</code></del><code> Enhanced Damage</code> | <ins><code>+300-350%</code></ins><code> Enhanced Damage</code> |
-| <del><code>150%</code></del><code> Bonus to Attack Rating</code> | <ins><code>250%</code></ins><code> Bonus to Attack Rating</code> |
-| <del><code>+175</code></del><code> to Life</code> | <ins><code>+200</code></ins><code> to Life</code> |
-| <code>Increase Maximum Mana </code><del><code>25%</code></del> | <code>Increase Maximum Mana </code><ins><code>40-50%</code></ins> |
-| <code>Increase Maximum Life </code><del><code>25%</code></del> | <code>Increase Maximum Life </code><ins><code>40-50%</code></ins> |
-|  | <ins><code>-15-30% to Enemy Physical Resistance</code></ins> |
+| <strong><code>+250% Enhanced Damage</code></strong> | <strong><code>+300-350% Enhanced Damage</code></strong> |
+| <strong><code>150% Bonus to Attack Rating</code></strong> | <strong><code>250% Bonus to Attack Rating</code></strong> |
+| <strong><code>+175 to Life</code></strong> | <strong><code>+200 to Life</code></strong> |
+| <strong><code>Increase Maximum Mana 25%</code></strong> | <strong><code>Increase Maximum Mana 40-50%</code></strong> |
+| <strong><code>Increase Maximum Life 25%</code></strong> | <strong><code>Increase Maximum Life 40-50%</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>-15-30% to Enemy Physical Resistance</code></strong> |
 
 **The Grandfather** (The Grandfather)
 
@@ -102,9 +102,9 @@
 | **Properties:** | **Properties:** |
 | <code>(2.5 per clvl) to Maximum Damage (Based on Character Level)</code> | <code>(2.5 per clvl) to Maximum Damage (Based on Character Level)</code> |
 | <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
-| <del><code>+20</code></del><code> to all Attributes</code> | <ins><code>+20-30</code></ins><code> to all Attributes</code> |
-| <del><code>+80</code></del><code> to Life</code> | <ins><code>+100</code></ins><code> to Life</code> |
-| <del><code>+200-300%</code></del><code> Enhanced Damage</code> | <ins><code>+450%</code></ins><code> Enhanced Damage</code> |
-| <del><code>50% Bonus to Attack Rating</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>-10-20% to Enemy Physical Resistance</code></ins> |
+| <strong><code>+20 to all Attributes</code></strong> | <strong><code>+20-30 to all Attributes</code></strong> |
+| <strong><code>+80 to Life</code></strong> | <strong><code>+100 to Life</code></strong> |
+| <strong><code>+200-300% Enhanced Damage</code></strong> | <strong><code>+450% Enhanced Damage</code></strong> |
+| <strong><code>50% Bonus to Attack Rating</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>-10-20% to Enemy Physical Resistance</code></strong> |
 

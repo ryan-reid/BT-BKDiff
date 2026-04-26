@@ -1,7 +1,7 @@
 # Modified Unique Axe
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Death Cleaver** (Deathcleaver)
 
@@ -16,8 +16,8 @@
 | <code>+40% Increased Attack Speed</code> | <code>+40% Increased Attack Speed</code> |
 | <code>+6-9 Life after each Kill</code> | <code>+6-9 Life after each Kill</code> |
 | <code>10-15% Chance of Crushing Blow</code> | <code>10-15% Chance of Crushing Blow</code> |
-|  | <ins><code>Damage +50-100</code></ins> |
-|  | <ins><code>-10-20% to Enemy Physical Resistance</code></ins> |
+| <strong><code>empty</code></strong> | <strong><code>Damage +50-100</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>-10-20% to Enemy Physical Resistance</code></strong> |
 
 **Ethereal Edge** (Ethereal Edge)
 
@@ -34,7 +34,7 @@
 | <code>Ethereal</code> | <code>Ethereal</code> |
 | <code>Indestructible</code> | <code>Indestructible</code> |
 | <code>+150-200% Damage to Undead</code> | <code>+150-200% Damage to Undead</code> |
-|  | <ins><code>5% Chance to cast level 10 Fade when you Kill an Enemy</code></ins> |
+| <strong><code>empty</code></strong> | <strong><code>5% Chance to cast level 10 Fade when you Kill an Enemy</code></strong> |
 
 **Rune Master** (Runemaster)
 
@@ -46,6 +46,6 @@
 | <code>+5% to Maximum Cold Resist</code> | <code>+5% to Maximum Cold Resist</code> |
 | <code>Cannot Be Frozen</code> | <code>Cannot Be Frozen</code> |
 | <code>Ignore Target's Defense</code> | <code>Ignore Target's Defense</code> |
-| <del><code>+270-320%</code></del><code> Enhanced Damage</code> | <ins><code>+350%</code></ins><code> Enhanced Damage</code> |
-| <del><code>+20%</code></del><code> Increased Attack Speed</code> | <ins><code>+40%</code></ins><code> Increased Attack Speed</code> |
+| <strong><code>+270-320% Enhanced Damage</code></strong> | <strong><code>+350% Enhanced Damage</code></strong> |
+| <strong><code>+20% Increased Attack Speed</code></strong> | <strong><code>+40% Increased Attack Speed</code></strong> |
 

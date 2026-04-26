@@ -4,15 +4,15 @@
 
 ## Modified Rows (3)
 ### hell
-- `ResistPenalty`: <del><code>-100</code></del> (Old) &rarr; <ins><code>-70</code></ins> (New)
-- `UniqueDamageBonus`: <del><code>66</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
-- `ChampionDamageBonus`: <del><code>66</code></del> (Old) &rarr; <ins><code>75</code></ins> (New)
-- `StaticFieldMin`: <del><code>50</code></del> (Old) &rarr; <ins><code>60</code></ins> (New)
+- `ResistPenalty`: <strong><code>-100</code></strong> (Old) &rarr; <strong><code>-70</code></strong> (New)
+- `UniqueDamageBonus`: <strong><code>66</code></strong> (Old) &rarr; <strong><code>75</code></strong> (New)
+- `ChampionDamageBonus`: <strong><code>66</code></strong> (Old) &rarr; <strong><code>75</code></strong> (New)
+- `StaticFieldMin`: <strong><code>50</code></strong> (Old) &rarr; <strong><code>60</code></strong> (New)
 ### nightmare
-- `DeathExpPenalty`: <del><code>5</code></del> (Old) &rarr; <ins><code>10</code></ins> (New)
-- `UniqueDamageBonus`: <del><code>75</code></del> (Old) &rarr; <ins><code>85</code></ins> (New)
-- `ChampionDamageBonus`: <del><code>75</code></del> (Old) &rarr; <ins><code>85</code></ins> (New)
-- `StaticFieldMin`: <del><code>33</code></del> (Old) &rarr; <ins><code>60</code></ins> (New)
+- `DeathExpPenalty`: <strong><code>5</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
+- `UniqueDamageBonus`: <strong><code>75</code></strong> (Old) &rarr; <strong><code>85</code></strong> (New)
+- `ChampionDamageBonus`: <strong><code>75</code></strong> (Old) &rarr; <strong><code>85</code></strong> (New)
+- `StaticFieldMin`: <strong><code>33</code></strong> (Old) &rarr; <strong><code>60</code></strong> (New)
 ### normal
-- `DeathExpPenalty`: <del><code>0</code></del> (Old) &rarr; <ins><code>10</code></ins> (New)
-- `StaticFieldMin`: <del><code>0</code></del> (Old) &rarr; <ins><code>60</code></ins> (New)
+- `DeathExpPenalty`: <strong><code>0</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
+- `StaticFieldMin`: <strong><code>0</code></strong> (Old) &rarr; <strong><code>60</code></strong> (New)

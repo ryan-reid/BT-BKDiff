@@ -13110,28 +13110,28 @@
 - zod rune generic
 ## Modified Rows (13)
 ### amethyst
-- `Equiv2`: <del><code>ggma</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggma</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### chipped gem
-- `Equiv2`: <del><code>ggm0</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggm0</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### diamond
-- `Equiv2`: <del><code>ggmd</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggmd</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### emerald
-- `Equiv2`: <del><code>ggme</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggme</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### flawed gem
-- `Equiv2`: <del><code>ggm1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggm1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### flawless gem
-- `Equiv2`: <del><code>ggm3</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggm3</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### knife
-- `StaffMods`:  (Old) &rarr; <ins><code>war</code></ins> (New)
+- `StaffMods`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>war</code></strong> (New)
 ### perfect gem
-- `Equiv2`: <del><code>ggm4</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggm4</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### ruby
-- `Equiv2`: <del><code>ggmr</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggmr</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### sapphire
-- `Equiv2`: <del><code>ggms</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggms</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### skull
-- `Equiv2`: <del><code>ggmz</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggmz</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### standard gem
-- `Equiv2`: <del><code>ggm2</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggm2</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### topaz
-- `Equiv2`: <del><code>ggmt</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Equiv2`: <strong><code>ggmt</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)

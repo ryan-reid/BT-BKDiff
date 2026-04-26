@@ -7,10 +7,10 @@
 | | **Base Item:** Any Shield |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>Cold Resist +30%</code></ins> |
-| | <ins><code>All Resistances +13</code></ins> |
-| | <ins><code>+50% Enhanced Defense</code></ins> |
-| | <ins><code>10% Damage Taken Goes To Mana</code></ins> |
+| | <strong><code>Cold Resist +30%</code></strong> |
+| | <strong><code>All Resistances +13</code></strong> |
+| | <strong><code>+50% Enhanced Defense</code></strong> |
+| | <strong><code>10% Damage Taken Goes To Mana</code></strong> |
 
 **Knight's Vigil** (Knight's Vigil)
 
@@ -19,13 +19,13 @@
 | | **Base Item:** Any Shield |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+15 to Strength</code></ins> |
-| | <ins><code>Magic Damage Reduced by 7</code></ins> |
-| | <ins><code>Level 10 Defiance Aura When Equipped</code></ins> |
-| | <ins><code>+50 to Life</code></ins> |
-| | <ins><code>+5-10% to Maximum Cold Resist</code></ins> |
-| | <ins><code>+50% Faster Block Rate</code></ins> |
-| | <ins><code>All Resistances +15</code></ins> |
+| | <strong><code>+15 to Strength</code></strong> |
+| | <strong><code>Magic Damage Reduced by 7</code></strong> |
+| | <strong><code>Level 10 Defiance Aura When Equipped</code></strong> |
+| | <strong><code>+50 to Life</code></strong> |
+| | <strong><code>+5-10% to Maximum Cold Resist</code></strong> |
+| | <strong><code>+50% Faster Block Rate</code></strong> |
+| | <strong><code>All Resistances +15</code></strong> |
 
 **Rhyme** (Rhyme)
 
@@ -34,12 +34,12 @@
 | | **Base Item:** Any Shield |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+20% Faster Block Rate</code></ins> |
-| | <ins><code>+20% Faster Block Rate</code></ins> |
-| | <ins><code>All Resistances +25</code></ins> |
-| | <ins><code>Cannot Be Frozen</code></ins> |
-| | <ins><code>50% Extra Gold from Monsters</code></ins> |
-| | <ins><code>25% Better Chance of Getting Magic Items</code></ins> |
+| | <strong><code>+20% Faster Block Rate</code></strong> |
+| | <strong><code>+20% Faster Block Rate</code></strong> |
+| | <strong><code>All Resistances +25</code></strong> |
+| | <strong><code>Cannot Be Frozen</code></strong> |
+| | <strong><code>50% Extra Gold from Monsters</code></strong> |
+| | <strong><code>25% Better Chance of Getting Magic Items</code></strong> |
 
 **Sanctuary** (Sanctuary)
 
@@ -48,13 +48,13 @@
 | | **Base Item:** Any Shield |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+20% Faster Block Rate</code></ins> |
-| | <ins><code>+20% Faster Block Rate</code></ins> |
-| | <ins><code>+130-160% Enhanced Defense</code></ins> |
-| | <ins><code>+10-15% to Magic Skill Damage</code></ins> |
-| | <ins><code>All Resistances +50-70</code></ins> |
-| | <ins><code>+20% Faster Hit Recovery</code></ins> |
-| | <ins><code>Level 10 Sanctuary Aura When Equipped</code></ins> |
+| | <strong><code>+20% Faster Block Rate</code></strong> |
+| | <strong><code>+20% Faster Block Rate</code></strong> |
+| | <strong><code>+130-160% Enhanced Defense</code></strong> |
+| | <strong><code>+10-15% to Magic Skill Damage</code></strong> |
+| | <strong><code>All Resistances +50-70</code></strong> |
+| | <strong><code>+20% Faster Hit Recovery</code></strong> |
+| | <strong><code>Level 10 Sanctuary Aura When Equipped</code></strong> |
 
 **Spirit** (Spirit)
 
@@ -63,13 +63,13 @@
 | | **Base Item:** Any Shield |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+25% Faster Hit Recovery</code></ins> |
-| | <ins><code>+89-112 to Mana</code></ins> |
-| | <ins><code>+250 Defense vs. Missile</code></ins> |
-| | <ins><code>+22 to Vitality</code></ins> |
-| | <ins><code>+30% Faster Cast Rate</code></ins> |
-| | <ins><code>Magic Absorb 3-8%</code></ins> |
-| | <ins><code>+1 to All Skills</code></ins> |
+| | <strong><code>+25% Faster Hit Recovery</code></strong> |
+| | <strong><code>+89-112 to Mana</code></strong> |
+| | <strong><code>+250 Defense vs. Missile</code></strong> |
+| | <strong><code>+22 to Vitality</code></strong> |
+| | <strong><code>+30% Faster Cast Rate</code></strong> |
+| | <strong><code>Magic Absorb 3-8%</code></strong> |
+| | <strong><code>+1 to All Skills</code></strong> |
 
 **Splendor** (Splendor)
 
@@ -78,13 +78,13 @@
 | | **Base Item:** Any Shield |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+3 to Light Radius</code></ins> |
-| | <ins><code>50% Extra Gold from Monsters</code></ins> |
-| | <ins><code>20% Better Chance of Getting Magic Items</code></ins> |
-| | <ins><code>+60-100% Enhanced Defense</code></ins> |
-| | <ins><code>+20% Faster Block Rate</code></ins> |
-| | <ins><code>+20% Faster Cast Rate</code></ins> |
-| | <ins><code>+1 to All Skills</code></ins> |
+| | <strong><code>+3 to Light Radius</code></strong> |
+| | <strong><code>50% Extra Gold from Monsters</code></strong> |
+| | <strong><code>20% Better Chance of Getting Magic Items</code></strong> |
+| | <strong><code>+60-100% Enhanced Defense</code></strong> |
+| | <strong><code>+20% Faster Block Rate</code></strong> |
+| | <strong><code>+20% Faster Cast Rate</code></strong> |
+| | <strong><code>+1 to All Skills</code></strong> |
 
 **Trust** (Trust)
 
@@ -93,10 +93,10 @@
 | | **Base Item:** Any Shield |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>Regenerate Mana 20%</code></ins> |
-| | <ins><code>Fire Resist +20%</code></ins> |
-| | <ins><code>Lightning Resist +20%</code></ins> |
-| | <ins><code>+50 Defense vs. Missile</code></ins> |
-| | <ins><code>+50 Defense vs. Melee</code></ins> |
-| | <ins><code>+20-35 Defense</code></ins> |
+| | <strong><code>Regenerate Mana 20%</code></strong> |
+| | <strong><code>Fire Resist +20%</code></strong> |
+| | <strong><code>Lightning Resist +20%</code></strong> |
+| | <strong><code>+50 Defense vs. Missile</code></strong> |
+| | <strong><code>+50 Defense vs. Melee</code></strong> |
+| | <strong><code>+20-35 Defense</code></strong> |
 

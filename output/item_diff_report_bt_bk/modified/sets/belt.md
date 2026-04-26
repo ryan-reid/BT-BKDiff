@@ -1,13 +1,13 @@
 # Modified Set Belt
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Immortal King's Detail** (Immortal King's Detail)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>War</code></del><code> </code><del><code>Belt</code></del> | **Base Item:** <ins><code>Colossus</code></ins><code> </code><ins><code>Girdle</code></ins> |
+| **Base Item:** <strong><code>War Belt</code></strong> | **Base Item:** <strong><code>Colossus Girdle</code></strong> |
 | **Level Requirement:** <code>29</code> | **Level Requirement:** <code>29</code> |
 | **Properties:** | **Properties:** |
 | <code>+36 Defense</code> | <code>+36 Defense</code> |
@@ -19,7 +19,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>War</code></del><code> </code><del><code>Belt</code></del> | **Base Item:** <ins><code>Colossus</code></ins><code> </code><ins><code>Girdle</code></ins> |
+| **Base Item:** <strong><code>War Belt</code></strong> | **Base Item:** <strong><code>Colossus Girdle</code></strong> |
 | **Level Requirement:** <code>95</code> | **Level Requirement:** <code>95</code> |
 | **Properties:** | **Properties:** |
 | <code>Damage Reduced by 10-20%</code> | <code>Damage Reduced by 10-20%</code> |
@@ -36,7 +36,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Sharkskin</code></del><code> Belt</code> | **Base Item:** <ins><code>Vampirefang</code></ins><code> Belt</code> |
+| **Base Item:** <strong><code>Sharkskin Belt</code></strong> | **Base Item:** <strong><code>Vampirefang Belt</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+25% Faster Run/Walk</code> | <code>+25% Faster Run/Walk</code> |
@@ -52,7 +52,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Sharkskin</code></del><code> Belt</code> | **Base Item:** <ins><code>Vampirefang</code></ins><code> Belt</code> |
+| **Base Item:** <strong><code>Sharkskin Belt</code></strong> | **Base Item:** <strong><code>Vampirefang Belt</code></strong> |
 | **Level Requirement:** <code>45</code> | **Level Requirement:** <code>45</code> |
 | **Properties:** | **Properties:** |
 | <code>+50 Defense</code> | <code>+50 Defense</code> |
@@ -65,7 +65,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Mesh</code></del><code> </code><del><code>Belt</code></del> | **Base Item:** <ins><code>Mithril</code></ins><code> </code><ins><code>Coil</code></ins> |
+| **Base Item:** <strong><code>Mesh Belt</code></strong> | **Base Item:** <strong><code>Mithril Coil</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>Damage Reduced by 5-10%</code> | <code>Damage Reduced by 5-10%</code> |
@@ -82,7 +82,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Mesh</code></del><code> </code><del><code>Belt</code></del> | **Base Item:** <ins><code>Mithril</code></ins><code> </code><ins><code>Coil</code></ins> |
+| **Base Item:** <strong><code>Mesh Belt</code></strong> | **Base Item:** <strong><code>Mithril Coil</code></strong> |
 | **Level Requirement:** <code>53</code> | **Level Requirement:** <code>53</code> |
 | **Properties:** | **Properties:** |
 | <code>Requirements --20%</code> | <code>Requirements --20%</code> |

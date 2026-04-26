@@ -44,7 +44,7 @@
 - of venom
 ## Modified Rows (1)
 ### chromatic
-- `levelreq`:  (Old) &rarr; <ins><code>1</code></ins> (New)
-- `group`: <del><code>307</code></del> (Old) &rarr; <ins><code>309</code></ins> (New)
-- `multiply`:  (Old) &rarr; <ins><code>0</code></ins> (New)
-- `add`:  (Old) &rarr; <ins><code>0</code></ins> (New)
+- `levelreq`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
+- `group`: <strong><code>307</code></strong> (Old) &rarr; <strong><code>309</code></strong> (New)
+- `multiply`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `add`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)

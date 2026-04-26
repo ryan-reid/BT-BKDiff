@@ -46,79 +46,79 @@
 - unused211
 ## Modified Rows (31)
 ### armorclass\_vs\_hth
-- `1\.09\-Save Bits`: <del><code>8</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
-- `Save Bits`: <del><code>8</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
+- `1\.09\-Save Bits`: <strong><code>8</code></strong> (Old) &rarr; <strong><code>9</code></strong> (New)
+- `Save Bits`: <strong><code>8</code></strong> (Old) &rarr; <strong><code>9</code></strong> (New)
 ### augmented
-- `\*ID`: <del><code>363</code></del> (Old) &rarr; <ins><code>370</code></ins> (New)
+- `\*ID`: <strong><code>363</code></strong> (Old) &rarr; <strong><code>370</code></strong> (New)
 ### coldmindam
-- `1\.09\-Save Bits`: <del><code>6</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
-- `Save Bits`: <del><code>8</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
+- `1\.09\-Save Bits`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>9</code></strong> (New)
+- `Save Bits`: <strong><code>8</code></strong> (Old) &rarr; <strong><code>9</code></strong> (New)
 ### corrupted
-- `\*ID`: <del><code>361</code></del> (Old) &rarr; <ins><code>368</code></ins> (New)
+- `\*ID`: <strong><code>361</code></strong> (Old) &rarr; <strong><code>368</code></strong> (New)
 ### corruptordesc
-- `\*ID`: <del><code>362</code></del> (Old) &rarr; <ins><code>369</code></ins> (New)
+- `\*ID`: <strong><code>362</code></strong> (Old) &rarr; <strong><code>369</code></strong> (New)
 ### damagepercent
-- `descpriority`:  (Old) &rarr; <ins><code>88</code></ins> (New)
-- `descfunc`:  (Old) &rarr; <ins><code>19</code></ins> (New)
-- `descstrpos`:  (Old) &rarr; <ins><code>strModEnhancedDamage</code></ins> (New)
-- `descstrneg`:  (Old) &rarr; <ins><code>strModEnhancedDamage</code></ins> (New)
+- `descpriority`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>88</code></strong> (New)
+- `descfunc`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>19</code></strong> (New)
+- `descstrpos`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>strModEnhancedDamage</code></strong> (New)
+- `descstrneg`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>strModEnhancedDamage</code></strong> (New)
 ### damageresist
-- `descfunc`: <del><code>19</code></del> (Old) &rarr; <ins><code>29</code></ins> (New)
-- `descstrneg`: <code>ModStr2</code><del><code>uPercent</code></del> (Old) &rarr; <code>ModStr2</code><ins><code>uPercentNegative</code></ins> (New)
+- `descfunc`: <strong><code>19</code></strong> (Old) &rarr; <strong><code>29</code></strong> (New)
+- `descstrneg`: <strong><code>ModStr2uPercent</code></strong> (Old) &rarr; <strong><code>ModStr2uPercentNegative</code></strong> (New)
 ### dyeblack
-- `\*ID`: <del><code>365</code></del> (Old) &rarr; <ins><code>372</code></ins> (New)
+- `\*ID`: <strong><code>365</code></strong> (Old) &rarr; <strong><code>372</code></strong> (New)
 ### dyewhite
-- `\*ID`: <del><code>364</code></del> (Old) &rarr; <ins><code>371</code></ins> (New)
+- `\*ID`: <strong><code>364</code></strong> (Old) &rarr; <strong><code>371</code></strong> (New)
 ### firemindam
-- `1\.09\-Save Bits`: <del><code>8</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
-- `Save Bits`: <del><code>8</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
+- `1\.09\-Save Bits`: <strong><code>8</code></strong> (Old) &rarr; <strong><code>9</code></strong> (New)
+- `Save Bits`: <strong><code>8</code></strong> (Old) &rarr; <strong><code>9</code></strong> (New)
 ### hpregen
-- `1\.09\-Save Bits`: <del><code>6</code></del> (Old) &rarr; <ins><code>7</code></ins> (New)
-- `Save Bits`: <del><code>6</code></del> (Old) &rarr; <ins><code>7</code></ins> (New)
+- `1\.09\-Save Bits`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>7</code></strong> (New)
+- `Save Bits`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>7</code></strong> (New)
 ### item\_allskills
-- `descpriority`: <del><code>158</code></del> (Old) &rarr; <ins><code>156</code></ins> (New)
+- `descpriority`: <strong><code>158</code></strong> (Old) &rarr; <strong><code>156</code></strong> (New)
 ### item\_attackertakesdamage
-- `1\.09\-Save Bits`: <del><code>7</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
-- `Save Bits`: <del><code>7</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `1\.09\-Save Bits`: <strong><code>7</code></strong> (Old) &rarr; <strong><code>8</code></strong> (New)
+- `Save Bits`: <strong><code>7</code></strong> (Old) &rarr; <strong><code>8</code></strong> (New)
 ### item\_aura
-- `descpriority`: <del><code>159</code></del> (Old) &rarr; <ins><code>157</code></ins> (New)
+- `descpriority`: <strong><code>159</code></strong> (Old) &rarr; <strong><code>157</code></strong> (New)
 ### item\_charge\_noconsume
-- `descpriority`: <del><code>159</code></del> (Old) &rarr; <ins><code>157</code></ins> (New)
+- `descpriority`: <strong><code>159</code></strong> (Old) &rarr; <strong><code>157</code></strong> (New)
 ### item\_kickdamage
-- `1\.09\-Save Bits`: <del><code>7</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
-- `Save Bits`: <del><code>7</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `1\.09\-Save Bits`: <strong><code>7</code></strong> (Old) &rarr; <strong><code>8</code></strong> (New)
+- `Save Bits`: <strong><code>7</code></strong> (Old) &rarr; <strong><code>8</code></strong> (New)
 ### item\_nonclassskill
-- `Save Bits`: <del><code>6</code></del> (Old) &rarr; <ins><code>7</code></ins> (New)
+- `Save Bits`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>7</code></strong> (New)
 ### item\_pierce
-- `Multiply`: <del><code>0</code></del> (Old) &rarr; <ins><code>2048</code></ins> (New)
+- `Multiply`: <strong><code>0</code></strong> (Old) &rarr; <strong><code>2048</code></strong> (New)
 ### item\_singleskill
-- `Save Bits`: <del><code>3</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
+- `Save Bits`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>4</code></strong> (New)
 ### item\_skillonattack
-- `descpriority`: <del><code>160</code></del> (Old) &rarr; <ins><code>158</code></ins> (New)
+- `descpriority`: <strong><code>160</code></strong> (Old) &rarr; <strong><code>158</code></strong> (New)
 ### item\_skillondeath
-- `descpriority`: <del><code>160</code></del> (Old) &rarr; <ins><code>158</code></ins> (New)
+- `descpriority`: <strong><code>160</code></strong> (Old) &rarr; <strong><code>158</code></strong> (New)
 ### item\_skillongethit
-- `descpriority`: <del><code>160</code></del> (Old) &rarr; <ins><code>158</code></ins> (New)
+- `descpriority`: <strong><code>160</code></strong> (Old) &rarr; <strong><code>158</code></strong> (New)
 ### item\_skillonhit
-- `descpriority`: <del><code>160</code></del> (Old) &rarr; <ins><code>158</code></ins> (New)
+- `descpriority`: <strong><code>160</code></strong> (Old) &rarr; <strong><code>158</code></strong> (New)
 ### item\_skillonkill
-- `descpriority`: <del><code>160</code></del> (Old) &rarr; <ins><code>158</code></ins> (New)
+- `descpriority`: <strong><code>160</code></strong> (Old) &rarr; <strong><code>158</code></strong> (New)
 ### item\_skillonlevelup
-- `descpriority`: <del><code>160</code></del> (Old) &rarr; <ins><code>158</code></ins> (New)
+- `descpriority`: <strong><code>160</code></strong> (Old) &rarr; <strong><code>158</code></strong> (New)
 ### lightmindam
-- `1\.09\-Save Bits`: <del><code>6</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
-- `Save Bits`: <del><code>6</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
+- `1\.09\-Save Bits`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>9</code></strong> (New)
+- `Save Bits`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>9</code></strong> (New)
 ### magicmindam
-- `1\.09\-Save Bits`: <del><code>6</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
-- `Save Bits`: <del><code>8</code></del> (Old) &rarr; <ins><code>9</code></ins> (New)
+- `1\.09\-Save Bits`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>9</code></strong> (New)
+- `Save Bits`: <strong><code>8</code></strong> (Old) &rarr; <strong><code>9</code></strong> (New)
 ### passive\_mag\_mastery
-- `descstrpos`: <del><code>ModitemdamMagsk</code></del> (Old) &rarr; <ins><code>ModStrMagMastery</code></ins> (New)
-- `descstrneg`: <del><code>ModitemdamMagsk</code></del> (Old) &rarr; <ins><code>ModStrMagMastery</code></ins> (New)
+- `descstrpos`: <strong><code>ModitemdamMagsk</code></strong> (Old) &rarr; <strong><code>ModStrMagMastery</code></strong> (New)
+- `descstrneg`: <strong><code>ModitemdamMagsk</code></strong> (Old) &rarr; <strong><code>ModStrMagMastery</code></strong> (New)
 ### passive\_mag\_pierce
-- `descstrpos`: <del><code>ModitemenresMagsk</code></del> (Old) &rarr; <ins><code>ModStrMagPierce</code></ins> (New)
-- `descstrneg`: <del><code>ModitemenresMagsk</code></del> (Old) &rarr; <ins><code>ModStrMagPierce</code></ins> (New)
+- `descstrpos`: <strong><code>ModitemenresMagsk</code></strong> (Old) &rarr; <strong><code>ModStrMagPierce</code></strong> (New)
+- `descstrneg`: <strong><code>ModitemenresMagsk</code></strong> (Old) &rarr; <strong><code>ModStrMagPierce</code></strong> (New)
 ### passive\_mastery\_replenish\_oncrit
-- `\*ID`: <del><code>206</code></del> (Old) &rarr; <ins><code>207</code></ins> (New)
+- `\*ID`: <strong><code>206</code></strong> (Old) &rarr; <strong><code>207</code></strong> (New)
 ### skill\_cooldown
-- `Send Bits`: <del><code>32</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `Send Param Bits`: <del><code>16</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `Send Bits`: <strong><code>32</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `Send Param Bits`: <strong><code>16</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)

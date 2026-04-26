@@ -1,13 +1,13 @@
 # Modified Set Mace
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Aldur's Onslaught** (Aldur's Onslaught)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Jagged</code></del><code> Star</code> | **Base Item:** <ins><code>Devil</code></ins><code> Star</code> |
+| **Base Item:** <strong><code>Jagged Star</code></strong> | **Base Item:** <strong><code>Devil Star</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+2-3 to Druid Skill Levels</code> | <code>+2-3 to Druid Skill Levels</code> |
@@ -23,7 +23,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Jagged</code></del><code> Star</code> | **Base Item:** <ins><code>Devil</code></ins><code> Star</code> |
+| **Base Item:** <strong><code>Jagged Star</code></strong> | **Base Item:** <strong><code>Devil Star</code></strong> |
 | **Level Requirement:** <code>55</code> | **Level Requirement:** <code>55</code> |
 | **Properties:** | **Properties:** |
 | <code>Adds 50-100 Damage</code> | <code>Adds 50-100 Damage</code> |

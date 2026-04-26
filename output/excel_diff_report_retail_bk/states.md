@@ -20,30 +20,30 @@
 - increasedstamina
 ## Modified Rows (14)
 ### apocalypse
-- `\*eol`:  (Old) &rarr; <ins><code>0</code></ins> (New)
+- `\*eol`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### battlecry
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### dimvision
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### shrine\_armor
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### shrine\_combat
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### shrine\_experience
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### shrine\_mana\_regen
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### shrine\_resist\_cold
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### shrine\_resist\_fire
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### shrine\_resist\_lightning
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### shrine\_resist\_poison
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### shrine\_skill
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### shrine\_stamina
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### taunt
-- `curse`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `curse`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)

@@ -1,7 +1,7 @@
 # Modified Unique Amazon Bow
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Blood Raven's Charge** (Bloodraven's Charge)
 
@@ -15,6 +15,6 @@
 | <code>+4-6 to Bow and Crossbow Skills</code> | <code>+4-6 to Bow and Crossbow Skills</code> |
 | <code>+5 to Revive</code> | <code>+5 to Revive</code> |
 | <code>+30% Increased Attack Speed</code> | <code>+30% Increased Attack Speed</code> |
-| <del><code>+180-230%</code></del><code> Enhanced Damage</code> | <ins><code>+200-300%</code></ins><code> Enhanced Damage</code> |
-|  | <ins><code>+50% Faster Run/Walk</code></ins> |
+| <strong><code>+180-230% Enhanced Damage</code></strong> | <strong><code>+200-300% Enhanced Damage</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>+50% Faster Run/Walk</code></strong> |
 

@@ -64,43 +64,43 @@
 - frostnovamsl
 ## Modified Rows (15)
 ### bonespirit
-- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
-- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `Vel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
+- `MaxVel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
 ### firenovaarrow
-- `\*ID`: <del><code>691</code></del> (Old) &rarr; <ins><code>740</code></ins> (New)
+- `\*ID`: <strong><code>691</code></strong> (Old) &rarr; <strong><code>740</code></strong> (New)
 ### fistoftheheavensbolt
-- `sHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `cHitPar1`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `cHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `sHitPar2`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `cHitPar1`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `cHitPar2`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### frostnovaarrow
-- `\*ID`: <del><code>690</code></del> (Old) &rarr; <ins><code>739</code></ins> (New)
+- `\*ID`: <strong><code>690</code></strong> (Old) &rarr; <strong><code>739</code></strong> (New)
 ### frozenorb
-- `Vel`: <del><code>10</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
-- `MaxVel`: <del><code>10</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `Vel`: <strong><code>10</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
+- `MaxVel`: <strong><code>10</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
 ### frozenorbbolt
-- `Vel`: <del><code>18</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
-- `MaxVel`: <del><code>18</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `Vel`: <strong><code>18</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
+- `MaxVel`: <strong><code>18</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
 ### frozenorbnova
-- `Vel`: <del><code>24</code></del> (Old) &rarr; <ins><code>30</code></ins> (New)
-- `MaxVel`: <del><code>24</code></del> (Old) &rarr; <ins><code>30</code></ins> (New)
+- `Vel`: <strong><code>24</code></strong> (Old) &rarr; <strong><code>30</code></strong> (New)
+- `MaxVel`: <strong><code>24</code></strong> (Old) &rarr; <strong><code>30</code></strong> (New)
 ### holybolt
-- `sHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `cHitPar1`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `cHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `sHitPar2`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `cHitPar1`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `cHitPar2`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### hydra
-- `Vel`: <del><code>16</code></del> (Old) &rarr; <ins><code>40</code></ins> (New)
-- `MaxVel`: <del><code>16</code></del> (Old) &rarr; <ins><code>40</code></ins> (New)
+- `Vel`: <strong><code>16</code></strong> (Old) &rarr; <strong><code>40</code></strong> (New)
+- `MaxVel`: <strong><code>16</code></strong> (Old) &rarr; <strong><code>40</code></strong> (New)
 ### iceblast
-- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
-- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `Vel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
+- `MaxVel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
 ### poisonnova
-- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
-- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
+- `Vel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>15</code></strong> (New)
+- `MaxVel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>15</code></strong> (New)
 ### powerstrikenova
-- `\*ID`: <del><code>692</code></del> (Old) &rarr; <ins><code>741</code></ins> (New)
+- `\*ID`: <strong><code>692</code></strong> (Old) &rarr; <strong><code>741</code></strong> (New)
 ### proc\_splashdamage
-- `\*ID`: <del><code>688</code></del> (Old) &rarr; <ins><code>737</code></ins> (New)
+- `\*ID`: <strong><code>688</code></strong> (Old) &rarr; <strong><code>737</code></strong> (New)
 ### proc\_splashinit
-- `\*ID`: <del><code>689</code></del> (Old) &rarr; <ins><code>738</code></ins> (New)
+- `\*ID`: <strong><code>689</code></strong> (Old) &rarr; <strong><code>738</code></strong> (New)
 ### thunderstormnova
-- `\*ID`: <del><code>686</code></del> (Old) &rarr; <ins><code>736</code></ins> (New)
+- `\*ID`: <strong><code>686</code></strong> (Old) &rarr; <strong><code>736</code></strong> (New)

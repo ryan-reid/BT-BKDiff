@@ -6,25 +6,25 @@
 - warlock
 ## Modified Rows (8)
 ### amazon
-- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
-- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `ToHitFactor`: <strong><code>750</code></strong> (Old) &rarr; <strong><code>1000</code></strong> (New)
+- `RunDrain`: <strong><code>15</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)
 ### assassin
-- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
-- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `ToHitFactor`: <strong><code>750</code></strong> (Old) &rarr; <strong><code>1000</code></strong> (New)
+- `RunDrain`: <strong><code>15</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)
 ### barbarian
-- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
-- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `ToHitFactor`: <strong><code>750</code></strong> (Old) &rarr; <strong><code>1000</code></strong> (New)
+- `RunDrain`: <strong><code>15</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)
 ### druid
-- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
-- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `ToHitFactor`: <strong><code>750</code></strong> (Old) &rarr; <strong><code>1000</code></strong> (New)
+- `RunDrain`: <strong><code>15</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)
 ### expansion
-- `item10count`: <del><code>0</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `item10count`: <strong><code>0</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### necromancer
-- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
-- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `ToHitFactor`: <strong><code>750</code></strong> (Old) &rarr; <strong><code>1000</code></strong> (New)
+- `RunDrain`: <strong><code>15</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)
 ### paladin
-- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
-- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `ToHitFactor`: <strong><code>750</code></strong> (Old) &rarr; <strong><code>1000</code></strong> (New)
+- `RunDrain`: <strong><code>15</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)
 ### sorceress
-- `ToHitFactor`: <del><code>750</code></del> (Old) &rarr; <ins><code>1000</code></ins> (New)
-- `RunDrain`: <del><code>15</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
+- `ToHitFactor`: <strong><code>750</code></strong> (Old) &rarr; <strong><code>1000</code></strong> (New)
+- `RunDrain`: <strong><code>15</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)

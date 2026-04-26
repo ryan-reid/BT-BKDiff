@@ -1,7 +1,7 @@
 # Modified Unique Shield
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Medusa's Gaze** (Medusa's Gaze)
 
@@ -20,7 +20,7 @@
 | <code>Damage Reduced by 20-30%</code> | <code>Damage Reduced by 20-30%</code> |
 | <code>+1 to All Skills</code> | <code>+1 to All Skills</code> |
 | <code>+2 to Random Class Skill Levels</code> | <code>+2 to Random Class Skill Levels</code> |
-|  | <ins><code>33% Chance to cast level 40 Frost Nova when struck</code></ins> |
+| <strong><code>empty</code></strong> | <strong><code>33% Chance to cast level 40 Frost Nova when struck</code></strong> |
 
 **Spike Thorn** (Spike Thorn)
 
@@ -38,7 +38,7 @@
 | <code>+25% Faster Block Rate</code> | <code>+25% Faster Block Rate</code> |
 | <code>+30% Faster Block Rate</code> | <code>+30% Faster Block Rate</code> |
 | <code>Damage +40-65</code> | <code>Damage +40-65</code> |
-|  | <ins><code>Level 20 Thorns Aura When Equipped</code></ins> |
+| <strong><code>empty</code></strong> | <strong><code>Level 20 Thorns Aura When Equipped</code></strong> |
 
 **Spirit Ward** (Spirit Ward)
 
@@ -55,5 +55,5 @@
 | <code>35% Chance to cast level 8 Fade when struck</code> | <code>35% Chance to cast level 8 Fade when struck</code> |
 | <code>Requirements --30%</code> | <code>Requirements --30%</code> |
 | <code>+2 to Random Class Skill Levels</code> | <code>+2 to Random Class Skill Levels</code> |
-|  | <ins><code>+25% Faster Cast Rate</code></ins> |
+| <strong><code>empty</code></strong> | <strong><code>+25% Faster Cast Rate</code></strong> |
 

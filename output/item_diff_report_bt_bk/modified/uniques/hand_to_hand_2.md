@@ -1,7 +1,7 @@
 # Modified Unique Hand to Hand 2
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Saboteurs Blade** (Saboteurs Blade)
 
@@ -17,5 +17,5 @@
 | <code>+250-300% Enhanced Damage</code> | <code>+250-300% Enhanced Damage</code> |
 | <code>Level 5 Vigor Aura When Equipped</code> | <code>Level 5 Vigor Aura When Equipped</code> |
 | <code>+3 to Weapon Block (Assassin only)</code> | <code>+3 to Weapon Block (Assassin only)</code> |
-| <del><code>+1-2</code></del><code> to Assassin Skill Levels</code> | <ins><code>+2</code></ins><code> to Assassin Skill Levels</code> |
+| <strong><code>+1-2 to Assassin Skill Levels</code></strong> | <strong><code>+2 to Assassin Skill Levels</code></strong> |
 

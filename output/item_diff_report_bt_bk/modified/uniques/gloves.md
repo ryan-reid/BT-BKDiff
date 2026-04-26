@@ -1,7 +1,7 @@
 # Modified Unique Gloves
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Amazon's Teaching** (Amazon's Teaching)
 
@@ -16,7 +16,7 @@
 | <code>+1 to Multiple Shot</code> | <code>+1 to Multiple Shot</code> |
 | <code>+24% Faster Hit Recovery</code> | <code>+24% Faster Hit Recovery</code> |
 | <code>+10 to Dexterity</code> | <code>+10 to Dexterity</code> |
-|  | <ins><code>-4-5% to Enemy Physical Resistance</code></ins> |
+| <strong><code>empty</code></strong> | <strong><code>-4-5% to Enemy Physical Resistance</code></strong> |
 
 **Dracul's Grasp** (Dracul's Grasp)
 
@@ -31,7 +31,7 @@
 | <code>10% Chance to cast level 15 Life Tap on striking</code> | <code>10% Chance to cast level 15 Life Tap on striking</code> |
 | <code>+5-10 Life after each Kill</code> | <code>+5-10 Life after each Kill</code> |
 | <code>+10-15 to Strength</code> | <code>+10-15 to Strength</code> |
-|  | <ins><code>Ignore Target's Defense</code></ins> |
+| <strong><code>empty</code></strong> | <strong><code>Ignore Target's Defense</code></strong> |
 
 **Soul Drainer** (Souldrain)
 
@@ -45,6 +45,6 @@
 | <code>4-7% Life stolen per hit</code> | <code>4-7% Life stolen per hit</code> |
 | <code>--50 to Monster Defense Per Hit</code> | <code>--50 to Monster Defense Per Hit</code> |
 | <code>Slows Target by 15%</code> | <code>Slows Target by 15%</code> |
-| <del><code>25% Chance to cast level 18 Weaken on striking</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>25% Chance to cast level 18 Decrepify on striking</code></ins> |
+| <strong><code>25% Chance to cast level 18 Weaken on striking</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>25% Chance to cast level 18 Decrepify on striking</code></strong> |
 

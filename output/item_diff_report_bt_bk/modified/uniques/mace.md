@@ -1,7 +1,7 @@
 # Modified Unique Mace
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Stormlash** (Stormlash)
 
@@ -17,5 +17,5 @@
 | <code>Attacker Takes Lightning Damage of 30</code> | <code>Attacker Takes Lightning Damage of 30</code> |
 | <code>33% Chance of Crushing Blow</code> | <code>33% Chance of Crushing Blow</code> |
 | <code>Lightning Absorb 3-9%</code> | <code>Lightning Absorb 3-9%</code> |
-| <code>20% Chance to cast level </code><del><code>30</code></del><code> Lightning on striking</code> | <code>20% Chance to cast level </code><ins><code>44</code></ins><code> Lightning on striking</code> |
+| <strong><code>20% Chance to cast level 30 Lightning on striking</code></strong> | <strong><code>20% Chance to cast level 44 Lightning on striking</code></strong> |
 

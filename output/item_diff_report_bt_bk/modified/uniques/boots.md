@@ -1,7 +1,7 @@
 # Modified Unique Boots
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Sandstorm Trek** (Sandstorm Trek)
 
@@ -17,9 +17,9 @@
 | <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
 | <code>Replenish Life +15</code> | <code>Replenish Life +15</code> |
 | <code>Attacker Takes Damage of 100</code> | <code>Attacker Takes Damage of 100</code> |
-| <del><code>+10-15 to Strength</code></del> | <ins><code>(removed)</code></ins> |
-| <del><code>+10-15 to Vitality</code></del> | <ins><code>(removed)</code></ins> |
-| <del><code>Poison Length Reduced by 75%</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>+10-15 to all Attributes</code></ins> |
-|  | <ins><code>Level 1 Cleansing Aura When Equipped</code></ins> |
+| <strong><code>+10-15 to Strength</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>+10-15 to Vitality</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>Poison Length Reduced by 75%</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>+10-15 to all Attributes</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>Level 1 Cleansing Aura When Equipped</code></strong> |
 

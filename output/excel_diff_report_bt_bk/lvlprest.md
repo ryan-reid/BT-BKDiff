@@ -9,8 +9,8 @@
 - act 5 \- throneroom new
 ## Modified Rows (2)
 ### rift 3a
-- `Def`: <del><code>1091</code></del> (Old) &rarr; <ins><code>1092</code></ins> (New)
-- `LevelId`: <del><code>140</code></del> (Old) &rarr; <ins><code>141</code></ins> (New)
+- `Def`: <strong><code>1091</code></strong> (Old) &rarr; <strong><code>1092</code></strong> (New)
+- `LevelId`: <strong><code>140</code></strong> (Old) &rarr; <strong><code>141</code></strong> (New)
 ### rift 6a
-- `Def`: <del><code>1092</code></del> (Old) &rarr; <ins><code>1093</code></ins> (New)
-- `LevelId`: <del><code>144</code></del> (Old) &rarr; <ins><code>145</code></ins> (New)
+- `Def`: <strong><code>1092</code></strong> (Old) &rarr; <strong><code>1093</code></strong> (New)
+- `LevelId`: <strong><code>144</code></strong> (Old) &rarr; <strong><code>145</code></strong> (New)

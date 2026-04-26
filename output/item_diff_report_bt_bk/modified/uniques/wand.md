@@ -1,7 +1,7 @@
 # Modified Unique Wand
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Arcbane** (Arcbane)
 
@@ -15,7 +15,7 @@
 | <code>Curse Resist +50%</code> | <code>Curse Resist +50%</code> |
 | <code>Piercing Attack</code> | <code>Piercing Attack</code> |
 | <code>Increase Maximum Mana 10-20%</code> | <code>Increase Maximum Mana 10-20%</code> |
-| <code>Level </code><del><code>3-12</code></del><code> Magic Conviction Aura When Equipped</code> | <code>Level </code><ins><code>1-12</code></ins><code> Magic Conviction Aura When Equipped</code> |
+| <strong><code>Level 3-12 Magic Conviction Aura When Equipped</code></strong> | <strong><code>Level 1-12 Magic Conviction Aura When Equipped</code></strong> |
 
 **Death's Web** (Deaths's Web)
 
@@ -30,5 +30,5 @@
 | <code>+7-12 to Mana after each Kill</code> | <code>+7-12 to Mana after each Kill</code> |
 | <code>+1-2 to Poison and Bone Skills</code> | <code>+1-2 to Poison and Bone Skills</code> |
 | <code>+20% Faster Cast Rate</code> | <code>+20% Faster Cast Rate</code> |
-|  | <ins><code>50% Chance to cast level 10 Lower Resist when you Kill an Enemy</code></ins> |
+| <strong><code>empty</code></strong> | <strong><code>50% Chance to cast level 10 Lower Resist when you Kill an Enemy</code></strong> |
 

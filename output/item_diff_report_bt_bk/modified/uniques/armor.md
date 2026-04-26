@@ -1,13 +1,13 @@
 # Modified Unique Armor
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Shaftstop** (Shaftstop)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Mesh Armor</code></del> | **Base Item:** <ins><code>Boneweave</code></ins> |
+| **Base Item:** <strong><code>Mesh Armor</code></strong> | **Base Item:** <strong><code>Boneweave</code></strong> |
 | **Level Requirement:** <code>38</code> | **Level Requirement:** <code>38</code> |
 | **Properties:** | **Properties:** |
 | <code>+250 Defense vs. Missile</code> | <code>+250 Defense vs. Missile</code> |
@@ -16,10 +16,10 @@
 | <code>+250 Defense vs. Melee</code> | <code>+250 Defense vs. Melee</code> |
 | <code>+125-150% Damage to Demons</code> | <code>+125-150% Damage to Demons</code> |
 | <code>+125-150% Damage to Undead</code> | <code>+125-150% Damage to Undead</code> |
-| <del><code>+85-140</code></del><code> to Life</code> | <ins><code>+100-200</code></ins><code> to Life</code> |
-| <code>Damage Reduced by </code><del><code>6-12</code></del> | <code>Damage Reduced by </code><ins><code>10-15</code></ins> |
-|  | <ins><code>Magic Damage Reduced by 10-15</code></ins> |
-|  | <ins><code>+1 to All Skills</code></ins> |
+| <strong><code>+85-140 to Life</code></strong> | <strong><code>+100-200 to Life</code></strong> |
+| <strong><code>Damage Reduced by 6-12</code></strong> | <strong><code>Damage Reduced by 10-15</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>Magic Damage Reduced by 10-15</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>+1 to All Skills</code></strong> |
 
 **Steel Carapace** (Steel Carapice)
 
@@ -34,11 +34,11 @@
 | <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
 | <code>Damage Reduced by 30-40%</code> | <code>Damage Reduced by 30-40%</code> |
 | <code>+15% Faster Run/Walk</code> | <code>+15% Faster Run/Walk</code> |
-| <del><code>+20%</code></del><code> Faster Hit Recovery</code> | <ins><code>+20-40%</code></ins><code> Faster Hit Recovery</code> |
-| <code>Regenerate Mana </code><del><code>10-15%</code></del> | <code>Regenerate Mana </code><ins><code>50-100%</code></ins> |
-|  | <ins><code>Level 8-10 Defiance Aura When Equipped</code></ins> |
-|  | <ins><code>+1-2 to All Skills</code></ins> |
-|  | <ins><code>Requirements --50%</code></ins> |
+| <strong><code>+20% Faster Hit Recovery</code></strong> | <strong><code>+20-40% Faster Hit Recovery</code></strong> |
+| <strong><code>Regenerate Mana 10-15%</code></strong> | <strong><code>Regenerate Mana 50-100%</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>Level 8-10 Defiance Aura When Equipped</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>+1-2 to All Skills</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>Requirements --50%</code></strong> |
 
 **Templar's Might** (Templar's Might)
 
@@ -54,8 +54,8 @@
 | <code>+4-6 to Offensive Auras Skills</code> | <code>+4-6 to Offensive Auras Skills</code> |
 | <code>Requirements --50%</code> | <code>Requirements --50%</code> |
 | <code>Poison Length Reduced by 75%</code> | <code>Poison Length Reduced by 75%</code> |
-| <del><code>+30-40</code></del><code> to Life</code> | <ins><code>+100</code></ins><code> to Life</code> |
-| <code>Level </code><del><code>6</code></del><code> Conviction Aura When Equipped</code> | <code>Level </code><ins><code>6-12</code></ins><code> Conviction Aura When Equipped</code> |
+| <strong><code>+30-40 to Life</code></strong> | <strong><code>+100 to Life</code></strong> |
+| <strong><code>Level 6 Conviction Aura When Equipped</code></strong> | <strong><code>Level 6-12 Conviction Aura When Equipped</code></strong> |
 
 **Tyrael's Might** (Tyrael's Might)
 
@@ -74,7 +74,7 @@
 | <code>All Resistances +20-30</code> | <code>All Resistances +20-30</code> |
 | <code>+1 to Teleport</code> | <code>+1 to Teleport</code> |
 | <code>+2 to All Skills</code> | <code>+2 to All Skills</code> |
-| <del><code>+20-30 to Strength</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>+30% Increased Attack Speed</code></ins> |
-|  | <ins><code>+30% Faster Cast Rate</code></ins> |
+| <strong><code>+20-30 to Strength</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>+30% Increased Attack Speed</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>+30% Faster Cast Rate</code></strong> |
 

@@ -7,14 +7,14 @@
 | | **Base Item:** Devil Star |
 | | **Level Requirement:** 85 |
 | | **Properties:** |
-| | <ins><code>+2-3 to Druid Skill Levels</code></ins> |
-| | <ins><code>+40-50% Increased Attack Speed</code></ins> |
-| | <ins><code>+40-50% Faster Cast Rate</code></ins> |
-| | <ins><code>+300-350% Enhanced Damage</code></ins> |
-| | <ins><code>+200-300 to Maximum Damage</code></ins> |
-| | <ins><code>50% Bonus to Attack Rating</code></ins> |
-| | <ins><code>10% Life stolen per hit</code></ins> |
-| | <ins><code>35% Chance of Crushing Blow</code></ins> |
+| | <strong><code>+2-3 to Druid Skill Levels</code></strong> |
+| | <strong><code>+40-50% Increased Attack Speed</code></strong> |
+| | <strong><code>+40-50% Faster Cast Rate</code></strong> |
+| | <strong><code>+300-350% Enhanced Damage</code></strong> |
+| | <strong><code>+200-300 to Maximum Damage</code></strong> |
+| | <strong><code>50% Bonus to Attack Rating</code></strong> |
+| | <strong><code>10% Life stolen per hit</code></strong> |
+| | <strong><code>35% Chance of Crushing Blow</code></strong> |
 
 **Aldur's Rhythm** (Aldur's Gauntlet)
 
@@ -23,13 +23,13 @@
 | | **Base Item:** Devil Star |
 | | **Level Requirement:** 55 |
 | | **Properties:** |
-| | <ins><code>Adds 50-100 Damage</code></ins> |
-| | <ins><code>Damage +50-75</code></ins> |
-| | <ins><code>10% Life stolen per hit</code></ins> |
-| | <ins><code>+45% Increased Attack Speed</code></ins> |
-| | <ins><code>+300% Enhanced Damage</code></ins> |
-| | <ins><code>5% Mana stolen per hit</code></ins> |
-| | <ins><code>+30% Faster Cast Rate</code></ins> |
+| | <strong><code>Adds 50-100 Damage</code></strong> |
+| | <strong><code>Damage +50-75</code></strong> |
+| | <strong><code>10% Life stolen per hit</code></strong> |
+| | <strong><code>+45% Increased Attack Speed</code></strong> |
+| | <strong><code>+300% Enhanced Damage</code></strong> |
+| | <strong><code>5% Mana stolen per hit</code></strong> |
+| | <strong><code>+30% Faster Cast Rate</code></strong> |
 
 **Dangoon's Teaching** (Dangoon's Teaching)
 
@@ -38,11 +38,11 @@
 | | **Base Item:** Reinforced Mace |
 | | **Level Requirement:** 65 |
 | | **Properties:** |
-| | <ins><code>(1.5 per clvl) to Maximum Damage (Based on Character Level)</code></ins> |
-| | <ins><code>+40% Increased Attack Speed</code></ins> |
-| | <ins><code>10% Chance to cast level 20 Meteor on striking</code></ins> |
-| | <ins><code>Adds 20-30 Fire Damage</code></ins> |
-| | <ins><code>25% Chance of Crushing Blow</code></ins> |
-| | <ins><code>+1 to Zeal</code></ins> |
-| | <ins><code>+200% Enhanced Damage</code></ins> |
+| | <strong><code>(1.5 per clvl) to Maximum Damage (Based on Character Level)</code></strong> |
+| | <strong><code>+40% Increased Attack Speed</code></strong> |
+| | <strong><code>10% Chance to cast level 20 Meteor on striking</code></strong> |
+| | <strong><code>Adds 20-30 Fire Damage</code></strong> |
+| | <strong><code>25% Chance of Crushing Blow</code></strong> |
+| | <strong><code>+1 to Zeal</code></strong> |
+| | <strong><code>+200% Enhanced Damage</code></strong> |
 

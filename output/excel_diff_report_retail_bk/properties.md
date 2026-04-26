@@ -27,13 +27,13 @@
 - randclassskill
 ## Modified Rows (5)
 ### expansion
-- `\*eol`:  (Old) &rarr; <ins><code>0</code></ins> (New)
+- `\*eol`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### fireskill
-- `func2`:  (Old) &rarr; <ins><code>3</code></ins> (New)
-- `stat2`:  (Old) &rarr; <ins><code>item_elemskill_fire</code></ins> (New)
+- `func2`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>3</code></strong> (New)
+- `stat2`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>item_elemskill_fire</code></strong> (New)
 ### noconsume
-- `\*Enabled`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `\*Enabled`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### pierce\-dmg
-- `\*Tooltip`: <code>-#% to Enemy </code><del><code>Lightning</code></del><code> Resistance</code> (Old) &rarr; <code>-#% to Enemy </code><ins><code>Physical</code></ins><code> Resistance</code> (New)
+- `\*Tooltip`: <strong><code>-#% to Enemy Lightning Resistance</code></strong> (Old) &rarr; <strong><code>-#% to Enemy Physical Resistance</code></strong> (New)
 ### pierce\-mag
-- `\*Tooltip`: <code>-#% to Enemy </code><del><code>Fire</code></del><code> Resistance</code> (Old) &rarr; <code>-#% to Enemy </code><ins><code>Magic</code></ins><code> Resistance</code> (New)
+- `\*Tooltip`: <strong><code>-#% to Enemy Fire Resistance</code></strong> (Old) &rarr; <strong><code>-#% to Enemy Magic Resistance</code></strong> (New)

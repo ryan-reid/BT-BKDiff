@@ -7,13 +7,13 @@
 | | **Base Item:** Short Staff |
 | | **Level Requirement:** 5 |
 | | **Properties:** |
-| | <ins><code>+200 to Minimum Fire Damage</code></ins> |
-| | <ins><code>+200 to Maximum Fire Damage</code></ins> |
-| | <ins><code>Fire Resist +50%</code></ins> |
-| | <ins><code>+70 to Mana</code></ins> |
-| | <ins><code>+30% Increased Attack Speed</code></ins> |
-| | <ins><code>+150-160% Enhanced Damage</code></ins> |
-| | <ins><code>+40% Faster Cast Rate</code></ins> |
+| | <strong><code>+200 to Minimum Fire Damage</code></strong> |
+| | <strong><code>+200 to Maximum Fire Damage</code></strong> |
+| | <strong><code>Fire Resist +50%</code></strong> |
+| | <strong><code>+70 to Mana</code></strong> |
+| | <strong><code>+30% Increased Attack Speed</code></strong> |
+| | <strong><code>+150-160% Enhanced Damage</code></strong> |
+| | <strong><code>+40% Faster Cast Rate</code></strong> |
 
 **Chromatic Ire** (Chromatic Ire)
 
@@ -22,13 +22,13 @@
 | | **Base Item:** Cedar Staff |
 | | **Level Requirement:** 35 |
 | | **Properties:** |
-| | <ins><code>+3 to Sorceress Skill Levels</code></ins> |
-| | <ins><code>All Resistances +40</code></ins> |
-| | <ins><code>+50% Faster Cast Rate</code></ins> |
-| | <ins><code>Increase Maximum Life 20-25%</code></ins> |
-| | <ins><code>+3 to Blizzard (Sorceress only)</code></ins> |
-| | <ins><code>+3 to Meteor (Sorceress only)</code></ins> |
-| | <ins><code>+3-5 to Chain Lightning (Sorceress only)</code></ins> |
+| | <strong><code>+3 to Sorceress Skill Levels</code></strong> |
+| | <strong><code>All Resistances +40</code></strong> |
+| | <strong><code>+50% Faster Cast Rate</code></strong> |
+| | <strong><code>Increase Maximum Life 20-25%</code></strong> |
+| | <strong><code>+3 to Blizzard (Sorceress only)</code></strong> |
+| | <strong><code>+3 to Meteor (Sorceress only)</code></strong> |
+| | <strong><code>+3-5 to Chain Lightning (Sorceress only)</code></strong> |
 
 **Horadric Staff** (Horadric Staff)
 
@@ -37,11 +37,11 @@
 | | **Base Item:** Horadric Staff |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>+10 to Mana</code></ins> |
-| | <ins><code>Poison Resist +25%</code></ins> |
-| | <ins><code>+10 to Life</code></ins> |
-| | <ins><code>All Resistances +10</code></ins> |
-| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <strong><code>+10 to Mana</code></strong> |
+| | <strong><code>Poison Resist +25%</code></strong> |
+| | <strong><code>+10 to Life</code></strong> |
+| | <strong><code>All Resistances +10</code></strong> |
+| | <strong><code>+50% Increased Attack Speed</code></strong> |
 
 **Mang Song's Lesson** (Mang Song's Lesson)
 
@@ -50,13 +50,13 @@
 | | **Base Item:** Archon Staff |
 | | **Level Requirement:** 82 |
 | | **Properties:** |
-| | <ins><code>+7 to All Skills</code></ins> |
-| | <ins><code>Level 5-10 Conviction Aura When Equipped</code></ins> |
-| | <ins><code>Increase Maximum Life 40-50%</code></ins> |
-| | <ins><code>Regenerate Mana 30-80%</code></ins> |
-| | <ins><code>+115% Faster Cast Rate</code></ins> |
-| | <ins><code>Increase Maximum Mana 40-50%</code></ins> |
-| | <ins><code>All Resistances +40-50</code></ins> |
+| | <strong><code>+7 to All Skills</code></strong> |
+| | <strong><code>Level 5-10 Conviction Aura When Equipped</code></strong> |
+| | <strong><code>Increase Maximum Life 40-50%</code></strong> |
+| | <strong><code>Regenerate Mana 30-80%</code></strong> |
+| | <strong><code>+115% Faster Cast Rate</code></strong> |
+| | <strong><code>Increase Maximum Mana 40-50%</code></strong> |
+| | <strong><code>All Resistances +40-50</code></strong> |
 
 **Ondal's Wisdom** (Ondal's Wisdom)
 
@@ -65,12 +65,12 @@
 | | **Base Item:** Elder Staff |
 | | **Level Requirement:** 66 |
 | | **Properties:** |
-| | <ins><code>+85% Faster Cast Rate</code></ins> |
-| | <ins><code>+40-50 to Energy</code></ins> |
-| | <ins><code>+2-4 to All Skills</code></ins> |
-| | <ins><code>+450-550 Defense</code></ins> |
-| | <ins><code>+5-15% to Experience Gained</code></ins> |
-| | <ins><code>Magic Damage Reduced by 5-8</code></ins> |
+| | <strong><code>+85% Faster Cast Rate</code></strong> |
+| | <strong><code>+40-50 to Energy</code></strong> |
+| | <strong><code>+2-4 to All Skills</code></strong> |
+| | <strong><code>+450-550 Defense</code></strong> |
+| | <strong><code>+5-15% to Experience Gained</code></strong> |
+| | <strong><code>Magic Damage Reduced by 5-8</code></strong> |
 
 **Razorswitch** (Razorswitch)
 
@@ -79,12 +79,12 @@
 | | **Base Item:** Jo Staff |
 | | **Level Requirement:** 28 |
 | | **Properties:** |
-| | <ins><code>+40-50% Faster Cast Rate</code></ins> |
-| | <ins><code>+175 to Mana</code></ins> |
-| | <ins><code>+100 to Life</code></ins> |
-| | <ins><code>Magic Damage Reduced by 15</code></ins> |
-| | <ins><code>All Resistances +50</code></ins> |
-| | <ins><code>+2 to All Skills</code></ins> |
+| | <strong><code>+40-50% Faster Cast Rate</code></strong> |
+| | <strong><code>+175 to Mana</code></strong> |
+| | <strong><code>+100 to Life</code></strong> |
+| | <strong><code>Magic Damage Reduced by 15</code></strong> |
+| | <strong><code>All Resistances +50</code></strong> |
+| | <strong><code>+2 to All Skills</code></strong> |
 
 **Ribcracker** (Ribcracker)
 
@@ -93,15 +93,15 @@
 | | **Base Item:** Quarterstaff |
 | | **Level Requirement:** 31 |
 | | **Properties:** |
-| | <ins><code>Adds 30-65 Damage</code></ins> |
-| | <ins><code>+200-300% Enhanced Damage</code></ins> |
-| | <ins><code>50% Chance of Crushing Blow</code></ins> |
-| | <ins><code>+15 to Dexterity</code></ins> |
-| | <ins><code>+150 Defense vs. Melee</code></ins> |
-| | <ins><code>+150 Defense vs. Missile</code></ins> |
-| | <ins><code>+50% Faster Hit Recovery</code></ins> |
-| | <ins><code>+50% Increased Attack Speed</code></ins> |
-| | <ins><code>Durability: 100 of 100</code></ins> |
+| | <strong><code>Adds 30-65 Damage</code></strong> |
+| | <strong><code>+200-300% Enhanced Damage</code></strong> |
+| | <strong><code>50% Chance of Crushing Blow</code></strong> |
+| | <strong><code>+15 to Dexterity</code></strong> |
+| | <strong><code>+150 Defense vs. Melee</code></strong> |
+| | <strong><code>+150 Defense vs. Missile</code></strong> |
+| | <strong><code>+50% Faster Hit Recovery</code></strong> |
+| | <strong><code>+50% Increased Attack Speed</code></strong> |
+| | <strong><code>Durability: 100 of 100</code></strong> |
 
 **Serpent Lord** (Serpent Lord)
 
@@ -110,13 +110,13 @@
 | | **Base Item:** Long Staff |
 | | **Level Requirement:** 9 |
 | | **Properties:** |
-| | <ins><code>Adds 100-100 Poison Damage Over 100 Seconds</code></ins> |
-| | <ins><code>Poison Resist +50%</code></ins> |
-| | <ins><code>+60 to Life</code></ins> |
-| | <ins><code>+100-200% Enhanced Damage</code></ins> |
-| | <ins><code>100% Mana stolen per hit</code></ins> |
-| | <ins><code>-50% Target Defense</code></ins> |
-| | <ins><code>+40% Increased Attack Speed</code></ins> |
+| | <strong><code>Adds 100-100 Poison Damage Over 100 Seconds</code></strong> |
+| | <strong><code>Poison Resist +50%</code></strong> |
+| | <strong><code>+60 to Life</code></strong> |
+| | <strong><code>+100-200% Enhanced Damage</code></strong> |
+| | <strong><code>100% Mana stolen per hit</code></strong> |
+| | <strong><code>-50% Target Defense</code></strong> |
+| | <strong><code>+40% Increased Attack Speed</code></strong> |
 
 **Skull Collector** (Skullcollector)
 
@@ -125,11 +125,11 @@
 | | **Base Item:** Rune Staff |
 | | **Level Requirement:** 41 |
 | | **Properties:** |
-| | <ins><code>Increase Maximum Mana 20%</code></ins> |
-| | <ins><code>+10-20 to Mana after each Kill</code></ins> |
-| | <ins><code>+1-4 to All Skills</code></ins> |
-| | <ins><code>(1.0% per clvl) Better Chance of Getting Magic Items (Based on Character Level)</code></ins> |
-| | <ins><code>+40-50% Faster Cast Rate</code></ins> |
+| | <strong><code>Increase Maximum Mana 20%</code></strong> |
+| | <strong><code>+10-20 to Mana after each Kill</code></strong> |
+| | <strong><code>+1-4 to All Skills</code></strong> |
+| | <strong><code>(1.0% per clvl) Better Chance of Getting Magic Items (Based on Character Level)</code></strong> |
+| | <strong><code>+40-50% Faster Cast Rate</code></strong> |
 
 **Spire of Lazarus** (Lazarus Spire)
 
@@ -138,14 +138,14 @@
 | | **Base Item:** Gnarled Staff |
 | | **Level Requirement:** 18 |
 | | **Properties:** |
-| | <ins><code>Lightning Resist +75%</code></ins> |
-| | <ins><code>Damage Reduced by 7-14</code></ins> |
-| | <ins><code>+30 to Energy</code></ins> |
-| | <ins><code>+2-3 to Chain Lightning (Sorceress only)</code></ins> |
-| | <ins><code>+2-3 to Lightning (Sorceress only)</code></ins> |
-| | <ins><code>Regenerate Mana 43%</code></ins> |
-| | <ins><code>+60% Faster Cast Rate</code></ins> |
-| | <ins><code>+2-3 to Sorceress Skill Levels</code></ins> |
+| | <strong><code>Lightning Resist +75%</code></strong> |
+| | <strong><code>Damage Reduced by 7-14</code></strong> |
+| | <strong><code>+30 to Energy</code></strong> |
+| | <strong><code>+2-3 to Chain Lightning (Sorceress only)</code></strong> |
+| | <strong><code>+2-3 to Lightning (Sorceress only)</code></strong> |
+| | <strong><code>Regenerate Mana 43%</code></strong> |
+| | <strong><code>+60% Faster Cast Rate</code></strong> |
+| | <strong><code>+2-3 to Sorceress Skill Levels</code></strong> |
 
 **Staff of Kings** (Staff of Kings)
 
@@ -154,8 +154,8 @@
 | | **Base Item:** Shaft of the Horadric Staff |
 | | **Level Requirement:** 0 |
 | | **Properties:** |
-| | <ins><code>All Resistances +10</code></ins> |
-| | <ins><code>+50% Increased Attack Speed</code></ins> |
+| | <strong><code>All Resistances +10</code></strong> |
+| | <strong><code>+50% Increased Attack Speed</code></strong> |
 
 **The Iron Jang Bong** (The Iron Jang Bong)
 
@@ -164,11 +164,11 @@
 | | **Base Item:** War Staff |
 | | **Level Requirement:** 28 |
 | | **Properties:** |
-| | <ins><code>+2-4 to Sorceress Skill Levels</code></ins> |
-| | <ins><code>+69% Faster Cast Rate</code></ins> |
-| | <ins><code>Replenish Life +20</code></ins> |
-| | <ins><code>+2-4 to Blaze (Sorceress only)</code></ins> |
-| | <ins><code>+220 to Mana</code></ins> |
+| | <strong><code>+2-4 to Sorceress Skill Levels</code></strong> |
+| | <strong><code>+69% Faster Cast Rate</code></strong> |
+| | <strong><code>Replenish Life +20</code></strong> |
+| | <strong><code>+2-4 to Blaze (Sorceress only)</code></strong> |
+| | <strong><code>+220 to Mana</code></strong> |
 
 **The Salamander** (The Salamander)
 
@@ -177,12 +177,12 @@
 | | **Base Item:** Battle Staff |
 | | **Level Requirement:** 21 |
 | | **Properties:** |
-| | <ins><code>+30% Faster Cast Rate</code></ins> |
-| | <ins><code>Fire Resist +30%</code></ins> |
-| | <ins><code>+3 to Fire Wall (Sorceress only)</code></ins> |
-| | <ins><code>+3 to Fire Ball (Sorceress only)</code></ins> |
-| | <ins><code>+60 to Mana</code></ins> |
-| | <ins><code>+3 to Fire Skills</code></ins> |
+| | <strong><code>+30% Faster Cast Rate</code></strong> |
+| | <strong><code>Fire Resist +30%</code></strong> |
+| | <strong><code>+3 to Fire Wall (Sorceress only)</code></strong> |
+| | <strong><code>+3 to Fire Ball (Sorceress only)</code></strong> |
+| | <strong><code>+60 to Mana</code></strong> |
+| | <strong><code>+3 to Fire Skills</code></strong> |
 
 **Warpspear** (Warpspear)
 
@@ -191,12 +191,12 @@
 | | **Base Item:** Gothic Staff |
 | | **Level Requirement:** 39 |
 | | **Properties:** |
-| | <ins><code>+3 to Sorceress Skill Levels</code></ins> |
-| | <ins><code>+55% Faster Hit Recovery</code></ins> |
-| | <ins><code>+3 to Teleport (Sorceress only)</code></ins> |
-| | <ins><code>+3 to Telekinesis (Sorceress only)</code></ins> |
-| | <ins><code>+3 to Meteor (Sorceress only)</code></ins> |
-| | <ins><code>+250 Defense vs. Missile</code></ins> |
-| | <ins><code>+40% Faster Cast Rate</code></ins> |
-| | <ins><code>+150 to Mana</code></ins> |
+| | <strong><code>+3 to Sorceress Skill Levels</code></strong> |
+| | <strong><code>+55% Faster Hit Recovery</code></strong> |
+| | <strong><code>+3 to Teleport (Sorceress only)</code></strong> |
+| | <strong><code>+3 to Telekinesis (Sorceress only)</code></strong> |
+| | <strong><code>+3 to Meteor (Sorceress only)</code></strong> |
+| | <strong><code>+250 Defense vs. Missile</code></strong> |
+| | <strong><code>+40% Faster Cast Rate</code></strong> |
+| | <strong><code>+150 to Mana</code></strong> |
 

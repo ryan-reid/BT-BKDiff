@@ -7,9 +7,9 @@
 | | **Base Item:** Large Charm |
 | | **Level Requirement:** 75 |
 | | **Properties:** |
-| | <ins><code>+3 to Random Class Skill Levels</code></ins> |
-| | <ins><code>+10-20 to all Attributes</code></ins> |
-| | <ins><code>All Resistances +10-20</code></ins> |
-| | <ins><code>+8 to Light Radius</code></ins> |
-| | <ins><code>Level 10 Hydra (30/# Charges)</code></ins> |
+| | <strong><code>+3 to Random Class Skill Levels</code></strong> |
+| | <strong><code>+10-20 to all Attributes</code></strong> |
+| | <strong><code>All Resistances +10-20</code></strong> |
+| | <strong><code>+8 to Light Radius</code></strong> |
+| | <strong><code>Level 10 Hydra (30/# Charges)</code></strong> |
 

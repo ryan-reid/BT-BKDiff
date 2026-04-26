@@ -7,8 +7,8 @@
 - warlock2
 ## Modified Rows (2)
 ### transmogrify box page 1
-- `gridTop`: <del><code>278</code></del> (Old) &rarr; <ins><code>139</code></ins> (New)
-- `gridBottom`: <del><code>506</code></del> (Old) &rarr; <ins><code>253</code></ins> (New)
+- `gridTop`: <strong><code>278</code></strong> (Old) &rarr; <strong><code>139</code></strong> (New)
+- `gridBottom`: <strong><code>506</code></strong> (Old) &rarr; <strong><code>253</code></strong> (New)
 ### transmogrify box2
-- `gridX`: <del><code>3</code></del> (Old) &rarr; <ins><code>6</code></ins> (New)
-- `gridY`: <del><code>4</code></del> (Old) &rarr; <ins><code>6</code></ins> (New)
+- `gridX`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>6</code></strong> (New)
+- `gridY`: <strong><code>4</code></strong> (Old) &rarr; <strong><code>6</code></strong> (New)

@@ -1,13 +1,13 @@
 # Modified Set Boots
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Aldur's Advance** (Aldur's Advance)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Battle</code></del><code> Boots</code> | **Base Item:** <ins><code>Mirrored</code></ins><code> Boots</code> |
+| **Base Item:** <strong><code>Battle Boots</code></strong> | **Base Item:** <strong><code>Mirrored Boots</code></strong> |
 | **Level Requirement:** <code>45</code> | **Level Requirement:** <code>45</code> |
 | **Properties:** | **Properties:** |
 | <code>Repairs 1 durability in 5 seconds</code> | <code>Repairs 1 durability in 5 seconds</code> |
@@ -22,7 +22,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Battle</code></del><code> Boots</code> | **Base Item:** <ins><code>Mirrored</code></ins><code> Boots</code> |
+| **Base Item:** <strong><code>Battle Boots</code></strong> | **Base Item:** <strong><code>Mirrored Boots</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+50% Faster Run/Walk</code> | <code>+50% Faster Run/Walk</code> |
@@ -36,7 +36,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>War</code></del><code> </code><del><code>Boots</code></del> | **Base Item:** <ins><code>Myrmidon</code></ins><code> </code><ins><code>Greaves</code></ins> |
+| **Base Item:** <strong><code>War Boots</code></strong> | **Base Item:** <strong><code>Myrmidon Greaves</code></strong> |
 | **Level Requirement:** <code>31</code> | **Level Requirement:** <code>31</code> |
 | **Properties:** | **Properties:** |
 | <code>+75 Defense</code> | <code>+75 Defense</code> |
@@ -51,7 +51,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>War</code></del><code> </code><del><code>Boots</code></del> | **Base Item:** <ins><code>Myrmidon</code></ins><code> </code><ins><code>Greaves</code></ins> |
+| **Base Item:** <strong><code>War Boots</code></strong> | **Base Item:** <strong><code>Myrmidon Greaves</code></strong> |
 | **Level Requirement:** <code>95</code> | **Level Requirement:** <code>95</code> |
 | **Properties:** | **Properties:** |
 | <code>+40% Faster Run/Walk</code> | <code>+40% Faster Run/Walk</code> |
@@ -65,7 +65,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Mesh</code></del><code> Boots</code> | **Base Item:** <ins><code>Boneweave</code></ins><code> Boots</code> |
+| **Base Item:** <strong><code>Mesh Boots</code></strong> | **Base Item:** <strong><code>Boneweave Boots</code></strong> |
 | **Level Requirement:** <code>85</code> | **Level Requirement:** <code>85</code> |
 | **Properties:** | **Properties:** |
 | <code>+40% Faster Run/Walk</code> | <code>+40% Faster Run/Walk</code> |
@@ -80,7 +80,7 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** <del><code>Mesh</code></del><code> Boots</code> | **Base Item:** <ins><code>Boneweave</code></ins><code> Boots</code> |
+| **Base Item:** <strong><code>Mesh Boots</code></strong> | **Base Item:** <strong><code>Boneweave Boots</code></strong> |
 | **Level Requirement:** <code>25</code> | **Level Requirement:** <code>25</code> |
 | **Properties:** | **Properties:** |
 | <code>+75-125 Defense</code> | <code>+75-125 Defense</code> |

@@ -71,45 +71,23 @@ class MarkdownExporter(BaseExporter):
 
     @staticmethod
     def get_styled_diffs(old_s: str, new_s: str) -> Tuple[str, str]:
-        def fmt(kind, text):
+        def fmt(text: str, changed: bool = False) -> str:
             if not text:
-                return ""
+                text = "empty"
             escaped = MarkdownExporter.escape_inline_html(text)
-            if kind == "added":
-                return f"<ins><code>{escaped}</code></ins>"
-            if kind == "removed":
-                return f"<del><code>{escaped}</code></del>"
+            if changed:
+                return f"<strong><code>{escaped}</code></strong>"
             return f"<code>{escaped}</code>"
 
-        if not old_s:
-            return "", fmt("added", new_s)
-        if not new_s or new_s == "(removed)":
-            return fmt("removed", old_s), fmt("added", "(removed)")
-        
         def normalize_text(t): return re.sub(r'\s+', ' ', re.sub(r'ÿc.', '', t)).strip()
+
+        if not old_s:
+            return fmt("", changed=True), fmt(new_s, changed=True)
+        if not new_s or new_s == "(removed)":
+            return fmt(old_s, changed=True), fmt("(removed)", changed=True)
         if normalize_text(old_s) == normalize_text(new_s):
-            return fmt("", old_s), fmt("", new_s)
-
-        def tokenize(text: str) -> List[str]:
-            return re.findall(r'[+-]?\d+(?:-\d+)?%?|[a-zA-Z]+|[^\w\s]|\s+', text)
-
-        old_toks, new_toks = tokenize(old_s), tokenize(new_s)
-        matcher = difflib.SequenceMatcher(None, old_toks, new_toks)
-        
-        def render(tokens: List[str], is_old: bool) -> str:
-            parts = []
-            for tag, i1, i2, j1, j2 in matcher.get_opcodes():
-                part = "".join(tokens[i1:i2] if is_old else tokens[j1:j2])
-                if not part: continue
-                escaped = MarkdownExporter.escape_inline_html(part)
-                if (is_old and tag in ['replace', 'delete']) or (not is_old and tag in ['replace', 'insert']):
-                    tag_name = "del" if is_old else "ins"
-                    parts.append(f"<{tag_name}><code>{escaped}</code></{tag_name}>")
-                elif tag == 'equal': 
-                    parts.append(f"<code>{escaped}</code>")
-            if not parts: return ""
-            return "".join(parts)
-        return render(old_toks, True), render(new_toks, False)
+            return fmt(old_s), fmt(new_s)
+        return fmt(old_s, changed=True), fmt(new_s, changed=True)
 
     def export_skill_tree(self, tree: SkillTreeDTO, output_path: str):
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -222,8 +200,8 @@ class MarkdownExporter(BaseExporter):
                 with open(path, 'w', encoding='utf-8') as f_out:
                     f_out.write(f"# {title}\n\n")
                     if is_modified:
-                        f_out.write("- `<del><code>old</code></del>`: Removed/Old Value\n")
-                        f_out.write("- `<ins><code>new</code></ins>`: Added/New Value\n\n")
+                        f_out.write("- `<strong><code>value</code></strong>`: Changed value\n")
+                        f_out.write("- `<strong><code>empty</code></strong>`: No value on that side\n\n")
 
                     for item in sorted(items_list, key=lambda x: x.get('display_name') or x.get('name', '')):
                         k = item['original_key']

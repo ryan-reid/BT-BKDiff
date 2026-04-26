@@ -14,204 +14,204 @@
 - thunderstormnova
 ## Modified Rows (75)
 ### acidspray
-- `Range`: <code>6</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>6</code> (New)
+- `Range`: <strong><code>6 +  (lvl *  2)</code></strong> (Old) &rarr; <strong><code>6</code></strong> (New)
 ### baal taunt lightning
-- `Range`: <code>10</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>10</code> (New)
+- `Range`: <strong><code>10 +  (lvl *  2)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
 ### battlecry
-- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
-- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
-- `Accel`: <del><code>-1000</code></del> (Old) &rarr; <ins><code>-500</code></ins> (New)
-- `Range`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
+- `Vel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>15</code></strong> (New)
+- `MaxVel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>15</code></strong> (New)
+- `Accel`: <strong><code>-1000</code></strong> (Old) &rarr; <strong><code>-500</code></strong> (New)
+- `Range`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>15</code></strong> (New)
 ### blade creeper
-- `Range`: <code>10</code><del><code> +  (lvl *  5)</code></del> (Old) &rarr; <code>10</code> (New)
-- `NextDelay`: <del><code>25</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
+- `Range`: <strong><code>10 +  (lvl *  5)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
+- `NextDelay`: <strong><code>25</code></strong> (Old) &rarr; <strong><code>15</code></strong> (New)
 ### blade shield attachment
-- `Range`: <code>500</code><del><code> +  (lvl *  100)</code></del> (Old) &rarr; <code>500</code> (New)
+- `Range`: <strong><code>500 +  (lvl *  100)</code></strong> (Old) &rarr; <strong><code>500</code></strong> (New)
 ### blaze
-- `Range`: <code>90</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>90</code> (New)
+- `Range`: <strong><code>90 +  (lvl *  25)</code></strong> (Old) &rarr; <strong><code>90</code></strong> (New)
 ### bluelightmissile
-- `Range`: <code>10</code><del><code> +  (lvl *  10)</code></del> (Old) &rarr; <code>10</code> (New)
+- `Range`: <strong><code>10 +  (lvl *  10)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
 ### bonespirit
-- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
-- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `Vel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
+- `MaxVel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
 ### bonewallmaker
-- `Range`: <code>7</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>7</code> (New)
+- `Range`: <strong><code>7 +  (lvl *  2)</code></strong> (Old) &rarr; <strong><code>7</code></strong> (New)
 ### catapult meteor fire
-- `Range`: <code>90</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>90</code> (New)
+- `Range`: <strong><code>90 +  (lvl *  25)</code></strong> (Old) &rarr; <strong><code>90</code></strong> (New)
 ### coldarrow
-- `pCltHitFunc`:  (Old) &rarr; <ins><code>4</code></ins> (New)
-- `pSrvHitFunc`:  (Old) &rarr; <ins><code>5</code></ins> (New)
-- `sHitPar1`:  (Old) &rarr; <ins><code>1</code></ins> (New)
-- `HitSubMissile1`:  (Old) &rarr; <ins><code>frostnovaarrow</code></ins> (New)
-- `CltHitSubMissile1`:  (Old) &rarr; <ins><code>frostnovaarrow</code></ins> (New)
+- `pCltHitFunc`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>4</code></strong> (New)
+- `pSrvHitFunc`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>5</code></strong> (New)
+- `sHitPar1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
+- `HitSubMissile1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>frostnovaarrow</code></strong> (New)
+- `CltHitSubMissile1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>frostnovaarrow</code></strong> (New)
 ### coldfissure center
-- `\*ID`: <del><code>726</code></del> (Old) &rarr; <ins><code>725</code></ins> (New)
+- `\*ID`: <strong><code>726</code></strong> (Old) &rarr; <strong><code>725</code></strong> (New)
 ### colossal throwing axe
-- `\*ID`: <del><code>732</code></del> (Old) &rarr; <ins><code>731</code></ins> (New)
+- `\*ID`: <strong><code>732</code></strong> (Old) &rarr; <strong><code>731</code></strong> (New)
 ### colossalchargedbolt
-- `\*ID`: <del><code>723</code></del> (Old) &rarr; <ins><code>735</code></ins> (New)
+- `\*ID`: <strong><code>723</code></strong> (Old) &rarr; <strong><code>735</code></strong> (New)
 ### countessfirewall
-- `Range`: <code>1000</code><del><code> +  (lvl *  1)</code></del> (Old) &rarr; <code>1000</code> (New)
+- `Range`: <strong><code>1000 +  (lvl *  1)</code></strong> (Old) &rarr; <strong><code>1000</code></strong> (New)
 ### distraction fog
-- `Range`: <code>10</code><del><code> +  (lvl *  5)</code></del> (Old) &rarr; <code>10</code> (New)
+- `Range`: <strong><code>10 +  (lvl *  5)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
 ### explodingarrowexp2
-- `sHitPar1`: <del><code>5</code></del> (Old) &rarr; <ins><code>7</code></ins> (New)
+- `sHitPar1`: <strong><code>5</code></strong> (Old) &rarr; <strong><code>7</code></strong> (New)
 ### firearrow
-- `pCltHitFunc`:  (Old) &rarr; <ins><code>4</code></ins> (New)
-- `pSrvHitFunc`:  (Old) &rarr; <ins><code>5</code></ins> (New)
-- `sHitPar1`:  (Old) &rarr; <ins><code>1</code></ins> (New)
-- `HitSubMissile1`:  (Old) &rarr; <ins><code>firenovaarrow</code></ins> (New)
-- `CltHitSubMissile1`:  (Old) &rarr; <ins><code>firenovaarrow</code></ins> (New)
+- `pCltHitFunc`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>4</code></strong> (New)
+- `pSrvHitFunc`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>5</code></strong> (New)
+- `sHitPar1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
+- `HitSubMissile1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>firenovaarrow</code></strong> (New)
+- `CltHitSubMissile1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>firenovaarrow</code></strong> (New)
 ### fireball
-- `sHitPar1`: <del><code>0</code></del> (Old) &rarr; <ins><code>4</code></ins> (New)
+- `sHitPar1`: <strong><code>0</code></strong> (Old) &rarr; <strong><code>4</code></strong> (New)
 ### firemedium
-- `Range`: <code>90</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>90</code> (New)
+- `Range`: <strong><code>90 +  (lvl *  25)</code></strong> (Old) &rarr; <strong><code>90</code></strong> (New)
 ### firesmall
-- `Range`: <code>90</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>90</code> (New)
+- `Range`: <strong><code>90 +  (lvl *  25)</code></strong> (Old) &rarr; <strong><code>90</code></strong> (New)
 ### firetwister
-- `\*ID`: <del><code>720</code></del> (Old) &rarr; <ins><code>732</code></ins> (New)
+- `\*ID`: <strong><code>720</code></strong> (Old) &rarr; <strong><code>732</code></strong> (New)
 ### firewallmaker
-- `Range`: <code>7</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>7</code> (New)
+- `Range`: <strong><code>7 +  (lvl *  2)</code></strong> (Old) &rarr; <strong><code>7</code></strong> (New)
 ### fistoftheheavensbolt
-- `sHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `cHitPar1`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `cHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `EDmgSymPerCalc`: <code>skill('Holy Bolt'.blvl) *</code><del><code> 15</code></del> (Old) &rarr; <code>skill('Holy Bolt'.blvl) *</code><ins><code>6</code></ins> (New)
+- `sHitPar2`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `cHitPar1`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `cHitPar2`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `EDmgSymPerCalc`: <strong><code>skill('Holy Bolt'.blvl) * 15</code></strong> (Old) &rarr; <strong><code>skill('Holy Bolt'.blvl) *6</code></strong> (New)
 ### frozenorb
-- `Vel`: <del><code>10</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
-- `MaxVel`: <del><code>10</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `Vel`: <strong><code>10</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
+- `MaxVel`: <strong><code>10</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
 ### frozenorbbolt
-- `Vel`: <del><code>18</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
-- `MaxVel`: <del><code>18</code></del> (Old) &rarr; <ins><code>16</code></ins> (New)
+- `Vel`: <strong><code>18</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
+- `MaxVel`: <strong><code>18</code></strong> (Old) &rarr; <strong><code>16</code></strong> (New)
 ### frozenorbnova
-- `Vel`: <del><code>24</code></del> (Old) &rarr; <ins><code>30</code></ins> (New)
-- `MaxVel`: <del><code>24</code></del> (Old) &rarr; <ins><code>30</code></ins> (New)
+- `Vel`: <strong><code>24</code></strong> (Old) &rarr; <strong><code>30</code></strong> (New)
+- `MaxVel`: <strong><code>24</code></strong> (Old) &rarr; <strong><code>30</code></strong> (New)
 ### greenlightmissile
-- `Range`: <code>10</code><del><code> +  (lvl *  10)</code></del> (Old) &rarr; <code>10</code> (New)
+- `Range`: <strong><code>10 +  (lvl *  10)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
 ### grimwardscare
-- `Range`: <code>24</code><del><code> +  (lvl *  12)</code></del> (Old) &rarr; <code>24</code> (New)
+- `Range`: <strong><code>24 +  (lvl *  12)</code></strong> (Old) &rarr; <strong><code>24</code></strong> (New)
 ### guidedarrow
-- `Pierce`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `Pierce`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### healing vortex
-- `Range`: <code>100</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>100</code> (New)
+- `Range`: <strong><code>100 +  (lvl *  25)</code></strong> (Old) &rarr; <strong><code>100</code></strong> (New)
 ### holybolt
-- `sHitPar1`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `sHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `cHitPar1`: <del><code>1</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `cHitPar2`: <del><code>3</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `sHitPar1`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `sHitPar2`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `cHitPar1`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `cHitPar2`: <strong><code>3</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### hydra
-- `Vel`: <del><code>16</code></del> (Old) &rarr; <ins><code>40</code></ins> (New)
-- `MaxVel`: <del><code>16</code></del> (Old) &rarr; <ins><code>40</code></ins> (New)
+- `Vel`: <strong><code>16</code></strong> (Old) &rarr; <strong><code>40</code></strong> (New)
+- `MaxVel`: <strong><code>16</code></strong> (Old) &rarr; <strong><code>40</code></strong> (New)
 ### ice crack 1
-- `\*ID`: <del><code>727</code></del> (Old) &rarr; <ins><code>726</code></ins> (New)
+- `\*ID`: <strong><code>727</code></strong> (Old) &rarr; <strong><code>726</code></strong> (New)
 ### ice crack 2
-- `\*ID`: <del><code>728</code></del> (Old) &rarr; <ins><code>727</code></ins> (New)
+- `\*ID`: <strong><code>728</code></strong> (Old) &rarr; <strong><code>727</code></strong> (New)
 ### ice vapor 1
-- `\*ID`: <del><code>729</code></del> (Old) &rarr; <ins><code>728</code></ins> (New)
+- `\*ID`: <strong><code>729</code></strong> (Old) &rarr; <strong><code>728</code></strong> (New)
 ### ice vapor 2
-- `\*ID`: <del><code>730</code></del> (Old) &rarr; <ins><code>729</code></ins> (New)
+- `\*ID`: <strong><code>730</code></strong> (Old) &rarr; <strong><code>729</code></strong> (New)
 ### iceblast
-- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
-- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `Vel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
+- `MaxVel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
 ### immolationfire
-- `EMin`: <del><code>12</code></del> (Old) &rarr; <ins><code>24</code></ins> (New)
-- `MinELev1`: <del><code>4</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
-- `MinELev2`: <del><code>5</code></del> (Old) &rarr; <ins><code>10</code></ins> (New)
-- `MinELev3`: <del><code>6</code></del> (Old) &rarr; <ins><code>12</code></ins> (New)
-- `MinELev4`: <del><code>6</code></del> (Old) &rarr; <ins><code>12</code></ins> (New)
-- `MinELev5`: <del><code>6</code></del> (Old) &rarr; <ins><code>12</code></ins> (New)
-- `EMax`: <del><code>24</code></del> (Old) &rarr; <ins><code>48</code></ins> (New)
-- `MaxELev1`: <del><code>4</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
-- `MaxELev2`: <del><code>5</code></del> (Old) &rarr; <ins><code>10</code></ins> (New)
-- `MaxELev3`: <del><code>7</code></del> (Old) &rarr; <ins><code>14</code></ins> (New)
-- `MaxELev4`: <del><code>7</code></del> (Old) &rarr; <ins><code>14</code></ins> (New)
-- `MaxELev5`: <del><code>7</code></del> (Old) &rarr; <ins><code>14</code></ins> (New)
-- `EDmgSymPerCalc`: <code>skill('Fire Arrow'.blvl)</code><code> * 5</code> (Old) &rarr; <ins><code>(</code></ins><code>skill('Fire Arrow'.blvl)</code><ins><code>+skill('Exploding Arrow'.blvl))</code></ins><code> * 5</code> (New)
+- `EMin`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>24</code></strong> (New)
+- `MinELev1`: <strong><code>4</code></strong> (Old) &rarr; <strong><code>8</code></strong> (New)
+- `MinELev2`: <strong><code>5</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
+- `MinELev3`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>12</code></strong> (New)
+- `MinELev4`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>12</code></strong> (New)
+- `MinELev5`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>12</code></strong> (New)
+- `EMax`: <strong><code>24</code></strong> (Old) &rarr; <strong><code>48</code></strong> (New)
+- `MaxELev1`: <strong><code>4</code></strong> (Old) &rarr; <strong><code>8</code></strong> (New)
+- `MaxELev2`: <strong><code>5</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
+- `MaxELev3`: <strong><code>7</code></strong> (Old) &rarr; <strong><code>14</code></strong> (New)
+- `MaxELev4`: <strong><code>7</code></strong> (Old) &rarr; <strong><code>14</code></strong> (New)
+- `MaxELev5`: <strong><code>7</code></strong> (Old) &rarr; <strong><code>14</code></strong> (New)
+- `EDmgSymPerCalc`: <strong><code>skill('Fire Arrow'.blvl) * 5</code></strong> (Old) &rarr; <strong><code>(skill('Fire Arrow'.blvl)+skill('Exploding Arrow'.blvl)) * 5</code></strong> (New)
 ### mephistoflyingrocksbig
-- `Range`: <code>10</code><del><code> +  (lvl *  3)</code></del> (Old) &rarr; <code>10</code> (New)
+- `Range`: <strong><code>10 +  (lvl *  3)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
 ### mephistoflyingrockssmall
-- `Range`: <code>5</code><del><code> +  (lvl *  3)</code></del> (Old) &rarr; <code>5</code> (New)
+- `Range`: <strong><code>5 +  (lvl *  3)</code></strong> (Old) &rarr; <strong><code>5</code></strong> (New)
 ### meteor
-- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `Range`: <strong><code>60</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
 ### meteorcenter
-- `CltParam1`: <del><code>59</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
-- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `CltParam1`: <strong><code>59</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
+- `Range`: <strong><code>60</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
 ### meteorexplode
-- `Range`: <del><code>16</code></del> (Old) &rarr; <ins><code>13</code></ins> (New)
+- `Range`: <strong><code>16</code></strong> (Old) &rarr; <strong><code>13</code></strong> (New)
 ### meteortail
-- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `Range`: <strong><code>60</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
 ### monblizcenter
-- `Range`: <code>25</code><del><code> +  (lvl *  15)</code></del> (Old) &rarr; <code>25</code> (New)
+- `Range`: <strong><code>25 +  (lvl *  15)</code></strong> (Old) &rarr; <strong><code>25</code></strong> (New)
 ### multipleshotarrow
-- `Range`: <del><code>50</code></del> (Old) &rarr; <ins><code>27</code></ins> (New)
+- `Range`: <strong><code>50</code></strong> (Old) &rarr; <strong><code>27</code></strong> (New)
 ### multipleshotbolt
-- `Range`: <del><code>50</code></del> (Old) &rarr; <ins><code>27</code></ins> (New)
+- `Range`: <strong><code>50</code></strong> (Old) &rarr; <strong><code>27</code></strong> (New)
 ### phoenixtrail
-- `Range`: <code>90</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>90</code> (New)
+- `Range`: <strong><code>90 +  (lvl *  25)</code></strong> (Old) &rarr; <strong><code>90</code></strong> (New)
 ### plague vines trail
-- `Range`: <code>100</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>100</code> (New)
+- `Range`: <strong><code>100 +  (lvl *  25)</code></strong> (Old) &rarr; <strong><code>100</code></strong> (New)
 ### poisonnova
-- `Vel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
-- `MaxVel`: <del><code>12</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
+- `Vel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>15</code></strong> (New)
+- `MaxVel`: <strong><code>12</code></strong> (Old) &rarr; <strong><code>15</code></strong> (New)
 ### rabiesplague
-- `Param1`: <del><code>4</code></del> (Old) &rarr; <ins><code>1</code></ins> (New)
-- `Param2`: <del><code>7</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
-- `Range`: <code>10</code><del><code> +  (lvl *  5)</code></del> (Old) &rarr; <code>10</code> (New)
+- `Param1`: <strong><code>4</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
+- `Param2`: <strong><code>7</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
+- `Range`: <strong><code>10 +  (lvl *  5)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
 ### redlightmissile
-- `Range`: <code>10</code><del><code> +  (lvl *  10)</code></del> (Old) &rarr; <code>10</code> (New)
+- `Range`: <strong><code>10 +  (lvl *  10)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
 ### ringoffireexplode
-- `\*ID`: <del><code>731</code></del> (Old) &rarr; <ins><code>730</code></ins> (New)
+- `\*ID`: <strong><code>731</code></strong> (Old) &rarr; <strong><code>730</code></strong> (New)
 ### royalstrikechainlightning
-- `pCltHitFunc`:  (Old) &rarr; <ins><code>*16</code></ins> (New)
-- `pSrvHitFunc`:  (Old) &rarr; <ins><code>*12</code></ins> (New)
+- `pCltHitFunc`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>*16</code></strong> (New)
+- `pSrvHitFunc`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>*12</code></strong> (New)
 ### royalstrikemeteor
-- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `Range`: <strong><code>60</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
 ### royalstrikemeteorcenter
-- `CltParam1`: <del><code>59</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
-- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
-- `ProgSound`:  (Old) &rarr; <ins><code>sorceress_meteor_impact</code></ins> (New)
+- `CltParam1`: <strong><code>59</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
+- `Range`: <strong><code>60</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
+- `ProgSound`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>sorceress_meteor_impact</code></strong> (New)
 ### royalstrikemeteorexplode
-- `Range`: <del><code>16</code></del> (Old) &rarr; <ins><code>13</code></ins> (New)
+- `Range`: <strong><code>16</code></strong> (Old) &rarr; <strong><code>13</code></strong> (New)
 ### royalstrikemeteortail
-- `Range`: <del><code>60</code></del> (Old) &rarr; <ins><code>18</code></ins> (New)
+- `Range`: <strong><code>60</code></strong> (Old) &rarr; <strong><code>18</code></strong> (New)
 ### sentrylightningbolt
-- `Range`: <code>10</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>10</code> (New)
+- `Range`: <strong><code>10 +  (lvl *  2)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
 ### sentrylightningbolt2
-- `Range`: <code>10</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>10</code> (New)
+- `Range`: <strong><code>10 +  (lvl *  2)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)
 ### sentryspikeonground
-- `Range`: <code>180</code><del><code> +  (lvl *  60)</code></del> (Old) &rarr; <code>180</code> (New)
+- `Range`: <strong><code>180 +  (lvl *  60)</code></strong> (Old) &rarr; <strong><code>180</code></strong> (New)
 ### shockwave
-- `NextHit`: <del><code>1</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `NextDelay`: <del><code>4</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
+- `NextHit`: <strong><code>1</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `NextDelay`: <strong><code>4</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
 ### taintedfireball
-- `\*ID`: <del><code>722</code></del> (Old) &rarr; <ins><code>734</code></ins> (New)
+- `\*ID`: <strong><code>722</code></strong> (Old) &rarr; <strong><code>734</code></strong> (New)
 ### taintedfirebolt
-- `\*ID`: <del><code>721</code></del> (Old) &rarr; <ins><code>733</code></ins> (New)
+- `\*ID`: <strong><code>721</code></strong> (Old) &rarr; <strong><code>733</code></strong> (New)
 ### teeth
-- `NextDelay`: <del><code>4</code></del> (Old) &rarr; <ins><code>(removed)</code></ins> (New)
-- `Pierce`:  (Old) &rarr; <ins><code>1</code></ins> (New)
+- `NextDelay`: <strong><code>4</code></strong> (Old) &rarr; <strong><code>(removed)</code></strong> (New)
+- `Pierce`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>1</code></strong> (New)
 ### throwingstar
-- `Range`: <code>100</code><del><code> +  (lvl *  50)</code></del> (Old) &rarr; <code>100</code> (New)
+- `Range`: <strong><code>100 +  (lvl *  50)</code></strong> (Old) &rarr; <strong><code>100</code></strong> (New)
 ### thunderstorm1
-- `pCltHitFunc`:  (Old) &rarr; <ins><code>4</code></ins> (New)
-- `pSrvHitFunc`:  (Old) &rarr; <ins><code>5</code></ins> (New)
-- `HitSubMissile1`:  (Old) &rarr; <ins><code>thunderstormnova</code></ins> (New)
-- `CltHitSubMissile1`:  (Old) &rarr; <ins><code>thunderstormnova</code></ins> (New)
+- `pCltHitFunc`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>4</code></strong> (New)
+- `pSrvHitFunc`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>5</code></strong> (New)
+- `HitSubMissile1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>thunderstormnova</code></strong> (New)
+- `CltHitSubMissile1`: <strong><code>empty</code></strong> (Old) &rarr; <strong><code>thunderstormnova</code></strong> (New)
 ### tornado
-- `Vel`: <del><code>8</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
-- `MaxVel`: <del><code>8</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
-- `NextDelay`: <del><code>25</code></del> (Old) &rarr; <ins><code>15</code></ins> (New)
+- `Vel`: <strong><code>8</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)
+- `MaxVel`: <strong><code>8</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)
+- `NextDelay`: <strong><code>25</code></strong> (Old) &rarr; <strong><code>15</code></strong> (New)
 ### towerchestspawner
-- `Range`: <code>400</code><del><code> +  (lvl *  1)</code></del> (Old) &rarr; <code>400</code> (New)
+- `Range`: <strong><code>400 +  (lvl *  1)</code></strong> (Old) &rarr; <strong><code>400</code></strong> (New)
 ### towermistfade
-- `Range`: <code>128</code><del><code> +  (lvl *  1)</code></del> (Old) &rarr; <code>128</code> (New)
+- `Range`: <strong><code>128 +  (lvl *  1)</code></strong> (Old) &rarr; <strong><code>128</code></strong> (New)
 ### twister
-- `Vel`: <del><code>10</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
-- `MaxVel`: <del><code>10</code></del> (Old) &rarr; <ins><code>20</code></ins> (New)
-- `AnimSpeed`: <del><code>16</code></del> (Old) &rarr; <ins><code>8</code></ins> (New)
+- `Vel`: <strong><code>10</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)
+- `MaxVel`: <strong><code>10</code></strong> (Old) &rarr; <strong><code>20</code></strong> (New)
+- `AnimSpeed`: <strong><code>16</code></strong> (Old) &rarr; <strong><code>8</code></strong> (New)
 ### vines trail
-- `Range`: <code>100</code><del><code> +  (lvl *  25)</code></del> (Old) &rarr; <code>100</code> (New)
+- `Range`: <strong><code>100 +  (lvl *  25)</code></strong> (Old) &rarr; <strong><code>100</code></strong> (New)
 ### wake of destruction maker
-- `Range`: <code>25</code><del><code> +  (lvl *  2)</code></del> (Old) &rarr; <code>25</code> (New)
+- `Range`: <strong><code>25 +  (lvl *  2)</code></strong> (Old) &rarr; <strong><code>25</code></strong> (New)
 ### whitelightmissile
-- `Range`: <code>10</code><del><code> +  (lvl *  10)</code></del> (Old) &rarr; <code>10</code> (New)
+- `Range`: <strong><code>10 +  (lvl *  10)</code></strong> (Old) &rarr; <strong><code>10</code></strong> (New)

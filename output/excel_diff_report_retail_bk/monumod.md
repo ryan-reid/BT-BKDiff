@@ -4,16 +4,16 @@
 
 ## Modified Rows (5)
 ### aura
-- `upick \(H\)`: <del><code>6</code></del> (Old) &rarr; <ins><code>12</code></ins> (New)
+- `upick \(H\)`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>12</code></strong> (New)
 ### manahit
-- `upick \(N\)`: <del><code>6</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `upick \(H\)`: <del><code>6</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `upick \(N\)`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `upick \(H\)`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### multishot
-- `upick`: <del><code>6</code></del> (Old) &rarr; <ins><code>50</code></ins> (New)
-- `upick \(N\)`: <del><code>6</code></del> (Old) &rarr; <ins><code>50</code></ins> (New)
-- `upick \(H\)`: <del><code>6</code></del> (Old) &rarr; <ins><code>50</code></ins> (New)
+- `upick`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>50</code></strong> (New)
+- `upick \(N\)`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>50</code></strong> (New)
+- `upick \(H\)`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>50</code></strong> (New)
 ### spectralhit
-- `upick \(N\)`: <del><code>6</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
-- `upick \(H\)`: <del><code>6</code></del> (Old) &rarr; <ins><code>0</code></ins> (New)
+- `upick \(N\)`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
+- `upick \(H\)`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>0</code></strong> (New)
 ### teleport
-- `upick \(H\)`: <del><code>6</code></del> (Old) &rarr; <ins><code>3</code></ins> (New)
+- `upick \(H\)`: <strong><code>6</code></strong> (Old) &rarr; <strong><code>3</code></strong> (New)

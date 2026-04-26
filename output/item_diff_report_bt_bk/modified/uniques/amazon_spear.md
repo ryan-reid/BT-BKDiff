@@ -1,7 +1,7 @@
 # Modified Unique Amazon Spear
 
-- `<del><code>old</code></del>`: Removed/Old Value
-- `<ins><code>new</code></ins>`: Added/New Value
+- `<strong><code>value</code></strong>`: Changed value
+- `<strong><code>empty</code></strong>`: No value on that side
 
 **Gaia's Precision** (Gaia's Precision)
 
@@ -15,9 +15,9 @@
 | <code>-20-30% to Enemy Lightning Resistance</code> | <code>-20-30% to Enemy Lightning Resistance</code> |
 | <code>+10-20 to all Attributes</code> | <code>+10-20 to all Attributes</code> |
 | <code>+40% Increased Attack Speed</code> | <code>+40% Increased Attack Speed</code> |
-| <code>Level </code><del><code>3-6</code></del><code> Conviction Aura When Equipped</code> | <code>Level </code><ins><code>6-10</code></ins><code> Conviction Aura When Equipped</code> |
-| <del><code>+200-300</code></del><code> Defense</code> | <ins><code>+1000</code></ins><code> Defense</code> |
-| <del><code>Damage Reduced by 15-20</code></del> | <ins><code>(removed)</code></ins> |
-|  | <ins><code>Increase Maximum Life 5-15%</code></ins> |
-|  | <ins><code>20% Chance to cast level 40 Lightning Strike on striking</code></ins> |
+| <strong><code>Level 3-6 Conviction Aura When Equipped</code></strong> | <strong><code>Level 6-10 Conviction Aura When Equipped</code></strong> |
+| <strong><code>+200-300 Defense</code></strong> | <strong><code>+1000 Defense</code></strong> |
+| <strong><code>Damage Reduced by 15-20</code></strong> | <strong><code>(removed)</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>Increase Maximum Life 5-15%</code></strong> |
+| <strong><code>empty</code></strong> | <strong><code>20% Chance to cast level 40 Lightning Strike on striking</code></strong> |
 
