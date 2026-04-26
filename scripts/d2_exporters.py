@@ -17,15 +17,38 @@ class JsonExporter(BaseExporter):
 
 class MarkdownExporter(BaseExporter):
     @staticmethod
+    def escape_markdown(s: str) -> str:
+        if not s: return ""
+        # Escape characters that have special meaning in Markdown
+        # Backslash first to avoid double-escaping
+        for char in r'\_ *[]()#+-.!':
+            s = s.replace(char, '\\' + char)
+        return s
+
+    @staticmethod
     def escape_latex(s: str) -> str:
         if not s: return ""
-        for char in '%$#_{}&': s = s.replace(char, '\\' + char)
+        # 1. Backslash first to avoid double-escaping
+        s = s.replace('\\', r'\textbackslash{}')
+        # 2. Characters that can be escaped with \
+        for char in r'{}$%&#_}':
+            s = s.replace(char, '\\' + char)
+        # 3. Characters that require special commands
+        s = s.replace('^', r'\textasciicircum{}')
+        s = s.replace('~', r'\textasciitilde{}')
+        # 4. Vertical bar (pipe) - use \vert{{}} for Markdown table safety
+        s = s.replace('|', r'\vert{}')
         return s
 
     @staticmethod
     def get_styled_diffs(old_s: str, new_s: str) -> Tuple[str, str]:
         def fmt(color, text):
-            return r"$\color{" + color + r"}{\text{" + MarkdownExporter.escape_latex(text) + r"}}$"
+            if not text: return ""
+            escaped = MarkdownExporter.escape_latex(text)
+            # Use GitHub's backtick math syntax to avoid Markdown interference
+            if color:
+                return f"$`\\color{{{color}}}{{\\text{{{escaped}}}}}`$"
+            return f"$`\\text{{{escaped}}}`$"
 
         if not old_s: return "", fmt("blue", new_s)
         if not new_s or new_s == "(removed)": 
@@ -35,7 +58,7 @@ class MarkdownExporter(BaseExporter):
             return re.sub(r'\s+', ' ', re.sub(r'ÿc.', '', t)).strip()
 
         if normalize_text(old_s) == normalize_text(new_s):
-            return old_s, new_s
+            return fmt("", old_s), fmt("", new_s)
 
         def tokenize(text: str) -> List[str]:
             return re.findall(r'[+-]?\d+(?:-\d+)?%?|[a-zA-Z]+|[^\w\s]|\s+', text)
@@ -44,60 +67,61 @@ class MarkdownExporter(BaseExporter):
         matcher = difflib.SequenceMatcher(None, old_toks, new_toks)
         
         def render(tokens: List[str], is_old: bool) -> str:
-            res = "$"
+            res = ""
             for tag, i1, i2, j1, j2 in matcher.get_opcodes():
                 part = "".join(tokens[i1:i2] if is_old else tokens[j1:j2])
+                if not part: continue
+                escaped = MarkdownExporter.escape_latex(part)
                 if (is_old and tag in ['replace', 'delete']) or (not is_old and tag in ['replace', 'insert']):
                     color = 'gray' if is_old else 'blue'
-                    res += r"\color{" + color + r"}{\text{" + MarkdownExporter.escape_latex(part) + r"}}"
+                    res += f"$`\\color{{{color}}}{{\\text{{{escaped}}}}}`$"
                 elif tag == 'equal': 
-                    res += r"\text{" + MarkdownExporter.escape_latex(part) + r"}}"
-            return res + "$"
+                    res += f"$`\\text{{{escaped}}}`$"
+            return res
         return render(old_toks, True), render(new_toks, False)
 
     def export_item_db(self, items: List[AnalyzedItemDTO], title: str, output_path: str):
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         content = f"# {title}\n\n"
-        blocks = []
         for item in items:
-            block = f"### {item['display_name']} ({item['id']})\n"
-            block += f"* **Base Item:** {item['base_item']}\n"
-            block += f"* **Level Requirement:** {item['lvl_req']}\n"
-            block += "* **Properties:**\n"
+            name = self.escape_markdown(item.get('display_name') or item.get('name'))
+            content += f"### {name} ({self.escape_markdown(str(item['id']))})\n"
+            content += f"* **Base Item:** {self.escape_markdown(item.get('base_item', ''))}\n"
+            content += f"* **Level Requirement:** {item.get('lvl_req', '0')}\n"
+            content += "* **Properties:**\n"
             for prop in item['properties']:
-                block += f"    * {prop['resolved_text']}\n"
-            blocks.append(block)
-        content += "\n".join(blocks)
+                content += f"    * {self.escape_markdown(prop['resolved_text'])}\n"
+            content += "\n"
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(content.strip() + "\n")
 
     def export_runewords(self, rws: List[RunewordDTO], title: str, output_path: str):
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         content = f"# {title}\n\n"
-        blocks = []
         for rw in rws:
-            block = f"### {rw['name']}\n"
-            block += f"* **Runes:** {' + '.join(rw['runes'])}\n"
-            block += f"* **Base Items:** {', '.join(rw['base_items'])}\n"
-            block += "* **Properties:**\n"
+            name = self.escape_markdown(rw['name'])
+            content += f"### {name}\n"
+            runes_str = ' + '.join([self.escape_markdown(r) for r in rw['runes']])
+            content += f"* **Runes:** {runes_str}\n"
+            bases_str = ', '.join([self.escape_markdown(bi) for bi in rw['base_items']])
+            content += f"* **Base Items:** {bases_str}\n"
+            content += "* **Properties:**\n"
             for prop in rw['properties']:
-                block += f"    * {prop['resolved_text']}\n"
-            blocks.append(block)
-        content += "\n".join(blocks)
+                content += f"    * {self.escape_markdown(prop['resolved_text'])}\n"
+            content += "\n"
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(content.strip() + "\n")
 
     def export_cube_recipes(self, recipes: List[CubeRecipeDTO], title: str, output_path: str):
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         content = f"# {title}\n\n"
-        blocks = []
         for r in recipes:
-            block = f"## {r['description']}\n\n"
-            block += f"**Inputs:** {' + '.join([f'**{inp}**' for inp in r['inputs']])}\n\n"
-            block += f"**Outputs:** {', '.join([f'**{out}**' for out in r['outputs']])}\n\n"
-            block += "---\n"
-            blocks.append(block)
-        content += "\n".join(blocks)
+            content += f"## {self.escape_markdown(r['description'])}\n\n"
+            inputs_str = ' + '.join([f"**{self.escape_markdown(inp)}**" for inp in r['inputs']])
+            content += f"**Inputs:** {inputs_str}\n\n"
+            outputs_str = ', '.join([f"**{self.escape_markdown(out)}**" for out in r['outputs']])
+            content += f"**Outputs:** {outputs_str}\n\n"
+            content += "---\n"
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(content.strip() + "\n")
 
@@ -110,20 +134,17 @@ class MarkdownExporter(BaseExporter):
             f.write("| Type | [Added](ADDED.md) | [Removed](REMOVED.md) | [Modified](MODIFIED.md) |\n")
             f.write("| :--- | :---: | :---: | :---: |\n")
             f.write(f"| All Items | {len(diff['added'])} | {len(diff['removed'])} | {len(diff['modified'])} |\n\n")
-            f.write("Click the links in the header to see detailed breakdowns.\n")
 
         # 2. ADDED.md
         with open(os.path.join(output_dir, "ADDED.md"), 'w', encoding='utf-8') as f:
             f.write("# Added Items\n\n")
             for k, item in sorted(diff['added'].items()):
-                name = item.get('display_name') or item.get('name')
-                base = item.get('base_item') or ', '.join(item.get('base_items', []))
-                lvl = item.get('lvl_req', '0')
-                
-                f.write(f"**{name}** ({k})\n\n")
+                name = self.escape_markdown(item.get('display_name') or item.get('name'))
+                base = self.escape_markdown(item.get('base_item') or ', '.join(item.get('base_items', [])))
+                f.write(f"**{name}** ({self.escape_markdown(str(k))})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
                 f.write(f"| | **Base Item:** {base} |\n")
-                f.write(f"| | **Level Requirement:** {lvl} |\n")
+                f.write(f"| | **Level Requirement:** {item.get('lvl_req', '0')} |\n")
                 f.write("| | **Properties:** |\n")
                 for prop in item['properties']:
                     _, new_fmt = self.get_styled_diffs("", prop['resolved_text'])
@@ -134,16 +155,16 @@ class MarkdownExporter(BaseExporter):
         with open(os.path.join(output_dir, "REMOVED.md"), 'w', encoding='utf-8') as f:
             f.write("# Removed Items\n\n")
             for k, item in sorted(diff['removed'].items()):
-                name = item.get('display_name') or item.get('name')
-                f.write(f"- **{name}** ({k})\n")
+                name = self.escape_markdown(item.get('display_name') or item.get('name'))
+                f.write(f"- **{name}** ({self.escape_markdown(str(k))})\n")
 
         # 4. MODIFIED.md
         with open(os.path.join(output_dir, "MODIFIED.md"), 'w', encoding='utf-8') as f:
             f.write("# Modified Items\n\n")
-            f.write(r"- $\color{gray}{\text{Gray text}}$: Removed/Old Value" + "\n")
-            f.write(r"- $\color{blue}{\text{Blue text}}$: Added/New Value" + "\n\n")
+            f.write(r"- $`\color{gray}{\text{Gray text}}`$: Removed/Old Value" + "\n")
+            f.write(r"- $`\color{blue}{\text{Blue text}}`$: Added/New Value" + "\n\n")
             for k, mod in sorted(diff['modified'].items()):
-                f.write(f"**{mod['name']}** ({k})\n\n")
+                f.write(f"**{self.escape_markdown(mod['name'])}** ({self.escape_markdown(str(k))})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
                 b_old, b_new = self.get_styled_diffs(mod['bt_base'], mod['bk_base'])
                 f.write(f"| **Base Item:** {b_old} | **Base Item:** {b_new} |\n")
@@ -151,7 +172,6 @@ class MarkdownExporter(BaseExporter):
                 f.write(f"| **Level Requirement:** {l_old} | **Level Requirement:** {l_new} |\n")
                 f.write("| **Properties:** | **Properties:** |\n")
                 
-                # Align properties for display
                 old_props = mod['bt_props']
                 new_props = mod['bk_props']
                 
@@ -183,19 +203,16 @@ class MarkdownExporter(BaseExporter):
         if diff['removed_cols']: lines.append(f"## Removed Columns: `{', '.join(diff['removed_cols'])}`  \n")
         if diff['added_rows']:
             lines.append(f"## Added Rows ({len(diff['added_rows'])})")
-            for r in diff['added_rows']: lines.append(f"- {r}")
-            lines.append("")
+            for r in diff['added_rows']: lines.append(f"- {self.escape_markdown(r)}")
         if diff['removed_rows']:
             lines.append(f"## Removed Rows ({len(diff['removed_rows'])})")
-            for r in diff['removed_rows']: lines.append(f"- {r}")
-            lines.append("")
+            for r in diff['removed_rows']: lines.append(f"- {self.escape_markdown(r)}")
         if diff['modified_rows']:
             lines.append(f"## Modified Rows ({len(diff['modified_rows'])})")
             for key, row_diff in sorted(diff['modified_rows'].items()):
-                lines.append(f"### {key}")
+                lines.append(f"### {self.escape_markdown(key)}")
                 for col, vals in row_diff.items():
                     old_fmt, new_fmt = self.get_styled_diffs(str(vals['bt_old']), str(vals['bk_new']))
                     lines.append(f"- `{col}`: {old_fmt} (Old) &rarr; {new_fmt} (New)")
-                lines.append("")
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write("\n".join(lines).strip() + "\n")
