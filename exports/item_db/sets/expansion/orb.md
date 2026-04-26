@@ -4,25 +4,16 @@
 * **Base Item:** Dimensional Shard
 * **Level Requirement:** 65
 * **Properties:**
-<<<<<<< HEAD
     * \+57 to Life
     * \+77 to Mana
     * \+10 to Energy
     * \+20% Faster Cast Rate
     * \+2\-3 to Sorceress Skill Levels
-=======
-    * +57 to Life
-    * +77 to Mana
-    * +10 to Energy
-    * +20% Faster Cast Rate
-    * +2-3 to Sorceress Skill Levels
->>>>>>> origin/main
 
 ### Tal Rasha's Omniscience (Tal Rasha's Omniscience)
 * **Base Item:** Dimensional Shard
 * **Level Requirement:** 85
 * **Properties:**
-<<<<<<< HEAD
     * \+3 to Sorceress Skill Levels
     * \+40% Faster Cast Rate
     * \+2\-3 to Lightning Mastery \(Sorceress only\)
@@ -31,13 +22,3 @@
     * \+50 to Life
     * \+50 to Mana
     * \+5 to Evade
-=======
-    * +3 to Sorceress Skill Levels
-    * +40% Faster Cast Rate
-    * +2-3 to Lightning Mastery (Sorceress only)
-    * +2-3 to Fire Mastery (Sorceress only)
-    * +2-3 to Cold Mastery (Sorceress only)
-    * +50 to Life
-    * +50 to Mana
-    * +5 to Evade
->>>>>>> origin/main

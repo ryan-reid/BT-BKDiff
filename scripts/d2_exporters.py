@@ -51,8 +51,8 @@ class MarkdownExporter(BaseExporter):
             if not text: return ""
             escaped = MarkdownExporter.escape_latex(text)
             if color:
-                return r"$\\color{" + color + r"}{\\text{" + escaped + r"}}$"
-            return r"$\\text{" + escaped + r"}$"
+                return r"$\color{" + color + r"}{\\text{" + escaped + r"}}$"
+            return r"$\text{" + escaped + r"}$"
 
         if not old_s: return "", fmt("blue", new_s)
         if not new_s or new_s == "(removed)": 
@@ -80,14 +80,9 @@ class MarkdownExporter(BaseExporter):
                     color = 'gray' if is_old else 'blue'
                     parts.append(r"\\color{" + color + r"}{\\text{" + escaped + r"}}")
                 elif tag == 'equal': 
-<<<<<<< HEAD
                     parts.append(r"\\text{" + escaped + r"}")
             if not parts: return ""
             return "$" + "".join(parts) + "$"
-=======
-                    res += r"\text{" + MarkdownExporter.escape_latex(part) + r"}}"
-            return res + "$"
->>>>>>> origin/main
         return render(old_toks, True), render(new_toks, False)
 
     def export_item_db(self, items: List[AnalyzedItemDTO], title: str, output_path: str):
@@ -150,14 +145,8 @@ class MarkdownExporter(BaseExporter):
         added_dir = os.path.join(output_dir, "added")
         os.makedirs(added_dir, exist_ok=True)
         
-        # Group items by their source (uniques, sets, runewords)
-        # Note: We don't have the explicit type here, but we can infer or 
-        # use the item_type property. 
-        # To be precise, let's categorize them logically.
-        
         uniques, runewords, sets = [], [], []
         for k, item in diff['added'].items():
-            # Infer type from raw_row or presence of specific fields
             if 'runes' in item or (item.get('raw_row') and 'Rune1' in item['raw_row']):
                 runewords.append(item)
             elif item.get('raw_row') and 'set' in item['raw_row']:
@@ -197,7 +186,6 @@ class MarkdownExporter(BaseExporter):
             added_toc.append("## Uniques\n")
             unique_groups = {}
             for item in uniques:
-                # Basic grouping by item_type if available, otherwise "Other"
                 cat = item.get('item_type', 'Other')
                 if cat not in unique_groups: unique_groups[cat] = []
                 unique_groups[cat].append(item)
@@ -236,48 +224,20 @@ class MarkdownExporter(BaseExporter):
                 added_toc.append(f"- [{cat}]({rel})\n")
 
         with open(os.path.join(output_dir, "ADDED.md"), 'w', encoding='utf-8') as f:
-<<<<<<< HEAD
             f.write("".join(added_toc))
-=======
-            f.write("# Added Items\n\n")
-            for k, item in sorted(diff['added'].items()):
-                name = item.get('display_name') or item.get('name')
-                base = item.get('base_item') or ', '.join(item.get('base_items', []))
-                lvl = item.get('lvl_req', '0')
-                
-                f.write(f"**{name}** ({k})\n\n")
-                f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
-                f.write(f"| | **Base Item:** {base} |\n")
-                f.write(f"| | **Level Requirement:** {lvl} |\n")
-                f.write("| | **Properties:** |\n")
-                for prop in item['properties']:
-                    _, new_fmt = self.get_styled_diffs("", prop['resolved_text'])
-                    f.write(f"| | {new_fmt} |\n")
-                f.write("\n")
->>>>>>> origin/main
 
         # 3. REMOVED.md
         with open(os.path.join(output_dir, "REMOVED.md"), 'w', encoding='utf-8') as f:
             f.write("# Removed Items\n\n")
             for k, item in sorted(diff['removed'].items()):
-<<<<<<< HEAD
                 name = self.escape_markdown(item.get('display_name') or item.get('name'))
                 f.write(f"- **{name}** ({self.escape_markdown(str(k))})\n")
-=======
-                name = item.get('display_name') or item.get('name')
-                f.write(f"- **{name}** ({k})\n")
->>>>>>> origin/main
 
         # 4. MODIFIED.md
         with open(os.path.join(output_dir, "MODIFIED.md"), 'w', encoding='utf-8') as f:
             f.write("# Modified Items\n\n")
-<<<<<<< HEAD
-            f.write(r"- $\\color{gray}{\\text{Gray text}}$: Removed/Old Value" + "\n")
-            f.write(r"- $\\color{blue}{\\text{Blue text}}$: Added/New Value" + "\n\n")
-=======
-            f.write(r"- $\color{gray}{\text{Gray text}}$: Removed/Old Value" + "\n")
-            f.write(r"- $\color{blue}{\text{Blue text}}$: Added/New Value" + "\n\n")
->>>>>>> origin/main
+            f.write(r"- $\color{gray}{\\text{Gray text}}$: Removed/Old Value" + "\n")
+            f.write(r"- $\color{blue}{\\text{Blue text}}$: Added/New Value" + "\n\n")
             for k, mod in sorted(diff['modified'].items()):
                 f.write(f"**{self.escape_markdown(mod['name'])}** ({self.escape_markdown(str(k))})\n\n")
                 f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
@@ -287,7 +247,6 @@ class MarkdownExporter(BaseExporter):
                 f.write(f"| **Level Requirement:** {l_old} | **Level Requirement:** {l_new} |\n")
                 f.write("| **Properties:** | **Properties:** |\n")
                 
-                # Align properties for display
                 old_props = mod['bt_props']
                 new_props = mod['bk_props']
                 
@@ -297,20 +256,17 @@ class MarkdownExporter(BaseExporter):
 
                 aligned = []
                 old_used, new_used = set(), set()
-                # 1. Exact matches
                 for i, op in enumerate(old_props):
                     for j, np in enumerate(new_props):
                         if j not in new_used and op == np:
                             aligned.append((op, np))
                             old_used.add(i); new_used.add(j); break
-                # 2. Fuzzy matches (stat keys)
                 for i, op in enumerate(old_props):
                     if i in old_used: continue
                     for j, np in enumerate(new_props):
                         if j not in new_used and get_stat_key(op) == get_stat_key(np):
                             aligned.append((op, np))
                             old_used.add(i); new_used.add(j); break
-                # 3. Remaining
                 for i, op in enumerate(old_props):
                     if i not in old_used: aligned.append((op, "(removed)"))
                 for j, np in enumerate(new_props):

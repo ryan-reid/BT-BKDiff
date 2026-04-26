@@ -18,10 +18,10 @@
 ### 7bl
 - `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 ### 7bw
-- `magic lvl`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `magic lvl`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 - `auto prefix`: $\\color{gray}{\\text{211}}$ (Old) &rarr; $\\color{blue}{\\text{411}}$ (New)
 ### 7gw
-- `magic lvl`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `magic lvl`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 - `auto prefix`: $\\color{gray}{\\text{211}}$ (Old) &rarr; $\\color{blue}{\\text{411}}$ (New)
 ### 7la
 - `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
@@ -34,12 +34,12 @@
 ### 7wh
 - `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 ### 7wn
-- `magic lvl`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `magic lvl`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 - `auto prefix`: $\\color{gray}{\\text{211}}$ (Old) &rarr; $\\color{blue}{\\text{411}}$ (New)
 ### 7ws
 - `auto prefix`: $\\color{gray}{\\text{208}}$ (Old) &rarr; $\\color{blue}{\\text{408}}$ (New)
 ### 7yw
-- `magic lvl`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `magic lvl`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 - `auto prefix`: $\\color{gray}{\\text{211}}$ (Old) &rarr; $\\color{blue}{\\text{411}}$ (New)
 ### 8bs
 - `auto prefix`: $\\color{gray}{\\text{201}}$ (Old) &rarr; $\\color{blue}{\\text{401}}$ (New)
@@ -119,21 +119,21 @@
 ### cst
 - `auto prefix`: $\\color{gray}{\\text{200}}$ (Old) &rarr; $\\color{blue}{\\text{400}}$ (New)
 ### d33
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### flc
 - `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 ### g33
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### gpl
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 - `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 ### gpm
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 - `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 ### gps
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 - `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 ### gsc
@@ -141,15 +141,15 @@
 ### gwn
 - `auto prefix`: $\\color{gray}{\\text{209}}$ (Old) &rarr; $\\color{blue}{\\text{409}}$ (New)
 ### hdm
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### hfh
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### hst
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### lax
 - `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 ### leg
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### lst
 - `auto prefix`: $\\color{gray}{\\text{200}}$ (Old) &rarr; $\\color{blue}{\\text{400}}$ (New)
 - `gemsockets`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
@@ -158,7 +158,7 @@
 ### mac
 - `gemsockets`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 ### msf
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### mxb
 - `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 ### ob1
@@ -192,21 +192,21 @@
 ### obf
 - `auto prefix`: $\\color{gray}{\\text{205}}$ (Old) &rarr; $\\color{blue}{\\text{405}}$ (New)
 ### opl
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 - `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 ### opm
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 - `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 ### ops
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 - `minstack`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `spawnstack`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 ### qf1
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### qf2
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### rxb
 - `gemsockets`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 ### sbr

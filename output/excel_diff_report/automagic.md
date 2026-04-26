@@ -70,7 +70,7 @@
 ### armor\_res\_mag
 - `group`: $\\color{gray}{\\text{225}}$ (Old) &rarr; $\\color{blue}{\\text{425}}$ (New)
 ### chromatic
-- `levelreq`:  (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `levelreq`:  (Old) &rarr; $\color{blue}{\\text{1}}$ (New)
 - `group`: $\\color{gray}{\\text{307}}$ (Old) &rarr; $\\color{blue}{\\text{309}}$ (New)
-- `multiply`:  (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
-- `add`:  (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `multiply`:  (Old) &rarr; $\color{blue}{\\text{0}}$ (New)
+- `add`:  (Old) &rarr; $\color{blue}{\\text{0}}$ (New)

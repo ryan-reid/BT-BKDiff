@@ -7,5 +7,5 @@
 | | **Base Item:** Jewel |
 | | **Level Requirement:** 1 |
 | | **Properties:** |
-| | $\\color{blue}{\\text{splash}}$ |
+| | $\color{blue}{\\text{splash}}$ |
 

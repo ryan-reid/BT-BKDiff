@@ -39,15 +39,15 @@
 ### act5barb3
 - `Velocity`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `Run`: $\\color{gray}{\\text{16}}$ (Old) &rarr; $\\color{blue}{\\text{17}}$ (New)
-- `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `Crit`: $\color{gray}{\\text{5}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### act5barb4
 - `Velocity`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `Run`: $\\color{gray}{\\text{16}}$ (Old) &rarr; $\\color{blue}{\\text{17}}$ (New)
-- `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `Crit`: $\color{gray}{\\text{5}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### act5hire1
-- `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `Crit`: $\color{gray}{\\text{5}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### act5hire2
-- `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `Crit`: $\color{gray}{\\text{5}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### act5pow
 - `Velocity`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 - `Run`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
@@ -203,15 +203,15 @@
 ### baron
 - `Crit`: $\\color{gray}{\\text{35}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### barricadedoor1
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### barricadedoor2
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### barricadetower
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### barricadewall1
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### barricadewall2
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### bat
 - `Velocity`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 - `Run`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
@@ -256,7 +256,7 @@
 ### bear
 - `Velocity`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{11}}$ (New)
 - `Run`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{11}}$ (New)
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### bighead1
 - `Velocity`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `Run`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
@@ -316,14 +316,14 @@
 - `Velocity`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 - `Run`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 ### bladecreeper
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### bloodgolem
 - `Skill1`: $\\color{gray}{\\text{BloodGolem}}$ (Old) &rarr; $\\color{blue}{\\text{Summon Splash}}$ (New)
 - `Sk1mode`: $\\color{gray}{\\text{NU}}$ (Old) &rarr; $\\color{blue}{\\text{A1}}$ (New)
 - `Sk1lvl`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
-- `Skill2`:  (Old) &rarr; $\\color{blue}{\\text{BloodGolem}}$ (New)
-- `Sk2mode`:  (Old) &rarr; $\\color{blue}{\\text{NU}}$ (New)
-- `Sk2lvl`:  (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `Skill2`:  (Old) &rarr; $\color{blue}{\\text{BloodGolem}}$ (New)
+- `Sk2mode`:  (Old) &rarr; $\color{blue}{\\text{NU}}$ (New)
+- `Sk2lvl`:  (Old) &rarr; $\color{blue}{\\text{0}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{120}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### bloodlord1
@@ -439,15 +439,15 @@
 ### bonefetish8
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### boneprison1
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### boneprison2
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### boneprison3
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### boneprison4
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### bonewall
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### brute1
 - `Velocity`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `Run`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
@@ -486,14 +486,14 @@
 - `Velocity`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 - `Run`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 ### bunny
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### cain1
 - `Velocity`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 - `Run`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 ### camel
 - `Velocity`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `Run`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### cantor1
 - `Velocity`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `Run`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
@@ -523,35 +523,35 @@
 ### cantor7
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### catapult1
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{35}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### catapult2
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{35}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### catapult3
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{35}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### catapult4
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{35}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### chaoshorde1
 - `Velocity`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `Run`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
-- `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `Crit`: $\color{gray}{\\text{5}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### chaoshorde2
 - `Velocity`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `Run`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
-- `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `Crit`: $\color{gray}{\\text{5}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### chaoshorde3
 - `Velocity`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `Run`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
-- `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `Crit`: $\color{gray}{\\text{5}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### chaoshorde4
 - `Velocity`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `Run`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
-- `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `Crit`: $\color{gray}{\\text{5}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### chargeboltsentry
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### charsi
 - `Velocity`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 - `Run`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
@@ -611,13 +611,13 @@
 - `MaxHP\(H\)`: $\\color{gray}{\\text{95}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
 - `Exp\(H\)`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### claygolem
-- `Skill1`:  (Old) &rarr; $\\color{blue}{\\text{Summon Splash}}$ (New)
-- `Sk1mode`:  (Old) &rarr; $\\color{blue}{\\text{A1}}$ (New)
-- `Sk1lvl`:  (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `Skill1`:  (Old) &rarr; $\color{blue}{\\text{Summon Splash}}$ (New)
+- `Sk1mode`:  (Old) &rarr; $\color{blue}{\\text{A1}}$ (New)
+- `Sk1lvl`:  (Old) &rarr; $\color{blue}{\\text{1}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### compellingorb
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### corruptrogue1
 - `Velocity`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `Run`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
@@ -753,13 +753,13 @@
 ### cr\_lancer9
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### crownest1
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### crownest2
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### crownest3
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### crownest4
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### cycleoflife
 - `Velocity`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 - `Run`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
@@ -815,7 +815,7 @@
 ### deathmauler7
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### deathsentry
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### demonspawner
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### diablo
@@ -860,9 +860,9 @@
 ### dopplezon
 - `Velocity`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{11}}$ (New)
 - `Run`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{11}}$ (New)
-- `Skill1`:  (Old) &rarr; $\\color{blue}{\\text{Summon Splash}}$ (New)
-- `Sk1mode`:  (Old) &rarr; $\\color{blue}{\\text{A1}}$ (New)
-- `Sk1lvl`:  (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `Skill1`:  (Old) &rarr; $\color{blue}{\\text{Summon Splash}}$ (New)
+- `Sk1mode`:  (Old) &rarr; $\color{blue}{\\text{A1}}$ (New)
+- `Sk1lvl`:  (Old) &rarr; $\color{blue}{\\text{1}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{164}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### drehyaiced
@@ -876,9 +876,9 @@
 - `Run`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{11}}$ (New)
 - `Skill1`: $\\color{gray}{\\text{BearSmite}}$ (Old) &rarr; $\\color{blue}{\\text{Summon Splash}}$ (New)
 - `Sk1mode`: $\\color{gray}{\\text{seqbearsmite}}$ (Old) &rarr; $\\color{blue}{\\text{A1}}$ (New)
-- `Skill2`:  (Old) &rarr; $\\color{blue}{\\text{BearSmite}}$ (New)
-- `Sk2mode`:  (Old) &rarr; $\\color{blue}{\\text{seq\\_bearsmite}}$ (New)
-- `Sk2lvl`:  (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `Skill2`:  (Old) &rarr; $\color{blue}{\\text{BearSmite}}$ (New)
+- `Sk2mode`:  (Old) &rarr; $\color{blue}{\\text{seq\\_bearsmite}}$ (New)
+- `Sk2lvl`:  (Old) &rarr; $\color{blue}{\\text{1}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### druidhawk
 - `Velocity`: $\\color{gray}{\\text{11}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
@@ -886,9 +886,9 @@
 - `Skill1`: $\\color{gray}{\\text{Raven}}$ (Old) &rarr; $\\color{blue}{\\text{Summon Splash}}$ (New)
 - `Sk1mode`: $\\color{gray}{\\text{NU}}$ (Old) &rarr; $\\color{blue}{\\text{A1}}$ (New)
 - `Sk1lvl`: $\\color{gray}{\\text{0}}$ (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
-- `Skill2`:  (Old) &rarr; $\\color{blue}{\\text{Raven}}$ (New)
-- `Sk2mode`:  (Old) &rarr; $\\color{blue}{\\text{NU}}$ (New)
-- `Sk2lvl`:  (Old) &rarr; $\\color{blue}{\\text{0}}$ (New)
+- `Skill2`:  (Old) &rarr; $\color{blue}{\\text{Raven}}$ (New)
+- `Sk2mode`:  (Old) &rarr; $\color{blue}{\\text{NU}}$ (New)
+- `Sk2lvl`:  (Old) &rarr; $\color{blue}{\\text{0}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### duriel
 - `Velocity`: $\\color{gray}{\\text{11}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
@@ -900,7 +900,7 @@
 - `Run`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### evilhut
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### fallen1
 - `Velocity`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `Run`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
@@ -1005,28 +1005,15 @@
 - `Velocity`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `Run`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 ### fenris
-<<<<<<< HEAD
 - `Velocity`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `Run`: $\\color{gray}{\\text{11}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
 - `Skill1`: $\\color{gray}{\\text{fenris}}\\text{ }\\color{gray}{\\text{rage}}$ (Old) &rarr; $\\color{blue}{\\text{Summon}}\\text{ }\\color{blue}{\\text{Splash}}$ (New)
 - `Skill2`: $\\color{gray}{\\text{Teleport}}\\text{ }\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{fenris}}\\text{ }\\color{blue}{\\text{rage}}$ (New)
 - `Sk2mode`: $\\color{gray}{\\text{S}}\\text{1}$ (Old) &rarr; $\\color{blue}{\\text{A}}\\text{1}$ (New)
-- `Skill3`:  (Old) &rarr; $\\color{blue}{\\text{Teleport 2}}$ (New)
-- `Sk3mode`:  (Old) &rarr; $\\color{blue}{\\text{S1}}$ (New)
-- `Sk3lvl`:  (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `Skill3`:  (Old) &rarr; $\color{blue}{\\text{Teleport 2}}$ (New)
+- `Sk3mode`:  (Old) &rarr; $\color{blue}{\\text{S1}}$ (New)
+- `Sk3lvl`:  (Old) &rarr; $\color{blue}{\\text{1}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
-=======
-- `Velocity`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
-- `Run`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `Skill1`: $\color{gray}{\text{fenris}}\text{ }}\color{gray}{\text{rage}}$ (Old) &rarr; $\color{blue}{\text{Summon}}\text{ }}\color{blue}{\text{Splash}}$ (New)
-- `Skill2`: $\color{gray}{\text{Teleport}}\text{ }}\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{fenris}}\text{ }}\color{blue}{\text{rage}}$ (New)
-- `Sk2mode`: $\color{gray}{\text{S}}\text{1}}$ (Old) &rarr; $\color{blue}{\text{A}}\text{1}}$ (New)
-- `Skill3`:  (Old) &rarr; $\color{blue}{\text{Teleport 2}}$ (New)
-- `Sk3mode`:  (Old) &rarr; $\color{blue}{\text{S1}}$ (New)
-- `Sk3lvl`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `Crit`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-
->>>>>>> origin/main
 ### fetish1
 - `Velocity`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `Run`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
@@ -1180,12 +1167,12 @@
 ### fingermage6
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### firegolem
-- `Skill1`:  (Old) &rarr; $\\color{blue}{\\text{Summon Splash}}$ (New)
-- `Sk1mode`:  (Old) &rarr; $\\color{blue}{\\text{A1}}$ (New)
-- `Sk1lvl`:  (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `Skill1`:  (Old) &rarr; $\color{blue}{\\text{Summon Splash}}$ (New)
+- `Sk1mode`:  (Old) &rarr; $\color{blue}{\\text{A1}}$ (New)
+- `Sk1lvl`:  (Old) &rarr; $\color{blue}{\\text{1}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### firetower
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### fish
 - `Velocity`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `Run`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
@@ -1334,7 +1321,7 @@
 ### heartofwolverine
 - `Velocity`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `Run`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### hellbovine
 - `Velocity`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `Run`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
@@ -1347,7 +1334,7 @@
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### horse
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### imp1
 - `Velocity`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 - `Run`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
@@ -1391,11 +1378,11 @@
 ### imp9
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### infernosentry
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### irongolem
-- `Skill1`:  (Old) &rarr; $\\color{blue}{\\text{Summon Splash}}$ (New)
-- `Sk1mode`:  (Old) &rarr; $\\color{blue}{\\text{A1}}$ (New)
-- `Sk1lvl`:  (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `Skill1`:  (Old) &rarr; $\color{blue}{\\text{Summon Splash}}$ (New)
+- `Sk1mode`:  (Old) &rarr; $\color{blue}{\\text{A1}}$ (New)
+- `Sk1lvl`:  (Old) &rarr; $\color{blue}{\\text{1}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{140}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### izual
@@ -1412,9 +1399,9 @@
 ### kexicon
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### lightningsentry
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### lightningspire
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### maggot
 - `Velocity`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
 - `Run`: $\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)
@@ -1447,22 +1434,22 @@
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `Exp\(H\)`: $\\color{gray}{\\text{30}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### maggotegg1
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### maggotegg2
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### maggotegg3
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### maggotegg4
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### maggotegg5
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### maggotegg6
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `Exp\(H\)`: $\\color{gray}{\\text{25}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### maggotqueen1
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
@@ -1482,7 +1469,7 @@
 ### malachai
 - `Velocity`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
 - `Run`: $\\color{gray}{\\text{3}}$ (Old) &rarr; $\\color{blue}{\\text{4}}$ (New)
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### megademon1
 - `Velocity`: $\\color{gray}{\\text{11}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
 - `Run`: $\\color{gray}{\\text{18}}$ (Old) &rarr; $\\color{blue}{\\text{19}}$ (New)
@@ -1648,7 +1635,7 @@
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `Exp\(H\)`: $\\color{gray}{\\text{100}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### navi
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{150}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### necromage
 - `Velocity`: $\\color{gray}{\\text{14}}$ (Old) &rarr; $\\color{blue}{\\text{15}}$ (New)
@@ -1657,9 +1644,9 @@
 ### necroskeleton
 - `Velocity`: $\\color{gray}{\\text{15}}$ (Old) &rarr; $\\color{blue}{\\text{16}}$ (New)
 - `Run`: $\\color{gray}{\\text{17}}$ (Old) &rarr; $\\color{blue}{\\text{18}}$ (New)
-- `Skill1`:  (Old) &rarr; $\\color{blue}{\\text{Summon Splash}}$ (New)
-- `Sk1mode`:  (Old) &rarr; $\\color{blue}{\\text{A1}}$ (New)
-- `Sk1lvl`:  (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `Skill1`:  (Old) &rarr; $\color{blue}{\\text{Summon Splash}}$ (New)
+- `Sk1mode`:  (Old) &rarr; $\color{blue}{\\text{A1}}$ (New)
+- `Sk1lvl`:  (Old) &rarr; $\color{blue}{\\text{1}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### nihlathakboss
 - `Velocity`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
@@ -1668,7 +1655,7 @@
 ### oaksage
 - `Velocity`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `Run`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### overseer1
 - `Velocity`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 - `Run`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
@@ -1749,9 +1736,9 @@
 ### plaguepoppy
 - `Velocity`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
 - `Run`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### prisondoor
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### putriddefiler1
 - `Velocity`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `Run`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
@@ -2038,7 +2025,7 @@
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `Exp\(H\)`: $\\color{gray}{\\text{120}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### sarcophagus
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### scarab1
 - `Velocity`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
 - `Run`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{6}}$ (New)
@@ -2083,9 +2070,9 @@
 - `Velocity`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `Run`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 ### shadowmaster
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### shadowwarrior
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### siegebeast1
 - `Velocity`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `Run`: $\\color{gray}{\\text{8}}$ (Old) &rarr; $\\color{blue}{\\text{9}}$ (New)
@@ -2373,28 +2360,16 @@
 ### spiritofbarbs
 - `Velocity`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
 - `Run`: $\\color{gray}{\\text{7}}$ (Old) &rarr; $\\color{blue}{\\text{8}}$ (New)
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### spiritwolf
-<<<<<<< HEAD
 - `Velocity`: $\\color{gray}{\\text{6}}$ (Old) &rarr; $\\color{blue}{\\text{7}}$ (New)
 - `Run`: $\\color{gray}{\\text{11}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
 - `Skill1`: $\\color{gray}{\\text{Teleport}}\\text{ }\\color{gray}{\\text{2}}$ (Old) &rarr; $\\color{blue}{\\text{Summon}}\\text{ }\\color{blue}{\\text{Splash}}$ (New)
 - `Sk1mode`: $\\color{gray}{\\text{S}}\\text{1}$ (Old) &rarr; $\\color{blue}{\\text{A}}\\text{1}$ (New)
-- `Skill2`:  (Old) &rarr; $\\color{blue}{\\text{Teleport 2}}$ (New)
-- `Sk2mode`:  (Old) &rarr; $\\color{blue}{\\text{S1}}$ (New)
-- `Sk2lvl`:  (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `Skill2`:  (Old) &rarr; $\color{blue}{\\text{Teleport 2}}$ (New)
+- `Sk2mode`:  (Old) &rarr; $\color{blue}{\\text{S1}}$ (New)
+- `Sk2lvl`:  (Old) &rarr; $\color{blue}{\\text{1}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
-=======
-- `Velocity`: $\color{gray}{\text{6}}$ (Old) &rarr; $\color{blue}{\text{7}}$ (New)
-- `Run`: $\color{gray}{\text{11}}$ (Old) &rarr; $\color{blue}{\text{12}}$ (New)
-- `Skill1`: $\color{gray}{\text{Teleport}}\text{ }}\color{gray}{\text{2}}$ (Old) &rarr; $\color{blue}{\text{Summon}}\text{ }}\color{blue}{\text{Splash}}$ (New)
-- `Sk1mode`: $\color{gray}{\text{S}}\text{1}}$ (Old) &rarr; $\color{blue}{\text{A}}\text{1}}$ (New)
-- `Skill2`:  (Old) &rarr; $\color{blue}{\text{Teleport 2}}$ (New)
-- `Sk2mode`:  (Old) &rarr; $\color{blue}{\text{S1}}$ (New)
-- `Sk2lvl`:  (Old) &rarr; $\color{blue}{\text{1}}$ (New)
-- `Crit`: $\color{gray}{\text{5}}$ (Old) &rarr; $\color{blue}{\text{10}}$ (New)
-
->>>>>>> origin/main
 ### succubus1
 - `Velocity`: $\\color{gray}{\\text{11}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
 - `Run`: $\\color{gray}{\\text{11}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
@@ -2484,16 +2459,16 @@
 ### succubuswitch9
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### suckernest1
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{65}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### suckernest2
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{65}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### suckernest3
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{65}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### suckernest4
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{65}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### suicideminion1
 - `Velocity`: $\\color{gray}{\\text{11}}$ (Old) &rarr; $\\color{blue}{\\text{12}}$ (New)
@@ -2635,23 +2610,23 @@
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `Exp\(H\)`: $\\color{gray}{\\text{130}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### trap\-horzmissile
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### trap\-melee
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### trap\-vertmissile
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### trappedsoul1
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### trappedsoul2
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 ### turret1
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{35}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### turret2
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{35}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### turret3
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{35}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### uberandariel
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
@@ -2708,9 +2683,9 @@
 ### valkyrie
 - `Velocity`: $\\color{gray}{\\text{13}}$ (Old) &rarr; $\\color{blue}{\\text{14}}$ (New)
 - `Run`: $\\color{gray}{\\text{13}}$ (Old) &rarr; $\\color{blue}{\\text{14}}$ (New)
-- `Skill1`:  (Old) &rarr; $\\color{blue}{\\text{Summon Splash}}$ (New)
-- `Sk1mode`:  (Old) &rarr; $\\color{blue}{\\text{A1}}$ (New)
-- `Sk1lvl`:  (Old) &rarr; $\\color{blue}{\\text{1}}$ (New)
+- `Skill1`:  (Old) &rarr; $\color{blue}{\\text{Summon Splash}}$ (New)
+- `Sk1mode`:  (Old) &rarr; $\color{blue}{\\text{A1}}$ (New)
+- `Sk1lvl`:  (Old) &rarr; $\color{blue}{\\text{1}}$ (New)
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `AC\(H\)`: $\\color{gray}{\\text{164}}$ (Old) &rarr; $\\color{blue}{\\text{200}}$ (New)
 ### vampire1
@@ -2844,7 +2819,7 @@
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `MaxHP\(H\)`: $\\color{gray}{\\text{90}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
 ### wakeofdestruction
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### warriv1
 - `Velocity`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
 - `Run`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{5}}$ (New)
@@ -2898,9 +2873,9 @@
 - `Crit`: $\\color{gray}{\\text{5}}$ (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
 - `MaxHP\(H\)`: $\\color{gray}{\\text{85}}$ (Old) &rarr; $\\color{blue}{\\text{100}}$ (New)
 ### window1
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### window2
-- `Crit`:  (Old) &rarr; $\\color{blue}{\\text{10}}$ (New)
+- `Crit`:  (Old) &rarr; $\color{blue}{\\text{10}}$ (New)
 ### wolf
 - `Velocity`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{11}}$ (New)
 - `Run`: $\\color{gray}{\\text{10}}$ (Old) &rarr; $\\color{blue}{\\text{11}}$ (New)

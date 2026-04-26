@@ -55,7 +55,7 @@
 - `reqstr`: $\\color{gray}{\\text{125}}$ (Old) &rarr; $\\color{blue}{\\text{150}}$ (New)
 - `auto prefix`: $\\color{gray}{\\text{224}}$ (Old) &rarr; $\\color{blue}{\\text{424}}$ (New)
 ### expansion
-- `ShowLevel`: $\\color{gray}{\\text{1}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `ShowLevel`: $\color{gray}{\\text{1}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
 ### fetish trophy
 - `auto prefix`: $\\color{gray}{\\text{305}}$ (Old) &rarr; $\\color{blue}{\\text{307}}$ (New)
 - `gemsockets`: $\\color{gray}{\\text{4}}$ (Old) &rarr; $\\color{blue}{\\text{3}}$ (New)

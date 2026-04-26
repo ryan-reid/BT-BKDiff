@@ -1,7 +1,6 @@
 # Paladin Item Runewords
 
 ### Exile
-<<<<<<< HEAD
 * **Runes:** •••Vex Rune \(26\)••• + •••Ohm Rune \(27\)••• + •••Ist Rune \(24\)••• + Dol Rune \(14\)
 * **Base Items:** Paladin Item
 * **Properties:**
@@ -10,15 +9,5 @@
     * \+220\-260% Enhanced Defense
     * Level 13\-16 Defiance Aura When Equipped
     * \+2 to Offensive Auras Skills
-=======
-* **Runes:** •••Vex Rune (26)••• + •••Ohm Rune (27)••• + •••Ist Rune (24)••• + Dol Rune (14)
-* **Base Items:** Paladin Item
-* **Properties:**
-    * +30% Faster Block Rate
-    * Freezes Target +1
-    * +220-260% Enhanced Defense
-    * Level 13-16 Defiance Aura When Equipped
-    * +2 to Offensive Auras Skills
->>>>>>> origin/main
     * 15% Chance to cast level 5 Life Tap on striking
     * Repairs 1 durability in 25 seconds

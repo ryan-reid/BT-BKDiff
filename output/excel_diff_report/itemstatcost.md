@@ -58,19 +58,13 @@
 ### corruptordesc
 - `\*ID`: $\\color{gray}{\\text{362}}$ (Old) &rarr; $\\color{blue}{\\text{369}}$ (New)
 ### damagepercent
-- `descpriority`:  (Old) &rarr; $\\color{blue}{\\text{88}}$ (New)
-- `descfunc`:  (Old) &rarr; $\\color{blue}{\\text{19}}$ (New)
-- `descstrpos`:  (Old) &rarr; $\\color{blue}{\\text{strModEnhancedDamage}}$ (New)
-- `descstrneg`:  (Old) &rarr; $\\color{blue}{\\text{strModEnhancedDamage}}$ (New)
+- `descpriority`:  (Old) &rarr; $\color{blue}{\\text{88}}$ (New)
+- `descfunc`:  (Old) &rarr; $\color{blue}{\\text{19}}$ (New)
+- `descstrpos`:  (Old) &rarr; $\color{blue}{\\text{strModEnhancedDamage}}$ (New)
+- `descstrneg`:  (Old) &rarr; $\color{blue}{\\text{strModEnhancedDamage}}$ (New)
 ### damageresist
-<<<<<<< HEAD
 - `descfunc`: $\\color{gray}{\\text{19}}$ (Old) &rarr; $\\color{blue}{\\text{29}}$ (New)
 - `descstrneg`: $\\text{ModStr2}\\color{gray}{\\text{uPercent}}$ (Old) &rarr; $\\text{ModStr2}\\color{blue}{\\text{uPercentNegative}}$ (New)
-=======
-- `descfunc`: $\color{gray}{\text{19}}$ (Old) &rarr; $\color{blue}{\text{29}}$ (New)
-- `descstrneg`: $\text{ModStr2}}\color{gray}{\text{uPercent}}$ (Old) &rarr; $\text{ModStr2}}\color{blue}{\text{uPercentNegative}}$ (New)
-
->>>>>>> origin/main
 ### dyeblack
 - `\*ID`: $\\color{gray}{\\text{365}}$ (Old) &rarr; $\\color{blue}{\\text{372}}$ (New)
 ### dyewhite
@@ -126,5 +120,5 @@
 ### passive\_mastery\_replenish\_oncrit
 - `\*ID`: $\\color{gray}{\\text{206}}$ (Old) &rarr; $\\color{blue}{\\text{207}}$ (New)
 ### skill\_cooldown
-- `Send Bits`: $\\color{gray}{\\text{32}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
-- `Send Param Bits`: $\\color{gray}{\\text{16}}$ (Old) &rarr; $\\color{blue}{\\text{(removed)}}$ (New)
+- `Send Bits`: $\color{gray}{\\text{32}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
+- `Send Param Bits`: $\color{gray}{\\text{16}}$ (Old) &rarr; $\color{blue}{\\text{(removed)}}$ (New)
