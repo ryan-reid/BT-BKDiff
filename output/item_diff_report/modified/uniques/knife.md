@@ -7,33 +7,33 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Cinquedeas}$ | **Base Item:** $\text{Cinquedeas}$ |
-| **Level Requirement:** $\text{38}$ | **Level Requirement:** $\text{38}$ |
+| **Base Item:** $	ext{Cinquedeas}$ | **Base Item:** $	ext{Cinquedeas}$ |
+| **Level Requirement:** $	ext{38}$ | **Level Requirement:** $	ext{38}$ |
 | **Properties:** | **Properties:** |
-| $\text{Slows Target by 50\\%}$ | $\text{Slows Target by 50\\%}$ |
-| $\text{-15\\% to Enemy Poison Resistance}$ | $\text{-15\\% to Enemy Poison Resistance}$ |
-| $\text{+60\\% Increased Attack Speed}$ | $\text{+60\\% Increased Attack Speed}$ |
-| $\text{Adds 500-500 Poison Damage Over 500 Seconds}$ | $\text{Adds 500-500 Poison Damage Over 500 Seconds}$ |
-| $\text{+6 to Poison Explosion (Necromancer only)}$ | $\text{+6 to Poison Explosion (Necromancer only)}$ |
-| $\text{+6 to Poison Nova (Necromancer only)}$ | $\text{+6 to Poison Nova (Necromancer only)}$ |
-| $\color{gray}{\\text{+6 to Poison Dagger (Necromancer only)}}$ | $\color{blue}{\\text{(removed)}}$ |
-|  | $\color{blue}{\\text{+6 to Poison Strike (Necromancer only)}}$ |
+| $	ext{Slows Target by 50\\%}$ | $	ext{Slows Target by 50\\%}$ |
+| $	ext{-15\\% to Enemy Poison Resistance}$ | $	ext{-15\\% to Enemy Poison Resistance}$ |
+| $	ext{+60\\% Increased Attack Speed}$ | $	ext{+60\\% Increased Attack Speed}$ |
+| $	ext{Adds 500-500 Poison Damage Over 500 Seconds}$ | $	ext{Adds 500-500 Poison Damage Over 500 Seconds}$ |
+| $	ext{+6 to Poison Explosion (Necromancer only)}$ | $	ext{+6 to Poison Explosion (Necromancer only)}$ |
+| $	ext{+6 to Poison Nova (Necromancer only)}$ | $	ext{+6 to Poison Nova (Necromancer only)}$ |
+| $\color{gray}{	ext{+6 to Poison Dagger (Necromancer only)}}$ | $\color{blue}{	ext{(removed)}}$ |
+|  | $\color{blue}{	ext{+6 to Poison Strike (Necromancer only)}}$ |
 
 **Spineripper** (Spineripper)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Poignard}$ | **Base Item:** $\text{Poignard}$ |
-| **Level Requirement:** $\text{32}$ | **Level Requirement:** $\text{32}$ |
+| **Base Item:** $	ext{Poignard}$ | **Base Item:** $	ext{Poignard}$ |
+| **Level Requirement:** $	ext{32}$ | **Level Requirement:** $	ext{32}$ |
 | **Properties:** | **Properties:** |
-| $\text{Ignore Target's Defense}$ | $\text{Ignore Target's Defense}$ |
-| $\text{8\\% Life stolen per hit}$ | $\text{8\\% Life stolen per hit}$ |
-| $\text{Prevent Monster Heal}$ | $\text{Prevent Monster Heal}$ |
-| $\text{+30\\% Increased Attack Speed}$ | $\text{+30\\% Increased Attack Speed}$ |
-| $\text{+30 to Dexterity}$ | $\text{+30 to Dexterity}$ |
-| $\text{+250\\% Enhanced Damage}$ | $\text{+250\\% Enhanced Damage}$ |
-| $\text{Adds 30-54 Damage}$ | $\text{Adds 30-54 Damage}$ |
-| $\text{+2 to Necromancer Skill Levels}$ | $\text{+2 to Necromancer Skill Levels}$ |
-| $\color{gray}{\\text{+3 to Poison Dagger}}$ | $\color{blue}{\\text{(removed)}}$ |
-|  | $\color{blue}{\\text{+3 to Poison Strike}}$ |
+| $	ext{Ignore Target's Defense}$ | $	ext{Ignore Target's Defense}$ |
+| $	ext{8\\% Life stolen per hit}$ | $	ext{8\\% Life stolen per hit}$ |
+| $	ext{Prevent Monster Heal}$ | $	ext{Prevent Monster Heal}$ |
+| $	ext{+30\\% Increased Attack Speed}$ | $	ext{+30\\% Increased Attack Speed}$ |
+| $	ext{+30 to Dexterity}$ | $	ext{+30 to Dexterity}$ |
+| $	ext{+250\\% Enhanced Damage}$ | $	ext{+250\\% Enhanced Damage}$ |
+| $	ext{Adds 30-54 Damage}$ | $	ext{Adds 30-54 Damage}$ |
+| $	ext{+2 to Necromancer Skill Levels}$ | $	ext{+2 to Necromancer Skill Levels}$ |
+| $\color{gray}{	ext{+3 to Poison Dagger}}$ | $\color{blue}{	ext{(removed)}}$ |
+|  | $\color{blue}{	ext{+3 to Poison Strike}}$ |
 

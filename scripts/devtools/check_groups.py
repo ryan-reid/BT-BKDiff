@@ -1,6 +1,6 @@
 import os
 import sys
-from d2_repository import D2Repository
+from d2lib.repository import D2Repository
 
 def main() -> None:
     groups_path = os.path.join("..", "data", "propertygroups.txt")

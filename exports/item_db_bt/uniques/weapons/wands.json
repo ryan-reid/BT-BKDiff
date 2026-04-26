@@ -1131,13 +1131,6 @@
         "min_val": "20",
         "max_val": "20",
         "resolved_text": "+20% Faster Cast Rate"
-      },
-      {
-        "code": "kill-skill",
-        "param": "Lower Resist",
-        "min_val": "50",
-        "max_val": "10",
-        "resolved_text": "50% Chance to cast level 10 Lower Resist when you Kill an Enemy"
       }
     ],
     "raw_row": {
@@ -1187,10 +1180,10 @@
       "par6": "",
       "min6": "20",
       "max6": "20",
-      "prop7": "kill-skill",
-      "par7": "Lower Resist",
-      "min7": "50",
-      "max7": "10",
+      "prop7": "",
+      "par7": "",
+      "min7": "",
+      "max7": "",
       "prop8": "",
       "par8": "",
       "min8": "",

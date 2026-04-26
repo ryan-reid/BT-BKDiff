@@ -323,8 +323,8 @@
         "code": "dmg%",
         "param": "",
         "min_val": "150",
-        "max_val": "250",
-        "resolved_text": "+150-250% Enhanced Damage"
+        "max_val": "240",
+        "resolved_text": "+150-240% Enhanced Damage"
       },
       {
         "code": "rep-quant",
@@ -402,7 +402,7 @@
       "prop1": "dmg%",
       "par1": "",
       "min1": "150",
-      "max1": "250",
+      "max1": "240",
       "prop2": "rep-quant",
       "par2": "40",
       "min2": "",
@@ -475,9 +475,9 @@
       {
         "code": "dmg%",
         "param": "",
-        "min_val": "250",
-        "max_val": "300",
-        "resolved_text": "+250-300% Enhanced Damage"
+        "min_val": "180",
+        "max_val": "250",
+        "resolved_text": "+180-250% Enhanced Damage"
       },
       {
         "code": "lifesteal",
@@ -527,8 +527,8 @@
       "max2": "80",
       "prop3": "dmg%",
       "par3": "",
-      "min3": "250",
-      "max3": "300",
+      "min3": "180",
+      "max3": "250",
       "prop4": "lifesteal",
       "par4": "",
       "min4": "5",

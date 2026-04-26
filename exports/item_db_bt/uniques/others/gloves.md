@@ -127,7 +127,7 @@
     * \+90\-120% Enhanced Defense
     * 4\-7% Mana stolen per hit
     * 4\-7% Life stolen per hit
-    * 25% Chance to cast level 18 Decrepify on striking
+    * 25% Chance to cast level 18 Weaken on striking
     * \-\-50 to Monster Defense Per Hit
     * Slows Target by 15%
 
@@ -141,7 +141,6 @@
     * 10% Chance to cast level 15 Life Tap on striking
     * \+5\-10 Life after each Kill
     * \+10\-15 to Strength
-    * Ignore Target's Defense
 
 ### Steelrend (Steelrend)
 * **Base Item:** Ogre Gauntlets

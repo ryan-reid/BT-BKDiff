@@ -3,7 +3,7 @@
     "id": "The Dragon Chang",
     "display_name": "The Dragon Chang",
     "base_item": "Spear",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "8",
     "properties": [
       {
@@ -131,7 +131,7 @@
     "id": "Razortine",
     "display_name": "Razortine",
     "base_item": "Trident",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "12",
     "properties": [
       {
@@ -266,7 +266,7 @@
     "id": "Bloodthief",
     "display_name": "Bloodthief",
     "base_item": "Brandistock",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "17",
     "properties": [
       {
@@ -394,7 +394,7 @@
     "id": "Lance of Yaggai",
     "display_name": "Lance of Yaggai",
     "base_item": "Spetum",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "22",
     "properties": [
       {
@@ -522,7 +522,7 @@
     "id": "The Tannr Gorerod",
     "display_name": "The Tannr Gorerod",
     "base_item": "Pike",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "27",
     "properties": [
       {
@@ -648,9 +648,9 @@
   },
   {
     "id": "The Impaler",
-    "display_name": "The Impaler",
+    "display_name": "the Impaler",
     "base_item": "War Spear",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "31",
     "properties": [
       {
@@ -785,7 +785,7 @@
     "id": "Kelpie Snare",
     "display_name": "Kelpie Snare",
     "base_item": "Fuscina",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "33",
     "properties": [
       {
@@ -927,7 +927,7 @@
     "id": "Soulfeast Tine",
     "display_name": "Soulfeast Tine",
     "base_item": "War Fork",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "35",
     "properties": [
       {
@@ -1062,7 +1062,7 @@
     "id": "Hone Sundan",
     "display_name": "Hone Sundan",
     "base_item": "Yari",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "37",
     "properties": [
       {
@@ -1183,7 +1183,7 @@
     "id": "Spire of Honor",
     "display_name": "Spire of Honor",
     "base_item": "Lance",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "39",
     "properties": [
       {
@@ -1318,7 +1318,7 @@
     "id": "Viperfork",
     "display_name": "Viperfork",
     "base_item": "Mancatcher",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "71",
     "properties": [
       {
@@ -1446,7 +1446,7 @@
     "id": "Steelpillar",
     "display_name": "Steel Pillar",
     "base_item": "War Pike",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "69",
     "properties": [
       {
@@ -1595,7 +1595,7 @@
     "id": "Arioc's Needle",
     "display_name": "Arioc's Needle",
     "base_item": "Hyperion Spear",
-    "item_type": "Spear",
+    "item_type": "Spears",
     "lvl_req": "81",
     "properties": [
       {

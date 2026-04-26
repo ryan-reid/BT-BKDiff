@@ -1,6 +1,6 @@
 import sys
 import os
-from d2_repository import D2Repository
+from d2lib.repository import D2Repository
 
 def main() -> None:
     if len(sys.argv) < 2:

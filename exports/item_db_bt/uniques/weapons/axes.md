@@ -10,7 +10,6 @@
     * \+180\-200% Enhanced Damage
     * \+25% Increased Attack Speed
     * 10% Deadly Strike
-    * Adds 20\-20 Damage
 
 ### Deathspade (Deathspade)
 * **Base Item:** Axe
@@ -296,8 +295,8 @@
 * **Base Item:** Ettin Axe
 * **Level Requirement:** 72
 * **Properties:**
-    * \+350% Enhanced Damage
-    * \+40% Increased Attack Speed
+    * \+270\-320% Enhanced Damage
+    * \+20% Increased Attack Speed
     * \+5% to Maximum Cold Resist
     * Cannot Be Frozen
     * Ignore Target's Defense
@@ -312,7 +311,6 @@
     * \+40% Increased Attack Speed
     * \+6\-9 Life after each Kill
     * 10\-15% Chance of Crushing Blow
-    * Adds 100\-100 Damage
 
 ### Executioner's Justice (Executioner's Justice)
 * **Base Item:** Glorious Axe
@@ -349,7 +347,6 @@
     * Fire Absorb 10\-12%
     * \+150\-200% Damage to Demons
     * \+5\-10 Life after each Kill
-    * 5% Chance to cast level 10 Fade when you Kill an Enemy
     * Ethereal
     * Indestructible
     * \+150\-200% Damage to Undead
@@ -361,10 +358,10 @@
     * \+200\-230% Enhanced Damage
     * Adds 250\-500 Fire Damage
     * Adds 250\-500 Cold Damage
-    * Adds 61\-511 Lightning Damage
+    * Adds 61\-501 Lightning Damage
     * Increased Stack Size
     * \+30% Increased Attack Speed
-    * 20% Chance to cast level 20 Lower Resist on striking
+    * 20% Chance to cast level 6 Lower Resist on striking
 
 ### Cranebeak (Cranebeak)
 * **Base Item:** War Spike

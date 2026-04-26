@@ -3,7 +3,7 @@
     "id": "Rixots Keen",
     "display_name": "Rixot's Keen",
     "base_item": "Short Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "2",
     "properties": [
       {
@@ -131,7 +131,7 @@
     "id": "Blood Crescent",
     "display_name": "Blood Crescent",
     "base_item": "Scimitar",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "7",
     "properties": [
       {
@@ -259,7 +259,7 @@
     "id": "Krintizs Skewer",
     "display_name": "Skewer of Krintiz",
     "base_item": "Sabre",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "10",
     "properties": [
       {
@@ -401,7 +401,7 @@
     "id": "Gleamscythe",
     "display_name": "Gleamscythe",
     "base_item": "Falchion",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "13",
     "properties": [
       {
@@ -522,7 +522,7 @@
     "id": "Azurewrath",
     "display_name": "Azurewrath",
     "base_item": "Crystal Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "13",
     "properties": [
       {
@@ -650,7 +650,7 @@
     "id": "Griswolds Edge",
     "display_name": "Griswold's Edge",
     "base_item": "Broad Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "17",
     "properties": [
       {
@@ -771,7 +771,7 @@
     "id": "Hellplague",
     "display_name": "Hellplague",
     "base_item": "Long Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "22",
     "properties": [
       {
@@ -906,7 +906,7 @@
     "id": "Culwens Point",
     "display_name": "Culwen's Point",
     "base_item": "War Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "29",
     "properties": [
       {
@@ -1041,7 +1041,7 @@
     "id": "Shadowfang",
     "display_name": "Shadowfang",
     "base_item": "2H Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "12",
     "properties": [
       {
@@ -1169,7 +1169,7 @@
     "id": "Soulflay",
     "display_name": "Soulflay",
     "base_item": "Claymore",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "19",
     "properties": [
       {
@@ -1304,7 +1304,7 @@
     "id": "Kinemils Awl",
     "display_name": "Kinemil's Awl",
     "base_item": "Giant Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "23",
     "properties": [
       {
@@ -1425,7 +1425,7 @@
     "id": "Blacktongue",
     "display_name": "Blacktongue",
     "base_item": "Bastard Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "26",
     "properties": [
       {
@@ -1560,7 +1560,7 @@
     "id": "Ripsaw",
     "display_name": "Ripsaw",
     "base_item": "Flamberge",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "26",
     "properties": [
       {
@@ -1695,7 +1695,7 @@
     "id": "The Patriarch",
     "display_name": "The Patriarch",
     "base_item": "Great Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "29",
     "properties": [
       {
@@ -1830,7 +1830,7 @@
     "id": "Bloodletter",
     "display_name": "Bloodletter",
     "base_item": "Gladius",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "30",
     "properties": [
       {
@@ -1972,7 +1972,7 @@
     "id": "Coldsteel Eye",
     "display_name": "Coldsteel Eye",
     "base_item": "Cutlass",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "31",
     "properties": [
       {
@@ -2107,7 +2107,7 @@
     "id": "Hexfire",
     "display_name": "Hexfire",
     "base_item": "Shamshir",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "33",
     "properties": [
       {
@@ -2256,7 +2256,7 @@
     "id": "Blade of Ali Baba",
     "display_name": "Blade of Ali Baba",
     "base_item": "Tulwar",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "35",
     "properties": [
       {
@@ -2384,7 +2384,7 @@
     "id": "Ginther's Rift",
     "display_name": "Ginther's Rift",
     "base_item": "Dimensional Blade",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "37",
     "properties": [
       {
@@ -2519,7 +2519,7 @@
     "id": "Headstriker",
     "display_name": "Headstriker",
     "base_item": "Battle Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "39",
     "properties": [
       {
@@ -2647,7 +2647,7 @@
     "id": "Plague Bearer",
     "display_name": "Plague Bearer",
     "base_item": "Rune Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "41",
     "properties": [
       {
@@ -2775,7 +2775,7 @@
     "id": "The Atlantian",
     "display_name": "The Atlantean",
     "base_item": "Ancient Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "42",
     "properties": [
       {
@@ -2917,7 +2917,7 @@
     "id": "Crainte Vomir",
     "display_name": "Crainte Vomir",
     "base_item": "Espandon",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "42",
     "properties": [
       {
@@ -3052,7 +3052,7 @@
     "id": "Bing Sz Wang",
     "display_name": "Bing Sz Wang",
     "base_item": "Dacian Falx",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "43",
     "properties": [
       {
@@ -3187,7 +3187,7 @@
     "id": "The Vile Husk",
     "display_name": "The Vile Husk",
     "base_item": "Tusk Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "44",
     "properties": [
       {
@@ -3315,7 +3315,7 @@
     "id": "Cloudcrack",
     "display_name": "Cloudcrack",
     "base_item": "Gothic Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "45",
     "properties": [
       {
@@ -3464,7 +3464,7 @@
     "id": "Todesfaelle Flamme",
     "display_name": "Todesfaelle Flamme",
     "base_item": "Zweihander",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "46",
     "properties": [
       {
@@ -3620,7 +3620,7 @@
     "id": "Swordguard",
     "display_name": "Swordguard",
     "base_item": "Executioner Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "48",
     "properties": [
       {
@@ -3776,7 +3776,7 @@
     "id": "Lightsabre",
     "display_name": "Lightsabre",
     "base_item": "Phase Blade",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "58",
     "properties": [
       {
@@ -3932,7 +3932,7 @@
     "id": "Doombringer",
     "display_name": "Doombringer",
     "base_item": "Champion Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "69",
     "properties": [
       {
@@ -4081,7 +4081,7 @@
     "id": "The Grandfather",
     "display_name": "The Grandfather",
     "base_item": "Colossus Blade",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "81",
     "properties": [
       {
@@ -4209,7 +4209,7 @@
     "id": "Bloodmoon",
     "display_name": "Bloodmoon",
     "base_item": "Elegant Blade",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "61",
     "properties": [
       {
@@ -4337,7 +4337,7 @@
     "id": "Djinnslayer",
     "display_name": "Djinn Slayer",
     "base_item": "Ataghan",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "65",
     "properties": [
       {
@@ -4465,7 +4465,7 @@
     "id": "Azurewrath",
     "display_name": "Azurewrath",
     "base_item": "Phase Blade",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "85",
     "properties": [
       {
@@ -4621,7 +4621,7 @@
     "id": "Flamebellow",
     "display_name": "Flamebellow",
     "base_item": "Balrog Blade",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "71",
     "properties": [
       {
@@ -4777,7 +4777,7 @@
     "id": "Frostwind",
     "display_name": "Frostwind",
     "base_item": "Cryptic Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "70",
     "properties": [
       {
@@ -4926,7 +4926,7 @@
     "id": "Dreadfang",
     "display_name": "Dreadfang",
     "base_item": "Legend Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "61",
     "properties": [
       {
@@ -5068,7 +5068,7 @@
     "id": "Mistiltein",
     "display_name": "Mistiltein",
     "base_item": "Mythical Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "90",
     "properties": [
       {
@@ -5203,7 +5203,7 @@
     "id": "Thunderfury",
     "display_name": "Thunderfury",
     "base_item": "Conquest Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "80",
     "properties": [
       {
@@ -5345,7 +5345,7 @@
     "id": "Slayer's Edge",
     "display_name": "Slayer's Edge",
     "base_item": "Hydra Edge",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "85",
     "properties": [
       {
@@ -5487,7 +5487,7 @@
     "id": "The Corrupted Grandfather",
     "display_name": "The Corrupted Grandfather",
     "base_item": "Colossus Blade",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "81",
     "properties": [
       {
@@ -5643,7 +5643,7 @@
     "id": "Corrupted Azurewrath",
     "display_name": "Corrupted Azurewrath",
     "base_item": "Crystal Sword",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "13",
     "properties": [
       {
@@ -5771,7 +5771,7 @@
     "id": "Primal Manslaughter",
     "display_name": "Primal Manslaughter",
     "base_item": "Hydra Edge",
-    "item_type": "Sword",
+    "item_type": "Swords",
     "lvl_req": "88",
     "properties": [
       {

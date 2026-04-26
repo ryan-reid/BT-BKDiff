@@ -7,13 +7,13 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Diadem}$ | **Base Item:** $\text{Diadem}$ |
-| **Level Requirement:** $\text{76}$ | **Level Requirement:** $\text{76}$ |
+| **Base Item:** $	ext{Diadem}$ | **Base Item:** $	ext{Diadem}$ |
+| **Level Requirement:** $	ext{76}$ | **Level Requirement:** $	ext{76}$ |
 | **Properties:** | **Properties:** |
-| $\text{+100-200 Defense}$ | $\text{+100-200 Defense}$ |
-| $\text{+25\\% Faster Cast Rate}$ | $\text{+25\\% Faster Cast Rate}$ |
-| $\text{+1 to All Skills}$ | $\text{+1 to All Skills}$ |
-| $\text{+10-15\\% to Lightning Skill Damage}$ | $\text{+10-15\\% to Lightning Skill Damage}$ |
-| $\text{-8-15\\% to Enemy Lightning Resistance}$ | $\text{-8-15\\% to Enemy Lightning Resistance}$ |
-|  | $\color{blue}{\\text{+7 to Thunder Storm}}$ |
+| $	ext{+100-200 Defense}$ | $	ext{+100-200 Defense}$ |
+| $	ext{+25\\% Faster Cast Rate}$ | $	ext{+25\\% Faster Cast Rate}$ |
+| $	ext{+1 to All Skills}$ | $	ext{+1 to All Skills}$ |
+| $	ext{+10-15\\% to Lightning Skill Damage}$ | $	ext{+10-15\\% to Lightning Skill Damage}$ |
+| $	ext{-8-15\\% to Enemy Lightning Resistance}$ | $	ext{-8-15\\% to Enemy Lightning Resistance}$ |
+|  | $\color{blue}{	ext{+7 to Thunder Storm}}$ |
 

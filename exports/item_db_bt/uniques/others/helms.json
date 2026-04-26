@@ -2538,9 +2538,9 @@
       {
         "code": "pierce-ltng",
         "param": "",
-        "min_val": "8",
-        "max_val": "15",
-        "resolved_text": "-8-15% to Enemy Lightning Resistance"
+        "min_val": "15",
+        "max_val": "20",
+        "resolved_text": "-15-20% to Enemy Lightning Resistance"
       }
     ],
     "raw_row": {
@@ -2584,8 +2584,8 @@
       "max4": "15",
       "prop5": "pierce-ltng",
       "par5": "",
-      "min5": "8",
-      "max5": "15",
+      "min5": "15",
+      "max5": "20",
       "prop6": "",
       "par6": "",
       "min6": "",
@@ -2677,9 +2677,9 @@
       {
         "code": "pierce-cold",
         "param": "",
-        "min_val": "8",
-        "max_val": "15",
-        "resolved_text": "-8-15% to Enemy Cold Resistance"
+        "min_val": "10",
+        "max_val": "20",
+        "resolved_text": "-10-20% to Enemy Cold Resistance"
       }
     ],
     "raw_row": {
@@ -2735,8 +2735,8 @@
       "max7": "-50",
       "prop8": "pierce-cold",
       "par8": "",
-      "min8": "8",
-      "max8": "15",
+      "min8": "10",
+      "max8": "20",
       "prop9": "",
       "par9": "",
       "min9": "",
@@ -2782,8 +2782,8 @@
         "code": "allskills",
         "param": "",
         "min_val": "1",
-        "max_val": "3",
-        "resolved_text": "+1-3 to All Skills"
+        "max_val": "2",
+        "resolved_text": "+1-2 to All Skills"
       },
       {
         "code": "ac",
@@ -2862,7 +2862,7 @@
       "prop3": "allskills",
       "par3": "",
       "min3": "1",
-      "max3": "3",
+      "max3": "2",
       "prop4": "ac",
       "par4": "",
       "min4": "100",
@@ -3183,9 +3183,9 @@
       {
         "code": "pierce-fire",
         "param": "",
-        "min_val": "8",
-        "max_val": "15",
-        "resolved_text": "-8-15% to Enemy Fire Resistance"
+        "min_val": "10",
+        "max_val": "20",
+        "resolved_text": "-10-20% to Enemy Fire Resistance"
       },
       {
         "code": "res-all-max",
@@ -3202,7 +3202,7 @@
       "enabled": "1",
       "firstLadderSeason": "",
       "lastLadderSeason": "",
-      "rarity": "50",
+      "rarity": "1",
       "nolimit": "1",
       "lvl": "85",
       "lvl req": "84",
@@ -3240,8 +3240,8 @@
       "max5": "6",
       "prop6": "pierce-fire",
       "par6": "",
-      "min6": "8",
-      "max6": "15",
+      "min6": "10",
+      "max6": "20",
       "prop7": "res-all-max",
       "par7": "",
       "min7": "1",
@@ -3318,13 +3318,6 @@
         "min_val": "25",
         "max_val": "35",
         "resolved_text": "+25-35 to Dexterity"
-      },
-      {
-        "code": "ignore-ac",
-        "param": "",
-        "min_val": "1",
-        "max_val": "1",
-        "resolved_text": "Ignore Target's Defense"
       }
     ],
     "raw_row": {
@@ -3374,10 +3367,10 @@
       "par6": "",
       "min6": "25",
       "max6": "35",
-      "prop7": "ignore-ac",
+      "prop7": "",
       "par7": "",
-      "min7": "1",
-      "max7": "1",
+      "min7": "",
+      "max7": "",
       "prop8": "",
       "par8": "",
       "min8": "",
@@ -4050,159 +4043,6 @@
       "par10": "",
       "min10": "",
       "max10": "",
-      "prop11": "",
-      "par11": "",
-      "min11": "",
-      "max11": "",
-      "prop12": "",
-      "par12": "",
-      "min12": "",
-      "max12": "",
-      "diablocloneweight": "",
-      "*eol": "0"
-    }
-  },
-  {
-    "id": "Ciris's Guidance",
-    "display_name": "Ciris's Guidance",
-    "base_item": "Tiara",
-    "item_type": "Circlet",
-    "lvl_req": "80",
-    "properties": [
-      {
-        "code": "oskill",
-        "param": "Teleport",
-        "min_val": "1",
-        "max_val": "1",
-        "resolved_text": "+1 to Teleport"
-      },
-      {
-        "code": "allskills",
-        "param": "",
-        "min_val": "1",
-        "max_val": "2",
-        "resolved_text": "+1-2 to All Skills"
-      },
-      {
-        "code": "hp%",
-        "param": "",
-        "min_val": "10",
-        "max_val": "10",
-        "resolved_text": "Increase Maximum Life 10%"
-      },
-      {
-        "code": "mana%",
-        "param": "",
-        "min_val": "10",
-        "max_val": "10",
-        "resolved_text": "Increase Maximum Mana 10%"
-      },
-      {
-        "code": "randclassskill3",
-        "param": "",
-        "min_val": "0",
-        "max_val": "6",
-        "resolved_text": "+1 to Random Class Skill Levels"
-      },
-      {
-        "code": "charge-noconsume",
-        "param": "",
-        "min_val": "98",
-        "max_val": "98",
-        "resolved_text": "+98% chance for finishing moves to not consume charges"
-      },
-      {
-        "code": "cheap",
-        "param": "",
-        "min_val": "15",
-        "max_val": "15",
-        "resolved_text": "Reduces all Vendor Prices 15%"
-      },
-      {
-        "code": "cast1",
-        "param": "",
-        "min_val": "10",
-        "max_val": "25",
-        "resolved_text": "+10-25% Faster Cast Rate"
-      },
-      {
-        "code": "swing2",
-        "param": "",
-        "min_val": "10",
-        "max_val": "25",
-        "resolved_text": "+10-25% Increased Attack Speed"
-      },
-      {
-        "code": "ac%",
-        "param": "",
-        "min_val": "200",
-        "max_val": "300",
-        "resolved_text": "+200-300% Enhanced Defense"
-      }
-    ],
-    "raw_row": {
-      "index": "Ciris's Guidance",
-      "*ID": "452",
-      "version": "100",
-      "enabled": "1",
-      "firstLadderSeason": "",
-      "lastLadderSeason": "",
-      "rarity": "1",
-      "nolimit": "1",
-      "lvl": "85",
-      "lvl req": "80",
-      "code": "ci2",
-      "*ItemName": "tiara",
-      "carry1": "",
-      "cost mult": "5",
-      "cost add": "5000",
-      "chrtransform": "whit",
-      "invtransform": "whit",
-      "flippyfile": "",
-      "invfile": "",
-      "dropsound": "",
-      "dropsfxframe": "",
-      "usesound": "",
-      "prop1": "oskill",
-      "par1": "Teleport",
-      "min1": "1",
-      "max1": "1",
-      "prop2": "allskills",
-      "par2": "",
-      "min2": "1",
-      "max2": "2",
-      "prop3": "hp%",
-      "par3": "",
-      "min3": "10",
-      "max3": "10",
-      "prop4": "mana%",
-      "par4": "",
-      "min4": "10",
-      "max4": "10",
-      "prop5": "randclassskill3",
-      "par5": "",
-      "min5": "0",
-      "max5": "6",
-      "prop6": "charge-noconsume",
-      "par6": "",
-      "min6": "98",
-      "max6": "98",
-      "prop7": "cheap",
-      "par7": "",
-      "min7": "15",
-      "max7": "15",
-      "prop8": "cast1",
-      "par8": "",
-      "min8": "10",
-      "max8": "25",
-      "prop9": "swing2",
-      "par9": "",
-      "min9": "10",
-      "max9": "25",
-      "prop10": "ac%",
-      "par10": "",
-      "min10": "200",
-      "max10": "300",
       "prop11": "",
       "par11": "",
       "min11": "",

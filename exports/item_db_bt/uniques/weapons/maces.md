@@ -97,8 +97,7 @@
     * \+5 to Minimum Fire Damage
     * \+20 to Maximum Fire Damage
     * Fire Resist \+40%
-    * \+66 Defense
-    * Adds 66\-66 Damage
+    * \+35 Defense
 
 ### Khalim's Flail (KhalimFlail)
 * **Base Item:** Khalim's Flail
@@ -116,10 +115,9 @@
     * \+1 to Minimum Lightning Damage
     * \+40 to Maximum Lightning Damage
     * \+50% Increased Attack Speed
-    * 200% Bonus to Attack Rating
+    * \+40 to Attack Rating
     * 6% Mana stolen per hit
     * 6% Life stolen per hit
-    * Adds 50\-50 Damage
 
 ### Dark Clan Crusher (Dark Clan Crusher)
 * **Base Item:** Cudgel
@@ -237,13 +235,13 @@
 * **Level Requirement:** 79
 * **Properties:**
     * 20% Chance to cast level 20 Static Field on striking
-    * \+100 to Life
+    * \+50 to Life
     * \(8\.0 per clvl\) to Attack Rating \(Based on Character Level\)
     * Lightning Resist \+75%
     * \+60% Increased Attack Speed
     * \(2\.0 per clvl\) to Maximum Damage \(Based on Character Level\)
     * Repairs 1 durability in 5 seconds
-    * \+350% Enhanced Damage
+    * \+200\-230% Enhanced Damage
     * Adds 50\-200 Lightning Damage
 
 ### The Cranium Basher (The Cranium Basher)
@@ -294,19 +292,18 @@
     * 40% Chance of Crushing Blow
     * \-50% Target Defense
     * \-\-100 to Monster Defense Per Hit
-    * Damage \+50\-85
+    * Damage \+42\-69
     * \+40% Increased Attack Speed
 
 ### Windhammer (Windhammer)
 * **Base Item:** Ogre Maul
 * **Level Requirement:** 68
 * **Properties:**
-    * \+200\-300% Enhanced Damage
+    * \+180\-230% Enhanced Damage
     * 50% Chance of Crushing Blow
     * \+60% Increased Attack Speed
     * 40% Chance to cast level 44 Twister on striking
     * \+30% Faster Run/Walk
-    * 50% Chance to cast level 40 Tornado when you Kill an Enemy
 
 ### Stormlash (Stormlash)
 * **Base Item:** Scourge
@@ -315,7 +312,7 @@
     * \+269\-300% Enhanced Damage
     * \+30% Increased Attack Speed
     * 20% Chance to cast level 20 Static Field on striking
-    * 20% Chance to cast level 44 Lightning on striking
+    * 20% Chance to cast level 30 Lightning on striking
     * Adds 1\-473 Lightning Damage
     * Attacker Takes Lightning Damage of 30
     * 33% Chance of Crushing Blow

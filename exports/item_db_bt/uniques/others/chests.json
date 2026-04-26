@@ -4532,11 +4532,11 @@
         "resolved_text": "All Resistances +20-30"
       },
       {
-        "code": "swing2",
+        "code": "str",
         "param": "",
-        "min_val": "30",
+        "min_val": "20",
         "max_val": "30",
-        "resolved_text": "+30% Increased Attack Speed"
+        "resolved_text": "+20-30 to Strength"
       },
       {
         "code": "oskill",
@@ -4551,13 +4551,6 @@
         "min_val": "2",
         "max_val": "2",
         "resolved_text": "+2 to All Skills"
-      },
-      {
-        "code": "cast2",
-        "param": "",
-        "min_val": "30",
-        "max_val": "30",
-        "resolved_text": "+30% Faster Cast Rate"
       }
     ],
     "raw_row": {
@@ -4615,9 +4608,9 @@
       "par8": "",
       "min8": "20",
       "max8": "30",
-      "prop9": "swing2",
+      "prop9": "str",
       "par9": "",
-      "min9": "30",
+      "min9": "20",
       "max9": "30",
       "prop10": "oskill",
       "par10": "Teleport",
@@ -4627,10 +4620,10 @@
       "par11": "",
       "min11": "2",
       "max11": "2",
-      "prop12": "cast2",
+      "prop12": "",
       "par12": "",
-      "min12": "30",
-      "max12": "30",
+      "min12": "",
+      "max12": "",
       "diablocloneweight": "",
       "*eol": "0"
     }
@@ -4850,13 +4843,6 @@
         "min_val": "15",
         "max_val": "15",
         "resolved_text": "+15% Faster Run/Walk"
-      },
-      {
-        "code": "aura",
-        "param": "defiance",
-        "min_val": "8",
-        "max_val": "10",
-        "resolved_text": "Level 8-10 Defiance Aura When Equipped"
       }
     ],
     "raw_row": {
@@ -4914,10 +4900,10 @@
       "par8": "",
       "min8": "15",
       "max8": "15",
-      "prop9": "aura",
-      "par9": "defiance",
-      "min9": "8",
-      "max9": "10",
+      "prop9": "",
+      "par9": "",
+      "min9": "",
+      "max9": "",
       "prop10": "",
       "par10": "",
       "min10": "",
@@ -5118,9 +5104,9 @@
       {
         "code": "hp",
         "param": "",
-        "min_val": "100",
-        "max_val": "100",
-        "resolved_text": "+100 to Life"
+        "min_val": "30",
+        "max_val": "40",
+        "resolved_text": "+30-40 to Life"
       },
       {
         "code": "skilltab",
@@ -5133,8 +5119,8 @@
         "code": "aura",
         "param": "conviction",
         "min_val": "6",
-        "max_val": "12",
-        "resolved_text": "Level 6-12 Conviction Aura When Equipped"
+        "max_val": "6",
+        "resolved_text": "Level 6 Conviction Aura When Equipped"
       },
       {
         "code": "ease",
@@ -5192,8 +5178,8 @@
       "max4": "30",
       "prop5": "hp",
       "par5": "",
-      "min5": "100",
-      "max5": "100",
+      "min5": "30",
+      "max5": "40",
       "prop6": "skilltab",
       "par6": "10",
       "min6": "4",
@@ -5201,7 +5187,7 @@
       "prop7": "aura",
       "par7": "conviction",
       "min7": "6",
-      "max7": "12",
+      "max7": "6",
       "prop8": "ease",
       "par8": "",
       "min8": "-50",

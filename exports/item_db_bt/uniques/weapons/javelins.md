@@ -35,7 +35,7 @@
 * **Base Item:** Ghost Glaive
 * **Level Requirement:** 76
 * **Properties:**
-    * \+150\-250% Enhanced Damage
+    * \+150\-240% Enhanced Damage
     * Replenishes quantity
     * 8\-12% Life stolen per hit
     * \+15 to Mana after each Kill
@@ -50,6 +50,6 @@
 * **Properties:**
     * \+8\-50% Strength
     * \+80% Increased Attack Speed
-    * \+250\-300% Enhanced Damage
+    * \+180\-250% Enhanced Damage
     * 5% Life stolen per hit
     * \+3 to Double Throw \(Barbarian only\)

@@ -633,7 +633,7 @@
   },
   {
     "id": "The Impaler",
-    "display_name": "The Impaler",
+    "display_name": "the Impaler",
     "base_item": "War Spear",
     "item_type": "Spear",
     "lvl_req": "31",
@@ -1301,9 +1301,9 @@
       {
         "code": "hit-skill",
         "param": "Lower Resist",
-        "min_val": "66",
+        "min_val": "15",
         "max_val": "5",
-        "resolved_text": "66% Chance to cast level 5 Lower Resist on striking"
+        "resolved_text": "15% Chance to cast level 5 Lower Resist on striking"
       },
       {
         "code": "swing2",
@@ -1363,7 +1363,7 @@
       "max1": "240",
       "prop2": "hit-skill",
       "par2": "Lower Resist",
-      "min2": "66",
+      "min2": "15",
       "max2": "5",
       "prop3": "swing2",
       "par3": "",
@@ -1471,13 +1471,6 @@
         "min_val": "15",
         "max_val": "33",
         "resolved_text": "15% Chance to cast level 33 Amplify Damage on striking"
-      },
-      {
-        "code": "oskill",
-        "param": "iron skin",
-        "min_val": "1",
-        "max_val": "1",
-        "resolved_text": "+1 to Iron Skin"
       }
     ],
     "raw_row": {
@@ -1535,10 +1528,10 @@
       "par8": "Amplify Damage",
       "min8": "15",
       "max8": "33",
-      "prop9": "oskill",
-      "par9": "iron skin",
-      "min9": "1",
-      "max9": "1",
+      "prop9": "",
+      "par9": "",
+      "min9": "",
+      "max9": "",
       "prop10": "",
       "par10": "",
       "min10": "",

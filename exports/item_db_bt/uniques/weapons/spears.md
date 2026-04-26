@@ -56,7 +56,7 @@
     * \+100\-130% Enhanced Damage
     * 15% Chance of Open Wounds
 
-### The Impaler (The Impaler)
+### the Impaler (The Impaler)
 * **Base Item:** War Spear
 * **Level Requirement:** 31
 * **Properties:**
@@ -120,7 +120,7 @@
 * **Level Requirement:** 71
 * **Properties:**
     * \+190\-240% Enhanced Damage
-    * 66% Chance to cast level 5 Lower Resist on striking
+    * 15% Chance to cast level 5 Lower Resist on striking
     * \+50% Increased Attack Speed
     * 33% Chance to cast level 60 Poison Nova when struck
     * 25% Chance to cast level 60 Poison Nova on striking
@@ -138,7 +138,6 @@
     * 44% Chance of Crushing Blow
     * 7\-12% Life stolen per hit
     * 15% Chance to cast level 33 Amplify Damage on striking
-    * \+1 to Iron Skin
 
 ### Arioc's Needle (Arioc's Needle)
 * **Base Item:** Hyperion Spear

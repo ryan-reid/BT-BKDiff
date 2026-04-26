@@ -7,28 +7,28 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Ghost Glaive}$ | **Base Item:** $\text{Ghost Glaive}$ |
-| **Level Requirement:** $\text{80}$ | **Level Requirement:** $\text{80}$ |
+| **Base Item:** $	ext{Ghost Glaive}$ | **Base Item:** $	ext{Ghost Glaive}$ |
+| **Level Requirement:** $	ext{80}$ | **Level Requirement:** $	ext{80}$ |
 | **Properties:** | **Properties:** |
-| $\text{+8-50\\% Strength}$ | $\text{+8-50\\% Strength}$ |
-| $\text{+80\\% Increased Attack Speed}$ | $\text{+80\\% Increased Attack Speed}$ |
-| $\text{5\\% Life stolen per hit}$ | $\text{5\\% Life stolen per hit}$ |
-| $\text{+3 to Double Throw (Barbarian only)}$ | $\text{+3 to Double Throw (Barbarian only)}$ |
+| $	ext{+8-50\\% Strength}$ | $	ext{+8-50\\% Strength}$ |
+| $	ext{+80\\% Increased Attack Speed}$ | $	ext{+80\\% Increased Attack Speed}$ |
+| $	ext{5\\% Life stolen per hit}$ | $	ext{5\\% Life stolen per hit}$ |
+| $	ext{+3 to Double Throw (Barbarian only)}$ | $	ext{+3 to Double Throw (Barbarian only)}$ |
 | $\\color{gray}{\\text{+250-300\\%}}\\text{ Enhanced Damage}$ | $\\color{blue}{\\text{+180-250\\%}}\\text{ Enhanced Damage}$ |
 
 **Wraith Flight** (Wraithflight)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Ghost Glaive}$ | **Base Item:** $\text{Ghost Glaive}$ |
-| **Level Requirement:** $\text{76}$ | **Level Requirement:** $\text{76}$ |
+| **Base Item:** $	ext{Ghost Glaive}$ | **Base Item:** $	ext{Ghost Glaive}$ |
+| **Level Requirement:** $	ext{76}$ | **Level Requirement:** $	ext{76}$ |
 | **Properties:** | **Properties:** |
-| $\text{Replenishes quantity}$ | $\text{Replenishes quantity}$ |
-| $\text{8-12\\% Life stolen per hit}$ | $\text{8-12\\% Life stolen per hit}$ |
-| $\text{+15 to Mana after each Kill}$ | $\text{+15 to Mana after each Kill}$ |
-| $\text{Ethereal}$ | $\text{Ethereal}$ |
-| $\text{+35\\% Increased Attack Speed}$ | $\text{+35\\% Increased Attack Speed}$ |
-| $\text{10\\% Chance of Crushing Blow}$ | $\text{10\\% Chance of Crushing Blow}$ |
-| $\text{Slows Target by 15\\%}$ | $\text{Slows Target by 15\\%}$ |
+| $	ext{Replenishes quantity}$ | $	ext{Replenishes quantity}$ |
+| $	ext{8-12\\% Life stolen per hit}$ | $	ext{8-12\\% Life stolen per hit}$ |
+| $	ext{+15 to Mana after each Kill}$ | $	ext{+15 to Mana after each Kill}$ |
+| $	ext{Ethereal}$ | $	ext{Ethereal}$ |
+| $	ext{+35\\% Increased Attack Speed}$ | $	ext{+35\\% Increased Attack Speed}$ |
+| $	ext{10\\% Chance of Crushing Blow}$ | $	ext{10\\% Chance of Crushing Blow}$ |
+| $	ext{Slows Target by 15\\%}$ | $	ext{Slows Target by 15\\%}$ |
 | $\\color{gray}{\\text{+150-250\\%}}\\text{ Enhanced Damage}$ | $\\color{blue}{\\text{+150-240\\%}}\\text{ Enhanced Damage}$ |
 

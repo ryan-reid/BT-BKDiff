@@ -106,13 +106,12 @@
 * **Base Item:** Matriarchal Bow
 * **Level Requirement:** 71
 * **Properties:**
-    * \+200\-300% Enhanced Damage
+    * \+180\-230% Enhanced Damage
     * 200\-300% Bonus to Attack Rating
     * Fires Explosive Arrows or Bolts
     * \+4\-6 to Bow and Crossbow Skills
     * \+5 to Revive
     * \+30% Increased Attack Speed
-    * \+50% Faster Run/Walk
 
 ### Shadow Killer (Shadowkiller)
 * **Base Item:** Battle Cestus

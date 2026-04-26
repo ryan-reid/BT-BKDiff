@@ -7,15 +7,15 @@
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
-| **Base Item:** $\text{Guardian Crown}$ | **Base Item:** $\text{Guardian Crown}$ |
-| **Level Requirement:** $\text{92}$ | **Level Requirement:** $\text{92}$ |
+| **Base Item:** $	ext{Guardian Crown}$ | **Base Item:** $	ext{Guardian Crown}$ |
+| **Level Requirement:** $	ext{92}$ | **Level Requirement:** $	ext{92}$ |
 | **Properties:** | **Properties:** |
-| $\text{+1-2 to Warcries Skills}$ | $\text{+1-2 to Warcries Skills}$ |
-| $\text{+2  to Barbarian Skill Levels}$ | $\text{+2  to Barbarian Skill Levels}$ |
-| $\text{+20\\% Faster Cast Rate}$ | $\text{+20\\% Faster Cast Rate}$ |
-| $\text{+15-20 to all Attributes}$ | $\text{+15-20 to all Attributes}$ |
-| $\text{+20\\% Faster Hit Recovery}$ | $\text{+20\\% Faster Hit Recovery}$ |
-| $\text{(0.5\\% per clvl) Better Chance of Getting Magic Items (Based on Character Level)}$ | $\text{(0.5\\% per clvl) Better Chance of Getting Magic Items (Based on Character Level)}$ |
-| $\text{+150-200\\% Enhanced Defense}$ | $\text{+150-200\\% Enhanced Defense}$ |
-|  | $\color{blue}{\\text{-5-10\\% to Enemy Physical Resistance}}$ |
+| $	ext{+1-2 to Warcries Skills}$ | $	ext{+1-2 to Warcries Skills}$ |
+| $	ext{+2  to Barbarian Skill Levels}$ | $	ext{+2  to Barbarian Skill Levels}$ |
+| $	ext{+20\\% Faster Cast Rate}$ | $	ext{+20\\% Faster Cast Rate}$ |
+| $	ext{+15-20 to all Attributes}$ | $	ext{+15-20 to all Attributes}$ |
+| $	ext{+20\\% Faster Hit Recovery}$ | $	ext{+20\\% Faster Hit Recovery}$ |
+| $	ext{(0.5\\% per clvl) Better Chance of Getting Magic Items (Based on Character Level)}$ | $	ext{(0.5\\% per clvl) Better Chance of Getting Magic Items (Based on Character Level)}$ |
+| $	ext{+150-200\\% Enhanced Defense}$ | $	ext{+150-200\\% Enhanced Defense}$ |
+|  | $\color{blue}{	ext{-5-10\\% to Enemy Physical Resistance}}$ |
 

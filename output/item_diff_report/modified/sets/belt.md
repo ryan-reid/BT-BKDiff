@@ -8,86 +8,86 @@
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
 | **Base Item:** $\\color{gray}{\\text{War}}\\text{ }\\color{gray}{\\text{Belt}}$ | **Base Item:** $\\color{blue}{\\text{Colossus}}\\text{ }\\color{blue}{\\text{Girdle}}$ |
-| **Level Requirement:** $\text{29}$ | **Level Requirement:** $\text{29}$ |
+| **Level Requirement:** $	ext{29}$ | **Level Requirement:** $	ext{29}$ |
 | **Properties:** | **Properties:** |
-| $\text{+36 Defense}$ | $\text{+36 Defense}$ |
-| $\text{Fire Resist +28\\%}$ | $\text{Fire Resist +28\\%}$ |
-| $\text{Lightning Resist +31\\%}$ | $\text{Lightning Resist +31\\%}$ |
-| $\text{+25 to Strength}$ | $\text{+25 to Strength}$ |
+| $	ext{+36 Defense}$ | $	ext{+36 Defense}$ |
+| $	ext{Fire Resist +28\\%}$ | $	ext{Fire Resist +28\\%}$ |
+| $	ext{Lightning Resist +31\\%}$ | $	ext{Lightning Resist +31\\%}$ |
+| $	ext{+25 to Strength}$ | $	ext{+25 to Strength}$ |
 
 **Immortal King's Tribal Binding** (Immortal King's Tribal Binding)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
 | **Base Item:** $\\color{gray}{\\text{War}}\\text{ }\\color{gray}{\\text{Belt}}$ | **Base Item:** $\\color{blue}{\\text{Colossus}}\\text{ }\\color{blue}{\\text{Girdle}}$ |
-| **Level Requirement:** $\text{95}$ | **Level Requirement:** $\text{95}$ |
+| **Level Requirement:** $	ext{95}$ | **Level Requirement:** $	ext{95}$ |
 | **Properties:** | **Properties:** |
-| $\text{Damage Reduced by 10-20\\%}$ | $\text{Damage Reduced by 10-20\\%}$ |
-| $\text{+20\\% Increased Attack Speed}$ | $\text{+20\\% Increased Attack Speed}$ |
-| $\text{+20\\% Faster Cast Rate}$ | $\text{+20\\% Faster Cast Rate}$ |
-| $\text{+40-75\\% Enhanced Damage}$ | $\text{+40-75\\% Enhanced Damage}$ |
-| $\text{All Resistances +10-20}$ | $\text{All Resistances +10-20}$ |
-| $\text{+3-5\\% Vitality}$ | $\text{+3-5\\% Vitality}$ |
-| $\text{+3-5\\% Strength}$ | $\text{+3-5\\% Strength}$ |
-| $\text{+3-5\\% Dexterity}$ | $\text{+3-5\\% Dexterity}$ |
-| $\text{+3-5\\% Energy}$ | $\text{+3-5\\% Energy}$ |
+| $	ext{Damage Reduced by 10-20\\%}$ | $	ext{Damage Reduced by 10-20\\%}$ |
+| $	ext{+20\\% Increased Attack Speed}$ | $	ext{+20\\% Increased Attack Speed}$ |
+| $	ext{+20\\% Faster Cast Rate}$ | $	ext{+20\\% Faster Cast Rate}$ |
+| $	ext{+40-75\\% Enhanced Damage}$ | $	ext{+40-75\\% Enhanced Damage}$ |
+| $	ext{All Resistances +10-20}$ | $	ext{All Resistances +10-20}$ |
+| $	ext{+3-5\\% Vitality}$ | $	ext{+3-5\\% Vitality}$ |
+| $	ext{+3-5\\% Strength}$ | $	ext{+3-5\\% Strength}$ |
+| $	ext{+3-5\\% Dexterity}$ | $	ext{+3-5\\% Dexterity}$ |
+| $	ext{+3-5\\% Energy}$ | $	ext{+3-5\\% Energy}$ |
 
 **M'avina's Principle** (M'avina's Principle)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
 | **Base Item:** $\\color{gray}{\\text{Sharkskin}}\\text{ Belt}$ | **Base Item:** $\\color{blue}{\\text{Vampirefang}}\\text{ Belt}$ |
-| **Level Requirement:** $\text{85}$ | **Level Requirement:** $\text{85}$ |
+| **Level Requirement:** $	ext{85}$ | **Level Requirement:** $	ext{85}$ |
 | **Properties:** | **Properties:** |
-| $\text{+25\\% Faster Run/Walk}$ | $\text{+25\\% Faster Run/Walk}$ |
-| $\text{+1 to Amazon Skill Levels}$ | $\text{+1 to Amazon Skill Levels}$ |
-| $\text{+3-8 to all Attributes}$ | $\text{+3-8 to all Attributes}$ |
-| $\text{5\\% Mana stolen per hit}$ | $\text{5\\% Mana stolen per hit}$ |
-| $\text{5\\% Life stolen per hit}$ | $\text{5\\% Life stolen per hit}$ |
-| $\text{+25\\% Increased Attack Speed}$ | $\text{+25\\% Increased Attack Speed}$ |
-| $\text{Damage Reduced by 5-10\\%}$ | $\text{Damage Reduced by 5-10\\%}$ |
-| $\text{All Resistances +10-20}$ | $\text{All Resistances +10-20}$ |
+| $	ext{+25\\% Faster Run/Walk}$ | $	ext{+25\\% Faster Run/Walk}$ |
+| $	ext{+1 to Amazon Skill Levels}$ | $	ext{+1 to Amazon Skill Levels}$ |
+| $	ext{+3-8 to all Attributes}$ | $	ext{+3-8 to all Attributes}$ |
+| $	ext{5\\% Mana stolen per hit}$ | $	ext{5\\% Mana stolen per hit}$ |
+| $	ext{5\\% Life stolen per hit}$ | $	ext{5\\% Life stolen per hit}$ |
+| $	ext{+25\\% Increased Attack Speed}$ | $	ext{+25\\% Increased Attack Speed}$ |
+| $	ext{Damage Reduced by 5-10\\%}$ | $	ext{Damage Reduced by 5-10\\%}$ |
+| $	ext{All Resistances +10-20}$ | $	ext{All Resistances +10-20}$ |
 
 **M'avina's Tenet** (M'avina's Tenet)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
 | **Base Item:** $\\color{gray}{\\text{Sharkskin}}\\text{ Belt}$ | **Base Item:** $\\color{blue}{\\text{Vampirefang}}\\text{ Belt}$ |
-| **Level Requirement:** $\text{45}$ | **Level Requirement:** $\text{45}$ |
+| **Level Requirement:** $	ext{45}$ | **Level Requirement:** $	ext{45}$ |
 | **Properties:** | **Properties:** |
-| $\text{+50 Defense}$ | $\text{+50 Defense}$ |
-| $\text{+30\\% Faster Run/Walk}$ | $\text{+30\\% Faster Run/Walk}$ |
-| $\text{5\\% Mana stolen per hit}$ | $\text{5\\% Mana stolen per hit}$ |
-| $\text{All Resistances +10-15}$ | $\text{All Resistances +10-15}$ |
-| $\text{+3-5 to Mana after each Kill}$ | $\text{+3-5 to Mana after each Kill}$ |
+| $	ext{+50 Defense}$ | $	ext{+50 Defense}$ |
+| $	ext{+30\\% Faster Run/Walk}$ | $	ext{+30\\% Faster Run/Walk}$ |
+| $	ext{5\\% Mana stolen per hit}$ | $	ext{5\\% Mana stolen per hit}$ |
+| $	ext{All Resistances +10-15}$ | $	ext{All Resistances +10-15}$ |
+| $	ext{+3-5 to Mana after each Kill}$ | $	ext{+3-5 to Mana after each Kill}$ |
 
 **Tal Rasha's Brace** (Tal Rasha's Brace)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
 | **Base Item:** $\\color{gray}{\\text{Mesh}}\\text{ }\\color{gray}{\\text{Belt}}$ | **Base Item:** $\\color{blue}{\\text{Mithril}}\\text{ }\\color{blue}{\\text{Coil}}$ |
-| **Level Requirement:** $\text{85}$ | **Level Requirement:** $\text{85}$ |
+| **Level Requirement:** $	ext{85}$ | **Level Requirement:** $	ext{85}$ |
 | **Properties:** | **Properties:** |
-| $\text{Damage Reduced by 5-10\\%}$ | $\text{Damage Reduced by 5-10\\%}$ |
-| $\text{+1 to Sorceress Skill Levels}$ | $\text{+1 to Sorceress Skill Levels}$ |
-| $\text{+1-3 to Meteor (Sorceress only)}$ | $\text{+1-3 to Meteor (Sorceress only)}$ |
-| $\text{+20\\% Faster Cast Rate}$ | $\text{+20\\% Faster Cast Rate}$ |
-| $\text{-3-5\\% to Enemy Fire Resistance}$ | $\text{-3-5\\% to Enemy Fire Resistance}$ |
-| $\text{Increase Maximum Mana 3-8\\%}$ | $\text{Increase Maximum Mana 3-8\\%}$ |
-| $\text{+5-10 to all Attributes}$ | $\text{+5-10 to all Attributes}$ |
-| $\text{25-50\\% Better Chance of Getting Magic Items}$ | $\text{25-50\\% Better Chance of Getting Magic Items}$ |
-| $\text{+3-7 to Mana after each Kill}$ | $\text{+3-7 to Mana after each Kill}$ |
+| $	ext{Damage Reduced by 5-10\\%}$ | $	ext{Damage Reduced by 5-10\\%}$ |
+| $	ext{+1 to Sorceress Skill Levels}$ | $	ext{+1 to Sorceress Skill Levels}$ |
+| $	ext{+1-3 to Meteor (Sorceress only)}$ | $	ext{+1-3 to Meteor (Sorceress only)}$ |
+| $	ext{+20\\% Faster Cast Rate}$ | $	ext{+20\\% Faster Cast Rate}$ |
+| $	ext{-3-5\\% to Enemy Fire Resistance}$ | $	ext{-3-5\\% to Enemy Fire Resistance}$ |
+| $	ext{Increase Maximum Mana 3-8\\%}$ | $	ext{Increase Maximum Mana 3-8\\%}$ |
+| $	ext{+5-10 to all Attributes}$ | $	ext{+5-10 to all Attributes}$ |
+| $	ext{25-50\\% Better Chance of Getting Magic Items}$ | $	ext{25-50\\% Better Chance of Getting Magic Items}$ |
+| $	ext{+3-7 to Mana after each Kill}$ | $	ext{+3-7 to Mana after each Kill}$ |
 
 **Tal Rasha's Fine\-Spun Cloth** (Tal Rasha's Fire\-Spun Cloth)
 
 | BT Diablo (Old) | BK Diablo (New) |
 | :--- | :--- |
 | **Base Item:** $\\color{gray}{\\text{Mesh}}\\text{ }\\color{gray}{\\text{Belt}}$ | **Base Item:** $\\color{blue}{\\text{Mithril}}\\text{ }\\color{blue}{\\text{Coil}}$ |
-| **Level Requirement:** $\text{53}$ | **Level Requirement:** $\text{53}$ |
+| **Level Requirement:** $	ext{53}$ | **Level Requirement:** $	ext{53}$ |
 | **Properties:** | **Properties:** |
-| $\text{Requirements --20\\%}$ | $\text{Requirements --20\\%}$ |
-| $\text{+30 to Mana}$ | $\text{+30 to Mana}$ |
-| $\text{+20 to Dexterity}$ | $\text{+20 to Dexterity}$ |
-| $\text{37\\% Damage Taken Goes To Mana}$ | $\text{37\\% Damage Taken Goes To Mana}$ |
-| $\text{10-15\\% Better Chance of Getting Magic Items}$ | $\text{10-15\\% Better Chance of Getting Magic Items}$ |
+| $	ext{Requirements --20\\%}$ | $	ext{Requirements --20\\%}$ |
+| $	ext{+30 to Mana}$ | $	ext{+30 to Mana}$ |
+| $	ext{+20 to Dexterity}$ | $	ext{+20 to Dexterity}$ |
+| $	ext{37\\% Damage Taken Goes To Mana}$ | $	ext{37\\% Damage Taken Goes To Mana}$ |
+| $	ext{10-15\\% Better Chance of Getting Magic Items}$ | $	ext{10-15\\% Better Chance of Getting Magic Items}$ |
 
