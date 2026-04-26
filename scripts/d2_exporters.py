@@ -141,21 +141,97 @@ class MarkdownExporter(BaseExporter):
             f.write("| :--- | :---: | :---: | :---: |\n")
             f.write(f"| All Items | {len(diff['added'])} | {len(diff['removed'])} | {len(diff['modified'])} |\n\n")
 
-        # 2. ADDED.md
+        # 2. Split Added Items into categories
+        added_dir = os.path.join(output_dir, "added")
+        os.makedirs(added_dir, exist_ok=True)
+        
+        # Group items by their source (uniques, sets, runewords)
+        # Note: We don't have the explicit type here, but we can infer or 
+        # use the item_type property. 
+        # To be precise, let's categorize them logically.
+        
+        uniques, runewords, sets = [], [], []
+        for k, item in diff['added'].items():
+            # Infer type from raw_row or presence of specific fields
+            if 'runes' in item or (item.get('raw_row') and 'Rune1' in item['raw_row']):
+                runewords.append(item)
+            elif item.get('raw_row') and 'set' in item['raw_row']:
+                sets.append(item)
+            else:
+                uniques.append(item)
+
+        added_toc = ["# Added Items Breakdown\n", "New items categorized by type to ensure optimal rendering.\n"]
+        
+        def write_items_to_file(items_list, title, filename, sub_dir=""):
+            if not items_list: return None
+            full_sub_dir = os.path.join(added_dir, sub_dir)
+            os.makedirs(full_sub_dir, exist_ok=True)
+            path = os.path.join(full_sub_dir, filename)
+            rel_path = os.path.join("added", sub_dir, filename).replace("\\", "/")
+            
+            with open(path, 'w', encoding='utf-8') as f_out:
+                f_out.write(f"# {title}\n\n")
+                for item in sorted(items_list, key=lambda x: x.get('display_name') or x.get('name', '')):
+                    name = self.escape_markdown(item.get('display_name') or item.get('name'))
+                    base = self.escape_markdown(item.get('base_item', '') or ', '.join(item.get('base_items', [])))
+                    item_id = self.escape_markdown(str(item.get('id', item.get('name', ''))))
+                    
+                    f_out.write(f"**{name}** ({item_id})\n\n")
+                    f_out.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
+                    f_out.write(f"| | **Base Item:** {base} |\n")
+                    f_out.write(f"| | **Level Requirement:** {item.get('lvl_req', '0')} |\n")
+                    f_out.write("| | **Properties:** |\n")
+                    for prop in item['properties']:
+                        _, new_fmt = self.get_styled_diffs("", prop['resolved_text'])
+                        f_out.write(f"| | {new_fmt} |\n")
+                    f_out.write("\n")
+            return rel_path
+
+        # Sub-categorize Uniques
+        if uniques:
+            added_toc.append("## Uniques\n")
+            unique_groups = {}
+            for item in uniques:
+                # Basic grouping by item_type if available, otherwise "Other"
+                cat = item.get('item_type', 'Other')
+                if cat not in unique_groups: unique_groups[cat] = []
+                unique_groups[cat].append(item)
+            
+            for cat, items in sorted(unique_groups.items()):
+                safe_name = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
+                rel = write_items_to_file(items, f"Added Unique {cat}", safe_name, "uniques")
+                added_toc.append(f"- [{cat}]({rel})\n")
+
+        # Sub-categorize Runewords
+        if runewords:
+            added_toc.append("\n## Runewords\n")
+            rw_groups = {}
+            for rw in runewords:
+                cat = rw.get('base_items', ['Other'])[0] if rw.get('base_items') else 'Other'
+                if cat not in rw_groups: rw_groups[cat] = []
+                rw_groups[cat].append(rw)
+            
+            for cat, items in sorted(rw_groups.items()):
+                safe_name = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
+                rel = write_items_to_file(items, f"Added {cat} Runewords", safe_name, "runewords")
+                added_toc.append(f"- [{cat}]({rel})\n")
+
+        # Sub-categorize Sets
+        if sets:
+            added_toc.append("\n## Sets\n")
+            set_groups = {}
+            for item in sets:
+                cat = item.get('item_type', 'Other')
+                if cat not in set_groups: set_groups[cat] = []
+                set_groups[cat].append(item)
+                
+            for cat, items in sorted(set_groups.items()):
+                safe_name = cat.lower().replace(" ", "_").replace("/", "_") + ".md"
+                rel = write_items_to_file(items, f"Added Set {cat}", safe_name, "sets")
+                added_toc.append(f"- [{cat}]({rel})\n")
+
         with open(os.path.join(output_dir, "ADDED.md"), 'w', encoding='utf-8') as f:
-            f.write("# Added Items\n\n")
-            for k, item in sorted(diff['added'].items()):
-                name = self.escape_markdown(item.get('display_name') or item.get('name'))
-                base = self.escape_markdown(item.get('base_item', '') or ', '.join(item.get('base_items', [])))
-                f.write(f"**{name}** ({self.escape_markdown(str(k))})\n\n")
-                f.write("| BT Diablo (Old) | BK Diablo (New) |\n| :--- | :--- |\n")
-                f.write(f"| | **Base Item:** {base} |\n")
-                f.write(f"| | **Level Requirement:** {item.get('lvl_req', '0')} |\n")
-                f.write("| | **Properties:** |\n")
-                for prop in item['properties']:
-                    _, new_fmt = self.get_styled_diffs("", prop['resolved_text'])
-                    f.write(f"| | {new_fmt} |\n")
-                f.write("\n")
+            f.write("".join(added_toc))
 
         # 3. REMOVED.md
         with open(os.path.join(output_dir, "REMOVED.md"), 'w', encoding='utf-8') as f:
