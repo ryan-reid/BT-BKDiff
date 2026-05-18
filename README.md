@@ -59,7 +59,7 @@ For local viewing, serve `output/wiki/` with a simple static server after runnin
 
 ## Script Layout
 
-Top-level scripts in `scripts/` are compatibility wrappers. The implementation is organized under:
+`scripts/generate_reports.py` is the top-level rebuild command. The implementation is organized under:
 
 - `scripts/d2lib/`: shared repository, service, exporter, and wiki generator code
 - `scripts/cli/`: primary CLI implementations

@@ -11,7 +11,7 @@ REPO_ROOT = os.path.dirname(SCRIPT_ROOT)
 if SCRIPT_ROOT not in sys.path:
     sys.path.insert(0, SCRIPT_ROOT)
 
-from d2_repository import D2Repository
+from d2lib.repository import D2Repository
 
 
 csv.field_size_limit(1000000)

@@ -6,7 +6,7 @@ from d2lib.services import ExcelComparisonService
 
 def main() -> None:
     if len(sys.argv) < 3:
-        print("Usage: python compare_excel.py <bk_file> <bt_file> [key_col]", file=sys.stderr)
+        print("Usage: python -m cli.compare_excel <bk_file> <bt_file> [key_col]", file=sys.stderr)
         return
         
     file_bk_path, file_bt_path = sys.argv[1], sys.argv[2]
