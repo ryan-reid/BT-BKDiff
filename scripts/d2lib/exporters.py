@@ -685,7 +685,9 @@ class HtmlReportExporter(BaseExporter):
         self._ensure_assets(os.path.dirname(output_path))
         rows = []
         for row in summary_rows:
-            html_report = str(row["report_name"]).replace(".md", ".html")
+            html_report = str(row["report_name"])
+            if html_report.endswith(".md"):
+                html_report = html_report[:-3] + ".html"
             rows.append(
                 f"<tr><td><a href=\"{self.escape(html_report)}\">{self.escape(row['filename'])}</a></td>"
                 f"<td>{row['added_cols']}</td><td>{row['removed_cols']}</td>"

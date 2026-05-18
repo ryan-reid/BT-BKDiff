@@ -3,10 +3,18 @@ import sys
 import json
 import glob
 import argparse
-from typing import Dict, List, Any
-from d2lib.repository import D2Repository
+from typing import Dict, Any
 from d2lib.services import ItemComparisonService
-from d2lib.exporters import HtmlReportExporter, JsonExporter, MarkdownExporter
+from d2lib.exporters import HtmlReportExporter, JsonExporter
+
+
+def remove_stale_markdown_reports(report_dir: str) -> None:
+    if not os.path.isdir(report_dir):
+        return
+    for root, _, files in os.walk(report_dir):
+        for filename in files:
+            if filename.lower().endswith(".md"):
+                os.remove(os.path.join(root, filename))
 
 def load_json_db(db_dir: str) -> Dict[str, Dict[str, Any]]:
     # type -> id -> item
@@ -36,7 +44,7 @@ def load_json_db(db_dir: str) -> Dict[str, Dict[str, Any]]:
     return types
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Compare two exported item databases and generate Markdown and HTML reports.")
+    parser = argparse.ArgumentParser(description="Compare two exported item databases and generate JSON and HTML reports.")
     parser.add_argument("--new-db", default="../exports/item_db", help="Path to the new/target exported JSON item database")
     parser.add_argument("--old-db", default="../exports/item_db_bt", help="Path to the old/base exported JSON item database")
     parser.add_argument("--out", default="../output/item_diff_report", help="Output directory for generated diff reports")
@@ -45,6 +53,7 @@ def main() -> None:
     bk_json_dir = args.new_db
     bt_json_dir = args.old_db
     out_dir = args.out
+    remove_stale_markdown_reports(out_dir)
 
     print("Loading Item Databases...")
     bk_db = load_json_db(bk_json_dir)
@@ -86,23 +95,9 @@ def main() -> None:
         os.path.join(out_dir, "diff.json"),
     )
 
-    exporter = MarkdownExporter()
-    exporter.export_item_diff(combined_diff, out_dir)
     html_exporter = HtmlReportExporter()
     html_exporter.export_item_diff(combined_diff, out_dir, type_counts=type_counts)
-    
-    # Inject breakdown into SUMMARY.md
-    summary_path = os.path.join(out_dir, "SUMMARY.md")
-    with open(summary_path, 'w', encoding='utf-8') as f:
-        f.write("# Item Database Comparison Summary\n\n")
-        f.write("| Category | [Added](ADDED.md) | [Removed](REMOVED.md) | [Modified](MODIFIED.md) |\n")
-        f.write("| :--- | :---: | :---: | :---: |\n")
-        for t in ['uniques', 'sets', 'runewords']:
-            c = type_counts[t]
-            f.write(f"| {t.capitalize()} | {c['added']} | {c['removed']} | {c['modified']} |\n")
-        f.write(f"| **Total** | **{len(combined_added)}** | **{len(combined_removed)}** | **{len(combined_modified)}** |\n\n")
-        f.write("Click the links in the header to see detailed breakdowns.\n")
-    
+
     print(f"Reports generated in {out_dir}")
 
 if __name__ == "__main__":

@@ -50,20 +50,20 @@ Acceptance checks:
 
 Purpose: stop carrying a broken renderer as an implied deliverable.
 
-- [ ] Decide whether Markdown diff reports are still needed.
+- [x] Decide whether Markdown diff reports are still needed. Decision: stop generating Markdown diff reports in the canonical pipeline; keep JSON DTOs plus HTML reports.
 - [ ] If Markdown stays:
   - [ ] Replace LaTeX/color formatting in `MarkdownExporter.get_styled_diffs` with plain Markdown-safe text.
   - [ ] Add tests for mixed unchanged/changed token diffs such as `dmg-undead` -> `dmg-norm`.
   - [ ] Verify generated Markdown renders cleanly in GitHub.
-- [ ] If Markdown goes:
-  - [ ] Remove Markdown report outputs from the canonical generator.
-  - [ ] Keep JSON DTOs and HTML reports as the supported outputs.
-  - [ ] Update docs and tests to reflect the supported renderer set.
+- [x] If Markdown goes:
+  - [x] Remove Markdown report outputs from the canonical generator.
+  - [x] Keep JSON DTOs and HTML reports as the supported outputs.
+  - [x] Update docs and tests to reflect the supported renderer set.
 
 Acceptance checks:
 
-- [ ] No generated Markdown report contains malformed `$`, `\text`, or tab-expanded `ext{...}` fragments.
-- [ ] HTML report generation remains unchanged for readers.
+- [x] No generated Markdown report contains malformed `$`, `\text`, or tab-expanded `ext{...}` fragments.
+- [x] HTML report generation remains unchanged for readers.
 
 ## Milestone 3: Report Templates And Assets
 
@@ -135,7 +135,7 @@ Acceptance checks:
 
 ## Open Questions
 
-- Should Markdown reports be supported long term, or should HTML plus JSON become the only canonical report outputs?
+- Markdown diff report decision: HTML plus JSON are the canonical report outputs; Markdown remains only for other currently Markdown-backed export surfaces until later milestones address them.
 - Should the extracted Diablo II data guide replace the source PDF in `docs/`, or should both remain for traceability?
 - Should cube recipes become a first-class wiki section?
 - Should report DTO JSON files be published publicly, or are they only intermediate/local artifacts?
