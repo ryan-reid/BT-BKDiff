@@ -64,4 +64,3 @@ Top-level scripts in `scripts/` are compatibility wrappers. The implementation i
 - `scripts/d2lib/`: shared repository, service, exporter, and wiki generator code
 - `scripts/cli/`: primary CLI implementations
 - `scripts/devtools/`: development inspection utilities
-- `scripts/legacy/`: older skill extraction reference tooling still used by dev utilities
