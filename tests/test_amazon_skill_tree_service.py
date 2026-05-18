@@ -10,9 +10,9 @@ SCRIPT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
-from d2_repository import D2Repository
+from d2lib.repository import D2Repository
 from d2lib.repository import strip_json_comments
-from d2_services import SkillAnalyzerService
+from d2lib.services import SkillAnalyzerService
 
 
 def normalize_skill_key(name: str) -> str:

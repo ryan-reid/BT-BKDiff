@@ -31,8 +31,8 @@ This document defines the first-pass wiki generation strategy for the project.
 
 ### Patch And System Pages
 
-- Excel diff outputs from `compare_all_excel.py`
-- Item diff outputs from `compare_item_db.py`
+- Excel diff outputs from `scripts/cli/compare_all_excel.py`
+- Item diff outputs from `scripts/cli/compare_item_db.py`
 
 ## First Milestone
 

@@ -27,37 +27,37 @@ def main() -> None:
 
     # 1. Export BK Item Database (Markdown & JSON for comparison)
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "d2_item_analyzer.py"), "--mpq", "../mods/BKDiablo/bkdiablo.mpq", "--type", "export", "--out", "../exports/item_db", "--format", "markdown"
+        sys.executable, "-m", "cli.d2_item_analyzer", "--mpq", "../mods/BKDiablo/bkdiablo.mpq", "--type", "export", "--out", "../exports/item_db", "--format", "markdown"
     ], "Exporting BK Item Database (Markdown)"):
         failures.append("Exporting BK Item Database (Markdown)")
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "d2_item_analyzer.py"), "--mpq", "../mods/BKDiablo/bkdiablo.mpq", "--type", "export", "--out", "../exports/item_db", "--format", "json"
+        sys.executable, "-m", "cli.d2_item_analyzer", "--mpq", "../mods/BKDiablo/bkdiablo.mpq", "--type", "export", "--out", "../exports/item_db", "--format", "json"
     ], "Exporting BK Item Database (JSON)"):
         failures.append("Exporting BK Item Database (JSON)")
 
     # 2. Export BT Item Database (Markdown & JSON for comparison)
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "d2_item_analyzer.py"), "--mpq", "../mods/BTDiablo/btdiablo.mpq", "--type", "export", "--out", "../exports/item_db_bt", "--format", "markdown"
+        sys.executable, "-m", "cli.d2_item_analyzer", "--mpq", "../mods/BTDiablo/btdiablo.mpq", "--type", "export", "--out", "../exports/item_db_bt", "--format", "markdown"
     ], "Exporting BT Item Database (Markdown)"):
         failures.append("Exporting BT Item Database (Markdown)")
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "d2_item_analyzer.py"), "--mpq", "../mods/BTDiablo/btdiablo.mpq", "--type", "export", "--out", "../exports/item_db_bt", "--format", "json"
+        sys.executable, "-m", "cli.d2_item_analyzer", "--mpq", "../mods/BTDiablo/btdiablo.mpq", "--type", "export", "--out", "../exports/item_db_bt", "--format", "json"
     ], "Exporting BT Item Database (JSON)"):
         failures.append("Exporting BT Item Database (JSON)")
 
     # 3. Export Retail Item Database (Markdown & JSON for comparison)
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "d2_item_analyzer.py"), "--mpq", "../data/retail", "--type", "export", "--out", "../exports/item_db_retail", "--format", "markdown"
+        sys.executable, "-m", "cli.d2_item_analyzer", "--mpq", "../data/retail", "--type", "export", "--out", "../exports/item_db_retail", "--format", "markdown"
     ], "Exporting Retail Item Database (Markdown)"):
         failures.append("Exporting Retail Item Database (Markdown)")
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "d2_item_analyzer.py"), "--mpq", "../data/retail", "--type", "export", "--out", "../exports/item_db_retail", "--format", "json"
+        sys.executable, "-m", "cli.d2_item_analyzer", "--mpq", "../data/retail", "--type", "export", "--out", "../exports/item_db_retail", "--format", "json"
     ], "Exporting Retail Item Database (JSON)"):
         failures.append("Exporting Retail Item Database (JSON)")
 
     # 4. Compare BK vs BT Item Databases
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "compare_item_db.py"),
+        sys.executable, "-m", "cli.compare_item_db",
         "--new-db", "../exports/item_db",
         "--old-db", "../exports/item_db_bt",
         "--out", "../output/item_diff_report_bt_bk"
@@ -66,7 +66,7 @@ def main() -> None:
 
     # 5. Compare BK vs Retail Item Databases
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "compare_item_db.py"),
+        sys.executable, "-m", "cli.compare_item_db",
         "--new-db", "../exports/item_db",
         "--old-db", "../exports/item_db_retail",
         "--out", "../output/item_diff_report_retail_bk"
@@ -75,7 +75,7 @@ def main() -> None:
 
     # 6. Compare BK vs BT Excel Tables
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "compare_all_excel.py"),
+        sys.executable, "-m", "cli.compare_all_excel",
         "--new-dir", "../mods/BKDiablo/bkdiablo.mpq/data/global/excel",
         "--old-dir", "../mods/BTDiablo/btdiablo.mpq/data/global/excel",
         "--out", "../output/excel_diff_report_bt_bk"
@@ -84,7 +84,7 @@ def main() -> None:
 
     # 7. Compare BK vs Retail Excel Tables
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "compare_all_excel.py"),
+        sys.executable, "-m", "cli.compare_all_excel",
         "--new-dir", "../mods/BKDiablo/bkdiablo.mpq/data/global/excel",
         "--old-dir", "../data/retail/excel",
         "--out", "../output/excel_diff_report_retail_bk"
@@ -93,7 +93,7 @@ def main() -> None:
 
     # 8. Generate BK class skill trees
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "extract_class_skills.py"),
+        sys.executable, "-m", "cli.extract_class_skills",
         "--mpq", "../mods/BKDiablo/bkdiablo.mpq",
         "--out", "../output/skill_trees"
     ], "Generating BK Class Skill Trees"):
@@ -101,7 +101,7 @@ def main() -> None:
 
     # 9. Generate the static wiki site
     if not run_command([
-        sys.executable, os.path.join(SCRIPTS_ROOT, "generate_wiki.py"),
+        sys.executable, "-m", "cli.generate_wiki",
         "--item-db", "../exports/item_db",
         "--old-item-db", "../exports/item_db_retail",
         "--skill-trees", "../output/skill_trees",
