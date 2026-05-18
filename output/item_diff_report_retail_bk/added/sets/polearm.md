@@ -16,20 +16,6 @@
 | | $\color{blue}{\text{Increase Maximum Mana 10-20\%}}$ |
 | | $\color{blue}{\text{+5-15 to Mana after each Kill}}$ |
 
-**Hwanin's Justice** (Hwanin's Justice)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| | **Base Item:** Bill |
-| | **Level Requirement:** 34 |
-| | **Properties:** |
-| | $\color{blue}{\text{+330 to Attack Rating}}$ |
-| | $\color{blue}{\text{Repairs 1 durability in 5 seconds}}$ |
-| | $\color{blue}{\text{10\% Chance to cast level 14 Nova on striking}}$ |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+200\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Adds 1-300 Lightning Damage}}$ |
-
 **The Decimation** (The Decimation)
 
 | BT Diablo (Old) | BK Diablo (New) |

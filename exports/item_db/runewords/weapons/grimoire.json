@@ -2,8 +2,8 @@
   {
     "name": "Vigilance",
     "runes": [
-      "Dol Rune (14)",
-      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022"
+      "Dol",
+      "Gul"
     ],
     "base_items": [
       "Grimoire"
@@ -57,6 +57,39 @@
         "min_val": "75",
         "max_val": "100",
         "resolved_text": "+75-100% Enhanced Defense"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Dol",
+        "properties": [
+          {
+            "code": "heal-kill",
+            "param": "",
+            "min_val": "3",
+            "max_val": "3",
+            "resolved_text": "+3 Life after each Kill"
+          }
+        ]
+      },
+      {
+        "rune": "Gul",
+        "properties": [
+          {
+            "code": "res-pois-max",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "+5% to Maximum Poison Resist"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
       }
     ],
     "raw_row": {

@@ -1,0 +1,124 @@
+# Unique Rings
+
+### Nagelring (Nagelring)
+* **Base Item:** Ring
+* **Level Requirement:** 7
+* **Properties:**
+    * Magic Damage Reduced by 3
+    * Attacker Takes Damage of 3
+    * \+50\-75 to Attack Rating
+    * 15\-30% Better Chance of Getting Magic Items
+
+### Manald Heal (Manald Heal)
+* **Base Item:** Ring
+* **Level Requirement:** 15
+* **Properties:**
+    * 4\-7% Mana stolen per hit
+    * Replenish Life \+5\-8
+    * \+20 to Life
+    * Regenerate Mana 20%
+
+### The Stone of Jordan (The Stone of Jordan)
+* **Base Item:** Ring
+* **Level Requirement:** 29
+* **Properties:**
+    * \+20 to Mana
+    * Increase Maximum Mana 25%
+    * \+1 to Minimum Lightning Damage
+    * \+1 to All Skills
+    * \+12 to Maximum Lightning Damage
+
+### Constricting Ring (Constricting Ring)
+* **Base Item:** Ring
+* **Level Requirement:** 95
+* **Properties:**
+    * All Resistances \+100
+    * Replenish Life \+\-30
+    * 100% Better Chance of Getting Magic Items
+    * \+15% to Maximum Fire Resist
+
+### Bul\-Kathos' Wedding Band (Bul Katho's Wedding Band)
+* **Base Item:** Ring
+* **Level Requirement:** 58
+* **Properties:**
+    * \(0\.5 per clvl\) to Life \(Based on Character Level\)
+    * \+1 to All Skills
+    * 3\-5% Life stolen per hit
+    * \+50 Maximum Stamina
+
+### Dwarf Star (Dwarf Star)
+* **Base Item:** Ring
+* **Level Requirement:** 45
+* **Properties:**
+    * 100% Extra Gold from Monsters
+    * \+40 Maximum Stamina
+    * Heal Stamina Plus 15%
+    * \+40 to Life
+    * Magic Damage Reduced by 12\-15
+    * \+15 Fire Absorb
+
+### Raven Frost (Raven Frost)
+* **Base Item:** Ring
+* **Level Requirement:** 45
+* **Properties:**
+    * Cannot Be Frozen
+    * Adds 15\-45 Cold Damage
+    * \+20 Cold Absorb
+    * \+40 to Mana
+    * \+15\-20 to Dexterity
+    * \+150\-250 to Attack Rating
+
+### Nature's Peace (Nature's Peace)
+* **Base Item:** Ring
+* **Level Requirement:** 69
+* **Properties:**
+    * Prevent Monster Heal
+    * Slain Monsters Rest in Peace
+    * Damage Reduced by 7\-11
+    * Poison Resist \+20\-30%
+    * Level 27 Oak Sage \(5/\# Charges\)
+
+### Wisp Projector (Wisp)
+* **Base Item:** Ring
+* **Level Requirement:** 76
+* **Properties:**
+    * \+10\-20 Lightning Absorb
+    * 10% Chance to cast level 16 Lightning on striking
+    * 10\-20% Better Chance of Getting Magic Items
+    * Level 15 Oak Sage \(2/\# Charges\)
+    * Level 13 Heart of Wolverine \(5/\# Charges\)
+    * Level 11 Spirit of Barbs \(7/\# Charges\)
+
+### Carrion Wind (Carrion Wind)
+* **Base Item:** Ring
+* **Level Requirement:** 60
+* **Properties:**
+    * \+100\-160 Defense vs\. Missile
+    * 6\-9% Life stolen per hit
+    * Poison Resist \+55%
+    * 10% Chance to cast level 10 Poison Nova when struck
+    * Level 15 Poison Creeper \(21/\# Charges\)
+    * 8% Chance to cast level 13 Twister on striking
+    * 10% Damage Taken Goes To Mana
+
+### Sling (Sling)
+* **Base Item:** Ring
+* **Level Requirement:** 50
+* **Properties:**
+    * \+1 to Town Portal
+    * \+10% Faster Cast Rate
+    * \-3\-5% to Enemy Fire Resistance
+    * \+10\-15 to Energy
+    * Slows Target by 15%
+    * 10\-20% Better Chance of Getting Magic Items
+
+### Opalvein (Opalvein)
+* **Base Item:** Ring
+* **Level Requirement:** 50
+* **Properties:**
+    * 2% Chance to cast level 15 Flame Wave on attack
+    * \+3\-5% to Magic Skill Damage / \+20\-40% Enhanced Damage / \+3\-5% to Fire Skill Damage / \+3\-5% to Cold Skill Damage / \+3\-5% to Lightning Skill Damage / \+3\-5% to Poison Skill Damage
+    * \+10% Faster Cast Rate
+    * All Resistances \+6\-8
+    * \+1\-3 Life after each Kill
+    * \+1\-3 to Mana after each Kill

@@ -23,7 +23,6 @@
 | [misc.txt](misc.md) | 5 | 1 | 18 | 80 | 132 |
 | [missiles.txt](missiles.md) | 4 | 1 | 53 | 1 | 15 |
 | [monai.txt](monai.md) | 0 | 0 | 0 | 0 | 0 |
-| [monlvl.txt](monlvl.md) | 0 | 0 | 0 | 0 | 0 |
 | [monpreset.txt](monpreset.md) | 0 | 0 | 0 | 0 | 0 |
 | [monprop.txt](monprop.md) | 0 | 0 | 0 | 0 | 0 |
 | [monseq.txt](monseq.md) | 0 | 0 | 0 | 0 | 0 |
@@ -39,7 +38,6 @@
 | [setitems.txt](setitems.md) | 6 | 0 | 0 | 0 | 0 |
 | [sets.txt](sets.md) | 1 | 0 | 0 | 0 | 0 |
 | [shrines.txt](shrines.md) | 0 | 0 | 0 | 0 | 0 |
-| [skillcalc.txt](skillcalc.md) | 0 | 0 | 0 | 0 | 0 |
 | [skilldesc.txt](skilldesc.md) | 0 | 0 | 0 | 0 | 0 |
 | [skills.txt](skills.md) | 29 | 0 | 57 | 2 | 57 |
 | [states.txt](states.md) | 1 | 0 | 0 | 0 | 0 |

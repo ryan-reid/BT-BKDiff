@@ -1,16 +1,20 @@
 # Any Shield Runewords
 
 ### Ancients' Pledge
-* **Runes:** Ral Rune \(8\) + Ort Rune \(9\) + Tal Rune \(7\)
+* **Runes:** Ral + Ort + Tal
 * **Base Items:** Any Shield
 * **Properties:**
     * Cold Resist \+30%
     * All Resistances \+13
     * \+50% Enhanced Defense
     * 10% Damage Taken Goes To Mana
+* **Properties from Runes:**
+    * **Ral:** Fire Resist \+35%
+    * **Ort:** Lightning Resist \+35%
+    * **Tal:** Poison Resist \+35%
 
 ### Knight's Vigil
-* **Runes:** Sol Rune \(12\) + Dol Rune \(14\)
+* **Runes:** Sol + Dol
 * **Base Items:** Any Shield
 * **Properties:**
     * \+15 to Strength
@@ -20,9 +24,12 @@
     * \+5\-10% to Maximum Cold Resist
     * \+50% Faster Block Rate
     * All Resistances \+15
+* **Properties from Runes:**
+    * **Sol:** Damage Reduced by 7
+    * **Dol:** \+3 Life after each Kill
 
 ### Rhyme
-* **Runes:** Shael Rune \(13\) + Eth Rune \(5\)
+* **Runes:** Shael + Eth
 * **Base Items:** Any Shield
 * **Properties:**
     * \+20% Faster Block Rate
@@ -31,9 +38,12 @@
     * Cannot Be Frozen
     * 50% Extra Gold from Monsters
     * 25% Better Chance of Getting Magic Items
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Block Rate
+    * **Eth:** Regenerate Mana 15%
 
 ### Sanctuary
-* **Runes:** Ko Rune \(18\) + Ko Rune \(18\) + •Mal Rune \(23\)•
+* **Runes:** Ko + Ko + Mal
 * **Base Items:** Any Shield
 * **Properties:**
     * \+20% Faster Block Rate
@@ -43,9 +53,13 @@
     * All Resistances \+50\-70
     * \+20% Faster Hit Recovery
     * Level 10 Sanctuary Aura When Equipped
+* **Properties from Runes:**
+    * **Ko:** \+10 to Dexterity
+    * **Ko:** \+10 to Dexterity
+    * **Mal:** Magic Damage Reduced by 7
 
 ### Spirit
-* **Runes:** Tal Rune \(7\) + Thul Rune \(10\) + Ort Rune \(9\) + Amn Rune \(11\)
+* **Runes:** Tal + Thul + Ort + Amn
 * **Base Items:** Any Shield
 * **Properties:**
     * \+25% Faster Hit Recovery
@@ -55,9 +69,14 @@
     * \+30% Faster Cast Rate
     * Magic Absorb 3\-8%
     * \+1 to All Skills
+* **Properties from Runes:**
+    * **Tal:** Poison Resist \+35%
+    * **Thul:** Cold Resist \+35%
+    * **Ort:** Lightning Resist \+35%
+    * **Amn:** Attacker Takes Damage of 14
 
 ### Splendor
-* **Runes:** Eth Rune \(5\) + Lum Rune \(17\)
+* **Runes:** Eth + Lum
 * **Base Items:** Any Shield
 * **Properties:**
     * \+3 to Light Radius
@@ -67,9 +86,12 @@
     * \+20% Faster Block Rate
     * \+20% Faster Cast Rate
     * \+1 to All Skills
+* **Properties from Runes:**
+    * **Eth:** Regenerate Mana 15%
+    * **Lum:** \+10 to Energy
 
 ### Trust
-* **Runes:** Ith Rune \(6\) + Eld Rune \(2\)
+* **Runes:** Ith + Eld
 * **Base Items:** Any Shield
 * **Properties:**
     * Regenerate Mana 20%
@@ -78,3 +100,6 @@
     * \+50 Defense vs\. Missile
     * \+50 Defense vs\. Melee
     * \+20\-35 Defense
+* **Properties from Runes:**
+    * **Ith:** 15% Damage Taken Goes To Mana
+    * **Eld:** \+10% Faster Block Rate

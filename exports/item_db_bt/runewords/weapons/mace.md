@@ -1,7 +1,7 @@
 # Mace Runewords
 
 ### Revenge
-* **Runes:** Thul Rune \(10\) + Ort Rune \(9\) + Ral Rune \(8\)
+* **Runes:** Thul + Ort + Ral
 * **Base Items:** Mace
 * **Properties:**
     * \+20% Increased Attack Speed

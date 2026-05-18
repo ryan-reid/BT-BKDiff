@@ -156,6 +156,12 @@ class MarkdownExporter(BaseExporter):
             content += "* **Properties:**\n"
             for prop in rw['properties']:
                 content += f"    * {self.escape_markdown(prop['resolved_text'])}\n"
+            if rw.get('rune_properties'):
+                content += "* **Properties from Runes:**\n"
+                for rune in rw['rune_properties']:
+                    rune_name = self.escape_markdown(rune['rune'])
+                    rune_props = '; '.join(self.escape_markdown(prop['resolved_text']) for prop in rune['properties'])
+                    content += f"    * **{rune_name}:** {rune_props}\n"
             content += "\n"
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(content.strip() + "\n")

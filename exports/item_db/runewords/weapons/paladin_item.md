@@ -1,7 +1,7 @@
 # Paladin Item Runewords
 
 ### Exile
-* **Runes:** •••Vex Rune \(26\)••• + •••Ohm Rune \(27\)••• + •••Ist Rune \(24\)••• + Dol Rune \(14\)
+* **Runes:** Vex + Ohm + Ist + Dol
 * **Base Items:** Paladin Item
 * **Properties:**
     * \+30% Faster Block Rate
@@ -11,3 +11,8 @@
     * \+2 to Offensive Auras Skills
     * 15% Chance to cast level 5 Life Tap on striking
     * Repairs 1 durability in 25 seconds
+* **Properties from Runes:**
+    * **Vex:** \+5% to Maximum Fire Resist; \+2% to Experience Gained
+    * **Ohm:** \+5% to Maximum Cold Resist; \+2% to Experience Gained
+    * **Ist:** 25% Better Chance of Getting Magic Items; \+2% to Experience Gained
+    * **Dol:** \+3 Life after each Kill

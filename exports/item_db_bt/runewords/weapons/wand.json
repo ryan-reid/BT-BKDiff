@@ -2,8 +2,8 @@
   {
     "name": "White",
     "runes": [
-      "Dol Rune (14)",
-      "Io Rune (16)"
+      "Dol",
+      "Io"
     ],
     "base_items": [
       "Wand"
@@ -59,6 +59,7 @@
         "resolved_text": "+4 to Skeleton Mastery (Necromancer only)"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword162",
       "*Rune Name": "White",

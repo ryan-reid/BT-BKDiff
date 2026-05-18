@@ -1,7 +1,7 @@
 # Any Shield Runewords
 
 ### Ancients' Pledge
-* **Runes:** Ral Rune \(8\) + Ort Rune \(9\) + Tal Rune \(7\)
+* **Runes:** Ral + Ort + Tal
 * **Base Items:** Any Shield
 * **Properties:**
     * Cold Resist \+30%
@@ -10,7 +10,7 @@
     * 10% Damage Taken Goes To Mana
 
 ### Knight's Vigil
-* **Runes:** Sol Rune \(12\) + Dol Rune \(14\)
+* **Runes:** Sol + Dol
 * **Base Items:** Any Shield
 * **Properties:**
     * \+15 to Strength
@@ -22,7 +22,7 @@
     * All Resistances \+15
 
 ### Rhyme
-* **Runes:** Shael Rune \(13\) + Eth Rune \(5\)
+* **Runes:** Shael + Eth
 * **Base Items:** Any Shield
 * **Properties:**
     * \+20% Faster Block Rate
@@ -33,7 +33,7 @@
     * 25% Better Chance of Getting Magic Items
 
 ### Sanctuary
-* **Runes:** Ko Rune \(18\) + Ko Rune \(18\) + •Mal Rune \(23\)•
+* **Runes:** Ko + Ko + Mal
 * **Base Items:** Any Shield
 * **Properties:**
     * \+20% Faster Block Rate
@@ -45,7 +45,7 @@
     * Level 10 Sanctuary Aura When Equipped
 
 ### Spirit
-* **Runes:** Tal Rune \(7\) + Thul Rune \(10\) + Ort Rune \(9\) + Amn Rune \(11\)
+* **Runes:** Tal + Thul + Ort + Amn
 * **Base Items:** Any Shield
 * **Properties:**
     * \+25% Faster Hit Recovery
@@ -57,7 +57,7 @@
     * \+1 to All Skills
 
 ### Splendor
-* **Runes:** Eth Rune \(5\) + Lum Rune \(17\)
+* **Runes:** Eth + Lum
 * **Base Items:** Any Shield
 * **Properties:**
     * \+3 to Light Radius
@@ -69,7 +69,7 @@
     * \+1 to All Skills
 
 ### Trust
-* **Runes:** Ith Rune \(6\) + Eld Rune \(2\)
+* **Runes:** Ith + Eld
 * **Base Items:** Any Shield
 * **Properties:**
     * Regenerate Mana 20%

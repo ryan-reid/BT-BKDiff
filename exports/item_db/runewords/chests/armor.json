@@ -2,9 +2,9 @@
   {
     "name": "Authority",
     "runes": [
-      "Hel Rune (15)",
-      "Shael Rune (13)",
-      "Ral Rune (8)"
+      "Hel",
+      "Shael",
+      "Ral"
     ],
     "base_items": [
       "Armor"
@@ -51,6 +51,44 @@
         "min_val": "50",
         "max_val": "50",
         "resolved_text": "+50 Defense"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Hel",
+        "properties": [
+          {
+            "code": "ease",
+            "param": "",
+            "min_val": "-15",
+            "max_val": "-15",
+            "resolved_text": "Requirements --15%"
+          }
+        ]
+      },
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Ral",
+        "properties": [
+          {
+            "code": "res-fire",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Fire Resist +30%"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -112,9 +150,9 @@
   {
     "name": "Bone",
     "runes": [
-      "Sol Rune (12)",
-      "Amn Rune (11)",
-      "Amn Rune (11)"
+      "Sol",
+      "Amn",
+      "Amn"
     ],
     "base_items": [
       "Armor"
@@ -161,6 +199,44 @@
         "min_val": "50",
         "max_val": "50",
         "resolved_text": "+50% Enhanced Defense"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
+      },
+      {
+        "rune": "Amn",
+        "properties": [
+          {
+            "code": "thorns",
+            "param": "",
+            "min_val": "14",
+            "max_val": "14",
+            "resolved_text": "Attacker Takes Damage of 14"
+          }
+        ]
+      },
+      {
+        "rune": "Amn",
+        "properties": [
+          {
+            "code": "thorns",
+            "param": "",
+            "min_val": "14",
+            "max_val": "14",
+            "resolved_text": "Attacker Takes Damage of 14"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -222,10 +298,10 @@
   {
     "name": "Bramble",
     "runes": [
-      "Ral Rune (8)",
-      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
-      "Eth Rune (5)"
+      "Ral",
+      "Ohm",
+      "Sur",
+      "Eth"
     ],
     "base_items": [
       "Armor"
@@ -279,6 +355,70 @@
         "min_val": "33",
         "max_val": "13",
         "resolved_text": "Level 33 Spirit of Barbs (13/# Charges)"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ral",
+        "properties": [
+          {
+            "code": "res-fire",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Fire Resist +30%"
+          }
+        ]
+      },
+      {
+        "rune": "Ohm",
+        "properties": [
+          {
+            "code": "res-cold-max",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "+5% to Maximum Cold Resist"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Sur",
+        "properties": [
+          {
+            "code": "mana%",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "Increase Maximum Mana 5%"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Eth",
+        "properties": [
+          {
+            "code": "regen-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "Regenerate Mana 15%"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -340,10 +480,10 @@
   {
     "name": "Broken Promise",
     "runes": [
-      "Io Rune (16)",
-      "Lum Rune (17)",
-      "Fal Rune (19)",
-      "Ko Rune (18)"
+      "Io",
+      "Lum",
+      "Fal",
+      "Ko"
     ],
     "base_items": [
       "Armor"
@@ -397,6 +537,56 @@
         "min_val": "20",
         "max_val": "20",
         "resolved_text": "20% Better Chance of Getting Magic Items"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Lum",
+        "properties": [
+          {
+            "code": "enr",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Energy"
+          }
+        ]
+      },
+      {
+        "rune": "Fal",
+        "properties": [
+          {
+            "code": "str",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Strength"
+          }
+        ]
+      },
+      {
+        "rune": "Ko",
+        "properties": [
+          {
+            "code": "dex",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Dexterity"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -458,10 +648,10 @@
   {
     "name": "Chains of Honor",
     "runes": [
-      "Dol Rune (14)",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022"
+      "Dol",
+      "Um",
+      "Ber",
+      "Ist"
     ],
     "base_items": [
       "Armor"
@@ -515,6 +705,70 @@
         "min_val": "20",
         "max_val": "20",
         "resolved_text": "+20 to Strength"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Dol",
+        "properties": [
+          {
+            "code": "heal-kill",
+            "param": "",
+            "min_val": "3",
+            "max_val": "3",
+            "resolved_text": "+3 Life after each Kill"
+          }
+        ]
+      },
+      {
+        "rune": "Um",
+        "properties": [
+          {
+            "code": "res-all",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "All Resistances +15"
+          }
+        ]
+      },
+      {
+        "rune": "Ber",
+        "properties": [
+          {
+            "code": "red-dmg%",
+            "param": "",
+            "min_val": "8",
+            "max_val": "8",
+            "resolved_text": "Damage Reduced by 8%"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Ist",
+        "properties": [
+          {
+            "code": "mag%",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "25% Better Chance of Getting Magic Items"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -576,9 +830,9 @@
   {
     "name": "Dragon",
     "runes": [
-      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022",
-      "Sol Rune (12)"
+      "Sur",
+      "Lo",
+      "Sol"
     ],
     "base_items": [
       "Armor"
@@ -632,6 +886,58 @@
         "min_val": "5",
         "max_val": "10",
         "resolved_text": "+5-10 to all Attributes"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Sur",
+        "properties": [
+          {
+            "code": "mana%",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "Increase Maximum Mana 5%"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Lo",
+        "properties": [
+          {
+            "code": "res-ltng-max",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "+5% to Maximum Lightning Resist"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -693,9 +999,9 @@
   {
     "name": "Duress",
     "runes": [
-      "Shael Rune (13)",
-      "\u2022Um Rune (22)\u2022",
-      "Thul Rune (10)"
+      "Shael",
+      "Um",
+      "Thul"
     ],
     "base_items": [
       "Armor"
@@ -749,6 +1055,44 @@
         "min_val": "9",
         "max_val": "15",
         "resolved_text": "+9-15 Life after each Kill"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Um",
+        "properties": [
+          {
+            "code": "res-all",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "All Resistances +15"
+          }
+        ]
+      },
+      {
+        "rune": "Thul",
+        "properties": [
+          {
+            "code": "res-cold",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Cold Resist +30%"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -810,9 +1154,9 @@
   {
     "name": "Enigma",
     "runes": [
-      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
-      "Ith Rune (6)",
-      "Sol Rune (12)"
+      "Jah",
+      "Ith",
+      "Sol"
     ],
     "base_items": [
       "Armor"
@@ -859,6 +1203,51 @@
         "min_val": "",
         "max_val": "",
         "resolved_text": "(0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level)"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Jah",
+        "properties": [
+          {
+            "code": "hp%",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "Increase Maximum Life 5%"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Ith",
+        "properties": [
+          {
+            "code": "dmg-to-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "15% Damage Taken Goes To Mana"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -920,9 +1309,9 @@
   {
     "name": "Enlightenment",
     "runes": [
-      "\u2022Pul Rune (21)\u2022",
-      "Ral Rune (8)",
-      "Sol Rune (12)"
+      "Pul",
+      "Ral",
+      "Sol"
     ],
     "base_items": [
       "Armor"
@@ -962,6 +1351,44 @@
         "min_val": "20",
         "max_val": "20",
         "resolved_text": "+20% Faster Hit Recovery"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Pul",
+        "properties": [
+          {
+            "code": "ac%",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30% Enhanced Defense"
+          }
+        ]
+      },
+      {
+        "rune": "Ral",
+        "properties": [
+          {
+            "code": "res-fire",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Fire Resist +30%"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1023,9 +1450,9 @@
   {
     "name": "Gloom",
     "runes": [
-      "Fal Rune (19)",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022Pul Rune (21)\u2022"
+      "Fal",
+      "Um",
+      "Pul"
     ],
     "base_items": [
       "Armor"
@@ -1079,6 +1506,44 @@
         "min_val": "1",
         "max_val": "1",
         "resolved_text": "Half Freeze Duration"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Fal",
+        "properties": [
+          {
+            "code": "str",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Strength"
+          }
+        ]
+      },
+      {
+        "rune": "Um",
+        "properties": [
+          {
+            "code": "res-all",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "All Resistances +15"
+          }
+        ]
+      },
+      {
+        "rune": "Pul",
+        "properties": [
+          {
+            "code": "ac%",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30% Enhanced Defense"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1140,9 +1605,9 @@
   {
     "name": "Lionheart",
     "runes": [
-      "Hel Rune (15)",
-      "Lum Rune (17)",
-      "Fal Rune (19)"
+      "Hel",
+      "Lum",
+      "Fal"
     ],
     "base_items": [
       "Armor"
@@ -1175,6 +1640,44 @@
         "min_val": "30",
         "max_val": "30",
         "resolved_text": "All Resistances +30"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Hel",
+        "properties": [
+          {
+            "code": "ease",
+            "param": "",
+            "min_val": "-15",
+            "max_val": "-15",
+            "resolved_text": "Requirements --15%"
+          }
+        ]
+      },
+      {
+        "rune": "Lum",
+        "properties": [
+          {
+            "code": "enr",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Energy"
+          }
+        ]
+      },
+      {
+        "rune": "Fal",
+        "properties": [
+          {
+            "code": "str",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Strength"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1236,9 +1739,9 @@
   {
     "name": "Myth",
     "runes": [
-      "Hel Rune (15)",
-      "Amn Rune (11)",
-      "Nef Rune (4)"
+      "Hel",
+      "Amn",
+      "Nef"
     ],
     "base_items": [
       "Armor"
@@ -1285,6 +1788,44 @@
         "min_val": "100",
         "max_val": "100",
         "resolved_text": "+100% Enhanced Defense"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Hel",
+        "properties": [
+          {
+            "code": "ease",
+            "param": "",
+            "min_val": "-15",
+            "max_val": "-15",
+            "resolved_text": "Requirements --15%"
+          }
+        ]
+      },
+      {
+        "rune": "Amn",
+        "properties": [
+          {
+            "code": "thorns",
+            "param": "",
+            "min_val": "14",
+            "max_val": "14",
+            "resolved_text": "Attacker Takes Damage of 14"
+          }
+        ]
+      },
+      {
+        "rune": "Nef",
+        "properties": [
+          {
+            "code": "ac-miss",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30 Defense vs. Missile"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1346,9 +1887,9 @@
   {
     "name": "Peace",
     "runes": [
-      "Shael Rune (13)",
-      "Thul Rune (10)",
-      "Amn Rune (11)"
+      "Shael",
+      "Thul",
+      "Amn"
     ],
     "base_items": [
       "Armor"
@@ -1402,6 +1943,44 @@
         "min_val": "2",
         "max_val": "2",
         "resolved_text": "+2 to Dodge (Amazon only)"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Thul",
+        "properties": [
+          {
+            "code": "res-cold",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Cold Resist +30%"
+          }
+        ]
+      },
+      {
+        "rune": "Amn",
+        "properties": [
+          {
+            "code": "thorns",
+            "param": "",
+            "min_val": "14",
+            "max_val": "14",
+            "resolved_text": "Attacker Takes Damage of 14"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1463,9 +2042,9 @@
   {
     "name": "Pestilence",
     "runes": [
-      "Tal Rune (7)",
-      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022"
+      "Tal",
+      "Cham",
+      "Ist"
     ],
     "base_items": [
       "Armor"
@@ -1519,6 +2098,58 @@
         "min_val": "50",
         "max_val": "50",
         "resolved_text": "Magic Resist +50%"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Tal",
+        "properties": [
+          {
+            "code": "res-pois",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Poison Resist +30%"
+          }
+        ]
+      },
+      {
+        "rune": "Cham",
+        "properties": [
+          {
+            "code": "res-curse",
+            "param": "",
+            "min_val": "34",
+            "max_val": "34",
+            "resolved_text": "Curse Resist +34%"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Ist",
+        "properties": [
+          {
+            "code": "mag%",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "25% Better Chance of Getting Magic Items"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1580,9 +2211,9 @@
   {
     "name": "Principle",
     "runes": [
-      "Ral Rune (8)",
-      "Ko Rune (18)",
-      "Ith Rune (6)"
+      "Ral",
+      "Ko",
+      "Ith"
     ],
     "base_items": [
       "Armor"
@@ -1622,6 +2253,44 @@
         "min_val": "100",
         "max_val": "100",
         "resolved_text": "+100% Enhanced Defense"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ral",
+        "properties": [
+          {
+            "code": "res-fire",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Fire Resist +30%"
+          }
+        ]
+      },
+      {
+        "rune": "Ko",
+        "properties": [
+          {
+            "code": "dex",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Dexterity"
+          }
+        ]
+      },
+      {
+        "rune": "Ith",
+        "properties": [
+          {
+            "code": "dmg-to-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "15% Damage Taken Goes To Mana"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1683,8 +2352,8 @@
   {
     "name": "Prudence",
     "runes": [
-      "\u2022Mal Rune (23)\u2022",
-      "Tir Rune (3)"
+      "Mal",
+      "Tir"
     ],
     "base_items": [
       "Armor"
@@ -1738,6 +2407,32 @@
         "min_val": "1",
         "max_val": "1",
         "resolved_text": "Cannot Be Frozen"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Mal",
+        "properties": [
+          {
+            "code": "red-mag",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Magic Damage Reduced by 7"
+          }
+        ]
+      },
+      {
+        "rune": "Tir",
+        "properties": [
+          {
+            "code": "mana-kill",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2 to Mana after each Kill"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1799,9 +2494,9 @@
   {
     "name": "Rain",
     "runes": [
-      "Ort Rune (9)",
-      "Dol Rune (14)",
-      "Ith Rune (6)"
+      "Ort",
+      "Dol",
+      "Ith"
     ],
     "base_items": [
       "Armor"
@@ -1834,6 +2529,44 @@
         "min_val": "100",
         "max_val": "150",
         "resolved_text": "+100-150 to Mana"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ort",
+        "properties": [
+          {
+            "code": "res-ltng",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Lightning Resist +30%"
+          }
+        ]
+      },
+      {
+        "rune": "Dol",
+        "properties": [
+          {
+            "code": "heal-kill",
+            "param": "",
+            "min_val": "3",
+            "max_val": "3",
+            "resolved_text": "+3 Life after each Kill"
+          }
+        ]
+      },
+      {
+        "rune": "Ith",
+        "properties": [
+          {
+            "code": "dmg-to-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "15% Damage Taken Goes To Mana"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1895,9 +2628,9 @@
   {
     "name": "Red",
     "runes": [
-      "Io Rune (16)",
-      "Eld Rune (2)",
-      "Dol Rune (14)"
+      "Io",
+      "Eld",
+      "Dol"
     ],
     "base_items": [
       "Armor"
@@ -1951,6 +2684,44 @@
         "min_val": "50",
         "max_val": "80",
         "resolved_text": "+50-80% Enhanced Defense"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Eld",
+        "properties": [
+          {
+            "code": "regen",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "Replenish Life +5"
+          }
+        ]
+      },
+      {
+        "rune": "Dol",
+        "properties": [
+          {
+            "code": "heal-kill",
+            "param": "",
+            "min_val": "3",
+            "max_val": "3",
+            "resolved_text": "+3 Life after each Kill"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -2012,8 +2783,8 @@
   {
     "name": "Smoke",
     "runes": [
-      "Nef Rune (4)",
-      "Lum Rune (17)"
+      "Nef",
+      "Lum"
     ],
     "base_items": [
       "Armor"
@@ -2060,6 +2831,32 @@
         "min_val": "20",
         "max_val": "13",
         "resolved_text": "20% Chance to cast level 13 Cloak of Shadows when struck"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Nef",
+        "properties": [
+          {
+            "code": "ac-miss",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30 Defense vs. Missile"
+          }
+        ]
+      },
+      {
+        "rune": "Lum",
+        "properties": [
+          {
+            "code": "enr",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Energy"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -2121,8 +2918,8 @@
   {
     "name": "Stealth",
     "runes": [
-      "Tal Rune (7)",
-      "Eth Rune (5)"
+      "Tal",
+      "Eth"
     ],
     "base_items": [
       "Armor"
@@ -2169,6 +2966,32 @@
         "min_val": "25",
         "max_val": "25",
         "resolved_text": "+25% Faster Hit Recovery"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Tal",
+        "properties": [
+          {
+            "code": "res-pois",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Poison Resist +30%"
+          }
+        ]
+      },
+      {
+        "rune": "Eth",
+        "properties": [
+          {
+            "code": "regen-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "Regenerate Mana 15%"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -2230,10 +3053,10 @@
   {
     "name": "Stone",
     "runes": [
-      "Shael Rune (13)",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022Pul Rune (21)\u2022",
-      "Lum Rune (17)"
+      "Shael",
+      "Um",
+      "Pul",
+      "Lum"
     ],
     "base_items": [
       "Armor"
@@ -2287,6 +3110,56 @@
         "min_val": "40",
         "max_val": "40",
         "resolved_text": "+40% Faster Hit Recovery"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Um",
+        "properties": [
+          {
+            "code": "res-all",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "All Resistances +15"
+          }
+        ]
+      },
+      {
+        "rune": "Pul",
+        "properties": [
+          {
+            "code": "ac%",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30% Enhanced Defense"
+          }
+        ]
+      },
+      {
+        "rune": "Lum",
+        "properties": [
+          {
+            "code": "enr",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Energy"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -2348,9 +3221,9 @@
   {
     "name": "Treachery",
     "runes": [
-      "Shael Rune (13)",
-      "Thul Rune (10)",
-      "\u2022Lem Rune (20)\u2022"
+      "Shael",
+      "Thul",
+      "Lem"
     ],
     "base_items": [
       "Armor"
@@ -2383,6 +3256,44 @@
         "min_val": "45",
         "max_val": "45",
         "resolved_text": "+45% Increased Attack Speed"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Thul",
+        "properties": [
+          {
+            "code": "res-cold",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Cold Resist +30%"
+          }
+        ]
+      },
+      {
+        "rune": "Lem",
+        "properties": [
+          {
+            "code": "gold%",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "50% Extra Gold from Monsters"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -2444,9 +3355,9 @@
   {
     "name": "Wealth",
     "runes": [
-      "\u2022Lem Rune (20)\u2022",
-      "Ko Rune (18)",
-      "Tir Rune (3)"
+      "Lem",
+      "Ko",
+      "Tir"
     ],
     "base_items": [
       "Armor"
@@ -2479,6 +3390,44 @@
         "min_val": "10",
         "max_val": "10",
         "resolved_text": "+10% Increased Attack Speed"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Lem",
+        "properties": [
+          {
+            "code": "gold%",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "50% Extra Gold from Monsters"
+          }
+        ]
+      },
+      {
+        "rune": "Ko",
+        "properties": [
+          {
+            "code": "dex",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Dexterity"
+          }
+        ]
+      },
+      {
+        "rune": "Tir",
+        "properties": [
+          {
+            "code": "mana-kill",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2 to Mana after each Kill"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -2540,9 +3489,9 @@
   {
     "name": "Hustle (armor)",
     "runes": [
-      "Shael Rune (13)",
-      "Ko Rune (18)",
-      "Eld Rune (2)"
+      "Shael",
+      "Ko",
+      "Eld"
     ],
     "base_items": [
       "Armor"
@@ -2582,6 +3531,44 @@
         "min_val": "6",
         "max_val": "6",
         "resolved_text": "+6 to Evade"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Ko",
+        "properties": [
+          {
+            "code": "dex",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Dexterity"
+          }
+        ]
+      },
+      {
+        "rune": "Eld",
+        "properties": [
+          {
+            "code": "regen",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "Replenish Life +5"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -2643,9 +3630,9 @@
   {
     "name": "Dilemma",
     "runes": [
-      "Dol Rune (14)",
-      "\u2022Lem Rune (20)\u2022",
-      "\u2022Mal Rune (23)\u2022"
+      "Dol",
+      "Lem",
+      "Mal"
     ],
     "base_items": [
       "Armor"
@@ -2678,6 +3665,44 @@
         "min_val": "35",
         "max_val": "50",
         "resolved_text": "35-50% Better Chance of Getting Magic Items"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Dol",
+        "properties": [
+          {
+            "code": "heal-kill",
+            "param": "",
+            "min_val": "3",
+            "max_val": "3",
+            "resolved_text": "+3 Life after each Kill"
+          }
+        ]
+      },
+      {
+        "rune": "Lem",
+        "properties": [
+          {
+            "code": "gold%",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "50% Extra Gold from Monsters"
+          }
+        ]
+      },
+      {
+        "rune": "Mal",
+        "properties": [
+          {
+            "code": "red-mag",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Magic Damage Reduced by 7"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -2739,9 +3764,9 @@
   {
     "name": "Shadows",
     "runes": [
-      "Shael Rune (13)",
-      "Sol Rune (12)",
-      "Ko Rune (18)"
+      "Shael",
+      "Sol",
+      "Ko"
     ],
     "base_items": [
       "Armor"
@@ -2788,6 +3813,44 @@
         "min_val": "30",
         "max_val": "30",
         "resolved_text": "Cold Resist +30%"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
+      },
+      {
+        "rune": "Ko",
+        "properties": [
+          {
+            "code": "dex",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Dexterity"
+          }
+        ]
       }
     ],
     "raw_row": {

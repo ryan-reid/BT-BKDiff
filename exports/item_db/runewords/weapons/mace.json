@@ -2,9 +2,9 @@
   {
     "name": "Revenge",
     "runes": [
-      "Thul Rune (10)",
-      "Ort Rune (9)",
-      "Ral Rune (8)"
+      "Thul",
+      "Ort",
+      "Ral"
     ],
     "base_items": [
       "Mace"
@@ -37,6 +37,44 @@
         "min_val": "33",
         "max_val": "8",
         "resolved_text": "33% Chance to cast level 8 Frost Nova on striking"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Thul",
+        "properties": [
+          {
+            "code": "dmg-cold",
+            "param": "75",
+            "min_val": "3",
+            "max_val": "14",
+            "resolved_text": "Adds 3-14 Cold Damage"
+          }
+        ]
+      },
+      {
+        "rune": "Ort",
+        "properties": [
+          {
+            "code": "dmg-ltng",
+            "param": "",
+            "min_val": "1",
+            "max_val": "50",
+            "resolved_text": "Adds 1-50 Lightning Damage"
+          }
+        ]
+      },
+      {
+        "rune": "Ral",
+        "properties": [
+          {
+            "code": "dmg-fire",
+            "param": "",
+            "min_val": "5",
+            "max_val": "30",
+            "resolved_text": "Adds 5-30 Fire Damage"
+          }
+        ]
       }
     ],
     "raw_row": {

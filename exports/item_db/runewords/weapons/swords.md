@@ -1,7 +1,7 @@
 # Swords Runewords
 
 ### Grief
-* **Runes:** Eth Rune \(5\) + Tir Rune \(3\) + •••Gul Rune \(25\)••• + •••Vex Rune \(26\)••• + Ral Rune \(8\)
+* **Runes:** Eth + Tir + Gul + Vex + Ral
 * **Base Items:** Swords
 * **Properties:**
     * 33% Deadly Strike
@@ -11,9 +11,15 @@
     * \-20\-25% to Enemy Poison Resistance
     * Ignore Target's Defense
     * \+10\-15 Life after each Kill
+* **Properties from Runes:**
+    * **Eth:** \-25% Target Defense
+    * **Tir:** \+2 to Mana after each Kill
+    * **Gul:** 20% Bonus to Attack Rating; \+2% to Experience Gained
+    * **Vex:** 7% Mana stolen per hit; \+2% to Experience Gained
+    * **Ral:** Adds 5\-30 Fire Damage
 
 ### Last Wish
-* **Runes:** •••Jah Rune \(31\)••• + •Mal Rune \(23\)• + •••Jah Rune \(31\)••• + •••Sur Rune \(29\)••• + •••Jah Rune \(31\)••• + •••Ber Rune \(30\)•••
+* **Runes:** Jah + Mal + Jah + Sur + Jah + Ber
 * **Base Items:** Swords
 * **Properties:**
     * \+330\-375% Enhanced Damage
@@ -23,9 +29,16 @@
     * 40\-50% Chance of Crushing Blow
     * \(0\.5% per clvl\) Better Chance of Getting Magic Items \(Based on Character Level\)
     * Level 17 Might Aura When Equipped
+* **Properties from Runes:**
+    * **Jah:** Ignore Target's Defense; \+2% to Experience Gained
+    * **Mal:** Prevent Monster Heal
+    * **Jah:** Ignore Target's Defense; \+2% to Experience Gained
+    * **Sur:** Hit Blinds Target \+1; \+2% to Experience Gained
+    * **Jah:** Ignore Target's Defense; \+2% to Experience Gained
+    * **Ber:** 20% Chance of Crushing Blow; \+2% to Experience Gained
 
 ### Lawbringer
-* **Runes:** Amn Rune \(11\) + •Lem Rune \(20\)• + Ko Rune \(18\)
+* **Runes:** Amn + Lem + Ko
 * **Base Items:** Swords
 * **Properties:**
     * Adds 200\-210 Cold Damage
@@ -35,9 +48,13 @@
     * \+200\-250 Defense vs\. Missile
     * \+200\-250 Defense vs\. Melee
     * \-50% Target Defense
+* **Properties from Runes:**
+    * **Amn:** 7% Life stolen per hit
+    * **Lem:** 75% Extra Gold from Monsters
+    * **Ko:** \+10 to Dexterity
 
 ### Oath
-* **Runes:** Shael Rune \(13\) + •Pul Rune \(21\)• + •Mal Rune \(23\)• + Lum Rune \(17\)
+* **Runes:** Shael + Pul + Mal + Lum
 * **Base Items:** Swords
 * **Properties:**
     * \+210\-340% Enhanced Damage
@@ -47,9 +64,14 @@
     * Level 20 Heart of Wolverine \(16/\# Charges\)
     * Magic Absorb 10\-15%
     * Indestructible
+* **Properties from Runes:**
+    * **Shael:** \+20% Increased Attack Speed
+    * **Pul:** \+100 to Attack Rating against Demons; \+75% Damage to Demons
+    * **Mal:** Prevent Monster Heal
+    * **Lum:** \+10 to Energy
 
 ### Plague
-* **Runes:** •••Cham Rune \(32\)••• + Shael Rune \(13\) + •Um Rune \(22\)•
+* **Runes:** Cham + Shael + Um
 * **Base Items:** Swords
 * **Properties:**
     * \+220\-320% Enhanced Damage
@@ -59,9 +81,13 @@
     * \(0\.4% per clvl\) Deadly Strike \(Based on Character Level\)
     * Level 13\-17 Cleansing Aura When Equipped
     * \+2 to All Skills
+* **Properties from Runes:**
+    * **Cham:** Slows Target by 20%; \+2% to Experience Gained
+    * **Shael:** \+20% Increased Attack Speed
+    * **Um:** 25% Chance of Open Wounds
 
 ### Unbending Will
-* **Runes:** Fal Rune \(19\) + Io Rune \(16\) + Ith Rune \(6\) + Eld Rune \(2\) + El Rune \(1\) + Hel Rune \(15\)
+* **Runes:** Fal + Io + Ith + Eld + El + Hel
 * **Base Items:** Swords
 * **Properties:**
     * \+3 to Combat Skills
@@ -71,3 +97,10 @@
     * Damage Reduced by 8
     * Prevent Monster Heal
     * 8\-10% Life stolen per hit
+* **Properties from Runes:**
+    * **Fal:** \+10 to Strength
+    * **Io:** \+10 to Vitality
+    * **Ith:** \+9 to Maximum Damage
+    * **Eld:** \+100 to Attack Rating against Undead; \+75% Damage to Undead
+    * **El:** \+5 to Light Radius; \+50 to Attack Rating
+    * **Hel:** Requirements \-\-20%

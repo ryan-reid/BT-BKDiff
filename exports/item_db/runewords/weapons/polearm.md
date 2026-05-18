@@ -1,7 +1,7 @@
 # Polearm Runewords
 
 ### Infinity
-* **Runes:** •••Ber Rune \(30\)••• + •Mal Rune \(23\)• + •••Ber Rune \(30\)••• + •••Ist Rune \(24\)•••
+* **Runes:** Ber + Mal + Ber + Ist
 * **Base Items:** Polearm
 * **Properties:**
     * \+255\-325% Enhanced Damage
@@ -11,9 +11,14 @@
     * 50% Chance to cast level 20 Chain Lightning when you Kill an Enemy
     * \-45\-55% to Enemy Lightning Resistance
     * Level 30 Cyclone Armor \(21/\# Charges\)
+* **Properties from Runes:**
+    * **Ber:** 20% Chance of Crushing Blow; \+2% to Experience Gained
+    * **Mal:** Prevent Monster Heal
+    * **Ber:** 20% Chance of Crushing Blow; \+2% to Experience Gained
+    * **Ist:** 30% Better Chance of Getting Magic Items; \+2% to Experience Gained
 
 ### Insight
-* **Runes:** Ral Rune \(8\) + Tir Rune \(3\) + Tal Rune \(7\) + Sol Rune \(12\)
+* **Runes:** Ral + Tir + Tal + Sol
 * **Base Items:** Polearm
 * **Properties:**
     * \+200\-260% Enhanced Damage
@@ -23,9 +28,14 @@
     * \+35% Faster Cast Rate
     * Level 12\-17 Meditation Aura When Equipped
     * \+5 to all Attributes
+* **Properties from Runes:**
+    * **Ral:** Adds 5\-30 Fire Damage
+    * **Tir:** \+2 to Mana after each Kill
+    * **Tal:** Adds 154\-154 Poison Damage Over 154 Seconds
+    * **Sol:** \+9 to Minimum Damage
 
 ### Obedience
-* **Runes:** Hel Rune \(15\) + Ko Rune \(18\) + Thul Rune \(10\) + Eth Rune \(5\) + Fal Rune \(19\)
+* **Runes:** Hel + Ko + Thul + Eth + Fal
 * **Base Items:** Polearm
 * **Properties:**
     * \+370% Enhanced Damage
@@ -35,9 +45,15 @@
     * \+25% Increased Attack Speed
     * \+40% Faster Hit Recovery
     * All Resistances \+20\-30
+* **Properties from Runes:**
+    * **Hel:** Requirements \-\-20%
+    * **Ko:** \+10 to Dexterity
+    * **Thul:** Adds 3\-14 Cold Damage
+    * **Eth:** \-25% Target Defense
+    * **Fal:** \+10 to Strength
 
 ### Whisper
-* **Runes:** •••Ber Rune \(30\)••• + •••Ber Rune \(30\)••• + •••Ist Rune \(24\)••• + •Mal Rune \(23\)•
+* **Runes:** Ber + Ber + Ist + Mal
 * **Base Items:** Polearm
 * **Properties:**
     * \+255\-325% Enhanced Damage
@@ -47,3 +63,8 @@
     * 50% Chance to cast level 20 Bone Spear when you Kill an Enemy
     * \-45\-55% to Enemy Magic Resistance
     * Level 30 Cyclone Armor \(21/\# Charges\)
+* **Properties from Runes:**
+    * **Ber:** 20% Chance of Crushing Blow; \+2% to Experience Gained
+    * **Ber:** 20% Chance of Crushing Blow; \+2% to Experience Gained
+    * **Ist:** 30% Better Chance of Getting Magic Items; \+2% to Experience Gained
+    * **Mal:** Prevent Monster Heal

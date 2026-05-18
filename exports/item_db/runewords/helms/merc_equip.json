@@ -2,9 +2,9 @@
   {
     "name": "Delirium",
     "runes": [
-      "\u2022Lem Rune (20)\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
-      "Io Rune (16)"
+      "Lem",
+      "Ist",
+      "Io"
     ],
     "base_items": [
       "Merc Equip"
@@ -58,6 +58,51 @@
         "min_val": "8",
         "max_val": "8",
         "resolved_text": "+8% to Experience Gained"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Lem",
+        "properties": [
+          {
+            "code": "gold%",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "50% Extra Gold from Monsters"
+          }
+        ]
+      },
+      {
+        "rune": "Ist",
+        "properties": [
+          {
+            "code": "mag%",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "25% Better Chance of Getting Magic Items"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -119,9 +164,9 @@
   {
     "name": "Dream",
     "runes": [
-      "Io Rune (16)",
-      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
-      "\u2022Pul Rune (21)\u2022"
+      "Io",
+      "Jah",
+      "Pul"
     ],
     "base_items": [
       "Merc Equip"
@@ -175,6 +220,51 @@
         "min_val": "20",
         "max_val": "30",
         "resolved_text": "20-30% Better Chance of Getting Magic Items"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Jah",
+        "properties": [
+          {
+            "code": "hp%",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "Increase Maximum Life 5%"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Pul",
+        "properties": [
+          {
+            "code": "ac%",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30% Enhanced Defense"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -236,9 +326,9 @@
   {
     "name": "Flickering Flame",
     "runes": [
-      "Nef Rune (4)",
-      "\u2022Pul Rune (21)\u2022",
-      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022"
+      "Nef",
+      "Pul",
+      "Vex"
     ],
     "base_items": [
       "Merc Equip"
@@ -285,6 +375,51 @@
         "min_val": "50",
         "max_val": "50",
         "resolved_text": "Poison Length Reduced by 50%"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Nef",
+        "properties": [
+          {
+            "code": "ac-miss",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30 Defense vs. Missile"
+          }
+        ]
+      },
+      {
+        "rune": "Pul",
+        "properties": [
+          {
+            "code": "ac%",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30% Enhanced Defense"
+          }
+        ]
+      },
+      {
+        "rune": "Vex",
+        "properties": [
+          {
+            "code": "res-fire-max",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "+5% to Maximum Fire Resist"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -346,9 +481,9 @@
   {
     "name": "Fortune",
     "runes": [
-      "Sol Rune (12)",
-      "Tir Rune (3)",
-      "Shael Rune (13)"
+      "Sol",
+      "Tir",
+      "Shael"
     ],
     "base_items": [
       "Merc Equip"
@@ -395,6 +530,44 @@
         "min_val": "5",
         "max_val": "5",
         "resolved_text": "+5 to Mana after each Kill"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
+      },
+      {
+        "rune": "Tir",
+        "properties": [
+          {
+            "code": "mana-kill",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2 to Mana after each Kill"
+          }
+        ]
+      },
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -456,9 +629,9 @@
   {
     "name": "Hunger",
     "runes": [
-      "Shael Rune (13)",
-      "Sol Rune (12)",
-      "Fal Rune (19)"
+      "Shael",
+      "Sol",
+      "Fal"
     ],
     "base_items": [
       "Merc Equip"
@@ -512,6 +685,44 @@
         "min_val": "25",
         "max_val": "25",
         "resolved_text": "+25% Faster Run/Walk"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
+      },
+      {
+        "rune": "Fal",
+        "properties": [
+          {
+            "code": "str",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Strength"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -573,8 +784,8 @@
   {
     "name": "Knowledge",
     "runes": [
-      "Ith Rune (6)",
-      "Tir Rune (3)"
+      "Ith",
+      "Tir"
     ],
     "base_items": [
       "Merc Equip"
@@ -607,6 +818,32 @@
         "min_val": "3",
         "max_val": "3",
         "resolved_text": "+3 to Warmth"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ith",
+        "properties": [
+          {
+            "code": "dmg-to-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "15% Damage Taken Goes To Mana"
+          }
+        ]
+      },
+      {
+        "rune": "Tir",
+        "properties": [
+          {
+            "code": "mana-kill",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2 to Mana after each Kill"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -668,8 +905,8 @@
   {
     "name": "Lore",
     "runes": [
-      "Ort Rune (9)",
-      "Sol Rune (12)"
+      "Ort",
+      "Sol"
     ],
     "base_items": [
       "Merc Equip"
@@ -702,6 +939,32 @@
         "min_val": "2",
         "max_val": "2",
         "resolved_text": "+2 to Mana after each Kill"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ort",
+        "properties": [
+          {
+            "code": "res-ltng",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Lightning Resist +30%"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -763,8 +1026,8 @@
   {
     "name": "Nadir",
     "runes": [
-      "Nef Rune (4)",
-      "Tir Rune (3)"
+      "Nef",
+      "Tir"
     ],
     "base_items": [
       "Merc Equip"
@@ -818,6 +1081,32 @@
         "min_val": "4",
         "max_val": "4",
         "resolved_text": "Damage Reduced by 4"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Nef",
+        "properties": [
+          {
+            "code": "ac-miss",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30 Defense vs. Missile"
+          }
+        ]
+      },
+      {
+        "rune": "Tir",
+        "properties": [
+          {
+            "code": "mana-kill",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2 to Mana after each Kill"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -879,9 +1168,9 @@
   {
     "name": "Radiance",
     "runes": [
-      "Nef Rune (4)",
-      "Sol Rune (12)",
-      "Ith Rune (6)"
+      "Nef",
+      "Sol",
+      "Ith"
     ],
     "base_items": [
       "Merc Equip"
@@ -935,6 +1224,44 @@
         "min_val": "5",
         "max_val": "5",
         "resolved_text": "Magic Damage Reduced by 5"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Nef",
+        "properties": [
+          {
+            "code": "ac-miss",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30 Defense vs. Missile"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
+      },
+      {
+        "rune": "Ith",
+        "properties": [
+          {
+            "code": "dmg-to-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "15% Damage Taken Goes To Mana"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -996,9 +1323,9 @@
   {
     "name": "Wisdom",
     "runes": [
-      "\u2022Pul Rune (21)\u2022",
-      "Ith Rune (6)",
-      "Eld Rune (2)"
+      "Pul",
+      "Ith",
+      "Eld"
     ],
     "base_items": [
       "Merc Equip"
@@ -1045,6 +1372,44 @@
         "min_val": "10",
         "max_val": "10",
         "resolved_text": "+10 to Energy"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Pul",
+        "properties": [
+          {
+            "code": "ac%",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "+30% Enhanced Defense"
+          }
+        ]
+      },
+      {
+        "rune": "Ith",
+        "properties": [
+          {
+            "code": "dmg-to-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "15% Damage Taken Goes To Mana"
+          }
+        ]
+      },
+      {
+        "rune": "Eld",
+        "properties": [
+          {
+            "code": "regen",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "Replenish Life +5"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1106,9 +1471,9 @@
   {
     "name": "Metamorphosis",
     "runes": [
-      "Io Rune (16)",
-      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022",
-      "Fal Rune (19)"
+      "Io",
+      "Cham",
+      "Fal"
     ],
     "base_items": [
       "Merc Equip"
@@ -1162,6 +1527,51 @@
         "min_val": "30",
         "max_val": "30",
         "resolved_text": "+30% Faster Run/Walk"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Cham",
+        "properties": [
+          {
+            "code": "res-curse",
+            "param": "",
+            "min_val": "34",
+            "max_val": "34",
+            "resolved_text": "Curse Resist +34%"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Fal",
+        "properties": [
+          {
+            "code": "str",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Strength"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1223,9 +1633,9 @@
   {
     "name": "Ground",
     "runes": [
-      "Shael Rune (13)",
-      "Io Rune (16)",
-      "Ort Rune (9)"
+      "Shael",
+      "Io",
+      "Ort"
     ],
     "base_items": [
       "Merc Equip"
@@ -1258,6 +1668,44 @@
         "min_val": "10",
         "max_val": "15",
         "resolved_text": "+10-15 Lightning Absorb"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Ort",
+        "properties": [
+          {
+            "code": "res-ltng",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Lightning Resist +30%"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1319,9 +1767,9 @@
   {
     "name": "Temper",
     "runes": [
-      "Shael Rune (13)",
-      "Io Rune (16)",
-      "Ral Rune (8)"
+      "Shael",
+      "Io",
+      "Ral"
     ],
     "base_items": [
       "Merc Equip"
@@ -1354,6 +1802,44 @@
         "min_val": "10",
         "max_val": "15",
         "resolved_text": "+10-15 Fire Absorb"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Ral",
+        "properties": [
+          {
+            "code": "res-fire",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Fire Resist +30%"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1415,9 +1901,9 @@
   {
     "name": "Hearth",
     "runes": [
-      "Shael Rune (13)",
-      "Io Rune (16)",
-      "Thul Rune (10)"
+      "Shael",
+      "Io",
+      "Thul"
     ],
     "base_items": [
       "Merc Equip"
@@ -1457,6 +1943,44 @@
         "min_val": "1",
         "max_val": "1",
         "resolved_text": "Cannot Be Frozen"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Thul",
+        "properties": [
+          {
+            "code": "res-cold",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Cold Resist +30%"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1518,9 +2042,9 @@
   {
     "name": "Cure",
     "runes": [
-      "Shael Rune (13)",
-      "Io Rune (16)",
-      "Tal Rune (7)"
+      "Shael",
+      "Io",
+      "Tal"
     ],
     "base_items": [
       "Merc Equip"
@@ -1560,6 +2084,44 @@
         "min_val": "1",
         "max_val": "1",
         "resolved_text": "Level 1 Cleansing Aura When Equipped"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Tal",
+        "properties": [
+          {
+            "code": "res-pois",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Poison Resist +30%"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1621,9 +2183,9 @@
   {
     "name": "Bulwark",
     "runes": [
-      "Shael Rune (13)",
-      "Io Rune (16)",
-      "Sol Rune (12)"
+      "Shael",
+      "Io",
+      "Sol"
     ],
     "base_items": [
       "Merc Equip"
@@ -1663,6 +2225,44 @@
         "min_val": "4",
         "max_val": "6",
         "resolved_text": "4-6% Life stolen per hit"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "balance2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Hit Recovery"
+          }
+        ]
+      },
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1724,9 +2324,9 @@
   {
     "name": "Coven",
     "runes": [
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
-      "Ral Rune (8)",
-      "Io Rune (16)"
+      "Ist",
+      "Ral",
+      "Io"
     ],
     "base_items": [
       "Merc Equip"
@@ -1773,6 +2373,51 @@
         "min_val": "1",
         "max_val": "5",
         "resolved_text": "+1-5 Life after each Kill"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ist",
+        "properties": [
+          {
+            "code": "mag%",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "25% Better Chance of Getting Magic Items"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Ral",
+        "properties": [
+          {
+            "code": "res-fire",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "Fire Resist +30%"
+          }
+        ]
+      },
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
       }
     ],
     "raw_row": {

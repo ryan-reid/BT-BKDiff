@@ -2,9 +2,9 @@
   {
     "name": "Revenge",
     "runes": [
-      "Thul Rune (10)",
-      "Ort Rune (9)",
-      "Ral Rune (8)"
+      "Thul",
+      "Ort",
+      "Ral"
     ],
     "base_items": [
       "Mace"
@@ -39,6 +39,7 @@
         "resolved_text": "33% Chance to cast level 8 Frost Nova on striking"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword183",
       "*Rune Name": "Revenge",

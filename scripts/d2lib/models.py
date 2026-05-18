@@ -21,6 +21,7 @@ class RunewordDTO(TypedDict):
     runes: List[str]
     base_items: List[str]
     properties: List[PropertyDTO]
+    rune_properties: List[Dict[str, Any]]
     raw_row: Dict[str, str]
 
 class ExcelDiffRowDTO(TypedDict):

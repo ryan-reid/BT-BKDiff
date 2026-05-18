@@ -1,7 +1,7 @@
 # Armor Runewords
 
 ### Authority
-* **Runes:** Hel Rune \(15\) + Shael Rune \(13\) + Ral Rune \(8\)
+* **Runes:** Hel + Shael + Ral
 * **Base Items:** Armor
 * **Properties:**
     * \+2 to Warlock Skill Levels
@@ -10,9 +10,13 @@
     * \+2 to Mana after each Kill
     * \+2 Life after each Kill
     * \+50 Defense
+* **Properties from Runes:**
+    * **Hel:** Requirements \-\-15%
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Ral:** Fire Resist \+30%
 
 ### Bone
-* **Runes:** Sol Rune \(12\) + Amn Rune \(11\) + Amn Rune \(11\)
+* **Runes:** Sol + Amn + Amn
 * **Base Items:** Armor
 * **Properties:**
     * \+15\-20% Faster Cast Rate
@@ -21,9 +25,13 @@
     * \+100\-150 to Mana
     * All Resistances \+15
     * \+50% Enhanced Defense
+* **Properties from Runes:**
+    * **Sol:** Damage Reduced by 7
+    * **Amn:** Attacker Takes Damage of 14
+    * **Amn:** Attacker Takes Damage of 14
 
 ### Bramble
-* **Runes:** Ral Rune \(8\) + •••Ohm Rune \(27\)••• + •••Sur Rune \(29\)••• + Eth Rune \(5\)
+* **Runes:** Ral + Ohm + Sur + Eth
 * **Base Items:** Armor
 * **Properties:**
     * \+50% Faster Hit Recovery
@@ -33,9 +41,14 @@
     * \+40\-50% to Poison Skill Damage
     * Poison Resist \+100%
     * Level 33 Spirit of Barbs \(13/\# Charges\)
+* **Properties from Runes:**
+    * **Ral:** Fire Resist \+30%
+    * **Ohm:** \+5% to Maximum Cold Resist; \+2% to Experience Gained
+    * **Sur:** Increase Maximum Mana 5%; \+2% to Experience Gained
+    * **Eth:** Regenerate Mana 15%
 
 ### Broken Promise
-* **Runes:** Io Rune \(16\) + Lum Rune \(17\) + Fal Rune \(19\) + Ko Rune \(18\)
+* **Runes:** Io + Lum + Fal + Ko
 * **Base Items:** Armor
 * **Properties:**
     * \+20% Faster Hit Recovery
@@ -45,9 +58,14 @@
     * Cannot Be Frozen
     * \+20% Increased Attack Speed
     * 20% Better Chance of Getting Magic Items
+* **Properties from Runes:**
+    * **Io:** \+10 to Vitality
+    * **Lum:** \+10 to Energy
+    * **Fal:** \+10 to Strength
+    * **Ko:** \+10 to Dexterity
 
 ### Chains of Honor
-* **Runes:** Dol Rune \(14\) + •Um Rune \(22\)• + •••Ber Rune \(30\)••• + •••Ist Rune \(24\)•••
+* **Runes:** Dol + Um + Ber + Ist
 * **Base Items:** Armor
 * **Properties:**
     * All Resistances \+50
@@ -57,9 +75,14 @@
     * 8% Life stolen per hit
     * \+2 to All Skills
     * \+20 to Strength
+* **Properties from Runes:**
+    * **Dol:** \+3 Life after each Kill
+    * **Um:** All Resistances \+15
+    * **Ber:** Damage Reduced by 8%; \+2% to Experience Gained
+    * **Ist:** 25% Better Chance of Getting Magic Items; \+2% to Experience Gained
 
 ### Dragon
-* **Runes:** •••Sur Rune \(29\)••• + •••Lo Rune \(28\)••• + Sol Rune \(12\)
+* **Runes:** Sur + Lo + Sol
 * **Base Items:** Armor
 * **Properties:**
     * \+360 Defense
@@ -69,9 +92,13 @@
     * 20% Chance to cast level 18 Venom when struck
     * Level 16\-21 Holy Fire Aura When Equipped
     * \+5\-10 to all Attributes
+* **Properties from Runes:**
+    * **Sur:** Increase Maximum Mana 5%; \+2% to Experience Gained
+    * **Lo:** \+5% to Maximum Lightning Resist; \+2% to Experience Gained
+    * **Sol:** Damage Reduced by 7
 
 ### Duress
-* **Runes:** Shael Rune \(13\) + •Um Rune \(22\)• + Thul Rune \(10\)
+* **Runes:** Shael + Um + Thul
 * **Base Items:** Armor
 * **Properties:**
     * \+15\-20 to Mana after each Kill
@@ -81,9 +108,13 @@
     * 33% Chance of Open Wounds
     * 15% Chance of Crushing Blow
     * \+9\-15 Life after each Kill
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Um:** All Resistances \+15
+    * **Thul:** Cold Resist \+30%
 
 ### Enigma
-* **Runes:** •••Jah Rune \(31\)••• + Ith Rune \(6\) + Sol Rune \(12\)
+* **Runes:** Jah + Ith + Sol
 * **Base Items:** Armor
 * **Properties:**
     * \+750\-775 Defense
@@ -92,9 +123,13 @@
     * \+2 to All Skills
     * \+1 to Teleport
     * \(0\.5% per clvl\) Better Chance of Getting Magic Items \(Based on Character Level\)
+* **Properties from Runes:**
+    * **Jah:** Increase Maximum Life 5%; \+2% to Experience Gained
+    * **Ith:** 15% Damage Taken Goes To Mana
+    * **Sol:** Damage Reduced by 7
 
 ### Enlightenment
-* **Runes:** •Pul Rune \(21\)• + Ral Rune \(8\) + Sol Rune \(12\)
+* **Runes:** Pul + Ral + Sol
 * **Base Items:** Armor
 * **Properties:**
     * \+15\-20% Faster Cast Rate
@@ -102,9 +137,13 @@
     * \+2 to Sorceress Skill Levels
     * \+1 to Warmth
     * \+20% Faster Hit Recovery
+* **Properties from Runes:**
+    * **Pul:** \+30% Enhanced Defense
+    * **Ral:** Fire Resist \+30%
+    * **Sol:** Damage Reduced by 7
 
 ### Gloom
-* **Runes:** Fal Rune \(19\) + •Um Rune \(22\)• + •Pul Rune \(21\)•
+* **Runes:** Fal + Um + Pul
 * **Base Items:** Armor
 * **Properties:**
     * \+170\-230% Enhanced Defense
@@ -114,18 +153,26 @@
     * 5% Damage Taken Goes To Mana
     * 100% Chance to cast level 55 Meteor when you Die
     * Half Freeze Duration
+* **Properties from Runes:**
+    * **Fal:** \+10 to Strength
+    * **Um:** All Resistances \+15
+    * **Pul:** \+30% Enhanced Defense
 
 ### Lionheart
-* **Runes:** Hel Rune \(15\) + Lum Rune \(17\) + Fal Rune \(19\)
+* **Runes:** Hel + Lum + Fal
 * **Base Items:** Armor
 * **Properties:**
     * \+15\-30 to all Attributes
     * \+90\-150% Enhanced Damage
     * \+50 to Life
     * All Resistances \+30
+* **Properties from Runes:**
+    * **Hel:** Requirements \-\-15%
+    * **Lum:** \+10 to Energy
+    * **Fal:** \+10 to Strength
 
 ### Myth
-* **Runes:** Hel Rune \(15\) + Amn Rune \(11\) + Nef Rune \(4\)
+* **Runes:** Hel + Amn + Nef
 * **Base Items:** Armor
 * **Properties:**
     * 20% Chance to cast level 10 Taunt on striking
@@ -134,9 +181,13 @@
     * Replenish Life \+10
     * \+100\-150 to Life
     * \+100% Enhanced Defense
+* **Properties from Runes:**
+    * **Hel:** Requirements \-\-15%
+    * **Amn:** Attacker Takes Damage of 14
+    * **Nef:** \+30 Defense vs\. Missile
 
 ### Peace
-* **Runes:** Shael Rune \(13\) + Thul Rune \(10\) + Amn Rune \(11\)
+* **Runes:** Shael + Thul + Amn
 * **Base Items:** Armor
 * **Properties:**
     * \+25% Faster Run/Walk
@@ -146,9 +197,13 @@
     * \+2 to Evade \(Amazon only\)
     * \+2 to Avoid \(Amazon only\)
     * \+2 to Dodge \(Amazon only\)
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Thul:** Cold Resist \+30%
+    * **Amn:** Attacker Takes Damage of 14
 
 ### Pestilence
-* **Runes:** Tal Rune \(7\) + •••Cham Rune \(32\)••• + •••Ist Rune \(24\)•••
+* **Runes:** Tal + Cham + Ist
 * **Base Items:** Armor
 * **Properties:**
     * \+3 to Poison Skills
@@ -158,9 +213,13 @@
     * 50% Chance to cast level 50 Lower Resist when struck
     * Level 15 Cleansing Aura When Equipped
     * Magic Resist \+50%
+* **Properties from Runes:**
+    * **Tal:** Poison Resist \+30%
+    * **Cham:** Curse Resist \+34%; \+2% to Experience Gained
+    * **Ist:** 25% Better Chance of Getting Magic Items; \+2% to Experience Gained
 
 ### Principle
-* **Runes:** Ral Rune \(8\) + Ko Rune \(18\) + Ith Rune \(6\)
+* **Runes:** Ral + Ko + Ith
 * **Base Items:** Armor
 * **Properties:**
     * 100% Chance to cast level 20 Blessed Hammer on striking
@@ -168,9 +227,13 @@
     * \+100\-150 to Life
     * 100% Bonus to Attack Rating
     * \+100% Enhanced Defense
+* **Properties from Runes:**
+    * **Ral:** Fire Resist \+30%
+    * **Ko:** \+10 to Dexterity
+    * **Ith:** 15% Damage Taken Goes To Mana
 
 ### Prudence
-* **Runes:** •Mal Rune \(23\)• + Tir Rune \(3\)
+* **Runes:** Mal + Tir
 * **Base Items:** Armor
 * **Properties:**
     * \+140\-170% Enhanced Defense
@@ -180,18 +243,25 @@
     * \+25% Faster Hit Recovery
     * Repairs 1 durability in 25 seconds
     * Cannot Be Frozen
+* **Properties from Runes:**
+    * **Mal:** Magic Damage Reduced by 7
+    * **Tir:** \+2 to Mana after each Kill
 
 ### Rain
-* **Runes:** Ort Rune \(9\) + Dol Rune \(14\) + Ith Rune \(6\)
+* **Runes:** Ort + Dol + Ith
 * **Base Items:** Armor
 * **Properties:**
     * \+15\-20% Faster Cast Rate
     * 5% Chance to cast level 15 Cyclone Armor when struck
     * \+2 to Druid Skill Levels
     * \+100\-150 to Mana
+* **Properties from Runes:**
+    * **Ort:** Lightning Resist \+30%
+    * **Dol:** \+3 Life after each Kill
+    * **Ith:** 15% Damage Taken Goes To Mana
 
 ### Red
-* **Runes:** Io Rune \(16\) + Eld Rune \(2\) + Dol Rune \(14\)
+* **Runes:** Io + Eld + Dol
 * **Base Items:** Armor
 * **Properties:**
     * Increase Maximum Life 15\-25%
@@ -201,9 +271,13 @@
     * Fire Resist \+75%
     * \+20 Fire Absorb
     * \+50\-80% Enhanced Defense
+* **Properties from Runes:**
+    * **Io:** \+10 to Vitality
+    * **Eld:** Replenish Life \+5
+    * **Dol:** \+3 Life after each Kill
 
 ### Smoke
-* **Runes:** Nef Rune \(4\) + Lum Rune \(17\)
+* **Runes:** Nef + Lum
 * **Base Items:** Armor
 * **Properties:**
     * \+250 Defense vs\. Missile
@@ -212,9 +286,12 @@
     * \+20% Faster Hit Recovery
     * \(0\.4\-0\.6 per clvl\) to Strength \(Based on Character Level\)
     * 20% Chance to cast level 13 Cloak of Shadows when struck
+* **Properties from Runes:**
+    * **Nef:** \+30 Defense vs\. Missile
+    * **Lum:** \+10 to Energy
 
 ### Stealth
-* **Runes:** Tal Rune \(7\) + Eth Rune \(5\)
+* **Runes:** Tal + Eth
 * **Base Items:** Armor
 * **Properties:**
     * Magic Damage Reduced by 3
@@ -223,9 +300,12 @@
     * \+25% Faster Run/Walk
     * \+25% Faster Cast Rate
     * \+25% Faster Hit Recovery
+* **Properties from Runes:**
+    * **Tal:** Poison Resist \+30%
+    * **Eth:** Regenerate Mana 15%
 
 ### Stone
-* **Runes:** Shael Rune \(13\) + •Um Rune \(22\)• + •Pul Rune \(21\)• + Lum Rune \(17\)
+* **Runes:** Shael + Um + Pul + Lum
 * **Base Items:** Armor
 * **Properties:**
     * \+350\-400% Enhanced Defense
@@ -235,27 +315,40 @@
     * \+15\-20 to Strength
     * \+15\-20 to Vitality
     * \+40% Faster Hit Recovery
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Um:** All Resistances \+15
+    * **Pul:** \+30% Enhanced Defense
+    * **Lum:** \+10 to Energy
 
 ### Treachery
-* **Runes:** Shael Rune \(13\) + Thul Rune \(10\) + •Lem Rune \(20\)•
+* **Runes:** Shael + Thul + Lem
 * **Base Items:** Armor
 * **Properties:**
     * 25% Chance to cast level 15 Venom on striking
     * 50% Chance to cast level 15 Fade when struck
     * \+2 to Assassin Skill Levels
     * \+45% Increased Attack Speed
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Thul:** Cold Resist \+30%
+    * **Lem:** 50% Extra Gold from Monsters
 
 ### Wealth
-* **Runes:** •Lem Rune \(20\)• + Ko Rune \(18\) + Tir Rune \(3\)
+* **Runes:** Lem + Ko + Tir
 * **Base Items:** Armor
 * **Properties:**
     * 250% Extra Gold from Monsters
     * \(1\.0% per clvl\) Better Chance of Getting Magic Items \(Based on Character Level\)
     * \+20% Faster Run/Walk
     * \+10% Increased Attack Speed
+* **Properties from Runes:**
+    * **Lem:** 50% Extra Gold from Monsters
+    * **Ko:** \+10 to Dexterity
+    * **Tir:** \+2 to Mana after each Kill
 
 ### Hustle \(armor\)
-* **Runes:** Shael Rune \(13\) + Ko Rune \(18\) + Eld Rune \(2\)
+* **Runes:** Shael + Ko + Eld
 * **Base Items:** Armor
 * **Properties:**
     * \+65% Faster Run/Walk
@@ -263,18 +356,26 @@
     * \+40% Increased Attack Speed
     * All Resistances \+10
     * \+6 to Evade
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Ko:** \+10 to Dexterity
+    * **Eld:** Replenish Life \+5
 
 ### Dilemma
-* **Runes:** Dol Rune \(14\) + •Lem Rune \(20\)• + •Mal Rune \(23\)•
+* **Runes:** Dol + Lem + Mal
 * **Base Items:** Armor
 * **Properties:**
     * \+1 to Teleport
     * Replenish Life \+\-40\-\-20
     * \+\-35\-\-25 Life after each Kill
     * 35\-50% Better Chance of Getting Magic Items
+* **Properties from Runes:**
+    * **Dol:** \+3 Life after each Kill
+    * **Lem:** 50% Extra Gold from Monsters
+    * **Mal:** Magic Damage Reduced by 7
 
 ### Shadows
-* **Runes:** Shael Rune \(13\) + Sol Rune \(12\) + Ko Rune \(18\)
+* **Runes:** Shael + Sol + Ko
 * **Base Items:** Armor
 * **Properties:**
     * \+45% Increased Attack Speed
@@ -283,3 +384,7 @@
     * \+2 to Assassin Skill Levels
     * 5% Deadly Strike
     * Cold Resist \+30%
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Sol:** Damage Reduced by 7
+    * **Ko:** \+10 to Dexterity

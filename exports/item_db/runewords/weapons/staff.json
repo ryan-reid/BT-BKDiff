@@ -2,10 +2,10 @@
   {
     "name": "Heart of the Oak",
     "runes": [
-      "Ko Rune (18)",
-      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
-      "\u2022Pul Rune (21)\u2022",
-      "Thul Rune (10)"
+      "Ko",
+      "Vex",
+      "Pul",
+      "Thul"
     ],
     "base_items": [
       "Staff"
@@ -52,6 +52,70 @@
         "min_val": "60",
         "max_val": "14",
         "resolved_text": "Level 60 Raven (14/# Charges)"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ko",
+        "properties": [
+          {
+            "code": "dex",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Dexterity"
+          }
+        ]
+      },
+      {
+        "rune": "Vex",
+        "properties": [
+          {
+            "code": "manasteal",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "7% Mana stolen per hit"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Pul",
+        "properties": [
+          {
+            "code": "att-demon",
+            "param": "",
+            "min_val": "100",
+            "max_val": "100",
+            "resolved_text": "+100 to Attack Rating against Demons"
+          },
+          {
+            "code": "dmg-demon",
+            "param": "",
+            "min_val": "75",
+            "max_val": "75",
+            "resolved_text": "+75% Damage to Demons"
+          }
+        ]
+      },
+      {
+        "rune": "Thul",
+        "properties": [
+          {
+            "code": "dmg-cold",
+            "param": "75",
+            "min_val": "3",
+            "max_val": "14",
+            "resolved_text": "Adds 3-14 Cold Damage"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -113,8 +177,8 @@
   {
     "name": "Leaf",
     "runes": [
-      "Tir Rune (3)",
-      "Ral Rune (8)"
+      "Tir",
+      "Ral"
     ],
     "base_items": [
       "Staff"
@@ -161,6 +225,32 @@
         "min_val": "3",
         "max_val": "3",
         "resolved_text": "+3 to Warmth (Sorceress only)"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Tir",
+        "properties": [
+          {
+            "code": "mana-kill",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2 to Mana after each Kill"
+          }
+        ]
+      },
+      {
+        "rune": "Ral",
+        "properties": [
+          {
+            "code": "dmg-fire",
+            "param": "",
+            "min_val": "5",
+            "max_val": "30",
+            "resolved_text": "Adds 5-30 Fire Damage"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -222,10 +312,10 @@
   {
     "name": "Memory",
     "runes": [
-      "Lum Rune (17)",
-      "Io Rune (16)",
-      "Sol Rune (12)",
-      "Eth Rune (5)"
+      "Lum",
+      "Io",
+      "Sol",
+      "Eth"
     ],
     "base_items": [
       "Staff"
@@ -279,6 +369,56 @@
         "min_val": "2",
         "max_val": "2",
         "resolved_text": "+2 to Static Field (Sorceress only)"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Lum",
+        "properties": [
+          {
+            "code": "enr",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Energy"
+          }
+        ]
+      },
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "dmg-min",
+            "param": "",
+            "min_val": "9",
+            "max_val": "9",
+            "resolved_text": "+9 to Minimum Damage"
+          }
+        ]
+      },
+      {
+        "rune": "Eth",
+        "properties": [
+          {
+            "code": "reduce-ac",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "-25% Target Defense"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -340,12 +480,12 @@
   {
     "name": "Obsession",
     "runes": [
-      "\u2022\u2022\u2022Zod Rune  (33)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
-      "\u2022Lem Rune (20)\u2022",
-      "Lum Rune (17)",
-      "Io Rune (16)",
-      "Nef Rune (4)"
+      "Zod",
+      "Ist",
+      "Lem",
+      "Lum",
+      "Io",
+      "Nef"
     ],
     "base_items": [
       "Staff"
@@ -399,6 +539,101 @@
         "min_val": "15",
         "max_val": "30",
         "resolved_text": "Regenerate Mana 15-30%"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Zod",
+        "properties": [
+          {
+            "code": "indestruct",
+            "param": "",
+            "min_val": "1",
+            "max_val": "1",
+            "resolved_text": "Indestructible"
+          },
+          {
+            "code": "allskills",
+            "param": "",
+            "min_val": "1",
+            "max_val": "1",
+            "resolved_text": "+1 to All Skills"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Ist",
+        "properties": [
+          {
+            "code": "mag%",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "30% Better Chance of Getting Magic Items"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Lem",
+        "properties": [
+          {
+            "code": "gold%",
+            "param": "",
+            "min_val": "75",
+            "max_val": "75",
+            "resolved_text": "75% Extra Gold from Monsters"
+          }
+        ]
+      },
+      {
+        "rune": "Lum",
+        "properties": [
+          {
+            "code": "enr",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Energy"
+          }
+        ]
+      },
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
+      },
+      {
+        "rune": "Nef",
+        "properties": [
+          {
+            "code": "knock",
+            "param": "",
+            "min_val": "1",
+            "max_val": "1",
+            "resolved_text": "Knockback"
+          }
+        ]
       }
     ],
     "raw_row": {

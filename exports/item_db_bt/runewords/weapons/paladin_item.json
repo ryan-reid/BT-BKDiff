@@ -2,10 +2,10 @@
   {
     "name": "Exile",
     "runes": [
-      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
-      "Dol Rune (14)"
+      "Vex",
+      "Ohm",
+      "Ist",
+      "Dol"
     ],
     "base_items": [
       "Paladin Item"
@@ -61,6 +61,7 @@
         "resolved_text": "Repairs 1 durability in 25 seconds"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword37",
       "*Rune Name": "Exile",

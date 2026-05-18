@@ -1,21 +1,5 @@
 # Added Set Hand to Hand 2
 
-**Natalya's Mark** (Natalya's Mark)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| | **Base Item:** Scissors Suwayyah |
-| | **Level Requirement:** 79 |
-| | **Properties:** |
-| | $\color{blue}{\text{+40\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+200-250\% Enhanced Damage}}$ |
-| | $\color{blue}{\text{Ignore Target's Defense}}$ |
-| | $\color{blue}{\text{Adds 100-100 Cold Damage}}$ |
-| | $\color{blue}{\text{Adds 100-100 Fire Damage}}$ |
-| | $\color{blue}{\text{+200\% Damage to Undead}}$ |
-| | $\color{blue}{\text{+200\% Damage to Demons}}$ |
-| | $\color{blue}{\text{+2-3 to All Skills}}$ |
-
 **Natalya's Scar** (Natalya's Scar)
 
 | BT Diablo (Old) | BK Diablo (New) |

@@ -2,9 +2,9 @@
   {
     "name": "Bone",
     "runes": [
-      "Sol Rune (12)",
-      "Amn Rune (11)",
-      "Amn Rune (11)"
+      "Sol",
+      "Amn",
+      "Amn"
     ],
     "base_items": [
       "Armor"
@@ -46,6 +46,7 @@
         "resolved_text": "All Resistances +15"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword8",
       "*Rune Name": "Bone",
@@ -103,10 +104,10 @@
   {
     "name": "Bramble",
     "runes": [
-      "Ral Rune (8)",
-      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
-      "Eth Rune (5)"
+      "Ral",
+      "Ohm",
+      "Sur",
+      "Eth"
     ],
     "base_items": [
       "Armor"
@@ -162,6 +163,7 @@
         "resolved_text": "Level 33 Spirit of Barbs (13/# Charges)"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword9",
       "*Rune Name": "Bramble",
@@ -219,10 +221,10 @@
   {
     "name": "Broken Promise",
     "runes": [
-      "Io Rune (16)",
-      "Lum Rune (17)",
-      "Fal Rune (19)",
-      "Ko Rune (18)"
+      "Io",
+      "Lum",
+      "Fal",
+      "Ko"
     ],
     "base_items": [
       "Armor"
@@ -278,6 +280,7 @@
         "resolved_text": "20% Better Chance of Getting Magic Items"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword12",
       "*Rune Name": "Broken Promise",
@@ -335,10 +338,10 @@
   {
     "name": "Chains of Honor",
     "runes": [
-      "Dol Rune (14)",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022"
+      "Dol",
+      "Um",
+      "Ber",
+      "Ist"
     ],
     "base_items": [
       "Armor"
@@ -394,6 +397,7 @@
         "resolved_text": "+20 to Strength"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword14",
       "*Rune Name": "Chains of Honor",
@@ -451,9 +455,9 @@
   {
     "name": "Dragon",
     "runes": [
-      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022",
-      "Sol Rune (12)"
+      "Sur",
+      "Lo",
+      "Sol"
     ],
     "base_items": [
       "Armor"
@@ -509,6 +513,7 @@
         "resolved_text": "+5-10 to all Attributes"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword27",
       "*Rune Name": "Dragon",
@@ -566,9 +571,9 @@
   {
     "name": "Duress",
     "runes": [
-      "Shael Rune (13)",
-      "\u2022Um Rune (22)\u2022",
-      "Thul Rune (10)"
+      "Shael",
+      "Um",
+      "Thul"
     ],
     "base_items": [
       "Armor"
@@ -624,6 +629,7 @@
         "resolved_text": "+9-15 Life after each Kill"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword30",
       "*Rune Name": "Duress",
@@ -681,9 +687,9 @@
   {
     "name": "Enigma",
     "runes": [
-      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
-      "Ith Rune (6)",
-      "Sol Rune (12)"
+      "Jah",
+      "Ith",
+      "Sol"
     ],
     "base_items": [
       "Armor"
@@ -732,6 +738,7 @@
         "resolved_text": "(0.5% per clvl) Better Chance of Getting Magic Items (Based on Character Level)"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword33",
       "*Rune Name": "Enigma",
@@ -789,9 +796,9 @@
   {
     "name": "Enlightenment",
     "runes": [
-      "\u2022Pul Rune (21)\u2022",
-      "Ral Rune (8)",
-      "Sol Rune (12)"
+      "Pul",
+      "Ral",
+      "Sol"
     ],
     "base_items": [
       "Armor"
@@ -833,6 +840,7 @@
         "resolved_text": "+20% Faster Hit Recovery"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword34",
       "*Rune Name": "Enlightenment",
@@ -890,9 +898,9 @@
   {
     "name": "Gloom",
     "runes": [
-      "Fal Rune (19)",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022Pul Rune (21)\u2022"
+      "Fal",
+      "Um",
+      "Pul"
     ],
     "base_items": [
       "Armor"
@@ -948,6 +956,7 @@
         "resolved_text": "Half Freeze Duration"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword45",
       "*Rune Name": "Gloom",
@@ -1005,9 +1014,9 @@
   {
     "name": "Lionheart",
     "runes": [
-      "Hel Rune (15)",
-      "Lum Rune (17)",
-      "Fal Rune (19)"
+      "Hel",
+      "Lum",
+      "Fal"
     ],
     "base_items": [
       "Armor"
@@ -1056,6 +1065,7 @@
         "resolved_text": "All Resistances +30"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword74",
       "*Rune Name": "Lionheart",
@@ -1113,9 +1123,9 @@
   {
     "name": "Myth",
     "runes": [
-      "Hel Rune (15)",
-      "Amn Rune (11)",
-      "Nef Rune (4)"
+      "Hel",
+      "Amn",
+      "Nef"
     ],
     "base_items": [
       "Armor"
@@ -1150,6 +1160,7 @@
         "resolved_text": "Replenish Life +10"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword87",
       "*Rune Name": "Myth",
@@ -1207,9 +1218,9 @@
   {
     "name": "Peace",
     "runes": [
-      "Shael Rune (13)",
-      "Thul Rune (10)",
-      "Amn Rune (11)"
+      "Shael",
+      "Thul",
+      "Amn"
     ],
     "base_items": [
       "Armor"
@@ -1244,6 +1255,7 @@
         "resolved_text": "+2 to Critical Strike"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword98",
       "*Rune Name": "Peace",
@@ -1301,9 +1313,9 @@
   {
     "name": "Pestilence",
     "runes": [
-      "Tal Rune (7)",
-      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022"
+      "Tal",
+      "Cham",
+      "Ist"
     ],
     "base_items": [
       "Armor"
@@ -1359,6 +1371,7 @@
         "resolved_text": "Magic Resist +50%"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword102",
       "*Rune Name": "Pestilence",
@@ -1416,9 +1429,9 @@
   {
     "name": "Principle",
     "runes": [
-      "Ral Rune (8)",
-      "Ko Rune (18)",
-      "Eld Rune (2)"
+      "Ral",
+      "Ko",
+      "Eld"
     ],
     "base_items": [
       "Armor"
@@ -1453,6 +1466,7 @@
         "resolved_text": "+50% Damage to Undead"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword110",
       "*Rune Name": "Principle",
@@ -1510,8 +1524,8 @@
   {
     "name": "Prudence",
     "runes": [
-      "\u2022Mal Rune (23)\u2022",
-      "Tir Rune (3)"
+      "Mal",
+      "Tir"
     ],
     "base_items": [
       "Armor"
@@ -1567,6 +1581,7 @@
         "resolved_text": "Cannot Be Frozen"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword112",
       "*Rune Name": "Prudence",
@@ -1624,9 +1639,9 @@
   {
     "name": "Rain",
     "runes": [
-      "Ort Rune (9)",
-      "Dol Rune (14)",
-      "Ith Rune (6)"
+      "Ort",
+      "Dol",
+      "Ith"
     ],
     "base_items": [
       "Armor"
@@ -1661,6 +1676,7 @@
         "resolved_text": "+100-150 to Mana"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword117",
       "*Rune Name": "Rain",
@@ -1718,9 +1734,9 @@
   {
     "name": "Red",
     "runes": [
-      "Io Rune (16)",
-      "Eld Rune (2)",
-      "Dol Rune (14)"
+      "Io",
+      "Eld",
+      "Dol"
     ],
     "base_items": [
       "Armor"
@@ -1776,6 +1792,7 @@
         "resolved_text": "+50-80% Enhanced Defense"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword119",
       "*Rune Name": "Red",
@@ -1833,8 +1850,8 @@
   {
     "name": "Smoke",
     "runes": [
-      "Nef Rune (4)",
-      "Lum Rune (17)"
+      "Nef",
+      "Lum"
     ],
     "base_items": [
       "Armor"
@@ -1883,6 +1900,7 @@
         "resolved_text": "20% Chance to cast level 13 Cloak of Shadows when you Kill an Enemy"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword128",
       "*Rune Name": "Smoke",
@@ -1940,8 +1958,8 @@
   {
     "name": "Stealth",
     "runes": [
-      "Tal Rune (7)",
-      "Eth Rune (5)"
+      "Tal",
+      "Eth"
     ],
     "base_items": [
       "Armor"
@@ -1990,6 +2008,7 @@
         "resolved_text": "+25% Faster Hit Recovery"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword133",
       "*Rune Name": "Stealth",
@@ -2047,10 +2066,10 @@
   {
     "name": "Stone",
     "runes": [
-      "Shael Rune (13)",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022Pul Rune (21)\u2022",
-      "Lum Rune (17)"
+      "Shael",
+      "Um",
+      "Pul",
+      "Lum"
     ],
     "base_items": [
       "Armor"
@@ -2106,6 +2125,7 @@
         "resolved_text": "+40% Faster Hit Recovery"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword137",
       "*Rune Name": "Stone",
@@ -2163,9 +2183,9 @@
   {
     "name": "Treachery",
     "runes": [
-      "Shael Rune (13)",
-      "Thul Rune (10)",
-      "\u2022Lem Rune (20)\u2022"
+      "Shael",
+      "Thul",
+      "Lem"
     ],
     "base_items": [
       "Armor"
@@ -2200,6 +2220,7 @@
         "resolved_text": "+45% Increased Attack Speed"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword148",
       "*Rune Name": "Treachery",
@@ -2257,9 +2278,9 @@
   {
     "name": "Wealth",
     "runes": [
-      "\u2022Lem Rune (20)\u2022",
-      "Ko Rune (18)",
-      "Tir Rune (3)"
+      "Lem",
+      "Ko",
+      "Tir"
     ],
     "base_items": [
       "Armor"
@@ -2294,6 +2315,7 @@
         "resolved_text": "+10% Increased Attack Speed"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword160",
       "*Rune Name": "Wealth",
@@ -2351,9 +2373,9 @@
   {
     "name": "Hustle (armor)",
     "runes": [
-      "Shael Rune (13)",
-      "Ko Rune (18)",
-      "Eld Rune (2)"
+      "Shael",
+      "Ko",
+      "Eld"
     ],
     "base_items": [
       "Armor"
@@ -2395,6 +2417,7 @@
         "resolved_text": "+6 to Evade"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword172",
       "*Rune Name": "Hustle (armor)",
@@ -2452,9 +2475,9 @@
   {
     "name": "Dilemma",
     "runes": [
-      "Dol Rune (14)",
-      "\u2022Lem Rune (20)\u2022",
-      "\u2022Mal Rune (23)\u2022"
+      "Dol",
+      "Lem",
+      "Mal"
     ],
     "base_items": [
       "Armor"
@@ -2489,6 +2512,7 @@
         "resolved_text": "35-50% Better Chance of Getting Magic Items"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword181",
       "*Rune Name": "Dilemma",
@@ -2546,9 +2570,9 @@
   {
     "name": "Shadows",
     "runes": [
-      "Shael Rune (13)",
-      "Sol Rune (12)",
-      "Ko Rune (18)"
+      "Shael",
+      "Sol",
+      "Ko"
     ],
     "base_items": [
       "Armor"
@@ -2597,6 +2621,7 @@
         "resolved_text": "Cold Resist +30%"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword182",
       "*Rune Name": "Shadows",

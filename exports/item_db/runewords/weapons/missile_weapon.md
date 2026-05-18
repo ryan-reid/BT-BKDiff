@@ -1,7 +1,7 @@
 # Missile Weapon Runewords
 
 ### Brand
-* **Runes:** •••Jah Rune \(31\)••• + •••Lo Rune \(28\)••• + •Mal Rune \(23\)• + •••Gul Rune \(25\)•••
+* **Runes:** Jah + Lo + Mal + Gul
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+260\-340% Enhanced Damage
@@ -11,9 +11,14 @@
     * Knockback
     * \+30% Increased Attack Speed
     * Fires Explosive Arrows or Bolts
+* **Properties from Runes:**
+    * **Jah:** Ignore Target's Defense; \+2% to Experience Gained
+    * **Lo:** 20% Deadly Strike; \+2% to Experience Gained
+    * **Mal:** Prevent Monster Heal
+    * **Gul:** 20% Bonus to Attack Rating; \+2% to Experience Gained
 
 ### Edge
-* **Runes:** Tir Rune \(3\) + Tal Rune \(7\) + Amn Rune \(11\)
+* **Runes:** Tir + Tal + Amn
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+280\-320% Enhanced Damage
@@ -23,9 +28,13 @@
     * Level 15 Thorns Aura When Equipped
     * \+5\-10 to all Attributes
     * Reduces all Vendor Prices 15%
+* **Properties from Runes:**
+    * **Tir:** \+2 to Mana after each Kill
+    * **Tal:** Adds 154\-154 Poison Damage Over 154 Seconds
+    * **Amn:** 7% Life stolen per hit
 
 ### Faith
-* **Runes:** •••Ohm Rune \(27\)••• + •••Jah Rune \(31\)••• + •Lem Rune \(20\)• + Eld Rune \(2\)
+* **Runes:** Ohm + Jah + Lem + Eld
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+280% Enhanced Damage
@@ -35,9 +44,14 @@
     * Level 12\-15 Fanaticism Aura When Equipped
     * Reanimate As: \[Returned\]
     * \+2 to All Skills
+* **Properties from Runes:**
+    * **Ohm:** \+50% Enhanced Damage; \+2% to Experience Gained
+    * **Jah:** Ignore Target's Defense; \+2% to Experience Gained
+    * **Lem:** 75% Extra Gold from Monsters
+    * **Eld:** \+100 to Attack Rating against Undead; \+75% Damage to Undead
 
 ### Harmony
-* **Runes:** Tir Rune \(3\) + Ith Rune \(6\) + Sol Rune \(12\) + Ko Rune \(18\)
+* **Runes:** Tir + Ith + Sol + Ko
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+275\-325% Enhanced Damage
@@ -47,9 +61,14 @@
     * \+2\-6 to Valkyrie
     * Regenerate Mana 20%
     * \+2 to Light Radius
+* **Properties from Runes:**
+    * **Tir:** \+2 to Mana after each Kill
+    * **Ith:** \+9 to Maximum Damage
+    * **Sol:** \+9 to Minimum Damage
+    * **Ko:** \+10 to Dexterity
 
 ### Ice
-* **Runes:** Amn Rune \(11\) + Shael Rune \(13\) + •••Jah Rune \(31\)••• + •••Lo Rune \(28\)•••
+* **Runes:** Amn + Shael + Jah + Lo
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+140\-210% Enhanced Damage
@@ -59,9 +78,14 @@
     * 100% Chance to cast level 40 Blizzard when you Level\-Up
     * \-25\-30% to Enemy Cold Resistance
     * \(3\.1% per clvl\) Extra Gold from Monsters \(Based on Character Level\)
+* **Properties from Runes:**
+    * **Amn:** 7% Life stolen per hit
+    * **Shael:** \+20% Increased Attack Speed
+    * **Jah:** Ignore Target's Defense; \+2% to Experience Gained
+    * **Lo:** 20% Deadly Strike; \+2% to Experience Gained
 
 ### Melody
-* **Runes:** Shael Rune \(13\) + Ko Rune \(18\) + Nef Rune \(4\)
+* **Runes:** Shael + Ko + Nef
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+50% Enhanced Damage
@@ -70,9 +94,13 @@
     * \+3 to Dodge \(Amazon only\)
     * \+3 to Slow Missiles \(Amazon only\)
     * \+300% Damage to Undead
+* **Properties from Runes:**
+    * **Shael:** \+20% Increased Attack Speed
+    * **Ko:** \+10 to Dexterity
+    * **Nef:** Knockback
 
 ### Mist
-* **Runes:** •••Cham Rune \(32\)••• + Shael Rune \(13\) + •••Gul Rune \(25\)••• + Thul Rune \(10\) + Ith Rune \(6\)
+* **Runes:** Cham + Shael + Gul + Thul + Ith
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+3 to All Skills
@@ -81,9 +109,15 @@
     * Piercing Attack
     * \+24 to Vitality
     * All Resistances \+40
+* **Properties from Runes:**
+    * **Cham:** Slows Target by 20%; \+2% to Experience Gained
+    * **Shael:** \+20% Increased Attack Speed
+    * **Gul:** 20% Bonus to Attack Rating; \+2% to Experience Gained
+    * **Thul:** Adds 3\-14 Cold Damage
+    * **Ith:** \+9 to Maximum Damage
 
 ### Wrath
-* **Runes:** •Pul Rune \(21\)• + Lum Rune \(17\) + •••Ber Rune \(30\)••• + •Mal Rune \(23\)•
+* **Runes:** Pul + Lum + Ber + Mal
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+300\-375% Enhanced Damage
@@ -93,9 +127,14 @@
     * 10\-20% Deadly Strike
     * 30% Chance to cast level 7 Decrepify on striking
     * Cannot Be Frozen
+* **Properties from Runes:**
+    * **Pul:** \+100 to Attack Rating against Demons; \+75% Damage to Demons
+    * **Lum:** \+10 to Energy
+    * **Ber:** 20% Chance of Crushing Blow; \+2% to Experience Gained
+    * **Mal:** Prevent Monster Heal
 
 ### Zephyr
-* **Runes:** Ort Rune \(9\) + Eth Rune \(5\)
+* **Runes:** Ort + Eth
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+25% Faster Run/Walk
@@ -105,3 +144,6 @@
     * 14% Chance to cast level 2 Twister on striking
     * Piercing Attack
     * \+30 to Mana
+* **Properties from Runes:**
+    * **Ort:** Adds 1\-50 Lightning Damage
+    * **Eth:** \-25% Target Defense

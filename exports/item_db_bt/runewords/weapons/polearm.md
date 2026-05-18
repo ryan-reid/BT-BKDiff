@@ -1,7 +1,7 @@
 # Polearm Runewords
 
 ### Infinity
-* **Runes:** •••Ber Rune \(30\)••• + •Mal Rune \(23\)• + •••Ber Rune \(30\)••• + •••Ist Rune \(24\)•••
+* **Runes:** Ber + Mal + Ber + Ist
 * **Base Items:** Polearm
 * **Properties:**
     * \+255\-325% Enhanced Damage
@@ -13,7 +13,7 @@
     * Level 30 Cyclone Armor \(21/\# Charges\)
 
 ### Insight
-* **Runes:** Ral Rune \(8\) + Tir Rune \(3\) + Tal Rune \(7\) + Sol Rune \(12\)
+* **Runes:** Ral + Tir + Tal + Sol
 * **Base Items:** Polearm
 * **Properties:**
     * \+200\-260% Enhanced Damage
@@ -25,7 +25,7 @@
     * \+5 to all Attributes
 
 ### Obedience
-* **Runes:** Hel Rune \(15\) + Ko Rune \(18\) + Thul Rune \(10\) + Eth Rune \(5\) + Fal Rune \(19\)
+* **Runes:** Hel + Ko + Thul + Eth + Fal
 * **Base Items:** Polearm
 * **Properties:**
     * \+370% Enhanced Damage
@@ -37,7 +37,7 @@
     * All Resistances \+20\-30
 
 ### Whisper
-* **Runes:** •••Ber Rune \(30\)••• + •••Ber Rune \(30\)••• + •••Ist Rune \(24\)••• + •Mal Rune \(23\)•
+* **Runes:** Ber + Ber + Ist + Mal
 * **Base Items:** Polearm
 * **Properties:**
     * \+255\-325% Enhanced Damage

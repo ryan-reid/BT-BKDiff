@@ -1,7 +1,7 @@
 # Hand to Hand Runewords
 
 ### Chaos
-* **Runes:** Fal Rune \(19\) + •••Ohm Rune \(27\)••• + •Um Rune \(22\)•
+* **Runes:** Fal + Ohm + Um
 * **Base Items:** Hand to Hand
 * **Properties:**
     * \+15 Life after each Demon Kill
@@ -13,7 +13,7 @@
     * Repairs 1 durability in 100 seconds
 
 ### Pattern
-* **Runes:** Tal Rune \(7\) + Ort Rune \(9\) + Thul Rune \(10\)
+* **Runes:** Tal + Ort + Thul
 * **Base Items:** Hand to Hand
 * **Properties:**
     * \+15% Increased Attack Speed

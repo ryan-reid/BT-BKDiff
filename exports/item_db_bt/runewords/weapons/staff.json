@@ -2,10 +2,10 @@
   {
     "name": "Heart of the Oak",
     "runes": [
-      "Ko Rune (18)",
-      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
-      "\u2022Pul Rune (21)\u2022",
-      "Thul Rune (10)"
+      "Ko",
+      "Vex",
+      "Pul",
+      "Thul"
     ],
     "base_items": [
       "Staff"
@@ -54,6 +54,7 @@
         "resolved_text": "Level 60 Raven (14/# Charges)"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword51",
       "*Rune Name": "Heart of the Oak",
@@ -111,8 +112,8 @@
   {
     "name": "Leaf",
     "runes": [
-      "Tir Rune (3)",
-      "Ral Rune (8)"
+      "Tir",
+      "Ral"
     ],
     "base_items": [
       "Staff"
@@ -161,6 +162,7 @@
         "resolved_text": "+3 to Warmth (Sorceress only)"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword72",
       "*Rune Name": "Leaf",
@@ -218,10 +220,10 @@
   {
     "name": "Memory",
     "runes": [
-      "Lum Rune (17)",
-      "Io Rune (16)",
-      "Sol Rune (12)",
-      "Eth Rune (5)"
+      "Lum",
+      "Io",
+      "Sol",
+      "Eth"
     ],
     "base_items": [
       "Staff"
@@ -277,6 +279,7 @@
         "resolved_text": "+2 to Static Field (Sorceress only)"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword83",
       "*Rune Name": "Memory",
@@ -334,12 +337,12 @@
   {
     "name": "Obsession",
     "runes": [
-      "\u2022\u2022\u2022Zod Rune  (33)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
-      "\u2022Lem Rune (20)\u2022",
-      "Lum Rune (17)",
-      "Io Rune (16)",
-      "Nef Rune (4)"
+      "Zod",
+      "Ist",
+      "Lem",
+      "Lum",
+      "Io",
+      "Nef"
     ],
     "base_items": [
       "Staff"
@@ -395,6 +398,7 @@
         "resolved_text": "Regenerate Mana 15-30%"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword94",
       "*Rune Name": "Obsession",

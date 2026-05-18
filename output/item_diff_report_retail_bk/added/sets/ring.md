@@ -1,27 +1,5 @@
 # Added Set Ring
 
-**Angelic Halo** (Angelic Halo)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| | **Base Item:** Ring |
-| | **Level Requirement:** 1 |
-| | **Properties:** |
-| | $\color{blue}{\text{Replenish Life +8}}$ |
-| | $\color{blue}{\text{+30 to Life}}$ |
-| | $\color{blue}{\text{+5 to Strength}}$ |
-
-**Cathan's Seal** (Cathan's Seal)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| | **Base Item:** Ring |
-| | **Level Requirement:** 1 |
-| | **Properties:** |
-| | $\color{blue}{\text{+2 Life after each Kill}}$ |
-| | $\color{blue}{\text{Damage Reduced by 2}}$ |
-| | $\color{blue}{\text{+10\% Faster Cast Rate}}$ |
-
 **Despair Caster** (Despair Caster)
 
 | BT Diablo (Old) | BK Diablo (New) |

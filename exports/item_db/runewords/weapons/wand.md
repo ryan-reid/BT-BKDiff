@@ -1,7 +1,7 @@
 # Wand Runewords
 
 ### White
-* **Runes:** Dol Rune \(14\) + Io Rune \(16\)
+* **Runes:** Dol + Io
 * **Base Items:** Wand
 * **Properties:**
     * \+3 to Poison and Bone Skills
@@ -11,3 +11,6 @@
     * \+3 to Bone Armor \(Necromancer only\)
     * \+2 to Bone Spear \(Necromancer only\)
     * \+4 to Skeleton Mastery \(Necromancer only\)
+* **Properties from Runes:**
+    * **Dol:** \+3 Life after each Kill
+    * **Io:** \+10 to Vitality

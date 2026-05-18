@@ -1,7 +1,7 @@
 # Sword Runewords
 
 ### Grief
-* **Runes:** Eth Rune \(5\) + Tir Rune \(3\) + •••Gul Rune \(25\)••• + •••Vex Rune \(26\)••• + Ral Rune \(8\)
+* **Runes:** Eth + Tir + Gul + Vex + Ral
 * **Base Items:** Sword
 * **Properties:**
     * 33% Deadly Strike
@@ -13,7 +13,7 @@
     * \+10\-15 Life after each Kill
 
 ### Last Wish
-* **Runes:** •••Jah Rune \(31\)••• + •Mal Rune \(23\)• + •••Jah Rune \(31\)••• + •••Sur Rune \(29\)••• + •••Jah Rune \(31\)••• + •••Ber Rune \(30\)•••
+* **Runes:** Jah + Mal + Jah + Sur + Jah + Ber
 * **Base Items:** Sword
 * **Properties:**
     * \+330\-375% Enhanced Damage
@@ -25,7 +25,7 @@
     * Level 17 Might Aura When Equipped
 
 ### Lawbringer
-* **Runes:** Amn Rune \(11\) + •Lem Rune \(20\)• + Ko Rune \(18\)
+* **Runes:** Amn + Lem + Ko
 * **Base Items:** Sword
 * **Properties:**
     * Adds 200\-210 Cold Damage
@@ -37,7 +37,7 @@
     * \-50% Target Defense
 
 ### Oath
-* **Runes:** Shael Rune \(13\) + •Pul Rune \(21\)• + •Mal Rune \(23\)• + Lum Rune \(17\)
+* **Runes:** Shael + Pul + Mal + Lum
 * **Base Items:** Sword
 * **Properties:**
     * \+210\-340% Enhanced Damage
@@ -49,7 +49,7 @@
     * Indestructible
 
 ### Plague
-* **Runes:** •••Cham Rune \(32\)••• + Shael Rune \(13\) + •Um Rune \(22\)•
+* **Runes:** Cham + Shael + Um
 * **Base Items:** Sword
 * **Properties:**
     * \+220\-320% Enhanced Damage
@@ -61,7 +61,7 @@
     * \+2 to All Skills
 
 ### Unbending Will
-* **Runes:** Fal Rune \(19\) + Io Rune \(16\) + Ith Rune \(6\) + Eld Rune \(2\) + El Rune \(1\) + Hel Rune \(15\)
+* **Runes:** Fal + Io + Ith + Eld + El + Hel
 * **Base Items:** Sword
 * **Properties:**
     * \+3 to Combat Skills

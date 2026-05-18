@@ -78,8 +78,22 @@ class TestWikiGenerator(unittest.TestCase):
             {
                 "name": "Practice",
                 "runes": ["El", "Eld"],
-                "base_items": ["Weapon"],
+                "base_items": ["Melee Weapon"],
                 "properties": [{"code": "dmg", "param": "", "resolved_text": "+25% Enhanced Damage"}],
+                "rune_properties": [
+                    {
+                        "rune": "El",
+                        "properties": [{"code": "att", "param": "", "resolved_text": "+50 to Attack Rating"}],
+                    }
+                ],
+            }
+        ]
+        old_runewords = [
+            {
+                "name": "Practice",
+                "runes": ["Tal", "Eth"],
+                "base_items": ["Sword"],
+                "properties": [{"code": "dmg", "param": "", "resolved_text": "+20% Enhanced Damage"}],
             }
         ]
 
@@ -87,6 +101,7 @@ class TestWikiGenerator(unittest.TestCase):
         self._write_json(self.old_item_db, "uniques/others/helms.json", old_uniques)
         self._write_json(self.item_db, "sets/normal/swords.json", sets)
         self._write_json(self.item_db, "runewords/weapons.json", runewords)
+        self._write_json(self.old_item_db, "runewords/weapons.json", old_runewords)
 
         os.makedirs(self.skill_trees, exist_ok=True)
         with open(os.path.join(self.skill_trees, "amazon_skills.md"), "w", encoding="utf-8") as f:
@@ -149,6 +164,9 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("added", rows[1]["status"])
         self.assertEqual("items/unique/twin-item/", rows[0]["href"])
 
+        practice = next(row for row in rows if row["title"] == "Practice")
+        self.assertEqual("modified", practice["status"])
+
     def test_templates_render_item_and_index_pages(self):
         self._generate()
         with open(os.path.join(self.output, "items", "unique", "twin-item", "index.html"), "r", encoding="utf-8") as f:
@@ -159,6 +177,11 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Twin Item", item_page)
         self.assertIn("Structured diff view using Retail (Old) and BKDiablo (New).", item_page)
         self.assertIn('data-item-index-url="../data/items-index.json"', items_page)
+
+        with open(os.path.join(self.output, "items", "runeword", "practice", "index.html"), "r", encoding="utf-8") as f:
+            runeword_page = f.read()
+        self.assertIn("Properties from Runes", runeword_page)
+        self.assertIn("+50 to Attack Rating", runeword_page)
 
     def test_stale_files_are_removed(self):
         os.makedirs(self.output, exist_ok=True)

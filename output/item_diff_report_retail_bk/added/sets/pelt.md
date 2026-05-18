@@ -17,17 +17,3 @@
 | | $\color{blue}{\text{+5-10\% to Cold Skill Damage}}$ |
 | | $\color{blue}{\text{-3-5\% to Enemy Cold Resistance}}$ |
 
-**Aldur's Stony Gaze** (Aldur's Stony Gaze)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| | **Base Item:** Earth Spirit |
-| | **Level Requirement:** 36 |
-| | **Properties:** |
-| | $\color{blue}{\text{+90 Defense}}$ |
-| | $\color{blue}{\text{+75 to Mana}}$ |
-| | $\color{blue}{\text{+25\% Faster Hit Recovery}}$ |
-| | $\color{blue}{\text{Lightning Resist +40-50\%}}$ |
-| | $\color{blue}{\text{+1-2 to All Skills}}$ |
-| | $\color{blue}{\text{Cold Resist +40-50\%}}$ |
-

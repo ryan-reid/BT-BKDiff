@@ -1,7 +1,7 @@
 # Club Runewords
 
 ### Black
-* **Runes:** Thul Rune \(10\) + Io Rune \(16\) + Nef Rune \(4\)
+* **Runes:** Thul + Io + Nef
 * **Base Items:** Club
 * **Properties:**
     * 40% Chance of Crushing Blow
@@ -10,3 +10,7 @@
     * Magic Damage Reduced by 7
     * \+200 to Attack Rating
     * Level 12 Corpse Explosion \(4/\# Charges\)
+* **Properties from Runes:**
+    * **Thul:** Adds 3\-14 Cold Damage
+    * **Io:** \+10 to Vitality
+    * **Nef:** Knockback

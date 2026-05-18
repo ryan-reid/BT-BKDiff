@@ -2,9 +2,9 @@
   {
     "name": "Chaos",
     "runes": [
-      "Fal Rune (19)",
-      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
-      "\u2022Um Rune (22)\u2022"
+      "Fal",
+      "Ohm",
+      "Um"
     ],
     "base_items": [
       "Hand to Hand"
@@ -60,6 +60,7 @@
         "resolved_text": "Repairs 1 durability in 100 seconds"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword16",
       "*Rune Name": "Chaos",
@@ -117,9 +118,9 @@
   {
     "name": "Pattern",
     "runes": [
-      "Tal Rune (7)",
-      "Ort Rune (9)",
-      "Thul Rune (10)"
+      "Tal",
+      "Ort",
+      "Thul"
     ],
     "base_items": [
       "Hand to Hand"
@@ -175,6 +176,7 @@
         "resolved_text": "+1 to Martial Arts Skills"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword97",
       "*Rune Name": "Pattern",
