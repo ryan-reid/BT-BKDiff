@@ -6,13 +6,13 @@ This project compares Diablo II mod data across BKDiablo, BTDiablo, and retail d
 
 ```text
 /
-├── data/           # Retail/base data snapshots and shared config
-├── docs/           # Modding references and wiki generation notes
-├── exports/        # Structured item database exports used by comparisons/wiki
-├── mods/           # BKDiablo and BTDiablo mod data
-├── output/         # Generated comparison reports and local wiki output
-├── scripts/        # CLI wrappers plus shared Python implementation
-└── tests/          # Unit tests and fixtures
+|-- data/           # Retail/base data snapshots and shared config
+|-- docs/           # Modding references and project plans
+|-- exports/        # Generated item database exports, ignored locally
+|-- mods/           # BKDiablo and BTDiablo mod data
+|-- output/         # Generated reports and local wiki output, ignored locally
+|-- scripts/        # Rebuild entrypoint plus shared Python implementation
+`-- tests/          # Unit tests and fixtures
 ```
 
 ## Main Workflow
@@ -29,7 +29,7 @@ Run the test suite:
 python -m unittest discover -s tests
 ```
 
-Rebuild all canonical generated outputs:
+Rebuild all generated outputs:
 
 ```bash
 python scripts/generate_reports.py
@@ -37,7 +37,9 @@ python scripts/generate_reports.py
 
 That command exports item databases, compares BKDiablo against BTDiablo and retail, regenerates class skill trees, and writes the local wiki to `output/wiki/`.
 
-## Canonical Outputs
+## Generated Local Artifacts
+
+These paths are produced by `scripts/generate_reports.py` and are intentionally ignored by git. They should be regenerated from source data instead of edited or reviewed as source files.
 
 - `exports/item_db/`: BKDiablo structured item export
 - `exports/item_db_bt/`: BTDiablo structured item export
@@ -46,14 +48,14 @@ That command exports item databases, compares BKDiablo against BTDiablo and reta
 - `output/item_diff_report_retail_bk/`: BKDiablo vs retail item comparison
 - `output/excel_diff_report_bt_bk/`: BKDiablo vs BTDiablo raw Excel comparison
 - `output/excel_diff_report_retail_bk/`: BKDiablo vs retail raw Excel comparison
-- `output/skill_trees/`: generated class skill tree markdown
-- `output/wiki/`: generated static wiki site, ignored as a local/publish artifact
+- `output/skill_trees/`: generated class skill tree Markdown
+- `output/wiki/`: generated static wiki site and GitHub Pages artifact
 
-Diff report directories contain structured JSON DTOs plus renderer outputs: Markdown for text review and browser-friendly HTML entry points at `index.html`. Legacy direct-command defaults such as `output/item_diff_report/` and `output/excel_diff_report/` are ignored. Prefer `scripts/generate_reports.py` for repeatable project output.
+Diff report directories contain structured JSON DTOs plus renderer outputs. Browser-friendly HTML entry points live at `index.html`; Markdown reports are still emitted for text review while that renderer remains supported. Legacy direct-command defaults such as `output/item_diff_report/` and `output/excel_diff_report/` are ignored. Prefer `scripts/generate_reports.py` for repeatable project output.
 
 ## Wiki
 
-The wiki is a static site generated from the structured exports and skill tree markdown. Item detail pages are pre-rendered HTML, while the item index uses `output/wiki/data/items-index.json` for browser-side search and filtering.
+The wiki is a static site generated from the structured exports and skill tree Markdown. Item detail pages are pre-rendered HTML, while the item index uses `output/wiki/data/items-index.json` for browser-side search and filtering. Technical report pages are copied into `output/wiki/reports/` during generation.
 
 For local viewing, serve `output/wiki/` with a simple static server after running the generator.
 

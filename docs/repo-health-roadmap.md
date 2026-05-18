@@ -22,29 +22,29 @@ This document tracks the cleanup and architecture work discovered during the rep
 
 Purpose: make the repo match the build-artifact model before deeper refactors.
 
-- [ ] Add ignore rules for generated canonical outputs:
-  - [ ] `exports/item_db/`
-  - [ ] `exports/item_db_bt/`
-  - [ ] `exports/item_db_retail/`
-  - [ ] `output/item_diff_report_bt_bk/`
-  - [ ] `output/item_diff_report_retail_bk/`
-  - [ ] `output/excel_diff_report_bt_bk/`
-  - [ ] `output/excel_diff_report_retail_bk/`
-  - [ ] `output/skill_trees/`
-- [ ] Remove currently tracked generated files from git while preserving local generation behavior.
-- [ ] Keep test fixtures and intentional documentation sources tracked.
-- [ ] Fix README mojibake in the project tree.
-- [ ] Update README language so `exports/` and `output/` are described as generated local artifacts, not long-term tracked source.
-- [ ] Update README script layout now that top-level compatibility wrappers are gone.
-- [ ] Update the patch notes page copy so it points readers toward the generated Reports section.
-- [ ] Decide whether the large source PDF in `docs/` should stay, be renamed with context, or be replaced by the extracted markdown guide.
+- [x] Add ignore rules for generated canonical outputs:
+  - [x] `exports/item_db/`
+  - [x] `exports/item_db_bt/`
+  - [x] `exports/item_db_retail/`
+  - [x] `output/item_diff_report_bt_bk/`
+  - [x] `output/item_diff_report_retail_bk/`
+  - [x] `output/excel_diff_report_bt_bk/`
+  - [x] `output/excel_diff_report_retail_bk/`
+  - [x] `output/skill_trees/`
+- [x] Remove currently tracked generated files from git while preserving local generation behavior.
+- [x] Keep test fixtures and intentional documentation sources tracked.
+- [x] Fix README mojibake in the project tree.
+- [x] Update README language so `exports/` and `output/` are described as generated local artifacts, not long-term tracked source.
+- [x] Update README script layout now that top-level compatibility wrappers are gone.
+- [x] Update the patch notes page copy so it points readers toward the generated Reports section.
+- [x] Decide whether the large source PDF in `docs/` should stay, be renamed with context, or be replaced by the extracted markdown guide. Decision: keep it for traceability for now; the extracted Markdown guide remains the easier day-to-day reference.
 
 Acceptance checks:
 
-- [ ] `git ls-files exports output` returns no generated report/export/wiki files.
-- [ ] `python -m unittest discover -s tests` passes.
-- [ ] `python scripts/generate_reports.py` recreates the local generated outputs.
-- [ ] README accurately describes the current workflow.
+- [x] `git ls-files exports output` returns no generated report/export/wiki files.
+- [x] `python -m unittest discover -s tests` passes.
+- [x] `python scripts/generate_reports.py` recreates the local generated outputs.
+- [x] README accurately describes the current workflow.
 
 ## Milestone 2: Markdown Report Decision
 
