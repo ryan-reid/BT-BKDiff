@@ -1,7 +1,7 @@
 # Weapon Runewords
 
 ### Breath of the Dying
-* **Runes:** •••Vex Rune \(26\)••• + Hel Rune \(15\) + El Rune \(1\) + Eld Rune \(2\) + •••Zod Rune  \(33\)••• + Eth Rune \(5\)
+* **Runes:** Vex + Hel + El + Eld + Zod + Eth
 * **Base Items:** Weapon
 * **Properties:**
     * \+60% Increased Attack Speed
@@ -11,9 +11,16 @@
     * 66% Chance to cast level 45 Poison Nova when you Kill an Enemy
     * \+350\-400% Enhanced Damage
     * \+30 to all Attributes
+* **Properties from Runes:**
+    * **Vex:** 7% Mana stolen per hit; \+2% to Experience Gained
+    * **Hel:** Requirements \-\-20%
+    * **El:** \+5 to Light Radius; \+50 to Attack Rating
+    * **Eld:** \+100 to Attack Rating against Undead; \+75% Damage to Undead
+    * **Zod:** Indestructible; \+1 to All Skills; \+2% to Experience Gained
+    * **Eth:** \-25% Target Defense
 
 ### Call to Arms
-* **Runes:** Amn Rune \(11\) + Ral Rune \(8\) + •Mal Rune \(23\)• + •••Ist Rune \(24\)••• + •••Ohm Rune \(27\)•••
+* **Runes:** Amn + Ral + Mal + Ist + Ohm
 * **Base Items:** Weapon
 * **Properties:**
     * \+40% Increased Attack Speed
@@ -23,9 +30,15 @@
     * \+1 to Battle Orders
     * \+1 to Battle Cry
     * Replenish Life \+12
+* **Properties from Runes:**
+    * **Amn:** 7% Life stolen per hit
+    * **Ral:** Adds 5\-30 Fire Damage
+    * **Mal:** Prevent Monster Heal
+    * **Ist:** 30% Better Chance of Getting Magic Items; \+2% to Experience Gained
+    * **Ohm:** \+50% Enhanced Damage; \+2% to Experience Gained
 
 ### Crescent Moon
-* **Runes:** Shael Rune \(13\) + •Um Rune \(22\)• + Tir Rune \(3\)
+* **Runes:** Shael + Um + Tir
 * **Base Items:** Weapon
 * **Properties:**
     * \-15% to Enemy Lightning Resistance
@@ -35,9 +48,13 @@
     * Level 14\-16 Holy Shock Aura When Equipped
     * 25% Chance to cast level 25 Static Field on striking
     * 34% Chance to cast level 34 Chain Lightning on striking
+* **Properties from Runes:**
+    * **Shael:** \+20% Increased Attack Speed
+    * **Um:** 25% Chance of Open Wounds
+    * **Tir:** \+2 to Mana after each Kill
 
 ### Destruction
-* **Runes:** •••Vex Rune \(26\)••• + •••Lo Rune \(28\)••• + •••Ber Rune \(30\)••• + •••Jah Rune \(31\)••• + Ko Rune \(18\)
+* **Runes:** Vex + Lo + Ber + Jah + Ko
 * **Base Items:** Weapon
 * **Properties:**
     * \+350% Enhanced Damage
@@ -47,9 +64,15 @@
     * 15% Chance to cast level 35 Nova on attack
     * 23% Chance to cast level 35 Volcano on striking
     * Prevent Monster Heal
+* **Properties from Runes:**
+    * **Vex:** 7% Mana stolen per hit; \+2% to Experience Gained
+    * **Lo:** 20% Deadly Strike; \+2% to Experience Gained
+    * **Ber:** 20% Chance of Crushing Blow; \+2% to Experience Gained
+    * **Jah:** Ignore Target's Defense; \+2% to Experience Gained
+    * **Ko:** \+10 to Dexterity
 
 ### Famine
-* **Runes:** Fal Rune \(19\) + •••Ohm Rune \(27\)••• + Ort Rune \(9\) + •••Jah Rune \(31\)•••
+* **Runes:** Fal + Ohm + Ort + Jah
 * **Base Items:** Weapon
 * **Properties:**
     * \+270\-320% Enhanced Damage
@@ -59,9 +82,14 @@
     * Adds 200\-300 Magic Damage
     * Adds 200\-210 Fire/Lightning/Cold Damage
     * \+10\-20 to all Attributes
+* **Properties from Runes:**
+    * **Fal:** \+10 to Strength
+    * **Ohm:** \+50% Enhanced Damage; \+2% to Experience Gained
+    * **Ort:** Adds 1\-50 Lightning Damage
+    * **Jah:** Ignore Target's Defense; \+2% to Experience Gained
 
 ### Fortitude
-* **Runes:** El Rune \(1\) + Sol Rune \(12\) + Dol Rune \(14\) + •••Lo Rune \(28\)•••
+* **Runes:** El + Sol + Dol + Lo
 * **Base Items:** Weapon
 * **Properties:**
     * \+200% Enhanced Defense
@@ -71,9 +99,14 @@
     * 12% Damage Taken Goes To Mana
     * \(1\.0\-1\.5 per clvl\) to Life \(Based on Character Level\)
     * All Resistances \+25\-30
+* **Properties from Runes:**
+    * **El:** \+5 to Light Radius; \+50 to Attack Rating
+    * **Sol:** \+9 to Minimum Damage
+    * **Dol:** \+3 Life after each Kill
+    * **Lo:** 20% Deadly Strike; \+2% to Experience Gained
 
 ### Fury
-* **Runes:** •••Jah Rune \(31\)••• + •••Gul Rune \(25\)••• + Eth Rune \(5\)
+* **Runes:** Jah + Gul + Eth
 * **Base Items:** Weapon
 * **Properties:**
     * \+280% Enhanced Damage
@@ -82,9 +115,13 @@
     * 66% Chance of Open Wounds
     * 6% Life stolen per hit
     * 33% Deadly Strike
+* **Properties from Runes:**
+    * **Jah:** Ignore Target's Defense; \+2% to Experience Gained
+    * **Gul:** 20% Bonus to Attack Rating; \+2% to Experience Gained
+    * **Eth:** \-25% Target Defense
 
 ### Hand of Justice
-* **Runes:** •••Sur Rune \(29\)••• + •••Cham Rune \(32\)••• + Amn Rune \(11\) + •••Lo Rune \(28\)•••
+* **Runes:** Sur + Cham + Amn + Lo
 * **Base Items:** Weapon
 * **Properties:**
     * \+33% Increased Attack Speed
@@ -94,9 +131,14 @@
     * 100% Chance to cast level 48 Meteor when you Die
     * Ignore Target's Defense
     * \-20\-25% to Enemy Fire Resistance
+* **Properties from Runes:**
+    * **Sur:** Hit Blinds Target \+1; \+2% to Experience Gained
+    * **Cham:** Slows Target by 20%; \+2% to Experience Gained
+    * **Amn:** 7% Life stolen per hit
+    * **Lo:** 20% Deadly Strike; \+2% to Experience Gained
 
 ### King's Grace
-* **Runes:** Amn Rune \(11\) + Ral Rune \(8\) + Thul Rune \(10\)
+* **Runes:** Amn + Ral + Thul
 * **Base Items:** Weapon
 * **Properties:**
     * \+130\-180% Enhanced Damage
@@ -104,9 +146,13 @@
     * \+150% Damage to Demons
     * \+150% Damage to Undead
     * \+1 to All Skills
+* **Properties from Runes:**
+    * **Amn:** 7% Life stolen per hit
+    * **Ral:** Adds 5\-30 Fire Damage
+    * **Thul:** Adds 3\-14 Cold Damage
 
 ### Passion
-* **Runes:** Dol Rune \(14\) + Ort Rune \(9\) + Eld Rune \(2\) + •Lem Rune \(20\)•
+* **Runes:** Dol + Ort + Eld + Lem
 * **Base Items:** Weapon
 * **Properties:**
     * \+160\-210% Enhanced Damage
@@ -116,9 +162,14 @@
     * \+25% Increased Attack Speed
     * Level 50 Heart of Wolverine \(3/\# Charges\)
     * Hit Blinds Target \+10
+* **Properties from Runes:**
+    * **Dol:** \+3 Life after each Kill
+    * **Ort:** Adds 1\-50 Lightning Damage
+    * **Eld:** \+100 to Attack Rating against Undead; \+75% Damage to Undead
+    * **Lem:** 75% Extra Gold from Monsters
 
 ### Voice of Reason
-* **Runes:** •Lem Rune \(20\)• + Ko Rune \(18\) + El Rune \(1\) + Eld Rune \(2\)
+* **Runes:** Lem + Ko + El + Eld
 * **Base Items:** Weapon
 * **Properties:**
     * \+250\-350% Damage to Demons
@@ -128,9 +179,14 @@
     * 20% Chance to cast level 50 Ice Blast on striking
     * 15% Chance to cast level 36 Frozen Orb on attack
     * Cannot Be Frozen
+* **Properties from Runes:**
+    * **Lem:** 75% Extra Gold from Monsters
+    * **Ko:** \+10 to Dexterity
+    * **El:** \+5 to Light Radius; \+50 to Attack Rating
+    * **Eld:** \+100 to Attack Rating against Undead; \+75% Damage to Undead
 
 ### Phoenix
-* **Runes:** •••Vex Rune \(26\)••• + •••Vex Rune \(26\)••• + •••Lo Rune \(28\)••• + •••Jah Rune \(31\)•••
+* **Runes:** Vex + Vex + Lo + Jah
 * **Base Items:** Weapon
 * **Properties:**
     * \+350\-400% Enhanced Damage
@@ -140,9 +196,14 @@
     * \-28\-30% to Enemy Fire Resistance
     * Level 10\-15 Redemption Aura When Equipped
     * Fire Absorb 15\-21%
+* **Properties from Runes:**
+    * **Vex:** 7% Mana stolen per hit; \+2% to Experience Gained
+    * **Vex:** 7% Mana stolen per hit; \+2% to Experience Gained
+    * **Lo:** 20% Deadly Strike; \+2% to Experience Gained
+    * **Jah:** Ignore Target's Defense; \+2% to Experience Gained
 
 ### Pride
-* **Runes:** •••Cham Rune \(32\)••• + •••Sur Rune \(29\)••• + Io Rune \(16\) + •••Lo Rune \(28\)•••
+* **Runes:** Cham + Sur + Io + Lo
 * **Base Items:** Weapon
 * **Properties:**
     * \(1\.0% per clvl\) Damage to Demons \(Based on Character Level\)
@@ -152,9 +213,14 @@
     * 25% Chance to cast level 50 Fire Wall on striking
     * \+20% Increased Attack Speed
     * \(3\.8% per clvl\) Extra Gold from Monsters \(Based on Character Level\)
+* **Properties from Runes:**
+    * **Cham:** Slows Target by 20%; \+2% to Experience Gained
+    * **Sur:** Hit Blinds Target \+1; \+2% to Experience Gained
+    * **Io:** \+10 to Vitality
+    * **Lo:** 20% Deadly Strike; \+2% to Experience Gained
 
 ### Rift
-* **Runes:** Hel Rune \(15\) + Ko Rune \(18\) + •Lem Rune \(20\)• + •••Gul Rune \(25\)•••
+* **Runes:** Hel + Ko + Lem + Gul
 * **Base Items:** Weapon
 * **Properties:**
     * Adds 250\-400 Magic Damage
@@ -164,9 +230,14 @@
     * 16% Chance to cast level 30 Frozen Orb on attack
     * \+15% Increased Attack Speed
     * \+5\-10 to all Attributes
+* **Properties from Runes:**
+    * **Hel:** Requirements \-\-20%
+    * **Ko:** \+10 to Dexterity
+    * **Lem:** 75% Extra Gold from Monsters
+    * **Gul:** 20% Bonus to Attack Rating; \+2% to Experience Gained
 
 ### Silence
-* **Runes:** Shael Rune \(13\) + Eld Rune \(2\) + Hel Rune \(15\) + •••Ist Rune \(24\)••• + Tir Rune \(3\) + •••Vex Rune \(26\)•••
+* **Runes:** Shael + Eld + Hel + Ist + Tir + Vex
 * **Base Items:** Weapon
 * **Properties:**
     * 4% Mana stolen per hit
@@ -175,9 +246,16 @@
     * All Resistances \+75
     * \+2\-3 to All Skills
     * 22% Chance to cast level 25 Amplify Damage on striking
+* **Properties from Runes:**
+    * **Shael:** \+20% Increased Attack Speed
+    * **Eld:** \+100 to Attack Rating against Undead; \+75% Damage to Undead
+    * **Hel:** Requirements \-\-20%
+    * **Ist:** 30% Better Chance of Getting Magic Items; \+2% to Experience Gained
+    * **Tir:** \+2 to Mana after each Kill
+    * **Vex:** 7% Mana stolen per hit; \+2% to Experience Gained
 
 ### Tempest
-* **Runes:** •••Ber Rune \(30\)••• + Tir Rune \(3\)
+* **Runes:** Ber + Tir
 * **Base Items:** Weapon
 * **Properties:**
     * \+50 to Thunder Storm
@@ -186,9 +264,12 @@
     * \+25% Increased Attack Speed
     * \+24% Faster Hit Recovery
     * 35% Better Chance of Getting Magic Items
+* **Properties from Runes:**
+    * **Ber:** 20% Chance of Crushing Blow; \+2% to Experience Gained
+    * **Tir:** \+2 to Mana after each Kill
 
 ### Temptation
-* **Runes:** Hel Rune \(15\) + Shael Rune \(13\) + Amn Rune \(11\) + •••Gul Rune \(25\)•••
+* **Runes:** Hel + Shael + Amn + Gul
 * **Base Items:** Weapon
 * **Properties:**
     * \+200\-280% Enhanced Damage
@@ -198,9 +279,14 @@
     * Repairs 1 durability in 25 seconds
     * 20% Deadly Strike
     * 10% Chance to cast level 25 Attract on striking
+* **Properties from Runes:**
+    * **Hel:** Requirements \-\-20%
+    * **Shael:** \+20% Increased Attack Speed
+    * **Amn:** 7% Life stolen per hit
+    * **Gul:** 20% Bonus to Attack Rating; \+2% to Experience Gained
 
 ### Venom
-* **Runes:** Tal Rune \(7\) + Shael Rune \(13\) + •Mal Rune \(23\)•
+* **Runes:** Tal + Shael + Mal
 * **Base Items:** Weapon
 * **Properties:**
     * \+190\-240% Enhanced Damage
@@ -210,9 +296,13 @@
     * 7% Mana stolen per hit
     * \+20\-25% Increased Attack Speed
     * \-20\-30% to Enemy Poison Resistance
+* **Properties from Runes:**
+    * **Tal:** Adds 154\-154 Poison Damage Over 154 Seconds
+    * **Shael:** \+20% Increased Attack Speed
+    * **Mal:** Prevent Monster Heal
 
 ### Wind
-* **Runes:** •••Sur Rune \(29\)••• + •Mal Rune \(23\)•
+* **Runes:** Sur + Mal
 * **Base Items:** Weapon
 * **Properties:**
     * \+260\-280% Enhanced Damage
@@ -222,18 +312,25 @@
     * 33% Chance to cast level 30 Tornado on striking
     * 25% Chance to cast level 35 Twister on striking
     * \+30% Faster Hit Recovery
+* **Properties from Runes:**
+    * **Sur:** Hit Blinds Target \+1; \+2% to Experience Gained
+    * **Mal:** Prevent Monster Heal
 
 ### Hustle \(weapon\)
-* **Runes:** Shael Rune \(13\) + Ko Rune \(18\) + Eld Rune \(2\)
+* **Runes:** Shael + Ko + Eld
 * **Base Items:** Weapon
 * **Properties:**
     * 5% Chance to cast level 1 Burst of Speed on striking
     * \+10% Increased Attack Speed
     * \+180\-200% Enhanced Damage
     * Level 1 Fanaticism Aura When Equipped
+* **Properties from Runes:**
+    * **Shael:** \+20% Increased Attack Speed
+    * **Ko:** \+10 to Dexterity
+    * **Eld:** \+100 to Attack Rating against Undead; \+75% Damage to Undead
 
 ### Mosaic
-* **Runes:** •Mal Rune \(23\)• + •••Sur Rune \(29\)••• + Amn Rune \(11\)
+* **Runes:** Mal + Sur + Amn
 * **Base Items:** Weapon
 * **Properties:**
     * \+2 to All Skills
@@ -243,3 +340,7 @@
     * \+15% to Fire Skill Damage
     * \+15% to Cold Skill Damage
     * \+15% to Lightning Skill Damage
+* **Properties from Runes:**
+    * **Mal:** Prevent Monster Heal
+    * **Sur:** Hit Blinds Target \+1; \+2% to Experience Gained
+    * **Amn:** 7% Life stolen per hit

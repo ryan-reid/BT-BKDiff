@@ -50,6 +50,23 @@
         {% endif %}
       </ul>
     </section>
+    {% if page.rune_properties %}
+    <section class="content-section">
+      <h2>Properties from Runes</h2>
+      <ul class="property-list rune-property-list">
+        {% for rune in page.rune_properties %}
+        <li>
+          <strong>{{ rune.rune }}</strong>
+          <ul>
+            {% for prop in rune.properties %}
+            <li class="property-entry{% if prop.is_warning %} is-warning{% endif %}">{{ prop.text }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
     <section class="content-section">
       <h2>Source</h2>
       <p class="muted">Structured export path: <code>{{ page.source_rel_path }}</code></p>

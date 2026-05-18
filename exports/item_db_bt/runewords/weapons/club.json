@@ -2,9 +2,9 @@
   {
     "name": "Black",
     "runes": [
-      "Thul Rune (10)",
-      "Io Rune (16)",
-      "Nef Rune (4)"
+      "Thul",
+      "Io",
+      "Nef"
     ],
     "base_items": [
       "Club"
@@ -53,6 +53,7 @@
         "resolved_text": "Level 12 Corpse Explosion (4/# Charges)"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword6",
       "*Rune Name": "Black",

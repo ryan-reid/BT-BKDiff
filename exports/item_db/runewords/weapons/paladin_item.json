@@ -2,10 +2,10 @@
   {
     "name": "Exile",
     "runes": [
-      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
-      "Dol Rune (14)"
+      "Vex",
+      "Ohm",
+      "Ist",
+      "Dol"
     ],
     "base_items": [
       "Paladin Item"
@@ -59,6 +59,77 @@
         "min_val": "",
         "max_val": "",
         "resolved_text": "Repairs 1 durability in 25 seconds"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Vex",
+        "properties": [
+          {
+            "code": "res-fire-max",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "+5% to Maximum Fire Resist"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Ohm",
+        "properties": [
+          {
+            "code": "res-cold-max",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "+5% to Maximum Cold Resist"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Ist",
+        "properties": [
+          {
+            "code": "mag%",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "25% Better Chance of Getting Magic Items"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Dol",
+        "properties": [
+          {
+            "code": "heal-kill",
+            "param": "",
+            "min_val": "3",
+            "max_val": "3",
+            "resolved_text": "+3 Life after each Kill"
+          }
+        ]
       }
     ],
     "raw_row": {

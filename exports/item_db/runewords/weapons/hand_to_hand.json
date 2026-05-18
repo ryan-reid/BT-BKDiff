@@ -2,9 +2,9 @@
   {
     "name": "Chaos",
     "runes": [
-      "Fal Rune (19)",
-      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
-      "\u2022Um Rune (22)\u2022"
+      "Fal",
+      "Ohm",
+      "Um"
     ],
     "base_items": [
       "Hand to Hand"
@@ -58,6 +58,51 @@
         "min_val": "",
         "max_val": "",
         "resolved_text": "Repairs 1 durability in 100 seconds"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Fal",
+        "properties": [
+          {
+            "code": "str",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Strength"
+          }
+        ]
+      },
+      {
+        "rune": "Ohm",
+        "properties": [
+          {
+            "code": "dmg%",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "+50% Enhanced Damage"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Um",
+        "properties": [
+          {
+            "code": "openwounds",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "25% Chance of Open Wounds"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -119,9 +164,9 @@
   {
     "name": "Pattern",
     "runes": [
-      "Tal Rune (7)",
-      "Ort Rune (9)",
-      "Thul Rune (10)"
+      "Tal",
+      "Ort",
+      "Thul"
     ],
     "base_items": [
       "Hand to Hand"
@@ -175,6 +220,44 @@
         "min_val": "1",
         "max_val": "1",
         "resolved_text": "+1 to Martial Arts Skills"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Tal",
+        "properties": [
+          {
+            "code": "dmg-pois",
+            "param": "125",
+            "min_val": "154",
+            "max_val": "154",
+            "resolved_text": "Adds 154-154 Poison Damage Over 154 Seconds"
+          }
+        ]
+      },
+      {
+        "rune": "Ort",
+        "properties": [
+          {
+            "code": "dmg-ltng",
+            "param": "",
+            "min_val": "1",
+            "max_val": "50",
+            "resolved_text": "Adds 1-50 Lightning Damage"
+          }
+        ]
+      },
+      {
+        "rune": "Thul",
+        "properties": [
+          {
+            "code": "dmg-cold",
+            "param": "75",
+            "min_val": "3",
+            "max_val": "14",
+            "resolved_text": "Adds 3-14 Cold Damage"
+          }
+        ]
       }
     ],
     "raw_row": {

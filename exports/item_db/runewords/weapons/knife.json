@@ -2,9 +2,9 @@
   {
     "name": "Ritual",
     "runes": [
-      "Amn Rune (11)",
-      "Shael Rune (13)",
-      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022"
+      "Amn",
+      "Shael",
+      "Ohm"
     ],
     "base_items": [
       "Knife"
@@ -58,6 +58,51 @@
         "min_val": "-50",
         "max_val": "-50",
         "resolved_text": "Requirements --50%"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Amn",
+        "properties": [
+          {
+            "code": "lifesteal",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "7% Life stolen per hit"
+          }
+        ]
+      },
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "swing2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Increased Attack Speed"
+          }
+        ]
+      },
+      {
+        "rune": "Ohm",
+        "properties": [
+          {
+            "code": "dmg%",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "+50% Enhanced Damage"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
       }
     ],
     "raw_row": {

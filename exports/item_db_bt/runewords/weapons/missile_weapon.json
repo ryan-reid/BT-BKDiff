@@ -2,10 +2,10 @@
   {
     "name": "Brand",
     "runes": [
-      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022",
-      "\u2022Mal Rune (23)\u2022",
-      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022"
+      "Jah",
+      "Lo",
+      "Mal",
+      "Gul"
     ],
     "base_items": [
       "Missile Weapon"
@@ -61,6 +61,7 @@
         "resolved_text": "Fires Explosive Arrows or Bolts"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword10",
       "*Rune Name": "Brand",
@@ -118,9 +119,9 @@
   {
     "name": "Edge",
     "runes": [
-      "Tir Rune (3)",
-      "Tal Rune (7)",
-      "Amn Rune (11)"
+      "Tir",
+      "Tal",
+      "Amn"
     ],
     "base_items": [
       "Missile Weapon"
@@ -176,6 +177,7 @@
         "resolved_text": "Reduces all Vendor Prices 15%"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword31",
       "*Rune Name": "Edge",
@@ -233,10 +235,10 @@
   {
     "name": "Faith",
     "runes": [
-      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
-      "\u2022Lem Rune (20)\u2022",
-      "Eld Rune (2)"
+      "Ohm",
+      "Jah",
+      "Lem",
+      "Eld"
     ],
     "base_items": [
       "Missile Weapon"
@@ -292,6 +294,7 @@
         "resolved_text": "+2 to All Skills"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword38",
       "*Rune Name": "Faith",
@@ -349,10 +352,10 @@
   {
     "name": "Harmony",
     "runes": [
-      "Tir Rune (3)",
-      "Ith Rune (6)",
-      "Sol Rune (12)",
-      "Ko Rune (18)"
+      "Tir",
+      "Ith",
+      "Sol",
+      "Ko"
     ],
     "base_items": [
       "Missile Weapon"
@@ -408,6 +411,7 @@
         "resolved_text": "+2 to Light Radius"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword49",
       "*Rune Name": "Harmony",
@@ -465,10 +469,10 @@
   {
     "name": "Ice",
     "runes": [
-      "Amn Rune (11)",
-      "Shael Rune (13)",
-      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022"
+      "Amn",
+      "Shael",
+      "Jah",
+      "Lo"
     ],
     "base_items": [
       "Missile Weapon"
@@ -524,6 +528,7 @@
         "resolved_text": "(3.1% per clvl) Extra Gold from Monsters (Based on Character Level)"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword59",
       "*Rune Name": "Ice",
@@ -581,9 +586,9 @@
   {
     "name": "Melody",
     "runes": [
-      "Shael Rune (13)",
-      "Ko Rune (18)",
-      "Nef Rune (4)"
+      "Shael",
+      "Ko",
+      "Nef"
     ],
     "base_items": [
       "Missile Weapon"
@@ -632,6 +637,7 @@
         "resolved_text": "+300% Damage to Undead"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword82",
       "*Rune Name": "Melody",
@@ -689,11 +695,11 @@
   {
     "name": "Mist",
     "runes": [
-      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022",
-      "Shael Rune (13)",
-      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022",
-      "Thul Rune (10)",
-      "Ith Rune (6)"
+      "Cham",
+      "Shael",
+      "Gul",
+      "Thul",
+      "Ith"
     ],
     "base_items": [
       "Missile Weapon"
@@ -742,6 +748,7 @@
         "resolved_text": "All Resistances +40"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword84",
       "*Rune Name": "Mist",
@@ -799,10 +806,10 @@
   {
     "name": "Wrath",
     "runes": [
-      "\u2022Pul Rune (21)\u2022",
-      "Lum Rune (17)",
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "\u2022Mal Rune (23)\u2022"
+      "Pul",
+      "Lum",
+      "Ber",
+      "Mal"
     ],
     "base_items": [
       "Missile Weapon"
@@ -858,6 +865,7 @@
         "resolved_text": "Cannot Be Frozen"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword168",
       "*Rune Name": "Wrath",
@@ -915,8 +923,8 @@
   {
     "name": "Zephyr",
     "runes": [
-      "Ort Rune (9)",
-      "Eth Rune (5)"
+      "Ort",
+      "Eth"
     ],
     "base_items": [
       "Missile Weapon"
@@ -972,6 +980,7 @@
         "resolved_text": "+30 to Mana"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword170",
       "*Rune Name": "Zephyr",

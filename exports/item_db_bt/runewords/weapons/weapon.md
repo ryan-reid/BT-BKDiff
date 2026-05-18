@@ -1,7 +1,7 @@
 # Weapon Runewords
 
 ### Breath of the Dying
-* **Runes:** •••Vex Rune \(26\)••• + Hel Rune \(15\) + El Rune \(1\) + Eld Rune \(2\) + •••Zod Rune  \(33\)••• + Eth Rune \(5\)
+* **Runes:** Vex + Hel + El + Eld + Zod + Eth
 * **Base Items:** Weapon
 * **Properties:**
     * \+60% Increased Attack Speed
@@ -13,7 +13,7 @@
     * \+30 to all Attributes
 
 ### Call to Arms
-* **Runes:** Amn Rune \(11\) + Ral Rune \(8\) + •Mal Rune \(23\)• + •••Ist Rune \(24\)••• + •••Ohm Rune \(27\)•••
+* **Runes:** Amn + Ral + Mal + Ist + Ohm
 * **Base Items:** Weapon
 * **Properties:**
     * \+40% Increased Attack Speed
@@ -25,7 +25,7 @@
     * Replenish Life \+12
 
 ### Crescent Moon
-* **Runes:** Shael Rune \(13\) + •Um Rune \(22\)• + Tir Rune \(3\)
+* **Runes:** Shael + Um + Tir
 * **Base Items:** Weapon
 * **Properties:**
     * \-15% to Enemy Lightning Resistance
@@ -37,7 +37,7 @@
     * 34% Chance to cast level 34 Chain Lightning on striking
 
 ### Destruction
-* **Runes:** •••Vex Rune \(26\)••• + •••Lo Rune \(28\)••• + •••Ber Rune \(30\)••• + •••Jah Rune \(31\)••• + Ko Rune \(18\)
+* **Runes:** Vex + Lo + Ber + Jah + Ko
 * **Base Items:** Weapon
 * **Properties:**
     * \+350% Enhanced Damage
@@ -49,7 +49,7 @@
     * Prevent Monster Heal
 
 ### Famine
-* **Runes:** Fal Rune \(19\) + •••Ohm Rune \(27\)••• + Ort Rune \(9\) + •••Jah Rune \(31\)•••
+* **Runes:** Fal + Ohm + Ort + Jah
 * **Base Items:** Weapon
 * **Properties:**
     * \+270\-320% Enhanced Damage
@@ -61,7 +61,7 @@
     * \+10\-20 to all Attributes
 
 ### Fortitude
-* **Runes:** El Rune \(1\) + Sol Rune \(12\) + Dol Rune \(14\) + •••Lo Rune \(28\)•••
+* **Runes:** El + Sol + Dol + Lo
 * **Base Items:** Weapon
 * **Properties:**
     * \+200% Enhanced Defense
@@ -73,7 +73,7 @@
     * All Resistances \+25\-30
 
 ### Fury
-* **Runes:** •••Jah Rune \(31\)••• + •••Gul Rune \(25\)••• + Eth Rune \(5\)
+* **Runes:** Jah + Gul + Eth
 * **Base Items:** Weapon
 * **Properties:**
     * \+280% Enhanced Damage
@@ -84,7 +84,7 @@
     * 33% Deadly Strike
 
 ### Hand of Justice
-* **Runes:** •••Sur Rune \(29\)••• + •••Cham Rune \(32\)••• + Amn Rune \(11\) + •••Lo Rune \(28\)•••
+* **Runes:** Sur + Cham + Amn + Lo
 * **Base Items:** Weapon
 * **Properties:**
     * \+33% Increased Attack Speed
@@ -96,7 +96,7 @@
     * \-20\-25% to Enemy Fire Resistance
 
 ### King's Grace
-* **Runes:** Amn Rune \(11\) + Ral Rune \(8\) + Thul Rune \(10\)
+* **Runes:** Amn + Ral + Thul
 * **Base Items:** Weapon
 * **Properties:**
     * \+130\-180% Enhanced Damage
@@ -106,7 +106,7 @@
     * \+1 to All Skills
 
 ### Passion
-* **Runes:** Dol Rune \(14\) + Ort Rune \(9\) + Eld Rune \(2\) + •Lem Rune \(20\)•
+* **Runes:** Dol + Ort + Eld + Lem
 * **Base Items:** Weapon
 * **Properties:**
     * \+160\-210% Enhanced Damage
@@ -118,7 +118,7 @@
     * Hit Blinds Target \+10
 
 ### Voice of Reason
-* **Runes:** •Lem Rune \(20\)• + Ko Rune \(18\) + El Rune \(1\) + Eld Rune \(2\)
+* **Runes:** Lem + Ko + El + Eld
 * **Base Items:** Weapon
 * **Properties:**
     * \+250\-350% Damage to Demons
@@ -130,7 +130,7 @@
     * Cannot Be Frozen
 
 ### Phoenix
-* **Runes:** •••Vex Rune \(26\)••• + •••Vex Rune \(26\)••• + •••Lo Rune \(28\)••• + •••Jah Rune \(31\)•••
+* **Runes:** Vex + Vex + Lo + Jah
 * **Base Items:** Weapon
 * **Properties:**
     * \+350\-400% Enhanced Damage
@@ -142,7 +142,7 @@
     * Fire Absorb 15\-21%
 
 ### Pride
-* **Runes:** •••Cham Rune \(32\)••• + •••Sur Rune \(29\)••• + Io Rune \(16\) + •••Lo Rune \(28\)•••
+* **Runes:** Cham + Sur + Io + Lo
 * **Base Items:** Weapon
 * **Properties:**
     * \(1\.0% per clvl\) Damage to Demons \(Based on Character Level\)
@@ -154,7 +154,7 @@
     * \(3\.8% per clvl\) Extra Gold from Monsters \(Based on Character Level\)
 
 ### Rift
-* **Runes:** Hel Rune \(15\) + Ko Rune \(18\) + •Lem Rune \(20\)• + •••Gul Rune \(25\)•••
+* **Runes:** Hel + Ko + Lem + Gul
 * **Base Items:** Weapon
 * **Properties:**
     * Adds 250\-400 Magic Damage
@@ -166,7 +166,7 @@
     * \+5\-10 to all Attributes
 
 ### Silence
-* **Runes:** Shael Rune \(13\) + Eld Rune \(2\) + Hel Rune \(15\) + •••Ist Rune \(24\)••• + Tir Rune \(3\) + •••Vex Rune \(26\)•••
+* **Runes:** Shael + Eld + Hel + Ist + Tir + Vex
 * **Base Items:** Weapon
 * **Properties:**
     * 4% Mana stolen per hit
@@ -177,7 +177,7 @@
     * 22% Chance to cast level 25 Amplify Damage on striking
 
 ### Tempest
-* **Runes:** •••Ber Rune \(30\)••• + Tir Rune \(3\)
+* **Runes:** Ber + Tir
 * **Base Items:** Weapon
 * **Properties:**
     * \+50 to Thunder Storm
@@ -188,7 +188,7 @@
     * 35% Better Chance of Getting Magic Items
 
 ### Temptation
-* **Runes:** Hel Rune \(15\) + Shael Rune \(13\) + Amn Rune \(11\) + •••Gul Rune \(25\)•••
+* **Runes:** Hel + Shael + Amn + Gul
 * **Base Items:** Weapon
 * **Properties:**
     * \+200\-280% Enhanced Damage
@@ -200,7 +200,7 @@
     * 10% Chance to cast level 25 Attract on striking
 
 ### Venom
-* **Runes:** Tal Rune \(7\) + Shael Rune \(13\) + •Mal Rune \(23\)•
+* **Runes:** Tal + Shael + Mal
 * **Base Items:** Weapon
 * **Properties:**
     * \+190\-240% Enhanced Damage
@@ -212,7 +212,7 @@
     * \-20\-30% to Enemy Poison Resistance
 
 ### Wind
-* **Runes:** •••Sur Rune \(29\)••• + •Mal Rune \(23\)•
+* **Runes:** Sur + Mal
 * **Base Items:** Weapon
 * **Properties:**
     * \+260\-280% Enhanced Damage
@@ -224,7 +224,7 @@
     * \+30% Faster Hit Recovery
 
 ### Hustle \(weapon\)
-* **Runes:** Shael Rune \(13\) + Ko Rune \(18\) + Eld Rune \(2\)
+* **Runes:** Shael + Ko + Eld
 * **Base Items:** Weapon
 * **Properties:**
     * 5% Chance to cast level 1 Burst of Speed on striking
@@ -233,7 +233,7 @@
     * Level 1 Fanaticism Aura When Equipped
 
 ### Mosaic
-* **Runes:** •Mal Rune \(23\)• + •••Sur Rune \(29\)••• + Amn Rune \(11\)
+* **Runes:** Mal + Sur + Amn
 * **Base Items:** Weapon
 * **Properties:**
     * \+2 to All Skills

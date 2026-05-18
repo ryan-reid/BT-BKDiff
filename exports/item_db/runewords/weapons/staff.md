@@ -1,7 +1,7 @@
 # Staff Runewords
 
 ### Heart of the Oak
-* **Runes:** Ko Rune \(18\) + •••Vex Rune \(26\)••• + •Pul Rune \(21\)• + Thul Rune \(10\)
+* **Runes:** Ko + Vex + Pul + Thul
 * **Base Items:** Staff
 * **Properties:**
     * \+40% Faster Cast Rate
@@ -10,9 +10,14 @@
     * Replenish Life \+20
     * All Resistances \+30\-40
     * Level 60 Raven \(14/\# Charges\)
+* **Properties from Runes:**
+    * **Ko:** \+10 to Dexterity
+    * **Vex:** 7% Mana stolen per hit; \+2% to Experience Gained
+    * **Pul:** \+100 to Attack Rating against Demons; \+75% Damage to Demons
+    * **Thul:** Adds 3\-14 Cold Damage
 
 ### Leaf
-* **Runes:** Tir Rune \(3\) + Ral Rune \(8\)
+* **Runes:** Tir + Ral
 * **Base Items:** Staff
 * **Properties:**
     * \+3 to Fire Skills
@@ -21,9 +26,12 @@
     * \+3 to Inferno \(Sorceress only\)
     * \+3 to Fire Bolt \(Sorceress only\)
     * \+3 to Warmth \(Sorceress only\)
+* **Properties from Runes:**
+    * **Tir:** \+2 to Mana after each Kill
+    * **Ral:** Adds 5\-30 Fire Damage
 
 ### Memory
-* **Runes:** Lum Rune \(17\) + Io Rune \(16\) + Sol Rune \(12\) + Eth Rune \(5\)
+* **Runes:** Lum + Io + Sol + Eth
 * **Base Items:** Staff
 * **Properties:**
     * Increase Maximum Mana 20%
@@ -33,9 +41,14 @@
     * \+3 to Sorceress Skill Levels
     * \+3 to Energy Shield \(Sorceress only\)
     * \+2 to Static Field \(Sorceress only\)
+* **Properties from Runes:**
+    * **Lum:** \+10 to Energy
+    * **Io:** \+10 to Vitality
+    * **Sol:** \+9 to Minimum Damage
+    * **Eth:** \-25% Target Defense
 
 ### Obsession
-* **Runes:** •••Zod Rune  \(33\)••• + •••Ist Rune \(24\)••• + •Lem Rune \(20\)• + Lum Rune \(17\) + Io Rune \(16\) + Nef Rune \(4\)
+* **Runes:** Zod + Ist + Lem + Lum + Io + Nef
 * **Base Items:** Staff
 * **Properties:**
     * \+4 to All Skills
@@ -45,3 +58,10 @@
     * All Resistances \+60\-70
     * Increase Maximum Life 15\-25%
     * Regenerate Mana 15\-30%
+* **Properties from Runes:**
+    * **Zod:** Indestructible; \+1 to All Skills; \+2% to Experience Gained
+    * **Ist:** 30% Better Chance of Getting Magic Items; \+2% to Experience Gained
+    * **Lem:** 75% Extra Gold from Monsters
+    * **Lum:** \+10 to Energy
+    * **Io:** \+10 to Vitality
+    * **Nef:** Knockback

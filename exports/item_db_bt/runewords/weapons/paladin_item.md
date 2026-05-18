@@ -1,7 +1,7 @@
 # Paladin Item Runewords
 
 ### Exile
-* **Runes:** •••Vex Rune \(26\)••• + •••Ohm Rune \(27\)••• + •••Ist Rune \(24\)••• + Dol Rune \(14\)
+* **Runes:** Vex + Ohm + Ist + Dol
 * **Base Items:** Paladin Item
 * **Properties:**
     * \+30% Faster Block Rate

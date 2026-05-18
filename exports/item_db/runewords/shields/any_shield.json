@@ -2,9 +2,9 @@
   {
     "name": "Ancients' Pledge",
     "runes": [
-      "Ral Rune (8)",
-      "Ort Rune (9)",
-      "Tal Rune (7)"
+      "Ral",
+      "Ort",
+      "Tal"
     ],
     "base_items": [
       "Any Shield"
@@ -37,6 +37,44 @@
         "min_val": "10",
         "max_val": "10",
         "resolved_text": "10% Damage Taken Goes To Mana"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ral",
+        "properties": [
+          {
+            "code": "res-fire",
+            "param": "",
+            "min_val": "35",
+            "max_val": "35",
+            "resolved_text": "Fire Resist +35%"
+          }
+        ]
+      },
+      {
+        "rune": "Ort",
+        "properties": [
+          {
+            "code": "res-ltng",
+            "param": "",
+            "min_val": "35",
+            "max_val": "35",
+            "resolved_text": "Lightning Resist +35%"
+          }
+        ]
+      },
+      {
+        "rune": "Tal",
+        "properties": [
+          {
+            "code": "res-pois",
+            "param": "",
+            "min_val": "35",
+            "max_val": "35",
+            "resolved_text": "Poison Resist +35%"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -98,8 +136,8 @@
   {
     "name": "Knight's Vigil",
     "runes": [
-      "Sol Rune (12)",
-      "Dol Rune (14)"
+      "Sol",
+      "Dol"
     ],
     "base_items": [
       "Any Shield"
@@ -153,6 +191,32 @@
         "min_val": "15",
         "max_val": "15",
         "resolved_text": "All Resistances +15"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "red-dmg",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Damage Reduced by 7"
+          }
+        ]
+      },
+      {
+        "rune": "Dol",
+        "properties": [
+          {
+            "code": "heal-kill",
+            "param": "",
+            "min_val": "3",
+            "max_val": "3",
+            "resolved_text": "+3 Life after each Kill"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -214,8 +278,8 @@
   {
     "name": "Rhyme",
     "runes": [
-      "Shael Rune (13)",
-      "Eth Rune (5)"
+      "Shael",
+      "Eth"
     ],
     "base_items": [
       "Any Shield"
@@ -262,6 +326,32 @@
         "min_val": "25",
         "max_val": "25",
         "resolved_text": "25% Better Chance of Getting Magic Items"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Shael",
+        "properties": [
+          {
+            "code": "block2",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "+20% Faster Block Rate"
+          }
+        ]
+      },
+      {
+        "rune": "Eth",
+        "properties": [
+          {
+            "code": "regen-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "Regenerate Mana 15%"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -323,9 +413,9 @@
   {
     "name": "Sanctuary",
     "runes": [
-      "Ko Rune (18)",
-      "Ko Rune (18)",
-      "\u2022Mal Rune (23)\u2022"
+      "Ko",
+      "Ko",
+      "Mal"
     ],
     "base_items": [
       "Any Shield"
@@ -379,6 +469,44 @@
         "min_val": "10",
         "max_val": "10",
         "resolved_text": "Level 10 Sanctuary Aura When Equipped"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ko",
+        "properties": [
+          {
+            "code": "dex",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Dexterity"
+          }
+        ]
+      },
+      {
+        "rune": "Ko",
+        "properties": [
+          {
+            "code": "dex",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Dexterity"
+          }
+        ]
+      },
+      {
+        "rune": "Mal",
+        "properties": [
+          {
+            "code": "red-mag",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "Magic Damage Reduced by 7"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -440,10 +568,10 @@
   {
     "name": "Spirit",
     "runes": [
-      "Tal Rune (7)",
-      "Thul Rune (10)",
-      "Ort Rune (9)",
-      "Amn Rune (11)"
+      "Tal",
+      "Thul",
+      "Ort",
+      "Amn"
     ],
     "base_items": [
       "Any Shield"
@@ -497,6 +625,56 @@
         "min_val": "1",
         "max_val": "1",
         "resolved_text": "+1 to All Skills"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Tal",
+        "properties": [
+          {
+            "code": "res-pois",
+            "param": "",
+            "min_val": "35",
+            "max_val": "35",
+            "resolved_text": "Poison Resist +35%"
+          }
+        ]
+      },
+      {
+        "rune": "Thul",
+        "properties": [
+          {
+            "code": "res-cold",
+            "param": "",
+            "min_val": "35",
+            "max_val": "35",
+            "resolved_text": "Cold Resist +35%"
+          }
+        ]
+      },
+      {
+        "rune": "Ort",
+        "properties": [
+          {
+            "code": "res-ltng",
+            "param": "",
+            "min_val": "35",
+            "max_val": "35",
+            "resolved_text": "Lightning Resist +35%"
+          }
+        ]
+      },
+      {
+        "rune": "Amn",
+        "properties": [
+          {
+            "code": "thorns",
+            "param": "",
+            "min_val": "14",
+            "max_val": "14",
+            "resolved_text": "Attacker Takes Damage of 14"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -558,8 +736,8 @@
   {
     "name": "Splendor",
     "runes": [
-      "Eth Rune (5)",
-      "Lum Rune (17)"
+      "Eth",
+      "Lum"
     ],
     "base_items": [
       "Any Shield"
@@ -613,6 +791,32 @@
         "min_val": "1",
         "max_val": "1",
         "resolved_text": "+1 to All Skills"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Eth",
+        "properties": [
+          {
+            "code": "regen-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "Regenerate Mana 15%"
+          }
+        ]
+      },
+      {
+        "rune": "Lum",
+        "properties": [
+          {
+            "code": "enr",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Energy"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -674,8 +878,8 @@
   {
     "name": "Trust",
     "runes": [
-      "Ith Rune (6)",
-      "Eld Rune (2)"
+      "Ith",
+      "Eld"
     ],
     "base_items": [
       "Any Shield"
@@ -722,6 +926,32 @@
         "min_val": "20",
         "max_val": "35",
         "resolved_text": "+20-35 Defense"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ith",
+        "properties": [
+          {
+            "code": "dmg-to-mana",
+            "param": "",
+            "min_val": "15",
+            "max_val": "15",
+            "resolved_text": "15% Damage Taken Goes To Mana"
+          }
+        ]
+      },
+      {
+        "rune": "Eld",
+        "properties": [
+          {
+            "code": "block",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10% Faster Block Rate"
+          }
+        ]
       }
     ],
     "raw_row": {

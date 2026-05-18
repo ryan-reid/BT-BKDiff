@@ -2,9 +2,9 @@
   {
     "name": "Ancients' Pledge",
     "runes": [
-      "Ral Rune (8)",
-      "Ort Rune (9)",
-      "Tal Rune (7)"
+      "Ral",
+      "Ort",
+      "Tal"
     ],
     "base_items": [
       "Any Shield"
@@ -39,6 +39,7 @@
         "resolved_text": "10% Damage Taken Goes To Mana"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword1",
       "*Rune Name": "Ancients' Pledge",
@@ -96,8 +97,8 @@
   {
     "name": "Knight's Vigil",
     "runes": [
-      "Sol Rune (12)",
-      "Dol Rune (14)"
+      "Sol",
+      "Dol"
     ],
     "base_items": [
       "Any Shield"
@@ -153,6 +154,7 @@
         "resolved_text": "All Resistances +15"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword67",
       "*Rune Name": "Knight's Vigil",
@@ -210,8 +212,8 @@
   {
     "name": "Rhyme",
     "runes": [
-      "Shael Rune (13)",
-      "Eth Rune (5)"
+      "Shael",
+      "Eth"
     ],
     "base_items": [
       "Any Shield"
@@ -260,6 +262,7 @@
         "resolved_text": "25% Better Chance of Getting Magic Items"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword120",
       "*Rune Name": "Rhyme",
@@ -317,9 +320,9 @@
   {
     "name": "Sanctuary",
     "runes": [
-      "Ko Rune (18)",
-      "Ko Rune (18)",
-      "\u2022Mal Rune (23)\u2022"
+      "Ko",
+      "Ko",
+      "Mal"
     ],
     "base_items": [
       "Any Shield"
@@ -375,6 +378,7 @@
         "resolved_text": "Level 10 Sanctuary Aura When Equipped"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword122",
       "*Rune Name": "Sanctuary",
@@ -432,10 +436,10 @@
   {
     "name": "Spirit",
     "runes": [
-      "Tal Rune (7)",
-      "Thul Rune (10)",
-      "Ort Rune (9)",
-      "Amn Rune (11)"
+      "Tal",
+      "Thul",
+      "Ort",
+      "Amn"
     ],
     "base_items": [
       "Any Shield"
@@ -491,6 +495,7 @@
         "resolved_text": "+1 to All Skills"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword130",
       "*Rune Name": "Spirit",
@@ -548,8 +553,8 @@
   {
     "name": "Splendor",
     "runes": [
-      "Eth Rune (5)",
-      "Lum Rune (17)"
+      "Eth",
+      "Lum"
     ],
     "base_items": [
       "Any Shield"
@@ -605,6 +610,7 @@
         "resolved_text": "+1 to All Skills"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword131",
       "*Rune Name": "Splendor",
@@ -662,8 +668,8 @@
   {
     "name": "Trust",
     "runes": [
-      "Ith Rune (6)",
-      "Eld Rune (2)"
+      "Ith",
+      "Eld"
     ],
     "base_items": [
       "Any Shield"
@@ -712,6 +718,7 @@
         "resolved_text": "+20-35 Defense"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword149",
       "*Rune Name": "Trust",

@@ -2,11 +2,11 @@
   {
     "name": "Beast",
     "runes": [
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "Tir Rune (3)",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022Mal Rune (23)\u2022",
-      "Lum Rune (17)"
+      "Ber",
+      "Tir",
+      "Um",
+      "Mal",
+      "Lum"
     ],
     "base_items": [
       "Melee Weapon"
@@ -62,6 +62,7 @@
         "resolved_text": "+3 to Lycanthropy"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword4",
       "*Rune Name": "Beast",
@@ -119,11 +120,11 @@
   {
     "name": "Death",
     "runes": [
-      "Hel Rune (15)",
-      "El Rune (1)",
-      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
-      "Ort Rune (9)",
-      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022"
+      "Hel",
+      "El",
+      "Vex",
+      "Ort",
+      "Gul"
     ],
     "base_items": [
       "Melee Weapon"
@@ -179,6 +180,7 @@
         "resolved_text": "Indestructible"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword20",
       "*Rune Name": "Death",
@@ -236,11 +238,11 @@
   {
     "name": "Doom",
     "runes": [
-      "Hel Rune (15)",
-      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022"
+      "Hel",
+      "Ohm",
+      "Um",
+      "Lo",
+      "Cham"
     ],
     "base_items": [
       "Melee Weapon"
@@ -296,6 +298,7 @@
         "resolved_text": "20% Chance to cast level 40 Blizzard on striking"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword26",
       "*Rune Name": "Doom",
@@ -353,11 +356,11 @@
   {
     "name": "Eternity",
     "runes": [
-      "Amn Rune (11)",
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
-      "Sol Rune (12)",
-      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022"
+      "Amn",
+      "Ber",
+      "Ist",
+      "Sol",
+      "Sur"
     ],
     "base_items": [
       "Melee Weapon"
@@ -413,6 +416,7 @@
         "resolved_text": "Cannot Be Frozen"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword36",
       "*Rune Name": "Eternity",
@@ -470,10 +474,10 @@
   {
     "name": "Holy Thunder",
     "runes": [
-      "Eth Rune (5)",
-      "Ral Rune (8)",
-      "Ort Rune (9)",
-      "Tal Rune (7)"
+      "Eth",
+      "Ral",
+      "Ort",
+      "Tal"
     ],
     "base_items": [
       "Melee Weapon"
@@ -529,6 +533,7 @@
         "resolved_text": "Poison Length Reduced by 75%"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword54",
       "*Rune Name": "Holy Thunder",
@@ -586,11 +591,11 @@
   {
     "name": "Honor",
     "runes": [
-      "Amn Rune (11)",
-      "El Rune (1)",
-      "Ith Rune (6)",
-      "Tir Rune (3)",
-      "Sol Rune (12)"
+      "Amn",
+      "El",
+      "Ith",
+      "Tir",
+      "Sol"
     ],
     "base_items": [
       "Melee Weapon"
@@ -639,6 +644,7 @@
         "resolved_text": "+25% Increased Attack Speed"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword55",
       "*Rune Name": "Honor",
@@ -696,10 +702,10 @@
   {
     "name": "Kingslayer",
     "runes": [
-      "\u2022Mal Rune (23)\u2022",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022",
-      "Fal Rune (19)"
+      "Mal",
+      "Um",
+      "Gul",
+      "Fal"
     ],
     "base_items": [
       "Melee Weapon"
@@ -755,6 +761,7 @@
         "resolved_text": "350% Extra Gold from Monsters"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword66",
       "*Rune Name": "Kingslayer",
@@ -812,9 +819,9 @@
   {
     "name": "Malice",
     "runes": [
-      "Ith Rune (6)",
-      "El Rune (1)",
-      "Eth Rune (5)"
+      "Ith",
+      "El",
+      "Eth"
     ],
     "base_items": [
       "Melee Weapon"
@@ -870,6 +877,7 @@
         "resolved_text": "7% Life stolen per hit"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword81",
       "*Rune Name": "Malice",
@@ -927,8 +935,8 @@
   {
     "name": "Steel",
     "runes": [
-      "Tir Rune (3)",
-      "El Rune (1)"
+      "Tir",
+      "El"
     ],
     "base_items": [
       "Melee Weapon"
@@ -977,6 +985,7 @@
         "resolved_text": "Repairs 1 durability in 25 seconds"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword134",
       "*Rune Name": "Steel",
@@ -1034,8 +1043,8 @@
   {
     "name": "Strength",
     "runes": [
-      "Amn Rune (11)",
-      "Tir Rune (3)"
+      "Amn",
+      "Tir"
     ],
     "base_items": [
       "Melee Weapon"
@@ -1077,6 +1086,7 @@
         "resolved_text": "Repairs 1 durability in 25 seconds"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword139",
       "*Rune Name": "Strength",

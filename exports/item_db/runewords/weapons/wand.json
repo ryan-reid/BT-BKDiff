@@ -2,8 +2,8 @@
   {
     "name": "White",
     "runes": [
-      "Dol Rune (14)",
-      "Io Rune (16)"
+      "Dol",
+      "Io"
     ],
     "base_items": [
       "Wand"
@@ -57,6 +57,32 @@
         "min_val": "4",
         "max_val": "4",
         "resolved_text": "+4 to Skeleton Mastery (Necromancer only)"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Dol",
+        "properties": [
+          {
+            "code": "heal-kill",
+            "param": "",
+            "min_val": "3",
+            "max_val": "3",
+            "resolved_text": "+3 Life after each Kill"
+          }
+        ]
+      },
+      {
+        "rune": "Io",
+        "properties": [
+          {
+            "code": "vit",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Vitality"
+          }
+        ]
       }
     ],
     "raw_row": {

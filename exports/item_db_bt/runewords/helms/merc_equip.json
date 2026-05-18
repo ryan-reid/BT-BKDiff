@@ -2,9 +2,9 @@
   {
     "name": "Delirium",
     "runes": [
-      "\u2022Lem Rune (20)\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
-      "Io Rune (16)"
+      "Lem",
+      "Ist",
+      "Io"
     ],
     "base_items": [
       "Merc Equip"
@@ -53,6 +53,7 @@
         "resolved_text": "+2 to All Skills"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword22",
       "*Rune Name": "Delirium",
@@ -110,9 +111,9 @@
   {
     "name": "Dream",
     "runes": [
-      "Io Rune (16)",
-      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
-      "\u2022Pul Rune (21)\u2022"
+      "Io",
+      "Jah",
+      "Pul"
     ],
     "base_items": [
       "Merc Equip"
@@ -168,6 +169,7 @@
         "resolved_text": "20-30% Better Chance of Getting Magic Items"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword29",
       "*Rune Name": "Dream",
@@ -225,9 +227,9 @@
   {
     "name": "Flickering Flame",
     "runes": [
-      "Nef Rune (4)",
-      "\u2022Pul Rune (21)\u2022",
-      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022"
+      "Nef",
+      "Pul",
+      "Vex"
     ],
     "base_items": [
       "Merc Equip"
@@ -276,6 +278,7 @@
         "resolved_text": "Poison Length Reduced by 50%"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword40",
       "*Rune Name": "Flickering Flame",
@@ -333,9 +336,9 @@
   {
     "name": "Fortune",
     "runes": [
-      "Sol Rune (12)",
-      "Tir Rune (3)",
-      "Shael Rune (13)"
+      "Sol",
+      "Tir",
+      "Shael"
     ],
     "base_items": [
       "Merc Equip"
@@ -384,6 +387,7 @@
         "resolved_text": "+5 to Mana after each Kill"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword42",
       "*Rune Name": "Fortune",
@@ -441,8 +445,8 @@
   {
     "name": "Knowledge",
     "runes": [
-      "Ith Rune (6)",
-      "Tir Rune (3)"
+      "Ith",
+      "Tir"
     ],
     "base_items": [
       "Merc Equip"
@@ -477,6 +481,7 @@
         "resolved_text": "+3 to Warmth"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword68",
       "*Rune Name": "Knowledge",
@@ -534,8 +539,8 @@
   {
     "name": "Lore",
     "runes": [
-      "Ort Rune (9)",
-      "Sol Rune (12)"
+      "Ort",
+      "Sol"
     ],
     "base_items": [
       "Merc Equip"
@@ -570,6 +575,7 @@
         "resolved_text": "+2 to Mana after each Kill"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword75",
       "*Rune Name": "Lore",
@@ -627,8 +633,8 @@
   {
     "name": "Nadir",
     "runes": [
-      "Nef Rune (4)",
-      "Tir Rune (3)"
+      "Nef",
+      "Tir"
     ],
     "base_items": [
       "Merc Equip"
@@ -684,6 +690,7 @@
         "resolved_text": "Damage Reduced by 4"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword88",
       "*Rune Name": "Nadir",
@@ -741,9 +748,9 @@
   {
     "name": "Radiance",
     "runes": [
-      "Nef Rune (4)",
-      "Sol Rune (12)",
-      "Ith Rune (6)"
+      "Nef",
+      "Sol",
+      "Ith"
     ],
     "base_items": [
       "Merc Equip"
@@ -799,6 +806,7 @@
         "resolved_text": "Magic Damage Reduced by 5"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword116",
       "*Rune Name": "Radiance",
@@ -856,9 +864,9 @@
   {
     "name": "Wisdom",
     "runes": [
-      "\u2022Pul Rune (21)\u2022",
-      "Ith Rune (6)",
-      "Eld Rune (2)"
+      "Pul",
+      "Ith",
+      "Eld"
     ],
     "base_items": [
       "Merc Equip"
@@ -907,6 +915,7 @@
         "resolved_text": "+10 to Energy"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword165",
       "*Rune Name": "Wisdom",
@@ -964,9 +973,9 @@
   {
     "name": "Metamorphosis",
     "runes": [
-      "Io Rune (16)",
-      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022",
-      "Fal Rune (19)"
+      "Io",
+      "Cham",
+      "Fal"
     ],
     "base_items": [
       "Merc Equip"
@@ -1015,6 +1024,7 @@
         "resolved_text": "25% Chance of Crushing Blow"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword175",
       "*Rune Name": "Metamorphosis",
@@ -1072,9 +1082,9 @@
   {
     "name": "Ground",
     "runes": [
-      "Shael Rune (13)",
-      "Io Rune (16)",
-      "Ort Rune (9)"
+      "Shael",
+      "Io",
+      "Ort"
     ],
     "base_items": [
       "Merc Equip"
@@ -1109,6 +1119,7 @@
         "resolved_text": "+10-15 Lightning Absorb"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword176",
       "*Rune Name": "Ground",
@@ -1166,9 +1177,9 @@
   {
     "name": "Temper",
     "runes": [
-      "Shael Rune (13)",
-      "Io Rune (16)",
-      "Ral Rune (8)"
+      "Shael",
+      "Io",
+      "Ral"
     ],
     "base_items": [
       "Merc Equip"
@@ -1203,6 +1214,7 @@
         "resolved_text": "+10-15 Fire Absorb"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword177",
       "*Rune Name": "Temper",
@@ -1260,9 +1272,9 @@
   {
     "name": "Hearth",
     "runes": [
-      "Shael Rune (13)",
-      "Io Rune (16)",
-      "Thul Rune (10)"
+      "Shael",
+      "Io",
+      "Thul"
     ],
     "base_items": [
       "Merc Equip"
@@ -1304,6 +1316,7 @@
         "resolved_text": "Cannot Be Frozen"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword178",
       "*Rune Name": "Hearth",
@@ -1361,9 +1374,9 @@
   {
     "name": "Cure",
     "runes": [
-      "Shael Rune (13)",
-      "Io Rune (16)",
-      "Tal Rune (7)"
+      "Shael",
+      "Io",
+      "Tal"
     ],
     "base_items": [
       "Merc Equip"
@@ -1405,6 +1418,7 @@
         "resolved_text": "Level 1 Cleansing Aura When Equipped"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword179",
       "*Rune Name": "Cure",
@@ -1462,9 +1476,9 @@
   {
     "name": "Bulwark",
     "runes": [
-      "Shael Rune (13)",
-      "Io Rune (16)",
-      "Sol Rune (12)"
+      "Shael",
+      "Io",
+      "Sol"
     ],
     "base_items": [
       "Merc Equip"
@@ -1506,6 +1520,7 @@
         "resolved_text": "4-6% Life stolen per hit"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword180",
       "*Rune Name": "Bulwark",

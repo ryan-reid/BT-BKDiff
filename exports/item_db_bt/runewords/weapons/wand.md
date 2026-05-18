@@ -1,7 +1,7 @@
 # Wand Runewords
 
 ### White
-* **Runes:** Dol Rune \(14\) + Io Rune \(16\)
+* **Runes:** Dol + Io
 * **Base Items:** Wand
 * **Properties:**
     * \+3 to Poison and Bone Skills

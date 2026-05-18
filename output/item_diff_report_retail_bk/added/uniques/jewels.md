@@ -36,19 +36,6 @@
 | | $\color{blue}{\text{Cannot Be Frozen}}$ |
 | | $\color{blue}{\text{+2\% to Experience Gained}}$ |
 
-**Rainbow Facet** (Rainbow Facet)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| | **Base Item:** Jewel |
-| | **Level Requirement:** 49 |
-| | **Properties:** |
-| | $\color{blue}{\text{Adds 30-43 Magic Damage}}$ |
-| | $\color{blue}{\text{-4-5\% to Enemy Magic Resistance}}$ |
-| | $\color{blue}{\text{+4-5\% to Magic Skill Damage}}$ |
-| | $\color{blue}{\text{100\% Chance to cast level 60 Blessed Hammer when you Die}}$ |
-| | $\color{blue}{\text{+2\% to Experience Gained}}$ |
-
 **Titan's Echo** (Titan's Echo)
 
 | BT Diablo (Old) | BK Diablo (New) |

@@ -17,30 +17,6 @@
 | | $\color{blue}{\text{+5 to Avoid (Amazon only)}}$ |
 | | $\color{blue}{\text{+5 to Evade (Amazon only)}}$ |
 
-**M'avina's True Sight** (M'avina's True Sight)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| | **Base Item:** Diadem |
-| | **Level Requirement:** 59 |
-| | **Properties:** |
-| | $\color{blue}{\text{+150 Defense}}$ |
-| | $\color{blue}{\text{Replenish Life +10}}$ |
-| | $\color{blue}{\text{+30\% Increased Attack Speed}}$ |
-| | $\color{blue}{\text{+25 to Mana}}$ |
-
-**Naj's Circlet** (Naj's Circlet)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| | **Base Item:** Circlet |
-| | **Level Requirement:** 59 |
-| | **Properties:** |
-| | $\color{blue}{\text{+75 to Mana}}$ |
-| | $\color{blue}{\text{+1 to Random Class Skill Levels}}$ |
-| | $\color{blue}{\text{+15 to Strength}}$ |
-| | $\color{blue}{\text{+30\% Faster Cast Rate}}$ |
-
 **Swallow's Grace** (Swallow's Grace)
 
 | BT Diablo (Old) | BK Diablo (New) |

@@ -33,19 +33,3 @@
 | | $\color{blue}{\text{+5-10\% Energy}}$ |
 | | $\color{blue}{\text{Magic Resist +15-25\%}}$ |
 
-**Trang\-Oul's Wing** (Trang\-Oul's Wing)
-
-| BT Diablo (Old) | BK Diablo (New) |
-| :--- | :--- |
-| | **Base Item:** Succubus Skull |
-| | **Level Requirement:** 54 |
-| | **Properties:** |
-| | $\color{blue}{\text{+125 Defense}}$ |
-| | $\color{blue}{\text{+20-30 to Strength}}$ |
-| | $\color{blue}{\text{+20-30 to Dexterity}}$ |
-| | $\color{blue}{\text{Fire Resist +35-50\%}}$ |
-| | $\color{blue}{\text{+30\% Faster Block Rate}}$ |
-| | $\color{blue}{\text{Poison Resist +40\%}}$ |
-| | $\color{blue}{\text{+2 to Poison and Bone Skills}}$ |
-| | $\color{blue}{\text{+35\% Faster Cast Rate}}$ |
-

@@ -513,12 +513,26 @@ class WikiGenerator:
             }
             for prop in entry.get("properties", [])
         ]
+        rune_properties = [
+            {
+                "rune": str(rune_entry.get("rune", "")),
+                "properties": [
+                    {
+                        "text": str(prop.get("resolved_text", "")),
+                        "is_warning": "unknown property:" in str(prop.get("resolved_text", "")).lower(),
+                    }
+                    for prop in rune_entry.get("properties", [])
+                ],
+            }
+            for rune_entry in entry.get("rune_properties", [])
+        ]
         return {
             "title": title,
             "summary": self._item_summary(entry, family),
             "chips": chips,
             "stats": stats,
             "properties": properties,
+            "rune_properties": rune_properties,
             "source_rel_path": entry.get("_source_rel_path", ""),
             "comparison": self._item_comparison_context(entry, family, old_entry),
         }
@@ -552,7 +566,7 @@ class WikiGenerator:
     def _item_identity(entry: Dict[str, Any], family: str) -> str:
         title = entry.get("display_name") or entry.get("name") or entry.get("id") or ""
         if family == "runeword":
-            return f"{title}|{'|'.join(entry.get('base_items', []))}"
+            return title
         if family == "set":
             set_name = entry.get("raw_row", {}).get("set", "")
             return f"{title}|{entry.get('base_item', '')}|{set_name}"

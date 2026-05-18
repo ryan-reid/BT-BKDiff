@@ -250,6 +250,7 @@ class ItemAnalyzerService:
         self.misc = {row['code']: row for row in repo.get_excel_table('misc')}
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
         self.sets = {row['name']: row for row in repo.get_excel_table('sets')}
+        self.gems = {row['code']: row for row in repo.get_excel_table('gems')}
 
     def get_item_name(self, code: str) -> str:
         item = self.armor.get(code) or self.weapons.get(code) or self.misc.get(code)
@@ -319,7 +320,9 @@ class ItemAnalyzerService:
         runes = []
         for i in range(1, 7):
             r_code = row.get(f'Rune{i}', '').strip()
-            if r_code and r_code != 'xxx': runes.append(self.get_item_name(r_code))
+            if r_code and r_code != 'xxx':
+                clean_rune_name = self.repo.get_string(f"{r_code}L")
+                runes.append(clean_rune_name or self.get_item_name(r_code))
         props = []
         for i in range(1, 8):
             code = row.get(f'T1Code{i}', '').strip()
@@ -328,11 +331,81 @@ class ItemAnalyzerService:
         
         itype = row.get('itype1', '').strip()
         base_items = [self.repo.get_string(self.item_types.get(itype, {}).get('ItemType', '')) or itype]
+        rune_properties = self._resolve_runeword_rune_properties(row, itype)
         
         return {
             "name": name, "runes": runes, "base_items": base_items,
-            "properties": props, "raw_row": row
+            "properties": props, "rune_properties": rune_properties, "raw_row": row
         }
+
+    def _resolve_runeword_rune_properties(self, row: Dict[str, str], item_type_code: str) -> List[Dict[str, Any]]:
+        socket_group = self._runeword_socket_group(item_type_code)
+        if not socket_group:
+            return []
+
+        results: List[Dict[str, Any]] = []
+        for i in range(1, 7):
+            rune_code = row.get(f'Rune{i}', '').strip()
+            if not rune_code or rune_code == 'xxx':
+                continue
+
+            gem_row = self.gems.get(rune_code)
+            if not gem_row:
+                continue
+
+            properties = []
+            for slot in range(1, 4):
+                code = gem_row.get(f'{socket_group}Mod{slot}Code', '').strip()
+                if not code or code == 'xxx':
+                    continue
+                properties.append(
+                    self.resolver.resolve_property(
+                        code,
+                        gem_row.get(f'{socket_group}Mod{slot}Param', ''),
+                        gem_row.get(f'{socket_group}Mod{slot}Min', ''),
+                        gem_row.get(f'{socket_group}Mod{slot}Max', ''),
+                    )
+                )
+
+            if properties:
+                results.append(
+                    {
+                        "rune": self.repo.get_string(f"{rune_code}L") or self.get_item_name(rune_code),
+                        "properties": properties,
+                    }
+                )
+        return results
+
+    def _runeword_socket_group(self, item_type_code: str) -> str:
+        categories = self._item_type_runeword_categories(item_type_code)
+        if categories & {"r_mel", "r_mis"}:
+            return "weapon"
+        if "r_off" in categories:
+            return "shield"
+        if categories & {"r_arm", "r_hel"}:
+            return "helm"
+        return ""
+
+    def _item_type_runeword_categories(self, item_type_code: str, seen: Optional[set[str]] = None) -> set[str]:
+        if not item_type_code:
+            return set()
+        seen = seen or set()
+        if item_type_code in seen:
+            return set()
+        seen.add(item_type_code)
+
+        item_type = self.item_types.get(item_type_code, {})
+        categories = {
+            category
+            for category in [
+                item_type.get('RunewordCategory1', '').strip(),
+                item_type.get('RunewordCategory2', '').strip(),
+            ]
+            if category
+        }
+        for equiv_key in ['Equiv1', 'Equiv2']:
+            categories.update(self._item_type_runeword_categories(item_type.get(equiv_key, '').strip(), seen))
+        return categories
 
     def analyze_set_item(self, row: Dict[str, str]) -> AnalyzedItemDTO:
         idx = row.get('index', '').strip()

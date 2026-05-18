@@ -1,7 +1,7 @@
 # Knife Runewords
 
 ### Ritual
-* **Runes:** Amn Rune \(11\) + Shael Rune \(13\) + •••Ohm Rune \(27\)•••
+* **Runes:** Amn + Shael + Ohm
 * **Base Items:** Knife
 * **Properties:**
     * 20% Chance to cast level 16 Sigil: Death when struck
@@ -11,3 +11,7 @@
     * 200\-260% Bonus to Attack Rating
     * \+3\-5 Life after each Kill
     * Requirements \-\-50%
+* **Properties from Runes:**
+    * **Amn:** 7% Life stolen per hit
+    * **Shael:** \+20% Increased Attack Speed
+    * **Ohm:** \+50% Enhanced Damage; \+2% to Experience Gained

@@ -1,7 +1,7 @@
 # Merc Equip Runewords
 
 ### Delirium
-* **Runes:** •Lem Rune \(20\)• + •••Ist Rune \(24\)••• + Io Rune \(16\)
+* **Runes:** Lem + Ist + Io
 * **Base Items:** Merc Equip
 * **Properties:**
     * 20% Chance to cast level 15 Amplifying Damage on striking
@@ -11,9 +11,13 @@
     * 5% Chance to cast level 30 Chilling Armor when struck
     * \+2 to All Skills
     * \+8% to Experience Gained
+* **Properties from Runes:**
+    * **Lem:** 50% Extra Gold from Monsters
+    * **Ist:** 25% Better Chance of Getting Magic Items; \+2% to Experience Gained
+    * **Io:** \+10 to Vitality
 
 ### Dream
-* **Runes:** Io Rune \(16\) + •••Jah Rune \(31\)••• + •Pul Rune \(21\)•
+* **Runes:** Io + Jah + Pul
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+150\-220 Defense
@@ -23,9 +27,13 @@
     * \+20\-30% Faster Hit Recovery
     * Level 15 Holy Shock Aura When Equipped
     * 20\-30% Better Chance of Getting Magic Items
+* **Properties from Runes:**
+    * **Io:** \+10 to Vitality
+    * **Jah:** Increase Maximum Life 5%; \+2% to Experience Gained
+    * **Pul:** \+30% Enhanced Defense
 
 ### Flickering Flame
-* **Runes:** Nef Rune \(4\) + •Pul Rune \(21\)• + •••Vex Rune \(26\)•••
+* **Runes:** Nef + Pul + Vex
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+3 to Fire Skills
@@ -34,9 +42,13 @@
     * \+50\-75 to Mana
     * Half Freeze Duration
     * Poison Length Reduced by 50%
+* **Properties from Runes:**
+    * **Nef:** \+30 Defense vs\. Missile
+    * **Pul:** \+30% Enhanced Defense
+    * **Vex:** \+5% to Maximum Fire Resist; \+2% to Experience Gained
 
 ### Fortune
-* **Runes:** Sol Rune \(12\) + Tir Rune \(3\) + Shael Rune \(13\)
+* **Runes:** Sol + Tir + Shael
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+77% Enhanced Defense
@@ -45,9 +57,13 @@
     * 20% Chance to cast level 20 Blaze when struck
     * 77% Extra Gold from Monsters
     * \+5 to Mana after each Kill
+* **Properties from Runes:**
+    * **Sol:** Damage Reduced by 7
+    * **Tir:** \+2 to Mana after each Kill
+    * **Shael:** \+20% Faster Hit Recovery
 
 ### Hunger
-* **Runes:** Shael Rune \(13\) + Sol Rune \(12\) + Fal Rune \(19\)
+* **Runes:** Shael + Sol + Fal
 * **Base Items:** Merc Equip
 * **Properties:**
     * Damage Reduced by 5\-8%
@@ -57,27 +73,37 @@
     * \+8 to Mana after each Kill
     * \+8 Life after each Kill
     * \+25% Faster Run/Walk
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Sol:** Damage Reduced by 7
+    * **Fal:** \+10 to Strength
 
 ### Knowledge
-* **Runes:** Ith Rune \(6\) + Tir Rune \(3\)
+* **Runes:** Ith + Tir
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+20\-30 to Energy
     * \+25% Faster Hit Recovery
     * \+15\-25% Faster Run/Walk
     * \+3 to Warmth
+* **Properties from Runes:**
+    * **Ith:** 15% Damage Taken Goes To Mana
+    * **Tir:** \+2 to Mana after each Kill
 
 ### Lore
-* **Runes:** Ort Rune \(9\) + Sol Rune \(12\)
+* **Runes:** Ort + Sol
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+10 to Energy
     * \+1 to All Skills
     * \+2 to Light Radius
     * \+2 to Mana after each Kill
+* **Properties from Runes:**
+    * **Ort:** Lightning Resist \+30%
+    * **Sol:** Damage Reduced by 7
 
 ### Nadir
-* **Runes:** Nef Rune \(4\) + Tir Rune \(3\)
+* **Runes:** Nef + Tir
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+50% Enhanced Defense
@@ -87,9 +113,12 @@
     * \+5 to Strength
     * Magic Damage Reduced by 4
     * Damage Reduced by 4
+* **Properties from Runes:**
+    * **Nef:** \+30 Defense vs\. Missile
+    * **Tir:** \+2 to Mana after each Kill
 
 ### Radiance
-* **Runes:** Nef Rune \(4\) + Sol Rune \(12\) + Ith Rune \(6\)
+* **Runes:** Nef + Sol + Ith
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+5 to Light Radius
@@ -99,9 +128,13 @@
     * \+33 to Mana
     * \+33 to Life
     * Magic Damage Reduced by 5
+* **Properties from Runes:**
+    * **Nef:** \+30 Defense vs\. Missile
+    * **Sol:** Damage Reduced by 7
+    * **Ith:** 15% Damage Taken Goes To Mana
 
 ### Wisdom
-* **Runes:** •Pul Rune \(21\)• + Ith Rune \(6\) + Eld Rune \(2\)
+* **Runes:** Pul + Ith + Eld
 * **Base Items:** Merc Equip
 * **Properties:**
     * Piercing Attack
@@ -110,9 +143,13 @@
     * \+5 to Mana after each Kill
     * Cannot Be Frozen
     * \+10 to Energy
+* **Properties from Runes:**
+    * **Pul:** \+30% Enhanced Defense
+    * **Ith:** 15% Damage Taken Goes To Mana
+    * **Eld:** Replenish Life \+5
 
 ### Metamorphosis
-* **Runes:** Io Rune \(16\) + •••Cham Rune \(32\)••• + Fal Rune \(19\)
+* **Runes:** Io + Cham + Fal
 * **Base Items:** Merc Equip
 * **Properties:**
     * 100% Chance to cast level 1 Mark of the Bear on striking
@@ -122,27 +159,39 @@
     * All Resistances \+10
     * 25% Chance of Crushing Blow
     * \+30% Faster Run/Walk
+* **Properties from Runes:**
+    * **Io:** \+10 to Vitality
+    * **Cham:** Curse Resist \+34%; \+2% to Experience Gained
+    * **Fal:** \+10 to Strength
 
 ### Ground
-* **Runes:** Shael Rune \(13\) + Io Rune \(16\) + Ort Rune \(9\)
+* **Runes:** Shael + Io + Ort
 * **Base Items:** Merc Equip
 * **Properties:**
     * Increase Maximum Life 5%
     * \+75\-100% Enhanced Defense
     * Lightning Resist \+10\-30%
     * \+10\-15 Lightning Absorb
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Io:** \+10 to Vitality
+    * **Ort:** Lightning Resist \+30%
 
 ### Temper
-* **Runes:** Shael Rune \(13\) + Io Rune \(16\) + Ral Rune \(8\)
+* **Runes:** Shael + Io + Ral
 * **Base Items:** Merc Equip
 * **Properties:**
     * Increase Maximum Life 5%
     * \+75\-100% Enhanced Defense
     * Fire Resist \+10\-30%
     * \+10\-15 Fire Absorb
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Io:** \+10 to Vitality
+    * **Ral:** Fire Resist \+30%
 
 ### Hearth
-* **Runes:** Shael Rune \(13\) + Io Rune \(16\) + Thul Rune \(10\)
+* **Runes:** Shael + Io + Thul
 * **Base Items:** Merc Equip
 * **Properties:**
     * Increase Maximum Life 5%
@@ -150,9 +199,13 @@
     * Cold Resist \+10\-30%
     * \+10\-15 Cold Absorb
     * Cannot Be Frozen
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Io:** \+10 to Vitality
+    * **Thul:** Cold Resist \+30%
 
 ### Cure
-* **Runes:** Shael Rune \(13\) + Io Rune \(16\) + Tal Rune \(7\)
+* **Runes:** Shael + Io + Tal
 * **Base Items:** Merc Equip
 * **Properties:**
     * Increase Maximum Life 5%
@@ -160,9 +213,13 @@
     * Poison Resist \+10\-30%
     * Poison Length Reduced by 50%
     * Level 1 Cleansing Aura When Equipped
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Io:** \+10 to Vitality
+    * **Tal:** Poison Resist \+30%
 
 ### Bulwark
-* **Runes:** Shael Rune \(13\) + Io Rune \(16\) + Sol Rune \(12\)
+* **Runes:** Shael + Io + Sol
 * **Base Items:** Merc Equip
 * **Properties:**
     * Increase Maximum Life 5%
@@ -170,9 +227,13 @@
     * Damage Reduced by 10%
     * Replenish Life \+30
     * 4\-6% Life stolen per hit
+* **Properties from Runes:**
+    * **Shael:** \+20% Faster Hit Recovery
+    * **Io:** \+10 to Vitality
+    * **Sol:** Damage Reduced by 7
 
 ### Coven
-* **Runes:** •••Ist Rune \(24\)••• + Ral Rune \(8\) + Io Rune \(16\)
+* **Runes:** Ist + Ral + Io
 * **Base Items:** Merc Equip
 * **Properties:**
     * 5% Chance to cast level 20 Sigil: Lethargy when struck
@@ -181,3 +242,7 @@
     * \+100% Enhanced Defense
     * 10\-25% Better Chance of Getting Magic Items
     * \+1\-5 Life after each Kill
+* **Properties from Runes:**
+    * **Ist:** 25% Better Chance of Getting Magic Items; \+2% to Experience Gained
+    * **Ral:** Fire Resist \+30%
+    * **Io:** \+10 to Vitality

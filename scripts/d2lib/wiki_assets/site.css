@@ -441,6 +441,17 @@ code {
   font-style: italic;
 }
 
+.rune-property-list > li {
+  display: grid;
+  gap: 8px;
+}
+
+.rune-property-list ul {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
 .comparison-table-wrap,
 .table-wrap {
   overflow-x: auto;

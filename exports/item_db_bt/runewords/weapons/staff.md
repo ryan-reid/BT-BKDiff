@@ -1,7 +1,7 @@
 # Staff Runewords
 
 ### Heart of the Oak
-* **Runes:** Ko Rune \(18\) + •••Vex Rune \(26\)••• + •Pul Rune \(21\)• + Thul Rune \(10\)
+* **Runes:** Ko + Vex + Pul + Thul
 * **Base Items:** Staff
 * **Properties:**
     * \+40% Faster Cast Rate
@@ -12,7 +12,7 @@
     * Level 60 Raven \(14/\# Charges\)
 
 ### Leaf
-* **Runes:** Tir Rune \(3\) + Ral Rune \(8\)
+* **Runes:** Tir + Ral
 * **Base Items:** Staff
 * **Properties:**
     * \+3 to Fire Skills
@@ -23,7 +23,7 @@
     * \+3 to Warmth \(Sorceress only\)
 
 ### Memory
-* **Runes:** Lum Rune \(17\) + Io Rune \(16\) + Sol Rune \(12\) + Eth Rune \(5\)
+* **Runes:** Lum + Io + Sol + Eth
 * **Base Items:** Staff
 * **Properties:**
     * Increase Maximum Mana 20%
@@ -35,7 +35,7 @@
     * \+2 to Static Field \(Sorceress only\)
 
 ### Obsession
-* **Runes:** •••Zod Rune  \(33\)••• + •••Ist Rune \(24\)••• + •Lem Rune \(20\)• + Lum Rune \(17\) + Io Rune \(16\) + Nef Rune \(4\)
+* **Runes:** Zod + Ist + Lem + Lum + Io + Nef
 * **Base Items:** Staff
 * **Properties:**
     * \+4 to All Skills

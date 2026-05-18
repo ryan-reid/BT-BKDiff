@@ -2,11 +2,11 @@
   {
     "name": "Grief",
     "runes": [
-      "Eth Rune (5)",
-      "Tir Rune (3)",
-      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
-      "Ral Rune (8)"
+      "Eth",
+      "Tir",
+      "Gul",
+      "Vex",
+      "Ral"
     ],
     "base_items": [
       "Sword"
@@ -62,6 +62,7 @@
         "resolved_text": "+10-15 Life after each Kill"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword47",
       "*Rune Name": "Grief",
@@ -119,12 +120,12 @@
   {
     "name": "Last Wish",
     "runes": [
-      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
-      "\u2022Mal Rune (23)\u2022",
-      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Jah Rune (31)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022"
+      "Jah",
+      "Mal",
+      "Jah",
+      "Sur",
+      "Jah",
+      "Ber"
     ],
     "base_items": [
       "Sword"
@@ -180,6 +181,7 @@
         "resolved_text": "Level 17 Might Aura When Equipped"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword69",
       "*Rune Name": "Last Wish",
@@ -237,9 +239,9 @@
   {
     "name": "Lawbringer",
     "runes": [
-      "Amn Rune (11)",
-      "\u2022Lem Rune (20)\u2022",
-      "Ko Rune (18)"
+      "Amn",
+      "Lem",
+      "Ko"
     ],
     "base_items": [
       "Sword"
@@ -295,6 +297,7 @@
         "resolved_text": "-50% Target Defense"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword71",
       "*Rune Name": "Lawbringer",
@@ -352,10 +355,10 @@
   {
     "name": "Oath",
     "runes": [
-      "Shael Rune (13)",
-      "\u2022Pul Rune (21)\u2022",
-      "\u2022Mal Rune (23)\u2022",
-      "Lum Rune (17)"
+      "Shael",
+      "Pul",
+      "Mal",
+      "Lum"
     ],
     "base_items": [
       "Sword"
@@ -411,6 +414,7 @@
         "resolved_text": "Indestructible"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword91",
       "*Rune Name": "Oath",
@@ -468,9 +472,9 @@
   {
     "name": "Plague",
     "runes": [
-      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022",
-      "Shael Rune (13)",
-      "\u2022Um Rune (22)\u2022"
+      "Cham",
+      "Shael",
+      "Um"
     ],
     "base_items": [
       "Sword"
@@ -526,6 +530,7 @@
         "resolved_text": "+2 to All Skills"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword106",
       "*Rune Name": "Plague",
@@ -583,12 +588,12 @@
   {
     "name": "Unbending Will",
     "runes": [
-      "Fal Rune (19)",
-      "Io Rune (16)",
-      "Ith Rune (6)",
-      "Eld Rune (2)",
-      "El Rune (1)",
-      "Hel Rune (15)"
+      "Fal",
+      "Io",
+      "Ith",
+      "Eld",
+      "El",
+      "Hel"
     ],
     "base_items": [
       "Sword"
@@ -644,6 +649,7 @@
         "resolved_text": "8-10% Life stolen per hit"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword151",
       "*Rune Name": "Unbending Will",

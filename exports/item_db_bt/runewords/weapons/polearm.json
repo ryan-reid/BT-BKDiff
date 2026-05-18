@@ -2,10 +2,10 @@
   {
     "name": "Infinity",
     "runes": [
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "\u2022Mal Rune (23)\u2022",
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022"
+      "Ber",
+      "Mal",
+      "Ber",
+      "Ist"
     ],
     "base_items": [
       "Polearm"
@@ -61,6 +61,7 @@
         "resolved_text": "Level 30 Cyclone Armor (21/# Charges)"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword60",
       "*Rune Name": "Infinity",
@@ -118,10 +119,10 @@
   {
     "name": "Insight",
     "runes": [
-      "Ral Rune (8)",
-      "Tir Rune (3)",
-      "Tal Rune (7)",
-      "Sol Rune (12)"
+      "Ral",
+      "Tir",
+      "Tal",
+      "Sol"
     ],
     "base_items": [
       "Polearm"
@@ -177,6 +178,7 @@
         "resolved_text": "+5 to all Attributes"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword62",
       "*Rune Name": "Insight",
@@ -234,11 +236,11 @@
   {
     "name": "Obedience",
     "runes": [
-      "Hel Rune (15)",
-      "Ko Rune (18)",
-      "Thul Rune (10)",
-      "Eth Rune (5)",
-      "Fal Rune (19)"
+      "Hel",
+      "Ko",
+      "Thul",
+      "Eth",
+      "Fal"
     ],
     "base_items": [
       "Polearm"
@@ -294,6 +296,7 @@
         "resolved_text": "All Resistances +20-30"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword92",
       "*Rune Name": "Obedience",
@@ -351,10 +354,10 @@
   {
     "name": "Whisper",
     "runes": [
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
-      "\u2022Mal Rune (23)\u2022"
+      "Ber",
+      "Ber",
+      "Ist",
+      "Mal"
     ],
     "base_items": [
       "Polearm"
@@ -410,6 +413,7 @@
         "resolved_text": "Level 30 Cyclone Armor (21/# Charges)"
       }
     ],
+    "rune_properties": [],
     "raw_row": {
       "Name": "Runeword161",
       "*Rune Name": "Whisper",

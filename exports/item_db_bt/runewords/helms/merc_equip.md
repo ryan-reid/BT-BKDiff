@@ -1,7 +1,7 @@
 # Merc Equip Runewords
 
 ### Delirium
-* **Runes:** •Lem Rune \(20\)• + •••Ist Rune \(24\)••• + Io Rune \(16\)
+* **Runes:** Lem + Ist + Io
 * **Base Items:** Merc Equip
 * **Properties:**
     * 11% Chance to cast level 18 Confuse on striking
@@ -12,7 +12,7 @@
     * \+2 to All Skills
 
 ### Dream
-* **Runes:** Io Rune \(16\) + •••Jah Rune \(31\)••• + •Pul Rune \(21\)•
+* **Runes:** Io + Jah + Pul
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+150\-220 Defense
@@ -24,7 +24,7 @@
     * 20\-30% Better Chance of Getting Magic Items
 
 ### Flickering Flame
-* **Runes:** Nef Rune \(4\) + •Pul Rune \(21\)• + •••Vex Rune \(26\)•••
+* **Runes:** Nef + Pul + Vex
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+3 to Fire Skills
@@ -35,7 +35,7 @@
     * Poison Length Reduced by 50%
 
 ### Fortune
-* **Runes:** Sol Rune \(12\) + Tir Rune \(3\) + Shael Rune \(13\)
+* **Runes:** Sol + Tir + Shael
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+77% Enhanced Defense
@@ -46,7 +46,7 @@
     * \+5 to Mana after each Kill
 
 ### Knowledge
-* **Runes:** Ith Rune \(6\) + Tir Rune \(3\)
+* **Runes:** Ith + Tir
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+20\-30 to Energy
@@ -55,7 +55,7 @@
     * \+3 to Warmth
 
 ### Lore
-* **Runes:** Ort Rune \(9\) + Sol Rune \(12\)
+* **Runes:** Ort + Sol
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+10 to Energy
@@ -64,7 +64,7 @@
     * \+2 to Mana after each Kill
 
 ### Nadir
-* **Runes:** Nef Rune \(4\) + Tir Rune \(3\)
+* **Runes:** Nef + Tir
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+50% Enhanced Defense
@@ -76,7 +76,7 @@
     * Damage Reduced by 4
 
 ### Radiance
-* **Runes:** Nef Rune \(4\) + Sol Rune \(12\) + Ith Rune \(6\)
+* **Runes:** Nef + Sol + Ith
 * **Base Items:** Merc Equip
 * **Properties:**
     * \+5 to Light Radius
@@ -88,7 +88,7 @@
     * Magic Damage Reduced by 5
 
 ### Wisdom
-* **Runes:** •Pul Rune \(21\)• + Ith Rune \(6\) + Eld Rune \(2\)
+* **Runes:** Pul + Ith + Eld
 * **Base Items:** Merc Equip
 * **Properties:**
     * Piercing Attack
@@ -99,7 +99,7 @@
     * \+10 to Energy
 
 ### Metamorphosis
-* **Runes:** Io Rune \(16\) + •••Cham Rune \(32\)••• + Fal Rune \(19\)
+* **Runes:** Io + Cham + Fal
 * **Base Items:** Merc Equip
 * **Properties:**
     * 100% Chance to cast level 1 Mark of the Bear on striking
@@ -110,7 +110,7 @@
     * 25% Chance of Crushing Blow
 
 ### Ground
-* **Runes:** Shael Rune \(13\) + Io Rune \(16\) + Ort Rune \(9\)
+* **Runes:** Shael + Io + Ort
 * **Base Items:** Merc Equip
 * **Properties:**
     * Increase Maximum Life 5%
@@ -119,7 +119,7 @@
     * \+10\-15 Lightning Absorb
 
 ### Temper
-* **Runes:** Shael Rune \(13\) + Io Rune \(16\) + Ral Rune \(8\)
+* **Runes:** Shael + Io + Ral
 * **Base Items:** Merc Equip
 * **Properties:**
     * Increase Maximum Life 5%
@@ -128,7 +128,7 @@
     * \+10\-15 Fire Absorb
 
 ### Hearth
-* **Runes:** Shael Rune \(13\) + Io Rune \(16\) + Thul Rune \(10\)
+* **Runes:** Shael + Io + Thul
 * **Base Items:** Merc Equip
 * **Properties:**
     * Increase Maximum Life 5%
@@ -138,7 +138,7 @@
     * Cannot Be Frozen
 
 ### Cure
-* **Runes:** Shael Rune \(13\) + Io Rune \(16\) + Tal Rune \(7\)
+* **Runes:** Shael + Io + Tal
 * **Base Items:** Merc Equip
 * **Properties:**
     * Increase Maximum Life 5%
@@ -148,7 +148,7 @@
     * Level 1 Cleansing Aura When Equipped
 
 ### Bulwark
-* **Runes:** Shael Rune \(13\) + Io Rune \(16\) + Sol Rune \(12\)
+* **Runes:** Shael + Io + Sol
 * **Base Items:** Merc Equip
 * **Properties:**
     * Increase Maximum Life 5%

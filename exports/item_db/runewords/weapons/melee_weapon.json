@@ -2,11 +2,11 @@
   {
     "name": "Beast",
     "runes": [
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "Tir Rune (3)",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022Mal Rune (23)\u2022",
-      "Lum Rune (17)"
+      "Ber",
+      "Tir",
+      "Um",
+      "Mal",
+      "Lum"
     ],
     "base_items": [
       "Melee Weapon"
@@ -60,6 +60,75 @@
         "min_val": "3",
         "max_val": "3",
         "resolved_text": "+3 to Lycanthropy"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ber",
+        "properties": [
+          {
+            "code": "crush",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "20% Chance of Crushing Blow"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Tir",
+        "properties": [
+          {
+            "code": "mana-kill",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2 to Mana after each Kill"
+          }
+        ]
+      },
+      {
+        "rune": "Um",
+        "properties": [
+          {
+            "code": "openwounds",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "25% Chance of Open Wounds"
+          }
+        ]
+      },
+      {
+        "rune": "Mal",
+        "properties": [
+          {
+            "code": "noheal",
+            "param": "",
+            "min_val": "1",
+            "max_val": "1",
+            "resolved_text": "Prevent Monster Heal"
+          }
+        ]
+      },
+      {
+        "rune": "Lum",
+        "properties": [
+          {
+            "code": "enr",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Energy"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -121,11 +190,11 @@
   {
     "name": "Death",
     "runes": [
-      "Hel Rune (15)",
-      "El Rune (1)",
-      "\u2022\u2022\u2022Vex Rune (26)\u2022\u2022\u2022",
-      "Ort Rune (9)",
-      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022"
+      "Hel",
+      "El",
+      "Vex",
+      "Ort",
+      "Gul"
     ],
     "base_items": [
       "Melee Weapon"
@@ -179,6 +248,89 @@
         "min_val": "1",
         "max_val": "1",
         "resolved_text": "Indestructible"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Hel",
+        "properties": [
+          {
+            "code": "ease",
+            "param": "",
+            "min_val": "-20",
+            "max_val": "-20",
+            "resolved_text": "Requirements --20%"
+          }
+        ]
+      },
+      {
+        "rune": "El",
+        "properties": [
+          {
+            "code": "light",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "+5 to Light Radius"
+          },
+          {
+            "code": "att",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "+50 to Attack Rating"
+          }
+        ]
+      },
+      {
+        "rune": "Vex",
+        "properties": [
+          {
+            "code": "manasteal",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "7% Mana stolen per hit"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Ort",
+        "properties": [
+          {
+            "code": "dmg-ltng",
+            "param": "",
+            "min_val": "1",
+            "max_val": "50",
+            "resolved_text": "Adds 1-50 Lightning Damage"
+          }
+        ]
+      },
+      {
+        "rune": "Gul",
+        "properties": [
+          {
+            "code": "att%",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "20% Bonus to Attack Rating"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -240,11 +392,11 @@
   {
     "name": "Doom",
     "runes": [
-      "Hel Rune (15)",
-      "\u2022\u2022\u2022Ohm Rune (27)\u2022\u2022\u2022",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022\u2022\u2022Lo Rune (28)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Cham Rune (32)\u2022\u2022\u2022"
+      "Hel",
+      "Ohm",
+      "Um",
+      "Lo",
+      "Cham"
     ],
     "base_items": [
       "Melee Weapon"
@@ -298,6 +450,89 @@
         "min_val": "20",
         "max_val": "40",
         "resolved_text": "20% Chance to cast level 40 Blizzard on striking"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Hel",
+        "properties": [
+          {
+            "code": "ease",
+            "param": "",
+            "min_val": "-20",
+            "max_val": "-20",
+            "resolved_text": "Requirements --20%"
+          }
+        ]
+      },
+      {
+        "rune": "Ohm",
+        "properties": [
+          {
+            "code": "dmg%",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "+50% Enhanced Damage"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Um",
+        "properties": [
+          {
+            "code": "openwounds",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "25% Chance of Open Wounds"
+          }
+        ]
+      },
+      {
+        "rune": "Lo",
+        "properties": [
+          {
+            "code": "deadly",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "20% Deadly Strike"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Cham",
+        "properties": [
+          {
+            "code": "slow",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "Slows Target by 20%"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -359,11 +594,11 @@
   {
     "name": "Eternity",
     "runes": [
-      "Amn Rune (11)",
-      "\u2022\u2022\u2022Ber Rune (30)\u2022\u2022\u2022",
-      "\u2022\u2022\u2022Ist Rune (24)\u2022\u2022\u2022",
-      "Sol Rune (12)",
-      "\u2022\u2022\u2022Sur Rune (29)\u2022\u2022\u2022"
+      "Amn",
+      "Ber",
+      "Ist",
+      "Sol",
+      "Sur"
     ],
     "base_items": [
       "Melee Weapon"
@@ -417,6 +652,89 @@
         "min_val": "1",
         "max_val": "1",
         "resolved_text": "Cannot Be Frozen"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Amn",
+        "properties": [
+          {
+            "code": "lifesteal",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "7% Life stolen per hit"
+          }
+        ]
+      },
+      {
+        "rune": "Ber",
+        "properties": [
+          {
+            "code": "crush",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "20% Chance of Crushing Blow"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Ist",
+        "properties": [
+          {
+            "code": "mag%",
+            "param": "",
+            "min_val": "30",
+            "max_val": "30",
+            "resolved_text": "30% Better Chance of Getting Magic Items"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "dmg-min",
+            "param": "",
+            "min_val": "9",
+            "max_val": "9",
+            "resolved_text": "+9 to Minimum Damage"
+          }
+        ]
+      },
+      {
+        "rune": "Sur",
+        "properties": [
+          {
+            "code": "stupidity",
+            "param": "",
+            "min_val": "1",
+            "max_val": "1",
+            "resolved_text": "Hit Blinds Target +1"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -478,10 +796,10 @@
   {
     "name": "Holy Thunder",
     "runes": [
-      "Eth Rune (5)",
-      "Ral Rune (8)",
-      "Ort Rune (9)",
-      "Tal Rune (7)"
+      "Eth",
+      "Ral",
+      "Ort",
+      "Tal"
     ],
     "base_items": [
       "Melee Weapon"
@@ -535,6 +853,56 @@
         "min_val": "75",
         "max_val": "75",
         "resolved_text": "Poison Length Reduced by 75%"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Eth",
+        "properties": [
+          {
+            "code": "reduce-ac",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "-25% Target Defense"
+          }
+        ]
+      },
+      {
+        "rune": "Ral",
+        "properties": [
+          {
+            "code": "dmg-fire",
+            "param": "",
+            "min_val": "5",
+            "max_val": "30",
+            "resolved_text": "Adds 5-30 Fire Damage"
+          }
+        ]
+      },
+      {
+        "rune": "Ort",
+        "properties": [
+          {
+            "code": "dmg-ltng",
+            "param": "",
+            "min_val": "1",
+            "max_val": "50",
+            "resolved_text": "Adds 1-50 Lightning Damage"
+          }
+        ]
+      },
+      {
+        "rune": "Tal",
+        "properties": [
+          {
+            "code": "dmg-pois",
+            "param": "125",
+            "min_val": "154",
+            "max_val": "154",
+            "resolved_text": "Adds 154-154 Poison Damage Over 154 Seconds"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -596,11 +964,11 @@
   {
     "name": "Honor",
     "runes": [
-      "Amn Rune (11)",
-      "El Rune (1)",
-      "Ith Rune (6)",
-      "Tir Rune (3)",
-      "Sol Rune (12)"
+      "Amn",
+      "El",
+      "Ith",
+      "Tir",
+      "Sol"
     ],
     "base_items": [
       "Melee Weapon"
@@ -647,6 +1015,75 @@
         "min_val": "25",
         "max_val": "25",
         "resolved_text": "+25% Increased Attack Speed"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Amn",
+        "properties": [
+          {
+            "code": "lifesteal",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "7% Life stolen per hit"
+          }
+        ]
+      },
+      {
+        "rune": "El",
+        "properties": [
+          {
+            "code": "light",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "+5 to Light Radius"
+          },
+          {
+            "code": "att",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "+50 to Attack Rating"
+          }
+        ]
+      },
+      {
+        "rune": "Ith",
+        "properties": [
+          {
+            "code": "dmg-max",
+            "param": "",
+            "min_val": "9",
+            "max_val": "9",
+            "resolved_text": "+9 to Maximum Damage"
+          }
+        ]
+      },
+      {
+        "rune": "Tir",
+        "properties": [
+          {
+            "code": "mana-kill",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2 to Mana after each Kill"
+          }
+        ]
+      },
+      {
+        "rune": "Sol",
+        "properties": [
+          {
+            "code": "dmg-min",
+            "param": "",
+            "min_val": "9",
+            "max_val": "9",
+            "resolved_text": "+9 to Minimum Damage"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -708,10 +1145,10 @@
   {
     "name": "Kingslayer",
     "runes": [
-      "\u2022Mal Rune (23)\u2022",
-      "\u2022Um Rune (22)\u2022",
-      "\u2022\u2022\u2022Gul Rune (25)\u2022\u2022\u2022",
-      "Fal Rune (19)"
+      "Mal",
+      "Um",
+      "Gul",
+      "Fal"
     ],
     "base_items": [
       "Melee Weapon"
@@ -765,6 +1202,63 @@
         "min_val": "350",
         "max_val": "350",
         "resolved_text": "350% Extra Gold from Monsters"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Mal",
+        "properties": [
+          {
+            "code": "noheal",
+            "param": "",
+            "min_val": "1",
+            "max_val": "1",
+            "resolved_text": "Prevent Monster Heal"
+          }
+        ]
+      },
+      {
+        "rune": "Um",
+        "properties": [
+          {
+            "code": "openwounds",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "25% Chance of Open Wounds"
+          }
+        ]
+      },
+      {
+        "rune": "Gul",
+        "properties": [
+          {
+            "code": "att%",
+            "param": "",
+            "min_val": "20",
+            "max_val": "20",
+            "resolved_text": "20% Bonus to Attack Rating"
+          },
+          {
+            "code": "addxp",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2% to Experience Gained"
+          }
+        ]
+      },
+      {
+        "rune": "Fal",
+        "properties": [
+          {
+            "code": "str",
+            "param": "",
+            "min_val": "10",
+            "max_val": "10",
+            "resolved_text": "+10 to Strength"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -826,9 +1320,9 @@
   {
     "name": "Malice",
     "runes": [
-      "Ith Rune (6)",
-      "El Rune (1)",
-      "Eth Rune (5)"
+      "Ith",
+      "El",
+      "Eth"
     ],
     "base_items": [
       "Melee Weapon"
@@ -882,6 +1376,51 @@
         "min_val": "7",
         "max_val": "7",
         "resolved_text": "7% Life stolen per hit"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Ith",
+        "properties": [
+          {
+            "code": "dmg-max",
+            "param": "",
+            "min_val": "9",
+            "max_val": "9",
+            "resolved_text": "+9 to Maximum Damage"
+          }
+        ]
+      },
+      {
+        "rune": "El",
+        "properties": [
+          {
+            "code": "light",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "+5 to Light Radius"
+          },
+          {
+            "code": "att",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "+50 to Attack Rating"
+          }
+        ]
+      },
+      {
+        "rune": "Eth",
+        "properties": [
+          {
+            "code": "reduce-ac",
+            "param": "",
+            "min_val": "25",
+            "max_val": "25",
+            "resolved_text": "-25% Target Defense"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -943,8 +1482,8 @@
   {
     "name": "Steel",
     "runes": [
-      "Tir Rune (3)",
-      "El Rune (1)"
+      "Tir",
+      "El"
     ],
     "base_items": [
       "Melee Weapon"
@@ -991,6 +1530,39 @@
         "min_val": "",
         "max_val": "",
         "resolved_text": "Repairs 1 durability in 25 seconds"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Tir",
+        "properties": [
+          {
+            "code": "mana-kill",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2 to Mana after each Kill"
+          }
+        ]
+      },
+      {
+        "rune": "El",
+        "properties": [
+          {
+            "code": "light",
+            "param": "",
+            "min_val": "5",
+            "max_val": "5",
+            "resolved_text": "+5 to Light Radius"
+          },
+          {
+            "code": "att",
+            "param": "",
+            "min_val": "50",
+            "max_val": "50",
+            "resolved_text": "+50 to Attack Rating"
+          }
+        ]
       }
     ],
     "raw_row": {
@@ -1052,8 +1624,8 @@
   {
     "name": "Strength",
     "runes": [
-      "Amn Rune (11)",
-      "Tir Rune (3)"
+      "Amn",
+      "Tir"
     ],
     "base_items": [
       "Melee Weapon"
@@ -1093,6 +1665,32 @@
         "min_val": "",
         "max_val": "",
         "resolved_text": "Repairs 1 durability in 25 seconds"
+      }
+    ],
+    "rune_properties": [
+      {
+        "rune": "Amn",
+        "properties": [
+          {
+            "code": "lifesteal",
+            "param": "",
+            "min_val": "7",
+            "max_val": "7",
+            "resolved_text": "7% Life stolen per hit"
+          }
+        ]
+      },
+      {
+        "rune": "Tir",
+        "properties": [
+          {
+            "code": "mana-kill",
+            "param": "",
+            "min_val": "2",
+            "max_val": "2",
+            "resolved_text": "+2 to Mana after each Kill"
+          }
+        ]
       }
     ],
     "raw_row": {

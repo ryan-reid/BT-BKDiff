@@ -1,7 +1,7 @@
 # Melee Weapon Runewords
 
 ### Beast
-* **Runes:** •••Ber Rune \(30\)••• + Tir Rune \(3\) + •Um Rune \(22\)• + •Mal Rune \(23\)• + Lum Rune \(17\)
+* **Runes:** Ber + Tir + Um + Mal + Lum
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+40% Increased Attack Speed
@@ -13,7 +13,7 @@
     * \+3 to Lycanthropy
 
 ### Death
-* **Runes:** Hel Rune \(15\) + El Rune \(1\) + •••Vex Rune \(26\)••• + Ort Rune \(9\) + •••Gul Rune \(25\)•••
+* **Runes:** Hel + El + Vex + Ort + Gul
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+300\-385% Enhanced Damage
@@ -25,7 +25,7 @@
     * Indestructible
 
 ### Doom
-* **Runes:** Hel Rune \(15\) + •••Ohm Rune \(27\)••• + •Um Rune \(22\)• + •••Lo Rune \(28\)••• + •••Cham Rune \(32\)•••
+* **Runes:** Hel + Ohm + Um + Lo + Cham
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+280\-320% Enhanced Damage
@@ -37,7 +37,7 @@
     * 20% Chance to cast level 40 Blizzard on striking
 
 ### Eternity
-* **Runes:** Amn Rune \(11\) + •••Ber Rune \(30\)••• + •••Ist Rune \(24\)••• + Sol Rune \(12\) + •••Sur Rune \(29\)•••
+* **Runes:** Amn + Ber + Ist + Sol + Sur
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+260\-310% Enhanced Damage
@@ -49,7 +49,7 @@
     * Cannot Be Frozen
 
 ### Holy Thunder
-* **Runes:** Eth Rune \(5\) + Ral Rune \(8\) + Ort Rune \(9\) + Tal Rune \(7\)
+* **Runes:** Eth + Ral + Ort + Tal
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+100% Enhanced Damage
@@ -61,7 +61,7 @@
     * Poison Length Reduced by 75%
 
 ### Honor
-* **Runes:** Amn Rune \(11\) + El Rune \(1\) + Ith Rune \(6\) + Tir Rune \(3\) + Sol Rune \(12\)
+* **Runes:** Amn + El + Ith + Tir + Sol
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+160\-190% Enhanced Damage
@@ -72,7 +72,7 @@
     * \+25% Increased Attack Speed
 
 ### Kingslayer
-* **Runes:** •Mal Rune \(23\)• + •Um Rune \(22\)• + •••Gul Rune \(25\)••• + Fal Rune \(19\)
+* **Runes:** Mal + Um + Gul + Fal
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+30% Increased Attack Speed
@@ -84,7 +84,7 @@
     * 350% Extra Gold from Monsters
 
 ### Malice
-* **Runes:** Ith Rune \(6\) + El Rune \(1\) + Eth Rune \(5\)
+* **Runes:** Ith + El + Eth
 * **Base Items:** Melee Weapon
 * **Properties:**
     * 100% Chance of Open Wounds
@@ -96,7 +96,7 @@
     * 7% Life stolen per hit
 
 ### Steel
-* **Runes:** Tir Rune \(3\) + El Rune \(1\)
+* **Runes:** Tir + El
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+25% Increased Attack Speed
@@ -107,7 +107,7 @@
     * Repairs 1 durability in 25 seconds
 
 ### Strength
-* **Runes:** Amn Rune \(11\) + Tir Rune \(3\)
+* **Runes:** Amn + Tir
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+20 to Strength

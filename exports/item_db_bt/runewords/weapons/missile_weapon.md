@@ -1,7 +1,7 @@
 # Missile Weapon Runewords
 
 ### Brand
-* **Runes:** •••Jah Rune \(31\)••• + •••Lo Rune \(28\)••• + •Mal Rune \(23\)• + •••Gul Rune \(25\)•••
+* **Runes:** Jah + Lo + Mal + Gul
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+260\-340% Enhanced Damage
@@ -13,7 +13,7 @@
     * Fires Explosive Arrows or Bolts
 
 ### Edge
-* **Runes:** Tir Rune \(3\) + Tal Rune \(7\) + Amn Rune \(11\)
+* **Runes:** Tir + Tal + Amn
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+280\-320% Enhanced Damage
@@ -25,7 +25,7 @@
     * Reduces all Vendor Prices 15%
 
 ### Faith
-* **Runes:** •••Ohm Rune \(27\)••• + •••Jah Rune \(31\)••• + •Lem Rune \(20\)• + Eld Rune \(2\)
+* **Runes:** Ohm + Jah + Lem + Eld
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+280% Enhanced Damage
@@ -37,7 +37,7 @@
     * \+2 to All Skills
 
 ### Harmony
-* **Runes:** Tir Rune \(3\) + Ith Rune \(6\) + Sol Rune \(12\) + Ko Rune \(18\)
+* **Runes:** Tir + Ith + Sol + Ko
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+275\-325% Enhanced Damage
@@ -49,7 +49,7 @@
     * \+2 to Light Radius
 
 ### Ice
-* **Runes:** Amn Rune \(11\) + Shael Rune \(13\) + •••Jah Rune \(31\)••• + •••Lo Rune \(28\)•••
+* **Runes:** Amn + Shael + Jah + Lo
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+140\-210% Enhanced Damage
@@ -61,7 +61,7 @@
     * \(3\.1% per clvl\) Extra Gold from Monsters \(Based on Character Level\)
 
 ### Melody
-* **Runes:** Shael Rune \(13\) + Ko Rune \(18\) + Nef Rune \(4\)
+* **Runes:** Shael + Ko + Nef
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+50% Enhanced Damage
@@ -72,7 +72,7 @@
     * \+300% Damage to Undead
 
 ### Mist
-* **Runes:** •••Cham Rune \(32\)••• + Shael Rune \(13\) + •••Gul Rune \(25\)••• + Thul Rune \(10\) + Ith Rune \(6\)
+* **Runes:** Cham + Shael + Gul + Thul + Ith
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+3 to All Skills
@@ -83,7 +83,7 @@
     * All Resistances \+40
 
 ### Wrath
-* **Runes:** •Pul Rune \(21\)• + Lum Rune \(17\) + •••Ber Rune \(30\)••• + •Mal Rune \(23\)•
+* **Runes:** Pul + Lum + Ber + Mal
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+300\-375% Enhanced Damage
@@ -95,7 +95,7 @@
     * Cannot Be Frozen
 
 ### Zephyr
-* **Runes:** Ort Rune \(9\) + Eth Rune \(5\)
+* **Runes:** Ort + Eth
 * **Base Items:** Missile Weapon
 * **Properties:**
     * \+25% Faster Run/Walk

@@ -1,7 +1,7 @@
 # Melee Weapon Runewords
 
 ### Beast
-* **Runes:** •••Ber Rune \(30\)••• + Tir Rune \(3\) + •Um Rune \(22\)• + •Mal Rune \(23\)• + Lum Rune \(17\)
+* **Runes:** Ber + Tir + Um + Mal + Lum
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+40% Increased Attack Speed
@@ -11,9 +11,15 @@
     * \+3 to Hunger
     * \+3 to Werebear
     * \+3 to Lycanthropy
+* **Properties from Runes:**
+    * **Ber:** 20% Chance of Crushing Blow; \+2% to Experience Gained
+    * **Tir:** \+2 to Mana after each Kill
+    * **Um:** 25% Chance of Open Wounds
+    * **Mal:** Prevent Monster Heal
+    * **Lum:** \+10 to Energy
 
 ### Death
-* **Runes:** Hel Rune \(15\) + El Rune \(1\) + •••Vex Rune \(26\)••• + Ort Rune \(9\) + •••Gul Rune \(25\)•••
+* **Runes:** Hel + El + Vex + Ort + Gul
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+300\-385% Enhanced Damage
@@ -23,9 +29,15 @@
     * 100% Chance to cast level 44 Chain Lightning when you Die
     * 50% Chance of Crushing Blow
     * Indestructible
+* **Properties from Runes:**
+    * **Hel:** Requirements \-\-20%
+    * **El:** \+5 to Light Radius; \+50 to Attack Rating
+    * **Vex:** 7% Mana stolen per hit; \+2% to Experience Gained
+    * **Ort:** Adds 1\-50 Lightning Damage
+    * **Gul:** 20% Bonus to Attack Rating; \+2% to Experience Gained
 
 ### Doom
-* **Runes:** Hel Rune \(15\) + •••Ohm Rune \(27\)••• + •Um Rune \(22\)• + •••Lo Rune \(28\)••• + •••Cham Rune \(32\)•••
+* **Runes:** Hel + Ohm + Um + Lo + Cham
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+280\-320% Enhanced Damage
@@ -35,9 +47,15 @@
     * \-50\-75% to Enemy Cold Resistance
     * \+2 to All Skills
     * 20% Chance to cast level 40 Blizzard on striking
+* **Properties from Runes:**
+    * **Hel:** Requirements \-\-20%
+    * **Ohm:** \+50% Enhanced Damage; \+2% to Experience Gained
+    * **Um:** 25% Chance of Open Wounds
+    * **Lo:** 20% Deadly Strike; \+2% to Experience Gained
+    * **Cham:** Slows Target by 20%; \+2% to Experience Gained
 
 ### Eternity
-* **Runes:** Amn Rune \(11\) + •••Ber Rune \(30\)••• + •••Ist Rune \(24\)••• + Sol Rune \(12\) + •••Sur Rune \(29\)•••
+* **Runes:** Amn + Ber + Ist + Sol + Sur
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+260\-310% Enhanced Damage
@@ -47,9 +65,15 @@
     * \+30% Increased Attack Speed
     * \+9% to Experience Gained
     * Cannot Be Frozen
+* **Properties from Runes:**
+    * **Amn:** 7% Life stolen per hit
+    * **Ber:** 20% Chance of Crushing Blow; \+2% to Experience Gained
+    * **Ist:** 30% Better Chance of Getting Magic Items; \+2% to Experience Gained
+    * **Sol:** \+9 to Minimum Damage
+    * **Sur:** Hit Blinds Target \+1; \+2% to Experience Gained
 
 ### Holy Thunder
-* **Runes:** Eth Rune \(5\) + Ral Rune \(8\) + Ort Rune \(9\) + Tal Rune \(7\)
+* **Runes:** Eth + Ral + Ort + Tal
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+100% Enhanced Damage
@@ -59,9 +83,14 @@
     * \+5% to Maximum Lightning Resist
     * Level 5 Holy Shock Aura When Equipped
     * Poison Length Reduced by 75%
+* **Properties from Runes:**
+    * **Eth:** \-25% Target Defense
+    * **Ral:** Adds 5\-30 Fire Damage
+    * **Ort:** Adds 1\-50 Lightning Damage
+    * **Tal:** Adds 154\-154 Poison Damage Over 154 Seconds
 
 ### Honor
-* **Runes:** Amn Rune \(11\) + El Rune \(1\) + Ith Rune \(6\) + Tir Rune \(3\) + Sol Rune \(12\)
+* **Runes:** Amn + El + Ith + Tir + Sol
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+160\-190% Enhanced Damage
@@ -70,9 +99,15 @@
     * 25% Deadly Strike
     * \+55% Faster Hit Recovery
     * \+25% Increased Attack Speed
+* **Properties from Runes:**
+    * **Amn:** 7% Life stolen per hit
+    * **El:** \+5 to Light Radius; \+50 to Attack Rating
+    * **Ith:** \+9 to Maximum Damage
+    * **Tir:** \+2 to Mana after each Kill
+    * **Sol:** \+9 to Minimum Damage
 
 ### Kingslayer
-* **Runes:** •Mal Rune \(23\)• + •Um Rune \(22\)• + •••Gul Rune \(25\)••• + Fal Rune \(19\)
+* **Runes:** Mal + Um + Gul + Fal
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+30% Increased Attack Speed
@@ -82,9 +117,14 @@
     * 25% Chance of Open Wounds
     * \+1 to Berserk
     * 350% Extra Gold from Monsters
+* **Properties from Runes:**
+    * **Mal:** Prevent Monster Heal
+    * **Um:** 25% Chance of Open Wounds
+    * **Gul:** 20% Bonus to Attack Rating; \+2% to Experience Gained
+    * **Fal:** \+10 to Strength
 
 ### Malice
-* **Runes:** Ith Rune \(6\) + El Rune \(1\) + Eth Rune \(5\)
+* **Runes:** Ith + El + Eth
 * **Base Items:** Melee Weapon
 * **Properties:**
     * 100% Chance of Open Wounds
@@ -94,9 +134,13 @@
     * Repairs 1 durability in 25 seconds
     * Replenish Life \+\-5
     * 7% Life stolen per hit
+* **Properties from Runes:**
+    * **Ith:** \+9 to Maximum Damage
+    * **El:** \+5 to Light Radius; \+50 to Attack Rating
+    * **Eth:** \-25% Target Defense
 
 ### Steel
-* **Runes:** Tir Rune \(3\) + El Rune \(1\)
+* **Runes:** Tir + El
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+25% Increased Attack Speed
@@ -105,9 +149,12 @@
     * \+20% Enhanced Damage
     * 5% Chance of Crushing Blow
     * Repairs 1 durability in 25 seconds
+* **Properties from Runes:**
+    * **Tir:** \+2 to Mana after each Kill
+    * **El:** \+5 to Light Radius; \+50 to Attack Rating
 
 ### Strength
-* **Runes:** Amn Rune \(11\) + Tir Rune \(3\)
+* **Runes:** Amn + Tir
 * **Base Items:** Melee Weapon
 * **Properties:**
     * \+20 to Strength
@@ -115,3 +162,6 @@
     * \+10 to Vitality
     * 25% Chance of Crushing Blow
     * Repairs 1 durability in 25 seconds
+* **Properties from Runes:**
+    * **Amn:** 7% Life stolen per hit
+    * **Tir:** \+2 to Mana after each Kill
