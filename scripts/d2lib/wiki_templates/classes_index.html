@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% from "components.html" import hero %}
+{% block content %}
+{{ hero(
+  "Generated Class Index",
+  "Classes",
+  "Class pages mirror the current skill tree export and present generated effect tables in a website format.",
+  [{"label": "Skill Tables", "tone": "accent"}]
+) }}
+<section class="content-section">
+  <input id="page-search" class="search-input" type="search" placeholder="Search classes or skill names..." />
+  <div class="card-grid class-grid">
+    {% for entry in classes %}
+    <a class="item-card" href="{{ site_root }}{{ entry.href }}" data-search="{{ entry.search_text }}">
+      <span class="item-card-family">Class</span>
+      <h3>{{ entry.title }}</h3>
+      <p>{{ entry.summary }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

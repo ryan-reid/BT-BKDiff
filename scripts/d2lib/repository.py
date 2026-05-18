@@ -25,12 +25,29 @@ def strip_json_comments(text: str) -> str:
 
 class D2Repository:
     def __init__(self, mpq_path: str):
-        self.mpq_path: str = mpq_path
+        self.mpq_path: str = os.path.abspath(mpq_path)
         # Supplemental files should be placed in data/retail/ within the repo
-        self.supplemental_path: str = os.path.join(os.path.dirname(__file__), "..", "data", "retail")
+        self.supplemental_path: str = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "..", "data", "retail")
+        )
         self.strings: Dict[str, str] = {}
         self.excel_cache: Dict[str, List[Dict[str, str]]] = {}
         self._load_strings()
+
+    def _candidate_string_dirs(self) -> List[str]:
+        return [
+            os.path.join(self.mpq_path, "data", "local", "lng", "strings"),
+            os.path.join(self.mpq_path, "local", "lng", "strings"),
+            os.path.join(self.mpq_path, "strings"),
+        ]
+
+    def _candidate_excel_paths(self, table_name: str) -> List[str]:
+        filename = f"{table_name}.txt"
+        return [
+            os.path.join(self.mpq_path, "data", "global", "excel", filename),
+            os.path.join(self.mpq_path, "global", "excel", filename),
+            os.path.join(self.mpq_path, "excel", filename),
+        ]
 
     def _load_strings(self) -> None:
         """Loads string JSON files with strict file-level precedence."""
@@ -49,8 +66,9 @@ class D2Repository:
                 if f.endswith(".json"): all_files[f] = os.path.join(base_string_dir, f)
 
         # 1. Highest Priority: Mod strings (from MPQ path)
-        mod_string_dir = os.path.join(self.mpq_path, "data", "local", "lng", "strings")
-        if os.path.exists(mod_string_dir):
+        for mod_string_dir in self._candidate_string_dirs():
+            if not os.path.exists(mod_string_dir):
+                continue
             for f in os.listdir(mod_string_dir):
                 if f.endswith(".json"): all_files[f] = os.path.join(mod_string_dir, f)
         
@@ -100,11 +118,13 @@ class D2Repository:
         if table_name in self.excel_cache:
             return self.excel_cache[table_name]
         
-        # 1. Try Mod Path
-        filepath = os.path.join(self.mpq_path, "data", "global", "excel", f"{table_name}.txt")
         data = []
-        if os.path.exists(filepath):
+        for filepath in self._candidate_excel_paths(table_name):
+            if not os.path.exists(filepath):
+                continue
             data = self.load_tsv(filepath)
+            if data:
+                break
         
         # 2. Try Supplemental Fallback ONLY if file is missing from mod
         if not data:

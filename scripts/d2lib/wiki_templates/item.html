@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% from "components.html" import hero %}
+{% block content %}
+{{ hero("Generated Item Page", page.title, page.summary, page.chips) }}
+<section class="page-grid">
+  <aside class="info-panel">
+    <h2>Quick Facts</h2>
+    <dl class="stat-list">
+      {% for stat in page.stats %}
+      <div><dt>{{ stat.label }}</dt><dd>{{ stat.value }}</dd></div>
+      {% endfor %}
+    </dl>
+  </aside>
+  <div class="content-panel">
+    <section class="content-section">
+      <h2>Retail Comparison</h2>
+      {% if page.comparison.state == "added" %}
+      <p class="muted">No {{ old_label }} (Old) record was matched for this item. This page shows the current {{ new_label }} (New) snapshot only.</p>
+      {% elif page.comparison.state == "unchanged" %}
+      <p class="muted">No structured differences were detected between {{ old_label }} (Old) and {{ new_label }} (New) for this item.</p>
+      {% else %}
+      <p class="muted">Structured diff view using {{ old_label }} (Old) and {{ new_label }} (New).</p>
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Field</th><th>{{ old_label }} (Old)</th><th>{{ new_label }} (New)</th></tr>
+          </thead>
+          <tbody>
+            {% for row in page.comparison.rows %}
+            <tr>
+              <th>{{ row.label }}</th>
+              <td><span class="comparison-value is-old">{{ row.old or "empty" }}</span></td>
+              <td><span class="comparison-value is-new">{{ row.new or "empty" }}</span></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+    </section>
+    <section class="content-section">
+      <h2>Properties</h2>
+      <ul class="property-list">
+        {% if page.properties %}
+          {% for prop in page.properties %}
+          <li class="property-entry{% if prop.is_warning %} is-warning{% endif %}">{{ prop.text }}</li>
+          {% endfor %}
+        {% else %}
+          <li class="is-empty">No generated properties were found for this record.</li>
+        {% endif %}
+      </ul>
+    </section>
+    <section class="content-section">
+      <h2>Source</h2>
+      <p class="muted">Structured export path: <code>{{ page.source_rel_path }}</code></p>
+    </section>
+  </div>
+</section>
+{% endblock %}

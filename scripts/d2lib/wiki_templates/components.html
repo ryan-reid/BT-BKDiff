@@ -1,0 +1,14 @@
+{% macro hero(eyebrow, title, subtitle, chips=[]) -%}
+<section class="hero">
+  <p class="hero-eyebrow">{{ eyebrow }}</p>
+  <h1>{{ title }}</h1>
+  <p class="hero-copy">{{ subtitle }}</p>
+  {% if chips %}
+  <div class="chip-row">
+    {% for chip in chips %}
+    <span class="chip{% if chip.tone == 'accent' %} chip-accent{% endif %}">{{ chip.label }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{%- endmacro %}

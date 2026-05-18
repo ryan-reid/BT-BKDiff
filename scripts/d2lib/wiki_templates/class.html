@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% from "components.html" import hero %}
+{% block content %}
+{{ hero(
+  "Generated Class Page",
+  page.class_name,
+  page.skills|length ~ " skills sourced from the current skill tree export.",
+  [{"label": "Class Skills", "tone": "accent"}]
+) }}
+<section class="content-section">
+  <h2>Skill Navigation</h2>
+  <div class="jump-grid">
+    {% for skill in page.skills %}
+    <a class="jump-link" href="#{{ skill.slug }}">{{ skill.name }}</a>
+    {% endfor %}
+  </div>
+</section>
+{% for skill in page.skills %}
+<section class="skill-card" id="{{ skill.slug }}">
+  <div class="skill-card-head"><h3>{{ skill.name }}</h3></div>
+  {% if skill.work_in_progress %}
+  <p class="callout">Work in Progress: values are generated from the current parsing and calculation pipeline.</p>
+  {% endif %}
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Effect</th><th>Scaling</th><th>L1</th><th>L10</th><th>L20</th><th>L20+10</th><th>Limit</th></tr></thead>
+      <tbody>
+        {% for effect in skill.effects %}
+        <tr>
+          <td>{{ effect.effect }}</td>
+          <td>{{ effect.scaling }}</td>
+          <td>{{ effect.l1 }}</td>
+          <td>{{ effect.l10 }}</td>
+          <td>{{ effect.l20 }}</td>
+          <td>{{ effect.l20_soft10 }}</td>
+          <td>{{ effect.limit }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% if skill.synergies %}
+  <div class="synergy-box">
+    <h4>Synergies</h4>
+    <ul>
+      {% for synergy in skill.synergies %}
+      <li><strong>{{ synergy.name }}</strong>: {{ synergy.effect }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>
+{% endfor %}
+{% endblock %}

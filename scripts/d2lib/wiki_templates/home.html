@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% from "components.html" import hero %}
+{% block content %}
+{{ hero(
+  "BT Diablo Data Wiki",
+  "Static site snapshot of the current data exports",
+  "Generated from the project analyzers and skill exports so the wiki can be browsed like a real site instead of a pile of markdown files.",
+  [
+    {"label": "HTML", "tone": "default"},
+    {"label": "CSS", "tone": "default"},
+    {"label": "JavaScript", "tone": "default"},
+    {"label": "Static Site", "tone": "accent"},
+  ]
+) }}
+<section class="metric-grid">
+  <article class="metric-card"><span>Unique Pages</span><strong>{{ item_counts.unique }}</strong></article>
+  <article class="metric-card"><span>Set Pages</span><strong>{{ item_counts.set }}</strong></article>
+  <article class="metric-card"><span>Runeword Pages</span><strong>{{ item_counts.runeword }}</strong></article>
+  <article class="metric-card"><span>Class Pages</span><strong>{{ class_count }}</strong></article>
+  <article class="metric-card"><span>Total Item Pages</span><strong>{{ total_items }}</strong></article>
+</section>
+<section class="card-grid three-up">
+  <a class="link-card" href="items/"><h3>All Items</h3><p>Browse every generated item page with quick search and family filters.</p><span class="link-card-cta">Open page</span></a>
+  <a class="link-card" href="classes/"><h3>Classes</h3><p>Open class skill pages built from the current skill tree exports.</p><span class="link-card-cta">Open page</span></a>
+  <a class="link-card" href="patch-notes/full-patch-notes-draft/"><h3>Patch Notes Draft</h3><p>Use the generated patch-notes page as a website-facing summary scaffold.</p><span class="link-card-cta">Open page</span></a>
+</section>
+{% endblock %}

@@ -99,6 +99,18 @@ def main() -> None:
     ], "Generating BK Class Skill Trees"):
         failures.append("Generating BK Class Skill Trees")
 
+    # 9. Generate the static wiki site
+    if not run_command([
+        sys.executable, os.path.join(SCRIPTS_ROOT, "generate_wiki.py"),
+        "--item-db", "../exports/item_db",
+        "--old-item-db", "../exports/item_db_retail",
+        "--skill-trees", "../output/skill_trees",
+        "--out", "../output/wiki",
+        "--old-label", "Retail",
+        "--new-label", "BKDiablo"
+    ], "Generating Wiki Pages"):
+        failures.append("Generating Wiki Pages")
+
     if failures:
         print("--- Some Tasks Failed ---", file=sys.stderr)
         for failure in failures:
