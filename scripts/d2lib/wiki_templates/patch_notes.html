@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% from "components.html" import hero %}
+{% block content %}
+{{ hero(
+  "Draft Patch Surface",
+  "Full Patch Notes Draft",
+  "This page acts as the website-facing landing page for future generated patch summaries.",
+  [{"label": "Draft", "tone": "accent"}]
+) }}
+<section class="content-section">
+  <h2>Current State</h2>
+  <ul class="property-list">
+    <li>Item and Excel diff reports remain the technical source artifacts for patch-note generation.</li>
+    <li>The current snapshot contains {{ total_items }} item pages and {{ class_count }} class pages available for reference.</li>
+    <li>This page is meant to become the front-facing narrative layer once the diff summaries are converted into readable sections.</li>
+  </ul>
+</section>
+<section class="content-section">
+  <h2>Source Reports</h2>
+  <p class="muted">Technical diff reports still live in the existing output folders and are intended to be summarized into this site over time.</p>
+  <div class="card-grid three-up">
+    <article class="link-card is-static"><h3>Excel Diff</h3><p>BK vs BT and BK vs Retail table comparisons are already generated through the canonical report pipeline.</p></article>
+    <article class="link-card is-static"><h3>Item Diff</h3><p>Item database comparisons remain the source for item-side patch note summaries.</p></article>
+    <article class="link-card is-static"><h3>Skill Trees</h3><p>Class skill exports can feed future skill-specific patch note sections.</p></article>
+  </div>
+</section>
+{% endblock %}

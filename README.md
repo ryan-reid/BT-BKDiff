@@ -65,4 +65,4 @@ Generates detailed technical reports highlighting additions, removals, and modif
 ## Requirements
 
 - Python 3.x
-- No external libraries required (uses standard `csv`, `json`, `difflib`, and `os` modules).
+- Install Python dependencies with `python -m pip install -r requirements.txt`.
