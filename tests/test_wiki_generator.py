@@ -21,6 +21,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.skill_trees = os.path.join(self.root, "skill_trees")
         self.output = os.path.join(self.root, "wiki")
         self._write_fixture_data()
+        self._write_report_fixture_data()
 
     def tearDown(self):
         self.temp_dir.cleanup()
@@ -114,6 +115,16 @@ class TestWikiGenerator(unittest.TestCase):
                 "| Damage | Linear (+1) | +1 | +10 | +20 | +30 | -- |\n"
             )
 
+    def _write_report_fixture_data(self):
+        report_root = os.path.join(self.root, "item_diff_report_retail_bk")
+        os.makedirs(os.path.join(report_root, "assets"), exist_ok=True)
+        with open(os.path.join(report_root, "index.html"), "w", encoding="utf-8") as f:
+            f.write("<!doctype html><title>Item Report</title>")
+        with open(os.path.join(report_root, "diff.json"), "w", encoding="utf-8") as f:
+            json.dump({"schema": "test"}, f)
+        with open(os.path.join(report_root, "assets", "report.css"), "w", encoding="utf-8") as f:
+            f.write("body { color: black; }")
+
     def _generate(self):
         generator = WikiGenerator(
             self.item_db,
@@ -139,6 +150,10 @@ class TestWikiGenerator(unittest.TestCase):
             os.path.join(self.output, "items", "unique", "twin-item-second-base-2", "index.html"),
             os.path.join(self.output, "items", "index.html"),
             os.path.join(self.output, "classes", "amazon", "index.html"),
+            os.path.join(self.output, "reports", "index.html"),
+            os.path.join(self.output, "reports", "items", "retail-bk", "index.html"),
+            os.path.join(self.output, "reports", "items", "retail-bk", "diff.json"),
+            os.path.join(self.output, "reports", "items", "retail-bk", "assets", "report.css"),
         ]
         for path in expected_paths:
             self.assertTrue(os.path.exists(path), path)
@@ -149,6 +164,8 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("items/unique/twin-item/", manifest_paths)
         self.assertIn("items/unique/twin-item-second-base/", manifest_paths)
         self.assertIn("items/", manifest_paths)
+        self.assertIn("reports/", manifest_paths)
+        self.assertIn("reports/items/retail-bk/", manifest_paths)
 
     def test_item_index_json_schema_and_ordering(self):
         self._generate()
@@ -176,7 +193,13 @@ class TestWikiGenerator(unittest.TestCase):
 
         self.assertIn("Twin Item", item_page)
         self.assertIn("Structured diff view using Retail (Old) and BKDiablo (New).", item_page)
+        self.assertIn('href="../../../reports/"', item_page)
         self.assertIn('data-item-index-url="../data/items-index.json"', items_page)
+
+        with open(os.path.join(self.output, "reports", "index.html"), "r", encoding="utf-8") as f:
+            reports_page = f.read()
+        self.assertIn("Item Diff: BKDiablo vs Retail", reports_page)
+        self.assertIn("reports/items/retail-bk/", reports_page)
 
         with open(os.path.join(self.output, "items", "runeword", "practice", "index.html"), "r", encoding="utf-8") as f:
             runeword_page = f.read()

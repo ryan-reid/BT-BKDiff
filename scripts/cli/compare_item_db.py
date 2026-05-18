@@ -6,7 +6,7 @@ import argparse
 from typing import Dict, List, Any
 from d2lib.repository import D2Repository
 from d2lib.services import ItemComparisonService
-from d2lib.exporters import MarkdownExporter
+from d2lib.exporters import HtmlReportExporter, JsonExporter, MarkdownExporter
 
 def load_json_db(db_dir: str) -> Dict[str, Dict[str, Any]]:
     # type -> id -> item
@@ -36,10 +36,10 @@ def load_json_db(db_dir: str) -> Dict[str, Dict[str, Any]]:
     return types
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Compare two exported item databases and generate markdown reports.")
+    parser = argparse.ArgumentParser(description="Compare two exported item databases and generate Markdown and HTML reports.")
     parser.add_argument("--new-db", default="../exports/item_db", help="Path to the new/target exported JSON item database")
     parser.add_argument("--old-db", default="../exports/item_db_bt", help="Path to the old/base exported JSON item database")
-    parser.add_argument("--out", default="../output/item_diff_report", help="Output directory for generated markdown diffs")
+    parser.add_argument("--out", default="../output/item_diff_report", help="Output directory for generated diff reports")
     args = parser.parse_args()
 
     bk_json_dir = args.new_db
@@ -75,9 +75,21 @@ def main() -> None:
         'removed': combined_removed,
         'modified': combined_modified
     }
-    
+
+    json_exporter = JsonExporter()
+    json_exporter.export(
+        {
+            "schema": "bt-bkdiff.item-diff.v1",
+            "type_counts": type_counts,
+            "diff": combined_diff,
+        },
+        os.path.join(out_dir, "diff.json"),
+    )
+
     exporter = MarkdownExporter()
     exporter.export_item_diff(combined_diff, out_dir)
+    html_exporter = HtmlReportExporter()
+    html_exporter.export_item_diff(combined_diff, out_dir, type_counts=type_counts)
     
     # Inject breakdown into SUMMARY.md
     summary_path = os.path.join(out_dir, "SUMMARY.md")

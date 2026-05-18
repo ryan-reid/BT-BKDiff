@@ -49,7 +49,7 @@ That command exports item databases, compares BKDiablo against BTDiablo and reta
 - `output/skill_trees/`: generated class skill tree markdown
 - `output/wiki/`: generated static wiki site, ignored as a local/publish artifact
 
-Legacy direct-command defaults such as `output/item_diff_report/` and `output/excel_diff_report/` are ignored. Prefer `scripts/generate_reports.py` for repeatable project output.
+Diff report directories contain structured JSON DTOs plus renderer outputs: Markdown for text review and browser-friendly HTML entry points at `index.html`. Legacy direct-command defaults such as `output/item_diff_report/` and `output/excel_diff_report/` are ignored. Prefer `scripts/generate_reports.py` for repeatable project output.
 
 ## Wiki
 

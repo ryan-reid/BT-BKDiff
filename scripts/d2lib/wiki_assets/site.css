@@ -167,6 +167,10 @@ code {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.card-grid.two-up {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 .metric-card,
 .link-card,
 .content-section,

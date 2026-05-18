@@ -3,7 +3,7 @@ import sys
 import argparse
 from d2lib.repository import D2Repository
 from d2lib.services import ExcelComparisonService
-from d2lib.exporters import MarkdownExporter
+from d2lib.exporters import HtmlReportExporter, JsonExporter, MarkdownExporter
 
 def get_key_column(filename: str) -> str:
     mapping = {
@@ -15,10 +15,10 @@ def get_key_column(filename: str) -> str:
     return mapping.get(filename, 'code')
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Compare two Diablo II Excel directories and export markdown diffs.")
+    parser = argparse.ArgumentParser(description="Compare two Diablo II Excel directories and export Markdown and HTML diffs.")
     parser.add_argument("--new-dir", default="../mods/BKDiablo/bkdiablo.mpq/data/global/excel", help="Path to the new/target Excel directory")
     parser.add_argument("--old-dir", default="../mods/BTDiablo/btdiablo.mpq/data/global/excel", help="Path to the old/base Excel directory")
-    parser.add_argument("--out", default="../output/excel_diff_report", help="Output directory for generated markdown diffs")
+    parser.add_argument("--out", default="../output/excel_diff_report", help="Output directory for generated diff reports")
     args = parser.parse_args()
 
     bk_dir = args.new_dir
@@ -27,6 +27,8 @@ def main() -> None:
     
     repo = D2Repository(".")
     exporter = MarkdownExporter()
+    html_exporter = HtmlReportExporter()
+    json_exporter = JsonExporter()
     summary_rows = []
     
     files_bk = {f for f in os.listdir(bk_dir) if f.endswith('.txt')}
@@ -40,7 +42,15 @@ def main() -> None:
         
         diff = ExcelComparisonService.compare_tables(table_bk, table_bt, get_key_column(filename), filename)
         report_name = filename.replace('.txt', '.md')
+        json_exporter.export(
+            {
+                "schema": "bt-bkdiff.excel-diff.v1",
+                "diff": diff,
+            },
+            os.path.join(report_dir, report_name.replace('.md', '.json')),
+        )
         exporter.export_excel_diff(diff, os.path.join(report_dir, report_name))
+        html_exporter.export_excel_diff(diff, os.path.join(report_dir, report_name.replace('.md', '.html')))
         summary_rows.append({
             "filename": filename,
             "report_name": report_name,
@@ -71,6 +81,14 @@ def main() -> None:
     os.makedirs(report_dir, exist_ok=True)
     with open(os.path.join(report_dir, "SUMMARY.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(summary_lines).strip() + "\n")
+    json_exporter.export(
+        {
+            "schema": "bt-bkdiff.excel-diff-summary.v1",
+            "files": summary_rows,
+        },
+        os.path.join(report_dir, "summary.json"),
+    )
+    html_exporter.export_excel_summary(summary_rows, os.path.join(report_dir, "index.html"))
 
     print(f"Reports generated in {report_dir}")
 

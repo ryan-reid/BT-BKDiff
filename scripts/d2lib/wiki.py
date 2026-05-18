@@ -11,6 +11,36 @@ MODULE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_DIR = os.path.join(MODULE_DIR, "wiki_templates")
 ASSET_SOURCE_DIR = os.path.join(MODULE_DIR, "wiki_assets")
 ITEM_FAMILIES = ("unique", "set", "runeword")
+REPORT_SOURCES = (
+    {
+        "title": "Item Diff: BKDiablo vs Retail",
+        "description": "Item database changes comparing BKDiablo against retail data.",
+        "source_dir": "item_diff_report_retail_bk",
+        "output_dir": "reports/items/retail-bk",
+        "source_kind": "item_diff",
+    },
+    {
+        "title": "Item Diff: BKDiablo vs BTDiablo",
+        "description": "Item database changes comparing BKDiablo against BTDiablo.",
+        "source_dir": "item_diff_report_bt_bk",
+        "output_dir": "reports/items/bt-bk",
+        "source_kind": "item_diff",
+    },
+    {
+        "title": "Excel Diff: BKDiablo vs Retail",
+        "description": "Raw Excel table changes comparing BKDiablo against retail data.",
+        "source_dir": "excel_diff_report_retail_bk",
+        "output_dir": "reports/excel/retail-bk",
+        "source_kind": "excel_diff",
+    },
+    {
+        "title": "Excel Diff: BKDiablo vs BTDiablo",
+        "description": "Raw Excel table changes comparing BKDiablo against BTDiablo.",
+        "source_dir": "excel_diff_report_bt_bk",
+        "output_dir": "reports/excel/bt-bk",
+        "source_kind": "excel_diff",
+    },
+)
 
 
 def _slugify(value: str) -> str:
@@ -51,6 +81,10 @@ class WikiRoutes:
     @staticmethod
     def patch_notes_output_path() -> str:
         return "patch-notes/full-patch-notes-draft/index.html"
+
+    @staticmethod
+    def reports_index_output_path() -> str:
+        return "reports/index.html"
 
     @staticmethod
     def route_from_output_path(output_path: str) -> str:
@@ -156,7 +190,8 @@ class WikiGenerator:
         self._write_assets()
         item_entries = self._write_item_pages(items, old_item_index)
         class_entries = self._write_class_pages(class_pages)
-        self._write_indexes(item_entries, class_entries)
+        report_entries = self._publish_reports()
+        self._write_indexes(item_entries, class_entries, report_entries)
         self._write_patch_notes_draft(item_entries, class_entries)
         self._write_item_index_data(item_entries)
         self._write_manifest()
@@ -375,6 +410,7 @@ class WikiGenerator:
         self,
         item_entries: Dict[str, List[Dict[str, str]]],
         class_entries: List[Dict[str, str]],
+        report_entries: List[Dict[str, str]],
     ) -> None:
         self._write_page(
             title="BT Diablo Data Wiki",
@@ -385,6 +421,7 @@ class WikiGenerator:
             item_counts={family: len(item_entries[family]) for family in ITEM_FAMILIES},
             class_count=len(class_entries),
             total_items=sum(len(entries) for entries in item_entries.values()),
+            reports=report_entries,
         )
 
         group_to_types: Dict[str, set[str]] = {}
@@ -412,6 +449,15 @@ class WikiGenerator:
             category="index",
             source_files=[],
             classes=class_entries,
+        )
+
+        self._write_page(
+            title="Reports | BT Diablo Data Wiki",
+            output_path=WikiRoutes.reports_index_output_path(),
+            template_name="reports_index.html",
+            category="index",
+            source_files=[],
+            reports=report_entries,
         )
 
     def _write_patch_notes_draft(
@@ -445,6 +491,48 @@ class WikiGenerator:
             for entry in item_entries[family]
         ]
         self.writer.write_text("data/items-index.json", json.dumps(rows, indent=2))
+
+    def _publish_reports(self) -> List[Dict[str, str]]:
+        reports_root = os.path.normpath(os.path.join(self.output_dir, ".."))
+        entries: List[Dict[str, str]] = []
+        for report in REPORT_SOURCES:
+            source_dir = os.path.join(reports_root, report["source_dir"])
+            if not os.path.isdir(source_dir):
+                continue
+
+            copied_files = 0
+            for root, _, files in os.walk(source_dir):
+                for filename in files:
+                    if not filename.endswith((".html", ".css", ".json")):
+                        continue
+                    source_path = os.path.join(root, filename)
+                    rel_source = os.path.relpath(source_path, source_dir).replace("\\", "/")
+                    rel_output = f"{report['output_dir']}/{rel_source}"
+                    self.writer.copy_asset(source_path, rel_output)
+                    copied_files += 1
+
+            if copied_files == 0:
+                continue
+
+            href = WikiRoutes.route_from_output_path(f"{report['output_dir']}/index.html")
+            entry = {
+                "title": report["title"],
+                "href": href,
+                "summary": report["description"],
+                "source_dir": report["source_dir"],
+                "source_kind": report["source_kind"],
+                "file_count": str(copied_files),
+            }
+            entries.append(entry)
+            self.manifest.append(
+                {
+                    "title": report["title"],
+                    "path": href,
+                    "category": "report",
+                    "sources": [report["source_dir"]],
+                }
+            )
+        return entries
 
     def _write_manifest(self) -> None:
         self.writer.write_text("manifest.json", json.dumps(self.manifest, indent=2))
