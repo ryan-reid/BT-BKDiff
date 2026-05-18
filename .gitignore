@@ -208,4 +208,10 @@ __marimo__/
 scripts/output/
 output/item_diff_report/
 output/excel_diff_report/
+output/item_diff_report_*/**/*.html
+output/item_diff_report_*/assets/
+output/item_diff_report_*/diff.json
+output/excel_diff_report_*/*.html
+output/excel_diff_report_*/*.json
+output/excel_diff_report_*/assets/
 output/wiki/
