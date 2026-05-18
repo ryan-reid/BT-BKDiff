@@ -84,7 +84,7 @@ class TestHtmlReportExporter(unittest.TestCase):
                 [
                     {
                         "filename": "gems.txt",
-                        "report_name": "gems.md",
+                        "report_name": "gems.html",
                         "added_cols": 1,
                         "removed_cols": 0,
                         "added_rows": 1,
