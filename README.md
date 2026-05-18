@@ -1,68 +1,67 @@
-# BT-BKDiff: Diablo 2 Excel & Item Comparison Tool
+# BT-BKDiff: Diablo II Data Diff and Wiki Generator
 
-This project provides a suite of Python scripts designed to compare Diablo 2 (D2R mod) data between two different mod versions. It handles both raw Excel (`.txt`) file differences and high-level Item Database comparisons.
+This project compares Diablo II mod data across BKDiablo, BTDiablo, and retail data, then generates human-readable reports plus a local static wiki.
 
 ## Project Structure
 
 ```text
 /
-├── data/           # Configuration files (propertygroups.txt)
-├── docs/           # Modding guides and references
-├── exports/        # Parsed item database dumps (.md)
-├── mods/           # Mod data (Submodules: BKDiablo, BTDiablo)
-├── output/         # Generated comparison reports
-├── scripts/        # Python analysis and comparison logic
-└── README.md
+├── data/           # Retail/base data snapshots and shared config
+├── docs/           # Modding references and wiki generation notes
+├── exports/        # Structured item database exports used by comparisons/wiki
+├── mods/           # BKDiablo and BTDiablo mod data
+├── output/         # Generated comparison reports and local wiki output
+├── scripts/        # CLI wrappers plus shared Python implementation
+└── tests/          # Unit tests and fixtures
 ```
 
----
+## Main Workflow
 
-## 1. Item Database Comparison (The "High-Level" View)
+Install dependencies:
 
-This tool exports items (Uniques, Sets, Runewords) into human-readable Markdown and then compares them surgically.
+```bash
+python -m pip install -r requirements.txt
+```
 
-### Scripts:
-*   **`scripts/d2_item_analyzer.py`**: Extracts item data from MPQ directories and saves them as `.md` files.
-    *   **Usage**: 
-        ```bash
-        cd scripts
-        python d2_item_analyzer.py --mpq ../mods/BKDiablo/bkdiablo.mpq --type export --out ../exports/item_db
-        python d2_item_analyzer.py --mpq ../mods/BTDiablo/btdiablo.mpq --type export --out ../exports/item_db_bt
-        ```
-    *   **Advanced**: Uses `data/propertygroups.txt` to resolve complex "composite" properties and random affix groups into human-readable text.
-*   **`scripts/compare_item_db.py`**: Compares the two exported databases and generates a multi-page report.
-    *   **Usage**: `cd scripts; python compare_item_db.py`
-    *   **Output**: Files are saved in `output/item_diff_report/`:
-        *   `SUMMARY.md`: High-level counts and links.
-        *   `ADDED.md`: Full breakdown of new items.
-        *   `MODIFIED.md`: Surgical side-by-side diffs of changed items.
-        *   `REMOVED.md`: List of deleted items.
+Run the test suite:
 
----
+```bash
+python -m unittest discover -s tests
+```
 
-## 2. Excel TSV Comparison (The "Raw Data" View)
+Rebuild all canonical generated outputs:
 
-Generates detailed technical reports highlighting additions, removals, and modifications in columns and rows of the game's `.txt` files.
+```bash
+python scripts/generate_reports.py
+```
 
-### Scripts:
-*   **`scripts/compare_all_excel.py`**: The primary orchestration script for raw data.
-    *   **Usage**: `cd scripts; python compare_all_excel.py`
-    *   **Output**: Detailed `.md` reports for every changed file in `output/excel_diff_report/SUMMARY.md`.
-*   **`scripts/compare_excel.py`**: Standalone utility used to compare any two specific TSV files.
-*   **`scripts/analyze_headers.py`**: Inspects headers and first rows to help identify "key columns" for matching.
+That command exports item databases, compares BKDiablo against BTDiablo and retail, regenerates class skill trees, and writes the local wiki to `output/wiki/`.
 
----
+## Canonical Outputs
 
-## Technical Features
+- `exports/item_db/`: BKDiablo structured item export
+- `exports/item_db_bt/`: BTDiablo structured item export
+- `exports/item_db_retail/`: retail structured item export
+- `output/item_diff_report_bt_bk/`: BKDiablo vs BTDiablo item comparison
+- `output/item_diff_report_retail_bk/`: BKDiablo vs retail item comparison
+- `output/excel_diff_report_bt_bk/`: BKDiablo vs BTDiablo raw Excel comparison
+- `output/excel_diff_report_retail_bk/`: BKDiablo vs retail raw Excel comparison
+- `output/skill_trees/`: generated class skill tree markdown
+- `output/wiki/`: generated static wiki site, ignored as a local/publish artifact
 
-*   **Surgical Highlighting**: Mod-level changes are highlighted token-by-token (e.g., if a range `10-20` changes to `10-30`, only the `30` is highlighted).
-*   **Smart Normalization**:
-    *   Ignores immaterial differences like Diablo II color codes (`ÿc1`), bullets (`•`), and formatting.
-    *   Treats equivalent phrasing (e.g., "Physical Damage Received Reduced by" vs "Damage Reduced by") as identical.
-    *   Distinguishes between flat reduction and percentile reduction by preserving the `%` sign in keys.
-*   **Property Group Resolution**: Unpacks custom mod properties (like `Incendiary-Affix1`) using the `data/propertygroups.txt` definition file.
+Legacy direct-command defaults such as `output/item_diff_report/` and `output/excel_diff_report/` are ignored. Prefer `scripts/generate_reports.py` for repeatable project output.
 
-## Requirements
+## Wiki
 
-- Python 3.x
-- Install Python dependencies with `python -m pip install -r requirements.txt`.
+The wiki is a static site generated from the structured exports and skill tree markdown. Item detail pages are pre-rendered HTML, while the item index uses `output/wiki/data/items-index.json` for browser-side search and filtering.
+
+For local viewing, serve `output/wiki/` with a simple static server after running the generator.
+
+## Script Layout
+
+Top-level scripts in `scripts/` are compatibility wrappers. The implementation is organized under:
+
+- `scripts/d2lib/`: shared repository, service, exporter, and wiki generator code
+- `scripts/cli/`: primary CLI implementations
+- `scripts/devtools/`: development inspection utilities
+- `scripts/legacy/`: older skill extraction reference tooling still used by dev utilities

@@ -206,4 +206,6 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 scripts/output/
+output/item_diff_report/
+output/excel_diff_report/
 output/wiki/
