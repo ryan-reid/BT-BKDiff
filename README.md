@@ -48,6 +48,7 @@ These paths are produced by `scripts/generate_reports.py` and are intentionally 
 - `output/item_diff_report_retail_bk/`: BKDiablo vs retail item comparison
 - `output/excel_diff_report_bt_bk/`: BKDiablo vs BTDiablo raw Excel comparison
 - `output/excel_diff_report_retail_bk/`: BKDiablo vs retail raw Excel comparison
+- `output/file_diff_report_retail_bk/`: BKDiablo vs retail text/JSON override file comparison
 - `output/skill_trees/`: generated class skill tree Markdown
 - `output/wiki/`: generated static wiki site and GitHub Pages artifact
 
