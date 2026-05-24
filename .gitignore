@@ -221,5 +221,6 @@ output/excel_diff_report_retail_bk/
 output/excel_diff_report_*/*.html
 output/excel_diff_report_*/*.json
 output/excel_diff_report_*/assets/
+output/file_diff_report_*/
 output/skill_trees/
 output/wiki/

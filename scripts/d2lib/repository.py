@@ -26,10 +26,9 @@ def strip_json_comments(text: str) -> str:
 class D2Repository:
     def __init__(self, mpq_path: str):
         self.mpq_path: str = os.path.abspath(mpq_path)
+        self.repo_root: str = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
         # Supplemental files should be placed in data/retail/ within the repo
-        self.supplemental_path: str = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "..", "data", "retail")
-        )
+        self.supplemental_path: str = os.path.join(self.repo_root, "data", "retail")
         self.strings: Dict[str, str] = {}
         self.excel_cache: Dict[str, List[Dict[str, str]]] = {}
         self._load_strings()
@@ -53,14 +52,18 @@ class D2Repository:
         """Loads string JSON files with strict file-level precedence."""
         all_files = {}
 
-        # 3. Lowest Priority: Retail strings (from data/retail/strings)
-        retail_string_dir = os.path.join(self.supplemental_path, "strings")
-        if os.path.exists(retail_string_dir):
-            for f in os.listdir(retail_string_dir):
-                if f.endswith(".json"): all_files[f] = os.path.join(retail_string_dir, f)
+        # 3. Lowest Priority: Retail strings
+        retail_string_dirs = [
+            os.path.join(self.supplemental_path, "local", "lng", "strings"),
+            os.path.join(self.supplemental_path, "strings"),
+        ]
+        for retail_string_dir in retail_string_dirs:
+            if os.path.exists(retail_string_dir):
+                for f in os.listdir(retail_string_dir):
+                    if f.endswith(".json"): all_files[f] = os.path.join(retail_string_dir, f)
 
         # 2. Medium Priority: Base strings (from data/base/strings)
-        base_string_dir = os.path.join(os.path.dirname(__file__), "..", "data", "base", "strings")
+        base_string_dir = os.path.join(self.repo_root, "data", "base", "strings")
         if os.path.exists(base_string_dir):
             for f in os.listdir(base_string_dir):
                 if f.endswith(".json"): all_files[f] = os.path.join(base_string_dir, f)

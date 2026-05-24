@@ -9,7 +9,7 @@ SCRIPT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
-from cli import compare_all_excel, compare_item_db
+from cli import compare_all_excel, compare_item_db, compare_override_files
 
 
 def run_cli(main_func, args):
@@ -105,6 +105,36 @@ class TestReportCliOutputs(unittest.TestCase):
             self.assertTrue(os.path.exists(os.path.join(out_dir, "ADDED.html")))
             self.assertTrue(os.path.exists(os.path.join(out_dir, "MODIFIED.html")))
             self.assertEqual([], markdown_files_under(out_dir))
+
+    def test_override_file_comparison_maps_mod_data_paths_to_retail_root(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            new_root = os.path.join(temp_dir, "mod")
+            old_root = os.path.join(temp_dir, "retail")
+            out_dir = os.path.join(temp_dir, "report")
+
+            new_file = os.path.join(new_root, "data", "hd", "global", "excel", "desecratedzones.json")
+            old_file = os.path.join(old_root, "hd", "global", "excel", "desecratedzones.json")
+            os.makedirs(os.path.dirname(new_file))
+            os.makedirs(os.path.dirname(old_file))
+            with open(new_file, "w", encoding="utf-8") as f:
+                json.dump({"name": "desecratedzones", "enabled": True}, f)
+            with open(old_file, "w", encoding="utf-8") as f:
+                json.dump({"name": "desecratedzones", "enabled": False}, f)
+
+            run_cli(
+                compare_override_files.main,
+                ["--new-root", new_root, "--old-root", old_root, "--out", out_dir],
+            )
+
+            self.assertTrue(os.path.exists(os.path.join(out_dir, "index.html")))
+            self.assertTrue(os.path.exists(os.path.join(out_dir, "summary.json")))
+            with open(os.path.join(out_dir, "summary.json"), "r", encoding="utf-8") as f:
+                summary = json.load(f)
+
+            self.assertEqual("bt-bkdiff.override-file-diff.v1", summary["schema"])
+            self.assertEqual("modified", summary["files"][0]["status"])
+            self.assertEqual("hd/global/excel/desecratedzones.json", summary["files"][0]["old_path"])
+            self.assertTrue(summary["files"][0]["diff_href"].endswith(".html"))
 
 
 if __name__ == "__main__":

@@ -4,11 +4,11 @@ import os
 def load_strings():
     strings = {}
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    root = os.path.dirname(script_dir)
+    root = os.path.dirname(os.path.dirname(script_dir))
     mod_path = os.path.join(root, "mods/BKDiablo/bkdiablo.mpq")
     paths = [
         os.path.join(root, "data/base/strings"),
-        os.path.join(root, "data/retail/strings"),
+        os.path.join(root, "data/retail/local/lng/strings"),
         os.path.join(mod_path, "data/local/lng/strings")
     ]
     for p in paths:
@@ -26,7 +26,7 @@ def load_strings():
 def main():
     strings = load_strings()
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    root = os.path.dirname(script_dir)
+    root = os.path.dirname(os.path.dirname(script_dir))
     skilldesc_path = os.path.join(root, "mods/BKDiablo/bkdiablo.mpq/data/global/excel/skilldesc.txt")
     
     mapping = {}

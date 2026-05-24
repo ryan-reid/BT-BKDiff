@@ -86,12 +86,21 @@ def main() -> None:
     if not run_command([
         sys.executable, "-m", "cli.compare_all_excel",
         "--new-dir", "../mods/BKDiablo/bkdiablo.mpq/data/global/excel",
-        "--old-dir", "../data/retail/excel",
+        "--old-dir", "../data/retail/global/excel",
         "--out", "../output/excel_diff_report_retail_bk"
     ], "Generating BK vs Retail Excel Comparison Reports"):
         failures.append("Generating BK vs Retail Excel Comparison Reports")
 
-    # 8. Generate BK class skill trees
+    # 8. Compare BK override text/JSON files against retail files
+    if not run_command([
+        sys.executable, "-m", "cli.compare_override_files",
+        "--new-root", "../mods/BKDiablo/bkdiablo.mpq",
+        "--old-root", "../data/retail",
+        "--out", "../output/file_diff_report_retail_bk"
+    ], "Generating BK vs Retail Override File Comparison Report"):
+        failures.append("Generating BK vs Retail Override File Comparison Report")
+
+    # 9. Generate BK class skill trees
     if not run_command([
         sys.executable, "-m", "cli.extract_class_skills",
         "--mpq", "../mods/BKDiablo/bkdiablo.mpq",
@@ -99,7 +108,7 @@ def main() -> None:
     ], "Generating BK Class Skill Trees"):
         failures.append("Generating BK Class Skill Trees")
 
-    # 9. Generate the static wiki site
+    # 10. Generate the static wiki site
     if not run_command([
         sys.executable, "-m", "cli.generate_wiki",
         "--item-db", "../exports/item_db",
