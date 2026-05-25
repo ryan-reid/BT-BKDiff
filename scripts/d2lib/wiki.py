@@ -224,12 +224,7 @@ class AreaFarmingDataBuilder:
         elite_min = self._to_int(row.get("MonUMin(H)"))
         elite_max = self._to_int(row.get("MonUMax(H)"))
         elite_avg = (elite_min + elite_max) / 2
-        display_name = (
-            str(row.get("LevelName", "")).strip()
-            or str(row.get("*StringName", "")).strip()
-            or str(row.get("Name", "")).strip()
-            or "Unknown Area"
-        )
+        display_name = self._level_display_name(row)
 
         return {
             "display_name": display_name,
@@ -270,6 +265,18 @@ class AreaFarmingDataBuilder:
 
     def _area_level(self, row: Dict[str, str]) -> int:
         return self._to_int(row.get("MonLvlEx(H)")) or self._to_int(row.get("MonLvl(H)"))
+
+    def _level_display_name(self, row: Dict[str, str]) -> str:
+        for column in ("LevelName", "*StringName", "Name"):
+            key = str(row.get(column, "")).strip()
+            if not key:
+                continue
+            resolved = self.repository.get_string(key)
+            if resolved and resolved != key:
+                return resolved
+            if column != "LevelName":
+                return key
+        return str(row.get("LevelName", "")).strip() or "Unknown Area"
 
     def _monster_pool_ids(self, row: Dict[str, str]) -> List[str]:
         ids: List[str] = []

@@ -175,6 +175,19 @@ class TestWikiGenerator(unittest.TestCase):
                     "nmon1": "stonebeast",
                     "LevelName": "Fallback Field",
                 },
+                {
+                    "Name": "Act 5 - Hell 1",
+                    "*StringName": "Abaddon",
+                    "Id": "12",
+                    "Act": "4",
+                    "MonLvl(H)": "87",
+                    "MonDen(H)": "900",
+                    "MonUMin(H)": "4",
+                    "MonUMax(H)": "4",
+                    "NumMon": "1",
+                    "nmon1": "firebeast",
+                    "LevelName": "Hell1",
+                },
             ],
         )
 
@@ -221,6 +234,11 @@ class TestWikiGenerator(unittest.TestCase):
                     "ResDm(H)": "100",
                 },
             ],
+        )
+        self._write_json(
+            self.game_data,
+            "data/local/lng/strings/levels.json",
+            [{"Key": "Hell1", "enUS": "Abaddon"}],
         )
 
     def _write_report_fixture_data(self):
@@ -315,6 +333,8 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual(["cold", "fire"], cold_cave["possible_immunities"])
         self.assertEqual(82, fallback["area_level"])
         self.assertIn("physical", fallback["possible_immunities"])
+        self.assertIn("Abaddon", [row["display_name"] for row in rows])
+        self.assertNotIn("Hell1", [row["display_name"] for row in rows])
         self.assertGreater(cold_cave["farm_score"], fallback["farm_score"])
         self.assertEqual(
             {"id", "name", "min_group", "max_group", "rarity", "immunities", "resistances"},
