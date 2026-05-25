@@ -1,5 +1,6 @@
 import json
 import os
+import struct
 import sys
 import tempfile
 import unittest
@@ -41,6 +42,27 @@ class TestWikiGenerator(unittest.TestCase):
             f.write("\t".join(fieldnames) + "\n")
             for row in rows:
                 f.write("\t".join(str(row.get(field, "")) for field in fieldnames) + "\n")
+
+    def _write_ds1_with_objects(self, root, relative_path, object_ids):
+        full_path = os.path.join(root, relative_path)
+        os.makedirs(os.path.dirname(full_path), exist_ok=True)
+        ints = [
+            18,  # version
+            0,  # stored width, actual width is +1
+            0,  # stored height, actual height is +1
+            0,  # act
+            0,  # substitution method
+            0,  # file count
+            0,  # wall layers
+            1,  # floor layers
+            0,  # floor stream cell
+            0,  # shadow stream cell
+            len(object_ids),
+        ]
+        for object_id in object_ids:
+            ints.extend([2, object_id, 0, 0, 0])
+        with open(full_path, "wb") as f:
+            f.write(struct.pack(f"<{len(ints)}i", *ints))
 
     def _write_fixture_data(self):
         uniques = [
@@ -188,6 +210,32 @@ class TestWikiGenerator(unittest.TestCase):
                     "nmon1": "firebeast",
                     "LevelName": "Hell1",
                 },
+                {
+                    "Name": "Act 3 - Kurast 1",
+                    "*StringName": "Lower Kurast",
+                    "Id": "79",
+                    "Act": "2",
+                    "MonLvl(H)": "80",
+                    "MonDen(H)": "1200",
+                    "MonUMin(H)": "2",
+                    "MonUMax(H)": "4",
+                    "NumMon": "1",
+                    "nmon1": "firebeast",
+                    "LevelName": "Lower Kurast",
+                },
+                {
+                    "Name": "Act 1 - Cave 2 Treasure",
+                    "*StringName": "Cave Level 2",
+                    "Id": "13",
+                    "Act": "0",
+                    "MonLvl(H)": "80",
+                    "MonDen(H)": "900",
+                    "MonUMin(H)": "1",
+                    "MonUMax(H)": "2",
+                    "NumMon": "1",
+                    "nmon1": "stonebeast",
+                    "LevelName": "Cave Level 2",
+                },
             ],
         )
 
@@ -234,6 +282,80 @@ class TestWikiGenerator(unittest.TestCase):
                     "ResDm(H)": "100",
                 },
             ],
+        )
+        object_fields = ["Class", "Name", "*Description", "*ID", "InitFn", "PopulateFn"]
+        self._write_tsv(
+            excel_root,
+            "objects.txt",
+            object_fields,
+            [
+                {
+                    "Class": "SpecialChest100",
+                    "Name": "specialchest",
+                    "*Description": "Super Chest",
+                    "*ID": "455",
+                    "InitFn": "57",
+                },
+                {
+                    "Class": "PlainChest",
+                    "Name": "chest",
+                    "*Description": "Plain Chest",
+                    "*ID": "100",
+                    "InitFn": "0",
+                },
+            ],
+        )
+        lvlprest_fields = ["Name", "Def", "LevelId", "File1", "File2", "File3", "File4", "File5", "File6"]
+        self._write_tsv(
+            excel_root,
+            "lvlprest.txt",
+            lvlprest_fields,
+            [
+                {
+                    "Name": "Cold Cave Chest Room",
+                    "Def": "1",
+                    "LevelId": "10",
+                    "File1": "Act1/Test/Super.ds1",
+                },
+                {
+                    "Name": "Fallback Plain Room",
+                    "Def": "2",
+                    "LevelId": "11",
+                    "File1": "Act1/Test/Plain.ds1",
+                },
+                {
+                    "Name": "Lower Kurast Camp",
+                    "Def": "3",
+                    "LevelId": "0",
+                    "File1": "Act3/Kurast/SlumsCamp.ds1",
+                },
+                {
+                    "Name": "Act 1 - Cave Treasure 2",
+                    "Def": "4",
+                    "LevelId": "13",
+                    "File1": "Act1/Caves/CaveRoom2.ds1",
+                },
+            ],
+        )
+        self._write_ds1_with_objects(
+            os.path.join(self.game_data, "data", "global", "tiles"),
+            os.path.join("Act1", "Test", "Super.ds1"),
+            [455],
+        )
+        self._write_ds1_with_objects(
+            os.path.join(self.game_data, "data", "global", "tiles"),
+            os.path.join("Act1", "Test", "Plain.ds1"),
+            [100],
+        )
+        self._write_ds1_with_objects(
+            os.path.join(self.game_data, "data", "global", "tiles"),
+            os.path.join("Act3", "Kurast", "SlumsCamp.ds1"),
+            [5],
+        )
+        self._write_ds1_with_objects(
+            os.path.join(self.game_data, "data", "global", "tiles"),
+            os.path.join("Act1", "Caves", "CaveRoom2.ds1"),
+            [1],
         )
         self._write_json(
             self.game_data,
@@ -302,6 +424,8 @@ class TestWikiGenerator(unittest.TestCase):
         rows = AreaFarmingDataBuilder(self.game_data).build()
         cold_cave = next(row for row in rows if row["display_name"] == "Cold Cave")
         fallback = next(row for row in rows if row["display_name"] == "Fallback Field")
+        lower_kurast = next(row for row in rows if row["display_name"] == "Lower Kurast")
+        cave_level_2 = next(row for row in rows if row["display_name"] == "Cave Level 2")
 
         self.assertEqual(
             {
@@ -319,6 +443,9 @@ class TestWikiGenerator(unittest.TestCase):
                 "elite_avg",
                 "possible_immunities",
                 "immunity_counts",
+                "has_super_chest",
+                "super_chest_count",
+                "super_chest_sources",
                 "monster_pool",
                 "farm_score",
                 "search_text",
@@ -331,6 +458,14 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertTrue(cold_cave["can_drop_top_tier"])
         self.assertEqual(11, cold_cave["elite_avg"])
         self.assertEqual(["cold", "fire"], cold_cave["possible_immunities"])
+        self.assertTrue(cold_cave["has_super_chest"])
+        self.assertEqual(1, cold_cave["super_chest_count"])
+        self.assertEqual("SpecialChest100", cold_cave["super_chest_sources"][0]["object_class"])
+        self.assertFalse(fallback["has_super_chest"])
+        self.assertTrue(lower_kurast["has_super_chest"])
+        self.assertEqual("Kurast Super Chest Right", lower_kurast["super_chest_sources"][0]["object_class"])
+        self.assertTrue(cave_level_2["has_super_chest"])
+        self.assertEqual("Act 1 Treasure Room Super Chest", cave_level_2["super_chest_sources"][0]["object_class"])
         self.assertEqual(82, fallback["area_level"])
         self.assertIn("physical", fallback["possible_immunities"])
         self.assertIn("Abaddon", [row["display_name"] for row in rows])
@@ -375,9 +510,11 @@ class TestWikiGenerator(unittest.TestCase):
             areas_page = f.read()
         self.assertIn('data-area-index-url="../data/areas-index.json"', areas_page)
         self.assertIn("How This Is Calculated", areas_page)
+        self.assertIn("Super chest potential", areas_page)
         with open(os.path.join(self.output, "data", "areas-index.json"), "r", encoding="utf-8") as f:
             area_rows = json.load(f)
         self.assertEqual("Cold Cave", area_rows[0]["display_name"])
+        self.assertTrue(area_rows[0]["has_super_chest"])
 
         with open(os.path.join(self.output, "reports", "index.html"), "r", encoding="utf-8") as f:
             reports_page = f.read()

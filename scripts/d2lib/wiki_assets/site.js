@@ -84,6 +84,18 @@ function areaMonsterPoolMarkup(area) {
     .join("<br>");
 }
 
+function areaSuperChestMarkup(area) {
+  if (!area.has_super_chest) {
+    return '<span class="muted">No</span>';
+  }
+
+  const sources = area.super_chest_sources || [];
+  const names = Array.from(new Set(sources.map((source) => source.object_class).filter(Boolean)));
+  const label = area.super_chest_count > 1 ? `Yes (${area.super_chest_count})` : "Yes";
+  const detail = names.length ? `<br><span class="muted">${escapeHtml(names.slice(0, 3).join(", "))}</span>` : "";
+  return `<span class="area-badge area-badge-accent">Super Chest</span><br><strong>${escapeHtml(label)}</strong>${detail}`;
+}
+
 function areaRowMarkup(area) {
   return `
     <tr>
@@ -99,6 +111,7 @@ function areaRowMarkup(area) {
       </td>
       <td>${escapeHtml(area.monster_density)}</td>
       <td>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)}<br><span class="muted">Avg ${escapeHtml(area.elite_avg)}</span></td>
+      <td>${areaSuperChestMarkup(area)}</td>
       <td><span class="immunity-list">${areaImmunityMarkup(area)}</span></td>
       <td>${areaMonsterPoolMarkup(area)}</td>
     </tr>
@@ -175,7 +188,7 @@ async function wireAreaIndex() {
     });
 
     root.innerHTML = sortedAreas(filtered).map(areaRowMarkup).join("")
-      || '<tr><td colspan="7" class="muted">No areas match the current filters.</td></tr>';
+      || '<tr><td colspan="8" class="muted">No areas match the current filters.</td></tr>';
     if (resultCount) {
       resultCount.textContent = String(filtered.length);
     }
@@ -305,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
   wireAreaIndex().catch((error) => {
     const root = document.querySelector("#area-index-root");
     if (root) {
-      root.innerHTML = '<tr><td colspan="7" class="muted">Unable to load the area index.</td></tr>';
+      root.innerHTML = '<tr><td colspan="8" class="muted">Unable to load the area index.</td></tr>';
     }
     console.error(error);
   });
