@@ -105,10 +105,7 @@ function areaRowMarkup(area) {
         <span class="area-badge-row">${areaBadgeMarkup(area)}</span>
       </th>
       <td><strong>${escapeHtml(area.farm_score)}</strong></td>
-      <td>
-        Area ${escapeHtml(area.area_level)}<br>
-        <span class="muted">Champ ${escapeHtml(area.champion_level)} · Unique ${escapeHtml(area.unique_level)}</span>
-      </td>
+      <td>Area ${escapeHtml(area.area_level)}</td>
       <td>${escapeHtml(area.monster_density)}</td>
       <td>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)}<br><span class="muted">Avg ${escapeHtml(area.elite_avg)}</span></td>
       <td>${areaSuperChestMarkup(area)}</td>
