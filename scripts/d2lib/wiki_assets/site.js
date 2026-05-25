@@ -40,6 +40,81 @@ function itemCardMarkup(item, siteRoot) {
   `;
 }
 
+function areaBadgeMarkup(area) {
+  const badges = [];
+  if (area.area_level >= 87) {
+    badges.push('<span class="area-badge">87+</span>');
+  }
+  if (area.can_drop_top_tier) {
+    badges.push('<span class="area-badge area-badge-accent">Top-tier</span>');
+  }
+  if (area.monster_density >= 3000) {
+    badges.push('<span class="area-badge">High density</span>');
+  }
+  return badges.join("");
+}
+
+function areaImmunityMarkup(area) {
+  if (!area.possible_immunities || area.possible_immunities.length === 0) {
+    return '<span class="muted">None flagged</span>';
+  }
+  return area.possible_immunities
+    .map((immunity) => {
+      const count = area.immunity_counts && area.immunity_counts[immunity]
+        ? ` (${area.immunity_counts[immunity]})`
+        : "";
+      return `<span class="immunity-chip">${escapeHtml(immunity)}${escapeHtml(count)}</span>`;
+    })
+    .join("");
+}
+
+function areaMonsterPoolMarkup(area) {
+  const monsters = area.monster_pool || [];
+  if (monsters.length === 0) {
+    return '<span class="muted">No monster pool</span>';
+  }
+  return monsters
+    .slice(0, 8)
+    .map((monster) => {
+      const immunities = monster.immunities && monster.immunities.length
+        ? `: ${monster.immunities.join(", ")} immune`
+        : "";
+      return `${escapeHtml(monster.name || monster.id)}${escapeHtml(immunities)}`;
+    })
+    .join("<br>");
+}
+
+function areaSuperChestMarkup(area) {
+  if (!area.has_super_chest) {
+    return '<span class="muted">No</span>';
+  }
+
+  const sources = area.super_chest_sources || [];
+  const names = Array.from(new Set(sources.map((source) => source.object_class).filter(Boolean)));
+  const label = area.super_chest_count > 1 ? `Yes (${area.super_chest_count})` : "Yes";
+  const detail = names.length ? `<br><span class="muted">${escapeHtml(names.slice(0, 3).join(", "))}</span>` : "";
+  return `<span class="area-badge area-badge-accent">Super Chest</span><br><strong>${escapeHtml(label)}</strong>${detail}`;
+}
+
+function areaRowMarkup(area) {
+  return `
+    <tr>
+      <th>
+        <span class="area-name">${escapeHtml(area.display_name)}</span>
+        <span class="area-meta">${escapeHtml(area.act)}</span>
+        <span class="area-badge-row">${areaBadgeMarkup(area)}</span>
+      </th>
+      <td><strong>${escapeHtml(area.farm_score)}</strong></td>
+      <td>Area ${escapeHtml(area.area_level)}</td>
+      <td>${escapeHtml(area.monster_density)}</td>
+      <td>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)}<br><span class="muted">Avg ${escapeHtml(area.elite_avg)}</span></td>
+      <td>${areaSuperChestMarkup(area)}</td>
+      <td><span class="immunity-list">${areaImmunityMarkup(area)}</span></td>
+      <td>${areaMonsterPoolMarkup(area)}</td>
+    </tr>
+  `;
+}
+
 function wireStaticSearch() {
   const searchInput = document.querySelector("#page-search");
   const cards = Array.from(document.querySelectorAll(".item-card"));
@@ -53,6 +128,77 @@ function wireStaticSearch() {
       card.hidden = Boolean(query) && !normalizeText(card.dataset.search).includes(query);
     });
   });
+}
+
+async function wireAreaIndex() {
+  const toolbar = document.querySelector("[data-area-index-url]");
+  const root = document.querySelector("#area-index-root");
+  if (!toolbar || !root) {
+    return;
+  }
+
+  const response = await fetch(toolbar.dataset.areaIndexUrl);
+  const areas = await response.json();
+  const searchInput = document.querySelector("#area-search");
+  const actSelect = document.querySelector("#area-act-filter");
+  const minLevelSelect = document.querySelector("#area-min-level-filter");
+  const sortSelect = document.querySelector("#area-sort-filter");
+  const topTierCheckbox = document.querySelector("#area-top-tier-filter");
+  const avoidCheckboxes = Array.from(document.querySelectorAll("[data-avoid-immunity]"));
+  const resultCount = document.querySelector("#area-result-count");
+
+  function sortedAreas(rows) {
+    const sortMode = sortSelect ? sortSelect.value : "score";
+    const sorters = {
+      score: (area) => area.farm_score,
+      level: (area) => area.area_level,
+      density: (area) => area.monster_density,
+      elite: (area) => area.elite_avg,
+    };
+    const score = sorters[sortMode] || sorters.score;
+    return rows.slice().sort((left, right) => {
+      const delta = score(right) - score(left);
+      if (delta !== 0) {
+        return delta;
+      }
+      return String(left.display_name).localeCompare(String(right.display_name));
+    });
+  }
+
+  function applyFilters() {
+    const query = normalizeText(searchInput ? searchInput.value : "");
+    const act = actSelect ? actSelect.value : "all";
+    const minLevel = Number(minLevelSelect ? minLevelSelect.value : 0);
+    const topTierOnly = Boolean(topTierCheckbox && topTierCheckbox.checked);
+    const avoidImmunities = avoidCheckboxes
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.dataset.avoidImmunity);
+
+    const filtered = areas.filter((area) => {
+      const immunities = area.possible_immunities || [];
+      const searchOk = !query || normalizeText(area.search_text).includes(query);
+      const actOk = act === "all" || area.act === act;
+      const levelOk = area.area_level >= minLevel;
+      const topTierOk = !topTierOnly || area.can_drop_top_tier;
+      const immunityOk = avoidImmunities.every((immunity) => !immunities.includes(immunity));
+      return searchOk && actOk && levelOk && topTierOk && immunityOk;
+    });
+
+    root.innerHTML = sortedAreas(filtered).map(areaRowMarkup).join("")
+      || '<tr><td colspan="8" class="muted">No areas match the current filters.</td></tr>';
+    if (resultCount) {
+      resultCount.textContent = String(filtered.length);
+    }
+  }
+
+  [searchInput, actSelect, minLevelSelect, sortSelect, topTierCheckbox, ...avoidCheckboxes]
+    .filter(Boolean)
+    .forEach((control) => control.addEventListener("input", applyFilters));
+  [actSelect, minLevelSelect, sortSelect, topTierCheckbox, ...avoidCheckboxes]
+    .filter(Boolean)
+    .forEach((control) => control.addEventListener("change", applyFilters));
+
+  applyFilters();
 }
 
 async function wireItemIndex() {
@@ -166,6 +312,13 @@ async function wireItemIndex() {
 
 document.addEventListener("DOMContentLoaded", () => {
   wireStaticSearch();
+  wireAreaIndex().catch((error) => {
+    const root = document.querySelector("#area-index-root");
+    if (root) {
+      root.innerHTML = '<tr><td colspan="8" class="muted">Unable to load the area index.</td></tr>';
+    }
+    console.error(error);
+  });
   wireItemIndex().catch((error) => {
     const root = document.querySelector("#item-index-root");
     if (root) {

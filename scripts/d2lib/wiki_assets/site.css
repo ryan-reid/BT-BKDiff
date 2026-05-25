@@ -297,6 +297,18 @@ code {
   border-color: var(--accent);
 }
 
+.filter-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.94rem;
+}
+
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -492,6 +504,60 @@ td {
 .comparison-table tbody tr:last-child th,
 .comparison-table tbody tr:last-child td {
   border-bottom: 0;
+}
+
+.area-table {
+  min-width: 1080px;
+}
+
+.area-name,
+.area-meta {
+  display: block;
+}
+
+.area-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.04rem;
+}
+
+.area-meta {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.88rem;
+}
+
+.area-badge-row,
+.immunity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.area-badge,
+.immunity-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius);
+  padding: 3px 8px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.area-badge {
+  background: rgba(63, 101, 117, 0.1);
+  color: var(--accent-2);
+}
+
+.area-badge-accent {
+  background: rgba(139, 47, 47, 0.12);
+  color: var(--accent);
+}
+
+.immunity-chip {
+  background: rgba(139, 47, 47, 0.1);
+  color: #7a2828;
 }
 
 .comparison-value {

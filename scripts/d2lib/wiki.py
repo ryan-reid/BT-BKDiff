@@ -2,15 +2,28 @@ import json
 import os
 import re
 import shutil
+import struct
 from typing import Any, Dict, List, Optional, Tuple
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from d2lib.repository import D2Repository
+
 
 MODULE_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(MODULE_DIR, "..", ".."))
 TEMPLATE_DIR = os.path.join(MODULE_DIR, "wiki_templates")
 ASSET_SOURCE_DIR = os.path.join(MODULE_DIR, "wiki_assets")
+DEFAULT_RETAIL_DATA_DIR = r"E:\Games\Diablo II Resurrected\Data"
 ITEM_FAMILIES = ("unique", "set", "runeword")
+DAMAGE_TYPES = (
+    ("physical", "ResDm(H)"),
+    ("magic", "ResMa(H)"),
+    ("fire", "ResFi(H)"),
+    ("lightning", "ResLi(H)"),
+    ("cold", "ResCo(H)"),
+    ("poison", "ResPo(H)"),
+)
 REPORT_SOURCES = (
     {
         "title": "Item Diff: BKDiablo vs Retail",
@@ -80,6 +93,10 @@ class WikiRoutes:
     @staticmethod
     def classes_index_output_path() -> str:
         return "classes/index.html"
+
+    @staticmethod
+    def areas_index_output_path() -> str:
+        return "areas/index.html"
 
     @staticmethod
     def class_output_path(slug: str) -> str:
@@ -160,6 +177,417 @@ class WikiOutputWriter:
                     pass
 
 
+class AreaFarmingDataBuilder:
+    SUPER_CHEST_TOKENS = (
+        "sparklychest",
+        "specialchest",
+        "arcanechest",
+        "travincalchest",
+        "sewerchestlarge",
+        "sewerchesttall",
+        "tombchest",
+        "forgottentowerchest",
+    )
+    KURAST_PRESET_LEVEL_IDS = (
+        ("act3/kurast/slums", 79),
+        ("act3/kurast/burbs", 80),
+        ("act3/kurast/metro", 81),
+    )
+
+    def __init__(self, game_data_dir: str, layout_data_dir: Optional[str] = None):
+        self.game_data_dir = game_data_dir
+        self.layout_data_dir = layout_data_dir
+        self.repository = D2Repository(game_data_dir)
+        self.layout_roots = self._layout_roots()
+
+    def build(self) -> List[Dict[str, Any]]:
+        levels = self.repository.get_excel_table("levels")
+        monsters = {
+            str(row.get("Id", "")).strip(): row
+            for row in self.repository.get_excel_table("monstats")
+            if str(row.get("Id", "")).strip()
+        }
+
+        super_chests_by_level_id = self._super_chests_by_level_id()
+        records = [self._area_record(row, monsters, super_chests_by_level_id) for row in levels]
+        records = [record for record in records if self._is_farmable_area(record)]
+        max_density = max([record["monster_density"] for record in records] or [1])
+        max_elite_avg = max([record["elite_avg"] for record in records] or [1])
+        max_density = max(max_density, 1)
+        max_elite_avg = max(max_elite_avg, 1)
+
+        for record in records:
+            record["farm_score"] = self._farm_score(record, max_density, max_elite_avg)
+
+        return sorted(
+            records,
+            key=lambda record: (
+                -record["farm_score"],
+                -record["area_level"],
+                -record["monster_density"],
+                record["display_name"].lower(),
+            ),
+        )
+
+    def _area_record(
+        self,
+        row: Dict[str, str],
+        monsters: Dict[str, Dict[str, str]],
+        super_chests_by_level_id: Dict[int, List[Dict[str, Any]]],
+    ) -> Dict[str, Any]:
+        monster_pool = [
+            self._monster_record(monsters[monster_id])
+            for monster_id in self._monster_pool_ids(row)
+            if monster_id in monsters
+        ]
+        immunity_counts: Dict[str, int] = {damage_type: 0 for damage_type, _ in DAMAGE_TYPES}
+        for monster in monster_pool:
+            for immunity in monster["immunities"]:
+                immunity_counts[immunity] += 1
+        immunity_counts = {key: value for key, value in immunity_counts.items() if value}
+
+        area_level = self._area_level(row)
+        level_id = self._to_int(row.get("Id"))
+        elite_min = self._to_int(row.get("MonUMin(H)"))
+        elite_max = self._to_int(row.get("MonUMax(H)"))
+        elite_avg = (elite_min + elite_max) / 2
+        display_name = self._level_display_name(row)
+        super_chests = super_chests_by_level_id.get(level_id, [])
+
+        return {
+            "display_name": display_name,
+            "internal_name": str(row.get("Name", "")).strip(),
+            "level_id": level_id,
+            "act": self._act_label(row.get("Act")),
+            "area_level": area_level,
+            "champion_level": area_level + 2 if area_level else 0,
+            "unique_level": area_level + 3 if area_level else 0,
+            "can_drop_top_tier": area_level + 3 >= 90 if area_level else False,
+            "monster_density": self._to_int(row.get("MonDen(H)")),
+            "elite_min": elite_min,
+            "elite_max": elite_max,
+            "elite_avg": elite_avg,
+            "possible_immunities": sorted(immunity_counts),
+            "immunity_counts": immunity_counts,
+            "has_super_chest": len(super_chests) > 0,
+            "super_chest_count": len(super_chests),
+            "super_chest_sources": super_chests,
+            "monster_pool": monster_pool,
+            "farm_score": 0,
+            "search_text": self._search_text(display_name, row, monster_pool, super_chests),
+        }
+
+    def _monster_record(self, row: Dict[str, str]) -> Dict[str, Any]:
+        resistances = {damage_type: self._to_int(row.get(column)) for damage_type, column in DAMAGE_TYPES}
+        immunities = [damage_type for damage_type, value in resistances.items() if value >= 100]
+        name_key = str(row.get("NameStr", "")).strip()
+        display_name = self.repository.get_string(name_key) if name_key else ""
+        if not display_name or display_name == name_key:
+            display_name = name_key or str(row.get("Id", "")).strip()
+        return {
+            "id": str(row.get("Id", "")).strip(),
+            "name": display_name,
+            "min_group": self._to_int(row.get("MinGrp")),
+            "max_group": self._to_int(row.get("MaxGrp")),
+            "rarity": self._to_int(row.get("Rarity")),
+            "immunities": immunities,
+            "resistances": resistances,
+        }
+
+    def _area_level(self, row: Dict[str, str]) -> int:
+        return self._to_int(row.get("MonLvlEx(H)")) or self._to_int(row.get("MonLvl(H)"))
+
+    def _level_display_name(self, row: Dict[str, str]) -> str:
+        for column in ("LevelName", "*StringName", "Name"):
+            key = str(row.get(column, "")).strip()
+            if not key:
+                continue
+            resolved = self.repository.get_string(key)
+            if resolved and resolved != key:
+                return resolved
+            if column != "LevelName":
+                return key
+        return str(row.get("LevelName", "")).strip() or "Unknown Area"
+
+    def _monster_pool_ids(self, row: Dict[str, str]) -> List[str]:
+        ids: List[str] = []
+        prefixes = ("nmon", "umon") if any(str(row.get(f"nmon{index}", "")).strip() for index in range(1, 26)) else ("mon", "umon")
+        for prefix in prefixes:
+            for index in range(1, 26):
+                monster_id = str(row.get(f"{prefix}{index}", "")).strip()
+                if monster_id and monster_id not in ids:
+                    ids.append(monster_id)
+        return ids
+
+    def _search_text(
+        self,
+        display_name: str,
+        row: Dict[str, str],
+        monster_pool: List[Dict[str, Any]],
+        super_chests: List[Dict[str, Any]],
+    ) -> str:
+        monsters = " ".join(
+            f"{monster['id']} {monster['name']} {' '.join(monster['immunities'])}"
+            for monster in monster_pool
+        )
+        chest_text = " ".join(
+            f"super chest {source.get('object_class', '')} {source.get('description', '')} {source.get('file', '')}"
+            for source in super_chests
+        )
+        return f"{display_name} {row.get('Name', '')} {row.get('*StringName', '')} {row.get('LevelName', '')} {monsters} {chest_text}"
+
+    def _layout_roots(self) -> List[str]:
+        roots = []
+        for candidate in (
+            os.path.join(self.game_data_dir, "data", "global", "tiles"),
+            os.path.join(self.game_data_dir, "global", "tiles"),
+            self._tiles_root(self.layout_data_dir),
+            self._tiles_root(DEFAULT_RETAIL_DATA_DIR),
+            os.path.join(REPO_ROOT, "data", "retail", "global", "tiles"),
+        ):
+            if candidate and os.path.isdir(candidate):
+                normalized = os.path.normcase(os.path.abspath(candidate))
+                if normalized not in {os.path.normcase(os.path.abspath(root)) for root in roots}:
+                    roots.append(candidate)
+        return roots
+
+    @staticmethod
+    def _tiles_root(path: Optional[str]) -> Optional[str]:
+        if not path:
+            return None
+        if os.path.basename(os.path.normpath(path)).lower() == "tiles":
+            return path
+        return os.path.join(path, "global", "tiles")
+
+    def _super_chests_by_level_id(self) -> Dict[int, List[Dict[str, Any]]]:
+        if not self.layout_roots:
+            return {}
+
+        objects_by_id = self._super_chest_objects()
+        if not objects_by_id:
+            return {}
+
+        chests_by_level_id: Dict[int, List[Dict[str, Any]]] = {}
+        seen = set()
+        for row in self.repository.get_excel_table("lvlprest"):
+            level_ids = self._preset_level_ids(row)
+            if not level_ids:
+                continue
+
+            for ds1_file in self._preset_files(row):
+                contextual_source = self._contextual_preset_super_chest(row, ds1_file)
+                if contextual_source:
+                    for level_id in level_ids:
+                        source_key = (level_id, contextual_source["object_class"], ds1_file)
+                        if source_key in seen:
+                            continue
+                        seen.add(source_key)
+                        chests_by_level_id.setdefault(level_id, []).append(contextual_source)
+
+                ds1_path = self._resolve_ds1_path(ds1_file)
+                if not ds1_path:
+                    continue
+                for object_id in self._read_ds1_object_ids(ds1_path):
+                    source = objects_by_id.get(object_id) or self._contextual_super_chest_object(object_id, ds1_file)
+                    if not source:
+                        continue
+                    for level_id in level_ids:
+                        source_key = (level_id, object_id, ds1_file)
+                        if source_key in seen:
+                            continue
+                        seen.add(source_key)
+                        chests_by_level_id.setdefault(level_id, []).append(
+                            {
+                                "object_id": object_id,
+                                "object_class": source["object_class"],
+                                "description": source["description"],
+                                "file": ds1_file.replace("\\", "/"),
+                            }
+                        )
+
+        for sources in chests_by_level_id.values():
+            sources.sort(key=lambda source: (source["object_class"], source["file"]))
+        return chests_by_level_id
+
+    def _super_chest_objects(self) -> Dict[int, Dict[str, str]]:
+        objects: Dict[int, Dict[str, str]] = {}
+        for row in self.repository.get_excel_table("objects"):
+            object_id = self._to_int(row.get("*ID"))
+            object_class = str(row.get("Class", "")).strip()
+            description = str(row.get("*Description", "")).strip()
+            haystack = " ".join(
+                [
+                    object_class,
+                    description,
+                    str(row.get("Name", "")).strip(),
+                    str(row.get("PopulateFn", "")).strip(),
+                ]
+            ).lower()
+            if str(row.get("InitFn", "")).strip() == "57" or any(token in haystack for token in self.SUPER_CHEST_TOKENS):
+                objects[object_id] = {
+                    "object_class": object_class or f"Object {object_id}",
+                    "description": description,
+                }
+        return objects
+
+    def _contextual_preset_super_chest(self, row: Dict[str, str], ds1_file: str) -> Optional[Dict[str, Any]]:
+        name = str(row.get("Name", "")).strip().lower()
+        normalized_file = ds1_file.replace("\\", "/").lower()
+        if "act 1 - cave treasure" not in name or not normalized_file.startswith("act1/caves/caveroom"):
+            return None
+        return {
+            "object_id": None,
+            "object_class": "Act 1 Treasure Room Super Chest",
+            "description": "Fixed cave treasure-room chest",
+            "file": ds1_file.replace("\\", "/"),
+        }
+
+    def _contextual_super_chest_object(self, object_id: int, ds1_file: str) -> Optional[Dict[str, str]]:
+        normalized_file = ds1_file.replace("\\", "/").lower()
+        if object_id not in (5, 6):
+            return None
+        if not any(token in normalized_file for token, _ in self.KURAST_PRESET_LEVEL_IDS):
+            return None
+        side = "Right" if object_id == 5 else "Left"
+        return {
+            "object_class": f"Kurast Super Chest {side}",
+            "description": "Kurast camp preset large chest",
+        }
+
+    def _preset_level_ids(self, row: Dict[str, str]) -> List[int]:
+        level_ids = []
+        direct_level_id = self._to_int(row.get("LevelId"))
+        if direct_level_id:
+            level_ids.append(direct_level_id)
+
+        preset_text = " ".join(self._preset_files(row)).replace("\\", "/").lower()
+        for token, level_id in self.KURAST_PRESET_LEVEL_IDS:
+            if token in preset_text and level_id not in level_ids:
+                level_ids.append(level_id)
+        return level_ids
+
+    @staticmethod
+    def _preset_files(row: Dict[str, str]) -> List[str]:
+        files = []
+        for index in range(1, 7):
+            filename = str(row.get(f"File{index}", "")).strip()
+            if filename:
+                files.append(filename)
+        return files
+
+    def _resolve_ds1_path(self, ds1_file: str) -> Optional[str]:
+        rel_path = ds1_file.replace("/", os.sep).replace("\\", os.sep)
+        for root in self.layout_roots:
+            candidate = os.path.join(root, rel_path)
+            if os.path.exists(candidate):
+                return candidate
+        return None
+
+    @classmethod
+    def _read_ds1_object_ids(cls, ds1_path: str) -> List[int]:
+        try:
+            with open(ds1_path, "rb") as f:
+                data = f.read()
+            objects = cls._read_ds1_objects(data)
+            return [object_id for _, object_id, _, _, _ in objects]
+        except (OSError, ValueError, struct.error):
+            return []
+
+    @staticmethod
+    def _read_ds1_objects(data: bytes) -> List[Tuple[int, int, int, int, int]]:
+        def read_int(offset: int) -> Tuple[int, int]:
+            return struct.unpack_from("<i", data, offset)[0], offset + 4
+
+        def read_cstr(offset: int) -> int:
+            end = data.index(0, offset)
+            return end + 1
+
+        offset = 0
+        version, offset = read_int(offset)
+        width, offset = read_int(offset)
+        height, offset = read_int(offset)
+        width += 1
+        height += 1
+
+        if version >= 8:
+            _, offset = read_int(offset)
+
+        subst_method = 0
+        if version >= 10:
+            subst_method, offset = read_int(offset)
+
+        if version >= 3:
+            file_count, offset = read_int(offset)
+            for _ in range(file_count):
+                offset = read_cstr(offset)
+
+        if 9 <= version <= 13:
+            offset += 8
+
+        num_walls = 0
+        num_floors = 1
+        if version >= 4:
+            num_walls, offset = read_int(offset)
+            if version >= 16:
+                num_floors, offset = read_int(offset)
+
+        num_shadows = 1
+        num_substitutions = 1 if version >= 10 and subst_method in (1, 2) else 0
+        stream_count = num_walls * 2 + num_floors + num_shadows + num_substitutions if version >= 4 else 5
+        offset += stream_count * width * height * 4
+
+        objects = []
+        if version >= 3 and offset + 4 <= len(data):
+            object_count, offset = read_int(offset)
+            for _ in range(object_count):
+                object_type, offset = read_int(offset)
+                object_id, offset = read_int(offset)
+                x, offset = read_int(offset)
+                y, offset = read_int(offset)
+                flags, offset = read_int(offset)
+                objects.append((object_type, object_id, x, y, flags))
+        return objects
+
+    def _farm_score(self, record: Dict[str, Any], max_density: int, max_elite_avg: float) -> int:
+        if record["unique_level"] >= 90:
+            area_level_score = 40
+        elif record["area_level"] >= 87:
+            area_level_score = 30
+        else:
+            area_level_score = max(0, (record["area_level"] - 75) * 2)
+        density_score = 35 * record["monster_density"] / max_density
+        elite_score = 25 * record["elite_avg"] / max_elite_avg
+        immunity_penalty = 3 * len(record["possible_immunities"])
+        return round(area_level_score + density_score + elite_score - immunity_penalty)
+
+    @staticmethod
+    def _is_farmable_area(record: Dict[str, Any]) -> bool:
+        return (
+            record["level_id"] > 0
+            and record["area_level"] > 0
+            and (
+                record["monster_density"] > 0
+                or record["elite_max"] > 0
+                or len(record["monster_pool"]) > 0
+            )
+        )
+
+    @staticmethod
+    def _act_label(value: Optional[str]) -> str:
+        text = str(value or "").strip()
+        if not text:
+            return "Unknown"
+        act = AreaFarmingDataBuilder._to_int(text)
+        return f"Act {act + 1}" if act >= 0 else "Unknown"
+
+    @staticmethod
+    def _to_int(value: Optional[str]) -> int:
+        try:
+            return int(str(value or "").strip())
+        except ValueError:
+            return 0
+
+
 class WikiGenerator:
     def __init__(
         self,
@@ -169,6 +597,8 @@ class WikiGenerator:
         old_item_db_dir: Optional[str] = None,
         old_label: str = "Retail",
         new_label: str = "BKDiablo",
+        game_data_dir: Optional[str] = None,
+        layout_data_dir: Optional[str] = None,
     ):
         self.item_db_dir = item_db_dir
         self.skill_tree_dir = skill_tree_dir
@@ -176,6 +606,8 @@ class WikiGenerator:
         self.old_item_db_dir = old_item_db_dir
         self.old_label = old_label
         self.new_label = new_label
+        self.game_data_dir = game_data_dir or os.path.join(REPO_ROOT, "mods", "BKDiablo", "bkdiablo.mpq")
+        self.layout_data_dir = layout_data_dir
         self.renderer = WikiRenderer()
         self.writer = WikiOutputWriter(output_dir)
         self.manifest: List[Dict[str, Any]] = []
@@ -193,14 +625,16 @@ class WikiGenerator:
         )
         old_item_index = self._index_items(old_items)
         class_pages = self._load_class_pages()
+        area_entries = self._load_area_entries()
 
         self._write_assets()
         item_entries = self._write_item_pages(items, old_item_index)
         class_entries = self._write_class_pages(class_pages)
         report_entries = self._publish_reports()
-        self._write_indexes(item_entries, class_entries, report_entries)
+        self._write_indexes(item_entries, class_entries, report_entries, area_entries)
         self._write_patch_notes_draft(item_entries, class_entries)
         self._write_item_index_data(item_entries)
+        self._write_area_index_data(area_entries)
         self._write_manifest()
         self.writer.remove_stale_files()
 
@@ -268,6 +702,11 @@ class WikiGenerator:
             )
 
         return pages
+
+    def _load_area_entries(self) -> List[Dict[str, Any]]:
+        if not os.path.isdir(self.game_data_dir):
+            return []
+        return AreaFarmingDataBuilder(self.game_data_dir, layout_data_dir=self.layout_data_dir).build()
 
     def _parse_skill_tree_markdown(self, content: str) -> List[Dict[str, Any]]:
         lines = content.splitlines()
@@ -418,6 +857,7 @@ class WikiGenerator:
         item_entries: Dict[str, List[Dict[str, str]]],
         class_entries: List[Dict[str, str]],
         report_entries: List[Dict[str, str]],
+        area_entries: List[Dict[str, Any]],
     ) -> None:
         self._write_page(
             title="BT Diablo Data Wiki",
@@ -427,6 +867,7 @@ class WikiGenerator:
             source_files=[],
             item_counts={family: len(item_entries[family]) for family in ITEM_FAMILIES},
             class_count=len(class_entries),
+            area_count=len(area_entries),
             total_items=sum(len(entries) for entries in item_entries.values()),
             reports=report_entries,
         )
@@ -456,6 +897,19 @@ class WikiGenerator:
             category="index",
             source_files=[],
             classes=class_entries,
+        )
+
+        self._write_page(
+            title="Areas | BT Diablo Data Wiki",
+            output_path=WikiRoutes.areas_index_output_path(),
+            template_name="areas_index.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", "levels.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "monstats.txt"),
+                os.path.join(REPO_ROOT, "docs", "Diablo_II_Data_File_Guide", "levels.md"),
+            ],
+            area_count=len(area_entries),
         )
 
         self._write_page(
@@ -498,6 +952,9 @@ class WikiGenerator:
             for entry in item_entries[family]
         ]
         self.writer.write_text("data/items-index.json", json.dumps(rows, indent=2))
+
+    def _write_area_index_data(self, area_entries: List[Dict[str, Any]]) -> None:
+        self.writer.write_text("data/areas-index.json", json.dumps(area_entries, indent=2))
 
     def _publish_reports(self) -> List[Dict[str, str]]:
         reports_root = os.path.normpath(os.path.join(self.output_dir, ".."))
