@@ -6,11 +6,22 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from d2lib.repository import D2Repository
+
 
 MODULE_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(MODULE_DIR, "..", ".."))
 TEMPLATE_DIR = os.path.join(MODULE_DIR, "wiki_templates")
 ASSET_SOURCE_DIR = os.path.join(MODULE_DIR, "wiki_assets")
 ITEM_FAMILIES = ("unique", "set", "runeword")
+DAMAGE_TYPES = (
+    ("physical", "ResDm(H)"),
+    ("magic", "ResMa(H)"),
+    ("fire", "ResFi(H)"),
+    ("lightning", "ResLi(H)"),
+    ("cold", "ResCo(H)"),
+    ("poison", "ResPo(H)"),
+)
 REPORT_SOURCES = (
     {
         "title": "Item Diff: BKDiablo vs Retail",
@@ -80,6 +91,10 @@ class WikiRoutes:
     @staticmethod
     def classes_index_output_path() -> str:
         return "classes/index.html"
+
+    @staticmethod
+    def areas_index_output_path() -> str:
+        return "areas/index.html"
 
     @staticmethod
     def class_output_path(slug: str) -> str:
@@ -160,6 +175,159 @@ class WikiOutputWriter:
                     pass
 
 
+class AreaFarmingDataBuilder:
+    def __init__(self, game_data_dir: str):
+        self.game_data_dir = game_data_dir
+        self.repository = D2Repository(game_data_dir)
+
+    def build(self) -> List[Dict[str, Any]]:
+        levels = self.repository.get_excel_table("levels")
+        monsters = {
+            str(row.get("Id", "")).strip(): row
+            for row in self.repository.get_excel_table("monstats")
+            if str(row.get("Id", "")).strip()
+        }
+
+        records = [self._area_record(row, monsters) for row in levels]
+        records = [record for record in records if self._is_farmable_area(record)]
+        max_density = max([record["monster_density"] for record in records] or [1])
+        max_elite_avg = max([record["elite_avg"] for record in records] or [1])
+        max_density = max(max_density, 1)
+        max_elite_avg = max(max_elite_avg, 1)
+
+        for record in records:
+            record["farm_score"] = self._farm_score(record, max_density, max_elite_avg)
+
+        return sorted(
+            records,
+            key=lambda record: (
+                -record["farm_score"],
+                -record["area_level"],
+                -record["monster_density"],
+                record["display_name"].lower(),
+            ),
+        )
+
+    def _area_record(self, row: Dict[str, str], monsters: Dict[str, Dict[str, str]]) -> Dict[str, Any]:
+        monster_pool = [
+            self._monster_record(monsters[monster_id])
+            for monster_id in self._monster_pool_ids(row)
+            if monster_id in monsters
+        ]
+        immunity_counts: Dict[str, int] = {damage_type: 0 for damage_type, _ in DAMAGE_TYPES}
+        for monster in monster_pool:
+            for immunity in monster["immunities"]:
+                immunity_counts[immunity] += 1
+        immunity_counts = {key: value for key, value in immunity_counts.items() if value}
+
+        area_level = self._area_level(row)
+        elite_min = self._to_int(row.get("MonUMin(H)"))
+        elite_max = self._to_int(row.get("MonUMax(H)"))
+        elite_avg = (elite_min + elite_max) / 2
+        display_name = (
+            str(row.get("LevelName", "")).strip()
+            or str(row.get("*StringName", "")).strip()
+            or str(row.get("Name", "")).strip()
+            or "Unknown Area"
+        )
+
+        return {
+            "display_name": display_name,
+            "internal_name": str(row.get("Name", "")).strip(),
+            "level_id": self._to_int(row.get("Id")),
+            "act": self._act_label(row.get("Act")),
+            "area_level": area_level,
+            "champion_level": area_level + 2 if area_level else 0,
+            "unique_level": area_level + 3 if area_level else 0,
+            "can_drop_top_tier": area_level + 3 >= 90 if area_level else False,
+            "monster_density": self._to_int(row.get("MonDen(H)")),
+            "elite_min": elite_min,
+            "elite_max": elite_max,
+            "elite_avg": elite_avg,
+            "possible_immunities": sorted(immunity_counts),
+            "immunity_counts": immunity_counts,
+            "monster_pool": monster_pool,
+            "farm_score": 0,
+            "search_text": self._search_text(display_name, row, monster_pool),
+        }
+
+    def _monster_record(self, row: Dict[str, str]) -> Dict[str, Any]:
+        resistances = {damage_type: self._to_int(row.get(column)) for damage_type, column in DAMAGE_TYPES}
+        immunities = [damage_type for damage_type, value in resistances.items() if value >= 100]
+        name_key = str(row.get("NameStr", "")).strip()
+        display_name = self.repository.get_string(name_key) if name_key else ""
+        if not display_name or display_name == name_key:
+            display_name = name_key or str(row.get("Id", "")).strip()
+        return {
+            "id": str(row.get("Id", "")).strip(),
+            "name": display_name,
+            "min_group": self._to_int(row.get("MinGrp")),
+            "max_group": self._to_int(row.get("MaxGrp")),
+            "rarity": self._to_int(row.get("Rarity")),
+            "immunities": immunities,
+            "resistances": resistances,
+        }
+
+    def _area_level(self, row: Dict[str, str]) -> int:
+        return self._to_int(row.get("MonLvlEx(H)")) or self._to_int(row.get("MonLvl(H)"))
+
+    def _monster_pool_ids(self, row: Dict[str, str]) -> List[str]:
+        ids: List[str] = []
+        prefixes = ("nmon", "umon") if any(str(row.get(f"nmon{index}", "")).strip() for index in range(1, 26)) else ("mon", "umon")
+        for prefix in prefixes:
+            for index in range(1, 26):
+                monster_id = str(row.get(f"{prefix}{index}", "")).strip()
+                if monster_id and monster_id not in ids:
+                    ids.append(monster_id)
+        return ids
+
+    def _search_text(self, display_name: str, row: Dict[str, str], monster_pool: List[Dict[str, Any]]) -> str:
+        monsters = " ".join(
+            f"{monster['id']} {monster['name']} {' '.join(monster['immunities'])}"
+            for monster in monster_pool
+        )
+        return f"{display_name} {row.get('Name', '')} {row.get('*StringName', '')} {row.get('LevelName', '')} {monsters}"
+
+    def _farm_score(self, record: Dict[str, Any], max_density: int, max_elite_avg: float) -> int:
+        if record["unique_level"] >= 90:
+            area_level_score = 40
+        elif record["area_level"] >= 87:
+            area_level_score = 30
+        else:
+            area_level_score = max(0, (record["area_level"] - 75) * 2)
+        density_score = 35 * record["monster_density"] / max_density
+        elite_score = 25 * record["elite_avg"] / max_elite_avg
+        immunity_penalty = 3 * len(record["possible_immunities"])
+        return round(area_level_score + density_score + elite_score - immunity_penalty)
+
+    @staticmethod
+    def _is_farmable_area(record: Dict[str, Any]) -> bool:
+        return (
+            record["level_id"] > 0
+            and record["area_level"] > 0
+            and (
+                record["monster_density"] > 0
+                or record["elite_max"] > 0
+                or len(record["monster_pool"]) > 0
+            )
+        )
+
+    @staticmethod
+    def _act_label(value: Optional[str]) -> str:
+        text = str(value or "").strip()
+        if not text:
+            return "Unknown"
+        act = AreaFarmingDataBuilder._to_int(text)
+        return f"Act {act + 1}" if act >= 0 else "Unknown"
+
+    @staticmethod
+    def _to_int(value: Optional[str]) -> int:
+        try:
+            return int(str(value or "").strip())
+        except ValueError:
+            return 0
+
+
 class WikiGenerator:
     def __init__(
         self,
@@ -169,6 +337,7 @@ class WikiGenerator:
         old_item_db_dir: Optional[str] = None,
         old_label: str = "Retail",
         new_label: str = "BKDiablo",
+        game_data_dir: Optional[str] = None,
     ):
         self.item_db_dir = item_db_dir
         self.skill_tree_dir = skill_tree_dir
@@ -176,6 +345,7 @@ class WikiGenerator:
         self.old_item_db_dir = old_item_db_dir
         self.old_label = old_label
         self.new_label = new_label
+        self.game_data_dir = game_data_dir or os.path.join(REPO_ROOT, "mods", "BKDiablo", "bkdiablo.mpq")
         self.renderer = WikiRenderer()
         self.writer = WikiOutputWriter(output_dir)
         self.manifest: List[Dict[str, Any]] = []
@@ -193,14 +363,16 @@ class WikiGenerator:
         )
         old_item_index = self._index_items(old_items)
         class_pages = self._load_class_pages()
+        area_entries = self._load_area_entries()
 
         self._write_assets()
         item_entries = self._write_item_pages(items, old_item_index)
         class_entries = self._write_class_pages(class_pages)
         report_entries = self._publish_reports()
-        self._write_indexes(item_entries, class_entries, report_entries)
+        self._write_indexes(item_entries, class_entries, report_entries, area_entries)
         self._write_patch_notes_draft(item_entries, class_entries)
         self._write_item_index_data(item_entries)
+        self._write_area_index_data(area_entries)
         self._write_manifest()
         self.writer.remove_stale_files()
 
@@ -268,6 +440,11 @@ class WikiGenerator:
             )
 
         return pages
+
+    def _load_area_entries(self) -> List[Dict[str, Any]]:
+        if not os.path.isdir(self.game_data_dir):
+            return []
+        return AreaFarmingDataBuilder(self.game_data_dir).build()
 
     def _parse_skill_tree_markdown(self, content: str) -> List[Dict[str, Any]]:
         lines = content.splitlines()
@@ -418,6 +595,7 @@ class WikiGenerator:
         item_entries: Dict[str, List[Dict[str, str]]],
         class_entries: List[Dict[str, str]],
         report_entries: List[Dict[str, str]],
+        area_entries: List[Dict[str, Any]],
     ) -> None:
         self._write_page(
             title="BT Diablo Data Wiki",
@@ -427,6 +605,7 @@ class WikiGenerator:
             source_files=[],
             item_counts={family: len(item_entries[family]) for family in ITEM_FAMILIES},
             class_count=len(class_entries),
+            area_count=len(area_entries),
             total_items=sum(len(entries) for entries in item_entries.values()),
             reports=report_entries,
         )
@@ -456,6 +635,19 @@ class WikiGenerator:
             category="index",
             source_files=[],
             classes=class_entries,
+        )
+
+        self._write_page(
+            title="Areas | BT Diablo Data Wiki",
+            output_path=WikiRoutes.areas_index_output_path(),
+            template_name="areas_index.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", "levels.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "monstats.txt"),
+                os.path.join(REPO_ROOT, "docs", "Diablo_II_Data_File_Guide", "levels.md"),
+            ],
+            area_count=len(area_entries),
         )
 
         self._write_page(
@@ -498,6 +690,9 @@ class WikiGenerator:
             for entry in item_entries[family]
         ]
         self.writer.write_text("data/items-index.json", json.dumps(rows, indent=2))
+
+    def _write_area_index_data(self, area_entries: List[Dict[str, Any]]) -> None:
+        self.writer.write_text("data/areas-index.json", json.dumps(area_entries, indent=2))
 
     def _publish_reports(self) -> List[Dict[str, str]]:
         reports_root = os.path.normpath(os.path.join(self.output_dir, ".."))
