@@ -207,9 +207,14 @@ class AreaFarmingDataBuilder:
             for row in self.repository.get_excel_table("monstats")
             if str(row.get("Id", "")).strip()
         }
+        maze_by_level_id = {
+            self._to_int(row.get("Level")): row
+            for row in self.repository.get_excel_table("lvlmaze")
+            if self._to_int(row.get("Level"))
+        }
 
         super_chests_by_level_id = self._super_chests_by_level_id()
-        records = [self._area_record(row, monsters, super_chests_by_level_id) for row in levels]
+        records = [self._area_record(row, monsters, super_chests_by_level_id, maze_by_level_id) for row in levels]
         records = [record for record in records if self._is_farmable_area(record)]
         max_density = max([record["monster_density"] for record in records] or [1])
         max_elite_avg = max([record["elite_avg"] for record in records] or [1])
@@ -234,6 +239,7 @@ class AreaFarmingDataBuilder:
         row: Dict[str, str],
         monsters: Dict[str, Dict[str, str]],
         super_chests_by_level_id: Dict[int, List[Dict[str, Any]]],
+        maze_by_level_id: Dict[int, Dict[str, str]],
     ) -> Dict[str, Any]:
         monster_pool = [
             self._monster_record(monsters[monster_id])
@@ -253,6 +259,7 @@ class AreaFarmingDataBuilder:
         elite_avg = (elite_min + elite_max) / 2
         display_name = self._level_display_name(row)
         super_chests = super_chests_by_level_id.get(level_id, [])
+        maze_info = self._maze_info(row, maze_by_level_id.get(level_id))
 
         return {
             "display_name": display_name,
@@ -264,6 +271,12 @@ class AreaFarmingDataBuilder:
             "unique_level": area_level + 3 if area_level else 0,
             "can_drop_top_tier": area_level + 3 >= 90 if area_level else False,
             "monster_density": self._to_int(row.get("MonDen(H)")),
+            "maze_rooms": maze_info["rooms"],
+            "maze_chunk_width": maze_info["chunk_width"],
+            "maze_chunk_height": maze_info["chunk_height"],
+            "maze_chunk_tiles": maze_info["chunk_tiles"],
+            "estimated_area_tiles": maze_info["estimated_area_tiles"],
+            "maze_source": maze_info["source"],
             "elite_min": elite_min,
             "elite_max": elite_max,
             "elite_avg": elite_avg,
@@ -274,7 +287,7 @@ class AreaFarmingDataBuilder:
             "super_chest_sources": super_chests,
             "monster_pool": monster_pool,
             "farm_score": 0,
-            "search_text": self._search_text(display_name, row, monster_pool, super_chests),
+            "search_text": self._search_text(display_name, row, monster_pool, super_chests, maze_info),
         }
 
     def _monster_record(self, row: Dict[str, str]) -> Dict[str, Any]:
@@ -296,6 +309,34 @@ class AreaFarmingDataBuilder:
 
     def _area_level(self, row: Dict[str, str]) -> int:
         return self._to_int(row.get("MonLvlEx(H)")) or self._to_int(row.get("MonLvl(H)"))
+
+    def _maze_info(self, level_row: Dict[str, str], maze_row: Optional[Dict[str, str]]) -> Dict[str, Any]:
+        if maze_row:
+            rooms = self._to_int(maze_row.get("Rooms(H)")) or self._to_int(maze_row.get("Rooms"))
+            chunk_width = self._to_int(maze_row.get("SizeX"))
+            chunk_height = self._to_int(maze_row.get("SizeY"))
+            chunk_tiles = chunk_width * chunk_height if chunk_width and chunk_height else 0
+            estimated_area_tiles = rooms * chunk_tiles if rooms and chunk_tiles else 0
+            return {
+                "rooms": rooms,
+                "chunk_width": chunk_width,
+                "chunk_height": chunk_height,
+                "chunk_tiles": chunk_tiles,
+                "estimated_area_tiles": estimated_area_tiles,
+                "source": "lvlmaze",
+            }
+
+        width = self._to_int(level_row.get("SizeX(H)")) or self._to_int(level_row.get("SizeX"))
+        height = self._to_int(level_row.get("SizeY(H)")) or self._to_int(level_row.get("SizeY"))
+        chunk_tiles = width * height if width and height else 0
+        return {
+            "rooms": 1 if chunk_tiles else 0,
+            "chunk_width": width,
+            "chunk_height": height,
+            "chunk_tiles": chunk_tiles,
+            "estimated_area_tiles": chunk_tiles,
+            "source": "levels",
+        }
 
     def _level_display_name(self, row: Dict[str, str]) -> str:
         for column in ("LevelName", "*StringName", "Name"):
@@ -325,6 +366,7 @@ class AreaFarmingDataBuilder:
         row: Dict[str, str],
         monster_pool: List[Dict[str, Any]],
         super_chests: List[Dict[str, Any]],
+        maze_info: Dict[str, Any],
     ) -> str:
         monsters = " ".join(
             f"{monster['id']} {monster['name']} {' '.join(monster['immunities'])}"
@@ -334,7 +376,12 @@ class AreaFarmingDataBuilder:
             f"super chest {source.get('object_class', '')} {source.get('description', '')} {source.get('file', '')}"
             for source in super_chests
         )
-        return f"{display_name} {row.get('Name', '')} {row.get('*StringName', '')} {row.get('LevelName', '')} {monsters} {chest_text}"
+        maze_text = (
+            f"rooms {maze_info.get('rooms')} "
+            f"chunk {maze_info.get('chunk_width')}x{maze_info.get('chunk_height')} "
+            f"tiles {maze_info.get('estimated_area_tiles')}"
+        )
+        return f"{display_name} {row.get('Name', '')} {row.get('*StringName', '')} {row.get('LevelName', '')} {monsters} {chest_text} {maze_text}"
 
     def _layout_roots(self) -> List[str]:
         roots = []

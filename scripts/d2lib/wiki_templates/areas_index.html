@@ -66,6 +66,7 @@
           <th>Score</th>
           <th>Levels</th>
           <th>Density</th>
+          <th>Chunk</th>
           <th>Elite Packs</th>
           <th>Super Chest</th>
           <th>Possible Immunities</th>
@@ -73,7 +74,7 @@
         </tr>
       </thead>
       <tbody id="area-index-root">
-        <tr><td colspan="8" class="muted">Loading area index...</td></tr>
+        <tr><td colspan="9" class="muted">Loading area index...</td></tr>
       </tbody>
     </table>
   </div>
@@ -83,6 +84,7 @@
   <p>The area guide is generated from BK's <code>levels.txt</code> and <code>monstats.txt</code>. The local data-file guide at <code>docs/Diablo_II_Data_File_Guide/levels.md</code> identifies <code>MonLvl</code>, <code>MonDen</code>, <code>MonUMin</code>, <code>MonUMax</code>, and monster pool columns as the key area spawning fields.</p>
   <p>Hell area level uses <code>MonLvlEx(H)</code> when present, then falls back to <code>MonLvl(H)</code>. Champions are shown as area level +2 and uniques as area level +3, so top-tier capable means unique monsters can reach level 90 or higher.</p>
   <p>Density is the table-derived <code>MonDen(H)</code> value. It is useful as a relative spawn-density signal, not an exact monsters-per-run count. Immunities are inherent monster resistances from <code>monstats.txt</code> where the Hell resistance is at least 100.</p>
+  <p>Chunk data comes from <code>lvlmaze.txt</code> when a maze row exists, using Hell room count times chunk width and height. Areas without a maze row fall back to <code>levels.txt</code> size columns. This is a rough layout footprint for comparison, not a simulated monster count.</p>
   <p>Super chest potential is derived from <code>objects.txt</code>, <code>lvlprest.txt</code>, and DS1 layout files. BK layout overrides are checked first, then the local retail extract at <code>E:\Games\Diablo II Resurrected\Data</code> fills in base game layouts. For randomized outdoor chunks, this means an area can roll a matching preset, not that every map seed guarantees that chest.</p>
 </section>
 {% endblock %}
