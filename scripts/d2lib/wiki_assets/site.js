@@ -89,7 +89,7 @@ function areaRowMarkup(area) {
     <tr>
       <th>
         <span class="area-name">${escapeHtml(area.display_name)}</span>
-        <span class="area-meta">${escapeHtml(area.act)} · ${escapeHtml(area.internal_name)}</span>
+        <span class="area-meta">${escapeHtml(area.act)}</span>
         <span class="area-badge-row">${areaBadgeMarkup(area)}</span>
       </th>
       <td><strong>${escapeHtml(area.farm_score)}</strong></td>
