@@ -670,6 +670,14 @@ td {
   color: var(--accent-2);
 }
 
+.stats-list small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .recipe-groups {
   display: flex;
   flex-direction: column;

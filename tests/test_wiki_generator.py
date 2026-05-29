@@ -147,6 +147,94 @@ class TestWikiGenerator(unittest.TestCase):
                 "| Damage | Linear (+1) | +1 | +10 | +20 | +30 | -- |\n"
             )
 
+        excel_root = os.path.join(self.game_data, "data", "global", "excel")
+        self._write_tsv(
+            excel_root,
+            "itemtypes.txt",
+            ["ItemType", "Code", "Equiv1", "Equiv2", "MaxSockets1", "MaxSockets2", "MaxSockets3"],
+            [
+                {"ItemType": "Weapon", "Code": "weap"},
+                {"ItemType": "Melee Weapon", "Code": "mele", "Equiv1": "weap"},
+                {"ItemType": "Blunt", "Code": "blun", "Equiv1": "mele"},
+                {"ItemType": "Hammer", "Code": "hamm", "Equiv1": "blun", "MaxSockets1": "3", "MaxSockets2": "4", "MaxSockets3": "6"},
+            ],
+        )
+        self._write_tsv(
+            excel_root,
+            "weapons.txt",
+            [
+                "name",
+                "namestr",
+                "code",
+                "type",
+                "level",
+                "levelreq",
+                "mindam",
+                "maxdam",
+                "2handmindam",
+                "2handmaxdam",
+                "reqstr",
+                "reqdex",
+                "gemsockets",
+                "normcode",
+                "ubercode",
+                "ultracode",
+                "speed",
+                "durability",
+                "auto prefix",
+            ],
+            [
+                {
+                    "name": "Thunder Maul",
+                    "namestr": "7gm",
+                    "code": "7gm",
+                    "type": "hamm",
+                    "level": "85",
+                    "levelreq": "65",
+                    "2handmindam": "65",
+                    "2handmaxdam": "255",
+                    "reqstr": "253",
+                    "gemsockets": "6",
+                    "normcode": "7gm",
+                    "ubercode": "7gm",
+                    "ultracode": "7gm",
+                    "speed": "20",
+                    "durability": "60",
+                }
+            ],
+        )
+        self._write_tsv(
+            excel_root,
+            "qualityitems.txt",
+            [
+                "mod1code",
+                "mod1param",
+                "mod1min",
+                "mod1max",
+                "mod2code",
+                "mod2param",
+                "mod2min",
+                "mod2max",
+                "armor",
+                "weapon",
+                "shield",
+                "scepter",
+                "wand",
+                "staff",
+                "bow",
+                "boots",
+                "gloves",
+                "belt",
+            ],
+            [{"mod1code": "reduce-ac", "mod1param": "0", "mod1min": "5", "mod1max": "30", "weapon": "1"}],
+        )
+        self._write_tsv(
+            excel_root,
+            "properties.txt",
+            ["code", "func1", "*Tooltip"],
+            [{"code": "reduce-ac", "func1": "1", "*Tooltip": "-#% Target Defense"}],
+        )
+
     def _write_area_fixture_data(self):
         excel_root = os.path.join(self.game_data, "data", "global", "excel")
         level_fields = [
@@ -594,6 +682,13 @@ class TestWikiGenerator(unittest.TestCase):
         ]:
             with open(os.path.join(self.output, relative_path), "r", encoding="utf-8") as f:
                 self.assertIn(expected_text, f.read())
+
+        with open(os.path.join(self.output, "bases", "index.html"), "r", encoding="utf-8") as f:
+            bases_page = f.read()
+        self.assertIn("Thunder Maul", bases_page)
+        self.assertIn("+50% Damage to Undead", bases_page)
+        self.assertIn("-5-30% Target Defense", bases_page)
+        self.assertIn("Superior roll", bases_page)
 
     def test_stale_files_are_removed(self):
         os.makedirs(self.output, exist_ok=True)

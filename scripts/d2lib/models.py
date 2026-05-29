@@ -94,7 +94,9 @@ class BaseItemDTO(TypedDict):
     dex_req: int
     sockets: int
     max_sockets_by_ilvl: Dict[str, int]
+    inherent_stats: List[str]
     auto_prefix_stats: List[str]
+    quality_bonus_stats: List[str]
     speed: int
     durability: int
     tier: str # Normal, Exceptional, Elite
