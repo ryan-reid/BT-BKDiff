@@ -23,6 +23,14 @@ Install dependencies:
 python -m pip install -r requirements.txt
 ```
 
+Install the repo's versioned git hooks:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+The hooks keep `mods/BKDiablo` and `mods/BTDiablo` synced to their configured submodule branches after checkout, pull/merge, and rebase. The pre-commit hook also refreshes and stages submodule pointers, so commits include any upstream mod updates used by the generated outputs.
+
 Run the test suite:
 
 ```bash
