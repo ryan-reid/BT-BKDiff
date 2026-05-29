@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Base Items | {{ new_label }} Wiki{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-eyebrow">Item Repository</p>
+  <h1>Base Items</h1>
+  <p class="hero-copy">Browse Armor and Weapons, including Normal, Exceptional, and Elite families.</p>
+</section>
+
+<section class="content-section">
+  <input id="page-search" class="search-input" type="search" placeholder="Search base items (e.g. Mage Plate)..." />
+  
+  <div class="card-grid">
+    {% for family in families %}
+    <div class="item-card family-card" data-search="{{ family.name }} {{ family.members|map(attribute='name')|join(' ') }}">
+      <div class="family-header">
+        <h3>{{ family.name }}</h3>
+      </div>
+      
+      <div class="family-table-wrap">
+        <table class="family-table">
+          <thead>
+            <tr>
+              <th>Tier</th>
+              <th>Item</th>
+              <th>Def/Dam</th>
+              <th>Reqs</th>
+              <th>Sockets</th>
+              <th>Auto Prefix</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in family.members %}
+            <tr class="tier-{{ item.tier|lower }}">
+              <td><span class="badge badge-{{ item.tier|lower }}">{{ item.tier }}</span></td>
+              <td class="item-name">
+                <strong>{{ item.name }}</strong><br/>
+                <small class="code-text">{{ item.code }}</small>
+              </td>
+              <td>
+                {% if item.defense_min is not none %}
+                  Def: {{ item.defense_min }}-{{ item.defense_max }}
+                {% elif item.damage_min is not none %}
+                  Dam: {{ item.damage_min }}-{{ item.damage_max }}
+                  {% if item.two_hand_damage_min %}
+                    <br/><small>(2H: {{ item.two_hand_damage_min }}-{{ item.two_hand_damage_max }})</small>
+                  {% endif %}
+                {% endif %}
+                <br/><small>Lvl: {{ item.level }}</small>
+              </td>
+              <td>
+                Str: {{ item.str_req }}<br/>
+                Dex: {{ item.dex_req }}<br/>
+                Lvl: {{ item.level_req }}
+              </td>
+              <td>
+                Max: {{ item.sockets }}<br/>
+                <small>
+                {% for range, max in item.max_sockets_by_ilvl.items() %}
+                  {{ range }}: {{ max }}<br/>
+                {% endfor %}
+                </small>
+              </td>
+              <td class="auto-prefix-cell">
+                {% if item.auto_prefix_stats %}
+                  <ul class="stats-list">
+                    {% for stat in item.auto_prefix_stats %}
+                    <li>{{ stat }}</li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <span class="text-muted">-</span>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -159,6 +159,8 @@ class TestWikiGenerator(unittest.TestCase):
             "MonDen(H)",
             "MonUMin(H)",
             "MonUMax(H)",
+            "SizeX",
+            "SizeY",
             "NumMon",
             "nmon1",
             "nmon2",
@@ -179,6 +181,8 @@ class TestWikiGenerator(unittest.TestCase):
                     "MonDen(H)": "5000",
                     "MonUMin(H)": "10",
                     "MonUMax(H)": "12",
+                    "SizeX": "200",
+                    "SizeY": "200",
                     "NumMon": "2",
                     "nmon1": "coldbeast",
                     "nmon2": "firebeast",
@@ -193,6 +197,8 @@ class TestWikiGenerator(unittest.TestCase):
                     "MonDen(H)": "1000",
                     "MonUMin(H)": "2",
                     "MonUMax(H)": "4",
+                    "SizeX": "200",
+                    "SizeY": "200",
                     "NumMon": "1",
                     "nmon1": "stonebeast",
                     "LevelName": "Fallback Field",
@@ -206,6 +212,8 @@ class TestWikiGenerator(unittest.TestCase):
                     "MonDen(H)": "900",
                     "MonUMin(H)": "4",
                     "MonUMax(H)": "4",
+                    "SizeX": "40",
+                    "SizeY": "40",
                     "NumMon": "1",
                     "nmon1": "firebeast",
                     "LevelName": "Hell1",
@@ -219,6 +227,8 @@ class TestWikiGenerator(unittest.TestCase):
                     "MonDen(H)": "1200",
                     "MonUMin(H)": "2",
                     "MonUMax(H)": "4",
+                    "SizeX": "200",
+                    "SizeY": "200",
                     "NumMon": "1",
                     "nmon1": "firebeast",
                     "LevelName": "Lower Kurast",
@@ -232,6 +242,8 @@ class TestWikiGenerator(unittest.TestCase):
                     "MonDen(H)": "900",
                     "MonUMin(H)": "1",
                     "MonUMax(H)": "2",
+                    "SizeX": "24",
+                    "SizeY": "24",
                     "NumMon": "1",
                     "nmon1": "stonebeast",
                     "LevelName": "Cave Level 2",
@@ -281,6 +293,23 @@ class TestWikiGenerator(unittest.TestCase):
                     "Rarity": "1",
                     "ResDm(H)": "100",
                 },
+            ],
+        )
+        maze_fields = ["Name", "Level", "Rooms", "Rooms(N)", "Rooms(H)", "SizeX", "SizeY", "Merge"]
+        self._write_tsv(
+            excel_root,
+            "lvlmaze.txt",
+            maze_fields,
+            [
+                {
+                    "Name": "Cold Cave",
+                    "Level": "10",
+                    "Rooms": "2",
+                    "Rooms(H)": "4",
+                    "SizeX": "24",
+                    "SizeY": "24",
+                    "Merge": "500",
+                }
             ],
         )
         object_fields = ["Class", "Name", "*Description", "*ID", "InitFn", "PopulateFn"]
@@ -391,6 +420,11 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("items/unique/twin-item/", WikiRoutes.route_from_output_path("items/unique/twin-item/index.html"))
         self.assertEqual("../../../", WikiRoutes.site_root_for_output_path("items/unique/twin-item/index.html"))
         self.assertEqual("areas/index.html", WikiRoutes.areas_index_output_path())
+        self.assertEqual("bases/index.html", WikiRoutes.bases_index_output_path())
+        self.assertEqual("recipes/index.html", WikiRoutes.recipes_index_output_path())
+        self.assertEqual("bestiary/index.html", WikiRoutes.bestiary_index_output_path())
+        self.assertEqual("misc/index.html", WikiRoutes.misc_index_output_path())
+        self.assertEqual("mechanics/index.html", WikiRoutes.mechanics_output_path())
 
     def test_generation_writes_pretty_routes_and_manifest(self):
         self._generate()
@@ -401,6 +435,11 @@ class TestWikiGenerator(unittest.TestCase):
             os.path.join(self.output, "items", "index.html"),
             os.path.join(self.output, "classes", "amazon", "index.html"),
             os.path.join(self.output, "areas", "index.html"),
+            os.path.join(self.output, "bases", "index.html"),
+            os.path.join(self.output, "recipes", "index.html"),
+            os.path.join(self.output, "bestiary", "index.html"),
+            os.path.join(self.output, "misc", "index.html"),
+            os.path.join(self.output, "mechanics", "index.html"),
             os.path.join(self.output, "data", "areas-index.json"),
             os.path.join(self.output, "reports", "index.html"),
             os.path.join(self.output, "reports", "items", "retail-bk", "index.html"),
@@ -417,6 +456,11 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("items/unique/twin-item-second-base/", manifest_paths)
         self.assertIn("items/", manifest_paths)
         self.assertIn("areas/", manifest_paths)
+        self.assertIn("bases/", manifest_paths)
+        self.assertIn("recipes/", manifest_paths)
+        self.assertIn("bestiary/", manifest_paths)
+        self.assertIn("misc/", manifest_paths)
+        self.assertIn("mechanics/", manifest_paths)
         self.assertIn("reports/", manifest_paths)
         self.assertIn("reports/items/retail-bk/", manifest_paths)
 
@@ -438,6 +482,12 @@ class TestWikiGenerator(unittest.TestCase):
                 "unique_level",
                 "can_drop_top_tier",
                 "monster_density",
+                "maze_rooms",
+                "maze_chunk_width",
+                "maze_chunk_height",
+                "maze_chunk_tiles",
+                "estimated_area_tiles",
+                "maze_source",
                 "elite_min",
                 "elite_max",
                 "elite_avg",
@@ -456,6 +506,14 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual(89, cold_cave["champion_level"])
         self.assertEqual(90, cold_cave["unique_level"])
         self.assertTrue(cold_cave["can_drop_top_tier"])
+        self.assertEqual(4, cold_cave["maze_rooms"])
+        self.assertEqual(24, cold_cave["maze_chunk_width"])
+        self.assertEqual(24, cold_cave["maze_chunk_height"])
+        self.assertEqual(576, cold_cave["maze_chunk_tiles"])
+        self.assertEqual(2304, cold_cave["estimated_area_tiles"])
+        self.assertEqual("lvlmaze", cold_cave["maze_source"])
+        self.assertEqual(40000, fallback["estimated_area_tiles"])
+        self.assertEqual("levels", fallback["maze_source"])
         self.assertEqual(11, cold_cave["elite_avg"])
         self.assertEqual(["cold", "fire"], cold_cave["possible_immunities"])
         self.assertTrue(cold_cave["has_super_chest"])
@@ -510,6 +568,7 @@ class TestWikiGenerator(unittest.TestCase):
             areas_page = f.read()
         self.assertIn('data-area-index-url="../data/areas-index.json"', areas_page)
         self.assertIn("How This Is Calculated", areas_page)
+        self.assertIn("Chunk data", areas_page)
         self.assertIn("Super chest potential", areas_page)
         with open(os.path.join(self.output, "data", "areas-index.json"), "r", encoding="utf-8") as f:
             area_rows = json.load(f)
@@ -525,6 +584,16 @@ class TestWikiGenerator(unittest.TestCase):
             runeword_page = f.read()
         self.assertIn("Properties from Runes", runeword_page)
         self.assertIn("+50 to Attack Rating", runeword_page)
+
+        for relative_path, expected_text in [
+            (os.path.join("bases", "index.html"), "Base Items"),
+            (os.path.join("recipes", "index.html"), "Cube Recipes"),
+            (os.path.join("bestiary", "index.html"), "Monster Bestiary"),
+            (os.path.join("misc", "index.html"), "Materials &amp; Runes"),
+            (os.path.join("mechanics", "index.html"), "Mechanics &amp; Progression"),
+        ]:
+            with open(os.path.join(self.output, relative_path), "r", encoding="utf-8") as f:
+                self.assertIn(expected_text, f.read())
 
     def test_stale_files_are_removed(self):
         os.makedirs(self.output, exist_ok=True)

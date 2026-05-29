@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Materials & Runes | {{ new_label }} Wiki{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-eyebrow">Vault Inventory</p>
+  <h1>Materials & Runes</h1>
+  <p class="hero-copy">Glossary of crafting materials, runes, gems, and currency items.</p>
+</section>
+
+<section class="content-section">
+  <input id="page-search" class="search-input" type="search" placeholder="Search items (e.g. Tablet, Southern, Sol)..." />
+  
+  <div class="misc-groups">
+    {% for group in groups %}
+    <div class="misc-group-section" data-search="{{ group.category }}">
+      <h2 class="group-title">{{ group.category }}</h2>
+      
+      <div class="table-wrap">
+        <table class="misc-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Details</th>
+              <th>Stack</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in group.members %}
+            <tr data-search="{{ item.name }} {{ item.code }} {{ item.description }}">
+              <td class="misc-name-cell">
+                <strong>{{ item.name }}</strong><br/>
+                <small class="code-text">{{ item.code }}</small>
+              </td>
+              <td>
+                Lvl: {{ item.level }}<br/>
+                Req: {{ item.level_req }}<br/>
+                Cost: {{ item.cost }}
+              </td>
+              <td>
+                {% if item.stackable %}
+                  Max: {{ item.max_stack }}
+                {% else %}
+                  <span class="text-muted">No</span>
+                {% endif %}
+              </td>
+              <td class="misc-desc-cell">
+                {{ item.description }}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

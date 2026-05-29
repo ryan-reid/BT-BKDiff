@@ -8,6 +8,8 @@ from typing import Any, Dict, List, Optional, Tuple
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from d2lib.repository import D2Repository
+from d2lib.services import PropertyResolverService, BaseItemAnalyzerService, CubeAnalyzerService, MonsterAnalyzerService, MiscAnalyzerService, MechanicsAnalyzerService
+from d2lib.models import BaseItemFamilyDTO, CubeRecipeGroupDTO, MonsterActGroupDTO, MiscGroupDTO, MechanicsSummaryDTO
 
 
 MODULE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -85,6 +87,26 @@ class WikiRoutes:
     @staticmethod
     def items_index_output_path() -> str:
         return "items/index.html"
+
+    @staticmethod
+    def bases_index_output_path() -> str:
+        return "bases/index.html"
+
+    @staticmethod
+    def recipes_index_output_path() -> str:
+        return "recipes/index.html"
+
+    @staticmethod
+    def bestiary_index_output_path() -> str:
+        return "bestiary/index.html"
+
+    @staticmethod
+    def misc_index_output_path() -> str:
+        return "misc/index.html"
+
+    @staticmethod
+    def mechanics_output_path() -> str:
+        return "mechanics/index.html"
 
     @staticmethod
     def item_output_path(family: str, slug: str) -> str:
@@ -207,10 +229,19 @@ class AreaFarmingDataBuilder:
             for row in self.repository.get_excel_table("monstats")
             if str(row.get("Id", "")).strip()
         }
+        maze_by_level_id = {
+            self._to_int(row.get("Level")): row
+            for row in self.repository.get_excel_table("lvlmaze")
+            if self._to_int(row.get("Level"))
+        }
 
         super_chests_by_level_id = self._super_chests_by_level_id()
-        records = [self._area_record(row, monsters, super_chests_by_level_id) for row in levels]
+        records = [self._area_record(row, monsters, super_chests_by_level_id, maze_by_level_id) for row in levels]
         records = [record for record in records if self._is_farmable_area(record)]
+
+        if not records:
+            return []
+
         max_density = max([record["monster_density"] for record in records] or [1])
         max_elite_avg = max([record["elite_avg"] for record in records] or [1])
         max_density = max(max_density, 1)
@@ -234,6 +265,7 @@ class AreaFarmingDataBuilder:
         row: Dict[str, str],
         monsters: Dict[str, Dict[str, str]],
         super_chests_by_level_id: Dict[int, List[Dict[str, Any]]],
+        maze_by_level_id: Dict[int, Dict[str, str]],
     ) -> Dict[str, Any]:
         monster_pool = [
             self._monster_record(monsters[monster_id])
@@ -253,6 +285,7 @@ class AreaFarmingDataBuilder:
         elite_avg = (elite_min + elite_max) / 2
         display_name = self._level_display_name(row)
         super_chests = super_chests_by_level_id.get(level_id, [])
+        maze_info = self._maze_info(row, maze_by_level_id.get(level_id))
 
         return {
             "display_name": display_name,
@@ -264,6 +297,12 @@ class AreaFarmingDataBuilder:
             "unique_level": area_level + 3 if area_level else 0,
             "can_drop_top_tier": area_level + 3 >= 90 if area_level else False,
             "monster_density": self._to_int(row.get("MonDen(H)")),
+            "maze_rooms": maze_info["rooms"],
+            "maze_chunk_width": maze_info["chunk_width"],
+            "maze_chunk_height": maze_info["chunk_height"],
+            "maze_chunk_tiles": maze_info["chunk_tiles"],
+            "estimated_area_tiles": maze_info["estimated_area_tiles"],
+            "maze_source": maze_info["source"],
             "elite_min": elite_min,
             "elite_max": elite_max,
             "elite_avg": elite_avg,
@@ -274,7 +313,7 @@ class AreaFarmingDataBuilder:
             "super_chest_sources": super_chests,
             "monster_pool": monster_pool,
             "farm_score": 0,
-            "search_text": self._search_text(display_name, row, monster_pool, super_chests),
+            "search_text": self._search_text(display_name, row, monster_pool, super_chests, maze_info),
         }
 
     def _monster_record(self, row: Dict[str, str]) -> Dict[str, Any]:
@@ -296,6 +335,34 @@ class AreaFarmingDataBuilder:
 
     def _area_level(self, row: Dict[str, str]) -> int:
         return self._to_int(row.get("MonLvlEx(H)")) or self._to_int(row.get("MonLvl(H)"))
+
+    def _maze_info(self, level_row: Dict[str, str], maze_row: Optional[Dict[str, str]]) -> Dict[str, Any]:
+        if maze_row:
+            rooms = self._to_int(maze_row.get("Rooms(H)")) or self._to_int(maze_row.get("Rooms"))
+            chunk_width = self._to_int(maze_row.get("SizeX"))
+            chunk_height = self._to_int(maze_row.get("SizeY"))
+            chunk_tiles = chunk_width * chunk_height if chunk_width and chunk_height else 0
+            estimated_area_tiles = rooms * chunk_tiles if rooms and chunk_tiles else 0
+            return {
+                "rooms": rooms,
+                "chunk_width": chunk_width,
+                "chunk_height": chunk_height,
+                "chunk_tiles": chunk_tiles,
+                "estimated_area_tiles": estimated_area_tiles,
+                "source": "lvlmaze",
+            }
+
+        width = self._to_int(level_row.get("SizeX(H)")) or self._to_int(level_row.get("SizeX"))
+        height = self._to_int(level_row.get("SizeY(H)")) or self._to_int(level_row.get("SizeY"))
+        chunk_tiles = width * height if width and height else 0
+        return {
+            "rooms": 1 if chunk_tiles else 0,
+            "chunk_width": width,
+            "chunk_height": height,
+            "chunk_tiles": chunk_tiles,
+            "estimated_area_tiles": chunk_tiles,
+            "source": "levels",
+        }
 
     def _level_display_name(self, row: Dict[str, str]) -> str:
         for column in ("LevelName", "*StringName", "Name"):
@@ -325,6 +392,7 @@ class AreaFarmingDataBuilder:
         row: Dict[str, str],
         monster_pool: List[Dict[str, Any]],
         super_chests: List[Dict[str, Any]],
+        maze_info: Dict[str, Any],
     ) -> str:
         monsters = " ".join(
             f"{monster['id']} {monster['name']} {' '.join(monster['immunities'])}"
@@ -334,7 +402,12 @@ class AreaFarmingDataBuilder:
             f"super chest {source.get('object_class', '')} {source.get('description', '')} {source.get('file', '')}"
             for source in super_chests
         )
-        return f"{display_name} {row.get('Name', '')} {row.get('*StringName', '')} {row.get('LevelName', '')} {monsters} {chest_text}"
+        maze_text = (
+            f"rooms {maze_info.get('rooms')} "
+            f"chunk {maze_info.get('chunk_width')}x{maze_info.get('chunk_height')} "
+            f"tiles {maze_info.get('estimated_area_tiles')}"
+        )
+        return f"{display_name} {row.get('Name', '')} {row.get('*StringName', '')} {row.get('LevelName', '')} {monsters} {chest_text} {maze_text}"
 
     def _layout_roots(self) -> List[str]:
         roots = []
@@ -626,17 +699,119 @@ class WikiGenerator:
         old_item_index = self._index_items(old_items)
         class_pages = self._load_class_pages()
         area_entries = self._load_area_entries()
+        base_item_families = self._load_base_item_families()
+        recipe_groups = self._load_recipe_groups()
+        monster_groups = self._load_monster_groups()
+        misc_groups = self._load_misc_groups()
+        mechanics_summary = self._load_mechanics_summary()
 
         self._write_assets()
         item_entries = self._write_item_pages(items, old_item_index)
         class_entries = self._write_class_pages(class_pages)
+        self._write_base_item_pages(base_item_families)
+        self._write_recipe_pages(recipe_groups)
+        self._write_bestiary_pages(monster_groups)
+        self._write_misc_pages(misc_groups)
+        self._write_mechanics_pages(mechanics_summary)
         report_entries = self._publish_reports()
-        self._write_indexes(item_entries, class_entries, report_entries, area_entries)
+        self._write_indexes(item_entries, class_entries, report_entries, area_entries, base_item_families, recipe_groups, monster_groups, misc_groups)
         self._write_patch_notes_draft(item_entries, class_entries)
         self._write_item_index_data(item_entries)
         self._write_area_index_data(area_entries)
         self._write_manifest()
         self.writer.remove_stale_files()
+
+    def _load_base_item_families(self) -> List[BaseItemFamilyDTO]:
+        repo = D2Repository(self.game_data_dir)
+        resolver = PropertyResolverService(repo)
+        service = BaseItemAnalyzerService(repo, resolver)
+        return service.analyze_base_items()
+
+    def _write_base_item_pages(self, families: List[BaseItemFamilyDTO]) -> None:
+        self._write_page(
+            title=f"Base Items | {self.new_label} Wiki",
+            output_path=WikiRoutes.bases_index_output_path(),
+            template_name="bases_index.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", "armor.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "weapons.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "itemtypes.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "magicprefix.txt"),
+            ],
+            families=families,
+        )
+
+    def _load_recipe_groups(self) -> List[CubeRecipeGroupDTO]:
+        repo = D2Repository(self.game_data_dir)
+        service = CubeAnalyzerService(repo)
+        return service.analyze_all_recipes()
+
+    def _write_recipe_pages(self, groups: List[CubeRecipeGroupDTO]) -> None:
+        self._write_page(
+            title=f"Cube Recipes | {self.new_label} Wiki",
+            output_path=WikiRoutes.recipes_index_output_path(),
+            template_name="recipes_index.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", "cubemain.txt"),
+            ],
+            groups=groups,
+        )
+
+    def _load_monster_groups(self) -> List[MonsterActGroupDTO]:
+        repo = D2Repository(self.game_data_dir)
+        service = MonsterAnalyzerService(repo)
+        return service.analyze_monsters()
+
+    def _write_bestiary_pages(self, groups: List[MonsterActGroupDTO]) -> None:
+        self._write_page(
+            title=f"Bestiary | {self.new_label} Wiki",
+            output_path=WikiRoutes.bestiary_index_output_path(),
+            template_name="bestiary_index.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", "monstats.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "levels.txt"),
+            ],
+            groups=groups,
+        )
+
+    def _load_misc_groups(self) -> List[MiscGroupDTO]:
+        repo = D2Repository(self.game_data_dir)
+        service = MiscAnalyzerService(repo)
+        return service.analyze_misc_items()
+
+    def _write_misc_pages(self, groups: List[MiscGroupDTO]) -> None:
+        self._write_page(
+            title=f"Materials & Runes | {self.new_label} Wiki",
+            output_path=WikiRoutes.misc_index_output_path(),
+            template_name="misc_index.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", "misc.txt"),
+            ],
+            groups=groups,
+        )
+
+    def _load_mechanics_summary(self) -> MechanicsSummaryDTO:
+        repo = D2Repository(self.game_data_dir)
+        retail_repo = D2Repository(os.path.join(REPO_ROOT, "data", "retail"))
+        service = MechanicsAnalyzerService(repo, retail_repo)
+        return service.analyze_mechanics()
+
+    def _write_mechanics_pages(self, summary: MechanicsSummaryDTO) -> None:
+        self._write_page(
+            title=f"Mechanics & Progression | {self.new_label} Wiki",
+            output_path=WikiRoutes.mechanics_output_path(),
+            template_name="mechanics.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", "experience.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "difficultylevels.txt"),
+            ],
+            summary=summary,
+        )
 
     def _load_items(self, item_db_dir: Optional[str] = None) -> Dict[str, List[Dict[str, Any]]]:
         items: Dict[str, List[Dict[str, Any]]] = {family: [] for family in ITEM_FAMILIES}
@@ -858,6 +1033,10 @@ class WikiGenerator:
         class_entries: List[Dict[str, str]],
         report_entries: List[Dict[str, str]],
         area_entries: List[Dict[str, Any]],
+        base_item_families: List[BaseItemFamilyDTO],
+        recipe_groups: List[CubeRecipeGroupDTO],
+        monster_groups: List[MonsterActGroupDTO],
+        misc_groups: List[MiscGroupDTO],
     ) -> None:
         self._write_page(
             title="BT Diablo Data Wiki",
@@ -868,6 +1047,10 @@ class WikiGenerator:
             item_counts={family: len(item_entries[family]) for family in ITEM_FAMILIES},
             class_count=len(class_entries),
             area_count=len(area_entries),
+            base_family_count=len(base_item_families),
+            recipe_count=sum(len(g["recipes"]) for g in recipe_groups),
+            monster_count=sum(len(g["monsters"]) for g in monster_groups),
+            misc_count=sum(len(g["members"]) for g in misc_groups),
             total_items=sum(len(entries) for entries in item_entries.values()),
             reports=report_entries,
         )

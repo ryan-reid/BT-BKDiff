@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Cube Recipes | {{ new_label }} Wiki{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-eyebrow">Horadric Archive</p>
+  <h1>Cube Recipes</h1>
+  <p class="hero-copy">Discover new crafting systems, item upgrades, and rune transmutations introduced in BKDiablo.</p>
+</section>
+
+<section class="content-section">
+  <input id="page-search" class="search-input" type="search" placeholder="Search recipes (e.g. Incendiary, Mage Plate)..." />
+  
+  <div class="recipe-groups">
+    {% for group in groups %}
+    <div class="recipe-group-section" data-search="{{ group.name }}">
+      <h2 class="group-title">{{ group.name }}</h2>
+      
+      <div class="table-wrap">
+        <table class="recipe-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Ingredients</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for recipe in group.recipes %}
+            <tr data-search="{{ recipe.description }} {{ recipe.inputs|join(' ') }} {{ recipe.outputs|join(' ') }}">
+              <td class="recipe-desc"><strong>{{ recipe.description }}</strong></td>
+              <td class="recipe-inputs">
+                <ul class="ingredient-list">
+                  {% for input in recipe.inputs %}
+                  <li>{{ input }}</li>
+                  {% endfor %}
+                </ul>
+              </td>
+              <td class="recipe-outputs">
+                <ul class="result-list">
+                  {% for output in recipe.outputs %}
+                  <li>{{ output }}</li>
+                  {% endfor %}
+                </ul>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

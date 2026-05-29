@@ -96,6 +96,23 @@ function areaSuperChestMarkup(area) {
   return `<span class="area-badge area-badge-accent">Super Chest</span><br><strong>${escapeHtml(label)}</strong>${detail}`;
 }
 
+function areaMazeMarkup(area) {
+  if (!area.estimated_area_tiles) {
+    return '<span class="muted">Unknown</span>';
+  }
+
+  const chunk = area.maze_chunk_width && area.maze_chunk_height
+    ? `${area.maze_chunk_width}x${area.maze_chunk_height}`
+    : "Unknown";
+  const rooms = area.maze_rooms ? `${area.maze_rooms} room${area.maze_rooms === 1 ? "" : "s"}` : "Unknown rooms";
+  const source = area.maze_source === "lvlmaze" ? "LvlMaze" : "Levels";
+  return `
+    <strong>${escapeHtml(chunk)}</strong><br>
+    <span class="muted">${escapeHtml(rooms)}</span><br>
+    <span class="muted">${escapeHtml(area.estimated_area_tiles)} tiles &middot; ${escapeHtml(source)}</span>
+  `;
+}
+
 function areaRowMarkup(area) {
   return `
     <tr>
@@ -107,6 +124,7 @@ function areaRowMarkup(area) {
       <td><strong>${escapeHtml(area.farm_score)}</strong></td>
       <td>Area ${escapeHtml(area.area_level)}</td>
       <td>${escapeHtml(area.monster_density)}</td>
+      <td>${areaMazeMarkup(area)}</td>
       <td>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)}<br><span class="muted">Avg ${escapeHtml(area.elite_avg)}</span></td>
       <td>${areaSuperChestMarkup(area)}</td>
       <td><span class="immunity-list">${areaImmunityMarkup(area)}</span></td>
@@ -185,7 +203,7 @@ async function wireAreaIndex() {
     });
 
     root.innerHTML = sortedAreas(filtered).map(areaRowMarkup).join("")
-      || '<tr><td colspan="8" class="muted">No areas match the current filters.</td></tr>';
+      || '<tr><td colspan="9" class="muted">No areas match the current filters.</td></tr>';
     if (resultCount) {
       resultCount.textContent = String(filtered.length);
     }
@@ -315,7 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
   wireAreaIndex().catch((error) => {
     const root = document.querySelector("#area-index-root");
     if (root) {
-      root.innerHTML = '<tr><td colspan="8" class="muted">Unable to load the area index.</td></tr>';
+      root.innerHTML = '<tr><td colspan="9" class="muted">Unable to load the area index.</td></tr>';
     }
     console.error(error);
   });

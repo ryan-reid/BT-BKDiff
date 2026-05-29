@@ -15,7 +15,7 @@ def main():
     service = SkillAnalyzerService(repo)
     exporter = MarkdownExporter()
 
-    classes = ["nec", "bar", "ama", "sor", "pal", "dru", "asn", "war"]
+    classes = ["nec", "bar", "ama", "sor", "pal", "dru", "ass", "war"]
     
     summary = "# Skill Trees\n\n"
 
