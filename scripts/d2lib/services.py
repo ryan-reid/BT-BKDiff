@@ -351,16 +351,24 @@ class PropertyResolverService:
         if tooltip and tooltip != '0' and not is_level_stat:
             func, val1 = prop.get('func1', '0').strip(), prop.get('val1', '0').strip()
             res_text = tooltip
+            display_range = range_str
+            if "-#" in res_text:
+                try:
+                    display_min = str(abs(int(actual_min))) if actual_min else actual_min
+                    display_max = str(abs(int(actual_max))) if actual_max else actual_max
+                    display_range = display_min if display_min == display_max else f"{display_min}-{display_max}"
+                except ValueError:
+                    display_range = range_str
             # Correct D2 placeholder logic: Handle multiple '#' symbols
             if func in ['36', '14']:
                 res_text = res_text.replace('#', val1)
             else:
-                if res_text.count('#') > 1 and '-' in range_str:
-                    parts = range_str.split('-')
+                if res_text.count('#') > 1 and '-' in display_range:
+                    parts = display_range.split('-')
                     for part in parts:
                         res_text = res_text.replace('#', part, 1)
                 else:
-                    res_text = res_text.replace('#', range_str)
+                    res_text = res_text.replace('#', display_range)
 
             if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(str(param), f"Tab {param}"))
             if '[Class]' in res_text:
@@ -1448,6 +1456,7 @@ class BaseItemAnalyzerService:
         self.weapons = repo.get_excel_table('weapons')
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
         self.automagic = repo.get_excel_table('automagic')
+        self.quality_items = repo.get_excel_table('qualityitems')
 
     def analyze_base_items(self) -> List[BaseItemFamilyDTO]:
         families: List[BaseItemFamilyDTO] = []
@@ -1493,6 +1502,7 @@ class BaseItemAnalyzerService:
         type_code = row.get('type', '')
         item_type = self.item_types.get(type_code, {})
         type_name = self.repo.get_string(item_type.get('ItemType', '')) or type_code
+        item_type_chain = self._item_type_chain(type_code)
 
         # Sockets
         base_sockets = int(row.get('gemsockets', '0') or '0')
@@ -1519,6 +1529,8 @@ class BaseItemAnalyzerService:
             prefix_rows = self._find_automagic_by_group(auto_prefix_id)
             seen_stats = set()
             for p_row in prefix_rows:
+                if not self._automagic_row_applies_to_item_type(p_row, item_type_chain):
+                    continue
                 for i in range(1, 4):
                     p_code = p_row.get(f'mod{i}code')
                     if p_code and p_code != 'xxx':
@@ -1532,6 +1544,9 @@ class BaseItemAnalyzerService:
                         if stat_text and stat_text not in seen_stats:
                             auto_prefix_stats.append(stat_text)
                             seen_stats.add(stat_text)
+
+        inherent_stats = self._inherent_stats_for_item_type(item_type_chain)
+        quality_bonus_stats = self._quality_bonus_stats_for_item_type(item_type_chain)
 
         def to_int(v):
             try: return int(v) if v else 0
@@ -1553,7 +1568,9 @@ class BaseItemAnalyzerService:
             "dex_req": to_int(row.get('reqdex')),
             "sockets": base_sockets,
             "max_sockets_by_ilvl": max_sockets_by_ilvl,
+            "inherent_stats": inherent_stats,
             "auto_prefix_stats": auto_prefix_stats,
+            "quality_bonus_stats": quality_bonus_stats,
             "speed": to_int(row.get('speed')),
             "durability": to_int(row.get('nodurability')) if row.get('nodurability') == '1' else to_int(row.get('durability')),
             "tier": tier
@@ -1561,3 +1578,88 @@ class BaseItemAnalyzerService:
 
     def _find_automagic_by_group(self, group_id: str) -> List[Dict[str, str]]:
         return [row for row in self.automagic if row.get('group') == group_id]
+
+    def _automagic_row_applies_to_item_type(self, row: Dict[str, str], item_type_chain: set) -> bool:
+        included_types = [row.get(f'itype{i}', '').strip() for i in range(1, 8)]
+        excluded_types = [row.get(f'etype{i}', '').strip() for i in range(1, 6)]
+        included_types = [code for code in included_types if code]
+        excluded_types = [code for code in excluded_types if code]
+
+        if included_types and not any(code in item_type_chain for code in included_types):
+            return False
+        if excluded_types and any(code in item_type_chain for code in excluded_types):
+            return False
+        return True
+
+    def _item_type_chain(self, type_code: str) -> set:
+        chain = set()
+
+        def visit(code: str) -> None:
+            code = (code or "").strip()
+            if not code or code in chain:
+                return
+            chain.add(code)
+            item_type = self.item_types.get(code, {})
+            visit(item_type.get('Equiv1', ''))
+            visit(item_type.get('Equiv2', ''))
+
+        visit(type_code)
+        return chain
+
+    def _inherent_stats_for_item_type(self, item_type_chain: set) -> List[str]:
+        stats = []
+        if 'blun' in item_type_chain:
+            stats.append("+50% Damage to Undead")
+        return stats
+
+    def _quality_bonus_stats_for_item_type(self, item_type_chain: set) -> List[str]:
+        quality_columns = self._quality_columns_for_item_type(item_type_chain)
+        if not quality_columns:
+            return []
+
+        stats = []
+        seen_stats = set()
+        for quality_row in self.quality_items:
+            if not any(quality_row.get(column) == '1' for column in quality_columns):
+                continue
+
+            row_stats = []
+            for i in range(1, 3):
+                p_code = quality_row.get(f'mod{i}code')
+                if p_code and p_code != 'xxx':
+                    res = self.resolver.resolve_property(
+                        p_code,
+                        quality_row.get(f'mod{i}param', ''),
+                        quality_row.get(f'mod{i}min', ''),
+                        quality_row.get(f'mod{i}max', '')
+                    )
+                    stat_text = res['resolved_text']
+                    if stat_text:
+                        row_stats.append(stat_text)
+
+            if not row_stats:
+                continue
+            combined = " / ".join(row_stats)
+            if combined not in seen_stats:
+                stats.append(combined)
+                seen_stats.add(combined)
+
+        return stats
+
+    def _quality_columns_for_item_type(self, item_type_chain: set) -> set:
+        column_map = {
+            'weap': 'weapon',
+            'armo': 'armor',
+            'shld': 'shield',
+            'shie': 'shield',
+            'ashd': 'shield',
+            'scep': 'scepter',
+            'wand': 'wand',
+            'staf': 'staff',
+            'bow': 'bow',
+            'xbow': 'bow',
+            'boot': 'boots',
+            'glov': 'gloves',
+            'belt': 'belt',
+        }
+        return {column for code, column in column_map.items() if code in item_type_chain}

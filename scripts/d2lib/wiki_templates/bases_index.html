@@ -14,7 +14,7 @@
   
   <div class="card-grid">
     {% for family in families %}
-    <div class="item-card family-card" data-search="{{ family.name }} {{ family.members|map(attribute='name')|join(' ') }}">
+    <div class="item-card family-card" data-search="{{ family.name }} {{ family.members|map(attribute='name')|join(' ') }} {% for item in family.members %}{{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_stats|join(' ') }} {{ item.quality_bonus_stats|join(' ') }} {% endfor %}">
       <div class="family-header">
         <h3>{{ family.name }}</h3>
       </div>
@@ -28,7 +28,7 @@
               <th>Def/Dam</th>
               <th>Reqs</th>
               <th>Sockets</th>
-              <th>Auto Prefix</th>
+              <th>Bonuses</th>
             </tr>
           </thead>
           <tbody>
@@ -64,10 +64,16 @@
                 </small>
               </td>
               <td class="auto-prefix-cell">
-                {% if item.auto_prefix_stats %}
+                {% if item.inherent_stats or item.auto_prefix_stats or item.quality_bonus_stats %}
                   <ul class="stats-list">
+                    {% for stat in item.inherent_stats %}
+                    <li><small>Inherent</small> {{ stat }}</li>
+                    {% endfor %}
                     {% for stat in item.auto_prefix_stats %}
-                    <li>{{ stat }}</li>
+                    <li><small>Auto prefix roll</small> {{ stat }}</li>
+                    {% endfor %}
+                    {% for stat in item.quality_bonus_stats %}
+                    <li><small>Superior roll</small> {{ stat }}</li>
                     {% endfor %}
                   </ul>
                 {% else %}
