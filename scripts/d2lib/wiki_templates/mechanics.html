@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Mechanics & Progression | {{ new_label }} Wiki{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-eyebrow">Game Systems</p>
+  <h1>Mechanics & Progression</h1>
+  <p class="hero-copy">Overview of fundamental changes to experience gain and difficulty scaling.</p>
+</section>
+
+<section class="content-section">
+  <h2>Experience Curve Changes</h2>
+  <p class="muted">Summary of changes to level-based experience requirements compared to Retail.</p>
+  
+  <div class="table-wrap">
+    <table class="mechanics-table">
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Property</th>
+          <th>Retail Value</th>
+          <th>{{ new_label }} Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for change in summary.experience_changes %}
+        <tr>
+          <td><strong>Level {{ change.level }}</strong></td>
+          <td>{{ change.property }}</td>
+          <td><span class="comparison-value is-old">{{ change.retail }}</span></td>
+          <td><span class="comparison-value is-new">{{ change.bk }}</span></td>
+        </tr>
+        {% endfor %}
+        {% if not summary.experience_changes %}
+        <tr><td colspan="4" class="text-center text-muted">No significant experience changes found.</td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="content-section">
+  <h2>Difficulty Scaling</h2>
+  <p class="muted">Modifications to monster power and player penalties across difficulty levels.</p>
+  
+  <div class="table-wrap">
+    <table class="mechanics-table">
+      <thead>
+        <tr>
+          <th>Difficulty</th>
+          <th>Property</th>
+          <th>Retail Value</th>
+          <th>{{ new_label }} Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for change in summary.difficulty_changes %}
+        <tr>
+          <td><strong>{{ change.difficulty }}</strong></td>
+          <td>{{ change.property }}</td>
+          <td><span class="comparison-value is-old">{{ change.retail }}</span></td>
+          <td><span class="comparison-value is-new">{{ change.bk }}</span></td>
+        </tr>
+        {% endfor %}
+        {% if not summary.difficulty_changes %}
+        <tr><td colspan="4" class="text-center text-muted">No significant difficulty changes found.</td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

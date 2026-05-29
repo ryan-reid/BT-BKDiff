@@ -420,6 +420,11 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("items/unique/twin-item/", WikiRoutes.route_from_output_path("items/unique/twin-item/index.html"))
         self.assertEqual("../../../", WikiRoutes.site_root_for_output_path("items/unique/twin-item/index.html"))
         self.assertEqual("areas/index.html", WikiRoutes.areas_index_output_path())
+        self.assertEqual("bases/index.html", WikiRoutes.bases_index_output_path())
+        self.assertEqual("recipes/index.html", WikiRoutes.recipes_index_output_path())
+        self.assertEqual("bestiary/index.html", WikiRoutes.bestiary_index_output_path())
+        self.assertEqual("misc/index.html", WikiRoutes.misc_index_output_path())
+        self.assertEqual("mechanics/index.html", WikiRoutes.mechanics_output_path())
 
     def test_generation_writes_pretty_routes_and_manifest(self):
         self._generate()
@@ -430,6 +435,11 @@ class TestWikiGenerator(unittest.TestCase):
             os.path.join(self.output, "items", "index.html"),
             os.path.join(self.output, "classes", "amazon", "index.html"),
             os.path.join(self.output, "areas", "index.html"),
+            os.path.join(self.output, "bases", "index.html"),
+            os.path.join(self.output, "recipes", "index.html"),
+            os.path.join(self.output, "bestiary", "index.html"),
+            os.path.join(self.output, "misc", "index.html"),
+            os.path.join(self.output, "mechanics", "index.html"),
             os.path.join(self.output, "data", "areas-index.json"),
             os.path.join(self.output, "reports", "index.html"),
             os.path.join(self.output, "reports", "items", "retail-bk", "index.html"),
@@ -446,6 +456,11 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("items/unique/twin-item-second-base/", manifest_paths)
         self.assertIn("items/", manifest_paths)
         self.assertIn("areas/", manifest_paths)
+        self.assertIn("bases/", manifest_paths)
+        self.assertIn("recipes/", manifest_paths)
+        self.assertIn("bestiary/", manifest_paths)
+        self.assertIn("misc/", manifest_paths)
+        self.assertIn("mechanics/", manifest_paths)
         self.assertIn("reports/", manifest_paths)
         self.assertIn("reports/items/retail-bk/", manifest_paths)
 
@@ -569,6 +584,16 @@ class TestWikiGenerator(unittest.TestCase):
             runeword_page = f.read()
         self.assertIn("Properties from Runes", runeword_page)
         self.assertIn("+50 to Attack Rating", runeword_page)
+
+        for relative_path, expected_text in [
+            (os.path.join("bases", "index.html"), "Base Items"),
+            (os.path.join("recipes", "index.html"), "Cube Recipes"),
+            (os.path.join("bestiary", "index.html"), "Monster Bestiary"),
+            (os.path.join("misc", "index.html"), "Materials &amp; Runes"),
+            (os.path.join("mechanics", "index.html"), "Mechanics &amp; Progression"),
+        ]:
+            with open(os.path.join(self.output, relative_path), "r", encoding="utf-8") as f:
+                self.assertIn(expected_text, f.read())
 
     def test_stale_files_are_removed(self):
         os.makedirs(self.output, exist_ok=True)

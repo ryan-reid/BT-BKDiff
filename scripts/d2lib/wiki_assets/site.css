@@ -618,6 +618,229 @@ td {
   margin: 0 0 10px;
 }
 
+.family-header {
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.family-table-wrap {
+  overflow-x: auto;
+}
+
+.family-table {
+  min-width: 900px;
+}
+
+.family-table th {
+  background: rgba(63, 101, 117, 0.04);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.family-table td {
+  font-size: 0.94rem;
+}
+
+.tier-exceptional { background: rgba(63, 101, 117, 0.02); }
+.tier-elite { background: rgba(139, 47, 47, 0.02); }
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: var(--radius);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge-normal { background: rgba(33, 29, 25, 0.08); color: var(--muted); }
+.badge-exceptional { background: rgba(63, 101, 117, 0.12); color: var(--accent-2); }
+.badge-elite { background: rgba(139, 47, 47, 0.12); color: var(--accent); }
+
+.auto-prefix-cell {
+  max-width: 240px;
+}
+
+.stats-list {
+  margin: 0;
+  padding-left: 14px;
+  font-size: 0.86rem;
+  color: var(--accent-2);
+}
+
+.recipe-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.recipe-group-section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.group-title {
+  margin: 0 0 20px 0;
+  color: var(--accent-2);
+  border-bottom: 2px solid var(--accent-2);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.recipe-table {
+  width: 100%;
+}
+
+.recipe-table th {
+  text-align: left;
+  padding: 12px;
+  background: rgba(33, 29, 25, 0.03);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.recipe-table td {
+  padding: 16px 12px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.recipe-desc {
+  width: 25%;
+  font-size: 1.05rem;
+}
+
+.recipe-inputs {
+  width: 35%;
+}
+
+.recipe-outputs {
+  width: 40%;
+}
+
+.ingredient-list, .result-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.ingredient-list li, .result-list li {
+  margin-bottom: 4px;
+  font-size: 0.94rem;
+}
+
+.result-list li {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.monster-table {
+  width: 100%;
+}
+
+.monster-table th {
+  text-align: left;
+  padding: 12px;
+  background: rgba(33, 29, 25, 0.03);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.monster-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.monster-name-cell {
+  width: 20%;
+}
+
+.immunity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.monster-table .immunity-chip {
+  background: var(--accent);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.spawn-areas-cell {
+  width: 40%;
+  color: var(--muted);
+}
+
+.misc-table {
+  width: 100%;
+}
+
+.misc-table th {
+  text-align: left;
+  padding: 12px;
+  background: rgba(33, 29, 25, 0.03);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.misc-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.misc-name-cell {
+  width: 25%;
+}
+
+.misc-desc-cell {
+  width: 50%;
+  font-size: 0.94rem;
+  color: var(--accent-2);
+}
+
+.mechanics-table {
+  width: 100%;
+}
+
+.mechanics-table th {
+  text-align: left;
+  padding: 12px;
+  background: rgba(33, 29, 25, 0.03);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.mechanics-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mechanics-table .comparison-value {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.mechanics-table .comparison-value.is-old {
+  background: rgba(139, 47, 47, 0.08);
+  color: var(--accent);
+  text-decoration: line-through;
+}
+
+.mechanics-table .comparison-value.is-new {
+  background: rgba(63, 101, 117, 0.08);
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
 .site-footer {
   padding: 22px 10px 0;
   color: var(--muted);

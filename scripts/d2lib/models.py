@@ -50,6 +50,10 @@ class CubeRecipeDTO(TypedDict):
     outputs: List[str]
     raw_row: Dict[str, str]
 
+class CubeRecipeGroupDTO(TypedDict):
+    name: str
+    recipes: List[CubeRecipeDTO]
+
 class SkillEffectDTO(TypedDict):
     label: str
     scaling: str
@@ -73,3 +77,67 @@ class SkillDTO(TypedDict):
 class SkillTreeDTO(TypedDict):
     class_name: str
     skills: List[SkillDTO]
+
+class BaseItemDTO(TypedDict):
+    code: str
+    name: str
+    type: str
+    level: int
+    level_req: int
+    defense_min: Optional[int]
+    defense_max: Optional[int]
+    damage_min: Optional[int]
+    damage_max: Optional[int]
+    two_hand_damage_min: Optional[int]
+    two_hand_damage_max: Optional[int]
+    str_req: int
+    dex_req: int
+    sockets: int
+    max_sockets_by_ilvl: Dict[str, int]
+    auto_prefix_stats: List[str]
+    speed: int
+    durability: int
+    tier: str # Normal, Exceptional, Elite
+
+class BaseItemFamilyDTO(TypedDict):
+    name: str
+    members: List[BaseItemDTO]
+
+class MonsterDTO(TypedDict):
+    id: str
+    name: str
+    level_norm: int
+    level_nm: int
+    level_hell: int
+    hp_norm: str
+    hp_nm: str
+    hp_hell: str
+    resists_hell: Dict[str, int]
+    immunities_hell: List[str]
+    spawn_areas: List[str]
+    is_boss: bool
+    is_unique: bool
+
+class MonsterActGroupDTO(TypedDict):
+    act: str
+    monsters: List[MonsterDTO]
+
+class MiscItemDTO(TypedDict):
+    code: str
+    name: str
+    type: str
+    level: int
+    level_req: int
+    stackable: bool
+    max_stack: int
+    cost: int
+    description: str
+    category: str
+
+class MiscGroupDTO(TypedDict):
+    category: str
+    members: List[MiscItemDTO]
+
+class MechanicsSummaryDTO(TypedDict):
+    experience_changes: List[Dict[str, Any]]
+    difficulty_changes: List[Dict[str, Any]]

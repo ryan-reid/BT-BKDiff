@@ -1,9 +1,171 @@
+from __future__ import annotations
 import os
 import re
 import difflib
 from typing import List, Dict, Optional, Any, Tuple
 from d2lib.repository import D2Repository, normalize_d2_value
-from d2lib.models import PropertyDTO, AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, ExcelDiffRowDTO, CubeRecipeDTO, ItemDiffDTO, SkillTreeDTO, SkillDTO, SkillEffectDTO, SkillSynergyDTO
+from d2lib.models import PropertyDTO, AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, ExcelDiffRowDTO, CubeRecipeDTO, CubeRecipeGroupDTO, ItemDiffDTO, SkillTreeDTO, SkillDTO, SkillEffectDTO, SkillSynergyDTO, BaseItemDTO, BaseItemFamilyDTO, MonsterDTO, MonsterActGroupDTO, MiscItemDTO, MiscGroupDTO, MechanicsSummaryDTO
+
+class MechanicsAnalyzerService:
+    def __init__(self, repo: D2Repository, retail_repo: Optional[D2Repository] = None):
+        self.repo = repo
+        self.retail_repo = retail_repo
+
+    def analyze_mechanics(self) -> MechanicsSummaryDTO:
+        exp_changes = []
+        diff_changes = []
+
+        if self.retail_repo:
+            # Compare Experience
+            exp_bk = self.repo.get_excel_table('experience')
+            exp_rt = self.retail_repo.get_excel_table('experience')
+
+            exp_diff = ExcelComparisonService.compare_tables(exp_bk, exp_rt, 'Level', 'experience.txt')
+            for lvl, row in exp_diff['modified_rows'].items():
+                for col, vals in row.items():
+                    exp_changes.append({"level": lvl, "property": col, "retail": vals['bt_old'], "bk": vals['bk_new']})
+
+            # Compare Difficulty Levels
+            dl_bk = self.repo.get_excel_table('difficultylevels')
+            dl_rt = self.retail_repo.get_excel_table('difficultylevels')
+
+            dl_diff = ExcelComparisonService.compare_tables(dl_bk, dl_rt, 'Name', 'difficultylevels.txt')
+            for name, row in dl_diff['modified_rows'].items():
+                for col, vals in row.items():
+                    diff_changes.append({"difficulty": name, "property": col, "retail": vals['bt_old'], "bk": vals['bk_new']})
+
+        return {
+            "experience_changes": exp_changes,
+            "difficulty_changes": diff_changes
+        }
+
+class MiscAnalyzerService:
+    def __init__(self, repo: D2Repository):
+        self.repo = repo
+        self.misc = repo.get_excel_table('misc')
+        self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
+
+    def analyze_misc_items(self) -> List[MiscGroupDTO]:
+        items: List[MiscItemDTO] = []
+
+        for row in self.misc:
+            code = row.get('code', '').strip()
+            if not code or code == '0': continue
+
+            # Filter: UICatOverride (BK specific) or specific types like Runes, Gems, Quest
+            uicat = row.get('UICatOverride', '').strip()
+            type_code = row.get('type', '').strip()
+
+            is_rune = type_code == 'rune'
+            is_gem = type_code in ('gem0', 'gem1', 'gem2', 'gem3', 'gem4')
+            is_quest = row.get('quest', '0') != '0'
+
+            if not uicat and not is_rune and not is_gem and not is_quest:
+                continue
+
+            name_str = row.get('namestr') or row.get('name')
+            name = self.repo.get_string(name_str) or name_str or code
+
+            desc_str = row.get('description')
+            description = self.repo.get_string(desc_str) if desc_str else ""
+
+            def to_int(v):
+                try: return int(v) if v else 0
+                except: return 0
+
+            items.append({
+                "code": code,
+                "name": name,
+                "type": type_code,
+                "level": to_int(row.get('level')),
+                "level_req": to_int(row.get('levelreq')),
+                "stackable": row.get('stackable') == '1',
+                "max_stack": to_int(row.get('maxstack')),
+                "cost": to_int(row.get('cost')),
+                "description": description,
+                "category": uicat or ( "Rune" if is_rune else "Gem" if is_gem else "Quest" if is_quest else "Other" )
+            })
+
+        # Group by Category
+        groups: Dict[str, List[MiscItemDTO]] = {}
+        for item in items:
+            cat = item['category']
+            if cat not in groups: groups[cat] = []
+            groups[cat].append(item)
+
+        return [{"category": name, "members": sorted(items, key=lambda x: (x["level"], x["name"]))} for name, items in sorted(groups.items())]
+
+class MonsterAnalyzerService:
+    def __init__(self, repo: D2Repository):
+        self.repo = repo
+        self.monstats = repo.get_excel_table('monstats')
+        self.levels = repo.get_excel_table('levels')
+        self.monstats2 = {row['Id']: row for row in repo.get_excel_table('monstats2') if row.get('Id')}
+
+    def analyze_monsters(self) -> List[MonsterActGroupDTO]:
+        monsters: List[MonsterDTO] = []
+
+        # Map spawn areas
+        area_map: Dict[str, List[str]] = {}
+        for l_row in self.levels:
+            area_name = self.repo.get_string(l_row.get('LevelName', '')) or l_row.get('LevelName', 'Unknown')
+            prefixes = ["mon", "nmon", "umon"]
+            for p in prefixes:
+                for i in range(1, 26):
+                    m_id = l_row.get(f"{p}{i}", "").strip()
+                    if m_id and m_id != "0":
+                        if m_id not in area_map: area_map[m_id] = []
+                        if area_name not in area_map[m_id]: area_map[m_id].append(area_name)
+
+        for row in self.monstats:
+            m_id = row.get('Id', '').strip()
+            if not m_id: continue
+
+            # Filter: only include monsters that are actually used/spawnable or bosses
+            spawn_areas = area_map.get(m_id, [])
+            is_boss = row.get('isBoss', '0') == '1'
+            if not spawn_areas and not is_boss: continue
+
+            name_str = row.get('NameStr', '')
+            name = self.repo.get_string(name_str) or name_str or m_id
+
+            # Simple HP/Level read
+            def to_int(v):
+                try: return int(v) if v else 0
+                except: return 0
+
+            resists_hell = {
+                "Physical": to_int(row.get('ResDm(H)')),
+                "Magic": to_int(row.get('ResMa(H)')),
+                "Fire": to_int(row.get('ResFi(H)')),
+                "Lightning": to_int(row.get('ResLi(H)')),
+                "Cold": to_int(row.get('ResCo(H)')),
+                "Poison": to_int(row.get('ResPo(H)'))
+            }
+            immunities = [k for k, v in resists_hell.items() if v >= 100]
+
+            monsters.append({
+                "id": m_id,
+                "name": name,
+                "level_norm": to_int(row.get('Level')),
+                "level_nm": to_int(row.get('Level(N)')),
+                "level_hell": to_int(row.get('Level(H)')),
+                "hp_norm": f"{row.get('MinHP')}-{row.get('MaxHP')}",
+                "hp_nm": f"{row.get('MinHP(N)')}-{row.get('MaxHP(N)')}",
+                "hp_hell": f"{row.get('MinHP(H)')}-{row.get('MaxHP(H)')}",
+                "resists_hell": resists_hell,
+                "immunities_hell": immunities,
+                "spawn_areas": sorted(spawn_areas),
+                "is_boss": is_boss,
+                "is_unique": False # Simplified
+            })
+
+        # Group by Act (best effort via spawn areas)
+        # This is tricky because monsters spawn in multiple acts.
+        # For simplicity, we'll just show all in one searchable list initially
+        # or group by the first act they appear in.
+
+        return [{"act": "All Monsters", "monsters": sorted(monsters, key=lambda x: x["name"])}]
 
 class PropertyResolverService:
     def __init__(self, repo: D2Repository, property_groups: Optional[List[Dict[str, str]]] = None):
@@ -11,7 +173,7 @@ class PropertyResolverService:
         self.property_groups: Dict[str, Dict[str, str]] = {
             row['code'].strip().lower(): row for row in property_groups
         } if property_groups else {}
-        
+
         self.aliases: Dict[str, str] = {
             'cast': 'cast1', 'balance': 'balance1', 'move': 'move1', 'swing': 'swing1',
             'block': 'block1', 'cold-res': 'res-cold', 'fire-res': 'res-fire',
@@ -21,7 +183,7 @@ class PropertyResolverService:
 
         self.properties = {row.get('code', '').strip().lower(): row for row in repo.get_excel_table('properties')}
         self.stats = {row.get('Stat', '').strip().lower(): row for row in repo.get_excel_table('itemstatcost')}
-        
+
         skills_data = repo.get_excel_table('skills')
         self.skills = {row.get('skill', '').strip().lower(): row for row in skills_data}
         self.skills_by_id = {}
@@ -32,7 +194,7 @@ class PropertyResolverService:
         self.skill_desc = {row.get('skilldesc', '').strip().lower(): row for row in repo.get_excel_table('skilldesc')}
         self.class_names = {'0': 'Amazon', '1': 'Sorceress', '2': 'Necromancer', '3': 'Paladin', '4': 'Barbarian', '5': 'Druid', '6': 'Assassin', '7': 'Warlock'}
         self.class_abbr_map = {'ama': 'Amazon', 'sor': 'Sorceress', 'nec': 'Necromancer', 'pal': 'Paladin', 'bar': 'Barbarian', 'dru': 'Druid', 'ass': 'Assassin', 'war': 'Warlock'}
-        
+
         self.skill_to_class = {}
         for row in skills_data:
             s_name = row.get('skill', '').strip().lower()
@@ -50,7 +212,7 @@ class PropertyResolverService:
             '16': 'Shape Shifting', '17': 'Elemental', '18': 'Traps', '19': 'Shadow Disciplines',
             '20': 'Martial Arts', '21': 'Warlock'
         }
-        
+
         self.manual_overrides = {
             'bloody': 'Unknown property: bloody',
             'gelid-affix5': '(Missing Affix 5 data)',
@@ -79,40 +241,40 @@ class PropertyResolverService:
         if not stat: return None
         str_pos, str_neg, str_2 = stat.get('descstrpos', '').strip(), stat.get('descstrneg', '').strip(), stat.get('descstr2', '').strip()
         if not str_pos: return None
-        
-        try: 
+
+        try:
             v_min = int(min_val) if min_val else 0
             v_max = int(max_val) if max_val else 0
-        except ValueError: 
+        except ValueError:
             v_min, v_max = 0, 0
 
         # Handle descfunc 19 (By Character Level)
         desc_func = stat.get('descfunc', '0').strip()
         op_base = stat.get('op base', '').strip().lower()
         is_level_stat = op_base == 'level'
-        
+
         if desc_func == '19' and is_level_stat:
             op_param_raw = stat.get('op param', '0').strip()
             op_param = int(op_param_raw) if op_param_raw else 0
             factor = 2 ** op_param
-            
+
             p_min = v_min / factor
             p_max = v_max / factor
-            
+
             p_range = f"{p_min:.1f}" if p_min == p_max else f"{p_min:.1f}-{p_max:.1f}"
-            
+
             fmt_string = self.repo.get_string(str_pos if v_min >= 0 else str_neg)
             if not fmt_string: return None
-            
+
             # Remove value placeholders and any leading +/- or % from the remaining string
             clean_fmt = fmt_string.replace('%+d', '').replace('%d', '').replace('%%', '').strip()
             if clean_fmt.startswith('+') or clean_fmt.startswith('-'): clean_fmt = clean_fmt[1:].strip()
             if clean_fmt.startswith('%'): clean_fmt = clean_fmt[1:].strip()
-            
+
             # Construct (X% per clvl) prefix
             pct = "%" if '%%' in fmt_string else ""
             prefix = f"({p_range}{pct} per clvl) "
-            
+
             res = prefix + clean_fmt
             if str_2: res += " " + self.repo.get_string(str_2)
             return res
@@ -121,14 +283,14 @@ class PropertyResolverService:
         fmt_string = self.repo.get_string(str_pos if v_min >= 0 else str_neg)
         if not fmt_string: return None
         sign = "+" if v_min >= 0 else ""
-        if "%+d" in fmt_string: 
+        if "%+d" in fmt_string:
             # Avoid double signs if range_str already has one
             display_range = range_str
             if range_str.startswith('+') or range_str.startswith('-'):
                 fmt_string = fmt_string.replace("%+d", display_range)
             else:
                 fmt_string = fmt_string.replace("%+d", f"{sign}{display_range}")
-        elif "%d" in fmt_string: 
+        elif "%d" in fmt_string:
             # Avoid double negative if fmt_string has -%d and range_str starts with -
             if fmt_string.find("-%d") != -1 and display_range.startswith('-'):
                 fmt_string = fmt_string.replace("-%d", display_range)
@@ -141,12 +303,12 @@ class PropertyResolverService:
     def resolve_property(self, code: str, param: str, min_val: str, max_val: str) -> PropertyDTO:
         code_orig = code
         code_lower = code.strip().lower()
-        
+
         if not code_lower or code_lower == 'xxx':
             return {"code": code, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": ""}
 
         if code_lower in self.aliases: code_lower = self.aliases[code_lower]
-        
+
         # 1. Manual Overrides
         if code_lower in self.manual_overrides:
             text = self.manual_overrides[code_lower]
@@ -170,9 +332,9 @@ class PropertyResolverService:
         if not prop:
             range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
-        
+
         func1 = prop.get('func1', '0').strip()
-        
+
         # Use param if min_val is empty and it's a per-level stat (func 17)
         actual_min, actual_max = min_val, max_val
         if func1 == '17' and not actual_min and param:
@@ -203,7 +365,7 @@ class PropertyResolverService:
             if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(str(param), f"Tab {param}"))
             if '[Class]' in res_text:
                 if func == '36': cls = 'Random Class' if actual_min != actual_max else self.class_names.get(actual_min, f"Class {actual_min}")
-                else: 
+                else:
                     set1 = prop.get('set1', '').strip()
                     cls_id = set1 if set1 and set1 != '0' else param
                     cls = self.class_names.get(str(cls_id))
@@ -230,12 +392,12 @@ class PropertyResolverService:
             if stat_code:
                 desc = self.format_desc(stat_code, actual_min, actual_max)
                 if desc: return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": desc}
-        
+
         # New Fallback Logic: Try resolving via the code name itself
         localized_code = self.repo.get_string(code_orig)
         if not localized_code or localized_code == code_orig:
             localized_code = self.repo.get_string(code_orig.capitalize())
-        
+
         if localized_code and localized_code != code_orig and localized_code != code_orig.capitalize():
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{localized_code}: {range_str}"}
 
@@ -281,7 +443,7 @@ class ItemAnalyzerService:
         if 'sword' in cat_lower: return 'Swords'
         if 'throwing' in cat_lower: return 'Throwing'
         if 'wand' in cat_lower: return 'Wands'
-        
+
         # Others
         if any(cls in cat_lower for cls in ['voodoo', 'pelt', 'primal', 'auric']): return 'Class Armors'
         if 'amulet' in cat_lower: return 'Amulets'
@@ -294,7 +456,7 @@ class ItemAnalyzerService:
         if 'glove' in cat_lower: return 'Gloves'
         if 'belt' in cat_lower: return 'Belts'
         if 'boot' in cat_lower: return 'Boots'
-        
+
         return 'Others'
 
     def get_top_level_group(self, granular_group: str) -> str:
@@ -328,11 +490,11 @@ class ItemAnalyzerService:
             code = row.get(f'T1Code{i}', '').strip()
             if code and code != 'xxx':
                 props.append(self.resolver.resolve_property(code, row.get(f'T1Param{i}', ''), row.get(f'T1Min{i}', ''), row.get(f'T1Max{i}', '')))
-        
+
         itype = row.get('itype1', '').strip()
         base_items = [self.repo.get_string(self.item_types.get(itype, {}).get('ItemType', '')) or itype]
         rune_properties = self._resolve_runeword_rune_properties(row, itype)
-        
+
         return {
             "name": name, "runes": runes, "base_items": base_items,
             "properties": props, "rune_properties": rune_properties, "raw_row": row
@@ -414,15 +576,15 @@ class ItemAnalyzerService:
             code = row.get(f'prop{i}', '').strip()
             if code and code != 'xxx':
                 props.append(self.resolver.resolve_property(code, row.get(f'par{i}', ''), row.get(f'min{i}', ''), row.get(f'max{i}', '')))
-        
+
         set_name = row.get('set', '').strip()
         set_info = self.sets.get(set_name, {})
         is_expansion = set_info.get('version', '0') != '0'
-        
+
         item_code = row.get('item', '').strip()
         return {
             "id": idx, "display_name": self.repo.get_string(idx), "base_item": self.get_item_name(item_code),
-            "item_type": self.get_item_category(item_code), "lvl_req": row.get('lvl req', '0'), "properties": props, 
+            "item_type": self.get_item_category(item_code), "lvl_req": row.get('lvl req', '0'), "properties": props,
             "raw_row": {**row, "is_expansion": is_expansion}
         }
 
@@ -433,11 +595,11 @@ class CubeAnalyzerService:
         self.weapons = {row['code']: row for row in repo.get_excel_table('weapons')}
         self.misc = {row['code']: row for row in repo.get_excel_table('misc')}
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
-        
+
         # Prefixes and Suffixes use row index as ID
         prefix_data = repo.get_excel_table('magicprefix')
         self.prefixes = {str(i): row for i, row in enumerate(prefix_data)}
-        
+
         suffix_data = repo.get_excel_table('magicsuffix')
         self.suffixes = {str(i): row for i, row in enumerate(suffix_data)}
 
@@ -448,40 +610,40 @@ class CubeAnalyzerService:
         if code_lower == "usetype": return "Input Item Type"
         if code_lower == "useitem": return "Input Item"
         if code_lower == "any": return "Any Item"
-        
+
         item = self.armor.get(code) or self.weapons.get(code) or self.misc.get(code)
         if item:
             name = self.repo.get_string(item.get('namestr', '').strip() or item.get('name', '').strip())
             return name or code
-        
+
         # Check item types
         it = self.item_types.get(code)
         if it:
             return self.repo.get_string(it.get('ItemType', '').strip()) or code
-            
+
         return code
 
     def resolve_token(self, token: str) -> str:
         if not token: return ""
         token = token.strip().strip('"')
-        
+
         # Handle quantity: "code,qty=3"
         qty = ""
         if ",qty=" in token:
             parts = token.split(",qty=", 1)
             token = parts[0]
             qty = f" (Qty: {parts[1]})"
-        
+
         # Handle complex codes: "amu,mag" or "rin,mag,pre=372"
         parts = token.split(',')
         base_code = parts[0]
         name = self.get_item_name(base_code)
-        
+
         qualities = {
             "low": "Low Quality", "nor": "Normal", "hi": "Superior", "mag": "Magic",
             "set": "Set", "uni": "Unique", "rar": "Rare", "ora": "Crafted", "tmp": "Tempered"
         }
-        
+
         mods = []
         for p in parts[1:]:
             p = p.strip().lower()
@@ -499,7 +661,7 @@ class CubeAnalyzerService:
                 mods.append(f"Suffix: {suf_name} ({val})")
             else:
                 mods.append(p)
-                
+
         res = name
         if mods:
             res += f" ({', '.join(mods)})"
@@ -542,6 +704,34 @@ class CubeAnalyzerService:
                 mod_val = row.get(f'mod {i} param', '').strip()
                 outputs.append(self.resolve_output(out, mod_str, mod_val))
         return {"id": desc, "description": desc, "enabled": enabled, "inputs": actual_inputs, "outputs": outputs, "raw_row": row}
+
+    def analyze_all_recipes(self) -> List[CubeRecipeGroupDTO]:
+        recipes_data = self.repo.get_excel_table('cubemain')
+        all_recipes = [self.analyze_recipe(row) for row in recipes_data if row.get('enabled') != '0']
+
+        groups: Dict[str, List[CubeRecipeDTO]] = {}
+
+        for r in all_recipes:
+            desc = r['description'].lower()
+            group_name = "Other Recipes"
+
+            if "incendiary" in desc: group_name = "Incendiary Crafting"
+            elif "magnetic" in desc: group_name = "Magnetic Crafting"
+            elif "virulent" in desc: group_name = "Virulent Crafting"
+            elif "gelid" in desc: group_name = "Gelid Crafting"
+            elif "mystical" in desc: group_name = "Mystical Crafting"
+            elif "breaching" in desc: group_name = "Breaching Crafting"
+            elif "bloody" in desc: group_name = "Bloody Crafting"
+            elif "upgrade" in desc or "to exceptional" in desc or "to elite" in desc: group_name = "Item Upgrades"
+            elif "rune" in desc: group_name = "Rune Transmutation"
+            elif "tablet" in desc: group_name = "Crafting Tablets"
+            elif "socket" in desc: group_name = "Socketing Recipes"
+            elif "recharge" in desc or "repair" in desc: group_name = "Repair & Recharge"
+
+            if group_name not in groups: groups[group_name] = []
+            groups[group_name].append(r)
+
+        return [{"name": name, "recipes": recipes} for name, recipes in groups.items()]
 
 class ItemComparisonService:
     def __init__(self):
@@ -591,20 +781,20 @@ class ItemComparisonService:
         common = [k for k in bk_items if k in bt_items]
         for k in common:
             bk, bt = bk_items[k], bt_items[k]
-            
+
             bk_base = bk.get('base_item') or ', '.join(bk.get('base_items', []))
             bt_base = bt.get('base_item') or ', '.join(bt.get('base_items', []))
             bk_lvl = bk.get('lvl_req', '0')
             bt_lvl = bt.get('lvl_req', '0')
 
-            header_diff = (self.normalize_text(bk_base) != self.normalize_text(bt_base) or 
+            header_diff = (self.normalize_text(bk_base) != self.normalize_text(bt_base) or
                            self.normalize_text(bk_lvl) != self.normalize_text(bt_lvl))
-            
+
             bk_norm = sorted([self.normalize_text(p['resolved_text']) for p in bk['properties']])
             bt_norm = sorted([self.normalize_text(p['resolved_text']) for p in bt['properties']])
             if header_diff or bk_norm != bt_norm:
                 modified[k] = {
-                    'name': bk.get('display_name') or bk.get('name'), 
+                    'name': bk.get('display_name') or bk.get('name'),
                     'bk_base': bk_base, 'bt_base': bt_base,
                     'bk_lvl': bk_lvl, 'bt_lvl': bt_lvl,
                     'bk_props': [p['resolved_text'] for p in bk['properties']],
@@ -647,7 +837,7 @@ class SkillAnalyzerService:
         self.skills = {row.get('skill', '').strip().lower(): row for row in repo.get_excel_table('skills')}
         self.missiles = {row.get('Missile', '').strip().lower(): row for row in repo.get_excel_table('missiles')}
         self.skilldesc = {row.get('skilldesc', '').strip().lower(): row for row in repo.get_excel_table('skilldesc')}
-        self.class_map = {"nec":"Necromancer", "bar":"Barbarian", "ama":"Amazon", "sor":"Sorceress", "pal":"Paladin", "dru":"Druid", "asn":"Assassin", "war":"Warlock"}
+        self.class_map = {"nec":"Necromancer", "bar":"Barbarian", "ama":"Amazon", "sor":"Sorceress", "pal":"Paladin", "dru":"Druid", "ass":"Assassin", "war":"Warlock"}
 
     def get_dam_generic(self, s, lvl, prefix):
         try:
@@ -747,7 +937,7 @@ class SkillAnalyzerService:
                         if m_type == "rn": return int(m.get("Range", "0") or "0")
             if var.startswith("clc"): return self.resolve_calc(s.get(f"calc{var[3:]}", s.get(f"cltcalc{var[3:]}", "0")), s, lvl, blvl, desc_row, depth + 1)
             if var.startswith("pst") or var.startswith("ps"): return self.resolve_calc(s.get(f"passivecalc{var[3:] if var.startswith('pst') else var[2:]}", "0"), s, lvl, blvl, desc_row, depth + 1)
-            if var.startswith("ast"): return self.resolve_calc(s.get(f"aurastatcalc{var[3:]}", "0"), s, lvl, blvl, desc_row, depth + 1)   
+            if var.startswith("ast"): return self.resolve_calc(s.get(f"aurastatcalc{var[3:]}", "0"), s, lvl, blvl, desc_row, depth + 1)
             if var.startswith("pa"): return s.get(f"Param{var[2:]}", "0")
             if var.startswith("par"): return p(var[3:])
             if var == "accr": return p(1) + (lvl - 1) * p(2)
@@ -1191,23 +1381,23 @@ class SkillAnalyzerService:
         for s in cs:
             dr = self.skilldesc.get(s.get("skilldesc", "").lower())
             if not dr: continue
-            
+
             skill_id = s.get("skill", "")
             skill_name_key = dr.get("str name", "").lower()
             skill_name = self.repo.get_string(skill_name_key) or self.repo.get_string(s['skill']) or s['skill']
-            
+
             effects = []
             for i in range(1, 7):
                 if not dr.get(f"descline{i}") or dr.get(f"descline{i}") == "0": continue
                 text_key = dr.get(f"desctexta{i}", "").lower()
                 tl = self.repo.get_string(text_key) or dr.get(f"desctexta{i}", "")
-                
+
                 unit = "%" if "%%" in tl or "percent" in tl.lower() else ("s" if "second" in tl.lower() else ("y" if "yard" in tl.lower() else ""))
                 if "per second" in tl.lower(): unit = " dmg/s"
-                
+
                 c1, c2 = dr.get(f"desccalca{i}", ""), dr.get(f"desccalcb{i}", "")
                 label = self.build_effect_label(dr, i, tl)
-                
+
                 if "%d-%d" in tl:
                     sc, cap = self.analyze_range_scaling(c1, c2, s, unit, dr)
                     show_formula = sc == "Complex"
@@ -1226,7 +1416,7 @@ class SkillAnalyzerService:
                         "label": label, "scaling": sc, "l1": v[0], "l10": v[1],
                         "l20": v[2], "l30": v[3], "limit": cap
                     })
-            
+
             synergies = []
             for dsc in ["dsc2", "dsc3"]:
                 for i in range(1, 8):
@@ -1235,11 +1425,11 @@ class SkillAnalyzerService:
                         t = self.repo.get_string(t_key) or ""
                         sid_key = dr.get(f"{dsc}textb{i}", "").lower()
                         sid_name = self.repo.get_string(sid_key) or sid_key
-                        
+
                         val = self.resolve_calc(dr.get(f"{dsc}calca{i}", ""), s, 1, 1, dr)
                         ut = f"+{val}% Magic Damage" if "Magic" in t else (f"+{val}% Poison Damage" if "Poison" in t else (f"+{val}% HP" if "HP" in t else f"+{val}% Damage"))
                         synergies.append({"name": sid_name, "effect": f"{ut} per Level"})
-            
+
             skills_dto.append({
                 "id": skill_id,
                 "name": skill_name,
@@ -1247,6 +1437,127 @@ class SkillAnalyzerService:
                 "synergies": synergies,
                 "raw_row": s
             })
-            
+
         return {"class_name": class_name, "skills": skills_dto}
 
+class BaseItemAnalyzerService:
+    def __init__(self, repo: D2Repository, resolver: PropertyResolverService):
+        self.repo = repo
+        self.resolver = resolver
+        self.armor = repo.get_excel_table('armor')
+        self.weapons = repo.get_excel_table('weapons')
+        self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
+        self.automagic = repo.get_excel_table('automagic')
+
+    def analyze_base_items(self) -> List[BaseItemFamilyDTO]:
+        families: List[BaseItemFamilyDTO] = []
+        seen_codes = set()
+
+        # Link families using normcode, ubercode, ultracode
+        all_items = self.armor + self.weapons
+        code_to_item = {row['code']: row for row in all_items if row.get('code')}
+
+        for row in all_items:
+            code = row.get('code')
+            if not code or code in seen_codes: continue
+
+            # Determine if this is a family head (Normal version)
+            norm_code = row.get('normcode')
+            if norm_code and norm_code != code and norm_code in code_to_item:
+                continue # This is an exceptional or elite, we'll find it via its normal version
+
+            family_members = [code]
+            if row.get('ubercode') and row.get('ubercode') in code_to_item:
+                family_members.append(row['ubercode'])
+            if row.get('ultracode') and row.get('ultracode') in code_to_item:
+                family_members.append(row['ultracode'])
+
+            items_dto = []
+            for i, m_code in enumerate(family_members):
+                seen_codes.add(m_code)
+                items_dto.append(self._analyze_item(code_to_item[m_code], ["Normal", "Exceptional", "Elite"][i] if i < 3 else "Unknown"))
+
+            if items_dto:
+                families.append({
+                    "name": items_dto[0]["name"],
+                    "members": items_dto
+                })
+
+        return sorted(families, key=lambda x: x["name"])
+
+    def _analyze_item(self, row: Dict[str, str], tier: str) -> BaseItemDTO:
+        code = row['code']
+        name_str = row.get('namestr') or row.get('name')
+        name = self.repo.get_string(name_str) or name_str
+
+        type_code = row.get('type', '')
+        item_type = self.item_types.get(type_code, {})
+        type_name = self.repo.get_string(item_type.get('ItemType', '')) or type_code
+
+        # Sockets
+        base_sockets = int(row.get('gemsockets', '0') or '0')
+        type_sockets = [
+            int(item_type.get('MaxSockets1', '0') or '0'),
+            int(item_type.get('MaxSockets2', '0') or '0'),
+            int(item_type.get('MaxSockets3', '0') or '0')
+        ]
+        thresholds = [
+            int(item_type.get('MaxSocketsLevelThresholdOne', '25') or '25'),
+            int(item_type.get('MaxSocketsLevelThresholdTwo', '40') or '40')
+        ]
+
+        max_sockets_by_ilvl = {
+            f"1-{thresholds[0]}": min(base_sockets, type_sockets[0]) if type_sockets[0] > 0 else base_sockets,
+            f"{thresholds[0]+1}-{thresholds[1]}": min(base_sockets, type_sockets[1]) if type_sockets[1] > 0 else base_sockets,
+            f"{thresholds[1]+1}+": min(base_sockets, type_sockets[2]) if type_sockets[2] > 0 else base_sockets
+        }
+
+        # Auto Prefix
+        auto_prefix_stats = []
+        auto_prefix_id = row.get('auto prefix')
+        if auto_prefix_id and auto_prefix_id != '0':
+            prefix_rows = self._find_automagic_by_group(auto_prefix_id)
+            seen_stats = set()
+            for p_row in prefix_rows:
+                for i in range(1, 4):
+                    p_code = p_row.get(f'mod{i}code')
+                    if p_code and p_code != 'xxx':
+                        res = self.resolver.resolve_property(
+                            p_code,
+                            p_row.get(f'mod{i}param', ''),
+                            p_row.get(f'mod{i}min', ''),
+                            p_row.get(f'mod{i}max', '')
+                        )
+                        stat_text = res['resolved_text']
+                        if stat_text and stat_text not in seen_stats:
+                            auto_prefix_stats.append(stat_text)
+                            seen_stats.add(stat_text)
+
+        def to_int(v):
+            try: return int(v) if v else 0
+            except: return 0
+
+        return {
+            "code": code,
+            "name": name,
+            "type": type_name,
+            "level": to_int(row.get('level')),
+            "level_req": to_int(row.get('levelreq')),
+            "defense_min": to_int(row.get('minac')) if 'minac' in row else None,
+            "defense_max": to_int(row.get('maxac')) if 'maxac' in row else None,
+            "damage_min": to_int(row.get('mindam')) if 'mindam' in row else to_int(row.get('minmisdam')),
+            "damage_max": to_int(row.get('maxdam')) if 'maxdam' in row else to_int(row.get('maxmisdam')),
+            "two_hand_damage_min": to_int(row.get('2handmindam')) if '2handmindam' in row else None,
+            "two_hand_damage_max": to_int(row.get('2handmaxdam')) if '2handmaxdam' in row else None,
+            "str_req": to_int(row.get('reqstr')),
+            "dex_req": to_int(row.get('reqdex')),
+            "sockets": base_sockets,
+            "max_sockets_by_ilvl": max_sockets_by_ilvl,
+            "auto_prefix_stats": auto_prefix_stats,
+            "speed": to_int(row.get('speed')),
+            "durability": to_int(row.get('nodurability')) if row.get('nodurability') == '1' else to_int(row.get('durability')),
+            "tier": tier
+        }
+
+    def _find_automagic_by_group(self, group_id: str) -> List[Dict[str, str]]:
+        return [row for row in self.automagic if row.get('group') == group_id]
