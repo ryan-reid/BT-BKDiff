@@ -105,6 +105,10 @@ class WikiRoutes:
         return "misc/index.html"
 
     @staticmethod
+    def gems_runes_index_output_path() -> str:
+        return "gems-runes/index.html"
+
+    @staticmethod
     def mechanics_output_path() -> str:
         return "mechanics/index.html"
 
@@ -671,6 +675,7 @@ class WikiGenerator:
         old_label: str = "Retail",
         new_label: str = "BKDiablo",
         game_data_dir: Optional[str] = None,
+        retail_data_dir: Optional[str] = None,
         layout_data_dir: Optional[str] = None,
     ):
         self.item_db_dir = item_db_dir
@@ -680,6 +685,7 @@ class WikiGenerator:
         self.old_label = old_label
         self.new_label = new_label
         self.game_data_dir = game_data_dir or os.path.join(REPO_ROOT, "mods", "BKDiablo", "bkdiablo.mpq")
+        self.retail_data_dir = retail_data_dir or os.path.join(REPO_ROOT, "data", "retail")
         self.layout_data_dir = layout_data_dir
         self.renderer = WikiRenderer()
         self.writer = WikiOutputWriter(output_dir)
@@ -702,7 +708,7 @@ class WikiGenerator:
         base_item_families = self._load_base_item_families()
         recipe_groups = self._load_recipe_groups()
         monster_groups = self._load_monster_groups()
-        misc_groups = self._load_misc_groups()
+        misc_groups, gem_rune_groups = self._load_misc_groups()
         mechanics_summary = self._load_mechanics_summary()
 
         self._write_assets()
@@ -712,9 +718,10 @@ class WikiGenerator:
         self._write_recipe_pages(recipe_groups)
         self._write_bestiary_pages(monster_groups)
         self._write_misc_pages(misc_groups)
+        self._write_gems_runes_pages(gem_rune_groups)
         self._write_mechanics_pages(mechanics_summary)
         report_entries = self._publish_reports()
-        self._write_indexes(item_entries, class_entries, report_entries, area_entries, base_item_families, recipe_groups, monster_groups, misc_groups)
+        self._write_indexes(item_entries, class_entries, report_entries, area_entries, base_item_families, recipe_groups, monster_groups, misc_groups, gem_rune_groups)
         self._write_patch_notes_draft(item_entries, class_entries)
         self._write_item_index_data(item_entries)
         self._write_area_index_data(area_entries)
@@ -737,14 +744,16 @@ class WikiGenerator:
                 os.path.join(self.game_data_dir, "data", "global", "excel", "armor.txt"),
                 os.path.join(self.game_data_dir, "data", "global", "excel", "weapons.txt"),
                 os.path.join(self.game_data_dir, "data", "global", "excel", "itemtypes.txt"),
-                os.path.join(self.game_data_dir, "data", "global", "excel", "magicprefix.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "automagic.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "qualityitems.txt"),
             ],
             families=families,
         )
 
     def _load_recipe_groups(self) -> List[CubeRecipeGroupDTO]:
         repo = D2Repository(self.game_data_dir)
-        service = CubeAnalyzerService(repo)
+        retail_repo = D2Repository(self.retail_data_dir)
+        service = CubeAnalyzerService(repo, retail_repo)
         return service.analyze_all_recipes()
 
     def _write_recipe_pages(self, groups: List[CubeRecipeGroupDTO]) -> None:
@@ -761,7 +770,8 @@ class WikiGenerator:
 
     def _load_monster_groups(self) -> List[MonsterActGroupDTO]:
         repo = D2Repository(self.game_data_dir)
-        service = MonsterAnalyzerService(repo)
+        retail_repo = D2Repository(self.retail_data_dir)
+        service = MonsterAnalyzerService(repo, retail_repo)
         return service.analyze_monsters()
 
     def _write_bestiary_pages(self, groups: List[MonsterActGroupDTO]) -> None:
@@ -777,14 +787,20 @@ class WikiGenerator:
             groups=groups,
         )
 
-    def _load_misc_groups(self) -> List[MiscGroupDTO]:
+    def _load_misc_groups(self) -> Tuple[List[MiscGroupDTO], List[MiscGroupDTO]]:
         repo = D2Repository(self.game_data_dir)
-        service = MiscAnalyzerService(repo)
-        return service.analyze_misc_items()
+        retail_repo = D2Repository(self.retail_data_dir)
+        resolver = PropertyResolverService(repo)
+        service = MiscAnalyzerService(repo, resolver, retail_repo)
+        groups = service.analyze_misc_items()
+        gem_rune_categories = {"Runes", "Gems & Skulls"}
+        gem_rune_groups = [group for group in groups if group["category"] in gem_rune_categories]
+        material_groups = [group for group in groups if group["category"] not in gem_rune_categories]
+        return material_groups, gem_rune_groups
 
     def _write_misc_pages(self, groups: List[MiscGroupDTO]) -> None:
         self._write_page(
-            title=f"Materials & Runes | {self.new_label} Wiki",
+            title=f"Materials | {self.new_label} Wiki",
             output_path=WikiRoutes.misc_index_output_path(),
             template_name="misc_index.html",
             category="index",
@@ -794,9 +810,22 @@ class WikiGenerator:
             groups=groups,
         )
 
+    def _write_gems_runes_pages(self, groups: List[MiscGroupDTO]) -> None:
+        self._write_page(
+            title=f"Gems & Runes | {self.new_label} Wiki",
+            output_path=WikiRoutes.gems_runes_index_output_path(),
+            template_name="gems_runes_index.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", "misc.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "gems.txt"),
+            ],
+            groups=groups,
+        )
+
     def _load_mechanics_summary(self) -> MechanicsSummaryDTO:
         repo = D2Repository(self.game_data_dir)
-        retail_repo = D2Repository(os.path.join(REPO_ROOT, "data", "retail"))
+        retail_repo = D2Repository(self.retail_data_dir)
         service = MechanicsAnalyzerService(repo, retail_repo)
         return service.analyze_mechanics()
 
@@ -809,6 +838,12 @@ class WikiGenerator:
             source_files=[
                 os.path.join(self.game_data_dir, "data", "global", "excel", "experience.txt"),
                 os.path.join(self.game_data_dir, "data", "global", "excel", "difficultylevels.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "skills.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "missiles.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "charstats.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "properties.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "itemstatcost.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "gamble.txt"),
             ],
             summary=summary,
         )
@@ -1037,9 +1072,10 @@ class WikiGenerator:
         recipe_groups: List[CubeRecipeGroupDTO],
         monster_groups: List[MonsterActGroupDTO],
         misc_groups: List[MiscGroupDTO],
+        gem_rune_groups: List[MiscGroupDTO],
     ) -> None:
         self._write_page(
-            title="BT Diablo Data Wiki",
+            title=f"{self.new_label} Data Wiki",
             output_path=WikiRoutes.home_output_path(),
             template_name="home.html",
             category="index",
@@ -1051,6 +1087,7 @@ class WikiGenerator:
             recipe_count=sum(len(g["recipes"]) for g in recipe_groups),
             monster_count=sum(len(g["monsters"]) for g in monster_groups),
             misc_count=sum(len(g["members"]) for g in misc_groups),
+            gem_rune_count=sum(len(g["members"]) for g in gem_rune_groups),
             total_items=sum(len(entries) for entries in item_entries.values()),
             reports=report_entries,
         )
@@ -1061,7 +1098,7 @@ class WikiGenerator:
                 group_to_types.setdefault(entry["item_group"], set()).add(entry["item_type"])
 
         self._write_page(
-            title="All Items | BT Diablo Data Wiki",
+            title=f"All Items | {self.new_label} Data Wiki",
             output_path=WikiRoutes.items_index_output_path(),
             template_name="items_index.html",
             category="index",
@@ -1074,7 +1111,7 @@ class WikiGenerator:
         )
 
         self._write_page(
-            title="Classes | BT Diablo Data Wiki",
+            title=f"Classes | {self.new_label} Data Wiki",
             output_path=WikiRoutes.classes_index_output_path(),
             template_name="classes_index.html",
             category="index",
@@ -1083,7 +1120,7 @@ class WikiGenerator:
         )
 
         self._write_page(
-            title="Areas | BT Diablo Data Wiki",
+            title=f"Areas | {self.new_label} Data Wiki",
             output_path=WikiRoutes.areas_index_output_path(),
             template_name="areas_index.html",
             category="index",
@@ -1096,7 +1133,7 @@ class WikiGenerator:
         )
 
         self._write_page(
-            title="Reports | BT Diablo Data Wiki",
+            title=f"Reports | {self.new_label} Data Wiki",
             output_path=WikiRoutes.reports_index_output_path(),
             template_name="reports_index.html",
             category="index",
@@ -1110,7 +1147,7 @@ class WikiGenerator:
         class_entries: List[Dict[str, str]],
     ) -> None:
         self._write_page(
-            title="Full Patch Notes Draft | BT Diablo Data Wiki",
+            title=f"Full Patch Notes Draft | {self.new_label} Data Wiki",
             output_path=WikiRoutes.patch_notes_output_path(),
             template_name="patch_notes.html",
             category="patch",

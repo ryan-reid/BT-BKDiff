@@ -6,6 +6,38 @@ from typing import List, Dict, Optional, Any, Tuple
 from d2lib.repository import D2Repository, normalize_d2_value
 from d2lib.models import PropertyDTO, AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, ExcelDiffRowDTO, CubeRecipeDTO, CubeRecipeGroupDTO, ItemDiffDTO, SkillTreeDTO, SkillDTO, SkillEffectDTO, SkillSynergyDTO, BaseItemDTO, BaseItemFamilyDTO, MonsterDTO, MonsterActGroupDTO, MiscItemDTO, MiscGroupDTO, MechanicsSummaryDTO
 
+def _row_changed(row: Dict[str, str], old_row: Optional[Dict[str, str]]) -> bool:
+    if not old_row:
+        return True
+    for key in set(row.keys()) | set(old_row.keys()):
+        if normalize_d2_value(row.get(key, "")) != normalize_d2_value(old_row.get(key, "")):
+            return True
+    return False
+
+def _status_for_row(key: str, row: Dict[str, str], old_rows: Dict[str, Dict[str, str]]) -> str:
+    old_row = old_rows.get(key)
+    if not old_row:
+        return "added"
+    return "modified" if _row_changed(row, old_row) else "unchanged"
+
+def _summarize_excel_diff(diff: ExcelDiffDTO, limit: int = 24) -> List[Dict[str, Any]]:
+    rows: List[Dict[str, Any]] = []
+    for key in diff.get("added_rows", [])[:limit]:
+        rows.append({"name": key, "status": "added", "fields": [], "field_count": 0})
+    for key in diff.get("removed_rows", [])[:limit]:
+        rows.append({"name": key, "status": "removed", "fields": [], "field_count": 0})
+    remaining = max(0, limit - len(rows))
+    for key, changes in list(diff.get("modified_rows", {}).items())[:remaining]:
+        fields = sorted(changes.keys())
+        rows.append({"name": key, "status": "modified", "fields": fields[:8], "field_count": len(fields)})
+    return rows
+
+def _slugify(value: str) -> str:
+    text = value.lower().strip()
+    text = re.sub(r"[^\w\s-]", "", text)
+    text = re.sub(r"[-\s]+", "-", text)
+    return text.strip("-") or "untitled"
+
 class MechanicsAnalyzerService:
     def __init__(self, repo: D2Repository, retail_repo: Optional[D2Repository] = None):
         self.repo = repo
@@ -36,17 +68,100 @@ class MechanicsAnalyzerService:
 
         return {
             "experience_changes": exp_changes,
-            "difficulty_changes": diff_changes
+            "difficulty_changes": diff_changes,
+            "skill_changes": self._table_summary("skills", "skill"),
+            "missile_changes": self._table_summary("missiles", "Missile"),
+            "charstat_changes": self._table_summary("charstats", "class"),
+            "property_changes": self._table_summary("properties", "code"),
+            "itemstat_changes": self._table_summary("itemstatcost", "Stat"),
+            "gamble_changes": self._table_summary("gamble", "name"),
         }
 
+    def _table_summary(self, table_name: str, key_col: str) -> List[Dict[str, Any]]:
+        if not self.retail_repo:
+            return []
+        bk_rows = self.repo.get_excel_table(table_name)
+        retail_rows = self.retail_repo.get_excel_table(table_name)
+        if not bk_rows or not retail_rows:
+            return []
+        diff = ExcelComparisonService.compare_tables(bk_rows, retail_rows, key_col, f"{table_name}.txt")
+        return _summarize_excel_diff(diff)
+
 class MiscAnalyzerService:
-    def __init__(self, repo: D2Repository):
+    CATEGORY_META = {
+        "Runes": {
+            "order": 10,
+            "summary": "Rune progression and runeword components, including changed socket effects.",
+        },
+        "Gems & Skulls": {
+            "order": 20,
+            "summary": "Socketable gems, skulls, quartz, and ascended tiers with weapon, armor, and shield effects.",
+        },
+        "Crafting Tablets & Materials": {
+            "order": 30,
+            "summary": "Core crafting inputs such as tablets, stones, sigils, herbs, and special BK crafting materials.",
+        },
+        "Worldstone Shards": {
+            "order": 40,
+            "summary": "Directional Worldstone shards used by BK crafting and endgame recipe families.",
+        },
+        "Respec Essences": {
+            "order": 50,
+            "summary": "Token and essence materials used for respec and boss-derived progression recipes.",
+        },
+        "Uber & Endgame Materials": {
+            "order": 60,
+            "summary": "Pandemonium keys, organs, standards, and BK-specific endgame quest materials.",
+        },
+        "Keys": {
+            "order": 70,
+            "summary": "Stackable keys and special access keys.",
+        },
+        "Scrolls & Tomes": {
+            "order": 80,
+            "summary": "Town portal, identify, and knowledge scroll items.",
+        },
+        "Potions & Consumables": {
+            "order": 90,
+            "summary": "Potions, elixirs, dyes, and consumables players may carry or convert.",
+        },
+        "Jewelry, Charms & Jewels": {
+            "order": 100,
+            "summary": "Miscellaneous socketables, charms, jewels, rings, and amulets surfaced by BK data.",
+        },
+        "Monster Parts": {
+            "order": 110,
+            "summary": "Body-part style drops used as recipe ingredients or progression materials.",
+        },
+        "Ammunition & Stackables": {
+            "order": 120,
+            "summary": "Arrows, bolts, gold, torches, and other stackable utility items.",
+        },
+        "Quest Items": {
+            "order": 130,
+            "summary": "Campaign and progression items that still appear in the mod data.",
+        },
+        "Other Materials": {
+            "order": 900,
+            "summary": "Additional misc items that do not fit a clearer player-facing bucket yet.",
+        },
+    }
+
+    def __init__(self, repo: D2Repository, resolver: Optional[PropertyResolverService] = None, retail_repo: Optional[D2Repository] = None):
         self.repo = repo
+        self.resolver = resolver or PropertyResolverService(repo)
+        self.retail_repo = retail_repo
         self.misc = repo.get_excel_table('misc')
+        self.gems = {row.get('code', '').strip(): row for row in repo.get_excel_table('gems') if row.get('code')}
+        self.retail_misc = {
+            row.get('code', '').strip(): row
+            for row in retail_repo.get_excel_table('misc')
+        } if retail_repo else {}
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
 
     def analyze_misc_items(self) -> List[MiscGroupDTO]:
         items: List[MiscItemDTO] = []
+        source_categories: Dict[str, set[str]] = {}
 
         for row in self.misc:
             code = row.get('code', '').strip()
@@ -57,7 +172,7 @@ class MiscAnalyzerService:
             type_code = row.get('type', '').strip()
 
             is_rune = type_code == 'rune'
-            is_gem = type_code in ('gem0', 'gem1', 'gem2', 'gem3', 'gem4')
+            is_gem = type_code.startswith('gem')
             is_quest = row.get('quest', '0') != '0'
 
             if not uicat and not is_rune and not is_gem and not is_quest:
@@ -68,6 +183,9 @@ class MiscAnalyzerService:
 
             desc_str = row.get('description')
             description = self.repo.get_string(desc_str) if desc_str else ""
+            category = self._player_category(row, uicat, type_code, is_rune, is_gem, is_quest, name)
+            source_category = uicat or ("Rune" if is_rune else "Gem" if is_gem else "Quest" if is_quest else type_code or "Other")
+            source_categories.setdefault(category, set()).add(source_category)
 
             def to_int(v):
                 try: return int(v) if v else 0
@@ -83,7 +201,9 @@ class MiscAnalyzerService:
                 "max_stack": to_int(row.get('maxstack')),
                 "cost": to_int(row.get('cost')),
                 "description": description,
-                "category": uicat or ( "Rune" if is_rune else "Gem" if is_gem else "Quest" if is_quest else "Other" )
+                "category": category,
+                "status": _status_for_row(code, row, self.retail_misc) if self.retail_repo else "unchanged",
+                "socket_effects": self._socket_effects_for_item(code),
             })
 
         # Group by Category
@@ -93,14 +213,115 @@ class MiscAnalyzerService:
             if cat not in groups: groups[cat] = []
             groups[cat].append(item)
 
-        return [{"category": name, "members": sorted(items, key=lambda x: (x["level"], x["name"]))} for name, items in sorted(groups.items())]
+        return [
+            {
+                "category": name,
+                "summary": self.CATEGORY_META.get(name, self.CATEGORY_META["Other Materials"])["summary"],
+                "order": self.CATEGORY_META.get(name, self.CATEGORY_META["Other Materials"])["order"],
+                "source_categories": sorted(source_categories.get(name, [])),
+                "members": sorted(items, key=lambda x: (x["level"], x["name"])),
+            }
+            for name, items in sorted(
+                groups.items(),
+                key=lambda entry: (
+                    self.CATEGORY_META.get(entry[0], self.CATEGORY_META["Other Materials"])["order"],
+                    entry[0],
+                ),
+            )
+        ]
+
+    def _player_category(
+        self,
+        row: Dict[str, str],
+        uicat: str,
+        type_code: str,
+        is_rune: bool,
+        is_gem: bool,
+        is_quest: bool,
+        name: str,
+    ) -> str:
+        ui = uicat.strip().lower()
+        type_lower = type_code.strip().lower()
+        name_lower = name.strip().lower()
+        code = row.get('code', '').strip().lower()
+
+        ui_map = {
+            "absol": "Respec Essences",
+            "terrt": "Worldstone Shards",
+            "uberm": "Uber & Endgame Materials",
+            "keysr": "Keys",
+            "scrlt": "Scrolls & Tomes",
+            "dns": "Jewelry, Charms & Jewels",
+            "null": "Potions & Consumables",
+            "crafting": "Crafting Tablets & Materials",
+        }
+        if ui in ui_map:
+            return ui_map[ui]
+        if ui and ui not in ("quest", "misc"):
+            return ui[:1].upper() + ui[1:]
+        if is_rune:
+            return "Runes"
+        if is_gem:
+            return "Gems & Skulls"
+        if type_lower in ("book", "scro"):
+            return "Scrolls & Tomes"
+        if type_lower == "key":
+            return "Keys"
+        if type_lower in ("hpot", "mpot", "wpot", "apot", "rpot", "elix"):
+            return "Potions & Consumables"
+        if type_lower in ("amul", "ring", "jewl", "cjwl", "chms", "scha", "mcha", "lcha", "csch"):
+            return "Jewelry, Charms & Jewels"
+        if type_lower == "body":
+            return "Monster Parts"
+        if type_lower in ("bowq", "xboq", "gold", "torc"):
+            return "Ammunition & Stackables"
+        if type_lower in ("spot", "herb") or any(
+            token in name_lower
+            for token in ("tablet", "shard", "stone", "sigil", "soulstone", "ashes", "hammer", "herb", "rift")
+        ):
+            return "Crafting Tablets & Materials"
+        if is_quest or code in ("box", "tr1", "mss"):
+            return "Quest Items"
+        return "Other Materials"
+
+    def _socket_effects_for_item(self, code: str) -> Dict[str, List[str]]:
+        gem_row = self.gems.get(code)
+        if not gem_row:
+            return {}
+        slot_prefixes = {
+            "Weapon": "weaponMod",
+            "Armor/Helm": "helmMod",
+            "Shield": "shieldMod",
+        }
+        effects: Dict[str, List[str]] = {}
+        for slot, prefix in slot_prefixes.items():
+            slot_effects = []
+            for i in range(1, 4):
+                prop_code = gem_row.get(f"{prefix}{i}Code", "").strip()
+                if prop_code and prop_code != "0":
+                    resolved = self.resolver.resolve_property(
+                        prop_code,
+                        gem_row.get(f"{prefix}{i}Param", ""),
+                        gem_row.get(f"{prefix}{i}Min", ""),
+                        gem_row.get(f"{prefix}{i}Max", ""),
+                    )["resolved_text"]
+                    if resolved:
+                        slot_effects.append(resolved)
+            if slot_effects:
+                effects[slot] = slot_effects
+        return effects
 
 class MonsterAnalyzerService:
-    def __init__(self, repo: D2Repository):
+    def __init__(self, repo: D2Repository, retail_repo: Optional[D2Repository] = None):
         self.repo = repo
+        self.retail_repo = retail_repo
         self.monstats = repo.get_excel_table('monstats')
         self.levels = repo.get_excel_table('levels')
         self.monstats2 = {row['Id']: row for row in repo.get_excel_table('monstats2') if row.get('Id')}
+        self.retail_monstats = {
+            row.get('Id', '').strip(): row
+            for row in retail_repo.get_excel_table('monstats')
+        } if retail_repo else {}
 
     def analyze_monsters(self) -> List[MonsterActGroupDTO]:
         monsters: List[MonsterDTO] = []
@@ -157,7 +378,9 @@ class MonsterAnalyzerService:
                 "immunities_hell": immunities,
                 "spawn_areas": sorted(spawn_areas),
                 "is_boss": is_boss,
-                "is_unique": False # Simplified
+                "is_unique": False, # Simplified
+                "status": _status_for_row(m_id, row, self.retail_monstats) if self.retail_repo else "unchanged",
+                "changed_fields": self._changed_fields(row, self.retail_monstats.get(m_id)) if self.retail_repo else [],
             })
 
         # Group by Act (best effort via spawn areas)
@@ -166,6 +389,19 @@ class MonsterAnalyzerService:
         # or group by the first act they appear in.
 
         return [{"act": "All Monsters", "monsters": sorted(monsters, key=lambda x: x["name"])}]
+
+    def _changed_fields(self, row: Dict[str, str], old_row: Optional[Dict[str, str]]) -> List[str]:
+        if not old_row:
+            return []
+        interesting = [
+            "Level(H)", "MinHP(H)", "MaxHP(H)", "ResDm(H)", "ResMa(H)", "ResFi(H)",
+            "ResLi(H)", "ResCo(H)", "ResPo(H)", "Velocity", "Run", "A1MinD(H)",
+            "A1MaxD(H)", "A2MinD(H)", "A2MaxD(H)"
+        ]
+        return [
+            field for field in interesting
+            if normalize_d2_value(row.get(field, "")) != normalize_d2_value(old_row.get(field, ""))
+        ]
 
 class PropertyResolverService:
     def __init__(self, repo: D2Repository, property_groups: Optional[List[Dict[str, str]]] = None):
@@ -342,6 +578,10 @@ class PropertyResolverService:
 
         range_str = f"{actual_min}" if actual_min == actual_max else f"{actual_min}-{actual_max}"
 
+        if code_lower in {"cold-len", "pois-len"}:
+            element = "Cold" if code_lower == "cold-len" else "Poison"
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{element} Duration: {self._format_frame_duration(actual_min, actual_max)}"}
+
         # Check if it's a level scaling stat to prefer format_desc over tooltip
         stat1_code = prop.get('stat1', '').lower()
         stat1 = self.stats.get(stat1_code)
@@ -410,6 +650,31 @@ class PropertyResolverService:
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{localized_code}: {range_str}"}
 
         return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
+
+    def _format_frame_duration(self, min_val: str, max_val: str) -> str:
+        def parse_frames(raw: str) -> Optional[int]:
+            try:
+                return int(raw)
+            except (TypeError, ValueError):
+                return None
+
+        min_frames = parse_frames(min_val)
+        max_frames = parse_frames(max_val)
+        if min_frames is None and max_frames is None:
+            return f"{min_val}-{max_val} frames" if min_val != max_val else f"{min_val} frames"
+        if max_frames is None:
+            max_frames = min_frames
+        if min_frames is None:
+            min_frames = max_frames
+
+        def seconds_text(frames: int) -> str:
+            seconds = frames / 25
+            return str(int(seconds)) if seconds.is_integer() else f"{seconds:.1f}".rstrip("0").rstrip(".")
+
+        if min_frames == max_frames:
+            unit = "second" if min_frames == 25 else "seconds"
+            return f"{seconds_text(min_frames)} {unit} ({min_frames} frames)"
+        return f"{seconds_text(min_frames)}-{seconds_text(max_frames)} seconds ({min_frames}-{max_frames} frames)"
 
 class ItemAnalyzerService:
     def __init__(self, repo: D2Repository, resolver: PropertyResolverService):
@@ -597,12 +862,118 @@ class ItemAnalyzerService:
         }
 
 class CubeAnalyzerService:
-    def __init__(self, repo: D2Repository):
+    GROUP_META = {
+        "Socketing & Sockets": {
+            "id": "socketing",
+            "order": 10,
+            "action": "Add, clear, or shape sockets",
+            "summary": "Socket recipes, unsocketing, and socket-related item setup.",
+        },
+        "Item Upgrades": {
+            "id": "item-upgrades",
+            "order": 20,
+            "action": "Upgrade item bases or tiers",
+            "summary": "Exceptional, elite, ethereal, set, unique, and base upgrade paths.",
+        },
+        "Classic Crafting": {
+            "id": "classic-crafting",
+            "order": 30,
+            "action": "Craft familiar Blood, Caster, Safety, and Hit Power items",
+            "summary": "Classic craft families using magic bases and crafting inputs.",
+        },
+        "Pierce Amulet Crafting": {
+            "id": "pierce-amulets",
+            "order": 40,
+            "action": "Craft pierce-focused amulets",
+            "summary": "Elemental, magic, physical, and poison pierce amulet families.",
+        },
+        "Ascended Crafting": {
+            "id": "ascended-crafting",
+            "order": 50,
+            "action": "Use ascended gems and endgame components",
+            "summary": "Ascended gem recipes and high-tier crafting conversions.",
+        },
+        "Corruption Recipes": {
+            "id": "corruption",
+            "order": 60,
+            "action": "Corrupt or modify items",
+            "summary": "Risk/reward item mutation recipes and corruption support recipes.",
+        },
+        "Rune Transmutation": {
+            "id": "runes",
+            "order": 70,
+            "action": "Upgrade or convert runes",
+            "summary": "Rune upgrades and rune-related cube conversions.",
+        },
+        "Material Upgrades & Conversions": {
+            "id": "materials",
+            "order": 75,
+            "action": "Upgrade gems, essences, and material stacks",
+            "summary": "Gem tiers, essence conversions, bricks, sigils, and other material ladders.",
+        },
+        "Crafting Tablets": {
+            "id": "tablets",
+            "order": 80,
+            "action": "Create or convert crafting tablets",
+            "summary": "Tablet recipes and tablet-driven crafting inputs.",
+        },
+        "Item Reforging & Cosmetics": {
+            "id": "reforging",
+            "order": 85,
+            "action": "Change item state, color, or presentation",
+            "summary": "Ethereal, superior, inferior, color, transmogrify, and generated base-item transforms.",
+        },
+        "Repair & Recharge": {
+            "id": "repair",
+            "order": 90,
+            "action": "Repair, recharge, or restore items",
+            "summary": "Durability, quantity, and charge restoration recipes.",
+        },
+        "Charm, Jewel & Reward Recipes": {
+            "id": "charms-jewels-rewards",
+            "order": 95,
+            "action": "Create charms, jewels, and named rewards",
+            "summary": "Charm setup, unique jewels, and reward item conversions.",
+        },
+        "Stacking & Utility": {
+            "id": "stacking",
+            "order": 100,
+            "action": "Stack, unstack, or convert supplies",
+            "summary": "Convenience recipes for stackables, consumables, and utility items.",
+        },
+        "Portals & Quest Recipes": {
+            "id": "portals-quests",
+            "order": 110,
+            "action": "Open content or complete progression combines",
+            "summary": "Portal, quest, cow level, and access-related cube recipes.",
+        },
+        "General Recipes": {
+            "id": "general",
+            "order": 800,
+            "action": "Review remaining enabled recipes",
+            "summary": "Enabled recipes that need more specific player-facing classification.",
+        },
+        "Removed Retail Recipes": {
+            "id": "removed-retail",
+            "order": 900,
+            "action": "See retail recipes not present in BK",
+            "summary": "Retail cube recipes that are absent from the BK enabled recipe set.",
+        },
+    }
+
+    def __init__(self, repo: D2Repository, retail_repo: Optional[D2Repository] = None):
         self.repo = repo
+        self.retail_repo = retail_repo
+        self.resolver = PropertyResolverService(repo)
         self.armor = {row['code']: row for row in repo.get_excel_table('armor')}
         self.weapons = {row['code']: row for row in repo.get_excel_table('weapons')}
         self.misc = {row['code']: row for row in repo.get_excel_table('misc')}
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
+        self.retail_recipe_rows = {
+            row.get('description', '').strip().lower(): row
+            for row in retail_repo.get_excel_table('cubemain')
+            if row.get('description')
+        } if retail_repo else {}
 
         # Prefixes and Suffixes use row index as ID
         prefix_data = repo.get_excel_table('magicprefix')
@@ -649,7 +1020,7 @@ class CubeAnalyzerService:
 
         qualities = {
             "low": "Low Quality", "nor": "Normal", "hi": "Superior", "mag": "Magic",
-            "set": "Set", "uni": "Unique", "rar": "Rare", "ora": "Crafted", "tmp": "Tempered"
+            "set": "Set", "uni": "Unique", "rar": "Rare", "ora": "Crafted", "crf": "Crafted", "tmp": "Tempered"
         }
 
         mods = []
@@ -678,7 +1049,7 @@ class CubeAnalyzerService:
     def resolve_output(self, out: str, mod_str: str = "", mod_val: str = "") -> str:
         if not out: return ""
         res = self.resolve_token(out)
-        qualities = {"low": "Low Quality", "nor": "Normal", "hi": "Superior", "mag": "Magic", "set": "Set", "uni": "Unique", "rar": "Rare", "ora": "Crafted", "tmp": "Tempered"}
+        qualities = {"low": "Low Quality", "nor": "Normal", "hi": "Superior", "mag": "Magic", "set": "Set", "uni": "Unique", "rar": "Rare", "ora": "Crafted", "crf": "Crafted", "tmp": "Tempered"}
         extra_mods = []
         if mod_str:
             parts = mod_str.split(',')
@@ -697,7 +1068,7 @@ class CubeAnalyzerService:
         if extra_mods: res += f" [Extra: {', '.join(extra_mods)}]"
         return res
 
-    def analyze_recipe(self, row: Dict[str, str]) -> CubeRecipeDTO:
+    def analyze_recipe(self, row: Dict[str, str], status: Optional[str] = None) -> CubeRecipeDTO:
         desc = row.get('description', 'Unknown Recipe').strip()
         enabled = row.get('enabled', '1').strip() == '1'
         actual_inputs = []
@@ -711,35 +1082,330 @@ class CubeAnalyzerService:
                 mod_str = row.get(f'mod {i}', '').strip()
                 mod_val = row.get(f'mod {i} param', '').strip()
                 outputs.append(self.resolve_output(out, mod_str, mod_val))
-        return {"id": desc, "description": desc, "enabled": enabled, "inputs": actual_inputs, "outputs": outputs, "raw_row": row}
+        if status is None:
+            status = _status_for_row(desc.lower(), row, self.retail_recipe_rows) if self.retail_repo else "unchanged"
+        return {
+            "id": desc,
+            "description": desc,
+            "enabled": enabled,
+            "status": status,
+            "inputs": actual_inputs,
+            "outputs": outputs,
+            "raw_row": row,
+        }
 
     def analyze_all_recipes(self) -> List[CubeRecipeGroupDTO]:
         recipes_data = self.repo.get_excel_table('cubemain')
-        all_recipes = [self.analyze_recipe(row) for row in recipes_data if row.get('enabled') != '0']
+        all_recipes = [
+            recipe
+            for row in recipes_data
+            if row.get('enabled') != '0'
+            for recipe in [self.analyze_recipe(row)]
+            if recipe["description"] or recipe["inputs"] or recipe["outputs"]
+        ]
+
+        if self.retail_repo:
+            bk_recipe_keys = {
+                row.get('description', '').strip().lower()
+                for row in recipes_data
+                if row.get('description') and row.get('enabled') != '0'
+            }
+            retail_analyzer = CubeAnalyzerService(self.retail_repo)
+            for key, row in self.retail_recipe_rows.items():
+                if key not in bk_recipe_keys and row.get('enabled') != '0':
+                    all_recipes.append(retail_analyzer.analyze_recipe(row, status="removed"))
 
         groups: Dict[str, List[CubeRecipeDTO]] = {}
 
         for r in all_recipes:
-            desc = r['description'].lower()
-            group_name = "Other Recipes"
-
-            if "incendiary" in desc: group_name = "Incendiary Crafting"
-            elif "magnetic" in desc: group_name = "Magnetic Crafting"
-            elif "virulent" in desc: group_name = "Virulent Crafting"
-            elif "gelid" in desc: group_name = "Gelid Crafting"
-            elif "mystical" in desc: group_name = "Mystical Crafting"
-            elif "breaching" in desc: group_name = "Breaching Crafting"
-            elif "bloody" in desc: group_name = "Bloody Crafting"
-            elif "upgrade" in desc or "to exceptional" in desc or "to elite" in desc: group_name = "Item Upgrades"
-            elif "rune" in desc: group_name = "Rune Transmutation"
-            elif "tablet" in desc: group_name = "Crafting Tablets"
-            elif "socket" in desc: group_name = "Socketing Recipes"
-            elif "recharge" in desc or "repair" in desc: group_name = "Repair & Recharge"
+            group_name = self._recipe_group_name(r)
 
             if group_name not in groups: groups[group_name] = []
             groups[group_name].append(r)
 
-        return [{"name": name, "recipes": recipes} for name, recipes in groups.items()]
+        return [
+            {
+                "id": meta["id"],
+                "name": name,
+                "summary": meta["summary"],
+                "action": meta["action"],
+                "order": meta["order"],
+                "status_counts": self._recipe_status_counts(recipes),
+                "corruption_summaries": self._corruption_summaries(recipes) if name == "Corruption Recipes" else [],
+                "recipes": sorted(recipes, key=self._recipe_sort_key),
+            }
+            for name, recipes in sorted(
+                groups.items(),
+                key=lambda entry: (self.GROUP_META.get(entry[0], self.GROUP_META["General Recipes"])["order"], entry[0]),
+            )
+            for meta in [self.GROUP_META.get(name, self.GROUP_META["General Recipes"])]
+        ]
+
+    def _recipe_group_name(self, recipe: CubeRecipeDTO) -> str:
+        if recipe.get("status") == "removed":
+            return "Removed Retail Recipes"
+
+        desc = recipe["description"].lower()
+        haystack = " ".join([desc] + recipe.get("inputs", []) + recipe.get("outputs", [])).lower()
+
+        if "corrupt" in haystack:
+            return "Corruption Recipes"
+        if any(token in haystack for token in ("socket", "sockets", "unsocket", "clear sockets")):
+            return "Socketing & Sockets"
+        if any(token in desc for token in ("upgrade", "to exceptional", "to elite", "upped", "downgrade")):
+            return "Item Upgrades"
+        if "->" in desc and any(token in desc for token in (" exceptional ", " elite ", " exceptional", " elite")):
+            return "Item Upgrades"
+        if "ascended" in haystack or "ascension" in haystack:
+            return "Ascended Crafting"
+        if any(token in desc for token in ("incendiary", "magnetic", "virulent", "gelid", "mystical", "breaching")):
+            return "Pierce Amulet Crafting"
+        if any(token in desc for token in ("blood ", " caster ", " safety ", " hit power ", "bloody")):
+            return "Classic Crafting"
+        if "tablet" in haystack:
+            return "Crafting Tablets"
+        if "recharge" in desc or "repair" in desc or "replenish" in desc:
+            return "Repair & Recharge"
+        if any(token in desc for token in ("chipped", "flawed", "standard", "flawless", "perfect", "essence", "brick", "sigil")):
+            return "Material Upgrades & Conversions"
+        if any(token in desc for token in ("charm", "jewel", "annihilus", "hellfire torch", "gheed", "tarnhelm", "gull dagger")):
+            return "Charm, Jewel & Reward Recipes"
+        if self._looks_like_reforge_recipe(desc):
+            return "Item Reforging & Cosmetics"
+        if any(token in desc for token in ("stack", "unstack", "quantity", "arrows", "bolts", "potion")):
+            return "Stacking & Utility"
+        if any(token in desc for token in ("portal", "cow", "horadric staff", "uber", "pandemonium", "key")):
+            return "Portals & Quest Recipes"
+        if "rune" in haystack:
+            return "Rune Transmutation"
+        return "General Recipes"
+
+    def _corruption_summaries(self, recipes: List[CubeRecipeDTO]) -> List[Dict[str, Any]]:
+        grouped: Dict[Tuple[str, ...], List[CubeRecipeDTO]] = {}
+        display_inputs: Dict[Tuple[str, ...], List[str]] = {}
+        for recipe in recipes:
+            value = self._to_int(recipe.get("raw_row", {}).get("value"))
+            description = recipe.get("description", "").strip()
+            if not recipe.get("inputs") or not description or "---" in description or value <= 0:
+                continue
+            key = self._corruption_raw_input_key(recipe)
+            if not key:
+                continue
+            grouped.setdefault(key, []).append(recipe)
+            display_inputs.setdefault(key, recipe["inputs"])
+
+        summaries: List[Dict[str, Any]] = []
+        for key, rows in grouped.items():
+            if self._is_parent_only_corruption_group(key, rows, grouped):
+                continue
+            expanded_rows = self._corruption_parent_rows(key, grouped) + rows
+            outcomes = self._corruption_outcomes(expanded_rows)
+            if not outcomes:
+                continue
+            inputs = display_inputs[key]
+            summaries.append(
+                {
+                    "id": _slugify(" ".join(inputs)),
+                    "inputs": list(inputs),
+                    "title": " + ".join(inputs),
+                    "material": inputs[-1] if len(inputs) > 1 else "",
+                    "outcomes": outcomes,
+                    "search_text": " ".join(inputs) + " " + " ".join(outcome["label"] for outcome in outcomes),
+                }
+            )
+        return sorted(summaries, key=lambda summary: (summary["material"], summary["title"]))
+
+    def _corruption_raw_input_key(self, recipe: CubeRecipeDTO) -> Tuple[str, ...]:
+        raw = recipe.get("raw_row", {})
+        values = []
+        for index in range(1, 8):
+            value = raw.get(f"input {index}", "").strip().strip('"')
+            if value and value != "0":
+                values.append(value)
+        return tuple(values)
+
+    def _corruption_parent_rows(
+        self,
+        key: Tuple[str, ...],
+        grouped: Dict[Tuple[str, ...], List[CubeRecipeDTO]],
+    ) -> List[CubeRecipeDTO]:
+        if len(key) < 2:
+            return []
+
+        first_token = key[0]
+        token_parts = first_token.split(",")
+        item_type = token_parts[0]
+        qualifiers = token_parts[1:]
+        parent_rows: List[CubeRecipeDTO] = []
+        for parent_type in self._item_type_ancestors(item_type):
+            parent_token = ",".join([parent_type] + qualifiers)
+            parent_key = (parent_token,) + key[1:]
+            parent_rows.extend(
+                recipe
+                for recipe in grouped.get(parent_key, [])
+                if self._is_parent_corruption_outcome(recipe)
+            )
+        return parent_rows
+
+    def _item_type_ancestors(self, item_type: str) -> List[str]:
+        explicit = {
+            "2han": ["weap"],
+        }
+        ancestors: List[str] = explicit.get(item_type, []).copy()
+        seen = set(ancestors)
+
+        def walk(code: str) -> None:
+            row = self.item_types.get(code)
+            if not row:
+                return
+            for column in ("Equiv1", "Equiv2"):
+                parent = row.get(column, "").strip()
+                if not parent or parent in seen:
+                    continue
+                seen.add(parent)
+                ancestors.append(parent)
+                walk(parent)
+
+        walk(item_type)
+        return ancestors
+
+    @staticmethod
+    def _is_parent_corruption_outcome(recipe: CubeRecipeDTO) -> bool:
+        return recipe.get("description", "").strip().lower() == "brick"
+
+    def _is_parent_only_corruption_group(
+        self,
+        key: Tuple[str, ...],
+        rows: List[CubeRecipeDTO],
+        grouped: Dict[Tuple[str, ...], List[CubeRecipeDTO]],
+    ) -> bool:
+        has_specific_outcome = any(
+            self._to_int(recipe.get("raw_row", {}).get("value")) > 0
+            and recipe.get("description", "").strip().lower() != "brick"
+            for recipe in rows
+        )
+        if has_specific_outcome:
+            return False
+
+        if len(key) < 2:
+            return False
+
+        first_code = key[0].split(",", 1)[0]
+        for candidate_key, candidate_rows in grouped.items():
+            if candidate_key == key or len(candidate_key) < 2 or candidate_key[1:] != key[1:]:
+                continue
+            candidate_code = candidate_key[0].split(",", 1)[0]
+            if first_code not in self._item_type_ancestors(candidate_code):
+                continue
+            if any(
+                recipe.get("raw_row", {}).get("mod 2", "").strip() == "sock"
+                and self._to_int(recipe.get("raw_row", {}).get("value")) > 0
+                for recipe in candidate_rows
+            ):
+                return True
+        return False
+
+    def _corruption_outcomes(self, rows: List[CubeRecipeDTO]) -> List[Dict[str, Any]]:
+        sorted_rows = sorted(rows, key=lambda recipe: (self._to_int(recipe["raw_row"].get("value")), recipe["description"]))
+        previous = 0
+        outcomes: List[Dict[str, Any]] = []
+        for recipe in sorted_rows:
+            threshold = min(1000, self._to_int(recipe["raw_row"].get("value")))
+            span = threshold - previous
+            if span <= 0:
+                continue
+            outcomes.append(
+                {
+                    "label": self._corruption_outcome_label(recipe),
+                    "detail": self._corruption_outcome_detail(recipe),
+                    "chance": self._format_corruption_percent(span),
+                    "range": f"{previous + 1}-{threshold}",
+                    "status": recipe.get("status", "unchanged"),
+                }
+            )
+            previous = threshold
+
+        if outcomes and previous < 1000:
+            outcomes.append(
+                {
+                    "label": "Successful corruption roll",
+                    "detail": "Falls through to the general corruption result for this item type.",
+                    "chance": self._format_corruption_percent(1000 - previous),
+                    "range": f"{previous + 1}-1000",
+                    "status": "unchanged",
+                }
+            )
+        return outcomes
+
+    def _corruption_outcome_label(self, recipe: CubeRecipeDTO) -> str:
+        description = recipe.get("description", "").strip()
+        raw = recipe.get("raw_row", {})
+        mod_code = raw.get("mod 2", "").strip()
+        if description.lower() == "brick":
+            return "Brick"
+        if mod_code == "sock":
+            sockets_min = raw.get("mod 2 min", "").strip()
+            sockets_max = raw.get("mod 2 max", "").strip()
+            if sockets_min and sockets_min == sockets_max:
+                return f"Add {sockets_min} socket{'s' if sockets_min != '1' else ''}"
+            if sockets_min and sockets_max:
+                return f"Add {sockets_min}-{sockets_max} sockets"
+            return "Add sockets"
+        return description
+
+    def _corruption_outcome_detail(self, recipe: CubeRecipeDTO) -> str:
+        raw = recipe.get("raw_row", {})
+        mod_code = raw.get("mod 2", "").strip()
+        if not mod_code or mod_code == "sock":
+            if recipe.get("description", "").strip().lower() == "brick":
+                return "The item bricks and produces the listed brick/material output."
+            return ""
+        resolved = self.resolver.resolve_property(
+            mod_code,
+            raw.get("mod 2 param", ""),
+            raw.get("mod 2 min", ""),
+            raw.get("mod 2 max", ""),
+        )
+        return resolved.get("resolved_text", "")
+
+    @staticmethod
+    def _format_corruption_percent(span: int) -> str:
+        value = span / 10
+        if value.is_integer():
+            return f"{int(value)}%"
+        return f"{value:.1f}".rstrip("0").rstrip(".") + "%"
+
+    @staticmethod
+    def _to_int(value: Any) -> int:
+        try:
+            return int(str(value).strip()) if str(value).strip() else 0
+        except (TypeError, ValueError):
+            return 0
+
+    @staticmethod
+    def _looks_like_reforge_recipe(desc: str) -> bool:
+        if any(token in desc for token in (" eth", " sup", " inf", "black", "white", "transmogify", "flask")):
+            return True
+        normalized = re.sub(r"\s+", " ", desc.strip().lower())
+        base_terms = {
+            "armor", "belt", "boots", "circ", "gloves", "helm", "shield", "weapon",
+            "throwing axes", "throwing javelins", "throwing knives", "block bows",
+            "block charms", "block jewels",
+        }
+        return normalized in base_terms
+
+    @staticmethod
+    def _recipe_status_counts(recipes: List[CubeRecipeDTO]) -> Dict[str, int]:
+        counts = {"added": 0, "modified": 0, "removed": 0, "unchanged": 0}
+        for recipe in recipes:
+            status = recipe.get("status", "unchanged")
+            counts[status] = counts.get(status, 0) + 1
+        return counts
+
+    @staticmethod
+    def _recipe_sort_key(recipe: CubeRecipeDTO) -> Tuple[int, str]:
+        status_order = {"added": 0, "modified": 1, "unchanged": 2, "removed": 3}
+        return (status_order.get(recipe.get("status", "unchanged"), 2), recipe.get("description", "").lower())
 
 class ItemComparisonService:
     def __init__(self):
@@ -1457,6 +2123,10 @@ class BaseItemAnalyzerService:
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
         self.automagic = repo.get_excel_table('automagic')
         self.quality_items = repo.get_excel_table('qualityitems')
+        self.class_names = {
+            'ama': 'Amazon', 'sor': 'Sorceress', 'nec': 'Necromancer', 'pal': 'Paladin',
+            'bar': 'Barbarian', 'dru': 'Druid', 'ass': 'Assassin', 'war': 'Warlock'
+        }
 
     def analyze_base_items(self) -> List[BaseItemFamilyDTO]:
         families: List[BaseItemFamilyDTO] = []
@@ -1503,6 +2173,8 @@ class BaseItemAnalyzerService:
         item_type = self.item_types.get(type_code, {})
         type_name = self.repo.get_string(item_type.get('ItemType', '')) or type_code
         item_type_chain = self._item_type_chain(type_code)
+        class_restriction = self._class_restriction_for_item_type(item_type_chain)
+        staffmod_class = self._staffmod_class_for_item_type(item_type_chain)
 
         # Sockets
         base_sockets = int(row.get('gemsockets', '0') or '0')
@@ -1568,6 +2240,9 @@ class BaseItemAnalyzerService:
             "dex_req": to_int(row.get('reqdex')),
             "sockets": base_sockets,
             "max_sockets_by_ilvl": max_sockets_by_ilvl,
+            "class_restriction": class_restriction,
+            "staffmod_class": staffmod_class,
+            "magic_level": to_int(row.get('magic lvl')),
             "inherent_stats": inherent_stats,
             "auto_prefix_stats": auto_prefix_stats,
             "quality_bonus_stats": quality_bonus_stats,
@@ -1579,7 +2254,7 @@ class BaseItemAnalyzerService:
     def _find_automagic_by_group(self, group_id: str) -> List[Dict[str, str]]:
         return [row for row in self.automagic if row.get('group') == group_id]
 
-    def _automagic_row_applies_to_item_type(self, row: Dict[str, str], item_type_chain: set) -> bool:
+    def _automagic_row_applies_to_item_type(self, row: Dict[str, str], item_type_chain: List[str]) -> bool:
         included_types = [row.get(f'itype{i}', '').strip() for i in range(1, 8)]
         excluded_types = [row.get(f'etype{i}', '').strip() for i in range(1, 6)]
         included_types = [code for code in included_types if code]
@@ -1591,14 +2266,16 @@ class BaseItemAnalyzerService:
             return False
         return True
 
-    def _item_type_chain(self, type_code: str) -> set:
-        chain = set()
+    def _item_type_chain(self, type_code: str) -> List[str]:
+        chain: List[str] = []
+        seen = set()
 
         def visit(code: str) -> None:
             code = (code or "").strip()
-            if not code or code in chain:
+            if not code or code in seen:
                 return
-            chain.add(code)
+            seen.add(code)
+            chain.append(code)
             item_type = self.item_types.get(code, {})
             visit(item_type.get('Equiv1', ''))
             visit(item_type.get('Equiv2', ''))
@@ -1606,13 +2283,13 @@ class BaseItemAnalyzerService:
         visit(type_code)
         return chain
 
-    def _inherent_stats_for_item_type(self, item_type_chain: set) -> List[str]:
+    def _inherent_stats_for_item_type(self, item_type_chain: List[str]) -> List[str]:
         stats = []
         if 'blun' in item_type_chain:
             stats.append("+50% Damage to Undead")
         return stats
 
-    def _quality_bonus_stats_for_item_type(self, item_type_chain: set) -> List[str]:
+    def _quality_bonus_stats_for_item_type(self, item_type_chain: List[str]) -> List[str]:
         quality_columns = self._quality_columns_for_item_type(item_type_chain)
         if not quality_columns:
             return []
@@ -1646,7 +2323,7 @@ class BaseItemAnalyzerService:
 
         return stats
 
-    def _quality_columns_for_item_type(self, item_type_chain: set) -> set:
+    def _quality_columns_for_item_type(self, item_type_chain: List[str]) -> set:
         column_map = {
             'weap': 'weapon',
             'armo': 'armor',
@@ -1663,3 +2340,17 @@ class BaseItemAnalyzerService:
             'belt': 'belt',
         }
         return {column for code, column in column_map.items() if code in item_type_chain}
+
+    def _class_restriction_for_item_type(self, item_type_chain: List[str]) -> str:
+        for code in item_type_chain:
+            class_code = self.item_types.get(code, {}).get('Class', '').strip()
+            if class_code:
+                return self.class_names.get(class_code, class_code)
+        return ""
+
+    def _staffmod_class_for_item_type(self, item_type_chain: List[str]) -> str:
+        for code in item_type_chain:
+            staffmod_code = self.item_types.get(code, {}).get('StaffMods', '').strip()
+            if staffmod_code:
+                return self.class_names.get(staffmod_code, staffmod_code)
+        return ""

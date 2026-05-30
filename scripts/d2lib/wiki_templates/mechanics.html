@@ -41,6 +41,82 @@
 </section>
 
 <section class="content-section">
+  <h2>Skill & Missile Changes</h2>
+  <p class="muted">High-level Retail to BK change summary for skill rows and missile rows. Raw formulas remain available in Reports.</p>
+  <div class="table-wrap">
+    <table class="mechanics-table">
+      <thead>
+        <tr><th>Source</th><th>Name</th><th>Status</th><th>Changed Fields</th></tr>
+      </thead>
+      <tbody>
+        {% for change in summary.skill_changes %}
+        <tr>
+          <td>skills.txt</td>
+          <td><strong>{{ change.name }}</strong></td>
+          <td>{{ change.status }}</td>
+          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% for change in summary.missile_changes %}
+        <tr>
+          <td>missiles.txt</td>
+          <td><strong>{{ change.name }}</strong></td>
+          <td>{{ change.status }}</td>
+          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="content-section">
+  <h2>Character, Item, And Economy Systems</h2>
+  <p class="muted">Summary rows for class starting data, property/stat definitions, and gamble availability.</p>
+  <div class="table-wrap">
+    <table class="mechanics-table">
+      <thead>
+        <tr><th>Source</th><th>Name</th><th>Status</th><th>Changed Fields</th></tr>
+      </thead>
+      <tbody>
+        {% for change in summary.charstat_changes %}
+        <tr>
+          <td>charstats.txt</td>
+          <td><strong>{{ change.name }}</strong></td>
+          <td>{{ change.status }}</td>
+          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% for change in summary.property_changes %}
+        <tr>
+          <td>properties.txt</td>
+          <td><strong>{{ change.name }}</strong></td>
+          <td>{{ change.status }}</td>
+          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% for change in summary.itemstat_changes %}
+        <tr>
+          <td>itemstatcost.txt</td>
+          <td><strong>{{ change.name }}</strong></td>
+          <td>{{ change.status }}</td>
+          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% for change in summary.gamble_changes %}
+        <tr>
+          <td>gamble.txt</td>
+          <td><strong>{{ change.name }}</strong></td>
+          <td>{{ change.status }}</td>
+          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="content-section">
   <h2>Difficulty Scaling</h2>
   <p class="muted">Modifications to monster power and player penalties across difficulty levels.</p>
   

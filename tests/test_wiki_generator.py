@@ -21,6 +21,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.old_item_db = os.path.join(self.root, "old_item_db")
         self.skill_trees = os.path.join(self.root, "skill_trees")
         self.game_data = os.path.join(self.root, "mod")
+        self.retail_data = os.path.join(self.root, "retail")
         self.output = os.path.join(self.root, "wiki")
         self._write_fixture_data()
         self._write_area_fixture_data()
@@ -151,12 +152,16 @@ class TestWikiGenerator(unittest.TestCase):
         self._write_tsv(
             excel_root,
             "itemtypes.txt",
-            ["ItemType", "Code", "Equiv1", "Equiv2", "MaxSockets1", "MaxSockets2", "MaxSockets3"],
+            ["ItemType", "Code", "Equiv1", "Equiv2", "MaxSockets1", "MaxSockets2", "MaxSockets3", "StaffMods", "Class"],
             [
                 {"ItemType": "Weapon", "Code": "weap"},
+                {"ItemType": "Any Armor", "Code": "armo"},
+                {"ItemType": "Helm", "Code": "helm", "Equiv1": "armo"},
                 {"ItemType": "Melee Weapon", "Code": "mele", "Equiv1": "weap"},
                 {"ItemType": "Blunt", "Code": "blun", "Equiv1": "mele"},
                 {"ItemType": "Hammer", "Code": "hamm", "Equiv1": "blun", "MaxSockets1": "3", "MaxSockets2": "4", "MaxSockets3": "6"},
+                {"ItemType": "Circlet", "Code": "circ", "Equiv1": "helm"},
+                {"ItemType": "Pelt", "Code": "pelt", "Equiv1": "armo", "StaffMods": "dru", "Class": "dru"},
             ],
         )
         self._write_tsv(
@@ -232,8 +237,116 @@ class TestWikiGenerator(unittest.TestCase):
             excel_root,
             "properties.txt",
             ["code", "func1", "*Tooltip"],
-            [{"code": "reduce-ac", "func1": "1", "*Tooltip": "-#% Target Defense"}],
+            [
+                {"code": "reduce-ac", "func1": "1", "*Tooltip": "-#% Target Defense"},
+                {"code": "cast2", "func1": "1", "*Tooltip": "+#% Faster Cast Rate"},
+                {"code": "res-all", "func1": "1", "*Tooltip": "All Resistances +#"},
+            ],
         )
+        self._write_tsv(
+            excel_root,
+            "armor.txt",
+            [
+                "name", "namestr", "code", "type", "level", "levelreq", "minac", "maxac",
+                "reqstr", "reqdex", "gemsockets", "normcode", "ubercode", "ultracode",
+                "durability", "auto prefix", "magic lvl"
+            ],
+            [
+                {
+                    "name": "Diadem", "namestr": "Diadem", "code": "ci3", "type": "circ",
+                    "level": "85", "levelreq": "64", "minac": "50", "maxac": "60",
+                    "gemsockets": "3", "normcode": "ci3", "ubercode": "ci3", "ultracode": "ci3",
+                    "durability": "20", "magic lvl": "18",
+                },
+                {
+                    "name": "Wolf Head", "namestr": "Wolf Head", "code": "dr1", "type": "pelt",
+                    "level": "4", "levelreq": "3", "minac": "8", "maxac": "11",
+                    "gemsockets": "3", "normcode": "dr1", "ubercode": "dr1", "ultracode": "dr1",
+                    "durability": "20",
+                },
+            ],
+        )
+        self._write_tsv(
+            excel_root,
+            "misc.txt",
+            ["name", "namestr", "code", "type", "level", "levelreq", "stackable", "maxstack", "cost", "description", "UICatOverride", "quest"],
+            [
+                {"name": "Amethyst", "namestr": "Amethyst", "code": "gsw", "type": "gem2", "level": "12", "levelreq": "0", "cost": "500"},
+                {"name": "Crafting Tablet", "namestr": "Crafting Tablet", "code": "pct", "type": "misc", "level": "1", "cost": "1000", "UICatOverride": "Crafting"},
+                {"name": "Standard of Heroes", "namestr": "Standard of Heroes", "code": "std", "type": "spot", "level": "1", "cost": "1000", "UICatOverride": "uberm"},
+                {"name": "Brick", "namestr": "Brick", "code": "brk", "type": "spot", "level": "1", "cost": "1000", "UICatOverride": "Crafting"},
+            ],
+        )
+        self._write_tsv(
+            excel_root,
+            "gems.txt",
+            [
+                "name", "code",
+                "weaponMod1Code", "weaponMod1Param", "weaponMod1Min", "weaponMod1Max",
+                "helmMod1Code", "helmMod1Param", "helmMod1Min", "helmMod1Max",
+                "shieldMod1Code", "shieldMod1Param", "shieldMod1Min", "shieldMod1Max",
+            ],
+            [
+                {
+                    "name": "Amethyst", "code": "gsw",
+                    "weaponMod1Code": "cast2", "weaponMod1Min": "3", "weaponMod1Max": "3",
+                    "helmMod1Code": "res-all", "helmMod1Min": "12", "helmMod1Max": "12",
+                    "shieldMod1Code": "reduce-ac", "shieldMod1Min": "5", "shieldMod1Max": "5",
+                }
+            ],
+        )
+        self._write_tsv(
+            excel_root,
+            "cubemain.txt",
+            [
+                "description", "enabled", "input 1", "input 2", "output", "output b",
+                "mod 1", "mod 1 param", "mod 1 min", "mod 1 max",
+                "mod 2", "mod 2 min", "mod 2 max", "value"
+            ],
+            [
+                {"description": "1 magic amulet + power crafting tablet -> hit power amulet", "enabled": "1", "input 1": "amu,mag", "input 2": "pct", "output": "amu", "mod 1": "mag"},
+                {"description": "1 amn + standard gem -> thul rune", "enabled": "1", "input 1": "r11", "input 2": "gsw", "output": "r10"},
+                {"description": "Unique Corruptor", "enabled": "1", "input 1": "amu,uni", "input 2": "std", "output": "useitem", "output b": "std", "mod 1": "corruption2", "mod 1 min": "1", "mod 1 max": "1000", "value": "0"},
+                {"description": "Brick", "enabled": "1", "input 1": "amu,uni", "input 2": "std", "output": "usetype,rar", "output b": "brk", "mod 1": "corruption2", "mod 1 min": "1001", "mod 1 max": "1001", "value": "300"},
+                {"description": "Amulet", "enabled": "1", "input 1": "amu,uni", "input 2": "std", "output": "useitem", "mod 1": "corruption2", "mod 1 min": "1001", "mod 1 max": "1001", "mod 2": "sock", "mod 2 min": "1", "mod 2 max": "1", "value": "1000"},
+            ],
+        )
+        self._write_tsv(
+            os.path.join(self.retail_data, "global", "excel"),
+            "misc.txt",
+            ["name", "namestr", "code", "type", "level", "levelreq", "stackable", "maxstack", "cost", "description", "UICatOverride", "quest"],
+            [{"name": "Amethyst", "namestr": "Amethyst", "code": "gsw", "type": "gem2", "level": "12", "cost": "300"}],
+        )
+        self._write_tsv(
+            os.path.join(self.retail_data, "global", "excel"),
+            "cubemain.txt",
+            ["description", "enabled", "input 1", "input 2", "output", "mod 1", "mod 1 param"],
+            [
+                {"description": "1 amn + standard gem -> thul rune", "enabled": "1", "input 1": "r11", "input 2": "gsw", "output": "r10"},
+                {"description": "removed retail recipe", "enabled": "1", "input 1": "amu", "output": "rin"},
+            ],
+        )
+        self._write_tsv(
+            os.path.join(self.retail_data, "global", "excel"),
+            "skills.txt",
+            ["skill", "Param1"],
+            [{"skill": "Magic Arrow", "Param1": "1"}, {"skill": "Removed Skill", "Param1": "1"}],
+        )
+        self._write_tsv(
+            excel_root,
+            "skills.txt",
+            ["skill", "Param1"],
+            [{"skill": "Magic Arrow", "Param1": "2"}, {"skill": "New Skill", "Param1": "1"}],
+        )
+        self._write_tsv(os.path.join(self.retail_data, "global", "excel"), "missiles.txt", ["Missile", "Vel"], [{"Missile": "arrow", "Vel": "10"}])
+        self._write_tsv(excel_root, "missiles.txt", ["Missile", "Vel"], [{"Missile": "arrow", "Vel": "20"}])
+        self._write_tsv(os.path.join(self.retail_data, "global", "excel"), "charstats.txt", ["class", "str"], [{"class": "Amazon", "str": "20"}])
+        self._write_tsv(excel_root, "charstats.txt", ["class", "str"], [{"class": "Amazon", "str": "25"}])
+        self._write_tsv(os.path.join(self.retail_data, "global", "excel"), "properties.txt", ["code", "func1", "*Tooltip"], [{"code": "old-prop", "func1": "1"}])
+        self._write_tsv(os.path.join(self.retail_data, "global", "excel"), "itemstatcost.txt", ["Stat", "descfunc"], [{"Stat": "old-stat", "descfunc": "1"}])
+        self._write_tsv(excel_root, "itemstatcost.txt", ["Stat", "descfunc"], [{"Stat": "new-stat", "descfunc": "1"}])
+        self._write_tsv(os.path.join(self.retail_data, "global", "excel"), "gamble.txt", ["name"], [{"name": "old gamble"}])
+        self._write_tsv(excel_root, "gamble.txt", ["name"], [{"name": "new gamble"}])
 
     def _write_area_fixture_data(self):
         excel_root = os.path.join(self.game_data, "data", "global", "excel")
@@ -383,6 +496,29 @@ class TestWikiGenerator(unittest.TestCase):
                 },
             ],
         )
+        self._write_tsv(
+            os.path.join(self.retail_data, "global", "excel"),
+            "monstats.txt",
+            monster_fields,
+            [
+                {
+                    "Id": "coldbeast",
+                    "NameStr": "Cold Beast",
+                    "MinGrp": "1",
+                    "MaxGrp": "2",
+                    "Rarity": "1",
+                    "ResCo(H)": "80",
+                },
+                {
+                    "Id": "firebeast",
+                    "NameStr": "Fire Beast",
+                    "MinGrp": "1",
+                    "MaxGrp": "3",
+                    "Rarity": "2",
+                    "ResFi(H)": "115",
+                },
+            ],
+        )
         maze_fields = ["Name", "Level", "Rooms", "Rooms(N)", "Rooms(H)", "SizeX", "SizeY", "Merge"]
         self._write_tsv(
             excel_root,
@@ -499,6 +635,7 @@ class TestWikiGenerator(unittest.TestCase):
             old_label="Retail",
             new_label="BKDiablo",
             game_data_dir=self.game_data,
+            retail_data_dir=self.retail_data,
         )
         generator.generate()
         return generator
@@ -512,6 +649,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("recipes/index.html", WikiRoutes.recipes_index_output_path())
         self.assertEqual("bestiary/index.html", WikiRoutes.bestiary_index_output_path())
         self.assertEqual("misc/index.html", WikiRoutes.misc_index_output_path())
+        self.assertEqual("gems-runes/index.html", WikiRoutes.gems_runes_index_output_path())
         self.assertEqual("mechanics/index.html", WikiRoutes.mechanics_output_path())
 
     def test_generation_writes_pretty_routes_and_manifest(self):
@@ -527,6 +665,7 @@ class TestWikiGenerator(unittest.TestCase):
             os.path.join(self.output, "recipes", "index.html"),
             os.path.join(self.output, "bestiary", "index.html"),
             os.path.join(self.output, "misc", "index.html"),
+            os.path.join(self.output, "gems-runes", "index.html"),
             os.path.join(self.output, "mechanics", "index.html"),
             os.path.join(self.output, "data", "areas-index.json"),
             os.path.join(self.output, "reports", "index.html"),
@@ -548,6 +687,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("recipes/", manifest_paths)
         self.assertIn("bestiary/", manifest_paths)
         self.assertIn("misc/", manifest_paths)
+        self.assertIn("gems-runes/", manifest_paths)
         self.assertIn("mechanics/", manifest_paths)
         self.assertIn("reports/", manifest_paths)
         self.assertIn("reports/items/retail-bk/", manifest_paths)
@@ -668,6 +808,41 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Item Diff: BKDiablo vs Retail", reports_page)
         self.assertIn("reports/items/retail-bk/", reports_page)
 
+        with open(os.path.join(self.output, "recipes", "index.html"), "r", encoding="utf-8") as f:
+            recipes_page = f.read()
+        self.assertIn("BK Only", recipes_page)
+        self.assertIn("Removed Retail Recipes", recipes_page)
+        self.assertIn("Retail Removed", recipes_page)
+        self.assertIn("Classic Crafting", recipes_page)
+        self.assertIn("Material Upgrades &amp; Conversions", recipes_page)
+        self.assertIn("30%", recipes_page)
+        self.assertIn("70%", recipes_page)
+        self.assertIn("Add 1 socket", recipes_page)
+
+        with open(os.path.join(self.output, "misc", "index.html"), "r", encoding="utf-8") as f:
+            misc_page = f.read()
+        self.assertIn("Crafting Tablet", misc_page)
+        self.assertIn("Crafting Tablets &amp; Materials", misc_page)
+        self.assertNotIn("Gems &amp; Skulls", misc_page)
+
+        with open(os.path.join(self.output, "gems-runes", "index.html"), "r", encoding="utf-8") as f:
+            gems_runes_page = f.read()
+        self.assertIn("Gems &amp; Skulls", gems_runes_page)
+        self.assertIn("Amethyst", gems_runes_page)
+        self.assertIn("Weapon", gems_runes_page)
+        self.assertIn("+3% Faster Cast Rate", gems_runes_page)
+
+        with open(os.path.join(self.output, "bestiary", "index.html"), "r", encoding="utf-8") as f:
+            bestiary_page = f.read()
+        self.assertIn("Changed", bestiary_page)
+        self.assertIn("BK Only", bestiary_page)
+
+        with open(os.path.join(self.output, "mechanics", "index.html"), "r", encoding="utf-8") as f:
+            mechanics_page = f.read()
+        self.assertIn("Skill & Missile Changes", mechanics_page)
+        self.assertIn("magic arrow", mechanics_page)
+        self.assertIn("Character, Item, And Economy Systems", mechanics_page)
+
         with open(os.path.join(self.output, "items", "runeword", "practice", "index.html"), "r", encoding="utf-8") as f:
             runeword_page = f.read()
         self.assertIn("Properties from Runes", runeword_page)
@@ -677,7 +852,8 @@ class TestWikiGenerator(unittest.TestCase):
             (os.path.join("bases", "index.html"), "Base Items"),
             (os.path.join("recipes", "index.html"), "Cube Recipes"),
             (os.path.join("bestiary", "index.html"), "Monster Bestiary"),
-            (os.path.join("misc", "index.html"), "Materials &amp; Runes"),
+            (os.path.join("misc", "index.html"), "Materials"),
+            (os.path.join("gems-runes", "index.html"), "Gems &amp; Runes"),
             (os.path.join("mechanics", "index.html"), "Mechanics &amp; Progression"),
         ]:
             with open(os.path.join(self.output, relative_path), "r", encoding="utf-8") as f:
@@ -689,6 +865,9 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("+50% Damage to Undead", bases_page)
         self.assertIn("-5-30% Target Defense", bases_page)
         self.assertIn("Superior roll", bases_page)
+        self.assertIn("Can roll Druid skill bonuses", bases_page)
+        self.assertIn("Druid only", bases_page)
+        self.assertIn("+18 affix level", bases_page)
 
     def test_stale_files_are_removed(self):
         os.makedirs(self.output, exist_ok=True)

@@ -1,33 +1,33 @@
 {% extends "base.html" %}
 
-{% block title %}Materials | {{ new_label }} Wiki{% endblock %}
+{% block title %}Gems & Runes | {{ new_label }} Wiki{% endblock %}
 
 {% block content %}
 <section class="hero">
-  <p class="hero-eyebrow">Vault Inventory</p>
-  <h1>Materials</h1>
-  <p class="hero-copy">Crafting tablets, shards, essences, keys, uber materials, and utility items. Gems and runes live on their own page.</p>
+  <p class="hero-eyebrow">Socketables</p>
+  <h1>Gems & Runes</h1>
+  <p class="hero-copy">Socket effects, ascended gem tiers, rune progression, and changed rune stats.</p>
 </section>
 
 <section class="content-section">
-  <input id="page-search" class="search-input" type="search" placeholder="Search items (e.g. Tablet, Southern, Sol)..." />
+  <input id="page-search" class="search-input" type="search" placeholder="Search gems or runes (e.g. Amethyst, El, Faster Cast)..." />
 
   <div class="guide-card-grid">
     {% for group in groups %}
-    <a class="guide-card" href="#{{ group.category|lower|replace('&', 'and')|replace(' ', '-') }}" data-search="{{ group.category }} {{ group.summary }} {{ group.source_categories|join(' ') }}">
+    <a class="guide-card" href="#{{ group.category|lower|replace('&', 'and')|replace(' ', '-') }}" data-search="{{ group.category }} {{ group.summary }}">
       <span class="guide-card-kicker">{{ group.members|length }} entries</span>
       <h2>{{ group.category }}</h2>
       <p>{{ group.summary }}</p>
     </a>
     {% endfor %}
   </div>
-  
+
   <div class="misc-groups">
     {% for group in groups %}
-    <div id="{{ group.category|lower|replace('&', 'and')|replace(' ', '-') }}" class="misc-group-section" data-search="{{ group.category }} {{ group.summary }} {{ group.source_categories|join(' ') }}">
+    <div id="{{ group.category|lower|replace('&', 'and')|replace(' ', '-') }}" class="misc-group-section" data-search="{{ group.category }} {{ group.summary }}">
       <div class="group-heading">
         <div>
-          <p class="group-kicker">Material category</p>
+          <p class="group-kicker">Socketable category</p>
           <h2 class="group-title">{{ group.category }}</h2>
           <p class="group-summary">{{ group.summary }}</p>
         </div>
@@ -36,7 +36,7 @@
           <span>entries</span>
         </div>
       </div>
-      
+
       <div class="table-wrap">
         <table class="misc-table">
           <thead>
@@ -44,7 +44,7 @@
               <th>Item</th>
               <th>Details</th>
               <th>Stack</th>
-              <th>Description</th>
+              <th>Socket Effects</th>
             </tr>
           </thead>
           <tbody>
@@ -72,13 +72,14 @@
                 {% endif %}
               </td>
               <td class="misc-desc-cell">
-                {{ item.description }}
                 {% if item.socket_effects %}
                 <div class="socket-effect-list">
                   {% for slot, effects in item.socket_effects.items() %}
                   <div><strong>{{ slot }}</strong>: {{ effects|join('; ') }}</div>
                   {% endfor %}
                 </div>
+                {% else %}
+                {{ item.description }}
                 {% endif %}
               </td>
             </tr>
