@@ -136,7 +136,13 @@ function areaRowMarkup(area) {
 function wireStaticSearch() {
   const searchInput = document.querySelector("#page-search");
   const cards = Array.from(document.querySelectorAll(".item-card"));
-  if (!searchInput || cards.length === 0 || document.querySelector("[data-item-index-url]")) {
+  const tableRows = Array.from(document.querySelectorAll("tbody tr[data-search]"));
+  const guideCards = Array.from(document.querySelectorAll(".guide-card[data-search]"));
+  const sections = Array.from(document.querySelectorAll(".recipe-group-section, .misc-group-section"));
+  if (!searchInput || document.querySelector("[data-item-index-url]")) {
+    return;
+  }
+  if (cards.length === 0 && tableRows.length === 0 && guideCards.length === 0) {
     return;
   }
 
@@ -144,6 +150,17 @@ function wireStaticSearch() {
     const query = normalizeText(searchInput.value);
     cards.forEach((card) => {
       card.hidden = Boolean(query) && !normalizeText(card.dataset.search).includes(query);
+    });
+    guideCards.forEach((card) => {
+      card.hidden = Boolean(query) && !normalizeText(card.dataset.search).includes(query);
+    });
+    tableRows.forEach((row) => {
+      row.hidden = Boolean(query) && !normalizeText(row.dataset.search).includes(query);
+    });
+    sections.forEach((section) => {
+      const sectionMatch = !query || normalizeText(section.dataset.search).includes(query);
+      const visibleRows = section.querySelectorAll("tbody tr:not([hidden])").length;
+      section.hidden = Boolean(query) && !sectionMatch && visibleRows === 0;
     });
   });
 }

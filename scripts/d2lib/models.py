@@ -46,12 +46,19 @@ class CubeRecipeDTO(TypedDict):
     id: str
     description: str
     enabled: bool
+    status: str
     inputs: List[str]
     outputs: List[str]
     raw_row: Dict[str, str]
 
 class CubeRecipeGroupDTO(TypedDict):
+    id: str
     name: str
+    summary: str
+    action: str
+    order: int
+    status_counts: Dict[str, int]
+    corruption_summaries: List[Dict[str, Any]]
     recipes: List[CubeRecipeDTO]
 
 class SkillEffectDTO(TypedDict):
@@ -94,6 +101,9 @@ class BaseItemDTO(TypedDict):
     dex_req: int
     sockets: int
     max_sockets_by_ilvl: Dict[str, int]
+    class_restriction: str
+    staffmod_class: str
+    magic_level: int
     inherent_stats: List[str]
     auto_prefix_stats: List[str]
     quality_bonus_stats: List[str]
@@ -119,6 +129,8 @@ class MonsterDTO(TypedDict):
     spawn_areas: List[str]
     is_boss: bool
     is_unique: bool
+    status: str
+    changed_fields: List[str]
 
 class MonsterActGroupDTO(TypedDict):
     act: str
@@ -135,11 +147,22 @@ class MiscItemDTO(TypedDict):
     cost: int
     description: str
     category: str
+    status: str
+    socket_effects: Dict[str, List[str]]
 
 class MiscGroupDTO(TypedDict):
     category: str
+    summary: str
+    order: int
+    source_categories: List[str]
     members: List[MiscItemDTO]
 
 class MechanicsSummaryDTO(TypedDict):
     experience_changes: List[Dict[str, Any]]
     difficulty_changes: List[Dict[str, Any]]
+    skill_changes: List[Dict[str, Any]]
+    missile_changes: List[Dict[str, Any]]
+    charstat_changes: List[Dict[str, Any]]
+    property_changes: List[Dict[str, Any]]
+    itemstat_changes: List[Dict[str, Any]]
+    gamble_changes: List[Dict[str, Any]]

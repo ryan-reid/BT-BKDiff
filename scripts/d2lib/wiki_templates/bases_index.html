@@ -14,7 +14,7 @@
   
   <div class="card-grid">
     {% for family in families %}
-    <div class="item-card family-card" data-search="{{ family.name }} {{ family.members|map(attribute='name')|join(' ') }} {% for item in family.members %}{{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_stats|join(' ') }} {{ item.quality_bonus_stats|join(' ') }} {% endfor %}">
+    <div class="item-card family-card" data-search="{{ family.name }} {{ family.members|map(attribute='name')|join(' ') }} {% for item in family.members %}{{ item.class_restriction }} {{ item.staffmod_class }} {{ item.magic_level }} {{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_stats|join(' ') }} {{ item.quality_bonus_stats|join(' ') }} {% endfor %}">
       <div class="family-header">
         <h3>{{ family.name }}</h3>
       </div>
@@ -64,8 +64,17 @@
                 </small>
               </td>
               <td class="auto-prefix-cell">
-                {% if item.inherent_stats or item.auto_prefix_stats or item.quality_bonus_stats %}
+                {% if item.class_restriction or item.staffmod_class or item.magic_level or item.inherent_stats or item.auto_prefix_stats or item.quality_bonus_stats %}
                   <ul class="stats-list">
+                    {% if item.class_restriction %}
+                    <li><small>Class</small> {{ item.class_restriction }} only</li>
+                    {% endif %}
+                    {% if item.staffmod_class %}
+                    <li><small>Staffmods</small> Can roll {{ item.staffmod_class }} skill bonuses</li>
+                    {% endif %}
+                    {% if item.magic_level %}
+                    <li><small>Magic level</small> +{{ item.magic_level }} affix level</li>
+                    {% endif %}
                     {% for stat in item.inherent_stats %}
                     <li><small>Inherent</small> {{ stat }}</li>
                     {% endfor %}

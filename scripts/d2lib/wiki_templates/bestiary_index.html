@@ -23,6 +23,7 @@
             <th>HP (H)</th>
             <th>Hell Immunities</th>
             <th>Spawn Areas</th>
+            <th>Retail→BK</th>
           </tr>
         </thead>
         <tbody>
@@ -49,6 +50,18 @@
             </td>
             <td class="spawn-areas-cell">
               <small>{{ monster.spawn_areas|join(', ') }}</small>
+            </td>
+            <td>
+              {% if monster.status == "added" %}
+              <span class="item-card-status is-added">BK Only</span>
+              {% elif monster.status == "modified" %}
+              <span class="item-card-status is-modified">Changed</span>
+              {% else %}
+              <span class="text-muted">-</span>
+              {% endif %}
+              {% if monster.changed_fields %}
+              <br/><small>{{ monster.changed_fields|join(', ') }}</small>
+              {% endif %}
             </td>
           </tr>
           {% endfor %}

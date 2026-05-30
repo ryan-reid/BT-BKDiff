@@ -386,6 +386,11 @@ code {
   color: #215b39;
 }
 
+.item-card-status.is-removed {
+  background: rgba(33, 29, 25, 0.1);
+  color: var(--muted);
+}
+
 .item-card h3 {
   margin: 0 0 8px;
   font-family: Georgia, "Times New Roman", serif;
@@ -684,23 +689,168 @@ td {
   gap: 40px;
 }
 
-.recipe-group-section {
+.guide-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin: 22px 0 34px;
+}
+
+.guide-card {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  min-height: 160px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.74);
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 47, 47, 0.25);
+}
+
+.guide-card h2 {
+  margin: 0;
+  font-size: 1.12rem;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.guide-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.guide-card-kicker,
+.guide-card-action,
+.group-kicker {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.guide-card-action {
+  margin-top: auto;
+  color: var(--accent-2);
+}
+
+.recipe-group-section,
+.misc-group-section {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 24px;
 }
 
+.group-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.group-kicker {
+  margin: 0 0 4px;
+}
+
 .group-title {
-  margin: 0 0 20px 0;
+  margin: 0;
   color: var(--accent-2);
   border-bottom: 2px solid var(--accent-2);
   display: inline-block;
   padding-bottom: 4px;
 }
 
+.group-summary {
+  max-width: 780px;
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.group-counts {
+  display: grid;
+  gap: 6px;
+  justify-items: end;
+  min-width: 112px;
+  color: var(--muted);
+}
+
+.group-counts strong {
+  color: var(--ink);
+  font-size: 1.7rem;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1;
+}
+
+.group-counts small {
+  max-width: 190px;
+  text-align: right;
+}
+
 .recipe-table {
   width: 100%;
+}
+
+.corruption-summary-grid {
+  display: grid;
+  gap: 18px;
+  margin: 4px 0 24px;
+}
+
+.corruption-summary-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(244, 242, 239, 0.45);
+  padding: 16px;
+}
+
+.corruption-summary-head {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.corruption-summary-head h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+}
+
+.corruption-summary-head span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.corruption-summary-table {
+  width: 100%;
+}
+
+.corruption-summary-table th {
+  text-align: left;
+  padding: 10px;
+  background: rgba(33, 29, 25, 0.03);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.corruption-summary-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.corruption-summary-table td:first-child {
+  width: 90px;
+  color: var(--accent);
 }
 
 .recipe-table th {
@@ -814,6 +964,13 @@ td {
   color: var(--accent-2);
 }
 
+.socket-effect-list {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+  color: var(--text);
+}
+
 .mechanics-table {
   width: 100%;
 }
@@ -884,5 +1041,17 @@ td {
   .skill-card,
   .info-panel {
     padding: 18px;
+  }
+
+  .group-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .group-counts {
+    justify-items: start;
+  }
+
+  .group-counts small {
+    text-align: left;
   }
 }
