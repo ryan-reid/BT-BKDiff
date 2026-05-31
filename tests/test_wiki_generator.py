@@ -65,6 +65,27 @@ class TestWikiGenerator(unittest.TestCase):
         with open(full_path, "wb") as f:
             f.write(struct.pack(f"<{len(ints)}i", *ints))
 
+    def _write_test_sprite(self, root, relative_path):
+        full_path = os.path.join(root, relative_path)
+        os.makedirs(os.path.dirname(full_path), exist_ok=True)
+        width = 2
+        height = 2
+        header = bytearray(40)
+        header[0:4] = b"SpA1"
+        header[6:8] = width.to_bytes(2, "little")
+        header[8:10] = height.to_bytes(2, "little")
+        header[12:16] = height.to_bytes(4, "little")
+        pixels = bytes(
+            [
+                110, 110, 110, 255,
+                175, 175, 175, 255,
+                80, 80, 80, 255,
+                140, 140, 140, 255,
+            ]
+        )
+        with open(full_path, "wb") as f:
+            f.write(bytes(header) + pixels)
+
     def _write_fixture_data(self):
         uniques = [
             {
@@ -149,6 +170,13 @@ class TestWikiGenerator(unittest.TestCase):
         self._write_json(self.item_db, "sets/normal/swords.json", sets)
         self._write_json(self.item_db, "runewords/weapons.json", runewords)
         self._write_json(self.old_item_db, "runewords/weapons.json", old_runewords)
+        self._write_json(
+            self.game_data,
+            "data/hd/items/items.json",
+            [{"r05": {"asset": "r05"}}, {"r07": {"asset": "r07"}}],
+        )
+        self._write_test_sprite(self.game_data, "data/hd/global/ui/items/misc/r05.sprite")
+        self._write_test_sprite(self.game_data, "data/hd/global/ui/items/misc/r07.sprite")
 
         os.makedirs(self.skill_trees, exist_ok=True)
         with open(os.path.join(self.skill_trees, "amazon_skills.md"), "w", encoding="utf-8") as f:
