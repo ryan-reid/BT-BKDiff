@@ -65,50 +65,59 @@
 
 </section>
 {% else %}
-{{ hero(page.hero_eyebrow, page.title, page.summary, page.chips) }}
-<section class="page-grid">
-  <aside class="info-panel">
-    {% if page.icon_src %}
-    <div class="item-detail-icon-wrap">
-      <img class="wiki-item-icon item-detail-icon" src="{{ site_root }}{{ page.icon_src }}" alt="{{ page.title }} icon" />
-    </div>
-    {% endif %}
-    <h2>Quick Facts</h2>
-    <dl class="stat-list">
-      {% for stat in page.stats %}
-      <div><dt>{{ stat.label }}</dt><dd>{{ stat.value }}</dd></div>
-      {% endfor %}
-    </dl>
-  </aside>
-  <div class="content-panel">
-    <section class="content-section">
-      <h2>Retail Comparison</h2>
-      {% if page.comparison.state == "added" %}
-      <p class="muted">No {{ old_label }} (Old) record was matched for this item. This page shows the current {{ new_label }} (New) snapshot only.</p>
-      {% elif page.comparison.state == "unchanged" %}
-      <p class="muted">No structured differences were detected between {{ old_label }} (Old) and {{ new_label }} (New) for this item.</p>
-      {% else %}
-      <p class="muted">Structured diff view using {{ old_label }} (Old) and {{ new_label }} (New).</p>
-      <div class="comparison-table-wrap">
-        <table class="comparison-table">
-          <thead>
-            <tr><th>Field</th><th>{{ old_label }} (Old)</th><th>{{ new_label }} (New)</th></tr>
-          </thead>
-          <tbody>
-            {% for row in page.comparison.rows %}
-            <tr>
-              <th>{{ row.label }}</th>
-              <td><span class="comparison-value is-old">{{ row.old or "empty" }}</span></td>
-              <td><span class="comparison-value is-new">{{ row.new or "empty" }}</span></td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+<section class="runeword-title-bar">
+  <p>{{ page.hero_eyebrow }}</p>
+  <h1>{{ page.title }}</h1>
+</section>
+
+<section class="runeword-detail-layout">
+  <section class="runeword-sheet">
+    <div class="runeword-sheet-header">
+      <div class="runeword-rune-box">
+        {% if page.icon_src %}
+        <div class="item-detail-icon-wrap" style="margin-bottom: 0;">
+          <img class="wiki-item-icon item-detail-icon" src="{{ site_root }}{{ page.icon_src }}" alt="{{ page.title }} icon" style="max-height: 120px;" />
+        </div>
+        {% endif %}
+        <h2 style="margin-top: 10px;">{{ page.title }}</h2>
       </div>
-      {% endif %}
-    </section>
-    <section class="content-section">
-      <h2>Properties</h2>
+      <div class="runeword-meta-box">
+        {% for stat in page.stats %}
+        <p><strong>{{ stat.label }}:</strong> {{ stat.value }}</p>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if page.comparison.state != "added" %}
+    <div class="runeword-before-after" role="table" aria-label="{{ page.title }} before and after comparison">
+      <div class="runeword-table-head" role="columnheader">{{ old_label }} (Old)</div>
+      <div class="runeword-table-head" role="columnheader">{{ new_label }} (New)</div>
+      
+      {# Stat Rows #}
+      {% for row in page.comparison.stat_rows %}
+      <div class="runeword-table-cell is-{{ row.status }}" role="cell">
+        <strong>{{ row.label }}:</strong> {{ row.old or "empty" }}
+      </div>
+      <div class="runeword-table-cell is-{{ row.status }}" role="cell">
+        <strong>{{ row.label }}:</strong> {{ row.new or "empty" }}
+      </div>
+      {% endfor %}
+
+      <div class="runeword-table-separator" role="rowheader">Properties</div>
+
+      {# Property Rows #}
+      {% for row in page.comparison.property_rows %}
+      <div class="runeword-table-cell is-{{ row.status }}" role="cell">
+        {% if row.label and "Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "(empty)" }}
+      </div>
+      <div class="runeword-table-cell is-{{ row.status }}" role="cell">
+        {% if row.label and "Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new or "(removed)" }}
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div style="padding: 24px;">
+      <h3 class="section-kicker">Properties</h3>
       <ul class="property-list">
         {% if page.properties %}
           {% for prop in page.properties %}
@@ -118,29 +127,31 @@
           <li class="is-empty">No generated properties were found for this record.</li>
         {% endif %}
       </ul>
-    </section>
-    {% if page.rune_properties %}
-    <section class="content-section">
-      <h2>Properties from Runes</h2>
-      <ul class="property-list rune-property-list">
-        {% for rune in page.rune_properties %}
-        <li>
-          <strong>{{ rune.rune }}</strong>
-          <ul>
-            {% for prop in rune.properties %}
-            <li class="property-entry{% if prop.is_warning %} is-warning{% endif %}">{{ prop.text }}</li>
-            {% endfor %}
-          </ul>
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
+    </div>
     {% endif %}
-    <section class="content-section">
-      <h2>Source</h2>
-      <p class="muted">Structured export path: <code>{{ page.source_rel_path }}</code></p>
-    </section>
-  </div>
+  </section>
+
+  {% if page.rune_properties %}
+  <section class="info-panel">
+    <h2>Properties from Runes</h2>
+    <ul class="property-list rune-property-list">
+      {% for rune in page.rune_properties %}
+      <li>
+        <strong>{{ rune.rune }}</strong>
+        <ul>
+          {% for prop in rune.properties %}
+          <li class="property-entry{% if prop.is_warning %} is-warning{% endif %}">{{ prop.text }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section class="content-section" style="box-shadow: none; background: transparent; border: 0; padding: 0;">
+    <p class="muted">Structured export path: <code>{{ page.source_rel_path }}</code></p>
+  </section>
 </section>
 {% endif %}
 {% endblock %}

@@ -191,7 +191,54 @@ class WikiGenerator:
         )
 
     def _write_gems_runes_pages(self, groups: List[MiscGroupDTO]) -> None:
-        ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir).attach_misc_item_icons(groups)
+        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
+        icon_exporter.attach_misc_item_icons(groups)
+        
+        # Load Retail data for comparison
+        retail_repo = D2Repository(self.retail_data_dir)
+        retail_service = MiscAnalyzerService(retail_repo)
+        retail_groups = retail_service.analyze_misc_items()
+        retail_items = {item["code"]: item for g in retail_groups for item in g["members"]}
+
+        for group in groups:
+            for item in group["members"]:
+                slug = slugify(item["name"])
+                output_path = WikiRoutes.gem_rune_output_path(slug)
+                item["href"] = WikiRoutes.route_from_output_path(output_path)
+                
+                old_item = retail_items.get(item["code"])
+                comparison = self._gem_rune_comparison_context(item, old_item)
+                
+                stats = [
+                    {"label": "Code", "value": item["code"]},
+                    {"label": "Level", "value": str(item["level"])},
+                    {"label": "Level Requirement", "value": str(item["level_req"])},
+                ]
+                if item["stackable"]:
+                    stats.append({"label": "Max Stack", "value": str(item["max_stack"])})
+
+                self._write_page(
+                    title=f"{item['name']} | Gems & Runes",
+                    output_path=output_path,
+                    template_name="item.html",
+                    category="gem-rune",
+                    source_files=["data/global/excel/misc.txt"],
+                    page={
+                        "family": "misc",
+                        "title": item["name"],
+                        "hero_eyebrow": f"{group['category']} Item",
+                        "summary": item["description"] or f"A {group['category'].lower()} used for socketing or crafting.",
+                        "chips": [
+                            {"label": group["category"], "tone": "default"},
+                            {"label": self.new_label, "tone": "accent"}
+                        ],
+                        "stats": stats,
+                        "icon_src": item["icon_src"],
+                        "source_rel_path": f"misc.txt ({item['code']})",
+                        "comparison": comparison,
+                    }
+                )
+
         self._write_page(
             title=f"Gems & Runes | {self.new_label} Wiki",
             output_path=WikiRoutes.gems_runes_index_output_path(),
@@ -203,6 +250,37 @@ class WikiGenerator:
             ],
             groups=groups,
         )
+
+    def _gem_rune_comparison_context(self, item: MiscItemDTO, old_item: Optional[MiscItemDTO]) -> Dict[str, Any]:
+        if not old_item:
+            return {"state": "added", "stat_rows": [], "socket_rows": []}
+
+        # 1. Stat Rows
+        stat_rows = []
+        for label, key in [("Level", "level"), ("Level Requirement", "level_req"), ("Cost", "cost")]:
+            old_val = str(old_item.get(key, ""))
+            new_val = str(item.get(key, ""))
+            status = "same" if old_val == new_val else "changed"
+            stat_rows.append({"label": label, "old": old_val, "new": new_val, "status": status})
+
+        # 2. Socket Rows (Weapon/Armor/Shield)
+        socket_rows = []
+        slots = ["Weapon", "Armor/Helm", "Shield"]
+        old_effects = old_item.get("socket_effects", {})
+        new_effects = item.get("socket_effects", {})
+
+        for slot in slots:
+            old_eff = "; ".join(old_effects.get(slot, []))
+            new_eff = "; ".join(new_effects.get(slot, []))
+            status = "same" if old_eff == new_eff else "changed"
+            socket_rows.append({"label": slot, "old": old_eff, "new": new_eff, "status": status})
+
+        has_changes = any(r["status"] != "same" for r in stat_rows + socket_rows)
+        return {
+            "state": "modified" if has_changes else "unchanged",
+            "stat_rows": stat_rows,
+            "property_rows": socket_rows, # Reuse template property_rows block for simplicity
+        }
 
     def _load_mechanics_summary(self) -> MechanicsSummaryDTO:
         repo = D2Repository(self.game_data_dir)
@@ -898,16 +976,46 @@ class WikiGenerator:
         if old_entry is None:
             return {"state": "added", "rows": []}
 
-        rows: List[Tuple[str, str, str]] = []
+        # 1. Stat Rows (Base, Lvl Req, etc.)
+        stat_rows = []
         for label, old_value, new_value in self._comparison_stat_rows(entry, family, old_entry):
-            if old_value != new_value:
-                rows.append((label, old_value, new_value))
-        for label, old_value, new_value in self._comparison_property_rows(entry, old_entry):
-            if old_value != new_value:
-                rows.append((label, old_value, new_value))
+            status = "same" if old_value == new_value else "changed"
+            stat_rows.append({"label": label, "old": old_value, "new": new_value, "status": status})
+
+        # 2. Property Rows (Aligned side-by-side)
+        property_rows = []
+        old_props = WikiGenerator._property_occurrence_map(old_entry)
+        new_props = WikiGenerator._property_occurrence_map(entry)
+        all_keys = list(new_props.keys()) + [key for key in old_props.keys() if key not in new_props]
+        
+        for key in all_keys:
+            old_val = old_props.get(key, "")
+            new_val = new_props.get(key, "")
+            
+            if old_val and new_val:
+                status = "changed" if old_val != new_val else "same"
+            elif new_val:
+                status = "added"
+            elif old_val:
+                status = "removed"
+            else:
+                status = "same"
+                
+            property_rows.append({
+                "label": WikiGenerator._comparison_property_label(old_val, new_val, key[0], key[2]),
+                "old": old_val,
+                "new": new_val,
+                "status": status
+            })
+
+        has_changes = any(r["status"] != "same" for r in stat_rows + property_rows)
+        
         return {
-            "state": "modified" if rows else "unchanged",
-            "rows": [{"label": label, "old": old_value, "new": new_value} for label, old_value, new_value in rows],
+            "state": "modified" if has_changes else "unchanged",
+            "stat_rows": stat_rows,
+            "property_rows": property_rows,
+            # Legacy rows for existing template compatibility during transition
+            "rows": [r for r in stat_rows + property_rows if r["status"] != "same"]
         }
 
     @staticmethod

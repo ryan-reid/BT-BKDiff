@@ -54,7 +54,7 @@
                 {% if item.icon_src %}
                 <img class="wiki-item-icon misc-item-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
                 {% endif %}
-                <strong>{{ item.name }}</strong><br/>
+                <a href="{{ site_root }}{{ item.href }}"><strong>{{ item.name }}</strong></a><br/>
                 <small class="code-text">{{ item.code }}</small>
                 {% if item.status == "added" %}
                 <span class="item-card-status is-added">BK Only</span>
