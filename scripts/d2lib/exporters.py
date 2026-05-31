@@ -134,6 +134,18 @@ class MarkdownExporter(BaseExporter):
         for item in items:
             name = self.escape_markdown(item.get('display_name') or item.get('name'))
             item_id = self.escape_markdown(str(item.get('id', '')))
+            
+            # Icon Integration for Codex/UI
+            family = "unique" if "Unique" in title else "set" if "Set" in title else ""
+            if family:
+                from d2lib.services import _slugify
+                icon_name = f"{family}-{_slugify(str(item.get('id', '')))}.png"
+                # Path is relative to the export file. Exports are in exports/item_db/...
+                # Icons are in docs/wiki/assets/item-icons/
+                # Typical export path: BT-BKDiff/exports/item_db/uniques/others/helms.md
+                # We need to go up 4 levels to get to BT-BKDiff/
+                content += f"![{name} icon](../../../../docs/wiki/assets/item-icons/{icon_name})\n\n"
+
             content += f"### {name} ({item_id})\n"
             content += f"* **Base Item:** {self.escape_markdown(item.get('base_item', ''))}\n"
             content += f"* **Level Requirement:** {item.get('lvl_req', '0')}\n"
