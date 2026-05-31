@@ -6,6 +6,7 @@ import shutil
 import struct
 import zlib
 from typing import Any, Dict, List, Optional, Tuple
+from urllib.parse import urlencode
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -1869,11 +1870,24 @@ class WikiGenerator:
             "properties": properties,
             "rune_properties": rune_properties,
             "rune_requirements": entry.get("rune_requirements", []),
+            "base_filter_url": self._runeword_base_filter_url(entry, len(entry.get("rune_requirements", []))),
             "icon_src": entry.get("icon_src", ""),
             "source_rel_path": entry.get("_source_rel_path", ""),
             "comparison": comparison,
             "comparison_summary": self._comparison_summary_context(comparison),
         }
+
+    @staticmethod
+    def _runeword_base_filter_url(entry: Dict[str, Any], socket_count: int) -> str:
+        if not entry.get("base_items") and not socket_count:
+            return "bases/"
+        params: Dict[str, str] = {}
+        base_items = [str(base).strip() for base in entry.get("base_items", []) if str(base).strip()]
+        if base_items:
+            params["category"] = base_items[0]
+        if socket_count:
+            params["minSockets"] = str(socket_count)
+        return f"bases/?{urlencode(params)}" if params else "bases/"
 
     def _item_comparison_context(
         self,

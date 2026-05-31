@@ -882,6 +882,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Rune Contributions", runeword_page)
         self.assertIn("BK vs Retail Changes", runeword_page)
         self.assertIn("Show technical retail comparison", runeword_page)
+        self.assertIn('href="../../../bases/?category=Melee+Weapon&amp;minSockets=2"', runeword_page)
         self.assertIn("+50 to Attack Rating", runeword_page)
 
         for relative_path, expected_text in [
