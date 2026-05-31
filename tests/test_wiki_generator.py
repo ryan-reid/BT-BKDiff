@@ -118,7 +118,10 @@ class TestWikiGenerator(unittest.TestCase):
                 "rune_properties": [
                     {
                         "rune": "El",
-                        "properties": [{"code": "att", "param": "", "resolved_text": "+50 to Attack Rating"}],
+                        "properties": [
+                            {"code": "att", "param": "", "resolved_text": "+50 to Attack Rating"},
+                            {"code": "openwounds", "param": "", "resolved_text": "25% Chance of Open Wounds"},
+                        ],
                     }
                 ],
             }
@@ -129,6 +132,15 @@ class TestWikiGenerator(unittest.TestCase):
                 "runes": ["Tal", "Eth"],
                 "base_items": ["Sword"],
                 "properties": [{"code": "dmg", "param": "", "resolved_text": "+20% Enhanced Damage"}],
+                "rune_properties": [
+                    {
+                        "rune": "Eth",
+                        "properties": [
+                            {"code": "openwounds", "param": "", "resolved_text": "25% Chance of Open Wounds"},
+                            {"code": "att", "param": "", "resolved_text": "+50 to Attack Rating"},
+                        ],
+                    }
+                ],
             }
         ]
 
@@ -874,12 +886,18 @@ class TestWikiGenerator(unittest.TestCase):
 
         with open(os.path.join(self.output, "items", "runeword", "practice", "index.html"), "r", encoding="utf-8") as f:
             runeword_page = f.read()
-        self.assertIn("Required Runes", runeword_page)
+        self.assertIn("Before", runeword_page)
+        self.assertIn("After", runeword_page)
+        self.assertIn("Rune properties", runeword_page)
         self.assertIn("rune-chip-icon", runeword_page)
         self.assertIn("Tal Rune", runeword_page)
         self.assertIn("Eth Rune", runeword_page)
-        self.assertIn("Properties from Runes", runeword_page)
+        self.assertIn("Bases:", runeword_page)
+        self.assertNotIn("Source & Diff", runeword_page)
+        self.assertNotIn("Show technical retail comparison", runeword_page)
+        self.assertIn('href="../../../bases/?category=Melee+Weapon&amp;minSockets=2"', runeword_page)
         self.assertIn("+50 to Attack Rating", runeword_page)
+        self.assertIn("25% Chance of Open Wounds", runeword_page)
 
         for relative_path, expected_text in [
             (os.path.join("bases", "index.html"), "Base Items"),

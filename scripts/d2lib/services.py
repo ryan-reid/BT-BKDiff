@@ -758,11 +758,16 @@ class ItemAnalyzerService:
     def analyze_runeword(self, row: Dict[str, str]) -> RunewordDTO:
         name = row.get('*Rune Name', row.get('Name', 'Unknown')).strip()
         runes = []
+        rune_levels = []
         for i in range(1, 7):
             r_code = row.get(f'Rune{i}', '').strip()
             if r_code and r_code != 'xxx':
                 clean_rune_name = self.repo.get_string(f"{r_code}L")
                 runes.append(clean_rune_name or self.get_item_name(r_code))
+                try:
+                    rune_levels.append(int(self.misc.get(r_code, {}).get("levelreq", "") or 0))
+                except ValueError:
+                    pass
         props = []
         for i in range(1, 8):
             code = row.get(f'T1Code{i}', '').strip()
@@ -770,11 +775,17 @@ class ItemAnalyzerService:
                 props.append(self.resolver.resolve_property(code, row.get(f'T1Param{i}', ''), row.get(f'T1Min{i}', ''), row.get(f'T1Max{i}', '')))
 
         itype = row.get('itype1', '').strip()
-        base_items = [self.repo.get_string(self.item_types.get(itype, {}).get('ItemType', '')) or itype]
+        base_items = []
+        for index in range(1, 7):
+            base_type = row.get(f'itype{index}', '').strip()
+            if not base_type or base_type == 'xxx':
+                continue
+            base_items.append(self.repo.get_string(self.item_types.get(base_type, {}).get('ItemType', '')) or base_type)
         rune_properties = self._resolve_runeword_rune_properties(row, itype)
 
         return {
             "name": name, "runes": runes, "base_items": base_items,
+            "required_level": str(max(rune_levels)) if rune_levels else "",
             "properties": props, "rune_properties": rune_properties, "raw_row": row
         }
 

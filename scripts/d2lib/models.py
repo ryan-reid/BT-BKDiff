@@ -20,6 +20,7 @@ class RunewordDTO(TypedDict):
     name: str
     runes: List[str]
     base_items: List[str]
+    required_level: str
     properties: List[PropertyDTO]
     rune_properties: List[Dict[str, Any]]
     raw_row: Dict[str, str]

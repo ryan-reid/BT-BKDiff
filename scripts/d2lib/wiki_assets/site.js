@@ -191,6 +191,49 @@ function wireBaseFilters() {
   const resultCount = document.querySelector("#base-result-count");
   const families = Array.from(document.querySelectorAll(".family-card"));
 
+  function queryValue(params, names) {
+    for (const name of names) {
+      const value = params.get(name);
+      if (value) {
+        return value;
+      }
+    }
+    return "";
+  }
+
+  function setSelectValue(select, value) {
+    if (!select || !value) {
+      return;
+    }
+    const normalizedValue = normalizeText(value);
+    const option = Array.from(select.options).find((candidate) => {
+      return normalizeText(candidate.value) === normalizedValue
+        || normalizeText(candidate.textContent || "") === normalizedValue;
+    });
+    if (option) {
+      select.value = option.value;
+    }
+  }
+
+  function applyInitialQueryFilters() {
+    const params = new URLSearchParams(window.location.search);
+    setSelectValue(groupSelect, queryValue(params, ["group", "baseGroup"]));
+    setSelectValue(categorySelect, queryValue(params, ["category", "baseCategory"]));
+    setSelectValue(classSelect, queryValue(params, ["class", "baseClass"]));
+    setSelectValue(tierSelect, queryValue(params, ["tier"]));
+    setSelectValue(speedSelect, queryValue(params, ["speed"]));
+    setSelectValue(minSocketsSelect, queryValue(params, ["minSockets", "sockets"]));
+    if (searchInput) {
+      searchInput.value = queryValue(params, ["q", "search"]);
+    }
+    if (rollInput) {
+      rollInput.value = queryValue(params, ["roll"]);
+    }
+    if (twoHandedCheckbox) {
+      twoHandedCheckbox.checked = queryValue(params, ["twoHanded"]) === "1";
+    }
+  }
+
   function applyFilters() {
     const query = normalizeText(searchInput ? searchInput.value : "");
     const activeGroup = groupSelect ? groupSelect.value : "all";
@@ -248,6 +291,7 @@ function wireBaseFilters() {
       control.addEventListener("change", applyFilters);
     });
 
+  applyInitialQueryFilters();
   applyFilters();
 }
 

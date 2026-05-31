@@ -1,7 +1,71 @@
 {% extends "base.html" %}
 {% from "components.html" import hero %}
 {% block content %}
-{{ hero("Generated Item Page", page.title, page.summary, page.chips) }}
+{% if page.family == "runeword" %}
+<section class="runeword-title-bar">
+  <p>{{ page.hero_eyebrow }}</p>
+  <h1>{{ page.title }}</h1>
+</section>
+<section class="runeword-detail-layout">
+  <section class="runeword-sheet">
+    <div class="runeword-sheet-header">
+      <div class="runeword-rune-box">
+        <h2>{{ page.title }}</h2>
+      {% if page.rune_requirements %}
+        <div class="rune-sequence rune-sequence-detail" aria-label="{{ page.title }} rune sequence">
+        {% for rune in page.rune_requirements %}
+          <span class="rune-chip rune-chip-large" title="{{ rune.name }}">
+          {% if rune.icon_src %}
+            <img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }} icon" />
+          {% endif %}
+            <span>{{ rune.name }}</span>
+          </span>
+        {% endfor %}
+        </div>
+      {% else %}
+        <p class="muted">No rune sequence was found for this runeword.</p>
+      {% endif %}
+      </div>
+      <div class="runeword-meta-box">
+        <p><strong>Bases:</strong> <a href="{{ site_root }}{{ page.base_filter_url }}">{{ page.stats[0].value }}</a></p>
+        {% if page.old_base_label and page.old_base_label != page.stats[0].value %}
+        <p class="runeword-meta-subtle">(was {{ page.old_base_label }})</p>
+        {% endif %}
+        {% if page.required_level %}
+        <p><strong>Required level:</strong> {{ page.required_level }}</p>
+        {% endif %}
+        <p><strong>Sockets:</strong> {{ page.stats[1].value }}</p>
+      </div>
+    </div>
+
+    <div class="runeword-before-after" role="table" aria-label="{{ page.title }} before and after comparison">
+      <div class="runeword-table-head" role="columnheader">Before</div>
+      <div class="runeword-table-head" role="columnheader">After</div>
+      {% if page.runeword_compare_rows %}
+        {% for row in page.runeword_compare_rows %}
+        {% if row.status == "separator" %}
+        <div class="runeword-table-separator" role="rowheader">Rune properties</div>
+        {% else %}
+        <div class="runeword-table-cell is-{{ row.status }}" role="cell">
+          {% if row.old %}{{ row.old }}{% else %}<span class="muted">(empty)</span>{% endif %}
+        </div>
+        <div class="runeword-table-cell is-{{ row.status }}" role="cell">
+          {% if row.new %}{{ row.new }}{% elif row.old %}<span class="muted">(removed)</span>{% else %}<span class="muted">(empty)</span>{% endif %}
+        </div>
+        {% endif %}
+        {% endfor %}
+      {% else %}
+        {% for prop in page.properties %}
+        <div class="runeword-table-cell is-added" role="cell"><span class="muted">(empty)</span></div>
+        <div class="runeword-table-cell is-added" role="cell">{{ prop.text }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </section>
+
+</section>
+{% else %}
+{{ hero(page.hero_eyebrow, page.title, page.summary, page.chips) }}
 <section class="page-grid">
   <aside class="info-panel">
     {% if page.icon_src %}
@@ -43,21 +107,6 @@
       </div>
       {% endif %}
     </section>
-    {% if page.rune_requirements %}
-    <section class="content-section">
-      <h2>Required Runes</h2>
-      <div class="rune-sequence rune-sequence-detail" aria-label="{{ page.title }} rune sequence">
-        {% for rune in page.rune_requirements %}
-        <span class="rune-chip" title="{{ rune.name }}">
-          {% if rune.icon_src %}
-          <img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }} icon" />
-          {% endif %}
-          <span>{{ rune.name }}</span>
-        </span>
-        {% endfor %}
-      </div>
-    </section>
-    {% endif %}
     <section class="content-section">
       <h2>Properties</h2>
       <ul class="property-list">
@@ -93,4 +142,5 @@
     </section>
   </div>
 </section>
+{% endif %}
 {% endblock %}

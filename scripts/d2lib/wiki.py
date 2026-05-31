@@ -6,6 +6,7 @@ import shutil
 import struct
 import zlib
 from typing import Any, Dict, List, Optional, Tuple
+from urllib.parse import urlencode
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -1805,12 +1806,23 @@ class WikiGenerator:
         old_entry: Optional[Dict[str, Any]],
     ) -> Dict[str, Any]:
         chips = [{"label": family.title(), "tone": "default"}, {"label": self.new_label, "tone": "accent"}]
+        hero_eyebrow = "Generated Item Page"
         if family == "runeword":
-            chips.append({"label": "Runeword", "tone": "accent"})
+            rune_requirements = entry.get("rune_requirements", [])
+            socket_count = len(rune_requirements) or len(entry.get("runes", []))
+            base_items = entry.get("base_items", [])
+            base_label = ", ".join(base_items) or "Unknown base"
+            hero_eyebrow = f"{base_label} Runeword"
+            chips = [
+                {"label": "Runeword", "tone": "default"},
+                {"label": self.new_label, "tone": "accent"},
+                {"label": base_label, "tone": "default"},
+                {"label": f"{socket_count} socket{'s' if socket_count != 1 else ''}", "tone": "accent"},
+            ]
             stats = [
+                {"label": "Base", "value": base_label},
+                {"label": "Sockets", "value": str(socket_count) if socket_count else "Unknown"},
                 {"label": "Runes", "value": " + ".join(entry.get("runes", [])) or "Unknown"},
-                {"label": "Base Items", "value": ", ".join(entry.get("base_items", [])) or "Unknown"},
-                {"label": "Property Count", "value": str(len(entry.get("properties", [])))},
             ]
         else:
             chips.append(
@@ -1847,18 +1859,95 @@ class WikiGenerator:
             }
             for rune_entry in entry.get("rune_properties", [])
         ]
+        comparison = self._item_comparison_context(entry, family, old_entry)
         return {
+            "family": family,
             "title": title,
+            "hero_eyebrow": hero_eyebrow,
             "summary": self._item_summary(entry, family),
             "chips": chips,
             "stats": stats,
             "properties": properties,
             "rune_properties": rune_properties,
             "rune_requirements": entry.get("rune_requirements", []),
+            "base_filter_url": self._runeword_base_filter_url(entry, len(entry.get("rune_requirements", []))),
+            "old_base_label": ", ".join(old_entry.get("base_items", [])) if old_entry else "",
+            "old_rune_label": " + ".join(old_entry.get("runes", [])) if old_entry else "",
+            "required_level": entry.get("required_level", ""),
+            "runeword_compare_rows": self._runeword_compare_rows(entry, old_entry),
             "icon_src": entry.get("icon_src", ""),
             "source_rel_path": entry.get("_source_rel_path", ""),
-            "comparison": self._item_comparison_context(entry, family, old_entry),
+            "comparison": comparison,
+            "comparison_summary": self._comparison_summary_context(comparison),
         }
+
+    @staticmethod
+    def _runeword_base_filter_url(entry: Dict[str, Any], socket_count: int) -> str:
+        if not entry.get("base_items") and not socket_count:
+            return "bases/"
+        params: Dict[str, str] = {}
+        base_items = [str(base).strip() for base in entry.get("base_items", []) if str(base).strip()]
+        if base_items:
+            params["category"] = base_items[0]
+        if socket_count:
+            params["minSockets"] = str(socket_count)
+        return f"bases/?{urlencode(params)}" if params else "bases/"
+
+    @staticmethod
+    def _runeword_compare_rows(
+        entry: Dict[str, Any],
+        old_entry: Optional[Dict[str, Any]],
+    ) -> List[Dict[str, str]]:
+        old_props = WikiGenerator._property_occurrence_map(old_entry or {})
+        new_props = WikiGenerator._property_occurrence_map(entry)
+        keys = list(new_props.keys()) + [key for key in old_props.keys() if key not in new_props]
+        rows = []
+        for key in keys:
+            old_value = old_props.get(key, "")
+            new_value = new_props.get(key, "")
+            if old_value and new_value:
+                status = "changed" if old_value != new_value else "same"
+            elif new_value:
+                status = "added"
+            elif old_value:
+                status = "removed"
+            else:
+                status = "same"
+            rows.append({"old": old_value, "new": new_value, "status": status})
+        old_rune_props = WikiGenerator._rune_property_occurrence_map(old_entry or {})
+        new_rune_props = WikiGenerator._rune_property_occurrence_map(entry)
+        if old_rune_props or new_rune_props:
+            rows.append({"old": "", "new": "", "status": "separator"})
+            rune_keys = list(new_rune_props.keys()) + [key for key in old_rune_props.keys() if key not in new_rune_props]
+            for key in rune_keys:
+                old_value = old_rune_props.get(key, "")
+                new_value = new_rune_props.get(key, "")
+                if old_value and new_value:
+                    status = "changed" if old_value != new_value else "same"
+                elif new_value:
+                    status = "added"
+                elif old_value:
+                    status = "removed"
+                else:
+                    status = "same"
+                rows.append({"old": old_value, "new": new_value, "status": status})
+        return rows
+
+    @staticmethod
+    def _rune_property_occurrence_map(entry: Dict[str, Any]) -> Dict[Tuple[str, str, int], str]:
+        occurrences: Dict[Tuple[str, str], int] = {}
+        values: Dict[Tuple[str, str, int], str] = {}
+        for rune_entry in entry.get("rune_properties", []):
+            for prop in rune_entry.get("properties", []):
+                code = str(prop.get("code", "")).strip() or "unknown"
+                param = str(prop.get("param", "")).strip()
+                text = str(prop.get("resolved_text", "")).strip()
+                if not text:
+                    continue
+                base_key = (code, param)
+                occurrences[base_key] = occurrences.get(base_key, 0) + 1
+                values[(code, param, occurrences[base_key])] = text
+        return values
 
     def _item_comparison_context(
         self,
@@ -1880,6 +1969,24 @@ class WikiGenerator:
             "state": "modified" if rows else "unchanged",
             "rows": [{"label": label, "old": old_value, "new": new_value} for label, old_value, new_value in rows],
         }
+
+    @staticmethod
+    def _comparison_summary_context(comparison: Dict[str, Any]) -> Dict[str, Any]:
+        summary = {"added": [], "removed": [], "changed": []}
+        for row in comparison.get("rows", []):
+            label = str(row.get("label", ""))
+            old_value = str(row.get("old", ""))
+            new_value = str(row.get("new", ""))
+            if label == "Property Count":
+                continue
+            if label.startswith("Added:") and new_value:
+                summary["added"].append({"label": label.replace("Added:", "").strip(), "value": new_value})
+            elif label.startswith("Removed:") and old_value:
+                summary["removed"].append({"label": label.replace("Removed:", "").strip(), "value": old_value})
+            elif old_value != new_value:
+                summary["changed"].append({"label": label, "old": old_value, "new": new_value})
+        summary["has_changes"] = any(summary[key] for key in ("added", "removed", "changed"))
+        return summary
 
     @staticmethod
     def _item_sort_key(entry: Dict[str, Any]) -> str:
@@ -2035,7 +2142,10 @@ class WikiGenerator:
     def _item_summary(entry: Dict[str, Any], family: str) -> str:
         if family == "runeword":
             base_items = ", ".join(entry.get("base_items", [])) or "Unknown base"
-            return f"Runeword for {base_items} with {len(entry.get('properties', []))} generated properties."
+            runes = " + ".join(entry.get("runes", [])) or "unknown runes"
+            socket_count = len(entry.get("runes", []))
+            socket_text = f"{socket_count}-socket " if socket_count else ""
+            return f"{runes} in {socket_text}{base_items}."
         item_type = entry.get("item_type", "Item")
         base_item = entry.get("base_item", "Unknown base")
         lvl_req = entry.get("lvl_req", "0")
