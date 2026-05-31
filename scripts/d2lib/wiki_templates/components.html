@@ -1,8 +1,8 @@
 {% macro hero(eyebrow, title, subtitle, chips=[]) -%}
 <section class="hero">
-  <p class="hero-eyebrow">{{ eyebrow }}</p>
+  <span class="hero-eyebrow">{{ eyebrow }}</span>
   <h1>{{ title }}</h1>
-  <p class="hero-copy">{{ subtitle }}</p>
+  {% if subtitle %}<p class="hero-copy">{{ subtitle }}</p>{% endif %}
   {% if chips %}
   <div class="chip-row">
     {% for chip in chips %}

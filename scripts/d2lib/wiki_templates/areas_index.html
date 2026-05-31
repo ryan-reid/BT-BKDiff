@@ -1,21 +1,19 @@
 {% extends "base.html" %}
-{% from "components.html" import hero %}
+{% block title %}Farming Areas | {{ new_label }} Wiki{% endblock %}
+{% block nav_areas %} class="is-active"{% endblock %}
 {% block content %}
-{{ hero(
-  "Generated Farming Guide",
-  "Hell Areas",
-  "Compare BK Hell farming areas by area level, monster density, elite pack range, super chest potential, and possible monster immunities.",
-  [
-    {"label": "BK Hell", "tone": "accent"},
-    {"label": "Area Levels", "tone": "default"},
-    {"label": "Immunity Filters", "tone": "default"},
-  ]
-) }}
+<section class="hero">
+  <span class="hero-eyebrow">Farming Guide</span>
+  <h1>Areas</h1>
+  <p class="hero-copy">{{ area_count }} Hell areas ranked by farm score — density, elite packs, area level, and super-chest access.</p>
+</section>
+
 <section class="content-section">
   <div class="toolbar" data-area-index-url="{{ site_root }}data/areas-index.json">
-    <input id="area-search" class="search-input" type="search" placeholder="Search areas or monsters..." />
-    <div class="filter-row filter-row-stacked">
-      <label class="filter-select-wrap" for="area-act-filter">
+    <input id="area-search" class="search-input" type="search" placeholder="Search areas or monsters…" />
+
+    <div class="area-toolbar">
+      <label>
         <span class="filter-label">Act</span>
         <select id="area-act-filter" class="filter-select">
           <option value="all">All Acts</option>
@@ -26,7 +24,7 @@
           <option value="Act 5">Act 5</option>
         </select>
       </label>
-      <label class="filter-select-wrap" for="area-min-level-filter">
+      <label>
         <span class="filter-label">Minimum Area Level</span>
         <select id="area-min-level-filter" class="filter-select">
           <option value="0">Any Level</option>
@@ -35,7 +33,7 @@
           <option value="90">90+</option>
         </select>
       </label>
-      <label class="filter-select-wrap" for="area-sort-filter">
+      <label>
         <span class="filter-label">Sort</span>
         <select id="area-sort-filter" class="filter-select">
           <option value="score">Farm Score</option>
@@ -44,20 +42,40 @@
           <option value="elite">Average Elite Packs</option>
         </select>
       </label>
-    </div>
-    <div class="filter-row">
-      <label class="filter-check"><input id="area-top-tier-filter" type="checkbox" /> Top-tier capable</label>
-      <label class="filter-check"><input type="checkbox" data-avoid-immunity="fire" /> Avoid fire immune</label>
-      <label class="filter-check"><input type="checkbox" data-avoid-immunity="cold" /> Avoid cold immune</label>
-      <label class="filter-check"><input type="checkbox" data-avoid-immunity="lightning" /> Avoid lightning immune</label>
-      <label class="filter-check"><input type="checkbox" data-avoid-immunity="poison" /> Avoid poison immune</label>
-      <label class="filter-check"><input type="checkbox" data-avoid-immunity="magic" /> Avoid magic immune</label>
-      <label class="filter-check"><input type="checkbox" data-avoid-immunity="physical" /> Avoid physical immune</label>
+      <label class="filter-check">
+        <input id="area-top-tier-filter" type="checkbox" /> Top-tier capable only
+      </label>
+
+      <div class="dmg-filter-group">
+        <span class="filter-label">My build deals — hide immune areas</span>
+        <div class="dmg-toggles">
+          <label class="dmg-toggle t-fire">
+            <input type="checkbox" data-avoid-immunity="fire"><span class="dot"></span>Fire
+          </label>
+          <label class="dmg-toggle t-cold">
+            <input type="checkbox" data-avoid-immunity="cold"><span class="dot"></span>Cold
+          </label>
+          <label class="dmg-toggle t-ltng">
+            <input type="checkbox" data-avoid-immunity="lightning"><span class="dot"></span>Lightning
+          </label>
+          <label class="dmg-toggle t-pois">
+            <input type="checkbox" data-avoid-immunity="poison"><span class="dot"></span>Poison
+          </label>
+          <label class="dmg-toggle t-phys">
+            <input type="checkbox" data-avoid-immunity="physical"><span class="dot"></span>Physical
+          </label>
+          <label class="dmg-toggle t-magic">
+            <input type="checkbox" data-avoid-immunity="magic"><span class="dot"></span>Magic
+          </label>
+        </div>
+      </div>
     </div>
   </div>
-</section>
-<section class="content-section">
-  <div class="section-head"><h2>Area Farming Table</h2><p><span id="area-result-count">{{ area_count }}</span> generated areas</p></div>
+
+  <div class="section-head">
+    <h2>Area Farming Table</h2>
+    <p><span id="area-result-count">{{ area_count }}</span> areas</p>
+  </div>
   <div class="table-wrap">
     <table class="area-table">
       <thead>
@@ -69,22 +87,19 @@
           <th>Chunk</th>
           <th>Elite Packs</th>
           <th>Super Chest</th>
-          <th>Possible Immunities</th>
+          <th>Immunities</th>
           <th>Monster Pool</th>
         </tr>
       </thead>
       <tbody id="area-index-root">
-        <tr><td colspan="9" class="muted">Loading area index...</td></tr>
+        <tr><td colspan="9" class="muted">Loading area index…</td></tr>
       </tbody>
     </table>
   </div>
 </section>
+
 <section class="content-section">
   <h2>How This Is Calculated</h2>
-  <p>The area guide is generated from BK's <code>levels.txt</code> and <code>monstats.txt</code>. The local data-file guide at <code>docs/Diablo_II_Data_File_Guide/levels.md</code> identifies <code>MonLvl</code>, <code>MonDen</code>, <code>MonUMin</code>, <code>MonUMax</code>, and monster pool columns as the key area spawning fields.</p>
-  <p>Hell area level uses <code>MonLvlEx(H)</code> when present, then falls back to <code>MonLvl(H)</code>. Champions are shown as area level +2 and uniques as area level +3, so top-tier capable means unique monsters can reach level 90 or higher.</p>
-  <p>Density is the table-derived <code>MonDen(H)</code> value. It is useful as a relative spawn-density signal, not an exact monsters-per-run count. Immunities are inherent monster resistances from <code>monstats.txt</code> where the Hell resistance is at least 100.</p>
-  <p>Chunk data comes from <code>lvlmaze.txt</code> when a maze row exists, using Hell room count times chunk width and height. Areas without a maze row fall back to <code>levels.txt</code> size columns. This is a rough layout footprint for comparison, not a simulated monster count.</p>
-  <p>Super chest potential is derived from <code>objects.txt</code>, <code>lvlprest.txt</code>, and DS1 layout files. BK layout overrides are checked first, then the local retail extract at <code>E:\Games\Diablo II Resurrected\Data</code> fills in base game layouts. For randomized outdoor chunks, this means an area can roll a matching preset, not that every map seed guarantees that chest.</p>
+  <p class="muted">Generated from BK's <code>levels.txt</code> and <code>monstats.txt</code>. Hell area level uses <code>MonLvlEx(H)</code> when present, then falls back to <code>MonLvl(H)</code>. Champions are area level +2, uniques +3 — so top-tier capable means uniques can reach level 90 or higher. Density is <code>MonDen(H)</code>, useful as a relative signal rather than an exact count. Chunk data comes from <code>lvlmaze.txt</code> when available. Super chest potential is derived from <code>objects.txt</code>, <code>lvlprest.txt</code>, and DS1 layout files.</p>
 </section>
 {% endblock %}

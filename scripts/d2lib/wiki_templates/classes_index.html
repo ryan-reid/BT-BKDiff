@@ -1,22 +1,22 @@
 {% extends "base.html" %}
-{% from "components.html" import hero %}
+{% block title %}Classes | {{ new_label }} Wiki{% endblock %}
+{% block nav_classes %} class="is-active"{% endblock %}
 {% block content %}
-{{ hero(
-  "Generated Class Index",
-  "Classes",
-  "Class pages mirror the current skill tree export and present generated effect tables in a website format.",
-  [{"label": "Skill Tables", "tone": "accent"}]
-) }}
-<section class="content-section">
-  <input id="page-search" class="search-input" type="search" placeholder="Search classes or skill names..." />
-  <div class="card-grid class-grid">
-    {% for entry in classes %}
-    <a class="item-card" href="{{ site_root }}{{ entry.href }}" data-search="{{ entry.search_text }}">
-      <span class="item-card-family">Class</span>
-      <h3>{{ entry.title }}</h3>
-      <p>{{ entry.summary }}</p>
-    </a>
-    {% endfor %}
-  </div>
+<section class="hero">
+  <span class="hero-eyebrow">Class Reference</span>
+  <h1>Classes</h1>
+  <p class="hero-copy">Skill trees built from the current skill tree export.</p>
 </section>
+
+<input id="page-search" class="search-input" type="search" placeholder="Search classes or skill names…" style="margin-bottom:18px" />
+
+<div class="portal-grid">
+  {% for entry in classes %}
+  <a class="portal" href="{{ site_root }}{{ entry.href }}" data-search="{{ entry.search_text }}">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-class"/></svg></span>
+    <h3>{{ entry.title }}</h3>
+    <p>{{ entry.summary }}</p>
+  </a>
+  {% endfor %}
+</div>
 {% endblock %}

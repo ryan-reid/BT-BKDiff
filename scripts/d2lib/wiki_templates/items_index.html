@@ -1,59 +1,62 @@
 {% extends "base.html" %}
-{% from "components.html" import hero %}
+{% block title %}All Items | {{ new_label }} Wiki{% endblock %}
+{% block nav_items %} class="is-active"{% endblock %}
 {% block content %}
-{{ hero(
-  "Generated Item Index",
-  "All Items",
-  "Search across unique and set item pages. Runewords have their own page with rune requirements.",
-  [
-    {"label": "Searchable", "tone": "default"},
-    {"label": "JSON Index", "tone": "accent"},
-  ]
-) }}
-<section class="content-section">
-  <div class="toolbar" data-item-index-url="{{ site_root }}data/items-index.json">
-    <input id="page-search" class="search-input" type="search" placeholder="Search items, base types, categories, or runes..." />
-    <div class="filter-row">
-      <button class="filter-button is-active" data-filter-family="all">All</button>
-      <button class="filter-button" data-filter-family="unique">Unique</button>
-      <button class="filter-button" data-filter-family="set">Set</button>
-    </div>
-    <div class="filter-row">
-      <button class="filter-button is-active" data-filter-status="all">All Statuses</button>
-      <button class="filter-button" data-filter-status="modified">Modified</button>
-      <button class="filter-button" data-filter-status="added">BK Only</button>
-      <button class="filter-button" data-filter-status="unchanged">Unchanged</button>
-    </div>
-    <div class="filter-row filter-row-stacked">
-      <label class="filter-select-wrap" for="item-group-filter">
-        <span class="filter-label">Item Group</span>
-        <select id="item-group-filter" class="filter-select">
-          <option value="all">All Item Groups</option>
-          {% for group in item_groups %}
-          <option value="{{ group.name }}">{{ group.name }}</option>
-          {% endfor %}
-        </select>
+<section class="hero">
+  <span class="hero-eyebrow">Item Database</span>
+  <h1>Items</h1>
+  <p class="hero-copy">Unique and set item pages. Runewords have their own section.</p>
+</section>
+
+<div class="index-layout">
+  <!-- filter rail -->
+  <aside class="filters" aria-label="Item filters">
+    <div class="filter-block">
+      <h4>Quality</h4>
+      <label class="facet" style="color:var(--q-unique)">
+        <input type="checkbox" checked data-filter-family="unique"> <span class="dot"></span>
+        Unique <span class="tally">{{ family_counts.unique }}</span>
       </label>
-      <label class="filter-select-wrap" for="item-type-filter">
-        <span class="filter-label">Item Type</span>
-        <select id="item-type-filter" class="filter-select">
-          <option value="all">All Item Types</option>
-          {% for group in item_groups %}
-          <optgroup label="{{ group.name }}">
-            {% for item_type in group.types %}
-            <option value="{{ item_type }}">{{ item_type }}</option>
-            {% endfor %}
-          </optgroup>
-          {% endfor %}
-        </select>
+      <label class="facet" style="color:var(--q-set)">
+        <input type="checkbox" checked data-filter-family="set"> <span class="dot"></span>
+        Set <span class="tally">{{ family_counts.set }}</span>
       </label>
     </div>
-  </div>
-</section>
-<section class="content-section">
-  <div class="section-head"><h2>Item Pages</h2><p>{{ family_counts.unique + family_counts.set }} generated pages</p></div>
-  <div id="item-index-root" class="item-index-root">
-    <p class="muted">Loading item index...</p>
-  </div>
-</section>
+    <div class="filter-block">
+      <h4>Item Group</h4>
+      <select id="item-group-filter" class="filter-select" style="width:100%">
+        <option value="all">All Groups</option>
+        {% for group in item_groups %}
+        <option value="{{ group.name }}">{{ group.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="filter-block">
+      <h4>Item Type</h4>
+      <select id="item-type-filter" class="filter-select" style="width:100%">
+        <option value="all">All Types</option>
+        {% for group in item_groups %}
+        <optgroup label="{{ group.name }}">
+          {% for item_type in group.types %}
+          <option value="{{ item_type }}">{{ item_type }}</option>
+          {% endfor %}
+        </optgroup>
+        {% endfor %}
+      </select>
+    </div>
+  </aside>
+
+  <!-- results -->
+  <main>
+    <div class="toolbar" data-item-index-url="{{ site_root }}data/items-index.json" style="margin-bottom:16px">
+      <input id="page-search" class="search-input" type="search" placeholder="Search items, base types, or categories…" />
+    </div>
+    <div class="results-bar">
+      <span class="count"><b>{{ family_counts.unique + family_counts.set }}</b> item pages</span>
+    </div>
+    <div id="item-index-root" class="loot-grid">
+      <p class="muted">Loading item index…</p>
+    </div>
+  </main>
+</div>
 {% endblock %}

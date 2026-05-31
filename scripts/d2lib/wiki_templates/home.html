@@ -1,48 +1,106 @@
 {% extends "base.html" %}
-{% from "components.html" import hero %}
+{% block nav_home %} class="is-active"{% endblock %}
 {% block content %}
-{{ hero(
-  new_label ~ " Data Wiki",
-  "Static site snapshot of the current data exports",
-  "Generated from the project analyzers and skill exports so the wiki can be browsed like a real site instead of a pile of markdown files.",
-  [
-    {"label": "HTML", "tone": "default"},
-    {"label": "CSS", "tone": "default"},
-    {"label": "JavaScript", "tone": "default"},
-    {"label": "Static Site", "tone": "accent"},
-  ]
-) }}
-<section class="metric-grid">
-  <article class="metric-card"><span>Unique Pages</span><strong>{{ item_counts.unique }}</strong></article>
-  <article class="metric-card"><span>Set Pages</span><strong>{{ item_counts.set }}</strong></article>
-  <article class="metric-card"><span>Runeword Pages</span><strong>{{ item_counts.runeword }}</strong></article>
-  <article class="metric-card"><span>Hell Areas</span><strong>{{ area_count }}</strong></article>
-  <article class="metric-card"><span>Class Pages</span><strong>{{ class_count }}</strong></article>
-  <article class="metric-card"><span>Base Families</span><strong>{{ base_family_count }}</strong></article>
-  <article class="metric-card"><span>Cube Recipes</span><strong>{{ recipe_count }}</strong></article>
-  <article class="metric-card"><span>Monsters</span><strong>{{ monster_count }}</strong></article>
-  <article class="metric-card"><span>Materials</span><strong>{{ misc_count }}</strong></article>
-  <article class="metric-card"><span>Gems & Runes</span><strong>{{ gem_rune_count }}</strong></article>
-  <article class="metric-card"><span>Weighted Drop Pools</span><strong>{{ drop_weight_count }}</strong></article>
-  <article class="metric-card"><span>Total Item Pages</span><strong>{{ total_items }}</strong></article>
+<section class="hero">
+  <span class="hero-eyebrow">Mod by Baron &amp; Kex &middot; Single Player</span>
+  <h1>{{ new_label }} Wiki</h1>
+  <p class="hero-copy">Reference for BKDiablo — uniques, runewords, cube recipes, the bestiary, class skill trees, and endgame farming routes.</p>
 </section>
-<section class="card-grid three-up">
-  <a class="link-card" href="items/"><h3>All Items</h3><p>Browse unique and set item pages with quick search and family filters.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="runewords/"><h3>Runewords</h3><p>Browse runewords by required runes, base item categories, and generated properties.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="bases/"><h3>Base Items</h3><p>Browse Armor and Weapons, including Normal, Exceptional, and Elite families.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="recipes/"><h3>Cube Recipes</h3><p>Discover new crafting systems, item upgrades, and rune transmutations.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="bestiary/"><h3>Bestiary</h3><p>Browse monsters, their stats across difficulties, and Hell immunities.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="misc/"><h3>Materials</h3><p>Browse crafting tablets, shards, essences, keys, uber materials, and utility items.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="gems-runes/"><h3>Gems & Runes</h3><p>Inspect socketable effects, ascended gem tiers, rune progression, and changed rune stats.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="mechanics/"><h3>Mechanics</h3><p>Overview of fundamental changes to experience gain and difficulty scaling.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="drops/"><h3>Drops</h3><p>Compare weighted unique and set candidates that share the same base item.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="areas/"><h3>Areas</h3><p>Compare Hell farming areas by level, density, elite packs, and monster immunities.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="classes/"><h3>Classes</h3><p>Open class skill pages built from the current skill tree exports.</p><span class="link-card-cta">Open page</span></a>
-  <a class="link-card" href="reports/"><h3>Reports</h3><p>Open the generated item and raw Excel diff reports as browser-friendly pages.</p><span class="link-card-cta">Open page</span></a>
+
+<div class="stat-strip">
+  <div class="stat-cell"><strong>{{ item_counts.unique }}</strong><span>Unique Items</span></div>
+  <div class="stat-cell"><strong>{{ item_counts.runeword }}</strong><span>Runewords</span></div>
+  <div class="stat-cell"><strong>{{ recipe_count }}</strong><span>Cube Recipes</span></div>
+  <div class="stat-cell"><strong>{{ area_count }}</strong><span>Farming Areas</span></div>
+</div>
+
+<div class="portal-grid">
+  <a class="portal" href="{{ site_root }}items/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-armor"/></svg></span>
+    <h3>Items</h3>
+    <p>Unique and set items with stats and properties.</p>
+    <span class="portal-count">{{ item_counts.unique + item_counts.set }} pages</span>
+  </a>
+  <a class="portal" href="{{ site_root }}runewords/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-rune"/></svg></span>
+    <h3>Runewords</h3>
+    <p>Rune order, required bases, and generated properties.</p>
+    <span class="portal-count">{{ item_counts.runeword }} runewords</span>
+  </a>
+  <a class="portal" href="{{ site_root }}sets/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-ring"/></svg></span>
+    <h3>Sets</h3>
+    <p>Complete set listings with piece stats and set bonuses.</p>
+    <span class="portal-count">{{ item_counts.set }} set items</span>
+  </a>
+  <a class="portal" href="{{ site_root }}bases/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-helm"/></svg></span>
+    <h3>Base Items</h3>
+    <p>Armor and weapons across Normal, Exceptional, and Elite tiers.</p>
+    <span class="portal-count">{{ base_family_count }} families</span>
+  </a>
+  <a class="portal" href="{{ site_root }}recipes/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+    <h3>Cube Recipes</h3>
+    <p>Crafting, corruptions, upgrades, and rune transmutations.</p>
+    <span class="portal-count">{{ recipe_count }} recipes</span>
+  </a>
+  <a class="portal" href="{{ site_root }}bestiary/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-skull"/></svg></span>
+    <h3>Bestiary</h3>
+    <p>Monster stats, Hell resistances, and immunities by area.</p>
+    <span class="portal-count">{{ monster_count }} monsters</span>
+  </a>
+  <a class="portal" href="{{ site_root }}classes/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-class"/></svg></span>
+    <h3>Classes</h3>
+    <p>Skill trees with level-by-level effect scaling.</p>
+    <span class="portal-count">{{ class_count }} classes</span>
+  </a>
+  <a class="portal" href="{{ site_root }}areas/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-map"/></svg></span>
+    <h3>Farming Areas</h3>
+    <p>Density, area level, elites, and super-chest routes ranked by score.</p>
+    <span class="portal-count">{{ area_count }} areas</span>
+  </a>
+  <a class="portal" href="{{ site_root }}gems-runes/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-gem"/></svg></span>
+    <h3>Gems &amp; Runes</h3>
+    <p>Socketable effects, ascended gem tiers, and rune progression.</p>
+    <span class="portal-count">{{ gem_rune_count }} items</span>
+  </a>
+  <a class="portal" href="{{ site_root }}misc/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-book"/></svg></span>
+    <h3>Materials</h3>
+    <p>Crafting tablets, shards, essences, keys, and uber materials.</p>
+    <span class="portal-count">{{ misc_count }} items</span>
+  </a>
+  <a class="portal" href="{{ site_root }}mechanics/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+    <h3>Mechanics</h3>
+    <p>Experience, difficulty scaling, and core game system changes.</p>
+    <span class="portal-count">Progression</span>
+  </a>
+  <a class="portal" href="{{ site_root }}drops/">
+    <span class="portal-icon"><svg aria-hidden="true"><use href="#i-drop"/></svg></span>
+    <h3>Drops</h3>
+    <p>Weighted unique and set candidates sharing the same base item.</p>
+    <span class="portal-count">Drop tables</span>
+  </a>
+</div>
+
+{% if reports %}
+<section class="content-section">
+  <div class="section-head"><h2>Generated Reports</h2></div>
+  <div class="card-grid two-up">
+    {% for report in reports %}
+    <a class="link-card" href="{{ report.href }}">
+      <h3>{{ report.title }}</h3>
+      <p>{{ report.summary }}</p>
+      <span class="link-card-cta">Open report →</span>
+    </a>
+    {% endfor %}
+  </div>
 </section>
-<section class="card-grid two-up">
-  {% for report in reports %}
-  <a class="link-card" href="{{ report.href }}"><h3>{{ report.title }}</h3><p>{{ report.summary }}</p><span class="link-card-cta">Open report</span></a>
-  {% endfor %}
-</section>
+{% endif %}
 {% endblock %}

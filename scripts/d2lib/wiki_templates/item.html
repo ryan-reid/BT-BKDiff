@@ -1,135 +1,65 @@
 {% extends "base.html" %}
-{% from "components.html" import hero %}
+{% block title %}{{ page.title }} | {{ new_label }} Wiki{% endblock %}
 {% block content %}
+
 {% if page.family == "runeword" %}
+{# ─────────────── RUNEWORD DETAIL ─────────────── #}
+<p class="breadcrumb">
+  <a href="{{ site_root }}">Home</a><span class="sep">/</span>
+  <a href="{{ site_root }}runewords/">Runewords</a><span class="sep">/</span>
+  <span>{{ page.title }}</span>
+</p>
+
 <section class="runeword-title-bar">
   <p>{{ page.hero_eyebrow }}</p>
   <h1>{{ page.title }}</h1>
 </section>
+
 <section class="runeword-detail-layout">
   <section class="runeword-sheet">
     <div class="runeword-sheet-header">
       <div class="runeword-rune-box">
         <h2>{{ page.title }}</h2>
-      {% if page.rune_requirements %}
+        {% if page.rune_requirements %}
         <div class="rune-sequence rune-sequence-detail" aria-label="{{ page.title }} rune sequence">
-        {% for rune in page.rune_requirements %}
+          {% for rune in page.rune_requirements %}
           <span class="rune-chip rune-chip-large" title="{{ rune.name }}">
-          {% if rune.icon_src %}
+            {% if rune.icon_src %}
             <img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }} icon" />
-          {% endif %}
+            {% endif %}
             <span>{{ rune.name }}</span>
           </span>
-        {% endfor %}
+          {% endfor %}
         </div>
-      {% else %}
-        <p class="muted">No rune sequence was found for this runeword.</p>
-      {% endif %}
+        {% else %}
+        <p class="muted">No rune sequence data for this runeword.</p>
+        {% endif %}
       </div>
       <div class="runeword-meta-box">
+        {% if page.stats %}
         <p><strong>Bases:</strong> <a href="{{ site_root }}{{ page.base_filter_url }}">{{ page.stats[0].value }}</a></p>
-        {% if page.old_base_label and page.old_base_label != page.stats[0].value %}
-        <p class="runeword-meta-subtle">(was {{ page.old_base_label }})</p>
+        {% if page.stats|length > 1 %}
+        <p><strong>Sockets:</strong> {{ page.stats[1].value }}</p>
+        {% endif %}
         {% endif %}
         {% if page.required_level %}
         <p><strong>Required level:</strong> {{ page.required_level }}</p>
         {% endif %}
-        <p><strong>Sockets:</strong> {{ page.stats[1].value }}</p>
       </div>
     </div>
 
-    <div class="runeword-before-after" role="table" aria-label="{{ page.title }} before and after comparison">
-      <div class="runeword-table-head" role="columnheader">Before</div>
-      <div class="runeword-table-head" role="columnheader">After</div>
-      {% if page.runeword_compare_rows %}
-        {% for row in page.runeword_compare_rows %}
-        {% if row.status == "separator" %}
-        <div class="runeword-table-separator" role="rowheader">Rune properties</div>
-        {% else %}
-        <div class="runeword-table-cell is-{{ row.status }}" role="cell">
-          {% if row.old %}{{ row.old }}{% else %}<span class="muted">(empty)</span>{% endif %}
-        </div>
-        <div class="runeword-table-cell is-{{ row.status }}" role="cell">
-          {% if row.new %}{{ row.new }}{% elif row.old %}<span class="muted">(removed)</span>{% else %}<span class="muted">(empty)</span>{% endif %}
-        </div>
-        {% endif %}
-        {% endfor %}
-      {% else %}
+    <div style="padding:20px">
+      <p class="section-kicker">Properties</p>
+      {% if page.properties %}
+      <ul class="property-list">
         {% for prop in page.properties %}
-        <div class="runeword-table-cell is-added" role="cell"><span class="muted">(empty)</span></div>
-        <div class="runeword-table-cell is-added" role="cell">{{ prop.text }}</div>
+        <li class="property-entry{% if prop.is_warning %} is-warning{% endif %}">{{ prop.text }}</li>
         {% endfor %}
+      </ul>
+      {% else %}
+      <p class="muted">No properties found.</p>
       {% endif %}
     </div>
-  </section>
-
-</section>
-{% else %}
-<section class="runeword-title-bar">
-  <p>{{ page.hero_eyebrow }}</p>
-  <h1>{{ page.title }}</h1>
-</section>
-
-<section class="runeword-detail-layout">
-  <section class="runeword-sheet">
-    <div class="runeword-sheet-header">
-      <div class="runeword-rune-box">
-        {% if page.icon_src %}
-        <div class="item-detail-icon-wrap" style="margin-bottom: 0;">
-          <img class="wiki-item-icon item-detail-icon" src="{{ site_root }}{{ page.icon_src }}" alt="{{ page.title }} icon" style="max-height: 120px;" />
-        </div>
-        {% endif %}
-        <h2 style="margin-top: 10px;">{{ page.title }}</h2>
-      </div>
-      <div class="runeword-meta-box">
-        {% for stat in page.stats %}
-        <p><strong>{{ stat.label }}:</strong> {{ stat.value }}</p>
-        {% endfor %}
-      </div>
-    </div>
-
-    {% if page.comparison.state != "added" %}
-    <div class="runeword-before-after" role="table" aria-label="{{ page.title }} before and after comparison">
-      <div class="runeword-table-head" role="columnheader">{{ old_label }} (Old)</div>
-      <div class="runeword-table-head" role="columnheader">{{ new_label }} (New)</div>
-      
-      {# Stat Rows #}
-      {% for row in page.comparison.stat_rows %}
-      <div class="runeword-table-cell is-{{ row.status }}" role="cell">
-        <strong>{{ row.label }}:</strong> {{ row.old or "empty" }}
-      </div>
-      <div class="runeword-table-cell is-{{ row.status }}" role="cell">
-        <strong>{{ row.label }}:</strong> {{ row.new or "empty" }}
-      </div>
-      {% endfor %}
-
-      <div class="runeword-table-separator" role="rowheader">Properties</div>
-
-      {# Property Rows #}
-      {% for row in page.comparison.property_rows %}
-      <div class="runeword-table-cell is-{{ row.status }}">
-        {% if row.label and ("(With" in row.label or ("Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label)) %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "(empty)" }}
-      </div>
-      <div class="runeword-table-cell is-{{ row.status }}">
-        {% if row.label and ("(With" in row.label or ("Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label)) %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new or "(removed)" }}
-      </div>
-      {% endfor %}
-
-    </div>
-    {% else %}
-    <div style="padding: 24px;">
-      <h3 class="section-kicker">Properties</h3>
-      <ul class="property-list">
-        {% if page.properties %}
-          {% for prop in page.properties %}
-          <li class="property-entry{% if prop.is_warning %} is-warning{% endif %}">{{ prop.text }}</li>
-          {% endfor %}
-        {% else %}
-          <li class="is-empty">No generated properties were found for this record.</li>
-        {% endif %}
-      </ul>
-    </div>
-    {% endif %}
   </section>
 
   {% if page.rune_properties %}
@@ -149,10 +79,74 @@
     </ul>
   </section>
   {% endif %}
-
-  <section class="content-section" style="box-shadow: none; background: transparent; border: 0; padding: 0;">
-    <p class="muted">Structured export path: <code>{{ page.source_rel_path }}</code></p>
-  </section>
 </section>
+
+{% else %}
+{# ─────────────── UNIQUE / SET DETAIL ─────────────── #}
+<p class="breadcrumb">
+  <a href="{{ site_root }}">Home</a><span class="sep">/</span>
+  <a href="{{ site_root }}items/">Items</a><span class="sep">/</span>
+  <span>{{ page.title }}</span>
+</p>
+
+<div class="detail">
+  <!-- LEFT: D2 tooltip card -->
+  <aside class="tooltip q-{{ page.family }}" aria-label="{{ page.title }} item tooltip">
+    {% if page.icon_src %}
+    <div class="tooltip-art">
+      <img src="{{ site_root }}{{ page.icon_src }}" alt="{{ page.title }} icon" />
+    </div>
+    {% else %}
+    <div class="tooltip-art">
+      <svg aria-hidden="true"><use href="#i-armor"/></svg>
+    </div>
+    {% endif %}
+    <div class="tt-name">{{ page.title }}</div>
+    <div class="tt-base">{{ page.hero_eyebrow }}</div>
+    {% if page.stats %}
+    <div class="tt-rule"></div>
+    <ul class="tt-stats">
+      {% for stat in page.stats %}
+      <li class="meta"><strong>{{ stat.label }}:</strong> {{ stat.value }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if page.properties %}
+    <div class="tt-rule"></div>
+    <ul class="tt-stats">
+      {% for prop in page.properties %}
+      <li{% if prop.is_warning %} class="req"{% endif %}>{{ prop.text }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </aside>
+
+  <!-- RIGHT: base stats -->
+  <div class="detail-main">
+    <div>
+      <div class="detail-title">
+        <h1>{{ page.title }}</h1>
+        <span class="pill {{ page.family }}">{{ page.family|capitalize }}</span>
+      </div>
+      <p class="muted">{{ page.hero_eyebrow }}</p>
+    </div>
+
+    {% if page.stats %}
+    <section class="panel">
+      <h2><svg aria-hidden="true"><use href="#i-info"/></svg>Item Stats</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Property</th><th>Value</th></tr></thead>
+          <tbody>
+            {% for stat in page.stats %}
+            <tr><td>{{ stat.label }}</td><td>{{ stat.value }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    {% endif %}
+  </div>
+</div>
 {% endif %}
 {% endblock %}

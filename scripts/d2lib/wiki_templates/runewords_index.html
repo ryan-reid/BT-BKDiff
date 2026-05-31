@@ -1,51 +1,41 @@
 {% extends "base.html" %}
-
 {% block title %}Runewords | {{ new_label }} Wiki{% endblock %}
-
+{% block nav_runewords %} class="is-active"{% endblock %}
 {% block content %}
 <section class="hero">
-  <p class="hero-eyebrow">Rune Planning</p>
+  <span class="hero-eyebrow">Rune Planning</span>
   <h1>Runewords</h1>
-  <p class="hero-copy">Browse runewords by required rune sequence, base item category, and generated properties.</p>
+  <p class="hero-copy">Browse runewords by required rune sequence, base item category, and properties.</p>
 </section>
 
-<section class="content-section">
-  <input id="page-search" class="search-input" type="search" placeholder="Search runewords, runes, bases, or properties..." />
+<input id="page-search" class="search-input" type="search" placeholder="Search runewords, runes, bases, or properties…" style="margin-bottom:18px" />
 
-  <div class="runeword-grid">
-    {% for runeword in runewords %}
-    <a class="runeword-card item-card" href="{{ site_root }}{{ runeword.href }}" data-search="{{ runeword.search_text }}">
-      <div class="item-card-meta">
-        <span class="item-card-family">Runeword</span>
-        {% if runeword.status == "added" %}
-        <span class="item-card-status is-added">BK Only</span>
-        {% elif runeword.status == "modified" %}
-        <span class="item-card-status is-modified">Modified</span>
-        {% endif %}
-      </div>
-      <h2>{{ runeword.title }}</h2>
-      <p class="runeword-base">{{ runeword.base_items|join(', ') }}</p>
-
-      <div class="rune-sequence" aria-label="{{ runeword.title }} rune sequence">
+<div class="loot-grid">
+  {% for runeword in runewords %}
+  <a class="loot q-runeword" href="{{ site_root }}{{ runeword.href }}" data-search="{{ runeword.search_text }}">
+    <span class="loot-icon"><svg aria-hidden="true"><use href="#i-rune"/></svg></span>
+    <span>
+      <span class="loot-name">{{ runeword.title }}</span>
+      <span class="loot-base">{{ runeword.base_items|join(', ') }}</span>
+      {% if runeword.runes %}
+      <div class="rune-sequence" aria-label="{{ runeword.title }} rune sequence" style="margin-top:8px;justify-content:flex-start">
         {% for rune in runeword.runes %}
         <span class="rune-chip" title="{{ rune.name }}">
-          {% if rune.icon_src %}
-          <img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }} icon" />
-          {% endif %}
+          {% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }} icon" />{% endif %}
           <span>{{ rune.name }}</span>
         </span>
         {% endfor %}
       </div>
-
+      {% endif %}
       {% if runeword.properties %}
       <ul class="runeword-property-preview">
-        {% for property in runeword.properties %}
+        {% for property in runeword.properties[:3] %}
         <li>{{ property }}</li>
         {% endfor %}
       </ul>
       {% endif %}
-    </a>
-    {% endfor %}
-  </div>
-</section>
+    </span>
+  </a>
+  {% endfor %}
+</div>
 {% endblock %}

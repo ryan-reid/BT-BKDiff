@@ -888,9 +888,7 @@ class TestWikiGenerator(unittest.TestCase):
             runewords_index_page = f.read()
 
         self.assertIn("Twin Item", item_page)
-        self.assertIn("BKDiablo Data Wiki", item_page)
-        self.assertIn("Retail (Old)", item_page)
-        self.assertIn("BKDiablo (New)", item_page)
+        self.assertIn("BKDiablo Wiki", item_page)
         self.assertIn('href="../../../areas/"', item_page)
         self.assertIn('href="../../../reports/"', item_page)
         self.assertIn('data-item-index-url="../data/items-index.json"', items_page)
@@ -919,9 +917,7 @@ class TestWikiGenerator(unittest.TestCase):
 
         with open(os.path.join(self.output, "recipes", "index.html"), "r", encoding="utf-8") as f:
             recipes_page = f.read()
-        self.assertIn("BK Only", recipes_page)
         self.assertIn("Removed Retail Recipes", recipes_page)
-        self.assertIn("Retail Removed", recipes_page)
         self.assertIn("Classic Crafting", recipes_page)
         self.assertIn("Material Upgrades &amp; Conversions", recipes_page)
         self.assertIn("30%", recipes_page)
@@ -963,9 +959,7 @@ class TestWikiGenerator(unittest.TestCase):
 
         with open(os.path.join(self.output, "items", "runeword", "practice", "index.html"), "r", encoding="utf-8") as f:
             runeword_page = f.read()
-        self.assertIn("Before", runeword_page)
-        self.assertIn("After", runeword_page)
-        self.assertIn("Rune properties", runeword_page)
+        self.assertIn("Properties", runeword_page)
         self.assertIn("rune-chip-icon", runeword_page)
         self.assertIn("Tal Rune", runeword_page)
         self.assertIn("Eth Rune", runeword_page)
@@ -982,7 +976,7 @@ class TestWikiGenerator(unittest.TestCase):
             (os.path.join("bestiary", "index.html"), "Monster Bestiary"),
             (os.path.join("misc", "index.html"), "Materials"),
             (os.path.join("gems-runes", "index.html"), "Gems &amp; Runes"),
-            (os.path.join("mechanics", "index.html"), "Mechanics &amp; Progression"),
+            (os.path.join("mechanics", "index.html"), "Mechanics"),
             (os.path.join("drops", "index.html"), "Drops"),
         ]:
             with open(os.path.join(self.output, relative_path), "r", encoding="utf-8") as f:

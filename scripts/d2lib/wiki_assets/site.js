@@ -22,35 +22,26 @@ function escapeHtml(value) {
 }
 
 function itemCardMarkup(item, siteRoot) {
-  const familyLabel = item.family.charAt(0).toUpperCase() + item.family.slice(1);
+  const qualityClass = item.family === "set" ? "q-set" : "q-unique";
   const iconMarkup = item.icon_src
     ? `<img class="wiki-item-icon item-card-icon" src="${escapeHtml(siteRoot + item.icon_src)}" alt="${escapeHtml(item.title)} icon" />`
+    : `<svg aria-hidden="true"><use href="#i-armor"/></svg>`;
+  const propsMarkup = item.properties && item.properties.length
+    ? `<ul class="runeword-property-preview">${item.properties.map((p) => `<li>${escapeHtml(p)}</li>`).join("")}</ul>`
     : "";
   return `
-    <a class="item-card" href="${escapeHtml(siteRoot + item.href)}"
+    <a class="loot item-card ${qualityClass}" href="${escapeHtml(siteRoot + item.href)}"
       data-family="${escapeHtml(item.family)}"
       data-status="${escapeHtml(item.status)}"
       data-item-group="${escapeHtml(item.item_group)}"
       data-item-type="${escapeHtml(item.item_type)}"
       data-search="${escapeHtml(item.search_text)}">
-      <div class="item-card-meta">
-        <span class="item-card-family">${escapeHtml(familyLabel)}</span>
-        ${statusLabel(item.status)}
-      </div>
-      <div class="item-card-main">
-        ${iconMarkup}
-        <div>
-          <h3>${escapeHtml(item.title)}</h3>
-          <p>${escapeHtml(item.summary)}</p>
-          ${
-            item.properties && item.properties.length
-              ? `<ul class="runeword-property-preview">
-                  ${item.properties.map((p) => `<li>${escapeHtml(p)}</li>`).join("")}
-                 </ul>`
-              : ""
-          }
-        </div>
-      </div>
+      <span class="loot-icon">${iconMarkup}</span>
+      <span>
+        <span class="loot-name">${escapeHtml(item.title)}</span>
+        <span class="loot-base">${escapeHtml(item.summary)}</span>
+        ${propsMarkup}
+      </span>
     </a>
   `;
 }
@@ -69,16 +60,26 @@ function areaBadgeMarkup(area) {
   return badges.join("");
 }
 
+const IMMUNITY_CLASS = {
+  fire: "im-fire",
+  cold: "im-cold",
+  lightning: "im-lightning",
+  poison: "im-poison",
+  physical: "im-physical",
+  magic: "im-magic",
+};
+
 function areaImmunityMarkup(area) {
   if (!area.possible_immunities || area.possible_immunities.length === 0) {
-    return '<span class="muted">None flagged</span>';
+    return '<span class="muted">—</span>';
   }
   return area.possible_immunities
     .map((immunity) => {
       const count = area.immunity_counts && area.immunity_counts[immunity]
         ? ` (${area.immunity_counts[immunity]})`
         : "";
-      return `<span class="immunity-chip">${escapeHtml(immunity)}${escapeHtml(count)}</span>`;
+      const cls = IMMUNITY_CLASS[immunity.toLowerCase()] || "";
+      return `<span class="immunity-chip ${cls}">${escapeHtml(immunity)}${escapeHtml(count)}</span>`;
     })
     .join("");
 }
@@ -406,9 +407,9 @@ async function wireItemIndex() {
     .map(([family, label]) => {
       const familyItems = items.filter((item) => item.family === family);
       return `
-        <section class="item-family-section" data-section-family="${family}">
-          <div class="section-head"><h2>${label}</h2><p>${familyItems.length} generated pages</p></div>
-          <div class="card-grid item-grid">
+        <section class="item-family-section" data-section-family="${family}" style="display:grid;gap:12px">
+          <div class="section-head"><h2>${label}</h2><p>${familyItems.length} pages</p></div>
+          <div class="loot-grid">
             ${familyItems.map((item) => itemCardMarkup(item, siteRoot)).join("")}
           </div>
         </section>

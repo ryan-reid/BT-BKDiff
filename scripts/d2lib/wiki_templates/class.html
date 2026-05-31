@@ -1,54 +1,83 @@
 {% extends "base.html" %}
-{% from "components.html" import hero %}
+{% block title %}{{ page.class_name }} | {{ new_label }} Wiki{% endblock %}
+{% block nav_classes %} class="is-active"{% endblock %}
 {% block content %}
-{{ hero(
-  "Generated Class Page",
-  page.class_name,
-  page.skills|length ~ " skills sourced from the current skill tree export.",
-  [{"label": "Class Skills", "tone": "accent"}]
-) }}
-<section class="content-section">
-  <h2>Skill Navigation</h2>
-  <div class="jump-grid">
-    {% for skill in page.skills %}
-    <a class="jump-link" href="#{{ skill.slug }}">{{ skill.name }}</a>
-    {% endfor %}
-  </div>
+<section class="hero">
+  <span class="hero-eyebrow">Class Skills</span>
+  <h1>{{ page.class_name }}</h1>
+  <p class="hero-copy">{{ page.skills|length }} skills from the current skill tree export.</p>
 </section>
-{% for skill in page.skills %}
-<section class="skill-card" id="{{ skill.slug }}">
-  <div class="skill-card-head"><h3>{{ skill.name }}</h3></div>
-  {% if skill.work_in_progress %}
-  <p class="callout">Work in Progress: values are generated from the current parsing and calculation pipeline.</p>
-  {% endif %}
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Effect</th><th>Scaling</th><th>L1</th><th>L10</th><th>L20</th><th>L20+10</th><th>Limit</th></tr></thead>
-      <tbody>
-        {% for effect in skill.effects %}
-        <tr>
-          <td>{{ effect.effect }}</td>
-          <td>{{ effect.scaling }}</td>
-          <td>{{ effect.l1 }}</td>
-          <td>{{ effect.l10 }}</td>
-          <td>{{ effect.l20 }}</td>
-          <td>{{ effect.l20_soft10 }}</td>
-          <td>{{ effect.limit }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
-  {% if skill.synergies %}
-  <div class="synergy-box">
-    <h4>Synergies</h4>
-    <ul>
-      {% for synergy in skill.synergies %}
-      <li><strong>{{ synergy.name }}</strong>: {{ synergy.effect }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-</section>
-{% endfor %}
+
+{% if page.skills %}
+<div class="jump-grid" aria-label="Jump to skill">
+  {% for skill in page.skills %}
+  <a class="jump-link" href="#{{ skill.slug }}">{{ skill.name }}</a>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="skill-list">
+  {% for skill in page.skills %}
+  <details class="skill-card-outer" id="{{ skill.slug }}">
+    <summary class="skill-head">
+      <span class="skill-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+      <span class="skill-head-text">
+        <span class="skill-name">{{ skill.name }}</span>
+        {% if skill.work_in_progress %}
+        <span class="skill-oneliner" style="color:var(--faint)">Work in progress</span>
+        {% elif skill.effects %}
+        <span class="skill-oneliner">{{ skill.effects|length }} tracked effects</span>
+        {% endif %}
+      </span>
+      {% if skill.effects and not skill.work_in_progress %}
+      <span class="skill-level-pills">
+        <span class="slvl-pill">L1 <b>{{ skill.effects[0].l1 }}</b></span>
+        <span class="slvl-pill">L20 <b>{{ skill.effects[0].l20 }}</b></span>
+      </span>
+      {% endif %}
+    </summary>
+    <div class="skill-body">
+      {% if skill.work_in_progress %}
+      <p class="wip-note">Scaling data is still being compiled from the parsing pipeline.</p>
+      {% endif %}
+      {% if skill.effects %}
+      <div class="table-wrap">
+        <table class="scale-table">
+          <thead>
+            <tr><th>Effect</th><th>Scaling</th><th>L1</th><th>L10</th><th>L20</th><th>L20+10</th><th>Cap</th></tr>
+          </thead>
+          <tbody>
+            {% for effect in skill.effects %}
+            <tr>
+              <td>{{ effect.effect }}</td>
+              <td class="scale-note">{{ effect.scaling }}</td>
+              <td>{{ effect.l1 }}</td>
+              <td>{{ effect.l10 }}</td>
+              <td>{{ effect.l20 }}</td>
+              <td>{{ effect.l20_soft10 }}</td>
+              <td>{{ effect.limit }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+      {% if skill.synergies %}
+      <div>
+        <p class="section-kicker">Synergies</p>
+        <div class="synergy-row">
+          {% for syn in skill.synergies %}
+          <div class="synergy-chip">
+            <span class="syn-name">{{ syn.name }}</span>
+            <span class="syn-divider">&middot;</span>
+            <span class="syn-effect">{{ syn.effect }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </details>
+  {% endfor %}
+</div>
 {% endblock %}
