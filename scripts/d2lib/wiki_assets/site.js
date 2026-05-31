@@ -23,6 +23,9 @@ function escapeHtml(value) {
 
 function itemCardMarkup(item, siteRoot) {
   const familyLabel = item.family.charAt(0).toUpperCase() + item.family.slice(1);
+  const iconMarkup = item.icon_src
+    ? `<img class="wiki-item-icon item-card-icon" src="${escapeHtml(siteRoot + item.icon_src)}" alt="${escapeHtml(item.title)} icon" />`
+    : "";
   return `
     <a class="item-card" href="${escapeHtml(siteRoot + item.href)}"
       data-family="${escapeHtml(item.family)}"
@@ -34,8 +37,13 @@ function itemCardMarkup(item, siteRoot) {
         <span class="item-card-family">${escapeHtml(familyLabel)}</span>
         ${statusLabel(item.status)}
       </div>
+      <div class="item-card-main">
+        ${iconMarkup}
+        <div>
       <h3>${escapeHtml(item.title)}</h3>
       <p>${escapeHtml(item.summary)}</p>
+        </div>
+      </div>
     </a>
   `;
 }
@@ -139,7 +147,7 @@ function wireStaticSearch() {
   const tableRows = Array.from(document.querySelectorAll("tbody tr[data-search]"));
   const guideCards = Array.from(document.querySelectorAll(".guide-card[data-search]"));
   const sections = Array.from(document.querySelectorAll(".recipe-group-section, .misc-group-section"));
-  if (!searchInput || document.querySelector("[data-item-index-url]")) {
+  if (!searchInput || document.querySelector("[data-item-index-url]") || document.querySelector("[data-base-filters]")) {
     return;
   }
   if (cards.length === 0 && tableRows.length === 0 && guideCards.length === 0) {
@@ -163,6 +171,84 @@ function wireStaticSearch() {
       section.hidden = Boolean(query) && !sectionMatch && visibleRows === 0;
     });
   });
+}
+
+function wireBaseFilters() {
+  const toolbar = document.querySelector("[data-base-filters]");
+  if (!toolbar) {
+    return;
+  }
+
+  const searchInput = document.querySelector("#page-search");
+  const groupSelect = document.querySelector("#base-group-filter");
+  const categorySelect = document.querySelector("#base-category-filter");
+  const classSelect = document.querySelector("#base-class-filter");
+  const tierSelect = document.querySelector("#base-tier-filter");
+  const speedSelect = document.querySelector("#base-speed-filter");
+  const minSocketsSelect = document.querySelector("#base-min-sockets-filter");
+  const rollInput = document.querySelector("#base-roll-filter");
+  const twoHandedCheckbox = document.querySelector("#base-two-handed-filter");
+  const resultCount = document.querySelector("#base-result-count");
+  const families = Array.from(document.querySelectorAll(".family-card"));
+
+  function applyFilters() {
+    const query = normalizeText(searchInput ? searchInput.value : "");
+    const activeGroup = groupSelect ? groupSelect.value : "all";
+    const activeCategory = categorySelect ? categorySelect.value : "all";
+    const activeClass = classSelect ? classSelect.value : "all";
+    const activeTier = tierSelect ? tierSelect.value : "all";
+    const activeSpeed = speedSelect ? speedSelect.value : "all";
+    const minSockets = Number(minSocketsSelect ? minSocketsSelect.value : 0);
+    const rollQuery = normalizeText(rollInput ? rollInput.value : "");
+    const twoHandedOnly = Boolean(twoHandedCheckbox && twoHandedCheckbox.checked);
+    let visibleFamilies = 0;
+
+    families.forEach((family) => {
+      const familyGroup = family.dataset.baseGroup || "";
+      const familyClasses = normalizeText(family.dataset.baseClasses || "");
+      const familySearch = normalizeText(family.dataset.search || "");
+      const groupOk = activeGroup === "all" || familyGroup === activeGroup;
+      const classOk = activeClass === "all" || familyClasses.split(/\s+/).includes(normalizeText(activeClass));
+      const familySearchOk = !query || familySearch.includes(query);
+      const rows = Array.from(family.querySelectorAll("tbody tr[data-search]"));
+      let visibleRows = 0;
+
+      rows.forEach((row) => {
+        const rowSearch = normalizeText(row.dataset.search || "");
+        const rowCategories = normalizeText(row.dataset.typeCategories || "").split("|").filter(Boolean);
+        const searchOk = !query || familySearchOk || rowSearch.includes(query);
+        const categoryOk = activeCategory === "all" || rowCategories.includes(normalizeText(activeCategory));
+        const tierOk = activeTier === "all" || row.dataset.tier === activeTier;
+        const speedOk = activeSpeed === "all" || row.dataset.speedLabel === activeSpeed;
+        const socketsOk = !minSockets || Number(row.dataset.maxSockets || 0) >= minSockets;
+        const rollOk = !rollQuery || normalizeText(row.dataset.rollSearch || "").includes(rollQuery);
+        const twoHandedOk = !twoHandedOnly || row.dataset.twoHanded === "1";
+        const rowVisible = groupOk && classOk && categoryOk && searchOk && tierOk && speedOk && socketsOk && rollOk && twoHandedOk;
+        row.hidden = !rowVisible;
+        if (rowVisible) {
+          visibleRows += 1;
+        }
+      });
+
+      family.hidden = visibleRows === 0;
+      if (visibleRows > 0) {
+        visibleFamilies += 1;
+      }
+    });
+
+    if (resultCount) {
+      resultCount.textContent = String(visibleFamilies);
+    }
+  }
+
+  [searchInput, groupSelect, categorySelect, classSelect, tierSelect, speedSelect, minSocketsSelect, rollInput, twoHandedCheckbox]
+    .filter(Boolean)
+    .forEach((control) => {
+      control.addEventListener("input", applyFilters);
+      control.addEventListener("change", applyFilters);
+    });
+
+  applyFilters();
 }
 
 async function wireAreaIndex() {
@@ -249,7 +335,6 @@ async function wireItemIndex() {
   const familyLabels = {
     unique: "Unique Items",
     set: "Set Items",
-    runeword: "Runewords",
   };
 
   root.innerHTML = Object.entries(familyLabels)
@@ -347,6 +432,7 @@ async function wireItemIndex() {
 
 document.addEventListener("DOMContentLoaded", () => {
   wireStaticSearch();
+  wireBaseFilters();
   wireAreaIndex().catch((error) => {
     const root = document.querySelector("#area-index-root");
     if (root) {

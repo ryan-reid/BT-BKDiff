@@ -4,6 +4,11 @@
 {{ hero("Generated Item Page", page.title, page.summary, page.chips) }}
 <section class="page-grid">
   <aside class="info-panel">
+    {% if page.icon_src %}
+    <div class="item-detail-icon-wrap">
+      <img class="wiki-item-icon item-detail-icon" src="{{ site_root }}{{ page.icon_src }}" alt="{{ page.title }} icon" />
+    </div>
+    {% endif %}
     <h2>Quick Facts</h2>
     <dl class="stat-list">
       {% for stat in page.stats %}
@@ -38,6 +43,21 @@
       </div>
       {% endif %}
     </section>
+    {% if page.rune_requirements %}
+    <section class="content-section">
+      <h2>Required Runes</h2>
+      <div class="rune-sequence rune-sequence-detail" aria-label="{{ page.title }} rune sequence">
+        {% for rune in page.rune_requirements %}
+        <span class="rune-chip" title="{{ rune.name }}">
+          {% if rune.icon_src %}
+          <img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }} icon" />
+          {% endif %}
+          <span>{{ rune.name }}</span>
+        </span>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
     <section class="content-section">
       <h2>Properties</h2>
       <ul class="property-list">

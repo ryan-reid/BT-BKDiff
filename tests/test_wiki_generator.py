@@ -111,8 +111,9 @@ class TestWikiGenerator(unittest.TestCase):
         runewords = [
             {
                 "name": "Practice",
-                "runes": ["El", "Eld"],
+                "runes": ["Tal Rune", "Eth Rune"],
                 "base_items": ["Melee Weapon"],
+                "raw_row": {"Rune1": "r07", "Rune2": "r05"},
                 "properties": [{"code": "dmg", "param": "", "resolved_text": "+25% Enhanced Damage"}],
                 "rune_properties": [
                     {
@@ -166,6 +167,14 @@ class TestWikiGenerator(unittest.TestCase):
         )
         self._write_tsv(
             excel_root,
+            "runes.txt",
+            ["Name", "*Rune Name", "complete", "itype1", "itype2", "Rune1", "Rune2", "T1Code1"],
+            [
+                {"Name": "Runeword1", "*Rune Name": "Practice", "complete": "1", "itype1": "mele", "itype2": "hamm", "Rune1": "r07", "Rune2": "r05", "T1Code1": "dmg"}
+            ],
+        )
+        self._write_tsv(
+            excel_root,
             "weapons.txt",
             [
                 "name",
@@ -176,6 +185,8 @@ class TestWikiGenerator(unittest.TestCase):
                 "levelreq",
                 "mindam",
                 "maxdam",
+                "1or2handed",
+                "2handed",
                 "2handmindam",
                 "2handmaxdam",
                 "reqstr",
@@ -196,6 +207,7 @@ class TestWikiGenerator(unittest.TestCase):
                     "type": "hamm",
                     "level": "85",
                     "levelreq": "65",
+                    "2handed": "1",
                     "2handmindam": "65",
                     "2handmaxdam": "255",
                     "reqstr": "253",
@@ -241,7 +253,14 @@ class TestWikiGenerator(unittest.TestCase):
                 {"code": "reduce-ac", "func1": "1", "*Tooltip": "-#% Target Defense"},
                 {"code": "cast2", "func1": "1", "*Tooltip": "+#% Faster Cast Rate"},
                 {"code": "res-all", "func1": "1", "*Tooltip": "All Resistances +#"},
+                {"code": "pierce", "func1": "1", "stat1": "item_pierce", "*Tooltip": "Piercing Attack", "*Min": "Min %", "*Max": "Max %"},
             ],
+        )
+        self._write_tsv(
+            excel_root,
+            "automagic.txt",
+            ["Name", "group", "mod1code", "mod1min", "mod1max", "itype1"],
+            [{"Name": "Piercing Test", "group": "307", "mod1code": "pierce", "mod1min": "33", "mod1max": "33", "itype1": "pelt"}],
         )
         self._write_tsv(
             excel_root,
@@ -262,7 +281,7 @@ class TestWikiGenerator(unittest.TestCase):
                     "name": "Wolf Head", "namestr": "Wolf Head", "code": "dr1", "type": "pelt",
                     "level": "4", "levelreq": "3", "minac": "8", "maxac": "11",
                     "gemsockets": "3", "normcode": "dr1", "ubercode": "dr1", "ultracode": "dr1",
-                    "durability": "20",
+                    "durability": "20", "auto prefix": "307",
                 },
             ],
         )
@@ -644,6 +663,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("items/unique/twin-item/index.html", WikiRoutes.item_output_path("unique", "twin-item"))
         self.assertEqual("items/unique/twin-item/", WikiRoutes.route_from_output_path("items/unique/twin-item/index.html"))
         self.assertEqual("../../../", WikiRoutes.site_root_for_output_path("items/unique/twin-item/index.html"))
+        self.assertEqual("runewords/index.html", WikiRoutes.runewords_index_output_path())
         self.assertEqual("areas/index.html", WikiRoutes.areas_index_output_path())
         self.assertEqual("bases/index.html", WikiRoutes.bases_index_output_path())
         self.assertEqual("recipes/index.html", WikiRoutes.recipes_index_output_path())
@@ -659,6 +679,7 @@ class TestWikiGenerator(unittest.TestCase):
             os.path.join(self.output, "items", "unique", "twin-item-second-base", "index.html"),
             os.path.join(self.output, "items", "unique", "twin-item-second-base-2", "index.html"),
             os.path.join(self.output, "items", "index.html"),
+            os.path.join(self.output, "runewords", "index.html"),
             os.path.join(self.output, "classes", "amazon", "index.html"),
             os.path.join(self.output, "areas", "index.html"),
             os.path.join(self.output, "bases", "index.html"),
@@ -682,6 +703,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("items/unique/twin-item/", manifest_paths)
         self.assertIn("items/unique/twin-item-second-base/", manifest_paths)
         self.assertIn("items/", manifest_paths)
+        self.assertIn("runewords/", manifest_paths)
         self.assertIn("areas/", manifest_paths)
         self.assertIn("bases/", manifest_paths)
         self.assertIn("recipes/", manifest_paths)
@@ -767,17 +789,16 @@ class TestWikiGenerator(unittest.TestCase):
         with open(os.path.join(self.output, "data", "items-index.json"), "r", encoding="utf-8") as f:
             rows = json.load(f)
 
-        self.assertEqual(["Twin Item", "Twin Item", "Twin Item", "Set Blade", "Practice"], [row["title"] for row in rows])
+        self.assertEqual(["Twin Item", "Twin Item", "Twin Item", "Set Blade"], [row["title"] for row in rows])
         self.assertEqual(
-            {"title", "href", "family", "status", "item_group", "item_type", "summary", "search_text"},
+            {"title", "href", "family", "status", "item_group", "item_type", "icon_src", "summary", "search_text"},
             set(rows[0].keys()),
         )
         self.assertEqual("modified", rows[0]["status"])
         self.assertEqual("added", rows[1]["status"])
         self.assertEqual("items/unique/twin-item/", rows[0]["href"])
 
-        practice = next(row for row in rows if row["title"] == "Practice")
-        self.assertEqual("modified", practice["status"])
+        self.assertNotIn("Practice", [row["title"] for row in rows])
 
     def test_templates_render_item_and_index_pages(self):
         self._generate()
@@ -785,12 +806,20 @@ class TestWikiGenerator(unittest.TestCase):
             item_page = f.read()
         with open(os.path.join(self.output, "items", "index.html"), "r", encoding="utf-8") as f:
             items_page = f.read()
+        with open(os.path.join(self.output, "runewords", "index.html"), "r", encoding="utf-8") as f:
+            runewords_index_page = f.read()
 
         self.assertIn("Twin Item", item_page)
         self.assertIn("Structured diff view using Retail (Old) and BKDiablo (New).", item_page)
         self.assertIn('href="../../../areas/"', item_page)
         self.assertIn('href="../../../reports/"', item_page)
         self.assertIn('data-item-index-url="../data/items-index.json"', items_page)
+        self.assertNotIn('data-filter-family="runeword"', items_page)
+        self.assertIn("Runewords", runewords_index_page)
+        self.assertIn("Practice", runewords_index_page)
+        self.assertIn("rune-chip-icon", runewords_index_page)
+        self.assertIn("Tal Rune", runewords_index_page)
+        self.assertIn("Eth Rune", runewords_index_page)
 
         with open(os.path.join(self.output, "areas", "index.html"), "r", encoding="utf-8") as f:
             areas_page = f.read()
@@ -845,6 +874,10 @@ class TestWikiGenerator(unittest.TestCase):
 
         with open(os.path.join(self.output, "items", "runeword", "practice", "index.html"), "r", encoding="utf-8") as f:
             runeword_page = f.read()
+        self.assertIn("Required Runes", runeword_page)
+        self.assertIn("rune-chip-icon", runeword_page)
+        self.assertIn("Tal Rune", runeword_page)
+        self.assertIn("Eth Rune", runeword_page)
         self.assertIn("Properties from Runes", runeword_page)
         self.assertIn("+50 to Attack Rating", runeword_page)
 
@@ -861,13 +894,35 @@ class TestWikiGenerator(unittest.TestCase):
 
         with open(os.path.join(self.output, "bases", "index.html"), "r", encoding="utf-8") as f:
             bases_page = f.read()
+        self.assertIn('data-base-filters', bases_page)
+        self.assertIn('id="base-group-filter"', bases_page)
+        self.assertIn('id="base-category-filter"', bases_page)
+        self.assertIn('id="base-tier-filter"', bases_page)
+        self.assertIn('id="base-min-sockets-filter"', bases_page)
+        self.assertIn('id="base-roll-filter"', bases_page)
+        self.assertIn('id="base-two-handed-filter"', bases_page)
+        self.assertNotIn('id="base-auto-roll-filter"', bases_page)
+        self.assertNotIn('id="base-superior-filter"', bases_page)
+        self.assertIn('data-max-sockets="6"', bases_page)
+        self.assertIn('data-type-categories="Hammer|Blunt|Melee Weapon|Weapon"', bases_page)
+        self.assertIn('<option value="Hammer">Hammer</option>', bases_page)
+        self.assertIn('<option value="Melee Weapon">Melee Weapon</option>', bases_page)
+        self.assertIn('data-roll-search="', bases_page)
         self.assertIn("Thunder Maul", bases_page)
+        self.assertIn("Two Handed", bases_page)
+        self.assertIn("Dam: 65-255", bases_page)
+        self.assertNotIn("Dam: 0-0", bases_page)
         self.assertIn("+50% Damage to Undead", bases_page)
         self.assertIn("-5-30% Target Defense", bases_page)
-        self.assertIn("Superior roll", bases_page)
-        self.assertIn("Can roll Druid skill bonuses", bases_page)
+        self.assertIn("Superior", bases_page)
+        self.assertIn("Druid staffmods", bases_page)
         self.assertIn("Druid only", bases_page)
-        self.assertIn("+18 affix level", bases_page)
+        self.assertIn("33% Piercing Attack", bases_page)
+        self.assertIn("+18 magic level", bases_page)
+        self.assertIn("Base Lvl: 85", bases_page)
+        self.assertIn("Req Lvl: 65", bases_page)
+        self.assertIn("WSM: 20 (Very Slow)", bases_page)
+        self.assertNotIn("<th>Speed/Block</th>", bases_page)
 
     def test_stale_files_are_removed(self):
         os.makedirs(self.output, exist_ok=True)

@@ -51,6 +51,9 @@
             {% for item in group.members %}
             <tr data-search="{{ item.name }} {{ item.code }} {{ item.description }} {{ item.status }} {% for slot, effects in item.socket_effects.items() %}{{ slot }} {{ effects|join(' ') }} {% endfor %}">
               <td class="misc-name-cell">
+                {% if item.icon_src %}
+                <img class="wiki-item-icon misc-item-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
+                {% endif %}
                 <strong>{{ item.name }}</strong><br/>
                 <small class="code-text">{{ item.code }}</small>
                 {% if item.status == "added" %}
