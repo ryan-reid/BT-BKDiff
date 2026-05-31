@@ -10,7 +10,7 @@ SCRIPT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
-from d2lib.wiki import AreaFarmingDataBuilder, WikiGenerator, WikiRoutes
+from d2lib.wiki import AreaFarmingDataBuilder, ItemIconExporter, WikiGenerator, WikiOutputWriter, WikiRoutes
 
 
 class TestWikiGenerator(unittest.TestCase):
@@ -711,6 +711,20 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("misc/index.html", WikiRoutes.misc_index_output_path())
         self.assertEqual("gems-runes/index.html", WikiRoutes.gems_runes_index_output_path())
         self.assertEqual("mechanics/index.html", WikiRoutes.mechanics_output_path())
+
+    def test_rune_icon_exporter_has_ci_safe_fallback(self):
+        writer = WikiOutputWriter(self.output)
+        exporter = ItemIconExporter(
+            writer,
+            game_data_dir=os.path.join(self.root, "missing-game-data"),
+            retail_data_dir=os.path.join(self.root, "missing-retail-data"),
+        )
+
+        icon_src = exporter.export_icon(output_key="rune-r08", item_code="r08", icon_key="r08")
+
+        self.assertEqual("assets/item-icons/rune-r08.png", icon_src)
+        with open(os.path.join(self.output, icon_src), "rb") as f:
+            self.assertEqual(b"\x89PNG\r\n\x1a\n", f.read(8))
 
     def test_generation_writes_pretty_routes_and_manifest(self):
         self._generate()

@@ -779,7 +779,87 @@ class ItemIconExporter:
         if sprite_path:
             return self._sprite_to_png(sprite_path)
 
+        if re.fullmatch(r"r\d{2}", item_code.lower()):
+            return self._fallback_rune_png(item_code)
+
         return None
+
+    def _fallback_rune_png(self, rune_code: str) -> bytes:
+        number = int(rune_code[1:]) if rune_code[1:].isdigit() else 0
+        width = 34
+        height = 34
+        pixels = bytearray(width * height * 4)
+        bg = (255, 255, 255, 0)
+        edge = (54, 51, 48, 255)
+        stone = (145, 142, 136, 255)
+        light = (188, 185, 178, 255)
+        shadow = (84, 80, 76, 255)
+        mark = (43, 42, 40, 255)
+
+        for y in range(height):
+            for x in range(width):
+                index = (y * width + x) * 4
+                color = bg
+                cx = abs(x - 16.5)
+                cy = abs(y - 16.5)
+                if (cx / 14.5) + (cy / 15.5) <= 1:
+                    color = stone
+                    if x + y < 24:
+                        color = light
+                    if x + y > 42:
+                        color = shadow
+                if (cx / 15.5) + (cy / 16.5) <= 1 and (cx / 13.5) + (cy / 14.5) > 1:
+                    color = edge
+                pixels[index : index + 4] = bytes(color)
+
+        strokes = [
+            ((16, 8), (16, 26)),
+            ((10, 14), (23, 14)),
+            ((11, 22), (23, 10)),
+            ((10, 10), (24, 24)),
+            ((9, 20), (16, 10)),
+            ((17, 10), (25, 20)),
+        ]
+        for bit, stroke in enumerate(strokes):
+            if number & (1 << bit):
+                self._draw_line_rgba(pixels, width, height, stroke[0], stroke[1], mark)
+
+        return self._png_rgba(width, height, bytes(pixels))
+
+    @staticmethod
+    def _draw_line_rgba(
+        pixels: bytearray,
+        width: int,
+        height: int,
+        start: Tuple[int, int],
+        end: Tuple[int, int],
+        color: Tuple[int, int, int, int],
+    ) -> None:
+        x0, y0 = start
+        x1, y1 = end
+        dx = abs(x1 - x0)
+        dy = -abs(y1 - y0)
+        sx = 1 if x0 < x1 else -1
+        sy = 1 if y0 < y1 else -1
+        err = dx + dy
+        while True:
+            for oy in (-1, 0, 1):
+                for ox in (-1, 0, 1):
+                    x = x0 + ox
+                    y = y0 + oy
+                    if 0 <= x < width and 0 <= y < height:
+                        index = (y * width + x) * 4
+                        if pixels[index + 3]:
+                            pixels[index : index + 4] = bytes(color)
+            if x0 == x1 and y0 == y1:
+                break
+            e2 = 2 * err
+            if e2 >= dy:
+                err += dy
+                x0 += sx
+            if e2 <= dx:
+                err += dx
+                y0 += sy
 
     def _find_quality_hd_sprite(self, family: str, quality_key: str, item_code: str) -> Optional[str]:
         family = family.strip().lower()
