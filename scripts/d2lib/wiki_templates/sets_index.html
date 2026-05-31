@@ -69,10 +69,10 @@
             <div class="runeword-table-separator">Properties</div>
             {% for row in comp.property_rows %}
               <div class="runeword-table-cell is-{{ row.status }}">
-                {% if row.label and "Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "(empty)" }}
+                {% if row.label and ("(With" in row.label or ("Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label)) %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "(empty)" }}
               </div>
               <div class="runeword-table-cell is-{{ row.status }}">
-                {% if row.label and "Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new or "(removed)" }}
+                {% if row.label and ("(With" in row.label or ("Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label)) %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new or "(removed)" }}
               </div>
             {% endfor %}
           </div>

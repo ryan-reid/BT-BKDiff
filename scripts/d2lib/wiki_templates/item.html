@@ -107,13 +107,14 @@
 
       {# Property Rows #}
       {% for row in page.comparison.property_rows %}
-      <div class="runeword-table-cell is-{{ row.status }}" role="cell">
-        {% if row.label and "Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "(empty)" }}
+      <div class="runeword-table-cell is-{{ row.status }}">
+        {% if row.label and ("(With" in row.label or ("Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label)) %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "(empty)" }}
       </div>
-      <div class="runeword-table-cell is-{{ row.status }}" role="cell">
-        {% if row.label and "Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new or "(removed)" }}
+      <div class="runeword-table-cell is-{{ row.status }}">
+        {% if row.label and ("(With" in row.label or ("Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label)) %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new or "(removed)" }}
       </div>
       {% endfor %}
+
     </div>
     {% else %}
     <div style="padding: 24px;">

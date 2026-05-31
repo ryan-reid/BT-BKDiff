@@ -671,10 +671,18 @@ class WikiGenerator:
             set_families[set_name].append(item)
             
         # 2. Build SetFamilyDTOs with aligned set bonuses
-        retail_repo = D2Repository(self.retail_data_dir)
-        retail_resolver = PropertyResolverService(retail_repo)
-        retail_sets = {row["name"]: row for row in retail_repo.get_excel_table("sets")}
-        bk_sets = {row["name"]: row for row in D2Repository(self.game_data_dir).get_excel_table("sets")}
+        repo_bk = D2Repository(self.game_data_dir)
+        repo_rt = D2Repository(self.retail_data_dir)
+        
+        # Load property groups for resolvers
+        prop_groups_path = os.path.join(REPO_ROOT, "BT-BKDiff", "data", "propertygroups.txt")
+        prop_groups = repo_bk.load_tsv(prop_groups_path)
+        
+        resolver_bk = PropertyResolverService(repo_bk, prop_groups)
+        resolver_rt = PropertyResolverService(repo_rt, prop_groups)
+        
+        retail_sets = {row["name"]: row for row in repo_rt.get_excel_table("sets")}
+        bk_sets = {row["name"]: row for row in repo_bk.get_excel_table("sets")}
         
         results: List[SetFamilyDTO] = []
         for name, members in sorted(set_families.items()):
@@ -686,7 +694,7 @@ class WikiGenerator:
                 old_item = old_item_index.get(self._item_identity(item, "set"))
                 item["comparison"] = self._item_comparison_context(item, "set", old_item)
 
-            bonus_diffs = self._set_bonus_comparison(name, bk_set_row, rt_set_row, retail_resolver)
+            bonus_diffs = self._set_bonus_comparison(name, bk_set_row, rt_set_row, resolver_bk, resolver_rt)
             
             status = "added" if not rt_set_row else "modified" if any(b["status"] != "same" for b in bonus_diffs) or any(m["comparison"]["state"] == "modified" for m in members) else "unchanged"
             
@@ -708,37 +716,89 @@ class WikiGenerator:
             sets=results,
         )
 
-    def _set_bonus_comparison(self, set_name: str, bk_row: Dict[str, str], rt_row: Dict[str, str], rt_resolver: PropertyResolverService) -> List[Dict[str, Any]]:
+    def _set_bonus_comparison(self, set_name: str, bk_row: Dict[str, str], rt_row: Dict[str, str], resolver_bk: PropertyResolverService, resolver_rt: PropertyResolverService) -> List[Dict[str, Any]]:
         # Set bonuses in sets.txt:
-        # P2CodeX (Partial 2), P3CodeX, P4CodeX, FCodeX (Full)
-        # We'll align them by type (P2, P3, P4, Full) and index
+        # PCode[2-5][a-b] (Partial 2-5 items)
+        # FCode[1-8] (Full Set)
         bonus_rows = []
-        bk_resolver = PropertyResolverService(D2Repository(self.game_data_dir))
         
-        prefixes = [("2 Pieces", "P2"), ("3 Pieces", "P3"), ("4 Pieces", "P4"), ("Full Set", "F")]
-        for label, pref in prefixes:
-            for i in range(1, 9):
-                bk_code = bk_row.get(f"{pref}Code{i}", "").strip()
-                rt_code = rt_row.get(f"{pref}Code{i}", "").strip()
+        # 1. Partial Bonuses (2, 3, 4, 5 pieces)
+        for count in range(2, 6):
+            for suffix in ["a", "b"]:
+                bk_code = bk_row.get(f"PCode{count}{suffix}", "").strip()
+                rt_code = rt_row.get(f"PCode{count}{suffix}", "").strip()
                 
                 if not bk_code and not rt_code:
                     continue
                 
-                bk_res = bk_resolver.resolve_property(bk_code, bk_row.get(f"{pref}Param{i}", ""), bk_row.get(f"{pref}Min{i}", ""), bk_row.get(f"{pref}Max{i}", "")) if bk_code else None
-                rt_res = rt_resolver.resolve_property(rt_code, rt_row.get(f"{pref}Param{i}", ""), rt_row.get(f"{pref}Min{i}", ""), rt_row.get(f"{pref}Max{i}", "")) if rt_code else None
+                bk_res = resolver_bk.resolve_property(
+                    bk_code, 
+                    bk_row.get(f"PParam{count}{suffix}", ""), 
+                    bk_row.get(f"PMin{count}{suffix}", ""), 
+                    bk_row.get(f"PMax{count}{suffix}", "")
+                ) if bk_code else None
+                
+                rt_res = resolver_rt.resolve_property(
+                    rt_code, 
+                    rt_row.get(f"PParam{count}{suffix}", ""), 
+                    rt_row.get(f"PMin{count}{suffix}", ""), 
+                    rt_row.get(f"PMax{count}{suffix}", "")
+                ) if rt_code else None
                 
                 o_val = rt_res["resolved_text"] if rt_res else ""
                 n_val = bk_res["resolved_text"] if bk_res else ""
                 
+                if not o_val and not n_val:
+                    continue
+                
                 status = "same" if o_val == n_val else "added" if n_val and not o_val else "removed" if o_val and not n_val else "changed"
                 
                 bonus_rows.append({
-                    "label": label if i == 1 else "",
+                    "label": f"{count} Pieces" if suffix == "a" else "",
                     "old": o_val,
                     "new": n_val,
                     "status": status,
-                    "is_separator": i == 1
+                    "is_separator": suffix == "a"
                 })
+
+        # 2. Full Set Bonuses
+        for i in range(1, 9):
+            bk_code = bk_row.get(f"FCode{i}", "").strip()
+            rt_code = rt_row.get(f"FCode{i}", "").strip()
+            
+            if not bk_code and not rt_code:
+                continue
+            
+            bk_res = resolver_bk.resolve_property(
+                bk_code, 
+                bk_row.get(f"FParam{i}", ""), 
+                bk_row.get(f"FMin{i}", ""), 
+                bk_row.get(f"FMax{i}", "")
+            ) if bk_code else None
+            
+            rt_res = resolver_rt.resolve_property(
+                rt_code, 
+                rt_row.get(f"FParam{i}", ""), 
+                rt_row.get(f"FMin{i}", ""), 
+                rt_row.get(f"FMax{i}", "")
+            ) if rt_code else None
+            
+            o_val = rt_res["resolved_text"] if rt_res else ""
+            n_val = bk_res["resolved_text"] if bk_res else ""
+            
+            if not o_val and not n_val:
+                continue
+
+            status = "same" if o_val == n_val else "added" if n_val and not o_val else "removed" if o_val and not n_val else "changed"
+            
+            bonus_rows.append({
+                "label": "Full Set" if i == 1 else "",
+                "old": o_val,
+                "new": n_val,
+                "status": status,
+                "is_separator": i == 1
+            })
+            
         return bonus_rows
 
     @staticmethod
@@ -1291,29 +1351,58 @@ class WikiGenerator:
     def _property_occurrence_map(entry: Dict[str, Any]) -> Dict[Tuple[str, str, int], str]:
         occurrences: Dict[Tuple[str, str], int] = {}
         values: Dict[Tuple[str, str, int], str] = {}
+        
+        # 1. Base Properties
         for prop in entry.get("properties", []):
             code = str(prop.get("code", "")).strip() or "unknown"
             param = str(prop.get("param", "")).strip()
             base_key = (code, param)
             occurrences[base_key] = occurrences.get(base_key, 0) + 1
             values[(code, param, occurrences[base_key])] = str(prop.get("resolved_text", "")).strip()
+            
+        # 2. Partial Set Bonuses (aprop columns)
+        for partial in entry.get("partial_set_properties", []) or []:
+            count = partial.get("count", 0)
+            for prop in partial.get("properties", []):
+                code = str(prop.get("code", "")).strip() or "unknown"
+                param = str(prop.get("param", "")).strip()
+                # Use a specific key namespace for partial bonuses
+                code_key = f"partial-{count}-{code}"
+                base_key = (code_key, param)
+                occurrences[base_key] = occurrences.get(base_key, 0) + 1
+                values[(code_key, param, occurrences[base_key])] = str(prop.get("resolved_text", "")).strip()
+                
         return values
 
     @staticmethod
     def _comparison_property_label(old_value: str, new_value: str, code: str, occurrence: int) -> str:
+        label_suffix = ""
+        actual_code = code
+        if code.startswith("partial-"):
+            parts = code.split("-")
+            count = parts[1]
+            actual_code = parts[2]
+            label_suffix = f" (With {count} Items)"
+
         old_label = WikiGenerator._comparison_text_label(old_value)
         new_label = WikiGenerator._comparison_text_label(new_value)
+        
+        base_label = ""
         if old_value and new_value:
             if old_label and old_label == new_label:
-                return old_label
-            if old_label and new_label:
-                return f"{old_label} / {new_label}"
-            return f"Changed Stat #{occurrence}"
-        if new_value:
-            return f"Added: {new_label or code}"
-        if old_value:
-            return f"Removed: {old_label or code}"
-        return f"Stat #{occurrence}"
+                base_label = old_label
+            elif old_label and new_label:
+                base_label = f"{old_label} / {new_label}"
+            else:
+                base_label = f"Changed Stat #{occurrence}"
+        elif new_value:
+            base_label = f"Added: {new_label or actual_code}"
+        elif old_value:
+            base_label = f"Removed: {old_label or actual_code}"
+        else:
+            base_label = f"Stat #{occurrence}"
+            
+        return base_label + label_suffix
 
     @staticmethod
     def _comparison_text_label(value: str) -> str:

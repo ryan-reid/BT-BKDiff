@@ -25,11 +25,17 @@ class ItemAnalyzerService:
         item = self.armor.get(code) or self.weapons.get(code) or self.misc.get(code)
         if not item: return "Miscellaneous"
         type_code = item.get('type', '').strip()
+        
+        # Swapped types in mods: often 'helm' is renamed to 'Merc Equip' 
+        # and a new 'merc' type is added for player 'Helms'.
+        if type_code == "helm":
+            return "Helm"
+            
         item_type = self.item_types.get(type_code)
         if not item_type: return "Miscellaneous"
         
         name = self.repo.get_string(item_type.get('ItemType', 'Unknown').strip())
-        if name == "Merc Equip":
+        if name.lower().strip() == "merc equip":
             return "Helm"
         return name
 

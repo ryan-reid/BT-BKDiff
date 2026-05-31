@@ -15,6 +15,14 @@ class ExportOrchestrator:
         self.json_exporter = json_exporter
 
     def run_export(self, output_dir: str, export_format: str):
+        # Clear output directory to prevent stale files (e.g. from renamed categories)
+        if os.path.exists(output_dir):
+            import shutil
+            for sub in ["uniques", "sets", "runewords"]:
+                sub_path = os.path.join(output_dir, sub)
+                if os.path.exists(sub_path):
+                    shutil.rmtree(sub_path)
+
         # 1. Uniques
         unique_data = {"Weapons": {}, "Others": {}}
         for row in self.repo.get_excel_table('uniqueitems'):
