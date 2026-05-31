@@ -199,7 +199,8 @@ code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surfa
 
 /* ── Loot cards ────────────────────────────────────────────────────────── */
 
-.loot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+/* 33.33% floor caps at 3 columns, reflows to 2 then 1 automatically. */
+.loot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(max(33.33%, 220px), 1fr)); gap: 12px; }
 
 .loot, .item-card, .runeword-card.item-card {
   position: relative; display: grid; grid-template-columns: 54px 1fr; gap: 12px;
@@ -260,6 +261,16 @@ code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surfa
 .toolbar      { display: grid; gap: 12px; }
 .filter-row   { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
 .filter-row-stacked { align-items: end; }
+.filter-row label { display: grid; gap: 5px; color: var(--muted); font-size: 0.82rem; }
+.filter-row label > span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--faint); }
+.filter-row .filter-wide { flex: 1 1 260px; min-width: min(260px, 100%); }
+.filter-row input[type="search"] {
+  width: 100%; background: var(--surface); border: 1px solid var(--line); color: var(--text);
+  border-radius: 8px; padding: 9px 12px; font: inherit; font-size: 0.88rem;
+}
+.filter-row input[type="search"]::placeholder { color: var(--faint); }
+.filter-check-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 10px; color: var(--muted); }
+.filter-check-row input { accent-color: var(--gold); }
 .filter-select-wrap { display: grid; gap: 6px; min-width: min(220px, 100%); }
 .filter-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--faint); }
 
@@ -579,6 +590,107 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
 .socket-effect-list { display: grid; gap: 5px; font-size: 0.84rem; color: var(--q-magic); margin-top: 8px; }
 .wiki-item-icon.misc-item-icon, .wiki-item-icon.base-item-icon { max-width: 38px; max-height: 50px; object-fit: contain; }
 
+/* ── Set items ──────────────────────────────────────────────────────────── */
+
+.set-list { display: grid; gap: 28px; }
+
+.set-block {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden;
+}
+.set-header {
+  padding: 16px 20px 14px; border-bottom: 1px solid var(--line);
+  background: rgba(0,0,0,0.18);
+}
+.set-name    { margin: 0 0 4px; font-size: 1.15rem; color: var(--q-set); }
+.set-summary { margin: 0; font-size: 0.88rem; }
+
+/* Fixed 3-column subgrid: empty slots are fine when a set has <3 pieces. */
+.set-pieces {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Each piece inherits parent row tracks; grid-row: span N is set inline.
+   Every piece gets a top divider by default; the first visual row (–n+3) clears it. */
+.set-piece {
+  display: grid;
+  grid-template-rows: subgrid;
+  border-top: 2px solid var(--line-strong);
+  border-right: 1px solid var(--line);
+  min-width: 0;
+}
+.set-piece:nth-child(-n+3) { border-top: 0; }   /* first row: no top separator */
+.set-piece:nth-child(3n)   { border-right: 0; }  /* 3rd column: no right divider */
+
+.sp-head {
+  display: flex; align-items: center; gap: 9px;
+  padding: 10px 12px; background: rgba(0,0,0,0.18);
+  border-bottom: 1px solid var(--line);
+}
+.sp-sub {
+  display: grid; grid-template-columns: 1fr 1fr;
+  padding: 5px 10px; font-size: 0.66rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-deep);
+  background: rgba(227,179,65,0.05); border-bottom: 1px solid var(--line-strong);
+}
+.sp-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.sp-cell {
+  padding: 6px 10px; font-size: 0.8rem; word-break: break-word; line-height: 1.4;
+}
+.sp-cell + .sp-cell   { border-left: 1px solid var(--line); }
+.sp-cell.is-same      { color: var(--muted); }
+.sp-cell.is-changed   { color: var(--q-unique); font-weight: 600; }
+.sp-cell.is-added     { color: var(--added); font-weight: 600; }
+.sp-cell.is-removed   { color: var(--faint); }
+.sp-sep {
+  padding: 5px 10px; font-size: 0.64rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--faint);
+  background: rgba(0,0,0,0.14); border-bottom: 1px solid var(--line-strong);
+}
+
+.set-th-icon { width: auto; max-width: 30px; max-height: 40px; object-fit: contain; flex: none; }
+.set-th-name {
+  font-family: var(--font-display); font-size: 0.88rem;
+  color: var(--q-set); display: block; line-height: 1.2;
+}
+.base-item-card .set-th-name { color: var(--text); }
+.set-th-name:hover { color: var(--gold); }
+.set-th-meta { font-size: 0.72rem; color: var(--faint); display: block; margin-top: 2px; }
+
+.set-cell {
+  padding: 7px 10px; border-bottom: 1px solid var(--line);
+  font-size: 0.8rem; vertical-align: top; word-break: break-word;
+}
+.set-cell.is-same    { color: var(--muted); }
+.set-cell.is-changed { color: var(--q-unique); font-weight: 600; }
+.set-cell.is-added   { color: var(--added); font-weight: 600; }
+.set-cell.is-removed { color: var(--faint); }
+
+.set-sep-row td {
+  padding: 5px 10px; font-size: 0.64rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--faint);
+  background: rgba(0,0,0,0.14); border-bottom: 1px solid var(--line-strong);
+}
+
+.set-bonuses {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 14px 18px; border-top: 1px solid var(--line);
+}
+.set-bonuses-label {
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--q-set);
+}
+/* Bonus table fills the full section width — no inner border, no max-width cap. */
+.set-bonuses .table-wrap { border: 0; border-radius: 0; overflow-x: auto; }
+.set-bonus-table { }
+.set-bonus-table td { font-size: 0.82rem; }
+.set-bonus-table th { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); }
+.sp-note { padding: 10px 12px; font-size: 0.85rem; border-top: 1px solid var(--line); background: rgba(33,29,25,0.01); }
+
 /* ── Base items ─────────────────────────────────────────────────────────── */
 
 .family-container { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 16px; overflow: hidden; }
@@ -587,7 +699,17 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
 .family-header p { margin: 5px 0 0; font-size: 0.84rem; color: var(--muted); }
 .family-table-wrap { overflow-x: auto; }
 .family-table { min-width: 900px; }
+/* 3-column responsive grid for base items / gems-runes within a family/group. */
+.family-items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 14px;
+}
+
 .base-item-card { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 12px; }
+.item-index-card { min-width: 0; }
+.item-index-card:hover { border-color: var(--line-strong); box-shadow: var(--shadow-sm); }
 .badge { display: inline-block; padding: 3px 7px; border-radius: 4px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; }
 .badge-normal      { background: rgba(33,29,25,0.3); color: var(--muted); }
 .badge-exceptional { background: rgba(60,130,200,0.12); color: #70a8e0; }
@@ -637,4 +759,27 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
   .runeword-before-after { grid-template-columns: 1fr; }
   .runeword-table-head:nth-child(2n), .runeword-table-cell:nth-child(2n) { border-right: 0; }
   .page-grid    { grid-template-columns: 1fr; }
+}
+
+/* Set pieces + base/gem family grids: reflow 3→2 columns at medium width */
+@media (max-width: 800px) {
+  .set-pieces { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* Reset 3-col border rules, apply 2-col rules */
+  .set-piece:nth-child(-n+3) { border-top: 2px solid var(--line-strong); }
+  .set-piece:nth-child(-n+2) { border-top: 0; }
+  .set-piece:nth-child(3n)   { border-right: 1px solid var(--line); }
+  .set-piece:nth-child(2n)   { border-right: 0; }
+
+  .family-items-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Set pieces + base/gem family grids: reflow 2→1 column on mobile */
+@media (max-width: 500px) {
+  .set-pieces { grid-template-columns: 1fr; }
+  /* Reset 2-col border rules, apply 1-col rules */
+  .set-piece                 { border-right: 0; }
+  .set-piece:nth-child(-n+2) { border-top: 2px solid var(--line-strong); }
+  .set-piece:first-child     { border-top: 0; }
+
+  .family-items-grid { grid-template-columns: 1fr; }
 }

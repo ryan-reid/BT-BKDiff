@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ site_root }}assets/site.css" />
 </head>
-<body data-site-root="{{ site_root }}">
+<body data-site-root="{{ site_root }}" data-new-label="{{ new_label }}" data-old-label="{{ old_label }}">
 
 <!-- SVG icon sprite -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -54,6 +54,7 @@
       <a href="{{ site_root }}gems-runes/"{% block nav_gems %}{% endblock %}>Gems &amp; Runes</a>
       <a href="{{ site_root }}misc/"{% block nav_misc %}{% endblock %}>Materials</a>
       <a href="{{ site_root }}mechanics/"{% block nav_mechanics %}{% endblock %}>Mechanics</a>
+      <a href="{{ site_root }}drops/"{% block nav_drops %}{% endblock %}>Drops</a>
       <a href="{{ site_root }}reports/"{% block nav_reports %}{% endblock %}>Reports</a>
     </nav>
     <label class="mast-search">

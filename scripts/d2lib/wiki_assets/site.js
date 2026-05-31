@@ -22,27 +22,47 @@ function escapeHtml(value) {
 }
 
 function itemCardMarkup(item, siteRoot) {
-  const qualityClass = item.family === "set" ? "q-set" : "q-unique";
+  const nameColor = item.family === "set" ? "var(--q-set)" : "var(--q-unique)";
   const iconMarkup = item.icon_src
-    ? `<img class="wiki-item-icon item-card-icon" src="${escapeHtml(siteRoot + item.icon_src)}" alt="${escapeHtml(item.title)} icon" />`
-    : `<svg aria-hidden="true"><use href="#i-armor"/></svg>`;
-  const propsMarkup = item.properties && item.properties.length
-    ? `<ul class="runeword-property-preview">${item.properties.map((p) => `<li>${escapeHtml(p)}</li>`).join("")}</ul>`
+    ? `<img class="wiki-item-icon set-th-icon" src="${escapeHtml(siteRoot + item.icon_src)}" alt="${escapeHtml(item.title)} icon" />`
     : "";
+
+  const statRowsHtml = (item.stat_rows || []).map((r) => `
+    <div class="sp-row">
+      <span class="sp-cell is-${escapeHtml(r.status)}"><strong>${escapeHtml(r.label)}:</strong> ${escapeHtml(r.old || "—")}</span>
+      <span class="sp-cell is-${escapeHtml(r.status)}"><strong>${escapeHtml(r.label)}:</strong> ${escapeHtml(r.new || "—")}</span>
+    </div>`).join("");
+
+  const propRows = item.property_rows || [];
+  const propRowsHtml = propRows.length
+    ? `<div class="sp-sep">Properties</div>` + propRows.map((r) => `
+    <div class="sp-row">
+      <span class="sp-cell is-${escapeHtml(r.status)}">${escapeHtml(r.old || "(empty)")}</span>
+      <span class="sp-cell is-${escapeHtml(r.status)}">${escapeHtml(r.new || "(removed)")}</span>
+    </div>`).join("")
+    : "";
+
+  const oldLabel = document.body.dataset.oldLabel || "Retail";
+  const newLabel = document.body.dataset.newLabel || "BK";
+
   return `
-    <a class="loot item-card ${qualityClass}" href="${escapeHtml(siteRoot + item.href)}"
+    <div class="base-item-card item-index-card" style="padding:0;overflow:hidden"
       data-family="${escapeHtml(item.family)}"
       data-status="${escapeHtml(item.status)}"
       data-item-group="${escapeHtml(item.item_group)}"
       data-item-type="${escapeHtml(item.item_type)}"
       data-search="${escapeHtml(item.search_text)}">
-      <span class="loot-icon">${iconMarkup}</span>
-      <span>
-        <span class="loot-name">${escapeHtml(item.title)}</span>
-        <span class="loot-base">${escapeHtml(item.summary)}</span>
-        ${propsMarkup}
-      </span>
-    </a>
+      <div class="sp-head">
+        ${iconMarkup}
+        <div style="min-width:0;flex:1">
+          <a class="set-th-name" href="${escapeHtml(siteRoot + item.href)}" style="color:${nameColor}">${escapeHtml(item.title)}</a>
+          <span class="set-th-meta">${escapeHtml(item.summary)}</span>
+        </div>
+      </div>
+      <div class="sp-sub"><span>${escapeHtml(oldLabel)}</span><span>${escapeHtml(newLabel)}</span></div>
+      ${statRowsHtml}
+      ${propRowsHtml}
+    </div>
   `;
 }
 
@@ -151,15 +171,24 @@ function areaRowMarkup(area) {
 
 function wireStaticSearch() {
   const searchInput = document.querySelector("#page-search");
-  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card"));
+  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece"));
   const tableRows = Array.from(document.querySelectorAll("tbody tr[data-search]"));
-  const sections = Array.from(document.querySelectorAll(".recipe-group-section, .misc-group-section, .family-container"));
+  const sections = Array.from(document.querySelectorAll(".recipe-group-section, .misc-group-section, .family-container, .set-block"));
   
   if (!searchInput || document.querySelector("[data-item-index-url]") || document.querySelector("[data-base-filters]")) {
     return;
   }
 
-  searchInput.addEventListener("input", () => {
+  const initialQuery = new URLSearchParams(window.location.search).get("q");
+  if (initialQuery) {
+    searchInput.value = initialQuery;
+    const mastSearch = document.querySelector("#mast-search-input");
+    if (mastSearch) {
+      mastSearch.value = initialQuery;
+    }
+  }
+
+  function applySearch() {
     const query = normalizeText(searchInput.value);
     
     // Hide/show individual cards
@@ -179,13 +208,57 @@ function wireStaticSearch() {
     // Hide/show parent sections based on children or section metadata
     sections.forEach((section) => {
       const sectionMatch = !query || normalizeText(section.dataset.search).includes(query);
-      const hasVisibleChildren = Array.from(section.querySelectorAll(".item-card, .base-item-card, .recipe-card"))
-        .some(child => !child.hidden);
+      const hasVisibleChildren = Array.from(section.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece, tbody tr[data-search]"))
+        .some(child => !child.hidden && child.style.display !== "none");
       
       const shouldShow = sectionMatch || hasVisibleChildren;
       section.hidden = !shouldShow;
       section.style.display = shouldShow ? "" : "none";
     });
+  }
+
+  searchInput.addEventListener("input", applySearch);
+  applySearch();
+}
+
+function wireMastSearch() {
+  const mastSearch = document.querySelector("#mast-search-input");
+  if (!mastSearch) {
+    return;
+  }
+
+  function pageSearchInput() {
+    return document.querySelector("#page-search, #area-search");
+  }
+
+  const initialTarget = pageSearchInput();
+  if (initialTarget && initialTarget.value) {
+    mastSearch.value = initialTarget.value;
+  }
+
+  mastSearch.addEventListener("input", () => {
+    const target = pageSearchInput();
+    if (!target) {
+      return;
+    }
+    target.value = mastSearch.value;
+    target.dispatchEvent(new Event("input", { bubbles: true }));
+    target.dispatchEvent(new Event("change", { bubbles: true }));
+  });
+
+  mastSearch.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") {
+      return;
+    }
+    const target = pageSearchInput();
+    if (target) {
+      target.focus();
+      return;
+    }
+    const query = mastSearch.value.trim();
+    if (query) {
+      window.location.href = `${document.body.dataset.siteRoot || ""}items/?q=${encodeURIComponent(query)}`;
+    }
   });
 }
 
@@ -241,6 +314,10 @@ function wireBaseFilters() {
     setSelectValue(minSocketsSelect, queryValue(params, ["minSockets", "sockets"]));
     if (searchInput) {
       searchInput.value = queryValue(params, ["q", "search"]);
+      const mastSearch = document.querySelector("#mast-search-input");
+      if (mastSearch && searchInput.value) {
+        mastSearch.value = searchInput.value;
+      }
     }
     if (rollInput) {
       rollInput.value = queryValue(params, ["roll"]);
@@ -409,7 +486,7 @@ async function wireItemIndex() {
       return `
         <section class="item-family-section" data-section-family="${family}" style="display:grid;gap:12px">
           <div class="section-head"><h2>${label}</h2><p>${familyItems.length} pages</p></div>
-          <div class="loot-grid">
+          <div class="family-items-grid">
             ${familyItems.map((item) => itemCardMarkup(item, siteRoot)).join("")}
           </div>
         </section>
@@ -418,53 +495,65 @@ async function wireItemIndex() {
     .join("");
 
   const searchInput = document.querySelector("#page-search");
-  const familyButtons = Array.from(document.querySelectorAll("[data-filter-family]"));
-  const statusButtons = Array.from(document.querySelectorAll("[data-filter-status]"));
+  const familyCheckboxes = Array.from(document.querySelectorAll("input[data-filter-family]"));
   const groupSelect = document.querySelector("#item-group-filter");
   const typeSelect = document.querySelector("#item-type-filter");
-  const cards = Array.from(document.querySelectorAll(".item-card"));
+  const cards = Array.from(document.querySelectorAll(".base-item-card[data-family]"));
   const familySections = Array.from(document.querySelectorAll("[data-section-family]"));
+  const initialQuery = new URLSearchParams(window.location.search).get("q");
 
-  let activeFamily = "all";
-  let activeStatus = "all";
   let activeGroup = "all";
   let activeType = "all";
 
+  function getActiveFamilies() {
+    const checked = familyCheckboxes.filter((cb) => cb.checked).map((cb) => cb.dataset.filterFamily);
+    // All checked (or none) → show everything
+    return checked.length === 0 || checked.length === familyCheckboxes.length
+      ? new Set()
+      : new Set(checked);
+  }
+
   function applyFilters() {
     const query = normalizeText(searchInput ? searchInput.value : "");
+    const activeFamilies = getActiveFamilies();
     cards.forEach((card) => {
-      const family = card.dataset.family || "all";
-      const status = card.dataset.status || "unchanged";
+      const family = card.dataset.family || "";
       const itemGroup = card.dataset.itemGroup || "";
       const itemType = card.dataset.itemType || "";
       const haystack = normalizeText(card.dataset.search);
-      const familyOk = activeFamily === "all" || family === activeFamily;
-      const statusOk = activeStatus === "all" || status === activeStatus;
+      const familyOk = activeFamilies.size === 0 || activeFamilies.has(family);
       const groupOk = activeGroup === "all" || normalizeText(itemGroup) === normalizeText(activeGroup);
       const typeOk = activeType === "all" || normalizeText(itemType) === normalizeText(activeType);
       const searchOk = !query || haystack.includes(query);
-      card.hidden = !(familyOk && statusOk && groupOk && typeOk && searchOk);
+      card.hidden = !(familyOk && groupOk && typeOk && searchOk);
     });
-
     familySections.forEach((section) => {
-      section.hidden = section.querySelectorAll(".item-card:not([hidden])").length === 0;
+      section.hidden = section.querySelectorAll(".base-item-card[data-family]:not([hidden])").length === 0;
     });
   }
 
   if (searchInput) {
+    if (initialQuery) {
+      searchInput.value = initialQuery;
+      const mastSearch = document.querySelector("#mast-search-input");
+      if (mastSearch) {
+        mastSearch.value = initialQuery;
+      }
+    }
     searchInput.addEventListener("input", applyFilters);
   }
+  familyCheckboxes.forEach((cb) => cb.addEventListener("change", applyFilters));
   if (groupSelect) {
     groupSelect.addEventListener("change", () => {
       activeGroup = groupSelect.value || "all";
       if (typeSelect && activeGroup !== "all") {
         const currentType = typeSelect.value;
-        const allowed = Array.from(typeSelect.options).some((option) => {
-          return option.value === currentType
-            && option.parentElement
-            && option.parentElement.tagName === "OPTGROUP"
-            && option.parentElement.label === activeGroup;
-        });
+        const allowed = Array.from(typeSelect.options).some((option) =>
+          option.value === currentType
+          && option.parentElement
+          && option.parentElement.tagName === "OPTGROUP"
+          && option.parentElement.label === activeGroup
+        );
         if (!allowed && currentType !== "all") {
           typeSelect.value = "all";
           activeType = "all";
@@ -479,24 +568,11 @@ async function wireItemIndex() {
       applyFilters();
     });
   }
-  familyButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      activeFamily = button.dataset.filterFamily || "all";
-      familyButtons.forEach((entry) => entry.classList.toggle("is-active", entry === button));
-      applyFilters();
-    });
-  });
-  statusButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      activeStatus = button.dataset.filterStatus || "all";
-      statusButtons.forEach((entry) => entry.classList.toggle("is-active", entry === button));
-      applyFilters();
-    });
-  });
   applyFilters();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  wireMastSearch();
   wireStaticSearch();
   wireBaseFilters();
   wireAreaIndex().catch((error) => {

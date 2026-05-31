@@ -868,7 +868,20 @@ class TestWikiGenerator(unittest.TestCase):
 
         self.assertEqual(["Twin Item", "Twin Item", "Twin Item", "Set Blade"], [row["title"] for row in rows])
         self.assertEqual(
-            {"title", "href", "family", "status", "item_group", "item_type", "icon_src", "summary", "search_text", "properties"},
+            {
+                "title",
+                "href",
+                "family",
+                "status",
+                "item_group",
+                "item_type",
+                "icon_src",
+                "summary",
+                "search_text",
+                "properties",
+                "stat_rows",
+                "property_rows",
+            },
             set(rows[0].keys()),
         )
         self.assertEqual("modified", rows[0]["status"])
@@ -890,6 +903,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Twin Item", item_page)
         self.assertIn("BKDiablo Wiki", item_page)
         self.assertIn('href="../../../areas/"', item_page)
+        self.assertIn('href="../../../drops/"', item_page)
         self.assertIn('href="../../../reports/"', item_page)
         self.assertIn('data-item-index-url="../data/items-index.json"', items_page)
         self.assertNotIn('data-filter-family="runeword"', items_page)
@@ -951,6 +965,7 @@ class TestWikiGenerator(unittest.TestCase):
         with open(os.path.join(self.output, "drops", "index.html"), "r", encoding="utf-8") as f:
             drops_page = f.read()
         self.assertIn("Conditional Odds", drops_page)
+        self.assertIn('href="../drops/" class="is-active"', drops_page)
         self.assertIn("Bright Circlet", drops_page)
         self.assertIn("95.2%", drops_page)
         self.assertIn("Thunder Two", drops_page)
@@ -980,7 +995,9 @@ class TestWikiGenerator(unittest.TestCase):
             (os.path.join("drops", "index.html"), "Drops"),
         ]:
             with open(os.path.join(self.output, relative_path), "r", encoding="utf-8") as f:
-                self.assertIn(expected_text, f.read())
+                page = f.read()
+            self.assertIn(expected_text, page)
+            self.assertIn('href="../drops/"', page)
 
         with open(os.path.join(self.output, "bases", "index.html"), "r", encoding="utf-8") as f:
             bases_page = f.read()
@@ -988,6 +1005,15 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('id="base-group-filter"', bases_page)
         self.assertIn('id="base-category-filter"', bases_page)
         self.assertIn('id="base-tier-filter"', bases_page)
+        self.assertIn("sp-head", bases_page)
+        self.assertIn("sp-sub", bases_page)
+        self.assertIn("Bonuses / Rolls", bases_page)
+        self.assertNotIn("runeword-before-after", bases_page)
+
+        self.assertIn("sp-head", gems_runes_page)
+        self.assertIn("sp-sub", gems_runes_page)
+        self.assertIn("Socket Effects", gems_runes_page)
+        self.assertNotIn("runeword-before-after", gems_runes_page)
         self.assertIn('id="base-min-sockets-filter"', bases_page)
         self.assertIn('id="base-roll-filter"', bases_page)
         self.assertIn('id="base-two-handed-filter"', bases_page)

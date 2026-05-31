@@ -86,7 +86,7 @@ class WikiGenerator:
         self._write_assets()
         item_entries = self._write_item_pages(items, old_item_index)
         class_entries = self._write_class_pages(class_pages)
-        self._write_runeword_index_page(items["runeword"], item_entries["runeword"])
+        self._write_runeword_index_page(items["runeword"], item_entries["runeword"], old_item_index)
         self._write_set_index_page(items["set"], old_item_index["set"])
         self._write_base_item_pages(base_item_families)
         self._write_recipe_pages(recipe_groups)
@@ -693,6 +693,7 @@ class WikiGenerator:
                 entry["icon_src"] = icon_src
                 if family == "runeword":
                     entry["rune_requirements"] = self._runeword_rune_requirements(entry, icon_exporter)
+                comparison = self._item_comparison_context(entry, family, old_entry)
                 page_entries[family].append(
                     {
                         "title": title,
@@ -708,6 +709,8 @@ class WikiGenerator:
                             for prop in entry.get("properties", [])
                             if str(prop.get("resolved_text", "")).strip()
                         ][:5],
+                        "stat_rows": comparison["stat_rows"],
+                        "property_rows": comparison["property_rows"],
                     }
                 )
 
@@ -750,9 +753,11 @@ class WikiGenerator:
         self,
         runewords: List[Dict[str, Any]],
         page_entries: List[Dict[str, str]],
+        old_item_index: Optional[Dict] = None,
     ) -> None:
         href_by_title = {entry["title"]: entry for entry in page_entries}
         icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
+        old_runewords = (old_item_index or {}).get("runeword", {})
         records = []
 
         for entry in sorted(runewords, key=self._item_sort_key):
@@ -768,6 +773,9 @@ class WikiGenerator:
                 if str(prop.get("resolved_text", "")).strip()
             ][:5]
 
+            old_entry = old_runewords.get(self._item_identity(entry, "runeword"))
+            comparison = self._item_comparison_context(entry, "runeword", old_entry)
+
             records.append(
                 {
                     "title": title,
@@ -777,6 +785,7 @@ class WikiGenerator:
                     "base_items": entry.get("base_items", []),
                     "runes": rune_requirements,
                     "properties": property_preview,
+                    "comparison": comparison,
                     "search_text": " ".join(
                         [
                             title,
@@ -1091,6 +1100,8 @@ class WikiGenerator:
                 "summary": entry["summary"],
                 "search_text": entry["search_text"],
                 "properties": entry.get("properties", []),
+                "stat_rows": entry.get("stat_rows", []),
+                "property_rows": entry.get("property_rows", []),
             }
             for family in ("unique", "set")
             for entry in item_entries[family]

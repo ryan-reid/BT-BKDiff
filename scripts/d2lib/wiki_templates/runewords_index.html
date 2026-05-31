@@ -10,32 +10,48 @@
 
 <input id="page-search" class="search-input" type="search" placeholder="Search runewords, runes, bases, or properties…" style="margin-bottom:18px" />
 
-<div class="loot-grid">
+<div class="family-items-grid">
   {% for runeword in runewords %}
-  <a class="loot q-runeword" href="{{ site_root }}{{ runeword.href }}" data-search="{{ runeword.search_text }}">
-    <span class="loot-icon"><svg aria-hidden="true"><use href="#i-rune"/></svg></span>
-    <span>
-      <span class="loot-name">{{ runeword.title }}</span>
-      <span class="loot-base">{{ runeword.base_items|join(', ') }}</span>
-      {% if runeword.runes %}
-      <div class="rune-sequence" aria-label="{{ runeword.title }} rune sequence" style="margin-top:8px;justify-content:flex-start">
-        {% for rune in runeword.runes %}
-        <span class="rune-chip" title="{{ rune.name }}">
-          {% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }} icon" />{% endif %}
-          <span>{{ rune.name }}</span>
-        </span>
-        {% endfor %}
+  {% set comp = runeword.comparison %}
+  <div class="base-item-card" style="padding:0;overflow:hidden" data-search="{{ runeword.search_text }}">
+
+    <div class="sp-head">
+      <div style="min-width:0;flex:1">
+        <a class="set-th-name" href="{{ site_root }}{{ runeword.href }}" style="color:var(--q-runeword)">{{ runeword.title }}</a>
+        <span class="set-th-meta">{{ runeword.base_items|join(', ') }}</span>
+        {% if runeword.runes %}
+        <div class="rune-sequence" style="margin-top:6px;justify-content:flex-start;flex-wrap:wrap;gap:4px">
+          {% for rune in runeword.runes %}
+          <span class="rune-chip" style="min-width:44px" title="{{ rune.name }}">
+            {% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }}" />{% endif %}
+            <span>{{ rune.name }}</span>
+          </span>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
-      {% endif %}
-      {% if runeword.properties %}
-      <ul class="runeword-property-preview">
-        {% for property in runeword.properties[:3] %}
-        <li>{{ property }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </span>
-  </a>
+    </div>
+
+    <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
+
+    {% for r in comp.stat_rows %}
+    <div class="sp-row">
+      <span class="sp-cell is-{{ r.status }}"><strong>{{ r.label }}:</strong> {{ r.old or "—" }}</span>
+      <span class="sp-cell is-{{ r.status }}"><strong>{{ r.label }}:</strong> {{ r.new or "—" }}</span>
+    </div>
+    {% endfor %}
+
+    {% if comp.property_rows %}
+    <div class="sp-sep">Properties</div>
+    {% for r in comp.property_rows %}
+    <div class="sp-row">
+      <span class="sp-cell is-{{ r.status }}">{{ r.old or "(empty)" }}</span>
+      <span class="sp-cell is-{{ r.status }}">{{ r.new or "(removed)" }}</span>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+  </div>
   {% endfor %}
 </div>
 {% endblock %}

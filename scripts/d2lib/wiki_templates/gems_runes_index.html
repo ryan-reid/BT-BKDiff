@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Gems & Runes | {{ new_label }} Wiki{% endblock %}
+{% block nav_gems %} class="is-active"{% endblock %}
 
 {% block content %}
 <section class="hero">
@@ -41,54 +42,42 @@
         {% for item in group.members %}
         {% set comp = item.comparison %}
         <div class="base-item-card" data-search="{{ item.name }} {{ item.code }} {{ item.description }} {{ item.status }} {% for row in comp.property_rows %}{{ row.label }} {{ row.old }} {{ row.new }} {% endfor %}">
-          <div class="base-card-header">
-            <div class="base-card-title-group">
-              <div class="base-card-icon-wrap">
-                {% if item.icon_src %}
-                <img class="base-card-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
+          <div class="sp-head">
+            {% if item.icon_src %}
+            <img class="set-th-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
+            {% endif %}
+            <div style="min-width:0;flex:1">
+              <span class="set-th-name">{{ item.name }}</span>
+              <span class="set-th-meta">{{ item.code }}</span>
+              <div class="base-tag-list">
+                {% if item.status == "added" %}
+                <span class="base-tag">BK Only</span>
+                {% elif item.status == "modified" %}
+                <span class="base-tag">Changed</span>
                 {% endif %}
-                <h3 style="font-family: inherit; font-weight: 700;">{{ item.name }}</h3>
               </div>
-            </div>
-            <div class="base-card-meta">
-              <small class="code-text">{{ item.code }}</small>
-              {% if item.status == "added" %}
-              <span class="item-card-status is-added">BK Only</span>
-              {% elif item.status == "modified" %}
-              <span class="item-card-status is-modified">Changed</span>
-              {% endif %}
             </div>
           </div>
 
-          <div class="runeword-before-after" style="font-size: 0.85rem;">
-            <div class="runeword-table-head">Retail</div>
-            <div class="runeword-table-head">BKDiablo</div>
+          <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
 
-            {# Stat Rows #}
-            {% for row in comp.stat_rows %}
-              {% if row.status != "same" or row.new %}
-              <div class="runeword-table-cell is-{{ row.status }}">
-                <strong>{{ row.label }}:</strong> {{ row.old or "empty" }}
-              </div>
-              <div class="runeword-table-cell is-{{ row.status }}">
-                <strong>{{ row.label }}:</strong> {{ row.new or "empty" }}
-              </div>
-              {% endif %}
-            {% endfor %}
-
-            <div class="runeword-table-separator">Socket Effects</div>
-            {% for row in comp.property_rows %}
-              <div class="runeword-table-cell is-{{ row.status }}">
-                <strong>{{ row.label }}:</strong> {{ row.old or "(empty)" }}
-              </div>
-              <div class="runeword-table-cell is-{{ row.status }}">
-                <strong>{{ row.label }}:</strong> {{ row.new or "(removed)" }}
-              </div>
-            {% endfor %}
+          {% for row in comp.stat_rows %}
+          <div class="sp-row">
+            <span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.old or "—" }}</span>
+            <span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.new or "—" }}</span>
           </div>
-          
+          {% endfor %}
+
+          <div class="sp-sep">Socket Effects</div>
+          {% for row in comp.property_rows %}
+          <div class="sp-row">
+            <span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.old or "(empty)" }}</span>
+            <span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.new or "(removed)" }}</span>
+          </div>
+          {% endfor %}
+
           {% if item.description %}
-          <div style="padding: 10px 12px; font-size: 0.85rem; border-top: 1px solid var(--line); background: rgba(33,29,25,0.01);">
+          <div class="sp-note">
             <p class="muted" style="margin: 0;">{{ item.description }}</p>
           </div>
           {% endif %}
