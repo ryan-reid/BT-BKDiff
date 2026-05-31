@@ -1871,6 +1871,10 @@ class WikiGenerator:
             "rune_properties": rune_properties,
             "rune_requirements": entry.get("rune_requirements", []),
             "base_filter_url": self._runeword_base_filter_url(entry, len(entry.get("rune_requirements", []))),
+            "old_base_label": ", ".join(old_entry.get("base_items", [])) if old_entry else "",
+            "old_rune_label": " + ".join(old_entry.get("runes", [])) if old_entry else "",
+            "required_level": entry.get("required_level", ""),
+            "runeword_compare_rows": self._runeword_compare_rows(entry, old_entry),
             "icon_src": entry.get("icon_src", ""),
             "source_rel_path": entry.get("_source_rel_path", ""),
             "comparison": comparison,
@@ -1888,6 +1892,29 @@ class WikiGenerator:
         if socket_count:
             params["minSockets"] = str(socket_count)
         return f"bases/?{urlencode(params)}" if params else "bases/"
+
+    @staticmethod
+    def _runeword_compare_rows(
+        entry: Dict[str, Any],
+        old_entry: Optional[Dict[str, Any]],
+    ) -> List[Dict[str, str]]:
+        old_props = WikiGenerator._property_occurrence_map(old_entry or {})
+        new_props = WikiGenerator._property_occurrence_map(entry)
+        keys = list(new_props.keys()) + [key for key in old_props.keys() if key not in new_props]
+        rows = []
+        for key in keys:
+            old_value = old_props.get(key, "")
+            new_value = new_props.get(key, "")
+            if old_value and new_value:
+                status = "changed" if old_value != new_value else "same"
+            elif new_value:
+                status = "added"
+            elif old_value:
+                status = "removed"
+            else:
+                status = "same"
+            rows.append({"old": old_value, "new": new_value, "status": status})
+        return rows
 
     def _item_comparison_context(
         self,
