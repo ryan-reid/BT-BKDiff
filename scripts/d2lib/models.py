@@ -14,6 +14,7 @@ class AnalyzedItemDTO(TypedDict):
     item_type: str
     lvl_req: str
     properties: List[PropertyDTO]
+    partial_set_properties: Optional[List[Dict[str, Any]]] # List of { "count": int, "properties": List[PropertyDTO] }
     raw_row: Dict[str, str]
 
 class RunewordDTO(TypedDict):

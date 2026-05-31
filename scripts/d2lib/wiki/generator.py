@@ -18,7 +18,9 @@ from d2lib.models import (
     CubeRecipeGroupDTO, 
     MonsterActGroupDTO, 
     MiscGroupDTO, 
-    MechanicsSummaryDTO
+    MechanicsSummaryDTO,
+    SetFamilyDTO,
+    MiscItemDTO
 )
 
 from d2lib.utils import slugify, strip_markdown
@@ -161,14 +163,14 @@ class WikiGenerator:
         
         # Add Defense/Damage if applicable
         if item.get("defense_min") is not None or (old_item and old_item.get("defense_min") is not None):
-            def_old = f"{old_item.get('defense_min')}-{old_item.get('defense_max')}" if old_item and old_item.get("defense_min") is not None else ""
-            def_new = f"{item.get('defense_min')}-{item.get('defense_max')}" if item.get("defense_min") is not None else ""
+            def_old = f"{old_item.get('defense_min')}-{old_item.get('defense_max')}" if old_item and old_item.get('defense_min') is not None else ""
+            def_new = f"{item.get('defense_min')}-{item.get('defense_max')}" if item.get('defense_min') is not None else ""
             status = "added" if def_new and not def_old else "same" if def_old == def_new else "changed"
             stat_rows.append({"label": "Defense", "old": def_old, "new": def_new, "status": status})
 
         if item.get("damage_min") is not None or (old_item and old_item.get("damage_min") is not None):
-            dam_old = f"{old_item.get('damage_min')}-{old_item.get('damage_max')}" if old_item and old_item.get("damage_min") is not None else ""
-            dam_new = f"{item.get('damage_min')}-{item.get('damage_max')}" if item.get("damage_min") is not None else ""
+            dam_old = f"{old_item.get('damage_min')}-{old_item.get('damage_max')}" if old_item and old_item.get('damage_min') is not None else ""
+            dam_new = f"{item.get('damage_min')}-{item.get('damage_max')}" if item.get('damage_min') is not None else ""
             status = "added" if dam_new and not dam_old else "same" if dam_old == dam_new else "changed"
             stat_rows.append({"label": "Damage", "old": dam_old, "new": dam_new, "status": status})
 
@@ -547,7 +549,13 @@ class WikiGenerator:
                 status = self._item_diff_status(entry, old_entry)
                 slug = self._item_slug(entry, family, title, used_paths[family])
                 output_path = WikiRoutes.item_output_path(family, slug)
-                href = WikiRoutes.route_from_output_path(output_path)
+                
+                if family == "set":
+                    set_name = entry.get("raw_row", {}).get("set", "Unknown Set")
+                    href = f"sets/#{slugify(set_name)}-{slugify(title)}"
+                else:
+                    href = WikiRoutes.route_from_output_path(output_path)
+
                 icon_src = icon_exporter.export_entry_icon(entry, family)
                 entry["icon_src"] = icon_src
                 if family == "runeword":
@@ -1130,18 +1138,15 @@ class WikiGenerator:
         family: str,
         old_entry: Optional[Dict[str, Any]],
     ) -> Dict[str, Any]:
-        if old_entry is None:
-            return {"state": "added", "rows": []}
-
         # 1. Stat Rows (Base, Lvl Req, etc.)
         stat_rows = []
         for label, old_value, new_value in self._comparison_stat_rows(entry, family, old_entry):
-            status = "same" if old_value == new_value else "changed"
+            status = "added" if new_value and not old_value else "same" if old_value == new_value else "changed"
             stat_rows.append({"label": label, "old": old_value, "new": new_value, "status": status})
 
         # 2. Property Rows (Aligned side-by-side)
         property_rows = []
-        old_props = WikiGenerator._property_occurrence_map(old_entry)
+        old_props = WikiGenerator._property_occurrence_map(old_entry or {})
         new_props = WikiGenerator._property_occurrence_map(entry)
         all_keys = list(new_props.keys()) + [key for key in old_props.keys() if key not in new_props]
         
@@ -1168,10 +1173,10 @@ class WikiGenerator:
         has_changes = any(r["status"] != "same" for r in stat_rows + property_rows)
         
         return {
-            "state": "modified" if has_changes else "unchanged",
+            "state": "added" if not old_entry else "modified" if has_changes else "unchanged",
             "stat_rows": stat_rows,
             "property_rows": property_rows,
-            # Legacy rows for existing template compatibility during transition
+            # Legacy rows for existing template compatibility
             "rows": [r for r in stat_rows + property_rows if r["status"] != "same"]
         }
 
@@ -1202,9 +1207,9 @@ class WikiGenerator:
         # Internal ID (index from txt) is the most stable identity
         item_id = entry.get("id")
         if item_id:
-            return f"{family}|{item_id}"
+            return f"{family}|{slugify(str(item_id))}"
         title = entry.get("display_name") or entry.get("name") or ""
-        return f"{family}|{title}"
+        return f"{family}|{slugify(str(title))}"
 
     @staticmethod
     def _item_diff_status(entry: Dict[str, Any], old_entry: Optional[Dict[str, Any]]) -> str:
@@ -1229,26 +1234,33 @@ class WikiGenerator:
     def _comparison_stat_rows(
         entry: Dict[str, Any],
         family: str,
-        old_entry: Dict[str, Any],
+        old_entry: Optional[Dict[str, Any]],
     ) -> List[Tuple[str, str, str]]:
+        def get_val(item, key, subkey=None):
+            if not item: return ""
+            if subkey: 
+                raw = item.get("raw_row", {})
+                return str(raw.get(subkey, ""))
+            return str(item.get(key, ""))
+
         if family == "runeword":
             return [
-                ("Runes", " + ".join(old_entry.get("runes", [])), " + ".join(entry.get("runes", []))),
-                ("Base Items", ", ".join(old_entry.get("base_items", [])), ", ".join(entry.get("base_items", []))),
-                ("Property Count", str(len(old_entry.get("properties", []))), str(len(entry.get("properties", [])))),
+                ("Runes", " + ".join(old_entry.get("runes", [])) if old_entry else "", " + ".join(entry.get("runes", []))),
+                ("Base Items", ", ".join(old_entry.get("base_items", [])) if old_entry else "", ", ".join(entry.get("base_items", []))),
+                ("Required Level", get_val(old_entry, "required_level"), get_val(entry, "required_level")),
             ]
 
         fields = [
-            ("Base Item", str(old_entry.get("base_item", "")), str(entry.get("base_item", ""))),
-            ("Item Type", str(old_entry.get("item_type", "")), str(entry.get("item_type", ""))),
-            ("Level Requirement", str(old_entry.get("lvl_req", "")), str(entry.get("lvl_req", ""))),
+            ("Base Item", get_val(old_entry, "base_item"), get_val(entry, "base_item")),
+            ("Item Type", get_val(old_entry, "item_type"), get_val(entry, "item_type")),
+            ("Level Requirement", get_val(old_entry, "lvl_req"), get_val(entry, "lvl_req")),
         ]
         if family == "set":
             fields.append(
                 (
                     "Set",
-                    str(old_entry.get("raw_row", {}).get("set", "")),
-                    str(entry.get("raw_row", {}).get("set", "")),
+                    get_val(old_entry, "raw_row", "set"),
+                    get_val(entry, "raw_row", "set"),
                 )
             )
         return fields
@@ -1256,9 +1268,9 @@ class WikiGenerator:
     @staticmethod
     def _comparison_property_rows(
         entry: Dict[str, Any],
-        old_entry: Dict[str, Any],
+        old_entry: Optional[Dict[str, Any]],
     ) -> List[Tuple[str, str, str]]:
-        old_props = WikiGenerator._property_occurrence_map(old_entry)
+        old_props = WikiGenerator._property_occurrence_map(old_entry or {})
         new_props = WikiGenerator._property_occurrence_map(entry)
         all_keys = list(new_props.keys()) + [key for key in old_props.keys() if key not in new_props]
         return [

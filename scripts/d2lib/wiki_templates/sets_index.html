@@ -14,7 +14,8 @@
 
   <div class="family-list">
     {% for set in sets %}
-    <div class="family-container" 
+    {% set set_slug = set.name|slugify %}
+    <div id="{{ set_slug }}" class="family-container" 
          data-search="{{ set.search_text }}"
          data-status="{{ set.status }}">
       <div class="family-header-bar">
@@ -32,8 +33,9 @@
       <div class="family-items-grid">
         {# Individual Pieces #}
         {% for item in set.members %}
+        {% set item_slug = item.display_name|slugify %}
         {% set comp = item.comparison %}
-        <div class="base-item-card tier-{{ item.lvl_req }}" style="border-left: 4px solid #287a28;">
+        <div id="{{ set_slug }}-{{ item_slug }}" class="base-item-card tier-{{ item.lvl_req }}" style="border-left: 4px solid #287a28;">
           <div class="base-card-header">
             <div class="base-card-title-group">
               <div class="base-card-icon-wrap">

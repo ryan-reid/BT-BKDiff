@@ -11,6 +11,8 @@ D2LIB_DIR = os.path.dirname(MODULE_DIR)
 TEMPLATE_DIR = os.path.join(D2LIB_DIR, "wiki_templates")
 ASSET_SOURCE_DIR = os.path.join(D2LIB_DIR, "wiki_assets")
 
+from d2lib.utils import slugify
+
 class WikiRenderer:
     def __init__(self, template_dir: str = TEMPLATE_DIR):
         self.environment = Environment(
@@ -19,6 +21,7 @@ class WikiRenderer:
             trim_blocks=True,
             lstrip_blocks=True,
         )
+        self.environment.filters["slugify"] = slugify
 
     def render(self, template_name: str, **context: Any) -> str:
         return self.environment.get_template(template_name).render(**context)

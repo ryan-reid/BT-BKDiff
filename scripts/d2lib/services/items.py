@@ -195,6 +195,27 @@ class ItemAnalyzerService:
             if code and code != 'xxx':
                 props.append(self.resolver.resolve_property(code, row.get(f'par{i}', ''), row.get(f'min{i}', ''), row.get(f'max{i}', '')))
 
+        # Partial Set Bonuses (on the item itself)
+        partial_props = []
+        for i in range(1, 6):
+            # i=1 -> 2 items, i=2 -> 3 items, etc.
+            piece_count = i + 1
+            piece_properties = []
+            for suffix in ['a', 'b']:
+                code = row.get(f'aprop{i}{suffix}', '').strip()
+                if code and code != 'xxx' and code != '0':
+                    piece_properties.append(self.resolver.resolve_property(
+                        code, 
+                        row.get(f'apar{i}{suffix}', ''), 
+                        row.get(f'amin{i}{suffix}', ''), 
+                        row.get(f'amax{i}{suffix}', '')
+                    ))
+            if piece_properties:
+                partial_props.append({
+                    "count": piece_count,
+                    "properties": piece_properties
+                })
+
         set_name = row.get('set', '').strip()
         set_info = self.sets.get(set_name, {})
         is_expansion = set_info.get('version', '0') != '0'
@@ -202,7 +223,9 @@ class ItemAnalyzerService:
         item_code = row.get('item', '').strip()
         return {
             "id": idx, "display_name": self.repo.get_string(idx), "base_item": self.get_item_name(item_code),
-            "item_type": self.get_item_category(item_code), "lvl_req": row.get('lvl req', '0'), "properties": props,
+            "item_type": self.get_item_category(item_code), "lvl_req": row.get('lvl req', '0'), 
+            "properties": props,
+            "partial_set_properties": partial_props if partial_props else None,
             "raw_row": {**row, "is_expansion": is_expansion}
         }
 
