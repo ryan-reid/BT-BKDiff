@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harlequin Crest — BKDiablo Wiki (mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mockup.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sigil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 5 5 1-3.5 4 1 6-5.5-3-5.5 3 1-6L4 8l5-1z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></symbol>
+  <symbol id="i-helm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 11a7 7 0 0114 0v6a2 2 0 01-2 2h-2v-4h-2v4h-2v-4H9v4H7a2 2 0 01-2-2z"/></symbol>
+  <symbol id="i-rune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v4l-4 4 4 4v6H8v-6l4-4-4-4z"/></symbol>
+  <symbol id="i-diff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12a3 3 0 003 3h6"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 5 6 8 6 11a6 6 0 11-12 0c0-3 2-6 6-11z"/></symbol>
+</svg>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-sigil"><svg><use href="#i-sigil"/></svg></span>
+      <span><span class="brand-name">BKDiablo</span><br><span class="brand-sub">Ascension Wiki</span></span>
+    </a>
+    <nav class="mast-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="items.html" class="is-active">Items</a>
+      <a href="items.html">Runewords</a>
+      <a href="#">Cube</a>
+      <a href="#">Bestiary</a>
+      <a href="#">Classes</a>
+      <a href="#">Areas</a>
+    </nav>
+    <label class="mast-search">
+      <svg aria-hidden="true"><use href="#i-search"/></svg>
+      <input type="search" placeholder="Search items, runes, recipes…" aria-label="Search the wiki">
+    </label>
+  </div>
+</header>
+
+<div class="shell breadcrumb">
+  <a href="index.html">Home</a><span class="sep">/</span>
+  <a href="items.html">Items</a><span class="sep">/</span>
+  <a href="items.html">Uniques · Helms</a><span class="sep">/</span>
+  <span>Harlequin Crest</span>
+</div>
+
+<div class="shell detail">
+  <!-- in-game tooltip -->
+  <aside class="tooltip q-unique" aria-label="Item tooltip">
+    <div class="tooltip-art"><svg><use href="#i-helm"/></svg></div>
+    <div class="tt-name">Harlequin Crest</div>
+    <div class="tt-base">Shako</div>
+    <div class="tt-rule"></div>
+    <ul class="tt-stats">
+      <li class="meta">Defense: 138</li>
+      <li class="meta">Durability: 12 of 12</li>
+      <li>+2 to All Skills</li>
+      <li>+1.5 Life (Based on Character Level)</li>
+      <li>+1.5 Mana (Based on Character Level)</li>
+      <li>Damage Reduced by 10%</li>
+      <li>+2 to All Attributes</li>
+      <li>+50% Better Chance of Magic Items</li>
+      <li>Socketed (1)</li>
+      <li class="req">Required Level: 62</li>
+    </ul>
+    <p class="tt-flavor">"The jester's grin hides a king's cunning."</p>
+  </aside>
+
+  <!-- main column -->
+  <div class="detail-main">
+    <div>
+      <div class="detail-title">
+        <h1>Harlequin Crest</h1>
+        <span class="pill unique">Unique</span>
+      </div>
+      <p class="muted" style="margin:0;color:var(--muted)">Shako · Elite Helm</p>
+    </div>
+
+    <!-- base item -->
+    <section class="panel">
+      <h2><svg aria-hidden="true"><use href="#i-info"/></svg>Base item — Shako</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Property</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Defense</td><td class="num">98–141</td></tr>
+            <tr><td>Required Level</td><td class="num">43</td></tr>
+            <tr><td>Required Strength</td><td class="num">50</td></tr>
+            <tr><td>Max Sockets</td><td class="num">3</td></tr>
+            <tr><td>Quality Level (qlvl)</td><td class="num">69</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <span>BKDiablo Wiki · generated from mod data · not affiliated with Blizzard.</span>
+    <span><a href="#">GitHub</a> · <a href="#">Discord</a> · <a href="#">Install guide</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

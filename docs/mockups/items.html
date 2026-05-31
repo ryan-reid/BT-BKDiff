@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BKDiablo Wiki — Items (mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mockup.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sigil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 5 5 1-3.5 4 1 6-5.5-3-5.5 3 1-6L4 8l5-1z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></symbol>
+  <symbol id="i-helm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 11a7 7 0 0114 0v6a2 2 0 01-2 2h-2v-4h-2v4h-2v-4H9v4H7a2 2 0 01-2-2z"/></symbol>
+  <symbol id="i-armor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3 7-7 9-4-2-7-4-7-9V6z"/><path d="M12 3v18"/></symbol>
+  <symbol id="i-ring" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="14" r="6"/><path d="M9 6l3-3 3 3-1.5 2h-3z"/></symbol>
+  <symbol id="i-amulet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M6 4h12l-3 6a4 4 0 11-6 0z"/><circle cx="12" cy="15" r="2.4"/></symbol>
+  <symbol id="i-sword" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7l-9 9-3-3z"/><path d="M9 16l-5 5"/><path d="M3 17l4 4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3 7-7 9-4-2-7-4-7-9V6z"/></symbol>
+  <symbol id="i-rune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v4l-4 4 4 4v6H8v-6l4-4-4-4z"/></symbol>
+  <symbol id="i-glove" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M7 11V6a1.5 1.5 0 013 0v4m0 0V4.5a1.5 1.5 0 013 0V10m0 0V6a1.5 1.5 0 013 0v7a6 6 0 01-6 6H10a4 4 0 01-3-1.5L4 14a1.6 1.6 0 012.4-2z"/></symbol>
+  <symbol id="i-diff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12a3 3 0 003 3h6"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></symbol>
+</svg>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-sigil"><svg><use href="#i-sigil"/></svg></span>
+      <span><span class="brand-name">BKDiablo</span><br><span class="brand-sub">Ascension Wiki</span></span>
+    </a>
+    <nav class="mast-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="items.html" class="is-active">Items</a>
+      <a href="items.html">Runewords</a>
+      <a href="#">Cube</a>
+      <a href="#">Bestiary</a>
+      <a href="#">Classes</a>
+      <a href="#">Areas</a>
+    </nav>
+    <label class="mast-search">
+      <svg aria-hidden="true"><use href="#i-search"/></svg>
+      <input type="search" placeholder="Search items, runes, recipes…" aria-label="Search the wiki">
+    </label>
+  </div>
+</header>
+
+<div class="legend shell" role="note" aria-label="Item quality colors">
+  <span style="color:var(--q-unique)"><i></i>Unique</span>
+  <span style="color:var(--q-set)"><i></i>Set</span>
+  <span style="color:var(--q-runeword)"><i></i>Runeword</span>
+  <span style="color:var(--q-magic)"><i></i>Magic</span>
+  <span style="color:var(--q-rare)"><i></i>Rare</span>
+  <span style="color:var(--q-crafted)"><i></i>Crafted</span>
+</div>
+
+<div class="shell breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Items</span></div>
+
+<div class="shell layout">
+  <!-- FILTER RAIL -->
+  <aside class="filters" aria-label="Filters">
+    <div class="filter-block">
+      <h4>Quality</h4>
+      <label class="facet" style="color:var(--q-unique)"><input type="checkbox" checked><span class="dot"></span>Unique<span class="tally">612</span></label>
+      <label class="facet" style="color:var(--q-set)"><input type="checkbox" checked><span class="dot"></span>Set<span class="tally">127</span></label>
+      <label class="facet" style="color:var(--q-runeword)"><input type="checkbox" checked><span class="dot"></span>Runeword<span class="tally">148</span></label>
+      <label class="facet" style="color:var(--q-crafted)"><input type="checkbox"><span class="dot"></span>Crafted<span class="tally">64</span></label>
+    </div>
+    <div class="filter-block">
+      <h4>Slot</h4>
+      <label class="facet"><input type="checkbox">Helms<span class="tally">88</span></label>
+      <label class="facet"><input type="checkbox">Body Armor<span class="tally">74</span></label>
+      <label class="facet"><input type="checkbox">Weapons<span class="tally">203</span></label>
+      <label class="facet"><input type="checkbox">Shields<span class="tally">61</span></label>
+      <label class="facet"><input type="checkbox">Rings &amp; Amulets<span class="tally">52</span></label>
+      <label class="facet"><input type="checkbox">Charms<span class="tally">40</span></label>
+    </div>
+  </aside>
+
+  <!-- RESULTS -->
+  <main>
+    <div class="results-bar">
+      <span class="count"><b>887</b> items</span>
+      <div class="chip-row">
+        <span class="chip is-on">Unique <span class="x">×</span></span>
+        <span class="chip is-on">Set <span class="x">×</span></span>
+        <span class="chip is-on">Runeword <span class="x">×</span></span>
+      </div>
+      <select class="select" aria-label="Sort items">
+        <option>Sort: Level (high → low)</option>
+        <option>Sort: Name (A → Z)</option>
+        <option>Sort: Recently changed</option>
+      </select>
+    </div>
+
+    <div class="loot-grid">
+      <a class="loot q-unique" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-helm"/></svg></span>
+        <span><span class="loot-name">Harlequin Crest</span><span class="loot-base">Shako · Helm</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 62</span></span></span>
+      </a>
+      <a class="loot q-unique" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-armor"/></svg></span>
+        <span><span class="loot-name">Skin of the Vipermagi</span><span class="loot-base">Serpentskin · Armor</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 29</span></span></span>
+      </a>
+      <a class="loot q-runeword" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-armor"/></svg></span>
+        <span><span class="loot-name">Enigma</span><span class="loot-base">Jah Ith Ber · Armor</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 65</span></span></span>
+      </a>
+      <a class="loot q-unique" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-ring"/></svg></span>
+        <span><span class="loot-name">Stone of Jordan</span><span class="loot-base">Ring</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 29</span></span></span>
+      </a>
+      <a class="loot q-set" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-amulet"/></svg></span>
+        <span><span class="loot-name">Tal Rasha's Adjudication</span><span class="loot-base">Amulet</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 67</span></span></span>
+      </a>
+      <a class="loot q-runeword" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-sword"/></svg></span>
+        <span><span class="loot-name">Grief</span><span class="loot-base">Eth Tir Lo Mal Ral · Sword</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 59</span></span></span>
+      </a>
+      <a class="loot q-unique" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-glove"/></svg></span>
+        <span><span class="loot-name">Magefist</span><span class="loot-base">Light Gauntlets</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 23</span></span></span>
+      </a>
+      <a class="loot q-unique" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-shield"/></svg></span>
+        <span><span class="loot-name">Stormshield</span><span class="loot-base">Monarch · Shield</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 73</span></span></span>
+      </a>
+      <a class="loot q-runeword" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-shield"/></svg></span>
+        <span><span class="loot-name">Spirit</span><span class="loot-base">Tal Thul Ort Amn · Shield</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 30</span></span></span>
+      </a>
+      <a class="loot q-set" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-armor"/></svg></span>
+        <span><span class="loot-name">Immortal King's Soul Cage</span><span class="loot-base">Sacred Armor</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 76</span></span></span>
+      </a>
+      <a class="loot q-unique" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-helm"/></svg></span>
+        <span><span class="loot-name">Crown of Ages</span><span class="loot-base">Corona · Helm</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 82</span></span></span>
+      </a>
+      <a class="loot q-unique" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-amulet"/></svg></span>
+        <span><span class="loot-name">Mara's Kaleidoscope</span><span class="loot-base">Amulet</span>
+        <span class="loot-foot"><span class="tag lvl">Lvl 67</span></span></span>
+      </a>
+    </div>
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <span>BKDiablo Wiki · generated from mod data · not affiliated with Blizzard.</span>
+    <span><a href="#">GitHub</a> · <a href="#">Discord</a> · <a href="#">Install guide</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -173,6 +173,10 @@ class MiscGroupDTO(TypedDict):
     source_categories: List[str]
     members: List[MiscItemDTO]
 
+class MechanicsDTO(TypedDict):
+    difficulty_levels: List[Dict[str, Any]]
+    experience_table: List[Dict[str, str]]
+
 class MechanicsSummaryDTO(TypedDict):
     experience_changes: List[Dict[str, Any]]
     difficulty_changes: List[Dict[str, Any]]

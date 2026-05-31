@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BKDiablo Wiki — Home (mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mockup.css">
+</head>
+<body>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sigil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 5 5 1-3.5 4 1 6-5.5-3-5.5 3 1-6L4 8l5-1z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></symbol>
+  <symbol id="i-helm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 11a7 7 0 0114 0v6a2 2 0 01-2 2h-2v-4h-2v4h-2v-4H9v4H7a2 2 0 01-2-2z"/></symbol>
+  <symbol id="i-armor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3 7-7 9-4-2-7-4-7-9V6z"/><path d="M12 3v18"/></symbol>
+  <symbol id="i-ring" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="14" r="6"/><path d="M9 6l3-3 3 3-1.5 2h-3z"/></symbol>
+  <symbol id="i-sword" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7l-9 9-3-3z"/><path d="M9 16l-5 5"/><path d="M3 17l4 4"/></symbol>
+  <symbol id="i-rune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v4l-4 4 4 4v6H8v-6l4-4-4-4z"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></symbol>
+  <symbol id="i-skull" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3a8 8 0 00-8 8c0 3 1.5 4.5 3 5.5V20h10v-3.5c1.5-1 3-2.5 3-5.5a8 8 0 00-8-8z"/><circle cx="9" cy="11" r="1.5"/><circle cx="15" cy="11" r="1.5"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M19 19H6"/></symbol>
+  <symbol id="i-class" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 21v-1a7 7 0 0114 0v1"/></symbol>
+  <symbol id="i-diff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12a3 3 0 003 3h6"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></symbol>
+</svg>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-sigil"><svg><use href="#i-sigil"/></svg></span>
+      <span>
+        <span class="brand-name">BKDiablo</span><br>
+        <span class="brand-sub">Ascension Wiki</span>
+      </span>
+    </a>
+    <nav class="mast-nav" aria-label="Primary">
+      <a href="index.html" class="is-active">Home</a>
+      <a href="items.html">Items</a>
+      <a href="items.html">Runewords</a>
+      <a href="#">Cube</a>
+      <a href="#">Bestiary</a>
+      <a href="#">Classes</a>
+      <a href="#">Areas</a>
+    </nav>
+    <label class="mast-search">
+      <svg aria-hidden="true"><use href="#i-search"/></svg>
+      <input type="search" placeholder="Search items, runes, recipes…" aria-label="Search the wiki">
+    </label>
+  </div>
+</header>
+
+<div class="legend shell" role="note" aria-label="Item quality colors">
+  <span style="color:var(--q-unique)"><i></i>Unique</span>
+  <span style="color:var(--q-set)"><i></i>Set</span>
+  <span style="color:var(--q-runeword)"><i></i>Runeword</span>
+  <span style="color:var(--q-magic)"><i></i>Magic</span>
+  <span style="color:var(--q-rare)"><i></i>Rare</span>
+  <span style="color:var(--q-crafted)"><i></i>Crafted</span>
+</div>
+
+<section class="hero">
+  <div class="shell">
+    <span class="hero-kicker">Mod by Baron &amp; Kex · Single Player</span>
+    <h1>BKDiablo Wiki</h1>
+    <p>Reference for BKDiablo — uniques, runewords, cube recipes, the bestiary,
+       class skill trees, and endgame farming routes.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="items.html"><svg aria-hidden="true"><use href="#i-sword"/></svg>Browse Items</a>
+      <a class="btn btn-ghost" href="items.html"><svg aria-hidden="true"><use href="#i-rune"/></svg>Runewords</a>
+    </div>
+  </div>
+</section>
+
+<div class="shell">
+  <div class="stat-strip">
+    <div class="stat-cell"><strong>612</strong><span>Unique Items</span></div>
+    <div class="stat-cell"><strong>148</strong><span>Runewords</span></div>
+    <div class="stat-cell"><strong>390</strong><span>Cube Recipes</span></div>
+    <div class="stat-cell"><strong>85</strong><span>Farming Areas</span></div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Explore the codex</div>
+        <h2>Where do you want to go?</h2>
+      </div>
+      <a class="see-all" href="items.html">View all sections →</a>
+    </div>
+    <div class="portal-grid">
+      <a class="portal" href="items.html">
+        <span class="portal-icon"><svg><use href="#i-armor"/></svg></span>
+        <h3>Items</h3><p>Uniques, sets &amp; their reworked affixes.</p>
+        <span class="portal-count">612 entries</span>
+      </a>
+      <a class="portal" href="items.html">
+        <span class="portal-icon"><svg><use href="#i-rune"/></svg></span>
+        <h3>Runewords</h3><p>Recipes, rune order, and stat rolls.</p>
+        <span class="portal-count">148 entries</span>
+      </a>
+      <a class="portal" href="#">
+        <span class="portal-icon"><svg><use href="#i-cube"/></svg></span>
+        <h3>Cube Recipes</h3><p>Crafting, corruptions &amp; upgrades.</p>
+        <span class="portal-count">390 recipes</span>
+      </a>
+      <a class="portal" href="#">
+        <span class="portal-icon"><svg><use href="#i-skull"/></svg></span>
+        <h3>Bestiary</h3><p>HP, resistances &amp; immunities by area.</p>
+        <span class="portal-count">Insanity tuned</span>
+      </a>
+      <a class="portal" href="#">
+        <span class="portal-icon"><svg><use href="#i-class"/></svg></span>
+        <h3>Classes</h3><p>Skill trees with level-by-level scaling.</p>
+        <span class="portal-count">8 classes</span>
+      </a>
+      <a class="portal" href="#">
+        <span class="portal-icon"><svg><use href="#i-map"/></svg></span>
+        <h3>Farming Areas</h3><p>Density, area level &amp; super-chest routes.</p>
+        <span class="portal-count">85 ranked</span>
+      </a>
+      <a class="portal" href="#">
+        <span class="portal-icon"><svg><use href="#i-book"/></svg></span>
+        <h3>Mechanics</h3><p>XP curve, difficulty &amp; system changes.</p>
+        <span class="portal-count">Progression</span>
+      </a>
+      <a class="portal" href="#">
+        <span class="portal-icon"><svg><use href="#i-diff"/></svg></span>
+        <h3>Diff Reports</h3><p>Raw table-level changes vs Retail &amp; BT.</p>
+        <span class="portal-count">Technical</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Popular lookups</div>
+        <h2>Featured items</h2>
+      </div>
+      <a class="see-all" href="items.html">Browse all items →</a>
+    </div>
+    <div class="loot-grid">
+      <a class="loot q-unique" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-helm"/></svg></span>
+        <span>
+          <span class="loot-name">Harlequin Crest</span>
+          <span class="loot-base">Shako · Helm</span>
+        </span>
+      </a>
+      <a class="loot q-runeword" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-armor"/></svg></span>
+        <span>
+          <span class="loot-name">Enigma</span>
+          <span class="loot-base">Jah · Ith · Ber</span>
+        </span>
+      </a>
+      <a class="loot q-unique" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-ring"/></svg></span>
+        <span>
+          <span class="loot-name">Stone of Jordan</span>
+          <span class="loot-base">Ring</span>
+        </span>
+      </a>
+      <a class="loot q-set" href="item.html">
+        <span class="loot-icon"><svg><use href="#i-helm"/></svg></span>
+        <span>
+          <span class="loot-name">Tal Rasha's Horadric Crest</span>
+          <span class="loot-base">Death Mask</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <span>BKDiablo Wiki · generated from mod data · not affiliated with Blizzard.</span>
+    <span><a href="#">GitHub</a> · <a href="#">Discord</a> · <a href="#">Install guide</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
