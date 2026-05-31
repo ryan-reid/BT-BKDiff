@@ -61,6 +61,10 @@ class WikiRoutes:
         return "items/index.html"
 
     @staticmethod
+    def sets_index_output_path() -> str:
+        return "sets/index.html"
+
+    @staticmethod
     def runewords_index_output_path() -> str:
         return "runewords/index.html"
 

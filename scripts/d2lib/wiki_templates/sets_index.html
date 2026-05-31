@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Set Items | {{ new_label }} Wiki{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-eyebrow">Item Repository</p>
+  <h1>Set Items</h1>
+  <p class="hero-copy">Browse full sets and their individual pieces. Technical comparisons of pieces and set bonuses against Retail baseline.</p>
+</section>
+
+<section class="content-section">
+  <input id="page-search" class="search-input" type="search" placeholder="Search sets (e.g. Tal Rasha, Sigon)..." />
+
+  <div class="family-list">
+    {% for set in sets %}
+    <div class="family-container" 
+         data-search="{{ set.search_text }}"
+         data-status="{{ set.status }}">
+      <div class="family-header-bar">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <h2 style="color: #287a28;">{{ set.name }}</h2>
+          {% if set.status == "added" %}
+          <span class="item-card-status is-added">BK Only</span>
+          {% elif set.status == "modified" %}
+          <span class="item-card-status is-modified">Changed</span>
+          {% endif %}
+        </div>
+        <p class="muted">{{ set.summary }}</p>
+      </div>
+
+      <div class="family-items-grid">
+        {# Individual Pieces #}
+        {% for item in set.members %}
+        {% set comp = item.comparison %}
+        <div class="base-item-card tier-{{ item.lvl_req }}" style="border-left: 4px solid #287a28;">
+          <div class="base-card-header">
+            <div class="base-card-title-group">
+              <div class="base-card-icon-wrap">
+                {% if item.icon_src %}
+                <img class="base-card-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
+                {% endif %}
+                <h3><a href="{{ site_root }}{{ item.href }}" style="color: inherit; text-decoration: none;">{{ item.display_name }}</a></h3>
+              </div>
+            </div>
+            <div class="base-card-meta">
+              <small class="code-text">{{ item.item_type }} ({{ item.base_item }})</small>
+            </div>
+          </div>
+
+          <div class="runeword-before-after" style="font-size: 0.85rem;">
+            <div class="runeword-table-head">Retail</div>
+            <div class="runeword-table-head">BKDiablo</div>
+
+            {# Stat Rows #}
+            {% for row in comp.stat_rows %}
+              {% if row.status != "same" or row.new %}
+              <div class="runeword-table-cell is-{{ row.status }}">
+                <strong>{{ row.label }}:</strong> {{ row.old or "empty" }}
+              </div>
+              <div class="runeword-table-cell is-{{ row.status }}">
+                <strong>{{ row.label }}:</strong> {{ row.new or "empty" }}
+              </div>
+              {% endif %}
+            {% endfor %}
+
+            <div class="runeword-table-separator">Properties</div>
+            {% for row in comp.property_rows %}
+              <div class="runeword-table-cell is-{{ row.status }}">
+                {% if row.label and "Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "(empty)" }}
+              </div>
+              <div class="runeword-table-cell is-{{ row.status }}">
+                {% if row.label and "Stat #" not in row.label and "Added:" not in row.label and "Removed:" not in row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new or "(removed)" }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+
+        {# Set Bonuses #}
+        <div class="base-item-card" style="grid-column: 1 / -1; border-top: 4px solid #287a28;">
+           <div class="base-card-header" style="background: rgba(40, 122, 40, 0.05);">
+             <h3 style="margin: 0; color: #287a28;">Set Bonuses</h3>
+           </div>
+           <div class="runeword-before-after" style="font-size: 0.85rem;">
+            <div class="runeword-table-head">Retail</div>
+            <div class="runeword-table-head">BKDiablo</div>
+            
+            {% for row in set.set_bonuses %}
+              {% if row.is_separator %}
+              <div class="runeword-table-separator">{{ row.label }}</div>
+              {% endif %}
+              <div class="runeword-table-cell is-{{ row.status }}">
+                {{ row.old or "(empty)" }}
+              </div>
+              <div class="runeword-table-cell is-{{ row.status }}">
+                {{ row.new or "(removed)" }}
+              </div>
+            {% endfor %}
+           </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

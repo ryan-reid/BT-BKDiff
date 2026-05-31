@@ -84,6 +84,7 @@ class WikiGenerator:
         item_entries = self._write_item_pages(items, old_item_index)
         class_entries = self._write_class_pages(class_pages)
         self._write_runeword_index_page(items["runeword"], item_entries["runeword"])
+        self._write_set_index_page(items["set"], old_item_index["set"])
         self._write_base_item_pages(base_item_families)
         self._write_recipe_pages(recipe_groups)
         self._write_bestiary_pages(monster_groups)
@@ -651,6 +652,86 @@ class WikiGenerator:
             source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "runes.txt")],
             runewords=records,
         )
+
+    def _write_set_index_page(self, sets: List[Dict[str, Any]], old_item_index: Dict[str, Dict[str, Any]]) -> None:
+        # 1. Group by set name
+        set_families: Dict[str, List[Dict[str, Any]]] = {}
+        for item in sets:
+            set_name = item.get("raw_row", {}).get("set", "Unknown Set")
+            if set_name not in set_families:
+                set_families[set_name] = []
+            set_families[set_name].append(item)
+            
+        # 2. Build SetFamilyDTOs with aligned set bonuses
+        retail_repo = D2Repository(self.retail_data_dir)
+        retail_resolver = PropertyResolverService(retail_repo)
+        retail_sets = {row["name"]: row for row in retail_repo.get_excel_table("sets")}
+        bk_sets = {row["name"]: row for row in D2Repository(self.game_data_dir).get_excel_table("sets")}
+        
+        results: List[SetFamilyDTO] = []
+        for name, members in sorted(set_families.items()):
+            bk_set_row = bk_sets.get(name, {})
+            rt_set_row = retail_sets.get(name, {})
+            
+            # Enrich members with comparison data
+            for item in members:
+                old_item = old_item_index.get(self._item_identity(item, "set"))
+                item["comparison"] = self._item_comparison_context(item, "set", old_item)
+
+            bonus_diffs = self._set_bonus_comparison(name, bk_set_row, rt_set_row, retail_resolver)
+            
+            status = "added" if not rt_set_row else "modified" if any(b["status"] != "same" for b in bonus_diffs) or any(m["comparison"]["state"] == "modified" for m in members) else "unchanged"
+            
+            results.append({
+                "name": name,
+                "summary": f"A {len(members)}-piece set.",
+                "set_bonuses": bonus_diffs,
+                "members": members,
+                "status": status,
+                "search_text": f"{name} " + " ".join(m["display_name"] for m in members),
+            })
+
+        self._write_page(
+            title=f"Set Items | {self.new_label} Wiki",
+            output_path=WikiRoutes.sets_index_output_path(),
+            template_name="sets_index.html",
+            category="index",
+            source_files=["data/global/excel/sets.txt", "data/global/excel/setitems.txt"],
+            sets=results,
+        )
+
+    def _set_bonus_comparison(self, set_name: str, bk_row: Dict[str, str], rt_row: Dict[str, str], rt_resolver: PropertyResolverService) -> List[Dict[str, Any]]:
+        # Set bonuses in sets.txt:
+        # P2CodeX (Partial 2), P3CodeX, P4CodeX, FCodeX (Full)
+        # We'll align them by type (P2, P3, P4, Full) and index
+        bonus_rows = []
+        bk_resolver = PropertyResolverService(D2Repository(self.game_data_dir))
+        
+        prefixes = [("2 Pieces", "P2"), ("3 Pieces", "P3"), ("4 Pieces", "P4"), ("Full Set", "F")]
+        for label, pref in prefixes:
+            for i in range(1, 9):
+                bk_code = bk_row.get(f"{pref}Code{i}", "").strip()
+                rt_code = rt_row.get(f"{pref}Code{i}", "").strip()
+                
+                if not bk_code and not rt_code:
+                    continue
+                
+                bk_res = bk_resolver.resolve_property(bk_code, bk_row.get(f"{pref}Param{i}", ""), bk_row.get(f"{pref}Min{i}", ""), bk_row.get(f"{pref}Max{i}", "")) if bk_code else None
+                rt_res = rt_resolver.resolve_property(rt_code, rt_row.get(f"{pref}Param{i}", ""), rt_row.get(f"{pref}Min{i}", ""), rt_row.get(f"{pref}Max{i}", "")) if rt_code else None
+                
+                o_val = rt_res["resolved_text"] if rt_res else ""
+                n_val = bk_res["resolved_text"] if bk_res else ""
+                
+                status = "same" if o_val == n_val else "added" if n_val and not o_val else "removed" if o_val and not n_val else "changed"
+                
+                bonus_rows.append({
+                    "label": label if i == 1 else "",
+                    "old": o_val,
+                    "new": n_val,
+                    "status": status,
+                    "is_separator": i == 1
+                })
+        return bonus_rows
 
     @staticmethod
     def _runeword_rune_name(entry: Dict[str, Any], rune_code: str, rune_index: int) -> str:

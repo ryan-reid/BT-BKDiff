@@ -173,6 +173,14 @@ class MiscGroupDTO(TypedDict):
     source_categories: List[str]
     members: List[MiscItemDTO]
 
+class SetFamilyDTO(TypedDict):
+    name: str
+    summary: str
+    set_bonuses: List[Dict[str, Any]] # Aligned diff
+    members: List[AnalyzedItemDTO]
+    status: str # added, modified, unchanged
+    search_text: str
+
 class MechanicsDTO(TypedDict):
     difficulty_levels: List[Dict[str, Any]]
     experience_table: List[Dict[str, str]]
