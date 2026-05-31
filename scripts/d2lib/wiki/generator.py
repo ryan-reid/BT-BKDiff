@@ -81,6 +81,7 @@ class WikiGenerator:
         monster_groups = self._load_monster_groups()
         misc_groups, gem_rune_groups = self._load_misc_groups()
         mechanics_summary = self._load_mechanics_summary()
+        drop_weight_groups = self._load_drop_weight_groups()
 
         self._write_assets()
         item_entries = self._write_item_pages(items, old_item_index)
@@ -93,8 +94,9 @@ class WikiGenerator:
         self._write_misc_pages(misc_groups)
         self._write_gems_runes_pages(gem_rune_groups)
         self._write_mechanics_pages(mechanics_summary)
+        self._write_drop_weight_pages(drop_weight_groups)
         report_entries = self._publish_reports()
-        self._write_indexes(item_entries, class_entries, report_entries, area_entries, base_item_families, recipe_groups, monster_groups, misc_groups, gem_rune_groups)
+        self._write_indexes(item_entries, class_entries, report_entries, area_entries, base_item_families, recipe_groups, monster_groups, misc_groups, gem_rune_groups, drop_weight_groups)
         self._write_patch_notes_draft(item_entries, class_entries)
         self._write_item_index_data(item_entries, items)
         self._write_area_index_data(area_entries)
@@ -403,6 +405,110 @@ class WikiGenerator:
                 os.path.join(self.game_data_dir, "data", "global", "excel", "gamble.txt"),
             ],
             summary=summary,
+        )
+
+    def _load_drop_weight_groups(self) -> List[Dict[str, Any]]:
+        repo = D2Repository(self.game_data_dir)
+        base_names = self._drop_base_name_lookup(repo)
+        groups: List[Dict[str, Any]] = []
+        groups.extend(self._quality_drop_weight_groups(repo.get_excel_table("setitems"), "set", "item", base_names))
+        groups.extend(self._quality_drop_weight_groups(repo.get_excel_table("uniqueitems"), "unique", "code", base_names))
+        return sorted(groups, key=lambda row: (row["base_name"].lower(), row["quality"], -row["max_chance"]))
+
+    @staticmethod
+    def _drop_base_name_lookup(repo: D2Repository) -> Dict[str, str]:
+        base_names: Dict[str, str] = {}
+        for table_name in ("weapons", "armor", "misc"):
+            for row in repo.get_excel_table(table_name):
+                code = str(row.get("code", "")).strip()
+                if not code:
+                    continue
+                name = str(row.get("name") or row.get("namestr") or code).strip()
+                base_names[code] = repo.get_string(name) if name else code
+        return base_names
+
+    @staticmethod
+    def _quality_drop_weight_groups(
+        rows: List[Dict[str, str]],
+        quality: str,
+        code_column: str,
+        base_names: Dict[str, str],
+    ) -> List[Dict[str, Any]]:
+        grouped: Dict[str, List[Dict[str, Any]]] = {}
+        for row in rows:
+            if str(row.get("disabled", "")).strip() in {"1", "true", "TRUE"}:
+                continue
+            if str(row.get("spawnable", "1")).strip() == "0":
+                continue
+            code = str(row.get(code_column, "")).strip()
+            if not code:
+                continue
+            try:
+                weight = int(str(row.get("rarity", "") or "0"))
+            except ValueError:
+                weight = 0
+            if weight <= 0:
+                continue
+            grouped.setdefault(code, []).append(
+                {
+                    "name": str(row.get("index") or row.get("*ItemName") or code).strip(),
+                    "weight": weight,
+                    "level": str(row.get("lvl", "")).strip(),
+                    "level_req": str(row.get("lvl req", "")).strip(),
+                }
+            )
+
+        result: List[Dict[str, Any]] = []
+        for code, candidates in grouped.items():
+            if len(candidates) < 2:
+                continue
+            total_weight = sum(candidate["weight"] for candidate in candidates)
+            if total_weight <= 0:
+                continue
+            enriched = []
+            for candidate in sorted(candidates, key=lambda row: (-row["weight"], row["name"].lower())):
+                chance = candidate["weight"] / total_weight * 100
+                enriched.append(
+                    {
+                        **candidate,
+                        "chance": chance,
+                        "chance_display": f"{chance:.1f}%",
+                    }
+                )
+            result.append(
+                {
+                    "id": f"{quality}-{slugify(code)}",
+                    "quality": quality,
+                    "quality_label": quality.title(),
+                    "base_code": code,
+                    "base_name": base_names.get(code, code),
+                    "candidate_count": len(enriched),
+                    "total_weight": total_weight,
+                    "max_chance": max(candidate["chance"] for candidate in enriched),
+                    "candidates": enriched,
+                    "search_text": " ".join(
+                        [quality, code, base_names.get(code, code)]
+                        + [candidate["name"] for candidate in enriched]
+                    ),
+                }
+            )
+        return result
+
+    def _write_drop_weight_pages(self, groups: List[Dict[str, Any]]) -> None:
+        self.writer.write_text("data/drop-weights.json", json.dumps(groups, indent=2))
+        self._write_page(
+            title=f"Drops | {self.new_label} Wiki",
+            output_path=WikiRoutes.drops_index_output_path(),
+            template_name="drops_index.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", "uniqueitems.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "setitems.txt"),
+                os.path.join(self.game_data_dir, "data", "global", "excel", "treasureclassex.txt"),
+            ],
+            groups=groups,
+            set_group_count=sum(1 for group in groups if group["quality"] == "set"),
+            unique_group_count=sum(1 for group in groups if group["quality"] == "unique"),
         )
 
     def _load_items(self, item_db_dir: Optional[str] = None) -> Dict[str, List[Dict[str, Any]]]:
@@ -887,6 +993,7 @@ class WikiGenerator:
         monster_groups: List[MonsterActGroupDTO],
         misc_groups: List[MiscGroupDTO],
         gem_rune_groups: List[MiscGroupDTO],
+        drop_weight_groups: List[Dict[str, Any]],
     ) -> None:
         self._write_page(
             title=f"{self.new_label} Data Wiki",
@@ -902,6 +1009,7 @@ class WikiGenerator:
             monster_count=sum(len(g["monsters"]) for g in monster_groups),
             misc_count=sum(len(g["members"]) for g in misc_groups),
             gem_rune_count=sum(len(g["members"]) for g in gem_rune_groups),
+            drop_weight_count=len(drop_weight_groups),
             total_items=sum(len(entries) for entries in item_entries.values()),
             reports=report_entries,
         )

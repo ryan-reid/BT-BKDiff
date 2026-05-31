@@ -338,6 +338,25 @@ class TestWikiGenerator(unittest.TestCase):
         )
         self._write_tsv(
             excel_root,
+            "setitems.txt",
+            ["index", "set", "item", "*ItemName", "rarity", "lvl", "lvl req", "spawnable"],
+            [
+                {"index": "Bright Circlet", "set": "Practice Set", "item": "ci3", "*ItemName": "Diadem", "rarity": "20", "lvl": "40", "lvl req": "30", "spawnable": "1"},
+                {"index": "Dim Circlet", "set": "Practice Set", "item": "ci3", "*ItemName": "Diadem", "rarity": "1", "lvl": "80", "lvl req": "65", "spawnable": "1"},
+            ],
+        )
+        self._write_tsv(
+            excel_root,
+            "uniqueitems.txt",
+            ["index", "code", "*ItemName", "rarity", "lvl", "lvl req", "spawnable"],
+            [
+                {"index": "Thunder One", "code": "7gm", "*ItemName": "Thunder Maul", "rarity": "3", "lvl": "85", "lvl req": "70", "spawnable": "1"},
+                {"index": "Thunder Two", "code": "7gm", "*ItemName": "Thunder Maul", "rarity": "1", "lvl": "90", "lvl req": "80", "spawnable": "1"},
+            ],
+        )
+        self._write_tsv(excel_root, "treasureclassex.txt", ["Treasure Class", "Picks", "Item1", "Prob1"], [{"Treasure Class": "Act Test", "Picks": "1", "Item1": "armo3", "Prob1": "1"}])
+        self._write_tsv(
+            excel_root,
             "gems.txt",
             [
                 "name", "code",
@@ -711,6 +730,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("misc/index.html", WikiRoutes.misc_index_output_path())
         self.assertEqual("gems-runes/index.html", WikiRoutes.gems_runes_index_output_path())
         self.assertEqual("mechanics/index.html", WikiRoutes.mechanics_output_path())
+        self.assertEqual("drops/index.html", WikiRoutes.drops_index_output_path())
 
     def test_rune_icon_exporter_has_ci_safe_fallback(self):
         writer = WikiOutputWriter(self.output)
@@ -742,7 +762,9 @@ class TestWikiGenerator(unittest.TestCase):
             os.path.join(self.output, "misc", "index.html"),
             os.path.join(self.output, "gems-runes", "index.html"),
             os.path.join(self.output, "mechanics", "index.html"),
+            os.path.join(self.output, "drops", "index.html"),
             os.path.join(self.output, "data", "areas-index.json"),
+            os.path.join(self.output, "data", "drop-weights.json"),
             os.path.join(self.output, "reports", "index.html"),
             os.path.join(self.output, "reports", "items", "retail-bk", "index.html"),
             os.path.join(self.output, "reports", "items", "retail-bk", "diff.json"),
@@ -765,6 +787,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("misc/", manifest_paths)
         self.assertIn("gems-runes/", manifest_paths)
         self.assertIn("mechanics/", manifest_paths)
+        self.assertIn("drops/", manifest_paths)
         self.assertIn("reports/", manifest_paths)
         self.assertIn("reports/items/retail-bk/", manifest_paths)
 
@@ -929,6 +952,15 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("magic arrow", mechanics_page)
         self.assertIn("Character, Item, And Economy Systems", mechanics_page)
 
+        with open(os.path.join(self.output, "drops", "index.html"), "r", encoding="utf-8") as f:
+            drops_page = f.read()
+        self.assertIn("Conditional Odds", drops_page)
+        self.assertIn("Bright Circlet", drops_page)
+        self.assertIn("95.2%", drops_page)
+        self.assertIn("Thunder Two", drops_page)
+        self.assertIn("25.0%", drops_page)
+        self.assertIn("does not resolve monster, area, or full treasure-class path odds", drops_page)
+
         with open(os.path.join(self.output, "items", "runeword", "practice", "index.html"), "r", encoding="utf-8") as f:
             runeword_page = f.read()
         self.assertIn("Before", runeword_page)
@@ -951,6 +983,7 @@ class TestWikiGenerator(unittest.TestCase):
             (os.path.join("misc", "index.html"), "Materials"),
             (os.path.join("gems-runes", "index.html"), "Gems &amp; Runes"),
             (os.path.join("mechanics", "index.html"), "Mechanics &amp; Progression"),
+            (os.path.join("drops", "index.html"), "Drops"),
         ]:
             with open(os.path.join(self.output, relative_path), "r", encoding="utf-8") as f:
                 self.assertIn(expected_text, f.read())

@@ -101,6 +101,10 @@ class WikiRoutes:
         return "mechanics/index.html"
 
     @staticmethod
+    def drops_index_output_path() -> str:
+        return "drops/index.html"
+
+    @staticmethod
     def item_output_path(family: str, slug: str) -> str:
         return f"items/{family}/{slug}/index.html"
 

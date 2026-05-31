@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Drops | {{ new_label }} Wiki{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-eyebrow">Drop Weighting</p>
+  <h1>Drops</h1>
+  <p class="hero-copy">Compare weighted unique and set candidates that share the same base item. These odds are conditional on the game already selecting that base item and item quality.</p>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>Set Base Pools</span><strong>{{ set_group_count }}</strong></article>
+  <article class="metric-card"><span>Unique Base Pools</span><strong>{{ unique_group_count }}</strong></article>
+  <article class="metric-card"><span>Total Weighted Pools</span><strong>{{ groups|length }}</strong></article>
+</section>
+
+<section class="content-section">
+  <input id="page-search" class="search-input" type="search" placeholder="Search base items or item names..." />
+  <p class="muted">This first pass does not resolve monster, area, or full treasure-class path odds. It shows the relative weighting among items that compete for the same base after a set or unique quality roll succeeds.</p>
+
+  <div class="family-list">
+    {% for group in groups %}
+    <div class="family-container" id="{{ group.id }}" data-search="{{ group.search_text }}">
+      <div class="family-header-bar">
+        <div>
+          <h2>{{ group.base_name }}</h2>
+          <p class="muted">{{ group.quality_label }} candidates for <code>{{ group.base_code }}</code>. Total rarity weight {{ group.total_weight }}.</p>
+        </div>
+        <span class="item-card-status is-{{ 'added' if group.quality == 'set' else 'modified' }}">{{ group.quality_label }}</span>
+      </div>
+      <div class="table-wrap">
+        <table class="monster-table">
+          <thead>
+            <tr>
+              <th>Candidate</th>
+              <th>Weight</th>
+              <th>Conditional Odds</th>
+              <th>Levels</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for candidate in group.candidates %}
+            <tr data-search="{{ group.search_text }} {{ candidate.name }}">
+              <td><strong>{{ candidate.name }}</strong></td>
+              <td>{{ candidate.weight }}</td>
+              <td>{{ candidate.chance_display }}</td>
+              <td>
+                {% if candidate.level %}Lvl {{ candidate.level }}{% endif %}
+                {% if candidate.level_req %}<br/><small>Req {{ candidate.level_req }}</small>{% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
