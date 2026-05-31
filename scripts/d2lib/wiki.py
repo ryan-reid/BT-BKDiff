@@ -1914,14 +1914,14 @@ class WikiGenerator:
             else:
                 status = "same"
             rows.append({"old": old_value, "new": new_value, "status": status})
-        old_rune_props = WikiGenerator._rune_property_texts(old_entry or {})
-        new_rune_props = WikiGenerator._rune_property_texts(entry)
+        old_rune_props = WikiGenerator._rune_property_occurrence_map(old_entry or {})
+        new_rune_props = WikiGenerator._rune_property_occurrence_map(entry)
         if old_rune_props or new_rune_props:
             rows.append({"old": "", "new": "", "status": "separator"})
-            max_count = max(len(old_rune_props), len(new_rune_props))
-            for index in range(max_count):
-                old_value = old_rune_props[index] if index < len(old_rune_props) else ""
-                new_value = new_rune_props[index] if index < len(new_rune_props) else ""
+            rune_keys = list(new_rune_props.keys()) + [key for key in old_rune_props.keys() if key not in new_rune_props]
+            for key in rune_keys:
+                old_value = old_rune_props.get(key, "")
+                new_value = new_rune_props.get(key, "")
                 if old_value and new_value:
                     status = "changed" if old_value != new_value else "same"
                 elif new_value:
@@ -1934,14 +1934,20 @@ class WikiGenerator:
         return rows
 
     @staticmethod
-    def _rune_property_texts(entry: Dict[str, Any]) -> List[str]:
-        rows = []
+    def _rune_property_occurrence_map(entry: Dict[str, Any]) -> Dict[Tuple[str, str, int], str]:
+        occurrences: Dict[Tuple[str, str], int] = {}
+        values: Dict[Tuple[str, str, int], str] = {}
         for rune_entry in entry.get("rune_properties", []):
             for prop in rune_entry.get("properties", []):
+                code = str(prop.get("code", "")).strip() or "unknown"
+                param = str(prop.get("param", "")).strip()
                 text = str(prop.get("resolved_text", "")).strip()
-                if text:
-                    rows.append(text)
-        return rows
+                if not text:
+                    continue
+                base_key = (code, param)
+                occurrences[base_key] = occurrences.get(base_key, 0) + 1
+                values[(code, param, occurrences[base_key])] = text
+        return values
 
     def _item_comparison_context(
         self,
