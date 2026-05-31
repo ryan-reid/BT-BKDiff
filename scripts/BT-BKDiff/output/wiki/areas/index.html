@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Areas | BKDiablo Data Wiki</title>
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body data-site-root="../">
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="brand-bar">
+        <a class="brand-mark" href="../">BT Diablo Data Wiki</a>
+        <p class="brand-copy">Generated static site from current project exports</p>
+      </div>
+      <nav class="site-nav">
+        <a href="../">Home</a>
+        <a href="../items/">All Items</a>
+        <a href="../runewords/">Runewords</a>
+        <a href="../bases/">Bases</a>
+        <a href="../recipes/">Recipes</a>
+        <a href="../bestiary/">Bestiary</a>
+        <a href="../misc/">Materials</a>
+        <a href="../gems-runes/">Gems &amp; Runes</a>
+        <a href="../mechanics/">Mechanics</a>
+        <a href="../areas/">Areas</a>
+        <a href="../classes/">Classes</a>
+        <a href="../reports/">Reports</a>
+        <a href="../patch-notes/full-patch-notes-draft/">Patch Notes</a>
+      </nav>
+    </header>
+    <main class="site-main">
+<section class="hero">
+  <p class="hero-eyebrow">Generated Farming Guide</p>
+  <h1>Hell Areas</h1>
+  <p class="hero-copy">Compare BK Hell farming areas by area level, monster density, elite pack range, super chest potential, and possible monster immunities.</p>
+  <div class="chip-row">
+    <span class="chip chip-accent">BK Hell</span>
+    <span class="chip">Area Levels</span>
+    <span class="chip">Immunity Filters</span>
+  </div>
+</section>
+<section class="content-section">
+  <div class="toolbar" data-area-index-url="../data/areas-index.json">
+    <input id="area-search" class="search-input" type="search" placeholder="Search areas or monsters..." />
+    <div class="filter-row filter-row-stacked">
+      <label class="filter-select-wrap" for="area-act-filter">
+        <span class="filter-label">Act</span>
+        <select id="area-act-filter" class="filter-select">
+          <option value="all">All Acts</option>
+          <option value="Act 1">Act 1</option>
+          <option value="Act 2">Act 2</option>
+          <option value="Act 3">Act 3</option>
+          <option value="Act 4">Act 4</option>
+          <option value="Act 5">Act 5</option>
+        </select>
+      </label>
+      <label class="filter-select-wrap" for="area-min-level-filter">
+        <span class="filter-label">Minimum Area Level</span>
+        <select id="area-min-level-filter" class="filter-select">
+          <option value="0">Any Level</option>
+          <option value="85">85+</option>
+          <option value="87">87+</option>
+          <option value="90">90+</option>
+        </select>
+      </label>
+      <label class="filter-select-wrap" for="area-sort-filter">
+        <span class="filter-label">Sort</span>
+        <select id="area-sort-filter" class="filter-select">
+          <option value="score">Farm Score</option>
+          <option value="level">Area Level</option>
+          <option value="density">Monster Density</option>
+          <option value="elite">Average Elite Packs</option>
+        </select>
+      </label>
+    </div>
+    <div class="filter-row">
+      <label class="filter-check"><input id="area-top-tier-filter" type="checkbox" /> Top-tier capable</label>
+      <label class="filter-check"><input type="checkbox" data-avoid-immunity="fire" /> Avoid fire immune</label>
+      <label class="filter-check"><input type="checkbox" data-avoid-immunity="cold" /> Avoid cold immune</label>
+      <label class="filter-check"><input type="checkbox" data-avoid-immunity="lightning" /> Avoid lightning immune</label>
+      <label class="filter-check"><input type="checkbox" data-avoid-immunity="poison" /> Avoid poison immune</label>
+      <label class="filter-check"><input type="checkbox" data-avoid-immunity="magic" /> Avoid magic immune</label>
+      <label class="filter-check"><input type="checkbox" data-avoid-immunity="physical" /> Avoid physical immune</label>
+    </div>
+  </div>
+</section>
+<section class="content-section">
+  <div class="section-head"><h2>Area Farming Table</h2><p><span id="area-result-count">138</span> generated areas</p></div>
+  <div class="table-wrap">
+    <table class="area-table">
+      <thead>
+        <tr>
+          <th>Area</th>
+          <th>Score</th>
+          <th>Levels</th>
+          <th>Density</th>
+          <th>Chunk</th>
+          <th>Elite Packs</th>
+          <th>Super Chest</th>
+          <th>Possible Immunities</th>
+          <th>Monster Pool</th>
+        </tr>
+      </thead>
+      <tbody id="area-index-root">
+        <tr><td colspan="9" class="muted">Loading area index...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="content-section">
+  <h2>How This Is Calculated</h2>
+  <p>The area guide is generated from BK's <code>levels.txt</code> and <code>monstats.txt</code>. The local data-file guide at <code>docs/Diablo_II_Data_File_Guide/levels.md</code> identifies <code>MonLvl</code>, <code>MonDen</code>, <code>MonUMin</code>, <code>MonUMax</code>, and monster pool columns as the key area spawning fields.</p>
+  <p>Hell area level uses <code>MonLvlEx(H)</code> when present, then falls back to <code>MonLvl(H)</code>. Champions are shown as area level +2 and uniques as area level +3, so top-tier capable means unique monsters can reach level 90 or higher.</p>
+  <p>Density is the table-derived <code>MonDen(H)</code> value. It is useful as a relative spawn-density signal, not an exact monsters-per-run count. Immunities are inherent monster resistances from <code>monstats.txt</code> where the Hell resistance is at least 100.</p>
+  <p>Chunk data comes from <code>lvlmaze.txt</code> when a maze row exists, using Hell room count times chunk width and height. Areas without a maze row fall back to <code>levels.txt</code> size columns. This is a rough layout footprint for comparison, not a simulated monster count.</p>
+  <p>Super chest potential is derived from <code>objects.txt</code>, <code>lvlprest.txt</code>, and DS1 layout files. BK layout overrides are checked first, then the local retail extract at <code>E:\Games\Diablo II Resurrected\Data</code> fills in base game layouts. For randomized outdoor chunks, this means an area can roll a matching preset, not that every map seed guarantees that chest.</p>
+</section>
+    </main>
+    <footer class="site-footer">
+      <p>Generated by <code>scripts/generate_reports.py</code> from current BK exports and skill tree outputs.</p>
+    </footer>
+  </div>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

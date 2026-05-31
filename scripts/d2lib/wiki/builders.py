@@ -545,7 +545,7 @@ class ItemIconExporter:
 
         relative_path = f"{self.output_prefix}/{self._safe_icon_name(output_key or item_code or icon_key or quality_key)}.png"
         if relative_path not in self._written:
-            png_bytes = self._icon_png_bytes(item_code, icon_key, quality_family, quality_key)
+            png_bytes = self._icon_png_bytes(item_code, icon_key, quality_family, quality_key, output_key=output_key)
             if not png_bytes:
                 return ""
             self.writer.write_bytes(relative_path, png_bytes)
@@ -559,7 +559,20 @@ class ItemIconExporter:
         icon_key: str,
         quality_family: str = "",
         quality_key: str = "",
+        output_key: str = "",
     ) -> Optional[bytes]:
+        # Priority 1: Check for pre-existing icons in the repo (docs/wiki/assets/item-icons/)
+        # This ensures GitHub Actions builds use the high-quality icons we've tracked.
+        repo_icon_name = self._safe_icon_name(output_key or item_code or icon_key or quality_key)
+        repo_icon_path = os.path.join(REPO_ROOT, "docs", "wiki", "assets", "item-icons", f"{repo_icon_name}.png")
+        if os.path.isfile(repo_icon_path):
+            try:
+                with open(repo_icon_path, "rb") as f:
+                    return f.read()
+            except OSError:
+                pass
+
+        # Priority 2: Try to decode from HD game assets
         hd_sprite_path = self._find_quality_hd_sprite(quality_family, quality_key, item_code)
         if not hd_sprite_path:
             hd_sprite_path = self._find_hd_sprite(item_code)
@@ -568,14 +581,17 @@ class ItemIconExporter:
             if hd_png:
                 return hd_png
 
+        # Priority 3: Try to decode from classic DC6 assets
         dc6_path = self._find_dc6(icon_key)
         if dc6_path:
             return self._dc6_to_png(dc6_path)
 
+        # Priority 4: Try to decode from standard sprite assets
         sprite_path = self._find_sprite(icon_key)
         if sprite_path:
             return self._sprite_to_png(sprite_path)
 
+        # Priority 5: Procedural fallback for runes
         if re.fullmatch(r"r\d{2}", item_code.lower()):
             return self._fallback_rune_png(item_code)
 
