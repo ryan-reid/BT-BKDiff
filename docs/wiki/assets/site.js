@@ -40,8 +40,15 @@ function itemCardMarkup(item, siteRoot) {
       <div class="item-card-main">
         ${iconMarkup}
         <div>
-      <h3>${escapeHtml(item.title)}</h3>
-      <p>${escapeHtml(item.summary)}</p>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.summary)}</p>
+          ${
+            item.properties && item.properties.length
+              ? `<ul class="runeword-property-preview">
+                  ${item.properties.map((p) => `<li>${escapeHtml(p)}</li>`).join("")}
+                 </ul>`
+              : ""
+          }
         </div>
       </div>
     </a>

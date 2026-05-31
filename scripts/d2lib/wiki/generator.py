@@ -93,7 +93,7 @@ class WikiGenerator:
         report_entries = self._publish_reports()
         self._write_indexes(item_entries, class_entries, report_entries, area_entries, base_item_families, recipe_groups, monster_groups, misc_groups, gem_rune_groups)
         self._write_patch_notes_draft(item_entries, class_entries)
-        self._write_item_index_data(item_entries)
+        self._write_item_index_data(item_entries, items)
         self._write_area_index_data(area_entries)
         self._write_manifest()
         self.writer.remove_stale_files()
@@ -721,7 +721,14 @@ class WikiGenerator:
             class_count=len(class_entries),
         )
 
-    def _write_item_index_data(self, item_entries: Dict[str, List[Dict[str, str]]]) -> None:
+    def _write_item_index_data(self, item_entries: Dict[str, List[Dict[str, str]]], items: Dict[str, List[Dict[str, Any]]]) -> None:
+        # Helper to find properties for a page entry
+        prop_map = {}
+        for family in ("unique", "set"):
+            for item in items[family]:
+                key = (family, item.get("display_name") or item.get("name") or item.get("id"))
+                prop_map[key] = [p["resolved_text"] for p in item.get("properties", []) if p.get("resolved_text")][:5]
+
         rows = [
             {
                 "title": entry["title"],
@@ -733,6 +740,7 @@ class WikiGenerator:
                 "icon_src": entry.get("icon_src", ""),
                 "summary": entry["summary"],
                 "search_text": entry["search_text"],
+                "properties": prop_map.get((family, entry["title"]), []),
             }
             for family in ("unique", "set")
             for entry in item_entries[family]
