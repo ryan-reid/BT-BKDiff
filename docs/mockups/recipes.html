@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cube Recipes — BKDiablo Wiki (mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mockup.css">
+<style>
+.recipe-layout { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 28px; align-items: start; padding: 28px 0 64px; }
+.recipe-nav { position: sticky; top: 96px; display: grid; gap: 4px; }
+.recipe-nav a {
+  display: block; padding: 10px 14px; border-radius: 8px;
+  font-size: 0.9rem; color: var(--muted);
+  transition: color 0.16s, background 0.16s;
+}
+.recipe-nav a:hover { color: var(--text); background: var(--surface); }
+.recipe-nav a.is-active { color: var(--gold-bright); background: rgba(227,179,65,0.08); }
+.recipe-nav .nav-count { float: right; font-size: 0.76rem; color: var(--faint); }
+
+.recipe-groups { display: grid; gap: 32px; }
+.recipe-group { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.recipe-group-head {
+  display: flex; align-items: baseline; gap: 14px; justify-content: space-between;
+  padding: 18px 22px; border-bottom: 1px solid var(--line);
+  background: var(--surface-2);
+}
+.recipe-group-head h2 {
+  margin: 0; font-size: 1.12rem; display: flex; align-items: center; gap: 10px;
+}
+.recipe-group-head h2 svg { width: 18px; height: 18px; color: var(--gold-deep); }
+.recipe-group-desc { margin: 0; color: var(--muted); font-size: 0.84rem; max-width: 60ch; }
+.recipe-group-count { font-size: 0.76rem; color: var(--faint); white-space: nowrap; }
+
+.recipe-table { width: 100%; border-collapse: collapse; }
+.recipe-table tr:last-child td { border-bottom: 0; }
+.recipe-table td { padding: 14px 20px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.recipe-table td:first-child { width: 28%; font-size: 0.98rem; color: var(--text); }
+.recipe-table td:nth-child(2) { width: 40%; }
+.recipe-table td:nth-child(3) { width: 32%; }
+.recipe-table thead th { padding: 10px 20px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); text-align: left; background: rgba(0,0,0,0.18); border-bottom: 1px solid var(--line); }
+
+.input-list, .output-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; }
+.input-list li { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--muted); }
+.input-list li::before { content: "+"; color: var(--faint); font-weight: 700; width: 12px; flex: none; }
+.input-list li:first-child::before { content: " "; }
+.output-list li { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
+.output-list li::before { content: "→"; color: var(--gold-deep); width: 16px; flex: none; }
+
+.hl-unique { color: var(--q-unique); }
+.hl-set    { color: var(--q-set); }
+.hl-rune   { color: var(--q-rune); }
+.hl-magic  { color: var(--q-magic); }
+.hl-crafted{ color: var(--q-crafted); }
+
+.search-bar {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 12px 16px; margin-bottom: 22px;
+}
+.search-bar svg { width: 17px; height: 17px; color: var(--faint); flex: none; }
+.search-bar input { all: unset; flex: 1; color: var(--text); font-size: 0.95rem; }
+.search-bar input::placeholder { color: var(--faint); }
+
+@media (max-width: 860px) {
+  .recipe-layout { grid-template-columns: 1fr; }
+  .recipe-nav { position: static; display: flex; flex-wrap: wrap; gap: 6px; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sigil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 5 5 1-3.5 4 1 6-5.5-3-5.5 3 1-6L4 8l5-1z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></symbol>
+  <symbol id="i-socket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></symbol>
+  <symbol id="i-upgrade" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+  <symbol id="i-rune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v4l-4 4 4 4v6H8v-6l4-4-4-4z"/></symbol>
+  <symbol id="i-corrupt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></symbol>
+  <symbol id="i-craft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-2.4.6.6-2.4 7.3-7.3a1 1 0 011.4 0z"/><path d="M16 5l3 3"/></symbol>
+</svg>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-sigil"><svg><use href="#i-sigil"/></svg></span>
+      <span><span class="brand-name">BKDiablo</span><br><span class="brand-sub">Ascension Wiki</span></span>
+    </a>
+    <nav class="mast-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="items.html">Items</a>
+      <a href="items.html">Runewords</a>
+      <a href="recipes.html" class="is-active">Cube</a>
+      <a href="bestiary.html">Bestiary</a>
+      <a href="classes.html">Classes</a>
+      <a href="areas.html">Areas</a>
+    </nav>
+    <label class="mast-search">
+      <svg aria-hidden="true"><use href="#i-search"/></svg>
+      <input type="search" placeholder="Search items, runes, recipes…" aria-label="Search the wiki">
+    </label>
+  </div>
+</header>
+
+<div class="legend shell" role="note">
+  <span style="color:var(--q-unique)"><i></i>Unique</span>
+  <span style="color:var(--q-set)"><i></i>Set</span>
+  <span style="color:var(--q-runeword)"><i></i>Runeword</span>
+  <span style="color:var(--q-magic)"><i></i>Magic</span>
+  <span style="color:var(--q-rare)"><i></i>Rare</span>
+  <span style="color:var(--q-crafted)"><i></i>Crafted</span>
+</div>
+
+<div class="shell" style="padding-top:22px">
+  <h1 style="margin:0 0 4px;font-size:1.8rem">Cube Recipes</h1>
+  <p style="margin:0 0 22px;color:var(--muted)">390 recipes across 13 categories.</p>
+
+  <div class="search-bar">
+    <svg aria-hidden="true"><use href="#i-search"/></svg>
+    <input type="search" placeholder="Search recipes, inputs, outputs…">
+  </div>
+</div>
+
+<div class="shell recipe-layout">
+  <nav class="recipe-nav" aria-label="Recipe categories">
+    <a href="#socketing" class="is-active">Socketing &amp; Sockets <span class="nav-count">24</span></a>
+    <a href="#upgrades">Item Upgrades <span class="nav-count">38</span></a>
+    <a href="#classic">Classic Crafting <span class="nav-count">42</span></a>
+    <a href="#pierce">Pierce Amulets <span class="nav-count">18</span></a>
+    <a href="#ascended">Ascended Crafting <span class="nav-count">31</span></a>
+    <a href="#corruption">Corruption <span class="nav-count">29</span></a>
+    <a href="#runes">Rune Transmutation <span class="nav-count">44</span></a>
+    <a href="#materials">Material Conversions <span class="nav-count">55</span></a>
+    <a href="#tablets">Crafting Tablets <span class="nav-count">22</span></a>
+    <a href="#reforging">Reforging &amp; Cosmetics <span class="nav-count">19</span></a>
+    <a href="#repair">Repair &amp; Recharge <span class="nav-count">8</span></a>
+    <a href="#stacking">Stacking &amp; Utility <span class="nav-count">27</span></a>
+    <a href="#portals">Portals &amp; Quests <span class="nav-count">13</span></a>
+  </nav>
+
+  <main class="recipe-groups">
+
+    <!-- SOCKETING -->
+    <section class="recipe-group" id="socketing">
+      <div class="recipe-group-head">
+        <div>
+          <h2><svg aria-hidden="true"><use href="#i-socket"/></svg>Socketing &amp; Sockets</h2>
+          <p class="recipe-group-desc">Add, clear, or reshape sockets on items.</p>
+        </div>
+        <span class="recipe-group-count">24 recipes</span>
+      </div>
+      <table class="recipe-table">
+        <thead><tr><th>Recipe</th><th>Ingredients</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Add 1 Socket (Normal White)</td>
+            <td><ul class="input-list">
+              <li>Normal White Item</li>
+              <li>Tal Rune</li>
+              <li>Thul Rune</li>
+              <li>Perfect Topaz</li>
+            </ul></td>
+            <td><ul class="output-list"><li>Socketed Item (1–max sockets)</li></ul></td>
+          </tr>
+          <tr>
+            <td>Clear Sockets</td>
+            <td><ul class="input-list">
+              <li>Socketed Item</li>
+              <li>Hel Rune</li>
+              <li>Scroll of Town Portal</li>
+            </ul></td>
+            <td><ul class="output-list"><li>Item with sockets cleared (gems/runes removed)</li></ul></td>
+          </tr>
+          <tr>
+            <td>Add Socket (Set / Unique)</td>
+            <td><ul class="input-list">
+              <li><span class="hl-unique">Unique</span> or <span class="hl-set">Set</span> Item</li>
+              <li>Worldstone Shard</li>
+              <li>Zod Rune</li>
+            </ul></td>
+            <td><ul class="output-list"><li>Item with 1 added socket</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- UPGRADES -->
+    <section class="recipe-group" id="upgrades">
+      <div class="recipe-group-head">
+        <div>
+          <h2><svg aria-hidden="true"><use href="#i-upgrade"/></svg>Item Upgrades</h2>
+          <p class="recipe-group-desc">Upgrade item bases through Normal → Exceptional → Elite tiers.</p>
+        </div>
+        <span class="recipe-group-count">38 recipes</span>
+      </div>
+      <table class="recipe-table">
+        <thead><tr><th>Recipe</th><th>Ingredients</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Upgrade Normal → Exceptional</td>
+            <td><ul class="input-list">
+              <li>Normal Unique Item</li>
+              <li>Ral Rune</li>
+              <li>Sol Rune</li>
+              <li>Perfect Emerald</li>
+            </ul></td>
+            <td><ul class="output-list"><li><span class="hl-unique">Exceptional Unique</span> (same affixes)</li></ul></td>
+          </tr>
+          <tr>
+            <td>Upgrade Exceptional → Elite</td>
+            <td><ul class="input-list">
+              <li>Exceptional Unique Item</li>
+              <li>Mal Rune</li>
+              <li>Um Rune</li>
+              <li>Perfect Diamond</li>
+            </ul></td>
+            <td><ul class="output-list"><li><span class="hl-unique">Elite Unique</span> (same affixes)</li></ul></td>
+          </tr>
+          <tr>
+            <td>Ethereal Upgrade (Normal → Exceptional)</td>
+            <td><ul class="input-list">
+              <li>Ethereal Normal Unique</li>
+              <li>Ral Rune</li>
+              <li>Sol Rune</li>
+              <li>Perfect Emerald</li>
+            </ul></td>
+            <td><ul class="output-list"><li><span class="hl-unique">Ethereal Exceptional Unique</span></li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CORRUPTION -->
+    <section class="recipe-group" id="corruption">
+      <div class="recipe-group-head">
+        <div>
+          <h2><svg aria-hidden="true"><use href="#i-corrupt"/></svg>Corruption Recipes</h2>
+          <p class="recipe-group-desc">Risk/reward item mutation. Results are random — bricks are possible.</p>
+        </div>
+        <span class="recipe-group-count">29 recipes</span>
+      </div>
+      <table class="recipe-table">
+        <thead><tr><th>Recipe</th><th>Ingredients</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Corrupt an Item</td>
+            <td><ul class="input-list">
+              <li>Any Item</li>
+              <li>Worldstone Shard</li>
+            </ul></td>
+            <td><ul class="output-list"><li>Item gains a random corruption mod <em style="color:var(--faint);font-size:0.84rem">(or bricks)</em></li></ul></td>
+          </tr>
+          <tr>
+            <td>Corrupt a Weapon</td>
+            <td><ul class="input-list">
+              <li>Any Weapon</li>
+              <li>Directional Worldstone Shard</li>
+            </ul></td>
+            <td><ul class="output-list"><li>Weapon-specific corruption pool applied</li></ul></td>
+          </tr>
+          <tr>
+            <td>Corrupt a Jewel</td>
+            <td><ul class="input-list">
+              <li>Magic or Rare Jewel</li>
+              <li>Worldstone Shard</li>
+              <li>Zod Rune</li>
+            </ul></td>
+            <td><ul class="output-list"><li>Jewel gains 1 corruption affix</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- RUNE TRANSMUTATION -->
+    <section class="recipe-group" id="runes">
+      <div class="recipe-group-head">
+        <div>
+          <h2><svg aria-hidden="true"><use href="#i-rune"/></svg>Rune Transmutation</h2>
+          <p class="recipe-group-desc">Upgrade lower runes into higher ones.</p>
+        </div>
+        <span class="recipe-group-count">44 recipes</span>
+      </div>
+      <table class="recipe-table">
+        <thead><tr><th>Recipe</th><th>Ingredients</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>El → Eld</td>
+            <td><ul class="input-list"><li>3× <span class="hl-rune">El Rune</span></li></ul></td>
+            <td><ul class="output-list"><li><span class="hl-rune">Eld Rune</span></li></ul></td>
+          </tr>
+          <tr>
+            <td>Eld → Tir</td>
+            <td><ul class="input-list"><li>3× <span class="hl-rune">Eld Rune</span></li></ul></td>
+            <td><ul class="output-list"><li><span class="hl-rune">Tir Rune</span></li></ul></td>
+          </tr>
+          <tr>
+            <td>Lo → Ohm (BK modification)</td>
+            <td><ul class="input-list">
+              <li>2× <span class="hl-rune">Lo Rune</span></li>
+              <li>1× Perfect Diamond</li>
+            </ul></td>
+            <td><ul class="output-list"><li><span class="hl-rune">Ohm Rune</span></li></ul></td>
+          </tr>
+          <tr>
+            <td>Cham → Zod</td>
+            <td><ul class="input-list">
+              <li>3× <span class="hl-rune">Cham Rune</span></li>
+              <li>1× Worldstone Shard</li>
+            </ul></td>
+            <td><ul class="output-list"><li><span class="hl-rune">Zod Rune</span></li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CLASSIC CRAFTING -->
+    <section class="recipe-group" id="classic">
+      <div class="recipe-group-head">
+        <div>
+          <h2><svg aria-hidden="true"><use href="#i-craft"/></svg>Classic Crafting</h2>
+          <p class="recipe-group-desc">Blood, Caster, Safety, and Hit Power families using magic bases.</p>
+        </div>
+        <span class="recipe-group-count">42 recipes</span>
+      </div>
+      <table class="recipe-table">
+        <thead><tr><th>Recipe</th><th>Ingredients</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Blood Helm</td>
+            <td><ul class="input-list">
+              <li><span class="hl-magic">Magic</span> Helm</li>
+              <li>Nef Rune</li>
+              <li>Tir Rune</li>
+              <li>Perfect Ruby</li>
+            </ul></td>
+            <td><ul class="output-list"><li><span class="hl-crafted">Crafted</span> Blood Helm (fixed mods + random affixes)</li></ul></td>
+          </tr>
+          <tr>
+            <td>Caster Amulet</td>
+            <td><ul class="input-list">
+              <li><span class="hl-magic">Magic</span> Amulet</li>
+              <li>Thul Rune</li>
+              <li>Ith Rune</li>
+              <li>Perfect Amethyst</li>
+            </ul></td>
+            <td><ul class="output-list"><li><span class="hl-crafted">Crafted</span> Caster Amulet (+skills, FCR, mana)</li></ul></td>
+          </tr>
+          <tr>
+            <td>Safety Gloves</td>
+            <td><ul class="input-list">
+              <li><span class="hl-magic">Magic</span> Gloves</li>
+              <li>El Rune</li>
+              <li>Eld Rune</li>
+              <li>Perfect Sapphire</li>
+            </ul></td>
+            <td><ul class="output-list"><li><span class="hl-crafted">Crafted</span> Safety Gloves (Defense, Block, etc.)</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <span>BKDiablo Wiki · generated from mod data · not affiliated with Blizzard.</span>
+    <span><a href="#">GitHub</a> · <a href="#">Discord</a> · <a href="#">Install guide</a></span>
+  </div>
+</footer>
+</body>
+</html>

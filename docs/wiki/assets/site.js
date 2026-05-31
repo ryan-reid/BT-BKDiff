@@ -150,10 +150,10 @@ function areaRowMarkup(area) {
 
 function wireStaticSearch() {
   const searchInput = document.querySelector("#page-search");
-  const cards = Array.from(document.querySelectorAll(".item-card"));
+  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card"));
   const tableRows = Array.from(document.querySelectorAll("tbody tr[data-search]"));
   const guideCards = Array.from(document.querySelectorAll(".guide-card[data-search]"));
-  const sections = Array.from(document.querySelectorAll(".recipe-group-section, .misc-group-section"));
+  const sections = Array.from(document.querySelectorAll(".recipe-group-section, .misc-group-section, .family-container"));
   if (!searchInput || document.querySelector("[data-item-index-url]") || document.querySelector("[data-base-filters]")) {
     return;
   }
@@ -174,8 +174,9 @@ function wireStaticSearch() {
     });
     sections.forEach((section) => {
       const sectionMatch = !query || normalizeText(section.dataset.search).includes(query);
+      const visibleCards = section.querySelectorAll(".base-item-card:not([hidden])").length;
       const visibleRows = section.querySelectorAll("tbody tr:not([hidden])").length;
-      section.hidden = Boolean(query) && !sectionMatch && visibleRows === 0;
+      section.hidden = Boolean(query) && !sectionMatch && visibleRows === 0 && visibleCards === 0;
     });
   });
 }

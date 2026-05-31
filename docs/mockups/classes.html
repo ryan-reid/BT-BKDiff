@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classes — BKDiablo Wiki (mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mockup.css">
+<style>
+/* class picker */
+.class-picker { display: flex; gap: 10px; flex-wrap: wrap; margin: 22px 0; }
+.classpill {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 18px; border-radius: 10px; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--line);
+  transition: border-color 0.16s, background 0.16s;
+}
+.classpill:hover { border-color: var(--line-strong); background: var(--surface-2); }
+.classpill.is-active { border-color: var(--gold-deep); background: rgba(227,179,65,0.07); }
+.classpill svg { width: 20px; height: 20px; color: var(--gold-deep); }
+.classpill span { font-family: var(--font-display); font-size: 0.98rem; }
+
+/* skill-tree layout */
+.tree-layout { display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 28px; align-items: start; }
+.tab-rail { position: sticky; top: 96px; display: grid; gap: 4px; }
+.tab-btn {
+  display: block; padding: 10px 14px; border-radius: 8px; font-size: 0.88rem;
+  color: var(--muted); background: none; border: none; cursor: pointer;
+  text-align: left; transition: color 0.16s, background 0.16s;
+}
+.tab-btn:hover { color: var(--text); background: var(--surface); }
+.tab-btn.is-active { color: var(--gold-bright); background: rgba(227,179,65,0.08); }
+.tab-label { font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); padding: 14px 14px 6px; }
+
+/* skill cards */
+.skill-list { display: grid; gap: 14px; }
+.skill-card-outer {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden;
+}
+.skill-head {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 18px; cursor: pointer; list-style: none;
+  transition: background 0.14s;
+}
+.skill-head:hover { background: var(--surface-2); }
+.skill-icon {
+  width: 44px; height: 44px; border-radius: 9px; flex: none; display: grid; place-items: center;
+  background: radial-gradient(circle at 35% 30%, #2a2013, #0e0a06);
+  border: 1px solid var(--line-strong); color: var(--gold-deep);
+}
+.skill-icon svg { width: 24px; height: 24px; }
+.skill-head-text { flex: 1; min-width: 0; }
+.skill-name { font-family: var(--font-display); font-size: 1.08rem; color: var(--text); }
+.skill-oneliner { font-size: 0.84rem; color: var(--muted); margin-top: 2px; }
+.skill-level-pills { display: flex; gap: 8px; margin-left: auto; flex-shrink: 0; }
+.slvl-pill { font-family: var(--font-mono); font-size: 0.76rem; padding: 4px 9px; border-radius: 6px; background: var(--surface-2); color: var(--muted); }
+.slvl-pill b { color: var(--text); }
+.skill-caret { color: var(--faint); font-size: 0.9rem; margin-left: 12px; transition: transform 0.2s; }
+
+.skill-body { border-top: 1px solid var(--line); padding: 18px 20px; display: grid; gap: 18px; }
+.skill-body.is-hidden { display: none; }
+
+.scale-table { width: 100%; border-collapse: collapse; }
+.scale-table thead th { padding: 9px 12px; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); text-align: center; background: rgba(0,0,0,0.18); border-bottom: 1px solid var(--line); }
+.scale-table thead th:first-child { text-align: left; }
+.scale-table tbody td { padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 0.88rem; text-align: center; color: var(--muted); font-family: var(--font-mono); }
+.scale-table tbody td:first-child { text-align: left; color: var(--text); font-family: var(--font-body); font-size: 0.9rem; }
+.scale-table tbody tr:last-child td { border-bottom: 0; }
+.scale-table .scale-note { font-size: 0.76rem; color: var(--faint); font-family: var(--font-body); }
+
+.synergy-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.synergy-chip {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px; border-radius: 8px;
+  background: var(--surface-2); border: 1px solid var(--line); font-size: 0.88rem;
+}
+.synergy-chip span:first-child { color: var(--gold-deep); font-family: var(--font-display); }
+.synergy-chip .syn-effect { color: var(--muted); }
+.syn-divider { color: var(--faint); }
+
+.wip-note { color: var(--faint); font-style: italic; font-size: 0.86rem; padding: 2px 0; }
+
+@media (max-width: 860px) {
+  .tree-layout { grid-template-columns: 1fr; }
+  .tab-rail { position: static; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tab-label { display: none; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sigil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 5 5 1-3.5 4 1 6-5.5-3-5.5 3 1-6L4 8l5-1z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></symbol>
+  <symbol id="i-class" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 21v-1a7 7 0 0114 0v1"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13H12l-1 9L20.5 11H13z"/></symbol>
+  <symbol id="i-fire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a7 7 0 003-13.32C15 10 13 10 13 8c0-1.5 1-4 1-4s-5 3-5 8a5 5 0 004 4.9"/><path d="M9 17a3 3 0 006 0c0-2-3-5-3-5s-3 3-3 5z"/></symbol>
+  <symbol id="i-cold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></symbol>
+  <symbol id="i-bone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="5.5" r="2.5"/><circle cx="18.5" cy="5.5" r="2.5"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/><path d="M8 5.5h8M5.5 8v8M18.5 8v8M8 18.5h8"/></symbol>
+</svg>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-sigil"><svg><use href="#i-sigil"/></svg></span>
+      <span><span class="brand-name">BKDiablo</span><br><span class="brand-sub">Ascension Wiki</span></span>
+    </a>
+    <nav class="mast-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="items.html">Items</a>
+      <a href="items.html">Runewords</a>
+      <a href="recipes.html">Cube</a>
+      <a href="bestiary.html">Bestiary</a>
+      <a href="classes.html" class="is-active">Classes</a>
+      <a href="areas.html">Areas</a>
+    </nav>
+    <label class="mast-search">
+      <svg aria-hidden="true"><use href="#i-search"/></svg>
+      <input type="search" placeholder="Search items, runes, recipes…" aria-label="Search the wiki">
+    </label>
+  </div>
+</header>
+
+<div class="legend shell" role="note">
+  <span style="color:var(--q-unique)"><i></i>Unique</span>
+  <span style="color:var(--q-set)"><i></i>Set</span>
+  <span style="color:var(--q-runeword)"><i></i>Runeword</span>
+  <span style="color:var(--q-magic)"><i></i>Magic</span>
+  <span style="color:var(--q-rare)"><i></i>Rare</span>
+  <span style="color:var(--q-crafted)"><i></i>Crafted</span>
+</div>
+
+<div class="shell" style="padding-top:22px">
+  <h1 style="margin:0 0 4px;font-size:1.8rem">Classes</h1>
+  <p style="margin:0;color:var(--muted)">Skill trees, scaling, and synergies for all 8 classes.</p>
+
+  <div class="class-picker">
+    <button class="classpill"><svg><use href="#i-class"/></svg><span>Amazon</span></button>
+    <button class="classpill"><svg><use href="#i-fire"/></svg><span>Sorceress</span></button>
+    <button class="classpill"><svg><use href="#i-bone"/></svg><span>Necromancer</span></button>
+    <button class="classpill"><svg><use href="#i-bolt"/></svg><span>Paladin</span></button>
+    <button class="classpill"><svg><use href="#i-class"/></svg><span>Barbarian</span></button>
+    <button class="classpill"><svg><use href="#i-cold"/></svg><span>Druid</span></button>
+    <button class="classpill"><svg><use href="#i-class"/></svg><span>Assassin</span></button>
+    <button class="classpill is-active"><svg><use href="#i-bolt"/></svg><span>Warlock</span></button>
+  </div>
+</div>
+
+<div class="shell tree-layout" style="padding-bottom:64px">
+  <!-- tab rail -->
+  <nav class="tab-rail" aria-label="Skill tabs">
+    <span class="tab-label">Skill Trees</span>
+    <button class="tab-btn is-active">Elemental</button>
+    <button class="tab-btn">Shadow Mastery</button>
+    <button class="tab-btn">Dark Pact</button>
+  </nav>
+
+  <!-- skill list -->
+  <main>
+    <div class="skill-list">
+
+      <!-- expanded skill -->
+      <details class="skill-card-outer" open>
+        <summary class="skill-head">
+          <span class="skill-icon"><svg><use href="#i-bolt"/></svg></span>
+          <span class="skill-head-text">
+            <span class="skill-name">Void Bolt</span>
+            <span class="skill-oneliner">Fires a bolt of shadow energy that pierces enemies.</span>
+          </span>
+          <span class="skill-level-pills">
+            <span class="slvl-pill">L1 <b>12</b></span>
+            <span class="slvl-pill">L20 <b>185</b></span>
+          </span>
+          <span class="skill-caret">▲</span>
+        </summary>
+        <div class="skill-body">
+          <div style="overflow-x:auto">
+            <table class="scale-table">
+              <thead>
+                <tr>
+                  <th>Effect</th>
+                  <th>Scaling</th>
+                  <th>Lvl 1</th>
+                  <th>Lvl 10</th>
+                  <th>Lvl 20</th>
+                  <th>Lvl 30</th>
+                  <th>Cap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Damage (min)</td>
+                  <td class="scale-note">Linear (+10/lvl)</td>
+                  <td>12</td><td>102</td><td>202</td><td>302</td><td>—</td>
+                </tr>
+                <tr>
+                  <td>Damage (max)</td>
+                  <td class="scale-note">Linear (+14/lvl)</td>
+                  <td>18</td><td>144</td><td>284</td><td>424</td><td>—</td>
+                </tr>
+                <tr>
+                  <td>Pierce Chance</td>
+                  <td class="scale-note">Diminishing</td>
+                  <td>10%</td><td>46%</td><td>64%</td><td>74%</td><td>75%</td>
+                </tr>
+                <tr>
+                  <td>Mana Cost</td>
+                  <td class="scale-note">Linear (+0.25/lvl)</td>
+                  <td>3</td><td>5.25</td><td>7.75</td><td>10.25</td><td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p style="margin:0 0 10px;font-size:0.76rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--faint)">Synergies</p>
+            <div class="synergy-row">
+              <div class="synergy-chip">
+                <span>Shadow Strike</span>
+                <span class="syn-divider">·</span>
+                <span class="syn-effect">+8% pierce chance per level</span>
+              </div>
+              <div class="synergy-chip">
+                <span>Dark Pact</span>
+                <span class="syn-divider">·</span>
+                <span class="syn-effect">+12% damage per level</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- collapsed skill -->
+      <details class="skill-card-outer">
+        <summary class="skill-head">
+          <span class="skill-icon"><svg><use href="#i-fire"/></svg></span>
+          <span class="skill-head-text">
+            <span class="skill-name">Soul Drain</span>
+            <span class="skill-oneliner">Channels void energy to drain life and mana from a target.</span>
+          </span>
+          <span class="skill-level-pills">
+            <span class="slvl-pill">L1 <b>8</b></span>
+            <span class="slvl-pill">L20 <b>96</b></span>
+          </span>
+          <span class="skill-caret">▼</span>
+        </summary>
+        <div class="skill-body">
+          <div style="overflow-x:auto">
+            <table class="scale-table">
+              <thead><tr><th>Effect</th><th>Scaling</th><th>Lvl 1</th><th>Lvl 10</th><th>Lvl 20</th><th>Lvl 30</th><th>Cap</th></tr></thead>
+              <tbody>
+                <tr><td>Life Drain/s</td><td class="scale-note">Linear (+4/lvl)</td><td>8</td><td>44</td><td>84</td><td>124</td><td>—</td></tr>
+                <tr><td>Mana Drain/s</td><td class="scale-note">Linear (+2/lvl)</td><td>4</td><td>22</td><td>42</td><td>62</td><td>—</td></tr>
+                <tr><td>Duration</td><td class="scale-note">Static</td><td>2s</td><td>2s</td><td>2s</td><td>2s</td><td>2s</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p style="margin:0 0 10px;font-size:0.76rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--faint)">Synergies</p>
+            <div class="synergy-row">
+              <div class="synergy-chip"><span>Void Bolt</span><span class="syn-divider">·</span><span class="syn-effect">+6% drain per level</span></div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- WIP skill -->
+      <details class="skill-card-outer">
+        <summary class="skill-head">
+          <span class="skill-icon"><svg><use href="#i-cold"/></svg></span>
+          <span class="skill-head-text">
+            <span class="skill-name">Entropy Field</span>
+            <span class="skill-oneliner">Creates a zone of disruption that slows and weakens enemies.</span>
+          </span>
+          <span class="skill-level-pills">
+            <span class="slvl-pill" style="color:var(--faint)">WIP</span>
+          </span>
+          <span class="skill-caret">▼</span>
+        </summary>
+        <div class="skill-body">
+          <p class="wip-note">Scaling data for this skill is still being compiled.</p>
+          <div>
+            <p style="margin:0 0 10px;font-size:0.76rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--faint)">Synergies</p>
+            <div class="synergy-row">
+              <div class="synergy-chip"><span>Soul Drain</span><span class="syn-divider">·</span><span class="syn-effect">+10% slow duration per level</span></div>
+              <div class="synergy-chip"><span>Void Bolt</span><span class="syn-divider">·</span><span class="syn-effect">+5% damage per level</span></div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="skill-card-outer">
+        <summary class="skill-head">
+          <span class="skill-icon"><svg><use href="#i-bone"/></svg></span>
+          <span class="skill-head-text">
+            <span class="skill-name">Oblivion</span>
+            <span class="skill-oneliner">Calls down a column of void energy, dealing massive shadow damage.</span>
+          </span>
+          <span class="skill-level-pills">
+            <span class="slvl-pill">L1 <b>40</b></span>
+            <span class="slvl-pill">L20 <b>620</b></span>
+          </span>
+          <span class="skill-caret">▼</span>
+        </summary>
+        <div class="skill-body">
+          <div style="overflow-x:auto">
+            <table class="scale-table">
+              <thead><tr><th>Effect</th><th>Scaling</th><th>Lvl 1</th><th>Lvl 10</th><th>Lvl 20</th><th>Lvl 30</th><th>Cap</th></tr></thead>
+              <tbody>
+                <tr><td>Damage (avg)</td><td class="scale-note">Linear (+30/lvl)</td><td>40</td><td>310</td><td>610</td><td>910</td><td>—</td></tr>
+                <tr><td>Radius</td><td class="scale-note">Accelerating</td><td>2.7yd</td><td>5.3yd</td><td>8.0yd</td><td>10.0yd</td><td>10yd</td></tr>
+                <tr><td>Mana Cost</td><td class="scale-note">Linear (+2/lvl)</td><td>22</td><td>40</td><td>60</td><td>80</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p style="margin:0 0 10px;font-size:0.76rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--faint)">Synergies</p>
+            <div class="synergy-row">
+              <div class="synergy-chip"><span>Void Bolt</span><span class="syn-divider">·</span><span class="syn-effect">+15% damage per level</span></div>
+              <div class="synergy-chip"><span>Entropy Field</span><span class="syn-divider">·</span><span class="syn-effect">+20% damage per level</span></div>
+              <div class="synergy-chip"><span>Soul Drain</span><span class="syn-divider">·</span><span class="syn-effect">+8% radius per level</span></div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <span>BKDiablo Wiki · generated from mod data · not affiliated with Blizzard.</span>
+    <span><a href="#">GitHub</a> · <a href="#">Discord</a> · <a href="#">Install guide</a></span>
+  </div>
+</footer>
+</body>
+</html>

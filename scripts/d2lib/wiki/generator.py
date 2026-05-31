@@ -1370,39 +1370,19 @@ class WikiGenerator:
                 code_key = f"partial-{count}-{code}"
                 base_key = (code_key, param)
                 occurrences[base_key] = occurrences.get(base_key, 0) + 1
-                values[(code_key, param, occurrences[base_key])] = str(prop.get("resolved_text", "")).strip()
+                # Put the suffix in the value per user preference
+                resolved = str(prop.get("resolved_text", "")).strip()
+                values[(code_key, param, occurrences[base_key])] = f"{resolved} (With {count} Items)"
                 
         return values
 
     @staticmethod
     def _comparison_property_label(old_value: str, new_value: str, code: str, occurrence: int) -> str:
-        label_suffix = ""
-        actual_code = code
-        if code.startswith("partial-"):
-            parts = code.split("-")
-            count = parts[1]
-            actual_code = parts[2]
-            label_suffix = f" (With {count} Items)"
-
-        old_label = WikiGenerator._comparison_text_label(old_value)
-        new_label = WikiGenerator._comparison_text_label(new_value)
-        
-        base_label = ""
-        if old_value and new_value:
-            if old_label and old_label == new_label:
-                base_label = old_label
-            elif old_label and new_label:
-                base_label = f"{old_label} / {new_label}"
-            else:
-                base_label = f"Changed Stat #{occurrence}"
-        elif new_value:
-            base_label = f"Added: {new_label or actual_code}"
-        elif old_value:
-            base_label = f"Removed: {old_label or actual_code}"
-        else:
-            base_label = f"Stat #{occurrence}"
-            
-        return base_label + label_suffix
+        # We suppress labels for properties because the resolved text (e.g. '+10 to Strength') 
+        # already includes the stat name. This prevents 'Strength: +10 to Strength' redundancy.
+        # Partial set bonuses also include their '(With X Items)' context in the value string
+        # generated in _property_occurrence_map.
+        return ""
 
     @staticmethod
     def _comparison_text_label(value: str) -> str:
