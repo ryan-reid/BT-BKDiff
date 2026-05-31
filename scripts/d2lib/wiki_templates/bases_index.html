@@ -10,13 +10,88 @@
 </section>
 
 <section class="content-section">
-  <input id="page-search" class="search-input" type="search" placeholder="Search base items (e.g. Mage Plate)..." />
+  <div class="base-filter-toolbar" data-base-filters>
+    <input id="page-search" class="search-input" type="search" placeholder="Search base items (e.g. Mage Plate)..." />
+    <div class="filter-row">
+      <label>
+        <span>Group</span>
+        <select id="base-group-filter">
+          <option value="all">All groups</option>
+          {% for group in base_groups %}
+          <option value="{{ group }}">{{ group }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+        <span>Runeword category</span>
+        <select id="base-category-filter">
+          <option value="all">All categories</option>
+          {% for category in base_type_categories %}
+          <option value="{{ category }}">{{ category }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+        <span>Class</span>
+        <select id="base-class-filter">
+          <option value="all">All classes</option>
+          {% for class_name in base_classes %}
+          <option value="{{ class_name }}">{{ class_name }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+        <span>Tier</span>
+        <select id="base-tier-filter">
+          <option value="all">All tiers</option>
+          <option value="Normal">Normal</option>
+          <option value="Exceptional">Exceptional</option>
+          <option value="Elite">Elite</option>
+        </select>
+      </label>
+      <label>
+        <span>Speed</span>
+        <select id="base-speed-filter">
+          <option value="all">All speeds</option>
+          <option value="Very Fast">Very Fast</option>
+          <option value="Fast">Fast</option>
+          <option value="Normal">Normal</option>
+          <option value="Slow">Slow</option>
+          <option value="Very Slow">Very Slow</option>
+        </select>
+      </label>
+      <label>
+        <span>Min sockets</span>
+        <select id="base-min-sockets-filter">
+          <option value="0">Any sockets</option>
+          <option value="1">1+ socket</option>
+          <option value="2">2+ sockets</option>
+          <option value="3">3+ sockets</option>
+          <option value="4">4+ sockets</option>
+          <option value="5">5+ sockets</option>
+          <option value="6">6 sockets</option>
+        </select>
+      </label>
+      <label class="filter-wide">
+        <span>Roll contains</span>
+        <input id="base-roll-filter" type="search" placeholder="Faster Cast Rate, res, pierce..." />
+      </label>
+    </div>
+    <div class="filter-check-row">
+      <label><input id="base-two-handed-filter" type="checkbox" /> Two handed</label>
+      <span class="muted"><strong id="base-result-count">{{ families|length }}</strong> families</span>
+    </div>
+  </div>
   
   <div class="card-grid">
     {% for family in families %}
-    <div class="item-card family-card" data-search="{{ family.name }} {{ family.members|map(attribute='name')|join(' ') }} {% for item in family.members %}{{ item.class_restriction }} {{ item.staffmod_class }} {{ item.magic_level }} {{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_stats|join(' ') }} {{ item.quality_bonus_stats|join(' ') }} {% endfor %}">
+    <div class="item-card family-card"
+      data-search="{{ family.search_text }}"
+      data-base-group="{{ family.group }}"
+      data-base-classes="{{ family.class_tags|join(' ') }}">
       <div class="family-header">
         <h3>{{ family.name }}</h3>
+        <p>{{ family.summary }}</p>
       </div>
       
       <div class="family-table-wrap">
@@ -28,32 +103,70 @@
               <th>Def/Dam</th>
               <th>Reqs</th>
               <th>Sockets</th>
-              <th>Bonuses</th>
+              <th>Auto Rolls</th>
+              <th>Superior</th>
             </tr>
           </thead>
           <tbody>
             {% for item in family.members %}
-            <tr class="tier-{{ item.tier|lower }}">
-              <td><span class="badge badge-{{ item.tier|lower }}">{{ item.tier }}</span></td>
+            <tr class="tier-{{ item.tier|lower }}"
+              data-search="{{ item.name }} {{ item.type }} {{ item.tier }} {{ item.class_restriction }} {{ item.staffmod_class }} {{ item.magic_level }} {{ item.speed }} {{ item.speed_label }} {{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}"
+              data-type-categories="{{ item.type_categories|join('|') }}"
+              data-tier="{{ item.tier }}"
+              data-max-sockets="{{ item.sockets }}"
+              data-two-handed="{{ '1' if item.two_handed_only else '0' }}"
+              data-speed-label="{{ item.speed_label }}"
+              data-roll-search="{{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}">
+              <td class="tier-cell">
+                <span class="badge badge-{{ item.tier|lower }}">{{ item.tier }}</span>
+                {% if item.icon_src %}
+                <img class="base-item-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
+                {% endif %}
+              </td>
               <td class="item-name">
                 <strong>{{ item.name }}</strong><br/>
-                <small class="code-text">{{ item.code }}</small>
+                <small class="code-text">{{ item.type }}</small>
+                {% if item.two_handed_only or item.class_restriction or item.staffmod_class or item.magic_level %}
+                <div class="base-tag-list">
+                  {% if item.two_handed_only %}
+                  <span class="base-tag">Two Handed</span>
+                  {% endif %}
+                  {% if item.class_restriction %}
+                  <span class="base-tag">{{ item.class_restriction }} only</span>
+                  {% endif %}
+                  {% if item.staffmod_class %}
+                  <span class="base-tag">{{ item.staffmod_class }} staffmods</span>
+                  {% endif %}
+                  {% if item.magic_level %}
+                  <span class="base-tag">+{{ item.magic_level }} magic level</span>
+                  {% endif %}
+                </div>
+                {% endif %}
               </td>
               <td>
                 {% if item.defense_min is not none %}
                   Def: {{ item.defense_min }}-{{ item.defense_max }}
                 {% elif item.damage_min is not none %}
-                  Dam: {{ item.damage_min }}-{{ item.damage_max }}
-                  {% if item.two_hand_damage_min %}
+                  {% if item.two_handed_only and item.two_hand_damage_min %}
+                    Dam: {{ item.two_hand_damage_min }}-{{ item.two_hand_damage_max }}
+                  {% else %}
+                    Dam: {{ item.damage_min }}-{{ item.damage_max }}
+                  {% endif %}
+                  {% if item.two_hand_damage_min and not item.two_handed_only %}
                     <br/><small>(2H: {{ item.two_hand_damage_min }}-{{ item.two_hand_damage_max }})</small>
                   {% endif %}
                 {% endif %}
-                <br/><small>Lvl: {{ item.level }}</small>
+                {% if item.defense_min is none and item.damage_min is not none %}
+                  <br/><small>WSM: {{ item.speed }} ({{ item.speed_label }})</small>
+                {% elif item.block %}
+                  <br/><small>Block: {{ item.block }}</small>
+                {% endif %}
+                  <br/><small>Base Lvl: {{ item.level }}</small>
               </td>
               <td>
                 Str: {{ item.str_req }}<br/>
                 Dex: {{ item.dex_req }}<br/>
-                Lvl: {{ item.level_req }}
+                Req Lvl: {% if item.level_req %}{{ item.level_req }}{% else %}<span class="text-muted">-</span>{% endif %}
               </td>
               <td>
                 Max: {{ item.sockets }}<br/>
@@ -63,30 +176,29 @@
                 {% endfor %}
                 </small>
               </td>
-              <td class="auto-prefix-cell">
-                {% if item.class_restriction or item.staffmod_class or item.magic_level or item.inherent_stats or item.auto_prefix_stats or item.quality_bonus_stats %}
-                  <ul class="stats-list">
-                    {% if item.class_restriction %}
-                    <li><small>Class</small> {{ item.class_restriction }} only</li>
-                    {% endif %}
-                    {% if item.staffmod_class %}
-                    <li><small>Staffmods</small> Can roll {{ item.staffmod_class }} skill bonuses</li>
-                    {% endif %}
-                    {% if item.magic_level %}
-                    <li><small>Magic level</small> +{{ item.magic_level }} affix level</li>
-                    {% endif %}
-                    {% for stat in item.inherent_stats %}
-                    <li><small>Inherent</small> {{ stat }}</li>
-                    {% endfor %}
-                    {% for stat in item.auto_prefix_stats %}
-                    <li><small>Auto prefix roll</small> {{ stat }}</li>
-                    {% endfor %}
-                    {% for stat in item.quality_bonus_stats %}
-                    <li><small>Superior roll</small> {{ stat }}</li>
-                    {% endfor %}
-                  </ul>
+              <td class="base-info-cell">
+                {% if item.inherent_stats or item.auto_prefix_summary %}
+                <ul class="stats-list">
+                  {% for stat in item.inherent_stats %}
+                  <li>{{ stat }}</li>
+                  {% endfor %}
+                  {% for stat in item.auto_prefix_summary %}
+                  <li>{{ stat }}</li>
+                  {% endfor %}
+                </ul>
                 {% else %}
-                  <span class="text-muted">-</span>
+                <span class="text-muted">-</span>
+                {% endif %}
+              </td>
+              <td class="base-info-cell">
+                {% if item.quality_bonus_summary %}
+                <ul class="stats-list">
+                  {% for stat in item.quality_bonus_summary %}
+                  <li>{{ stat }}</li>
+                  {% endfor %}
+                </ul>
+                {% else %}
+                <span class="text-muted">-</span>
                 {% endif %}
               </td>
             </tr>

@@ -194,6 +194,8 @@ class MiscAnalyzerService:
             items.append({
                 "code": code,
                 "name": name,
+                "icon_key": row.get('invfile', '').strip(),
+                "icon_src": "",
                 "type": type_code,
                 "level": to_int(row.get('level')),
                 "level_req": to_int(row.get('levelreq')),
@@ -609,6 +611,9 @@ class PropertyResolverService:
                         res_text = res_text.replace('#', part, 1)
                 else:
                     res_text = res_text.replace('#', display_range)
+
+            if code_lower == "pierce" and "#" not in tooltip and display_range:
+                res_text = f"{display_range}% {res_text}"
 
             if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(str(param), f"Tab {param}"))
             if '[Class]' in res_text:
@@ -2121,6 +2126,7 @@ class BaseItemAnalyzerService:
         self.armor = repo.get_excel_table('armor')
         self.weapons = repo.get_excel_table('weapons')
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
+        self.runeword_filter_type_codes = self._runeword_filter_type_codes(repo.get_excel_table('runes'))
         self.automagic = repo.get_excel_table('automagic')
         self.quality_items = repo.get_excel_table('qualityitems')
         self.class_names = {
@@ -2157,8 +2163,16 @@ class BaseItemAnalyzerService:
                 items_dto.append(self._analyze_item(code_to_item[m_code], ["Normal", "Exceptional", "Elite"][i] if i < 3 else "Unknown"))
 
             if items_dto:
+                group = self._family_group(items_dto)
+                class_tags = self._family_class_tags(items_dto)
+                max_sockets = max(item["sockets"] for item in items_dto)
                 families.append({
                     "name": items_dto[0]["name"],
+                    "group": group,
+                    "summary": self._family_summary(items_dto, group, class_tags, max_sockets),
+                    "class_tags": class_tags,
+                    "max_sockets": max_sockets,
+                    "search_text": self._family_search_text(items_dto, group, class_tags),
                     "members": items_dto
                 })
 
@@ -2173,6 +2187,7 @@ class BaseItemAnalyzerService:
         item_type = self.item_types.get(type_code, {})
         type_name = self.repo.get_string(item_type.get('ItemType', '')) or type_code
         item_type_chain = self._item_type_chain(type_code)
+        type_categories = self._type_categories_for_item_type_chain(item_type_chain)
         class_restriction = self._class_restriction_for_item_type(item_type_chain)
         staffmod_class = self._staffmod_class_for_item_type(item_type_chain)
 
@@ -2219,15 +2234,23 @@ class BaseItemAnalyzerService:
 
         inherent_stats = self._inherent_stats_for_item_type(item_type_chain)
         quality_bonus_stats = self._quality_bonus_stats_for_item_type(item_type_chain)
+        auto_prefix_summary = self._collapse_stat_ranges(auto_prefix_stats)
+        quality_bonus_summary = self._collapse_stat_ranges(quality_bonus_stats)
 
         def to_int(v):
             try: return int(v) if v else 0
             except: return 0
 
+        speed = to_int(row.get('speed'))
+        two_handed_only = row.get('2handed') == '1' and row.get('1or2handed') != '1'
+
         return {
             "code": code,
             "name": name,
+            "icon_key": row.get('invfile', '').strip(),
+            "icon_src": "",
             "type": type_name,
+            "type_categories": type_categories,
             "level": to_int(row.get('level')),
             "level_req": to_int(row.get('levelreq')),
             "defense_min": to_int(row.get('minac')) if 'minac' in row else None,
@@ -2236,8 +2259,10 @@ class BaseItemAnalyzerService:
             "damage_max": to_int(row.get('maxdam')) if 'maxdam' in row else to_int(row.get('maxmisdam')),
             "two_hand_damage_min": to_int(row.get('2handmindam')) if '2handmindam' in row else None,
             "two_hand_damage_max": to_int(row.get('2handmaxdam')) if '2handmaxdam' in row else None,
+            "two_handed_only": two_handed_only,
             "str_req": to_int(row.get('reqstr')),
             "dex_req": to_int(row.get('reqdex')),
+            "block": to_int(row.get('block')),
             "sockets": base_sockets,
             "max_sockets_by_ilvl": max_sockets_by_ilvl,
             "class_restriction": class_restriction,
@@ -2245,11 +2270,137 @@ class BaseItemAnalyzerService:
             "magic_level": to_int(row.get('magic lvl')),
             "inherent_stats": inherent_stats,
             "auto_prefix_stats": auto_prefix_stats,
+            "auto_prefix_summary": auto_prefix_summary,
             "quality_bonus_stats": quality_bonus_stats,
-            "speed": to_int(row.get('speed')),
+            "quality_bonus_summary": quality_bonus_summary,
+            "speed": speed,
+            "speed_label": self._weapon_speed_label(speed),
             "durability": to_int(row.get('nodurability')) if row.get('nodurability') == '1' else to_int(row.get('durability')),
             "tier": tier
         }
+
+    def _collapse_stat_ranges(self, stats: List[str]) -> List[str]:
+        groups: Dict[str, Dict[str, Any]] = {}
+        passthrough: List[str] = []
+
+        for stat in stats:
+            parsed = self._stat_range_parts(stat)
+            if not parsed:
+                if stat not in passthrough:
+                    passthrough.append(stat)
+                continue
+
+            prefix, sign, minimum, maximum, suffix = parsed
+            key = f"{prefix}|{suffix}"
+            if key not in groups:
+                groups[key] = {"prefix": prefix, "sign": sign, "suffix": suffix, "minimum": minimum, "maximum": maximum}
+            else:
+                groups[key]["minimum"] = min(groups[key]["minimum"], minimum)
+                groups[key]["maximum"] = max(groups[key]["maximum"], maximum)
+
+        collapsed = [
+            self._format_stat_range(group["prefix"], group["sign"], group["minimum"], group["maximum"], group["suffix"])
+            for group in groups.values()
+        ]
+        return collapsed + passthrough
+
+    @staticmethod
+    def _stat_range_parts(stat: str) -> Optional[Tuple[str, str, int, int, str]]:
+        matches = list(re.finditer(r"([+-]?\d+)(?:-([+-]?\d+))?", stat))
+        if not matches:
+            return None
+
+        # Collapse simple single-stat rolls only. Hybrid superior rolls should stay explicit.
+        if len(matches) > 1:
+            return None
+
+        match = matches[0]
+        first_value = match.group(1)
+        sign = "+" if first_value.startswith("+") else ""
+        minimum = int(first_value)
+        maximum = int(match.group(2) or match.group(1))
+        if minimum > maximum:
+            minimum, maximum = maximum, minimum
+        return stat[:match.start()], sign, minimum, maximum, stat[match.end():]
+
+    @staticmethod
+    def _format_stat_range(prefix: str, sign: str, minimum: int, maximum: int, suffix: str) -> str:
+        value = str(minimum) if minimum == maximum else f"{minimum}-{maximum}"
+        if sign and not value.startswith(("+", "-")):
+            value = f"{sign}{value}"
+        return f"{prefix}{value}{suffix}"
+
+    @staticmethod
+    def _weapon_speed_label(speed: int) -> str:
+        if speed <= -20:
+            return "Very Fast"
+        if speed <= -10:
+            return "Fast"
+        if speed < 10:
+            return "Normal"
+        if speed < 20:
+            return "Slow"
+        return "Very Slow"
+
+    def _family_group(self, items: List[BaseItemDTO]) -> str:
+        if any(item["class_restriction"] or item["staffmod_class"] for item in items):
+            return "Class Gear"
+        if any(item["defense_min"] is not None for item in items):
+            return "Armor"
+        return "Weapons"
+
+    @staticmethod
+    def _family_class_tags(items: List[BaseItemDTO]) -> List[str]:
+        tags = {
+            tag
+            for item in items
+            for tag in (item["class_restriction"], item["staffmod_class"])
+            if tag
+        }
+        return sorted(tags)
+
+    @staticmethod
+    def _family_summary(
+        items: List[BaseItemDTO],
+        group: str,
+        class_tags: List[str],
+        max_sockets: int,
+    ) -> str:
+        tiers = " / ".join(item["name"] for item in items)
+        details = [group]
+        if class_tags:
+            details.append(", ".join(class_tags))
+        details.append(f"up to {max_sockets} socket{'s' if max_sockets != 1 else ''}")
+        fastest = min((item["speed"] for item in items), default=0)
+        if fastest < 0:
+            details.append(f"fastest speed {fastest}")
+        return f"{tiers}. {'; '.join(details)}."
+
+    @staticmethod
+    def _family_search_text(items: List[BaseItemDTO], group: str, class_tags: List[str]) -> str:
+        parts: List[str] = [group, " ".join(class_tags)]
+        for item in items:
+            parts.extend(
+                [
+                    item["name"],
+                    item["code"],
+                    item["type"],
+                    " ".join(item["type_categories"]),
+                    item["tier"],
+                    item["class_restriction"],
+                    item["staffmod_class"],
+                    "Two Handed" if item["two_handed_only"] else "",
+                    str(item["level"]),
+                    str(item["level_req"]),
+                    str(item["sockets"]),
+                    str(item["speed"]),
+                    item["speed_label"],
+                    " ".join(item["inherent_stats"]),
+                    " ".join(item["auto_prefix_summary"]),
+                    " ".join(item["quality_bonus_summary"]),
+                ]
+            )
+        return " ".join(part for part in parts if part)
 
     def _find_automagic_by_group(self, group_id: str) -> List[Dict[str, str]]:
         return [row for row in self.automagic if row.get('group') == group_id]
@@ -2282,6 +2433,38 @@ class BaseItemAnalyzerService:
 
         visit(type_code)
         return chain
+
+    def _runeword_filter_type_codes(self, runeword_rows: List[Dict[str, str]]) -> set:
+        codes = set()
+        for row in runeword_rows:
+            for index in range(1, 7):
+                type_code = row.get(f'itype{index}', '').strip()
+                if type_code and type_code != 'xxx':
+                    codes.update(self._item_type_chain(type_code))
+        return codes
+
+    def _type_categories_for_item_type_chain(self, item_type_chain: List[str]) -> List[str]:
+        categories: List[str] = []
+        seen = set()
+        hidden_codes = {"ac5", "seco"}
+        for code in item_type_chain:
+            if code in hidden_codes:
+                continue
+            if self.runeword_filter_type_codes and code not in self.runeword_filter_type_codes:
+                continue
+            label = self._item_type_label(code)
+            key = label.lower()
+            if label and key not in seen:
+                categories.append(label)
+                seen.add(key)
+        return categories
+
+    def _item_type_label(self, type_code: str) -> str:
+        row = self.item_types.get(type_code, {})
+        if not row:
+            return ""
+        label_key = row.get('ItemType', '').strip()
+        return self.repo.get_string(label_key) or label_key or type_code
 
     def _inherent_stats_for_item_type(self, item_type_chain: List[str]) -> List[str]:
         stats = []

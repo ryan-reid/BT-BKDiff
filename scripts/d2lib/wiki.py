@@ -1,8 +1,10 @@
+import binascii
 import json
 import os
 import re
 import shutil
 import struct
+import zlib
 from typing import Any, Dict, List, Optional, Tuple
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -89,6 +91,10 @@ class WikiRoutes:
         return "items/index.html"
 
     @staticmethod
+    def runewords_index_output_path() -> str:
+        return "runewords/index.html"
+
+    @staticmethod
     def bases_index_output_path() -> str:
         return "bases/index.html"
 
@@ -173,6 +179,14 @@ class WikiOutputWriter:
         full_path = os.path.join(self.output_dir, normalized)
         os.makedirs(os.path.dirname(full_path), exist_ok=True)
         with open(full_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        self.generated_paths.add(normalized)
+
+    def write_bytes(self, relative_path: str, content: bytes) -> None:
+        normalized = relative_path.replace("\\", "/")
+        full_path = os.path.join(self.output_dir, normalized)
+        os.makedirs(os.path.dirname(full_path), exist_ok=True)
+        with open(full_path, "wb") as f:
             f.write(content)
         self.generated_paths.add(normalized)
 
@@ -665,6 +679,426 @@ class AreaFarmingDataBuilder:
             return 0
 
 
+class ItemIconExporter:
+    def __init__(
+        self,
+        writer: WikiOutputWriter,
+        game_data_dir: str,
+        retail_data_dir: str,
+        output_prefix: str = "assets/item-icons",
+    ):
+        self.writer = writer
+        self.game_data_dir = game_data_dir
+        self.retail_data_dir = retail_data_dir
+        self.output_prefix = output_prefix
+        self._written: set[str] = set()
+        self._item_asset_maps = [self._load_item_asset_map(path) for path in self._hd_item_manifest_paths()]
+        self._unique_asset_maps = [self._load_quality_asset_map(path) for path in self._hd_quality_manifest_paths("uniques.json")]
+        self._set_asset_maps = [self._load_quality_asset_map(path) for path in self._hd_quality_manifest_paths("sets.json")]
+
+    def attach_base_item_icons(self, families: List[BaseItemFamilyDTO]) -> None:
+        for family in families:
+            for item in family["members"]:
+                item["icon_src"] = self.export_icon(
+                    output_key=str(item.get("code", "") or item.get("icon_key", "")),
+                    item_code=str(item.get("code", "")),
+                    icon_key=str(item.get("icon_key", "")),
+                )
+
+    def attach_misc_item_icons(self, groups: List[MiscGroupDTO]) -> None:
+        for group in groups:
+            for item in group["members"]:
+                item["icon_src"] = self.export_icon(
+                    output_key=str(item.get("code", "") or item.get("icon_key", "")),
+                    item_code=str(item.get("code", "")),
+                    icon_key=str(item.get("icon_key", "")),
+                )
+
+    def export_entry_icon(self, entry: Dict[str, Any], family: str) -> str:
+        if family == "runeword":
+            return ""
+
+        raw_row = entry.get("raw_row", {})
+        item_code = str(raw_row.get("item" if family == "set" else "code", "")).strip()
+        icon_key = str(raw_row.get("invfile", "")).strip()
+        quality_key = str(raw_row.get("index", "") or entry.get("display_name", "")).strip()
+        return self.export_icon(
+            output_key=f"{family}-{quality_key or item_code or icon_key}",
+            item_code=item_code,
+            icon_key=icon_key,
+            quality_family=family,
+            quality_key=quality_key,
+        )
+
+    def export_icon(
+        self,
+        output_key: str,
+        item_code: str = "",
+        icon_key: str = "",
+        quality_family: str = "",
+        quality_key: str = "",
+    ) -> str:
+        item_code = item_code.strip()
+        icon_key = icon_key.strip()
+        quality_family = quality_family.strip()
+        quality_key = quality_key.strip()
+        if not output_key and not item_code and not icon_key and not quality_key:
+            return ""
+
+        relative_path = f"{self.output_prefix}/{self._safe_icon_name(output_key or item_code or icon_key or quality_key)}.png"
+        if relative_path not in self._written:
+            png_bytes = self._icon_png_bytes(item_code, icon_key, quality_family, quality_key)
+            if not png_bytes:
+                return ""
+            self.writer.write_bytes(relative_path, png_bytes)
+            self._written.add(relative_path)
+
+        return relative_path
+
+    def _icon_png_bytes(
+        self,
+        item_code: str,
+        icon_key: str,
+        quality_family: str = "",
+        quality_key: str = "",
+    ) -> Optional[bytes]:
+        hd_sprite_path = self._find_quality_hd_sprite(quality_family, quality_key, item_code)
+        if not hd_sprite_path:
+            hd_sprite_path = self._find_hd_sprite(item_code)
+        if hd_sprite_path:
+            hd_png = self._sprite_to_png(hd_sprite_path)
+            if hd_png:
+                return hd_png
+
+        dc6_path = self._find_dc6(icon_key)
+        if dc6_path:
+            return self._dc6_to_png(dc6_path)
+
+        sprite_path = self._find_sprite(icon_key)
+        if sprite_path:
+            return self._sprite_to_png(sprite_path)
+
+        return None
+
+    def _find_quality_hd_sprite(self, family: str, quality_key: str, item_code: str) -> Optional[str]:
+        family = family.strip().lower()
+        quality_key = self._quality_asset_key(quality_key)
+        if not family or not quality_key:
+            return None
+
+        maps = self._unique_asset_maps if family == "unique" else self._set_asset_maps if family == "set" else []
+        for asset_map in maps:
+            variants = asset_map.get(quality_key, {})
+            if not variants:
+                continue
+
+            tier = self._item_code_tier(item_code)
+            for variant in [tier, "normal", "uber", "ultra"]:
+                asset = variants.get(variant, "").strip()
+                if not asset:
+                    continue
+                sprite_path = self._find_hd_sprite_by_asset(asset)
+                if sprite_path:
+                    return sprite_path
+        return None
+
+    def _find_hd_sprite(self, item_code: str) -> Optional[str]:
+        item_code = item_code.lower().strip()
+        if not item_code:
+            return None
+
+        for asset_map in self._item_asset_maps:
+            asset = asset_map.get(item_code, "").strip()
+            if not asset:
+                continue
+            sprite_path = self._find_hd_sprite_by_asset(asset)
+            if sprite_path:
+                return sprite_path
+        return None
+
+    def _find_hd_sprite_by_asset(self, asset: str) -> Optional[str]:
+        asset_parts = [part for part in asset.replace("\\", "/").split("/") if part]
+        for ui_root in self._hd_item_ui_roots():
+            for group in ("weapon", "armor", "misc"):
+                candidate = os.path.join(ui_root, group, *asset_parts) + ".sprite"
+                if os.path.isfile(candidate):
+                    return candidate
+        return None
+
+    def _hd_item_manifest_paths(self) -> List[str]:
+        candidates = [
+            os.path.join(self.game_data_dir, "data", "hd", "items", "items.json"),
+            os.path.join(self.retail_data_dir, "hd", "items", "items.json"),
+            os.path.join(DEFAULT_RETAIL_DATA_DIR, "hd", "items", "items.json"),
+        ]
+        return [path for path in candidates if os.path.isfile(path)]
+
+    def _hd_quality_manifest_paths(self, filename: str) -> List[str]:
+        candidates = [
+            os.path.join(self.game_data_dir, "data", "hd", "items", filename),
+            os.path.join(self.retail_data_dir, "hd", "items", filename),
+            os.path.join(DEFAULT_RETAIL_DATA_DIR, "hd", "items", filename),
+        ]
+        return [path for path in candidates if os.path.isfile(path)]
+
+    def _hd_item_ui_roots(self) -> List[str]:
+        candidates = [
+            os.path.join(self.game_data_dir, "data", "hd", "global", "ui", "items"),
+            os.path.join(self.retail_data_dir, "hd", "global", "ui", "items"),
+            os.path.join(DEFAULT_RETAIL_DATA_DIR, "hd", "global", "ui", "items"),
+        ]
+        return [path for path in candidates if os.path.isdir(path)]
+
+    @staticmethod
+    def _load_item_asset_map(path: str) -> Dict[str, str]:
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                rows = json.load(f)
+        except (OSError, json.JSONDecodeError):
+            return {}
+
+        assets: Dict[str, str] = {}
+        if not isinstance(rows, list):
+            return assets
+
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            for code, payload in row.items():
+                if isinstance(payload, dict):
+                    asset = str(payload.get("asset", "")).strip()
+                    if asset:
+                        assets[str(code).lower()] = asset
+        return assets
+
+    @staticmethod
+    def _load_quality_asset_map(path: str) -> Dict[str, Dict[str, str]]:
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                rows = json.load(f)
+        except (OSError, json.JSONDecodeError):
+            return {}
+
+        assets: Dict[str, Dict[str, str]] = {}
+        if not isinstance(rows, list):
+            return assets
+
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            for key, payload in row.items():
+                if not isinstance(payload, dict):
+                    continue
+                variants = {
+                    variant: str(payload.get(variant, "")).strip()
+                    for variant in ("normal", "uber", "ultra")
+                    if str(payload.get(variant, "")).strip()
+                }
+                if variants:
+                    assets[ItemIconExporter._quality_asset_key(str(key))] = variants
+        return assets
+
+    @staticmethod
+    def _quality_asset_key(value: str) -> str:
+        return re.sub(r"[^a-z0-9]+", "_", value.lower()).strip("_")
+
+    @staticmethod
+    def _item_code_tier(item_code: str) -> str:
+        code = item_code.strip().lower()
+        if not code:
+            return "normal"
+        if code[:1] in {"7", "u", "z"}:
+            return "ultra"
+        if code[:1] in {"9", "x"}:
+            return "uber"
+        return "normal"
+
+    def _find_dc6(self, icon_key: str) -> Optional[str]:
+        filename = f"{icon_key.lower()}.dc6"
+        for item_dir in self._classic_item_dirs():
+            candidate = os.path.join(item_dir, filename)
+            if os.path.isfile(candidate):
+                return candidate
+        return None
+
+    def _classic_item_dirs(self) -> List[str]:
+        candidates = [
+            os.path.join(self.game_data_dir, "data", "global", "items"),
+            os.path.join(self.retail_data_dir, "global", "items"),
+            os.path.join(DEFAULT_RETAIL_DATA_DIR, "global", "items"),
+        ]
+        return [path for path in candidates if os.path.isdir(path)]
+
+    def _find_sprite(self, icon_key: str) -> Optional[str]:
+        filename = f"{icon_key.lower()}.sprite"
+        roots = [
+            os.path.join(self.game_data_dir, "data", "hd", "global", "ui", "items"),
+            os.path.join(self.retail_data_dir, "hd", "global", "ui", "items"),
+        ]
+        for root in roots:
+            if not os.path.isdir(root):
+                continue
+            for current_root, _, files in os.walk(root):
+                lower_files = {filename.lower(): filename for filename in files}
+                if filename in lower_files:
+                    return os.path.join(current_root, lower_files[filename])
+        return None
+
+    def _dc6_to_png(self, path: str) -> Optional[bytes]:
+        try:
+            with open(path, "rb") as f:
+                data = f.read()
+            if len(data) < 60:
+                return None
+
+            directions, frames = struct.unpack_from("<2I", data, 16)
+            if directions < 1 or frames < 1:
+                return None
+
+            frame_offset = struct.unpack_from("<I", data, 24)[0]
+            if frame_offset + 32 > len(data):
+                return None
+
+            _, width, height, _, _, _, _, encoded_length = struct.unpack_from("<8I", data, frame_offset)
+            if width <= 0 or height <= 0:
+                return None
+
+            palette = self._palette_bytes(path)
+            if not palette:
+                return None
+
+            pixels = bytearray(width * height * 4)
+            x = 0
+            y = height - 1
+            pos = frame_offset + 32
+            end = min(len(data), pos + encoded_length)
+
+            while pos < end and y >= 0:
+                command = data[pos]
+                pos += 1
+
+                if command == 0x80:
+                    x = 0
+                    y -= 1
+                elif command & 0x80:
+                    x += command & 0x7F
+                else:
+                    count = command
+                    for color_index in data[pos : pos + count]:
+                        if x < width and y >= 0:
+                            palette_index = color_index * 3
+                            pixel_index = (y * width + x) * 4
+                            pixels[pixel_index] = palette[palette_index + 2]
+                            pixels[pixel_index + 1] = palette[palette_index + 1]
+                            pixels[pixel_index + 2] = palette[palette_index]
+                            pixels[pixel_index + 3] = 255
+                        x += 1
+                    pos += count
+
+            trimmed_width, trimmed_height, trimmed_pixels = self._trim_transparent_rgba(width, height, bytes(pixels))
+            return self._png_rgba(trimmed_width, trimmed_height, trimmed_pixels)
+        except (OSError, struct.error, IndexError, ValueError):
+            return None
+
+    def _palette_bytes(self, dc6_path: str) -> Optional[bytes]:
+        item_dir = os.path.dirname(dc6_path)
+        candidates = [
+            os.path.join(DEFAULT_RETAIL_DATA_DIR, "global", "palette", "act1", "pal.dat"),
+            os.path.join(self.retail_data_dir, "global", "palette", "act1", "pal.dat"),
+            os.path.join(item_dir, "..", "palette", "grey.dat"),
+        ]
+        for candidate in candidates:
+            normalized = os.path.abspath(candidate)
+            if os.path.isfile(normalized):
+                with open(normalized, "rb") as f:
+                    palette = f.read(768)
+                if len(palette) == 768:
+                    return palette
+        return None
+
+    def _sprite_to_png(self, path: str) -> Optional[bytes]:
+        try:
+            with open(path, "rb") as f:
+                data = f.read()
+            if len(data) < 40 or data[:4] != b"SpA1":
+                return None
+            width = int.from_bytes(data[6:8], "little")
+            height = int.from_bytes(data[12:16], "little")
+            cell_height = int.from_bytes(data[8:10], "little")
+            if width <= 0 or height <= 0:
+                height = cell_height
+            pixel_count = width * height * 4
+            if width <= 0 or height <= 0 or len(data) < 40 + pixel_count:
+                return None
+            trimmed_width, trimmed_height, trimmed_pixels = self._trim_transparent_rgba(
+                width,
+                height,
+                data[40 : 40 + pixel_count],
+            )
+            return self._png_rgba(trimmed_width, trimmed_height, trimmed_pixels)
+        except OSError:
+            return None
+
+    @staticmethod
+    def _trim_transparent_rgba(width: int, height: int, rgba: bytes, padding: int = 2) -> Tuple[int, int, bytes]:
+        min_x = width
+        min_y = height
+        max_x = -1
+        max_y = -1
+
+        for y in range(height):
+            for x in range(width):
+                if rgba[((y * width + x) * 4) + 3] == 0:
+                    continue
+                min_x = min(min_x, x)
+                min_y = min(min_y, y)
+                max_x = max(max_x, x)
+                max_y = max(max_y, y)
+
+        if max_x < min_x or max_y < min_y:
+            return width, height, rgba
+
+        min_x = max(0, min_x - padding)
+        min_y = max(0, min_y - padding)
+        max_x = min(width - 1, max_x + padding)
+        max_y = min(height - 1, max_y + padding)
+        trimmed_width = max_x - min_x + 1
+        trimmed_height = max_y - min_y + 1
+        trimmed = bytearray(trimmed_width * trimmed_height * 4)
+
+        for y in range(trimmed_height):
+            src_start = (((min_y + y) * width) + min_x) * 4
+            src_end = src_start + (trimmed_width * 4)
+            dest_start = y * trimmed_width * 4
+            trimmed[dest_start : dest_start + (trimmed_width * 4)] = rgba[src_start:src_end]
+
+        return trimmed_width, trimmed_height, bytes(trimmed)
+
+    @staticmethod
+    def _png_rgba(width: int, height: int, rgba: bytes) -> bytes:
+        def chunk(kind: bytes, payload: bytes) -> bytes:
+            crc = binascii.crc32(kind + payload) & 0xFFFFFFFF
+            return struct.pack(">I", len(payload)) + kind + payload + struct.pack(">I", crc)
+
+        rows = []
+        stride = width * 4
+        for row_index in range(height):
+            start = row_index * stride
+            rows.append(b"\x00" + rgba[start : start + stride])
+
+        header = struct.pack(">IIBBBBB", width, height, 8, 6, 0, 0, 0)
+        return (
+            b"\x89PNG\r\n\x1a\n"
+            + chunk(b"IHDR", header)
+            + chunk(b"IDAT", zlib.compress(b"".join(rows), 9))
+            + chunk(b"IEND", b"")
+        )
+
+    @staticmethod
+    def _safe_icon_name(icon_key: str) -> str:
+        return re.sub(r"[^a-zA-Z0-9_-]+", "-", icon_key.strip().lower()).strip("-") or "item"
+
+
 class WikiGenerator:
     def __init__(
         self,
@@ -714,6 +1148,7 @@ class WikiGenerator:
         self._write_assets()
         item_entries = self._write_item_pages(items, old_item_index)
         class_entries = self._write_class_pages(class_pages)
+        self._write_runeword_index_page(items["runeword"], item_entries["runeword"])
         self._write_base_item_pages(base_item_families)
         self._write_recipe_pages(recipe_groups)
         self._write_bestiary_pages(monster_groups)
@@ -735,6 +1170,7 @@ class WikiGenerator:
         return service.analyze_base_items()
 
     def _write_base_item_pages(self, families: List[BaseItemFamilyDTO]) -> None:
+        ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir).attach_base_item_icons(families)
         self._write_page(
             title=f"Base Items | {self.new_label} Wiki",
             output_path=WikiRoutes.bases_index_output_path(),
@@ -748,6 +1184,14 @@ class WikiGenerator:
                 os.path.join(self.game_data_dir, "data", "global", "excel", "qualityitems.txt"),
             ],
             families=families,
+            base_groups=sorted({family["group"] for family in families}),
+            base_classes=sorted({class_name for family in families for class_name in family["class_tags"]}),
+            base_type_categories=sorted({
+                category
+                for family in families
+                for item in family["members"]
+                for category in item["type_categories"]
+            }),
         )
 
     def _load_recipe_groups(self) -> List[CubeRecipeGroupDTO]:
@@ -799,6 +1243,7 @@ class WikiGenerator:
         return material_groups, gem_rune_groups
 
     def _write_misc_pages(self, groups: List[MiscGroupDTO]) -> None:
+        ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir).attach_misc_item_icons(groups)
         self._write_page(
             title=f"Materials | {self.new_label} Wiki",
             output_path=WikiRoutes.misc_index_output_path(),
@@ -811,6 +1256,7 @@ class WikiGenerator:
         )
 
     def _write_gems_runes_pages(self, groups: List[MiscGroupDTO]) -> None:
+        ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir).attach_misc_item_icons(groups)
         self._write_page(
             title=f"Gems & Runes | {self.new_label} Wiki",
             output_path=WikiRoutes.gems_runes_index_output_path(),
@@ -1006,6 +1452,7 @@ class WikiGenerator:
     ) -> Dict[str, List[Dict[str, str]]]:
         page_entries: Dict[str, List[Dict[str, str]]] = {family: [] for family in ITEM_FAMILIES}
         used_paths: Dict[str, Dict[str, int]] = {family: {} for family in ITEM_FAMILIES}
+        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
 
         for family, entries in items.items():
             for entry in sorted(entries, key=self._item_sort_key):
@@ -1015,6 +1462,10 @@ class WikiGenerator:
                 slug = self._item_slug(entry, family, title, used_paths[family])
                 output_path = WikiRoutes.item_output_path(family, slug)
                 href = WikiRoutes.route_from_output_path(output_path)
+                icon_src = icon_exporter.export_entry_icon(entry, family)
+                entry["icon_src"] = icon_src
+                if family == "runeword":
+                    entry["rune_requirements"] = self._runeword_rune_requirements(entry, icon_exporter)
                 page_entries[family].append(
                     {
                         "title": title,
@@ -1024,6 +1475,7 @@ class WikiGenerator:
                         "status": status,
                         "item_group": self._item_filter_group(entry, family),
                         "item_type": self._item_filter_type(entry, family),
+                        "icon_src": icon_src,
                     }
                 )
 
@@ -1061,6 +1513,102 @@ class WikiGenerator:
                 }
             )
         return entries
+
+    def _write_runeword_index_page(
+        self,
+        runewords: List[Dict[str, Any]],
+        page_entries: List[Dict[str, str]],
+    ) -> None:
+        href_by_title = {entry["title"]: entry for entry in page_entries}
+        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
+        records = []
+
+        for entry in sorted(runewords, key=self._item_sort_key):
+            title = self._item_title(entry, "runeword")
+            page_entry = href_by_title.get(title, {})
+            rune_requirements = entry.get("rune_requirements") or self._runeword_rune_requirements(
+                entry, icon_exporter
+            )
+
+            property_preview = [
+                str(prop.get("resolved_text", ""))
+                for prop in entry.get("properties", [])
+                if str(prop.get("resolved_text", "")).strip()
+            ][:5]
+
+            records.append(
+                {
+                    "title": title,
+                    "href": page_entry.get("href", ""),
+                    "status": page_entry.get("status", "unchanged"),
+                    "summary": self._item_summary(entry, "runeword"),
+                    "base_items": entry.get("base_items", []),
+                    "runes": rune_requirements,
+                    "properties": property_preview,
+                    "search_text": " ".join(
+                        [
+                            title,
+                            " ".join(entry.get("base_items", [])),
+                            " ".join(rune["name"] for rune in rune_requirements),
+                            " ".join(rune["code"] for rune in rune_requirements),
+                            " ".join(property_preview),
+                            page_entry.get("status", ""),
+                        ]
+                    ),
+                }
+            )
+
+        self._write_page(
+            title=f"Runewords | {self.new_label} Wiki",
+            output_path=WikiRoutes.runewords_index_output_path(),
+            template_name="runewords_index.html",
+            category="index",
+            source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "runes.txt")],
+            runewords=records,
+        )
+
+    @staticmethod
+    def _runeword_rune_name(entry: Dict[str, Any], rune_code: str, rune_index: int) -> str:
+        runes = entry.get("runes", [])
+        if rune_index < len(runes):
+            return str(runes[rune_index])
+        return rune_code
+
+    def _runeword_rune_requirements(
+        self,
+        entry: Dict[str, Any],
+        icon_exporter: ItemIconExporter,
+    ) -> List[Dict[str, str]]:
+        requirements = []
+        raw_row = entry.get("raw_row", {})
+        for index in range(1, 7):
+            rune_code = str(raw_row.get(f"Rune{index}", "")).strip()
+            if not rune_code or rune_code == "xxx":
+                continue
+            rune_name = self._runeword_rune_name(entry, rune_code, len(requirements))
+            requirements.append(
+                {
+                    "code": rune_code,
+                    "name": rune_name,
+                    "icon_src": icon_exporter.export_icon(
+                        output_key=f"rune-{rune_code}",
+                        item_code=rune_code,
+                        icon_key=rune_code,
+                    ),
+                }
+            )
+
+        if requirements:
+            return requirements
+
+        return [
+            {
+                "code": "",
+                "name": str(rune_name),
+                "icon_src": "",
+            }
+            for rune_name in entry.get("runes", [])
+        ]
 
     def _write_indexes(
         self,
@@ -1165,10 +1713,11 @@ class WikiGenerator:
                 "status": entry["status"],
                 "item_group": entry["item_group"],
                 "item_type": entry["item_type"],
+                "icon_src": entry.get("icon_src", ""),
                 "summary": entry["summary"],
                 "search_text": entry["search_text"],
             }
-            for family in ITEM_FAMILIES
+            for family in ("unique", "set")
             for entry in item_entries[family]
         ]
         self.writer.write_text("data/items-index.json", json.dumps(rows, indent=2))
@@ -1305,6 +1854,8 @@ class WikiGenerator:
             "stats": stats,
             "properties": properties,
             "rune_properties": rune_properties,
+            "rune_requirements": entry.get("rune_requirements", []),
+            "icon_src": entry.get("icon_src", ""),
             "source_rel_path": entry.get("_source_rel_path", ""),
             "comparison": self._item_comparison_context(entry, family, old_entry),
         }

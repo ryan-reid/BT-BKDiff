@@ -355,6 +355,13 @@ code {
   margin-bottom: 10px;
 }
 
+.item-card-main {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
 .item-card:hover {
   transform: translateY(-2px);
   border-color: rgba(139, 47, 47, 0.22);
@@ -399,6 +406,91 @@ code {
 .item-card p {
   margin: 0;
   color: var(--muted);
+}
+
+.runeword-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.runeword-card {
+  display: grid;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.runeword-card h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+}
+
+.runeword-base {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.rune-sequence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.rune-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 42px;
+  padding: 4px 8px 4px 4px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(33, 29, 25, 0.03);
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.rune-chip-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.runeword-property-preview {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--accent-2);
+  font-size: 0.9rem;
+}
+
+.runeword-property-preview li {
+  margin-bottom: 3px;
+}
+
+.wiki-item-icon {
+  display: block;
+  object-fit: contain;
+}
+
+.item-card-icon {
+  width: 42px;
+  height: 56px;
+  max-width: 42px;
+  max-height: 56px;
+}
+
+.item-detail-icon-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.item-detail-icon {
+  width: auto;
+  max-width: 132px;
+  max-height: 180px;
 }
 
 .page-grid {
@@ -623,10 +715,66 @@ td {
   margin: 0 0 10px;
 }
 
+.base-filter-toolbar {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.filter-row,
+.filter-check-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+}
+
+.filter-row label {
+  display: grid;
+  gap: 4px;
+  min-width: 150px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter-row select,
+.filter-row input {
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  font: inherit;
+  text-transform: none;
+}
+
+.filter-row .filter-wide {
+  min-width: min(100%, 260px);
+  flex: 1 1 260px;
+}
+
+.filter-check-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .family-header {
   margin-bottom: 16px;
   border-bottom: 1px solid var(--line);
   padding-bottom: 12px;
+}
+
+.family-header p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .family-table-wrap {
@@ -634,7 +782,7 @@ td {
 }
 
 .family-table {
-  min-width: 900px;
+  min-width: 980px;
 }
 
 .family-table th {
@@ -651,6 +799,30 @@ td {
 .tier-exceptional { background: rgba(63, 101, 117, 0.02); }
 .tier-elite { background: rgba(139, 47, 47, 0.02); }
 
+.tier-cell {
+  width: 92px;
+  text-align: center;
+}
+
+.base-item-icon {
+  display: block;
+  max-width: 44px;
+  max-height: 58px;
+  width: auto;
+  height: auto;
+  margin: 8px auto 0;
+  image-rendering: auto;
+  object-fit: contain;
+}
+
+.misc-item-icon {
+  float: left;
+  width: auto;
+  max-width: 42px;
+  max-height: 56px;
+  margin: 0 10px 8px 0;
+}
+
 .badge {
   display: inline-block;
   padding: 4px 8px;
@@ -664,8 +836,28 @@ td {
 .badge-exceptional { background: rgba(63, 101, 117, 0.12); color: var(--accent-2); }
 .badge-elite { background: rgba(139, 47, 47, 0.12); color: var(--accent); }
 
+.base-info-cell,
 .auto-prefix-cell {
   max-width: 240px;
+}
+
+.base-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.base-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  border: 1px solid rgba(63, 101, 117, 0.18);
+  border-radius: 4px;
+  background: rgba(63, 101, 117, 0.08);
+  color: var(--accent-2);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .stats-list {

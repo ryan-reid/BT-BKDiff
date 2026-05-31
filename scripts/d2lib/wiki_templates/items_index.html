@@ -4,7 +4,7 @@
 {{ hero(
   "Generated Item Index",
   "All Items",
-  "Search across unique items, set items, and runewords. Results are rendered from a compact JSON index built with the site.",
+  "Search across unique and set item pages. Runewords have their own page with rune requirements.",
   [
     {"label": "Searchable", "tone": "default"},
     {"label": "JSON Index", "tone": "accent"},
@@ -17,7 +17,6 @@
       <button class="filter-button is-active" data-filter-family="all">All</button>
       <button class="filter-button" data-filter-family="unique">Unique</button>
       <button class="filter-button" data-filter-family="set">Set</button>
-      <button class="filter-button" data-filter-family="runeword">Runeword</button>
     </div>
     <div class="filter-row">
       <button class="filter-button is-active" data-filter-status="all">All Statuses</button>
@@ -52,7 +51,7 @@
   </div>
 </section>
 <section class="content-section">
-  <div class="section-head"><h2>Item Pages</h2><p>{{ family_counts.unique + family_counts.set + family_counts.runeword }} generated pages</p></div>
+  <div class="section-head"><h2>Item Pages</h2><p>{{ family_counts.unique + family_counts.set }} generated pages</p></div>
   <div id="item-index-root" class="item-index-root">
     <p class="muted">Loading item index...</p>
   </div>

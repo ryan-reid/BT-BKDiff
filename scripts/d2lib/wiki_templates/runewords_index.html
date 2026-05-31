@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Runewords | {{ new_label }} Wiki{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-eyebrow">Rune Planning</p>
+  <h1>Runewords</h1>
+  <p class="hero-copy">Browse runewords by required rune sequence, base item category, and generated properties.</p>
+</section>
+
+<section class="content-section">
+  <input id="page-search" class="search-input" type="search" placeholder="Search runewords, runes, bases, or properties..." />
+
+  <div class="runeword-grid">
+    {% for runeword in runewords %}
+    <a class="runeword-card item-card" href="{{ site_root }}{{ runeword.href }}" data-search="{{ runeword.search_text }}">
+      <div class="item-card-meta">
+        <span class="item-card-family">Runeword</span>
+        {% if runeword.status == "added" %}
+        <span class="item-card-status is-added">BK Only</span>
+        {% elif runeword.status == "modified" %}
+        <span class="item-card-status is-modified">Modified</span>
+        {% endif %}
+      </div>
+      <h2>{{ runeword.title }}</h2>
+      <p class="runeword-base">{{ runeword.base_items|join(', ') }}</p>
+
+      <div class="rune-sequence" aria-label="{{ runeword.title }} rune sequence">
+        {% for rune in runeword.runes %}
+        <span class="rune-chip" title="{{ rune.name }}">
+          {% if rune.icon_src %}
+          <img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }} icon" />
+          {% endif %}
+          <span>{{ rune.name }}</span>
+        </span>
+        {% endfor %}
+      </div>
+
+      {% if runeword.properties %}
+      <ul class="runeword-property-preview">
+        {% for property in runeword.properties %}
+        <li>{{ property }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

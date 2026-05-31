@@ -88,7 +88,10 @@ class SkillTreeDTO(TypedDict):
 class BaseItemDTO(TypedDict):
     code: str
     name: str
+    icon_key: str
+    icon_src: str
     type: str
+    type_categories: List[str]
     level: int
     level_req: int
     defense_min: Optional[int]
@@ -97,8 +100,10 @@ class BaseItemDTO(TypedDict):
     damage_max: Optional[int]
     two_hand_damage_min: Optional[int]
     two_hand_damage_max: Optional[int]
+    two_handed_only: bool
     str_req: int
     dex_req: int
+    block: int
     sockets: int
     max_sockets_by_ilvl: Dict[str, int]
     class_restriction: str
@@ -106,13 +111,21 @@ class BaseItemDTO(TypedDict):
     magic_level: int
     inherent_stats: List[str]
     auto_prefix_stats: List[str]
+    auto_prefix_summary: List[str]
     quality_bonus_stats: List[str]
+    quality_bonus_summary: List[str]
     speed: int
+    speed_label: str
     durability: int
     tier: str # Normal, Exceptional, Elite
 
 class BaseItemFamilyDTO(TypedDict):
     name: str
+    group: str
+    summary: str
+    class_tags: List[str]
+    max_sockets: int
+    search_text: str
     members: List[BaseItemDTO]
 
 class MonsterDTO(TypedDict):
@@ -139,6 +152,8 @@ class MonsterActGroupDTO(TypedDict):
 class MiscItemDTO(TypedDict):
     code: str
     name: str
+    icon_key: str
+    icon_src: str
     type: str
     level: int
     level_req: int
