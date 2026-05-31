@@ -279,6 +279,7 @@ class WikiGenerator:
                 
                 old_item = retail_items.get(item["code"])
                 comparison = self._gem_rune_comparison_context(item, old_item)
+                item["comparison"] = comparison
                 
                 stats = [
                     {"label": "Code", "value": item["code"]},

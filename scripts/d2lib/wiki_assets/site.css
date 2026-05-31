@@ -1529,3 +1529,99 @@ td {
     font-size: 0.9rem;
   }
 }
+
+/* --- Consolidated Bases & Item Cards --- */
+.family-list {
+  display: grid;
+  gap: 40px;
+}
+
+.family-container {
+  display: grid;
+  gap: 20px;
+}
+
+.family-header-bar {
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--line);
+}
+
+.family-header-bar h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.family-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 24px;
+}
+
+.base-item-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.base-card-header {
+  padding: 16px;
+  background: rgba(33, 29, 25, 0.02);
+  border-bottom: 1px solid var(--line);
+}
+
+.base-card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.base-card-icon-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.base-card-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.base-card-title-group h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.base-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.base-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.base-tag {
+  font-size: 0.72rem;
+  padding: 2px 6px;
+  background: rgba(63, 101, 117, 0.08);
+  color: var(--accent-2);
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* --- Responsive adjustments for base items --- */
+@media (max-width: 900px) {
+  .family-items-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -6,7 +6,7 @@
 <section class="hero">
   <p class="hero-eyebrow">Socketables</p>
   <h1>Gems & Runes</h1>
-  <p class="hero-copy">Socket effects, ascended gem tiers, rune progression, and changed rune stats.</p>
+  <p class="hero-copy">Socket effects, ascended gem tiers, rune progression, and changed rune stats. Technical comparisons against Retail baseline.</p>
 </section>
 
 <section class="content-section">
@@ -37,58 +37,63 @@
         </div>
       </div>
 
-      <div class="table-wrap">
-        <table class="misc-table">
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Details</th>
-              <th>Stack</th>
-              <th>Socket Effects</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for item in group.members %}
-            <tr data-search="{{ item.name }} {{ item.code }} {{ item.description }} {{ item.status }} {% for slot, effects in item.socket_effects.items() %}{{ slot }} {{ effects|join(' ') }} {% endfor %}">
-              <td class="misc-name-cell">
+      <div class="family-items-grid">
+        {% for item in group.members %}
+        {% set comp = item.comparison %}
+        <div class="base-item-card" data-search="{{ item.name }} {{ item.code }} {{ item.description }} {{ item.status }} {% for row in comp.property_rows %}{{ row.label }} {{ row.old }} {{ row.new }} {% endfor %}">
+          <div class="base-card-header">
+            <div class="base-card-title-group">
+              <div class="base-card-icon-wrap">
                 {% if item.icon_src %}
-                <img class="wiki-item-icon misc-item-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
+                <img class="base-card-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
                 {% endif %}
-                <a href="{{ site_root }}{{ item.href }}"><strong>{{ item.name }}</strong></a><br/>
-                <small class="code-text">{{ item.code }}</small>
-                {% if item.status == "added" %}
-                <span class="item-card-status is-added">BK Only</span>
-                {% elif item.status == "modified" %}
-                <span class="item-card-status is-modified">Changed</span>
-                {% endif %}
-              </td>
-              <td>
-                Lvl: {{ item.level }}<br/>
-                Req: {{ item.level_req }}<br/>
-                Cost: {{ item.cost }}
-              </td>
-              <td>
-                {% if item.stackable %}
-                  Max: {{ item.max_stack }}
-                {% else %}
-                  <span class="text-muted">No</span>
-                {% endif %}
-              </td>
-              <td class="misc-desc-cell">
-                {% if item.socket_effects %}
-                <div class="socket-effect-list">
-                  {% for slot, effects in item.socket_effects.items() %}
-                  <div><strong>{{ slot }}</strong>: {{ effects|join('; ') }}</div>
-                  {% endfor %}
-                </div>
-                {% else %}
-                {{ item.description }}
-                {% endif %}
-              </td>
-            </tr>
+                <h3 style="font-family: inherit; font-weight: 700;">{{ item.name }}</h3>
+              </div>
+            </div>
+            <div class="base-card-meta">
+              <small class="code-text">{{ item.code }}</small>
+              {% if item.status == "added" %}
+              <span class="item-card-status is-added">BK Only</span>
+              {% elif item.status == "modified" %}
+              <span class="item-card-status is-modified">Changed</span>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="runeword-before-after" style="font-size: 0.85rem;">
+            <div class="runeword-table-head">Retail</div>
+            <div class="runeword-table-head">BKDiablo</div>
+
+            {# Stat Rows #}
+            {% for row in comp.stat_rows %}
+              {% if row.status != "same" or row.new %}
+              <div class="runeword-table-cell is-{{ row.status }}">
+                <strong>{{ row.label }}:</strong> {{ row.old or "empty" }}
+              </div>
+              <div class="runeword-table-cell is-{{ row.status }}">
+                <strong>{{ row.label }}:</strong> {{ row.new or "empty" }}
+              </div>
+              {% endif %}
             {% endfor %}
-          </tbody>
-        </table>
+
+            <div class="runeword-table-separator">Socket Effects</div>
+            {% for row in comp.property_rows %}
+              <div class="runeword-table-cell is-{{ row.status }}">
+                <strong>{{ row.label }}:</strong> {{ row.old or "(empty)" }}
+              </div>
+              <div class="runeword-table-cell is-{{ row.status }}">
+                <strong>{{ row.label }}:</strong> {{ row.new or "(removed)" }}
+              </div>
+            {% endfor %}
+          </div>
+          
+          {% if item.description %}
+          <div style="padding: 10px 12px; font-size: 0.85rem; border-top: 1px solid var(--line); background: rgba(33,29,25,0.01);">
+            <p class="muted" style="margin: 0;">{{ item.description }}</p>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
       </div>
     </div>
     {% endfor %}

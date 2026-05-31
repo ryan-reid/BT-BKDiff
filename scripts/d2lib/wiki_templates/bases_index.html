@@ -6,7 +6,7 @@
 <section class="hero">
   <p class="hero-eyebrow">Item Repository</p>
   <h1>Base Items</h1>
-  <p class="hero-copy">Browse Armor and Weapons, including Normal, Exceptional, and Elite families.</p>
+  <p class="hero-copy">Browse Armor and Weapons, including Normal, Exceptional, and Elite families. Technical comparisons against Retail baseline.</p>
 </section>
 
 <section class="content-section">
@@ -49,33 +49,6 @@
           <option value="Elite">Elite</option>
         </select>
       </label>
-      <label>
-        <span>Speed</span>
-        <select id="base-speed-filter">
-          <option value="all">All speeds</option>
-          <option value="Very Fast">Very Fast</option>
-          <option value="Fast">Fast</option>
-          <option value="Normal">Normal</option>
-          <option value="Slow">Slow</option>
-          <option value="Very Slow">Very Slow</option>
-        </select>
-      </label>
-      <label>
-        <span>Min sockets</span>
-        <select id="base-min-sockets-filter">
-          <option value="0">Any sockets</option>
-          <option value="1">1+ socket</option>
-          <option value="2">2+ sockets</option>
-          <option value="3">3+ sockets</option>
-          <option value="4">4+ sockets</option>
-          <option value="5">5+ sockets</option>
-          <option value="6">6 sockets</option>
-        </select>
-      </label>
-      <label class="filter-wide">
-        <span>Roll contains</span>
-        <input id="base-roll-filter" type="search" placeholder="Faster Cast Rate, res, pierce..." />
-      </label>
     </div>
     <div class="filter-check-row">
       <label><input id="base-two-handed-filter" type="checkbox" /> Two handed</label>
@@ -83,136 +56,75 @@
     </div>
   </div>
   
-  <div class="card-grid">
+  <div class="family-list">
     {% for family in families %}
-    <div class="item-card family-card"
-      data-search="{{ family.search_text }}"
-      data-base-group="{{ family.group }}"
-      data-base-classes="{{ family.class_tags|join(' ') }}">
-      <div class="family-header">
-        <h3>{{ family.name }}</h3>
-        <p>{{ family.summary }}</p>
+    <div class="family-container" 
+         data-search="{{ family.search_text }}"
+         data-base-group="{{ family.group }}"
+         data-base-classes="{{ family.class_tags|join(' ') }}">
+      <div class="family-header-bar">
+        <h2>{{ family.name }}</h2>
+        <p class="muted">{{ family.summary }}</p>
       </div>
-      
-      <div class="family-table-wrap">
-        <table class="family-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Tier</th>
-              <th rowspan="2">Item</th>
-              <th colspan="2">Defense / Damage</th>
-              <th colspan="2">Requirements</th>
-              <th colspan="2">Sockets</th>
-              <th colspan="2">Auto Rolls / Superior</th>
-            </tr>
-            <tr>
-              <th>Retail</th>
-              <th>BKDiablo</th>
-              <th>Retail</th>
-              <th>BKDiablo</th>
-              <th>Retail</th>
-              <th>BKDiablo</th>
-              <th>Retail</th>
-              <th>BKDiablo</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for item in family.members %}
-            {% set comp = item.comparison %}
-            <tr class="tier-{{ item.tier|lower }}"
-              data-search="{{ item.name }} {{ item.type }} {{ item.tier }} {{ item.class_restriction }} {{ item.staffmod_class }} {{ item.magic_level }} {{ item.speed }} {{ item.speed_label }} {{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}"
-              data-type-categories="{{ item.type_categories|join('|') }}"
-              data-tier="{{ item.tier }}"
-              data-max-sockets="{{ item.sockets }}"
-              data-two-handed="{{ '1' if item.two_handed_only else '0' }}"
-              data-speed-label="{{ item.speed_label }}"
-              data-roll-search="{{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}">
-              <td class="tier-cell">
-                <span class="badge badge-{{ item.tier|lower }}">{{ item.tier }}</span>
+
+      <div class="family-items-grid">
+        {% for item in family.members %}
+        {% set comp = item.comparison %}
+        <div class="base-item-card tier-{{ item.tier|lower }}"
+             data-search="{{ item.name }} {{ item.type }} {{ item.tier }} {{ item.class_restriction }} {{ item.staffmod_class }} {{ item.magic_level }} {{ item.speed }} {{ item.speed_label }} {{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}"
+             data-type-categories="{{ item.type_categories|join('|') }}"
+             data-tier="{{ item.tier }}"
+             data-max-sockets="{{ item.sockets }}"
+             data-two-handed="{{ '1' if item.two_handed_only else '0' }}">
+          
+          <div class="base-card-header">
+            <div class="base-card-title-group">
+              <span class="badge badge-{{ item.tier|lower }}">{{ item.tier }}</span>
+              <div class="base-card-icon-wrap">
                 {% if item.icon_src %}
-                <img class="base-item-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
+                <img class="base-card-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
                 {% endif %}
-              </td>
-              <td class="item-name">
-                <strong>{{ item.name }}</strong><br/>
-                <small class="code-text">{{ item.type }}</small>
-                {% if item.two_handed_only or item.class_restriction or item.staffmod_class or item.magic_level %}
-                <div class="base-tag-list">
-                  {% if item.two_handed_only %}
-                  <span class="base-tag">Two Handed</span>
-                  {% endif %}
-                  {% if item.class_restriction %}
-                  <span class="base-tag">{{ item.class_restriction }} only</span>
-                  {% endif %}
-                  {% if item.staffmod_class %}
-                  <span class="base-tag">{{ item.staffmod_class }} staffmods</span>
-                  {% endif %}
-                  {% if item.magic_level %}
-                  <span class="base-tag">+{{ item.magic_level }} magic level</span>
-                  {% endif %}
-                </div>
-                {% endif %}
-              </td>
-              
-              {# Defense / Damage #}
-              <td class="diff-old">
-                {% if comp.stat_rows[0].label == "Defense" or comp.stat_rows[1].label == "Defense" %}
-                  {% set def_row = comp.stat_rows[0] if comp.stat_rows[0].label == "Defense" else comp.stat_rows[1] %}
-                  {{ def_row.old or "-" }}
-                {% elif comp.stat_rows[0].label == "Damage" or comp.stat_rows[1].label == "Damage" %}
-                  {% set dam_row = comp.stat_rows[0] if comp.stat_rows[0].label == "Damage" else comp.stat_rows[1] %}
-                  {{ dam_row.old or "-" }}
-                {% endif %}
-              </td>
-              <td class="diff-new {% if (comp.stat_rows[0].label == 'Defense' and comp.stat_rows[0].status == 'changed') or (comp.stat_rows[1].label == 'Defense' and comp.stat_rows[1].status == 'changed') or (comp.stat_rows[0].label == 'Damage' and comp.stat_rows[0].status == 'changed') or (comp.stat_rows[1].label == 'Damage' and comp.stat_rows[1].status == 'changed') %}is-changed{% endif %}">
-                {% if comp.stat_rows[0].label == "Defense" or comp.stat_rows[1].label == "Defense" %}
-                  {% set def_row = comp.stat_rows[0] if comp.stat_rows[0].label == "Defense" else comp.stat_rows[1] %}
-                  {{ def_row.new or "-" }}
-                {% elif comp.stat_rows[0].label == "Damage" or comp.stat_rows[1].label == "Damage" %}
-                  {% set dam_row = comp.stat_rows[0] if comp.stat_rows[0].label == "Damage" else comp.stat_rows[1] %}
-                  {{ dam_row.new or "-" }}
-                {% endif %}
-              </td>
+                <h3>{{ item.name }}</h3>
+              </div>
+            </div>
+            <div class="base-card-meta">
+              <small class="code-text">{{ item.type }}</small>
+              {% if item.class_restriction %}
+              <span class="base-tag">{{ item.class_restriction }} only</span>
+              {% endif %}
+            </div>
+          </div>
 
-              {# Requirements (Str / Dex) #}
-              <td class="diff-old">
-                S: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Strength Req")|map(attribute="old")|first }}<br/>
-                D: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Dexterity Req")|map(attribute="old")|first }}
-              </td>
-              <td class="diff-new">
-                S: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Strength Req")|map(attribute="new")|first }}<br/>
-                D: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Dexterity Req")|map(attribute="new")|first }}
-              </td>
+          <div class="runeword-before-after" style="font-size: 0.85rem;">
+            <div class="runeword-table-head">Retail</div>
+            <div class="runeword-table-head">BKDiablo</div>
 
-              {# Sockets #}
-              <td class="diff-old">
-                Max: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Max Sockets")|map(attribute="old")|first }}
-              </td>
-              <td class="diff-new">
-                Max: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Max Sockets")|map(attribute="new")|first }}
-              </td>
-
-              {# Auto Rolls / Superior #}
-              <td class="diff-old base-info-cell">
-                <ul class="stats-list">
-                  {% for row in item.comparison.property_rows if row.old %}
-                  <li>{{ row.old }}</li>
-                  {% endfor %}
-                </ul>
-              </td>
-              <td class="diff-new base-info-cell">
-                <ul class="stats-list">
-                  {% for row in item.comparison.property_rows %}
-                    {% if row.status != "same" or row.new %}
-                    <li class="is-{{ row.status }}">{% if row.status == "removed" %}<del>{{ row.old }}</del>{% else %}{{ row.new }}{% endif %}</li>
-                    {% endif %}
-                  {% endfor %}
-                </ul>
-              </td>
-            </tr>
+            {# Stat Rows #}
+            {% for row in comp.stat_rows %}
+              {% if row.status != "same" or row.new %}
+              <div class="runeword-table-cell is-{{ row.status }}">
+                <strong>{{ row.label }}:</strong> {{ row.old or "empty" }}
+              </div>
+              <div class="runeword-table-cell is-{{ row.status }}">
+                <strong>{{ row.label }}:</strong> {{ row.new or "empty" }}
+              </div>
+              {% endif %}
             {% endfor %}
-          </tbody>
-        </table>
+
+            {% if comp.property_rows %}
+            <div class="runeword-table-separator">Bonuses / Rolls</div>
+            {% for row in comp.property_rows %}
+              <div class="runeword-table-cell is-{{ row.status }}">
+                {% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "(empty)" }}
+              </div>
+              <div class="runeword-table-cell is-{{ row.status }}">
+                {% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new or "(removed)" }}
+              </div>
+            {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
       </div>
     </div>
     {% endfor %}
