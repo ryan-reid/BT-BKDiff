@@ -26,7 +26,12 @@ class ItemAnalyzerService:
         if not item: return "Miscellaneous"
         type_code = item.get('type', '').strip()
         item_type = self.item_types.get(type_code)
-        return self.repo.get_string(item_type.get('ItemType', 'Unknown').strip()) if item_type else "Miscellaneous"
+        if not item_type: return "Miscellaneous"
+        
+        name = self.repo.get_string(item_type.get('ItemType', 'Unknown').strip())
+        if name == "Merc Equip":
+            return "Helm"
+        return name
 
     def get_granular_group(self, category: str) -> str:
         cat_lower = category.lower()
