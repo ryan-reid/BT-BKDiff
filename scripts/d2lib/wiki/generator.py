@@ -1199,13 +1199,12 @@ class WikiGenerator:
 
     @staticmethod
     def _item_identity(entry: Dict[str, Any], family: str) -> str:
-        title = entry.get("display_name") or entry.get("name") or entry.get("id") or ""
-        if family == "runeword":
-            return title
-        if family == "set":
-            set_name = entry.get("raw_row", {}).get("set", "")
-            return f"{title}|{entry.get('base_item', '')}|{set_name}"
-        return f"{title}|{entry.get('base_item', '')}"
+        # Internal ID (index from txt) is the most stable identity
+        item_id = entry.get("id")
+        if item_id:
+            return f"{family}|{item_id}"
+        title = entry.get("display_name") or entry.get("name") or ""
+        return f"{family}|{title}"
 
     @staticmethod
     def _item_diff_status(entry: Dict[str, Any], old_entry: Optional[Dict[str, Any]]) -> str:
