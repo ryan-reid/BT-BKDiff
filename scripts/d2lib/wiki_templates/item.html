@@ -43,12 +43,16 @@
       <div class="runeword-table-head" role="columnheader">After</div>
       {% if page.runeword_compare_rows %}
         {% for row in page.runeword_compare_rows %}
+        {% if row.status == "separator" %}
+        <div class="runeword-table-separator" role="rowheader">Rune properties</div>
+        {% else %}
         <div class="runeword-table-cell is-{{ row.status }}" role="cell">
           {% if row.old %}{{ row.old }}{% else %}<span class="muted">(empty)</span>{% endif %}
         </div>
         <div class="runeword-table-cell is-{{ row.status }}" role="cell">
           {% if row.new %}{{ row.new }}{% elif row.old %}<span class="muted">(removed)</span>{% else %}<span class="muted">(empty)</span>{% endif %}
         </div>
+        {% endif %}
         {% endfor %}
       {% else %}
         {% for prop in page.properties %}
@@ -59,52 +63,6 @@
     </div>
   </section>
 
-  <div class="runeword-support-grid">
-  {% if page.rune_properties %}
-    <section class="content-section">
-      <p class="section-kicker">Socketed Rune Effects</p>
-      <h2>Rune Contributions</h2>
-      <div class="rune-contribution-grid">
-        {% for rune in page.rune_properties %}
-        <div class="rune-contribution-card">
-          <strong>{{ rune.rune }}</strong>
-          <ul class="property-list">
-            {% for prop in rune.properties %}
-            <li class="property-entry{% if prop.is_warning %} is-warning{% endif %}">{{ prop.text }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endfor %}
-      </div>
-    </section>
-  {% endif %}
-    <section class="content-section">
-      <p class="section-kicker">Technical</p>
-      <h2>Source & Diff</h2>
-      <p class="muted">Source: <code>{{ page.source_rel_path }}</code></p>
-    {% if page.comparison.rows %}
-      <details class="technical-details">
-        <summary>Show technical retail comparison</summary>
-        <div class="comparison-table-wrap">
-          <table class="comparison-table">
-            <thead>
-              <tr><th>Field</th><th>{{ old_label }} (Old)</th><th>{{ new_label }} (New)</th></tr>
-            </thead>
-            <tbody>
-              {% for row in page.comparison.rows %}
-              <tr>
-                <th>{{ row.label }}</th>
-                <td><span class="comparison-value is-old">{{ row.old or "empty" }}</span></td>
-                <td><span class="comparison-value is-new">{{ row.new or "empty" }}</span></td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </details>
-    {% endif %}
-    </section>
-  </div>
 </section>
 {% else %}
 {{ hero(page.hero_eyebrow, page.title, page.summary, page.chips) }}

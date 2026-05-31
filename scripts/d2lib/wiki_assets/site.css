@@ -472,7 +472,7 @@ code {
 .runeword-title-bar {
   max-width: 980px;
   margin: 0 auto -4px;
-  border-bottom: 1px solid rgba(33, 29, 25, 0.28);
+  border-bottom: 1px solid var(--line);
   padding-bottom: 10px;
 }
 
@@ -500,28 +500,29 @@ code {
 
 .runeword-sheet {
   overflow: hidden;
-  border: 1px solid #4b3926;
-  border-radius: 2px;
-  background: #1f160e;
-  color: #d5a45b;
-  box-shadow: 0 14px 32px rgba(33, 29, 25, 0.24);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: var(--shadow);
 }
 
 .runeword-sheet-header {
   display: grid;
   grid-template-columns: minmax(250px, 44%) minmax(0, 1fr);
-  border-bottom: 1px solid #3a2a1b;
+  border-bottom: 1px solid var(--line);
+  background: rgba(33, 29, 25, 0.025);
 }
 
 .runeword-rune-box {
   padding: 14px 18px;
-  border-right: 1px solid #3a2a1b;
+  border-right: 1px solid var(--line);
   text-align: center;
 }
 
 .runeword-rune-box h2 {
   margin: 0 0 8px;
-  color: #d0a15b;
+  color: var(--accent);
   font-size: 1rem;
 }
 
@@ -535,10 +536,10 @@ code {
   min-width: 46px;
   min-height: 70px;
   padding: 6px;
-  border-color: #3a2a1b;
-  border-radius: 0;
-  background: #2a1d12;
-  color: #d5a45b;
+  border-color: var(--line);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
 }
 
 .runeword-sheet .rune-chip-icon {
@@ -551,7 +552,7 @@ code {
   align-content: center;
   gap: 8px;
   padding: 14px 18px;
-  background: #2c2014;
+  background: rgba(63, 101, 117, 0.045);
 }
 
 .runeword-meta-box p {
@@ -560,18 +561,16 @@ code {
 
 .runeword-meta-box strong,
 .runeword-table-head {
-  color: #d0a15b;
+  color: var(--accent-2);
 }
 
-.runeword-meta-box a,
-.runeword-table-cell.is-added,
-.runeword-table-cell.is-changed {
-  color: #9f82ff;
+.runeword-meta-box a {
+  color: var(--accent);
   font-weight: 700;
 }
 
 .runeword-meta-subtle {
-  color: #9f8d77;
+  color: var(--muted);
 }
 
 .runeword-before-after {
@@ -581,11 +580,18 @@ code {
 
 .runeword-table-head,
 .runeword-table-cell {
-  padding: 8px 12px;
-  border-right: 1px solid #3a2a1b;
-  border-bottom: 1px solid #3a2a1b;
-  background: #2a1d12;
+  padding: 9px 12px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.46);
   line-height: 1.35;
+}
+
+.runeword-table-head {
+  background: rgba(63, 101, 117, 0.08);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .runeword-table-head:nth-child(2n),
@@ -595,15 +601,33 @@ code {
 
 .runeword-table-cell:nth-child(4n),
 .runeword-table-cell:nth-child(4n - 1) {
-  background: #312313;
-}
-
-.runeword-table-cell.is-removed {
-  color: #8f8273;
+  background: rgba(33, 29, 25, 0.025);
 }
 
 .runeword-table-cell.is-added {
-  border-top: 1px dotted #9f8d77;
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.runeword-table-cell.is-changed {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.runeword-table-cell.is-removed {
+  color: var(--muted);
+}
+
+.runeword-table-separator {
+  grid-column: 1 / -1;
+  padding: 8px 12px;
+  border-top: 1px dotted rgba(63, 101, 117, 0.45);
+  border-bottom: 1px dotted rgba(63, 101, 117, 0.45);
+  background: rgba(63, 101, 117, 0.05);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .runeword-support-grid {

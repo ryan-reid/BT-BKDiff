@@ -1914,6 +1914,33 @@ class WikiGenerator:
             else:
                 status = "same"
             rows.append({"old": old_value, "new": new_value, "status": status})
+        old_rune_props = WikiGenerator._rune_property_texts(old_entry or {})
+        new_rune_props = WikiGenerator._rune_property_texts(entry)
+        if old_rune_props or new_rune_props:
+            rows.append({"old": "", "new": "", "status": "separator"})
+            max_count = max(len(old_rune_props), len(new_rune_props))
+            for index in range(max_count):
+                old_value = old_rune_props[index] if index < len(old_rune_props) else ""
+                new_value = new_rune_props[index] if index < len(new_rune_props) else ""
+                if old_value and new_value:
+                    status = "changed" if old_value != new_value else "same"
+                elif new_value:
+                    status = "added"
+                elif old_value:
+                    status = "removed"
+                else:
+                    status = "same"
+                rows.append({"old": old_value, "new": new_value, "status": status})
+        return rows
+
+    @staticmethod
+    def _rune_property_texts(entry: Dict[str, Any]) -> List[str]:
+        rows = []
+        for rune_entry in entry.get("rune_properties", []):
+            for prop in rune_entry.get("properties", []):
+                text = str(prop.get("resolved_text", "")).strip()
+                if text:
+                    rows.append(text)
         return rows
 
     def _item_comparison_context(
