@@ -49,6 +49,33 @@
           <option value="Elite">Elite</option>
         </select>
       </label>
+      <label>
+        <span>Speed</span>
+        <select id="base-speed-filter">
+          <option value="all">All speeds</option>
+          <option value="Very Fast">Very Fast</option>
+          <option value="Fast">Fast</option>
+          <option value="Normal">Normal</option>
+          <option value="Slow">Slow</option>
+          <option value="Very Slow">Very Slow</option>
+        </select>
+      </label>
+      <label>
+        <span>Min sockets</span>
+        <select id="base-min-sockets-filter">
+          <option value="0">Any sockets</option>
+          <option value="1">1+ socket</option>
+          <option value="2">2+ sockets</option>
+          <option value="3">3+ sockets</option>
+          <option value="4">4+ sockets</option>
+          <option value="5">5+ sockets</option>
+          <option value="6">6 sockets</option>
+        </select>
+      </label>
+      <label class="filter-wide">
+        <span>Roll contains</span>
+        <input id="base-roll-filter" type="search" placeholder="Faster Cast Rate, res, pierce..." />
+      </label>
     </div>
     <div class="filter-check-row">
       <label><input id="base-two-handed-filter" type="checkbox" /> Two handed</label>
@@ -75,7 +102,9 @@
              data-type-categories="{{ item.type_categories|join('|') }}"
              data-tier="{{ item.tier }}"
              data-max-sockets="{{ item.sockets }}"
-             data-two-handed="{{ '1' if item.two_handed_only else '0' }}">
+             data-two-handed="{{ '1' if item.two_handed_only else '0' }}"
+             data-speed-label="{{ item.speed_label }}"
+             data-roll-search="{{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}">
           
           <div class="base-card-header">
             <div class="base-card-title-group">
@@ -91,6 +120,15 @@
               <small class="code-text">{{ item.type }}</small>
               {% if item.class_restriction %}
               <span class="base-tag">{{ item.class_restriction }} only</span>
+              {% endif %}
+              {% if item.two_handed_only %}
+              <span class="base-tag">Two Handed</span>
+              {% endif %}
+              {% if item.staffmod_class %}
+              <span class="base-tag">{{ item.staffmod_class }} staffmods</span>
+              {% endif %}
+              {% if item.magic_level %}
+              <span class="base-tag">+{{ item.magic_level }} magic level</span>
               {% endif %}
             </div>
           </div>

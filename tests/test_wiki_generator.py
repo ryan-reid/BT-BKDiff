@@ -845,12 +845,13 @@ class TestWikiGenerator(unittest.TestCase):
 
         self.assertEqual(["Twin Item", "Twin Item", "Twin Item", "Set Blade"], [row["title"] for row in rows])
         self.assertEqual(
-            {"title", "href", "family", "status", "item_group", "item_type", "icon_src", "summary", "search_text"},
+            {"title", "href", "family", "status", "item_group", "item_type", "icon_src", "summary", "search_text", "properties"},
             set(rows[0].keys()),
         )
         self.assertEqual("modified", rows[0]["status"])
         self.assertEqual("added", rows[1]["status"])
         self.assertEqual("items/unique/twin-item/", rows[0]["href"])
+        self.assertEqual(["+10 Damage"], rows[0]["properties"])
 
         self.assertNotIn("Practice", [row["title"] for row in rows])
 
@@ -864,7 +865,9 @@ class TestWikiGenerator(unittest.TestCase):
             runewords_index_page = f.read()
 
         self.assertIn("Twin Item", item_page)
-        self.assertIn("Structured diff view using Retail (Old) and BKDiablo (New).", item_page)
+        self.assertIn("BKDiablo Data Wiki", item_page)
+        self.assertIn("Retail (Old)", item_page)
+        self.assertIn("BKDiablo (New)", item_page)
         self.assertIn('href="../../../areas/"', item_page)
         self.assertIn('href="../../../reports/"', item_page)
         self.assertIn('data-item-index-url="../data/items-index.json"', items_page)
@@ -970,7 +973,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('data-roll-search="', bases_page)
         self.assertIn("Thunder Maul", bases_page)
         self.assertIn("Two Handed", bases_page)
-        self.assertIn("Dam: 65-255", bases_page)
+        self.assertIn("<strong>Dam:</strong> 65-255", bases_page)
         self.assertNotIn("Dam: 0-0", bases_page)
         self.assertIn("+50% Damage to Undead", bases_page)
         self.assertIn("-5-30% Target Defense", bases_page)
@@ -979,9 +982,9 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Druid only", bases_page)
         self.assertIn("33% Piercing Attack", bases_page)
         self.assertIn("+18 magic level", bases_page)
-        self.assertIn("Base Lvl: 85", bases_page)
-        self.assertIn("Req Lvl: 65", bases_page)
-        self.assertIn("WSM: 20 (Very Slow)", bases_page)
+        self.assertIn("<strong>Base Lvl:</strong> 85", bases_page)
+        self.assertIn("<strong>Req Lvl:</strong> 65", bases_page)
+        self.assertIn("<strong>WSM:</strong> 20 (Very Slow)", bases_page)
         self.assertNotIn("<th>Speed/Block</th>", bases_page)
 
     def test_stale_files_are_removed(self):

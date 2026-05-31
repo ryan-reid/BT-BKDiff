@@ -151,34 +151,61 @@ class WikiGenerator:
         # 1. Stat Rows
         stat_rows = []
         stats_to_compare = [
-            ("Level", "level"),
-            ("Level Requirement", "level_req"),
-            ("Strength Req", "str_req"),
-            ("Dexterity Req", "dex_req"),
+            ("Base Lvl", "level"),
+            ("Req Lvl", "level_req"),
+            ("Str", "str_req"),
+            ("Dex", "dex_req"),
             ("Max Sockets", "sockets"),
-            ("Block", "block"),
-            ("Speed (WSM)", "speed"),
-            ("Durability", "durability"),
         ]
+
+        def range_text(row: Optional[BaseItemDTO], min_key: str, max_key: str) -> str:
+            if not row:
+                return ""
+            min_value = row.get(min_key)
+            max_value = row.get(max_key)
+            if min_value is None or max_value is None:
+                return ""
+            if int(min_value) == 0 and int(max_value) == 0:
+                return ""
+            return f"{min_value}-{max_value}"
+
+        def damage_text(row: Optional[BaseItemDTO]) -> str:
+            if not row:
+                return ""
+            if row.get("two_handed_only"):
+                return range_text(row, "two_hand_damage_min", "two_hand_damage_max")
+            one_hand = range_text(row, "damage_min", "damage_max")
+            two_hand = range_text(row, "two_hand_damage_min", "two_hand_damage_max")
+            if two_hand and one_hand:
+                return f"{one_hand} (2H: {two_hand})"
+            return one_hand or two_hand
+
+        def add_stat_row(label: str, old_value: str, new_value: str) -> None:
+            if not old_value and not new_value:
+                return
+            status = "added" if new_value and not old_value else "same" if old_value == new_value else "changed"
+            stat_rows.append({"label": label, "old": old_value, "new": new_value, "status": status})
         
         # Add Defense/Damage if applicable
-        if item.get("defense_min") is not None or (old_item and old_item.get("defense_min") is not None):
-            def_old = f"{old_item.get('defense_min')}-{old_item.get('defense_max')}" if old_item and old_item.get('defense_min') is not None else ""
-            def_new = f"{item.get('defense_min')}-{item.get('defense_max')}" if item.get('defense_min') is not None else ""
-            status = "added" if def_new and not def_old else "same" if def_old == def_new else "changed"
-            stat_rows.append({"label": "Defense", "old": def_old, "new": def_new, "status": status})
-
-        if item.get("damage_min") is not None or (old_item and old_item.get("damage_min") is not None):
-            dam_old = f"{old_item.get('damage_min')}-{old_item.get('damage_max')}" if old_item and old_item.get('damage_min') is not None else ""
-            dam_new = f"{item.get('damage_min')}-{item.get('damage_max')}" if item.get('damage_min') is not None else ""
-            status = "added" if dam_new and not dam_old else "same" if dam_old == dam_new else "changed"
-            stat_rows.append({"label": "Damage", "old": dam_old, "new": dam_new, "status": status})
+        add_stat_row("Def", range_text(old_item, "defense_min", "defense_max"), range_text(item, "defense_min", "defense_max"))
+        old_damage = damage_text(old_item)
+        new_damage = damage_text(item)
+        add_stat_row("Dam", old_damage, new_damage)
 
         for label, key in stats_to_compare:
             old_val = str(old_item.get(key, "")) if old_item else ""
             new_val = str(item.get(key, ""))
-            status = "added" if new_val and not old_val else "same" if old_val == new_val else "changed"
-            stat_rows.append({"label": label, "old": old_val, "new": new_val, "status": status})
+            add_stat_row(label, old_val, new_val)
+
+        old_block = int(old_item.get("block", 0)) if old_item else 0
+        new_block = int(item.get("block", 0))
+        if old_block or new_block:
+            add_stat_row("Block", str(old_block) if old_item else "", str(new_block))
+
+        if old_damage or new_damage:
+            old_speed = f"{old_item.get('speed', '')} ({old_item.get('speed_label', '')})" if old_item else ""
+            new_speed = f"{item.get('speed', '')} ({item.get('speed_label', '')})"
+            add_stat_row("WSM", old_speed, new_speed)
 
         # 2. Property Rows (Inherent stats, Auto Prefixes, Quality Bonuses)
         property_rows = []
@@ -570,6 +597,11 @@ class WikiGenerator:
                         "item_group": self._item_filter_group(entry, family),
                         "item_type": self._item_filter_type(entry, family),
                         "icon_src": icon_src,
+                        "properties": [
+                            str(prop.get("resolved_text", "")).strip()
+                            for prop in entry.get("properties", [])
+                            if str(prop.get("resolved_text", "")).strip()
+                        ][:5],
                     }
                 )
 
@@ -939,13 +971,6 @@ class WikiGenerator:
         )
 
     def _write_item_index_data(self, item_entries: Dict[str, List[Dict[str, str]]], items: Dict[str, List[Dict[str, Any]]]) -> None:
-        # Helper to find properties for a page entry
-        prop_map = {}
-        for family in ("unique", "set"):
-            for item in items[family]:
-                key = (family, item.get("display_name") or item.get("name") or item.get("id"))
-                prop_map[key] = [p["resolved_text"] for p in item.get("properties", []) if p.get("resolved_text")][:5]
-
         rows = [
             {
                 "title": entry["title"],
@@ -957,7 +982,7 @@ class WikiGenerator:
                 "icon_src": entry.get("icon_src", ""),
                 "summary": entry["summary"],
                 "search_text": entry["search_text"],
-                "properties": prop_map.get((family, entry["title"]), []),
+                "properties": entry.get("properties", []),
             }
             for family in ("unique", "set")
             for entry in item_entries[family]
@@ -1269,7 +1294,10 @@ class WikiGenerator:
         if item_id:
             return f"{family}|{slugify(str(item_id))}"
         title = entry.get("display_name") or entry.get("name") or ""
-        return f"{family}|{slugify(str(title))}"
+        base_item = entry.get("base_item") or ""
+        item_type = entry.get("item_type") or ""
+        lvl_req = entry.get("lvl_req") or ""
+        return f"{family}|{slugify(str(title))}|{slugify(str(base_item))}|{slugify(str(item_type))}|{slugify(str(lvl_req))}"
 
     @staticmethod
     def _item_diff_status(entry: Dict[str, Any], old_entry: Optional[Dict[str, Any]]) -> str:
