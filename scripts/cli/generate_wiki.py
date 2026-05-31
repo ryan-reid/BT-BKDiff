@@ -1,8 +1,34 @@
 import argparse
 import os
+from typing import Optional
 
 from d2lib.wiki import WikiGenerator
 
+
+def run(
+    item_db_dir: str,
+    skill_tree_dir: str,
+    output_dir: str,
+    old_item_db_dir: Optional[str] = None,
+    game_data_dir: Optional[str] = None,
+    retail_data_dir: Optional[str] = None,
+    layout_data_dir: Optional[str] = None,
+    old_label: str = "Retail",
+    new_label: str = "BKDiablo"
+):
+    generator = WikiGenerator(
+        item_db_dir,
+        skill_tree_dir,
+        output_dir,
+        old_item_db_dir=old_item_db_dir,
+        old_label=old_label,
+        new_label=new_label,
+        game_data_dir=game_data_dir,
+        retail_data_dir=retail_data_dir,
+        layout_data_dir=layout_data_dir,
+    )
+    generator.generate()
+    print(f"Generated wiki pages in {output_dir}")
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate a static HTML/CSS/JS wiki site from current project exports.")
@@ -27,19 +53,17 @@ def main() -> None:
     layout_data_dir = os.path.normpath(os.path.join(scripts_root, args.layout_data)) if args.layout_data else None
     output_dir = os.path.normpath(os.path.join(scripts_root, args.out))
 
-    generator = WikiGenerator(
+    run(
         item_db_dir,
         skill_tree_dir,
         output_dir,
         old_item_db_dir=old_item_db_dir,
-        old_label=args.old_label,
-        new_label=args.new_label,
         game_data_dir=game_data_dir,
         retail_data_dir=retail_data_dir,
         layout_data_dir=layout_data_dir,
+        old_label=args.old_label,
+        new_label=args.new_label
     )
-    generator.generate()
-    print(f"Generated wiki pages in {output_dir}")
 
 
 if __name__ == "__main__":

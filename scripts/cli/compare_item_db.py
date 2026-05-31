@@ -43,21 +43,12 @@ def load_json_db(db_dir: str) -> Dict[str, Dict[str, Any]]:
                 print(f"Error loading {filepath}: {e}", file=sys.stderr)
     return types
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Compare two exported item databases and generate JSON and HTML reports.")
-    parser.add_argument("--new-db", default="../exports/item_db", help="Path to the new/target exported JSON item database")
-    parser.add_argument("--old-db", default="../exports/item_db_bt", help="Path to the old/base exported JSON item database")
-    parser.add_argument("--out", default="../output/item_diff_report", help="Output directory for generated diff reports")
-    args = parser.parse_args()
-
-    bk_json_dir = args.new_db
-    bt_json_dir = args.old_db
-    out_dir = args.out
+def run(new_db_dir: str, old_db_dir: str, out_dir: str):
     remove_stale_markdown_reports(out_dir)
 
     print("Loading Item Databases...")
-    bk_db = load_json_db(bk_json_dir)
-    bt_db = load_json_db(bt_json_dir)
+    bk_db = load_json_db(new_db_dir)
+    bt_db = load_json_db(old_db_dir)
 
     service = ItemComparisonService()
     
@@ -99,6 +90,15 @@ def main() -> None:
     html_exporter.export_item_diff(combined_diff, out_dir, type_counts=type_counts)
 
     print(f"Reports generated in {out_dir}")
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Compare two exported item databases and generate JSON and HTML reports.")
+    parser.add_argument("--new-db", default="../exports/item_db", help="Path to the new/target exported JSON item database")
+    parser.add_argument("--old-db", default="../exports/item_db_bt", help="Path to the old/base exported JSON item database")
+    parser.add_argument("--out", default="../output/item_diff_report", help="Output directory for generated diff reports")
+    args = parser.parse_args()
+
+    run(args.new_db, args.old_db, args.out)
 
 if __name__ == "__main__":
     main()

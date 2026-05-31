@@ -193,6 +193,12 @@ def write_summary(report: Dict[str, Any], output_dir: str) -> None:
     write_text(os.path.join(output_dir, "summary.json"), json.dumps(report, indent=2) + "\n")
 
 
+def run(new_root: str, old_root: str, out_dir: str):
+    report = compare_files(os.path.abspath(new_root), os.path.abspath(old_root), os.path.abspath(out_dir))
+    write_summary(report, os.path.abspath(out_dir))
+    print(f"File override report generated in {out_dir}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Compare BKDiablo override text/JSON files against a retail extract.")
     parser.add_argument("--new-root", default="../mods/BKDiablo/bkdiablo.mpq", help="Path to the new/target mod root")
@@ -200,9 +206,7 @@ def main() -> None:
     parser.add_argument("--out", default="../output/file_diff_report_retail_bk", help="Output directory for generated file diff report")
     args = parser.parse_args()
 
-    report = compare_files(os.path.abspath(args.new_root), os.path.abspath(args.old_root), os.path.abspath(args.out))
-    write_summary(report, os.path.abspath(args.out))
-    print(f"File override report generated in {args.out}")
+    run(args.new_root, args.old_root, args.out)
 
 
 if __name__ == "__main__":

@@ -22,31 +22,22 @@ def get_key_column(filename: str) -> str:
     }
     return mapping.get(filename, 'code')
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Compare two Diablo II Excel directories and export JSON and HTML diffs.")
-    parser.add_argument("--new-dir", default="../mods/BKDiablo/bkdiablo.mpq/data/global/excel", help="Path to the new/target Excel directory")
-    parser.add_argument("--old-dir", default="../mods/BTDiablo/btdiablo.mpq/data/global/excel", help="Path to the old/base Excel directory")
-    parser.add_argument("--out", default="../output/excel_diff_report", help="Output directory for generated diff reports")
-    args = parser.parse_args()
-
-    bk_dir = args.new_dir
-    bt_dir = args.old_dir
-    report_dir = args.out
-    remove_stale_markdown_reports(report_dir)
+def run(new_dir: str, old_dir: str, out_dir: str):
+    remove_stale_markdown_reports(out_dir)
     
     repo = D2Repository(".")
     html_exporter = HtmlReportExporter()
     json_exporter = JsonExporter()
     summary_rows = []
     
-    files_bk = {f for f in os.listdir(bk_dir) if f.endswith('.txt')}
-    files_bt = {f for f in os.listdir(bt_dir) if f.endswith('.txt')}
+    files_bk = {f for f in os.listdir(new_dir) if f.endswith('.txt')}
+    files_bt = {f for f in os.listdir(old_dir) if f.endswith('.txt')}
     common_files = sorted(files_bk & files_bt)
     
     for filename in common_files:
         print(f"Comparing {filename}...")
-        table_bk = repo.load_tsv(os.path.join(bk_dir, filename))
-        table_bt = repo.load_tsv(os.path.join(bt_dir, filename))
+        table_bk = repo.load_tsv(os.path.join(new_dir, filename))
+        table_bt = repo.load_tsv(os.path.join(old_dir, filename))
         
         diff = ExcelComparisonService.compare_tables(table_bk, table_bt, get_key_column(filename), filename)
         report_stem = filename[:-4]
@@ -56,9 +47,9 @@ def main() -> None:
                 "schema": "bt-bkdiff.excel-diff.v1",
                 "diff": diff,
             },
-            os.path.join(report_dir, f"{report_stem}.json"),
+            os.path.join(out_dir, f"{report_stem}.json"),
         )
-        html_exporter.export_excel_diff(diff, os.path.join(report_dir, report_name))
+        html_exporter.export_excel_diff(diff, os.path.join(out_dir, report_name))
         summary_rows.append({
             "filename": filename,
             "report_name": report_name,
@@ -69,17 +60,26 @@ def main() -> None:
             "modified_rows": len(diff["modified_rows"]),
         })
 
-    os.makedirs(report_dir, exist_ok=True)
+    os.makedirs(out_dir, exist_ok=True)
     json_exporter.export(
         {
             "schema": "bt-bkdiff.excel-diff-summary.v1",
             "files": summary_rows,
         },
-        os.path.join(report_dir, "summary.json"),
+        os.path.join(out_dir, "summary.json"),
     )
-    html_exporter.export_excel_summary(summary_rows, os.path.join(report_dir, "index.html"))
+    html_exporter.export_excel_summary(summary_rows, os.path.join(out_dir, "index.html"))
 
-    print(f"Reports generated in {report_dir}")
+    print(f"Reports generated in {out_dir}")
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Compare two Diablo II Excel directories and export JSON and HTML diffs.")
+    parser.add_argument("--new-dir", default="../mods/BKDiablo/bkdiablo.mpq/data/global/excel", help="Path to the new/target Excel directory")
+    parser.add_argument("--old-dir", default="../mods/BTDiablo/btdiablo.mpq/data/global/excel", help="Path to the old/base Excel directory")
+    parser.add_argument("--out", default="../output/excel_diff_report", help="Output directory for generated diff reports")
+    args = parser.parse_args()
+
+    run(args.new_dir, args.old_dir, args.out)
 
 if __name__ == "__main__":
     main()

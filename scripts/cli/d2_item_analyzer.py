@@ -81,6 +81,21 @@ class ExportOrchestrator:
 
         print(f"Export to {output_dir} complete.")
 
+def run(mpq_path: str, output_dir: str, export_format: str, repo: Optional[D2Repository] = None, property_groups: Optional[List[Dict[str, str]]] = None):
+    if not repo:
+        repo = D2Repository(mpq_path)
+    
+    if property_groups is None:
+        scripts_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        prop_groups_path = os.path.join(os.path.dirname(scripts_dir), "data", "propertygroups.txt")
+        property_groups = repo.load_tsv(prop_groups_path)
+    
+    resolver = PropertyResolverService(repo, property_groups)
+    analyzer = ItemAnalyzerService(repo, resolver)
+    
+    orchestrator = ExportOrchestrator(repo, analyzer, MarkdownExporter(), JsonExporter())
+    orchestrator.run_export(output_dir, export_format)
+
 def main() -> None: 
     parser = argparse.ArgumentParser(description="Diablo II Item Analyzer (Refactored)")
     parser.add_argument("--mpq", default="../mods/BKDiablo/bkdiablo.mpq", help="Path to the MPQ data directory")
@@ -90,14 +105,15 @@ def main() -> None:
     parser.add_argument("--format", choices=["markdown", "json"], default="markdown", help="Output format")
     
     args = parser.parse_args()
-    repo = D2Repository(args.mpq)
-    resolver = PropertyResolverService(repo, repo.load_tsv("../data/propertygroups.txt"))
-    analyzer = ItemAnalyzerService(repo, resolver)
     
     if args.type == "export":
-        orchestrator = ExportOrchestrator(repo, analyzer, MarkdownExporter(), JsonExporter())
-        orchestrator.run_export(args.out, args.format)
+        run(args.mpq, args.out, args.format)
     elif args.type == "unique" and args.name:
+        repo = D2Repository(args.mpq)
+        scripts_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        prop_groups_path = os.path.join(os.path.dirname(scripts_dir), "data", "propertygroups.txt")
+        resolver = PropertyResolverService(repo, repo.load_tsv(prop_groups_path))
+        analyzer = ItemAnalyzerService(repo, resolver)
         for row in repo.get_excel_table('uniqueitems'):
             if args.name.lower() in row.get('index', '').lower():
                 analyzed = analyzer.analyze_unique(row)
