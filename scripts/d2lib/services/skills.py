@@ -3,6 +3,7 @@ import re
 from typing import List, Dict, Optional, Any, Tuple
 from d2lib.repository import D2Repository
 from d2lib.models import SkillTreeDTO, SkillDTO, SkillEffectDTO, SkillSynergyDTO
+from d2lib.utils import slugify, strip_markdown
 
 class SkillAnalyzerService:
     def __init__(self, repo: D2Repository):
@@ -608,6 +609,7 @@ class SkillAnalyzerService:
             skills_dto.append({
                 "id": skill_id,
                 "name": skill_name,
+                "slug": slugify(skill_name),
                 "effects": effects,
                 "synergies": synergies,
                 "raw_row": s

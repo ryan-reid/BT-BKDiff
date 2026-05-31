@@ -4,7 +4,8 @@ from typing import List, Dict, Optional, Any, Tuple
 from d2lib.repository import D2Repository
 from d2lib.models import CubeRecipeDTO, CubeRecipeGroupDTO
 from d2lib.services.resolver import PropertyResolverService
-from d2lib.services.base import _status_for_row, _slugify
+from d2lib.utils import slugify
+from d2lib.services.base import _status_for_row
 
 class CubeAnalyzerService:
     GROUP_META = {
@@ -350,7 +351,7 @@ class CubeAnalyzerService:
             inputs = display_inputs[key]
             summaries.append(
                 {
-                    "id": _slugify(" ".join(inputs)),
+                    "id": slugify(" ".join(inputs)),
                     "inputs": list(inputs),
                     "title": " + ".join(inputs),
                     "material": inputs[-1] if len(inputs) > 1 else "",

@@ -4,18 +4,14 @@ from typing import List, Dict, Optional, Any, Tuple
 from d2lib.repository import normalize_d2_value
 from d2lib.models import ExcelDiffDTO, ItemDiffDTO
 
+from d2lib.utils import normalize_d2_text
+
 class ItemComparisonService:
     def __init__(self):
         pass
 
     def normalize_text(self, s: str) -> str:
-        if not s: return ""
-        s = re.sub(r'ÿc.', '', s)
-        s = s.replace('•', '').replace('**', '')
-        s = s.replace("Physical Damage Received Reduced by", "Damage Reduced by")
-        s = re.sub(r'(Original|Random) Class', 'Random Class', s, flags=re.IGNORECASE)
-        s = re.sub(r'\s+', ' ', s)
-        return s.strip()
+        return normalize_d2_text(s)
 
     def align_properties(self, old_props: List[str], new_props: List[str]) -> List[Tuple[str, str]]:
         def get_stat_key(s):

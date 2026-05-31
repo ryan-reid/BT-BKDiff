@@ -1,8 +1,8 @@
+from d2lib.utils import slugify
 from d2lib.services.base import (
     _row_changed,
     _status_for_row,
-    _summarize_excel_diff,
-    _slugify
+    _summarize_excel_diff
 )
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.services.items import ItemAnalyzerService, BaseItemAnalyzerService
@@ -17,7 +17,7 @@ __all__ = [
     "_row_changed",
     "_status_for_row",
     "_summarize_excel_diff",
-    "_slugify",
+    "slugify",
     "PropertyResolverService",
     "ItemAnalyzerService",
     "BaseItemAnalyzerService",

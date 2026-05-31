@@ -5,6 +5,7 @@ import difflib
 import html
 from typing import List, Dict, Any, Tuple
 from d2lib.models import AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, CubeRecipeDTO, ItemDiffDTO, SkillTreeDTO
+from d2lib.utils import normalize_d2_text, slugify
 
 class BaseExporter:
     def export(self, data: Any, output_path: str):
@@ -30,7 +31,7 @@ class MarkdownExporter(BaseExporter):
         """Escapes text for use inside a LaTeX block on GitHub ($ ... $)."""
         if not s: return ""
         # 1. Strip D2 color codes
-        s = re.sub(r'ÿc.', '', str(s))
+        s = normalize_d2_text(s)
         # 2. Simple character escaping.
         # We replace the most troublesome characters first.
         # We do NOT use \textbackslash{} for literal backslashes here to avoid parsing depth issues.
@@ -75,8 +76,7 @@ class MarkdownExporter(BaseExporter):
         if not new_s or new_s == "(removed)": 
             return fmt("gray", old_s), fmt("blue", "(removed)")
         
-        def normalize_text(t): return re.sub(r'\s+', ' ', re.sub(r'ÿc.', '', t)).strip()
-        if normalize_text(old_s) == normalize_text(new_s):
+        if normalize_d2_text(old_s) == normalize_d2_text(new_s):
             return fmt("", old_s), fmt("", new_s)
 
         def tokenize(text: str) -> List[str]:
@@ -138,8 +138,7 @@ class MarkdownExporter(BaseExporter):
             # Icon Integration for Codex/UI
             family = "unique" if "Unique" in title else "set" if "Set" in title else ""
             if family:
-                from d2lib.services import _slugify
-                icon_name = f"{family}-{_slugify(str(item.get('id', '')))}.png"
+                icon_name = f"{family}-{slugify(str(item.get('id', '')))}.png"
                 # Path is relative to the export file. Exports are in exports/item_db/...
                 # Icons are in docs/wiki/assets/item-icons/
                 # Typical export path: BT-BKDiff/exports/item_db/uniques/others/helms.md

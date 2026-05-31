@@ -29,9 +29,3 @@ def _summarize_excel_diff(diff: ExcelDiffDTO, limit: int = 24) -> List[Dict[str,
         fields = sorted(changes.keys())
         rows.append({"name": key, "status": "modified", "fields": fields[:8], "field_count": len(fields)})
     return rows
-
-def _slugify(value: str) -> str:
-    text = value.lower().strip()
-    text = re.sub(r"[^\w\s-]", "", text)
-    text = re.sub(r"[-\s]+", "-", text)
-    return text.strip("-") or "untitled"
