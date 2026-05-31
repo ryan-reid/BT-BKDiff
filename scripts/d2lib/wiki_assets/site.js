@@ -69,13 +69,13 @@ function itemCardMarkup(item, siteRoot) {
 function areaBadgeMarkup(area) {
   const badges = [];
   if (area.area_level >= 87) {
-    badges.push('<span class="area-badge">87+</span>');
+    badges.push('<span class="area-badge area-badge-level">Area Lv 87+</span>');
   }
   if (area.can_drop_top_tier) {
-    badges.push('<span class="area-badge area-badge-accent">Top-tier</span>');
+    badges.push('<span class="area-badge area-badge-drop">Top-tier drops</span>');
   }
   if (area.monster_density >= 3000) {
-    badges.push('<span class="area-badge">High density</span>');
+    badges.push('<span class="area-badge area-badge-density">High density</span>');
   }
   return badges.join("");
 }
@@ -129,7 +129,7 @@ function areaSuperChestMarkup(area) {
   const names = Array.from(new Set(sources.map((source) => source.object_class).filter(Boolean)));
   const label = area.super_chest_count > 1 ? `Yes (${area.super_chest_count})` : "Yes";
   const detail = names.length ? `<br><span class="muted">${escapeHtml(names.slice(0, 3).join(", "))}</span>` : "";
-  return `<span class="area-badge area-badge-accent">Super Chest</span><br><strong>${escapeHtml(label)}</strong>${detail}`;
+  return `<span class="area-badge area-badge-super">Super chest</span><br><strong>${escapeHtml(label)}</strong>${detail}`;
 }
 
 function areaMazeMarkup(area) {
@@ -158,7 +158,7 @@ function areaRowMarkup(area) {
         <span class="area-badge-row">${areaBadgeMarkup(area)}</span>
       </th>
       <td><strong>${escapeHtml(area.farm_score)}</strong></td>
-      <td>Area ${escapeHtml(area.area_level)}</td>
+      <td><strong class="area-level-label">Lv ${escapeHtml(area.area_level)}</strong></td>
       <td>${escapeHtml(area.monster_density)}</td>
       <td>${areaMazeMarkup(area)}</td>
       <td>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)}<br><span class="muted">Avg ${escapeHtml(area.elite_avg)}</span></td>
