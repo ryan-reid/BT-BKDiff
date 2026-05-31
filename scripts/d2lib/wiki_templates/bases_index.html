@@ -98,17 +98,27 @@
         <table class="family-table">
           <thead>
             <tr>
-              <th>Tier</th>
-              <th>Item</th>
-              <th>Def/Dam</th>
-              <th>Reqs</th>
-              <th>Sockets</th>
-              <th>Auto Rolls</th>
-              <th>Superior</th>
+              <th rowspan="2">Tier</th>
+              <th rowspan="2">Item</th>
+              <th colspan="2">Defense / Damage</th>
+              <th colspan="2">Requirements</th>
+              <th colspan="2">Sockets</th>
+              <th colspan="2">Auto Rolls / Superior</th>
+            </tr>
+            <tr>
+              <th>Retail</th>
+              <th>BKDiablo</th>
+              <th>Retail</th>
+              <th>BKDiablo</th>
+              <th>Retail</th>
+              <th>BKDiablo</th>
+              <th>Retail</th>
+              <th>BKDiablo</th>
             </tr>
           </thead>
           <tbody>
             {% for item in family.members %}
+            {% set comp = item.comparison %}
             <tr class="tier-{{ item.tier|lower }}"
               data-search="{{ item.name }} {{ item.type }} {{ item.tier }} {{ item.class_restriction }} {{ item.staffmod_class }} {{ item.magic_level }} {{ item.speed }} {{ item.speed_label }} {{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}"
               data-type-categories="{{ item.type_categories|join('|') }}"
@@ -124,7 +134,7 @@
                 {% endif %}
               </td>
               <td class="item-name">
-                <a href="{{ site_root }}{{ item.href }}"><strong>{{ item.name }}</strong></a><br/>
+                <strong>{{ item.name }}</strong><br/>
                 <small class="code-text">{{ item.type }}</small>
                 {% if item.two_handed_only or item.class_restriction or item.staffmod_class or item.magic_level %}
                 <div class="base-tag-list">
@@ -143,63 +153,61 @@
                 </div>
                 {% endif %}
               </td>
-              <td>
-                {% if item.defense_min is not none %}
-                  Def: {{ item.defense_min }}-{{ item.defense_max }}
-                {% elif item.damage_min is not none %}
-                  {% if item.two_handed_only and item.two_hand_damage_min %}
-                    Dam: {{ item.two_hand_damage_min }}-{{ item.two_hand_damage_max }}
-                  {% else %}
-                    Dam: {{ item.damage_min }}-{{ item.damage_max }}
-                  {% endif %}
-                  {% if item.two_hand_damage_min and not item.two_handed_only %}
-                    <br/><small>(2H: {{ item.two_hand_damage_min }}-{{ item.two_hand_damage_max }})</small>
-                  {% endif %}
+              
+              {# Defense / Damage #}
+              <td class="diff-old">
+                {% if comp.stat_rows[0].label == "Defense" or comp.stat_rows[1].label == "Defense" %}
+                  {% set def_row = comp.stat_rows[0] if comp.stat_rows[0].label == "Defense" else comp.stat_rows[1] %}
+                  {{ def_row.old or "-" }}
+                {% elif comp.stat_rows[0].label == "Damage" or comp.stat_rows[1].label == "Damage" %}
+                  {% set dam_row = comp.stat_rows[0] if comp.stat_rows[0].label == "Damage" else comp.stat_rows[1] %}
+                  {{ dam_row.old or "-" }}
                 {% endif %}
-                {% if item.defense_min is none and item.damage_min is not none %}
-                  <br/><small>WSM: {{ item.speed }} ({{ item.speed_label }})</small>
-                {% elif item.block %}
-                  <br/><small>Block: {{ item.block }}</small>
+              </td>
+              <td class="diff-new {% if (comp.stat_rows[0].label == 'Defense' and comp.stat_rows[0].status == 'changed') or (comp.stat_rows[1].label == 'Defense' and comp.stat_rows[1].status == 'changed') or (comp.stat_rows[0].label == 'Damage' and comp.stat_rows[0].status == 'changed') or (comp.stat_rows[1].label == 'Damage' and comp.stat_rows[1].status == 'changed') %}is-changed{% endif %}">
+                {% if comp.stat_rows[0].label == "Defense" or comp.stat_rows[1].label == "Defense" %}
+                  {% set def_row = comp.stat_rows[0] if comp.stat_rows[0].label == "Defense" else comp.stat_rows[1] %}
+                  {{ def_row.new or "-" }}
+                {% elif comp.stat_rows[0].label == "Damage" or comp.stat_rows[1].label == "Damage" %}
+                  {% set dam_row = comp.stat_rows[0] if comp.stat_rows[0].label == "Damage" else comp.stat_rows[1] %}
+                  {{ dam_row.new or "-" }}
                 {% endif %}
-                  <br/><small>Base Lvl: {{ item.level }}</small>
               </td>
-              <td>
-                Str: {{ item.str_req }}<br/>
-                Dex: {{ item.dex_req }}<br/>
-                Req Lvl: {% if item.level_req %}{{ item.level_req }}{% else %}<span class="text-muted">-</span>{% endif %}
+
+              {# Requirements (Str / Dex) #}
+              <td class="diff-old">
+                S: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Strength Req")|map(attribute="old")|first }}<br/>
+                D: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Dexterity Req")|map(attribute="old")|first }}
               </td>
-              <td>
-                Max: {{ item.sockets }}<br/>
-                <small>
-                {% for range, max in item.max_sockets_by_ilvl.items() %}
-                  {{ range }}: {{ max }}<br/>
-                {% endfor %}
-                </small>
+              <td class="diff-new">
+                S: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Strength Req")|map(attribute="new")|first }}<br/>
+                D: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Dexterity Req")|map(attribute="new")|first }}
               </td>
-              <td class="base-info-cell">
-                {% if item.inherent_stats or item.auto_prefix_summary %}
+
+              {# Sockets #}
+              <td class="diff-old">
+                Max: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Max Sockets")|map(attribute="old")|first }}
+              </td>
+              <td class="diff-new">
+                Max: {{ item.comparison.stat_rows|selectattr("label", "equalto", "Max Sockets")|map(attribute="new")|first }}
+              </td>
+
+              {# Auto Rolls / Superior #}
+              <td class="diff-old base-info-cell">
                 <ul class="stats-list">
-                  {% for stat in item.inherent_stats %}
-                  <li>{{ stat }}</li>
-                  {% endfor %}
-                  {% for stat in item.auto_prefix_summary %}
-                  <li>{{ stat }}</li>
+                  {% for row in item.comparison.property_rows if row.old %}
+                  <li>{{ row.old }}</li>
                   {% endfor %}
                 </ul>
-                {% else %}
-                <span class="text-muted">-</span>
-                {% endif %}
               </td>
-              <td class="base-info-cell">
-                {% if item.quality_bonus_summary %}
+              <td class="diff-new base-info-cell">
                 <ul class="stats-list">
-                  {% for stat in item.quality_bonus_summary %}
-                  <li>{{ stat }}</li>
+                  {% for row in item.comparison.property_rows %}
+                    {% if row.status != "same" or row.new %}
+                    <li class="is-{{ row.status }}">{% if row.status == "removed" %}<del>{{ row.old }}</del>{% else %}{{ row.new }}{% endif %}</li>
+                    {% endif %}
                   {% endfor %}
                 </ul>
-                {% else %}
-                <span class="text-muted">-</span>
-                {% endif %}
               </td>
             </tr>
             {% endfor %}

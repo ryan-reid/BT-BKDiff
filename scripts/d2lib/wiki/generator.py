@@ -117,40 +117,9 @@ class WikiGenerator:
 
         for family in families:
             for item in family["members"]:
-                slug = slugify(item["name"])
-                output_path = WikiRoutes.base_item_output_path(slug)
-                item["href"] = WikiRoutes.route_from_output_path(output_path)
-                
                 old_item = retail_items.get(item["code"])
-                comparison = self._base_item_comparison_context(item, old_item)
-                
-                stats = [
-                    {"label": "Tier", "value": item["tier"]},
-                    {"label": "Type", "value": item["type"]},
-                    {"label": "Level Requirement", "value": str(item["level_req"])},
-                ]
-                
-                self._write_page(
-                    title=f"{item['name']} | Base Items",
-                    output_path=output_path,
-                    template_name="item.html",
-                    category="base-item",
-                    source_files=["data/global/excel/armor.txt", "data/global/excel/weapons.txt"],
-                    page={
-                        "family": "base",
-                        "title": item["name"],
-                        "hero_eyebrow": f"{item['tier']} {item['type']}",
-                        "summary": f"A {item['tier'].lower()} {item['type'].lower()} base item.",
-                        "chips": [
-                            {"label": item["tier"], "tone": "default"},
-                            {"label": self.new_label, "tone": "accent"}
-                        ],
-                        "stats": stats,
-                        "icon_src": item["icon_src"],
-                        "source_rel_path": f"bases.txt ({item['code']})",
-                        "comparison": comparison,
-                    }
-                )
+                item["comparison"] = self._base_item_comparison_context(item, old_item)
+                item["href"] = "" # No separate page
 
         self._write_page(
             title=f"Base Items | {self.new_label} Wiki",
