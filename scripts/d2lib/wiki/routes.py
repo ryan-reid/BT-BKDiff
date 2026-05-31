@@ -69,6 +69,10 @@ class WikiRoutes:
         return "bases/index.html"
 
     @staticmethod
+    def base_item_output_path(slug: str) -> str:
+        return f"bases/{slug}/index.html"
+
+    @staticmethod
     def recipes_index_output_path() -> str:
         return "recipes/index.html"
 

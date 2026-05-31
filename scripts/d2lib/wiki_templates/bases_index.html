@@ -124,7 +124,7 @@
                 {% endif %}
               </td>
               <td class="item-name">
-                <strong>{{ item.name }}</strong><br/>
+                <a href="{{ site_root }}{{ item.href }}"><strong>{{ item.name }}</strong></a><br/>
                 <small class="code-text">{{ item.type }}</small>
                 {% if item.two_handed_only or item.class_restriction or item.staffmod_class or item.magic_level %}
                 <div class="base-tag-list">

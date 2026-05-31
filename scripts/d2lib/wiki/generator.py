@@ -105,7 +105,53 @@ class WikiGenerator:
         return service.analyze_base_items()
 
     def _write_base_item_pages(self, families: List[BaseItemFamilyDTO]) -> None:
-        ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir).attach_base_item_icons(families)
+        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
+        icon_exporter.attach_base_item_icons(families)
+        
+        # Load Retail data for comparison
+        retail_repo = D2Repository(self.retail_data_dir)
+        retail_resolver = PropertyResolverService(retail_repo)
+        retail_service = BaseItemAnalyzerService(retail_repo, retail_resolver)
+        retail_families = retail_service.analyze_base_items()
+        retail_items = {item["code"]: item for f in retail_families for item in f["members"]}
+
+        for family in families:
+            for item in family["members"]:
+                slug = slugify(item["name"])
+                output_path = WikiRoutes.base_item_output_path(slug)
+                item["href"] = WikiRoutes.route_from_output_path(output_path)
+                
+                old_item = retail_items.get(item["code"])
+                comparison = self._base_item_comparison_context(item, old_item)
+                
+                stats = [
+                    {"label": "Tier", "value": item["tier"]},
+                    {"label": "Type", "value": item["type"]},
+                    {"label": "Level Requirement", "value": str(item["level_req"])},
+                ]
+                
+                self._write_page(
+                    title=f"{item['name']} | Base Items",
+                    output_path=output_path,
+                    template_name="item.html",
+                    category="base-item",
+                    source_files=["data/global/excel/armor.txt", "data/global/excel/weapons.txt"],
+                    page={
+                        "family": "base",
+                        "title": item["name"],
+                        "hero_eyebrow": f"{item['tier']} {item['type']}",
+                        "summary": f"A {item['tier'].lower()} {item['type'].lower()} base item.",
+                        "chips": [
+                            {"label": item["tier"], "tone": "default"},
+                            {"label": self.new_label, "tone": "accent"}
+                        ],
+                        "stats": stats,
+                        "icon_src": item["icon_src"],
+                        "source_rel_path": f"bases.txt ({item['code']})",
+                        "comparison": comparison,
+                    }
+                )
+
         self._write_page(
             title=f"Base Items | {self.new_label} Wiki",
             output_path=WikiRoutes.bases_index_output_path(),
@@ -128,6 +174,62 @@ class WikiGenerator:
                 for category in item["type_categories"]
             }),
         )
+
+    def _base_item_comparison_context(self, item: BaseItemDTO, old_item: Optional[BaseItemDTO]) -> Dict[str, Any]:
+        if not old_item:
+            return {"state": "added", "stat_rows": [], "property_rows": []}
+
+        # 1. Stat Rows
+        stat_rows = []
+        stats_to_compare = [
+            ("Level", "level"),
+            ("Level Requirement", "level_req"),
+            ("Strength Req", "str_req"),
+            ("Dexterity Req", "dex_req"),
+            ("Max Sockets", "sockets"),
+            ("Block", "block"),
+            ("Speed (WSM)", "speed"),
+            ("Durability", "durability"),
+        ]
+        
+        # Add Defense/Damage if applicable
+        if item.get("defense_min") is not None or old_item.get("defense_min") is not None:
+            def_old = f"{old_item.get('defense_min')}-{old_item.get('defense_max')}" if old_item.get("defense_min") is not None else ""
+            def_new = f"{item.get('defense_min')}-{item.get('defense_max')}" if item.get("defense_min") is not None else ""
+            stat_rows.append({"label": "Defense", "old": def_old, "new": def_new, "status": "same" if def_old == def_new else "changed"})
+
+        if item.get("damage_min") is not None or old_item.get("damage_min") is not None:
+            dam_old = f"{old_item.get('damage_min')}-{old_item.get('damage_max')}" if old_item.get("damage_min") is not None else ""
+            dam_new = f"{item.get('damage_min')}-{item.get('damage_max')}" if item.get("damage_min") is not None else ""
+            stat_rows.append({"label": "Damage", "old": dam_old, "new": dam_new, "status": "same" if dam_old == dam_new else "changed"})
+
+        for label, key in stats_to_compare:
+            old_val = str(old_item.get(key, ""))
+            new_val = str(item.get(key, ""))
+            status = "same" if old_val == new_val else "changed"
+            stat_rows.append({"label": label, "old": old_val, "new": new_val, "status": status})
+
+        # 2. Property Rows (Inherent stats, Auto Prefixes, Quality Bonuses)
+        property_rows = []
+        
+        def add_prop_group(label, old_list, new_list):
+            max_len = max(len(old_list), len(new_list))
+            for i in range(max_len):
+                o = old_list[i] if i < len(old_list) else ""
+                n = new_list[i] if i < len(new_list) else ""
+                status = "same" if o == n else "added" if n and not o else "removed" if o and not n else "changed"
+                property_rows.append({"label": label if i == 0 else "", "old": o, "new": n, "status": status})
+
+        add_prop_group("Inherent", old_item.get("inherent_stats", []), item.get("inherent_stats", []))
+        add_prop_group("Auto Prefix", old_item.get("auto_prefix_summary", []), item.get("auto_prefix_summary", []))
+        add_prop_group("Superior Bonuses", old_item.get("quality_bonus_summary", []), item.get("quality_bonus_summary", []))
+
+        has_changes = any(r["status"] != "same" for r in stat_rows + property_rows)
+        return {
+            "state": "modified" if has_changes else "unchanged",
+            "stat_rows": stat_rows,
+            "property_rows": property_rows,
+        }
 
     def _load_recipe_groups(self) -> List[CubeRecipeGroupDTO]:
         repo = D2Repository(self.game_data_dir)
