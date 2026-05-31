@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="assets/mockup.css">
 <style>
 .area-toolbar {
-  display: flex; flex-wrap: wrap; gap: 12px; align-items: end;
-  padding: 20px 0 18px;
+  display: flex; flex-wrap: wrap; gap: 16px; align-items: end;
+  padding: 20px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 18px;
 }
 .area-toolbar label { display: grid; gap: 5px; min-width: 140px; }
 .area-toolbar .lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--faint); }
@@ -20,6 +20,32 @@
   border-radius: 8px; padding: 9px 12px; font: inherit; font-size: 0.9rem;
 }
 .area-toolbar input[type=search]::placeholder { color: var(--faint); }
+
+/* element toggle group */
+.dmg-filter-group { display: grid; gap: 5px; }
+.dmg-toggles { display: flex; gap: 6px; flex-wrap: wrap; }
+.dmg-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px; border-radius: 7px; cursor: pointer;
+  font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  border: 1px solid var(--line); background: var(--surface);
+  color: var(--faint); user-select: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.dmg-toggle input { position: absolute; opacity: 0; pointer-events: none; }
+.dmg-toggle .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 6px currentColor; opacity: 0.3; transition: opacity 0.15s; }
+
+/* active states — element colours */
+.dmg-toggle.t-fire:has(input:checked)   { background: rgba(200,80,40,0.18); color: #e07050; border-color: rgba(200,80,40,0.45); }
+.dmg-toggle.t-cold:has(input:checked)   { background: rgba(60,130,200,0.18); color: #70a8e0; border-color: rgba(60,130,200,0.45); }
+.dmg-toggle.t-ltng:has(input:checked)   { background: rgba(220,200,60,0.18); color: #d4c840; border-color: rgba(220,200,60,0.45); }
+.dmg-toggle.t-pois:has(input:checked)   { background: rgba(80,180,60,0.18); color: #70c050; border-color: rgba(80,180,60,0.45); }
+.dmg-toggle.t-phys:has(input:checked)   { background: rgba(160,140,100,0.18); color: #c0aa70; border-color: rgba(160,140,100,0.45); }
+.dmg-toggle.t-magic:has(input:checked)  { background: rgba(120,80,200,0.18); color: #a070d8; border-color: rgba(120,80,200,0.45); }
+
+.dmg-toggle:has(input:checked) .dot { opacity: 1; }
+
+.filter-hint { font-size: 0.78rem; color: var(--faint); margin-top: 4px; }
 
 /* score bar */
 .score-bar { width: 100%; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; margin-top: 4px; }
@@ -143,17 +169,30 @@
         <option>Has super chests</option>
       </select>
     </label>
-    <label>
-      <span class="lbl">Avoid immunity</span>
-      <select>
-        <option>Any</option>
-        <option>Fire</option>
-        <option>Cold</option>
-        <option>Lightning</option>
-        <option>Poison</option>
-        <option>Physical</option>
-      </select>
-    </label>
+    <div class="dmg-filter-group">
+      <span class="lbl">My build deals — hide immune areas</span>
+      <div class="dmg-toggles">
+        <label class="dmg-toggle t-fire">
+          <input type="checkbox"><span class="dot"></span>Fire
+        </label>
+        <label class="dmg-toggle t-cold">
+          <input type="checkbox" checked><span class="dot"></span>Cold
+        </label>
+        <label class="dmg-toggle t-ltng">
+          <input type="checkbox" checked><span class="dot"></span>Lightning
+        </label>
+        <label class="dmg-toggle t-pois">
+          <input type="checkbox"><span class="dot"></span>Poison
+        </label>
+        <label class="dmg-toggle t-phys">
+          <input type="checkbox"><span class="dot"></span>Physical
+        </label>
+        <label class="dmg-toggle t-magic">
+          <input type="checkbox"><span class="dot"></span>Magic
+        </label>
+      </div>
+      <span class="filter-hint">Cold + Lightning checked — areas with those immunities are hidden</span>
+    </div>
   </div>
 
   <div class="area-wrap" style="overflow-x:auto;margin-bottom:64px">

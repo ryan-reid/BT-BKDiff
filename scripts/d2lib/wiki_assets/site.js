@@ -204,7 +204,7 @@ function wireBaseFilters() {
   const rollInput = document.querySelector("#base-roll-filter");
   const twoHandedCheckbox = document.querySelector("#base-two-handed-filter");
   const resultCount = document.querySelector("#base-result-count");
-  const families = Array.from(document.querySelectorAll(".family-card"));
+  const families = Array.from(document.querySelectorAll(".family-container"));
 
   function queryValue(params, names) {
     for (const name of names) {
@@ -268,28 +268,34 @@ function wireBaseFilters() {
       const groupOk = activeGroup === "all" || familyGroup === activeGroup;
       const classOk = activeClass === "all" || familyClasses.split(/\s+/).includes(normalizeText(activeClass));
       const familySearchOk = !query || familySearch.includes(query);
-      const rows = Array.from(family.querySelectorAll("tbody tr[data-search]"));
-      let visibleRows = 0;
+      
+      const items = Array.from(family.querySelectorAll(".base-item-card"));
+      let visibleItems = 0;
 
-      rows.forEach((row) => {
-        const rowSearch = normalizeText(row.dataset.search || "");
-        const rowCategories = normalizeText(row.dataset.typeCategories || "").split("|").filter(Boolean);
-        const searchOk = !query || familySearchOk || rowSearch.includes(query);
-        const categoryOk = activeCategory === "all" || rowCategories.includes(normalizeText(activeCategory));
-        const tierOk = activeTier === "all" || row.dataset.tier === activeTier;
-        const speedOk = activeSpeed === "all" || row.dataset.speedLabel === activeSpeed;
-        const socketsOk = !minSockets || Number(row.dataset.maxSockets || 0) >= minSockets;
-        const rollOk = !rollQuery || normalizeText(row.dataset.rollSearch || "").includes(rollQuery);
-        const twoHandedOk = !twoHandedOnly || row.dataset.twoHanded === "1";
-        const rowVisible = groupOk && classOk && categoryOk && searchOk && tierOk && speedOk && socketsOk && rollOk && twoHandedOk;
-        row.hidden = !rowVisible;
-        if (rowVisible) {
-          visibleRows += 1;
+      items.forEach((item) => {
+        const itemSearch = normalizeText(item.dataset.search || "");
+        const itemCategories = normalizeText(item.dataset.typeCategories || "").split("|").filter(Boolean);
+        const searchOk = !query || familySearchOk || itemSearch.includes(query);
+        const categoryOk = activeCategory === "all" || itemCategories.includes(normalizeText(activeCategory));
+        const tierOk = activeTier === "all" || item.dataset.tier === activeTier;
+        const speedOk = activeSpeed === "all" || item.dataset.speedLabel === activeSpeed;
+        const socketsOk = !minSockets || Number(item.dataset.maxSockets || 0) >= minSockets;
+        const rollOk = !rollQuery || normalizeText(item.dataset.rollSearch || "").includes(rollQuery);
+        const twoHandedOk = !twoHandedOnly || item.dataset.twoHanded === "1";
+        
+        const itemVisible = groupOk && classOk && categoryOk && searchOk && tierOk && speedOk && socketsOk && rollOk && twoHandedOk;
+        item.hidden = !itemVisible;
+        item.style.display = itemVisible ? "" : "none";
+        
+        if (itemVisible) {
+          visibleItems += 1;
         }
       });
 
-      family.hidden = visibleRows === 0;
-      if (visibleRows > 0) {
+      const familyVisible = visibleItems > 0;
+      family.hidden = !familyVisible;
+      family.style.display = familyVisible ? "" : "none";
+      if (familyVisible) {
         visibleFamilies += 1;
       }
     });
