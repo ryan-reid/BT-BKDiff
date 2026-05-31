@@ -35,7 +35,8 @@
         {% for item in set.members %}
         {% set item_slug = item.display_name|slugify %}
         {% set comp = item.comparison %}
-        <div id="{{ set_slug }}-{{ item_slug }}" class="base-item-card tier-{{ item.lvl_req }}" style="border-left: 4px solid #287a28;">
+        <div id="{{ set_slug }}-{{ item_slug }}" class="base-item-card tier-{{ item.lvl_req }}" style="border-left: 4px solid #287a28;"
+             data-search="{{ item.display_name }} {{ item.item_type }} {{ item.base_item }} {% for row in comp.property_rows %}{{ row.old }} {{ row.new }} {% endfor %}">
           <div class="base-card-header">
             <div class="base-card-title-group">
               <div class="base-card-icon-wrap">
@@ -80,7 +81,8 @@
         {% endfor %}
 
         {# Set Bonuses #}
-        <div class="base-item-card" style="grid-column: 1 / -1; border-top: 4px solid #287a28;">
+        <div class="base-item-card" style="grid-column: 1 / -1; border-top: 4px solid #287a28;"
+             data-search="{{ set.name }} bonuses {% for row in set.set_bonuses %}{{ row.old }} {{ row.new }} {% endfor %}">
            <div class="base-card-header" style="background: rgba(40, 122, 40, 0.05);">
              <h3 style="margin: 0; color: #287a28;">Set Bonuses</h3>
            </div>

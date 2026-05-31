@@ -150,33 +150,40 @@ function areaRowMarkup(area) {
 
 function wireStaticSearch() {
   const searchInput = document.querySelector("#page-search");
-  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card"));
+  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card"));
   const tableRows = Array.from(document.querySelectorAll("tbody tr[data-search]"));
-  const guideCards = Array.from(document.querySelectorAll(".guide-card[data-search]"));
   const sections = Array.from(document.querySelectorAll(".recipe-group-section, .misc-group-section, .family-container"));
+  
   if (!searchInput || document.querySelector("[data-item-index-url]") || document.querySelector("[data-base-filters]")) {
-    return;
-  }
-  if (cards.length === 0 && tableRows.length === 0 && guideCards.length === 0) {
     return;
   }
 
   searchInput.addEventListener("input", () => {
     const query = normalizeText(searchInput.value);
+    
+    // Hide/show individual cards
     cards.forEach((card) => {
-      card.hidden = Boolean(query) && !normalizeText(card.dataset.search).includes(query);
+      const match = !query || normalizeText(card.dataset.search).includes(query);
+      card.hidden = !match;
+      // Also handle display property if hidden attribute isn't enough for the grid
+      card.style.display = match ? "" : "none";
     });
-    guideCards.forEach((card) => {
-      card.hidden = Boolean(query) && !normalizeText(card.dataset.search).includes(query);
-    });
+
+    // Hide/show table rows
     tableRows.forEach((row) => {
-      row.hidden = Boolean(query) && !normalizeText(row.dataset.search).includes(query);
+      const match = !query || normalizeText(row.dataset.search).includes(query);
+      row.hidden = !match;
     });
+
+    // Hide/show parent sections based on children or section metadata
     sections.forEach((section) => {
       const sectionMatch = !query || normalizeText(section.dataset.search).includes(query);
-      const visibleCards = section.querySelectorAll(".base-item-card:not([hidden])").length;
-      const visibleRows = section.querySelectorAll("tbody tr:not([hidden])").length;
-      section.hidden = Boolean(query) && !sectionMatch && visibleRows === 0 && visibleCards === 0;
+      const hasVisibleChildren = Array.from(section.querySelectorAll(".item-card, .base-item-card, .recipe-card"))
+        .some(child => !child.hidden);
+      
+      const shouldShow = sectionMatch || hasVisibleChildren;
+      section.hidden = !shouldShow;
+      section.style.display = shouldShow ? "" : "none";
     });
   });
 }

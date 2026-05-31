@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farming Areas — BKDiablo Wiki (mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mockup.css">
+<style>
+.area-toolbar {
+  display: flex; flex-wrap: wrap; gap: 12px; align-items: end;
+  padding: 20px 0 18px;
+}
+.area-toolbar label { display: grid; gap: 5px; min-width: 140px; }
+.area-toolbar .lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--faint); }
+.area-toolbar select, .area-toolbar input[type=search] {
+  background: var(--surface); border: 1px solid var(--line); color: var(--text);
+  border-radius: 8px; padding: 9px 12px; font: inherit; font-size: 0.9rem;
+}
+.area-toolbar input[type=search]::placeholder { color: var(--faint); }
+
+/* score bar */
+.score-bar { width: 100%; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; margin-top: 4px; }
+.score-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright)); }
+
+/* immunity pills — element colours */
+.im-fire     { background: rgba(200,80,40,0.18); color: #e07050; border: 1px solid rgba(200,80,40,0.3); }
+.im-cold     { background: rgba(60,130,200,0.18); color: #70a8e0; border: 1px solid rgba(60,130,200,0.3); }
+.im-lightning{ background: rgba(220,200,60,0.18); color: #d4c840; border: 1px solid rgba(220,200,60,0.3); }
+.im-poison   { background: rgba(80,180,60,0.18); color: #70c050; border: 1px solid rgba(80,180,60,0.3); }
+.im-physical { background: rgba(160,140,100,0.18); color: #c0aa70; border: 1px solid rgba(160,140,100,0.3); }
+.im-magic    { background: rgba(120,80,200,0.18); color: #a070d8; border: 1px solid rgba(120,80,200,0.3); }
+
+.im-pill { display: inline-block; padding: 2px 7px; border-radius: 5px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* main area table */
+.area-wrap { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.area-tbl { width: 100%; border-collapse: collapse; min-width: 860px; }
+.area-tbl thead th {
+  padding: 11px 16px; text-align: left;
+  font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--faint); background: var(--surface-2);
+  border-bottom: 1px solid var(--line-strong);
+}
+.area-tbl thead th.r { text-align: right; }
+.area-tbl tbody tr { transition: background 0.12s; }
+.area-tbl tbody tr:hover { background: rgba(227,179,65,0.04); }
+.area-tbl tbody td { padding: 13px 16px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.area-tbl tbody tr:last-child td { border-bottom: 0; }
+
+.area-rank { font-family: var(--font-mono); font-size: 0.8rem; color: var(--faint); width: 32px; }
+.area-name-cell { }
+.area-nm { font-family: var(--font-display); font-size: 0.98rem; color: var(--text); }
+.area-act { font-size: 0.78rem; color: var(--faint); margin-top: 2px; }
+.numcol { font-family: var(--font-mono); font-size: 0.92rem; text-align: right; }
+.top-tier { color: var(--gold-bright); }
+.score-col { width: 120px; }
+.chest-badge { display: inline-block; padding: 2px 7px; border-radius: 5px; font-size: 0.72rem; font-weight: 700; background: rgba(227,179,65,0.12); color: var(--gold-deep); border: 1px solid rgba(227,179,65,0.22); }
+.immunity-cell { display: flex; gap: 5px; flex-wrap: wrap; }
+
+/* act sections */
+.act-header td {
+  padding: 8px 16px; background: var(--surface-2);
+  font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep);
+  border-bottom: 1px solid var(--line);
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sigil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 5 5 1-3.5 4 1 6-5.5-3-5.5 3 1-6L4 8l5-1z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></symbol>
+</svg>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-sigil"><svg><use href="#i-sigil"/></svg></span>
+      <span><span class="brand-name">BKDiablo</span><br><span class="brand-sub">Ascension Wiki</span></span>
+    </a>
+    <nav class="mast-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="items.html">Items</a>
+      <a href="items.html">Runewords</a>
+      <a href="recipes.html">Cube</a>
+      <a href="bestiary.html">Bestiary</a>
+      <a href="classes.html">Classes</a>
+      <a href="areas.html" class="is-active">Areas</a>
+    </nav>
+    <label class="mast-search">
+      <svg aria-hidden="true"><use href="#i-search"/></svg>
+      <input type="search" placeholder="Search items, runes, recipes…" aria-label="Search the wiki">
+    </label>
+  </div>
+</header>
+
+<div class="legend shell" role="note">
+  <span style="color:var(--q-unique)"><i></i>Unique</span>
+  <span style="color:var(--q-set)"><i></i>Set</span>
+  <span style="color:var(--q-runeword)"><i></i>Runeword</span>
+  <span style="color:var(--q-magic)"><i></i>Magic</span>
+  <span style="color:var(--q-rare)"><i></i>Rare</span>
+  <span style="color:var(--q-crafted)"><i></i>Crafted</span>
+</div>
+
+<div class="shell">
+  <div style="padding-top:22px">
+    <h1 style="margin:0 0 4px;font-size:1.8rem">Farming Areas</h1>
+    <p style="margin:0;color:var(--muted)">85 areas ranked by farm score — density, elite count, area level, and super-chest access.</p>
+  </div>
+
+  <div class="area-toolbar">
+    <label>
+      <span class="lbl">Search</span>
+      <input type="search" placeholder="Area name or monster…" style="min-width:220px">
+    </label>
+    <label>
+      <span class="lbl">Act</span>
+      <select>
+        <option>All Acts</option>
+        <option>Act 1</option>
+        <option>Act 2</option>
+        <option>Act 3</option>
+        <option>Act 4</option>
+        <option>Act 5</option>
+      </select>
+    </label>
+    <label>
+      <span class="lbl">Can Drop Top Tier</span>
+      <select>
+        <option>All areas</option>
+        <option>Top-tier drops only (alvl+3 ≥ 90)</option>
+      </select>
+    </label>
+    <label>
+      <span class="lbl">Super Chests</span>
+      <select>
+        <option>All areas</option>
+        <option>Has super chests</option>
+      </select>
+    </label>
+    <label>
+      <span class="lbl">Avoid immunity</span>
+      <select>
+        <option>Any</option>
+        <option>Fire</option>
+        <option>Cold</option>
+        <option>Lightning</option>
+        <option>Poison</option>
+        <option>Physical</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="area-wrap" style="overflow-x:auto;margin-bottom:64px">
+    <table class="area-tbl">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Area</th>
+          <th class="r">Area Lvl</th>
+          <th class="r">Density</th>
+          <th class="r">Elites (avg)</th>
+          <th>Immunities</th>
+          <th>Super Chests</th>
+          <th class="score-col">Farm Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="act-header"><td colspan="8">Act 4 · Insanity</td></tr>
+        <tr>
+          <td class="area-rank">1</td>
+          <td class="area-name-cell"><div class="area-nm">Chaos Sanctuary</div><div class="area-act">Act 4</div></td>
+          <td class="numcol top-tier">85</td>
+          <td class="numcol">5800</td>
+          <td class="numcol">12.0</td>
+          <td><div class="immunity-cell"><span class="im-pill im-fire">Fire</span><span class="im-pill im-cold">Cold</span></div></td>
+          <td>—</td>
+          <td class="score-col">
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:0.88rem">
+              <span>94</span>
+              <div class="score-bar" style="flex:1"><div class="score-fill" style="width:94%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="act-header"><td colspan="8">Act 5 · Insanity</td></tr>
+        <tr>
+          <td class="area-rank">2</td>
+          <td class="area-name-cell"><div class="area-nm">Worldstone Keep (Level 2)</div><div class="area-act">Act 5</div></td>
+          <td class="numcol top-tier">85</td>
+          <td class="numcol">5200</td>
+          <td class="numcol">9.5</td>
+          <td><div class="immunity-cell"><span class="im-pill im-lightning">Lightning</span></div></td>
+          <td>—</td>
+          <td class="score-col">
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:0.88rem">
+              <span>88</span>
+              <div class="score-bar" style="flex:1"><div class="score-fill" style="width:88%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="area-rank">3</td>
+          <td class="area-name-cell"><div class="area-nm">Throne of Destruction</div><div class="area-act">Act 5</div></td>
+          <td class="numcol top-tier">85</td>
+          <td class="numcol">4100</td>
+          <td class="numcol">18.0</td>
+          <td><div class="immunity-cell"><span class="im-pill im-fire">Fire</span></div></td>
+          <td>—</td>
+          <td class="score-col">
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:0.88rem">
+              <span>86</span>
+              <div class="score-bar" style="flex:1"><div class="score-fill" style="width:86%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="act-header"><td colspan="8">Act 3 · Insanity</td></tr>
+        <tr>
+          <td class="area-rank">4</td>
+          <td class="area-name-cell"><div class="area-nm">Travincal</div><div class="area-act">Act 3</div></td>
+          <td class="numcol top-tier">85</td>
+          <td class="numcol">2400</td>
+          <td class="numcol">6.0</td>
+          <td><div class="immunity-cell"><span class="im-pill im-fire">Fire</span><span class="im-pill im-lightning">Lightning</span></div></td>
+          <td><span class="chest-badge">3 super chests</span></td>
+          <td class="score-col">
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:0.88rem">
+              <span>82</span>
+              <div class="score-bar" style="flex:1"><div class="score-fill" style="width:82%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="area-rank">5</td>
+          <td class="area-name-cell"><div class="area-nm">Durance of Hate (Level 3)</div><div class="area-act">Act 3</div></td>
+          <td class="numcol top-tier">85</td>
+          <td class="numcol">3800</td>
+          <td class="numcol">5.5</td>
+          <td><div class="immunity-cell"><span class="im-pill im-cold">Cold</span><span class="im-pill im-fire">Fire</span></div></td>
+          <td>—</td>
+          <td class="score-col">
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:0.88rem">
+              <span>81</span>
+              <div class="score-bar" style="flex:1"><div class="score-fill" style="width:81%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="act-header"><td colspan="8">Act 1 · Insanity</td></tr>
+        <tr>
+          <td class="area-rank">6</td>
+          <td class="area-name-cell"><div class="area-nm">Pit (Level 2)</div><div class="area-act">Act 1</div></td>
+          <td class="numcol top-tier">85</td>
+          <td class="numcol">4600</td>
+          <td class="numcol">7.0</td>
+          <td><div class="immunity-cell"><span class="im-pill im-poison">Poison</span></div></td>
+          <td>—</td>
+          <td class="score-col">
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:0.88rem">
+              <span>79</span>
+              <div class="score-bar" style="flex:1"><div class="score-fill" style="width:79%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="area-rank">7</td>
+          <td class="area-name-cell"><div class="area-nm">Mausoleum</div><div class="area-act">Act 1</div></td>
+          <td class="numcol top-tier">85</td>
+          <td class="numcol">3900</td>
+          <td class="numcol">5.0</td>
+          <td><div class="immunity-cell"><span class="im-pill im-physical">Physical</span></div></td>
+          <td>—</td>
+          <td class="score-col">
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:0.88rem">
+              <span>75</span>
+              <div class="score-bar" style="flex:1"><div class="score-fill" style="width:75%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="act-header"><td colspan="8">Act 2 · Insanity</td></tr>
+        <tr>
+          <td class="area-rank">8</td>
+          <td class="area-name-cell"><div class="area-nm">Maggot Lair (Level 3)</div><div class="area-act">Act 2</div></td>
+          <td class="numcol top-tier">85</td>
+          <td class="numcol">2200</td>
+          <td class="numcol">4.0</td>
+          <td><div class="immunity-cell"><span class="im-pill im-poison">Poison</span><span class="im-pill im-fire">Fire</span></div></td>
+          <td>—</td>
+          <td class="score-col">
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:0.88rem">
+              <span>67</span>
+              <div class="score-bar" style="flex:1"><div class="score-fill" style="width:67%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="area-rank">9</td>
+          <td class="area-name-cell"><div class="area-nm">Arcane Sanctuary</div><div class="area-act">Act 2</div></td>
+          <td class="numcol top-tier">85</td>
+          <td class="numcol">1800</td>
+          <td class="numcol">3.5</td>
+          <td><div class="immunity-cell"><span class="im-pill im-magic">Magic</span></div></td>
+          <td><span class="chest-badge">1 super chest</span></td>
+          <td class="score-col">
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:0.88rem">
+              <span>62</span>
+              <div class="score-bar" style="flex:1"><div class="score-fill" style="width:62%"></div></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <span>BKDiablo Wiki · generated from mod data · not affiliated with Blizzard.</span>
+    <span><a href="#">GitHub</a> · <a href="#">Discord</a> · <a href="#">Install guide</a></span>
+  </div>
+</footer>
+</body>
+</html>
