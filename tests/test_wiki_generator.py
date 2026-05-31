@@ -878,7 +878,10 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("rune-chip-icon", runeword_page)
         self.assertIn("Tal Rune", runeword_page)
         self.assertIn("Eth Rune", runeword_page)
-        self.assertIn("Properties from Runes", runeword_page)
+        self.assertIn("Runeword Bonuses", runeword_page)
+        self.assertIn("Rune Contributions", runeword_page)
+        self.assertIn("BK vs Retail Changes", runeword_page)
+        self.assertIn("Show technical retail comparison", runeword_page)
         self.assertIn("+50 to Attack Rating", runeword_page)
 
         for relative_path, expected_text in [

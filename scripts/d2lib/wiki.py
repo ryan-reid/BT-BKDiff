@@ -1805,12 +1805,23 @@ class WikiGenerator:
         old_entry: Optional[Dict[str, Any]],
     ) -> Dict[str, Any]:
         chips = [{"label": family.title(), "tone": "default"}, {"label": self.new_label, "tone": "accent"}]
+        hero_eyebrow = "Generated Item Page"
         if family == "runeword":
-            chips.append({"label": "Runeword", "tone": "accent"})
+            rune_requirements = entry.get("rune_requirements", [])
+            socket_count = len(rune_requirements) or len(entry.get("runes", []))
+            base_items = entry.get("base_items", [])
+            base_label = ", ".join(base_items) or "Unknown base"
+            hero_eyebrow = f"{base_label} Runeword"
+            chips = [
+                {"label": "Runeword", "tone": "default"},
+                {"label": self.new_label, "tone": "accent"},
+                {"label": base_label, "tone": "default"},
+                {"label": f"{socket_count} socket{'s' if socket_count != 1 else ''}", "tone": "accent"},
+            ]
             stats = [
+                {"label": "Base", "value": base_label},
+                {"label": "Sockets", "value": str(socket_count) if socket_count else "Unknown"},
                 {"label": "Runes", "value": " + ".join(entry.get("runes", [])) or "Unknown"},
-                {"label": "Base Items", "value": ", ".join(entry.get("base_items", [])) or "Unknown"},
-                {"label": "Property Count", "value": str(len(entry.get("properties", [])))},
             ]
         else:
             chips.append(
@@ -1847,8 +1858,11 @@ class WikiGenerator:
             }
             for rune_entry in entry.get("rune_properties", [])
         ]
+        comparison = self._item_comparison_context(entry, family, old_entry)
         return {
+            "family": family,
             "title": title,
+            "hero_eyebrow": hero_eyebrow,
             "summary": self._item_summary(entry, family),
             "chips": chips,
             "stats": stats,
@@ -1857,7 +1871,8 @@ class WikiGenerator:
             "rune_requirements": entry.get("rune_requirements", []),
             "icon_src": entry.get("icon_src", ""),
             "source_rel_path": entry.get("_source_rel_path", ""),
-            "comparison": self._item_comparison_context(entry, family, old_entry),
+            "comparison": comparison,
+            "comparison_summary": self._comparison_summary_context(comparison),
         }
 
     def _item_comparison_context(
@@ -1880,6 +1895,24 @@ class WikiGenerator:
             "state": "modified" if rows else "unchanged",
             "rows": [{"label": label, "old": old_value, "new": new_value} for label, old_value, new_value in rows],
         }
+
+    @staticmethod
+    def _comparison_summary_context(comparison: Dict[str, Any]) -> Dict[str, Any]:
+        summary = {"added": [], "removed": [], "changed": []}
+        for row in comparison.get("rows", []):
+            label = str(row.get("label", ""))
+            old_value = str(row.get("old", ""))
+            new_value = str(row.get("new", ""))
+            if label == "Property Count":
+                continue
+            if label.startswith("Added:") and new_value:
+                summary["added"].append({"label": label.replace("Added:", "").strip(), "value": new_value})
+            elif label.startswith("Removed:") and old_value:
+                summary["removed"].append({"label": label.replace("Removed:", "").strip(), "value": old_value})
+            elif old_value != new_value:
+                summary["changed"].append({"label": label, "old": old_value, "new": new_value})
+        summary["has_changes"] = any(summary[key] for key in ("added", "removed", "changed"))
+        return summary
 
     @staticmethod
     def _item_sort_key(entry: Dict[str, Any]) -> str:
@@ -2035,7 +2068,10 @@ class WikiGenerator:
     def _item_summary(entry: Dict[str, Any], family: str) -> str:
         if family == "runeword":
             base_items = ", ".join(entry.get("base_items", [])) or "Unknown base"
-            return f"Runeword for {base_items} with {len(entry.get('properties', []))} generated properties."
+            runes = " + ".join(entry.get("runes", [])) or "unknown runes"
+            socket_count = len(entry.get("runes", []))
+            socket_text = f"{socket_count}-socket " if socket_count else ""
+            return f"{runes} in {socket_text}{base_items}."
         item_type = entry.get("item_type", "Item")
         base_item = entry.get("base_item", "Unknown base")
         lvl_req = entry.get("lvl_req", "0")

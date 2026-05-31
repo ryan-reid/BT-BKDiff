@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "components.html" import hero %}
 {% block content %}
-{{ hero("Generated Item Page", page.title, page.summary, page.chips) }}
+{{ hero(page.hero_eyebrow, page.title, page.summary, page.chips) }}
 <section class="page-grid">
   <aside class="info-panel">
     {% if page.icon_src %}
@@ -17,6 +17,130 @@
     </dl>
   </aside>
   <div class="content-panel">
+    {% if page.family == "runeword" %}
+    <section class="content-section">
+      <h2>Runeword Bonuses</h2>
+      <ul class="property-list runeword-bonus-list">
+        {% if page.properties %}
+          {% for prop in page.properties %}
+          <li class="property-entry{% if prop.is_warning %} is-warning{% endif %}">{{ prop.text }}</li>
+          {% endfor %}
+        {% else %}
+          <li class="is-empty">No generated properties were found for this record.</li>
+        {% endif %}
+      </ul>
+    </section>
+    <section class="content-section">
+      <h2>Required Runes & Base</h2>
+      {% if page.rune_requirements %}
+      <div class="rune-sequence rune-sequence-detail" aria-label="{{ page.title }} rune sequence">
+        {% for rune in page.rune_requirements %}
+        <span class="rune-chip" title="{{ rune.name }}">
+          {% if rune.icon_src %}
+          <img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }} icon" />
+          {% endif %}
+          <span>{{ rune.name }}</span>
+        </span>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="muted">No rune sequence was found for this runeword.</p>
+      {% endif %}
+      <div class="runeword-base-panel">
+        {% for stat in page.stats %}
+        <div>
+          <span>{{ stat.label }}</span>
+          <strong>{{ stat.value }}</strong>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="muted">Use the Bases page to compare eligible item bases and socket capacity.</p>
+      <a class="text-link" href="{{ site_root }}bases/">View base items</a>
+    </section>
+    {% if page.rune_properties %}
+    <section class="content-section">
+      <h2>Rune Contributions</h2>
+      <ul class="property-list rune-property-list">
+        {% for rune in page.rune_properties %}
+        <li>
+          <strong>{{ rune.rune }}</strong>
+          <ul>
+            {% for prop in rune.properties %}
+            <li class="property-entry{% if prop.is_warning %} is-warning{% endif %}">{{ prop.text }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+    <section class="content-section">
+      <h2>BK vs Retail Changes</h2>
+      {% if page.comparison.state == "added" %}
+      <p class="muted">No {{ old_label }} record was matched. This appears to be {{ new_label }} only.</p>
+      {% elif page.comparison.state == "unchanged" %}
+      <p class="muted">No structured differences were detected for this runeword.</p>
+      {% elif page.comparison_summary.has_changes %}
+      <div class="runeword-change-summary">
+        {% if page.comparison_summary.added %}
+        <div>
+          <h3>Added in {{ new_label }}</h3>
+          <ul class="property-list">
+            {% for row in page.comparison_summary.added %}
+            <li class="property-entry">{{ row.value }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        {% if page.comparison_summary.changed %}
+        <div>
+          <h3>Changed</h3>
+          <ul class="property-list">
+            {% for row in page.comparison_summary.changed %}
+            <li class="property-entry"><strong>{{ row.label }}</strong>: {{ row.old or "empty" }} to {{ row.new or "empty" }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        {% if page.comparison_summary.removed %}
+        <div>
+          <h3>Removed from Retail</h3>
+          <ul class="property-list">
+            {% for row in page.comparison_summary.removed %}
+            <li class="property-entry">{{ row.value }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% if page.comparison.rows %}
+      <details class="technical-details">
+        <summary>Show technical retail comparison</summary>
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr><th>Field</th><th>{{ old_label }} (Old)</th><th>{{ new_label }} (New)</th></tr>
+            </thead>
+            <tbody>
+              {% for row in page.comparison.rows %}
+              <tr>
+                <th>{{ row.label }}</th>
+                <td><span class="comparison-value is-old">{{ row.old or "empty" }}</span></td>
+                <td><span class="comparison-value is-new">{{ row.new or "empty" }}</span></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </details>
+      {% endif %}
+    </section>
+    <section class="content-section source-section">
+      <h2>Source</h2>
+      <p class="muted">Structured export path: <code>{{ page.source_rel_path }}</code></p>
+    </section>
+    {% else %}
     <section class="content-section">
       <h2>Retail Comparison</h2>
       {% if page.comparison.state == "added" %}
@@ -43,21 +167,6 @@
       </div>
       {% endif %}
     </section>
-    {% if page.rune_requirements %}
-    <section class="content-section">
-      <h2>Required Runes</h2>
-      <div class="rune-sequence rune-sequence-detail" aria-label="{{ page.title }} rune sequence">
-        {% for rune in page.rune_requirements %}
-        <span class="rune-chip" title="{{ rune.name }}">
-          {% if rune.icon_src %}
-          <img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }} icon" />
-          {% endif %}
-          <span>{{ rune.name }}</span>
-        </span>
-        {% endfor %}
-      </div>
-    </section>
-    {% endif %}
     <section class="content-section">
       <h2>Properties</h2>
       <ul class="property-list">
@@ -91,6 +200,7 @@
       <h2>Source</h2>
       <p class="muted">Structured export path: <code>{{ page.source_rel_path }}</code></p>
     </section>
+    {% endif %}
   </div>
 </section>
 {% endblock %}

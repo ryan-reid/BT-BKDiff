@@ -469,6 +469,74 @@ code {
   margin-bottom: 3px;
 }
 
+.runeword-base-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.runeword-base-panel div {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(33, 29, 25, 0.03);
+}
+
+.runeword-base-panel span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.runeword-base-panel strong {
+  color: var(--ink);
+}
+
+.runeword-bonus-list {
+  columns: 2 260px;
+  column-gap: 28px;
+}
+
+.runeword-bonus-list li {
+  break-inside: avoid;
+}
+
+.runeword-change-summary {
+  display: grid;
+  gap: 16px;
+}
+
+.runeword-change-summary h3 {
+  margin: 0 0 8px;
+  color: var(--accent-2);
+  font-size: 0.95rem;
+}
+
+.technical-details {
+  margin-top: 16px;
+}
+
+.technical-details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.technical-details[open] summary {
+  margin-bottom: 12px;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .wiki-item-icon {
   display: block;
   object-fit: contain;
