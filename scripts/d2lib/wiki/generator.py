@@ -145,9 +145,6 @@ class WikiGenerator:
         )
 
     def _base_item_comparison_context(self, item: BaseItemDTO, old_item: Optional[BaseItemDTO]) -> Dict[str, Any]:
-        if not old_item:
-            return {"state": "added", "stat_rows": [], "property_rows": []}
-
         # 1. Stat Rows
         stat_rows = []
         stats_to_compare = [
@@ -162,20 +159,22 @@ class WikiGenerator:
         ]
         
         # Add Defense/Damage if applicable
-        if item.get("defense_min") is not None or old_item.get("defense_min") is not None:
-            def_old = f"{old_item.get('defense_min')}-{old_item.get('defense_max')}" if old_item.get("defense_min") is not None else ""
+        if item.get("defense_min") is not None or (old_item and old_item.get("defense_min") is not None):
+            def_old = f"{old_item.get('defense_min')}-{old_item.get('defense_max')}" if old_item and old_item.get("defense_min") is not None else ""
             def_new = f"{item.get('defense_min')}-{item.get('defense_max')}" if item.get("defense_min") is not None else ""
-            stat_rows.append({"label": "Defense", "old": def_old, "new": def_new, "status": "same" if def_old == def_new else "changed"})
+            status = "added" if def_new and not def_old else "same" if def_old == def_new else "changed"
+            stat_rows.append({"label": "Defense", "old": def_old, "new": def_new, "status": status})
 
-        if item.get("damage_min") is not None or old_item.get("damage_min") is not None:
-            dam_old = f"{old_item.get('damage_min')}-{old_item.get('damage_max')}" if old_item.get("damage_min") is not None else ""
+        if item.get("damage_min") is not None or (old_item and old_item.get("damage_min") is not None):
+            dam_old = f"{old_item.get('damage_min')}-{old_item.get('damage_max')}" if old_item and old_item.get("damage_min") is not None else ""
             dam_new = f"{item.get('damage_min')}-{item.get('damage_max')}" if item.get("damage_min") is not None else ""
-            stat_rows.append({"label": "Damage", "old": dam_old, "new": dam_new, "status": "same" if dam_old == dam_new else "changed"})
+            status = "added" if dam_new and not dam_old else "same" if dam_old == dam_new else "changed"
+            stat_rows.append({"label": "Damage", "old": dam_old, "new": dam_new, "status": status})
 
         for label, key in stats_to_compare:
-            old_val = str(old_item.get(key, ""))
+            old_val = str(old_item.get(key, "")) if old_item else ""
             new_val = str(item.get(key, ""))
-            status = "same" if old_val == new_val else "changed"
+            status = "added" if new_val and not old_val else "same" if old_val == new_val else "changed"
             stat_rows.append({"label": label, "old": old_val, "new": new_val, "status": status})
 
         # 2. Property Rows (Inherent stats, Auto Prefixes, Quality Bonuses)
@@ -189,13 +188,13 @@ class WikiGenerator:
                 status = "same" if o == n else "added" if n and not o else "removed" if o and not n else "changed"
                 property_rows.append({"label": label if i == 0 else "", "old": o, "new": n, "status": status})
 
-        add_prop_group("Inherent", old_item.get("inherent_stats", []), item.get("inherent_stats", []))
-        add_prop_group("Auto Prefix", old_item.get("auto_prefix_summary", []), item.get("auto_prefix_summary", []))
-        add_prop_group("Superior Bonuses", old_item.get("quality_bonus_summary", []), item.get("quality_bonus_summary", []))
+        add_prop_group("Inherent", old_item.get("inherent_stats", []) if old_item else [], item.get("inherent_stats", []))
+        add_prop_group("Auto Prefix", old_item.get("auto_prefix_summary", []) if old_item else [], item.get("auto_prefix_summary", []))
+        add_prop_group("Superior Bonuses", old_item.get("quality_bonus_summary", []) if old_item else [], item.get("quality_bonus_summary", []))
 
         has_changes = any(r["status"] != "same" for r in stat_rows + property_rows)
         return {
-            "state": "modified" if has_changes else "unchanged",
+            "state": "added" if not old_item else "modified" if has_changes else "unchanged",
             "stat_rows": stat_rows,
             "property_rows": property_rows,
         }
@@ -324,32 +323,29 @@ class WikiGenerator:
         )
 
     def _gem_rune_comparison_context(self, item: MiscItemDTO, old_item: Optional[MiscItemDTO]) -> Dict[str, Any]:
-        if not old_item:
-            return {"state": "added", "stat_rows": [], "socket_rows": []}
-
         # 1. Stat Rows
         stat_rows = []
         for label, key in [("Level", "level"), ("Level Requirement", "level_req"), ("Cost", "cost")]:
-            old_val = str(old_item.get(key, ""))
+            old_val = str(old_item.get(key, "")) if old_item else ""
             new_val = str(item.get(key, ""))
-            status = "same" if old_val == new_val else "changed"
+            status = "added" if new_val and not old_val else "same" if old_val == new_val else "changed"
             stat_rows.append({"label": label, "old": old_val, "new": new_val, "status": status})
 
-        # 2. Socket Rows (Weapon/Armor/Shield)
+        # 2. Socket Rows (Weapon/Armor/Helm, Shield)
         socket_rows = []
         slots = ["Weapon", "Armor/Helm", "Shield"]
-        old_effects = old_item.get("socket_effects", {})
+        old_effects = old_item.get("socket_effects", {}) if old_item else {}
         new_effects = item.get("socket_effects", {})
 
         for slot in slots:
             old_eff = "; ".join(old_effects.get(slot, []))
             new_eff = "; ".join(new_effects.get(slot, []))
-            status = "same" if old_eff == new_eff else "changed"
+            status = "added" if new_eff and not old_eff else "same" if old_eff == new_eff else "changed"
             socket_rows.append({"label": slot, "old": old_eff, "new": new_eff, "status": status})
 
         has_changes = any(r["status"] != "same" for r in stat_rows + socket_rows)
         return {
-            "state": "modified" if has_changes else "unchanged",
+            "state": "added" if not old_item else "modified" if has_changes else "unchanged",
             "stat_rows": stat_rows,
             "property_rows": socket_rows, # Reuse template property_rows block for simplicity
         }
