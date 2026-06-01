@@ -566,10 +566,10 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
 .filter-hint { font-size: 0.76rem; color: var(--faint); margin-top: 4px; }
 
 .area-table { min-width: 900px; }
-.area-name  { font-family: var(--font-display); font-size: 0.96rem; display: block; }
-.area-meta  { color: var(--faint); font-size: 0.8rem; display: block; }
+.area-name  { font-family: var(--font-display); font-size: 0.96rem; display: block; text-align: center; }
+.area-meta  { color: var(--faint); font-size: 0.8rem; display: block; text-align: center; }
 .area-level-label { white-space: nowrap; }
-.area-badge-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; max-width: 170px; }
+.area-badge-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 8px auto 0; max-width: 170px; }
 .area-badge {
   display: inline-flex; align-items: center; white-space: nowrap;
   padding: 3px 8px; border-radius: 5px; font-size: 0.68rem; font-weight: 700;
