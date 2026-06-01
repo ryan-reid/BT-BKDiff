@@ -565,11 +565,18 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
 .dmg-toggle.t-magic:has(input:checked) { background: rgba(120,80,200,0.15); color: #a070d8; border-color: rgba(120,80,200,0.4); }
 .filter-hint { font-size: 0.76rem; color: var(--faint); margin-top: 4px; }
 
-.area-table { min-width: 900px; }
+.area-table { min-width: 900px; border-collapse: collapse; }
+.area-table tbody tr { border-bottom: 1px solid var(--line); }
+.area-table tbody tr:last-child { border-bottom: 0; }
+.area-table tbody td { border-bottom: 0; padding-top: 18px; padding-bottom: 18px; }
+.area-table tbody th {
+  border-bottom: 0; padding: 18px 14px 22px;
+  vertical-align: top; font-size: 0.9rem;
+}
 .area-name  { font-family: var(--font-display); font-size: 0.96rem; display: block; text-align: center; }
 .area-meta  { color: var(--faint); font-size: 0.8rem; display: block; text-align: center; }
 .area-level-label { white-space: nowrap; }
-.area-badge-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 8px auto 0; max-width: 170px; }
+.area-badge-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 12px auto 0; max-width: 170px; padding-bottom: 2px; }
 .area-badge {
   display: inline-flex; align-items: center; white-space: nowrap;
   padding: 3px 8px; border-radius: 5px; font-size: 0.68rem; font-weight: 700;
