@@ -1,12 +1,12 @@
 from __future__ import annotations
 import re
 from typing import List, Dict, Optional, Any, Tuple
-from d2lib.repository import D2Repository
+from d2lib.repository import D2Repository, D2RepositoryProtocol
 from d2lib.models import SkillTreeDTO, SkillDTO, SkillEffectDTO, SkillSynergyDTO
 from d2lib.utils import slugify, strip_markdown
 
 class SkillAnalyzerService:
-    def __init__(self, repo: D2Repository):
+    def __init__(self, repo: D2RepositoryProtocol):
         self.repo = repo
         self.skills = {row.get('skill', '').strip().lower(): row for row in repo.get_excel_table('skills')}
         self.missiles = {row.get('Missile', '').strip().lower(): row for row in repo.get_excel_table('missiles')}

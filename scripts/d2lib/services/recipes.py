@@ -1,7 +1,7 @@
 from __future__ import annotations
 import re
 from typing import List, Dict, Optional, Any, Tuple
-from d2lib.repository import D2Repository
+from d2lib.repository import D2Repository, D2RepositoryProtocol
 from d2lib.models import CubeRecipeDTO, CubeRecipeGroupDTO
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.utils import slugify
@@ -107,7 +107,7 @@ class CubeAnalyzerService:
         },
     }
 
-    def __init__(self, repo: D2Repository, retail_repo: Optional[D2Repository] = None):
+    def __init__(self, repo: D2RepositoryProtocol, retail_repo: Optional[D2RepositoryProtocol] = None):
         self.repo = repo
         self.retail_repo = retail_repo
         self.resolver = PropertyResolverService(repo)

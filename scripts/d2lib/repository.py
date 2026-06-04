@@ -4,9 +4,23 @@ import json
 import sys
 import re
 from typing import List, Dict, Tuple, Optional, Any
+from typing import Protocol, runtime_checkable
 
 # Increase CSV field size limit for large D2 fields
 csv.field_size_limit(1000000)
+
+
+@runtime_checkable
+class D2RepositoryProtocol(Protocol):
+    """Structural interface for D2 data access.
+
+    Services and builders should type-hint against this Protocol rather than
+    the concrete D2Repository class, keeping them decoupled from file I/O
+    details and making unit-testing with lightweight fakes straightforward.
+    """
+    def get_excel_table(self, table_name: str) -> List[Dict[str, str]]: ...
+    def get_string(self, key: str) -> str: ...
+    def load_tsv(self, file_path: str) -> List[Dict[str, str]]: ...
 
 def normalize_d2_value(val: Any) -> str:
     """Normalizes D2 data values for consistent comparison."""

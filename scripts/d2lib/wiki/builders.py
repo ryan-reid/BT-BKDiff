@@ -8,7 +8,7 @@ import zlib
 from typing import Any, Dict, List, Optional, Tuple
 from urllib.parse import urlencode
 
-from d2lib.repository import D2Repository
+from d2lib.repository import D2Repository, D2RepositoryProtocol
 from d2lib.models import BaseItemFamilyDTO, MiscGroupDTO
 from d2lib.wiki.routes import DAMAGE_TYPES, WikiRoutes
 
@@ -32,10 +32,15 @@ class AreaFarmingDataBuilder:
         ("act3/kurast/metro", 81),
     )
 
-    def __init__(self, game_data_dir: str, layout_data_dir: Optional[str] = None):
+    def __init__(
+        self,
+        game_data_dir: str,
+        layout_data_dir: Optional[str] = None,
+        repository: Optional[D2RepositoryProtocol] = None,
+    ):
         self.game_data_dir = game_data_dir
         self.layout_data_dir = layout_data_dir
-        self.repository = D2Repository(game_data_dir)
+        self.repository: D2RepositoryProtocol = repository or D2Repository(game_data_dir)
         self.layout_roots = self._layout_roots()
 
     def build(self) -> List[Dict[str, Any]]:

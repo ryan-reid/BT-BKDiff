@@ -105,6 +105,7 @@ class WikiGenerator:
         class_pages = self._load_class_pages()
         area_entries = self._load_area_entries()
         base_item_families = self._load_base_item_families()
+        retail_base_items = self._load_retail_base_items()
 
         # Single CubeAnalyzerService for both group summary and raw recipes.
         recipe_service = CubeAnalyzerService(self._repo, self._retail_repo)
@@ -114,6 +115,7 @@ class WikiGenerator:
 
         monster_groups = self._load_monster_groups()
         misc_groups, gem_rune_groups = self._load_misc_groups()
+        retail_misc_items = self._load_retail_misc_items()
         mechanics_summary = self._load_mechanics_summary()
         drop_weight_groups = self._load_drop_weight_groups()
 
@@ -122,11 +124,11 @@ class WikiGenerator:
         class_entries = self._write_class_pages(class_pages)
         self._write_runeword_index_page(items["runeword"], item_entries["runeword"], old_item_index)
         self._write_set_index_page(items["set"], old_item_index["set"])
-        self._write_base_item_pages(base_item_families)
+        self._write_base_item_pages(base_item_families, retail_base_items)
         self._write_recipe_pages(recipe_groups, recipe_pages_data)
         self._write_bestiary_pages(monster_groups)
         self._write_misc_pages(misc_groups)
-        self._write_gems_runes_pages(gem_rune_groups)
+        self._write_gems_runes_pages(gem_rune_groups, retail_misc_items)
         self._write_mechanics_pages(mechanics_summary)
         self._write_drop_weight_pages(drop_weight_groups)
         report_entries = self._publish_reports()
@@ -143,8 +145,16 @@ class WikiGenerator:
         resolver = PropertyResolverService(self._repo)
         return BaseItemAnalyzerService(self._repo, resolver).analyze_base_items()
 
+    def _load_retail_base_items(self) -> Dict[str, Any]:
+        retail_resolver = PropertyResolverService(self._retail_repo)
+        retail_families = BaseItemAnalyzerService(self._retail_repo, retail_resolver).analyze_base_items()
+        return {item["code"]: item for f in retail_families for item in f["members"]}
+
     def _load_monster_groups(self) -> List[MonsterActGroupDTO]:
         return MonsterAnalyzerService(self._repo, self._retail_repo).analyze_monsters()
+
+    def _load_retail_misc_items(self) -> Dict[str, Any]:
+        return {item["code"]: item for g in MiscAnalyzerService(self._retail_repo).analyze_misc_items() for item in g["members"]}
 
     def _load_misc_groups(self) -> Tuple[List[MiscGroupDTO], List[MiscGroupDTO]]:
         resolver = PropertyResolverService(self._repo)
@@ -225,7 +235,7 @@ class WikiGenerator:
     def _load_area_entries(self) -> List[Dict[str, Any]]:
         if not os.path.isdir(self.game_data_dir):
             return []
-        return AreaFarmingDataBuilder(self.game_data_dir, layout_data_dir=self.layout_data_dir).build()
+        return AreaFarmingDataBuilder(self.game_data_dir, layout_data_dir=self.layout_data_dir, repository=self._repo).build()
 
     # ── Writers ─────────────────────────────────────────────────────────────
 
@@ -238,13 +248,9 @@ class WikiGenerator:
             if os.path.isfile(source_path):
                 self.writer.copy_asset(source_path, f"assets/{filename}")
 
-    def _write_base_item_pages(self, families: List[BaseItemFamilyDTO]) -> None:
+    def _write_base_item_pages(self, families: List[BaseItemFamilyDTO], retail_items: Dict[str, Any]) -> None:
         icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
         icon_exporter.attach_base_item_icons(families)
-
-        retail_resolver = PropertyResolverService(self._retail_repo)
-        retail_families = BaseItemAnalyzerService(self._retail_repo, retail_resolver).analyze_base_items()
-        retail_items = {item["code"]: item for f in retail_families for item in f["members"]}
 
         for family in families:
             for item in family["members"]:
@@ -315,12 +321,9 @@ class WikiGenerator:
             groups=groups,
         )
 
-    def _write_gems_runes_pages(self, groups: List[MiscGroupDTO]) -> None:
+    def _write_gems_runes_pages(self, groups: List[MiscGroupDTO], retail_items: Dict[str, Any]) -> None:
         icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
         icon_exporter.attach_misc_item_icons(groups)
-
-        retail_service = MiscAnalyzerService(self._retail_repo)
-        retail_items = {item["code"]: item for g in retail_service.analyze_misc_items() for item in g["members"]}
 
         for group in groups:
             for item in group["members"]:

@@ -1,13 +1,13 @@
 from __future__ import annotations
 import re
 from typing import List, Dict, Optional, Any, Tuple
-from d2lib.repository import D2Repository
+from d2lib.repository import D2Repository, D2RepositoryProtocol
 from d2lib.models import AnalyzedItemDTO, RunewordDTO, BaseItemDTO, BaseItemFamilyDTO
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.utils import item_category_to_group
 
 class ItemAnalyzerService:
-    def __init__(self, repo: D2Repository, resolver: PropertyResolverService):
+    def __init__(self, repo: D2RepositoryProtocol, resolver: PropertyResolverService):
         self.repo = repo
         self.resolver = resolver
         self.armor = {row['code']: row for row in repo.get_excel_table('armor')}
@@ -208,7 +208,7 @@ class ItemAnalyzerService:
         }
 
 class BaseItemAnalyzerService:
-    def __init__(self, repo: D2Repository, resolver: PropertyResolverService):
+    def __init__(self, repo: D2RepositoryProtocol, resolver: PropertyResolverService):
         self.repo = repo
         self.resolver = resolver
         self.armor = repo.get_excel_table('armor')

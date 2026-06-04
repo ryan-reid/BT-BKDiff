@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import List, Dict, Optional, Any
-from d2lib.repository import D2Repository
+from d2lib.repository import D2Repository, D2RepositoryProtocol
 from d2lib.models import MiscItemDTO, MiscGroupDTO
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.services.base import _status_for_row
@@ -65,7 +65,7 @@ class MiscAnalyzerService:
         },
     }
 
-    def __init__(self, repo: D2Repository, resolver: Optional[PropertyResolverService] = None, retail_repo: Optional[D2Repository] = None):
+    def __init__(self, repo: D2RepositoryProtocol, resolver: Optional[PropertyResolverService] = None, retail_repo: Optional[D2RepositoryProtocol] = None):
         self.repo = repo
         self.resolver = resolver or PropertyResolverService(repo)
         self.retail_repo = retail_repo

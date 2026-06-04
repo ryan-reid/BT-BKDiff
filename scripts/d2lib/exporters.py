@@ -3,13 +3,14 @@ import json
 import re
 import difflib
 import html
+from abc import ABC, abstractmethod
 from typing import List, Dict, Any, Tuple
 from d2lib.models import AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, CubeRecipeDTO, ItemDiffDTO, SkillTreeDTO
 from d2lib.utils import normalize_d2_text, slugify
 
-class BaseExporter:
-    def export(self, data: Any, output_path: str):
-        raise NotImplementedError
+class BaseExporter(ABC):
+    @abstractmethod
+    def export(self, data: Any, output_path: str) -> None: ...
 
 class JsonExporter(BaseExporter):
     def export(self, data: Any, output_path: str):

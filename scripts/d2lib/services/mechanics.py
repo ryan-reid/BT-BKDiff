@@ -1,12 +1,12 @@
 from __future__ import annotations
 from typing import List, Dict, Optional, Any
-from d2lib.repository import D2Repository
+from d2lib.repository import D2Repository, D2RepositoryProtocol
 from d2lib.models import MechanicsSummaryDTO
 from d2lib.services.comparison import ExcelComparisonService
 from d2lib.services.base import _summarize_excel_diff
 
 class MechanicsAnalyzerService:
-    def __init__(self, repo: D2Repository, retail_repo: Optional[D2Repository] = None):
+    def __init__(self, repo: D2RepositoryProtocol, retail_repo: Optional[D2RepositoryProtocol] = None):
         self.repo = repo
         self.retail_repo = retail_repo
 

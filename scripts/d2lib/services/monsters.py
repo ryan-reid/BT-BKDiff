@@ -1,11 +1,11 @@
 from __future__ import annotations
 from typing import List, Dict, Optional, Any
-from d2lib.repository import D2Repository, normalize_d2_value
+from d2lib.repository import D2Repository, D2RepositoryProtocol, normalize_d2_value
 from d2lib.models import MonsterDTO, MonsterActGroupDTO
 from d2lib.services.base import _status_for_row
 
 class MonsterAnalyzerService:
-    def __init__(self, repo: D2Repository, retail_repo: Optional[D2Repository] = None):
+    def __init__(self, repo: D2RepositoryProtocol, retail_repo: Optional[D2RepositoryProtocol] = None):
         self.repo = repo
         self.retail_repo = retail_repo
         self.monstats = repo.get_excel_table('monstats')

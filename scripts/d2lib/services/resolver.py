@@ -1,10 +1,11 @@
 from __future__ import annotations
+import re
 from typing import List, Dict, Optional, Any
-from d2lib.repository import D2Repository
+from d2lib.repository import D2RepositoryProtocol
 from d2lib.models import PropertyDTO
 
 class PropertyResolverService:
-    def __init__(self, repo: D2Repository, property_groups: Optional[List[Dict[str, str]]] = None):
+    def __init__(self, repo: D2RepositoryProtocol, property_groups: Optional[List[Dict[str, str]]] = None):
         self.repo: D2Repository = repo
         self.property_groups: Dict[str, Dict[str, str]] = {
             row['code'].strip().lower(): row for row in property_groups
@@ -169,7 +170,6 @@ class PropertyResolverService:
             range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
 
-        import re
         func1 = prop.get('func1', '0').strip()
 
         # Use param if min_val is empty and it's a per-level stat (func 17)
