@@ -9,10 +9,17 @@
 </section>
 
 <input id="page-search" class="search-input" type="search" placeholder="Search corruption material, item type, socket count, or outcome..." style="margin-bottom:20px" />
-{% set sections = [("standard-corruptions", "Standard of Heroes", page.standard_summaries), ("divine-corruptions", "The Divine Standard", page.divine_summaries)] %}
+<div class="recipe-filter-bar" aria-label="Corruption filters">
+  <button class="filter-button is-active" type="button" data-recipe-filter="all">All</button>
+  {% for filter in page.filters %}
+  <button class="filter-button" type="button" data-recipe-filter="{{ filter.value }}">{{ filter.label }} <span class="filter-count">{{ filter.count }}</span></button>
+  {% endfor %}
+</div>
+{% set sections = [("either-standard-corruptions", "Standard of Heroes or The Divine Standard", page.combined_summaries), ("standard-corruptions", "Standard of Heroes only", page.standard_summaries), ("divine-corruptions", "The Divine Standard only", page.divine_summaries)] %}
 <div class="recipe-groups">
   {% for id, title, summaries in sections %}
-  <section id="{{ id }}" class="recipe-group" data-search="{{ title }}">
+  {% if summaries %}
+  <section id="{{ id }}" class="recipe-group" data-filter-tags="{{ id }}" data-search="{{ title }}">
     <div class="recipe-group-head">
       <div>
         <h2>{{ title }}</h2>
@@ -22,7 +29,7 @@
     </div>
     <div class="corruption-summary-grid">
       {% for summary in summaries %}
-      <article class="corruption-summary-card" data-search="{{ summary.search_text }}">
+      <article class="corruption-summary-card" data-filter-tags="{{ summary.filter_tags }}" data-search="{{ summary.search_text }}">
         <div class="corruption-summary-head">
           <h3>{{ summary.title }}</h3>
           <span>{{ summary.outcomes|length }} outcomes</span>
@@ -32,7 +39,7 @@
             <thead><tr><th>Chance</th><th>Outcome</th><th>Roll</th></tr></thead>
             <tbody>
               {% for outcome in summary.outcomes %}
-              <tr data-search="{{ summary.title }} {{ outcome.label }} {{ outcome.detail }} {{ outcome.chance }}">
+              <tr data-filter-tags="{{ summary.filter_tags }}" data-search="{{ summary.title }} {{ outcome.label }} {{ outcome.detail }} {{ outcome.chance }}">
                 <td><strong>{{ outcome.chance }}</strong></td>
                 <td>{{ outcome.label }}{% if outcome.detail %}<br><span class="muted">{{ outcome.detail }}</span>{% endif %}</td>
                 <td><code>{{ outcome.range }}</code></td>
@@ -45,6 +52,7 @@
       {% endfor %}
     </div>
   </section>
+  {% endif %}
   {% endfor %}
 </div>
 {% endblock %}

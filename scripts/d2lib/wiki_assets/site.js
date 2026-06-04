@@ -210,10 +210,15 @@ function areaCardMarkup(area) {
 }
 
 function wireStaticSearch() {
-  const searchInput = document.querySelector("#page-search");
-  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece"));
+  const pageSearch = document.querySelector("#page-search");
+  const hasLandingCards = Boolean(document.querySelector(".guide-card"));
+  const searchInput = pageSearch || (hasLandingCards ? document.querySelector("#mast-search-input") : null);
+  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece, .corruption-summary-card"));
   const tableRows = Array.from(document.querySelectorAll("tbody tr[data-search]"));
-  const sections = Array.from(document.querySelectorAll(".recipe-group-section, .misc-group-section, .family-container, .set-block"));
+  const sections = Array.from(document.querySelectorAll(".recipe-group, .recipe-group-section, .misc-group-section, .family-container, .set-block"));
+  const filterButtons = Array.from(document.querySelectorAll("[data-recipe-filter]"));
+  let activeRecipeFilter = "all";
+  let emptyMessage = null;
   
   if (!searchInput || document.querySelector("[data-item-index-url]") || document.querySelector("[data-base-filters]")) {
     return;
@@ -228,34 +233,82 @@ function wireStaticSearch() {
     }
   }
 
+  if (pageSearch) {
+    emptyMessage = document.createElement("p");
+    emptyMessage.className = "search-empty";
+    emptyMessage.hidden = true;
+    emptyMessage.textContent = "No matching entries.";
+    pageSearch.insertAdjacentElement("afterend", emptyMessage);
+  }
+
+  function filterTags(element) {
+    return normalizeText(element && element.dataset ? element.dataset.filterTags : "")
+      .split("|")
+      .map((tag) => tag.trim())
+      .filter(Boolean);
+  }
+
+  function matchesFilter(element) {
+    return activeRecipeFilter === "all" || filterTags(element).includes(activeRecipeFilter);
+  }
+
+  function matchesSearch(element, query) {
+    return !query || normalizeText(element && element.dataset ? element.dataset.search : "").includes(query);
+  }
+
+  function ownerMatches(row, matcher) {
+    const card = row.closest(".corruption-summary-card");
+    const section = row.closest(".recipe-group, .recipe-group-section, .misc-group-section, .family-container, .set-block");
+    return matcher(row) || matcher(card) || matcher(section);
+  }
+
   function applySearch() {
     const query = normalizeText(searchInput.value);
-    
-    // Hide/show individual cards
+
+    // Hide/show table rows
+    tableRows.forEach((row) => {
+      const match = ownerMatches(row, matchesFilter) && ownerMatches(row, (element) => matchesSearch(element, query));
+      row.hidden = !match;
+    });
+
+    // Hide/show individual cards. Cards with matching visible rows stay visible.
     cards.forEach((card) => {
-      const match = !query || normalizeText(card.dataset.search).includes(query);
+      const section = card.closest(".recipe-group, .recipe-group-section, .misc-group-section, .family-container, .set-block");
+      const filterMatch = matchesFilter(card) || matchesFilter(section);
+      const cardMatch = filterMatch && (matchesSearch(card, query) || matchesSearch(section, query));
+      const hasVisibleRows = Array.from(card.querySelectorAll("tbody tr[data-search]"))
+        .some((row) => !row.hidden);
+      const match = cardMatch || hasVisibleRows;
       card.hidden = !match;
       // Also handle display property if hidden attribute isn't enough for the grid
       card.style.display = match ? "" : "none";
     });
 
-    // Hide/show table rows
-    tableRows.forEach((row) => {
-      const match = !query || normalizeText(row.dataset.search).includes(query);
-      row.hidden = !match;
-    });
-
     // Hide/show parent sections based on children or section metadata
     sections.forEach((section) => {
-      const sectionMatch = !query || normalizeText(section.dataset.search).includes(query);
-      const hasVisibleChildren = Array.from(section.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece, tbody tr[data-search]"))
+      const sectionMatch = matchesFilter(section) && matchesSearch(section, query);
+      const hasVisibleChildren = Array.from(section.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece, .corruption-summary-card, tbody tr[data-search]"))
         .some(child => !child.hidden && child.style.display !== "none");
       
       const shouldShow = sectionMatch || hasVisibleChildren;
       section.hidden = !shouldShow;
       section.style.display = shouldShow ? "" : "none";
     });
+
+    if (emptyMessage) {
+      const topLevel = sections.length ? sections : (cards.length ? cards : tableRows);
+      const hasResults = topLevel.some((element) => !element.hidden && element.style.display !== "none");
+      emptyMessage.hidden = (!query && activeRecipeFilter === "all") || hasResults;
+    }
   }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeRecipeFilter = normalizeText(button.dataset.recipeFilter || "all") || "all";
+      filterButtons.forEach((candidate) => candidate.classList.toggle("is-active", candidate === button));
+      applySearch();
+    });
+  });
 
   searchInput.addEventListener("input", applySearch);
   applySearch();
@@ -296,6 +349,10 @@ function wireMastSearch() {
       return;
     }
     const query = mastSearch.value.trim();
+    if (query && document.querySelector(".guide-card")) {
+      event.preventDefault();
+      return;
+    }
     if (query) {
       window.location.href = `${document.body.dataset.siteRoot || ""}items/?q=${encodeURIComponent(query)}`;
     }

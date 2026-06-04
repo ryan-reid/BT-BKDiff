@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}All Cube Recipes | {{ new_label }} Wiki{% endblock %}
+{% block nav_recipes %} class="is-active"{% endblock %}
+{% block content %}
+<section class="hero">
+  <span class="hero-eyebrow"><a href="../">Cube Recipes</a></span>
+  <h1>All Recipes</h1>
+  <p class="hero-copy">Every player-facing cube recipe in one searchable list.</p>
+</section>
+
+<input id="page-search" class="search-input" type="search" placeholder="Search all recipes, ingredients, outcomes, or systems..." style="margin-bottom:20px" />
+<div class="recipe-filter-bar" aria-label="All recipe filters">
+  <button class="filter-button is-active" type="button" data-recipe-filter="all">All</button>
+  {% for filter in page.filters %}
+  <button class="filter-button" type="button" data-recipe-filter="{{ filter.value }}">{{ filter.label }} <span class="filter-count">{{ filter.count }}</span></button>
+  {% endfor %}
+</div>
+
+<section class="recipe-group" data-search="All recipes">
+  <div class="recipe-group-head">
+    <div>
+      <h2>Searchable Recipes</h2>
+      <p class="recipe-group-desc">Flattened from the player recipe pages. Use Raw Cube Rows only when you need exact cubemain row detail.</p>
+    </div>
+    <span class="recipe-group-count">{{ page.rows|length }} entries</span>
+  </div>
+  <div class="table-wrap">
+    <table class="recipe-table">
+      <thead><tr><th>System</th><th>Category</th><th>Recipe</th><th>Inputs</th><th>Outputs</th><th>Notes</th></tr></thead>
+      <tbody>
+        {% for row in page.rows %}
+        <tr data-filter-tags="{{ row.filter_tags }}" data-search="{{ row.search_text }}">
+          <td data-label="System"><strong>{{ row.system }}</strong></td>
+          <td data-label="Category">{{ row.category }}</td>
+          <td data-label="Recipe"><strong>{{ row.recipe }}</strong></td>
+          <td data-label="Inputs"><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td data-label="Outputs"><ul class="result-list">{% for item in row.results %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td data-label="Notes"><ul class="result-list">{% for item in row.details %}<li>{{ item }}</li>{% endfor %}</ul></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

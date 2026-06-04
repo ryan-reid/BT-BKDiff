@@ -9,48 +9,36 @@
 </section>
 
 <input id="page-search" class="search-input" type="search" placeholder="Search craft family, item type, ingredients, or properties..." style="margin-bottom:20px" />
+<div class="recipe-filter-bar" aria-label="Crafting filters">
+  <button class="filter-button is-active" type="button" data-recipe-filter="all">All</button>
+  {% for filter in page.filters %}
+  <button class="filter-button" type="button" data-recipe-filter="{{ filter.value }}">{{ filter.label }} <span class="filter-count">{{ filter.count }}</span></button>
+  {% endfor %}
+</div>
 <div class="recipe-groups">
   {% for section in page.sections %}
-  <section id="{{ section.id }}" class="recipe-group" data-search="{{ section.title }} {{ section.summary }}">
+  <section id="{{ section.id }}" class="recipe-group" data-filter-tags="{{ section.filter_tags }}" data-search="{{ section.title }} {{ section.summary }}">
     <div class="recipe-group-head">
       <div>
         <h2>{{ section.title }}</h2>
         <p class="recipe-group-desc">{{ section.summary }}</p>
       </div>
-      <span class="recipe-group-count">{{ section.rows|length }} rows</span>
+      <span class="recipe-group-count">{{ section.rows|length }} item types</span>
     </div>
     <div class="table-wrap">
       <table class="recipe-table recipe-matrix">
-        <thead><tr><th>Item type</th><th>Variants</th><th>Ingredients</th><th>Fixed properties</th><th>Result</th></tr></thead>
+        <thead><tr><th>Item type</th><th>Variant</th><th>Ingredients</th><th>Fixed properties</th><th>Result</th></tr></thead>
         <tbody>
           {% for row in section.rows %}
-          <tr data-search="{{ row.search_text }}">
-            <td><strong>{{ row.item_type }}</strong></td>
-            <td>
-              {% for variant in row.variants %}
-              <div class="recipe-variant">{{ variant.variant }}</div>
-              {% endfor %}
-            </td>
-            <td>
-              {% for variant in row.variants %}
-              <div class="recipe-variant">
-                <ul class="input-list">{% for item in variant.ingredients %}<li>{{ item }}</li>{% endfor %}</ul>
-              </div>
-              {% endfor %}
-            </td>
-            <td>
-              {% for variant in row.variants %}
-              <div class="recipe-variant">
-                <ul class="result-list">{% for prop in variant.fixed_properties %}<li>{{ prop }}</li>{% endfor %}</ul>
-              </div>
-              {% endfor %}
-            </td>
-            <td>
-              {% for variant in row.variants %}
-              <div class="recipe-variant">{{ variant.output }}</div>
-              {% endfor %}
-            </td>
+          {% for variant in row.variants %}
+          <tr data-filter-tags="{{ section.filter_tags }}" data-search="{{ row.search_text }} {{ variant.variant }} {{ variant.ingredients|join(' ') }} {{ variant.fixed_properties|join(' ') }} {{ variant.output }}">
+            <td data-label="Item type"><strong>{{ row.item_type }}</strong></td>
+            <td data-label="Variant">{{ variant.variant }}</td>
+            <td data-label="Ingredients"><ul class="input-list">{% for item in variant.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
+            <td data-label="Fixed properties"><ul class="result-list">{% for prop in variant.fixed_properties %}<li>{{ prop }}</li>{% endfor %}</ul></td>
+            <td data-label="Result">{{ variant.output }}</td>
           </tr>
+          {% endfor %}
           {% endfor %}
         </tbody>
       </table>

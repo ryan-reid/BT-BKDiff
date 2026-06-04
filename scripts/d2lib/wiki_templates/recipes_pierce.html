@@ -9,6 +9,12 @@
 </section>
 
 <input id="page-search" class="search-input" type="search" placeholder="Search pierce family, item type, ingredient, or property..." style="margin-bottom:20px" />
+<div class="recipe-filter-bar" aria-label="Pierce filters">
+  <button class="filter-button is-active" type="button" data-recipe-filter="all">All</button>
+  {% for filter in page.filters %}
+  <button class="filter-button" type="button" data-recipe-filter="{{ filter.value }}">{{ filter.label }} <span class="filter-count">{{ filter.count }}</span></button>
+  {% endfor %}
+</div>
 <section class="recipe-group">
   <div class="recipe-group-head">
     <div>
@@ -22,12 +28,12 @@
       <thead><tr><th>Family</th><th>Ingredients</th><th>Eligible item types</th><th>Result</th><th>Property</th></tr></thead>
       <tbody>
         {% for row in page.families %}
-        <tr data-search="{{ row.search_text }}">
-          <td><strong>{{ row.family }}</strong></td>
-          <td><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
-          <td>{{ row.item_types|join(", ") }}</td>
-          <td>{{ row.result }}</td>
-          <td>{{ row.property }}</td>
+        <tr data-filter-tags="{{ row.filter_tags }}" data-search="{{ row.search_text }}">
+          <td data-label="Family"><strong>{{ row.family }}</strong></td>
+          <td data-label="Ingredients"><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td data-label="Eligible types">{{ row.item_types|join(", ") }}</td>
+          <td data-label="Result">{{ row.result }}</td>
+          <td data-label="Property">{{ row.property }}</td>
         </tr>
         {% endfor %}
       </tbody>

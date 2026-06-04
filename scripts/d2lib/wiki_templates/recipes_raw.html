@@ -23,10 +23,10 @@
       <tbody>
         {% for row in page.rows %}
         <tr data-search="{{ row.search_text }}">
-          <td class="num">{{ row.row }}</td>
-          <td><strong>{{ row.description }}</strong></td>
-          <td><ul class="input-list">{% for item in row.inputs %}<li>{{ item }}</li>{% endfor %}</ul></td>
-          <td><ul class="result-list">{% for item in row.outputs %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td class="num" data-label="Row">{{ row.row }}</td>
+          <td data-label="Description"><strong>{{ row.description }}</strong></td>
+          <td data-label="Inputs"><ul class="input-list">{% for item in row.inputs %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td data-label="Outputs"><ul class="result-list">{% for item in row.outputs %}<li>{{ item }}</li>{% endfor %}</ul></td>
         </tr>
         {% endfor %}
       </tbody>

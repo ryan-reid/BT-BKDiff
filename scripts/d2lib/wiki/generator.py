@@ -246,6 +246,7 @@ class WikiGenerator:
         recipe_pages = RecipePresentationBuilder(service, raw_recipes, groups).build()
         self.writer.write_text("data/recipes-overview.json", json.dumps(recipe_pages["overview"], indent=2))
         self.writer.write_text("data/recipes-crafting.json", json.dumps(recipe_pages["crafting"], indent=2))
+        self.writer.write_text("data/recipes-all.json", json.dumps(recipe_pages["all"], indent=2))
         self.writer.write_text("data/recipes-raw.json", json.dumps(recipe_pages["raw"], indent=2))
 
         self._write_page(
@@ -298,6 +299,14 @@ class WikiGenerator:
             category="index",
             source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "cubemain.txt")],
             page=recipe_pages["materials"],
+        )
+        self._write_page(
+            title=f"All Cube Recipes | {self.new_label} Wiki",
+            output_path=WikiRoutes.recipes_all_output_path(),
+            template_name="recipes_all.html",
+            category="index",
+            source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "cubemain.txt")],
+            page=recipe_pages["all"],
         )
         self._write_page(
             title=f"Raw Cube Recipes | {self.new_label} Wiki",

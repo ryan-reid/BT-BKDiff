@@ -9,9 +9,15 @@
 </section>
 
 <input id="page-search" class="search-input" type="search" placeholder="Search runes, gems, keys, sigils, or materials..." style="margin-bottom:20px" />
+<div class="recipe-filter-bar" aria-label="Material filters">
+  <button class="filter-button is-active" type="button" data-recipe-filter="all">All</button>
+  {% for filter in page.filters %}
+  <button class="filter-button" type="button" data-recipe-filter="{{ filter.value }}">{{ filter.label }} <span class="filter-count">{{ filter.count }}</span></button>
+  {% endfor %}
+</div>
 <div class="recipe-groups">
   {% for section in page.sections %}
-  <section id="{{ section.id }}" class="recipe-group" data-search="{{ section.title }}">
+  <section id="{{ section.id }}" class="recipe-group" data-filter-tags="{{ section.filter_tags }}" data-search="{{ section.title }}">
     <div class="recipe-group-head">
       <div><h2>{{ section.title }}</h2></div>
       <span class="recipe-group-count">{{ section.rows|length }} rows</span>
@@ -21,10 +27,10 @@
         <thead><tr><th>Recipe</th><th>Ingredients</th><th>Result</th></tr></thead>
         <tbody>
           {% for row in section.rows %}
-          <tr data-search="{{ row.search_text }}">
-            <td><strong>{{ row.description }}</strong></td>
-            <td><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
-            <td><ul class="result-list">{% for item in row.results %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <tr data-filter-tags="{{ section.filter_tags }}" data-search="{{ row.search_text }}">
+            <td data-label="Recipe"><strong>{{ row.description }}</strong></td>
+            <td data-label="Ingredients"><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
+            <td data-label="Result"><ul class="result-list">{% for item in row.results %}<li>{{ item }}</li>{% endfor %}</ul></td>
           </tr>
           {% endfor %}
         </tbody>

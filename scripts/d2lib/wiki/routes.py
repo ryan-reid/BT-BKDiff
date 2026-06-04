@@ -101,6 +101,10 @@ class WikiRoutes:
         return "recipes/materials/index.html"
 
     @staticmethod
+    def recipes_all_output_path() -> str:
+        return "recipes/all/index.html"
+
+    @staticmethod
     def recipes_raw_output_path() -> str:
         return "recipes/raw/index.html"
 

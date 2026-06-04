@@ -1021,6 +1021,13 @@ class RecipePresentationBuilder:
             "action": "Convert materials",
         },
         {
+            "id": "all",
+            "title": "All Recipes",
+            "href": "all/",
+            "summary": "Every player-facing cube recipe in one searchable table.",
+            "action": "Search everything",
+        },
+        {
             "id": "raw",
             "title": "Technical Raw Rows",
             "href": "raw/",
@@ -1057,8 +1064,9 @@ class RecipePresentationBuilder:
         pierce = self.pierce_page()
         reforge = self.reforge_upgrade_page()
         materials = self.materials_page()
+        all_recipes = self.all_page(crafting, corruptions, pierce, reforge, materials)
         raw = self.raw_page()
-        overview = self.overview_page(crafting, corruptions, pierce, reforge, materials, raw)
+        overview = self.overview_page(crafting, corruptions, pierce, reforge, materials, all_recipes, raw)
         return {
             "overview": overview,
             "crafting": crafting,
@@ -1066,15 +1074,16 @@ class RecipePresentationBuilder:
             "pierce": pierce,
             "reforge_upgrade": reforge,
             "materials": materials,
+            "all": all_recipes,
             "raw": raw,
         }
 
-    def overview_page(self, crafting, corruptions, pierce, reforge, materials, raw) -> Dict[str, Any]:
+    def overview_page(self, crafting, corruptions, pierce, reforge, materials, all_recipes, raw) -> Dict[str, Any]:
         counts = {
             "raw_enabled_rows": len([recipe for recipe in self.raw_recipes if recipe.get("status") != "removed"]),
             "display_groups": len(self.groups),
             "craft_rows": sum(len(section["rows"]) for section in crafting["sections"]),
-            "corruption_cards": len(corruptions["standard_summaries"]) + len(corruptions["divine_summaries"]),
+            "corruption_cards": len(corruptions["combined_summaries"]) + len(corruptions["standard_summaries"]) + len(corruptions["divine_summaries"]),
             "raw_rows": len(raw["rows"]),
         }
         cards = []
@@ -1084,6 +1093,7 @@ class RecipePresentationBuilder:
             "pierce": len(pierce["families"]),
             "reforge-upgrade": len(reforge["sections"]),
             "materials": sum(len(section["rows"]) for section in materials["sections"]),
+            "all": len(all_recipes["rows"]),
             "raw": counts["raw_rows"],
         }
         for card in self.SYSTEM_PAGES:
@@ -1115,6 +1125,7 @@ class RecipePresentationBuilder:
                     "id": slugify(f"{source} {family}"),
                     "source": source,
                     "family": family,
+                    "filter_tags": slugify(family),
                     "title": f"{source} {family}",
                     "summary": self._craft_summary(source, family),
                     "rows": [],
@@ -1159,18 +1170,352 @@ class RecipePresentationBuilder:
         sections = list(sections_by_key.values())
         for section in sections:
             section["rows"] = sorted(section["rows"], key=lambda row: row["item_type"])
-        return {"sections": sorted(sections, key=lambda section: (section["source"], section["family"]))}
+        filters = [
+            {
+                "value": slugify(family),
+                "label": family,
+                "count": sum(len(section["rows"]) for section in sections if section["family"] == family),
+            }
+            for family in sorted({section["family"] for section in sections})
+        ]
+        return {
+            "sections": sorted(sections, key=lambda section: (section["source"], section["family"])),
+            "filters": filters,
+        }
 
     def corruptions_page(self) -> Dict[str, Any]:
         corruption_group = self.group_by_id.get("corruption", {"recipes": [], "corruption_summaries": []})
         summaries = list(corruption_group.get("corruption_summaries", []))
         divine = [summary for summary in summaries if any("Divine Standard" in inp for inp in summary.get("inputs", []))]
         standard = [summary for summary in summaries if summary not in divine]
+        for summary in standard + divine:
+            summary["filter_tags"] = "|".join(self._corruption_filter_tags(summary))
+        standard = self._group_corruption_equivalent_summaries(standard)
+        divine = self._group_corruption_equivalent_summaries(divine)
+        combined, standard, divine = self._group_corruption_material_equivalent_summaries(standard, divine)
+        combined = self._group_corruption_target_equivalent_summaries(combined)
+        standard = self._group_corruption_target_equivalent_summaries(standard)
+        divine = self._group_corruption_target_equivalent_summaries(divine)
+        filter_defs = [
+            ("charms", "Charms"),
+            ("weapons", "Weapons"),
+            ("wearables", "Armor & Wearables"),
+            ("shields", "Shields"),
+            ("jewelry", "Jewelry"),
+            ("any-item", "Any Item"),
+            ("named-uniques", "Named Uniques"),
+        ]
+        all_summaries = combined + standard + divine
         return {
+            "combined_summaries": combined,
             "standard_summaries": standard,
             "divine_summaries": divine,
             "raw_count": len(corruption_group.get("recipes", [])),
+            "filters": [
+                {
+                    "value": value,
+                    "label": label,
+                    "count": len([summary for summary in all_summaries if value in summary.get("filter_tags", "").split("|")]),
+                }
+                for value, label in filter_defs
+                if any(value in summary.get("filter_tags", "").split("|") for summary in all_summaries)
+            ],
         }
+
+    @staticmethod
+    def _group_corruption_target_equivalent_summaries(summaries: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        grouped: Dict[Tuple[Any, ...], List[Dict[str, Any]]] = {}
+        passthrough: List[Dict[str, Any]] = []
+
+        for summary in summaries:
+            inputs = summary.get("inputs", [])
+            if len(inputs) < 2:
+                passthrough.append(summary)
+                continue
+            family = RecipePresentationBuilder._corruption_target_family(inputs[0])
+            if not family:
+                passthrough.append(summary)
+                continue
+            outcomes = tuple(
+                (
+                    outcome.get("label", ""),
+                    outcome.get("detail", ""),
+                    outcome.get("chance", ""),
+                    outcome.get("range", ""),
+                )
+                for outcome in summary.get("outcomes", [])
+            )
+            key = (family, inputs[-1], outcomes)
+            grouped.setdefault(key, []).append(summary)
+
+        result = passthrough[:]
+        for (_family, material, _outcomes), rows in grouped.items():
+            if len(rows) == 1:
+                result.append(rows[0])
+                continue
+
+            first = dict(rows[0])
+            target = RecipePresentationBuilder._combined_corruption_target_label([row["inputs"][0] for row in rows])
+            filter_tags = RecipePresentationBuilder._combined_filter_tags(rows)
+            first["inputs"] = [target, material]
+            first["title"] = " + ".join(first["inputs"])
+            first["id"] = slugify(" ".join(first["inputs"]))
+            first["filter_tags"] = filter_tags
+            first["search_text"] = " ".join(
+                [first["title"]]
+                + [row.get("title", "") for row in rows]
+                + [row.get("search_text", "") for row in rows]
+            )
+            result.append(first)
+
+        return sorted(result, key=lambda summary: (summary["material"], summary["title"]))
+
+    @staticmethod
+    def _corruption_target_family(target: str) -> str:
+        label, _rarities = RecipePresentationBuilder._corruption_target_label_and_rarities(target)
+        normalized = label.lower()
+        if normalized in {"armor", "helm", "helmet", "boots", "gloves"}:
+            return "wearable-armor"
+        if normalized in {"2handed melee weapon", "bow", "crossbow"}:
+            return "weapon-subtypes"
+        if normalized in {"amulet", "ring"}:
+            return "jewelry"
+        return ""
+
+    @staticmethod
+    def _combined_corruption_target_label(targets: List[str]) -> str:
+        parsed = [RecipePresentationBuilder._corruption_target_label_and_rarities(target) for target in targets]
+        order = {
+            "armor": 10,
+            "helm": 20,
+            "helmet": 21,
+            "boots": 30,
+            "gloves": 40,
+            "2handed melee weapon": 50,
+            "bow": 60,
+            "crossbow": 70,
+            "amulet": 80,
+            "ring": 90,
+        }
+        unique_parsed = []
+        seen = set()
+        for label, rarities in parsed:
+            key = (label, rarities)
+            if key not in seen:
+                seen.add(key)
+                unique_parsed.append((label, rarities))
+        unique_parsed = sorted(unique_parsed, key=lambda item: (order.get(item[0].lower(), 999), item[0], item[1]))
+
+        rarity_sets = {rarities for _label, rarities in unique_parsed}
+        if len(rarity_sets) == 1:
+            rarities = next(iter(rarity_sets))
+            labels = ", ".join(label for label, _rarities in unique_parsed)
+            return f"{labels} ({rarities})" if rarities else labels
+
+        return " or ".join(
+            f"{label} ({rarities})" if rarities else label
+            for label, rarities in unique_parsed
+        )
+
+    @staticmethod
+    def _corruption_target_label_and_rarities(target: str) -> Tuple[str, str]:
+        match = re.match(r"^(?P<label>.+?) \((?P<rarities>[^)]+)\)$", target.strip())
+        if not match:
+            return target, ""
+        return match.group("label"), match.group("rarities")
+
+    @staticmethod
+    def _combined_filter_tags(rows: List[Dict[str, Any]]) -> str:
+        tags: List[str] = []
+        for row in rows:
+            for tag in row.get("filter_tags", "").split("|"):
+                if tag and tag not in tags:
+                    tags.append(tag)
+        return "|".join(tags)
+
+    @staticmethod
+    def _group_corruption_material_equivalent_summaries(standard: List[Dict[str, Any]], divine: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]]]:
+        def signature(summary: Dict[str, Any]) -> Tuple[Any, ...]:
+            inputs = summary.get("inputs", [])
+            target = inputs[0] if inputs else summary.get("title", "")
+            outcomes = tuple(
+                (
+                    outcome.get("label", ""),
+                    outcome.get("detail", ""),
+                    outcome.get("chance", ""),
+                    outcome.get("range", ""),
+                )
+                for outcome in summary.get("outcomes", [])
+            )
+            return (target, summary.get("filter_tags", ""), outcomes)
+
+        divine_by_signature = {signature(summary): summary for summary in divine}
+        matched_divine_signatures = set()
+        combined: List[Dict[str, Any]] = []
+        remaining_standard: List[Dict[str, Any]] = []
+
+        for standard_summary in standard:
+            sig = signature(standard_summary)
+            divine_summary = divine_by_signature.get(sig)
+            if not divine_summary:
+                remaining_standard.append(standard_summary)
+                continue
+
+            matched_divine_signatures.add(sig)
+            first = dict(standard_summary)
+            first["inputs"] = [standard_summary["inputs"][0], "Standard of Heroes or The Divine Standard"]
+            first["title"] = " + ".join(first["inputs"])
+            first["id"] = slugify(" ".join(first["inputs"]))
+            first["material"] = "Standard of Heroes or The Divine Standard"
+            first["search_text"] = " ".join(
+                [
+                    first["title"],
+                    standard_summary.get("title", ""),
+                    divine_summary.get("title", ""),
+                    standard_summary.get("search_text", ""),
+                    divine_summary.get("search_text", ""),
+                ]
+            )
+            combined.append(first)
+
+        remaining_divine = [
+            summary for summary in divine
+            if signature(summary) not in matched_divine_signatures
+        ]
+
+        return (
+            sorted(combined, key=lambda summary: summary["title"]),
+            sorted(remaining_standard, key=lambda summary: (summary["material"], summary["title"])),
+            sorted(remaining_divine, key=lambda summary: (summary["material"], summary["title"])),
+        )
+
+    @staticmethod
+    def _group_corruption_equivalent_summaries(summaries: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        grouped: Dict[Tuple[Any, ...], List[Dict[str, Any]]] = {}
+        passthrough: List[Dict[str, Any]] = []
+
+        for summary in summaries:
+            inputs = summary.get("inputs", [])
+            if len(inputs) < 2:
+                passthrough.append(summary)
+                continue
+            target_label, rarity = RecipePresentationBuilder._corruption_target_parts(inputs[0])
+            if not rarity:
+                passthrough.append(summary)
+                continue
+            signature = tuple(
+                (
+                    outcome.get("label", ""),
+                    outcome.get("detail", ""),
+                    outcome.get("chance", ""),
+                    outcome.get("range", ""),
+                )
+                for outcome in summary.get("outcomes", [])
+            )
+            key = (inputs[-1], target_label, summary.get("filter_tags", ""), signature)
+            grouped.setdefault(key, []).append(summary)
+
+        result = passthrough[:]
+        rarity_order = {"Crafted": 0, "Magic": 1, "Rare": 2, "Set": 3, "Unique": 4}
+        for (_material, target_label, _filter_tags, _signature), rows in grouped.items():
+            if len(rows) == 1:
+                result.append(rows[0])
+                continue
+
+            rarities = []
+            for row in rows:
+                _, rarity = RecipePresentationBuilder._corruption_target_parts(row["inputs"][0])
+                if rarity and rarity not in rarities:
+                    rarities.append(rarity)
+            rarities = sorted(rarities, key=lambda rarity: (rarity_order.get(rarity, 99), rarity))
+            first = dict(rows[0])
+            first["inputs"] = [f"{target_label} ({', '.join(rarities)})", rows[0]["inputs"][-1]]
+            first["title"] = " + ".join(first["inputs"])
+            first["id"] = slugify(" ".join(first["inputs"]))
+            first["search_text"] = " ".join(
+                [first["title"]]
+                + [row.get("title", "") for row in rows]
+                + [row.get("search_text", "") for row in rows]
+            )
+            result.append(first)
+
+        return sorted(result, key=lambda summary: (summary["material"], summary["title"]))
+
+    @staticmethod
+    def _corruption_target_parts(target: str) -> Tuple[str, str]:
+        match = re.match(r"^(?P<label>.+?) \((?P<rarity>Crafted|Magic|Rare|Set|Unique)\)$", target.strip())
+        if not match:
+            return target, ""
+        return match.group("label"), match.group("rarity")
+
+    @staticmethod
+    def _corruption_filter_tags(summary: Dict[str, Any]) -> List[str]:
+        inputs = summary.get("inputs", [])
+        target = inputs[0] if inputs else summary.get("title", "")
+        normalized = target.lower()
+        tags: List[str] = []
+
+        def add(tag: str) -> None:
+            if tag not in tags:
+                tags.append(tag)
+
+        specific_tags = {
+            "annihilus": "annihilus",
+            "hellfire torch": "hellfire-torch",
+            "gheed's fortune": "gheeds-fortune",
+        }
+        for marker, tag in specific_tags.items():
+            if marker in normalized:
+                add(tag)
+
+        if any(marker in normalized for marker in ("annihilus", "hellfire torch", "gheed's fortune")):
+            add("charms")
+        if "any item" in normalized:
+            add("any-item")
+        if "merc equip" in normalized:
+            add("merc-equip")
+            add("wearables")
+        if any(marker in normalized for marker in ("weapon", "2handed", "bow", "crossbow")):
+            add("weapons")
+        if any(marker in normalized for marker in ("armor", "helm", "helmet")):
+            add("armor")
+            add("wearables")
+        if "shield" in normalized:
+            add("shields")
+        if "amulet" in normalized or "ring" in normalized:
+            add("jewelry")
+        if "belt" in normalized:
+            add("belts")
+            add("wearables")
+        if "boots" in normalized:
+            add("boots")
+            add("wearables")
+        if "gloves" in normalized:
+            add("gloves")
+            add("wearables")
+
+        generic_markers = (
+            "annihilus",
+            "hellfire torch",
+            "gheed's fortune",
+            "2handed",
+            "amulet",
+            "any item",
+            "any shield",
+            "armor",
+            "belt",
+            "boots",
+            "bow",
+            "crossbow",
+            "gloves",
+            "merc equip",
+            "ring",
+            "weapon",
+        )
+        if not any(marker in normalized for marker in generic_markers):
+            add("named-uniques")
+
+        return tags or ["other"]
 
     def pierce_page(self) -> Dict[str, Any]:
         pierce_recipes = [
@@ -1194,6 +1539,7 @@ class RecipePresentationBuilder:
                 {
                     "id": slugify(family or prop or "pierce"),
                     "family": family or "Pierce",
+                    "filter_tags": slugify(family or "Pierce"),
                     "property": self._property_text(prop, raw),
                     "ingredients": [self.analyzer.resolve_token(token) for token in ingredient_key],
                     "item_types": item_types,
@@ -1201,7 +1547,15 @@ class RecipePresentationBuilder:
                     "search_text": " ".join([family, prop, " ".join(item_types), " ".join(first["inputs"]), " ".join(first["outputs"])]),
                 }
             )
-        return {"families": sorted(families, key=lambda row: (row["family"], row["property"]))}
+        filters = [
+            {
+                "value": slugify(family),
+                "label": family,
+                "count": len([row for row in families if row["family"] == family]),
+            }
+            for family in sorted({row["family"] for row in families})
+        ]
+        return {"families": sorted(families, key=lambda row: (row["family"], row["property"])), "filters": filters}
 
     def reforge_upgrade_page(self) -> Dict[str, Any]:
         section_defs = [
@@ -1222,12 +1576,15 @@ class RecipePresentationBuilder:
                         continue
                     rows.append(self._display_recipe_row(recipe))
             if rows:
-                sections.append({"id": section_id, "title": title, "rows": rows})
+                sections.append({"id": section_id, "title": title, "filter_tags": section_id, "rows": rows})
 
         augment_rows = self._augment_rows()
         if augment_rows:
-            sections.append({"id": "augments", "title": "Augments", "rows": augment_rows})
-        return {"sections": sections}
+            sections.append({"id": "augments", "title": "Augments", "filter_tags": "augments", "rows": augment_rows})
+        return {
+            "sections": sections,
+            "filters": [{"value": section["id"], "label": section["title"], "count": len(section["rows"])} for section in sections],
+        }
 
     def materials_page(self) -> Dict[str, Any]:
         section_map = [
@@ -1242,8 +1599,109 @@ class RecipePresentationBuilder:
                 for recipe in self.group_by_id.get(group_id, {}).get("recipes", []):
                     rows.append(self._display_recipe_row(recipe))
             if rows:
-                sections.append({"id": section_id, "title": title, "rows": rows})
-        return {"sections": sections}
+                sections.append({"id": section_id, "title": title, "filter_tags": section_id, "rows": rows})
+        return {
+            "sections": sections,
+            "filters": [{"value": section["id"], "label": section["title"], "count": len(section["rows"])} for section in sections],
+        }
+
+    def all_page(self, crafting, corruptions, pierce, reforge, materials) -> Dict[str, Any]:
+        rows: List[Dict[str, Any]] = []
+
+        def add_row(system: str, filter_tag: str, category: str, recipe: str, ingredients: List[str], results: List[str], details: List[str], search_parts: List[str]) -> None:
+            rows.append(
+                {
+                    "system": system,
+                    "filter_tags": filter_tag,
+                    "category": category,
+                    "recipe": recipe,
+                    "ingredients": ingredients,
+                    "results": results,
+                    "details": details,
+                    "search_text": " ".join(
+                        [system, category, recipe]
+                        + ingredients
+                        + results
+                        + details
+                        + search_parts
+                    ),
+                }
+            )
+
+        for section in crafting["sections"]:
+            for row in section["rows"]:
+                for variant in row["variants"]:
+                    variant_label = variant["variant"]
+                    recipe = row["item_type"]
+                    if variant_label and variant_label != "standard":
+                        recipe = f"{recipe} - {variant_label}"
+                    add_row(
+                        "Crafting",
+                        "crafting",
+                        section["title"],
+                        recipe,
+                        variant["ingredients"],
+                        [variant["output"]],
+                        variant["fixed_properties"],
+                        [row.get("search_text", ""), variant_label],
+                    )
+
+        corruption_sections = [
+            ("either-standard-corruptions", "Corruptions", "Standard of Heroes or The Divine Standard", corruptions["combined_summaries"]),
+            ("standard-corruptions", "Corruptions", "Standard of Heroes", corruptions["standard_summaries"]),
+            ("divine-corruptions", "Corruptions", "The Divine Standard", corruptions["divine_summaries"]),
+        ]
+        for filter_tag, system, category, summaries in corruption_sections:
+            for summary in summaries:
+                details = [
+                    " ".join([outcome.get("chance", ""), outcome.get("label", ""), outcome.get("detail", ""), outcome.get("range", "")]).strip()
+                    for outcome in summary.get("outcomes", [])
+                ]
+                add_row(
+                    system,
+                    "corruptions",
+                    category,
+                    summary["title"],
+                    summary.get("inputs", []),
+                    [f"{len(summary.get('outcomes', []))} possible outcomes"],
+                    details,
+                    [summary.get("search_text", ""), filter_tag],
+                )
+
+        for row in pierce["families"]:
+            add_row(
+                "Pierce",
+                "pierce",
+                row["family"],
+                row["property"],
+                row["ingredients"],
+                [row["result"]],
+                [", ".join(row["item_types"])],
+                [row.get("search_text", "")],
+            )
+
+        for page, system, filter_tag in ((reforge, "Reforge and Upgrade", "reforge-upgrade"), (materials, "Runes and Materials", "materials")):
+            for section in page["sections"]:
+                for row in section["rows"]:
+                    add_row(
+                        system,
+                        filter_tag,
+                        section["title"],
+                        row["description"],
+                        row["ingredients"],
+                        row["results"],
+                        [],
+                        [row.get("search_text", "")],
+                    )
+
+        filters = [
+            {"value": "crafting", "label": "Crafting", "count": len([row for row in rows if row["filter_tags"] == "crafting"])},
+            {"value": "corruptions", "label": "Corruptions", "count": len([row for row in rows if row["filter_tags"] == "corruptions"])},
+            {"value": "pierce", "label": "Pierce", "count": len([row for row in rows if row["filter_tags"] == "pierce"])},
+            {"value": "reforge-upgrade", "label": "Reforge and Upgrade", "count": len([row for row in rows if row["filter_tags"] == "reforge-upgrade"])},
+            {"value": "materials", "label": "Runes and Materials", "count": len([row for row in rows if row["filter_tags"] == "materials"])},
+        ]
+        return {"rows": rows, "filters": filters}
 
     def raw_page(self) -> Dict[str, Any]:
         rows = []

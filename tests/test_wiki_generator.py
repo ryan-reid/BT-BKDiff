@@ -10,6 +10,7 @@ SCRIPT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
+from d2lib.services.recipes import RecipePresentationBuilder
 from d2lib.wiki import AreaFarmingDataBuilder, ItemIconExporter, WikiGenerator, WikiOutputWriter, WikiRoutes
 
 
@@ -29,6 +30,119 @@ class TestWikiGenerator(unittest.TestCase):
 
     def tearDown(self):
         self.temp_dir.cleanup()
+
+    def test_corruption_summaries_group_equivalent_rarities(self):
+        outcomes = [{"label": "Add 1 socket", "detail": "", "chance": "80%", "range": ""}]
+        summaries = [
+            {
+                "title": f"Gloves ({rarity}) + Standard of Heroes",
+                "inputs": [f"Gloves ({rarity})", "Standard of Heroes"],
+                "material": "Standard of Heroes",
+                "outcomes": outcomes,
+                "filter_tags": "gloves",
+                "search_text": "",
+            }
+            for rarity in ("Crafted", "Magic", "Rare")
+        ]
+        summaries.append(
+            {
+                "title": "Gloves (Unique) + Standard of Heroes",
+                "inputs": ["Gloves (Unique)", "Standard of Heroes"],
+                "material": "Standard of Heroes",
+                "outcomes": [{"label": "Brick", "detail": "", "chance": "30%", "range": ""}],
+                "filter_tags": "gloves",
+                "search_text": "",
+            }
+        )
+
+        grouped = RecipePresentationBuilder._group_corruption_equivalent_summaries(summaries)
+        titles = [summary["title"] for summary in grouped]
+
+        self.assertEqual(2, len(grouped))
+        self.assertIn("Gloves (Crafted, Magic, Rare) + Standard of Heroes", titles)
+        self.assertIn("Gloves (Unique) + Standard of Heroes", titles)
+
+    def test_corruption_summaries_group_equivalent_materials(self):
+        outcomes = [{"label": "Add 1 socket", "detail": "", "chance": "80%", "range": ""}]
+        standard = [
+            {
+                "title": "Gloves (Crafted, Magic, Rare, Set) + Standard of Heroes",
+                "inputs": ["Gloves (Crafted, Magic, Rare, Set)", "Standard of Heroes"],
+                "material": "Standard of Heroes",
+                "outcomes": outcomes,
+                "filter_tags": "gloves",
+                "search_text": "",
+            },
+            {
+                "title": "Annihilus + Hellfire Ashes",
+                "inputs": ["Annihilus", "Hellfire Ashes"],
+                "material": "Hellfire Ashes",
+                "outcomes": outcomes,
+                "filter_tags": "annihilus",
+                "search_text": "",
+            },
+        ]
+        divine = [
+            {
+                "title": "Gloves (Crafted, Magic, Rare, Set) + The Divine Standard",
+                "inputs": ["Gloves (Crafted, Magic, Rare, Set)", "The Divine Standard"],
+                "material": "The Divine Standard",
+                "outcomes": outcomes,
+                "filter_tags": "gloves",
+                "search_text": "",
+            },
+            {
+                "title": "Crown of Ages + The Divine Standard",
+                "inputs": ["Crown of Ages", "The Divine Standard"],
+                "material": "The Divine Standard",
+                "outcomes": outcomes,
+                "filter_tags": "named-uniques",
+                "search_text": "",
+            },
+        ]
+
+        combined, remaining_standard, remaining_divine = RecipePresentationBuilder._group_corruption_material_equivalent_summaries(standard, divine)
+
+        self.assertEqual(["Gloves (Crafted, Magic, Rare, Set) + Standard of Heroes or The Divine Standard"], [summary["title"] for summary in combined])
+        self.assertEqual(["Annihilus + Hellfire Ashes"], [summary["title"] for summary in remaining_standard])
+        self.assertEqual(["Crown of Ages + The Divine Standard"], [summary["title"] for summary in remaining_divine])
+
+    def test_corruption_summaries_group_equivalent_target_families(self):
+        outcomes = [{"label": "Add 1 socket", "detail": "", "chance": "80%", "range": ""}]
+        summaries = [
+            {
+                "title": f"{target} (Crafted, Magic, Rare, Set) + Standard of Heroes or The Divine Standard",
+                "inputs": [f"{target} (Crafted, Magic, Rare, Set)", "Standard of Heroes or The Divine Standard"],
+                "material": "Standard of Heroes or The Divine Standard",
+                "outcomes": outcomes,
+                "filter_tags": tag,
+                "search_text": "",
+            }
+            for target, tag in (("Armor", "armor"), ("Boots", "boots"), ("Gloves", "gloves"))
+        ]
+        summaries.append(
+            {
+                "title": "Belt (Crafted, Magic, Rare, Set) + Standard of Heroes or The Divine Standard",
+                "inputs": ["Belt (Crafted, Magic, Rare, Set)", "Standard of Heroes or The Divine Standard"],
+                "material": "Standard of Heroes or The Divine Standard",
+                "outcomes": outcomes,
+                "filter_tags": "belts",
+                "search_text": "",
+            }
+        )
+
+        grouped = RecipePresentationBuilder._group_corruption_target_equivalent_summaries(summaries)
+        by_title = {summary["title"]: summary for summary in grouped}
+
+        self.assertIn("Armor, Boots, Gloves (Crafted, Magic, Rare, Set) + Standard of Heroes or The Divine Standard", by_title)
+        self.assertEqual("armor|boots|gloves", by_title["Armor, Boots, Gloves (Crafted, Magic, Rare, Set) + Standard of Heroes or The Divine Standard"]["filter_tags"])
+        self.assertIn("Belt (Crafted, Magic, Rare, Set) + Standard of Heroes or The Divine Standard", by_title)
+
+    def test_corruption_filter_tags_include_high_level_groups(self):
+        self.assertIn("wearables", RecipePresentationBuilder._corruption_filter_tags({"inputs": ["Gloves (Unique)"]}))
+        self.assertIn("wearables", RecipePresentationBuilder._corruption_filter_tags({"inputs": ["Belt (Unique)"]}))
+        self.assertIn("charms", RecipePresentationBuilder._corruption_filter_tags({"inputs": ["Annihilus"]}))
+        self.assertIn("jewelry", RecipePresentationBuilder._corruption_filter_tags({"inputs": ["Ring (Unique)"]}))
 
     def _write_json(self, root, relative_path, payload):
         full_path = os.path.join(root, relative_path)
@@ -1073,6 +1187,9 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("30%", corruptions_page)
         self.assertIn("70%", corruptions_page)
         self.assertIn("Add 1 socket", corruptions_page)
+        self.assertNotIn('data-recipe-filter="gloves"', corruptions_page)
+        self.assertNotIn('data-recipe-filter="boots"', corruptions_page)
+        self.assertNotIn('data-recipe-filter="belts"', corruptions_page)
 
         with open(os.path.join(self.output, "recipes", "materials", "index.html"), "r", encoding="utf-8") as f:
             materials_page = f.read()
