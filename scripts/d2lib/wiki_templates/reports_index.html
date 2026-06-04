@@ -4,27 +4,21 @@
 {% block content %}
 {{ hero(
   "Reports",
-  "Browser-friendly generated diff reports",
-  "Open the item and raw Excel comparison reports that are produced from structured DTOs during the project rebuild.",
-  [
-    {"label": "DTO", "tone": "default"},
-    {"label": "HTML", "tone": "default"},
-    {"label": "Markdown", "tone": "default"},
-    {"label": "Generated Reports", "tone": "accent"},
-  ]
+  "Diff Reports",
+  "Field-level comparisons between " ~ new_label ~ " and the Retail baseline — items, raw data tables, and override files.",
+  [{"label": new_label, "tone": "accent"}]
 ) }}
 <section class="card-grid two-up">
   {% for report in reports %}
   <a class="link-card" href="{{ site_root }}{{ report.href }}">
     <h3>{{ report.title }}</h3>
     <p>{{ report.summary }}</p>
-    <p class="muted">{{ report.file_count }} published files from <code>{{ report.source_dir }}</code></p>
     <span class="link-card-cta">Open report</span>
   </a>
   {% else %}
   <article class="content-section">
-    <h2>No Reports Generated</h2>
-    <p class="muted">Run <code>python scripts/generate_reports.py</code> before generating the wiki.</p>
+    <h2>No Reports Available</h2>
+    <p class="muted">Reports are not currently available. Please check back soon.</p>
   </article>
   {% endfor %}
 </section>

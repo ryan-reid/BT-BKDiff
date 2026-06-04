@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import List, Dict, TypedDict, Optional, Any
 
 class PropertyDTO(TypedDict):
@@ -7,6 +8,10 @@ class PropertyDTO(TypedDict):
     max_val: str
     resolved_text: str
 
+class PartialSetBonusDTO(TypedDict):
+    count: int
+    properties: List[PropertyDTO]
+
 class AnalyzedItemDTO(TypedDict):
     id: str
     display_name: str
@@ -14,7 +19,7 @@ class AnalyzedItemDTO(TypedDict):
     item_type: str
     lvl_req: str
     properties: List[PropertyDTO]
-    partial_set_properties: Optional[List[Dict[str, Any]]] # List of { "count": int, "properties": List[PropertyDTO] }
+    partial_set_properties: Optional[List[PartialSetBonusDTO]]
     raw_row: Dict[str, str]
 
 class RunewordDTO(TypedDict):

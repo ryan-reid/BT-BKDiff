@@ -4,7 +4,7 @@
 <section class="hero">
   <span class="hero-eyebrow">Mod by Baron &amp; Kex &middot; Single Player</span>
   <h1>{{ new_label }} Wiki</h1>
-  <p class="hero-copy">Reference for BKDiablo — uniques, runewords, cube recipes, the bestiary, class skill trees, and endgame farming routes.</p>
+  <p class="hero-copy">Reference for {{ new_label }} — uniques, runewords, cube recipes, the bestiary, class skill trees, and endgame farming routes.</p>
 </section>
 
 <div class="stat-strip">
@@ -91,7 +91,7 @@
 
 {% if reports %}
 <section class="content-section">
-  <div class="section-head"><h2>Generated Reports</h2></div>
+  <div class="section-head"><h2>Diff Reports</h2></div>
   <div class="card-grid two-up">
     {% for report in reports %}
     <a class="link-card" href="{{ report.href }}">

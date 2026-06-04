@@ -7,7 +7,7 @@
 <section class="hero">
   <p class="hero-eyebrow">Item Repository</p>
   <h1>Base Items</h1>
-  <p class="hero-copy">Browse Armor and Weapons, including Normal, Exceptional, and Elite families. Technical comparisons against Retail baseline.</p>
+  <p class="hero-copy">Browse Armor and Weapons across Normal, Exceptional, and Elite tiers, with stat comparisons against Retail.</p>
 </section>
 
 <section class="content-section">
@@ -24,7 +24,7 @@
         </select>
       </label>
       <label>
-        <span>Runeword category</span>
+        <span>Socket type</span>
         <select id="base-category-filter">
           <option value="all">All categories</option>
           {% for category in base_type_categories %}
@@ -123,7 +123,7 @@
               <span class="base-tag">Two Handed</span>
               {% endif %}
               {% if item.staffmod_class %}
-              <span class="base-tag">{{ item.staffmod_class }} staffmods</span>
+              <span class="base-tag">{{ item.staffmod_class }} skills</span>
               {% endif %}
               {% if item.magic_level %}
               <span class="base-tag">+{{ item.magic_level }} magic level</span>
@@ -142,7 +142,7 @@
           {% endfor %}
 
           {% if comp.property_rows %}
-          <div class="sp-sep">Bonuses / Rolls</div>
+          <div class="sp-sep">Properties</div>
           {% for row in comp.property_rows %}
           <div class="sp-row">
             <span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "(empty)" }}</span>

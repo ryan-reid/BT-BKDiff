@@ -1228,7 +1228,7 @@ class TestWikiGenerator(unittest.TestCase):
             mechanics_page = f.read()
         self.assertIn("Skill & Missile Changes", mechanics_page)
         self.assertIn("magic arrow", mechanics_page)
-        self.assertIn("Character, Item, And Economy Systems", mechanics_page)
+        self.assertIn("Character, Item, and Economy Systems", mechanics_page)
 
         with open(os.path.join(self.output, "drops", "index.html"), "r", encoding="utf-8") as f:
             drops_page = f.read()
@@ -1238,7 +1238,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("95.2%", drops_page)
         self.assertIn("Thunder Two", drops_page)
         self.assertIn("25.0%", drops_page)
-        self.assertIn("does not resolve monster, area, or full treasure-class path odds", drops_page)
+        self.assertIn("Monster source, area density, and full drop-table path odds are not included", drops_page)
 
         with open(os.path.join(self.output, "items", "runeword", "practice", "index.html"), "r", encoding="utf-8") as f:
             runeword_page = f.read()
@@ -1275,7 +1275,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('id="base-tier-filter"', bases_page)
         self.assertIn("sp-head", bases_page)
         self.assertIn("sp-sub", bases_page)
-        self.assertIn("Bonuses / Rolls", bases_page)
+        self.assertIn("sp-sep", bases_page)
         self.assertNotIn("runeword-before-after", bases_page)
 
         self.assertIn("sp-head", gems_runes_page)
@@ -1299,7 +1299,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("+50% Damage to Undead", bases_page)
         self.assertIn("-5-30% Target Defense", bases_page)
         self.assertIn("Superior", bases_page)
-        self.assertIn("Druid staffmods", bases_page)
+        self.assertIn("Druid skills", bases_page)
         self.assertIn("Druid only", bases_page)
         self.assertIn("33% Piercing Attack", bases_page)
         self.assertIn("+18 magic level", bases_page)

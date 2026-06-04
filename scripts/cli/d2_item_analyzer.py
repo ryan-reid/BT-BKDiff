@@ -73,7 +73,7 @@ class ExportOrchestrator:
         set_data = {"normal": {}, "expansion": {}}
         for row in self.repo.get_excel_table('setitems'):
             item = self.analyzer.analyze_set_item(row)
-            is_expansion = item['raw_row'].get('is_expansion', False)
+            is_expansion = item.get('is_expansion', False)
             group = "expansion" if is_expansion else "normal"
             
             if item['item_type'] not in set_data[group]:

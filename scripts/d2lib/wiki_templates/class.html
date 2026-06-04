@@ -5,7 +5,7 @@
 <section class="hero">
   <span class="hero-eyebrow">Class Skills</span>
   <h1>{{ page.class_name }}</h1>
-  <p class="hero-copy">{{ page.skills|length }} skills from the current skill tree export.</p>
+  <p class="hero-copy">{{ page.skills|length }} skills with level-by-level scaling and synergy data.</p>
 </section>
 
 {% if page.skills %}
@@ -24,7 +24,7 @@
       <span class="skill-head-text">
         <span class="skill-name">{{ skill.name }}</span>
         {% if skill.work_in_progress %}
-        <span class="skill-oneliner" style="color:var(--faint)">Work in progress</span>
+        <span class="skill-oneliner" style="color:var(--faint)">Scaling data pending</span>
         {% elif skill.effects %}
         <span class="skill-oneliner">{{ skill.effects|length }} tracked effects</span>
         {% endif %}
@@ -38,7 +38,7 @@
     </summary>
     <div class="skill-body">
       {% if skill.work_in_progress %}
-      <p class="wip-note">Scaling data is still being compiled from the parsing pipeline.</p>
+      <p class="wip-note">Scaling data for this skill is still being compiled and may be incomplete.</p>
       {% endif %}
       {% if skill.effects %}
       <div class="table-wrap">

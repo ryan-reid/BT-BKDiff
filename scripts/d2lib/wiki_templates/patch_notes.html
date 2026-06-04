@@ -2,26 +2,45 @@
 {% from "components.html" import hero %}
 {% block content %}
 {{ hero(
-  "Draft Patch Surface",
-  "Full Patch Notes Draft",
-  "This page acts as the website-facing landing page for future generated patch summaries.",
-  [{"label": "Draft", "tone": "accent"}]
+  "Changes",
+  "Patch Notes",
+  "Track what has changed in " ~ new_label ~ " compared to the retail baseline — items, skills, cube recipes, and game systems.",
+  [{"label": new_label, "tone": "accent"}]
 ) }}
 <section class="content-section">
-  <h2>Current State</h2>
-  <ul class="property-list">
-    <li>Item and Excel diff reports remain the technical source artifacts for patch-note generation.</li>
-    <li>The current snapshot contains {{ total_items }} item pages and {{ class_count }} class pages available for reference.</li>
-    <li>This page is meant to become the front-facing narrative layer once the diff summaries are converted into readable sections.</li>
-  </ul>
-</section>
-<section class="content-section">
-  <h2>Source Reports</h2>
-  <p class="muted">Technical diff reports are available in the generated Reports section and are intended to be summarized into this page over time.</p>
-  <div class="card-grid three-up">
-    <a class="link-card" href="{{ site_root }}reports/"><h3>Reports</h3><p>Open the generated item and raw Excel diff reports as browser-friendly pages.</p><span class="link-card-cta">Open reports</span></a>
-    <article class="link-card is-static"><h3>Item Diff</h3><p>Item database comparisons remain the source for item-side patch note summaries.</p></article>
-    <article class="link-card is-static"><h3>Skill Trees</h3><p>Class skill exports can feed future skill-specific patch note sections.</p></article>
+  <h2>What Changed</h2>
+  <p>This wiki documents <strong>{{ total_items }}</strong> items and <strong>{{ class_count }}</strong> class skill trees. Use the sections below to explore changes by category.</p>
+  <div class="card-grid three-up" style="margin-top:20px">
+    <a class="link-card" href="{{ site_root }}items/">
+      <h3>Items</h3>
+      <p>Browse unique and set items, filtered by what is new or changed versus Retail.</p>
+      <span class="link-card-cta">View items →</span>
+    </a>
+    <a class="link-card" href="{{ site_root }}recipes/">
+      <h3>Cube Recipes</h3>
+      <p>Crafting, corruption, rune, and upgrade recipes including new additions.</p>
+      <span class="link-card-cta">View recipes →</span>
+    </a>
+    <a class="link-card" href="{{ site_root }}mechanics/">
+      <h3>Mechanics</h3>
+      <p>Experience curve, difficulty scaling, and core game system changes.</p>
+      <span class="link-card-cta">View mechanics →</span>
+    </a>
+    <a class="link-card" href="{{ site_root }}classes/">
+      <h3>Classes</h3>
+      <p>Skill trees with updated effects and synergy values.</p>
+      <span class="link-card-cta">View classes →</span>
+    </a>
+    <a class="link-card" href="{{ site_root }}bestiary/">
+      <h3>Bestiary</h3>
+      <p>Monster stats, resistances, and Hell immunities — highlights new and changed monsters.</p>
+      <span class="link-card-cta">View bestiary →</span>
+    </a>
+    <a class="link-card" href="{{ site_root }}reports/">
+      <h3>Detailed Reports</h3>
+      <p>Full field-level diff tables for items, Excel tables, and override files.</p>
+      <span class="link-card-cta">View reports →</span>
+    </a>
   </div>
 </section>
 {% endblock %}

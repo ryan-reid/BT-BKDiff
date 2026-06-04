@@ -4,6 +4,7 @@ from typing import List, Dict, Optional, Any, Tuple
 from d2lib.repository import D2Repository
 from d2lib.models import AnalyzedItemDTO, RunewordDTO, BaseItemDTO, BaseItemFamilyDTO
 from d2lib.services.resolver import PropertyResolverService
+from d2lib.utils import item_category_to_group
 
 class ItemAnalyzerService:
     def __init__(self, repo: D2Repository, resolver: PropertyResolverService):
@@ -40,37 +41,7 @@ class ItemAnalyzerService:
         return name
 
     def get_granular_group(self, category: str) -> str:
-        cat_lower = category.lower()
-        # Weapons
-        if any(cls in cat_lower for cls in ['amazon', 'assassin', 'orb', 'hand to hand', 'grimoire']): return 'Class Weapons'
-        if 'axe' in cat_lower: return 'Axes'
-        if 'bow' in cat_lower: return 'Bows'
-        if 'crossbow' in cat_lower: return 'Crossbows'
-        if 'dagger' in cat_lower or 'knife' in cat_lower: return 'Daggers'
-        if 'javelin' in cat_lower: return 'Javelins'
-        if 'mace' in cat_lower or 'club' in cat_lower or 'hammer' in cat_lower: return 'Maces'
-        if 'polearm' in cat_lower: return 'Polearms'
-        if 'scepter' in cat_lower: return 'Scepters'
-        if 'spear' in cat_lower: return 'Spears'
-        if 'staff' in cat_lower: return 'Staves'
-        if 'sword' in cat_lower: return 'Swords'
-        if 'throwing' in cat_lower: return 'Throwing'
-        if 'wand' in cat_lower: return 'Wands'
-
-        # Others
-        if any(cls in cat_lower for cls in ['voodoo', 'pelt', 'primal', 'auric']): return 'Class Armors'
-        if 'amulet' in cat_lower: return 'Amulets'
-        if 'ring' in cat_lower: return 'Rings'
-        if 'charm' in cat_lower: return 'Charms'
-        if 'jewel' in cat_lower: return 'Jewels'
-        if any(h in cat_lower for h in ['helm', 'circlet', 'merc']): return 'Helms'
-        if any(c in cat_lower for c in ['armor', 'tors']): return 'Chests'
-        if 'shield' in cat_lower: return 'Shields'
-        if 'glove' in cat_lower: return 'Gloves'
-        if 'belt' in cat_lower: return 'Belts'
-        if 'boot' in cat_lower: return 'Boots'
-
-        return 'Others'
+        return item_category_to_group(category)
 
     def get_top_level_group(self, granular_group: str) -> str:
         weapons = ['Class Weapons', 'Axes', 'Bows', 'Crossbows', 'Daggers', 'Javelins', 'Maces', 'Polearms', 'Scepters', 'Spears', 'Staves', 'Swords', 'Throwing', 'Wands']
@@ -229,10 +200,11 @@ class ItemAnalyzerService:
         item_code = row.get('item', '').strip()
         return {
             "id": idx, "display_name": self.repo.get_string(idx), "base_item": self.get_item_name(item_code),
-            "item_type": self.get_item_category(item_code), "lvl_req": row.get('lvl req', '0'), 
+            "item_type": self.get_item_category(item_code), "lvl_req": row.get('lvl req', '0'),
             "properties": props,
             "partial_set_properties": partial_props if partial_props else None,
-            "raw_row": {**row, "is_expansion": is_expansion}
+            "is_expansion": is_expansion,
+            "raw_row": row,
         }
 
 class BaseItemAnalyzerService:
