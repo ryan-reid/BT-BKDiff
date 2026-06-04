@@ -5,90 +5,24 @@
 <section class="hero">
   <span class="hero-eyebrow">Horadric Archive</span>
   <h1>Cube Recipes</h1>
-  <p class="hero-copy">Crafting systems, item upgrades, corruptions, and rune transmutations.</p>
+  <p class="hero-copy">Player-facing cube systems grouped by what the recipe does, with exact raw cubemain rows kept for technical drilldown.</p>
 </section>
 
-<div class="recipe-layout">
-  <!-- left-rail nav -->
-  <nav class="recipe-nav" aria-label="Recipe categories">
-    <span class="nav-label">Categories</span>
-    {% for group in groups %}
-    <a href="#{{ group.id }}">
-      {{ group.name }}
-      <span class="nav-count">{{ group.recipes|length }}</span>
-    </a>
-    {% endfor %}
-  </nav>
+<div class="stat-grid">
+  <div class="stat-cell"><strong>{{ overview.counts.raw_enabled_rows }}</strong><span>enabled rows</span></div>
+  <div class="stat-cell"><strong>{{ overview.counts.craft_rows }}</strong><span>craft matrix rows</span></div>
+  <div class="stat-cell"><strong>{{ overview.counts.corruption_cards }}</strong><span>corruption cards</span></div>
+  <div class="stat-cell"><strong>{{ overview.counts.display_groups }}</strong><span>legacy groups</span></div>
+</div>
 
-  <!-- recipe groups -->
-  <main>
-    <input id="page-search" class="search-input" type="search" placeholder="Search recipes, inputs, or outputs…" style="margin-bottom:20px" />
-
-    <div class="recipe-groups">
-      {% for group in groups %}
-      <div id="{{ group.id }}" class="recipe-group" data-search="{{ group.name }} {{ group.summary }} {{ group.action }}">
-        <div class="recipe-group-head">
-          <div>
-            <h2>{{ group.name }}</h2>
-            <p class="recipe-group-desc">{{ group.summary }}</p>
-          </div>
-          <span class="recipe-group-count">{{ group.recipes|length }} recipes</span>
-        </div>
-
-        {% if group.corruption_summaries %}
-        <div class="corruption-summary-grid">
-          {% for summary in group.corruption_summaries %}
-          <article class="corruption-summary-card" data-search="{{ summary.search_text }}">
-            <div class="corruption-summary-head">
-              <h3>{{ summary.title }}</h3>
-              <span>{{ summary.outcomes|length }} outcomes</span>
-            </div>
-            <div class="table-wrap">
-              <table class="corruption-summary-table">
-                <thead><tr><th>Chance</th><th>Outcome</th><th>Roll</th></tr></thead>
-                <tbody>
-                  {% for outcome in summary.outcomes %}
-                  <tr data-search="{{ summary.title }} {{ outcome.label }} {{ outcome.detail }} {{ outcome.chance }}">
-                    <td><strong>{{ outcome.chance }}</strong></td>
-                    <td>{{ outcome.label }}{% if outcome.detail %}<br><span class="muted">{{ outcome.detail }}</span>{% endif %}</td>
-                    <td><code>{{ outcome.range }}</code></td>
-                  </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
-            </div>
-          </article>
-          {% endfor %}
-        </div>
-        {% endif %}
-
-        <div class="table-wrap">
-          <table class="recipe-table">
-            <thead>
-              <tr><th>Recipe</th><th>Ingredients</th><th>Result</th></tr>
-            </thead>
-            <tbody>
-              {% for recipe in group.recipes %}
-              <tr data-search="{{ recipe.description }} {{ recipe.inputs|join(' ') }} {{ recipe.outputs|join(' ') }}">
-                <td class="recipe-desc"><strong>{{ recipe.description }}</strong></td>
-                <td>
-                  <ul class="input-list">
-                    {% for inp in recipe.inputs %}<li>{{ inp }}</li>{% endfor %}
-                  </ul>
-                </td>
-                <td>
-                  <ul class="result-list">
-                    {% for out in recipe.outputs %}<li>{{ out }}</li>{% endfor %}
-                  </ul>
-                </td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </main>
+<div class="guide-card-grid">
+  {% for card in overview.cards %}
+  <a class="guide-card" href="{{ card.href }}">
+    <span class="guide-card-kicker">{{ card.action }}</span>
+    <h2>{{ card.title }}</h2>
+    <p>{{ card.summary }}</p>
+    <span class="guide-card-action">{{ card.count }} entries</span>
+  </a>
+  {% endfor %}
 </div>
 {% endblock %}

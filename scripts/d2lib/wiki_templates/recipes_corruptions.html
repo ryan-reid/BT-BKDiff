@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Corruption Recipes | {{ new_label }} Wiki{% endblock %}
+{% block nav_recipes %} class="is-active"{% endblock %}
+{% block content %}
+<section class="hero">
+  <span class="hero-eyebrow"><a href="../">Cube Recipes</a></span>
+  <h1>Corruptions</h1>
+  <p class="hero-copy">Risk and reward outcomes grouped into chance cards. Exact implementation rows remain in the raw recipe table.</p>
+</section>
+
+<input id="page-search" class="search-input" type="search" placeholder="Search corruption material, item type, socket count, or outcome..." style="margin-bottom:20px" />
+{% set sections = [("standard-corruptions", "Standard of Heroes", page.standard_summaries), ("divine-corruptions", "The Divine Standard", page.divine_summaries)] %}
+<div class="recipe-groups">
+  {% for id, title, summaries in sections %}
+  <section id="{{ id }}" class="recipe-group" data-search="{{ title }}">
+    <div class="recipe-group-head">
+      <div>
+        <h2>{{ title }}</h2>
+        <p class="recipe-group-desc">Grouped chance tables for this corruption material.</p>
+      </div>
+      <span class="recipe-group-count">{{ summaries|length }} cards</span>
+    </div>
+    <div class="corruption-summary-grid">
+      {% for summary in summaries %}
+      <article class="corruption-summary-card" data-search="{{ summary.search_text }}">
+        <div class="corruption-summary-head">
+          <h3>{{ summary.title }}</h3>
+          <span>{{ summary.outcomes|length }} outcomes</span>
+        </div>
+        <div class="table-wrap">
+          <table class="corruption-summary-table">
+            <thead><tr><th>Chance</th><th>Outcome</th><th>Roll</th></tr></thead>
+            <tbody>
+              {% for outcome in summary.outcomes %}
+              <tr data-search="{{ summary.title }} {{ outcome.label }} {{ outcome.detail }} {{ outcome.chance }}">
+                <td><strong>{{ outcome.chance }}</strong></td>
+                <td>{{ outcome.label }}{% if outcome.detail %}<br><span class="muted">{{ outcome.detail }}</span>{% endif %}</td>
+                <td><code>{{ outcome.range }}</code></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

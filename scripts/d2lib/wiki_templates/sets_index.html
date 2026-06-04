@@ -10,24 +10,11 @@
   <p class="hero-copy">Complete sets with individual pieces and set bonuses.</p>
 </section>
 
-<input id="page-search" class="search-input" type="search" placeholder="Search sets or pieces…" style="margin-bottom:22px" />
+<input id="page-search" class="search-input" type="search" placeholder="Search sets or pieces..." style="margin-bottom:22px" />
 
 <div class="set-list">
   {% for set in sets %}
   {% set set_slug = set.name|slugify %}
-
-  {# Compute row counts so every piece spans the same number of parent-grid rows #}
-  {% set ns = namespace(max_props=0, stat_count=0) %}
-  {% if set.members %}
-    {% set ns.stat_count = set.members[0].comparison.stat_rows|length %}
-    {% for item in set.members %}
-      {% if item.comparison.property_rows|length > ns.max_props %}
-        {% set ns.max_props = item.comparison.property_rows|length %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-  {# 1 header + 1 sub-head + stat rows + (1 separator if props exist) + prop rows #}
-  {% set total_rows = 2 + ns.stat_count + (1 if ns.max_props > 0 else 0) + ns.max_props %}
 
   <div id="{{ set_slug }}" class="set-block"
        data-search="{{ set.search_text }}" data-status="{{ set.status }}">
@@ -37,52 +24,50 @@
       <p class="set-summary muted">{{ set.summary }}</p>
     </div>
 
-    {# subgrid container — auto-fit columns, pieces share row tracks #}
     <div class="set-pieces">
       {% for item in set.members %}
       {% set comp = item.comparison %}
-      <div class="set-piece" style="grid-row: span {{ total_rows }}"
+      <div id="{{ item.set_anchor }}" class="set-piece"
+           style="--set-piece-row-count: {{ comp.row_count }}"
            data-search="{{ set.name }} {{ item.display_name }} {{ item.item_type }} {{ item.base_item }}">
 
-        {# row 1: piece header #}
         <div class="sp-head">
           {% if item.icon_src %}
           <img class="set-th-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.display_name }}" />
           {% endif %}
-          <div>
-            <a class="set-th-name" href="{{ site_root }}{{ item.href }}">{{ item.display_name }}</a>
-            <span class="set-th-meta">{{ item.base_item }}{% if item.lvl_req %} · Req {{ item.lvl_req }}{% endif %}</span>
+          <div class="sp-head-text">
+            <span class="set-th-name">{{ item.display_name }}</span>
+            <span class="set-th-meta">
+              {{ item.base_item }}{% if item.lvl_req %} &middot; Req {{ item.lvl_req }}{% endif %}{% if item.drop_info and item.drop_info.label %} &middot; Drop {{ item.drop_info.label }}{% endif %}
+            </span>
           </div>
         </div>
 
-        {# row 2: Retail / BK column labels #}
         <div class="sp-sub">
-          <span>Retail</span><span>{{ new_label }}</span>
+          {% if comp.state == "added" %}
+          <span></span><span>{{ new_label }}</span>
+          {% elif comp.state == "removed" %}
+          <span>{{ old_label }}</span><span></span>
+          {% else %}
+          <span>{{ old_label }}</span><span>{{ new_label }}</span>
+          {% endif %}
         </div>
 
-        {# rows 3…: stat rows (same labels across all pieces) #}
-        {% for r in comp.stat_rows %}
-        <div class="sp-row">
-          <span class="sp-cell is-{{ r.status }}"><strong>{{ r.label }}:</strong> {{ r.old or "—" }}</span>
-          <span class="sp-cell is-{{ r.status }}"><strong>{{ r.label }}:</strong> {{ r.new or "—" }}</span>
-        </div>
-        {% endfor %}
-
-        {% if ns.max_props > 0 %}
-        {# separator row #}
-        <div class="sp-sep">Properties</div>
-
-        {# property rows for this piece #}
-        {% for r in comp.property_rows %}
-        <div class="sp-row">
-          <span class="sp-cell is-{{ r.status }}">{{ r.old or "(empty)" }}</span>
-          <span class="sp-cell is-{{ r.status }}">{{ r.new or "(removed)" }}</span>
+        {% for r in comp.aligned_stat_rows %}
+        <div class="sp-row{% if r.is_spacer %} sp-row-spacer{% endif %}">
+          <span class="sp-cell {% if r.old %}is-{{ r.status }}{% else %}is-same{% endif %}">{% if r.old %}<strong>{{ r.label }}:</strong> {{ r.old }}{% endif %}</span>
+          <span class="sp-cell {% if r.new %}is-{{ r.status }}{% else %}is-same{% endif %}">{% if r.new %}<strong>{{ r.label }}:</strong> {{ r.new }}{% endif %}</span>
         </div>
         {% endfor %}
 
-        {# placeholder rows so every piece spans the same total_rows #}
-        {% for i in range(ns.max_props - comp.property_rows|length) %}
-        <div class="sp-row sp-empty"><span class="sp-cell"></span><span class="sp-cell"></span></div>
+        {% if comp.has_property_section %}
+        <div class="sp-sep{% if not comp.property_rows %} sp-sep-spacer{% endif %}">{% if comp.property_rows %}Properties{% endif %}</div>
+
+        {% for r in comp.aligned_property_rows %}
+        <div class="sp-row{% if r.is_spacer %} sp-row-spacer{% endif %}">
+          <span class="sp-cell {% if r.old %}is-{{ r.status }}{% else %}is-same{% endif %}">{{ r.old }}</span>
+          <span class="sp-cell {% if r.new %}is-{{ r.status }}{% else %}is-same{% endif %}">{{ r.new }}</span>
+        </div>
         {% endfor %}
         {% endif %}
 
@@ -96,7 +81,7 @@
       <div class="table-wrap">
         <table class="set-bonus-table">
           <thead>
-            <tr><th>Retail</th><th>{{ new_label }}</th></tr>
+            <tr><th>{{ old_label }}</th><th>{{ new_label }}</th></tr>
           </thead>
           <tbody>
             {% for row in set.set_bonuses %}

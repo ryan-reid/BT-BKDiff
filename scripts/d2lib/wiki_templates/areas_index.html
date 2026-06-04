@@ -5,12 +5,12 @@
 <section class="hero">
   <span class="hero-eyebrow">Farming Guide</span>
   <h1>Areas</h1>
-  <p class="hero-copy">{{ area_count }} Hell areas ranked by farm score — density, elite packs, area level, and super-chest access.</p>
+  <p class="hero-copy">{{ area_count }} Hell areas ranked by density, elite packs, area level, and super-chest access.</p>
 </section>
 
 <section class="content-section">
   <div class="toolbar" data-area-index-url="{{ site_root }}data/areas-index.json">
-    <input id="area-search" class="search-input" type="search" placeholder="Search areas or monsters…" />
+    <input id="area-search" class="search-input" type="search" placeholder="Search areas or monsters..." />
 
     <div class="area-toolbar">
       <label>
@@ -36,18 +36,13 @@
       <label>
         <span class="filter-label">Sort</span>
         <select id="area-sort-filter" class="filter-select">
-          <option value="score">Farm Score</option>
-          <option value="level">Area Level</option>
           <option value="density">Monster Density</option>
+          <option value="level">Area Level</option>
           <option value="elite">Average Elite Packs</option>
         </select>
       </label>
-      <label class="filter-check">
-        <input id="area-top-tier-filter" type="checkbox" /> Top-tier capable only
-      </label>
-
       <div class="dmg-filter-group">
-        <span class="filter-label">My build deals — hide immune areas</span>
+        <span class="filter-label">My build deals - hide immune areas</span>
         <div class="dmg-toggles">
           <label class="dmg-toggle t-fire">
             <input type="checkbox" data-avoid-immunity="fire"><span class="dot"></span>Fire
@@ -72,17 +67,15 @@
     </div>
   </div>
 
-  <div class="section-head">
-    <h2>Area Farming Table</h2>
+  <div class="section-head area-results-head">
+    <h2>Area Farming Guide</h2>
     <p><span id="area-result-count">{{ area_count }}</span> areas</p>
   </div>
-  <div class="table-wrap">
+  <div class="table-wrap area-table-wrap">
     <table class="area-table">
       <thead>
         <tr>
           <th>Area</th>
-          <th>Score</th>
-          <th>Levels</th>
           <th>Density</th>
           <th>Chunk</th>
           <th>Elite Packs</th>
@@ -92,14 +85,17 @@
         </tr>
       </thead>
       <tbody id="area-index-root">
-        <tr><td colspan="9" class="muted">Loading area index…</td></tr>
+        <tr><td colspan="7" class="muted">Loading area index...</td></tr>
       </tbody>
     </table>
+  </div>
+  <div id="area-card-root" class="area-card-list">
+    <p class="muted">Loading area index...</p>
   </div>
 </section>
 
 <section class="content-section">
   <h2>How This Is Calculated</h2>
-  <p class="muted">Generated from BK's <code>levels.txt</code> and <code>monstats.txt</code>. Hell area level uses <code>MonLvlEx(H)</code> when present, then falls back to <code>MonLvl(H)</code>. Champions are area level +2, uniques +3 — so top-tier capable means uniques can reach level 90 or higher. Density is <code>MonDen(H)</code>, useful as a relative signal rather than an exact count. Chunk data comes from <code>lvlmaze.txt</code> when available. Super chest potential is derived from <code>objects.txt</code>, <code>lvlprest.txt</code>, and DS1 layout files.</p>
+  <p class="muted">Generated from BK's <code>levels.txt</code> and <code>monstats.txt</code>. Hell area level uses <code>MonLvlEx(H)</code> when present, then falls back to <code>MonLvl(H)</code>. Champions are area level +2 and uniques are area level +3. Density is <code>MonDen(H)</code>, useful as a relative signal rather than an exact count. Chunk data comes from <code>lvlmaze.txt</code> when available. Super chest potential is derived from <code>objects.txt</code>, <code>lvlprest.txt</code>, and DS1 layout files.</p>
 </section>
 {% endblock %}

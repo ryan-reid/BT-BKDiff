@@ -26,6 +26,12 @@ function itemCardMarkup(item, siteRoot) {
   const iconMarkup = item.icon_src
     ? `<img class="wiki-item-icon set-th-icon" src="${escapeHtml(siteRoot + item.icon_src)}" alt="${escapeHtml(item.title)} icon" />`
     : "";
+  const dropMarkup = item.drop_level_label
+    ? `<span class="item-drop-level">Drop ${escapeHtml(item.drop_level_label)}</span>`
+    : "";
+  const titleMarkup = item.family === "set"
+    ? `<a class="set-th-name" href="${escapeHtml(siteRoot + item.href)}" style="color:${nameColor}">${escapeHtml(item.title)}</a>`
+    : `<span class="set-th-name" style="color:${nameColor}">${escapeHtml(item.title)}</span>`;
 
   const statRowsHtml = (item.stat_rows || []).map((r) => `
     <div class="sp-row">
@@ -51,12 +57,14 @@ function itemCardMarkup(item, siteRoot) {
       data-status="${escapeHtml(item.status)}"
       data-item-group="${escapeHtml(item.item_group)}"
       data-item-type="${escapeHtml(item.item_type)}"
+      data-drop-level="${escapeHtml(item.drop_level || 0)}"
       data-search="${escapeHtml(item.search_text)}">
       <div class="sp-head">
         ${iconMarkup}
         <div style="min-width:0;flex:1">
-          <a class="set-th-name" href="${escapeHtml(siteRoot + item.href)}" style="color:${nameColor}">${escapeHtml(item.title)}</a>
+          ${titleMarkup}
           <span class="set-th-meta">${escapeHtml(item.summary)}</span>
+          ${dropMarkup}
         </div>
       </div>
       <div class="sp-sub"><span>${escapeHtml(oldLabel)}</span><span>${escapeHtml(newLabel)}</span></div>
@@ -67,17 +75,7 @@ function itemCardMarkup(item, siteRoot) {
 }
 
 function areaBadgeMarkup(area) {
-  const badges = [];
-  if (area.area_level >= 87) {
-    badges.push('<span class="area-badge area-badge-level">Area Lv 87+</span>');
-  }
-  if (area.can_drop_top_tier) {
-    badges.push('<span class="area-badge area-badge-drop">Top-tier drops</span>');
-  }
-  if (area.monster_density >= 3000) {
-    badges.push('<span class="area-badge area-badge-density">High density</span>');
-  }
-  return badges.join("");
+  return `<span class="area-badge area-badge-level">Lvl ${escapeHtml(area.area_level)}</span>`;
 }
 
 const IMMUNITY_CLASS = {
@@ -120,6 +118,23 @@ function areaMonsterPoolMarkup(area) {
     .join("<br>");
 }
 
+function areaMonsterListMarkup(area) {
+  const monsters = area.monster_pool || [];
+  if (monsters.length === 0) {
+    return '<p class="muted">No monster pool data.</p>';
+  }
+  return `
+    <ul class="area-monster-list">
+      ${monsters.slice(0, 8).map((monster) => {
+        const immunities = monster.immunities && monster.immunities.length
+          ? `<span>${escapeHtml(monster.immunities.join(", "))} immune</span>`
+          : "";
+        return `<li><strong>${escapeHtml(monster.name || monster.id)}</strong>${immunities}</li>`;
+      }).join("")}
+    </ul>
+  `;
+}
+
 function areaSuperChestMarkup(area) {
   if (!area.has_super_chest) {
     return '<span class="muted">No</span>';
@@ -157,8 +172,6 @@ function areaRowMarkup(area) {
         <span class="area-meta">${escapeHtml(area.act)}</span>
         <span class="area-badge-row">${areaBadgeMarkup(area)}</span>
       </th>
-      <td><strong>${escapeHtml(area.farm_score)}</strong></td>
-      <td><strong class="area-level-label">Lv ${escapeHtml(area.area_level)}</strong></td>
       <td>${escapeHtml(area.monster_density)}</td>
       <td>${areaMazeMarkup(area)}</td>
       <td>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)}<br><span class="muted">Avg ${escapeHtml(area.elite_avg)}</span></td>
@@ -166,6 +179,33 @@ function areaRowMarkup(area) {
       <td><span class="immunity-list">${areaImmunityMarkup(area)}</span></td>
       <td>${areaMonsterPoolMarkup(area)}</td>
     </tr>
+  `;
+}
+
+function areaCardMarkup(area) {
+  return `
+    <article class="area-card" data-search="${escapeHtml(area.search_text)}">
+      <div class="area-card-head">
+        <div>
+          <h3>${escapeHtml(area.display_name)}</h3>
+          <span>${escapeHtml(area.act)}</span>
+        </div>
+        <span class="area-level-pill">Lvl ${escapeHtml(area.area_level)}</span>
+      </div>
+      <dl class="area-card-stats">
+        <div><dt>Density</dt><dd>${escapeHtml(area.monster_density)}</dd></div>
+        <div><dt>Elite Packs</dt><dd>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)} <span>Avg ${escapeHtml(area.elite_avg)}</span></dd></div>
+        <div><dt>Super Chest</dt><dd>${area.has_super_chest ? escapeHtml(area.super_chest_count || 1) : "No"}</dd></div>
+      </dl>
+      <div class="area-card-section">
+        <span class="area-card-label">Possible Immunities</span>
+        <div class="immunity-list">${areaImmunityMarkup(area)}</div>
+      </div>
+      <details class="area-card-details">
+        <summary>Monster pool</summary>
+        ${areaMonsterListMarkup(area)}
+      </details>
+    </article>
   `;
 }
 
@@ -397,29 +437,28 @@ function wireBaseFilters() {
 async function wireAreaIndex() {
   const toolbar = document.querySelector("[data-area-index-url]");
   const root = document.querySelector("#area-index-root");
-  if (!toolbar || !root) {
+  const cardRoot = document.querySelector("#area-card-root");
+  if (!toolbar || !root || !cardRoot) {
     return;
   }
 
-  const response = await fetch(toolbar.dataset.areaIndexUrl);
+  const response = await fetch(toolbar.dataset.areaIndexUrl, { cache: "no-store" });
   const areas = await response.json();
   const searchInput = document.querySelector("#area-search");
   const actSelect = document.querySelector("#area-act-filter");
   const minLevelSelect = document.querySelector("#area-min-level-filter");
   const sortSelect = document.querySelector("#area-sort-filter");
-  const topTierCheckbox = document.querySelector("#area-top-tier-filter");
   const avoidCheckboxes = Array.from(document.querySelectorAll("[data-avoid-immunity]"));
   const resultCount = document.querySelector("#area-result-count");
 
   function sortedAreas(rows) {
-    const sortMode = sortSelect ? sortSelect.value : "score";
+    const sortMode = sortSelect ? sortSelect.value : "density";
     const sorters = {
-      score: (area) => area.farm_score,
-      level: (area) => area.area_level,
       density: (area) => area.monster_density,
+      level: (area) => area.area_level,
       elite: (area) => area.elite_avg,
     };
-    const score = sorters[sortMode] || sorters.score;
+    const score = sorters[sortMode] || sorters.density;
     return rows.slice().sort((left, right) => {
       const delta = score(right) - score(left);
       if (delta !== 0) {
@@ -433,7 +472,6 @@ async function wireAreaIndex() {
     const query = normalizeText(searchInput ? searchInput.value : "");
     const act = actSelect ? actSelect.value : "all";
     const minLevel = Number(minLevelSelect ? minLevelSelect.value : 0);
-    const topTierOnly = Boolean(topTierCheckbox && topTierCheckbox.checked);
     const avoidImmunities = avoidCheckboxes
       .filter((checkbox) => checkbox.checked)
       .map((checkbox) => checkbox.dataset.avoidImmunity);
@@ -443,22 +481,24 @@ async function wireAreaIndex() {
       const searchOk = !query || normalizeText(area.search_text).includes(query);
       const actOk = act === "all" || area.act === act;
       const levelOk = area.area_level >= minLevel;
-      const topTierOk = !topTierOnly || area.can_drop_top_tier;
       const immunityOk = avoidImmunities.every((immunity) => !immunities.includes(immunity));
-      return searchOk && actOk && levelOk && topTierOk && immunityOk;
+      return searchOk && actOk && levelOk && immunityOk;
     });
 
-    root.innerHTML = sortedAreas(filtered).map(areaRowMarkup).join("")
-      || '<tr><td colspan="9" class="muted">No areas match the current filters.</td></tr>';
+    const sorted = sortedAreas(filtered);
+    root.innerHTML = sorted.map(areaRowMarkup).join("")
+      || '<tr><td colspan="7" class="muted">No areas match the current filters.</td></tr>';
+    cardRoot.innerHTML = sorted.map(areaCardMarkup).join("")
+      || '<p class="muted">No areas match the current filters.</p>';
     if (resultCount) {
       resultCount.textContent = String(filtered.length);
     }
   }
 
-  [searchInput, actSelect, minLevelSelect, sortSelect, topTierCheckbox, ...avoidCheckboxes]
+  [searchInput, actSelect, minLevelSelect, sortSelect, ...avoidCheckboxes]
     .filter(Boolean)
     .forEach((control) => control.addEventListener("input", applyFilters));
-  [actSelect, minLevelSelect, sortSelect, topTierCheckbox, ...avoidCheckboxes]
+  [actSelect, minLevelSelect, sortSelect, ...avoidCheckboxes]
     .filter(Boolean)
     .forEach((control) => control.addEventListener("change", applyFilters));
 
@@ -473,7 +513,7 @@ async function wireItemIndex() {
   }
 
   const siteRoot = document.body.dataset.siteRoot || "";
-  const response = await fetch(toolbar.dataset.itemIndexUrl);
+  const response = await fetch(toolbar.dataset.itemIndexUrl, { cache: "no-store" });
   const items = await response.json();
   const familyLabels = {
     unique: "Unique Items",
@@ -498,12 +538,14 @@ async function wireItemIndex() {
   const familyCheckboxes = Array.from(document.querySelectorAll("input[data-filter-family]"));
   const groupSelect = document.querySelector("#item-group-filter");
   const typeSelect = document.querySelector("#item-type-filter");
+  const dropLevelSelect = document.querySelector("#item-drop-level-filter");
   const cards = Array.from(document.querySelectorAll(".base-item-card[data-family]"));
   const familySections = Array.from(document.querySelectorAll("[data-section-family]"));
   const initialQuery = new URLSearchParams(window.location.search).get("q");
 
   let activeGroup = "all";
   let activeType = "all";
+  let activeDropLevel = 0;
 
   function getActiveFamilies() {
     const checked = familyCheckboxes.filter((cb) => cb.checked).map((cb) => cb.dataset.filterFamily);
@@ -520,12 +562,14 @@ async function wireItemIndex() {
       const family = card.dataset.family || "";
       const itemGroup = card.dataset.itemGroup || "";
       const itemType = card.dataset.itemType || "";
+      const dropLevel = Number(card.dataset.dropLevel || 0);
       const haystack = normalizeText(card.dataset.search);
       const familyOk = activeFamilies.size === 0 || activeFamilies.has(family);
       const groupOk = activeGroup === "all" || normalizeText(itemGroup) === normalizeText(activeGroup);
       const typeOk = activeType === "all" || normalizeText(itemType) === normalizeText(activeType);
+      const dropLevelOk = !activeDropLevel || dropLevel >= activeDropLevel;
       const searchOk = !query || haystack.includes(query);
-      card.hidden = !(familyOk && groupOk && typeOk && searchOk);
+      card.hidden = !(familyOk && groupOk && typeOk && dropLevelOk && searchOk);
     });
     familySections.forEach((section) => {
       section.hidden = section.querySelectorAll(".base-item-card[data-family]:not([hidden])").length === 0;
@@ -568,17 +612,23 @@ async function wireItemIndex() {
       applyFilters();
     });
   }
+  if (dropLevelSelect) {
+    dropLevelSelect.addEventListener("change", () => {
+      activeDropLevel = Number(dropLevelSelect.value || 0);
+      applyFilters();
+    });
+  }
   applyFilters();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function initWiki() {
   wireMastSearch();
   wireStaticSearch();
   wireBaseFilters();
   wireAreaIndex().catch((error) => {
     const root = document.querySelector("#area-index-root");
     if (root) {
-      root.innerHTML = '<tr><td colspan="9" class="muted">Unable to load the area index.</td></tr>';
+      root.innerHTML = '<tr><td colspan="7" class="muted">Unable to load the area index.</td></tr>';
     }
     console.error(error);
   });
@@ -589,4 +639,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     console.error(error);
   });
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initWiki);
+} else {
+  initWiki();
+}

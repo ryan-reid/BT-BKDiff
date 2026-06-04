@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Crafting Recipes | {{ new_label }} Wiki{% endblock %}
+{% block nav_recipes %} class="is-active"{% endblock %}
+{% block content %}
+<section class="hero">
+  <span class="hero-eyebrow"><a href="../">Cube Recipes</a></span>
+  <h1>Crafting</h1>
+  <p class="hero-copy">Blood, Caster, Safety, and Hit Power crafts grouped by source, family, item type, and ethereal variant.</p>
+</section>
+
+<input id="page-search" class="search-input" type="search" placeholder="Search craft family, item type, ingredients, or properties..." style="margin-bottom:20px" />
+<div class="recipe-groups">
+  {% for section in page.sections %}
+  <section id="{{ section.id }}" class="recipe-group" data-search="{{ section.title }} {{ section.summary }}">
+    <div class="recipe-group-head">
+      <div>
+        <h2>{{ section.title }}</h2>
+        <p class="recipe-group-desc">{{ section.summary }}</p>
+      </div>
+      <span class="recipe-group-count">{{ section.rows|length }} rows</span>
+    </div>
+    <div class="table-wrap">
+      <table class="recipe-table recipe-matrix">
+        <thead><tr><th>Item type</th><th>Variants</th><th>Ingredients</th><th>Fixed properties</th><th>Result</th></tr></thead>
+        <tbody>
+          {% for row in section.rows %}
+          <tr data-search="{{ row.search_text }}">
+            <td><strong>{{ row.item_type }}</strong></td>
+            <td>
+              {% for variant in row.variants %}
+              <div class="recipe-variant">{{ variant.variant }}</div>
+              {% endfor %}
+            </td>
+            <td>
+              {% for variant in row.variants %}
+              <div class="recipe-variant">
+                <ul class="input-list">{% for item in variant.ingredients %}<li>{{ item }}</li>{% endfor %}</ul>
+              </div>
+              {% endfor %}
+            </td>
+            <td>
+              {% for variant in row.variants %}
+              <div class="recipe-variant">
+                <ul class="result-list">{% for prop in variant.fixed_properties %}<li>{{ prop }}</li>{% endfor %}</ul>
+              </div>
+              {% endfor %}
+            </td>
+            <td>
+              {% for variant in row.variants %}
+              <div class="recipe-variant">{{ variant.output }}</div>
+              {% endfor %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

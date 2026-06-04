@@ -107,7 +107,13 @@
     <div class="tt-rule"></div>
     <ul class="tt-stats">
       {% for stat in page.stats %}
-      <li class="meta"><strong>{{ stat.label }}:</strong> {{ stat.value }}</li>
+      <li class="meta"><strong>{{ stat.label }}:</strong>
+        {% if stat.href %}
+        <a class="inline-stat-link" href="{{ site_root }}{{ stat.href }}">{{ stat.value }}</a>
+        {% else %}
+        {{ stat.value }}
+        {% endif %}
+      </li>
       {% endfor %}
     </ul>
     {% endif %}
@@ -139,7 +145,16 @@
           <thead><tr><th>Property</th><th>Value</th></tr></thead>
           <tbody>
             {% for stat in page.stats %}
-            <tr><td>{{ stat.label }}</td><td>{{ stat.value }}</td></tr>
+            <tr>
+              <td>{{ stat.label }}</td>
+              <td>
+                {% if stat.href %}
+                <a class="inline-stat-link" href="{{ site_root }}{{ stat.href }}">{{ stat.value }}</a>
+                {% else %}
+                {{ stat.value }}
+                {% endif %}
+              </td>
+            </tr>
             {% endfor %}
           </tbody>
         </table>

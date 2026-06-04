@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Pierce Recipes | {{ new_label }} Wiki{% endblock %}
+{% block nav_recipes %} class="is-active"{% endblock %}
+{% block content %}
+<section class="hero">
+  <span class="hero-eyebrow"><a href="../">Cube Recipes</a></span>
+  <h1>Pierce Crafts</h1>
+  <p class="hero-copy">Pierce families grouped by element/property, ingredients, and eligible item types.</p>
+</section>
+
+<input id="page-search" class="search-input" type="search" placeholder="Search pierce family, item type, ingredient, or property..." style="margin-bottom:20px" />
+<section class="recipe-group">
+  <div class="recipe-group-head">
+    <div>
+      <h2>Pierce Matrix</h2>
+      <p class="recipe-group-desc">One row per pierce family and ingredient pattern.</p>
+    </div>
+    <span class="recipe-group-count">{{ page.families|length }} rows</span>
+  </div>
+  <div class="table-wrap">
+    <table class="recipe-table">
+      <thead><tr><th>Family</th><th>Ingredients</th><th>Eligible item types</th><th>Result</th><th>Property</th></tr></thead>
+      <tbody>
+        {% for row in page.families %}
+        <tr data-search="{{ row.search_text }}">
+          <td><strong>{{ row.family }}</strong></td>
+          <td><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td>{{ row.item_types|join(", ") }}</td>
+          <td>{{ row.result }}</td>
+          <td>{{ row.property }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

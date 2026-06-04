@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Reforge and Upgrade Recipes | {{ new_label }} Wiki{% endblock %}
+{% block nav_recipes %} class="is-active"{% endblock %}
+{% block content %}
+<section class="hero">
+  <span class="hero-eyebrow"><a href="../">Cube Recipes</a></span>
+  <h1>Reforge, Socket, and Upgrade</h1>
+  <p class="hero-copy">Gear shaping systems grouped by transformation instead of raw item-quality rows.</p>
+</section>
+
+<input id="page-search" class="search-input" type="search" placeholder="Search upgrades, sockets, augments, or ingredients..." style="margin-bottom:20px" />
+<div class="recipe-groups">
+  {% for section in page.sections %}
+  <section id="{{ section.id }}" class="recipe-group" data-search="{{ section.title }}">
+    <div class="recipe-group-head">
+      <div><h2>{{ section.title }}</h2></div>
+      <span class="recipe-group-count">{{ section.rows|length }} rows</span>
+    </div>
+    <div class="table-wrap">
+      <table class="recipe-table">
+        <thead><tr><th>Recipe</th><th>Ingredients</th><th>Result</th></tr></thead>
+        <tbody>
+          {% for row in section.rows %}
+          <tr data-search="{{ row.search_text }}">
+            <td><strong>{{ row.description }}</strong></td>
+            <td><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
+            <td><ul class="result-list">{% for item in row.results %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -81,6 +81,30 @@ class WikiRoutes:
         return "recipes/index.html"
 
     @staticmethod
+    def recipes_crafting_output_path() -> str:
+        return "recipes/crafting/index.html"
+
+    @staticmethod
+    def recipes_corruptions_output_path() -> str:
+        return "recipes/corruptions/index.html"
+
+    @staticmethod
+    def recipes_pierce_output_path() -> str:
+        return "recipes/pierce/index.html"
+
+    @staticmethod
+    def recipes_reforge_upgrade_output_path() -> str:
+        return "recipes/reforge-upgrade/index.html"
+
+    @staticmethod
+    def recipes_materials_output_path() -> str:
+        return "recipes/materials/index.html"
+
+    @staticmethod
+    def recipes_raw_output_path() -> str:
+        return "recipes/raw/index.html"
+
+    @staticmethod
     def bestiary_index_output_path() -> str:
         return "bestiary/index.html"
 

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Raw Cube Recipes | {{ new_label }} Wiki{% endblock %}
+{% block nav_recipes %} class="is-active"{% endblock %}
+{% block content %}
+<section class="hero">
+  <span class="hero-eyebrow"><a href="../">Cube Recipes</a></span>
+  <h1>Raw Cube Rows</h1>
+  <p class="hero-copy">Exact enabled cubemain rows for technical drilldown. Player pages intentionally group these rows into systems.</p>
+</section>
+
+<input id="page-search" class="search-input" type="search" placeholder="Search raw recipe rows..." style="margin-bottom:20px" />
+<section class="recipe-group">
+  <div class="recipe-group-head">
+    <div>
+      <h2>Enabled Rows</h2>
+      <p class="recipe-group-desc">Disabled rows, description-only separators, and no-output rows are excluded from player-facing data.</p>
+    </div>
+    <span class="recipe-group-count">{{ page.rows|length }} rows</span>
+  </div>
+  <div class="table-wrap">
+    <table class="recipe-table">
+      <thead><tr><th>#</th><th>Description</th><th>Inputs</th><th>Outputs</th></tr></thead>
+      <tbody>
+        {% for row in page.rows %}
+        <tr data-search="{{ row.search_text }}">
+          <td class="num">{{ row.row }}</td>
+          <td><strong>{{ row.description }}</strong></td>
+          <td><ul class="input-list">{% for item in row.inputs %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td><ul class="result-list">{% for item in row.outputs %}<li>{{ item }}</li>{% endfor %}</ul></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

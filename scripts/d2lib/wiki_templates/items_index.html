@@ -5,7 +5,7 @@
 <section class="hero">
   <span class="hero-eyebrow">Item Database</span>
   <h1>Items</h1>
-  <p class="hero-copy">Unique and set item pages. Runewords have their own section.</p>
+  <p class="hero-copy">Unique items and set pieces. Set pieces open inside their full set view; runewords have their own section.</p>
 </section>
 
 <div class="index-layout">
@@ -41,6 +41,18 @@
           <option value="{{ item_type }}">{{ item_type }}</option>
           {% endfor %}
         </optgroup>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="filter-block">
+      <h4>Drop Level</h4>
+      <select id="item-drop-level-filter" class="filter-select" style="width:100%">
+        <option value="0">Any Drop Level</option>
+        <option value="60">60+</option>
+        <option value="75">75+</option>
+        <option value="85">85+</option>
+        {% for level in drop_level_breakpoints %}
+        <option value="{{ level }}">{{ level }}+</option>
         {% endfor %}
       </select>
     </div>

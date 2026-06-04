@@ -118,7 +118,7 @@ class CubeAnalyzerService:
         self.retail_recipe_rows = {
             row.get('description', '').strip().lower(): row
             for row in retail_repo.get_excel_table('cubemain')
-            if row.get('description')
+            if row.get('description') and self._is_enabled_recipe_row(row)
         } if retail_repo else {}
 
         # Prefixes and Suffixes use row index as ID
@@ -222,11 +222,18 @@ class CubeAnalyzerService:
             val = row.get(f'input {i}', '').strip()
             if val and val != '0': actual_inputs.append(self.resolve_token(val))
         outputs = []
-        for i in range(1, 4):
-            out = row.get('output' if i == 1 else f'output {i}', '').strip()
+        output_slots = [
+            ("output", "mod 1", "mod 1 param"),
+            ("output 2", "mod 2", "mod 2 param"),
+            ("output 3", "mod 3", "mod 3 param"),
+            ("output b", "b mod 1", "b mod 1 param"),
+            ("output c", "c mod 1", "c mod 1 param"),
+        ]
+        for output_column, mod_column, mod_param_column in output_slots:
+            out = row.get(output_column, '').strip()
             if out and out != '0':
-                mod_str = row.get(f'mod {i}', '').strip()
-                mod_val = row.get(f'mod {i} param', '').strip()
+                mod_str = row.get(mod_column, '').strip()
+                mod_val = row.get(mod_param_column, '').strip()
                 outputs.append(self.resolve_output(out, mod_str, mod_val))
         if status is None:
             status = _status_for_row(desc.lower(), row, self.retail_recipe_rows) if self.retail_repo else "unchanged"
@@ -241,25 +248,7 @@ class CubeAnalyzerService:
         }
 
     def analyze_all_recipes(self) -> List[CubeRecipeGroupDTO]:
-        recipes_data = self.repo.get_excel_table('cubemain')
-        all_recipes = [
-            recipe
-            for row in recipes_data
-            if row.get('enabled') != '0'
-            for recipe in [self.analyze_recipe(row)]
-            if recipe["description"] or recipe["inputs"] or recipe["outputs"]
-        ]
-
-        if self.retail_repo:
-            bk_recipe_keys = {
-                row.get('description', '').strip().lower()
-                for row in recipes_data
-                if row.get('description') and row.get('enabled') != '0'
-            }
-            retail_analyzer = CubeAnalyzerService(self.retail_repo)
-            for key, row in self.retail_recipe_rows.items():
-                if key not in bk_recipe_keys and row.get('enabled') != '0':
-                    all_recipes.append(retail_analyzer.analyze_recipe(row, status="removed"))
+        all_recipes = self.analyze_raw_recipes(include_removed=True)
 
         groups: Dict[str, List[CubeRecipeDTO]] = {}
 
@@ -278,7 +267,7 @@ class CubeAnalyzerService:
                 "order": meta["order"],
                 "status_counts": self._recipe_status_counts(recipes),
                 "corruption_summaries": self._corruption_summaries(recipes) if name == "Corruption Recipes" else [],
-                "recipes": sorted(recipes, key=self._recipe_sort_key),
+                "recipes": sorted(self._display_recipes(name, recipes), key=self._recipe_sort_key),
             }
             for name, recipes in sorted(
                 groups.items(),
@@ -286,6 +275,402 @@ class CubeAnalyzerService:
             )
             for meta in [self.GROUP_META.get(name, self.GROUP_META["General Recipes"])]
         ]
+
+    def _display_recipes(self, group_name: str, recipes: List[CubeRecipeDTO]) -> List[CubeRecipeDTO]:
+        if group_name == "Classic Crafting":
+            return self._condense_classic_crafting(recipes)
+        if group_name == "Item Upgrades":
+            return self._condense_item_upgrades(recipes)
+        if group_name == "Socketing & Sockets":
+            return self._condense_socketing_recipes(recipes)
+        if group_name == "Item Reforging & Cosmetics":
+            return self._condense_socketing_recipes(recipes)
+        return recipes
+
+    def _condense_classic_crafting(self, recipes: List[CubeRecipeDTO]) -> List[CubeRecipeDTO]:
+        grouped: Dict[Tuple[Any, ...], List[CubeRecipeDTO]] = {}
+        passthrough: List[CubeRecipeDTO] = []
+
+        for recipe in recipes:
+            key = self._classic_craft_key(recipe)
+            if key is None:
+                passthrough.append(recipe)
+                continue
+            grouped.setdefault(key, []).append(recipe)
+
+        condensed = passthrough[:]
+        for rows in grouped.values():
+            if len(rows) == 1:
+                condensed.append(self._classic_craft_display_recipe(rows))
+                continue
+            condensed.append(self._classic_craft_display_recipe(rows))
+        return condensed
+
+    def _classic_craft_key(self, recipe: CubeRecipeDTO) -> Optional[Tuple[Any, ...]]:
+        raw = recipe.get("raw_row", {})
+        output = raw.get("output", "").strip()
+        if output.lower() != "usetype,crf":
+            return None
+
+        modifiers = tuple(
+            (
+                raw.get(f"mod {index}", "").strip(),
+                raw.get(f"mod {index} param", "").strip(),
+                raw.get(f"mod {index} min", "").strip(),
+                raw.get(f"mod {index} max", "").strip(),
+                raw.get(f"mod {index} chance", "").strip(),
+            )
+            for index in range(1, 6)
+            if raw.get(f"mod {index}", "").strip()
+        )
+        if not modifiers:
+            return None
+
+        extra_inputs = tuple(
+            raw.get(f"input {index}", "").strip()
+            for index in range(2, 8)
+            if raw.get(f"input {index}", "").strip() and raw.get(f"input {index}", "").strip() != "0"
+        )
+        return (recipe.get("status", "unchanged"), output, extra_inputs, modifiers)
+
+    def _classic_craft_display_recipe(self, rows: List[CubeRecipeDTO]) -> CubeRecipeDTO:
+        first = rows[0]
+        raw = first.get("raw_row", {})
+        family = self._craft_family_name(raw.get("input 2", ""), first.get("description", ""), raw)
+        base_label = self._classic_craft_base_label(rows)
+        extra_inputs = self._classic_craft_extra_inputs(raw)
+        result = self._classic_craft_result(raw)
+        modifiers = self._resolve_output_modifiers(raw)
+
+        inputs = [base_label] + [self.resolve_token(token) for token in extra_inputs]
+        outputs = [result]
+        if modifiers:
+            outputs.append("Fixed properties: " + "; ".join(modifiers))
+
+        display_description = f"{family} Craft"
+        if len(self._classic_craft_base_names(rows)) == 1:
+            display_description = f"{family} {self._classic_craft_base_names(rows)[0]} Craft"
+
+        return {
+            "id": display_description,
+            "description": display_description,
+            "enabled": True,
+            "status": first.get("status", "unchanged"),
+            "inputs": inputs,
+            "outputs": outputs,
+            "raw_row": raw,
+        }
+
+    def _craft_family_name(self, tablet_code: str, description: str = "", raw: Optional[Dict[str, str]] = None) -> str:
+        code = tablet_code.strip().lower()
+        explicit_names = {
+            "bct": "Blood",
+            "cct": "Caster",
+            "pct": "Hit Power",
+            "sct": "Safety",
+        }
+        if code in explicit_names:
+            return explicit_names[code]
+
+        desc = description.lower()
+        for family in ("blood", "caster", "safety", "hit power"):
+            if f"-> {family}" in desc or f"to {family}" in desc:
+                return family.title()
+
+        if raw:
+            first_mod = raw.get("mod 1", "").strip().lower()
+            if first_mod == "lifesteal":
+                return "Blood"
+            if first_mod in {"regen-mana", "mana-kill", "allskills", "cast1"}:
+                return "Caster"
+            if first_mod in {"red-dmg", "red-mag"}:
+                return "Safety"
+            if first_mod == "gethit-skill":
+                return "Hit Power"
+
+        item = self.misc.get(tablet_code.strip())
+        name = item.get("name", "").strip() if item else self.get_item_name(tablet_code)
+        for suffix in (" Crafting Tablet", " Tablet"):
+            if name.endswith(suffix):
+                return name[: -len(suffix)]
+        return name or "Crafting"
+
+    def _classic_craft_base_label(self, rows: List[CubeRecipeDTO]) -> str:
+        base_names = self._classic_craft_base_names(rows)
+        quality_names = self._classic_craft_quality_names(rows)
+        eth_states = self._classic_craft_eth_states(rows)
+
+        quality = " ".join(quality_names) if quality_names else ""
+        if len(base_names) == 1:
+            label = " ".join(part for part in (quality, base_names[0]) if part)
+        else:
+            label = " ".join(part for part in (quality, "Items") if part)
+            label += f": {', '.join(base_names)}"
+
+        if eth_states == {"eth"}:
+            label += " (ethereal)"
+        elif eth_states == {"noe"}:
+            label += " (non-ethereal)"
+        return label
+
+    def _classic_craft_base_names(self, rows: List[CubeRecipeDTO]) -> List[str]:
+        names: List[str] = []
+        for recipe in rows:
+            token = recipe.get("raw_row", {}).get("input 1", "").strip()
+            if not token:
+                continue
+            base_code = token.split(",", 1)[0]
+            name = self.get_item_name(base_code)
+            if name and name not in names:
+                names.append(name)
+        return names
+
+    def _classic_craft_quality_names(self, rows: List[CubeRecipeDTO]) -> List[str]:
+        quality_labels = {
+            "low": "Low Quality",
+            "nor": "Normal",
+            "hi": "Superior",
+            "mag": "Magic",
+            "set": "Set",
+            "uni": "Unique",
+            "rar": "Rare",
+            "ora": "Crafted",
+            "crf": "Crafted",
+            "tmp": "Tempered",
+        }
+        qualities: List[str] = []
+        for recipe in rows:
+            parts = recipe.get("raw_row", {}).get("input 1", "").strip().split(",")[1:]
+            for part in parts:
+                label = quality_labels.get(part.strip().lower())
+                if label and label not in qualities:
+                    qualities.append(label)
+        return qualities
+
+    def _classic_craft_eth_states(self, rows: List[CubeRecipeDTO]) -> set:
+        states = set()
+        for recipe in rows:
+            parts = recipe.get("raw_row", {}).get("input 1", "").strip().split(",")[1:]
+            for part in parts:
+                value = part.strip().lower()
+                if value in {"eth", "noe"}:
+                    states.add(value)
+        return states
+
+    @staticmethod
+    def _classic_craft_extra_inputs(raw: Dict[str, str]) -> List[str]:
+        return [
+            raw.get(f"input {index}", "").strip()
+            for index in range(2, 8)
+            if raw.get(f"input {index}", "").strip() and raw.get(f"input {index}", "").strip() != "0"
+        ]
+
+    def _classic_craft_result(self, raw: Dict[str, str]) -> str:
+        output = raw.get("output", "").strip()
+        if output.lower() == "usetype,crf":
+            return "Input Item Type (Crafted)"
+        return self.resolve_output(output, raw.get("mod 1", "").strip(), raw.get("mod 1 param", "").strip())
+
+    def _resolve_output_modifiers(self, raw: Dict[str, str]) -> List[str]:
+        modifiers: List[str] = []
+        for index in range(1, 6):
+            code = raw.get(f"mod {index}", "").strip()
+            if not code:
+                continue
+            resolved = self.resolver.resolve_property(
+                code,
+                raw.get(f"mod {index} param", ""),
+                raw.get(f"mod {index} min", ""),
+                raw.get(f"mod {index} max", ""),
+            )
+            text = resolved.get("resolved_text", "").strip()
+            if text and text not in modifiers:
+                modifiers.append(text)
+        return modifiers
+
+    def _condense_item_upgrades(self, recipes: List[CubeRecipeDTO]) -> List[CubeRecipeDTO]:
+        grouped: Dict[Tuple[Any, ...], List[CubeRecipeDTO]] = {}
+        passthrough: List[CubeRecipeDTO] = []
+
+        for recipe in recipes:
+            key = self._item_upgrade_key(recipe)
+            if key is None:
+                passthrough.append(recipe)
+                continue
+            grouped.setdefault(key, []).append(recipe)
+
+        condensed = passthrough[:]
+        for rows in grouped.values():
+            condensed.append(self._item_upgrade_display_recipe(rows))
+        return condensed
+
+    def _item_upgrade_key(self, recipe: CubeRecipeDTO) -> Optional[Tuple[Any, ...]]:
+        raw = recipe.get("raw_row", {})
+        output = raw.get("output", "").strip().lower()
+        if output not in {"useitem,mod,exc", "useitem,mod,eli"}:
+            return None
+
+        parts = self._raw_token_parts(raw.get("input 1", ""))
+        if len(parts) < 3 or parts[1] not in {"bas", "exc"}:
+            return None
+
+        extra_inputs = tuple(
+            raw.get(f"input {index}", "").strip()
+            for index in range(2, 8)
+            if raw.get(f"input {index}", "").strip() and raw.get(f"input {index}", "").strip() != "0"
+        )
+        modifiers = tuple(
+            raw.get(f"mod {index}", "").strip()
+            for index in range(1, 6)
+            if raw.get(f"mod {index}", "").strip()
+        )
+        return (recipe.get("status", "unchanged"), output, extra_inputs, modifiers)
+
+    def _item_upgrade_display_recipe(self, rows: List[CubeRecipeDTO]) -> CubeRecipeDTO:
+        first = rows[0]
+        raw = first.get("raw_row", {})
+        output = raw.get("output", "").strip().lower()
+        from_tier = "Normal" if output == "useitem,mod,exc" else "Exceptional"
+        to_tier = "Exceptional" if output == "useitem,mod,exc" else "Elite"
+        qualities = self._quality_names_for_rows(rows)
+        bases = self._base_names_for_rows(rows)
+        quality_label = self._join_labels(qualities, slash=True)
+        base_label = self._join_labels(self._display_base_names(bases), connector="or")
+        subject = " ".join(part for part in (from_tier, quality_label, base_label) if part)
+
+        extra_inputs = [
+            self.resolve_token(raw.get(f"input {index}", "").strip())
+            for index in range(2, 8)
+            if raw.get(f"input {index}", "").strip() and raw.get(f"input {index}", "").strip() != "0"
+        ]
+
+        return {
+            "id": f"{from_tier} to {to_tier} {quality_label} Gear",
+            "description": f"{from_tier} to {to_tier} {quality_label} Gear",
+            "enabled": True,
+            "status": first.get("status", "unchanged"),
+            "inputs": [subject] + extra_inputs,
+            "outputs": [f"{to_tier} version of input item"],
+            "raw_row": raw,
+        }
+
+    def _condense_socketing_recipes(self, recipes: List[CubeRecipeDTO]) -> List[CubeRecipeDTO]:
+        grouped: Dict[Tuple[Any, ...], List[CubeRecipeDTO]] = {}
+        passthrough: List[CubeRecipeDTO] = []
+
+        for recipe in recipes:
+            key = self._socket_reforge_key(recipe)
+            if key is None:
+                passthrough.append(recipe)
+                continue
+            grouped.setdefault(key, []).append(recipe)
+
+        condensed = passthrough[:]
+        for rows in grouped.values():
+            condensed.append(self._socket_reforge_display_recipe(rows))
+        return condensed
+
+    def _socket_reforge_key(self, recipe: CubeRecipeDTO) -> Optional[Tuple[Any, ...]]:
+        raw = recipe.get("raw_row", {})
+        if raw.get("output", "").strip().lower() != "useitem":
+            return None
+        if raw.get("mod 1", "").strip().lower() != "sock":
+            return None
+        if raw.get("input 2", "").strip().lower() != "lmr":
+            return None
+        if any(raw.get(f"input {index}", "").strip() for index in range(3, 8)):
+            return None
+
+        parts = self._raw_token_parts(raw.get("input 1", ""))
+        if not parts:
+            return None
+        return (recipe.get("status", "unchanged"), raw.get("output", "").strip().lower(), raw.get("mod 1", "").strip().lower(), parts[0])
+
+    def _socket_reforge_display_recipe(self, rows: List[CubeRecipeDTO]) -> CubeRecipeDTO:
+        first = rows[0]
+        raw = first.get("raw_row", {})
+        bases = self._display_base_names(self._base_names_for_rows(rows))
+        qualities = self._quality_names_for_rows(rows)
+        state_labels = self._state_labels_for_rows(rows)
+        base_label = self._join_labels(bases, connector="or")
+        quality_label = self._join_labels(qualities, slash=True)
+        state_label = f" ({', '.join(state_labels)})" if state_labels else ""
+        item_label = " ".join(part for part in (quality_label, base_label) if part) + state_label
+
+        return {
+            "id": f"Add sockets to {base_label}",
+            "description": f"Add sockets to {base_label}",
+            "enabled": True,
+            "status": first.get("status", "unchanged"),
+            "inputs": [item_label, self.resolve_token(raw.get("input 2", ""))],
+            "outputs": ["Input Item (socketed)"],
+            "raw_row": raw,
+        }
+
+    @staticmethod
+    def _raw_token_parts(token: str) -> List[str]:
+        return [part.strip().lower() for part in token.strip().strip('"').split(",") if part.strip()]
+
+    def _base_names_for_rows(self, rows: List[CubeRecipeDTO]) -> List[str]:
+        names: List[str] = []
+        for recipe in rows:
+            parts = self._raw_token_parts(recipe.get("raw_row", {}).get("input 1", ""))
+            if not parts:
+                continue
+            name = self.get_item_name(parts[0])
+            if name and name not in names:
+                names.append(name)
+        return names
+
+    def _quality_names_for_rows(self, rows: List[CubeRecipeDTO]) -> List[str]:
+        order = ["low", "nor", "hiq", "mag", "rar", "set", "uni", "crf", "tmp"]
+        labels = {
+            "low": "Low Quality",
+            "nor": "Normal",
+            "hiq": "Superior",
+            "mag": "Magic",
+            "rar": "Rare",
+            "set": "Set",
+            "uni": "Unique",
+            "crf": "Crafted",
+            "tmp": "Tempered",
+        }
+        seen = set()
+        for recipe in rows:
+            parts = self._raw_token_parts(recipe.get("raw_row", {}).get("input 1", ""))[1:]
+            for part in parts:
+                if part in labels:
+                    seen.add(part)
+        return [labels[key] for key in order if key in seen]
+
+    def _state_labels_for_rows(self, rows: List[CubeRecipeDTO]) -> List[str]:
+        order = [("noe", "non-ethereal"), ("eth", "ethereal"), ("nos", "unsocketed")]
+        seen = set()
+        for recipe in rows:
+            parts = self._raw_token_parts(recipe.get("raw_row", {}).get("input 1", ""))[1:]
+            for part in parts:
+                if part in {"noe", "eth", "nos"}:
+                    seen.add(part)
+        return [label for key, label in order if key in seen]
+
+    @staticmethod
+    def _display_base_names(names: List[str]) -> List[str]:
+        replacements = {
+            "Any Armor": "Armor",
+            "Any Shield": "Shield",
+            "Merc Equip": "Helm",
+        }
+        return [replacements.get(name, name) for name in names]
+
+    @staticmethod
+    def _join_labels(labels: List[str], connector: str = "and", slash: bool = False) -> str:
+        if not labels:
+            return ""
+        if slash:
+            return "/".join(labels)
+        if len(labels) == 1:
+            return labels[0]
+        return f"{', '.join(labels[:-1])} {connector} {labels[-1]}"
 
     def _recipe_group_name(self, recipe: CubeRecipeDTO) -> str:
         if recipe.get("status") == "removed":
@@ -529,6 +914,30 @@ class CubeAnalyzerService:
             return 0
 
     @staticmethod
+    def _is_enabled_recipe_row(row: Dict[str, str]) -> bool:
+        if row.get("enabled", "").strip() == "0":
+            return False
+        return CubeAnalyzerService._has_cube_payload(row)
+
+    @staticmethod
+    def _has_cube_payload(row: Dict[str, str]) -> bool:
+        input_columns = [f"input {index}" for index in range(1, 8)]
+        output_columns = ["output", "output 2", "output 3", "output b", "output c"]
+        has_input = False
+        for column in input_columns + output_columns:
+            value = row.get(column, "").strip()
+            if value and value != "0" and column in input_columns:
+                has_input = True
+                break
+        has_output = False
+        for column in output_columns:
+            value = row.get(column, "").strip()
+            if value and value != "0":
+                has_output = True
+                break
+        return has_input and has_output
+
+    @staticmethod
     def _looks_like_reforge_recipe(desc: str) -> bool:
         if any(token in desc for token in (" eth", " sup", " inf", "black", "white", "transmogify", "flask")):
             return True
@@ -552,3 +961,450 @@ class CubeAnalyzerService:
     def _recipe_sort_key(recipe: CubeRecipeDTO) -> Tuple[int, str]:
         status_order = {"added": 0, "modified": 1, "unchanged": 2, "removed": 3}
         return (status_order.get(recipe.get("status", "unchanged"), 2), recipe.get("description", "").lower())
+
+    def analyze_raw_recipes(self, include_removed: bool = False) -> List[CubeRecipeDTO]:
+        recipes_data = self.repo.get_excel_table('cubemain')
+        recipes = [
+            self.analyze_recipe(row)
+            for row in recipes_data
+            if self._is_enabled_recipe_row(row)
+        ]
+
+        if include_removed and self.retail_repo:
+            bk_recipe_keys = {
+                row.get('description', '').strip().lower()
+                for row in recipes_data
+                if row.get('description') and self._is_enabled_recipe_row(row)
+            }
+            retail_analyzer = CubeAnalyzerService(self.retail_repo)
+            for key, row in self.retail_recipe_rows.items():
+                if key not in bk_recipe_keys and self._is_enabled_recipe_row(row):
+                    recipes.append(retail_analyzer.analyze_recipe(row, status="removed"))
+        return recipes
+
+
+class RecipePresentationBuilder:
+    SYSTEM_PAGES = [
+        {
+            "id": "crafting",
+            "title": "Crafting",
+            "href": "crafting/",
+            "summary": "Blood, Caster, Safety, and Hit Power crafts as item-type matrices.",
+            "action": "Compare craft families",
+        },
+        {
+            "id": "corruptions",
+            "title": "Corruptions",
+            "href": "corruptions/",
+            "summary": "Standard and Divine Standard corruption outcomes with chance breakdowns.",
+            "action": "Review risk and sockets",
+        },
+        {
+            "id": "pierce",
+            "title": "Pierce Crafts",
+            "href": "pierce/",
+            "summary": "Elemental, magic, poison, and physical pierce recipes grouped by family.",
+            "action": "Find pierce recipes",
+        },
+        {
+            "id": "reforge-upgrade",
+            "title": "Reforge, Socket, and Upgrade",
+            "href": "reforge-upgrade/",
+            "summary": "Tier upgrades, Larzuk sockets, Charsi reforges, ethereal changes, and augments.",
+            "action": "Shape gear",
+        },
+        {
+            "id": "materials",
+            "title": "Runes and Materials",
+            "href": "materials/",
+            "summary": "Rune ladders, gem conversions, standards, bricks, sigils, keys, and utility recipes.",
+            "action": "Convert materials",
+        },
+        {
+            "id": "raw",
+            "title": "Technical Raw Rows",
+            "href": "raw/",
+            "summary": "Exact enabled cubemain rows for technical drilldown.",
+            "action": "Inspect source rows",
+        },
+    ]
+
+    QUALITY_LABELS = {
+        "low": "Low Quality",
+        "nor": "Normal",
+        "hiq": "Superior",
+        "mag": "Magic",
+        "rar": "Rare",
+        "set": "Set",
+        "uni": "Unique",
+        "crf": "Crafted",
+        "ora": "Crafted",
+        "tmp": "Tempered",
+        "exc": "Exceptional",
+        "bas": "Normal",
+    }
+    STATE_LABELS = {"noe": "non-ethereal", "eth": "ethereal", "nos": "unsocketed"}
+
+    def __init__(self, analyzer: CubeAnalyzerService, raw_recipes: List[CubeRecipeDTO], groups: List[CubeRecipeGroupDTO]):
+        self.analyzer = analyzer
+        self.raw_recipes = raw_recipes
+        self.groups = groups
+        self.group_by_id = {group["id"]: group for group in groups}
+
+    def build(self) -> Dict[str, Any]:
+        crafting = self.crafting_page()
+        corruptions = self.corruptions_page()
+        pierce = self.pierce_page()
+        reforge = self.reforge_upgrade_page()
+        materials = self.materials_page()
+        raw = self.raw_page()
+        overview = self.overview_page(crafting, corruptions, pierce, reforge, materials, raw)
+        return {
+            "overview": overview,
+            "crafting": crafting,
+            "corruptions": corruptions,
+            "pierce": pierce,
+            "reforge_upgrade": reforge,
+            "materials": materials,
+            "raw": raw,
+        }
+
+    def overview_page(self, crafting, corruptions, pierce, reforge, materials, raw) -> Dict[str, Any]:
+        counts = {
+            "raw_enabled_rows": len([recipe for recipe in self.raw_recipes if recipe.get("status") != "removed"]),
+            "display_groups": len(self.groups),
+            "craft_rows": sum(len(section["rows"]) for section in crafting["sections"]),
+            "corruption_cards": len(corruptions["standard_summaries"]) + len(corruptions["divine_summaries"]),
+            "raw_rows": len(raw["rows"]),
+        }
+        cards = []
+        page_counts = {
+            "crafting": counts["craft_rows"],
+            "corruptions": counts["corruption_cards"],
+            "pierce": len(pierce["families"]),
+            "reforge-upgrade": len(reforge["sections"]),
+            "materials": sum(len(section["rows"]) for section in materials["sections"]),
+            "raw": counts["raw_rows"],
+        }
+        for card in self.SYSTEM_PAGES:
+            entry = dict(card)
+            entry["count"] = page_counts.get(card["id"], 0)
+            cards.append(entry)
+        return {"counts": counts, "cards": cards}
+
+    def crafting_page(self) -> Dict[str, Any]:
+        craft_recipes = [
+            recipe for recipe in self.raw_recipes
+            if recipe.get("raw_row", {}).get("output", "").strip().lower() == "usetype,crf"
+            and "mag" in self._token_parts(recipe.get("raw_row", {}).get("input 1", ""))
+        ]
+        grouped: Dict[Tuple[str, str, str], List[CubeRecipeDTO]] = {}
+        for recipe in craft_recipes:
+            raw = recipe["raw_row"]
+            source = self._craft_source(raw)
+            family = self._craft_family(raw, recipe["description"])
+            item_type = self._base_name(self._token_base(raw.get("input 1", "")))
+            grouped.setdefault((source, family, item_type), []).append(recipe)
+
+        sections_by_key: Dict[Tuple[str, str], Dict[str, Any]] = {}
+        for (source, family, item_type), recipes in grouped.items():
+            key = (source, family)
+            section = sections_by_key.setdefault(
+                key,
+                {
+                    "id": slugify(f"{source} {family}"),
+                    "source": source,
+                    "family": family,
+                    "title": f"{source} {family}",
+                    "summary": self._craft_summary(source, family),
+                    "rows": [],
+                },
+            )
+            variants = []
+            seen_variants = set()
+            for recipe in sorted(recipes, key=lambda candidate: self._craft_variant_name(candidate["raw_row"])):
+                raw = recipe["raw_row"]
+                variant_key = (
+                    self._craft_variant_name(raw),
+                    tuple(raw.get(f"input {index}", "").strip() for index in range(2, 8)),
+                    tuple(raw.get(f"mod {index}", "").strip() for index in range(1, 6)),
+                    tuple(raw.get(f"mod {index} min", "").strip() for index in range(1, 6)),
+                    tuple(raw.get(f"mod {index} max", "").strip() for index in range(1, 6)),
+                )
+                if variant_key in seen_variants:
+                    continue
+                seen_variants.add(variant_key)
+                variants.append(
+                    {
+                        "variant": self._craft_variant_name(raw),
+                        "ingredients": self._ingredient_labels(raw, start=2),
+                        "output": "Input Item Type (Crafted)",
+                        "fixed_properties": self._fixed_properties(raw),
+                    }
+                )
+            section["rows"].append(
+                {
+                    "item_type": item_type,
+                    "variants": variants,
+                    "search_text": " ".join(
+                        [source, family, item_type]
+                        + [
+                            " ".join([variant["variant"], " ".join(variant["ingredients"]), " ".join(variant["fixed_properties"])])
+                            for variant in variants
+                        ]
+                    ),
+                }
+            )
+
+        sections = list(sections_by_key.values())
+        for section in sections:
+            section["rows"] = sorted(section["rows"], key=lambda row: row["item_type"])
+        return {"sections": sorted(sections, key=lambda section: (section["source"], section["family"]))}
+
+    def corruptions_page(self) -> Dict[str, Any]:
+        corruption_group = self.group_by_id.get("corruption", {"recipes": [], "corruption_summaries": []})
+        summaries = list(corruption_group.get("corruption_summaries", []))
+        divine = [summary for summary in summaries if any("Divine Standard" in inp for inp in summary.get("inputs", []))]
+        standard = [summary for summary in summaries if summary not in divine]
+        return {
+            "standard_summaries": standard,
+            "divine_summaries": divine,
+            "raw_count": len(corruption_group.get("recipes", [])),
+        }
+
+    def pierce_page(self) -> Dict[str, Any]:
+        pierce_recipes = [
+            recipe for recipe in self.raw_recipes
+            if self._is_pierce_recipe(recipe)
+        ]
+        grouped: Dict[Tuple[str, Tuple[str, ...], str], List[CubeRecipeDTO]] = {}
+        for recipe in pierce_recipes:
+            raw = recipe["raw_row"]
+            family = self._pierce_family(recipe["description"])
+            ingredient_key = tuple(raw.get(f"input {index}", "").strip() for index in range(2, 8) if raw.get(f"input {index}", "").strip())
+            prop = raw.get("mod 1", "").strip() or raw.get("output", "").strip()
+            grouped.setdefault((family, ingredient_key, prop), []).append(recipe)
+
+        families = []
+        for (family, ingredient_key, prop), recipes in grouped.items():
+            first = recipes[0]
+            raw = first["raw_row"]
+            item_types = sorted({self._base_name(self._token_base(recipe["raw_row"].get("input 1", ""))) for recipe in recipes})
+            families.append(
+                {
+                    "id": slugify(family or prop or "pierce"),
+                    "family": family or "Pierce",
+                    "property": self._property_text(prop, raw),
+                    "ingredients": [self.analyzer.resolve_token(token) for token in ingredient_key],
+                    "item_types": item_types,
+                    "result": first["outputs"][0] if first["outputs"] else "",
+                    "search_text": " ".join([family, prop, " ".join(item_types), " ".join(first["inputs"]), " ".join(first["outputs"])]),
+                }
+            )
+        return {"families": sorted(families, key=lambda row: (row["family"], row["property"]))}
+
+    def reforge_upgrade_page(self) -> Dict[str, Any]:
+        section_defs = [
+            ("upgrades", "Tier Upgrades", ["item-upgrades"]),
+            ("sockets", "Socketing and Larzuk", ["socketing", "reforging"]),
+            ("reforge", "Reforge and State Changes", ["reforging"]),
+            ("repair", "Repair and Quantity Augments", ["repair"]),
+        ]
+        sections = []
+        for section_id, title, group_ids in section_defs:
+            rows = []
+            for group_id in group_ids:
+                for recipe in self.group_by_id.get(group_id, {}).get("recipes", []):
+                    text = " ".join([recipe["description"], " ".join(recipe["inputs"]), " ".join(recipe["outputs"])]).lower()
+                    if section_id == "sockets" and "socket" not in text:
+                        continue
+                    if section_id == "reforge" and "socket" in text:
+                        continue
+                    rows.append(self._display_recipe_row(recipe))
+            if rows:
+                sections.append({"id": section_id, "title": title, "rows": rows})
+
+        augment_rows = self._augment_rows()
+        if augment_rows:
+            sections.append({"id": "augments", "title": "Augments", "rows": augment_rows})
+        return {"sections": sections}
+
+    def materials_page(self) -> Dict[str, Any]:
+        section_map = [
+            ("rune-ladders", "Rune Ladders", ["runes"]),
+            ("materials", "Materials and Conversions", ["materials", "stacking", "tablets"]),
+            ("quests", "Quest, Reward, and Utility", ["portals-quests", "charms-jewels-rewards", "general"]),
+        ]
+        sections = []
+        for section_id, title, group_ids in section_map:
+            rows = []
+            for group_id in group_ids:
+                for recipe in self.group_by_id.get(group_id, {}).get("recipes", []):
+                    rows.append(self._display_recipe_row(recipe))
+            if rows:
+                sections.append({"id": section_id, "title": title, "rows": rows})
+        return {"sections": sections}
+
+    def raw_page(self) -> Dict[str, Any]:
+        rows = []
+        for index, recipe in enumerate(self.raw_recipes, start=1):
+            raw = recipe.get("raw_row", {})
+            rows.append(
+                {
+                    "row": index,
+                    "description": recipe["description"],
+                    "status": recipe.get("status", "unchanged"),
+                    "inputs": recipe["inputs"],
+                    "outputs": recipe["outputs"],
+                    "raw_inputs": [raw.get(f"input {i}", "").strip() for i in range(1, 8) if raw.get(f"input {i}", "").strip()],
+                    "raw_outputs": [raw.get(column, "").strip() for column in ("output", "output 2", "output 3", "output b", "output c") if raw.get(column, "").strip()],
+                    "search_text": " ".join([recipe["description"], " ".join(recipe["inputs"]), " ".join(recipe["outputs"])]),
+                }
+            )
+        return {"rows": rows}
+
+    def _display_recipe_row(self, recipe: CubeRecipeDTO) -> Dict[str, Any]:
+        return {
+            "description": recipe["description"],
+            "ingredients": recipe.get("inputs", []),
+            "results": recipe.get("outputs", []),
+            "status": recipe.get("status", "unchanged"),
+            "search_text": " ".join([recipe["description"], " ".join(recipe.get("inputs", [])), " ".join(recipe.get("outputs", []))]),
+        }
+
+    def _augment_rows(self) -> List[Dict[str, Any]]:
+        grouped: Dict[Tuple[Tuple[str, ...], Tuple[Tuple[str, str, str], ...]], List[CubeRecipeDTO]] = {}
+        for recipe in self.raw_recipes:
+            raw = recipe["raw_row"]
+            mods = tuple(
+                (raw.get(f"mod {index}", "").strip(), raw.get(f"mod {index} min", "").strip(), raw.get(f"mod {index} max", "").strip())
+                for index in range(1, 6)
+                if raw.get(f"mod {index}", "").strip()
+            )
+            if not any(mod[0].startswith("augmented") for mod in mods) and "augment" not in recipe["description"].lower():
+                continue
+            rest = tuple(raw.get(f"input {index}", "").strip() for index in range(2, 8) if raw.get(f"input {index}", "").strip())
+            grouped.setdefault((rest, mods), []).append(recipe)
+
+        rows = []
+        for (rest, mods), recipes in grouped.items():
+            first = recipes[0]
+            item_types = sorted({self._base_name(self._token_base(recipe["raw_row"].get("input 1", ""))) for recipe in recipes})
+            rows.append(
+                {
+                    "description": self._augment_title(first, item_types),
+                    "ingredients": [self._join_labels(item_types, connector="or")] + [self.analyzer.resolve_token(token) for token in rest],
+                    "results": self._fixed_properties(first["raw_row"]),
+                    "status": first.get("status", "unchanged"),
+                    "search_text": " ".join([first["description"], " ".join(item_types)]),
+                }
+            )
+        return sorted(rows, key=lambda row: row["description"])
+
+    def _augment_title(self, recipe: CubeRecipeDTO, item_types: List[str]) -> str:
+        desc = recipe["description"].lower()
+        if "mf" in desc and "gf" in desc:
+            return "Magic Find and Gold Find Augment"
+        if "melee augment" in desc:
+            return "Melee Augment"
+        if "teleport" in desc:
+            return "Teleport, Magic Find, and Gold Find Augment"
+        if "repair augment" in desc:
+            return "Repair Augment"
+        return f"Augment {self._join_labels(item_types, connector='or')}"
+
+    def _craft_source(self, raw: Dict[str, str]) -> str:
+        desc = raw.get("description", "").lower()
+        inputs = " ".join(raw.get(f"input {i}", "") for i in range(1, 8)).lower()
+        if "ascended" in desc or any(token in inputs for token in ("gar", "gab", "gav", "gag", "gaw", "gpy", "gpr", "gpb", "gpg", "gpv", "gpw")) and "ascended" in desc:
+            return "Ascended"
+        if raw.get("input 2", "").strip().lower() in {"bct", "cct", "pct", "sct"}:
+            return "Tablet"
+        return "Classic"
+
+    def _craft_family(self, raw: Dict[str, str], description: str) -> str:
+        return self.analyzer._craft_family_name(raw.get("input 2", ""), description, raw)
+
+    def _craft_variant_name(self, raw: Dict[str, str]) -> str:
+        input_parts = self._token_parts(raw.get("input 1", ""))
+        state_parts = [self.STATE_LABELS[part] for part in input_parts[1:] if part in self.STATE_LABELS and part != "nos"]
+        ingredients = [raw.get(f"input {i}", "").strip().lower() for i in range(2, 8)]
+        if "r05" in ingredients and "mls" in ingredients:
+            state_parts.append("adds ethereal")
+        return ", ".join(state_parts) if state_parts else "standard"
+
+    def _craft_summary(self, source: str, family: str) -> str:
+        source_text = {
+            "Classic": "Classic jewel, rune, and perfect gem recipe.",
+            "Tablet": "Tablet shortcut recipe using the matching crafting tablet.",
+            "Ascended": "Ascended gem recipe with stronger endgame materials.",
+        }.get(source, "Crafting recipe.")
+        return f"{source_text} Shows fixed {family} properties by item type."
+
+    def _ingredient_labels(self, raw: Dict[str, str], start: int = 1) -> List[str]:
+        labels = []
+        for index in range(start, 8):
+            token = raw.get(f"input {index}", "").strip()
+            if token and token != "0":
+                labels.append(self.analyzer.resolve_token(token))
+        return labels
+
+    def _fixed_properties(self, raw: Dict[str, str]) -> List[str]:
+        props = []
+        for index in range(1, 6):
+            code = raw.get(f"mod {index}", "").strip()
+            if not code:
+                continue
+            resolved = self.analyzer.resolver.resolve_property(
+                code,
+                raw.get(f"mod {index} param", ""),
+                raw.get(f"mod {index} min", ""),
+                raw.get(f"mod {index} max", ""),
+            )
+            text = resolved.get("resolved_text", "").strip()
+            if text and text not in props:
+                props.append(text)
+        return props
+
+    def _is_pierce_recipe(self, recipe: CubeRecipeDTO) -> bool:
+        desc = recipe.get("description", "").lower()
+        haystack = " ".join([desc, " ".join(recipe.get("outputs", []))]).lower()
+        return any(token in haystack for token in ("incendiary", "magnetic", "virulent", "gelid", "mystical", "breaching", "pierce-"))
+
+    def _pierce_family(self, description: str) -> str:
+        desc = description.lower()
+        for family in ("Incendiary", "Magnetic", "Virulent", "Gelid", "Mystical", "Breaching"):
+            if family.lower() in desc:
+                return family
+        return "Pierce"
+
+    def _property_text(self, prop: str, raw: Dict[str, str]) -> str:
+        if not prop:
+            return ""
+        resolved = self.analyzer.resolver.resolve_property(
+            prop,
+            raw.get("mod 1 param", ""),
+            raw.get("mod 1 min", ""),
+            raw.get("mod 1 max", ""),
+        )
+        return resolved.get("resolved_text", "") or prop
+
+    def _token_base(self, token: str) -> str:
+        parts = self._token_parts(token)
+        return parts[0] if parts else ""
+
+    @staticmethod
+    def _token_parts(token: str) -> List[str]:
+        return [part.strip().lower() for part in token.strip().strip('"').split(",") if part.strip()]
+
+    def _base_name(self, code: str) -> str:
+        return self.analyzer._display_base_names([self.analyzer.get_item_name(code)])[0] if code else ""
+
+    @staticmethod
+    def _join_labels(labels: List[str], connector: str = "and") -> str:
+        labels = [label for label in labels if label]
+        if not labels:
+            return ""
+        if len(labels) == 1:
+            return labels[0]
+        return f"{', '.join(labels[:-1])} {connector} {labels[-1]}"

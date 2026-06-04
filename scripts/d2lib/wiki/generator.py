@@ -13,6 +13,7 @@ from d2lib.services import (
     MiscAnalyzerService, 
     MechanicsAnalyzerService
 )
+from d2lib.services.recipes import RecipePresentationBuilder
 from d2lib.models import (
     BaseItemFamilyDTO, 
     CubeRecipeGroupDTO, 
@@ -238,6 +239,15 @@ class WikiGenerator:
         return service.analyze_all_recipes()
 
     def _write_recipe_pages(self, groups: List[CubeRecipeGroupDTO]) -> None:
+        repo = D2Repository(self.game_data_dir)
+        retail_repo = D2Repository(self.retail_data_dir)
+        service = CubeAnalyzerService(repo, retail_repo)
+        raw_recipes = service.analyze_raw_recipes(include_removed=True)
+        recipe_pages = RecipePresentationBuilder(service, raw_recipes, groups).build()
+        self.writer.write_text("data/recipes-overview.json", json.dumps(recipe_pages["overview"], indent=2))
+        self.writer.write_text("data/recipes-crafting.json", json.dumps(recipe_pages["crafting"], indent=2))
+        self.writer.write_text("data/recipes-raw.json", json.dumps(recipe_pages["raw"], indent=2))
+
         self._write_page(
             title=f"Cube Recipes | {self.new_label} Wiki",
             output_path=WikiRoutes.recipes_index_output_path(),
@@ -247,6 +257,55 @@ class WikiGenerator:
                 os.path.join(self.game_data_dir, "data", "global", "excel", "cubemain.txt"),
             ],
             groups=groups,
+            overview=recipe_pages["overview"],
+        )
+        self._write_page(
+            title=f"Crafting Recipes | {self.new_label} Wiki",
+            output_path=WikiRoutes.recipes_crafting_output_path(),
+            template_name="recipes_crafting.html",
+            category="index",
+            source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "cubemain.txt")],
+            page=recipe_pages["crafting"],
+        )
+        self._write_page(
+            title=f"Corruption Recipes | {self.new_label} Wiki",
+            output_path=WikiRoutes.recipes_corruptions_output_path(),
+            template_name="recipes_corruptions.html",
+            category="index",
+            source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "cubemain.txt")],
+            page=recipe_pages["corruptions"],
+        )
+        self._write_page(
+            title=f"Pierce Recipes | {self.new_label} Wiki",
+            output_path=WikiRoutes.recipes_pierce_output_path(),
+            template_name="recipes_pierce.html",
+            category="index",
+            source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "cubemain.txt")],
+            page=recipe_pages["pierce"],
+        )
+        self._write_page(
+            title=f"Reforge and Upgrade Recipes | {self.new_label} Wiki",
+            output_path=WikiRoutes.recipes_reforge_upgrade_output_path(),
+            template_name="recipes_reforge_upgrade.html",
+            category="index",
+            source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "cubemain.txt")],
+            page=recipe_pages["reforge_upgrade"],
+        )
+        self._write_page(
+            title=f"Rune and Material Recipes | {self.new_label} Wiki",
+            output_path=WikiRoutes.recipes_materials_output_path(),
+            template_name="recipes_materials.html",
+            category="index",
+            source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "cubemain.txt")],
+            page=recipe_pages["materials"],
+        )
+        self._write_page(
+            title=f"Raw Cube Recipes | {self.new_label} Wiki",
+            output_path=WikiRoutes.recipes_raw_output_path(),
+            template_name="recipes_raw.html",
+            category="index",
+            source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "cubemain.txt")],
+            page=recipe_pages["raw"],
         )
 
     def _load_monster_groups(self) -> List[MonsterActGroupDTO]:
@@ -511,6 +570,72 @@ class WikiGenerator:
             unique_group_count=sum(1 for group in groups if group["quality"] == "unique"),
         )
 
+    @staticmethod
+    def _drop_base_lookup(repo: D2Repository) -> Dict[str, Dict[str, Any]]:
+        lookup: Dict[str, Dict[str, Any]] = {}
+
+        def to_int(value: Any) -> int:
+            try:
+                return int(str(value).strip() or "0")
+            except ValueError:
+                return 0
+
+        for table_name in ("weapons", "armor", "misc"):
+            for row in repo.get_excel_table(table_name):
+                code = str(row.get("code", "")).strip()
+                if not code:
+                    continue
+                name_key = str(row.get("namestr") or row.get("name") or code).strip()
+                display_name = repo.get_string(name_key) or str(row.get("name") or name_key or code).strip()
+                lookup[code] = {
+                    "code": code,
+                    "name": display_name,
+                    "level": to_int(row.get("level")),
+                    "source_table": f"{table_name}.txt",
+                }
+        return lookup
+
+    @staticmethod
+    def _item_drop_info(
+        entry: Dict[str, Any],
+        family: str,
+        base_lookup: Dict[str, Dict[str, Any]],
+    ) -> Dict[str, Any]:
+        if family not in {"unique", "set"}:
+            return {}
+
+        raw_row = entry.get("raw_row", {}) or {}
+        base_code_column = "code" if family == "unique" else "item"
+        base_code = str(raw_row.get(base_code_column, "")).strip()
+        base_info = base_lookup.get(base_code, {})
+
+        def to_int(value: Any) -> int:
+            try:
+                return int(str(value).strip() or "0")
+            except ValueError:
+                return 0
+
+        item_level = to_int(raw_row.get("lvl"))
+        base_level = to_int(base_info.get("level"))
+        drop_level = max(item_level, base_level)
+        if drop_level <= 0:
+            return {}
+
+        parts = []
+        if item_level:
+            parts.append(f"item {item_level}")
+        if base_level:
+            parts.append(f"base {base_level}")
+        detail = f" ({', '.join(parts)})" if parts else ""
+        return {
+            "drop_level": drop_level,
+            "label": f"{drop_level}+{detail}",
+            "item_level": item_level,
+            "base_level": base_level,
+            "base_code": base_code,
+            "base_name": base_info.get("name", ""),
+        }
+
     def _load_items(self, item_db_dir: Optional[str] = None) -> Dict[str, List[Dict[str, Any]]]:
         items: Dict[str, List[Dict[str, Any]]] = {family: [] for family in ITEM_FAMILIES}
         source_dir = item_db_dir or self.item_db_dir
@@ -674,25 +799,29 @@ class WikiGenerator:
         page_entries: Dict[str, List[Dict[str, str]]] = {family: [] for family in ITEM_FAMILIES}
         used_paths: Dict[str, Dict[str, int]] = {family: {} for family in ITEM_FAMILIES}
         icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
+        drop_base_lookup = self._drop_base_lookup(D2Repository(self.game_data_dir))
 
         for family, entries in items.items():
             for entry in sorted(entries, key=self._item_sort_key):
                 title = self._item_title(entry, family)
                 old_entry = old_item_index.get(family, {}).get(self._item_identity(entry, family))
                 status = self._item_diff_status(entry, old_entry)
-                slug = self._item_slug(entry, family, title, used_paths[family])
-                output_path = WikiRoutes.item_output_path(family, slug)
-                
                 if family == "set":
-                    set_name = entry.get("raw_row", {}).get("set", "Unknown Set")
-                    href = f"sets/#{slugify(set_name)}-{slugify(title)}"
+                    set_name = str(entry.get("raw_row", {}).get("set") or "").strip()
+                    entry["set_anchor"] = self._set_item_anchor(entry)
+                    href = f"sets/#{slugify(set_name)}" if set_name else "sets/"
+                    output_path = ""
                 else:
+                    slug = self._item_slug(entry, family, title, used_paths[family])
+                    output_path = WikiRoutes.item_output_path(family, slug)
                     href = WikiRoutes.route_from_output_path(output_path)
+                entry["href"] = href
 
                 icon_src = icon_exporter.export_entry_icon(entry, family)
                 entry["icon_src"] = icon_src
                 if family == "runeword":
                     entry["rune_requirements"] = self._runeword_rune_requirements(entry, icon_exporter)
+                entry["drop_info"] = self._item_drop_info(entry, family, drop_base_lookup)
                 comparison = self._item_comparison_context(entry, family, old_entry)
                 page_entries[family].append(
                     {
@@ -704,6 +833,8 @@ class WikiGenerator:
                         "item_group": self._item_filter_group(entry, family),
                         "item_type": self._item_filter_type(entry, family),
                         "icon_src": icon_src,
+                        "drop_level": entry["drop_info"].get("drop_level", 0),
+                        "drop_level_label": entry["drop_info"].get("label", ""),
                         "properties": [
                             str(prop.get("resolved_text", "")).strip()
                             for prop in entry.get("properties", [])
@@ -714,14 +845,15 @@ class WikiGenerator:
                     }
                 )
 
-                self._write_page(
-                    title=f"{title} | {family.title()} Item",
-                    output_path=output_path,
-                    template_name="item.html",
-                    category=family,
-                    source_files=[entry["_source_rel_path"]],
-                    page=self._item_page_context(entry, family, title, old_entry),
-                )
+                if output_path:
+                    self._write_page(
+                        title=f"{title} | {family.title()} Item",
+                        output_path=output_path,
+                        template_name="item.html",
+                        category=family,
+                        source_files=[entry["_source_rel_path"]],
+                        page=self._item_page_context(entry, family, title, old_entry),
+                    )
 
         return page_entries
 
@@ -772,6 +904,11 @@ class WikiGenerator:
                 for prop in entry.get("properties", [])
                 if str(prop.get("resolved_text", "")).strip()
             ][:5]
+            searchable_properties = [
+                str(prop.get("resolved_text", ""))
+                for prop in entry.get("properties", [])
+                if str(prop.get("resolved_text", "")).strip()
+            ]
 
             old_entry = old_runewords.get(self._item_identity(entry, "runeword"))
             comparison = self._item_comparison_context(entry, "runeword", old_entry)
@@ -792,7 +929,7 @@ class WikiGenerator:
                             " ".join(entry.get("base_items", [])),
                             " ".join(rune["name"] for rune in rune_requirements),
                             " ".join(rune["code"] for rune in rune_requirements),
-                            " ".join(property_preview),
+                            " ".join(searchable_properties),
                             page_entry.get("status", ""),
                         ]
                     ),
@@ -840,11 +977,11 @@ class WikiGenerator:
             for item in members:
                 old_item = old_item_index.get(self._item_identity(item, "set"))
                 item["comparison"] = self._item_comparison_context(item, "set", old_item)
+            self._align_set_member_comparisons(members)
 
             bonus_diffs = self._set_bonus_comparison(name, bk_set_row, rt_set_row, resolver_bk, resolver_rt)
             
             status = "added" if not rt_set_row else "modified" if any(b["status"] != "same" for b in bonus_diffs) or any(m["comparison"]["state"] == "modified" for m in members) else "unchanged"
-            
             results.append({
                 "name": name,
                 "summary": f"A {len(members)}-piece set.",
@@ -862,6 +999,39 @@ class WikiGenerator:
             source_files=["data/global/excel/sets.txt", "data/global/excel/setitems.txt"],
             sets=results,
         )
+
+    @staticmethod
+    def _align_set_member_comparisons(members: List[Dict[str, Any]]) -> None:
+        max_stat_rows = max(
+            (len(member.get("comparison", {}).get("stat_rows", [])) for member in members),
+            default=0,
+        )
+        max_property_rows = max(
+            (len(member.get("comparison", {}).get("property_rows", [])) for member in members),
+            default=0,
+        )
+        has_property_section = max_property_rows > 0
+
+        def copy_real_rows(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+            return [{**row, "is_spacer": False} for row in rows]
+
+        def spacer_rows(count: int) -> List[Dict[str, Any]]:
+            return [
+                {"label": "", "old": "", "new": "", "status": "same", "is_spacer": True}
+                for _ in range(count)
+            ]
+
+        row_count = 2 + max_stat_rows + (1 if has_property_section else 0) + max_property_rows
+        for member in members:
+            comparison = member.get("comparison", {})
+            stat_rows = copy_real_rows(comparison.get("stat_rows", []))
+            property_rows = copy_real_rows(comparison.get("property_rows", []))
+            comparison["aligned_stat_rows"] = stat_rows + spacer_rows(max_stat_rows - len(stat_rows))
+            comparison["aligned_property_rows"] = property_rows + spacer_rows(
+                max_property_rows - len(property_rows)
+            )
+            comparison["has_property_section"] = has_property_section
+            comparison["row_count"] = row_count
 
     def _set_bonus_comparison(self, set_name: str, bk_row: Dict[str, str], rt_row: Dict[str, str], resolver_bk: PropertyResolverService, resolver_rt: PropertyResolverService) -> List[Dict[str, Any]]:
         # Set bonuses in sets.txt:
@@ -1024,6 +1194,14 @@ class WikiGenerator:
         )
 
         group_to_types: Dict[str, set[str]] = {}
+        drop_level_breakpoints = sorted(
+            {
+                int(entry.get("drop_level") or 0)
+                for family in ("unique", "set")
+                for entry in item_entries[family]
+                if 85 < int(entry.get("drop_level") or 0) < 99
+            }
+        )
         for entries in item_entries.values():
             for entry in entries:
                 group_to_types.setdefault(entry["item_group"], set()).add(entry["item_type"])
@@ -1039,6 +1217,7 @@ class WikiGenerator:
                 {"name": group, "types": sorted(group_to_types[group])}
                 for group in sorted(group_to_types)
             ],
+            drop_level_breakpoints=drop_level_breakpoints,
         )
 
         self._write_page(
@@ -1099,6 +1278,8 @@ class WikiGenerator:
                 "icon_src": entry.get("icon_src", ""),
                 "summary": entry["summary"],
                 "search_text": entry["search_text"],
+                "drop_level": entry.get("drop_level", 0),
+                "drop_level_label": entry.get("drop_level_label", ""),
                 "properties": entry.get("properties", []),
                 "stat_rows": entry.get("stat_rows", []),
                 "property_rows": entry.get("property_rows", []),
@@ -1221,8 +1402,18 @@ class WikiGenerator:
                 {"label": "Item Type", "value": entry.get("item_type", "Unknown")},
                 {"label": "Level Requirement", "value": entry.get("lvl_req", "0")},
             ]
+            drop_info = entry.get("drop_info") or {}
+            if drop_info.get("label"):
+                stats.append({"label": "Drop Level", "value": drop_info["label"]})
             if family == "set" and entry.get("raw_row", {}).get("set"):
-                stats.append({"label": "Set", "value": entry["raw_row"]["set"]})
+                set_name = str(entry["raw_row"]["set"])
+                stats.append(
+                    {
+                        "label": "Set",
+                        "value": set_name,
+                        "href": f"sets/#{slugify(set_name)}",
+                    }
+                )
 
         properties = [
             {
@@ -1591,13 +1782,21 @@ class WikiGenerator:
             props = " ".join(prop.get("resolved_text", "") for prop in entry.get("properties", []))
             return f"{entry.get('name', '')} {runes} {bases} {props}"
         props = " ".join(prop.get("resolved_text", "") for prop in entry.get("properties", []))
+        drop_info = entry.get("drop_info") or {}
         return (
             f"{entry.get('display_name', '')} "
             f"{entry.get('base_item', '')} "
             f"{entry.get('item_type', '')} "
             f"{entry.get('raw_row', {}).get('set', '')} "
+            f"{drop_info.get('drop_level', '')} {drop_info.get('label', '')} "
             f"{props}"
         )
+
+    @staticmethod
+    def _set_item_anchor(entry: Dict[str, Any]) -> str:
+        set_name = str(entry.get("raw_row", {}).get("set") or "set").strip()
+        item_name = str(entry.get("display_name") or entry.get("id") or entry.get("name") or "item").strip()
+        return f"{slugify(set_name)}-{slugify(item_name)}"
 
     @staticmethod
     def _item_filter_type(entry: Dict[str, Any], family: str) -> str:

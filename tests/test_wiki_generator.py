@@ -93,6 +93,7 @@ class TestWikiGenerator(unittest.TestCase):
                 "base_item": "First Base",
                 "item_type": "Helm",
                 "lvl_req": "10",
+                "raw_row": {"code": "7gm", "lvl": "85", "lvl req": "10"},
                 "properties": [{"code": "dmg", "param": "", "resolved_text": "+10 Damage"}],
             },
             {
@@ -100,6 +101,7 @@ class TestWikiGenerator(unittest.TestCase):
                 "base_item": "Second Base",
                 "item_type": "Helm",
                 "lvl_req": "20",
+                "raw_row": {"code": "7gm", "lvl": "90", "lvl req": "20"},
                 "properties": [{"code": "dmg", "param": "", "resolved_text": "+20 Damage"}],
             },
             {
@@ -107,6 +109,7 @@ class TestWikiGenerator(unittest.TestCase):
                 "base_item": "Second Base",
                 "item_type": "Helm",
                 "lvl_req": "30",
+                "raw_row": {"code": "7gm", "lvl": "80", "lvl req": "30"},
                 "properties": [{"code": "dmg", "param": "", "resolved_text": "+30 Damage"}],
             },
         ]
@@ -125,8 +128,27 @@ class TestWikiGenerator(unittest.TestCase):
                 "base_item": "Short Sword",
                 "item_type": "Sword",
                 "lvl_req": "12",
-                "raw_row": {"set": "Practice Set"},
+                "raw_row": {"set": "Practice Set", "item": "7gm", "lvl": "85"},
                 "properties": [{"code": "ias", "param": "", "resolved_text": "+10% Increased Attack Speed"}],
+            },
+            {
+                "display_name": "Set Cap",
+                "base_item": "Cap",
+                "item_type": "Helm",
+                "lvl_req": "8",
+                "raw_row": {"set": "Practice Set"},
+                "properties": [],
+            },
+            {
+                "display_name": "Set Belt",
+                "base_item": "Belt",
+                "item_type": "Belt",
+                "lvl_req": "15",
+                "raw_row": {"set": "Practice Set"},
+                "properties": [
+                    {"code": "res-all", "param": "", "resolved_text": "All Resistances +5"},
+                    {"code": "hp", "param": "", "resolved_text": "+20 to Life"},
+                ],
             }
         ]
         runewords = [
@@ -135,7 +157,14 @@ class TestWikiGenerator(unittest.TestCase):
                 "runes": ["Tal Rune", "Eth Rune"],
                 "base_items": ["Melee Weapon"],
                 "raw_row": {"Rune1": "r07", "Rune2": "r05"},
-                "properties": [{"code": "dmg", "param": "", "resolved_text": "+25% Enhanced Damage"}],
+                "properties": [
+                    {"code": "dmg", "param": "", "resolved_text": "+25% Enhanced Damage"},
+                    {"code": "ac", "param": "", "resolved_text": "+150 Defense"},
+                    {"code": "mana/lvl", "param": "", "resolved_text": "+5 to Mana per Level"},
+                    {"code": "res-all", "param": "", "resolved_text": "All Resistances +20"},
+                    {"code": "balance3", "param": "", "resolved_text": "30% Faster Hit Recovery"},
+                    {"code": "aura", "param": "Holy Shock", "resolved_text": "Level 15 Holy Shock Aura When Equipped"},
+                ],
                 "rune_properties": [
                     {
                         "rune": "El",
@@ -198,6 +227,7 @@ class TestWikiGenerator(unittest.TestCase):
                 {"ItemType": "Weapon", "Code": "weap"},
                 {"ItemType": "Any Armor", "Code": "armo"},
                 {"ItemType": "Helm", "Code": "helm", "Equiv1": "armo"},
+                {"ItemType": "Belt", "Code": "belt", "Equiv1": "armo"},
                 {"ItemType": "Melee Weapon", "Code": "mele", "Equiv1": "weap"},
                 {"ItemType": "Blunt", "Code": "blun", "Equiv1": "mele"},
                 {"ItemType": "Hammer", "Code": "hamm", "Equiv1": "blun", "MaxSockets1": "3", "MaxSockets2": "4", "MaxSockets3": "6"},
@@ -332,6 +362,9 @@ class TestWikiGenerator(unittest.TestCase):
             [
                 {"name": "Amethyst", "namestr": "Amethyst", "code": "gsw", "type": "gem2", "level": "12", "levelreq": "0", "cost": "500"},
                 {"name": "Crafting Tablet", "namestr": "Crafting Tablet", "code": "pct", "type": "misc", "level": "1", "cost": "1000", "UICatOverride": "Crafting"},
+                {"name": "Blood Crafting Tablet", "namestr": "Blood Crafting Tablet", "code": "bct", "type": "misc", "level": "1", "cost": "1000", "UICatOverride": "Crafting"},
+                {"name": "Caster Crafting Tablet", "namestr": "Caster Crafting Tablet", "code": "cct", "type": "misc", "level": "1", "cost": "1000", "UICatOverride": "Crafting"},
+                {"name": "Safety Crafting Tablet", "namestr": "Safety Crafting Tablet", "code": "sct", "type": "misc", "level": "1", "cost": "1000", "UICatOverride": "Crafting"},
                 {"name": "Standard of Heroes", "namestr": "Standard of Heroes", "code": "std", "type": "spot", "level": "1", "cost": "1000", "UICatOverride": "uberm"},
                 {"name": "Brick", "namestr": "Brick", "code": "brk", "type": "spot", "level": "1", "cost": "1000", "UICatOverride": "Crafting"},
             ],
@@ -383,10 +416,19 @@ class TestWikiGenerator(unittest.TestCase):
             ],
             [
                 {"description": "1 magic amulet + power crafting tablet -> hit power amulet", "enabled": "1", "input 1": "amu,mag", "input 2": "pct", "output": "amu", "mod 1": "mag"},
+                {"description": "1 Magic Axe + Blood Crafting Tablet -> Blood Weapon", "enabled": "1", "input 1": "weap,mag,noe", "input 2": "bct", "output": "usetype,crf", "mod 1": "lifesteal", "mod 1 min": "2", "mod 1 max": "4"},
+                {"description": "1 Magic Axe + Blood Crafting Tablet -> Blood Weapon", "enabled": "1", "input 1": "weap,mag,eth", "input 2": "bct", "output": "usetype,crf", "mod 1": "lifesteal", "mod 1 min": "2", "mod 1 max": "4"},
+                {"description": "1 Magic Belt + Blood Crafting Tablet -> Blood Belt", "enabled": "1", "input 1": "belt,mag,noe", "input 2": "bct", "output": "usetype,crf", "mod 1": "lifesteal", "mod 1 min": "2", "mod 1 max": "4"},
+                {"description": "1 Magic Axe + 1 Jewel + Ort Rune + 1 Perfect Ruby -> Blood Weapon", "enabled": "1", "input 1": "weap,mag,noe", "input 2": "jew", "input 3": "r09", "input 4": "gsw", "output": "usetype,crf", "mod 1": "lifesteal", "mod 1 min": "2", "mod 1 max": "4"},
+                {"description": "1 Magic Axe + Caster Crafting Tablet -> Caster Weapon", "enabled": "1", "input 1": "weap,mag,noe", "input 2": "cct", "output": "usetype,crf", "mod 1": "regen-mana", "mod 1 min": "4", "mod 1 max": "10"},
+                {"description": "1 Magic Axe + Safety Crafting Tablet -> Safety Weapon", "enabled": "1", "input 1": "weap,mag,noe", "input 2": "sct", "output": "usetype,crf", "mod 1": "red-dmg", "mod 1 min": "1", "mod 1 max": "4"},
+                {"description": "1 Magic Axe + Power Crafting Tablet -> Hit Power Weapon", "enabled": "1", "input 1": "weap,mag,noe", "input 2": "pct", "output": "usetype,crf", "mod 1": "gethit-skill", "mod 1 min": "1", "mod 1 max": "5"},
+                {"description": "1 Magic Axe + 1 Jewel + Fal Rune + 1 Ascended Ruby -> Ascended Blood Weapon", "enabled": "1", "input 1": "weap,mag,noe", "input 2": "jew", "input 3": "r19", "input 4": "gsw", "output": "usetype,crf", "mod 1": "lifesteal", "mod 1 min": "3", "mod 1 max": "6"},
                 {"description": "1 amn + standard gem -> thul rune", "enabled": "1", "input 1": "r11", "input 2": "gsw", "output": "r10"},
                 {"description": "Unique Corruptor", "enabled": "1", "input 1": "amu,uni", "input 2": "std", "output": "useitem", "output b": "std", "mod 1": "corruption2", "mod 1 min": "1", "mod 1 max": "1000", "value": "0"},
                 {"description": "Brick", "enabled": "1", "input 1": "amu,uni", "input 2": "std", "output": "usetype,rar", "output b": "brk", "mod 1": "corruption2", "mod 1 min": "1001", "mod 1 max": "1001", "value": "300"},
                 {"description": "Amulet", "enabled": "1", "input 1": "amu,uni", "input 2": "std", "output": "useitem", "mod 1": "corruption2", "mod 1 min": "1001", "mod 1 max": "1001", "mod 2": "sock", "mod 2 min": "1", "mod 2 max": "1", "value": "1000"},
+                {"description": "1 Socket"},
             ],
         )
         self._write_tsv(
@@ -726,6 +768,12 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("areas/index.html", WikiRoutes.areas_index_output_path())
         self.assertEqual("bases/index.html", WikiRoutes.bases_index_output_path())
         self.assertEqual("recipes/index.html", WikiRoutes.recipes_index_output_path())
+        self.assertEqual("recipes/crafting/index.html", WikiRoutes.recipes_crafting_output_path())
+        self.assertEqual("recipes/corruptions/index.html", WikiRoutes.recipes_corruptions_output_path())
+        self.assertEqual("recipes/pierce/index.html", WikiRoutes.recipes_pierce_output_path())
+        self.assertEqual("recipes/reforge-upgrade/index.html", WikiRoutes.recipes_reforge_upgrade_output_path())
+        self.assertEqual("recipes/materials/index.html", WikiRoutes.recipes_materials_output_path())
+        self.assertEqual("recipes/raw/index.html", WikiRoutes.recipes_raw_output_path())
         self.assertEqual("bestiary/index.html", WikiRoutes.bestiary_index_output_path())
         self.assertEqual("misc/index.html", WikiRoutes.misc_index_output_path())
         self.assertEqual("gems-runes/index.html", WikiRoutes.gems_runes_index_output_path())
@@ -758,6 +806,12 @@ class TestWikiGenerator(unittest.TestCase):
             os.path.join(self.output, "areas", "index.html"),
             os.path.join(self.output, "bases", "index.html"),
             os.path.join(self.output, "recipes", "index.html"),
+            os.path.join(self.output, "recipes", "crafting", "index.html"),
+            os.path.join(self.output, "recipes", "corruptions", "index.html"),
+            os.path.join(self.output, "recipes", "pierce", "index.html"),
+            os.path.join(self.output, "recipes", "reforge-upgrade", "index.html"),
+            os.path.join(self.output, "recipes", "materials", "index.html"),
+            os.path.join(self.output, "recipes", "raw", "index.html"),
             os.path.join(self.output, "bestiary", "index.html"),
             os.path.join(self.output, "misc", "index.html"),
             os.path.join(self.output, "gems-runes", "index.html"),
@@ -765,6 +819,9 @@ class TestWikiGenerator(unittest.TestCase):
             os.path.join(self.output, "drops", "index.html"),
             os.path.join(self.output, "data", "areas-index.json"),
             os.path.join(self.output, "data", "drop-weights.json"),
+            os.path.join(self.output, "data", "recipes-overview.json"),
+            os.path.join(self.output, "data", "recipes-crafting.json"),
+            os.path.join(self.output, "data", "recipes-raw.json"),
             os.path.join(self.output, "reports", "index.html"),
             os.path.join(self.output, "reports", "items", "retail-bk", "index.html"),
             os.path.join(self.output, "reports", "items", "retail-bk", "diff.json"),
@@ -772,6 +829,7 @@ class TestWikiGenerator(unittest.TestCase):
         ]
         for path in expected_paths:
             self.assertTrue(os.path.exists(path), path)
+        self.assertFalse(os.path.exists(os.path.join(self.output, "items", "set", "set-blade", "index.html")))
 
         with open(os.path.join(self.output, "manifest.json"), "r", encoding="utf-8") as f:
             manifest = json.load(f)
@@ -783,6 +841,12 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("areas/", manifest_paths)
         self.assertIn("bases/", manifest_paths)
         self.assertIn("recipes/", manifest_paths)
+        self.assertIn("recipes/crafting/", manifest_paths)
+        self.assertIn("recipes/corruptions/", manifest_paths)
+        self.assertIn("recipes/pierce/", manifest_paths)
+        self.assertIn("recipes/reforge-upgrade/", manifest_paths)
+        self.assertIn("recipes/materials/", manifest_paths)
+        self.assertIn("recipes/raw/", manifest_paths)
         self.assertIn("bestiary/", manifest_paths)
         self.assertIn("misc/", manifest_paths)
         self.assertIn("gems-runes/", manifest_paths)
@@ -866,7 +930,10 @@ class TestWikiGenerator(unittest.TestCase):
         with open(os.path.join(self.output, "data", "items-index.json"), "r", encoding="utf-8") as f:
             rows = json.load(f)
 
-        self.assertEqual(["Twin Item", "Twin Item", "Twin Item", "Set Blade"], [row["title"] for row in rows])
+        self.assertEqual(
+            ["Twin Item", "Twin Item", "Twin Item", "Set Belt", "Set Blade", "Set Cap"],
+            [row["title"] for row in rows],
+        )
         self.assertEqual(
             {
                 "title",
@@ -878,6 +945,8 @@ class TestWikiGenerator(unittest.TestCase):
                 "icon_src",
                 "summary",
                 "search_text",
+                "drop_level",
+                "drop_level_label",
                 "properties",
                 "stat_rows",
                 "property_rows",
@@ -887,7 +956,11 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("modified", rows[0]["status"])
         self.assertEqual("added", rows[1]["status"])
         self.assertEqual("items/unique/twin-item/", rows[0]["href"])
+        self.assertEqual("sets/#practice-set", rows[4]["href"])
         self.assertEqual(["+10 Damage"], rows[0]["properties"])
+        self.assertEqual(85, rows[0]["drop_level"])
+        self.assertEqual("85+ (item 85, base 85)", rows[0]["drop_level_label"])
+        self.assertEqual(90, rows[1]["drop_level"])
 
         self.assertNotIn("Practice", [row["title"] for row in rows])
 
@@ -899,23 +972,62 @@ class TestWikiGenerator(unittest.TestCase):
             items_page = f.read()
         with open(os.path.join(self.output, "runewords", "index.html"), "r", encoding="utf-8") as f:
             runewords_index_page = f.read()
+        with open(os.path.join(self.output, "sets", "index.html"), "r", encoding="utf-8") as f:
+            sets_index_page = f.read()
+        with open(os.path.join(self.output, "assets", "site.css"), "r", encoding="utf-8") as f:
+            site_css = f.read()
+        with open(os.path.join(self.output, "assets", "site.js"), "r", encoding="utf-8") as f:
+            site_js = f.read()
 
         self.assertIn("Twin Item", item_page)
+        self.assertIn("Drop Level", item_page)
+        self.assertIn("85+ (item 85, base 85)", item_page)
         self.assertIn("BKDiablo Wiki", item_page)
         self.assertIn('href="../../../areas/"', item_page)
         self.assertIn('href="../../../drops/"', item_page)
         self.assertIn('href="../../../reports/"', item_page)
         self.assertIn('data-item-index-url="../data/items-index.json"', items_page)
+        self.assertIn('id="item-drop-level-filter"', items_page)
+        self.assertIn('<option value="85">85+</option>', items_page)
+        self.assertIn('<option value="90">90+</option>', items_page)
         self.assertNotIn('data-filter-family="runeword"', items_page)
         self.assertIn("Runewords", runewords_index_page)
         self.assertIn("Practice", runewords_index_page)
         self.assertIn("rune-chip-icon", runewords_index_page)
         self.assertIn("Tal Rune", runewords_index_page)
         self.assertIn("Eth Rune", runewords_index_page)
+        self.assertRegex(runewords_index_page, r'data-search="[^"]*Holy Shock[^"]*"')
+        self.assertIn('id="practice-set"', sets_index_page)
+        self.assertIn('id="practice-set-set-blade"', sets_index_page)
+        self.assertIn("<span class=\"set-th-name\">Set Blade</span>", sets_index_page)
+        self.assertNotIn('href="../sets/#practice-set-set-blade"', sets_index_page)
+        self.assertIn("Drop", sets_index_page)
+        self.assertIn("sp-row-spacer", sets_index_page)
+        self.assertIn("sp-sep-spacer", sets_index_page)
+        self.assertIn("--set-piece-row-count:", sets_index_page)
+        self.assertNotIn("sp-empty", sets_index_page)
+        self.assertNotIn("(empty)", sets_index_page)
+        self.assertIn(".set-pieces { grid-template-columns: repeat(2, minmax(0, 1fr)); }", site_css)
+        self.assertIn(".set-pieces { grid-template-columns: 1fr; }", site_css)
+        self.assertIn(".item-drop-level", site_css)
+        self.assertIn(".inline-stat-link", site_css)
+        self.assertIn("scroll-margin-top: 118px", site_css)
+        self.assertNotIn("is-focused-piece", site_css)
+        self.assertNotIn("is-focused-set", site_css)
+        self.assertNotIn("scrollSetPieceHashIntoView", site_js)
+        self.assertNotIn("prepend(setBlock)", site_js)
 
         with open(os.path.join(self.output, "areas", "index.html"), "r", encoding="utf-8") as f:
             areas_page = f.read()
         self.assertIn('data-area-index-url="../data/areas-index.json"', areas_page)
+        self.assertIn('id="area-card-root"', areas_page)
+        self.assertIn("Area Farming Guide", areas_page)
+        self.assertIn("Monster Density", areas_page)
+        self.assertNotIn("Farm Score", areas_page)
+        self.assertNotIn("<th>Score</th>", areas_page)
+        self.assertNotIn("<th>Levels</th>", areas_page)
+        self.assertNotIn("area-top-tier-filter", areas_page)
+        self.assertNotIn("Top-tier capable", areas_page)
         self.assertIn("How This Is Calculated", areas_page)
         self.assertIn("Chunk data", areas_page)
         self.assertIn("Super chest potential", areas_page)
@@ -931,12 +1043,51 @@ class TestWikiGenerator(unittest.TestCase):
 
         with open(os.path.join(self.output, "recipes", "index.html"), "r", encoding="utf-8") as f:
             recipes_page = f.read()
-        self.assertIn("Removed Retail Recipes", recipes_page)
-        self.assertIn("Classic Crafting", recipes_page)
-        self.assertIn("Material Upgrades &amp; Conversions", recipes_page)
-        self.assertIn("30%", recipes_page)
-        self.assertIn("70%", recipes_page)
-        self.assertIn("Add 1 socket", recipes_page)
+        self.assertIn("Player-facing cube systems", recipes_page)
+        self.assertIn('href="crafting/"', recipes_page)
+        self.assertIn('href="corruptions/"', recipes_page)
+        self.assertIn('href="pierce/"', recipes_page)
+        self.assertIn('href="reforge-upgrade/"', recipes_page)
+        self.assertIn('href="materials/"', recipes_page)
+        self.assertIn('href="raw/"', recipes_page)
+        self.assertNotIn("<strong>1 Socket</strong>", recipes_page)
+        self.assertNotIn("<strong>1 Magic Axe + Blood Crafting Tablet -&gt; Blood Weapon</strong>", recipes_page)
+
+        with open(os.path.join(self.output, "recipes", "crafting", "index.html"), "r", encoding="utf-8") as f:
+            crafting_page = f.read()
+        self.assertIn("Crafting", crafting_page)
+        self.assertIn("Blood", crafting_page)
+        self.assertIn("Caster", crafting_page)
+        self.assertIn("Safety", crafting_page)
+        self.assertIn("Hit Power", crafting_page)
+        self.assertIn("Classic", crafting_page)
+        self.assertIn("Tablet", crafting_page)
+        self.assertIn("Ascended", crafting_page)
+        self.assertIn("<strong>Weapon</strong>", crafting_page)
+        self.assertIn("<strong>Belt</strong>", crafting_page)
+        self.assertNotIn("<strong>1 Magic Axe + Blood Crafting Tablet -&gt; Blood Weapon</strong>", crafting_page)
+
+        with open(os.path.join(self.output, "recipes", "corruptions", "index.html"), "r", encoding="utf-8") as f:
+            corruptions_page = f.read()
+        self.assertIn("Corruptions", corruptions_page)
+        self.assertIn("30%", corruptions_page)
+        self.assertIn("70%", corruptions_page)
+        self.assertIn("Add 1 socket", corruptions_page)
+
+        with open(os.path.join(self.output, "recipes", "materials", "index.html"), "r", encoding="utf-8") as f:
+            materials_page = f.read()
+        self.assertIn("Runes and Materials", materials_page)
+        self.assertIn("1 amn + standard gem -&gt; thul rune", materials_page)
+
+        with open(os.path.join(self.output, "recipes", "raw", "index.html"), "r", encoding="utf-8") as f:
+            raw_recipes_page = f.read()
+        self.assertIn("Raw Cube Rows", raw_recipes_page)
+        self.assertIn("1 Magic Axe + Blood Crafting Tablet -&gt; Blood Weapon", raw_recipes_page)
+
+        with open(os.path.join(self.output, "data", "recipes-crafting.json"), "r", encoding="utf-8") as f:
+            crafting_data = json.load(f)
+        self.assertIn("sections", crafting_data)
+        self.assertTrue(any(section["family"] == "Blood" for section in crafting_data["sections"]))
 
         with open(os.path.join(self.output, "misc", "index.html"), "r", encoding="utf-8") as f:
             misc_page = f.read()
