@@ -41,31 +41,33 @@
   </div>
 </section>
 
+{% macro status_badge(status) %}
+  {% if status == "added" %}<span class="item-card-status is-added">Added</span>
+  {% elif status == "modified" %}<span class="item-card-status is-modified">Changed</span>
+  {% elif status == "removed" %}<span class="item-card-status is-removed">Removed</span>
+  {% else %}<span class="text-muted">—</span>{% endif %}
+{% endmacro %}
+
+{% macro change_row(source_label, change) %}
+<tr>
+  <td>{{ source_label }}</td>
+  <td><strong>{{ change.name }}</strong></td>
+  <td>{{ status_badge(change.status) }}</td>
+  <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
+</tr>
+{% endmacro %}
+
 <section class="content-section">
   <h2>Skill & Missile Changes</h2>
   <p class="muted">Summary of skill and missile changes versus Retail. For full field-level detail see the <a href="{{ site_root }}reports/">Reports</a> section.</p>
   <div class="table-wrap">
     <table class="mechanics-table">
       <thead>
-        <tr><th>Source</th><th>Name</th><th>Status</th><th>Changed Fields</th></tr>
+        <tr><th>Category</th><th>Name</th><th>Status</th><th>Changed Fields</th></tr>
       </thead>
       <tbody>
-        {% for change in summary.skill_changes %}
-        <tr>
-          <td>skills.txt</td>
-          <td><strong>{{ change.name }}</strong></td>
-          <td>{{ change.status }}</td>
-          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
-        </tr>
-        {% endfor %}
-        {% for change in summary.missile_changes %}
-        <tr>
-          <td>missiles.txt</td>
-          <td><strong>{{ change.name }}</strong></td>
-          <td>{{ change.status }}</td>
-          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
-        </tr>
-        {% endfor %}
+        {% for change in summary.skill_changes %}{{ change_row("Skills", change) }}{% endfor %}
+        {% for change in summary.missile_changes %}{{ change_row("Missiles", change) }}{% endfor %}
       </tbody>
     </table>
   </div>
@@ -77,41 +79,13 @@
   <div class="table-wrap">
     <table class="mechanics-table">
       <thead>
-        <tr><th>Source</th><th>Name</th><th>Status</th><th>Changed Fields</th></tr>
+        <tr><th>Category</th><th>Name</th><th>Status</th><th>Changed Fields</th></tr>
       </thead>
       <tbody>
-        {% for change in summary.charstat_changes %}
-        <tr>
-          <td>charstats.txt</td>
-          <td><strong>{{ change.name }}</strong></td>
-          <td>{{ change.status }}</td>
-          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
-        </tr>
-        {% endfor %}
-        {% for change in summary.property_changes %}
-        <tr>
-          <td>properties.txt</td>
-          <td><strong>{{ change.name }}</strong></td>
-          <td>{{ change.status }}</td>
-          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
-        </tr>
-        {% endfor %}
-        {% for change in summary.itemstat_changes %}
-        <tr>
-          <td>itemstatcost.txt</td>
-          <td><strong>{{ change.name }}</strong></td>
-          <td>{{ change.status }}</td>
-          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
-        </tr>
-        {% endfor %}
-        {% for change in summary.gamble_changes %}
-        <tr>
-          <td>gamble.txt</td>
-          <td><strong>{{ change.name }}</strong></td>
-          <td>{{ change.status }}</td>
-          <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
-        </tr>
-        {% endfor %}
+        {% for change in summary.charstat_changes %}{{ change_row("Character Stats", change) }}{% endfor %}
+        {% for change in summary.property_changes %}{{ change_row("Properties", change) }}{% endfor %}
+        {% for change in summary.itemstat_changes %}{{ change_row("Item Stats", change) }}{% endfor %}
+        {% for change in summary.gamble_changes %}{{ change_row("Gambling", change) }}{% endfor %}
       </tbody>
     </table>
   </div>

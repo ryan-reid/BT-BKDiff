@@ -2,6 +2,11 @@
 {% block title %}{{ page.class_name }} | {{ new_label }} Wiki{% endblock %}
 {% block nav_classes %} class="is-active"{% endblock %}
 {% block content %}
+<p class="breadcrumb">
+  <a href="{{ site_root }}">Home</a><span class="sep">/</span>
+  <a href="{{ site_root }}classes/">Classes</a><span class="sep">/</span>
+  <span>{{ page.class_name }}</span>
+</p>
 <section class="hero">
   <span class="hero-eyebrow">Class Skills</span>
   <h1>{{ page.class_name }}</h1>
@@ -44,7 +49,7 @@
       <div class="table-wrap">
         <table class="scale-table">
           <thead>
-            <tr><th>Effect</th><th>Scaling</th><th>L1</th><th>L10</th><th>L20</th><th>L20+10</th><th>Cap</th></tr>
+            <tr><th>Effect</th><th>Scaling</th><th>L1</th><th>L10</th><th>L20</th><th title="Level 20 with 10 additional hard points from items or synergies">L20+10</th><th title="Maximum possible value">Cap</th></tr>
           </thead>
           <tbody>
             {% for effect in skill.effects %}

@@ -5,25 +5,24 @@
 <section class="hero">
   <span class="hero-eyebrow"><a href="../">Cube Recipes</a></span>
   <h1>Raw Cube Rows</h1>
-  <p class="hero-copy">Exact enabled cubemain rows for technical drilldown. Player pages intentionally group these rows into systems.</p>
+  <p class="hero-copy">Every enabled cube recipe, unprocessed. The organized recipe pages group these into player-friendly systems.</p>
 </section>
 
-<input id="page-search" class="search-input" type="search" placeholder="Search raw recipe rows..." style="margin-bottom:20px" />
+<input id="page-search" class="search-input" type="search" placeholder="Search raw recipe rows" style="margin-bottom:20px" />
 <section class="recipe-group">
   <div class="recipe-group-head">
     <div>
-      <h2>Enabled Rows</h2>
-      <p class="recipe-group-desc">Disabled rows, description-only separators, and no-output rows are excluded from player-facing data.</p>
+      <h2>All Recipes</h2>
+      <p class="recipe-group-desc">Disabled rows and internal separator rows are excluded.</p>
     </div>
     <span class="recipe-group-count">{{ page.rows|length }} rows</span>
   </div>
   <div class="table-wrap">
     <table class="recipe-table">
-      <thead><tr><th>#</th><th>Description</th><th>Inputs</th><th>Outputs</th></tr></thead>
+      <thead><tr><th>Description</th><th>Inputs</th><th>Outputs</th></tr></thead>
       <tbody>
         {% for row in page.rows %}
         <tr data-search="{{ row.search_text }}">
-          <td class="num" data-label="Row">{{ row.row }}</td>
           <td data-label="Description"><strong>{{ row.description }}</strong></td>
           <td data-label="Inputs"><ul class="input-list">{% for item in row.inputs %}<li>{{ item }}</li>{% endfor %}</ul></td>
           <td data-label="Outputs"><ul class="result-list">{% for item in row.outputs %}<li>{{ item }}</li>{% endfor %}</ul></td>

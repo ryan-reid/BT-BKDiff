@@ -10,7 +10,7 @@
   <p class="hero-copy">Complete sets with individual pieces and set bonuses.</p>
 </section>
 
-<input id="page-search" class="search-input" type="search" placeholder="Search sets or pieces..." style="margin-bottom:22px" />
+<input id="page-search" class="search-input" type="search" placeholder="Search sets or pieces" style="margin-bottom:22px" />
 
 <div class="set-list">
   {% for set in sets %}
@@ -89,8 +89,8 @@
             <tr class="set-sep-row"><td colspan="2">{{ row.label }}</td></tr>
             {% else %}
             <tr>
-              <td class="set-cell is-{{ row.status }}">{{ row.old or "(empty)" }}</td>
-              <td class="set-cell is-{{ row.status }}">{{ row.new or "(removed)" }}</td>
+              <td class="set-cell is-{{ row.status }}">{{ row.old or "—" }}</td>
+              <td class="set-cell is-{{ row.status }}">{{ row.new or "—" }}</td>
             </tr>
             {% endif %}
             {% endfor %}

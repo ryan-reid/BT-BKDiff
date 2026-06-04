@@ -488,7 +488,7 @@ class WikiGenerator:
             entries.append({
                 "title": title,
                 "href": href,
-                "summary": f"{len(page['skills'])} generated skill entries",
+                "summary": f"{len(page['skills'])} skills",
                 "search_text": f"{title} {' '.join(skill['name'] for skill in page['skills'])}",
             })
         return entries

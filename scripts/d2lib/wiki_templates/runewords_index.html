@@ -8,16 +8,16 @@
   <p class="hero-copy">Browse runewords by required rune sequence, base item category, and properties.</p>
 </section>
 
-<input id="page-search" class="search-input" type="search" placeholder="Search runewords, runes, bases, or properties…" style="margin-bottom:18px" />
+<input id="page-search" class="search-input" type="search" placeholder="Search runewords, runes, bases, or properties" style="margin-bottom:18px" />
 
 <div class="family-items-grid">
   {% for runeword in runewords %}
   {% set comp = runeword.comparison %}
-  <div class="base-item-card" style="padding:0;overflow:hidden" data-search="{{ runeword.search_text }}">
+  <a class="base-item-card" style="padding:0;overflow:hidden;display:block;text-decoration:none;color:inherit" href="{{ site_root }}{{ runeword.href }}" data-search="{{ runeword.search_text }}">
 
     <div class="sp-head">
       <div style="min-width:0;flex:1">
-        <a class="set-th-name" href="{{ site_root }}{{ runeword.href }}" style="color:var(--q-runeword)">{{ runeword.title }}</a>
+        <span class="set-th-name" style="color:var(--q-runeword)">{{ runeword.title }}</span>
         <span class="set-th-meta">{{ runeword.base_items|join(', ') }}</span>
         {% if runeword.runes %}
         <div class="rune-sequence" style="margin-top:6px;justify-content:flex-start;flex-wrap:wrap;gap:4px">
@@ -45,13 +45,13 @@
     <div class="sp-sep">Properties</div>
     {% for r in comp.property_rows %}
     <div class="sp-row">
-      <span class="sp-cell is-{{ r.status }}">{{ r.old or "(empty)" }}</span>
-      <span class="sp-cell is-{{ r.status }}">{{ r.new or "(removed)" }}</span>
+      <span class="sp-cell is-{{ r.status }}">{{ r.old or "—" }}</span>
+      <span class="sp-cell is-{{ r.status }}">{{ r.new or "—" }}</span>
     </div>
     {% endfor %}
     {% endif %}
 
-  </div>
+  </a>
   {% endfor %}
 </div>
 {% endblock %}

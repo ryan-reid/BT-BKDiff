@@ -1143,8 +1143,8 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertNotIn("area-top-tier-filter", areas_page)
         self.assertNotIn("Top-tier capable", areas_page)
         self.assertIn("How This Is Calculated", areas_page)
-        self.assertIn("Chunk data", areas_page)
-        self.assertIn("Super chest potential", areas_page)
+        self.assertIn("Map size is estimated from layout data", areas_page)
+        self.assertIn("Super chest presence is detected", areas_page)
         with open(os.path.join(self.output, "data", "areas-index.json"), "r", encoding="utf-8") as f:
             area_rows = json.load(f)
         self.assertEqual("Cold Cave", area_rows[0]["display_name"])

@@ -11,7 +11,7 @@
 </section>
 
 <section class="content-section">
-  <input id="page-search" class="search-input" type="search" placeholder="Search monsters (e.g. Fallen, Baal)..." />
+  <input id="page-search" class="search-input" type="search" placeholder="Search monsters (e.g. Fallen, Baal)" />
   
   <div class="monster-list">
     {% for group in groups %}
@@ -20,8 +20,8 @@
         <thead>
           <tr>
             <th>Monster</th>
-            <th>Levels (N/NM/H)</th>
-            <th>HP (H)</th>
+            <th title="Normal / Nightmare / Hell">Level (N/NM/H)</th>
+            <th>HP (Hell)</th>
             <th>Hell Immunities</th>
             <th>Spawn Areas</th>
             <th>Changes</th>
@@ -31,8 +31,7 @@
           {% for monster in group.monsters %}
           <tr data-search="{{ monster.name }} {{ monster.id }} {{ monster.immunities_hell|join(' ') }} {{ monster.spawn_areas|join(' ') }}">
             <td class="monster-name-cell">
-              <strong>{{ monster.name }}</strong><br/>
-              <small class="code-text">{{ monster.id }}</small>
+              <strong>{{ monster.name }}</strong>
               {% if monster.is_boss %}
               <span class="badge badge-elite">Boss</span>
               {% endif %}

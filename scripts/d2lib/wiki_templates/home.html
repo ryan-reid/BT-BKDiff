@@ -2,13 +2,14 @@
 {% block nav_home %} class="is-active"{% endblock %}
 {% block content %}
 <section class="hero">
-  <span class="hero-eyebrow">Mod by Baron &amp; Kex &middot; Single Player</span>
+  <span class="hero-eyebrow">Mod by Baron &amp; Kex &middot; D2R Ascension</span>
   <h1>{{ new_label }} Wiki</h1>
   <p class="hero-copy">Reference for {{ new_label }} — uniques, runewords, cube recipes, the bestiary, class skill trees, and endgame farming routes.</p>
 </section>
 
 <div class="stat-strip">
   <div class="stat-cell"><strong>{{ item_counts.unique }}</strong><span>Unique Items</span></div>
+  <div class="stat-cell"><strong>{{ item_counts.set }}</strong><span>Set Items</span></div>
   <div class="stat-cell"><strong>{{ item_counts.runeword }}</strong><span>Runewords</span></div>
   <div class="stat-cell"><strong>{{ recipe_count }}</strong><span>Cube Recipes</span></div>
   <div class="stat-cell"><strong>{{ area_count }}</strong><span>Farming Areas</span></div>
@@ -79,13 +80,13 @@
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
     <h3>Mechanics</h3>
     <p>Experience, difficulty scaling, and core game system changes.</p>
-    <span class="portal-count">Progression</span>
+    <span class="portal-count">Game systems</span>
   </a>
   <a class="portal" href="{{ site_root }}drops/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-drop"/></svg></span>
     <h3>Drops</h3>
     <p>Weighted unique and set candidates sharing the same base item.</p>
-    <span class="portal-count">Drop tables</span>
+    <span class="portal-count">{{ drop_weight_count }} base pools</span>
   </a>
 </div>
 

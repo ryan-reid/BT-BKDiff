@@ -12,7 +12,7 @@
 
 <section class="content-section">
   <div class="base-filter-toolbar" data-base-filters>
-    <input id="page-search" class="search-input" type="search" placeholder="Search base items (e.g. Mage Plate)..." />
+    <input id="page-search" class="search-input" type="search" placeholder="Search base items (e.g. Mage Plate)" />
     <div class="filter-row">
       <label>
         <span>Group</span>
@@ -75,7 +75,7 @@
       </label>
       <label class="filter-wide">
         <span>Roll contains</span>
-        <input id="base-roll-filter" type="search" placeholder="Faster Cast Rate, res, pierce..." />
+        <input id="base-roll-filter" type="search" placeholder="Faster Cast Rate, res, pierce" />
       </label>
     </div>
     <div class="filter-check-row">
@@ -145,8 +145,8 @@
           <div class="sp-sep">Properties</div>
           {% for row in comp.property_rows %}
           <div class="sp-row">
-            <span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "(empty)" }}</span>
-            <span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new or "(removed)" }}</span>
+            <span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old or "—" }}</span>
+            <span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new or "—" }}</span>
           </div>
           {% endfor %}
           {% endif %}
