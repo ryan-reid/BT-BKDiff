@@ -19,6 +19,14 @@ class JsonExporter(BaseExporter):
             json.dump(data, f, indent=2)
 
 class MarkdownExporter(BaseExporter):
+    def export(self, data: Any, output_path: str) -> None:
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            if isinstance(data, str):
+                f.write(data)
+            else:
+                f.write(json.dumps(data, indent=2))
+
     @staticmethod
     def escape_markdown(s: str) -> str:
         if not s: return ""

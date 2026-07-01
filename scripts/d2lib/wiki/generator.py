@@ -14,6 +14,7 @@ from d2lib.services import (
     MiscAnalyzerService,
     MechanicsAnalyzerService,
 )
+from d2lib.services.items import normalize_runeword_base_item_label
 from d2lib.services.recipes import RecipePresentationBuilder
 from d2lib.models import (
     BaseItemFamilyDTO,
@@ -26,7 +27,8 @@ from d2lib.models import (
 )
 from d2lib.utils import slugify, strip_markdown
 from d2lib.wiki.routes import ITEM_FAMILIES, REPORT_SOURCES, WikiRoutes
-from d2lib.wiki.renderers import WikiRenderer, WikiOutputWriter
+from d2lib.wiki.renderers import HtmlWikiRenderer, WikiPublisher
+from d2lib.wiki.publication import WikiSiteDTO, WikiSiteRecordingWriter, empty_wiki_site
 from d2lib.wiki.builders import AreaFarmingDataBuilder, ItemIconExporter
 from d2lib.wiki.comparison import (
     item_diff_status,
@@ -58,7 +60,7 @@ D2LIB_DIR = os.path.dirname(MODULE_DIR)
 REPO_ROOT = os.path.abspath(os.path.join(D2LIB_DIR, "..", ".."))
 
 
-class WikiGenerator:
+class WikiContentBuilder:
     def __init__(
         self,
         item_db_dir: str,
@@ -80,16 +82,16 @@ class WikiGenerator:
         self.game_data_dir = game_data_dir or os.path.join(REPO_ROOT, "mods", "BKDiablo", "bkdiablo.mpq")
         self.retail_data_dir = retail_data_dir or os.path.join(REPO_ROOT, "data", "retail")
         self.layout_data_dir = layout_data_dir
-        self.renderer = WikiRenderer()
-        self.writer = WikiOutputWriter(output_dir)
-        self.manifest: List[Dict[str, Any]] = []
+        self.site: WikiSiteDTO = empty_wiki_site(old_label, new_label)
+        self.writer = WikiSiteRecordingWriter(self.site)
+        self.manifest = self.site["manifest"]
         self._repo: Optional[D2Repository] = None
         self._retail_repo: Optional[D2Repository] = None
 
-    def generate(self) -> None:
-        os.makedirs(self.output_dir, exist_ok=True)
-        self.manifest = []
-        self.writer.generated_paths = set()
+    def build(self) -> WikiSiteDTO:
+        self.site = empty_wiki_site(self.old_label, self.new_label)
+        self.writer = WikiSiteRecordingWriter(self.site)
+        self.manifest = self.site["manifest"]
 
         # Cached repos — all _load_* and _write_* methods share these instances.
         self._repo = D2Repository(self.game_data_dir)
@@ -137,7 +139,7 @@ class WikiGenerator:
         self._write_item_index_data(item_entries, items)
         self._write_area_index_data(area_entries)
         self._write_manifest()
-        self.writer.remove_stale_files()
+        return self.site
 
     # ── Data loaders ────────────────────────────────────────────────────────
 
@@ -201,6 +203,11 @@ class WikiGenerator:
                 for entry in payload:
                     record = dict(entry)
                     record["_source_rel_path"] = rel_path
+                    if family == "runeword":
+                        record["base_items"] = [
+                            normalize_runeword_base_item_label(base_item)
+                            for base_item in record.get("base_items", [])
+                        ]
                     if should_include_item(record, family):
                         items[family].append(record)
 
@@ -439,6 +446,15 @@ class WikiGenerator:
                     entry["rune_requirements"] = self._runeword_rune_requirements(entry, icon_exporter)
                 entry["drop_info"] = self._item_drop_info(entry, family, drop_base_lookup)
                 comparison = item_comparison_context(entry, family, old_entry)
+                runes = [
+                    {
+                        "name": str(rune.get("name", "")).strip(),
+                        "code": str(rune.get("code", "")).strip(),
+                        "icon_src": str(rune.get("icon_src", "")).strip(),
+                    }
+                    for rune in entry.get("rune_requirements", [])
+                    if str(rune.get("name", "")).strip() or str(rune.get("code", "")).strip()
+                ]
                 page_entries[family].append({
                     "title": title,
                     "href": href,
@@ -450,6 +466,7 @@ class WikiGenerator:
                     "icon_src": icon_src,
                     "drop_level": entry["drop_info"].get("drop_level", 0),
                     "drop_level_label": entry["drop_info"].get("label", ""),
+                    "runes": runes,
                     "properties": [
                         str(prop.get("resolved_text", "")).strip()
                         for prop in entry.get("properties", [])
@@ -698,11 +715,12 @@ class WikiGenerator:
                 "search_text": entry["search_text"],
                 "drop_level": entry.get("drop_level", 0),
                 "drop_level_label": entry.get("drop_level_label", ""),
+                "runes": entry.get("runes", []),
                 "properties": entry.get("properties", []),
                 "stat_rows": entry.get("stat_rows", []),
                 "property_rows": entry.get("property_rows", []),
             }
-            for family in ("unique", "set")
+            for family in ITEM_FAMILIES
             for entry in item_entries[family]
         ]
         self.writer.write_text("data/items-index.json", json.dumps(rows, indent=2))
@@ -744,15 +762,17 @@ class WikiGenerator:
         self.writer.write_text("manifest.json", json.dumps(self.manifest, indent=2))
 
     def _write_page(self, title: str, output_path: str, template_name: str, category: str, source_files: List[str], **context: Any) -> None:
-        document = self.renderer.render(
-            template_name,
-            title=title,
-            site_root=WikiRoutes.site_root_for_output_path(output_path),
-            old_label=self.old_label,
-            new_label=self.new_label,
-            **context,
-        )
-        self.writer.write_text(output_path, document)
+        normalized = output_path.replace("\\", "/")
+        self.site["pages"].append({
+            "kind": os.path.splitext(template_name)[0],
+            "title": title,
+            "output_path": normalized,
+            "template_name": template_name,
+            "category": category,
+            "source_files": source_files,
+            "payload": context,
+        })
+        self.writer.generated_paths.add(normalized)
         self.manifest.append({"title": title, "path": WikiRoutes.route_from_output_path(output_path), "category": category, "sources": source_files})
 
     # ── Item page context (needs instance state) ─────────────────────────────
@@ -1064,3 +1084,47 @@ class WikiGenerator:
             })
 
         return skills
+
+
+class WikiGenerator:
+    """Compatibility facade for generating the HTML wiki from the shared site DTO."""
+
+    def __init__(
+        self,
+        item_db_dir: str,
+        skill_tree_dir: str,
+        output_dir: str,
+        old_item_db_dir: Optional[str] = None,
+        old_label: str = "Retail",
+        new_label: str = "BKDiablo",
+        game_data_dir: Optional[str] = None,
+        retail_data_dir: Optional[str] = None,
+        layout_data_dir: Optional[str] = None,
+    ):
+        self.item_db_dir = item_db_dir
+        self.skill_tree_dir = skill_tree_dir
+        self.output_dir = output_dir
+        self.old_item_db_dir = old_item_db_dir
+        self.old_label = old_label
+        self.new_label = new_label
+        self.game_data_dir = game_data_dir
+        self.retail_data_dir = retail_data_dir
+        self.layout_data_dir = layout_data_dir
+
+    def build_site(self) -> WikiSiteDTO:
+        return WikiContentBuilder(
+            self.item_db_dir,
+            self.skill_tree_dir,
+            self.output_dir,
+            old_item_db_dir=self.old_item_db_dir,
+            old_label=self.old_label,
+            new_label=self.new_label,
+            game_data_dir=self.game_data_dir,
+            retail_data_dir=self.retail_data_dir,
+            layout_data_dir=self.layout_data_dir,
+        ).build()
+
+    def generate(self) -> WikiSiteDTO:
+        site = self.build_site()
+        WikiPublisher(self.output_dir).publish(site, HtmlWikiRenderer())
+        return site

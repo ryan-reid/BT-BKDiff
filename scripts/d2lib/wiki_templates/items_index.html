@@ -5,7 +5,7 @@
 <section class="hero">
   <span class="hero-eyebrow">Item Database</span>
   <h1>Items</h1>
-  <p class="hero-copy">Unique items and set pieces. Set pieces open inside their full set view; runewords have their own section.</p>
+  <p class="hero-copy">Unique items, set pieces, and runewords in one searchable index. Set pieces open inside their full set view.</p>
 </section>
 
 <div class="index-layout">
@@ -20,6 +20,10 @@
       <label class="facet" style="color:var(--q-set)">
         <input type="checkbox" checked data-filter-family="set"> <span class="dot"></span>
         Set <span class="tally">{{ family_counts.set }}</span>
+      </label>
+      <label class="facet" style="color:var(--q-runeword)">
+        <input type="checkbox" checked data-filter-family="runeword"> <span class="dot"></span>
+        Runeword <span class="tally">{{ family_counts.runeword }}</span>
       </label>
     </div>
     <div class="filter-block">
@@ -61,10 +65,10 @@
   <!-- results -->
   <main>
     <div class="toolbar" data-item-index-url="{{ site_root }}data/items-index.json" style="margin-bottom:16px">
-      <input id="page-search" class="search-input" type="search" placeholder="Search items, base types, or categories…" />
+      <input id="page-search" class="search-input" type="search" placeholder="Search items, runewords, runes, base types, or categories..." />
     </div>
     <div class="results-bar">
-      <span class="count"><b>{{ family_counts.unique + family_counts.set }}</b> item pages</span>
+      <span class="count"><b>{{ family_counts.unique + family_counts.set + family_counts.runeword }}</b> item pages</span>
     </div>
     <div id="item-index-root" style="display:grid;gap:32px">
       <p class="muted">Loading item index…</p>

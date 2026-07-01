@@ -631,6 +631,9 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
 }
 .area-card-details { border-top: 1px solid var(--line); padding: 11px 14px 13px; }
 .area-card-details summary { cursor: pointer; color: var(--gold-deep); font-weight: 700; font-size: 0.86rem; }
+.area-monster-more { margin-top: 6px; }
+.area-monster-more summary { cursor: pointer; color: var(--gold-deep); font-weight: 700; font-size: 0.78rem; }
+.area-monster-more span { display: block; margin-top: 3px; color: var(--muted); }
 .area-monster-list { list-style: none; padding: 8px 0 0; margin: 0; display: grid; gap: 7px; }
 .area-monster-list li { display: grid; gap: 1px; color: var(--text); font-size: 0.86rem; }
 .area-monster-list li span { color: var(--muted); font-size: 0.78rem; }

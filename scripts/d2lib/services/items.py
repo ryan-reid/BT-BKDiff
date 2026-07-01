@@ -6,6 +6,14 @@ from d2lib.models import AnalyzedItemDTO, RunewordDTO, BaseItemDTO, BaseItemFami
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.utils import item_category_to_group
 
+
+def normalize_runeword_base_item_label(value: str) -> str:
+    label = str(value).strip()
+    if label.lower() in {"helm", "merc equip"}:
+        return "Helm"
+    return label
+
+
 class ItemAnalyzerService:
     def __init__(self, repo: D2RepositoryProtocol, resolver: PropertyResolverService):
         self.repo = repo
@@ -86,7 +94,7 @@ class ItemAnalyzerService:
             base_type = row.get(f'itype{index}', '').strip()
             if not base_type or base_type == 'xxx':
                 continue
-            base_items.append(self.repo.get_string(self.item_types.get(base_type, {}).get('ItemType', '')) or base_type)
+            base_items.append(self._runeword_base_item_label(base_type))
         rune_properties = self._resolve_runeword_rune_properties(row, itype)
 
         return {
@@ -94,6 +102,12 @@ class ItemAnalyzerService:
             "required_level": str(max(rune_levels)) if rune_levels else "",
             "properties": props, "rune_properties": rune_properties, "raw_row": row
         }
+
+    def _runeword_base_item_label(self, type_code: str) -> str:
+        if type_code == "helm":
+            return "Helm"
+        label = self.repo.get_string(self.item_types.get(type_code, {}).get('ItemType', '')) or type_code
+        return normalize_runeword_base_item_label(label)
 
     def _resolve_runeword_rune_properties(self, row: Dict[str, str], item_type_code: str) -> List[Dict[str, Any]]:
         socket_group = self._runeword_socket_group(item_type_code)

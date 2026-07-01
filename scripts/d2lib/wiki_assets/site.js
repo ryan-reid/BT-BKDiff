@@ -22,16 +22,31 @@ function escapeHtml(value) {
 }
 
 function itemCardMarkup(item, siteRoot) {
-  const nameColor = item.family === "set" ? "var(--q-set)" : "var(--q-unique)";
+  const familyColors = {
+    runeword: "var(--q-runeword)",
+    set: "var(--q-set)",
+    unique: "var(--q-unique)",
+  };
+  const nameColor = familyColors[item.family] || "var(--text)";
   const iconMarkup = item.icon_src
     ? `<img class="wiki-item-icon set-th-icon" src="${escapeHtml(siteRoot + item.icon_src)}" alt="${escapeHtml(item.title)} icon" />`
     : "";
   const dropMarkup = item.drop_level_label
     ? `<span class="item-drop-level">Drop ${escapeHtml(item.drop_level_label)}</span>`
     : "";
-  const titleMarkup = item.family === "set"
+  const titleMarkup = item.family === "set" || item.family === "runeword"
     ? `<a class="set-th-name" href="${escapeHtml(siteRoot + item.href)}" style="color:${nameColor}">${escapeHtml(item.title)}</a>`
     : `<span class="set-th-name" style="color:${nameColor}">${escapeHtml(item.title)}</span>`;
+  const runesMarkup = item.family === "runeword" && item.runes && item.runes.length
+    ? `<div class="rune-sequence" style="margin-top:6px;justify-content:flex-start;flex-wrap:wrap;gap:4px">
+        ${item.runes.map((rune) => `
+          <span class="rune-chip" style="min-width:44px" title="${escapeHtml(rune.name)}">
+            ${rune.icon_src ? `<img class="wiki-item-icon rune-chip-icon" src="${escapeHtml(siteRoot + rune.icon_src)}" alt="${escapeHtml(rune.name)}" />` : ""}
+            <span>${escapeHtml(rune.name || rune.code)}</span>
+          </span>
+        `).join("")}
+      </div>`
+    : "";
 
   const statRowsHtml = (item.stat_rows || []).map((r) => `
     <div class="sp-row">
@@ -64,6 +79,7 @@ function itemCardMarkup(item, siteRoot) {
         <div style="min-width:0;flex:1">
           ${titleMarkup}
           <span class="set-th-meta">${escapeHtml(item.summary)}</span>
+          ${runesMarkup}
           ${dropMarkup}
         </div>
       </div>
@@ -88,10 +104,11 @@ const IMMUNITY_CLASS = {
 };
 
 function areaImmunityMarkup(area) {
-  if (!area.possible_immunities || area.possible_immunities.length === 0) {
+  const immunities = areaMonsterImmunities(area);
+  if (immunities.length === 0) {
     return '<span class="muted">—</span>';
   }
-  return area.possible_immunities
+  return immunities
     .map((immunity) => {
       const count = area.immunity_counts && area.immunity_counts[immunity]
         ? ` (${area.immunity_counts[immunity]})`
@@ -102,12 +119,20 @@ function areaImmunityMarkup(area) {
     .join("");
 }
 
+function areaMonsterImmunities(area) {
+  const found = new Set(area.possible_immunities || []);
+  (area.monster_pool || []).forEach((monster) => {
+    (monster.immunities || []).forEach((immunity) => found.add(immunity));
+  });
+  return Array.from(found).sort();
+}
+
 function areaMonsterPoolMarkup(area) {
   const monsters = area.monster_pool || [];
   if (monsters.length === 0) {
     return '<span class="muted">No monster pool</span>';
   }
-  return monsters
+  const preview = monsters
     .slice(0, 8)
     .map((monster) => {
       const immunities = monster.immunities && monster.immunities.length
@@ -116,6 +141,22 @@ function areaMonsterPoolMarkup(area) {
       return `${escapeHtml(monster.name || monster.id)}${escapeHtml(immunities)}`;
     })
     .join("<br>");
+  const hiddenMonsters = monsters.slice(8);
+  if (hiddenMonsters.length === 0) {
+    return preview;
+  }
+  return `
+    ${preview}
+    <details class="area-monster-more">
+      <summary>+${hiddenMonsters.length} more</summary>
+      ${hiddenMonsters.map((monster) => {
+        const immunities = monster.immunities && monster.immunities.length
+          ? `: ${monster.immunities.join(", ")} immune`
+          : "";
+        return `<span>${escapeHtml(monster.name || monster.id)}${escapeHtml(immunities)}</span>`;
+      }).join("")}
+    </details>
+  `;
 }
 
 function areaMonsterListMarkup(area) {
@@ -125,7 +166,7 @@ function areaMonsterListMarkup(area) {
   }
   return `
     <ul class="area-monster-list">
-      ${monsters.slice(0, 8).map((monster) => {
+      ${monsters.map((monster) => {
         const immunities = monster.immunities && monster.immunities.length
           ? `<span>${escapeHtml(monster.immunities.join(", "))} immune</span>`
           : "";
@@ -534,7 +575,7 @@ async function wireAreaIndex() {
       .map((checkbox) => checkbox.dataset.avoidImmunity);
 
     const filtered = areas.filter((area) => {
-      const immunities = area.possible_immunities || [];
+      const immunities = areaMonsterImmunities(area);
       const searchOk = !query || normalizeText(area.search_text).includes(query);
       const actOk = act === "all" || area.act === act;
       const levelOk = area.area_level >= minLevel;
@@ -575,6 +616,7 @@ async function wireItemIndex() {
   const familyLabels = {
     unique: "Unique Items",
     set: "Set Items",
+    runeword: "Runewords",
   };
 
   root.innerHTML = Object.entries(familyLabels)

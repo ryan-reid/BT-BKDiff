@@ -2,7 +2,7 @@ import argparse
 import os
 from typing import Optional
 
-from d2lib.wiki import WikiGenerator
+from d2lib.wiki import MediaWikiPublisher, WikiGenerator
 
 
 def run(
@@ -14,7 +14,8 @@ def run(
     retail_data_dir: Optional[str] = None,
     layout_data_dir: Optional[str] = None,
     old_label: str = "Retail",
-    new_label: str = "BKDiablo"
+    new_label: str = "BKDiablo",
+    mediawiki_output_dir: Optional[str] = None,
 ):
     generator = WikiGenerator(
         item_db_dir,
@@ -27,8 +28,11 @@ def run(
         retail_data_dir=retail_data_dir,
         layout_data_dir=layout_data_dir,
     )
-    generator.generate()
+    site = generator.generate()
     print(f"Generated wiki pages in {output_dir}")
+    if mediawiki_output_dir:
+        MediaWikiPublisher(mediawiki_output_dir).publish(site)
+        print(f"Generated MediaWiki pages in {mediawiki_output_dir}")
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate a static HTML/CSS/JS wiki site from current project exports.")
@@ -39,6 +43,7 @@ def main() -> None:
     parser.add_argument("--retail-data", default="../data/retail", help="Path to the Retail game data root")
     parser.add_argument("--layout-data", default="", help="Optional path to a data root or global/tiles folder for DS1 layout files")
     parser.add_argument("--out", default="../output/wiki", help="Output directory for generated wiki pages")
+    parser.add_argument("--mediawiki-out", default="", help="Optional output directory for generated MediaWiki wikitext files")
     parser.add_argument("--old-label", default="Retail", help="Display label for the comparison source")
     parser.add_argument("--new-label", default="BKDiablo", help="Display label for the current export")
     args = parser.parse_args()
@@ -52,6 +57,7 @@ def main() -> None:
     retail_data_dir = os.path.normpath(os.path.join(scripts_root, args.retail_data))
     layout_data_dir = os.path.normpath(os.path.join(scripts_root, args.layout_data)) if args.layout_data else None
     output_dir = os.path.normpath(os.path.join(scripts_root, args.out))
+    mediawiki_output_dir = os.path.normpath(os.path.join(scripts_root, args.mediawiki_out)) if args.mediawiki_out else None
 
     run(
         item_db_dir,
@@ -62,7 +68,8 @@ def main() -> None:
         retail_data_dir=retail_data_dir,
         layout_data_dir=layout_data_dir,
         old_label=args.old_label,
-        new_label=args.new_label
+        new_label=args.new_label,
+        mediawiki_output_dir=mediawiki_output_dir,
     )
 
 

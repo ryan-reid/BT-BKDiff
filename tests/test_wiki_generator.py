@@ -11,7 +11,7 @@ if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
 from d2lib.services.recipes import RecipePresentationBuilder
-from d2lib.wiki import AreaFarmingDataBuilder, ItemIconExporter, WikiGenerator, WikiOutputWriter, WikiRoutes
+from d2lib.wiki import AreaFarmingDataBuilder, ItemIconExporter, MediaWikiPublisher, WikiGenerator, WikiOutputWriter, WikiRoutes
 
 
 class TestWikiGenerator(unittest.TestCase):
@@ -269,7 +269,7 @@ class TestWikiGenerator(unittest.TestCase):
             {
                 "name": "Practice",
                 "runes": ["Tal Rune", "Eth Rune"],
-                "base_items": ["Melee Weapon"],
+                "base_items": ["Merc Equip"],
                 "raw_row": {"Rune1": "r07", "Rune2": "r05"},
                 "properties": [
                     {"code": "dmg", "param": "", "resolved_text": "+25% Enhanced Damage"},
@@ -894,6 +894,97 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("mechanics/index.html", WikiRoutes.mechanics_output_path())
         self.assertEqual("drops/index.html", WikiRoutes.drops_index_output_path())
 
+    def test_wiki_content_builder_produces_shared_page_model(self):
+        site = WikiGenerator(
+            self.item_db,
+            self.skill_trees,
+            self.output,
+            old_item_db_dir=self.old_item_db,
+            old_label="Retail",
+            new_label="BKDiablo",
+            game_data_dir=self.game_data,
+            retail_data_dir=self.retail_data,
+        ).build_site()
+
+        pages_by_kind = {page["kind"]: page for page in site["pages"]}
+        self.assertIn("bases_index", pages_by_kind)
+        self.assertIn("recipes_crafting", pages_by_kind)
+        self.assertIn("misc_index", pages_by_kind)
+        self.assertIn("item", pages_by_kind)
+        self.assertTrue(any(entry["path"] == "bases/" for entry in site["manifest"]))
+        self.assertTrue(any(data_file["relative_path"] == "data/items-index.json" for data_file in site["data_files"]))
+
+        base_page = pages_by_kind["bases_index"]
+        self.assertIn("families", base_page["payload"])
+        self.assertTrue(any(family["members"] for family in base_page["payload"]["families"]))
+
+        crafting_page = pages_by_kind["recipes_crafting"]
+        self.assertIn("sections", crafting_page["payload"]["page"])
+        self.assertTrue(any(section["rows"] for section in crafting_page["payload"]["page"]["sections"]))
+
+    def test_mediawiki_export_preserves_grouped_content_and_manifest(self):
+        site = WikiGenerator(
+            self.item_db,
+            self.skill_trees,
+            self.output,
+            old_item_db_dir=self.old_item_db,
+            old_label="Retail",
+            new_label="BKDiablo",
+            game_data_dir=self.game_data,
+            retail_data_dir=self.retail_data,
+        ).build_site()
+        mediawiki_output = os.path.join(self.root, "mediawiki")
+
+        MediaWikiPublisher(mediawiki_output).publish(site)
+
+        with open(os.path.join(mediawiki_output, "bases.wiki"), "r", encoding="utf-8") as f:
+            bases_page = f.read()
+        self.assertIn("= Base Items =", bases_page)
+        self.assertIn("Thunder Maul", bases_page)
+        self.assertIn('{| class="wikitable"', bases_page)
+
+        with open(os.path.join(mediawiki_output, "recipes__crafting.wiki"), "r", encoding="utf-8") as f:
+            crafting_page = f.read()
+        self.assertIn("Blood", crafting_page)
+        self.assertIn("Weapon", crafting_page)
+        self.assertIn("Fixed Properties", crafting_page)
+
+        with open(os.path.join(mediawiki_output, "sets.wiki"), "r", encoding="utf-8") as f:
+            sets_page = f.read()
+        self.assertIn("Practice Set", sets_page)
+        self.assertIn("Set Blade", sets_page)
+
+        with open(os.path.join(mediawiki_output, "items.wiki"), "r", encoding="utf-8") as f:
+            all_items_page = f.read()
+        self.assertIn("== All Items ==", all_items_page)
+        self.assertIn("__TOC__", all_items_page)
+        self.assertIn("* [[#Uniques|Uniques]]", all_items_page)
+        self.assertIn("* [[#Sets|Sets]]", all_items_page)
+        self.assertIn("* [[#Runewords|Runewords]]", all_items_page)
+        self.assertIn("=== Uniques ===", all_items_page)
+        self.assertIn("=== Sets ===", all_items_page)
+        self.assertIn("=== Runewords ===", all_items_page)
+        self.assertIn("== Twin Item ==", all_items_page)
+        self.assertIn("== Set Blade ==", all_items_page)
+        self.assertIn("== Practice ==", all_items_page)
+        self.assertIn("Base Type: Helm", all_items_page)
+        self.assertNotIn("Merc Equip", all_items_page)
+        self.assertIn("! Retail !! BK", all_items_page)
+        self.assertIn('<b> Twin Item </b><br />Base Type:', all_items_page)
+        self.assertIn("<b>Properties</b><br />", all_items_page)
+        self.assertIn('class="wiki-diff-row is-changed"', all_items_page)
+        self.assertIn("color:", all_items_page)
+        self.assertNotIn("background:", all_items_page)
+        self.assertNotIn("!! Status", all_items_page)
+        self.assertFalse(os.path.exists(os.path.join(mediawiki_output, "items__unique__twin-item.wiki")))
+
+        with open(os.path.join(mediawiki_output, "manifest.json"), "r", encoding="utf-8") as f:
+            manifest = json.load(f)
+        manifest_by_route = {entry["route"]: entry for entry in manifest}
+        self.assertEqual("bases.wiki", manifest_by_route["bases/"]["mediawiki_path"])
+        self.assertEqual("recipes__crafting.wiki", manifest_by_route["recipes/crafting/"]["mediawiki_path"])
+        self.assertNotIn("items/unique/twin-item/", manifest_by_route)
+
     def test_rune_icon_exporter_has_ci_safe_fallback(self):
         writer = WikiOutputWriter(self.output)
         exporter = ItemIconExporter(
@@ -1045,7 +1136,7 @@ class TestWikiGenerator(unittest.TestCase):
             rows = json.load(f)
 
         self.assertEqual(
-            ["Twin Item", "Twin Item", "Twin Item", "Set Belt", "Set Blade", "Set Cap"],
+            ["Twin Item", "Twin Item", "Twin Item", "Set Belt", "Set Blade", "Set Cap", "Practice"],
             [row["title"] for row in rows],
         )
         self.assertEqual(
@@ -1061,6 +1152,7 @@ class TestWikiGenerator(unittest.TestCase):
                 "search_text",
                 "drop_level",
                 "drop_level_label",
+                "runes",
                 "properties",
                 "stat_rows",
                 "property_rows",
@@ -1076,7 +1168,12 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("85+ (item 85, base 85)", rows[0]["drop_level_label"])
         self.assertEqual(90, rows[1]["drop_level"])
 
-        self.assertNotIn("Practice", [row["title"] for row in rows])
+        practice = rows[-1]
+        self.assertEqual("runeword", practice["family"])
+        self.assertEqual("items/runeword/practice/", practice["href"])
+        self.assertEqual("Helm", practice["item_type"])
+        self.assertEqual(["Tal Rune", "Eth Rune"], [rune["name"] for rune in practice["runes"]])
+        self.assertIn("Holy Shock", practice["search_text"])
 
     def test_templates_render_item_and_index_pages(self):
         self._generate()
@@ -1104,12 +1201,16 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('id="item-drop-level-filter"', items_page)
         self.assertIn('<option value="85">85+</option>', items_page)
         self.assertIn('<option value="90">90+</option>', items_page)
-        self.assertNotIn('data-filter-family="runeword"', items_page)
+        self.assertIn('data-filter-family="runeword"', items_page)
+        self.assertIn("Search items, runewords, runes", items_page)
+        self.assertIn('runeword: "var(--q-runeword)"', site_js)
         self.assertIn("Runewords", runewords_index_page)
         self.assertIn("Practice", runewords_index_page)
         self.assertIn("rune-chip-icon", runewords_index_page)
         self.assertIn("Tal Rune", runewords_index_page)
         self.assertIn("Eth Rune", runewords_index_page)
+        self.assertIn("Helm", runewords_index_page)
+        self.assertNotIn("Merc Equip", runewords_index_page)
         self.assertRegex(runewords_index_page, r'data-search="[^"]*Holy Shock[^"]*"')
         self.assertIn('id="practice-set"', sets_index_page)
         self.assertIn('id="practice-set-set-blade"', sets_index_page)
@@ -1130,6 +1231,10 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertNotIn("is-focused-set", site_css)
         self.assertNotIn("scrollSetPieceHashIntoView", site_js)
         self.assertNotIn("prepend(setBlock)", site_js)
+        self.assertIn("function areaMonsterImmunities(area)", site_js)
+        self.assertIn("const immunities = areaMonsterImmunities(area);", site_js)
+        self.assertIn("<summary>+${hiddenMonsters.length} more</summary>", site_js)
+        self.assertIn(".area-monster-more", site_css)
 
         with open(os.path.join(self.output, "areas", "index.html"), "r", encoding="utf-8") as f:
             areas_page = f.read()
@@ -1249,7 +1354,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Bases:", runeword_page)
         self.assertNotIn("Source & Diff", runeword_page)
         self.assertNotIn("Show technical retail comparison", runeword_page)
-        self.assertIn('href="../../../bases/?category=Melee+Weapon&amp;minSockets=2"', runeword_page)
+        self.assertIn('href="../../../bases/?category=Helm&amp;minSockets=2"', runeword_page)
         self.assertIn("+50 to Attack Rating", runeword_page)
         self.assertIn("25% Chance of Open Wounds", runeword_page)
 

@@ -12,6 +12,8 @@ TEMPLATE_DIR = os.path.join(D2LIB_DIR, "wiki_templates")
 ASSET_SOURCE_DIR = os.path.join(D2LIB_DIR, "wiki_assets")
 
 from d2lib.utils import slugify
+from d2lib.wiki.publication import WikiPageDTO, WikiSiteDTO
+from d2lib.wiki.routes import WikiRoutes
 
 class WikiRenderer:
     def __init__(self, template_dir: str = TEMPLATE_DIR):
@@ -25,6 +27,24 @@ class WikiRenderer:
 
     def render(self, template_name: str, **context: Any) -> str:
         return self.environment.get_template(template_name).render(**context)
+
+
+class HtmlWikiRenderer:
+    """Renders format-neutral wiki page DTOs through the existing Jinja templates."""
+
+    def __init__(self, template_dir: str = TEMPLATE_DIR):
+        self.renderer = WikiRenderer(template_dir)
+
+    def render_page(self, page: WikiPageDTO, site: WikiSiteDTO) -> str:
+        output_path = page["output_path"]
+        return self.renderer.render(
+            page["template_name"],
+            title=page["title"],
+            site_root=WikiRoutes.site_root_for_output_path(output_path),
+            old_label=site["old_label"],
+            new_label=site["new_label"],
+            **page["payload"],
+        )
 
 
 class WikiOutputWriter:
@@ -73,3 +93,29 @@ class WikiOutputWriter:
                     os.rmdir(dir_path)
                 except OSError:
                     pass
+
+
+class WikiPublisher:
+    """Writes a rendered wiki site to disk and handles stale-file cleanup."""
+
+    def __init__(self, output_dir: str):
+        self.output_dir = output_dir
+        self.writer = WikiOutputWriter(output_dir)
+
+    def publish(self, site: WikiSiteDTO, renderer: HtmlWikiRenderer) -> None:
+        os.makedirs(self.output_dir, exist_ok=True)
+        self.writer.generated_paths = set()
+
+        for asset in site["assets"]:
+            if "source_path" in asset:
+                self.writer.copy_asset(asset["source_path"], asset["relative_path"])
+            else:
+                self.writer.write_bytes(asset["relative_path"], asset.get("content_bytes", b""))
+
+        for data_file in site["data_files"]:
+            self.writer.write_text(data_file["relative_path"], data_file["content"])
+
+        for page in site["pages"]:
+            self.writer.write_text(page["output_path"], renderer.render_page(page, site))
+
+        self.writer.remove_stale_files()

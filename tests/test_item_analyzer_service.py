@@ -16,7 +16,10 @@ class FakeRepo:
             "armor": [],
             "weapons": [],
             "misc": [],
-            "itemtypes": [{"Code": "mele", "ItemType": "Melee Weapon", "RunewordCategory1": "r_mel"}],
+            "itemtypes": [
+                {"Code": "mele", "ItemType": "Melee Weapon", "RunewordCategory1": "r_mel"},
+                {"Code": "helm", "ItemType": "Merc Equip", "RunewordCategory1": "r_hel"},
+            ],
             "sets": [],
             "gems": [
                 {
@@ -45,6 +48,7 @@ class FakeRepo:
             "r03": "Tir Rune (3)",
             "r03l": "Tir",
             "melee weapon": "Melee Weapon",
+            "merc equip": "Merc Equip",
         }
 
     def get_excel_table(self, table_name):
@@ -118,6 +122,19 @@ class TestItemAnalyzerService(unittest.TestCase):
             ],
             runeword["rune_properties"],
         )
+
+    def test_runeword_base_items_normalize_merc_equip_to_helm(self):
+        analyzer = ItemAnalyzerService(FakeRepo(), FakeResolver())
+        runeword = analyzer.analyze_runeword(
+            {
+                "*Rune Name": "Practice",
+                "Rune1": "r30",
+                "itype1": "helm",
+            }
+        )
+
+        self.assertEqual(["Helm"], runeword["base_items"])
+        self.assertNotIn("Merc Equip", runeword["base_items"])
 
 
 if __name__ == "__main__":
