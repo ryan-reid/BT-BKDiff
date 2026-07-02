@@ -11,6 +11,8 @@ from d2lib.services.monsters import MonsterAnalyzerService
 from d2lib.services.recipes import CubeAnalyzerService
 from d2lib.services.mechanics import MechanicsAnalyzerService
 from d2lib.services.misc import MiscAnalyzerService
+from d2lib.services.drops import DropSourceAnalyzerService
+from d2lib.services.references import ReferenceAnalyzerService
 from d2lib.services.comparison import ExcelComparisonService, ItemComparisonService
 
 __all__ = [
@@ -26,6 +28,8 @@ __all__ = [
     "CubeAnalyzerService",
     "MechanicsAnalyzerService",
     "MiscAnalyzerService",
+    "DropSourceAnalyzerService",
+    "ReferenceAnalyzerService",
     "ExcelComparisonService",
     "ItemComparisonService",
 ]

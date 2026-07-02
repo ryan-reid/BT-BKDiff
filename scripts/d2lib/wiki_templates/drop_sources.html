@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Drop Sources | {{ new_label }} Wiki{% endblock %}
+{% block nav_drops %} class="is-active"{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-eyebrow">Treasure Classes</p>
+  <h1>Drop Sources</h1>
+  <p class="hero-copy">Browse Hell treasure classes, nested drop pools, direct item entries, and monster or superunique records that point at them. This shows source structure, not final simulated drop odds.</p>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>Treasure Classes</span><strong>{{ summary.total_treasure_classes }}</strong></article>
+  <article class="metric-card"><span>Nested TC Links</span><strong>{{ summary.nested_tc_refs }}</strong></article>
+  <article class="metric-card"><span>Direct Item Refs</span><strong>{{ summary.direct_item_refs }}</strong></article>
+  <article class="metric-card"><span>Monster Sources</span><strong>{{ summary.monster_source_refs + summary.superunique_source_refs }}</strong></article>
+</section>
+
+<section class="content-section">
+  <div class="section-head">
+    <div>
+      <h2>Treasure Class Explorer</h2>
+      <p class="muted">Search by treasure class, direct item, nested pool, monster, or superunique name.</p>
+    </div>
+    <a class="link-card-cta" href="{{ site_root }}drops/">Back to drop weighting</a>
+  </div>
+  <input id="page-search" class="search-input" type="search" placeholder="Search treasure classes, items, monsters, or nested pools" />
+
+  <div class="table-wrap">
+    <table class="monster-table">
+      <thead>
+        <tr>
+          <th>Treasure Class</th>
+          <th>Rules</th>
+          <th>Entries</th>
+          <th>Known Sources</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr data-search="{{ row.search_text }}">
+          <td>
+            <strong>{{ row.name }}</strong>
+            {% if row.group or row.level %}
+            <br><small>{% if row.group %}Group {{ row.group }}{% endif %}{% if row.group and row.level %} &middot; {% endif %}{% if row.level %}Level {{ row.level }}{% endif %}</small>
+            {% endif %}
+          </td>
+          <td>
+            {% if row.picks %}<span class="chip">Picks {{ row.picks }}</span>{% endif %}
+            {% if row.no_drop %}<span class="chip">NoDrop {{ row.no_drop }}</span>{% endif %}
+            {% for weight in row.quality_weights %}
+            <span class="chip">{{ weight.label }} {{ weight.value }}</span>
+            {% endfor %}
+          </td>
+          <td>
+            {% if row.entries %}
+            <ul class="compact-list">
+              {% for entry in row.entries[:5] %}
+              <li>
+                <strong>{{ entry.label }}</strong>
+                <small>{{ entry.source or entry.kind }}{% if entry.prob %}, weight {{ entry.prob }}{% endif %}{% if entry.modifiers %}, {{ entry.modifiers }}{% endif %}</small>
+              </li>
+              {% endfor %}
+            </ul>
+            {% if row.entries|length > 5 %}<small class="muted">+{{ row.entries|length - 5 }} more entries</small>{% endif %}
+            {% else %}
+            <span class="muted">No item entries</span>
+            {% endif %}
+          </td>
+          <td>
+            {% if row.sources %}
+            <ul class="compact-list">
+              {% for source in row.sources[:5] %}
+              <li><strong>{{ source.name }}</strong> <small>{{ source.label }}</small></li>
+              {% endfor %}
+            </ul>
+            {% if row.sources|length > 5 %}<small class="muted">+{{ row.sources|length - 5 }} more sources</small>{% endif %}
+            {% else %}
+            <span class="muted">No direct monster or parent source found</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

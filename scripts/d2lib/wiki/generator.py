@@ -13,6 +13,8 @@ from d2lib.services import (
     MonsterAnalyzerService,
     MiscAnalyzerService,
     MechanicsAnalyzerService,
+    DropSourceAnalyzerService,
+    ReferenceAnalyzerService,
 )
 from d2lib.services.items import normalize_runeword_base_item_label
 from d2lib.services.recipes import RecipePresentationBuilder
@@ -29,6 +31,7 @@ from d2lib.utils import slugify, strip_markdown
 from d2lib.wiki.routes import ITEM_FAMILIES, REPORT_SOURCES, WikiRoutes
 from d2lib.wiki.renderers import HtmlWikiRenderer, WikiPublisher
 from d2lib.wiki.publication import WikiSiteDTO, WikiSiteRecordingWriter, empty_wiki_site
+from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 from d2lib.wiki.builders import AreaFarmingDataBuilder, ItemIconExporter
 from d2lib.wiki.comparison import (
     item_diff_status,
@@ -120,6 +123,8 @@ class WikiContentBuilder:
         retail_misc_items = self._load_retail_misc_items()
         mechanics_summary = self._load_mechanics_summary()
         drop_weight_groups = self._load_drop_weight_groups()
+        drop_source_data = self._load_drop_source_data()
+        reference_pages, reference_coverage = self._load_reference_pages()
 
         self._write_assets()
         item_entries = self._write_item_pages(items, old_item_index)
@@ -133,8 +138,10 @@ class WikiContentBuilder:
         self._write_gems_runes_pages(gem_rune_groups, retail_misc_items)
         self._write_mechanics_pages(mechanics_summary)
         self._write_drop_weight_pages(drop_weight_groups)
+        self._write_drop_source_pages(drop_source_data)
+        self._write_reference_pages(reference_pages, reference_coverage)
         report_entries = self._publish_reports()
-        self._write_indexes(item_entries, class_entries, report_entries, area_entries, base_item_families, recipe_groups, monster_groups, misc_groups, gem_rune_groups, drop_weight_groups)
+        self._write_indexes(item_entries, class_entries, report_entries, area_entries, base_item_families, recipe_groups, monster_groups, misc_groups, gem_rune_groups, drop_weight_groups, reference_pages)
         self._write_patch_notes_draft(item_entries, class_entries)
         self._write_item_index_data(item_entries, items)
         self._write_area_index_data(area_entries)
@@ -175,6 +182,75 @@ class WikiContentBuilder:
         groups.extend(self._quality_drop_weight_groups(self._repo.get_excel_table("setitems"), "set", "item", base_names))
         groups.extend(self._quality_drop_weight_groups(self._repo.get_excel_table("uniqueitems"), "unique", "code", base_names))
         return sorted(groups, key=lambda row: (row["base_name"].lower(), row["quality"], -row["max_chance"]))
+
+    def _load_drop_source_data(self) -> Dict[str, Any]:
+        return DropSourceAnalyzerService(self._repo).analyze_drop_sources()
+
+    def _load_reference_pages(self) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
+        table_names = self._available_excel_tables()
+        service = ReferenceAnalyzerService(self._repo, PropertyResolverService(self._repo))
+        pages = service.build_pages(table_names)
+        coverage = service.build_coverage(pages, table_names, self._core_raw_table_coverage())
+        return pages, coverage
+
+    @staticmethod
+    def _core_raw_table_coverage() -> Dict[str, str]:
+        return {
+            "armor": "Items, Bases, and References",
+            "automagic": "Bases and References",
+            "charstats": "Mechanics",
+            "cubemain": "Cube Recipes",
+            "difficultylevels": "Mechanics",
+            "experience": "Mechanics",
+            "gamble": "Mechanics and References",
+            "gems": "Gems & Runes",
+            "hireling": "References",
+            "inventory": "References",
+            "itemstatcost": "Properties and Mechanics",
+            "itemtypes": "Items, Bases, and Recipes",
+            "levels": "Areas and Bestiary",
+            "lvlmaze": "Areas and References",
+            "lvlprest": "Areas and References",
+            "lvlwarp": "Areas and References",
+            "magicprefix": "Recipes and References",
+            "magicsuffix": "Recipes and References",
+            "misc": "Materials, Gems & Runes, and Recipes",
+            "missiles": "Skills, Mechanics, and References",
+            "monai": "References",
+            "monpreset": "Areas and References",
+            "monprop": "References",
+            "monseq": "References",
+            "monstats": "Areas, Bestiary, and Drop Sources",
+            "monstats2": "Bestiary and References",
+            "monumod": "References",
+            "npc": "References",
+            "objects": "Areas and References",
+            "overlay": "References",
+            "properties": "Properties, Recipes, and Mechanics",
+            "qualityitems": "Bases and References",
+            "runes": "Runewords, Gems & Runes, and Items",
+            "setitems": "Items, Sets, and Drops",
+            "sets": "Sets",
+            "shrines": "References",
+            "skilldesc": "Skills and References",
+            "skills": "Skills, Mechanics, and References",
+            "states": "References",
+            "superuniques": "Drop Sources and References",
+            "treasureclassex": "Drop Sources",
+            "uniqueitems": "Items and Drops",
+            "uniqueprefix": "Raw Coverage",
+            "weapons": "Items, Bases, and References",
+        }
+
+    def _available_excel_tables(self) -> List[str]:
+        excel_dir = os.path.join(self.game_data_dir, "data", "global", "excel")
+        if not os.path.isdir(excel_dir):
+            return []
+        return sorted(
+            os.path.splitext(filename)[0]
+            for filename in os.listdir(excel_dir)
+            if filename.lower().endswith(".txt")
+        )
 
     def _load_items(self, item_db_dir: Optional[str] = None) -> Dict[str, List[Dict[str, Any]]]:
         items: Dict[str, List[Dict[str, Any]]] = {family: [] for family in ITEM_FAMILIES}
@@ -414,6 +490,94 @@ class WikiContentBuilder:
             unique_group_count=sum(1 for g in groups if g["quality"] == "unique"),
         )
 
+    def _write_drop_source_pages(self, data: Dict[str, Any]) -> None:
+        self.writer.write_text("data/drop-sources.json", json.dumps(data, indent=2))
+        self._write_page(
+            title=f"Drop Sources | {self.new_label} Wiki",
+            output_path=WikiRoutes.drop_sources_output_path(),
+            template_name="drop_sources.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", fname)
+                for fname in ("treasureclassex.txt", "monstats.txt", "superuniques.txt", "weapons.txt", "armor.txt", "misc.txt")
+            ],
+            page=data,
+            summary=data.get("summary", {}),
+            rows=data.get("rows", []),
+        )
+
+    def _write_reference_pages(self, pages: List[Dict[str, Any]], coverage: Dict[str, Any]) -> None:
+        self.writer.write_text("data/references-raw-coverage.json", json.dumps(coverage, indent=2))
+        index_entries = [
+            {
+                "title": page["title"],
+                "description": page["description"],
+                "href": WikiRoutes.route_from_output_path(WikiRoutes.reference_output_path(page["slug"])),
+                "row_count": page["row_count"],
+                "source_tables": page["source_tables"],
+                "search_text": page["search_text"],
+            }
+            for page in pages
+        ]
+        self._write_page(
+            title=f"References | {self.new_label} Wiki",
+            output_path=WikiRoutes.references_index_output_path(),
+            template_name="references_index.html",
+            category="index",
+            source_files=[],
+            pages=index_entries,
+            coverage=coverage,
+        )
+
+        for page in pages:
+            self.writer.write_text(f"data/references-{page['slug']}.json", json.dumps(page, indent=2))
+            self._write_page(
+                title=f"{page['title']} | {self.new_label} Wiki",
+                output_path=WikiRoutes.reference_output_path(page["slug"]),
+                template_name="reference_table.html",
+                category="index",
+                source_files=[
+                    os.path.join(self.game_data_dir, "data", "global", "excel", f"{table}.txt")
+                    for table in page["source_tables"]
+                ],
+                page=page,
+            )
+
+        coverage_page = {
+            "slug": "raw-coverage",
+            "title": "Raw Coverage",
+            "description": "Every raw Excel txt table detected in the mod data and whether it is mapped into a generated wiki surface.",
+            "sections": [
+                {
+                    "title": "Raw Tables",
+                    "table": "coverage",
+                    "row_count": len(coverage.get("rows", [])),
+                    "rows": [
+                        {
+                            "label": row["table"],
+                            "fields": [
+                                {"label": "Rows", "value": str(row["row_count"])},
+                                {"label": "Coverage", "value": row["coverage"]},
+                                {"label": "Status", "value": row["status"]},
+                            ],
+                            "properties": [],
+                            "search_text": row["search_text"],
+                        }
+                        for row in coverage.get("rows", [])
+                    ],
+                }
+            ],
+        }
+        self.writer.write_text("data/references-raw-coverage-page.json", json.dumps(coverage_page, indent=2))
+        self._write_page(
+            title=f"Raw Coverage | {self.new_label} Wiki",
+            output_path=WikiRoutes.reference_output_path("raw-coverage"),
+            template_name="reference_table.html",
+            category="index",
+            source_files=[],
+            page=coverage_page,
+        )
+
     def _write_item_pages(
         self,
         items: Dict[str, List[Dict[str, Any]]],
@@ -629,6 +793,7 @@ class WikiContentBuilder:
         misc_groups: List[MiscGroupDTO],
         gem_rune_groups: List[MiscGroupDTO],
         drop_weight_groups: List[Dict[str, Any]],
+        reference_pages: List[Dict[str, Any]],
     ) -> None:
         self._write_page(
             title=f"{self.new_label} Data Wiki",
@@ -645,6 +810,7 @@ class WikiContentBuilder:
             misc_count=sum(len(g["members"]) for g in misc_groups),
             gem_rune_count=sum(len(g["members"]) for g in gem_rune_groups),
             drop_weight_count=len(drop_weight_groups),
+            reference_count=len(reference_pages) + 1,
             total_items=sum(len(entries) for entries in item_entries.values()),
             reports=report_entries,
         )
@@ -765,12 +931,12 @@ class WikiContentBuilder:
         normalized = output_path.replace("\\", "/")
         self.site["pages"].append({
             "kind": os.path.splitext(template_name)[0],
-            "title": title,
+            "title": sanitize_display_text(title),
             "output_path": normalized,
             "template_name": template_name,
             "category": category,
             "source_files": source_files,
-            "payload": context,
+            "payload": sanitize_display_payload(context),
         })
         self.writer.generated_paths.add(normalized)
         self.manifest.append({"title": title, "path": WikiRoutes.route_from_output_path(output_path), "category": category, "sources": source_files})

@@ -17,8 +17,18 @@
 </section>
 
 <section class="content-section">
+  <div class="card-grid two-up">
+    <a class="link-card" href="{{ site_root }}drops/sources/">
+      <h3>Drop Sources</h3>
+      <p>Browse treasure classes, nested pools, direct item entries, and monster or superunique source records.</p>
+      <span class="link-card-cta">Open source explorer -></span>
+    </a>
+  </div>
+</section>
+
+<section class="content-section">
   <input id="page-search" class="search-input" type="search" placeholder="Search base items or item names" />
-  <p class="muted">These odds show relative weighting among items that share the same base item, calculated after the game selects a unique or set quality. Monster source, area density, and full drop-table path odds are not included.</p>
+  <p class="muted">These odds show relative weighting among items that share the same base item, calculated after the game selects a unique or set quality. The source explorer includes treasure-class structure and monster links, but final full-path drop odds are not simulated.</p>
 
   <div class="family-list">
     {% for group in groups %}

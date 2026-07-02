@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ new_label }} Wiki{% endblock %}
+{% block nav_references %} class="is-active"{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-eyebrow">Reference</p>
+  <h1>{{ page.title }}</h1>
+  <p class="hero-copy">{{ page.description }}</p>
+</section>
+
+<section class="content-section">
+  <div class="section-head">
+    <div>
+      <h2>Tables</h2>
+      <p class="muted">Search within this generated reference. Values are shown only when present in the raw row.</p>
+    </div>
+    <a class="link-card-cta" href="{{ site_root }}references/">Back to references</a>
+  </div>
+  <input id="page-search" class="search-input" type="search" placeholder="Search rows, properties, and raw values" />
+
+  {% for section in page.sections %}
+  <div class="family-container" data-search="{{ section.title }} {{ section.table }}">
+    <div class="family-header-bar">
+      <div>
+        <h2>{{ section.title }}</h2>
+        <p class="muted"><code>{{ section.table }}.txt</code> &middot; {{ section.row_count }} rows</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="monster-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Fields</th>
+            <th>Resolved Properties</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in section.rows %}
+          <tr data-search="{{ row.search_text }}">
+            <td><strong>{{ row.label }}</strong></td>
+            <td>
+              {% if row.fields %}
+              <ul class="compact-list">
+                {% for field in row.fields[:10] %}
+                <li><strong>{{ field.label }}</strong><small>{{ field.value }}</small></li>
+                {% endfor %}
+              </ul>
+              {% if row.fields|length > 10 %}<small class="muted">+{{ row.fields|length - 10 }} more fields</small>{% endif %}
+              {% else %}
+              <span class="muted">No selected fields</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if row.properties %}
+              <ul class="compact-list">
+                {% for prop in row.properties %}
+                <li><strong>{{ prop.code }}</strong><small>{{ prop.text }}</small></li>
+                {% endfor %}
+              </ul>
+              {% else %}
+              <span class="muted">No resolved properties</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

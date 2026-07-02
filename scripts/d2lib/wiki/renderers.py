@@ -12,6 +12,7 @@ TEMPLATE_DIR = os.path.join(D2LIB_DIR, "wiki_templates")
 ASSET_SOURCE_DIR = os.path.join(D2LIB_DIR, "wiki_assets")
 
 from d2lib.utils import slugify
+from d2lib.wiki.presentation import sanitize_display_text
 from d2lib.wiki.publication import WikiPageDTO, WikiSiteDTO
 from d2lib.wiki.routes import WikiRoutes
 
@@ -57,7 +58,7 @@ class WikiOutputWriter:
         full_path = os.path.join(self.output_dir, normalized)
         os.makedirs(os.path.dirname(full_path), exist_ok=True)
         with open(full_path, "w", encoding="utf-8") as f:
-            f.write(content)
+            f.write(sanitize_display_text(content))
         self.generated_paths.add(normalized)
 
     def write_bytes(self, relative_path: str, content: bytes) -> None:
@@ -72,7 +73,13 @@ class WikiOutputWriter:
         normalized = relative_path.replace("\\", "/")
         full_path = os.path.join(self.output_dir, normalized)
         os.makedirs(os.path.dirname(full_path), exist_ok=True)
-        shutil.copyfile(source_path, full_path)
+        if os.path.splitext(source_path)[1].lower() in {".html", ".json"}:
+            with open(source_path, "r", encoding="utf-8") as source_file:
+                content = source_file.read()
+            with open(full_path, "w", encoding="utf-8") as output_file:
+                output_file.write(sanitize_display_text(content))
+        else:
+            shutil.copyfile(source_path, full_path)
         self.generated_paths.add(normalized)
 
     def remove_stale_files(self) -> None:

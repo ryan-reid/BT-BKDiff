@@ -798,6 +798,8 @@ class CubeAnalyzerService:
                 walk(parent)
 
         walk(item_type)
+        if item_type != "any" and "any" not in seen:
+            ancestors.append("any")
         return ancestors
 
     @staticmethod

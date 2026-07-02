@@ -12,6 +12,7 @@ if SCRIPT_DIR not in sys.path:
 
 from d2lib.services.recipes import RecipePresentationBuilder
 from d2lib.wiki import AreaFarmingDataBuilder, ItemIconExporter, MediaWikiPublisher, WikiGenerator, WikiOutputWriter, WikiRoutes
+from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 
 
 class TestWikiGenerator(unittest.TestCase):
@@ -143,6 +144,45 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("wearables", RecipePresentationBuilder._corruption_filter_tags({"inputs": ["Belt (Unique)"]}))
         self.assertIn("charms", RecipePresentationBuilder._corruption_filter_tags({"inputs": ["Annihilus"]}))
         self.assertIn("jewelry", RecipePresentationBuilder._corruption_filter_tags({"inputs": ["Ring (Unique)"]}))
+
+    def test_display_payload_normalizes_merc_equip_to_helm(self):
+        payload = {
+            "recipe": "Helm Merc Equip (Normal, nos)",
+            "inputs": ["Merc Equip", "Merc Equip (Set)"],
+            "nested": [{"search_text": "Black Merc Equip dye"}],
+        }
+
+        normalized = sanitize_display_payload(payload)
+
+        self.assertEqual("Helm (Normal, nos)", normalized["recipe"])
+        self.assertEqual(["Helm", "Helm (Set)"], normalized["inputs"])
+        self.assertEqual("Black Helm dye", normalized["nested"][0]["search_text"])
+        self.assertEqual("Helm Eth Sup (hiq, eth, nos)", sanitize_display_text("Helm Eth Sup Merc Equip (hiq, eth, nos)"))
+        self.assertEqual("Helm", sanitize_display_text("merc equip"))
+
+    def test_wiki_output_writer_sanitizes_display_text(self):
+        source_dir = os.path.join(self.root, "report_source")
+        os.makedirs(source_dir, exist_ok=True)
+        source_path = os.path.join(source_dir, "merc_equip.html")
+        with open(source_path, "w", encoding="utf-8") as f:
+            f.write("<h1>Added Merc Equip Runewords</h1><p>Base Item: Merc Equip</p>")
+
+        writer = WikiOutputWriter(self.output)
+        writer.write_text("data/example.json", '{"label": "Merc Equip"}')
+        writer.copy_asset(source_path, "reports/items/merc_equip.html")
+
+        with open(os.path.join(self.output, "data", "example.json"), "r", encoding="utf-8") as f:
+            data_file = f.read()
+        with open(os.path.join(self.output, "reports", "items", "merc_equip.html"), "r", encoding="utf-8") as f:
+            copied_report = f.read()
+        with open(source_path, "r", encoding="utf-8") as f:
+            original_report = f.read()
+
+        self.assertNotIn("Merc Equip", data_file)
+        self.assertIn('"label": "Helm"', data_file)
+        self.assertNotIn("Merc Equip", copied_report)
+        self.assertIn("Added Helm Runewords", copied_report)
+        self.assertIn("Merc Equip", original_report)
 
     def _write_json(self, root, relative_path, payload):
         full_path = os.path.join(root, relative_path)
@@ -501,7 +541,34 @@ class TestWikiGenerator(unittest.TestCase):
                 {"index": "Thunder Two", "code": "7gm", "*ItemName": "Thunder Maul", "rarity": "1", "lvl": "90", "lvl req": "80", "spawnable": "1"},
             ],
         )
-        self._write_tsv(excel_root, "treasureclassex.txt", ["Treasure Class", "Picks", "Item1", "Prob1"], [{"Treasure Class": "Act Test", "Picks": "1", "Item1": "armo3", "Prob1": "1"}])
+        self._write_tsv(
+            excel_root,
+            "treasureclassex.txt",
+            ["Treasure Class", "group", "level", "Picks", "NoDrop", "Unique", "Set", "Item1", "Prob1", "Item2", "Prob2"],
+            [
+                {
+                    "Treasure Class": "Act Test",
+                    "group": "7",
+                    "level": "85",
+                    "Picks": "1",
+                    "NoDrop": "100",
+                    "Unique": "800",
+                    "Set": "800",
+                    "Item1": "ci3",
+                    "Prob1": "1",
+                    "Item2": "Nested Test",
+                    "Prob2": "2",
+                },
+                {
+                    "Treasure Class": "Nested Test",
+                    "group": "7",
+                    "level": "80",
+                    "Picks": "1",
+                    "Item1": "gsw",
+                    "Prob1": "3",
+                },
+            ],
+        )
         self._write_tsv(
             excel_root,
             "gems.txt",
@@ -542,6 +609,9 @@ class TestWikiGenerator(unittest.TestCase):
                 {"description": "Unique Corruptor", "enabled": "1", "input 1": "amu,uni", "input 2": "std", "output": "useitem", "output b": "std", "mod 1": "corruption2", "mod 1 min": "1", "mod 1 max": "1000", "value": "0"},
                 {"description": "Brick", "enabled": "1", "input 1": "amu,uni", "input 2": "std", "output": "usetype,rar", "output b": "brk", "mod 1": "corruption2", "mod 1 min": "1001", "mod 1 max": "1001", "value": "300"},
                 {"description": "Amulet", "enabled": "1", "input 1": "amu,uni", "input 2": "std", "output": "useitem", "mod 1": "corruption2", "mod 1 min": "1001", "mod 1 max": "1001", "mod 2": "sock", "mod 2 min": "1", "mod 2 max": "1", "value": "1000"},
+                {"description": "Brick", "enabled": "1", "input 1": "any,set", "input 2": "std", "output": "usetype,rar", "output b": "brk", "mod 1": "corruption2", "mod 1 min": "1001", "mod 1 max": "1001", "value": "300"},
+                {"description": "Set Weapon", "enabled": "1", "input 1": "weap,set", "input 2": "std", "output": "useitem", "mod 1": "corruption2", "mod 1 min": "1001", "mod 1 max": "1001", "mod 2": "sock", "mod 2 min": "1", "mod 2 max": "1", "value": "580"},
+                {"description": "Set Weapon", "enabled": "1", "input 1": "weap,set", "input 2": "std", "output": "useitem", "mod 1": "corruption2", "mod 1 min": "1001", "mod 1 max": "1001", "mod 2": "sock", "mod 2 min": "2", "mod 2 max": "2", "value": "1000"},
                 {"description": "1 Socket"},
             ],
         )
@@ -692,6 +762,8 @@ class TestWikiGenerator(unittest.TestCase):
             "MinGrp",
             "MaxGrp",
             "Rarity",
+            "TreasureClass(H)",
+            "TreasureClassUnique(H)",
             "ResDm(H)",
             "ResMa(H)",
             "ResFi(H)",
@@ -710,6 +782,7 @@ class TestWikiGenerator(unittest.TestCase):
                     "MinGrp": "2",
                     "MaxGrp": "4",
                     "Rarity": "1",
+                    "TreasureClass(H)": "Act Test",
                     "ResCo(H)": "100",
                 },
                 {
@@ -718,6 +791,7 @@ class TestWikiGenerator(unittest.TestCase):
                     "MinGrp": "1",
                     "MaxGrp": "3",
                     "Rarity": "2",
+                    "TreasureClassUnique(H)": "Nested Test",
                     "ResFi(H)": "115",
                 },
                 {
@@ -752,6 +826,12 @@ class TestWikiGenerator(unittest.TestCase):
                     "ResFi(H)": "115",
                 },
             ],
+        )
+        self._write_tsv(
+            excel_root,
+            "superuniques.txt",
+            ["Name", "TC(H)", "TC(H) Desecrated"],
+            [{"Name": "Practice Boss", "TC(H)": "Act Test", "TC(H) Desecrated": "Nested Test"}],
         )
         maze_fields = ["Name", "Level", "Rooms", "Rooms(N)", "Rooms(H)", "SizeX", "SizeY", "Merge"]
         self._write_tsv(
@@ -1022,8 +1102,15 @@ class TestWikiGenerator(unittest.TestCase):
             os.path.join(self.output, "gems-runes", "index.html"),
             os.path.join(self.output, "mechanics", "index.html"),
             os.path.join(self.output, "drops", "index.html"),
+            os.path.join(self.output, "drops", "sources", "index.html"),
+            os.path.join(self.output, "references", "index.html"),
+            os.path.join(self.output, "references", "affixes", "index.html"),
+            os.path.join(self.output, "references", "raw-coverage", "index.html"),
             os.path.join(self.output, "data", "areas-index.json"),
             os.path.join(self.output, "data", "drop-weights.json"),
+            os.path.join(self.output, "data", "drop-sources.json"),
+            os.path.join(self.output, "data", "references-affixes.json"),
+            os.path.join(self.output, "data", "references-raw-coverage.json"),
             os.path.join(self.output, "data", "recipes-overview.json"),
             os.path.join(self.output, "data", "recipes-crafting.json"),
             os.path.join(self.output, "data", "recipes-raw.json"),
@@ -1057,6 +1144,10 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("gems-runes/", manifest_paths)
         self.assertIn("mechanics/", manifest_paths)
         self.assertIn("drops/", manifest_paths)
+        self.assertIn("drops/sources/", manifest_paths)
+        self.assertIn("references/", manifest_paths)
+        self.assertIn("references/affixes/", manifest_paths)
+        self.assertIn("references/raw-coverage/", manifest_paths)
         self.assertIn("reports/", manifest_paths)
         self.assertIn("reports/items/retail-bk/", manifest_paths)
 
@@ -1292,6 +1383,10 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("30%", corruptions_page)
         self.assertIn("70%", corruptions_page)
         self.assertIn("Add 1 socket", corruptions_page)
+        self.assertIn("Weapon (Set) + Standard of Heroes", corruptions_page)
+        self.assertIn("28%", corruptions_page)
+        self.assertIn("42%", corruptions_page)
+        self.assertNotIn("Any Item (Set) + Standard of Heroes", corruptions_page)
         self.assertNotIn('data-recipe-filter="gloves"', corruptions_page)
         self.assertNotIn('data-recipe-filter="boots"', corruptions_page)
         self.assertNotIn('data-recipe-filter="belts"', corruptions_page)
@@ -1337,13 +1432,50 @@ class TestWikiGenerator(unittest.TestCase):
 
         with open(os.path.join(self.output, "drops", "index.html"), "r", encoding="utf-8") as f:
             drops_page = f.read()
+        with open(os.path.join(self.output, "drops", "sources", "index.html"), "r", encoding="utf-8") as f:
+            drop_sources_page = f.read()
+        with open(os.path.join(self.output, "references", "index.html"), "r", encoding="utf-8") as f:
+            references_page = f.read()
+        with open(os.path.join(self.output, "references", "affixes", "index.html"), "r", encoding="utf-8") as f:
+            affixes_page = f.read()
+        with open(os.path.join(self.output, "references", "raw-coverage", "index.html"), "r", encoding="utf-8") as f:
+            raw_coverage_page = f.read()
         self.assertIn("Conditional Odds", drops_page)
         self.assertIn('href="../drops/" class="is-active"', drops_page)
+        self.assertIn('href="../drops/sources/"', drops_page)
         self.assertIn("Bright Circlet", drops_page)
         self.assertIn("95.2%", drops_page)
         self.assertIn("Thunder Two", drops_page)
         self.assertIn("25.0%", drops_page)
-        self.assertIn("Monster source, area density, and full drop-table path odds are not included", drops_page)
+        self.assertIn("source explorer includes treasure-class structure", drops_page)
+        self.assertIn("Drop Sources", drop_sources_page)
+        self.assertIn("Act Test", drop_sources_page)
+        self.assertIn("Nested Test", drop_sources_page)
+        self.assertIn("Cold Beast", drop_sources_page)
+        self.assertIn("Practice Boss", drop_sources_page)
+        self.assertIn("Diadem", drop_sources_page)
+        self.assertIn("Amethyst", drop_sources_page)
+
+        with open(os.path.join(self.output, "data", "drop-sources.json"), "r", encoding="utf-8") as f:
+            drop_sources_data = json.load(f)
+        by_tc = {row["name"]: row for row in drop_sources_data["rows"]}
+        self.assertEqual(2, drop_sources_data["summary"]["total_treasure_classes"])
+        self.assertIn("Nested Test", [entry["label"] for entry in by_tc["Act Test"]["entries"]])
+        self.assertIn("Act Test", [source["name"] for source in by_tc["Nested Test"]["sources"]])
+        self.assertIn("Cold Beast", [source["name"] for source in by_tc["Act Test"]["sources"]])
+        self.assertIn("Practice Boss", [source["name"] for source in by_tc["Act Test"]["sources"]])
+
+        self.assertIn("References", references_page)
+        self.assertIn("Affixes &amp; Automagic", references_page)
+        self.assertIn('href="../references/affixes/"', references_page)
+        self.assertIn("Monster Specials", references_page)
+        self.assertIn("Raw Coverage", references_page)
+        self.assertIn("Piercing Test", affixes_page)
+        self.assertIn("Piercing Attack", affixes_page)
+        self.assertIn("qualityitems.txt", affixes_page)
+        self.assertIn("treasureclassex", raw_coverage_page)
+        self.assertIn("Drop Sources", raw_coverage_page)
+        self.assertIn("Raw Tables", raw_coverage_page)
 
         with open(os.path.join(self.output, "items", "runeword", "practice", "index.html"), "r", encoding="utf-8") as f:
             runeword_page = f.read()

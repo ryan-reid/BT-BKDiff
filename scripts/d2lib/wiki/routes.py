@@ -133,6 +133,18 @@ class WikiRoutes:
         return "drops/index.html"
 
     @staticmethod
+    def drop_sources_output_path() -> str:
+        return "drops/sources/index.html"
+
+    @staticmethod
+    def references_index_output_path() -> str:
+        return "references/index.html"
+
+    @staticmethod
+    def reference_output_path(slug: str) -> str:
+        return f"references/{slug}/index.html"
+
+    @staticmethod
     def item_output_path(family: str, slug: str) -> str:
         return f"items/{family}/{slug}/index.html"
 

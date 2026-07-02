@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}References | {{ new_label }} Wiki{% endblock %}
+{% block nav_references %} class="is-active"{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-eyebrow">Raw Data Coverage</p>
+  <h1>References</h1>
+  <p class="hero-copy">Focused generated references for raw txt tables that support affixes, monster specials, economy, states, area structure, and skill behavior.</p>
+</section>
+
+<section class="metric-grid">
+  <article class="metric-card"><span>Reference Pages</span><strong>{{ pages|length + 1 }}</strong></article>
+  <article class="metric-card"><span>Mapped Tables</span><strong>{{ coverage.summary.covered_count }}</strong></article>
+  <article class="metric-card"><span>Total Raw Tables</span><strong>{{ coverage.summary.table_count }}</strong></article>
+</section>
+
+<section class="content-section">
+  <input id="page-search" class="search-input" type="search" placeholder="Search reference pages or raw table names" />
+  <div class="card-grid two-up">
+    {% for page in pages %}
+    <a class="link-card" href="{{ site_root }}{{ page.href }}" data-search="{{ page.search_text }}">
+      <h3>{{ page.title }}</h3>
+      <p>{{ page.description }}</p>
+      <span class="portal-count">{{ page.row_count }} rows &middot; {{ page.source_tables|length }} tables</span>
+      <span class="link-card-cta">Open reference -></span>
+    </a>
+    {% endfor %}
+    <a class="link-card" href="{{ site_root }}references/raw-coverage/" data-search="raw coverage all txt tables">
+      <h3>Raw Coverage</h3>
+      <p>Audit every raw Excel txt table detected in the mod data and whether it is mapped to a wiki surface.</p>
+      <span class="portal-count">{{ coverage.summary.table_count }} tables</span>
+      <span class="link-card-cta">Open coverage -></span>
+    </a>
+  </div>
+</section>
+{% endblock %}

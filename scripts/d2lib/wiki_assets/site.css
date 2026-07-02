@@ -196,6 +196,9 @@ code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surfa
 .portal p,  .link-card p    { margin: 0; color: var(--muted); font-size: 0.88rem; }
 .portal-count  { display: inline-block; margin-top: 12px; font-size: 0.76rem; color: var(--gold-deep); font-weight: 600; }
 .link-card-cta { display: inline-block; margin-top: 12px; color: var(--gold-deep); font-size: 0.84rem; font-weight: 600; }
+.compact-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.compact-list li { display: grid; gap: 1px; }
+.compact-list small { color: var(--muted); }
 
 /* ── Loot cards ────────────────────────────────────────────────────────── */
 
