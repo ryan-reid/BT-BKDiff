@@ -685,11 +685,19 @@ class WikiContentBuilder:
         old_runewords = (old_item_index or {}).get("runeword", {})
         records = []
         rune_options_by_code: Dict[str, Dict[str, str]] = {}
+        base_options = set()
 
         for entry in sorted(runewords, key=item_sort_key):
             title = item_title(entry, "runeword")
             page_entry = href_by_title.get(title, {})
             rune_requirements = entry.get("rune_requirements") or self._runeword_rune_requirements(entry, icon_exporter)
+            base_items = entry.get("base_items", [])
+            base_filter_terms = []
+            for base_item in base_items:
+                base_label = str(base_item).strip()
+                if base_label:
+                    base_options.add(base_label)
+                    base_filter_terms.append(base_label)
 
             property_preview = [
                 str(prop.get("resolved_text", ""))
@@ -731,7 +739,8 @@ class WikiContentBuilder:
                 "href": page_entry.get("href", ""),
                 "status": page_entry.get("status", "unchanged"),
                 "summary": item_summary(entry, "runeword"),
-                "base_items": entry.get("base_items", []),
+                "base_items": base_items,
+                "base_filter_terms": "|".join(base_filter_terms),
                 "runes": rune_requirements,
                 "rune_filter_terms": "|".join(rune_filter_terms),
                 "rune_requirement_codes": "|".join(rune_requirement_codes),
@@ -759,6 +768,7 @@ class WikiContentBuilder:
             source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "runes.txt")],
             runewords=records,
             rune_options=sorted(rune_options_by_code.values(), key=rune_option_sort),
+            base_options=sorted(base_options),
         )
 
     def _write_set_index_page(self, sets: List[Dict[str, Any]], old_item_index: Dict[str, Dict[str, Any]]) -> None:

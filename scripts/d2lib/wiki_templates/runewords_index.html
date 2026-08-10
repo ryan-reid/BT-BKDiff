@@ -14,6 +14,19 @@
       <span>Search</span>
       <input id="page-search" class="search-input" type="search" placeholder="Search runewords, bases, or properties" />
     </label>
+    <label>
+      <span>Name Prefix</span>
+      <input id="runeword-prefix-filter" class="search-input" type="search" placeholder="Breath, Grief" />
+    </label>
+    <label>
+      <span>Base</span>
+      <select id="runeword-base-filter" class="filter-select">
+        <option value="all">All Bases</option>
+        {% for base in base_options %}
+        <option value="{{ base }}">{{ base }}</option>
+        {% endfor %}
+      </select>
+    </label>
     <span class="runeword-result-summary"><b id="runeword-result-count">{{ runewords|length }}</b> runewords</span>
   </div>
   <div class="runeword-selector-panel">
@@ -35,7 +48,7 @@
 <div class="family-items-grid">
   {% for runeword in runewords %}
   {% set comp = runeword.comparison %}
-  <a class="base-item-card" style="padding:0;overflow:hidden;display:block;text-decoration:none;color:inherit" href="{{ site_root }}{{ runeword.href }}" data-runeword-card data-runes="{{ runeword.rune_filter_terms }}" data-rune-codes="{{ runeword.rune_requirement_codes }}" data-search="{{ runeword.search_text }}">
+  <a class="base-item-card" style="padding:0;overflow:hidden;display:block;text-decoration:none;color:inherit" href="{{ site_root }}{{ runeword.href }}" data-runeword-card data-runeword-title="{{ runeword.title }}" data-base-items="{{ runeword.base_filter_terms }}" data-runes="{{ runeword.rune_filter_terms }}" data-rune-codes="{{ runeword.rune_requirement_codes }}" data-search="{{ runeword.search_text }}">
 
     <div class="sp-head">
       <div style="min-width:0;flex:1">

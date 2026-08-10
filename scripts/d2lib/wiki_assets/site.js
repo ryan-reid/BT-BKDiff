@@ -369,6 +369,8 @@ function wireRunewordFilters() {
   }
 
   const searchInput = document.querySelector("#page-search");
+  const prefixInput = document.querySelector("#runeword-prefix-filter");
+  const baseSelect = document.querySelector("#runeword-base-filter");
   const resultCount = document.querySelector("#runeword-result-count");
   const selectedCount = document.querySelector("#runeword-selected-count");
   const clearRunesButton = document.querySelector("#runeword-clear-runes");
@@ -383,12 +385,26 @@ function wireRunewordFilters() {
 
   const params = new URLSearchParams(window.location.search);
   const initialQuery = params.get("q") || params.get("search") || "";
+  const initialPrefix = params.get("prefix") || params.get("namePrefix") || "";
+  const initialBase = params.get("base") || params.get("baseItem") || "";
   const initialRunes = params.get("runes") || params.get("rune") || params.get("have") || "";
   if (searchInput && initialQuery) {
     searchInput.value = initialQuery;
     const mastSearch = document.querySelector("#mast-search-input");
     if (mastSearch) {
       mastSearch.value = initialQuery;
+    }
+  }
+  if (prefixInput && initialPrefix) {
+    prefixInput.value = initialPrefix;
+  }
+  if (baseSelect && initialBase) {
+    const normalizedBase = normalizeText(initialBase);
+    const option = Array.from(baseSelect.options).find((candidate) =>
+      normalizeText(candidate.value) === normalizedBase || normalizeText(candidate.textContent || "") === normalizedBase
+    );
+    if (option) {
+      baseSelect.value = option.value;
     }
   }
 
@@ -419,14 +435,20 @@ function wireRunewordFilters() {
 
   function applyFilters() {
     const query = normalizeText(searchInput ? searchInput.value : "");
+    const prefix = normalizeText(prefixInput ? prefixInput.value : "");
+    const activeBase = baseSelect ? baseSelect.value : "all";
+    const normalizedBase = normalizeText(activeBase);
     const hasSelectedRunes = selectedRuneCodes.size > 0;
     let visibleCount = 0;
 
     cards.forEach((card) => {
       const textOk = !query || normalizeText(card.dataset.search || "").includes(query);
+      const prefixOk = !prefix || normalizeText(card.dataset.runewordTitle || "").startsWith(prefix);
+      const baseItems = normalizeText(card.dataset.baseItems || "").split("|").filter(Boolean);
+      const baseOk = activeBase === "all" || baseItems.includes(normalizedBase);
       const runeCodes = normalizeText(card.dataset.runeCodes || "").split("|").filter(Boolean);
       const runeOk = !hasSelectedRunes || runeCodes.every((code) => selectedRuneCodes.has(code));
-      const visible = textOk && runeOk;
+      const visible = textOk && prefixOk && baseOk && runeOk;
       card.hidden = !visible;
       card.style.display = visible ? "" : "none";
       if (visible) {
@@ -443,12 +465,15 @@ function wireRunewordFilters() {
     if (clearRunesButton) {
       clearRunesButton.disabled = selectedRuneCodes.size === 0;
     }
-    emptyMessage.hidden = visibleCount > 0 || (!query && !hasSelectedRunes);
+    emptyMessage.hidden = visibleCount > 0 || (!query && !prefix && activeBase === "all" && !hasSelectedRunes);
   }
 
-  if (searchInput) {
-    searchInput.addEventListener("input", applyFilters);
-  }
+  [searchInput, prefixInput, baseSelect]
+    .filter(Boolean)
+    .forEach((control) => {
+      control.addEventListener("input", applyFilters);
+      control.addEventListener("change", applyFilters);
+    });
   runeButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const code = normalizeText(button.dataset.runeCode || "");
