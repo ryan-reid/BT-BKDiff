@@ -684,6 +684,7 @@ class WikiContentBuilder:
         icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
         old_runewords = (old_item_index or {}).get("runeword", {})
         records = []
+        rune_options_by_code: Dict[str, Dict[str, str]] = {}
 
         for entry in sorted(runewords, key=item_sort_key):
             title = item_title(entry, "runeword")
@@ -703,6 +704,27 @@ class WikiContentBuilder:
 
             old_entry = old_runewords.get(item_identity(entry, "runeword"))
             comparison = item_comparison_context(entry, "runeword", old_entry)
+            rune_filter_terms = []
+            rune_requirement_codes = []
+            for rune in rune_requirements:
+                rune_name = str(rune.get("name", "")).strip()
+                rune_code = str(rune.get("code", "")).strip()
+                short_rune_name = re.sub(r"\s+rune$", "", rune_name, flags=re.IGNORECASE).strip()
+                rune_terms = []
+                for term in (rune_name, short_rune_name, rune_code):
+                    if term and term not in rune_filter_terms:
+                        rune_filter_terms.append(term)
+                    if term and term not in rune_terms:
+                        rune_terms.append(term)
+                if rune_code:
+                    rune_requirement_codes.append(rune_code)
+                    if rune_code not in rune_options_by_code:
+                        rune_options_by_code[rune_code] = {
+                            "code": rune_code,
+                            "name": short_rune_name or rune_name or rune_code,
+                            "icon_src": str(rune.get("icon_src", "")),
+                            "filter_terms": "|".join(rune_terms),
+                        }
 
             records.append({
                 "title": title,
@@ -711,6 +733,8 @@ class WikiContentBuilder:
                 "summary": item_summary(entry, "runeword"),
                 "base_items": entry.get("base_items", []),
                 "runes": rune_requirements,
+                "rune_filter_terms": "|".join(rune_filter_terms),
+                "rune_requirement_codes": "|".join(rune_requirement_codes),
                 "properties": property_preview,
                 "comparison": comparison,
                 "search_text": " ".join([
@@ -723,6 +747,10 @@ class WikiContentBuilder:
                 ]),
             })
 
+        def rune_option_sort(option: Dict[str, str]) -> Tuple[int, str]:
+            match = re.search(r"\d+", option.get("code", ""))
+            return (int(match.group(0)) if match else 999, option.get("name", ""))
+
         self._write_page(
             title=f"Runewords | {self.new_label} Wiki",
             output_path=WikiRoutes.runewords_index_output_path(),
@@ -730,6 +758,7 @@ class WikiContentBuilder:
             category="index",
             source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "runes.txt")],
             runewords=records,
+            rune_options=sorted(rune_options_by_code.values(), key=rune_option_sort),
         )
 
     def _write_set_index_page(self, sets: List[Dict[str, Any]], old_item_index: Dict[str, Dict[str, Any]]) -> None:

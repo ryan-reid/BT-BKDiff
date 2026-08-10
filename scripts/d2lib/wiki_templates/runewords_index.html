@@ -8,12 +8,34 @@
   <p class="hero-copy">Browse runewords by required rune sequence, base item category, and properties.</p>
 </section>
 
-<input id="page-search" class="search-input" type="search" placeholder="Search runewords, runes, bases, or properties" style="margin-bottom:18px" />
+<div class="toolbar runeword-filter-toolbar" data-runeword-filters>
+  <div class="filter-row">
+    <label class="filter-wide">
+      <span>Search</span>
+      <input id="page-search" class="search-input" type="search" placeholder="Search runewords, bases, or properties" />
+    </label>
+    <span class="runeword-result-summary"><b id="runeword-result-count">{{ runewords|length }}</b> runewords</span>
+  </div>
+  <div class="runeword-selector-panel">
+    <div class="runeword-selector-tools">
+      <span class="rune-selector-title">Runes I Have <b id="runeword-selected-count">0</b></span>
+      <button id="runeword-clear-runes" class="filter-button" type="button">Clear</button>
+    </div>
+    <div class="runeword-rune-selector" data-rune-selector aria-label="Runes I Have">
+      {% for rune in rune_options %}
+      <button class="rune-chip rune-option" type="button" data-rune-option data-rune-code="{{ rune.code }}" data-rune-terms="{{ rune.filter_terms }}" aria-pressed="false" title="{{ rune.name }}">
+        {% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }}" />{% endif %}
+        <span>{{ rune.name }}</span>
+      </button>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 
 <div class="family-items-grid">
   {% for runeword in runewords %}
   {% set comp = runeword.comparison %}
-  <a class="base-item-card" style="padding:0;overflow:hidden;display:block;text-decoration:none;color:inherit" href="{{ site_root }}{{ runeword.href }}" data-search="{{ runeword.search_text }}">
+  <a class="base-item-card" style="padding:0;overflow:hidden;display:block;text-decoration:none;color:inherit" href="{{ site_root }}{{ runeword.href }}" data-runeword-card data-runes="{{ runeword.rune_filter_terms }}" data-rune-codes="{{ runeword.rune_requirement_codes }}" data-search="{{ runeword.search_text }}">
 
     <div class="sp-head">
       <div style="min-width:0;flex:1">

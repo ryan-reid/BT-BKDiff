@@ -261,7 +261,7 @@ function wireStaticSearch() {
   let activeRecipeFilter = "all";
   let emptyMessage = null;
   
-  if (!searchInput || document.querySelector("[data-item-index-url]") || document.querySelector("[data-base-filters]")) {
+  if (!searchInput || document.querySelector("[data-item-index-url]") || document.querySelector("[data-base-filters]") || document.querySelector("[data-runeword-filters]")) {
     return;
   }
 
@@ -353,6 +353,117 @@ function wireStaticSearch() {
 
   searchInput.addEventListener("input", applySearch);
   applySearch();
+}
+
+function parseRuneQueries(value) {
+  return normalizeText(value)
+    .split(/[,\s/]+/)
+    .map((query) => query.replace(/\brune\b/g, "").trim())
+    .filter(Boolean);
+}
+
+function wireRunewordFilters() {
+  const toolbar = document.querySelector("[data-runeword-filters]");
+  if (!toolbar) {
+    return;
+  }
+
+  const searchInput = document.querySelector("#page-search");
+  const resultCount = document.querySelector("#runeword-result-count");
+  const selectedCount = document.querySelector("#runeword-selected-count");
+  const clearRunesButton = document.querySelector("#runeword-clear-runes");
+  const runeButtons = Array.from(document.querySelectorAll("[data-rune-option]"));
+  const cards = Array.from(document.querySelectorAll("[data-runeword-card]"));
+  const selectedRuneCodes = new Set();
+  const emptyMessage = document.createElement("p");
+  emptyMessage.className = "search-empty";
+  emptyMessage.hidden = true;
+  emptyMessage.textContent = "No runewords match the current filters.";
+  toolbar.insertAdjacentElement("afterend", emptyMessage);
+
+  const params = new URLSearchParams(window.location.search);
+  const initialQuery = params.get("q") || params.get("search") || "";
+  const initialRunes = params.get("runes") || params.get("rune") || params.get("have") || "";
+  if (searchInput && initialQuery) {
+    searchInput.value = initialQuery;
+    const mastSearch = document.querySelector("#mast-search-input");
+    if (mastSearch) {
+      mastSearch.value = initialQuery;
+    }
+  }
+
+  function setRuneSelected(button, selected) {
+    const code = normalizeText(button.dataset.runeCode || "");
+    if (!code) {
+      return;
+    }
+    if (selected) {
+      selectedRuneCodes.add(code);
+    } else {
+      selectedRuneCodes.delete(code);
+    }
+    button.classList.toggle("is-selected", selected);
+    button.setAttribute("aria-pressed", selected ? "true" : "false");
+  }
+
+  parseRuneQueries(initialRunes).forEach((query) => {
+    const button = runeButtons.find((candidate) => {
+      const code = normalizeText(candidate.dataset.runeCode || "");
+      const terms = normalizeText(candidate.dataset.runeTerms || "").split("|").filter(Boolean);
+      return code === query || terms.includes(query);
+    });
+    if (button) {
+      setRuneSelected(button, true);
+    }
+  });
+
+  function applyFilters() {
+    const query = normalizeText(searchInput ? searchInput.value : "");
+    const hasSelectedRunes = selectedRuneCodes.size > 0;
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const textOk = !query || normalizeText(card.dataset.search || "").includes(query);
+      const runeCodes = normalizeText(card.dataset.runeCodes || "").split("|").filter(Boolean);
+      const runeOk = !hasSelectedRunes || runeCodes.every((code) => selectedRuneCodes.has(code));
+      const visible = textOk && runeOk;
+      card.hidden = !visible;
+      card.style.display = visible ? "" : "none";
+      if (visible) {
+        visibleCount += 1;
+      }
+    });
+
+    if (resultCount) {
+      resultCount.textContent = String(visibleCount);
+    }
+    if (selectedCount) {
+      selectedCount.textContent = String(selectedRuneCodes.size);
+    }
+    if (clearRunesButton) {
+      clearRunesButton.disabled = selectedRuneCodes.size === 0;
+    }
+    emptyMessage.hidden = visibleCount > 0 || (!query && !hasSelectedRunes);
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", applyFilters);
+  }
+  runeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const code = normalizeText(button.dataset.runeCode || "");
+      setRuneSelected(button, !selectedRuneCodes.has(code));
+      applyFilters();
+    });
+  });
+  if (clearRunesButton) {
+    clearRunesButton.addEventListener("click", () => {
+      runeButtons.forEach((button) => setRuneSelected(button, false));
+      applyFilters();
+    });
+  }
+
+  applyFilters();
 }
 
 function wireMastSearch() {
@@ -722,6 +833,7 @@ async function wireItemIndex() {
 
 function initWiki() {
   wireMastSearch();
+  wireRunewordFilters();
   wireStaticSearch();
   wireBaseFilters();
   wireAreaIndex().catch((error) => {
