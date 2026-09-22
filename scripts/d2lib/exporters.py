@@ -669,10 +669,10 @@ class HtmlReportExporter(BaseExporter):
 """)
         self._write_page(path, title, "\n".join(cards), css_href="../../assets/report.css")
 
-    def export_excel_diff(self, diff: ExcelDiffDTO, output_path: str) -> None:
+    def export_excel_diff(self, diff: ExcelDiffDTO, output_path: str, old_label: str = "Base", new_label: str = "Target") -> None:
         self._ensure_assets(os.path.dirname(output_path))
         nav = '<nav class="nav"><a href="index.html">Summary</a></nav>'
-        sections = [nav, f'<p class="muted">Key column used: <code>{self.escape(diff["key_used"])}</code></p>']
+        sections = [nav, self._excel_direction(old_label, new_label), f'<p class="muted">Key column used: <code>{self.escape(diff["key_used"])}</code></p>']
         if diff["added_cols"]:
             sections.append(f"<h2>Added Columns</h2><p>{self.escape(', '.join(diff['added_cols']))}</p>")
         if diff["removed_cols"]:
@@ -694,14 +694,18 @@ class HtmlReportExporter(BaseExporter):
 <section class="card">
   <h3>{self.escape(key)}</h3>
   <table>
-    <thead><tr><th>Column</th><th>Old</th><th>New</th></tr></thead>
+    <thead><tr><th>Column</th><th>{self.escape(old_label)} (Old / Base)</th><th>{self.escape(new_label)} (New)</th></tr></thead>
     <tbody>{''.join(rows)}</tbody>
   </table>
 </section>
 """)
         self._write_page(output_path, f"Differences for {diff['filename']}", "\n".join(sections))
 
-    def export_excel_summary(self, summary_rows: List[Dict[str, Any]], output_path: str) -> None:
+    def _excel_direction(self, old_label: str, new_label: str) -> str:
+        return (f"<p><strong>{self.escape(old_label)} (Old / Base) &rarr; {self.escape(new_label)} (New)</strong></p>"
+                f"<p>Added means present only in {self.escape(new_label)}; removed means present only in {self.escape(old_label)}.</p>")
+
+    def export_excel_summary(self, summary_rows: List[Dict[str, Any]], output_path: str, old_label: str = "Base", new_label: str = "Target") -> None:
         self._ensure_assets(os.path.dirname(output_path))
         rows = []
         for row in summary_rows:
@@ -730,7 +734,7 @@ class HtmlReportExporter(BaseExporter):
   <tbody>{''.join(rows)}</tbody>
 </table>
 """
-        self._write_page(output_path, "Excel Diff Summary", body)
+        self._write_page(output_path, "Excel Diff Summary", self._excel_direction(old_label, new_label) + body)
 
 
 def title_for_item(item: Dict[str, Any]) -> str:

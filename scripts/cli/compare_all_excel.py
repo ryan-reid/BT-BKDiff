@@ -22,7 +22,7 @@ def get_key_column(filename: str) -> str:
     }
     return mapping.get(filename, 'code')
 
-def run(new_dir: str, old_dir: str, out_dir: str):
+def run(new_dir: str, old_dir: str, out_dir: str, old_label: str = "BTDiablo", new_label: str = "BKDiablo"):
     remove_stale_markdown_reports(out_dir)
     
     repo = D2Repository(".")
@@ -49,7 +49,7 @@ def run(new_dir: str, old_dir: str, out_dir: str):
             },
             os.path.join(out_dir, f"{report_stem}.json"),
         )
-        html_exporter.export_excel_diff(diff, os.path.join(out_dir, report_name))
+        html_exporter.export_excel_diff(diff, os.path.join(out_dir, report_name), old_label=old_label, new_label=new_label)
         summary_rows.append({
             "filename": filename,
             "report_name": report_name,
@@ -68,7 +68,7 @@ def run(new_dir: str, old_dir: str, out_dir: str):
         },
         os.path.join(out_dir, "summary.json"),
     )
-    html_exporter.export_excel_summary(summary_rows, os.path.join(out_dir, "index.html"))
+    html_exporter.export_excel_summary(summary_rows, os.path.join(out_dir, "index.html"), old_label=old_label, new_label=new_label)
 
     print(f"Reports generated in {out_dir}")
 
@@ -77,9 +77,11 @@ def main() -> None:
     parser.add_argument("--new-dir", default="../mods/BKDiablo/bkdiablo.mpq/data/global/excel", help="Path to the new/target Excel directory")
     parser.add_argument("--old-dir", default="../mods/BTDiablo/btdiablo.mpq/data/global/excel", help="Path to the old/base Excel directory")
     parser.add_argument("--out", default="../output/excel_diff_report", help="Output directory for generated diff reports")
+    parser.add_argument("--old-label", default="BTDiablo", help="Display name of the old/base data")
+    parser.add_argument("--new-label", default="BKDiablo", help="Display name of the new/target data")
     args = parser.parse_args()
 
-    run(args.new_dir, args.old_dir, args.out)
+    run(args.new_dir, args.old_dir, args.out, args.old_label, args.new_label)
 
 if __name__ == "__main__":
     main()

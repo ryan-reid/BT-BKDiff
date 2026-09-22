@@ -110,7 +110,7 @@ def main() -> None:
 
     # 7. Compare BK vs Retail Excel Tables
     rt_excel = os.path.join(retail_data, "global/excel")
-    if not orch.run_task("Generating BK vs Retail Excel Comparison Reports", compare_all_excel.run, bk_excel, rt_excel, excel_diff_retail_bk):
+    if not orch.run_task("Generating BK vs Retail Excel Comparison Reports", compare_all_excel.run, bk_excel, rt_excel, excel_diff_retail_bk, old_label="Retail"):
         failures.append("Generating BK vs Retail Excel Comparison Reports")
 
     # 8. Compare BK override text/JSON files against retail files
