@@ -75,13 +75,8 @@ class TestHtmlReportExporter(unittest.TestCase):
             for item in modified.values():
                 self.assertEqual(page.count(item["name"]), 1)
             self.assertIn("All Modified Items (3)", page)
-            self.assertIn('href="MODIFIED_DOWNLOAD.html" download', page)
-            with open(os.path.join(temp_dir, "MODIFIED_DOWNLOAD.html"), encoding="utf-8") as f:
-                downloaded = f.read()
-            self.assertIn("<style>", downloaded)
-            self.assertNotIn('href="', downloaded)
-            for item in modified.values():
-                self.assertEqual(downloaded.count(item["name"]), 1)
+            self.assertNotIn("MODIFIED_DOWNLOAD.html", page)
+            self.assertFalse(os.path.exists(os.path.join(temp_dir, "MODIFIED_DOWNLOAD.html")))
             self.assertIn('href="assets/report.css"', page)
             self.assertIn('href="index.html"', page)
             self.assertIn('href="MODIFIED_BY_TYPE.html"', page)

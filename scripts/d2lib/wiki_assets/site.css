@@ -966,3 +966,10 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
 
   .family-items-grid { grid-template-columns: 1fr; }
 }
+
+/* Highlight the changed values rather than coloring both complete properties alike. */
+.sp-cell.is-changed, .set-cell.is-changed { color: var(--text); font-weight: 400; }
+.diff-token { padding: 0; background: transparent; font-weight: 600; }
+.diff-token-old { color: #e69a90; text-decoration: none; }
+.diff-token-new { color: var(--added); text-decoration: none; }
+.diff-empty { color: #91877a; font-weight: 400; font-style: italic; }

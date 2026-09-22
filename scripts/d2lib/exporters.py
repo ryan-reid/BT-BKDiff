@@ -58,7 +58,7 @@ class MarkdownExporter(BaseExporter):
         """Escapes plain-text content for safe Markdown table rendering."""
         if s is None:
             return ""
-        text = re.sub(r'Ãƒ(?:Æ’Ã‚)?Â¿c.', '', str(s))
+        text = re.sub(r'ÃƒÆ’(?:Ã†â€™Ãƒâ€š)?Ã‚Â¿c.', '', str(s))
         text = text.replace('\r', ' ').replace('\n', ' ').strip()
         return text.replace('|', '\\|')
 
@@ -256,7 +256,7 @@ class MarkdownExporter(BaseExporter):
                             new_props = item['bk_props']
                             
                             def get_stat_key(s):
-                                s = re.sub(r'\s+', ' ', re.sub(r'Ã¿c.', '', s)).strip()
+                                s = re.sub(r'\s+', ' ', re.sub(r'ÃƒÂ¿c.', '', s)).strip()
                                 return re.sub(r'[+-]?\d+(?:-\d+)?', '', s).strip().lower()
 
                             aligned = []
@@ -426,7 +426,7 @@ class HtmlReportExporter(BaseExporter):
     def escape(value: Any) -> str:
         if value is None:
             return ""
-        text = re.sub(r'ÃƒÂ¿c.', '', str(value))
+        text = re.sub(r'ÃƒÆ’Ã‚Â¿c.', '', str(value))
         return html.escape(text, quote=True)
 
     @staticmethod
@@ -437,7 +437,7 @@ class HtmlReportExporter(BaseExporter):
 
     @staticmethod
     def _stat_key(text: str) -> str:
-        text = re.sub(r'\s+', ' ', re.sub(r'ÃƒÂ¿c.', '', text or '')).strip()
+        text = re.sub(r'\s+', ' ', re.sub(r'ÃƒÆ’Ã‚Â¿c.', '', text or '')).strip()
         return re.sub(r'[+-]?\d+(?:-\d+)?', '', text).strip().lower()
 
     def _ensure_assets(self, output_dir: str) -> None:
@@ -484,7 +484,7 @@ class HtmlReportExporter(BaseExporter):
             return f'<span class="diff-old">{self.escape(old_text)}</span>', '<span class="diff-new">(removed)</span>'
 
         def normalize(text: str) -> str:
-            return re.sub(r'\s+', ' ', re.sub(r'ÃƒÂ¿c.', '', text)).strip()
+            return re.sub(r'\s+', ' ', re.sub(r'ÃƒÆ’Ã‚Â¿c.', '', text)).strip()
 
         if normalize(old_text) == normalize(new_text):
             escaped = self.escape(old_text)
@@ -561,7 +561,6 @@ class HtmlReportExporter(BaseExporter):
   <a href="ADDED.html">Added</a>
   <a href="REMOVED.html">Removed</a>
   <a href="MODIFIED.html">Modified</a>
-  <a href="MODIFIED_DOWNLOAD.html" download>Download all modified items (HTML)</a>
 </nav>
 <table>
   <thead><tr><th>Category</th><th>Added</th><th>Removed</th><th>Modified</th></tr></thead>
@@ -641,19 +640,11 @@ class HtmlReportExporter(BaseExporter):
             f"All Modified Items ({len(all_modified)})", True,
             summary_href="index.html", css_href="assets/report.css",
             intro='<p>Every modified item, sorted by name, with old and new values. '
-                  '<a href="MODIFIED_BY_TYPE.html">Browse by item type</a>. '
-                  '<a href="MODIFIED_DOWNLOAD.html" download>Download this report (HTML)</a>.</p>',
+                  '<a href="MODIFIED_BY_TYPE.html">Browse by item type</a>.</p>',
         )
-        with open(os.path.join(output_dir, "MODIFIED.html"), encoding="utf-8") as source:
-            standalone = source.read()
-        standalone = standalone.replace('<link rel="stylesheet" href="assets/report.css">',
-                                        '<style>' + self.REPORT_CSS + '</style>')
-        standalone = re.sub(r'<nav class="nav">.*?</nav>', '', standalone, flags=re.DOTALL)
-        standalone = re.sub(r'<p>Every modified item,.*?</p>',
-                            '<p>Every modified item, sorted by name, with old and new values. Offline report.</p>',
-                            standalone, flags=re.DOTALL)
-        with open(os.path.join(output_dir, "MODIFIED_DOWNLOAD.html"), "w", encoding="utf-8") as target:
-            target.write(standalone)
+        obsolete_download = os.path.join(output_dir, "MODIFIED_DOWNLOAD.html")
+        if os.path.isfile(obsolete_download):
+            os.remove(obsolete_download)
 
     def _write_item_group_page(self, items: List[Dict[str, Any]], path: str, title: str, is_modified: bool,
                                summary_href: str = "../../index.html", css_href: str = "../../assets/report.css",

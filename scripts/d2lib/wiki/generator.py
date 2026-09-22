@@ -30,7 +30,7 @@ from d2lib.models import (
 )
 from d2lib.utils import slugify, strip_markdown
 from d2lib.wiki.routes import ITEM_FAMILIES, REPORT_SOURCES, WikiRoutes
-from d2lib.wiki.renderers import HtmlWikiRenderer, WikiPublisher
+from d2lib.wiki.renderers import HtmlWikiRenderer, WikiPublisher, highlight_comparison
 from d2lib.wiki.publication import WikiSiteDTO, WikiSiteRecordingWriter, empty_wiki_site
 from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 from d2lib.wiki.builders import AreaFarmingDataBuilder, ItemIconExporter
@@ -929,6 +929,12 @@ class WikiContentBuilder:
             for family in ITEM_FAMILIES
             for entry in item_entries[family]
         ]
+        for item in rows:
+            for key in ("stat_rows", "property_rows"):
+                item[key] = [dict(row,
+                    old_html=str(highlight_comparison(row.get("old", ""), row.get("new", ""), "old")),
+                    new_html=str(highlight_comparison(row.get("new", ""), row.get("old", ""), "new")),
+                ) for row in item[key]]
         self.writer.write_text("data/items-index.json", json.dumps(rows, indent=2))
 
     def _write_area_index_data(self, area_entries: List[Dict[str, Any]]) -> None:

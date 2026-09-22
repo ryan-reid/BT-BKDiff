@@ -50,16 +50,16 @@ function itemCardMarkup(item, siteRoot) {
 
   const statRowsHtml = (item.stat_rows || []).map((r) => `
     <div class="sp-row">
-      <span class="sp-cell is-${escapeHtml(r.status)}"><strong>${escapeHtml(r.label)}:</strong> ${escapeHtml(r.old || "—")}</span>
-      <span class="sp-cell is-${escapeHtml(r.status)}"><strong>${escapeHtml(r.label)}:</strong> ${escapeHtml(r.new || "—")}</span>
+      <span class="sp-cell is-${escapeHtml(r.status)}"><strong>${escapeHtml(r.label)}:</strong> ${r.old_html ?? escapeHtml(r.old || "—")}</span>
+      <span class="sp-cell is-${escapeHtml(r.status)}"><strong>${escapeHtml(r.label)}:</strong> ${r.new_html ?? escapeHtml(r.new || "—")}</span>
     </div>`).join("");
 
   const propRows = item.property_rows || [];
   const propRowsHtml = propRows.length
     ? `<div class="sp-sep">Properties</div>` + propRows.map((r) => `
     <div class="sp-row">
-      <span class="sp-cell is-${escapeHtml(r.status)}">${escapeHtml(r.old || "(empty)")}</span>
-      <span class="sp-cell is-${escapeHtml(r.status)}">${escapeHtml(r.new || "(removed)")}</span>
+      <span class="sp-cell is-${escapeHtml(r.status)}">${r.old_html ?? escapeHtml(r.old || "(empty)")}</span>
+      <span class="sp-cell is-${escapeHtml(r.status)}">${r.new_html ?? escapeHtml(r.new || "(removed)")}</span>
     </div>`).join("")
     : "";
 

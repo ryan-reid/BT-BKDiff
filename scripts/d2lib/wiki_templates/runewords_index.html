@@ -71,8 +71,8 @@
 
     {% for r in comp.stat_rows %}
     <div class="sp-row">
-      <span class="sp-cell is-{{ r.status }}"><strong>{{ r.label }}:</strong> {{ r.old or "—" }}</span>
-      <span class="sp-cell is-{{ r.status }}"><strong>{{ r.label }}:</strong> {{ r.new or "—" }}</span>
+      <span class="sp-cell is-{{ r.status }}"><strong>{{ r.label }}:</strong> {{ r.old | comparison_highlight(r.new, "old") }}</span>
+      <span class="sp-cell is-{{ r.status }}"><strong>{{ r.label }}:</strong> {{ r.new | comparison_highlight(r.old, "new") }}</span>
     </div>
     {% endfor %}
 
@@ -80,8 +80,8 @@
     <div class="sp-sep">Properties</div>
     {% for r in comp.property_rows %}
     <div class="sp-row">
-      <span class="sp-cell is-{{ r.status }}">{{ r.old or "—" }}</span>
-      <span class="sp-cell is-{{ r.status }}">{{ r.new or "—" }}</span>
+      <span class="sp-cell is-{{ r.status }}">{{ r.old | comparison_highlight(r.new, "old") }}</span>
+      <span class="sp-cell is-{{ r.status }}">{{ r.new | comparison_highlight(r.old, "new") }}</span>
     </div>
     {% endfor %}
     {% endif %}

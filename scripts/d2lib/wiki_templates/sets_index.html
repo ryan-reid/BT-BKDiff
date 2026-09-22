@@ -55,8 +55,8 @@
 
         {% for r in comp.aligned_stat_rows %}
         <div class="sp-row{% if r.is_spacer %} sp-row-spacer{% endif %}">
-          <span class="sp-cell {% if r.old %}is-{{ r.status }}{% else %}is-same{% endif %}">{% if r.old %}<strong>{{ r.label }}:</strong> {{ r.old }}{% endif %}</span>
-          <span class="sp-cell {% if r.new %}is-{{ r.status }}{% else %}is-same{% endif %}">{% if r.new %}<strong>{{ r.label }}:</strong> {{ r.new }}{% endif %}</span>
+          <span class="sp-cell {% if r.old %}is-{{ r.status }}{% else %}is-same{% endif %}">{% if r.old %}<strong>{{ r.label }}:</strong> {{ r.old | comparison_highlight(r.new, "old") }}{% endif %}</span>
+          <span class="sp-cell {% if r.new %}is-{{ r.status }}{% else %}is-same{% endif %}">{% if r.new %}<strong>{{ r.label }}:</strong> {{ r.new | comparison_highlight(r.old, "new") }}{% endif %}</span>
         </div>
         {% endfor %}
 
@@ -65,8 +65,8 @@
 
         {% for r in comp.aligned_property_rows %}
         <div class="sp-row{% if r.is_spacer %} sp-row-spacer{% endif %}">
-          <span class="sp-cell {% if r.old %}is-{{ r.status }}{% else %}is-same{% endif %}">{{ r.old }}</span>
-          <span class="sp-cell {% if r.new %}is-{{ r.status }}{% else %}is-same{% endif %}">{{ r.new }}</span>
+          <span class="sp-cell {% if r.old %}is-{{ r.status }}{% else %}is-same{% endif %}">{{ r.old | comparison_highlight(r.new, "old") }}</span>
+          <span class="sp-cell {% if r.new %}is-{{ r.status }}{% else %}is-same{% endif %}">{{ r.new | comparison_highlight(r.old, "new") }}</span>
         </div>
         {% endfor %}
         {% endif %}
@@ -89,8 +89,8 @@
             <tr class="set-sep-row"><td colspan="2">{{ row.label }}</td></tr>
             {% else %}
             <tr>
-              <td class="set-cell is-{{ row.status }}">{{ row.old or "—" }}</td>
-              <td class="set-cell is-{{ row.status }}">{{ row.new or "—" }}</td>
+              <td class="set-cell is-{{ row.status }}">{{ row.old | comparison_highlight(row.new, "old") }}</td>
+              <td class="set-cell is-{{ row.status }}">{{ row.new | comparison_highlight(row.old, "new") }}</td>
             </tr>
             {% endif %}
             {% endfor %}

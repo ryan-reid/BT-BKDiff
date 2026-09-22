@@ -1,5 +1,8 @@
 from __future__ import annotations
 import os
+import difflib
+import re
+from markupsafe import Markup, escape
 import shutil
 from typing import Any, Dict, List, Optional
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -16,6 +19,22 @@ from d2lib.wiki.presentation import sanitize_display_text
 from d2lib.wiki.publication import WikiPageDTO, WikiSiteDTO
 from d2lib.wiki.routes import WikiRoutes
 
+def highlight_comparison(value: str, other: str, side: str) -> Markup:
+    text, baseline = str(value or ""), str(other or "")
+    if not text:
+        return Markup('<span class="diff-empty">&mdash;</span>')
+    tokens = re.findall(r"\d+(?:[.\-]\d+)*%?|[A-Za-z]+|\s+|.", text)
+    other_tokens = re.findall(r"\d+(?:[.\-]\d+)*%?|[A-Za-z]+|\s+|.", baseline)
+    parts = []
+    for tag, i1, i2, _, _ in difflib.SequenceMatcher(None, tokens, other_tokens, autojunk=False).get_opcodes():
+        chunk = escape("".join(tokens[i1:i2]))
+        if tag in {"replace", "delete"} and chunk.strip():
+            kind = "old" if side == "old" else "new"
+            chunk = Markup('<mark class="diff-token diff-token-{}">{}</mark>').format(kind, chunk)
+        parts.append(chunk)
+    return Markup("").join(parts)
+
+
 class WikiRenderer:
     def __init__(self, template_dir: str = TEMPLATE_DIR):
         self.environment = Environment(
@@ -25,6 +44,7 @@ class WikiRenderer:
             lstrip_blocks=True,
         )
         self.environment.filters["slugify"] = slugify
+        self.environment.filters["comparison_highlight"] = highlight_comparison
 
     def render(self, template_name: str, **context: Any) -> str:
         return self.environment.get_template(template_name).render(**context)
