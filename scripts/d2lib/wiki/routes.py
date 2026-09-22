@@ -34,8 +34,8 @@ REPORT_SOURCES = (
         "source_kind": "excel_diff",
     },
     {
-        "title": "Override File Diff: BKDiablo vs Retail",
-        "description": "Text and JSON override file changes comparing BKDiablo against retail files.",
+        "title": "JSON Override Diff: BKDiablo vs Retail",
+        "description": "JSON override file changes comparing BKDiablo against retail files.",
         "source_dir": "file_diff_report_retail_bk",
         "output_dir": "reports/files/retail-bk",
         "source_kind": "file_diff",

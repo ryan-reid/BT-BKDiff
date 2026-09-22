@@ -8,7 +8,7 @@ import re
 from typing import Any, Dict, List, Tuple
 
 
-TEXT_EXTENSIONS = {".json", ".txt"}
+TEXT_EXTENSIONS = {".json"}
 MAX_DIFF_LINES = 2000
 
 
@@ -94,6 +94,14 @@ def page(title: str, body: str) -> str:
     .nav {{ display: flex; gap: 8px; margin: 16px 0; }}
     .nav a {{ border: 1px solid #d8cfc2; border-radius: 999px; padding: 5px 10px; background: #fffdf8; text-decoration: none; }}
     .diff {{ overflow-x: auto; background: #fffdf8; border: 1px solid #d8cfc2; padding: 12px; }}
+    .removed {{ background: #ffebe9; color: #82071e; }}
+    .added {{ background: #dafbe1; color: #116329; }}
+    .hunk {{ background: #ddf4ff; color: #0550ae; }}
+    .diff-table {{ width: max-content; min-width: 100%; margin: 0; }}
+    .diff-table td {{ padding: 2px 8px; border-bottom: 0; }}
+    .number {{ color: #6c6258; text-align: right; user-select: none; }}
+    .diff-table pre {{ white-space: pre; }}
+    .nav {{ flex-wrap: wrap; }}
     pre {{ margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.86rem; line-height: 1.45; }}
   </style>
 </head>
@@ -105,26 +113,38 @@ def page(title: str, body: str) -> str:
 def build_diff_page(rel_path: str, old_rel: str, old_text: str, new_text: str) -> str:
     old_lines = old_text.splitlines()
     new_lines = new_text.splitlines()
-    diff_lines = list(difflib.unified_diff(
-        old_lines,
-        new_lines,
-        fromfile=f"Retail: {old_rel}",
-        tofile=f"BKDiablo: {rel_path}",
-        lineterm="",
-        n=3,
-    ))
-    truncated = len(diff_lines) > MAX_DIFF_LINES
-    if truncated:
-        diff_lines = diff_lines[:MAX_DIFF_LINES]
-        diff_lines.append(f"... diff truncated after {MAX_DIFF_LINES} lines ...")
-    diff_html = html.escape("\n".join(diff_lines))
-    truncated_note = '<p class="muted">This large diff was truncated for browser performance.</p>' if truncated else ""
+    rows = []
+    truncated = False
+    for group in difflib.SequenceMatcher(None, old_lines, new_lines).get_grouped_opcodes(3):
+        rows.append('<tr class="hunk"><td colspan="4">Changed section</td></tr>')
+        for tag, i1, i2, j1, j2 in group:
+            entries = []
+            if tag == "equal":
+                entries = [("context", i + 1, j + 1, " ", old_lines[i]) for i, j in zip(range(i1, i2), range(j1, j2))]
+            else:
+                if tag in {"replace", "delete"}:
+                    entries.extend(("removed", i + 1, "", "-", old_lines[i]) for i in range(i1, i2))
+                if tag in {"replace", "insert"}:
+                    entries.extend(("added", "", j + 1, "+", new_lines[j]) for j in range(j1, j2))
+            for kind, old_no, new_no, sign, line in entries:
+                if len(rows) >= MAX_DIFF_LINES:
+                    truncated = True
+                    break
+                rows.append(f'<tr class="{kind}"><td class="number">{old_no}</td><td class="number">{new_no}</td><td>{sign}</td><td><pre>{html.escape(line)}</pre></td></tr>')
+            if truncated:
+                break
+        if truncated:
+            break
+    note = '<p>Large diff: showing the first 2,000 display rows.</p>' if truncated else ""
+    missing = '<p>No matching Retail baseline; all lines are BK additions.</p>' if not old_text else ""
     body = f"""
-<nav class="nav"><a href="../index.html">Summary</a></nav>
+<nav class="nav"><a href="../index.html">JSON report summary</a></nav>
 <h1>{html.escape(rel_path)}</h1>
-<p class="muted">Compared against <code>{html.escape(old_rel)}</code>.</p>
-{truncated_note}
-<section class="diff"><pre>{diff_html}</pre></section>
+<p><strong>Retail (Old / Base) &rarr; BKDiablo (New)</strong></p>
+<p><span class="removed">- Removed from Retail</span> &nbsp; <span class="added">+ Added in BK</span>. Unchanged context appears around each change.</p>
+<p class="muted">JSON keys are sorted and formatting normalized before comparison. Line numbers refer to this normalized JSON.</p>
+{missing}{note}
+<section class="diff"><table class="diff-table"><thead><tr><th>Retail line</th><th>BK line</th><th></th><th>JSON</th></tr></thead><tbody>{''.join(rows)}</tbody></table></section>
 """
     return page(rel_path, body)
 
@@ -133,16 +153,16 @@ def compare_files(new_root: str, old_root: str, output_dir: str) -> Dict[str, An
     os.makedirs(output_dir, exist_ok=True)
     diff_dir = os.path.join(output_dir, "files")
     os.makedirs(diff_dir, exist_ok=True)
+    # Remove obsolete table reports from the former text/JSON report scope.
+    for filename in os.listdir(diff_dir):
+        if filename.endswith(".txt.html"):
+            os.remove(os.path.join(diff_dir, filename))
 
     records: List[Dict[str, Any]] = []
     for rel_path in iter_text_overrides(new_root):
         new_path = os.path.join(new_root, rel_path.replace("/", os.sep))
         old_path, old_rel = find_old_path(old_root, rel_path)
-        if not old_path:
-            records.append({"path": rel_path, "status": "added", "old_path": old_rel, "diff_href": ""})
-            continue
-
-        old_text = comparable_text(old_path)
+        old_text = comparable_text(old_path) if old_path else ""
         new_text = comparable_text(new_path)
         if digest(old_text) == digest(new_text):
             records.append({"path": rel_path, "status": "unchanged", "old_path": old_rel, "diff_href": ""})
@@ -151,7 +171,7 @@ def compare_files(new_root: str, old_root: str, output_dir: str) -> Dict[str, An
         filename = report_filename(rel_path)
         diff_href = f"files/{filename}"
         write_text(os.path.join(output_dir, diff_href), build_diff_page(rel_path, old_rel, old_text, new_text))
-        records.append({"path": rel_path, "status": "modified", "old_path": old_rel, "diff_href": diff_href})
+        records.append({"path": rel_path, "status": "modified" if old_path else "added", "old_path": old_rel, "diff_href": diff_href})
 
     return {
         "schema": "bt-bkdiff.override-file-diff.v1",
@@ -167,19 +187,20 @@ def write_summary(report: Dict[str, Any], output_dir: str) -> None:
         counts[record["status"]] = counts.get(record["status"], 0) + 1
 
     rows = []
-    for record in report["files"]:
+    for record in sorted(report["files"], key=lambda r: ({"modified": 0, "added": 1, "unchanged": 2}[r["status"]], r["path"])):
         label = html.escape(record["path"])
         if record["diff_href"]:
             file_cell = f'<a href="{html.escape(record["diff_href"])}">{label}</a>'
         else:
             file_cell = f"<code>{label}</code>"
+        baseline = "No matching Retail file" if record["status"] == "added" else record["old_path"]
         rows.append(
-            f"<tr><td>{file_cell}</td><td>{html.escape(record['status'])}</td><td><code>{html.escape(record['old_path'])}</code></td></tr>"
+            f"<tr><td>{file_cell}</td><td>{html.escape(record['status'])}</td><td><code>{html.escape(baseline)}</code></td></tr>"
         )
 
     body = f"""
-<h1>Override File Diff: BKDiablo vs Retail</h1>
-<p class="muted">Compares BKDiablo text and JSON override files against the refreshed retail extract.</p>
+<h1>JSON Override Diff: BKDiablo vs Retail</h1>
+<p class="muted">JSON overrides only. Retail is Old / Base; BKDiablo is New. Modified files appear first, then BK-only files, then unchanged files. Raw .txt tables are covered by the Excel reports.</p>
 <table>
   <thead><tr><th>Total</th><th>Added</th><th>Modified</th><th>Unchanged</th></tr></thead>
   <tbody><tr><td>{len(report['files'])}</td><td>{counts.get('added', 0)}</td><td>{counts.get('modified', 0)}</td><td>{counts.get('unchanged', 0)}</td></tr></tbody>
@@ -189,7 +210,7 @@ def write_summary(report: Dict[str, Any], output_dir: str) -> None:
   <tbody>{''.join(rows)}</tbody>
 </table>
 """
-    write_text(os.path.join(output_dir, "index.html"), page("Override File Diff: BKDiablo vs Retail", body))
+    write_text(os.path.join(output_dir, "index.html"), page("JSON Override Diff: BKDiablo vs Retail", body))
     write_text(os.path.join(output_dir, "summary.json"), json.dumps(report, indent=2) + "\n")
 
 
@@ -200,7 +221,7 @@ def run(new_root: str, old_root: str, out_dir: str):
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Compare BKDiablo override text/JSON files against a retail extract.")
+    parser = argparse.ArgumentParser(description="Compare BKDiablo JSON override files against a retail extract.")
     parser.add_argument("--new-root", default="../mods/BKDiablo/bkdiablo.mpq", help="Path to the new/target mod root")
     parser.add_argument("--old-root", default="../data/retail", help="Path to the old/base retail root")
     parser.add_argument("--out", default="../output/file_diff_report_retail_bk", help="Output directory for generated file diff report")

@@ -106,6 +106,30 @@ class TestReportCliOutputs(unittest.TestCase):
             self.assertTrue(os.path.exists(os.path.join(out_dir, "MODIFIED.html")))
             self.assertEqual([], markdown_files_under(out_dir))
 
+    def test_json_override_scope_and_diff_rendering(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            from pathlib import Path
+            root = Path(temp_dir)
+            new = root / "new"
+            old = root / "old"
+            new.mkdir()
+            old.mkdir()
+            (new / "table.txt").write_text("ignored")
+            (new / "added.json").write_text('{"value": "<script>"}')
+            (new / "changed.json").write_text('{"value": 2}')
+            (old / "changed.json").write_text('{"value": 1}')
+            report = compare_override_files.compare_files(str(new), str(old), str(root / "out"))
+            self.assertEqual(len(report["files"]), 2)
+            for record in report["files"]:
+                page = (root / "out" / record["diff_href"]).read_text(encoding="utf-8")
+                self.assertIn('class="added"', page)
+                self.assertIn("Retail (Old / Base)", page)
+                if record["status"] == "modified":
+                    self.assertIn('class="removed"', page)
+                else:
+                    self.assertIn("&lt;script&gt;", page)
+                    self.assertNotIn("<script>", page)
+
     def test_override_file_comparison_maps_mod_data_paths_to_retail_root(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             new_root = os.path.join(temp_dir, "mod")

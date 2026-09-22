@@ -1,5 +1,6 @@
 from __future__ import annotations
 import json
+import html
 import os
 import re
 from typing import Any, Dict, List, Optional, Tuple
@@ -947,7 +948,30 @@ class WikiContentBuilder:
                         continue
                     source_path = os.path.join(root, filename)
                     rel_source = os.path.relpath(source_path, source_dir).replace("\\", "/")
-                    self.writer.copy_asset(source_path, f"{report['output_dir']}/{rel_source}")
+                    output_path = f"{report['output_dir']}/{rel_source}"
+                    if rel_source == "index.html":
+                        groups = ['<p><a href="../../index.html">All reports</a></p>']
+                        labels = {"item_diff": "Item differences", "excel_diff": "Raw table differences", "file_diff": "Override file differences"}
+                        for suffix, heading in [("retail-bk", "BK vs Retail"), ("bt-bk", "BK vs BT")]:
+                            links = []
+                            for other in REPORT_SOURCES:
+                                if not other["output_dir"].endswith(suffix) or not os.path.isfile(os.path.join(reports_root, other["source_dir"], "index.html")):
+                                    continue
+                                label = labels[other["source_kind"]]
+                                if other == report:
+                                    links.append(f'<li><strong aria-current="page">{label} (current)</strong></li>')
+                                else:
+                                    target = os.path.relpath(f"{other['output_dir']}/index.html", report["output_dir"]).replace("\\", "/")
+                                    links.append(f'<li><a href="{html.escape(target, quote=True)}">{label}</a></li>')
+                            if links:
+                                groups.append(f'<section><h2>{heading}</h2><ul>' + "".join(links) + '</ul></section>')
+                        navigation = '<nav aria-label="Report summaries">' + groups[0] + '<div style="display:flex;flex-wrap:wrap;gap:16px 48px">' + "".join(groups[1:]) + '</div></nav>'
+                        with open(source_path, encoding="utf-8") as source:
+                            content = source.read()
+                        content = re.sub(r'(<main\b[^>]*>)', lambda match: match.group(1) + navigation, content, count=1)
+                        self.writer.write_text(output_path, content)
+                    else:
+                        self.writer.copy_asset(source_path, output_path)
                     copied_files += 1
             if copied_files == 0:
                 continue
@@ -958,6 +982,7 @@ class WikiContentBuilder:
                 "summary": report["description"],
                 "source_dir": report["source_dir"],
                 "source_kind": report["source_kind"],
+                "comparison": "BK vs Retail" if report["output_dir"].endswith("retail-bk") else "BK vs BT",
                 "file_count": str(copied_files),
             })
             self.manifest.append({"title": report["title"], "path": href, "category": "report", "sources": [report["source_dir"]]})

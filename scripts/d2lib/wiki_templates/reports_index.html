@@ -5,21 +5,27 @@
 {{ hero(
   "Reports",
   "Diff Reports",
-  "Field-level comparisons between " ~ new_label ~ " and the Retail baseline — items, raw data tables, and override files.",
+  "Field-level comparisons between " ~ new_label ~ " and the Retail or BT baseline — items, raw data tables, and override files.",
   [{"label": new_label, "tone": "accent"}]
 ) }}
-<section class="card-grid two-up">
-  {% for report in reports %}
-  <a class="link-card" href="{{ site_root }}{{ report.href }}">
-    <h3>{{ report.title }}</h3>
-    <p>{{ report.summary }}</p>
-    <span class="link-card-cta">Open report</span>
-  </a>
-  {% else %}
-  <article class="content-section">
-    <h2>No Reports Available</h2>
-    <p class="muted">Reports are not currently available. Please check back soon.</p>
-  </article>
+{% for comparison in ["BK vs Retail", "BK vs BT"] %}
+{% set group = reports | selectattr("comparison", "equalto", comparison) | list %}
+{% if group %}
+<section class="content-section">
+  <h2>{{ comparison }}</h2>
+  <div class="card-grid two-up">
+  {% for report in group %}
+    <a class="link-card" href="{{ site_root }}{{ report.href }}">
+      <h3>{{ report.title.split(":")[0] }}</h3>
+      <p>{{ report.summary }}</p>
+      <span class="link-card-cta">Open report</span>
+    </a>
   {% endfor %}
+  </div>
 </section>
+{% endif %}
+{% endfor %}
+{% if not reports %}
+<article class="content-section"><h2>No Reports Available</h2><p class="muted">Reports are not currently available. Please check back soon.</p></article>
+{% endif %}
 {% endblock %}

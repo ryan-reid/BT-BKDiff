@@ -1364,7 +1364,8 @@ class TestWikiGenerator(unittest.TestCase):
 
         with open(os.path.join(self.output, "reports", "index.html"), "r", encoding="utf-8") as f:
             reports_page = f.read()
-        self.assertIn("Item Diff: BKDiablo vs Retail", reports_page)
+        self.assertIn("<h2>BK vs Retail</h2>", reports_page)
+        self.assertIn("<h3>Item Diff</h3>", reports_page)
         self.assertIn("reports/items/retail-bk/", reports_page)
 
         with open(os.path.join(self.output, "recipes", "index.html"), "r", encoding="utf-8") as f:

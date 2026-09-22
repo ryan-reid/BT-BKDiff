@@ -61,6 +61,36 @@ class TestHtmlReportExporter(unittest.TestCase):
             self.assertIn("diff-old", modified_html)
             self.assertIn("diff-new", modified_html)
 
+    def test_modified_page_includes_every_family_and_empty_state(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            modified = {
+                "unique": {"name": "Unique Example", "item_type": "Helm", "raw_row": {}},
+                "set": {"name": "Set Example", "item_type": "Boots", "raw_row": {"set": "Test"}},
+                "rune": {"name": "Runeword Example", "raw_row": {"Rune1": "r01"}},
+            }
+            exporter = HtmlReportExporter()
+            exporter.export_item_diff({"added": {}, "removed": {}, "modified": modified}, temp_dir)
+            with open(os.path.join(temp_dir, "MODIFIED.html"), encoding="utf-8") as f:
+                page = f.read()
+            for item in modified.values():
+                self.assertEqual(page.count(item["name"]), 1)
+            self.assertIn("All Modified Items (3)", page)
+            self.assertIn('href="MODIFIED_DOWNLOAD.html" download', page)
+            with open(os.path.join(temp_dir, "MODIFIED_DOWNLOAD.html"), encoding="utf-8") as f:
+                downloaded = f.read()
+            self.assertIn("<style>", downloaded)
+            self.assertNotIn('href="', downloaded)
+            for item in modified.values():
+                self.assertEqual(downloaded.count(item["name"]), 1)
+            self.assertIn('href="assets/report.css"', page)
+            self.assertIn('href="index.html"', page)
+            self.assertIn('href="MODIFIED_BY_TYPE.html"', page)
+            self.assertLess(page.index("Runeword Example"), page.index("Set Example"))
+            self.assertLess(page.index("Set Example"), page.index("Unique Example"))
+            exporter.export_item_diff({"added": {}, "removed": {}, "modified": {}}, temp_dir)
+            with open(os.path.join(temp_dir, "MODIFIED.html"), encoding="utf-8") as f:
+                self.assertIn("No items in this bucket.", f.read())
+
     def test_exports_excel_diff_pages(self):
         diff = {
             "filename": "gems.txt",

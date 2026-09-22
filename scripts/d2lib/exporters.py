@@ -58,7 +58,7 @@ class MarkdownExporter(BaseExporter):
         """Escapes plain-text content for safe Markdown table rendering."""
         if s is None:
             return ""
-        text = re.sub(r'Ã(?:ƒÂ)?¿c.', '', str(s))
+        text = re.sub(r'Ãƒ(?:Æ’Ã‚)?Â¿c.', '', str(s))
         text = text.replace('\r', ' ').replace('\n', ' ').strip()
         return text.replace('|', '\\|')
 
@@ -256,7 +256,7 @@ class MarkdownExporter(BaseExporter):
                             new_props = item['bk_props']
                             
                             def get_stat_key(s):
-                                s = re.sub(r'\s+', ' ', re.sub(r'ÿc.', '', s)).strip()
+                                s = re.sub(r'\s+', ' ', re.sub(r'Ã¿c.', '', s)).strip()
                                 return re.sub(r'[+-]?\d+(?:-\d+)?', '', s).strip().lower()
 
                             aligned = []
@@ -426,7 +426,7 @@ class HtmlReportExporter(BaseExporter):
     def escape(value: Any) -> str:
         if value is None:
             return ""
-        text = re.sub(r'Ã¿c.', '', str(value))
+        text = re.sub(r'ÃƒÂ¿c.', '', str(value))
         return html.escape(text, quote=True)
 
     @staticmethod
@@ -437,7 +437,7 @@ class HtmlReportExporter(BaseExporter):
 
     @staticmethod
     def _stat_key(text: str) -> str:
-        text = re.sub(r'\s+', ' ', re.sub(r'Ã¿c.', '', text or '')).strip()
+        text = re.sub(r'\s+', ' ', re.sub(r'ÃƒÂ¿c.', '', text or '')).strip()
         return re.sub(r'[+-]?\d+(?:-\d+)?', '', text).strip().lower()
 
     def _ensure_assets(self, output_dir: str) -> None:
@@ -484,7 +484,7 @@ class HtmlReportExporter(BaseExporter):
             return f'<span class="diff-old">{self.escape(old_text)}</span>', '<span class="diff-new">(removed)</span>'
 
         def normalize(text: str) -> str:
-            return re.sub(r'\s+', ' ', re.sub(r'Ã¿c.', '', text)).strip()
+            return re.sub(r'\s+', ' ', re.sub(r'ÃƒÂ¿c.', '', text)).strip()
 
         if normalize(old_text) == normalize(new_text):
             escaped = self.escape(old_text)
@@ -561,6 +561,7 @@ class HtmlReportExporter(BaseExporter):
   <a href="ADDED.html">Added</a>
   <a href="REMOVED.html">Removed</a>
   <a href="MODIFIED.html">Modified</a>
+  <a href="MODIFIED_DOWNLOAD.html" download>Download all modified items (HTML)</a>
 </nav>
 <table>
   <thead><tr><th>Category</th><th>Added</th><th>Removed</th><th>Modified</th></tr></thead>
@@ -599,6 +600,8 @@ class HtmlReportExporter(BaseExporter):
                 family_groups[family].setdefault(group, []).append(item_copy)
 
             toc_parts = ['<nav class="nav"><a href="index.html">Summary</a></nav>']
+            if is_modified:
+                toc_parts.append('<p><a href="MODIFIED.html">View all modified items on one page</a></p>')
             family_labels = {"uniques": "Uniques", "runewords": "Runewords", "sets": "Sets"}
             for family in ["uniques", "runewords", "sets"]:
                 groups = family_groups[family]
@@ -618,7 +621,8 @@ class HtmlReportExporter(BaseExporter):
                 toc_parts.append("</ul>")
             if len(toc_parts) == 1:
                 toc_parts.append('<p class="muted">No items in this bucket.</p>')
-            self._write_page(os.path.join(output_dir, f"{base_name.upper()}.html"), f"{base_name} Items Breakdown", "\n".join(toc_parts))
+            toc_name = "MODIFIED_BY_TYPE.html" if is_modified else f"{base_name.upper()}.html"
+            self._write_page(os.path.join(output_dir, toc_name), f"{base_name} Items Breakdown", "\n".join(toc_parts))
 
         write_toc(diff["added"], "Added")
         removed_cards = ['<nav class="nav"><a href="index.html">Summary</a></nav>']
@@ -631,9 +635,34 @@ class HtmlReportExporter(BaseExporter):
             removed_cards.append('<p class="muted">No removed items.</p>')
         self._write_page(os.path.join(output_dir, "REMOVED.html"), "Removed Items", "\n".join(removed_cards))
         write_toc(diff["modified"], "Modified", is_modified=True)
+        all_modified = [dict(item, original_key=key) for key, item in diff["modified"].items()]
+        self._write_item_group_page(
+            all_modified, os.path.join(output_dir, "MODIFIED.html"),
+            f"All Modified Items ({len(all_modified)})", True,
+            summary_href="index.html", css_href="assets/report.css",
+            intro='<p>Every modified item, sorted by name, with old and new values. '
+                  '<a href="MODIFIED_BY_TYPE.html">Browse by item type</a>. '
+                  '<a href="MODIFIED_DOWNLOAD.html" download>Download this report (HTML)</a>.</p>',
+        )
+        with open(os.path.join(output_dir, "MODIFIED.html"), encoding="utf-8") as source:
+            standalone = source.read()
+        standalone = standalone.replace('<link rel="stylesheet" href="assets/report.css">',
+                                        '<style>' + self.REPORT_CSS + '</style>')
+        standalone = re.sub(r'<nav class="nav">.*?</nav>', '', standalone, flags=re.DOTALL)
+        standalone = re.sub(r'<p>Every modified item,.*?</p>',
+                            '<p>Every modified item, sorted by name, with old and new values. Offline report.</p>',
+                            standalone, flags=re.DOTALL)
+        with open(os.path.join(output_dir, "MODIFIED_DOWNLOAD.html"), "w", encoding="utf-8") as target:
+            target.write(standalone)
 
-    def _write_item_group_page(self, items: List[Dict[str, Any]], path: str, title: str, is_modified: bool) -> None:
-        cards = ['<nav class="nav"><a href="../../index.html">Summary</a></nav>']
+    def _write_item_group_page(self, items: List[Dict[str, Any]], path: str, title: str, is_modified: bool,
+                               summary_href: str = "../../index.html", css_href: str = "../../assets/report.css",
+                               intro: str = "") -> None:
+        cards = [f'<nav class="nav"><a href="{self.escape(summary_href)}">Summary</a></nav>']
+        if intro:
+            cards.append(intro)
+        if not items:
+            cards.append('<p class="muted">No items in this bucket.</p>')
         for item in sorted(items, key=title_for_item):
             key = item.get("original_key", "")
             if is_modified:
@@ -667,7 +696,7 @@ class HtmlReportExporter(BaseExporter):
   <ul class="properties">{props}</ul>
 </section>
 """)
-        self._write_page(path, title, "\n".join(cards), css_href="../../assets/report.css")
+        self._write_page(path, title, "\n".join(cards), css_href=css_href)
 
     def export_excel_diff(self, diff: ExcelDiffDTO, output_path: str, old_label: str = "Base", new_label: str = "Target") -> None:
         self._ensure_assets(os.path.dirname(output_path))
