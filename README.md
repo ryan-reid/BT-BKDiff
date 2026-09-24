@@ -68,6 +68,17 @@ The wiki is a static site generated from the structured exports and skill tree M
 
 For local viewing, serve `output/wiki/` with a simple static server after running the generator.
 
+GitHub Pages checks the configured BKDiablo and BTDiablo branches every 15 minutes
+(at minutes 7, 22, 37, and 52; GitHub may delay scheduled runs). Scheduled runs
+only rebuild when either upstream commit or this repository's commit differs
+from the live site's `source-revisions.json`. The first check after enabling this
+feature rebuilds to create that record. Builds use the exact upstream commits
+detected by the check, and publish the record with the site, so failed builds or
+deployments are retried on subsequent checks. An unavailable revision endpoint
+fails the check rather than treating a network error as an upstream update.
+Manual workflow runs and relevant pushes to `main` always rebuild. Deployments
+are serialized so a scheduled check cannot interrupt a running deployment.
+
 ## Script Layout
 
 `scripts/generate_reports.py` is the top-level rebuild command. The implementation is organized under:

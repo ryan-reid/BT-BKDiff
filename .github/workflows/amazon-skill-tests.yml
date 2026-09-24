@@ -33,3 +33,6 @@ jobs:
 
       - name: Run test suite
         run: python -m unittest discover -s tests
+
+      - name: Test wiki update detection
+        run: node --test tests/test_wiki_updates.cjs
