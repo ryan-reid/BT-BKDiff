@@ -257,7 +257,7 @@ function wireStaticSearch() {
   const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece, .corruption-summary-card"));
   const tableRows = Array.from(document.querySelectorAll("tbody tr[data-search]"));
   const sections = Array.from(document.querySelectorAll(".recipe-group, .recipe-group-section, .misc-group-section, .family-container, .set-block"));
-  const filterButtons = Array.from(document.querySelectorAll("[data-recipe-filter]"));
+  const filterButtons = Array.from(document.querySelectorAll("[data-recipe-filter], [data-search-filter]"));
   let activeRecipeFilter = "all";
   let emptyMessage = null;
   
@@ -345,8 +345,11 @@ function wireStaticSearch() {
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      activeRecipeFilter = normalizeText(button.dataset.recipeFilter || "all") || "all";
-      filterButtons.forEach((candidate) => candidate.classList.toggle("is-active", candidate === button));
+      activeRecipeFilter = normalizeText(button.dataset.searchFilter || button.dataset.recipeFilter || "all") || "all";
+      filterButtons.forEach((candidate) => {
+        candidate.classList.toggle("is-active", candidate === button);
+        candidate.setAttribute("aria-pressed", String(candidate === button));
+      });
       applySearch();
     });
   });

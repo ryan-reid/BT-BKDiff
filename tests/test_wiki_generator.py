@@ -11,7 +11,7 @@ if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
 from d2lib.services.recipes import RecipePresentationBuilder
-from d2lib.wiki import AreaFarmingDataBuilder, ItemIconExporter, MediaWikiPublisher, WikiGenerator, WikiOutputWriter, WikiRoutes
+from d2lib.wiki import AreaFarmingDataBuilder, ItemIconExporter, MediaWikiPublisher, WikiContentBuilder, WikiGenerator, WikiOutputWriter, WikiRoutes
 from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 
 
@@ -1305,6 +1305,9 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('id="runeword-prefix-filter"', runewords_index_page)
         self.assertIn('id="runeword-base-filter"', runewords_index_page)
         self.assertIn('<option value="Helm">Helm</option>', runewords_index_page)
+        self.assertIn("All Shields", WikiContentBuilder._runeword_base_filter_terms(["Grimoire", "Any Shield", "Voodoo Heads", "Auric Shields"]))
+        self.assertIn("All Shields", WikiContentBuilder._runeword_base_filter_terms(["Paladin Item"]))
+        self.assertIn("All Weapons", WikiContentBuilder._runeword_base_filter_terms(["Swords", "Wand"]))
         self.assertIn("data-rune-selector", runewords_index_page)
         self.assertIn('data-rune-option data-rune-code="r07"', runewords_index_page)
         self.assertIn('id="runeword-selected-count"', runewords_index_page)
@@ -1459,12 +1462,17 @@ class TestWikiGenerator(unittest.TestCase):
             raw_coverage_page = f.read()
         self.assertIn("Conditional Odds", drops_page)
         self.assertIn('href="../drops/" class="is-active"', drops_page)
-        self.assertIn('href="../drops/sources/"', drops_page)
+        self.assertNotIn('href="../drops/sources/"', drops_page)
+        self.assertNotIn("Drop Sources", drops_page)
+        self.assertIn('data-search-filter="set"', drops_page)
+        self.assertIn('data-search-filter="unique"', drops_page)
+        self.assertIn('data-filter-tags="set"', drops_page)
+        self.assertIn('data-filter-tags="unique"', drops_page)
         self.assertIn("Bright Circlet", drops_page)
         self.assertIn("95.2%", drops_page)
         self.assertIn("Thunder Two", drops_page)
         self.assertIn("25.0%", drops_page)
-        self.assertIn("source explorer includes treasure-class structure", drops_page)
+        self.assertNotIn("source explorer", drops_page)
         self.assertIn("Drop Sources", drop_sources_page)
         self.assertIn("Act Test", drop_sources_page)
         self.assertIn("Nested Test", drop_sources_page)
@@ -1548,7 +1556,8 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('data-roll-search="', bases_page)
         self.assertIn("Thunder Maul", bases_page)
         self.assertIn("Two Handed", bases_page)
-        self.assertIn("<strong>Dam:</strong> 65-255", bases_page)
+        self.assertIn('<strong>Dam:</strong> <mark class="diff-token diff-token-old">33-180</mark>', bases_page)
+        self.assertIn('<strong>Dam:</strong> <mark class="diff-token diff-token-new">65-255</mark>', bases_page)
         self.assertNotIn("Dam: 0-0", bases_page)
         self.assertIn("+50% Damage to Undead", bases_page)
         self.assertIn("-5-30% Target Defense", bases_page)

@@ -686,19 +686,16 @@ class WikiContentBuilder:
         old_runewords = (old_item_index or {}).get("runeword", {})
         records = []
         rune_options_by_code: Dict[str, Dict[str, str]] = {}
-        base_options = set()
+        base_options: Dict[str, str] = {}
 
         for entry in sorted(runewords, key=item_sort_key):
             title = item_title(entry, "runeword")
             page_entry = href_by_title.get(title, {})
             rune_requirements = entry.get("rune_requirements") or self._runeword_rune_requirements(entry, icon_exporter)
             base_items = entry.get("base_items", [])
-            base_filter_terms = []
-            for base_item in base_items:
-                base_label = str(base_item).strip()
-                if base_label:
-                    base_options.add(base_label)
-                    base_filter_terms.append(base_label)
+            base_filter_terms = self._runeword_base_filter_terms(base_items)
+            for base_term in base_filter_terms:
+                base_options[base_term] = base_term
 
             property_preview = [
                 str(prop.get("resolved_text", ""))
@@ -761,6 +758,18 @@ class WikiContentBuilder:
             match = re.search(r"\d+", option.get("code", ""))
             return (int(match.group(0)) if match else 999, option.get("name", ""))
 
+        base_sort_order = {
+            "All Weapons": 0,
+            "Melee Weapon": 1,
+            "Missile Weapon": 2,
+            "All Shields": 3,
+            "Armor": 4,
+            "Helm": 5,
+        }
+
+        def base_option_sort(label: str) -> Tuple[int, str]:
+            return (base_sort_order.get(label, 20), label)
+
         self._write_page(
             title=f"Runewords | {self.new_label} Wiki",
             output_path=WikiRoutes.runewords_index_output_path(),
@@ -769,8 +778,51 @@ class WikiContentBuilder:
             source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "runes.txt")],
             runewords=records,
             rune_options=sorted(rune_options_by_code.values(), key=rune_option_sort),
-            base_options=sorted(base_options),
+            base_options=sorted(base_options.values(), key=base_option_sort),
         )
+
+    @staticmethod
+    def _runeword_base_filter_terms(base_items: List[str]) -> List[str]:
+        shield_labels = {
+            "any shield",
+            "shield",
+            "voodoo heads",
+            "auric shields",
+            "grimoire",
+            "paladin item",
+        }
+        weapon_labels = {
+            "weapon",
+            "melee weapon",
+            "missile weapon",
+            "swords",
+            "axe",
+            "club",
+            "hammer",
+            "hand to hand",
+            "knife",
+            "mace",
+            "polearm",
+            "scepter",
+            "spears",
+            "staff",
+            "wand",
+        }
+        terms: List[str] = []
+
+        def add(term: str) -> None:
+            if term and term not in terms:
+                terms.append(term)
+
+        for base_item in base_items:
+            base_label = normalize_runeword_base_item_label(str(base_item).strip())
+            normalized = base_label.lower()
+            add(base_label)
+            if normalized in shield_labels:
+                add("All Shields")
+            if normalized in weapon_labels:
+                add("All Weapons")
+        return terms
 
     def _write_set_index_page(self, sets: List[Dict[str, Any]], old_item_index: Dict[str, Dict[str, Any]]) -> None:
         set_families: Dict[str, List[Dict[str, Any]]] = {}

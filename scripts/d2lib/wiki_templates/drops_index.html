@@ -17,22 +17,17 @@
 </section>
 
 <section class="content-section">
-  <div class="card-grid two-up">
-    <a class="link-card" href="{{ site_root }}drops/sources/">
-      <h3>Drop Sources</h3>
-      <p>Browse treasure classes, nested pools, direct item entries, and monster or superunique source records.</p>
-      <span class="link-card-cta">Open source explorer -></span>
-    </a>
-  </div>
-</section>
-
-<section class="content-section">
   <input id="page-search" class="search-input" type="search" placeholder="Search base items or item names" />
-  <p class="muted">These odds show relative weighting among items that share the same base item, calculated after the game selects a unique or set quality. The source explorer includes treasure-class structure and monster links, but final full-path drop odds are not simulated.</p>
+  <div class="filter-row" role="group" aria-label="Item quality">
+    <button class="filter-button is-active" type="button" data-search-filter="all" aria-pressed="true">All</button>
+    <button class="filter-button" type="button" data-search-filter="set" aria-pressed="false">Sets</button>
+    <button class="filter-button" type="button" data-search-filter="unique" aria-pressed="false">Uniques</button>
+  </div>
+  <p class="muted">These odds show relative weighting among items that share the same base item, calculated after the game selects a unique or set quality.</p>
 
   <div class="family-list">
     {% for group in groups %}
-    <div class="family-container" id="{{ group.id }}" data-search="{{ group.search_text }}">
+    <div class="family-container" id="{{ group.id }}" data-search="{{ group.search_text }}" data-filter-tags="{{ group.quality }}">
       <div class="family-header-bar">
         <div>
           <h2>{{ group.base_name }}</h2>
