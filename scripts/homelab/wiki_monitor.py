@@ -90,7 +90,7 @@ def check(client, *, dry_run=False):
 
     # Query each active state explicitly so older waiting runs cannot be missed.
     for status in ("queued", "in_progress", "waiting", "pending", "requested"):
-        runs = client.api(f"{REPOSITORY}/actions/workflows/{WORKFLOW}/runs?branch={BRANCH}&status={status}&per_page=1")
+        runs = client.api(f"{REPOSITORY}/actions/workflows/{WORKFLOW}/runs?branch={BRANCH}&head_sha={revisions['repository']}&status={status}&per_page=1")
         if runs["total_count"]:
             LOG.info("Pages workflow already %s; check again next tick", status)
             return "busy"
