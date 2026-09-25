@@ -28,12 +28,12 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-self-hosted
+  group: pages-hosted
   cancel-in-progress: true
 
 jobs:
   check:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     outputs:
       rebuild: ${{ steps.sources.outputs.rebuild }}
       revisions: ${{ steps.sources.outputs.revisions }}
@@ -52,7 +52,7 @@ jobs:
   build:
     needs: check
     if: needs.check.outputs.rebuild == 'true'
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     env:
       SOURCE_REVISIONS: ${{ needs.check.outputs.revisions }}
 
@@ -100,7 +100,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     needs: build
 
     steps:
