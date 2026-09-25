@@ -3,15 +3,15 @@
 Ryan Server runs `wiki-monitor.timer` every 15 minutes, with up to 30 seconds
 of jitter. GitHub Actions builds and deploys the site through `publish-wiki.yml`
 (Publish Wiki), restored from the last successful deployment at `1b6ccc9`.
-Its original schedule checks at minutes 07, 22, 37 and 52 of every hour.
+Its fallback schedule runs once daily at 10:00 UTC.
 
 The Python standard-library script reads the live `source-revisions.json`, gets
 the current repository commit, reads `.gitmodules` at that commit, and resolves
 the configured upstream branches. It dispatches only when a revision differs
 and no Publish Wiki workflow for the current repository revision is active.
-Dispatches send only `ref=main`, matching the restored workflow's input-free
-dispatch interface. Scheduled Actions runs compare the deployed revisions;
-pushes and manual dispatches build and deploy.
+Dispatches send only `ref=main`; the workflow always builds and deploys.
+Change detection happens entirely in the homelab monitor; the daily Actions run
+is a dumb fallback.
 
 The monitor has no local success marker. Only a successful deployment updates
 the live marker; failed builds and network errors are retried at the next check.

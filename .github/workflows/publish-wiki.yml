@@ -13,7 +13,7 @@ on:
       - "scripts/**"
       - "tests/**"
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    - cron: "0 10 * * *"
   workflow_dispatch:
 
 permissions:
@@ -25,30 +25,8 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-jobs:
-  check:
-    runs-on: ubuntu-latest
-    outputs:
-      rebuild: ${{ steps.sources.outputs.rebuild }}
-      revisions: ${{ steps.sources.outputs.revisions }}
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Check upstream commits against the live site
-        id: sources
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const check = require('./scripts/check_wiki_updates.cjs');
-            await check({github, context, core, exec});
-
   build:
-    needs: check
-    if: needs.check.outputs.rebuild == 'true'
     runs-on: ubuntu-latest
-    env:
-      SOURCE_REVISIONS: ${{ needs.check.outputs.revisions }}
 
     steps:
       - name: Check out repository
@@ -56,14 +34,8 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Pin submodules to the checked upstream commits
-        run: |
-          for mod in BKDiablo BTDiablo; do
-            revision=$(jq -er --arg mod "$mod" '.[$mod]' <<< "$SOURCE_REVISIONS")
-            git -C "mods/$mod" fetch origin "$revision"
-            git -C "mods/$mod" checkout --detach "$revision"
-          done
-          git submodule foreach 'git submodule update --init --recursive'
+      - name: Update submodules to configured branches
+        run: git submodule update --init --recursive --remote
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -80,7 +52,22 @@ jobs:
         run: python scripts/generate_reports.py
 
       - name: Include source revisions in the deployed site
-        run: printf '%s\n' "$SOURCE_REVISIONS" > output/wiki/source-revisions.json
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          def revision(path):
+              return subprocess.check_output(["git", "-C", path, "rev-parse", "HEAD"], text=True).strip()
+
+          revisions = {
+              "repository": revision("."),
+              "BKDiablo": revision("mods/BKDiablo"),
+              "BTDiablo": revision("mods/BTDiablo"),
+          }
+          Path("output/wiki/source-revisions.json").write_text(json.dumps(revisions) + "\n", encoding="utf-8")
+          PY
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
