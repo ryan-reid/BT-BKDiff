@@ -33,7 +33,7 @@ concurrency:
 
 jobs:
   check:
-    runs-on: bt-bkdiff
+    runs-on: self-hosted
     outputs:
       rebuild: ${{ steps.sources.outputs.rebuild }}
       revisions: ${{ steps.sources.outputs.revisions }}
@@ -52,7 +52,7 @@ jobs:
   build:
     needs: check
     if: needs.check.outputs.rebuild == 'true'
-    runs-on: bt-bkdiff
+    runs-on: self-hosted
     env:
       SOURCE_REVISIONS: ${{ needs.check.outputs.revisions }}
 
@@ -100,7 +100,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: bt-bkdiff
+    runs-on: self-hosted
     needs: build
 
     steps:
