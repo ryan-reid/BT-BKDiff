@@ -15,7 +15,7 @@ from urllib.request import Request, urlopen
 
 REPOSITORY = "ryan-reid/BT-BKDiff"
 BRANCH = "main"
-WORKFLOW = "wiki-pages.yml"
+WORKFLOW = "publish-wiki.yml"
 MARKER = "https://ryan-reid.github.io/BT-BKDiff/source-revisions.json"
 API = "https://api.github.com"
 LOG = logging.getLogger("wiki-monitor")
@@ -99,7 +99,7 @@ def check(client, *, dry_run=False):
         LOG.info("Dry run: would dispatch conditional Pages build")
         return "dry-run"
     client.api(f"{REPOSITORY}/actions/workflows/{WORKFLOW}/dispatches",
-               payload={"ref": BRANCH, "inputs": {"check_only": True}})
+               payload={"ref": BRANCH})
     LOG.info("Dispatched conditional Pages build; published marker remains the source of truth")
     return "dispatched"
 

@@ -45,7 +45,7 @@ class TestWikiMonitor(unittest.TestCase):
             with self.subTest(source=source):
                 client = FakeClient({**REVISIONS, source: "d" * 40})
                 self.assertEqual("dispatched", monitor.check(client))
-                self.assertEqual({"ref": "main", "inputs": {"check_only": True}}, client.dispatches[0])
+                self.assertEqual({"ref": "main"}, client.dispatches[0])
                 self.assertEqual("dispatched", monitor.check(client))
 
     def test_active_runs_prevent_duplicate_dispatches(self):

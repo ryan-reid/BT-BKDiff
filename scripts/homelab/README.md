@@ -1,17 +1,17 @@
 # Homelab wiki monitor
 
 Ryan Server runs `wiki-monitor.timer` every 15 minutes, with up to 30 seconds
-of jitter. GitHub Actions builds and deploys the site. Its twice-daily fallback
-schedule is 09:07 and 21:07 UTC (04:07/16:07 Winnipeg during daylight time,
-03:07/15:07 during standard time).
+of jitter. GitHub Actions builds and deploys the site through `publish-wiki.yml`
+(Publish Wiki), restored from the last successful deployment at `1b6ccc9`.
+Its original schedule checks at minutes 07, 22, 37 and 52 of every hour.
 
 The Python standard-library script reads the live `source-revisions.json`, gets
 the current repository commit, reads `.gitmodules` at that commit, and resolves
 the configured upstream branches. It dispatches only when a revision differs
-and no Pages workflow for the current repository revision is active. Dispatches
-still send `check_only=true` for compatibility, but the Pages workflow currently
-builds unconditionally on every trigger. Change detection happens in the homelab
-monitor; both scheduled and manual Actions runs always build and deploy.
+and no Publish Wiki workflow for the current repository revision is active.
+Dispatches send only `ref=main`, matching the restored workflow's input-free
+dispatch interface. Scheduled Actions runs compare the deployed revisions;
+pushes and manual dispatches build and deploy.
 
 The monitor has no local success marker. Only a successful deployment updates
 the live marker; failed builds and network errors are retried at the next check.
@@ -52,5 +52,5 @@ sudo systemctl start wiki-monitor.service
 Rotate the credential before its expiration; systemd loads it anew for each
 invocation. HTTP 401/403 errors require checking token validity, permissions,
 and rate limits. Errors are logged locally; this service does not send alerts.
-Disable with `sudo systemctl disable --now wiki-monitor.timer`; the twice-daily
-GitHub fallback remains available. Back up existing installed files before updates.
+Disable with `sudo systemctl disable --now wiki-monitor.timer`; the GitHub
+schedule remains available. Back up existing installed files before updates.
