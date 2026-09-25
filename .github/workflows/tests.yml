@@ -6,13 +6,13 @@ on:
       - "scripts/**"
       - "tests/**"
       - "requirements.txt"
-      - ".github/workflows/amazon-skill-tests.yml"
+      - ".github/workflows/tests.yml"
   pull_request:
     paths:
       - "scripts/**"
       - "tests/**"
       - "requirements.txt"
-      - ".github/workflows/amazon-skill-tests.yml"
+      - ".github/workflows/tests.yml"
   workflow_dispatch:
 
 jobs:
