@@ -10,6 +10,8 @@ from typing import Any, Dict, List, Tuple
 
 TEXT_EXTENSIONS = {".json"}
 MAX_DIFF_LINES = 2000
+LARGE_JSON_DIFF_BYTES = 5_000_000
+STRUCTURED_OMIT_FIELDS = {"thumbnailBase64", "thumbnailMip"}
 
 
 def report_filename(value: str, ext: str = ".html") -> str:
@@ -149,6 +151,54 @@ def build_diff_page(rel_path: str, old_rel: str, old_text: str, new_text: str) -
     return page(rel_path, body)
 
 
+def collect_structured_changes(old: Any, new: Any, path: str = "", changes: List[Tuple[str, str, Any, Any]] | None = None) -> List[Tuple[str, str, Any, Any]]:
+    changes = [] if changes is None else changes
+    if isinstance(old, dict) and isinstance(new, dict):
+        for key in sorted(set(old) | set(new)):
+            if key in STRUCTURED_OMIT_FIELDS:
+                continue
+            current_path = f"{path}.{key}" if path else key
+            if key not in old:
+                changes.append((current_path, "added", "", new[key]))
+            elif key not in new:
+                changes.append((current_path, "removed", old[key], ""))
+            else:
+                collect_structured_changes(old[key], new[key], current_path, changes)
+    elif isinstance(old, list) and isinstance(new, list):
+        for index, (old_value, new_value) in enumerate(zip(old, new)):
+            collect_structured_changes(old_value, new_value, f"{path}[{index}]", changes)
+        if len(old) != len(new):
+            changes.append((path, "length", len(old), len(new)))
+    elif old != new:
+        changes.append((path, "changed", old, new))
+    return changes
+
+
+def build_structured_diff_page(rel_path: str, old_text: str, new_text: str) -> str:
+    old_data = json.loads(old_text)
+    new_data = json.loads(new_text)
+    changes = collect_structured_changes(old_data, new_data)
+    rows = []
+    for path, kind, old_value, new_value in changes[:MAX_DIFF_LINES]:
+        rows.append(
+            f'<tr><td><code>{html.escape(path)}</code></td>'
+            f'<td>{html.escape(kind)}</td>'
+            f'<td><pre>{html.escape(str(old_value))}</pre></td>'
+            f'<td><pre>{html.escape(str(new_value))}</pre></td></tr>'
+        )
+    note = '<p>Large diff: showing the first 2,000 field changes.</p>' if len(changes) > MAX_DIFF_LINES else ""
+    body = f"""
+<nav class="nav"><a href="../index.html">JSON report summary</a></nav>
+<h1>{html.escape(rel_path)}</h1>
+<p><strong>Retail (Old / Base) &rarr; BKDiablo (New)</strong></p>
+<p>This oversized JSON file uses a structured field diff. Binary thumbnail payload fields are omitted.</p>
+<p class="muted">{len(changes)} meaningful field changes. {note}</p>
+<table><thead><tr><th>Path</th><th>Change</th><th>Retail</th><th>BKDiablo</th></tr></thead>
+<tbody>{''.join(rows)}</tbody></table>
+"""
+    return page(rel_path, body)
+
+
 def compare_files(new_root: str, old_root: str, output_dir: str) -> Dict[str, Any]:
     os.makedirs(output_dir, exist_ok=True)
     diff_dir = os.path.join(output_dir, "files")
@@ -170,7 +220,11 @@ def compare_files(new_root: str, old_root: str, output_dir: str) -> Dict[str, An
 
         filename = report_filename(rel_path)
         diff_href = f"files/{filename}"
-        write_text(os.path.join(output_dir, diff_href), build_diff_page(rel_path, old_rel, old_text, new_text))
+        if old_path and new_path.lower().endswith(".json") and os.path.getsize(new_path) >= LARGE_JSON_DIFF_BYTES:
+            diff_page = build_structured_diff_page(rel_path, old_text, new_text)
+        else:
+            diff_page = build_diff_page(rel_path, old_rel, old_text, new_text)
+        write_text(os.path.join(output_dir, diff_href), diff_page)
         records.append({"path": rel_path, "status": "modified" if old_path else "added", "old_path": old_rel, "diff_href": diff_href})
 
     return {
