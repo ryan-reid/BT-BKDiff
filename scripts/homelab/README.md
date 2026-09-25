@@ -8,9 +8,10 @@ schedule is 09:07 and 21:07 UTC (04:07/16:07 Winnipeg during daylight time,
 The Python standard-library script reads the live `source-revisions.json`, gets
 the current repository commit, reads `.gitmodules` at that commit, and resolves
 the configured upstream branches. It dispatches only when a revision differs
-and no Pages workflow is active. Dispatches set `check_only=true`, so the Actions
-workflow checks again after obtaining its concurrency slot. Normal manual runs
-still force a rebuild unless that input is selected.
+and no Pages workflow for the current repository revision is active. Dispatches
+still send `check_only=true` for compatibility, but the Pages workflow currently
+builds unconditionally on every trigger. Change detection happens in the homelab
+monitor; both scheduled and manual Actions runs always build and deploy.
 
 The monitor has no local success marker. Only a successful deployment updates
 the live marker; failed builds and network errors are retried at the next check.
