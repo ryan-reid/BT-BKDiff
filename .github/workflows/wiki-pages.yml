@@ -28,7 +28,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-self-hosted
   cancel-in-progress: true
 
 jobs:
