@@ -1,6 +1,7 @@
 import os
 import sys
 import csv
+import time
 from typing import List, Optional
 
 # Ensure D2-Safe I/O
@@ -35,10 +36,13 @@ class Orchestrator:
 
     def run_task(self, description: str, func, *args, **kwargs) -> bool:
         print(f"--- {description} ---")
+        started = time.perf_counter()
         try:
             func(*args, **kwargs)
+            print(f"--- Completed {description} ({time.perf_counter() - started:.3f}s) ---", flush=True)
             return True
         except Exception as e:
+            print(f"--- Failed {description} ({time.perf_counter() - started:.3f}s) ---", flush=True)
             print(f"Error during {description}: {e}", file=sys.stderr)
             import traceback
             traceback.print_exc()
