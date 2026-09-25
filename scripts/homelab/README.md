@@ -1,0 +1,55 @@
+# Homelab wiki monitor
+
+Ryan Server runs `wiki-monitor.timer` every 15 minutes, with up to 30 seconds
+of jitter. GitHub Actions builds and deploys the site. Its twice-daily fallback
+schedule is 09:07 and 21:07 UTC (04:07/16:07 Winnipeg during daylight time,
+03:07/15:07 during standard time).
+
+The Python standard-library script reads the live `source-revisions.json`, gets
+the current repository commit, reads `.gitmodules` at that commit, and resolves
+the configured upstream branches. It dispatches only when a revision differs
+and no Pages workflow is active. Dispatches set `check_only=true`, so the Actions
+workflow checks again after obtaining its concurrency slot. Normal manual runs
+still force a rebuild unless that input is selected.
+
+The monitor has no local success marker. Only a successful deployment updates
+the live marker; failed builds and network errors are retried at the next check.
+Malformed markers and API failures fail the check rather than forcing builds.
+Systemd prevents overlapping local checks, catches up once after downtime, and
+records stdout/stderr in the journal. There are no inbound ports or dependencies
+beyond Python 3.9+ and systemd with LoadCredential support.
+
+## Install
+
+Install `wiki_monitor.py` root-owned at `/opt/wiki-monitor/wiki_monitor.py`, and
+the two unit files at `/etc/systemd/system/`. Store a fine-grained GitHub token
+at `/etc/wiki-monitor/github-token`, owned by root with mode 0600, inside a
+root-owned 0700 directory. Select only `ryan-reid/BT-BKDiff`, with repository
+Actions read/write permission. Public repository metadata can be read with this
+token. Never commit the token or put it in command arguments.
+
+The service uses a dynamic unprivileged user and systemd credentials; it cannot
+write to the application or credential source files. After installing:
+
+```sh
+sudo systemd-analyze verify /etc/systemd/system/wiki-monitor.service /etc/systemd/system/wiki-monitor.timer
+sudo python3 /opt/wiki-monitor/wiki_monitor.py --token-file /etc/wiki-monitor/github-token --dry-run
+sudo systemctl daemon-reload
+sudo systemctl start wiki-monitor.service
+sudo systemctl enable --now wiki-monitor.timer
+```
+
+## Operate
+
+```sh
+systemctl list-timers wiki-monitor.timer
+systemctl status wiki-monitor.service wiki-monitor.timer
+journalctl -u wiki-monitor.service --since today
+sudo systemctl start wiki-monitor.service
+```
+
+Rotate the credential before its expiration; systemd loads it anew for each
+invocation. HTTP 401/403 errors require checking token validity, permissions,
+and rate limits. Errors are logged locally; this service does not send alerts.
+Disable with `sudo systemctl disable --now wiki-monitor.timer`; the twice-daily
+GitHub fallback remains available. Back up existing installed files before updates.

@@ -68,6 +68,31 @@ test('server failures fail the check without producing a skip decision', async (
   assert.deepEqual(f.outputs, {});
 });
 
+for (const checkOnly of [true, 'true']) {
+  test(`homelab dispatch checks deployed revisions (${typeof checkOnly})`, async () => {
+    const f = fixture({event: 'workflow_dispatch'});
+    f.args.context.payload = {inputs: {check_only: checkOnly}};
+    await check(f.args);
+    assert.equal(f.outputs.rebuild, 'false');
+    assert.equal(f.requests(), 1);
+  });
+}
+
+test('homelab dispatch rebuilds changed sources', async () => {
+  const f = fixture({event: 'workflow_dispatch', deployed: {...revisions, BKDiablo: 'd'.repeat(40)}});
+  f.args.context.payload = {inputs: {check_only: 'true'}};
+  await check(f.args);
+  assert.equal(f.outputs.rebuild, 'true');
+});
+
+test('explicitly forced dispatch still rebuilds', async () => {
+  const f = fixture({event: 'workflow_dispatch'});
+  f.args.context.payload = {inputs: {check_only: 'false'}};
+  await check(f.args);
+  assert.equal(f.outputs.rebuild, 'true');
+  assert.equal(f.requests(), 0);
+});
+
 test('network errors fail the check', async () => {
   const f = fixture();
   f.args.fetchImpl = async () => {throw new Error('network unavailable');};

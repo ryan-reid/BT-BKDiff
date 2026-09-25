@@ -16,7 +16,9 @@ module.exports = async function checkWikiUpdates({github, context, core, exec, f
   }
 
   let rebuild = true;
-  if (context.eventName === 'schedule') {
+  const conditionalDispatch = context.eventName === 'workflow_dispatch'
+    && [true, 'true'].includes(context.payload?.inputs?.check_only);
+  if (context.eventName === 'schedule' || conditionalDispatch) {
     const {data: pages} = await github.rest.repos.getPages(context.repo);
     const url = new URL('source-revisions.json', pages.html_url.replace(/\/?$/, '/'));
     url.searchParams.set('check', `${context.runId}-${Date.now()}`);

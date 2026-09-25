@@ -13,8 +13,14 @@ on:
       - "scripts/**"
       - "tests/**"
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    # Twice-daily fallback; the homelab checks every 15 minutes.
+    - cron: "7 9,21 * * *"
   workflow_dispatch:
+    inputs:
+      check_only:
+        description: Only rebuild if deployed source revisions differ
+        type: boolean
+        default: false
 
 permissions:
   contents: read
