@@ -1,0 +1,42 @@
+{% macro comparison(row, old_label, new_label, full=false) %}
+<div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
+{% set sections = [('Stats', [('HP', 'Life'), ('Defense', 'Defense'), ('AR', 'Attack Rating'), ('Str', 'Strength'), ('Dex', 'Dexterity'), ('Dmg-Min', 'Min Damage'), ('Dmg-Max', 'Max Damage'), ('DefaultChance', 'Basic Attack Weight')])] %}
+{% if full %}
+  {% set sections = sections + [('Resistances (before penalties / caps)', [('ResistFire', 'Fire'), ('ResistCold', 'Cold'), ('ResistLightning', 'Lightning'), ('ResistPoison', 'Poison')])] %}
+{% endif %}
+{% for heading, fields in sections %}
+<div class="sp-sep">{{ heading }}</div>
+{% for field, label in fields %}
+  {% set old = row.retail.get(field, '') %}
+  {% set new = row.current.get(field, '') %}
+  {% set status = 'same' if old == new else 'changed' if old and new else 'added' if new else 'removed' %}
+<div class="sp-row">
+  <span class="sp-cell is-{{ status }}"><strong>{{ label }}:</strong> {{ old | comparison_highlight(new, 'old') }}</span>
+  <span class="sp-cell is-{{ status }}"><strong>{{ label }}:</strong> {{ new | comparison_highlight(old, 'new') }}</span>
+</div>
+{% endfor %}
+{% endfor %}
+<div class="sp-sep">Skills</div>
+{% for i in range(1, 7) %}
+  {% set old = row.retail.get('Skill' ~ i, '') %}
+  {% set new = row.current.get('Skill' ~ i, '') %}
+  {% set status = 'same' if old == new else 'changed' if old and new else 'added' if new else 'removed' %}
+  {% if old or new %}
+<div class="sp-row">
+  <span class="sp-cell is-{{ status }}">{{ old | comparison_highlight(new, 'old') }}</span>
+  <span class="sp-cell is-{{ status }}">{{ new | comparison_highlight(old, 'new') }}</span>
+</div>
+{% for field, label in [('Level', 'Skill Level'), ('Chance', 'Usage Weight'), ('ChancePerLvl', 'Weight Growth (raw / 4)'), ('LvlPerLvl', 'Skill Growth (raw / 32)'), ('Mode', 'Animation Mode')] %}
+  {% set old_setting = row.retail.get(field ~ i, '') if old else '' %}
+  {% set new_setting = row.current.get(field ~ i, '') if new else '' %}
+  {% if (full or old_setting != new_setting) and (old_setting or new_setting) %}
+  {% set setting_status = 'same' if old_setting == new_setting else 'changed' if old_setting and new_setting else 'added' if new_setting else 'removed' %}
+<div class="sp-row">
+  <span class="sp-cell is-{{ setting_status }}"><strong>{{ label }}:</strong> {{ old_setting | comparison_highlight(new_setting, 'old') }}</span>
+  <span class="sp-cell is-{{ setting_status }}"><strong>{{ label }}:</strong> {{ new_setting | comparison_highlight(old_setting, 'new') }}</span>
+</div>
+  {% endif %}
+{% endfor %}
+  {% endif %}
+{% endfor %}
+{% endmacro %}
