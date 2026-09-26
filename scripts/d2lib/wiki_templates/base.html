@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site_root }}assets/site.css?v=20260926-mercenaries" />
+  <link rel="stylesheet" href="{{ site_root }}assets/site.css?v=20260926-baseline-toggle" />
 </head>
 <body data-site-root="{{ site_root }}" data-new-label="{{ new_label }}" data-old-label="{{ old_label }}">
 
@@ -76,6 +76,15 @@
 
 <div class="site-shell">
   <main class="site-main">
+    {% if comparison_switch %}
+    <div class="comparison-bar">
+      <span class="comparison-caption">{{ new_label }} <span class="muted">compared against</span></span>
+      <nav class="comparison-toggle" aria-label="Comparison baseline">
+        <a href="{{ comparison_switch.retail }}" data-comparison-link{% if comparison_switch.active == 'retail' %} class="is-active" aria-current="true"{% endif %}>Retail</a>
+        <a href="{{ comparison_switch.bt }}" data-comparison-link{% if comparison_switch.active == 'bt' %} class="is-active" aria-current="true"{% endif %}>BTDiablo</a>
+      </nav>
+    </div>
+    {% endif %}
     {% block content %}{% endblock %}
   </main>
   <footer class="site-footer">
@@ -83,6 +92,6 @@
   </footer>
 </div>
 
-<script src="{{ site_root }}assets/site.js?v=20260924-drop-filters"></script>
+<script src="{{ site_root }}assets/site.js?v=20260926-baseline-toggle"></script>
 </body>
 </html>

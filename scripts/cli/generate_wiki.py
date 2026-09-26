@@ -3,6 +3,8 @@ import os
 from typing import Optional
 
 from d2lib.wiki import MediaWikiPublisher, WikiGenerator
+from d2lib.wiki.renderers import WikiPublisher, HtmlWikiRenderer
+from d2lib.wiki.routes import WikiRoutes
 
 
 def run(
@@ -16,6 +18,8 @@ def run(
     old_label: str = "Retail",
     new_label: str = "BKDiablo",
     mediawiki_output_dir: Optional[str] = None,
+    bt_item_db_dir: Optional[str] = None,
+    bt_data_dir: Optional[str] = None,
 ):
     generator = WikiGenerator(
         item_db_dir,
@@ -28,11 +32,44 @@ def run(
         retail_data_dir=retail_data_dir,
         layout_data_dir=layout_data_dir,
     )
-    site = generator.generate()
+    if bool(bt_item_db_dir) != bool(bt_data_dir):
+        raise ValueError("Both BT item database and BT data paths are required")
+    if bt_item_db_dir:
+        for path in (bt_item_db_dir, bt_data_dir):
+            if not os.path.isdir(path):
+                raise ValueError(f"Missing BT comparison input: {path}")
+        site = generator.build_site()
+        bt_output = os.path.join(output_dir, "compare-bt")
+        bt_site = WikiGenerator(
+            item_db_dir, skill_tree_dir, bt_output,
+            old_item_db_dir=bt_item_db_dir, old_label="BTDiablo", new_label=new_label,
+            game_data_dir=game_data_dir, retail_data_dir=bt_data_dir,
+            layout_data_dir=layout_data_dir,
+        ).build_site()
+        add_comparison_links(site, bt_site)
+        WikiPublisher(output_dir).publish(site, HtmlWikiRenderer())
+        WikiPublisher(bt_output).publish(bt_site, HtmlWikiRenderer())
+    else:
+        site = generator.generate()
     print(f"Generated wiki pages in {output_dir}")
     if mediawiki_output_dir:
         MediaWikiPublisher(mediawiki_output_dir).publish(site)
         print(f"Generated MediaWiki pages in {mediawiki_output_dir}")
+
+def add_comparison_links(retail_site, bt_site):
+    """Link counterpart pages relative to each baseline's own site root."""
+    for site, other, is_bt in ((retail_site, bt_site, False), (bt_site, retail_site, True)):
+        other_paths = {page["output_path"] for page in other["pages"]}
+        for page in site["pages"]:
+            path = page["output_path"]
+            root = WikiRoutes.site_root_for_output_path(path)
+            target = path if path in other_paths else "index.html"
+            page["payload"]["comparison_switch"] = {
+                "active": "bt" if is_bt else "retail",
+                "retail": root + ("../" + target if is_bt else path),
+                "bt": root + (path if is_bt else "compare-bt/" + target),
+            }
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate a static HTML/CSS/JS wiki site from current project exports.")
@@ -46,6 +83,9 @@ def main() -> None:
     parser.add_argument("--mediawiki-out", default="", help="Optional output directory for generated MediaWiki wikitext files")
     parser.add_argument("--old-label", default="Retail", help="Display label for the comparison source")
     parser.add_argument("--new-label", default="BKDiablo", help="Display label for the current export")
+    parser.add_argument("--compare-bt", action="store_true", help="Build Retail and BTDiablo comparisons with a site-wide switch")
+    parser.add_argument("--bt-item-db", default="../exports/item_db_bt")
+    parser.add_argument("--bt-data", default="../mods/BTDiablo/btdiablo.mpq")
     args = parser.parse_args()
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -70,6 +110,8 @@ def main() -> None:
         old_label=args.old_label,
         new_label=args.new_label,
         mediawiki_output_dir=mediawiki_output_dir,
+        bt_item_db_dir=os.path.normpath(os.path.join(scripts_root, args.bt_item_db)) if args.compare_bt else None,
+        bt_data_dir=os.path.normpath(os.path.join(scripts_root, args.bt_data)) if args.compare_bt else None,
     )
 
 

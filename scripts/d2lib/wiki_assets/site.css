@@ -985,3 +985,16 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
   flex-wrap: wrap; gap: 8px; padding: 10px 12px;
   color: var(--gold); font-size: 0.75rem;
 }
+
+/* Global comparison baseline selector. */
+.comparison-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap; padding: 12px 16px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface);
+}
+.comparison-caption { font-size: .85rem; color: var(--gold); font-weight: 600; }
+.comparison-toggle { display: flex; padding: 3px; gap: 3px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.comparison-toggle a { padding: 7px 18px; border-radius: 4px; color: var(--muted); font-size: .8rem; font-weight: 600; }
+.comparison-toggle a:hover { color: var(--gold-bright); }
+.comparison-toggle a.is-active { background: var(--raised); color: var(--gold-bright); box-shadow: inset 0 0 0 1px var(--line-strong); }
