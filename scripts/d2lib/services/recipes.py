@@ -99,11 +99,11 @@ class CubeAnalyzerService:
             "action": "Review remaining enabled recipes",
             "summary": "Enabled recipes that need more specific player-facing classification.",
         },
-        "Removed Retail Recipes": {
+        "Removed Baseline Recipes": {
             "id": "removed-retail",
             "order": 900,
-            "action": "See retail recipes not present in BK",
-            "summary": "Retail cube recipes that are absent from the BK enabled recipe set.",
+            "action": "See baseline recipes not present in BK",
+            "summary": "Recipes from the selected comparison baseline that are absent from the BK enabled recipe set.",
         },
     }
 
@@ -674,7 +674,7 @@ class CubeAnalyzerService:
 
     def _recipe_group_name(self, recipe: CubeRecipeDTO) -> str:
         if recipe.get("status") == "removed":
-            return "Removed Retail Recipes"
+            return "Removed Baseline Recipes"
 
         desc = recipe["description"].lower()
         haystack = " ".join([desc] + recipe.get("inputs", []) + recipe.get("outputs", [])).lower()

@@ -41,7 +41,9 @@ def run(
         site = generator.build_site()
         bt_output = os.path.join(output_dir, "compare-bt")
         bt_site = WikiGenerator(
-            item_db_dir, skill_tree_dir, bt_output,
+            # Both builders discover source reports beside the main wiki output.
+            # Only the publisher changes the destination to compare-bt/.
+            item_db_dir, skill_tree_dir, output_dir,
             old_item_db_dir=bt_item_db_dir, old_label="BTDiablo", new_label=new_label,
             game_data_dir=game_data_dir, retail_data_dir=bt_data_dir,
             layout_data_dir=layout_data_dir,
