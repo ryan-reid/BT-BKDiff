@@ -973,3 +973,15 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
 .diff-token-old { color: #e69a90; text-decoration: none; }
 .diff-token-new { color: var(--added); text-decoration: none; }
 .diff-empty { color: #91877a; font-weight: 400; font-style: italic; }
+
+/* Mercenaries share the item and set comparison card system. */
+.mercenary-card { display: block; padding: 0; overflow: hidden; min-width: 0; }
+.mercenary-name { color: var(--q-unique); }
+.mercenary-levels { padding: 0; align-items: start; }
+.mercenary-level-head { justify-content: space-between; flex-wrap: wrap; }
+.mercenary-level-head h2 { margin: 0; }
+.mercenary-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px; padding: 10px 12px;
+  color: var(--gold); font-size: 0.75rem;
+}

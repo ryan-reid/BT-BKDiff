@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% from "mercenary_comparison.html" import comparison %}
+{% block title %}Mercenaries | {{ new_label }} Wiki{% endblock %}
+{% block nav_mercenaries %} class="is-active"{% endblock %}
+{% block content %}
+<section class="hero">
+  <span class="hero-eyebrow">Hireling Database</span>
+  <h1>Mercenaries</h1>
+  <p class="hero-copy">Compare level 80 stats and skill breakdowns between {{ old_label }} and {{ new_label }}. Stats use expansion progression and the labeled hiring difficulty. Resistances are before difficulty penalties and caps. Open a type for all difficulty and level comparisons.</p>
+</section>
+<div class="toolbar">
+  <input id="page-search" class="search-input" type="search" aria-label="Search mercenaries" placeholder="Search hirelings, difficulties, or skills" />
+</div>
+<div class="results-bar"><span class="count"><b>{{ entries|length }}</b> types &middot; {{ data.summary.changed }} of {{ data.summary.total }} configured level rows changed</span></div>
+<div class="set-list">
+  {% for group in entries|groupby('name') %}
+  <section class="set-block" data-search="{{ group.grouper }}">
+    <div class="set-header">
+      <h2 class="set-name mercenary-name">{{ group.grouper }}</h2>
+      <p class="set-summary muted">{{ group.list|length }} types &middot; Level 80 stats before equipment bonuses</p>
+    </div>
+    <div class="family-items-grid">
+      {% for entry in group.list %}
+      {% set row = entry.preview %}
+      <a class="base-item-card item-index-card mercenary-card" href="{{ entry.slug }}/" data-search="{{ entry.name }} {{ entry.variant }} {% for offer in entry.offers %}{{ offer.difficulty }} {% endfor %}{% for level in entry.rows %}{% for i in range(1, 7) %}{{ level.current.get('Skill' ~ i, '') }} {{ level.retail.get('Skill' ~ i, '') }} {% endfor %}{% endfor %}">
+        <div class="sp-head">
+          <div class="sp-head-text">
+            <span class="set-th-name mercenary-name">{{ entry.variant }}</span>
+            <span class="set-th-meta">{{ row.difficulty }} &middot; Level {{ row.level }}</span>
+          </div>
+        </div>
+        <div class="sp-sep">Hire in &middot; {{ new_label }}</div>
+        {% for offer in entry.offers %}
+        <div class="sp-row sp-row-single"><span class="sp-cell"><strong>{{ offer.difficulty }}:</strong> {% if offer.available %}{{ offer.skills|join(', ') }}{% else %}Not available{% endif %}</span></div>
+        {% endfor %}
+        {{ comparison(row, old_label, new_label, full=true) }}
+        <div class="mercenary-card-footer"><span class="item-card-status is-{{ 'modified' if entry.status == 'changed' else 'unchanged' }}">{{ entry.status|title }}</span><span>Full comparison &rarr;</span></div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% else %}
+  <p class="muted">No mercenary data available.</p>
+  {% endfor %}
+</div>
+{% endblock %}

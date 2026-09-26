@@ -123,6 +123,7 @@ class WikiContentBuilder:
         misc_groups, gem_rune_groups = self._load_misc_groups()
         retail_misc_items = self._load_retail_misc_items()
         mechanics_summary = self._load_mechanics_summary()
+        mercenary_data = self._load_mercenary_data()
         drop_weight_groups = self._load_drop_weight_groups()
         drop_source_data = self._load_drop_source_data()
         reference_pages, reference_coverage = self._load_reference_pages()
@@ -138,6 +139,7 @@ class WikiContentBuilder:
         self._write_misc_pages(misc_groups)
         self._write_gems_runes_pages(gem_rune_groups, retail_misc_items)
         self._write_mechanics_pages(mechanics_summary)
+        self._write_mercenary_pages(mercenary_data)
         self._write_drop_weight_pages(drop_weight_groups)
         self._write_drop_source_pages(drop_source_data)
         self._write_reference_pages(reference_pages, reference_coverage)
@@ -176,6 +178,123 @@ class WikiContentBuilder:
 
     def _load_mechanics_summary(self) -> MechanicsSummaryDTO:
         return MechanicsAnalyzerService(self._repo, self._retail_repo).analyze_mechanics()
+
+    def _load_mercenary_data(self) -> Dict[str, Any]:
+        fields = ("HP", "Defense", "AR", "Dmg-Min", "Dmg-Max", "ResistFire", "ResistCold", "ResistLightning", "ResistPoison")
+        skill_fields = tuple(
+            f"{field}{i}" for i in range(1, 7)
+            for field in ("Skill", "Mode", "Chance", "ChancePerLvl", "Level", "LvlPerLvl")
+        )
+        def load(repo):
+            candidates = (
+                os.path.join(repo.mpq_path, "data", "global", "excel", "hireling.txt"),
+                os.path.join(repo.mpq_path, "global", "excel", "hireling.txt"),
+            )
+            rows = repo.load_tsv(next((path for path in candidates if os.path.exists(path)), candidates[0]))
+            return {(r.get("*SubType", ""), r.get("Level", "")): r for r in rows
+                    if r.get("Version") == "100" and r.get("Hireling") and r.get("Level", "").isdigit()}
+        current, retail = load(self._repo), load(self._retail_repo)
+        entries = []
+        for key in sorted(set(current) | set(retail)):
+            row, old = current.get(key), retail.get(key)
+            source = row or old or {}
+            changed = [field for field in fields + skill_fields if row and old and row.get(field, "") != old.get(field, "")]
+            entries.append({"name": source.get("Hireling", ""), "variant": key[0], "level": key[1], "status": "added" if row and not old else "removed" if old and not row else "changed" if changed else "unchanged", "current": row or {}, "retail": old or {}, "changed_fields": changed})
+        return {"rows": entries, "summary": {"total": len(entries), "changed": sum(r["status"] != "unchanged" for r in entries), "added": sum(r["status"] == "added" for r in entries), "removed": sum(r["status"] == "removed" for r in entries)}}
+
+    @staticmethod
+    def _mercenary_stats_at_level(source: Dict[str, str], level: int) -> Dict[str, str]:
+        """Apply hireling growth units to one expansion progression breakpoint.
+
+        Formula reference: https://locbones.github.io/D2R_DataGuide/#hirelingtxt
+        Resistance values are raw, before difficulty penalties and caps.
+        """
+        if not source:
+            return {}
+        result = dict(source)
+        delta = level - int(source["Level"])
+        if delta < 0:
+            raise ValueError("Target level precedes the hireling breakpoint")
+        growth = [("HP", "HP/Lvl", 1), ("Defense", "Def/Lvl", 1),
+                  ("AR", "AR/Lvl", 1), ("Str", "Str/Lvl", 8), ("Dex", "Dex/Lvl", 8),
+                  ("Dmg-Min", "Dmg/Lvl", 8), ("Dmg-Max", "Dmg/Lvl", 8)]
+        growth += [(f"Resist{element}", f"Resist{element}/Lvl", 4)
+                   for element in ("Fire", "Cold", "Lightning", "Poison")]
+        for i in range(1, 7):
+            if source.get(f"Skill{i}"):
+                growth.extend([(f"Level{i}", f"LvlPerLvl{i}", 32),
+                               (f"Chance{i}", f"ChancePerLvl{i}", 4)])
+        for field, rate, divisor in growth:
+            if source.get(field, "") != "":
+                result[field] = str(int(source[field]) + delta * int(source.get(rate) or 0) // divisor)
+        result["Level"] = str(level)
+        return result
+
+    def _write_mercenary_pages(self, data: Dict[str, Any]) -> None:
+        groups = {}
+        for row in data["rows"]:
+            groups.setdefault((row["name"], row["variant"]), []).append(row)
+        entries = []
+        def variant_order(group):
+            name, variant = group[0]
+            subtype, _, difficulty = variant.rpartition("-")
+            difficulty_order = {"normal": 0, "nightmare": 1, "hell": 2}
+            return (name, subtype.strip().casefold(), difficulty_order.get(difficulty.strip().casefold(), 3), variant)
+
+        for (name, variant), rows in sorted(groups.items(), key=variant_order):
+            rows.sort(key=lambda row: int(row["level"] or 0))
+            slug = slugify(f"{name}-{variant}")
+            changed = any(row["status"] != "unchanged" for row in rows)
+            entries.append({"name": name, "variant": variant, "slug": slug, "levels": len(rows), "rows": rows, "status": "changed" if changed else "unchanged"})
+            self._write_page(title=f"{name} ({variant}) | {self.new_label} Wiki", output_path=WikiRoutes.mercenary_output_path(slug), template_name="mercenary.html", category="detail", source_files=[], mercenary={"name": name, "variant": variant, "rows": rows})
+        # Keep existing difficulty URLs, but present one index card per subtype.
+        combined = {}
+        for entry in entries:
+            subtype, _, difficulty = entry["variant"].rpartition("-")
+            subtype = subtype.strip() or entry["variant"]
+            difficulty = difficulty.strip()
+            key = (entry["name"], subtype)
+            group = combined.setdefault(key, {
+                "name": entry["name"], "variant": subtype,
+                "slug": slugify(f"{entry['name']}-{subtype}"),
+                "rows": [], "offers": [], "status": "unchanged",
+            })
+            skills = list(dict.fromkeys(
+                row["current"].get(f"Skill{i}", "")
+                for row in entry["rows"] for i in range(1, 7)
+                if row["current"].get(f"Skill{i}", "")
+            ))
+            group["offers"].append({
+                "difficulty": difficulty, "skills": skills,
+                "available": any(row["current"] for row in entry["rows"]),
+            })
+            group["rows"].extend(dict(row, difficulty=difficulty) for row in entry["rows"])
+            if entry["status"] == "changed":
+                group["status"] = "changed"
+        entries = list(combined.values())
+        for entry in entries:
+            entry["levels"] = len(entry["rows"])
+            difficulty = min(
+                (row["difficulty"] for row in entry["rows"] if row["current"]),
+                key=lambda value: {"Hell": 0, "Nightmare": 1, "Normal": 2}.get(value, 3),
+                default=entry["rows"][0]["difficulty"],
+            )
+            preview = {"level": "80", "difficulty": difficulty}
+            for side in ("current", "retail"):
+                candidates = [row[side] for row in entry["rows"]
+                              if row["difficulty"] == difficulty and row[side]
+                              and int(row[side]["Level"]) <= 80]
+                source = max(candidates, key=lambda row: int(row["Level"]), default={})
+                preview[side] = self._mercenary_stats_at_level(source, 80)
+            entry["preview"] = preview
+            self._write_page(
+                title=f"{entry['name']} ({entry['variant']}) | {self.new_label} Wiki",
+                output_path=WikiRoutes.mercenary_output_path(entry["slug"]),
+                template_name="mercenary.html", category="detail", source_files=[],
+                mercenary=entry,
+            )
+        self.writer.write_text("data/mercenaries.json", json.dumps(data, indent=2))
+        self._write_page(title=f"Mercenaries | {self.new_label} Wiki", output_path=WikiRoutes.mercenaries_index_output_path(), template_name="mercenaries_index.html", category="index", source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "hireling.txt"), os.path.join(self.retail_data_dir, "global", "excel", "hireling.txt")], data=data, entries=entries)
 
     def _load_drop_weight_groups(self) -> List[Dict[str, Any]]:
         base_names = self._drop_base_name_lookup(self._repo)

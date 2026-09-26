@@ -129,6 +129,14 @@ class WikiRoutes:
         return "mechanics/index.html"
 
     @staticmethod
+    def mercenaries_index_output_path() -> str:
+        return "mercenaries/index.html"
+
+    @staticmethod
+    def mercenary_output_path(slug: str) -> str:
+        return f"mercenaries/{slug}/index.html"
+
+    @staticmethod
     def drops_index_output_path() -> str:
         return "drops/index.html"
 
