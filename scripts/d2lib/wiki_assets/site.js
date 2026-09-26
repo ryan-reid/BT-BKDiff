@@ -885,3 +885,22 @@ if (document.readyState === "loading") {
 } else {
   initWiki();
 }
+
+// Keep search and anchor context when changing comparison baselines.
+document.querySelectorAll("[data-comparison-link]").forEach((link) => {
+  function updateComparisonTarget() {
+    const target = new URL(link.href);
+    target.search = window.location.search;
+    target.hash = window.location.hash;
+    const search = document.querySelector("#page-search, #area-search");
+    if (search) {
+      if (search.value.trim()) target.searchParams.set("q", search.value.trim());
+      else target.searchParams.delete("q");
+    }
+    link.href = target.href;
+  }
+  // Read live state, including input or anchor changes after page load.
+  link.addEventListener("click", updateComparisonTarget);
+  link.addEventListener("auxclick", updateComparisonTarget);
+  updateComparisonTarget();
+});

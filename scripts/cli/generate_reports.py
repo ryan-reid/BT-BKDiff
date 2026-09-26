@@ -126,7 +126,7 @@ def main() -> None:
         failures.append("Generating BK Class Skill Trees")
 
     # 10. Generate the static wiki site
-    if not orch.run_task("Generating Wiki Pages", generate_wiki.run, bk_out, skill_trees_out, wiki_out, old_item_db_dir=retail_out, game_data_dir=bk_mpq, retail_data_dir=retail_data, old_label="Retail", new_label="BKDiablo"):
+    if not orch.run_task("Generating Wiki Pages", generate_wiki.run, bk_out, skill_trees_out, wiki_out, old_item_db_dir=retail_out, game_data_dir=bk_mpq, retail_data_dir=retail_data, old_label="Retail", new_label="BKDiablo", bt_item_db_dir=bt_out, bt_data_dir=bt_mpq):
         failures.append("Generating Wiki Pages")
 
     if failures:

@@ -4,7 +4,7 @@
 {{ hero(
   "Changes",
   "Patch Notes",
-  "Track what has changed in " ~ new_label ~ " compared to the retail baseline — items, skills, cube recipes, and game systems.",
+  "Track what has changed in " ~ new_label ~ " compared to " ~ old_label ~ " — items, skills, cube recipes, and game systems.",
   [{"label": new_label, "tone": "accent"}]
 ) }}
 <section class="content-section">
@@ -13,7 +13,7 @@
   <div class="card-grid three-up" style="margin-top:20px">
     <a class="link-card" href="{{ site_root }}items/">
       <h3>Items</h3>
-      <p>Browse unique and set items, filtered by what is new or changed versus Retail.</p>
+      <p>Browse unique and set items, filtered by what is new or changed versus {{ old_label }}.</p>
       <span class="link-card-cta">View items →</span>
     </a>
     <a class="link-card" href="{{ site_root }}recipes/">
