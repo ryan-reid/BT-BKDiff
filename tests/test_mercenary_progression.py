@@ -34,3 +34,15 @@ class TestMercenaryProgression(unittest.TestCase):
         data = builder._load_mercenary_data()
         self.assertEqual(len(data['rows']), 1)
         self.assertEqual(data['rows'][0]['level'], '67')
+
+    def test_growth_only_changes_are_counted(self):
+        builder = WikiContentBuilder('', '', '')
+        base = {'Hireling': 'Rogue Scout', '*SubType': 'Fire - Normal', 'Level': '67',
+                'Version': '100', 'HP': '900', 'HP/Lvl': '30'}
+        builder._repo = Mock(mpq_path='mod')
+        builder._retail_repo = Mock(mpq_path='retail')
+        builder._repo.load_tsv.return_value = [dict(base, **{'HP/Lvl': '40'})]
+        builder._retail_repo.load_tsv.return_value = [base]
+        data = builder._load_mercenary_data()
+        self.assertEqual(data['rows'][0]['status'], 'changed')
+        self.assertEqual(data['rows'][0]['changed_fields'], ['HP/Lvl'])

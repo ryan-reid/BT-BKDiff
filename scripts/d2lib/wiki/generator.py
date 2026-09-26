@@ -180,7 +180,10 @@ class WikiContentBuilder:
         return MechanicsAnalyzerService(self._repo, self._retail_repo).analyze_mechanics()
 
     def _load_mercenary_data(self) -> Dict[str, Any]:
-        fields = ("HP", "Defense", "AR", "Dmg-Min", "Dmg-Max", "ResistFire", "ResistCold", "ResistLightning", "ResistPoison")
+        fields = ("HP", "HP/Lvl", "Defense", "Def/Lvl", "Str", "Str/Lvl", "Dex", "Dex/Lvl",
+                  "AR", "AR/Lvl", "Dmg-Min", "Dmg-Max", "Dmg/Lvl", "DefaultChance",
+                  "ResistFire", "ResistFire/Lvl", "ResistCold", "ResistCold/Lvl",
+                  "ResistLightning", "ResistLightning/Lvl", "ResistPoison", "ResistPoison/Lvl")
         skill_fields = tuple(
             f"{field}{i}" for i in range(1, 7)
             for field in ("Skill", "Mode", "Chance", "ChancePerLvl", "Level", "LvlPerLvl")

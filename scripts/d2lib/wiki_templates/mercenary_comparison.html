@@ -1,8 +1,8 @@
 {% macro comparison(row, old_label, new_label, full=false) %}
 <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
-{% set sections = [('Stats', [('HP', 'Life'), ('Defense', 'Defense'), ('AR', 'Attack Rating'), ('Dmg-Min', 'Min Damage'), ('Dmg-Max', 'Max Damage')])] %}
+{% set sections = [('Stats', [('HP', 'Life'), ('Defense', 'Defense'), ('AR', 'Attack Rating'), ('Str', 'Strength'), ('Dex', 'Dexterity'), ('Dmg-Min', 'Min Damage'), ('Dmg-Max', 'Max Damage'), ('DefaultChance', 'Basic Attack Weight')])] %}
 {% if full %}
-  {% set sections = sections + [('Resistances', [('ResistFire', 'Fire'), ('ResistCold', 'Cold'), ('ResistLightning', 'Lightning'), ('ResistPoison', 'Poison')])] %}
+  {% set sections = sections + [('Resistances (before penalties / caps)', [('ResistFire', 'Fire'), ('ResistCold', 'Cold'), ('ResistLightning', 'Lightning'), ('ResistPoison', 'Poison')])] %}
 {% endif %}
 {% for heading, fields in sections %}
 <div class="sp-sep">{{ heading }}</div>
@@ -26,7 +26,7 @@
   <span class="sp-cell is-{{ status }}">{{ old | comparison_highlight(new, 'old') }}</span>
   <span class="sp-cell is-{{ status }}">{{ new | comparison_highlight(old, 'new') }}</span>
 </div>
-{% for field, label in [('Level', 'Skill Level'), ('Chance', 'Usage Weight'), ('ChancePerLvl', 'Weight / Level'), ('LvlPerLvl', 'Level Growth (raw)'), ('Mode', 'Animation Mode')] %}
+{% for field, label in [('Level', 'Skill Level'), ('Chance', 'Usage Weight'), ('ChancePerLvl', 'Weight Growth (raw / 4)'), ('LvlPerLvl', 'Skill Growth (raw / 32)'), ('Mode', 'Animation Mode')] %}
   {% set old_setting = row.retail.get(field ~ i, '') if old else '' %}
   {% set new_setting = row.current.get(field ~ i, '') if new else '' %}
   {% if (full or old_setting != new_setting) and (old_setting or new_setting) %}
