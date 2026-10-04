@@ -109,6 +109,8 @@ class BaseItemDTO(TypedDict):
     damage_max: Optional[int]
     two_hand_damage_min: Optional[int]
     two_hand_damage_max: Optional[int]
+    throw_damage_min: Optional[int]
+    throw_damage_max: Optional[int]
     two_handed_only: bool
     str_req: int
     dex_req: int

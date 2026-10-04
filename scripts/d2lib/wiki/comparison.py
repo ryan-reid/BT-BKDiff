@@ -226,27 +226,28 @@ def base_item_comparison_context(
             return ""
         return f"{min_v}-{max_v}"
 
-    def damage_text(row: Optional[Dict[str, Any]]) -> str:
-        if not row:
-            return ""
-        if row.get("two_handed_only"):
-            return range_text(row, "two_hand_damage_min", "two_hand_damage_max")
-        one_hand = range_text(row, "damage_min", "damage_max")
-        two_hand = range_text(row, "two_hand_damage_min", "two_hand_damage_max")
-        if two_hand and one_hand:
-            return f"{one_hand} (2H: {two_hand})"
-        return one_hand or two_hand
-
     def add_stat(label: str, old_v: str, new_v: str) -> None:
         if not old_v and not new_v:
             return
-        status = "added" if new_v and not old_v else "same" if old_v == new_v else "changed"
+        status = "same" if old_v == new_v else "added" if not old_v else "removed" if not new_v else "changed"
         stat_rows.append({"label": label, "old": old_v, "new": new_v, "status": status})
 
     add_stat("Def", range_text(old_item, "defense_min", "defense_max"), range_text(item, "defense_min", "defense_max"))
-    old_damage = damage_text(old_item)
-    new_damage = damage_text(item)
-    add_stat("Dam", old_damage, new_damage)
+    has_damage = False
+    for label, min_key, max_key in [
+        ("One-Hand Damage", "damage_min", "damage_max"),
+        ("Two-Hand Damage", "two_hand_damage_min", "two_hand_damage_max"),
+        ("Throwing Damage", "throw_damage_min", "throw_damage_max"),
+    ]:
+        old_damage = range_text(old_item, min_key, max_key)
+        new_damage = range_text(item, min_key, max_key)
+        if min_key == "damage_min":
+            if old_item and old_item.get("two_handed_only"):
+                old_damage = ""
+            if item.get("two_handed_only"):
+                new_damage = ""
+        add_stat(label, old_damage, new_damage)
+        has_damage = has_damage or bool(old_damage or new_damage)
 
     for label, key in [("Base Lvl", "level"), ("Req Lvl", "level_req"), ("Str", "str_req"), ("Dex", "dex_req"), ("Max Sockets", "sockets")]:
         add_stat(label, str(old_item.get(key, "")) if old_item else "", str(item.get(key, "")))
@@ -256,7 +257,7 @@ def base_item_comparison_context(
     if old_block or new_block:
         add_stat("Block", str(old_block) if old_item else "", str(new_block))
 
-    if old_damage or new_damage:
+    if has_damage:
         old_speed = f"{old_item.get('speed', '')} ({old_item.get('speed_label', '')})" if old_item else ""
         add_stat("WSM", old_speed, f"{item.get('speed', '')} ({item.get('speed_label', '')})")
 

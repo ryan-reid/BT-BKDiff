@@ -142,7 +142,7 @@
               <span class="base-tag">{{ item.staffmod_class }} skills</span>
               {% endif %}
               {% if item.magic_level %}
-              <span class="base-tag">+{{ item.magic_level }} magic level</span>
+              <span class="base-tag" title="Used when determining which random prefixes and suffixes this base can roll. Does not grant skill levels, spell damage, or Magic Find, and does not improve runeword stats.">Affix level bonus: +{{ item.magic_level }}</span>
               {% endif %}
               </div>
             </div>
