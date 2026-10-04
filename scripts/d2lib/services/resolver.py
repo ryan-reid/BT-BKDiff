@@ -13,9 +13,11 @@ class PropertyResolverService:
 
         self.aliases: Dict[str, str] = {
             'cast': 'cast1', 'balance': 'balance1', 'move': 'move1', 'swing': 'swing1',
-            'block': 'block1', 'cold-res': 'res-cold', 'fire-res': 'res-fire',
+            'cold-res': 'res-cold', 'fire-res': 'res-fire',
             'ltng-res': 'res-ltng', 'pois-res': 'res-pois', 'all-res': 'res-all',
-            'ern%': 'enr%', 'res-poi-len': 'res-pois-len', 'get-hit-skill': 'gethit-skill'
+            'ern%': 'enr%', 'res-poi-len': 'res-pois-len', 'get-hit-skill': 'gethit-skill',
+            'ar%': 'att%', 'attskill': 'att-skill', 'hitskill': 'hit-skill',
+            'level-skill': 'levelup-skill'
         }
 
         self.properties = {row.get('code', '').strip().lower(): row for row in repo.get_excel_table('properties')}
@@ -51,7 +53,7 @@ class PropertyResolverService:
         }
 
         self.manual_overrides = {
-            'bloody': 'Unknown property: bloody',
+            'bloody': 'Extra Blood',
             'gelid-affix5': '(Missing Affix 5 data)',
             'incendiary-affix5': '(Missing Affix 5 data)',
             'magnetic-affix5': '(Missing Affix 5 data)',
@@ -141,7 +143,7 @@ class PropertyResolverService:
         code_orig = code
         code_lower = code.strip().lower()
 
-        if not code_lower or code_lower == 'xxx':
+        if not code_lower or code_lower == 'xxx' or code_lower.startswith('*'):
             return {"code": code, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": ""}
 
         if code_lower in self.aliases: code_lower = self.aliases[code_lower]
@@ -149,6 +151,8 @@ class PropertyResolverService:
         # 1. Manual Overrides
         if code_lower in self.manual_overrides:
             text = self.manual_overrides[code_lower]
+            if code_lower == 'bloody':
+                return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": text}
             range_str = f"{min_val}" if min_val == max_val else f"{min_val}-{max_val}"
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{text} ({range_str})" if range_str else text}
 
@@ -172,9 +176,9 @@ class PropertyResolverService:
 
         func1 = prop.get('func1', '0').strip()
 
-        # Use param if min_val is empty and it's a per-level stat (func 17)
+        # Use param if min_val is empty and it's a per-level stat (func 17) or dmg-ac
         actual_min, actual_max = min_val, max_val
-        if func1 == '17' and not actual_min and param:
+        if (func1 == '17' or code_lower == 'dmg-ac') and not actual_min and param:
             actual_min, actual_max = param, param
 
         range_str = f"{actual_min}" if actual_min == actual_max else f"{actual_min}-{actual_max}"
@@ -182,6 +186,24 @@ class PropertyResolverService:
         if code_lower in {"cold-len", "pois-len"}:
             element = "Cold" if code_lower == "cold-len" else "Poison"
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{element} Duration: {self._format_frame_duration(actual_min, actual_max)}"}
+
+        if code_lower == "dmg-pois":
+            try:
+                frames = int(param) if param else 0
+            except ValueError:
+                frames = 0
+            seconds = frames / 25
+            sec_str = str(int(seconds)) if seconds.is_integer() else f"{seconds:.1f}".rstrip("0").rstrip(".")
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Adds {range_str} Poison Damage Over {sec_str} Seconds"}
+
+        if func1 == "12" or code_lower == "skill-rand":
+            bonus = param if param else "1"
+            cls_name = "Class"
+            if actual_min in self.skills_by_id:
+                sk_row = self.skills_by_id[actual_min]
+                c_abbr = sk_row.get("charclass", "").strip().lower()
+                cls_name = self.class_abbr_map.get(c_abbr, "Class")
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"+{bonus} to Random {cls_name} Skill"}
 
         # Check if it's a level scaling stat to prefer format_desc over tooltip
         stat1_code = prop.get('stat1', '').lower()
@@ -233,10 +255,21 @@ class PropertyResolverService:
                 res_text = res_text.replace('[Skill]', skill_name).replace('%s', skill_name)
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": res_text}
 
-        skill_codes = ['oskill', 'skill', 'att-skill', 'hit-skill', 'gethit-skill', 'kill-skill', 'death-skill', 'level-skill', 'aura']
+        skill_codes = ['oskill', 'skill', 'att-skill', 'hit-skill', 'gethit-skill', 'kill-skill', 'death-skill', 'level-skill', 'levelup-skill', 'aura']
         if code_lower in skill_codes:
             skill_name = self.resolve_skill_name(param)
-            templates = {'oskill': f"+{range_str} to {skill_name}", 'skill': f"+{range_str} to {skill_name}", 'aura': f"Level {range_str} {skill_name} Aura When Equipped", 'hit-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} on striking", 'att-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} on striking", 'gethit-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} when struck", 'kill-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Kill an Enemy", 'death-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Die", 'level-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Level-Up"}
+            templates = {
+                'oskill': f"+{range_str} to {skill_name}",
+                'skill': f"+{range_str} to {skill_name}",
+                'aura': f"Level {range_str} {skill_name} Aura When Equipped",
+                'hit-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} on striking",
+                'att-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} on attack",
+                'gethit-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} when struck",
+                'kill-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Kill an Enemy",
+                'death-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Die",
+                'level-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Level-Up",
+                'levelup-skill': f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Level-Up"
+            }
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": templates.get(code_lower, "")}
 
         for i in range(1, 8):

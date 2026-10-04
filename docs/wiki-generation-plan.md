@@ -94,3 +94,7 @@ Generated wiki site content should live under `output/wiki/`.
 - Publish `output/wiki/` through GitHub Pages from a dedicated GitHub Actions workflow.
 - Keep generated site files as build artifacts rather than tracked repository content.
 - **Permanent UI Assets:** Core UI assets (like item icons) are mirrored to `docs/wiki/assets/` to enable UI display in tools like Codex and for persistent documentation references.
+
+## Known Issues and Parser Backlog
+
+- See [docs/wiki-issues.md](wiki-issues.md) for detailed tracking of property resolution bugs, Chance to Block aliasing, poison duration formatting, and Ormus skill range handling discovered during save engine verification.

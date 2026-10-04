@@ -63,8 +63,18 @@ class D2Repository:
         ]
 
     def _load_strings(self) -> None:
-        """Loads string JSON files with strict file-level precedence."""
-        all_files = {}
+        """Loads string JSON files with strict directory-level precedence (Mod > Base > Retail)."""
+        ordered_dirs = []
+
+        # 1. Highest Priority: Mod strings (from MPQ path)
+        for mod_string_dir in self._candidate_string_dirs():
+            if os.path.exists(mod_string_dir):
+                ordered_dirs.append(mod_string_dir)
+
+        # 2. Medium Priority: Base strings (from data/base/strings)
+        base_string_dir = os.path.join(self.repo_root, "data", "base", "strings")
+        if os.path.exists(base_string_dir):
+            ordered_dirs.append(base_string_dir)
 
         # 3. Lowest Priority: Retail strings
         retail_string_dirs = [
@@ -73,35 +83,28 @@ class D2Repository:
         ]
         for retail_string_dir in retail_string_dirs:
             if os.path.exists(retail_string_dir):
-                for f in os.listdir(retail_string_dir):
-                    if f.endswith(".json"): all_files[f] = os.path.join(retail_string_dir, f)
+                ordered_dirs.append(retail_string_dir)
 
-        # 2. Medium Priority: Base strings (from data/base/strings)
-        base_string_dir = os.path.join(self.repo_root, "data", "base", "strings")
-        if os.path.exists(base_string_dir):
-            for f in os.listdir(base_string_dir):
-                if f.endswith(".json"): all_files[f] = os.path.join(base_string_dir, f)
-
-        # 1. Highest Priority: Mod strings (from MPQ path)
-        for mod_string_dir in self._candidate_string_dirs():
-            if not os.path.exists(mod_string_dir):
-                continue
-            for f in os.listdir(mod_string_dir):
-                if f.endswith(".json"): all_files[f] = os.path.join(mod_string_dir, f)
-        
-        for filename, filepath in all_files.items():
-            try:
-                with open(filepath, 'r', encoding='utf-8-sig') as f:
-                    content = f.read()
-                    clean_content = strip_json_comments(content)
-                    data = json.loads(clean_content)
-                    for entry in data:
-                        if "Key" in entry and "enUS" in entry:
-                            key_lower = entry["Key"].lower()
-                            if key_lower not in self.strings:
-                                self.strings[key_lower] = entry["enUS"]
-            except Exception as e:
-                print(f"Error loading strings from {filename}: {e}", file=sys.stderr)
+        for string_dir in ordered_dirs:
+            for filename in sorted(os.listdir(string_dir)):
+                if not filename.endswith(".json"):
+                    continue
+                # Exclude localization overlays (e.g. chinese-overlay.json censorship overrides)
+                if "overlay" in filename.lower():
+                    continue
+                filepath = os.path.join(string_dir, filename)
+                try:
+                    with open(filepath, 'r', encoding='utf-8-sig') as f:
+                        content = f.read()
+                        clean_content = strip_json_comments(content)
+                        data = json.loads(clean_content)
+                        for entry in data:
+                            if "Key" in entry and "enUS" in entry:
+                                key_lower = entry["Key"].lower()
+                                if key_lower not in self.strings:
+                                    self.strings[key_lower] = entry["enUS"]
+                except Exception as e:
+                    print(f"Error loading strings from {filename}: {e}", file=sys.stderr)
 
     def load_tsv(self, file_path: str) -> List[Dict[str, str]]:
         """Loads a D2 TSV file and returns data rows."""
