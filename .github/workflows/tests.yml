@@ -35,4 +35,4 @@ jobs:
         run: python -m unittest discover -s tests
 
       - name: Test wiki update detection and comparison toggle
-        run: node --test tests/test_wiki_updates.cjs tests/test_comparison_switch.cjs
+        run: node --test tests/test_wiki_updates.cjs tests/test_comparison_switch.cjs tests/test_base_filters.cjs

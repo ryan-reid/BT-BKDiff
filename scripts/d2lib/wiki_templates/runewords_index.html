@@ -5,7 +5,7 @@
 <section class="hero">
   <span class="hero-eyebrow">Rune Planning</span>
   <h1>Runewords</h1>
-  <p class="hero-copy">Browse runewords by required rune sequence, base item category, and properties.</p>
+  <p class="hero-copy">Browse runewords by required rune sequence, compatible base class, and properties.</p>
 </section>
 
 <div class="toolbar runeword-filter-toolbar" data-runeword-filters>
@@ -45,6 +45,7 @@
   </div>
 </div>
 
+<p class="muted">Base filters include runewords that fit that class. Mace, Club, and Hammer are distinct runeword classes, even though the loot filter groups them as Maces.</p>
 <div class="family-items-grid">
   {% for runeword in runewords %}
   {% set comp = runeword.comparison %}

@@ -99,6 +99,8 @@ class BaseItemDTO(TypedDict):
     icon_src: str
     type: str
     type_categories: List[str]
+    loot_category: str
+    type_codes: List[str]
     level: int
     level_req: int
     defense_min: Optional[int]

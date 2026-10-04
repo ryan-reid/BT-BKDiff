@@ -68,6 +68,13 @@ The wiki is a static site generated from the structured exports and skill tree M
 
 For local viewing, serve `output/wiki/` with a simple static server after running the generator.
 
+Every wiki page has **Report Issue** and **Request Feature** buttons in its footer.
+They open dedicated GitHub issue forms with optional screenshot/file uploads;
+submitting requires a GitHub account and creates a public issue in this repository.
+The forms live in `.github/ISSUE_TEMPLATE/` and must be on the repository's default
+branch before the links work. Keep GitHub Issues enabled in the repository settings.
+Rebuild and deploy the wiki to publish changes to the buttons.
+
 GitHub Pages checks the configured BKDiablo and BTDiablo branches every 15 minutes
 (at minutes 7, 22, 37, and 52; GitHub may delay scheduled runs). Scheduled runs
 only rebuild when either upstream commit or this repository's commit differs
@@ -86,3 +93,17 @@ are serialized so a scheduled check cannot interrupt a running deployment.
 - `scripts/d2lib/`: shared repository, service, exporter, and wiki generator code
 - `scripts/cli/`: primary CLI implementations
 - `scripts/devtools/`: development inspection utilities
+
+### Item and runeword filters
+
+Items and bases use the in-game loot-filter categories under Armor, Weapons, and
+Accessories. Categories come from `itemtypes.txt`'s `UICategory`, with type-code
+fallbacks for older data. Class-specific gear stays under its armor/weapon group;
+for example, grimoires are Armor / Warlock and throwing axes are Weapons / Throwing.
+
+Runeword eligibility is separate from these browsing categories. It follows both
+`Equiv1` and `Equiv2` parents (including a base's secondary type), all `itype` includes,
+and all `etype` exclusions. Mace, Club, and Hammer remain distinct. Runeword base
+links retain those rules and filter by socket capacity; crafting still requires a
+nonmagical item with the exact number of sockets. Base cards display their type
+hierarchy alongside their loot category.

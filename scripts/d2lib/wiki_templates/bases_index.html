@@ -24,7 +24,18 @@
         </select>
       </label>
       <label>
-        <span>Socket type</span>
+        <span>Item category</span>
+        <select id="base-loot-filter">
+          <option value="all">All categories</option>
+          {% for group, categories in loot_groups.items() if group != 'Accessories' %}
+          <optgroup label="{{ group }}">
+            {% for category in categories %}<option value="{{ category }}">{{ category }}</option>{% endfor %}
+          </optgroup>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+        <span>Runeword class</span>
         <select id="base-category-filter">
           <option value="all">All categories</option>
           {% for category in base_type_categories %}
@@ -84,6 +95,8 @@
     </div>
   </div>
   
+  <p class="muted">Loot categories group similar gear. Runeword classes use the game type hierarchy: Mace, Club, and Hammer are separate. A runeword needs the exact socket count on a nonmagical base; capacity alone is not enough.</p>
+  <p id="base-runeword-notice" class="muted" hidden>Showing bases matching the selected runeword's allowed types, exclusions, and socket capacity. <a href="{{ site_root }}bases/">Clear runeword filter</a></p>
   <div class="family-list">
     {% for family in families %}
     <div class="family-container" 
@@ -100,6 +113,8 @@
         {% set comp = item.comparison %}
         <div class="base-item-card tier-{{ item.tier|lower }}"
              data-search="{{ item.name }} {{ item.type }} {{ item.tier }} {{ item.class_restriction }} {{ item.staffmod_class }} {{ item.magic_level }} {{ item.speed }} {{ item.speed_label }} {{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}"
+             data-loot-category="{{ item.loot_category }}"
+             data-type-codes="{{ item.type_codes|join('|') }}"
              data-type-categories="{{ item.type_categories|join('|') }}"
              data-tier="{{ item.tier }}"
              data-max-sockets="{{ item.sockets }}"
@@ -114,6 +129,7 @@
             <div style="min-width:0;flex:1">
               <span class="set-th-name">{{ item.name }}</span>
               <span class="set-th-meta">{{ item.type }}{% if item.sockets %} - {{ item.sockets }} sockets{% endif %}</span>
+              <p class="set-th-meta">Category: {{ item.loot_category }}<br>Runeword classes: {{ item.type_categories|join(', ') }}</p>
               <div class="base-tag-list">
               <span class="badge badge-{{ item.tier|lower }}">{{ item.tier }}</span>
               {% if item.class_restriction %}

@@ -5,6 +5,7 @@ from d2lib.repository import D2Repository, D2RepositoryProtocol
 from d2lib.models import AnalyzedItemDTO, RunewordDTO, BaseItemDTO, BaseItemFamilyDTO
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.utils import item_category_to_group
+from d2lib.services.item_types import ItemTypeTaxonomy
 
 
 def normalize_runeword_base_item_label(value: str) -> str:
@@ -228,7 +229,7 @@ class BaseItemAnalyzerService:
         self.armor = repo.get_excel_table('armor')
         self.weapons = repo.get_excel_table('weapons')
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
-        self.runeword_filter_type_codes = self._runeword_filter_type_codes(repo.get_excel_table('runes'))
+        self.taxonomy = ItemTypeTaxonomy(repo)
         self.automagic = repo.get_excel_table('automagic')
         self.quality_items = repo.get_excel_table('qualityitems')
         self.class_names = {
@@ -288,7 +289,7 @@ class BaseItemAnalyzerService:
         type_code = row.get('type', '')
         item_type = self.item_types.get(type_code, {})
         type_name = self.repo.get_string(item_type.get('ItemType', '')) or type_code
-        item_type_chain = self._item_type_chain(type_code)
+        item_type_chain = self.taxonomy.chain(type_code, row.get('type2', ''))
         type_categories = self._type_categories_for_item_type_chain(item_type_chain)
         class_restriction = self._class_restriction_for_item_type(item_type_chain)
         staffmod_class = self._staffmod_class_for_item_type(item_type_chain)
@@ -352,6 +353,8 @@ class BaseItemAnalyzerService:
             "icon_key": row.get('invfile', '').strip(),
             "icon_src": "",
             "type": type_name,
+            "loot_category": self.taxonomy.category(row),
+            "type_codes": item_type_chain,
             "type_categories": type_categories,
             "level": to_int(row.get('level')),
             "level_req": to_int(row.get('levelreq')),
@@ -365,7 +368,7 @@ class BaseItemAnalyzerService:
             "str_req": to_int(row.get('reqstr')),
             "dex_req": to_int(row.get('reqdex')),
             "block": to_int(row.get('block')),
-            "sockets": base_sockets,
+            "sockets": max(max_sockets_by_ilvl.values()),
             "max_sockets_by_ilvl": max_sockets_by_ilvl,
             "class_restriction": class_restriction,
             "staffmod_class": staffmod_class,
@@ -445,8 +448,6 @@ class BaseItemAnalyzerService:
         return "Very Slow"
 
     def _family_group(self, items: List[BaseItemDTO]) -> str:
-        if any(item["class_restriction"] or item["staffmod_class"] for item in items):
-            return "Class Gear"
         if any(item["defense_min"] is not None for item in items):
             return "Armor"
         return "Weapons"
@@ -519,42 +520,14 @@ class BaseItemAnalyzerService:
             return False
         return True
 
-    def _item_type_chain(self, type_code: str) -> List[str]:
-        chain: List[str] = []
-        seen = set()
-
-        def visit(code: str) -> None:
-            code = (code or "").strip()
-            if not code or code in seen:
-                return
-            seen.add(code)
-            chain.append(code)
-            item_type = self.item_types.get(code, {})
-            visit(item_type.get('Equiv1', ''))
-            visit(item_type.get('Equiv2', ''))
-
-        visit(type_code)
-        return chain
-
-    def _runeword_filter_type_codes(self, runeword_rows: List[Dict[str, str]]) -> set:
-        codes = set()
-        for row in runeword_rows:
-            for index in range(1, 7):
-                type_code = row.get(f'itype{index}', '').strip()
-                if type_code and type_code != 'xxx':
-                    codes.update(self._item_type_chain(type_code))
-        return codes
-
     def _type_categories_for_item_type_chain(self, item_type_chain: List[str]) -> List[str]:
         categories: List[str] = []
         seen = set()
-        hidden_codes = {"ac5", "seco"}
+        hidden_codes = {"ac5", "clas"}
         for code in item_type_chain:
             if code in hidden_codes:
                 continue
-            if self.runeword_filter_type_codes and code not in self.runeword_filter_type_codes:
-                continue
-            label = self._item_type_label(code)
+            label = self.taxonomy.label(code)
             key = label.lower()
             if label and key not in seen:
                 categories.append(label)

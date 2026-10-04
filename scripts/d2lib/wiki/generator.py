@@ -1,4 +1,5 @@
 from __future__ import annotations
+from d2lib.services.item_types import ItemTypeTaxonomy, LOOT_GROUPS
 import json
 import html
 import os
@@ -99,6 +100,7 @@ class WikiContentBuilder:
 
         # Cached repos — all _load_* and _write_* methods share these instances.
         self._repo = D2Repository(self.game_data_dir)
+        self._taxonomy = ItemTypeTaxonomy(self._repo)
         self._retail_repo = D2Repository(self.retail_data_dir)
 
         items = self._load_items()
@@ -477,6 +479,7 @@ class WikiContentBuilder:
                 os.path.join(self.game_data_dir, "data", "global", "excel", "qualityitems.txt"),
             ],
             families=families,
+            loot_groups=LOOT_GROUPS,
             base_groups=sorted({family["group"] for family in families}),
             base_classes=sorted({cn for family in families for cn in family["class_tags"]}),
             base_type_categories=sorted({
@@ -742,14 +745,23 @@ class WikiContentBuilder:
                     for rune in entry.get("rune_requirements", [])
                     if str(rune.get("name", "")).strip() or str(rune.get("code", "")).strip()
                 ]
+                taxonomy = self._taxonomy
+                if family == "runeword":
+                    categories = sorted({taxonomy.category(base) for base in taxonomy.matching_bases(entry.get("raw_row", {}))})
+                else:
+                    raw = entry.get("raw_row", {})
+                    base = taxonomy.bases.get(raw.get("code") or raw.get("item", ""), {})
+                    categories = [taxonomy.category(base)]
+                if not categories:
+                    categories = [item_filter_type(entry, family)]
                 page_entries[family].append({
                     "title": title,
                     "href": href,
                     "summary": item_summary(entry, family),
                     "search_text": item_search_text(entry, family),
                     "status": status,
-                    "item_group": item_filter_group(entry, family),
-                    "item_type": item_filter_type(entry, family),
+                    "item_group": "|".join(sorted({taxonomy.group(category) for category in categories})),
+                    "item_type": "|".join(categories),
                     "icon_src": icon_src,
                     "drop_level": entry["drop_info"].get("drop_level", 0),
                     "drop_level_label": entry["drop_info"].get("label", ""),
@@ -815,7 +827,7 @@ class WikiContentBuilder:
             page_entry = href_by_title.get(title, {})
             rune_requirements = entry.get("rune_requirements") or self._runeword_rune_requirements(entry, icon_exporter)
             base_items = entry.get("base_items", [])
-            base_filter_terms = self._runeword_base_filter_terms(base_items)
+            base_filter_terms = (self._taxonomy.runeword_terms(entry.get("raw_row", {})) or self._runeword_base_filter_terms(base_items))
             for base_term in base_filter_terms:
                 base_options[base_term] = base_term
 
@@ -881,11 +893,11 @@ class WikiContentBuilder:
             return (int(match.group(0)) if match else 999, option.get("name", ""))
 
         base_sort_order = {
-            "All Weapons": 0,
-            "Melee Weapon": 1,
-            "Missile Weapon": 2,
-            "All Shields": 3,
-            "Armor": 4,
+            "Body Armour": 0,
+            "OffHand": 1,
+            "Melee": 2,
+            "Missile": 3,
+            "Weapons": 4,
             "Helm": 5,
         }
 
@@ -1029,7 +1041,7 @@ class WikiContentBuilder:
             reports=report_entries,
         )
 
-        group_to_types: Dict[str, set] = {}
+        group_to_types = {group: set(categories) for group, categories in LOOT_GROUPS.items()}
         drop_level_breakpoints = sorted({
             int(entry.get("drop_level") or 0)
             for family in ("unique", "set")
@@ -1038,7 +1050,9 @@ class WikiContentBuilder:
         })
         for entries in item_entries.values():
             for entry in entries:
-                group_to_types.setdefault(entry["item_group"], set()).add(entry["item_type"])
+                for group in entry["item_group"].split("|"):
+                    if group not in group_to_types:
+                        group_to_types[group] = set()
 
         self._write_page(
             title=f"All Items | {self.new_label} Data Wiki",
@@ -1047,7 +1061,7 @@ class WikiContentBuilder:
             category="index",
             source_files=[],
             family_counts={family: len(item_entries[family]) for family in ITEM_FAMILIES},
-            item_groups=[{"name": g, "types": sorted(group_to_types[g])} for g in sorted(group_to_types)],
+            item_groups=[{"name": g, "types": LOOT_GROUPS.get(g, sorted(group_to_types[g]))} for g in group_to_types],
             drop_level_breakpoints=drop_level_breakpoints,
         )
 
@@ -1269,7 +1283,13 @@ class WikiContentBuilder:
             return "bases/"
         params: Dict[str, str] = {}
         base_items = [str(base).strip() for base in entry.get("base_items", []) if str(base).strip()]
-        if base_items:
+        raw = entry.get("raw_row", {})
+        included = ItemTypeTaxonomy.rules(raw, "itype")
+        excluded = ItemTypeTaxonomy.rules(raw, "etype")
+        if included:
+            params["types"] = "|".join(included)
+            params["exclude"] = "|".join(excluded)
+        elif base_items:
             params["category"] = base_items[0]
         if socket_count:
             params["minSockets"] = str(socket_count)

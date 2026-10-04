@@ -548,6 +548,12 @@ function wireBaseFilters() {
   const searchInput = document.querySelector("#page-search");
   const groupSelect = document.querySelector("#base-group-filter");
   const categorySelect = document.querySelector("#base-category-filter");
+  const lootSelect = document.querySelector("#base-loot-filter");
+  const ruleParams = new URLSearchParams(window.location.search);
+  const includedTypes = (ruleParams.get("types") || "").split("|").filter(Boolean);
+  const excludedTypes = (ruleParams.get("exclude") || "").split("|").filter(Boolean);
+  const runewordNotice = document.querySelector("#base-runeword-notice");
+  if (runewordNotice) runewordNotice.hidden = !includedTypes.length;
   const classSelect = document.querySelector("#base-class-filter");
   const tierSelect = document.querySelector("#base-tier-filter");
   const speedSelect = document.querySelector("#base-speed-filter");
@@ -631,6 +637,10 @@ function wireBaseFilters() {
         const itemSearch = normalizeText(item.dataset.search || "");
         const itemCategories = normalizeText(item.dataset.typeCategories || "").split("|").filter(Boolean);
         const searchOk = !query || familySearchOk || itemSearch.includes(query);
+        const codes = (item.dataset.typeCodes || "").split("|");
+        const rulesOk = (!includedTypes.length || includedTypes.some(code => codes.includes(code)))
+          && !excludedTypes.some(code => codes.includes(code));
+        const lootOk = !lootSelect || lootSelect.value === "all" || item.dataset.lootCategory === lootSelect.value;
         const categoryOk = activeCategory === "all" || itemCategories.includes(normalizeText(activeCategory));
         const tierOk = activeTier === "all" || item.dataset.tier === activeTier;
         const speedOk = activeSpeed === "all" || item.dataset.speedLabel === activeSpeed;
@@ -638,7 +648,7 @@ function wireBaseFilters() {
         const rollOk = !rollQuery || normalizeText(item.dataset.rollSearch || "").includes(rollQuery);
         const twoHandedOk = !twoHandedOnly || item.dataset.twoHanded === "1";
         
-        const itemVisible = groupOk && classOk && categoryOk && searchOk && tierOk && speedOk && socketsOk && rollOk && twoHandedOk;
+        const itemVisible = rulesOk && lootOk && groupOk && classOk && categoryOk && searchOk && tierOk && speedOk && socketsOk && rollOk && twoHandedOk;
         item.hidden = !itemVisible;
         item.style.display = itemVisible ? "" : "none";
         
@@ -660,7 +670,7 @@ function wireBaseFilters() {
     }
   }
 
-  [searchInput, groupSelect, categorySelect, classSelect, tierSelect, speedSelect, minSocketsSelect, rollInput, twoHandedCheckbox]
+  [searchInput, groupSelect, categorySelect, lootSelect, classSelect, tierSelect, speedSelect, minSocketsSelect, rollInput, twoHandedCheckbox]
     .filter(Boolean)
     .forEach((control) => {
       control.addEventListener("input", applyFilters);
@@ -803,8 +813,8 @@ async function wireItemIndex() {
       const dropLevel = Number(card.dataset.dropLevel || 0);
       const haystack = normalizeText(card.dataset.search);
       const familyOk = activeFamilies.size === 0 || activeFamilies.has(family);
-      const groupOk = activeGroup === "all" || normalizeText(itemGroup) === normalizeText(activeGroup);
-      const typeOk = activeType === "all" || normalizeText(itemType) === normalizeText(activeType);
+      const groupOk = activeGroup === "all" || normalizeText(itemGroup).split("|").includes(normalizeText(activeGroup));
+      const typeOk = activeType === "all" || normalizeText(itemType).split("|").includes(normalizeText(activeType));
       const dropLevelOk = !activeDropLevel || dropLevel >= activeDropLevel;
       const searchOk = !query || haystack.includes(query);
       card.hidden = !(familyOk && groupOk && typeOk && dropLevelOk && searchOk);

@@ -1,0 +1,38 @@
+name: Request Feature
+description: Suggest a new feature or improvement for the wiki.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share an idea for improving the BKDiablo wiki. Please check existing requests first.
+        Your request and attachments will be public, so leave out personal information.
+  - type: textarea
+    id: feature
+    attributes:
+      label: Proposed feature
+      description: What would you like the wiki to do?
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Why would this help?
+      description: Describe the problem this solves or how you would use it.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Related page
+      description: Paste a wiki page URL if the idea relates to an existing page (optional).
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or examples
+      description: Share any workarounds, examples, or other approaches you have considered (optional).
+  - type: upload
+    id: screenshots
+    attributes:
+      label: Screenshots, mockups, or supporting files
+      description: Drag and drop relevant files here, or click to browse (optional).

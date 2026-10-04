@@ -1,0 +1,47 @@
+name: Report Issue
+description: Report incorrect wiki data, broken pages, or another problem with the wiki.
+title: "[Issue]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what needs fixing in the BKDiablo wiki. Please check existing issues first.
+        Your report and attachments will be public, so leave out personal information.
+  - type: input
+    id: page
+    attributes:
+      label: Affected page
+      description: Paste the wiki page URL, or describe where the problem occurs.
+      placeholder: "https://ryan-reid.github.io/BT-BKDiff/..."
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+      description: Describe the problem. For incorrect data, include the item, skill, or other entry involved.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: Describe the correct behavior or data. Include a source if available.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: If applicable, explain how to encounter the problem, including filters or comparison baseline.
+      placeholder: "1. Open the page..."
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: "Chrome on Windows 11, Safari on iPhone, etc."
+  - type: upload
+    id: screenshots
+    attributes:
+      label: Screenshots or supporting files
+      description: Drag and drop screenshots or relevant files here, or click to browse (optional).
