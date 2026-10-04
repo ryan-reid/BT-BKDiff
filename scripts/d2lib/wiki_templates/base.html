@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site_root }}assets/site.css?v=20261004-feedback" />
+  <link rel="stylesheet" href="{{ site_root }}assets/site.css?v=20261004-feedback-top" />
 </head>
 <body data-site-root="{{ site_root }}" data-new-label="{{ new_label }}" data-old-label="{{ old_label }}">
 
@@ -65,6 +65,14 @@
   </div>
 </header>
 
+<div class="feedback-bar">
+    <nav class="feedback-actions" aria-label="Wiki feedback" aria-describedby="feedback-note">
+      <a href="https://github.com/ryan-reid/BT-BKDiff/issues/new?template=report_issue.yml" target="_blank" rel="noopener noreferrer">Report Issue</a>
+      <a href="https://github.com/ryan-reid/BT-BKDiff/issues/new?template=request_feature.yml" target="_blank" rel="noopener noreferrer">Request Feature</a>
+    </nav>
+    <p id="feedback-note" class="feedback-note">Opens a GitHub form in a new tab. GitHub account required. Screenshots welcome.</p>
+</div>
+
 <div class="legend" role="note" aria-label="Item quality colour key">
   <span style="color:var(--q-unique)"><i></i>Unique</span>
   <span style="color:var(--q-set)"><i></i>Set</span>
@@ -88,11 +96,7 @@
     {% block content %}{% endblock %}
   </main>
   <footer class="site-footer">
-    <nav class="feedback-actions" aria-label="Wiki feedback" aria-describedby="feedback-note">
-      <a href="https://github.com/ryan-reid/BT-BKDiff/issues/new?template=report_issue.yml" target="_blank" rel="noopener noreferrer">Report Issue</a>
-      <a href="https://github.com/ryan-reid/BT-BKDiff/issues/new?template=request_feature.yml" target="_blank" rel="noopener noreferrer">Request Feature</a>
-    </nav>
-    <p id="feedback-note" class="feedback-note">Opens a GitHub form in a new tab. GitHub account required. Screenshots welcome.</p>
+
     <p>{{ new_label }} Wiki &middot; generated from mod data &middot; not affiliated with Blizzard &middot; <a href="{{ site_root }}reports/">Reports</a> &middot; <a href="{{ site_root }}patch-notes/full-patch-notes-draft/">Patch Notes</a></p>
   </footer>
 </div>

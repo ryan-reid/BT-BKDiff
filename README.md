@@ -68,7 +68,7 @@ The wiki is a static site generated from the structured exports and skill tree M
 
 For local viewing, serve `output/wiki/` with a simple static server after running the generator.
 
-Every wiki page has **Report Issue** and **Request Feature** buttons in its footer.
+Every wiki page has **Report Issue** and **Request Feature** buttons directly below its main navigation.
 They open dedicated GitHub issue forms with optional screenshot/file uploads;
 submitting requires a GitHub account and creates a public issue in this repository.
 The forms live in `.github/ISSUE_TEMPLATE/` and must be on the repository's default
