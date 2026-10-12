@@ -461,7 +461,7 @@ class HistoryCollector:
                         record['events'].append(event)
                         if record['first'] is None and state is not None:
                             record['first'] = event
-                        if kind in ('changed', 'activation_changed', 'removed', 'reappeared'):
+                        if kind in ('changed', 'activation_changed', 'removed', 'reappeared', 'recorded_after_gap'):
                             record['last_change'] = event
                     record['present'] = state is not None
                     next_states[identity] = {'state': state, 'gap': False}
