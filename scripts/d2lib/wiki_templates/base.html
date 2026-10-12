@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site_root }}assets/site.css?v=20261004-feedback-top" />
+  <link rel="stylesheet" href="{{ site_root }}assets/site.css?v=20261011-revisions" />
 </head>
 <body data-site-root="{{ site_root }}" data-new-label="{{ new_label }}" data-old-label="{{ old_label }}">
 
@@ -101,6 +101,16 @@
   </footer>
 </div>
 
-<script src="{{ site_root }}assets/site.js?v=20261004-item-types"></script>
+<dialog id="item-revisions-dialog" class="item-revisions-dialog" aria-labelledby="item-revisions-title">
+  <div class="revision-dialog-head"><h2 id="item-revisions-title">Item revisions</h2><button type="button" data-close-revisions aria-label="Close item revisions">Close</button></div>
+  <p class="history-help">Explore BK source revisions against the selected comparison source. Dates are source commit dates. Localization uses current wording.</p>
+  <label for="item-revision-select">BK revision</label>
+  <select id="item-revision-select"></select>
+  <p id="item-revision-meta"></p>
+  <div id="item-revision-content" aria-live="polite"></div>
+  <a id="item-revision-page" hidden>Open item page</a>
+</dialog>
+<script src="{{ site_root }}assets/site.js?v=20261010-history"></script>
+<script src="{{ site_root }}assets/history.js?v=20261011-revisions"></script>
 </body>
 </html>

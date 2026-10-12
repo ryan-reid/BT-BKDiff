@@ -1004,3 +1004,30 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
 .comparison-toggle a { padding: 7px 18px; border-radius: 4px; color: var(--muted); font-size: .8rem; font-weight: 600; }
 .comparison-toggle a:hover { color: var(--gold-bright); }
 .comparison-toggle a.is-active { background: var(--raised); color: var(--gold-bright); box-shadow: inset 0 0 0 1px var(--line-strong); }
+
+/* Source history remains usable without JavaScript. */
+.item-history { padding: 10px 14px; font-size: 0.76rem; color: var(--muted); text-align: left; line-height: 1.6; min-width: 0; overflow-wrap: anywhere; }
+.history-heading { display: block; color: var(--text); font-weight: 600; }
+.history-open { display: none; margin-top: 6px; color: var(--gold); background: transparent; border: 1px solid var(--border); border-radius: 5px; padding: 5px 9px; cursor: pointer; font: inherit; }
+.has-item-revisions .history-open { display: block; }
+.item-revisions-dialog { width: min(760px, calc(100vw - 24px)); max-height: calc(100dvh - 32px); box-sizing: border-box; padding: 20px; background: #17130d; color: var(--text); border: 1px solid #65502c; border-radius: 12px; overflow-y: auto; }
+.item-revisions-dialog::backdrop { background: rgb(0 0 0 / 75%); }
+.revision-dialog-head { display: flex; align-items: start; justify-content: space-between; gap: 16px; }
+.revision-dialog-head h2 { margin: 0; overflow-wrap: anywhere; }
+.revision-dialog-head button { padding: 6px 12px; cursor: pointer; background: #241d12; color: var(--text); border: 1px solid #65502c; border-radius: 5px; }
+.item-revisions-dialog select { display: block; width: 100%; margin: 8px 0; padding: 10px; background: #241d12; color: var(--text); border: 1px solid #65502c; }
+.item-revisions-dialog .sp-cell { min-width: 0; overflow-wrap: anywhere; }
+.item-revisions-dialog .sp-sub { position: static; }
+.item-revisions-dialog :focus-visible, .history-open:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+#item-revision-page { display: inline-block; margin-top: 16px; }
+#item-revision-page[hidden] { display: none; }
+@media (max-width: 500px) { .item-revisions-dialog { padding: 12px; } }
+.history-coverage { display: block; color: var(--gold); }
+.item-history a { color: var(--gold); text-decoration: underline; }
+.item-history summary { cursor: pointer; color: var(--text); padding: 6px 0; }
+.item-history summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.item-history details[open] { max-height: 28rem; overflow: auto; }
+.item-history ol, .history-changes { padding-left: 20px; }
+.item-history li { margin-bottom: 10px; }
+.item-history ins { color: var(--text); text-decoration: none; }
+.history-help { font-size: 0.72rem; }

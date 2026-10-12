@@ -1,0 +1,28 @@
+{% if reason %}<p class="history-revision-notice">{{ reason }} No current BK stats have been substituted.</p>{% endif %}
+{% if comparison %}
+{% if not baseline_present %}<p class="history-help">This item does not exist in the selected {{ old_label }} comparison data.</p>{% endif %}
+<div class="sp-sub"><span>{{ old_label }} (current comparison)</span><span>BK at this revision</span></div>
+{% for group in ['stat_rows', 'property_rows'] %}
+{% if group == 'property_rows' and comparison[group] %}<div class="sp-sep">Properties</div>{% endif %}
+{% for row in comparison[group] %}
+{% if row.status == 'separator' %}<div class="sp-sep">Properties from Runes</div>{% else %}
+<div class="sp-row"><span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% if base_comparison %}
+<div class="sp-sep">Base stats</div>
+<p class="history-help">Underlying base values, before this item's bonuses. Max sockets is the base capacity, not guaranteed sockets on the unique or set item.</p>
+{% for row in base_comparison.stat_rows %}
+<div class="sp-row"><span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
+{% endfor %}
+{% endif %}
+{% if availability %}
+<div class="sp-sep">Availability</div>
+<p class="history-help">Source settings do not guarantee an in-game drop. Drop selection weight is relative, not a drop percentage.</p>
+<div class="sp-sub"><span>{{ old_label }}</span><span>BK at this revision</span></div>
+{% for row in availability %}
+<div class="sp-row"><span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
+{% endfor %}
+{% endif %}

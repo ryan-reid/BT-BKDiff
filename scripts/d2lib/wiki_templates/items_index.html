@@ -71,7 +71,7 @@
       <span class="count"><b>{{ family_counts.unique + family_counts.set + family_counts.runeword }}</b> item pages</span>
     </div>
     <div id="item-index-root" style="display:grid;gap:32px">
-      <p class="muted">Loading item index…</p>
+      {% include "item_index_cards.html" %}
     </div>
   </main>
 </div>

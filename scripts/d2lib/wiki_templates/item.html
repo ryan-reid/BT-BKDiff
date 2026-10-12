@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "history.html" import item_history %}
 {% block title %}{{ page.title }} | {{ new_label }} Wiki{% endblock %}
 {% block content %}
 
@@ -13,6 +14,7 @@
 <section class="runeword-title-bar">
   <p>{{ page.hero_eyebrow }}</p>
   <h1>{{ page.title }}</h1>
+  {{ item_history(page.history) }}
 </section>
 
 <section class="runeword-detail-layout">
@@ -102,6 +104,7 @@
     </div>
     {% endif %}
     <div class="tt-name">{{ page.title }}</div>
+    {{ item_history(page.history) }}
     <div class="tt-base">{{ page.hero_eyebrow }}</div>
     {% if page.stats %}
     <div class="tt-rule"></div>

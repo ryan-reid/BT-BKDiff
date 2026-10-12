@@ -33,6 +33,9 @@ from d2lib.utils import slugify, strip_markdown
 from d2lib.wiki.routes import ITEM_FAMILIES, REPORT_SOURCES, WikiRoutes
 from d2lib.wiki.renderers import HtmlWikiRenderer, WikiPublisher, highlight_comparison
 from d2lib.wiki.publication import WikiSiteDTO, WikiSiteRecordingWriter, empty_wiki_site
+from d2lib.wiki.history import HistoryCollector, item_history
+from d2lib.wiki.history_comparison import write_history_comparisons
+from pathlib import Path
 from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 from d2lib.wiki.builders import AreaFarmingDataBuilder, ItemIconExporter
 from d2lib.wiki.comparison import (
@@ -103,7 +106,15 @@ class WikiContentBuilder:
         self._taxonomy = ItemTypeTaxonomy(self._repo)
         self._retail_repo = D2Repository(self.retail_data_dir)
 
+        history_config = json.loads(Path(REPO_ROOT, "data", "item-history.json").read_text(encoding="utf-8"))
+        history_collector = HistoryCollector(self.game_data_dir, Path(REPO_ROOT, ".cache", "item-history"), history_config)
+        self._history = history_collector.collect()
+        self._history_aliases = history_config.get("aliases", {})
+        self.writer.write_text("data/item-history.json", json.dumps(self._history, ensure_ascii=True))
         items = self._load_items()
+        for family, entries in items.items():
+            for entry in entries:
+                entry["history"] = item_history(self._history, family, entry.get("raw_row", {}), self._history_aliases)
         old_items = (
             self._load_items(self.old_item_db_dir)
             if self.old_item_db_dir
@@ -113,7 +124,10 @@ class WikiContentBuilder:
         class_pages = self._load_class_pages()
         area_entries = self._load_area_entries()
         base_item_families = self._load_base_item_families()
+        base_item_lookup = {item["code"]: item for family in base_item_families for item in family["members"]}
         retail_base_items = self._load_retail_base_items()
+        write_history_comparisons(history_collector, self._history, self._repo, items, old_item_index,
+                                  base_item_families, retail_base_items, self.writer, self.old_label, self._retail_repo)
 
         # Single CubeAnalyzerService for both group summary and raw recipes.
         recipe_service = CubeAnalyzerService(self._repo, self._retail_repo)
@@ -131,7 +145,7 @@ class WikiContentBuilder:
         reference_pages, reference_coverage = self._load_reference_pages()
 
         self._write_assets()
-        item_entries = self._write_item_pages(items, old_item_index)
+        item_entries = self._write_item_pages(items, old_item_index, base_item_lookup, retail_base_items)
         class_entries = self._write_class_pages(class_pages)
         self._write_runeword_index_page(items["runeword"], item_entries["runeword"], old_item_index)
         self._write_set_index_page(items["set"], old_item_index["set"])
@@ -465,6 +479,7 @@ class WikiContentBuilder:
                 old_item = retail_items.get(item["code"])
                 item["comparison"] = base_item_comparison_context(item, old_item)
                 item["href"] = ""
+                item["history"] = item_history(self._history, "base", item, self._history_aliases)
 
         self._write_page(
             title=f"Base Items | {self.new_label} Wiki",
@@ -708,6 +723,8 @@ class WikiContentBuilder:
         self,
         items: Dict[str, List[Dict[str, Any]]],
         old_item_index: Dict[str, Dict[str, Dict[str, Any]]],
+        base_item_lookup: Dict[str, Any],
+        retail_base_items: Dict[str, Any],
     ) -> Dict[str, List[Dict[str, str]]]:
         page_entries: Dict[str, List[Dict[str, str]]] = {family: [] for family in ITEM_FAMILIES}
         used_paths: Dict[str, Dict[str, int]] = {family: {} for family in ITEM_FAMILIES}
@@ -736,6 +753,11 @@ class WikiContentBuilder:
                     entry["rune_requirements"] = self._runeword_rune_requirements(entry, icon_exporter)
                 entry["drop_info"] = self._item_drop_info(entry, family, drop_base_lookup)
                 comparison = item_comparison_context(entry, family, old_entry)
+                base_stats = []
+                if family in ("unique", "set"):
+                    raw_row = entry.get("raw_row", {})
+                    base_code = raw_row.get("code" if family == "unique" else "item", "")
+                    base_stats = self._base_comparison_rows(base_item_lookup.get(base_code), retail_base_items.get(base_code))
                 runes = [
                     {
                         "name": str(rune.get("name", "")).strip(),
@@ -760,6 +782,7 @@ class WikiContentBuilder:
                     "summary": item_summary(entry, family),
                     "search_text": item_search_text(entry, family),
                     "status": status,
+                    "history": entry["history"],
                     "item_group": "|".join(sorted({taxonomy.group(category) for category in categories})),
                     "item_type": "|".join(categories),
                     "icon_src": icon_src,
@@ -771,6 +794,7 @@ class WikiContentBuilder:
                         for prop in entry.get("properties", [])
                         if str(prop.get("resolved_text", "")).strip()
                     ][:5],
+                    "base_stats": base_stats,
                     "stat_rows": comparison["stat_rows"],
                     "property_rows": comparison["property_rows"],
                 })
@@ -782,7 +806,7 @@ class WikiContentBuilder:
                         template_name="item.html",
                         category=family,
                         source_files=[entry["_source_rel_path"]],
-                        page=self._item_page_context(entry, family, title, old_entry),
+                        page=self._item_page_context(entry, family, title, old_entry, base_stats),
                     )
 
         return page_entries
@@ -871,6 +895,7 @@ class WikiContentBuilder:
                 "href": page_entry.get("href", ""),
                 "status": page_entry.get("status", "unchanged"),
                 "summary": item_summary(entry, "runeword"),
+                "history": entry.get("history"),
                 "base_items": base_items,
                 "base_filter_terms": "|".join(base_filter_terms),
                 "runes": rune_requirements,
@@ -964,7 +989,7 @@ class WikiContentBuilder:
             set_name = item.get("raw_row", {}).get("set", "Unknown Set")
             set_families.setdefault(set_name, []).append(item)
 
-        prop_groups_path = os.path.join(REPO_ROOT, "BT-BKDiff", "data", "propertygroups.txt")
+        prop_groups_path = os.path.join(REPO_ROOT, "data", "propertygroups.txt")
         prop_groups = self._repo.load_tsv(prop_groups_path)
 
         resolver_bk = PropertyResolverService(self._repo, prop_groups)
@@ -1060,6 +1085,7 @@ class WikiContentBuilder:
             template_name="items_index.html",
             category="index",
             source_files=[],
+            item_entries=item_entries,
             family_counts={family: len(item_entries[family]) for family in ITEM_FAMILIES},
             item_groups=[{"name": g, "types": LOOT_GROUPS.get(g, sorted(group_to_types[g]))} for g in group_to_types],
             drop_level_breakpoints=drop_level_breakpoints,
@@ -1100,6 +1126,7 @@ class WikiContentBuilder:
             {
                 "title": entry["title"],
                 "href": entry["href"],
+                "history": entry["history"],
                 "family": family,
                 "status": entry["status"],
                 "item_group": entry["item_group"],
@@ -1118,6 +1145,11 @@ class WikiContentBuilder:
             for entry in item_entries[family]
         ]
         for item in rows:
+            record = item["history"]
+            item["history"] = {"id": record["id"], "coverage": record["coverage"]}
+            for event_key in ("first", "last_change"):
+                event = record.get(event_key)
+                item["history"][event_key] = ({k: event[k] for k in ("kind", "timestamp", "date", "commit", "short_commit", "url", "release")} if event else None)
             for key in ("stat_rows", "property_rows"):
                 item[key] = [dict(row,
                     old_html=str(highlight_comparison(row.get("old", ""), row.get("new", ""), "old")),
@@ -1201,12 +1233,32 @@ class WikiContentBuilder:
 
     # ── Item page context (needs instance state) ─────────────────────────────
 
+    def _base_comparison_rows(
+        self,
+        bk_base: Dict[str, Any],
+        retail_base: Optional[Dict[str, Any]],
+    ) -> List[Dict[str, str]]:
+        labels = {
+            "Def": "Def",
+            "One-Hand Damage": "One-Hand Damage",
+            "Two-Hand Damage": "Two-Hand Damage",
+            "Throwing Damage": "Throw Damage",
+            "Max Sockets": "Max Sockets",
+        }
+        comparison = base_item_comparison_context(bk_base or {}, retail_base or {})
+        return [
+            {**row, "label": labels[row["label"]]}
+            for row in comparison["stat_rows"]
+            if row["label"] in labels
+        ]
+
     def _item_page_context(
         self,
         entry: Dict[str, Any],
         family: str,
         title: str,
         old_entry: Optional[Dict[str, Any]],
+        base_stats: Optional[List[Dict[str, str]]] = None,
     ) -> Dict[str, Any]:
         chips = [{"label": family.title(), "tone": "default"}, {"label": self.new_label, "tone": "accent"}]
         hero_eyebrow = "Generated Item Page"
@@ -1240,6 +1292,9 @@ class WikiContentBuilder:
             if family == "set" and entry.get("raw_row", {}).get("set"):
                 set_name = str(entry["raw_row"]["set"])
                 stats.append({"label": "Set", "value": set_name, "href": f"sets/#{slugify(set_name)}"})
+            for row in base_stats or []:
+                if row.get("new"):
+                    stats.append({"label": row["label"], "value": row["new"]})
 
         properties = [
             {"text": str(prop.get("resolved_text", "")), "is_warning": "unknown property:" in str(prop.get("resolved_text", "")).lower()}
@@ -1260,6 +1315,7 @@ class WikiContentBuilder:
             "family": family,
             "title": title,
             "hero_eyebrow": hero_eyebrow,
+            "history": entry.get("history"),
             "summary": item_summary(entry, family),
             "chips": chips,
             "stats": stats,

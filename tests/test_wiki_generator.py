@@ -1232,7 +1232,7 @@ class TestWikiGenerator(unittest.TestCase):
         )
         self.assertEqual(
             {
-                "title",
+                "title", "history",
                 "href",
                 "family",
                 "status",
@@ -1294,7 +1294,10 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('<option value="90">90+</option>', items_page)
         self.assertIn('data-filter-family="runeword"', items_page)
         self.assertIn("Search items, runewords, runes", items_page)
-        self.assertIn('runeword: "var(--q-runeword)"', site_js)
+        self.assertIn('style="color:var(--q-runeword)"', items_page)
+        self.assertIn('class="item-history"', items_page)
+        self.assertIn('History unavailable', items_page)
+        self.assertNotIn('Loading item index', items_page)
         self.assertIn("Runewords", runewords_index_page)
         self.assertIn("Practice", runewords_index_page)
         self.assertIn("rune-chip-icon", runewords_index_page)

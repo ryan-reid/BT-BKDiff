@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "history.html" import item_history %}
 
 {% block title %}Set Items | {{ new_label }} Wiki{% endblock %}
 {% block nav_sets %} class="is-active"{% endblock %}
@@ -43,6 +44,7 @@
           </div>
         </div>
 
+        {{ item_history(item.history) }}
         <div class="sp-sub">
           {% if comp.state == "added" %}
           <span></span><span>{{ new_label }}</span>

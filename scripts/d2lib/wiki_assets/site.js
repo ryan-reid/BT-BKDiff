@@ -21,75 +21,6 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
-function itemCardMarkup(item, siteRoot) {
-  const familyColors = {
-    runeword: "var(--q-runeword)",
-    set: "var(--q-set)",
-    unique: "var(--q-unique)",
-  };
-  const nameColor = familyColors[item.family] || "var(--text)";
-  const iconMarkup = item.icon_src
-    ? `<img class="wiki-item-icon set-th-icon" src="${escapeHtml(siteRoot + item.icon_src)}" alt="${escapeHtml(item.title)} icon" />`
-    : "";
-  const dropMarkup = item.drop_level_label
-    ? `<span class="item-drop-level">Drop ${escapeHtml(item.drop_level_label)}</span>`
-    : "";
-  const titleMarkup = item.family === "set" || item.family === "runeword"
-    ? `<a class="set-th-name" href="${escapeHtml(siteRoot + item.href)}" style="color:${nameColor}">${escapeHtml(item.title)}</a>`
-    : `<span class="set-th-name" style="color:${nameColor}">${escapeHtml(item.title)}</span>`;
-  const runesMarkup = item.family === "runeword" && item.runes && item.runes.length
-    ? `<div class="rune-sequence" style="margin-top:6px;justify-content:flex-start;flex-wrap:wrap;gap:4px">
-        ${item.runes.map((rune) => `
-          <span class="rune-chip" style="min-width:44px" title="${escapeHtml(rune.name)}">
-            ${rune.icon_src ? `<img class="wiki-item-icon rune-chip-icon" src="${escapeHtml(siteRoot + rune.icon_src)}" alt="${escapeHtml(rune.name)}" />` : ""}
-            <span>${escapeHtml(rune.name || rune.code)}</span>
-          </span>
-        `).join("")}
-      </div>`
-    : "";
-
-  const statRowsHtml = (item.stat_rows || []).map((r) => `
-    <div class="sp-row">
-      <span class="sp-cell is-${escapeHtml(r.status)}"><strong>${escapeHtml(r.label)}:</strong> ${r.old_html ?? escapeHtml(r.old || "—")}</span>
-      <span class="sp-cell is-${escapeHtml(r.status)}"><strong>${escapeHtml(r.label)}:</strong> ${r.new_html ?? escapeHtml(r.new || "—")}</span>
-    </div>`).join("");
-
-  const propRows = item.property_rows || [];
-  const propRowsHtml = propRows.length
-    ? `<div class="sp-sep">Properties</div>` + propRows.map((r) => `
-    <div class="sp-row">
-      <span class="sp-cell is-${escapeHtml(r.status)}">${r.old_html ?? escapeHtml(r.old || "(empty)")}</span>
-      <span class="sp-cell is-${escapeHtml(r.status)}">${r.new_html ?? escapeHtml(r.new || "(removed)")}</span>
-    </div>`).join("")
-    : "";
-
-  const oldLabel = document.body.dataset.oldLabel || "Retail";
-  const newLabel = document.body.dataset.newLabel || "BK";
-
-  return `
-    <div class="base-item-card item-index-card" style="padding:0;overflow:hidden"
-      data-family="${escapeHtml(item.family)}"
-      data-status="${escapeHtml(item.status)}"
-      data-item-group="${escapeHtml(item.item_group)}"
-      data-item-type="${escapeHtml(item.item_type)}"
-      data-drop-level="${escapeHtml(item.drop_level || 0)}"
-      data-search="${escapeHtml(item.search_text)}">
-      <div class="sp-head">
-        ${iconMarkup}
-        <div style="min-width:0;flex:1">
-          ${titleMarkup}
-          <span class="set-th-meta">${escapeHtml(item.summary)}</span>
-          ${runesMarkup}
-          ${dropMarkup}
-        </div>
-      </div>
-      <div class="sp-sub"><span>${escapeHtml(oldLabel)}</span><span>${escapeHtml(newLabel)}</span></div>
-      ${statRowsHtml}
-      ${propRowsHtml}
-    </div>
-  `;
-}
-
 function areaBadgeMarkup(area) {
   return `<span class="area-badge area-badge-level">Lvl ${escapeHtml(area.area_level)}</span>`;
 }
@@ -759,29 +690,7 @@ async function wireItemIndex() {
     return;
   }
 
-  const siteRoot = document.body.dataset.siteRoot || "";
-  const response = await fetch(toolbar.dataset.itemIndexUrl, { cache: "no-store" });
-  const items = await response.json();
-  const familyLabels = {
-    unique: "Unique Items",
-    set: "Set Items",
-    runeword: "Runewords",
-  };
-
-  root.innerHTML = Object.entries(familyLabels)
-    .map(([family, label]) => {
-      const familyItems = items.filter((item) => item.family === family);
-      return `
-        <section class="item-family-section" data-section-family="${family}" style="display:grid;gap:12px">
-          <div class="section-head"><h2>${label}</h2><p>${familyItems.length} pages</p></div>
-          <div class="family-items-grid">
-            ${familyItems.map((item) => itemCardMarkup(item, siteRoot)).join("")}
-          </div>
-        </section>
-      `;
-    })
-    .join("");
-
+  // Cards and their history are server-rendered; enhance them without a second download.
   const searchInput = document.querySelector("#page-search");
   const familyCheckboxes = Array.from(document.querySelectorAll("input[data-filter-family]"));
   const groupSelect = document.querySelector("#item-group-filter");
@@ -882,10 +791,7 @@ function initWiki() {
     console.error(error);
   });
   wireItemIndex().catch((error) => {
-    const root = document.querySelector("#item-index-root");
-    if (root) {
-      root.innerHTML = '<p class="muted">Unable to load the item index.</p>';
-    }
+    // Preserve the server-rendered cards and history if enhancement fails.
     console.error(error);
   });
 }

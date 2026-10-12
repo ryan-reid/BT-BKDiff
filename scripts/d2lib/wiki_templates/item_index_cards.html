@@ -1,0 +1,40 @@
+{% from "history.html" import item_history %}
+{% for family, entries in item_entries.items() %}
+<section class="item-family-section" data-section-family="{{ family }}" style="display:grid;gap:12px">
+  <div class="section-head"><h2>{{ family|title }} Items</h2></div>
+  <div class="family-items-grid">
+    {% for item in entries %}
+    <div class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="{{ family }}" data-status="{{ item.status }}" data-item-group="{{ item.item_group }}" data-item-type="{{ item.item_type }}" data-drop-level="{{ item.drop_level }}" data-search="{{ item.search_text }}">
+      <div class="sp-head">
+        {% if item.icon_src %}<img class="set-th-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.title }} icon">{% endif %}
+        <div style="min-width:0;flex:1">
+          <a class="set-th-name" style="color:var(--q-{{ family }})" href="{{ site_root }}{{ item.href }}">{{ item.title }}</a>
+          <span class="set-th-meta">{{ item.summary }}</span>
+          {% if item.runes %}
+          <div class="rune-sequence" style="margin-top:6px;justify-content:flex-start;flex-wrap:wrap;gap:4px">
+            {% for rune in item.runes %}<span class="rune-chip" style="min-width:44px" title="{{ rune.name }}">{% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }}">{% endif %}<span>{{ rune.name or rune.code }}</span></span>{% endfor %}
+          </div>
+          {% endif %}
+          {% if item.drop_level_label %}<span class="item-drop-level">Drop {{ item.drop_level_label }}</span>{% endif %}
+        </div>
+      </div>
+      {{ item_history(item.history) }}
+      <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
+      {% for row in item.stat_rows %}
+      <div class="sp-row"><span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
+      {% endfor %}
+      {% if item.base_stats %}
+      <div class="sp-sep">Base Stats</div>
+      {% for row in item.base_stats %}
+      <div class="sp-row"><span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
+      {% endfor %}
+      {% endif %}
+      {% if item.property_rows %}<div class="sp-sep">Properties</div>{% endif %}
+      {% for row in item.property_rows %}
+      <div class="sp-row"><span class="sp-cell is-{{ row.status }}">{{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}">{{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

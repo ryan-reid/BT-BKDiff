@@ -107,3 +107,9 @@ and all `etype` exclusions. Mace, Club, and Hammer remain distinct. Runeword bas
 links retain those rules and filter by socket capacity; crafting still requires a
 nonmagical item with the exact number of sockets. Base cards display their type
 hierarchy alongside their loot category.
+
+### BK item history
+
+Item cards and detail pages include BK source-history indicators and expandable
+history, including known coverage gaps. See [item history](docs/item-history.md)
+for evidence rules, verified release mappings, caching, and local review.

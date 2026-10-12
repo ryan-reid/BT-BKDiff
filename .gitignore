@@ -224,3 +224,7 @@ output/excel_diff_report_*/assets/
 output/file_diff_report_*/
 output/skill_trees/
 output/wiki/
+output/mediawiki/
+output/mediawiki-preview/
+output/retail-baseline-audit/
+output/wiki-raw-txt-coverage.json

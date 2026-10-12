@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "history.html" import item_history %}
 
 {% block title %}Base Items | {{ new_label }} Wiki{% endblock %}
 {% block nav_bases %} class="is-active"{% endblock %}
@@ -148,6 +149,7 @@
             </div>
           </div>
 
+          {{ item_history(item.history) }}
           <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
 
           {% for row in comp.stat_rows %}

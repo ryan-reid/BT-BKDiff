@@ -1,0 +1,44 @@
+{% macro event_link(event) -%}
+<time datetime="{{ event.timestamp }}">{{ event.date }}</time>{% if event.release %} · {{ event.release }}{% endif %} · <a href="{{ event.url }}" target="_blank" rel="noopener noreferrer">{{ event.short_commit }}</a>
+{%- endmacro %}
+{% macro item_history(history) -%}
+<div class="item-history">
+  <span class="history-heading">BK history</span>
+  {% if not history or history.coverage == 'unavailable' %}
+  <span class="history-coverage">History unavailable</span>
+  {% else %}
+  {% set latest = history.last_change or history.first %}
+  {% if latest %}
+  <div{% if not history.last_change %} title="No later change recorded; this is the first-known source date."{% endif %}><strong>Last changed:</strong> {{ event_link(latest) }}</div>
+  {% endif %}
+  {% if history.events or history.gaps %}
+  {% if history.revisions_path %}<button type="button" class="history-open" data-revisions-path="{{ history.revisions_path }}">View item revisions</button><noscript>{% endif %}
+  <details>
+    <summary>History ({{ history.events|length }})</summary>
+    <p class="history-help">Source commit dates, not release dates. Recorded in source does not necessarily mean obtainable in-game.</p>
+    {% if history.gaps %}
+    <ul class="history-coverage">
+      {% for gap in history.gaps %}<li>Coverage gap: {{ event_link(gap) }} — {{ gap.reason }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    <ol>
+      {% for event in history.events|reverse %}
+      <li>
+        <strong>{{ event.kind|replace('_', ' ')|capitalize }}</strong> — {{ event_link(event) }}
+        {% if event.causes %}<div>{{ event.causes|join('; ') }}</div>{% endif %}
+        {% if event.changes %}
+        <ul class="history-changes">
+          {% for change in event.changes %}
+          <li><span>{{ change.source }}{% if change.field %} · {{ change.field }}{% endif %}</span><br><del>{{ change.before if change.before is not none else '—' }}</del> → <ins>{{ change.after if change.after is not none else '—' }}</ins></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </details>
+  {% if history.revisions_path %}</noscript>{% endif %}
+  {% endif %}
+  {% endif %}
+</div>
+{%- endmacro %}
