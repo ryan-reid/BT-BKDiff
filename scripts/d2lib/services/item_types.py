@@ -20,8 +20,13 @@ class ItemTypeTaxonomy:
         self.repo = repo
         self.types = {row['Code']: row for row in repo.get_excel_table('itemtypes') if row.get('Code')}
         self.bases = {row['code']: row for table in ('weapons', 'armor', 'misc') for row in repo.get_excel_table(table) if row.get('code')}
+        self._chain_cache: dict[tuple, list] = {}
 
     def chain(self, *codes):
+        key = tuple(codes)
+        cached = self._chain_cache.get(key)
+        if cached is not None:
+            return cached
         result = []
         def visit(code):
             code = (code or '').strip()
@@ -33,6 +38,8 @@ class ItemTypeTaxonomy:
             visit(row.get('Equiv2'))
         for code in codes:
             visit(code)
+        # Callers only read this list; it is shared and must not be mutated.
+        self._chain_cache[key] = result
         return result
 
     def category(self, row):
@@ -70,7 +77,19 @@ class ItemTypeTaxonomy:
         return bool(chain.intersection(included)) and not chain.intersection(excluded) and capacity >= sockets
 
     def matching_bases(self, row):
-        return [base for base in self.bases.values() if self.accepts(row, base)]
+        included = set(self.rules(row, 'itype'))
+        excluded = set(self.rules(row, 'etype'))
+        sockets = sum(bool(row.get(f'Rune{i}', '').strip() not in ('', 'xxx')) for i in range(1, 7))
+        result = []
+        for base in self.bases.values():
+            chain = set(self.chain(base.get('type'), base.get('type2')))
+            type_row = self.types.get(base.get('type'), {})
+            caps = [int(type_row.get(f'MaxSockets{i}', '') or 0) for i in range(1, 4)]
+            base_cap = int(base.get('gemsockets', '') or 0)
+            capacity = min(base_cap, max(caps)) if max(caps) else base_cap
+            if bool(chain & included) and not (chain & excluded) and capacity >= sockets:
+                result.append(base)
+        return result
 
     def runeword_terms(self, row):
         codes = self.rules(row, 'itype')

@@ -13,7 +13,6 @@ from d2lib.wiki.comparison import (
     property_occurrence_map,
     rune_property_occurrence_map,
     runeword_compare_rows,
-    align_set_member_comparisons,
     base_item_comparison_context,
     gem_rune_comparison_context,
 )
@@ -306,26 +305,6 @@ class TestShouldIncludeItem(unittest.TestCase):
     def test_runeword_included_if_has_runes(self):
         entry = {"base_items": [], "runes": ["El"], "properties": []}
         self.assertTrue(should_include_item(entry, "runeword"))
-
-
-class TestAlignSetMemberComparisons(unittest.TestCase):
-    def test_pads_shorter_members(self):
-        members = [
-            {"comparison": {"stat_rows": [{"label": "A", "old": "1", "new": "2", "status": "changed"}], "property_rows": []}},
-            {"comparison": {"stat_rows": [], "property_rows": []}},
-        ]
-        align_set_member_comparisons(members)
-        self.assertEqual(1, len(members[0]["comparison"]["aligned_stat_rows"]))
-        self.assertEqual(1, len(members[1]["comparison"]["aligned_stat_rows"]))
-        self.assertTrue(members[1]["comparison"]["aligned_stat_rows"][0]["is_spacer"])
-
-    def test_row_count_consistent(self):
-        members = [
-            {"comparison": {"stat_rows": [{"label": "X", "old": "", "new": "v", "status": "added"}] * 3, "property_rows": []}},
-            {"comparison": {"stat_rows": [], "property_rows": []}},
-        ]
-        align_set_member_comparisons(members)
-        self.assertEqual(members[0]["comparison"]["row_count"], members[1]["comparison"]["row_count"])
 
 
 class TestBaseItemComparisonContext(unittest.TestCase):

@@ -955,9 +955,8 @@ class TestWikiGenerator(unittest.TestCase):
         return generator
 
     def test_route_builder_uses_pretty_paths(self):
-        self.assertEqual("items/unique/twin-item/index.html", WikiRoutes.item_output_path("unique", "twin-item"))
-        self.assertEqual("items/unique/twin-item/", WikiRoutes.route_from_output_path("items/unique/twin-item/index.html"))
-        self.assertEqual("../../../", WikiRoutes.site_root_for_output_path("items/unique/twin-item/index.html"))
+        self.assertEqual("runewords/", WikiRoutes.route_from_output_path("runewords/index.html"))
+        self.assertEqual("../", WikiRoutes.site_root_for_output_path("runewords/index.html"))
         self.assertEqual("runewords/index.html", WikiRoutes.runewords_index_output_path())
         self.assertEqual("areas/index.html", WikiRoutes.areas_index_output_path())
         self.assertEqual("bases/index.html", WikiRoutes.bases_index_output_path())
@@ -990,7 +989,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("bases_index", pages_by_kind)
         self.assertIn("recipes_crafting", pages_by_kind)
         self.assertIn("misc_index", pages_by_kind)
-        self.assertIn("item", pages_by_kind)
+        self.assertNotIn("item", pages_by_kind)
         self.assertTrue(any(entry["path"] == "bases/" for entry in site["manifest"]))
         self.assertTrue(any(data_file["relative_path"] == "data/items-index.json" for data_file in site["data_files"]))
 
@@ -1082,9 +1081,6 @@ class TestWikiGenerator(unittest.TestCase):
     def test_generation_writes_pretty_routes_and_manifest(self):
         self._generate()
         expected_paths = [
-            os.path.join(self.output, "items", "unique", "twin-item", "index.html"),
-            os.path.join(self.output, "items", "unique", "twin-item-second-base", "index.html"),
-            os.path.join(self.output, "items", "unique", "twin-item-second-base-2", "index.html"),
             os.path.join(self.output, "items", "index.html"),
             os.path.join(self.output, "runewords", "index.html"),
             os.path.join(self.output, "classes", "amazon", "index.html"),
@@ -1126,8 +1122,8 @@ class TestWikiGenerator(unittest.TestCase):
         with open(os.path.join(self.output, "manifest.json"), "r", encoding="utf-8") as f:
             manifest = json.load(f)
         manifest_paths = {entry["path"] for entry in manifest}
-        self.assertIn("items/unique/twin-item/", manifest_paths)
-        self.assertIn("items/unique/twin-item-second-base/", manifest_paths)
+        self.assertNotIn("items/unique/twin-item/", manifest_paths)
+        self.assertNotIn("items/unique/twin-item-second-base/", manifest_paths)
         self.assertIn("items/", manifest_paths)
         self.assertIn("runewords/", manifest_paths)
         self.assertIn("areas/", manifest_paths)
@@ -1252,7 +1248,7 @@ class TestWikiGenerator(unittest.TestCase):
         )
         self.assertEqual("modified", rows[0]["status"])
         self.assertEqual("added", rows[1]["status"])
-        self.assertEqual("items/unique/twin-item/", rows[0]["href"])
+        self.assertEqual("items/", rows[0]["href"])
         self.assertEqual("sets/#practice-set", rows[4]["href"])
         self.assertEqual(["+10 Damage"], rows[0]["properties"])
         self.assertEqual(85, rows[0]["drop_level"])
@@ -1261,15 +1257,13 @@ class TestWikiGenerator(unittest.TestCase):
 
         practice = rows[-1]
         self.assertEqual("runeword", practice["family"])
-        self.assertEqual("items/runeword/practice/", practice["href"])
+        self.assertEqual("items/", practice["href"])
         self.assertEqual("Helm", practice["item_type"])
         self.assertEqual(["Tal Rune", "Eth Rune"], [rune["name"] for rune in practice["runes"]])
         self.assertIn("Holy Shock", practice["search_text"])
 
     def test_templates_render_item_and_index_pages(self):
         self._generate()
-        with open(os.path.join(self.output, "items", "unique", "twin-item", "index.html"), "r", encoding="utf-8") as f:
-            item_page = f.read()
         with open(os.path.join(self.output, "items", "index.html"), "r", encoding="utf-8") as f:
             items_page = f.read()
         with open(os.path.join(self.output, "runewords", "index.html"), "r", encoding="utf-8") as f:
@@ -1281,13 +1275,7 @@ class TestWikiGenerator(unittest.TestCase):
         with open(os.path.join(self.output, "assets", "site.js"), "r", encoding="utf-8") as f:
             site_js = f.read()
 
-        self.assertIn("Twin Item", item_page)
-        self.assertIn("Drop Level", item_page)
-        self.assertIn("85+ (item 85, base 85)", item_page)
-        self.assertIn("BKDiablo Wiki", item_page)
-        self.assertIn('href="../../../areas/"', item_page)
-        self.assertIn('href="../../../drops/"', item_page)
-        self.assertIn('href="../../../reports/"', item_page)
+        self.assertIn("Twin Item", items_page)
         self.assertIn('data-item-index-url="../data/items-index.json"', items_page)
         self.assertIn('id="item-drop-level-filter"', items_page)
         self.assertIn('<option value="85">85+</option>', items_page)
@@ -1330,13 +1318,8 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("<span class=\"set-th-name\">Set Blade</span>", sets_index_page)
         self.assertNotIn('href="../sets/#practice-set-set-blade"', sets_index_page)
         self.assertIn("Drop", sets_index_page)
-        self.assertIn("sp-row-spacer", sets_index_page)
-        self.assertIn("sp-sep-spacer", sets_index_page)
-        self.assertIn("--set-piece-row-count:", sets_index_page)
         self.assertNotIn("sp-empty", sets_index_page)
         self.assertNotIn("(empty)", sets_index_page)
-        self.assertIn(".set-pieces { grid-template-columns: repeat(2, minmax(0, 1fr)); }", site_css)
-        self.assertIn(".set-pieces { grid-template-columns: 1fr; }", site_css)
         self.assertIn(".item-drop-level", site_css)
         self.assertIn(".inline-stat-link", site_css)
         self.assertIn("scroll-margin-top: 118px", site_css)
@@ -1449,9 +1432,14 @@ class TestWikiGenerator(unittest.TestCase):
 
         with open(os.path.join(self.output, "mechanics", "index.html"), "r", encoding="utf-8") as f:
             mechanics_page = f.read()
-        self.assertIn("Skill & Missile Changes", mechanics_page)
-        self.assertIn("magic arrow", mechanics_page)
-        self.assertIn("Character, Item, and Economy Systems", mechanics_page)
+        self.assertIn("Difficulty Scaling", mechanics_page)
+        self.assertIn("Experience Curve Changes", mechanics_page)
+        self.assertLess(
+            mechanics_page.index("Difficulty Scaling"),
+            mechanics_page.index("Experience Curve Changes"),
+        )
+        self.assertNotIn("Skill & Missile Changes", mechanics_page)
+        self.assertNotIn("Character, Item, and Economy Systems", mechanics_page)
 
         with open(os.path.join(self.output, "drops", "index.html"), "r", encoding="utf-8") as f:
             drops_page = f.read()
@@ -1504,19 +1492,6 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("treasureclassex", raw_coverage_page)
         self.assertIn("Drop Sources", raw_coverage_page)
         self.assertIn("Raw Tables", raw_coverage_page)
-
-        with open(os.path.join(self.output, "items", "runeword", "practice", "index.html"), "r", encoding="utf-8") as f:
-            runeword_page = f.read()
-        self.assertIn("Properties", runeword_page)
-        self.assertIn("rune-chip-icon", runeword_page)
-        self.assertIn("Tal Rune", runeword_page)
-        self.assertIn("Eth Rune", runeword_page)
-        self.assertIn("Bases:", runeword_page)
-        self.assertNotIn("Source & Diff", runeword_page)
-        self.assertNotIn("Show technical retail comparison", runeword_page)
-        self.assertIn('href="../../../bases/?category=Helm&amp;minSockets=2"', runeword_page)
-        self.assertIn("+50 to Attack Rating", runeword_page)
-        self.assertIn("25% Chance of Open Wounds", runeword_page)
 
         for relative_path, expected_text in [
             (os.path.join("bases", "index.html"), "Base Items"),

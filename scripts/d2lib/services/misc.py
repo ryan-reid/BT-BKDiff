@@ -82,49 +82,17 @@ class MiscAnalyzerService:
         source_categories: Dict[str, set[str]] = {}
 
         for row in self.misc:
-            code = row.get('code', '').strip()
-            if not code or code == '0': continue
-
-            # Filter: UICatOverride (BK specific) or specific types like Runes, Gems, Quest
-            uicat = row.get('UICatOverride', '').strip()
+            item = self.analyze_row(row)
+            if item is None:
+                continue
             type_code = row.get('type', '').strip()
-
+            uicat = row.get('UICatOverride', '').strip()
             is_rune = type_code == 'rune'
             is_gem = type_code.startswith('gem')
             is_quest = row.get('quest', '0') != '0'
-
-            if not uicat and not is_rune and not is_gem and not is_quest:
-                continue
-
-            name_str = row.get('namestr') or row.get('name')
-            name = self.repo.get_string(name_str) or name_str or code
-
-            desc_str = row.get('description')
-            description = self.repo.get_string(desc_str) if desc_str else ""
-            category = self._player_category(row, uicat, type_code, is_rune, is_gem, is_quest, name)
             source_category = uicat or ("Rune" if is_rune else "Gem" if is_gem else "Quest" if is_quest else type_code or "Other")
-            source_categories.setdefault(category, set()).add(source_category)
-
-            def to_int(v):
-                try: return int(v) if v else 0
-                except: return 0
-
-            items.append({
-                "code": code,
-                "name": name,
-                "icon_key": row.get('invfile', '').strip(),
-                "icon_src": "",
-                "type": type_code,
-                "level": to_int(row.get('level')),
-                "level_req": to_int(row.get('levelreq')),
-                "stackable": row.get('stackable') == '1',
-                "max_stack": to_int(row.get('maxstack')),
-                "cost": to_int(row.get('cost')),
-                "description": description,
-                "category": category,
-                "status": _status_for_row(code, row, self.retail_misc) if self.retail_repo else "unchanged",
-                "socket_effects": self._socket_effects_for_item(code),
-            })
+            source_categories.setdefault(item["category"], set()).add(source_category)
+            items.append(item)
 
         # Group by Category
         groups: Dict[str, List[MiscItemDTO]] = {}
@@ -149,6 +117,49 @@ class MiscAnalyzerService:
                 ),
             )
         ]
+
+    def analyze_row(self, row: Dict[str, str]) -> Optional[MiscItemDTO]:
+        code = row.get('code', '').strip()
+        if not code or code == '0':
+            return None
+
+        # Filter: UICatOverride (BK specific) or specific types like Runes, Gems, Quest
+        uicat = row.get('UICatOverride', '').strip()
+        type_code = row.get('type', '').strip()
+        is_rune = type_code == 'rune'
+        is_gem = type_code.startswith('gem')
+        is_quest = row.get('quest', '0') != '0'
+
+        if not uicat and not is_rune and not is_gem and not is_quest:
+            return None
+
+        name_str = row.get('namestr') or row.get('name')
+        name = self.repo.get_string(name_str) or name_str or code
+
+        desc_str = row.get('description')
+        description = self.repo.get_string(desc_str) if desc_str else ""
+        category = self._player_category(row, uicat, type_code, is_rune, is_gem, is_quest, name)
+
+        def to_int(v):
+            try: return int(v) if v else 0
+            except: return 0
+
+        return {
+            "code": code,
+            "name": name,
+            "icon_key": row.get('invfile', '').strip(),
+            "icon_src": "",
+            "type": type_code,
+            "level": to_int(row.get('level')),
+            "level_req": to_int(row.get('levelreq')),
+            "stackable": row.get('stackable') == '1',
+            "max_stack": to_int(row.get('maxstack')),
+            "cost": to_int(row.get('cost')),
+            "description": description,
+            "category": category,
+            "status": _status_for_row(code, row, self.retail_misc) if self.retail_repo else "unchanged",
+            "socket_effects": self._socket_effects_for_item(code),
+        }
 
     def _player_category(
         self,

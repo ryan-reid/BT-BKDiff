@@ -19,12 +19,20 @@ from d2lib.wiki.presentation import sanitize_display_text
 from d2lib.wiki.publication import WikiPageDTO, WikiSiteDTO
 from d2lib.wiki.routes import WikiRoutes
 
+_TOKEN_RE = re.compile(r"\d+(?:[.\-]\d+)*%?|[A-Za-z]+|\s+|.")
+_HIGHLIGHT_CACHE: dict[tuple[str, str, str], Markup] = {}
+
+
 def highlight_comparison(value: str, other: str, side: str) -> Markup:
     text, baseline = str(value or ""), str(other or "")
     if not text:
         return Markup('<span class="diff-empty">&mdash;</span>')
-    tokens = re.findall(r"\d+(?:[.\-]\d+)*%?|[A-Za-z]+|\s+|.", text)
-    other_tokens = re.findall(r"\d+(?:[.\-]\d+)*%?|[A-Za-z]+|\s+|.", baseline)
+    cache_key = (text, baseline, side)
+    cached = _HIGHLIGHT_CACHE.get(cache_key)
+    if cached is not None:
+        return cached
+    tokens = _TOKEN_RE.findall(text)
+    other_tokens = _TOKEN_RE.findall(baseline)
     parts = []
     for tag, i1, i2, _, _ in difflib.SequenceMatcher(None, tokens, other_tokens, autojunk=False).get_opcodes():
         chunk = escape("".join(tokens[i1:i2]))
@@ -32,7 +40,9 @@ def highlight_comparison(value: str, other: str, side: str) -> Markup:
             kind = "old" if side == "old" else "new"
             chunk = Markup('<mark class="diff-token diff-token-{}">{}</mark>').format(kind, chunk)
         parts.append(chunk)
-    return Markup("").join(parts)
+    result = Markup("").join(parts)
+    _HIGHLIGHT_CACHE[cache_key] = result
+    return result
 
 
 class WikiRenderer:

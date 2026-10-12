@@ -8,7 +8,7 @@
       <div class="sp-head">
         {% if item.icon_src %}<img class="set-th-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.title }} icon">{% endif %}
         <div style="min-width:0;flex:1">
-          <a class="set-th-name" style="color:var(--q-{{ family }})" href="{{ site_root }}{{ item.href }}">{{ item.title }}</a>
+          <span class="set-th-name" style="color:var(--q-{{ family }})">{{ item.title }}</span>
           <span class="set-th-meta">{{ item.summary }}</span>
           {% if item.runes %}
           <div class="rune-sequence" style="margin-top:6px;justify-content:flex-start;flex-wrap:wrap;gap:4px">

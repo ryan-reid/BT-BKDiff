@@ -25,50 +25,49 @@
       <p class="set-summary muted">{{ set.summary }}</p>
     </div>
 
-    <div class="set-pieces">
+    <div class="family-items-grid">
       {% for item in set.members %}
       {% set comp = item.comparison %}
-      <div id="{{ item.set_anchor }}" class="set-piece"
-           style="--set-piece-row-count: {{ comp.row_count }}"
+      <div id="{{ item.set_anchor }}" class="base-item-card item-index-card"
            data-search="{{ set.name }} {{ item.display_name }} {{ item.item_type }} {{ item.base_item }}">
 
         <div class="sp-head">
           {% if item.icon_src %}
           <img class="set-th-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.display_name }}" />
           {% endif %}
-          <div class="sp-head-text">
+          <div style="min-width:0;flex:1">
             <span class="set-th-name">{{ item.display_name }}</span>
-            <span class="set-th-meta">
-              {{ item.base_item }}{% if item.lvl_req %} &middot; Req {{ item.lvl_req }}{% endif %}{% if item.drop_info and item.drop_info.label %} &middot; Drop {{ item.drop_info.label }}{% endif %}
-            </span>
+            <span class="set-th-meta">{{ item.summary }}</span>
+            {% if item.drop_info and item.drop_info.label %}<span class="item-drop-level">Drop {{ item.drop_info.label }}</span>{% endif %}
           </div>
         </div>
 
         {{ item_history(item.history) }}
-        <div class="sp-sub">
-          {% if comp.state == "added" %}
-          <span></span><span>{{ new_label }}</span>
-          {% elif comp.state == "removed" %}
-          <span>{{ old_label }}</span><span></span>
-          {% else %}
-          <span>{{ old_label }}</span><span>{{ new_label }}</span>
-          {% endif %}
-        </div>
+        <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
 
-        {% for r in comp.aligned_stat_rows %}
-        <div class="sp-row{% if r.is_spacer %} sp-row-spacer{% endif %}">
-          <span class="sp-cell {% if r.old %}is-{{ r.status }}{% else %}is-same{% endif %}">{% if r.old %}<strong>{{ r.label }}:</strong> {{ r.old | comparison_highlight(r.new, "old") }}{% endif %}</span>
-          <span class="sp-cell {% if r.new %}is-{{ r.status }}{% else %}is-same{% endif %}">{% if r.new %}<strong>{{ r.label }}:</strong> {{ r.new | comparison_highlight(r.old, "new") }}{% endif %}</span>
+        {% for r in comp.stat_rows %}
+        <div class="sp-row">
+          <span class="sp-cell is-{{ r.status }}">{% if r.label %}<strong>{{ r.label }}:</strong> {% endif %}{{ r.old | comparison_highlight(r.new, "old") }}</span>
+          <span class="sp-cell is-{{ r.status }}">{% if r.label %}<strong>{{ r.label }}:</strong> {% endif %}{{ r.new | comparison_highlight(r.old, "new") }}</span>
         </div>
         {% endfor %}
 
-        {% if comp.has_property_section %}
-        <div class="sp-sep{% if not comp.property_rows %} sp-sep-spacer{% endif %}">{% if comp.property_rows %}Properties{% endif %}</div>
+        {% if item.base_stats %}
+        <div class="sp-sep">Base Stats</div>
+        {% for r in item.base_stats %}
+        <div class="sp-row">
+          <span class="sp-cell is-{{ r.status }}">{% if r.label %}<strong>{{ r.label }}:</strong> {% endif %}{{ r.old | comparison_highlight(r.new, "old") }}</span>
+          <span class="sp-cell is-{{ r.status }}">{% if r.label %}<strong>{{ r.label }}:</strong> {% endif %}{{ r.new | comparison_highlight(r.old, "new") }}</span>
+        </div>
+        {% endfor %}
+        {% endif %}
 
-        {% for r in comp.aligned_property_rows %}
-        <div class="sp-row{% if r.is_spacer %} sp-row-spacer{% endif %}">
-          <span class="sp-cell {% if r.old %}is-{{ r.status }}{% else %}is-same{% endif %}">{{ r.old | comparison_highlight(r.new, "old") }}</span>
-          <span class="sp-cell {% if r.new %}is-{{ r.status }}{% else %}is-same{% endif %}">{{ r.new | comparison_highlight(r.old, "new") }}</span>
+        {% if comp.property_rows %}
+        <div class="sp-sep">Properties</div>
+        {% for r in comp.property_rows %}
+        <div class="sp-row">
+          <span class="sp-cell is-{{ r.status }}">{{ r.old | comparison_highlight(r.new, "old") }}</span>
+          <span class="sp-cell is-{{ r.status }}">{{ r.new | comparison_highlight(r.old, "new") }}</span>
         </div>
         {% endfor %}
         {% endif %}

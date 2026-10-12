@@ -4,7 +4,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from d2lib.wiki.history_comparison import HistoricalRepository, analyze_revision, with_shared_set_bonuses, availability_rows
+from d2lib.wiki.history_comparison import HistoricalRepository, analyze_revision, with_shared_set_bonuses, availability_rows, comparison_has_changes
 from d2lib.wiki.comparison import base_item_comparison_context
 from d2lib.wiki.renderers import WikiRenderer
 
@@ -36,8 +36,12 @@ class HistoryComparisonTests(unittest.TestCase):
     def test_missing_dependencies_never_use_current_data(self):
         del self.tables['itemtypes']
         result = self.analyze()
-        self.assertEqual('unavailable', result['status'])
-        self.assertNotIn('entry', result)
+        # Missing dependency tables no longer fail the whole revision; the entry
+        # is reconstructed leniently from the historical tables only (no current
+        # data fallback), with the raw type code preserved.
+        self.assertEqual('available', result['status'])
+        self.assertIn('entry', result)
+        self.assertEqual('axe', result['entry']['type'])
         repo = HistoricalRepository({}, {})
         self.assertEqual([], repo.get_excel_table('weapons'))
 
@@ -49,9 +53,10 @@ class HistoryComparisonTests(unittest.TestCase):
 
     def test_revision_markup_escapes_values(self):
         comparison = {'stat_rows': [{'label': 'Name', 'old': '<script>bad</script>', 'new': 'safe', 'status': 'changed'}], 'property_rows': []}
-        html = WikiRenderer().render('history_revision.html', comparison=comparison, old_label='BT', baseline_present=True)
+        html = WikiRenderer().render('history_revision.html', comparison=comparison, is_first=False, prev_date='2026-01-01', this_date='2026-02-02')
         self.assertNotIn('<script>', html)
-        self.assertIn('BT (current comparison)', html)
+        self.assertIn('Previous Revision · 2026-01-01', html)
+        self.assertIn('BK At · 2026-02-02', html)
 
     def test_shared_set_bonuses_preserve_slots_and_input(self):
         class Resolver:
@@ -83,6 +88,14 @@ class HistoryComparisonTests(unittest.TestCase):
         rows = availability_rows({}, {'spawnable': '1'}, current_present=False)
         self.assertEqual('Not present', rows[0]['new'])
         self.assertEqual('—', rows[1]['new'])
+
+    def test_comparison_has_changes(self):
+        self.assertFalse(comparison_has_changes({'stat_rows': [{'status': 'same'}], 'property_rows': [{'status': 'same'}]}))
+        self.assertTrue(comparison_has_changes({'stat_rows': [{'status': 'same'}], 'property_rows': [{'status': 'changed'}]}))
+        self.assertTrue(comparison_has_changes({'stat_rows': [{'status': 'added'}], 'property_rows': []}))
+        self.assertFalse(comparison_has_changes({'stat_rows': [], 'property_rows': [{'status': 'separator'}]}))
+        self.assertTrue(comparison_has_changes({}, availability=[{'status': 'changed'}]))
+        self.assertFalse(comparison_has_changes({}, availability=[{'status': 'same'}]))
 
 
 if __name__ == '__main__':

@@ -8,10 +8,17 @@
   const select = dialog.querySelector('#item-revision-select');
   const content = dialog.querySelector('#item-revision-content');
   const meta = dialog.querySelector('#item-revision-meta');
-  const pageLink = dialog.querySelector('#item-revision-page');
+  const prevBtn = dialog.querySelector('#item-revision-prev');
+  const nextBtn = dialog.querySelector('#item-revision-next');
   const cache = new Map();
   let active = null;
   let request = 0;
+  function updateNav() {
+    const count = active?.revisions.length || 0;
+    const index = Number(select.value);
+    prevBtn.disabled = index <= 0;
+    nextBtn.disabled = index >= count - 1;
+  }
   function renderRevision() {
     const revision = active?.revisions[Number(select.value)];
     if (!revision) return;
@@ -24,8 +31,15 @@
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     meta.append(document.createTextNode(`${revision.date}${revision.release ? ' · ' + revision.release : ''} · `), link);
+    updateNav();
   }
   select.addEventListener('change', renderRevision);
+  prevBtn.addEventListener('click', () => {
+    if (Number(select.value) > 0) { select.value = String(Number(select.value) - 1); renderRevision(); }
+  });
+  nextBtn.addEventListener('click', () => {
+    if (Number(select.value) < (active?.revisions.length || 1) - 1) { select.value = String(Number(select.value) + 1); renderRevision(); }
+  });
   dialog.querySelector('[data-close-revisions]').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => { request++; active = null; });
   dialog.addEventListener('click', event => {
@@ -43,9 +57,6 @@
     const trigger = explicit || card.querySelector('[data-revisions-path]');
     if (!trigger) return;
     event.preventDefault();
-    const detail = card?.querySelector('a.set-th-name');
-    pageLink.hidden = !detail;
-    if (detail) pageLink.href = detail.href;
     const token = ++request;
     active = null;
     select.replaceChildren();
@@ -73,7 +84,7 @@
         select.append(option);
       });
       select.disabled = !data.revisions.length;
-      if (data.revisions.length) { select.value = '0'; renderRevision(); }
+      if (data.revisions.length) { select.value = String(data.revisions.length - 1); renderRevision(); }
       else content.textContent = 'No source revisions are available for this item.';
     } catch (error) {
       if (token === request) content.textContent = 'Unable to load revisions. Close this popup and try again.';

@@ -121,10 +121,6 @@ class WikiRoutes:
         return "gems-runes/index.html"
 
     @staticmethod
-    def gem_rune_output_path(slug: str) -> str:
-        return f"gems-runes/{slug}/index.html"
-
-    @staticmethod
     def mechanics_output_path() -> str:
         return "mechanics/index.html"
 
@@ -151,10 +147,6 @@ class WikiRoutes:
     @staticmethod
     def reference_output_path(slug: str) -> str:
         return f"references/{slug}/index.html"
-
-    @staticmethod
-    def item_output_path(family: str, slug: str) -> str:
-        return f"items/{family}/{slug}/index.html"
 
     @staticmethod
     def classes_index_output_path() -> str:

@@ -131,28 +131,6 @@ def runeword_compare_rows(
     return rows
 
 
-def align_set_member_comparisons(members: List[Dict[str, Any]]) -> None:
-    max_stat_rows = max((len(m.get("comparison", {}).get("stat_rows", [])) for m in members), default=0)
-    max_prop_rows = max((len(m.get("comparison", {}).get("property_rows", [])) for m in members), default=0)
-    has_property_section = max_prop_rows > 0
-
-    def copy_real(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        return [{**row, "is_spacer": False} for row in rows]
-
-    def spacers(count: int) -> List[Dict[str, Any]]:
-        return [{"label": "", "old": "", "new": "", "status": "same", "is_spacer": True} for _ in range(count)]
-
-    row_count = 2 + max_stat_rows + (1 if has_property_section else 0) + max_prop_rows
-    for member in members:
-        cmp = member.get("comparison", {})
-        stat_rows = copy_real(cmp.get("stat_rows", []))
-        prop_rows = copy_real(cmp.get("property_rows", []))
-        cmp["aligned_stat_rows"] = stat_rows + spacers(max_stat_rows - len(stat_rows))
-        cmp["aligned_property_rows"] = prop_rows + spacers(max_prop_rows - len(prop_rows))
-        cmp["has_property_section"] = has_property_section
-        cmp["row_count"] = row_count
-
-
 def comparison_summary_context(comparison: Dict[str, Any]) -> Dict[str, Any]:
     summary: Dict[str, Any] = {"added": [], "removed": [], "changed": []}
     for row in comparison.get("rows", []):

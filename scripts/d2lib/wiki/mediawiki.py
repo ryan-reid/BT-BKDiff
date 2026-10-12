@@ -145,33 +145,45 @@ class MediaWikiRenderer:
         rows = [[row.get("id", ""), row.get("status", ""), row.get("description", ""), " + ".join(row.get("inputs", [])), ", ".join(row.get("outputs", []))] for row in page.get("rows", [])]
         return self._table(["ID", "Status", "Description", "Inputs", "Outputs"], rows)
 
-    def _render_items_index(self, _payload: Dict[str, Any], site: WikiSiteDTO) -> List[str]:
+    def _render_items_index(self, payload: Dict[str, Any], _site: WikiSiteDTO) -> List[str]:
         family_defs = (("unique", "Uniques"), ("set", "Sets"), ("runeword", "Runewords"))
-        family_pages = []
-        for family, label in family_defs:
-            pages = [
-                page
-                for page in site["pages"]
-                if page["kind"] == "item"
-                and page["category"] == family
-                and isinstance(page["payload"].get("page"), dict)
-            ]
-            if family == "set":
-                pages.extend(self._set_item_pages(site))
-            if not pages:
-                continue
-            family_pages.append((label, sorted(pages, key=lambda row: self.page_title(row).lower())))
-
+        item_entries = payload.get("item_entries", {})
         lines = ["== All Items ==", "__TOC__", ""]
-        for label, pages in family_pages:
-            lines.append(f"* [[#{label}|{label}]] ({len(pages)})")
+        for family, label in family_defs:
+            entries = item_entries.get(family, [])
+            if entries:
+                lines.append(f"* [[#{label}|{label}]] ({len(entries)})")
         lines.append("")
 
-        for label, pages in family_pages:
-            lines.extend([f"=== {label} ===", ""])
-            for page in sorted(pages, key=lambda row: self.page_title(row).lower()):
-                lines.extend([f"== {self._text(self.page_title(page))} ==", *self._item_compare_table(page["payload"].get("page", {})), ""])
+        for family, label in family_defs:
+            entries = item_entries.get(family, [])
+            if not entries:
+                continue
+            lines.append(f"=== {label} ===")
+            for entry in sorted(entries, key=lambda row: self._text(row.get("title", "")).lower()):
+                page = self._entry_page(entry, family)
+                lines.append(f"== {self._text(page['title'])} ==")
+                lines.extend(self._item_compare_table(page))
+                lines.append("")
         return lines
+
+    def _entry_page(self, entry: Dict[str, Any], family: str) -> Dict[str, Any]:
+        stat_rows = entry.get("stat_rows", [])
+        property_rows = entry.get("property_rows", [])
+        stats = [{"label": row.get("label", ""), "value": row.get("new", "")} for row in stat_rows]
+        if family == "runeword":
+            base_row = next((row for row in stat_rows if row.get("label") == "Base Items"), {})
+            stats.append({"label": "Base", "value": base_row.get("new", "")})
+        return {
+            "title": entry.get("title", ""),
+            "stats": stats,
+            "properties": [{"text": text} for text in entry.get("properties", [])],
+            "comparison": {
+                "stat_rows": stat_rows,
+                "property_rows": property_rows,
+                "state": entry.get("status", ""),
+            },
+        }
 
     def _render_recipe_sections(self, sections: List[Dict[str, Any]]) -> List[str]:
         lines = []

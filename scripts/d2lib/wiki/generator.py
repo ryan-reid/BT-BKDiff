@@ -46,9 +46,6 @@ from d2lib.wiki.comparison import (
     base_item_comparison_context,
     gem_rune_comparison_context,
     set_bonus_comparison,
-    align_set_member_comparisons,
-    comparison_summary_context,
-    runeword_compare_rows,
 )
 from d2lib.wiki.item_helpers import (
     item_filter_group,
@@ -59,7 +56,6 @@ from d2lib.wiki.item_helpers import (
     item_title,
     item_summary,
     item_search_text,
-    item_slug,
     set_item_anchor,
 )
 
@@ -126,8 +122,11 @@ class WikiContentBuilder:
         base_item_families = self._load_base_item_families()
         base_item_lookup = {item["code"]: item for family in base_item_families for item in family["members"]}
         retail_base_items = self._load_retail_base_items()
+        misc_groups, gem_rune_groups = self._load_misc_groups()
+        retail_misc_items = self._load_retail_misc_items()
         write_history_comparisons(history_collector, self._history, self._repo, items, old_item_index,
-                                  base_item_families, retail_base_items, self.writer, self.old_label, self._retail_repo)
+                                  base_item_families, retail_base_items, gem_rune_groups, retail_misc_items,
+                                  self.writer, self.old_label, self._retail_repo)
 
         # Single CubeAnalyzerService for both group summary and raw recipes.
         recipe_service = CubeAnalyzerService(self._repo, self._retail_repo)
@@ -136,8 +135,6 @@ class WikiContentBuilder:
         recipe_pages_data = RecipePresentationBuilder(recipe_service, raw_recipes, recipe_groups).build()
 
         monster_groups = self._load_monster_groups()
-        misc_groups, gem_rune_groups = self._load_misc_groups()
-        retail_misc_items = self._load_retail_misc_items()
         mechanics_summary = self._load_mechanics_summary()
         mercenary_data = self._load_mercenary_data()
         drop_weight_groups = self._load_drop_weight_groups()
@@ -148,7 +145,7 @@ class WikiContentBuilder:
         item_entries = self._write_item_pages(items, old_item_index, base_item_lookup, retail_base_items)
         class_entries = self._write_class_pages(class_pages)
         self._write_runeword_index_page(items["runeword"], item_entries["runeword"], old_item_index)
-        self._write_set_index_page(items["set"], old_item_index["set"])
+        self._write_set_index_page(items["set"], old_item_index["set"], base_item_lookup, retail_base_items)
         self._write_base_item_pages(base_item_families, retail_base_items)
         self._write_recipe_pages(recipe_groups, recipe_pages_data)
         self._write_bestiary_pages(monster_groups)
@@ -187,6 +184,9 @@ class WikiContentBuilder:
     def _load_misc_groups(self) -> Tuple[List[MiscGroupDTO], List[MiscGroupDTO]]:
         resolver = PropertyResolverService(self._repo)
         groups = MiscAnalyzerService(self._repo, resolver, self._retail_repo).analyze_misc_items()
+        for group in groups:
+            for member in group["members"]:
+                member["history"] = item_history(self._history, "base", member, self._history_aliases)
         gem_rune_categories = {"Runes", "Gems & Skulls"}
         gem_rune_groups = [g for g in groups if g["category"] in gem_rune_categories]
         material_groups = [g for g in groups if g["category"] not in gem_rune_categories]
@@ -551,43 +551,8 @@ class WikiContentBuilder:
 
         for group in groups:
             for item in group["members"]:
-                slug = slugify(item["name"])
-                output_path = WikiRoutes.gem_rune_output_path(slug)
-                item["href"] = WikiRoutes.route_from_output_path(output_path)
-
                 old_item = retail_items.get(item["code"])
-                comparison = gem_rune_comparison_context(item, old_item)
-                item["comparison"] = comparison
-
-                stats = [
-                    {"label": "Code", "value": item["code"]},
-                    {"label": "Level", "value": str(item["level"])},
-                    {"label": "Level Requirement", "value": str(item["level_req"])},
-                ]
-                if item["stackable"]:
-                    stats.append({"label": "Max Stack", "value": str(item["max_stack"])})
-
-                self._write_page(
-                    title=f"{item['name']} | Gems & Runes",
-                    output_path=output_path,
-                    template_name="item.html",
-                    category="gem-rune",
-                    source_files=["data/global/excel/misc.txt"],
-                    page={
-                        "family": "misc",
-                        "title": item["name"],
-                        "hero_eyebrow": f"{group['category']} Item",
-                        "summary": item["description"] or f"A {group['category'].lower()} used for socketing or crafting.",
-                        "chips": [
-                            {"label": group["category"], "tone": "default"},
-                            {"label": self.new_label, "tone": "accent"},
-                        ],
-                        "stats": stats,
-                        "icon_src": item["icon_src"],
-                        "source_rel_path": f"misc.txt ({item['code']})",
-                        "comparison": comparison,
-                    },
-                )
+                item["comparison"] = gem_rune_comparison_context(item, old_item)
 
         self._write_page(
             title=f"Gems & Runes | {self.new_label} Wiki",
@@ -727,7 +692,6 @@ class WikiContentBuilder:
         retail_base_items: Dict[str, Any],
     ) -> Dict[str, List[Dict[str, str]]]:
         page_entries: Dict[str, List[Dict[str, str]]] = {family: [] for family in ITEM_FAMILIES}
-        used_paths: Dict[str, Dict[str, int]] = {family: {} for family in ITEM_FAMILIES}
         icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
         drop_base_lookup = self._drop_base_lookup(self._repo)
 
@@ -740,11 +704,8 @@ class WikiContentBuilder:
                     set_name = str(entry.get("raw_row", {}).get("set") or "").strip()
                     entry["set_anchor"] = set_item_anchor(entry)
                     href = f"sets/#{slugify(set_name)}" if set_name else "sets/"
-                    output_path = ""
                 else:
-                    slug = item_slug(entry, family, title, used_paths[family])
-                    output_path = WikiRoutes.item_output_path(family, slug)
-                    href = WikiRoutes.route_from_output_path(output_path)
+                    href = "items/"
                 entry["href"] = href
 
                 icon_src = icon_exporter.export_entry_icon(entry, family)
@@ -798,16 +759,6 @@ class WikiContentBuilder:
                     "stat_rows": comparison["stat_rows"],
                     "property_rows": comparison["property_rows"],
                 })
-
-                if output_path:
-                    self._write_page(
-                        title=f"{title} | {family.title()} Item",
-                        output_path=output_path,
-                        template_name="item.html",
-                        category=family,
-                        source_files=[entry["_source_rel_path"]],
-                        page=self._item_page_context(entry, family, title, old_entry, base_stats),
-                    )
 
         return page_entries
 
@@ -868,6 +819,7 @@ class WikiContentBuilder:
 
             old_entry = old_runewords.get(item_identity(entry, "runeword"))
             comparison = item_comparison_context(entry, "runeword", old_entry)
+            comparison["rune_property_rows"] = self._rune_property_rows(entry, old_entry)
             rune_filter_terms = []
             rune_requirement_codes = []
             for rune in rune_requirements:
@@ -983,7 +935,13 @@ class WikiContentBuilder:
                 add("All Weapons")
         return terms
 
-    def _write_set_index_page(self, sets: List[Dict[str, Any]], old_item_index: Dict[str, Dict[str, Any]]) -> None:
+    def _write_set_index_page(
+        self,
+        sets: List[Dict[str, Any]],
+        old_item_index: Dict[str, Dict[str, Any]],
+        base_item_lookup: Dict[str, Any],
+        retail_base_items: Dict[str, Any],
+    ) -> None:
         set_families: Dict[str, List[Dict[str, Any]]] = {}
         for item in sets:
             set_name = item.get("raw_row", {}).get("set", "Unknown Set")
@@ -1006,7 +964,11 @@ class WikiContentBuilder:
             for item in members:
                 old_item = old_item_index.get(item_identity(item, "set"))
                 item["comparison"] = item_comparison_context(item, "set", old_item)
-            align_set_member_comparisons(members)
+                item["summary"] = item_summary(item, "set")
+                base_code = item.get("raw_row", {}).get("item", "")
+                item["base_stats"] = self._base_comparison_rows(
+                    base_item_lookup.get(base_code), retail_base_items.get(base_code)
+                )
 
             bonus_diffs = set_bonus_comparison(name, bk_set_row, rt_set_row, resolver_bk, resolver_rt)
             status = (
@@ -1252,104 +1214,25 @@ class WikiContentBuilder:
             if row["label"] in labels
         ]
 
-    def _item_page_context(
+    def _rune_property_rows(
         self,
         entry: Dict[str, Any],
-        family: str,
-        title: str,
         old_entry: Optional[Dict[str, Any]],
-        base_stats: Optional[List[Dict[str, str]]] = None,
-    ) -> Dict[str, Any]:
-        chips = [{"label": family.title(), "tone": "default"}, {"label": self.new_label, "tone": "accent"}]
-        hero_eyebrow = "Generated Item Page"
-        if family == "runeword":
-            rune_requirements = entry.get("rune_requirements", [])
-            socket_count = len(rune_requirements) or len(entry.get("runes", []))
-            base_items = entry.get("base_items", [])
-            base_label = ", ".join(base_items) or "Unknown base"
-            hero_eyebrow = f"{base_label} Runeword"
-            chips = [
-                {"label": "Runeword", "tone": "default"},
-                {"label": self.new_label, "tone": "accent"},
-                {"label": base_label, "tone": "default"},
-                {"label": f"{socket_count} socket{'s' if socket_count != 1 else ''}", "tone": "accent"},
-            ]
-            stats = [
-                {"label": "Base", "value": base_label},
-                {"label": "Sockets", "value": str(socket_count) if socket_count else "Unknown"},
-                {"label": "Runes", "value": " + ".join(entry.get("runes", [])) or "Unknown"},
-            ]
-        else:
-            chips.append({"label": "Set Item" if family == "set" else entry.get("item_type", "Item"), "tone": "accent"})
-            stats = [
-                {"label": "Base Item", "value": entry.get("base_item", "Unknown")},
-                {"label": "Item Type", "value": entry.get("item_type", "Unknown")},
-                {"label": "Level Requirement", "value": entry.get("lvl_req", "0")},
-            ]
-            drop_info = entry.get("drop_info") or {}
-            if drop_info.get("label"):
-                stats.append({"label": "Drop Level", "value": drop_info["label"]})
-            if family == "set" and entry.get("raw_row", {}).get("set"):
-                set_name = str(entry["raw_row"]["set"])
-                stats.append({"label": "Set", "value": set_name, "href": f"sets/#{slugify(set_name)}"})
-            for row in base_stats or []:
-                if row.get("new"):
-                    stats.append({"label": row["label"], "value": row["new"]})
+    ) -> List[Dict[str, str]]:
+        old_rune = rune_property_occurrence_map(old_entry or {})
+        new_rune = rune_property_occurrence_map(entry)
 
-        properties = [
-            {"text": str(prop.get("resolved_text", "")), "is_warning": "unknown property:" in str(prop.get("resolved_text", "")).lower()}
-            for prop in entry.get("properties", [])
-        ]
-        rune_properties = [
-            {
-                "rune": str(rune_entry.get("rune", "")),
-                "properties": [
-                    {"text": str(prop.get("resolved_text", "")), "is_warning": "unknown property:" in str(prop.get("resolved_text", "")).lower()}
-                    for prop in rune_entry.get("properties", [])
-                ],
-            }
-            for rune_entry in entry.get("rune_properties", [])
-        ]
-        comparison = item_comparison_context(entry, family, old_entry)
-        return {
-            "family": family,
-            "title": title,
-            "hero_eyebrow": hero_eyebrow,
-            "history": entry.get("history"),
-            "summary": item_summary(entry, family),
-            "chips": chips,
-            "stats": stats,
-            "properties": properties,
-            "rune_properties": rune_properties,
-            "rune_requirements": entry.get("rune_requirements", []),
-            "base_filter_url": self._runeword_base_filter_url(entry, len(entry.get("rune_requirements", []))),
-            "old_base_label": ", ".join(old_entry.get("base_items", [])) if old_entry else "",
-            "old_rune_label": " + ".join(old_entry.get("runes", [])) if old_entry else "",
-            "required_level": entry.get("required_level", ""),
-            "runeword_compare_rows": runeword_compare_rows(entry, old_entry),
-            "icon_src": entry.get("icon_src", ""),
-            "source_rel_path": entry.get("_source_rel_path", ""),
-            "comparison": comparison,
-            "comparison_summary": comparison_summary_context(comparison),
-        }
+        def status(old_v: str, new_v: str) -> str:
+            if old_v and new_v:
+                return "changed" if old_v != new_v else "same"
+            return "added" if new_v else "removed" if old_v else "same"
 
-    @staticmethod
-    def _runeword_base_filter_url(entry: Dict[str, Any], socket_count: int) -> str:
-        if not entry.get("base_items") and not socket_count:
-            return "bases/"
-        params: Dict[str, str] = {}
-        base_items = [str(base).strip() for base in entry.get("base_items", []) if str(base).strip()]
-        raw = entry.get("raw_row", {})
-        included = ItemTypeTaxonomy.rules(raw, "itype")
-        excluded = ItemTypeTaxonomy.rules(raw, "etype")
-        if included:
-            params["types"] = "|".join(included)
-            params["exclude"] = "|".join(excluded)
-        elif base_items:
-            params["category"] = base_items[0]
-        if socket_count:
-            params["minSockets"] = str(socket_count)
-        return f"bases/?{urlencode(params)}" if params else "bases/"
+        keys = list(new_rune.keys()) + [k for k in old_rune if k not in new_rune]
+        return [
+            {"old": old_rune.get(k, ""), "new": new_rune.get(k, ""),
+             "status": status(old_rune.get(k, ""), new_rune.get(k, ""))}
+            for k in keys
+        ]
 
     @staticmethod
     def _runeword_rune_name(entry: Dict[str, Any], rune_index: int) -> str:

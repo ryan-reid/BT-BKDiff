@@ -4,8 +4,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from d2lib.services.item_types import ItemTypeTaxonomy
-from d2lib.wiki.generator import WikiContentBuilder
-from urllib.parse import parse_qs, urlparse
 
 
 class Repo:
@@ -59,10 +57,3 @@ class TestItemTypes(unittest.TestCase):
 
     def test_chain_handles_cycles(self):
         self.assertEqual(['cycle1', 'cycle2'], self.types.chain('cycle1'))
-
-    def test_base_link_preserves_multiple_types_and_exclusions(self):
-        url = WikiContentBuilder._runeword_base_filter_url({'raw_row': {'itype1': 'mace', 'itype2': 'swor', 'etype1': 'hamm'}, 'base_items': ['Mace', 'Sword']}, 3)
-        params = parse_qs(urlparse(url).query)
-        self.assertEqual(['mace|swor'], params['types'])
-        self.assertEqual(['hamm'], params['exclude'])
-        self.assertEqual(['3'], params['minSockets'])

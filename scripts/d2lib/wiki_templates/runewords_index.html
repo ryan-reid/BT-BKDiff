@@ -54,7 +54,7 @@
 
     <div class="sp-head">
       <div style="min-width:0;flex:1">
-        <a class="set-th-name" style="color:var(--q-runeword)" href="{{ site_root }}{{ runeword.href }}">{{ runeword.title }}</a>
+        <span class="set-th-name" style="color:var(--q-runeword)">{{ runeword.title }}</span>
         <span class="set-th-meta">{{ runeword.base_items|join(', ') }}</span>
         {% if runeword.runes %}
         <div class="rune-sequence" style="margin-top:6px;justify-content:flex-start;flex-wrap:wrap;gap:4px">
@@ -82,6 +82,16 @@
     {% if comp.property_rows %}
     <div class="sp-sep">Properties</div>
     {% for r in comp.property_rows %}
+    <div class="sp-row">
+      <span class="sp-cell is-{{ r.status }}">{{ r.old | comparison_highlight(r.new, "old") }}</span>
+      <span class="sp-cell is-{{ r.status }}">{{ r.new | comparison_highlight(r.old, "new") }}</span>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if comp.rune_property_rows %}
+    <div class="sp-sep">Properties from Runes</div>
+    {% for r in comp.rune_property_rows %}
     <div class="sp-row">
       <span class="sp-cell is-{{ r.status }}">{{ r.old | comparison_highlight(r.new, "old") }}</span>
       <span class="sp-cell is-{{ r.status }}">{{ r.new | comparison_highlight(r.old, "new") }}</span>

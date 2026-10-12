@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site_root }}assets/site.css?v=20261011-revisions" />
+  <link rel="stylesheet" href="{{ site_root }}assets/site.css?v=20261011-items" />
 </head>
 <body data-site-root="{{ site_root }}" data-new-label="{{ new_label }}" data-old-label="{{ old_label }}">
 
@@ -48,9 +48,7 @@
       <a href="{{ site_root }}sets/"{% block nav_sets %}{% endblock %}>Sets</a>
       <a href="{{ site_root }}bases/"{% block nav_bases %}{% endblock %}>Bases</a>
       <a href="{{ site_root }}recipes/"{% block nav_recipes %}{% endblock %}>Recipes</a>
-      <a href="{{ site_root }}bestiary/"{% block nav_bestiary %}{% endblock %}>Bestiary</a>
       <a href="{{ site_root }}areas/"{% block nav_areas %}{% endblock %}>Areas</a>
-      <a href="{{ site_root }}classes/"{% block nav_classes %}{% endblock %}>Classes</a>
       <a href="{{ site_root }}gems-runes/"{% block nav_gems %}{% endblock %}>Gems &amp; Runes</a>
       <a href="{{ site_root }}misc/"{% block nav_misc %}{% endblock %}>Materials</a>
       <a href="{{ site_root }}mechanics/"{% block nav_mechanics %}{% endblock %}>Mechanics</a>
@@ -103,14 +101,16 @@
 
 <dialog id="item-revisions-dialog" class="item-revisions-dialog" aria-labelledby="item-revisions-title">
   <div class="revision-dialog-head"><h2 id="item-revisions-title">Item revisions</h2><button type="button" data-close-revisions aria-label="Close item revisions">Close</button></div>
-  <p class="history-help">Explore BK source revisions against the selected comparison source. Dates are source commit dates. Localization uses current wording.</p>
-  <label for="item-revision-select">BK revision</label>
-  <select id="item-revision-select"></select>
+  <p class="history-help">Explore BK source revisions over time. Dates are source commit dates. Localization uses current wording.</p>
+  <div class="revision-nav">
+    <button type="button" class="revision-nav-btn" id="item-revision-prev" disabled>Previous</button>
+    <select id="item-revision-select" aria-label="BK revision"></select>
+    <button type="button" class="revision-nav-btn" id="item-revision-next" disabled>Next</button>
+  </div>
   <p id="item-revision-meta"></p>
   <div id="item-revision-content" aria-live="polite"></div>
-  <a id="item-revision-page" hidden>Open item page</a>
 </dialog>
 <script src="{{ site_root }}assets/site.js?v=20261010-history"></script>
-<script src="{{ site_root }}assets/history.js?v=20261011-revisions"></script>
+<script src="{{ site_root }}assets/history.js?v=20261011-items"></script>
 </body>
 </html>

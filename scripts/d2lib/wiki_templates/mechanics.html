@@ -11,90 +11,9 @@
 </section>
 
 <section class="content-section">
-  <h2>Experience Curve Changes</h2>
-  <p class="muted">Summary of changes to level-based experience requirements compared to {{ old_label }}.</p>
-  
-  <div class="table-wrap">
-    <table class="mechanics-table">
-      <thead>
-        <tr>
-          <th>Level</th>
-          <th>Property</th>
-          <th>{{ old_label }} Value</th>
-          <th>{{ new_label }} Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for change in summary.experience_changes %}
-        <tr>
-          <td><strong>Level {{ change.level }}</strong></td>
-          <td>{{ change.property }}</td>
-          <td><span class="comparison-value is-old">{{ change.retail }}</span></td>
-          <td><span class="comparison-value is-new">{{ change.bk }}</span></td>
-        </tr>
-        {% endfor %}
-        {% if not summary.experience_changes %}
-        <tr><td colspan="4" class="text-center text-muted">No significant experience changes found.</td></tr>
-        {% endif %}
-      </tbody>
-    </table>
-  </div>
-</section>
-
-{% macro status_badge(status) %}
-  {% if status == "added" %}<span class="item-card-status is-added">Added</span>
-  {% elif status == "modified" %}<span class="item-card-status is-modified">Changed</span>
-  {% elif status == "removed" %}<span class="item-card-status is-removed">Removed</span>
-  {% else %}<span class="text-muted">—</span>{% endif %}
-{% endmacro %}
-
-{% macro change_row(source_label, change) %}
-<tr>
-  <td>{{ source_label }}</td>
-  <td><strong>{{ change.name }}</strong></td>
-  <td>{{ status_badge(change.status) }}</td>
-  <td>{{ change.fields|join(', ') }}{% if change.field_count > change.fields|length %} +{{ change.field_count - change.fields|length }} more{% endif %}</td>
-</tr>
-{% endmacro %}
-
-<section class="content-section">
-  <h2>Skill & Missile Changes</h2>
-  <p class="muted">Summary of skill and missile changes versus {{ old_label }}. For full field-level detail see the <a href="{{ site_root }}reports/">Reports</a> section.</p>
-  <div class="table-wrap">
-    <table class="mechanics-table">
-      <thead>
-        <tr><th>Category</th><th>Name</th><th>Status</th><th>Changed Fields</th></tr>
-      </thead>
-      <tbody>
-        {% for change in summary.skill_changes %}{{ change_row("Skills", change) }}{% endfor %}
-        {% for change in summary.missile_changes %}{{ change_row("Missiles", change) }}{% endfor %}
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="content-section">
-  <h2>Character, Item, and Economy Systems</h2>
-  <p class="muted">Changes to starting character stats, item property definitions, and gamble availability.</p>
-  <div class="table-wrap">
-    <table class="mechanics-table">
-      <thead>
-        <tr><th>Category</th><th>Name</th><th>Status</th><th>Changed Fields</th></tr>
-      </thead>
-      <tbody>
-        {% for change in summary.charstat_changes %}{{ change_row("Character Stats", change) }}{% endfor %}
-        {% for change in summary.property_changes %}{{ change_row("Properties", change) }}{% endfor %}
-        {% for change in summary.itemstat_changes %}{{ change_row("Item Stats", change) }}{% endfor %}
-        {% for change in summary.gamble_changes %}{{ change_row("Gambling", change) }}{% endfor %}
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="content-section">
   <h2>Difficulty Scaling</h2>
   <p class="muted">Modifications to monster power and player penalties across difficulty levels.</p>
-  
+
   <div class="table-wrap">
     <table class="mechanics-table">
       <thead>
@@ -116,6 +35,37 @@
         {% endfor %}
         {% if not summary.difficulty_changes %}
         <tr><td colspan="4" class="text-center text-muted">No significant difficulty changes found.</td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="content-section">
+  <h2>Experience Curve Changes</h2>
+  <p class="muted">Summary of changes to level-based experience requirements compared to {{ old_label }}.</p>
+
+  <div class="table-wrap">
+    <table class="mechanics-table">
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Property</th>
+          <th>{{ old_label }} Value</th>
+          <th>{{ new_label }} Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for change in summary.experience_changes %}
+        <tr>
+          <td><strong>Level {{ change.level }}</strong></td>
+          <td>{{ change.property }}</td>
+          <td><span class="comparison-value is-old">{{ change.retail }}</span></td>
+          <td><span class="comparison-value is-new">{{ change.bk }}</span></td>
+        </tr>
+        {% endfor %}
+        {% if not summary.experience_changes %}
+        <tr><td colspan="4" class="text-center text-muted">No significant experience changes found.</td></tr>
         {% endif %}
       </tbody>
     </table>
