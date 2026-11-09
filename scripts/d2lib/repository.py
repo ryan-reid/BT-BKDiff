@@ -45,6 +45,7 @@ class D2Repository:
         self.supplemental_path: str = os.path.join(self.repo_root, "data", "retail")
         self.strings: Dict[str, str] = {}
         self.excel_cache: Dict[str, List[Dict[str, str]]] = {}
+        self.excel_sources: Dict[str, str] = {}
         self._load_strings()
 
     def _candidate_string_dirs(self) -> List[str]:
@@ -139,11 +140,13 @@ class D2Repository:
             return self.excel_cache[table_name]
         
         data = []
+        source_path = ""
         for filepath in self._candidate_excel_paths(table_name):
             if not os.path.exists(filepath):
                 continue
             data = self.load_tsv(filepath)
             if data:
+                source_path = filepath
                 break
         
         # 2. Try Supplemental Fallback ONLY if file is missing from mod
@@ -151,8 +154,11 @@ class D2Repository:
             supp_file = os.path.join(self.supplemental_path, "global", "excel", f"{table_name}.txt")
             if os.path.exists(supp_file):
                 data = self.load_tsv(supp_file)
+                if data:
+                    source_path = supp_file
         
         self.excel_cache[table_name] = data
+        self.excel_sources[table_name] = source_path
         return data
 
     def get_string(self, key: str) -> str:

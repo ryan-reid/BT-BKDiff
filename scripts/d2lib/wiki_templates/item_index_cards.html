@@ -1,7 +1,12 @@
 {% from "history.html" import item_history %}
+{% macro comparison_cell(label, value, other, note, other_note, status, side) %}
+<span class="sp-cell is-{{ status }}">{% if label %}<strong>{{ label }}:</strong> {% endif %}{{ value|comparison_highlight(other, side) }}{% if note %}<small class="comparison-note">{{ note|comparison_highlight(other_note, side) }}</small>{% endif %}</span>
+{% endmacro %}
+
 {% macro comparison_rows(rows, show_labels=true) %}
   {% for row in rows %}
-  <div class="sp-row"><span class="sp-cell is-{{ row.status }}">{% if show_labels and row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}">{% if show_labels and row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
+  {% set label = row.label if show_labels else "" %}
+  <div class="sp-row">{{ comparison_cell(label, row.old, row.new, row.old_note, row.new_note, row.status, "old") }}{{ comparison_cell(label, row.new, row.old, row.new_note, row.old_note, row.status, "new") }}</div>
   {% endfor %}
 {% endmacro %}
 
@@ -17,11 +22,15 @@
   <div class="section-head"><h2>{{ item_section_titles[family] if item_section_titles is defined else family|title ~ ' Items' }}</h2></div>
   <div class="family-items-grid">
     {% for item in entries %}
-    <div class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="{{ family }}" data-status="{{ item.status }}" data-item-group="{{ item.item_group }}" data-item-type="{{ item.item_type }}" data-drop-level="{{ item.drop_level }}" data-search="{{ item.search_text }}">
+    <div class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="{{ family }}" data-status="{{ item.status }}" data-item-group="{{ item.item_group }}" data-item-type="{{ item.item_type }}" data-drop-level="{{ item.drop_level }}" data-search="{{ item.search_text }}"{% if item.anchor %} id="{{ item.anchor }}"{% endif %}{% if family == "skill" %} data-skill-card{% endif %}>
       <div class="sp-head">
         {% if item.icon_src %}<img class="set-th-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.title }} icon">{% endif %}
         <div style="min-width:0;flex:1">
+          {% if item.anchor %}
+          <a class="set-th-name" style="color:var(--q-{{ item.card_quality|default(family) }})" href="#{{ item.anchor }}">{{ item.title }}</a>
+          {% else %}
           <span class="set-th-name" style="color:var(--q-{{ item.card_quality|default(family) }})">{{ item.title }}</span>
+          {% endif %}
           <span class="set-th-meta">{{ item.summary }}</span>
           {% if item.runes %}
           <div class="rune-sequence" style="margin-top:6px;justify-content:flex-start;flex-wrap:wrap;gap:4px">

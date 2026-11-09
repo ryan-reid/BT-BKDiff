@@ -635,14 +635,14 @@ class TestWikiGenerator(unittest.TestCase):
         self._write_tsv(
             os.path.join(self.retail_data, "global", "excel"),
             "skills.txt",
-            ["skill", "Param1"],
-            [{"skill": "Magic Arrow", "Param1": "1"}, {"skill": "Removed Skill", "Param1": "1"}],
+            ["skill", "charclass", "Param1"],
+            [{"skill": "Magic Arrow", "charclass": "ama", "Param1": "1"}, {"skill": "Removed Skill", "charclass": "ama", "Param1": "1"}],
         )
         self._write_tsv(
             excel_root,
             "skills.txt",
-            ["skill", "Param1"],
-            [{"skill": "Magic Arrow", "Param1": "2"}, {"skill": "New Skill", "Param1": "1"}],
+            ["skill", "charclass", "Param1"],
+            [{"skill": "Magic Arrow", "charclass": "ama", "Param1": "2"}, {"skill": "New Skill", "charclass": "ama", "Param1": "1"}],
         )
         self._write_tsv(os.path.join(self.retail_data, "global", "excel"), "missiles.txt", ["Missile", "Vel"], [{"Missile": "arrow", "Vel": "10"}])
         self._write_tsv(excel_root, "missiles.txt", ["Missile", "Vel"], [{"Missile": "arrow", "Vel": "20"}])

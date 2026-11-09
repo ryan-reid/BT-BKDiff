@@ -412,10 +412,17 @@ class MediaWikiRenderer:
         lines = []
         for skill in page.get("skills", []):
             lines.extend([f"== {self._text(skill.get('name'))} ==", ""])
-            rows = [[effect.get("effect", ""), effect.get("scaling", ""), effect.get("l1", ""), effect.get("l10", ""), effect.get("l20", ""), effect.get("l20_soft10", ""), effect.get("limit", "")] for effect in skill.get("effects", [])]
-            lines.extend(self._table(["Effect", "Scaling", "L1", "L10", "L20", "L20+10", "Limit"], rows))
-            if skill.get("synergies"):
-                lines.extend(["", "=== Synergies ===", *[f"* '''{self._text(syn.get('name'))}''': {self._text(syn.get('effect'))}" for syn in skill.get("synergies", [])]])
+            tooltip = skill.get("tooltip", {})
+            base = [tooltip] if tooltip.get("old") or tooltip.get("new") else []
+            for title, rows in (
+                ("Base skill information", base + skill.get("facts", [])),
+                ("Formulas", skill.get("formula_rows", [])),
+                ("Synergies", skill.get("synergy_rows", [])),
+            ):
+                if rows:
+                    lines.extend([f"=== {title} ===", *self._table(
+                        ["Field", _site["old_label"], _site["new_label"]],
+                        [[row["label"], row["old"], row["new"]] for row in rows])])
             lines.append("")
         return lines
 

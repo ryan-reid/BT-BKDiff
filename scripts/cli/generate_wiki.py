@@ -77,7 +77,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Generate a static HTML/CSS/JS wiki site from current project exports.")
     parser.add_argument("--item-db", default="../exports/item_db", help="Path to the structured BK item database export")
     parser.add_argument("--old-item-db", default="../exports/item_db_retail", help="Optional path to the structured comparison item database export")
-    parser.add_argument("--skill-trees", default="../output/skill_trees", help="Path to generated class skill tree markdown")
+    parser.add_argument("--skill-trees", default="../output/skill_trees", help="Legacy compatibility argument; skills now come directly from game data")
     parser.add_argument("--game-data", default="../mods/BKDiablo/bkdiablo.mpq", help="Path to the BK game data root")
     parser.add_argument("--retail-data", default="../data/retail", help="Path to the Retail game data root")
     parser.add_argument("--layout-data", default="", help="Optional path to a data root or global/tiles folder for DS1 layout files")

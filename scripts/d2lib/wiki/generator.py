@@ -19,6 +19,7 @@ from d2lib.services import (
     ReferenceAnalyzerService,
 )
 from d2lib.services.items import normalize_runeword_base_item_label
+from d2lib.services.skill_comparison import SkillComparisonService
 from d2lib.services.recipes import RecipePresentationBuilder
 from d2lib.models import (
     BaseItemFamilyDTO,
@@ -29,7 +30,7 @@ from d2lib.models import (
     SetFamilyDTO,
     MiscItemDTO,
 )
-from d2lib.utils import slugify, strip_markdown
+from d2lib.utils import slugify
 from d2lib.wiki.routes import ITEM_FAMILIES, REPORT_SOURCES, WikiRoutes
 from d2lib.wiki.renderers import HtmlWikiRenderer, WikiPublisher, highlight_comparison
 from d2lib.wiki.publication import WikiSiteDTO, WikiSiteRecordingWriter, empty_wiki_site
@@ -40,6 +41,7 @@ from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_t
 from d2lib.wiki.builders import AreaFarmingDataBuilder, ItemIconExporter
 from d2lib.wiki.comparison import (
     affix_card_context,
+    skill_card_context,
     item_diff_status,
     property_occurrence_map,
     rune_property_occurrence_map,
@@ -437,23 +439,7 @@ class WikiContentBuilder:
         return index
 
     def _load_class_pages(self) -> List[Dict[str, Any]]:
-        pages: List[Dict[str, Any]] = []
-        if not os.path.isdir(self.skill_tree_dir):
-            return pages
-        for filename in sorted(os.listdir(self.skill_tree_dir)):
-            if not filename.endswith("_skills.md"):
-                continue
-            full_path = os.path.join(self.skill_tree_dir, filename)
-            with open(full_path, "r", encoding="utf-8") as f:
-                content = f.read().strip()
-            heading = content.splitlines()[0].lstrip("# ").strip() if content else filename
-            class_name = heading.replace(" Skill Tree", "").strip()
-            pages.append({
-                "class_name": class_name,
-                "skills": self._parse_skill_tree_markdown(content),
-                "source_path": full_path,
-            })
-        return pages
+        return SkillComparisonService(self._repo, self._retail_repo).class_pages()
 
     def _load_area_entries(self) -> List[Dict[str, Any]]:
         if not os.path.isdir(self.game_data_dir):
@@ -784,8 +770,10 @@ class WikiContentBuilder:
                 output_path=output_path,
                 template_name="class.html",
                 category="class",
-                source_files=[page["source_path"]],
+                source_files=page["source_files"],
                 page=page,
+                item_entries={"skill": [skill_card_context(skill) for skill in page["skills"]]},
+                item_section_titles={"skill": "Skills"},
             )
             entries.append({
                 "title": title,
@@ -1397,73 +1385,6 @@ class WikiContentBuilder:
             "base_name": base_info.get("name", ""),
         }
 
-    # ── Skill tree parsing ───────────────────────────────────────────────────
-
-    def _parse_skill_tree_markdown(self, content: str) -> List[Dict[str, Any]]:
-        lines = content.splitlines()
-        skills: List[Dict[str, Any]] = []
-        i = 0
-        while i < len(lines):
-            line = lines[i].strip()
-            if not line.startswith("## "):
-                i += 1
-                continue
-
-            skill_name = line[3:].strip()
-            i += 1
-            wip = False
-            table_rows: List[Dict[str, str]] = []
-            synergies: List[Dict[str, str]] = []
-
-            while i < len(lines):
-                stripped = lines[i].strip()
-                if stripped.startswith("## "):
-                    break
-                if stripped == "> Work in Progress":
-                    wip = True
-                    i += 1
-                    continue
-                if stripped.startswith("| Effect |"):
-                    i += 2
-                    while i < len(lines):
-                        row_line = lines[i].strip()
-                        if not row_line.startswith("|"):
-                            break
-                        parts = [p.strip() for p in row_line.strip("|").split("|")]
-                        if len(parts) >= 7:
-                            table_rows.append({
-                                "effect": strip_markdown(parts[0]),
-                                "scaling": strip_markdown(parts[1]),
-                                "l1": strip_markdown(parts[2]),
-                                "l10": strip_markdown(parts[3]),
-                                "l20": strip_markdown(parts[4]),
-                                "l20_soft10": strip_markdown(parts[5]),
-                                "limit": strip_markdown(parts[6]),
-                            })
-                        i += 1
-                    continue
-                if stripped == "### Synergies":
-                    i += 1
-                    while i < len(lines):
-                        syn_line = lines[i].strip()
-                        if not syn_line.startswith("* "):
-                            break
-                        match = re.match(r"\* \*\*(.+?)\*\*: (.+)", syn_line)
-                        if match:
-                            synergies.append({"name": strip_markdown(match.group(1)), "effect": strip_markdown(match.group(2))})
-                        i += 1
-                    continue
-                i += 1
-
-            skills.append({
-                "name": skill_name,
-                "slug": slugify(skill_name),
-                "work_in_progress": wip,
-                "effects": table_rows,
-                "synergies": synergies,
-            })
-
-        return skills
 
 
 class WikiGenerator:

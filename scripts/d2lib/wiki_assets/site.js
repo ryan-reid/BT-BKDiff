@@ -185,7 +185,7 @@ function wireStaticSearch() {
   const pageSearch = document.querySelector("#page-search");
   const hasLandingCards = Boolean(document.querySelector(".guide-card"));
   const searchInput = pageSearch || (hasLandingCards ? document.querySelector("#mast-search-input") : null);
-  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece, .corruption-summary-card"));
+  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece, .corruption-summary-card, .portal[data-skill-class]"));
   const tableRows = Array.from(document.querySelectorAll("tbody tr[data-search]"));
   const sections = Array.from(document.querySelectorAll(".recipe-group, .recipe-group-section, .misc-group-section, .family-container, .set-block"));
   const filterButtons = Array.from(document.querySelectorAll("[data-recipe-filter], [data-search-filter]"));
@@ -432,7 +432,7 @@ function wireMastSearch() {
   }
 
   function pageSearchInput() {
-    return document.querySelector("#page-search, #area-search");
+    return document.querySelector("#page-search, #area-search") || document.querySelector("#skill-search");
   }
 
   const initialTarget = pageSearchInput();
@@ -850,7 +850,7 @@ document.querySelectorAll("[data-comparison-link]").forEach((link) => {
     const target = new URL(link.href);
     target.search = window.location.search;
     target.hash = window.location.hash;
-    const search = document.querySelector("#page-search, #area-search");
+    const search = document.querySelector("#page-search, #area-search") || document.querySelector("#skill-search");
     if (search) {
       if (search.value.trim()) target.searchParams.set("q", search.value.trim());
       else target.searchParams.delete("q");
