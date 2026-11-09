@@ -19,7 +19,6 @@ from cli import (
     compare_item_db,
     compare_all_excel,
     compare_override_files,
-    extract_class_skills,
     generate_wiki
 )
 
@@ -121,11 +120,7 @@ def main() -> None:
     if not orch.run_task("Generating BK vs Retail Override File Comparison Report", compare_override_files.run, bk_mpq, retail_data, file_diff_retail_bk):
         failures.append("Generating BK vs Retail Override File Comparison Report")
 
-    # 9. Generate BK class skill trees
-    if not orch.run_task("Generating BK Class Skill Trees", extract_class_skills.run, bk_mpq, skill_trees_out, repo=repo_bk):
-        failures.append("Generating BK Class Skill Trees")
-
-    # 10. Generate the static wiki site
+    # 9. Generate the static wiki, including skills joined directly from source tables.
     if not orch.run_task("Generating Wiki Pages", generate_wiki.run, bk_out, skill_trees_out, wiki_out, old_item_db_dir=retail_out, game_data_dir=bk_mpq, retail_data_dir=retail_data, old_label="Retail", new_label="BKDiablo", bt_item_db_dir=bt_out, bt_data_dir=bt_mpq):
         failures.append("Generating Wiki Pages")
 

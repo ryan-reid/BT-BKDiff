@@ -6,6 +6,37 @@ from typing import Any, Dict, List, Optional, Tuple
 from d2lib.services.resolver import PropertyResolverService
 
 
+def skill_card_context(skill: Dict[str, Any]) -> Dict[str, Any]:
+    tooltip = skill["tooltip"]
+    base_rows = [tooltip] if tooltip["old"] or tooltip["new"] else []
+    base_rows.extend(skill["facts"])
+    notes = {warning["side"]: warning["text"] for warning in skill["warnings"] if warning.get("kind") == "tooltip"}
+    if notes:
+        base_rows.append({"label": "Tooltip note", "old": notes.get("old", ""), "new": notes.get("new", ""),
+                          "status": "same" if notes.get("old") == notes.get("new") else "changed"})
+
+    return {
+        "title": skill["name"],
+        "anchor": skill["slug"],
+        "summary": skill["display_status"].title(),
+        "status": skill["display_status"],
+        "search_text": skill["search_text"],
+        "card_quality": "magic",
+        "comparison_sections": [
+            {"title": title, "stat_rows": [
+                dict(row, status="same" if row["status"] == "unchanged" else row["status"])
+                for row in rows
+            ]}
+            for title, rows in (
+                ("Base skill information", base_rows),
+                ("Formulas", skill["formula_rows"]),
+                ("Synergies", skill["synergy_rows"]),
+            )
+            if rows
+        ],
+    }
+
+
 def _affix_tier_match(old, new) -> int:
     if old["settings"] == new["settings"] and old["properties"] == new["properties"]:
         return 100
