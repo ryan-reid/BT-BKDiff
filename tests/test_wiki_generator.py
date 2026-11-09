@@ -1606,6 +1606,12 @@ class TestWikiGenerator(unittest.TestCase):
             self.assertIn('class="family-items-grid"', html)
             self.assertIn('class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="magicsuffix"', html)
             self.assertIn('<div class="sp-sep">Roll 1</div>', html)
+            venom_card = html.split(">of Test Venom</span>", 1)[1].split('<div class="base-item-card', 1)[0]
+            for index in range(1, 4):
+                roll = venom_card.split(f">Roll {index}</div>", 1)[1].split('<div class="sp-sep">Roll', 1)[0]
+                stats, properties = roll.split('<div class="sp-sep">Properties</div>', 1)
+                self.assertIn("Affix level", stats)
+                self.assertIn("Poison Damage", properties)
             self.assertNotIn(f'<div class="sp-sep">{baseline} roll', html)
             self.assertNotIn('<div class="sp-sep">BKDiablo roll', html)
             self.assertNotIn("<details", html.split('<div id="item-index-root"', 1)[1])
@@ -1624,9 +1630,10 @@ class TestWikiGenerator(unittest.TestCase):
                 "old": f"Adds {damage} Poison Damage Over 2 Seconds",
                 "new": "Adds 30 Poison Damage",
                 "status": "changed",
-            }, changed["rows"])
-            self.assertTrue(all(row["status"] == "same" for row in shared["rows"]))
-            self.assertTrue(all(row["status"] == "added" for row in added["rows"]))
+            }, changed["property_rows"])
+            self.assertIn({"old": "Affix level 15", "new": "Affix level 15", "status": "same"}, changed["stat_rows"])
+            self.assertTrue(all(row["status"] == "same" for row in shared["stat_rows"] + shared["property_rows"]))
+            self.assertTrue(all(row["status"] == "added" for row in added["stat_rows"] + added["property_rows"]))
             if baseline == "Retail":
                 self.assertEqual("Removed", affixes["of Old Venom"]["status"])
 
