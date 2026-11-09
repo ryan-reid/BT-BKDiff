@@ -76,7 +76,8 @@ def affix_card_context(entry: Dict[str, Any]) -> Dict[str, Any]:
     card["comparison_sections"] = [
         {
             "title": f"Roll {index}",
-            "rows": comparison_rows(old_roll, new_roll, "settings") + comparison_rows(old_roll, new_roll, "properties"),
+            "stat_rows": comparison_rows(old_roll, new_roll, "settings"),
+            "property_rows": comparison_rows(old_roll, new_roll, "properties"),
         }
         for index, (old_roll, new_roll) in enumerate(pairs, 1)
     ]
