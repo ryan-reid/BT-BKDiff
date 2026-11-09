@@ -5,6 +5,13 @@
   {% endfor %}
 {% endmacro %}
 
+{% macro properties(rows) %}
+  {% if rows %}
+  <div class="sp-sep">Properties</div>
+  {{ comparison_rows(rows, false) }}
+  {% endif %}
+{% endmacro %}
+
 {% for family, entries in item_entries.items() %}
 <section class="item-family-section" data-section-family="{{ family }}" style="display:grid;gap:12px">
   <div class="section-head"><h2>{{ item_section_titles[family] if item_section_titles is defined else family|title ~ ' Items' }}</h2></div>
@@ -31,13 +38,11 @@
       <div class="sp-sep">Base Stats</div>
       {{ comparison_rows(item.base_stats) }}
       {% endif %}
-      {% if item.property_rows %}
-      <div class="sp-sep">Properties</div>
-      {{ comparison_rows(item.property_rows, false) }}
-      {% endif %}
+      {{ properties(item.property_rows) }}
       {% for section in item.comparison_sections %}
       <div class="sp-sep">{{ section.title }}</div>
-      {{ comparison_rows(section.rows) }}
+      {{ comparison_rows(section.stat_rows) }}
+      {{ properties(section.property_rows) }}
       {% endfor %}
     </div>
     {% endfor %}
