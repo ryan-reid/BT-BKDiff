@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site_root }}assets/site.css?v=20261011-items" />
+  <link rel="stylesheet" href="{{ site_root }}assets/site.css?v=20261109-items-layout" />
 </head>
 <body data-site-root="{{ site_root }}" data-new-label="{{ new_label }}" data-old-label="{{ old_label }}">
 
@@ -48,6 +48,8 @@
       <a href="{{ site_root }}runewords/"{% block nav_runewords %}{% endblock %}>Runewords</a>
       <a href="{{ site_root }}sets/"{% block nav_sets %}{% endblock %}>Sets</a>
       <a href="{{ site_root }}bases/"{% block nav_bases %}{% endblock %}>Bases</a>
+      <a href="{{ site_root }}references/affixes/"{% block nav_affixes %}{% endblock %}>Affixes</a>
+      <a href="{{ site_root }}references/automagic/"{% block nav_automagic %}{% endblock %}>Automagic</a>
       <a href="{{ site_root }}recipes/"{% block nav_recipes %}{% endblock %}>Recipes</a>
       <a href="{{ site_root }}areas/"{% block nav_areas %}{% endblock %}>Areas</a>
       <a href="{{ site_root }}gems-runes/"{% block nav_gems %}{% endblock %}>Gems &amp; Runes</a>
@@ -111,7 +113,7 @@
   <p id="item-revision-meta"></p>
   <div id="item-revision-content" aria-live="polite"></div>
 </dialog>
-<script src="{{ site_root }}assets/site.js?v=20261010-history"></script>
+<script src="{{ site_root }}assets/site.js?v=20261109-automagic"></script>
 <script src="{{ site_root }}assets/history.js?v=20261011-items"></script>
 </body>
 </html>

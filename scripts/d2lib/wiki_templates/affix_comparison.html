@@ -1,0 +1,62 @@
+{% set sections = page.sections | selectattr("comparison_rows", "defined") | list %}
+{% set reference_sections = page.sections | rejectattr("comparison_rows", "defined") | list %}
+{% set result_noun = "modifiers" if page.slug == "automagic" else "affixes" %}
+
+<section class="hero">
+  <span class="hero-eyebrow">Item Database</span>
+  <h1>{{ page.title }}</h1>
+  <p class="hero-copy">{{ page.description }}</p>
+</section>
+
+<section class="item-index-toolbar" aria-label="Search {{ result_noun }}">
+  <div class="toolbar" data-affix-index="{{ result_noun }}">
+    <input id="page-search" class="search-input" type="search" aria-label="Search {{ result_noun }}" placeholder="Search names, properties, or item types…" />
+  </div>
+  <div class="results-bar">
+    <span class="count" id="item-result-count" role="status" aria-live="polite">{{ sections | map(attribute="comparison_rows") | map("length") | sum }} {{ result_noun }}</span>
+    <button type="button" class="filter-button" id="item-reset-filters">Reset filters</button>
+  </div>
+</section>
+
+<div class="index-layout">
+  <aside class="filters" aria-label="{{ page.title }} filters">
+    <details class="item-filter-panel" open>
+      <summary>Filter {{ result_noun }}</summary>
+      <div class="item-filter-controls">
+        {% if sections|length > 1 %}
+        <div class="filter-block">
+          <h4>Affix type</h4>
+          {% for section in sections %}
+          <label class="facet">
+            <input type="checkbox" checked data-filter-family="{{ section.table }}">
+            {{ "Prefixes" if section.table == "magicprefix" else "Suffixes" }}
+            <span class="tally">{{ section.comparison_rows|length }}</span>
+          </label>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <div class="filter-block">
+          <h4>Comparison</h4>
+          <label class="facet"><input type="checkbox" id="affix-changes-filter"> Changes only</label>
+        </div>
+      </div>
+    </details>
+  </aside>
+
+  <section class="affix-results" aria-label="{{ page.title }} results">
+    <p id="item-empty-message" class="muted" hidden>No {{ result_noun }} match the current filters. Try a different search or reset the filters.</p>
+    <div id="item-index-root" style="display:grid;gap:32px">
+      {% with item_entries = affix_cards %}
+      {% include "item_index_cards.html" %}
+      {% endwith %}
+    </div>
+  </section>
+</div>
+
+{% if reference_sections %}
+<section class="content-section affix-reference" aria-label="Other modifiers">
+  {% for section in reference_sections %}
+    {{ reference_section(section) }}
+  {% endfor %}
+</section>
+{% endif %}

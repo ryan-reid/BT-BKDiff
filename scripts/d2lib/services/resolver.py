@@ -192,9 +192,12 @@ class PropertyResolverService:
                 frames = int(param) if param else 0
             except ValueError:
                 frames = 0
-            seconds = frames / 25
-            sec_str = str(int(seconds)) if seconds.is_integer() else f"{seconds:.1f}".rstrip("0").rstrip(".")
-            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Adds {range_str} Poison Damage Over {sec_str} Seconds"}
+            text = f"Adds {range_str} Poison Damage"
+            if frames > 0:
+                seconds = frames / 25
+                sec_str = str(int(seconds)) if seconds.is_integer() else f"{seconds:.1f}".rstrip("0").rstrip(".")
+                text += f" Over {sec_str} Seconds"
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": text}
 
         if func1 == "12" or code_lower == "skill-rand":
             bonus = param if param else "1"

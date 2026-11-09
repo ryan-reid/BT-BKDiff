@@ -2,25 +2,10 @@
 
 {% block title %}{{ page.title }} | {{ new_label }} Wiki{% endblock %}
 {% block nav_references %} class="is-active"{% endblock %}
+{% block nav_affixes %}{% if page.slug == "affixes" %} class="is-active" aria-current="page"{% endif %}{% endblock %}
+{% block nav_automagic %}{% if page.slug == "automagic" %} class="is-active" aria-current="page"{% endif %}{% endblock %}
 
-{% block content %}
-<section class="hero">
-  <p class="hero-eyebrow">Reference</p>
-  <h1>{{ page.title }}</h1>
-  <p class="hero-copy">{{ page.description }}</p>
-</section>
-
-<section class="content-section">
-  <div class="section-head">
-    <div>
-      <h2>Tables</h2>
-      <p class="muted">Search within this generated reference. Values are shown only when present in the raw row.</p>
-    </div>
-    <a class="link-card-cta" href="{{ site_root }}references/">Back to references</a>
-  </div>
-  <input id="page-search" class="search-input" type="search" placeholder="Search rows, properties, and raw values" />
-
-  {% for section in page.sections %}
+{% macro reference_section(section) %}
   <div class="family-container" data-search="{{ section.title }} {{ section.table }}">
     <div class="family-header-bar">
       <div>
@@ -70,6 +55,30 @@
       </table>
     </div>
   </div>
+{% endmacro %}
+
+{% block content %}
+{% if affix_cards %}
+{% include "affix_comparison.html" %}
+{% else %}
+<section class="hero">
+  <p class="hero-eyebrow">Reference</p>
+  <h1>{{ page.title }}</h1>
+  <p class="hero-copy">{{ page.description }}</p>
+</section>
+
+<section class="content-section">
+  <div class="section-head">
+    <div>
+      <h2>Tables</h2>
+      <p class="muted">Search within this generated reference. Values are shown only when present in the raw row.</p>
+    </div>
+    <a class="link-card-cta" href="{{ site_root }}references/">Back to references</a>
+  </div>
+  <input id="page-search" class="search-input" type="search" aria-label="Search this reference" placeholder="Search rows, properties, and raw values" />
+  {% for section in page.sections %}
+    {{ reference_section(section) }}
   {% endfor %}
 </section>
+{% endif %}
 {% endblock %}

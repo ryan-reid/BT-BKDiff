@@ -192,7 +192,7 @@ function wireStaticSearch() {
   let activeRecipeFilter = "all";
   let emptyMessage = null;
   
-  if (!searchInput || document.querySelector("[data-item-index-url]") || document.querySelector("[data-base-filters]") || document.querySelector("[data-runeword-filters]")) {
+  if (!searchInput || document.querySelector("[data-item-index-url], [data-affix-index]") || document.querySelector("[data-base-filters]") || document.querySelector("[data-runeword-filters]")) {
     return;
   }
 
@@ -685,8 +685,9 @@ async function wireAreaIndex() {
 
 async function wireItemIndex() {
   const toolbar = document.querySelector("[data-item-index-url]");
+  const affixIndex = document.querySelector("[data-affix-index]");
   const root = document.querySelector("#item-index-root");
-  if (!toolbar || !root) {
+  if ((!toolbar && !affixIndex) || !root) {
     return;
   }
 
@@ -698,7 +699,17 @@ async function wireItemIndex() {
   const dropLevelSelect = document.querySelector("#item-drop-level-filter");
   const cards = Array.from(document.querySelectorAll(".base-item-card[data-family]"));
   const familySections = Array.from(document.querySelectorAll("[data-section-family]"));
-  const initialQuery = new URLSearchParams(window.location.search).get("q");
+  const params = new URLSearchParams(window.location.search);
+  const initialQuery = params.get("q");
+  const changesOnly = document.querySelector("#affix-changes-filter");
+  const resultCount = document.querySelector("#item-result-count");
+  const emptyMessage = document.querySelector("#item-empty-message");
+  const resetButton = document.querySelector("#item-reset-filters");
+  if (affixIndex && params.has("qualities")) {
+    const selected = params.get("qualities").split(",");
+    familyCheckboxes.forEach((control) => { control.checked = selected.includes(control.dataset.filterFamily); });
+  }
+  if (changesOnly) changesOnly.checked = params.get("changes") === "1";
 
   let activeGroup = "all";
   let activeType = "all";
@@ -706,6 +717,7 @@ async function wireItemIndex() {
 
   function getActiveFamilies() {
     const checked = familyCheckboxes.filter((cb) => cb.checked).map((cb) => cb.dataset.filterFamily);
+    if (affixIndex) return new Set(checked);
     // All checked (or none) → show everything
     return checked.length === 0 || checked.length === familyCheckboxes.length
       ? new Set()
@@ -715,22 +727,43 @@ async function wireItemIndex() {
   function applyFilters() {
     const query = normalizeText(searchInput ? searchInput.value : "");
     const activeFamilies = getActiveFamilies();
+    let visibleCount = 0;
     cards.forEach((card) => {
       const family = card.dataset.family || "";
       const itemGroup = card.dataset.itemGroup || "";
       const itemType = card.dataset.itemType || "";
       const dropLevel = Number(card.dataset.dropLevel || 0);
       const haystack = normalizeText(card.dataset.search);
-      const familyOk = activeFamilies.size === 0 || activeFamilies.has(family);
+      const familyOk = !familyCheckboxes.length || activeFamilies.has(family)
+        || (!affixIndex && activeFamilies.size === 0);
       const groupOk = activeGroup === "all" || normalizeText(itemGroup).split("|").includes(normalizeText(activeGroup));
       const typeOk = activeType === "all" || normalizeText(itemType).split("|").includes(normalizeText(activeType));
       const dropLevelOk = !activeDropLevel || dropLevel >= activeDropLevel;
       const searchOk = !query || haystack.includes(query);
-      card.hidden = !(familyOk && groupOk && typeOk && dropLevelOk && searchOk);
+      const changeOk = !changesOnly?.checked || card.dataset.status !== "unchanged";
+      card.hidden = !(familyOk && groupOk && typeOk && dropLevelOk && searchOk && changeOk);
+      if (!card.hidden) visibleCount += 1;
     });
     familySections.forEach((section) => {
       section.hidden = section.querySelectorAll(".base-item-card[data-family]:not([hidden])").length === 0;
     });
+    if (affixIndex && resultCount) resultCount.textContent = `${visibleCount} of ${cards.length} ${affixIndex.dataset.affixIndex}`;
+    if (emptyMessage) emptyMessage.hidden = visibleCount > 0;
+  }
+
+  function updateFilters() {
+    applyFilters();
+    if (!affixIndex) return;
+
+    const url = new URL(window.location.href);
+    if (searchInput.value.trim()) url.searchParams.set("q", searchInput.value.trim());
+    else url.searchParams.delete("q");
+    if (changesOnly.checked) url.searchParams.set("changes", "1");
+    else url.searchParams.delete("changes");
+    const selected = getActiveFamilies();
+    if (selected.size !== familyCheckboxes.length) url.searchParams.set("qualities", Array.from(selected).join(","));
+    else url.searchParams.delete("qualities");
+    if (url.href !== window.location.href) window.history.replaceState(null, "", url.href);
   }
 
   if (searchInput) {
@@ -741,9 +774,18 @@ async function wireItemIndex() {
         mastSearch.value = initialQuery;
       }
     }
-    searchInput.addEventListener("input", applyFilters);
+    searchInput.addEventListener("input", updateFilters);
   }
-  familyCheckboxes.forEach((cb) => cb.addEventListener("change", applyFilters));
+  familyCheckboxes.forEach((cb) => cb.addEventListener("change", updateFilters));
+  changesOnly?.addEventListener("change", updateFilters);
+  resetButton?.addEventListener("click", () => {
+    searchInput.value = "";
+    const mastSearch = document.querySelector("#mast-search-input");
+    if (mastSearch) mastSearch.value = "";
+    familyCheckboxes.forEach((control) => { control.checked = true; });
+    changesOnly.checked = false;
+    updateFilters();
+  });
   if (groupSelect) {
     groupSelect.addEventListener("change", () => {
       activeGroup = groupSelect.value || "all";

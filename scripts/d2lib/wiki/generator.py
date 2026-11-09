@@ -39,6 +39,7 @@ from pathlib import Path
 from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 from d2lib.wiki.builders import AreaFarmingDataBuilder, ItemIconExporter
 from d2lib.wiki.comparison import (
+    affix_card_context,
     item_diff_status,
     property_occurrence_map,
     rune_property_occurrence_map,
@@ -328,7 +329,7 @@ class WikiContentBuilder:
     def _load_reference_pages(self) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
         table_names = self._available_excel_tables()
         service = ReferenceAnalyzerService(self._repo, PropertyResolverService(self._repo))
-        pages = service.build_pages(table_names)
+        pages = service.build_pages(table_names, baseline=ReferenceAnalyzerService(self._retail_repo))
         coverage = service.build_coverage(pages, table_names, self._core_raw_table_coverage())
         return pages, coverage
 
@@ -637,6 +638,14 @@ class WikiContentBuilder:
 
         for page in pages:
             self.writer.write_text(f"data/references-{page['slug']}.json", json.dumps(page, indent=2))
+            comparison_sections = [section for section in page["sections"] if "comparison_rows" in section]
+            affix_cards = {
+                section["table"]: [
+                    affix_card_context(row)
+                    for row in section["comparison_rows"]
+                ]
+                for section in comparison_sections
+            }
             self._write_page(
                 title=f"{page['title']} | {self.new_label} Wiki",
                 output_path=WikiRoutes.reference_output_path(page["slug"]),
@@ -647,6 +656,8 @@ class WikiContentBuilder:
                     for table in page["source_tables"]
                 ],
                 page=page,
+                affix_cards=affix_cards,
+                item_section_titles={section["table"]: section["title"] for section in comparison_sections},
             )
 
         coverage_page = {

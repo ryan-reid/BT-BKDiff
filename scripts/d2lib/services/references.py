@@ -1,21 +1,35 @@
 from __future__ import annotations
 
-from typing import Any, Dict, Iterable, List, Optional, Set
+from collections import Counter
+from typing import Any, Dict, Iterable, List, NamedTuple, Optional, Set, Tuple
 
 from d2lib.repository import D2RepositoryProtocol
 from d2lib.services.resolver import PropertyResolverService
 
 
+class AffixTier(NamedTuple):
+    properties: Tuple[str, ...]
+    settings: Tuple[str, ...]
+    identity: Dict[str, Any]
+
+
 REFERENCE_GROUPS = [
     {
         "slug": "affixes",
-        "title": "Affixes & Automagic",
-        "description": "Magic prefixes, suffixes, automagic groups, and quality item modifiers with resolved property text where possible.",
+        "title": "Affixes",
+        "description": "Compare magic prefixes and suffixes, their roll ranges, and the items they can appear on.",
         "tables": [
             {"name": "magicprefix", "title": "Magic Prefixes", "fields": ["group", "level", "maxlevel", "frequency", "spawnable", "itype1", "itype2", "etype1", "etype2"], "properties": "mod"},
             {"name": "magicsuffix", "title": "Magic Suffixes", "fields": ["group", "level", "maxlevel", "frequency", "spawnable", "itype1", "itype2", "etype1", "etype2"], "properties": "mod"},
-            {"name": "automagic", "title": "Automagic", "fields": ["group", "level", "maxlevel", "frequency", "itype1", "itype2", "etype1", "etype2"], "properties": "mod"},
             {"name": "qualityitems", "title": "Quality Item Modifiers", "fields": ["armor", "weapon", "shield", "scepter", "wand", "staff", "bow", "boots", "gloves", "belt"], "properties": "mod"},
+        ],
+    },
+    {
+        "slug": "automagic",
+        "title": "Automagic",
+        "description": "Compare automatic item modifiers, their roll ranges, and the item types and groups they apply to.",
+        "tables": [
+            {"name": "automagic", "title": "Automatic Modifiers", "fields": ["group", "level", "maxlevel", "frequency", "itype1", "itype2", "etype1", "etype2"], "properties": "mod"},
         ],
     },
     {
@@ -83,11 +97,19 @@ class ReferenceAnalyzerService:
         self.repo = repo
         self.resolver = resolver or PropertyResolverService(repo)
 
-    def build_pages(self, available_tables: Optional[Iterable[str]] = None) -> List[Dict[str, Any]]:
+    def build_pages(
+        self,
+        available_tables: Optional[Iterable[str]] = None,
+        baseline: Optional[ReferenceAnalyzerService] = None,
+    ) -> List[Dict[str, Any]]:
         available = set(available_tables or [])
         pages: List[Dict[str, Any]] = []
         for group in REFERENCE_GROUPS:
             sections = [self._section(config) for config in group["tables"]]
+            if baseline is not None:
+                for section in sections:
+                    if section["table"] in {"magicprefix", "magicsuffix", "automagic"}:
+                        section["comparison_rows"] = self._compare_affixes(section["table"], baseline)
             row_count = sum(section["row_count"] for section in sections)
             present_tables = [
                 section["table"]
@@ -106,6 +128,89 @@ class ReferenceAnalyzerService:
                 }
             )
         return pages
+
+    def _compare_affixes(self, table: str, baseline: ReferenceAnalyzerService) -> List[Dict[str, Any]]:
+        def display_tiers(tiers: List[AffixTier], shared: Counter) -> List[Dict[str, Any]]:
+            remaining = shared.copy()
+            result = []
+            for tier in tiers:
+                signature = (tier.properties, tier.settings)
+                result.append({
+                    "properties": tier.properties, "settings": tier.settings, "identity": tier.identity,
+                    "changed": remaining[signature] <= 0,
+                })
+                remaining[signature] -= 1
+            return result
+
+        item_types = {
+            row["Code"]: row["ItemType"]
+            for repo in (baseline.repo, self.repo)
+            for row in repo.get_excel_table("itemtypes")
+            if row.get("Code") and row.get("ItemType")
+        }
+        current = self._affix_groups(table, item_types)
+        old = baseline._affix_groups(table, item_types)
+        rows = []
+        for key in sorted(old.keys() | current.keys()):
+            label, new_tiers = current.get(key, ("", []))
+            old_label, old_tiers = old.get(key, ("", []))
+            # A name can have multiple tiers and the source tables lack a stable
+            # tier ID. Compare their contents as a multiset, independent of order.
+            shared = Counter(tier[:2] for tier in old_tiers) & Counter(tier[:2] for tier in new_tiers)
+            status = (
+                "Added" if not old_tiers else "Removed" if not new_tiers
+                else "Unchanged" if len(old_tiers) == len(new_tiers) == shared.total()
+                else "Changed"
+            )
+
+            rows.append({
+                "label": label or old_label,
+                "status": status,
+                "old": display_tiers(old_tiers, shared),
+                "new": display_tiers(new_tiers, shared),
+                "search_text": " ".join([
+                    label, old_label, key, status,
+                    *(part for tier in old_tiers + new_tiers for part in (*tier.properties, *tier.settings)),
+                ]),
+            })
+        return sorted(rows, key=lambda row: row["label"].casefold())
+
+    def _affix_groups(self, table: str, item_types: Dict[str, str]) -> Dict[str, Tuple[str, List[AffixTier]]]:
+        groups: Dict[str, Tuple[str, List[AffixTier]]] = {}
+        for row in self.repo.get_excel_table(table):
+            name = row.get("Name", "")
+            properties = tuple(sorted(prop["text"] for prop in self._properties(row, "mod")))
+            if not name or not properties:
+                continue
+
+            settings = []
+            identity = {field: row.get(field, "") for field in (
+                "version", "group", "level", "levelreq", "class", "spawnable",
+            )}
+            identity["properties"] = sorted({row.get(f"mod{i}code", "") for i in range(1, 4)} - {""})
+            for prefix, count, label in (("itype", 7, "Item types"), ("etype", 5, "Excludes")):
+                codes = sorted({row.get(f"{prefix}{i}", "") for i in range(1, count + 1)} - {""})
+                identity[prefix] = codes
+                if codes:
+                    names = [f"{item_types[code]} ({code})" if code in item_types else code for code in codes]
+                    settings.append(f"{label} · {', '.join(names)}")
+            spawn = row.get("spawnable", "")
+            spawn_label = {"1": "Spawnable", "0": "Disabled", "": "Disabled"}.get(spawn, f"Spawn flag {spawn}")
+            settings.append(spawn_label)
+            if row.get("rare") == "1":
+                settings.append("Can roll on rares")
+            elif spawn == "1":
+                settings.append("No rare rolls")
+            for field, label in (
+                ("level", "Affix level"), ("maxlevel", "Max affix level"), ("levelreq", "Required level"),
+                ("class", "Class"), ("classlevelreq", "Class required level"), ("frequency", "Weight"),
+                ("group", "Group"), ("version", "Version"),
+            ):
+                if row.get(field):
+                    settings.append(f"{label} {row[field]}")
+            _, tiers = groups.setdefault(name.casefold(), (self.repo.get_string(name) or name, []))
+            tiers.append(AffixTier(properties, tuple(settings), identity))
+        return groups
 
     def build_coverage(
         self,
