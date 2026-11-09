@@ -10,8 +10,10 @@ SCRIPT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
+from cli.generate_wiki import run as generate_wiki
 from d2lib.services.recipes import RecipePresentationBuilder
 from d2lib.wiki import AreaFarmingDataBuilder, ItemIconExporter, MediaWikiPublisher, WikiContentBuilder, WikiGenerator, WikiOutputWriter, WikiRoutes
+from d2lib.wiki.comparison import affix_card_context
 from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 
 
@@ -1101,6 +1103,7 @@ class TestWikiGenerator(unittest.TestCase):
             os.path.join(self.output, "drops", "sources", "index.html"),
             os.path.join(self.output, "references", "index.html"),
             os.path.join(self.output, "references", "affixes", "index.html"),
+            os.path.join(self.output, "references", "automagic", "index.html"),
             os.path.join(self.output, "references", "raw-coverage", "index.html"),
             os.path.join(self.output, "data", "areas-index.json"),
             os.path.join(self.output, "data", "drop-weights.json"),
@@ -1143,6 +1146,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("drops/sources/", manifest_paths)
         self.assertIn("references/", manifest_paths)
         self.assertIn("references/affixes/", manifest_paths)
+        self.assertIn("references/automagic/", manifest_paths)
         self.assertIn("references/raw-coverage/", manifest_paths)
         self.assertIn("reports/", manifest_paths)
         self.assertIn("reports/items/retail-bk/", manifest_paths)
@@ -1449,6 +1453,8 @@ class TestWikiGenerator(unittest.TestCase):
             references_page = f.read()
         with open(os.path.join(self.output, "references", "affixes", "index.html"), "r", encoding="utf-8") as f:
             affixes_page = f.read()
+        with open(os.path.join(self.output, "references", "automagic", "index.html"), "r", encoding="utf-8") as f:
+            automagic_page = f.read()
         with open(os.path.join(self.output, "references", "raw-coverage", "index.html"), "r", encoding="utf-8") as f:
             raw_coverage_page = f.read()
         self.assertIn("Conditional Odds", drops_page)
@@ -1482,12 +1488,16 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Practice Boss", [source["name"] for source in by_tc["Act Test"]["sources"]])
 
         self.assertIn("References", references_page)
-        self.assertIn("Affixes &amp; Automagic", references_page)
+        self.assertIn("<h3>Affixes</h3>", references_page)
+        self.assertIn("<h3>Automagic</h3>", references_page)
         self.assertIn('href="../references/affixes/"', references_page)
+        self.assertIn('href="../references/automagic/"', references_page)
         self.assertIn("Monster Specials", references_page)
         self.assertIn("Raw Coverage", references_page)
-        self.assertIn("Piercing Test", affixes_page)
-        self.assertIn("Piercing Attack", affixes_page)
+        self.assertNotIn("Piercing Test", affixes_page)
+        self.assertIn("Piercing Test", automagic_page)
+        self.assertIn("Piercing Attack", automagic_page)
+        self.assertIn('data-family="automagic"', automagic_page)
         self.assertIn("qualityitems.txt", affixes_page)
         self.assertIn("treasureclassex", raw_coverage_page)
         self.assertIn("Drop Sources", raw_coverage_page)
@@ -1549,6 +1559,92 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("<strong>Req Lvl:</strong> 65", bases_page)
         self.assertIn("<strong>WSM:</strong> 20 (Very Slow)", bases_page)
         self.assertNotIn("<th>Speed/Block</th>", bases_page)
+
+    def test_affixes_compare_both_baselines_and_keep_duplicate_tiers(self):
+        bt_data = os.path.join(self.root, "bt")
+        fields = [
+            "Name", "spawnable", "level", "itype7", "mod1code", "mod1param", "mod1min", "mod1max",
+            "mod2code", "mod2min", "mod2max",
+        ]
+
+        def tier(name, damage, *, param="", duration="", level="5"):
+            return {
+                "Name": name, "spawnable": "1", "level": level, "itype7": "ring", "mod1code": "dmg-pois",
+                "mod1param": param, "mod1min": damage, "mod1max": damage,
+                "mod2code": "pois-len" if duration else "", "mod2min": duration, "mod2max": duration,
+            }
+
+        shared = tier("of Test Venom", "10", param="75")
+        for root, rows in (
+            (self.game_data, [tier("of Test Venom", "30", duration="75", level="15"), shared, shared, tier("of New Venom", "5")]),
+            (self.retail_data, [shared, tier("of Test Venom", "15", param="50", level="15"), tier("of Old Venom", "5")]),
+            (bt_data, [shared, tier("of Test Venom", "20", param="50", level="15")]),
+        ):
+            excel = os.path.join(root, "data", "global", "excel")
+            self._write_tsv(excel, "magicsuffix.txt", fields, rows)
+            self._write_tsv(excel, "magicprefix.txt", fields, [tier("Test Prefix", "10", param="75")])
+            automatic = next(row for row in rows if row["level"] == "15")
+            self._write_tsv(excel, "automagic.txt", fields, [dict(automatic, Name="Test Automatic Roll")])
+            self._write_tsv(excel, "properties.txt", ["code", "func1"], [
+                {"code": "dmg-pois", "func1": "15"}, {"code": "pois-len", "func1": "1"},
+            ])
+
+        generate_wiki(
+            self.item_db, self.skill_trees, self.output, old_item_db_dir=self.old_item_db,
+            game_data_dir=self.game_data, retail_data_dir=self.retail_data,
+            bt_item_db_dir=self.old_item_db, bt_data_dir=bt_data,
+        )
+        for root, baseline, damage, counterpart in (
+            (self.output, "Retail", 15, "../../compare-bt/references/affixes/index.html"),
+            (os.path.join(self.output, "compare-bt"), "BTDiablo", 20, "../../../references/affixes/index.html"),
+        ):
+            with open(os.path.join(root, "references", "affixes", "index.html"), encoding="utf-8") as handle:
+                html = handle.read()
+            self.assertIn(f'<div class="sp-sub"><span>{baseline}</span><span>BKDiablo</span></div>', html)
+            self.assertIn(f'href="{counterpart}" data-comparison-link', html)
+            self.assertIn('id="affix-changes-filter"', html)
+            self.assertIn('class="family-items-grid"', html)
+            self.assertIn('class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="magicsuffix"', html)
+            self.assertIn('<div class="sp-sep">Roll 1</div>', html)
+            self.assertNotIn(f'<div class="sp-sep">{baseline} roll', html)
+            self.assertNotIn('<div class="sp-sep">BKDiablo roll', html)
+            self.assertNotIn("<details", html.split('<div id="item-index-root"', 1)[1])
+            self.assertIn("Poison Duration: 3 seconds (75 frames)", html)
+            self.assertNotIn("Over 0 Seconds", html)
+            with open(os.path.join(root, "data", "references-affixes.json"), encoding="utf-8") as handle:
+                prefix, suffix, *_ = json.load(handle)["sections"]
+            self.assertEqual("Unchanged", prefix["comparison_rows"][0]["status"])
+            affixes = {row["label"]: row for row in suffix["comparison_rows"]}
+            self.assertEqual("Added", affixes["of New Venom"]["status"])
+            self.assertEqual("Changed", affixes["of Test Venom"]["status"])
+            self.assertEqual([True, False, True], [tier["changed"] for tier in affixes["of Test Venom"]["new"]])
+            self.assertIn("ring", affixes["of Test Venom"]["search_text"])
+            changed, shared, added = affix_card_context(affixes["of Test Venom"])["comparison_sections"]
+            self.assertIn({
+                "old": f"Adds {damage} Poison Damage Over 2 Seconds",
+                "new": "Adds 30 Poison Damage",
+                "status": "changed",
+            }, changed["rows"])
+            self.assertTrue(all(row["status"] == "same" for row in shared["rows"]))
+            self.assertTrue(all(row["status"] == "added" for row in added["rows"]))
+            if baseline == "Retail":
+                self.assertEqual("Removed", affixes["of Old Venom"]["status"])
+
+            with open(os.path.join(root, "references", "automagic", "index.html"), encoding="utf-8") as handle:
+                automagic_html = handle.read()
+            self.assertIn('<h1>Automagic</h1>', automagic_html)
+            self.assertIn('data-affix-index="modifiers"', automagic_html)
+            self.assertIn('data-family="automagic"', automagic_html)
+            self.assertIn(f'<div class="sp-sub"><span>{baseline}</span><span>BKDiablo</span></div>', automagic_html)
+            self.assertIn(f'href="{counterpart.replace("/affixes/", "/automagic/")}" data-comparison-link', automagic_html)
+            self.assertNotIn("Test Automatic Roll", html)
+            with open(os.path.join(root, "data", "references-automagic.json"), encoding="utf-8") as handle:
+                automatic = json.load(handle)["sections"][0]["comparison_rows"][0]
+            self.assertIn({
+                "old": f"Adds {damage} Poison Damage Over 2 Seconds",
+                "new": "Adds 30 Poison Damage",
+                "status": "changed",
+            }, affix_card_context(automatic)["property_rows"])
 
     def test_stale_files_are_removed(self):
         os.makedirs(self.output, exist_ok=True)

@@ -1,7 +1,86 @@
 from __future__ import annotations
+from difflib import SequenceMatcher
+from itertools import zip_longest
 from typing import Any, Dict, List, Optional, Tuple
 
 from d2lib.services.resolver import PropertyResolverService
+
+
+def _affix_tier_match(old, new) -> int:
+    if old["settings"] == new["settings"] and old["properties"] == new["properties"]:
+        return 100
+
+    before, after = old["identity"], new["identity"]
+    old_types, new_types = set(before["itype"]), set(after["itype"])
+    same_types = bool(old_types and old_types == new_types)
+    type_overlap = bool(old_types & new_types)
+    property_overlap = bool(set(before["properties"]) & set(after["properties"]))
+    same = {field for field, value in before.items() if value and value == after[field]}
+    if not (
+        ("level" in same and (type_overlap or "group" in same))
+        or (same_types and ("levelreq" in same or "group" in same or property_overlap))
+        or ({"level", "version"} <= same and property_overlap)
+    ):
+        return 0
+
+    return (
+        10 * same_types + 7 * ("level" in same) + 5 * ("version" in same)
+        + 4 * ("group" in same) + 3 * type_overlap + 3 * ("levelreq" in same)
+        + 2 * property_overlap + len(same & {"class", "etype", "spawnable"})
+    )
+
+
+def affix_card_context(entry: Dict[str, Any]) -> Dict[str, Any]:
+    def comparison_rows(old_roll, new_roll, field):
+        old_values, new_values = old_roll.get(field, ()), new_roll.get(field, ())
+        rows = []
+        for _, old_start, old_end, new_start, new_end in SequenceMatcher(None, old_values, new_values).get_opcodes():
+            for old, new in zip_longest(old_values[old_start:old_end], new_values[new_start:new_end], fillvalue=""):
+                status = "same" if old == new else "changed" if old and new else "added" if new else "removed"
+                rows.append({"old": old, "new": new, "status": status})
+        return rows
+
+    old = entry["old"]
+    new = entry["new"]
+    card = {
+        "title": entry["label"],
+        "summary": entry["status"],
+        "status": entry["status"].lower(),
+        "search_text": entry["search_text"],
+        "card_quality": "magic",
+    }
+    if len(old) <= 1 and len(new) <= 1:
+        old_roll = old[0] if old else {}
+        new_roll = new[0] if new else {}
+        card["stat_rows"] = comparison_rows(old_roll, new_roll, "settings")
+        card["property_rows"] = comparison_rows(old_roll, new_roll, "properties")
+        return card
+
+    # Match exact copies first, then use the strongest shared tier metadata.
+    # Source order only breaks ties between otherwise equivalent candidates.
+    candidates = sorted(
+        (-score, old_index, new_index)
+        for old_index, old_roll in enumerate(old)
+        for new_index, new_roll in enumerate(new)
+        if (score := _affix_tier_match(old_roll, new_roll))
+    )
+    matches = {}
+    used_old = set()
+    for _, old_index, new_index in candidates:
+        if old_index not in used_old and new_index not in matches:
+            matches[new_index] = old[old_index]
+            used_old.add(old_index)
+    pairs = [(matches.get(index, {}), roll) for index, roll in enumerate(new)]
+    pairs.extend((roll, {}) for index, roll in enumerate(old) if index not in used_old)
+
+    card["comparison_sections"] = [
+        {
+            "title": f"Roll {index}",
+            "rows": comparison_rows(old_roll, new_roll, "settings") + comparison_rows(old_roll, new_roll, "properties"),
+        }
+        for index, (old_roll, new_roll) in enumerate(pairs, 1)
+    ]
+    return card
 
 
 def item_diff_status(entry: Dict[str, Any], old_entry: Optional[Dict[str, Any]]) -> str:
