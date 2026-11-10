@@ -49,9 +49,11 @@
       {% endif %}
       {{ properties(item.property_rows) }}
       {% for section in item.comparison_sections %}
+      {% if section.affix_types is defined %}<div data-affix-roll-types="{{ section.affix_types }}">{% endif %}
       <div class="sp-sep">{{ section.title }}</div>
       {{ comparison_rows(section.stat_rows) }}
       {{ properties(section.property_rows) }}
+      {% if section.affix_types is defined %}</div>{% endif %}
       {% endfor %}
     </div>
     {% endfor %}

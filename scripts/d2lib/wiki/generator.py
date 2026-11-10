@@ -369,7 +369,7 @@ class WikiContentBuilder:
             "objects": "Areas and References",
             "overlay": "References",
             "properties": "Properties, Recipes, and Mechanics",
-            "qualityitems": "Bases and References",
+            "qualityitems": "Bases",
             "runes": "Runewords, Gems & Runes, and Items",
             "setitems": "Items, Sets, and Drops",
             "sets": "Sets",
@@ -632,6 +632,13 @@ class WikiContentBuilder:
                 ]
                 for section in comparison_sections
             }
+            affix_item_types = {
+                code: label
+                for section in comparison_sections
+                for row in section["comparison_rows"]
+                for roll in row["old"] + row["new"]
+                for code, label in roll["item_types"].items()
+            }
             self._write_page(
                 title=f"{page['title']} | {self.new_label} Wiki",
                 output_path=WikiRoutes.reference_output_path(page["slug"]),
@@ -643,6 +650,7 @@ class WikiContentBuilder:
                 ],
                 page=page,
                 affix_cards=affix_cards,
+                affix_item_types=sorted(affix_item_types.items(), key=lambda item: item[1].casefold()),
                 item_section_titles={section["table"]: section["title"] for section in comparison_sections},
             )
 
