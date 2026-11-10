@@ -64,12 +64,21 @@ def _affix_tier_match(old, new) -> int:
 def affix_card_context(entry: Dict[str, Any]) -> Dict[str, Any]:
     def comparison_rows(old_roll, new_roll, field):
         old_values, new_values = old_roll.get(field, ()), new_roll.get(field, ())
+        if field == "settings":
+            old_values, new_values = (
+                [setting for setting in roll.get("settings", ())
+                 if not setting.startswith(("Group ", "Version "))]
+                for roll in (old_roll, new_roll)
+            )
         rows = []
         for _, old_start, old_end, new_start, new_end in SequenceMatcher(None, old_values, new_values).get_opcodes():
             for old, new in zip_longest(old_values[old_start:old_end], new_values[new_start:new_end], fillvalue=""):
                 status = "same" if old == new else "changed" if old and new else "added" if new else "removed"
                 rows.append({"old": old, "new": new, "status": status})
         return rows
+
+    def item_type_codes(rolls):
+        return "|".join(sorted({code for roll in rolls for code in roll.get("item_types", {})}))
 
     old = entry["old"]
     new = entry["new"]
@@ -79,6 +88,7 @@ def affix_card_context(entry: Dict[str, Any]) -> Dict[str, Any]:
         "status": entry["status"].lower(),
         "search_text": entry["search_text"],
         "card_quality": "magic",
+        "item_type": item_type_codes(old + new),
     }
     if len(old) <= 1 and len(new) <= 1:
         old_roll = old[0] if old else {}
@@ -107,6 +117,7 @@ def affix_card_context(entry: Dict[str, Any]) -> Dict[str, Any]:
     card["comparison_sections"] = [
         {
             "title": f"Roll {index}",
+            "affix_types": item_type_codes([old_roll, new_roll]),
             "stat_rows": comparison_rows(old_roll, new_roll, "settings"),
             "property_rows": comparison_rows(old_roll, new_roll, "properties"),
         }

@@ -11,6 +11,7 @@ class AffixTier(NamedTuple):
     properties: Tuple[str, ...]
     settings: Tuple[str, ...]
     identity: Dict[str, Any]
+    item_types: Dict[str, str]
 
 
 REFERENCE_GROUPS = [
@@ -21,7 +22,6 @@ REFERENCE_GROUPS = [
         "tables": [
             {"name": "magicprefix", "title": "Magic Prefixes", "fields": ["group", "level", "maxlevel", "frequency", "spawnable", "itype1", "itype2", "etype1", "etype2"], "properties": "mod"},
             {"name": "magicsuffix", "title": "Magic Suffixes", "fields": ["group", "level", "maxlevel", "frequency", "spawnable", "itype1", "itype2", "etype1", "etype2"], "properties": "mod"},
-            {"name": "qualityitems", "title": "Quality Item Modifiers", "fields": ["armor", "weapon", "shield", "scepter", "wand", "staff", "bow", "boots", "gloves", "belt"], "properties": "mod"},
         ],
     },
     {
@@ -137,6 +137,7 @@ class ReferenceAnalyzerService:
                 signature = (tier.properties, tier.settings)
                 result.append({
                     "properties": tier.properties, "settings": tier.settings, "identity": tier.identity,
+                    "item_types": tier.item_types,
                     "changed": remaining[signature] <= 0,
                 })
                 remaining[signature] -= 1
@@ -188,12 +189,15 @@ class ReferenceAnalyzerService:
                 "version", "group", "level", "levelreq", "class", "spawnable",
             )}
             identity["properties"] = sorted({row.get(f"mod{i}code", "") for i in range(1, 4)} - {""})
+            type_labels = {}
             for prefix, count, label in (("itype", 7, "Item types"), ("etype", 5, "Excludes")):
                 codes = sorted({row.get(f"{prefix}{i}", "") for i in range(1, count + 1)} - {""})
                 identity[prefix] = codes
-                if codes:
-                    names = [f"{item_types[code]} ({code})" if code in item_types else code for code in codes]
-                    settings.append(f"{label} · {', '.join(names)}")
+                names = {code: f"{item_types[code]} ({code})" if code in item_types else code for code in codes}
+                if prefix == "itype":
+                    type_labels = names
+                if names:
+                    settings.append(f"{label} · {', '.join(names.values())}")
             spawn = row.get("spawnable", "")
             spawn_label = {"1": "Spawnable", "0": "Disabled", "": "Disabled"}.get(spawn, f"Spawn flag {spawn}")
             settings.append(spawn_label)
@@ -209,7 +213,7 @@ class ReferenceAnalyzerService:
                 if row.get(field):
                     settings.append(f"{label} {row[field]}")
             _, tiers = groups.setdefault(name.casefold(), (self.repo.get_string(name) or name, []))
-            tiers.append(AffixTier(properties, tuple(settings), identity))
+            tiers.append(AffixTier(properties, tuple(settings), identity, type_labels))
         return groups
 
     def build_coverage(

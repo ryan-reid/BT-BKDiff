@@ -695,7 +695,7 @@ async function wireItemIndex() {
   const searchInput = document.querySelector("#page-search");
   const familyCheckboxes = Array.from(document.querySelectorAll("input[data-filter-family]"));
   const groupSelect = document.querySelector("#item-group-filter");
-  const typeSelect = document.querySelector("#item-type-filter");
+  const typeSelect = document.querySelector(affixIndex ? "#affix-item-type-filter" : "#item-type-filter");
   const dropLevelSelect = document.querySelector("#item-drop-level-filter");
   const cards = Array.from(document.querySelectorAll(".base-item-card[data-family]"));
   const familySections = Array.from(document.querySelectorAll("[data-section-family]"));
@@ -710,9 +710,13 @@ async function wireItemIndex() {
     familyCheckboxes.forEach((control) => { control.checked = selected.includes(control.dataset.filterFamily); });
   }
   if (changesOnly) changesOnly.checked = params.get("changes") === "1";
+  if (affixIndex && typeSelect && params.has("type")
+      && Array.from(typeSelect.options).some((option) => option.value === params.get("type"))) {
+    typeSelect.value = params.get("type");
+  }
 
   let activeGroup = "all";
-  let activeType = "all";
+  let activeType = affixIndex && typeSelect ? typeSelect.value : "all";
   let activeDropLevel = 0;
 
   function getActiveFamilies() {
@@ -742,6 +746,12 @@ async function wireItemIndex() {
       const searchOk = !query || haystack.includes(query);
       const changeOk = !changesOnly?.checked || card.dataset.status !== "unchanged";
       card.hidden = !(familyOk && groupOk && typeOk && dropLevelOk && searchOk && changeOk);
+      if (affixIndex && !card.hidden) {
+        card.querySelectorAll("[data-affix-roll-types]").forEach((roll) => {
+          roll.hidden = activeType !== "all"
+            && !normalizeText(roll.dataset.affixRollTypes).split("|").includes(normalizeText(activeType));
+        });
+      }
       if (!card.hidden) visibleCount += 1;
     });
     familySections.forEach((section) => {
@@ -760,6 +770,8 @@ async function wireItemIndex() {
     else url.searchParams.delete("q");
     if (changesOnly.checked) url.searchParams.set("changes", "1");
     else url.searchParams.delete("changes");
+    if (activeType !== "all") url.searchParams.set("type", activeType);
+    else url.searchParams.delete("type");
     const selected = getActiveFamilies();
     if (selected.size !== familyCheckboxes.length) url.searchParams.set("qualities", Array.from(selected).join(","));
     else url.searchParams.delete("qualities");
@@ -784,6 +796,10 @@ async function wireItemIndex() {
     if (mastSearch) mastSearch.value = "";
     familyCheckboxes.forEach((control) => { control.checked = true; });
     changesOnly.checked = false;
+    if (affixIndex && typeSelect) {
+      typeSelect.value = "all";
+      activeType = "all";
+    }
     updateFilters();
   });
   if (groupSelect) {
@@ -808,7 +824,7 @@ async function wireItemIndex() {
   if (typeSelect) {
     typeSelect.addEventListener("change", () => {
       activeType = typeSelect.value || "all";
-      applyFilters();
+      updateFilters();
     });
   }
   if (dropLevelSelect) {

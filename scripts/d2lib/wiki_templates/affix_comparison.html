@@ -36,6 +36,16 @@
         </div>
         {% endif %}
         <div class="filter-block">
+          <h4 id="affix-item-type-label">Item Type</h4>
+          <select id="affix-item-type-filter" class="filter-select" aria-labelledby="affix-item-type-label" aria-describedby="affix-item-type-help">
+            <option value="all">All Item Types</option>
+            {% for code, label in affix_item_types %}
+            <option value="{{ code }}">{{ label }}</option>
+            {% endfor %}
+          </select>
+          <p id="affix-item-type-help" class="muted">Matches the Item types listed on either side of each roll.</p>
+        </div>
+        <div class="filter-block">
           <h4>Comparison</h4>
           <label class="facet"><input type="checkbox" id="affix-changes-filter"> Changes only</label>
         </div>
