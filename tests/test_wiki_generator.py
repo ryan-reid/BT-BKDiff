@@ -1624,6 +1624,7 @@ class TestWikiGenerator(unittest.TestCase):
             self.assertIn(f'href="{counterpart}" data-comparison-link', html)
             self.assertIn('id="affix-changes-filter"', html)
             self.assertIn('id="affix-rare-filter"', html)
+            self.assertIn('id="affix-disabled-filter"', html)
             self.assertIn('class="family-items-grid"', html)
             self.assertIn('class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="magicsuffix"', html)
             venom_cards = [
@@ -1652,6 +1653,8 @@ class TestWikiGenerator(unittest.TestCase):
             settings = prefix["comparison_rows"][0]["new"][0]["settings"]
             self.assertIn("Disabled (zero weight)", settings)
             self.assertNotIn("Can roll on rares", settings)
+            disabled, = affix_card_contexts(prefix["comparison_rows"][0])
+            self.assertFalse(disabled["affix_spawnable"])
             affixes = {row["label"]: row for row in suffix["comparison_rows"]}
             self.assertEqual("Added", affixes["of New Venom"]["status"])
             self.assertEqual("Changed", affixes["of Test Venom"]["status"])
@@ -1659,6 +1662,7 @@ class TestWikiGenerator(unittest.TestCase):
             self.assertEqual({"test": "Test type (test)"}, affixes["of Test Venom"]["new"][0]["item_types"])
             changed, shared, added = affix_card_contexts(affixes["of Test Venom"])
             self.assertEqual("old|test", changed["item_type"])
+            self.assertTrue(changed["affix_spawnable"])
             self.assertEqual("test", changed["rare_item_types"])
             self.assertEqual("test", shared["item_type"])
             self.assertIsNone(shared["rare_item_types"])
@@ -1675,11 +1679,14 @@ class TestWikiGenerator(unittest.TestCase):
                 self.assertEqual("Removed", affixes["of Old Venom"]["status"])
                 removed, = affix_card_contexts(affixes["of Old Venom"])
                 self.assertIsNone(removed["rare_item_types"])
+                self.assertFalse(removed["affix_spawnable"])
 
             with open(os.path.join(root, "references", "automagic", "index.html"), encoding="utf-8") as handle:
                 automagic_html = handle.read()
             self.assertIn('<h1>Automagic</h1>', automagic_html)
             self.assertIn('data-affix-index="automagic rolls"', automagic_html)
+            self.assertIn('id="affix-disabled-filter"', automagic_html)
+            self.assertIn('id="affix-rare-filter"', automagic_html)
             self.assertIn('data-family="automagic"', automagic_html)
             self.assertIn('<option value="test">Test type (test)</option>', automagic_html)
             self.assertIn('<option value="old">Old type (old)</option>', automagic_html)

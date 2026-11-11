@@ -697,6 +697,7 @@ async function wireItemIndex() {
   const groupSelect = document.querySelector("#item-group-filter");
   const typeSelect = document.querySelector(affixIndex ? "#affix-item-type-filter" : "#item-type-filter");
   const rareOnly = document.querySelector("#affix-rare-filter");
+  const showDisabled = document.querySelector("#affix-disabled-filter");
   const dropLevelSelect = document.querySelector("#item-drop-level-filter");
   const cards = Array.from(document.querySelectorAll(".base-item-card[data-family]"));
   const familySections = Array.from(document.querySelectorAll("[data-section-family]"));
@@ -712,6 +713,7 @@ async function wireItemIndex() {
   }
   if (changesOnly) changesOnly.checked = params.get("changes") === "1";
   if (rareOnly) rareOnly.checked = params.get("rare") === "1";
+  if (showDisabled) showDisabled.checked = params.get("disabled") === "1";
   if (affixIndex && typeSelect && params.has("type")
       && Array.from(typeSelect.options).some((option) => option.value === params.get("type"))) {
     typeSelect.value = params.get("type");
@@ -748,7 +750,8 @@ async function wireItemIndex() {
       const searchOk = !query || haystack.includes(query);
       const changeOk = !changesOnly?.checked || card.dataset.status !== "unchanged";
       const rareOk = !rareOnly?.checked || card.dataset.affixRareTypes !== undefined;
-      card.hidden = !(familyOk && groupOk && typeOk && dropLevelOk && searchOk && changeOk && rareOk);
+      const spawnOk = !showDisabled || showDisabled.checked || card.dataset.affixSpawnable === "1";
+      card.hidden = !(familyOk && groupOk && typeOk && dropLevelOk && searchOk && changeOk && rareOk && spawnOk);
       if (!card.hidden) visibleCount += 1;
     });
     familySections.forEach((section) => {
@@ -769,6 +772,8 @@ async function wireItemIndex() {
     else url.searchParams.delete("changes");
     if (rareOnly?.checked) url.searchParams.set("rare", "1");
     else url.searchParams.delete("rare");
+    if (showDisabled?.checked) url.searchParams.set("disabled", "1");
+    else url.searchParams.delete("disabled");
     if (activeType !== "all") url.searchParams.set("type", activeType);
     else url.searchParams.delete("type");
     const selected = getActiveFamilies();
@@ -790,6 +795,7 @@ async function wireItemIndex() {
   familyCheckboxes.forEach((cb) => cb.addEventListener("change", updateFilters));
   changesOnly?.addEventListener("change", updateFilters);
   rareOnly?.addEventListener("change", updateFilters);
+  showDisabled?.addEventListener("change", updateFilters);
   resetButton?.addEventListener("click", () => {
     searchInput.value = "";
     const mastSearch = document.querySelector("#mast-search-input");
@@ -797,6 +803,7 @@ async function wireItemIndex() {
     familyCheckboxes.forEach((control) => { control.checked = true; });
     changesOnly.checked = false;
     if (rareOnly) rareOnly.checked = false;
+    if (showDisabled) showDisabled.checked = false;
     if (affixIndex && typeSelect) {
       typeSelect.value = "all";
       activeType = "all";

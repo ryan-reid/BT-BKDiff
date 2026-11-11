@@ -97,6 +97,7 @@ def affix_card_contexts(entry: Dict[str, Any]) -> List[Dict[str, Any]]:
             ]),
             "card_quality": "magic",
             "item_type": item_type_codes(rolls),
+            "affix_spawnable": new_roll.get("spawnable", False),
             "rare_item_types": item_type_codes([new_roll]) if new_roll.get("can_roll_on_rares") else None,
             "stat_rows": comparison_rows(old_roll, new_roll, "settings"),
             "property_rows": comparison_rows(old_roll, new_roll, "properties"),
