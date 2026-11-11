@@ -40,7 +40,7 @@ from pathlib import Path
 from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 from d2lib.wiki.builders import AreaFarmingDataBuilder, ItemIconExporter
 from d2lib.wiki.comparison import (
-    affix_card_context,
+    affix_card_contexts,
     skill_card_context,
     item_diff_status,
     property_occurrence_map,
@@ -627,8 +627,9 @@ class WikiContentBuilder:
             comparison_sections = [section for section in page["sections"] if "comparison_rows" in section]
             affix_cards = {
                 section["table"]: [
-                    affix_card_context(row)
+                    card
                     for row in section["comparison_rows"]
+                    for card in affix_card_contexts(row)
                 ]
                 for section in comparison_sections
             }

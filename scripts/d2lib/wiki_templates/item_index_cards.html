@@ -22,7 +22,7 @@
   <div class="section-head"><h2>{{ item_section_titles[family] if item_section_titles is defined else family|title ~ ' Items' }}</h2></div>
   <div class="family-items-grid">
     {% for item in entries %}
-    <div class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="{{ family }}" data-status="{{ item.status }}" data-item-group="{{ item.item_group }}" data-item-type="{{ item.item_type }}" data-drop-level="{{ item.drop_level }}" data-search="{{ item.search_text }}"{% if item.anchor %} id="{{ item.anchor }}"{% endif %}{% if family == "skill" %} data-skill-card{% endif %}>
+    <div class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="{{ family }}" data-status="{{ item.status }}" data-item-group="{{ item.item_group }}" data-item-type="{{ item.item_type }}" data-drop-level="{{ item.drop_level }}" data-search="{{ item.search_text }}"{% if item.rare_item_types is defined and item.rare_item_types is not none %} data-affix-rare-types="{{ item.rare_item_types }}"{% endif %}{% if item.anchor %} id="{{ item.anchor }}"{% endif %}{% if family == "skill" %} data-skill-card{% endif %}>
       <div class="sp-head">
         {% if item.icon_src %}<img class="set-th-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.title }} icon">{% endif %}
         <div style="min-width:0;flex:1">
@@ -49,11 +49,9 @@
       {% endif %}
       {{ properties(item.property_rows) }}
       {% for section in item.comparison_sections %}
-      {% if section.affix_types is defined %}<div data-affix-roll-types="{{ section.affix_types }}">{% endif %}
       <div class="sp-sep">{{ section.title }}</div>
       {{ comparison_rows(section.stat_rows) }}
       {{ properties(section.property_rows) }}
-      {% if section.affix_types is defined %}</div>{% endif %}
       {% endfor %}
     </div>
     {% endfor %}

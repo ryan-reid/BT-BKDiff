@@ -61,7 +61,7 @@ def _affix_tier_match(old, new) -> int:
     )
 
 
-def affix_card_context(entry: Dict[str, Any]) -> Dict[str, Any]:
+def affix_card_contexts(entry: Dict[str, Any]) -> List[Dict[str, Any]]:
     def comparison_rows(old_roll, new_roll, field):
         old_values, new_values = old_roll.get(field, ()), new_roll.get(field, ())
         if field == "settings":
@@ -80,22 +80,33 @@ def affix_card_context(entry: Dict[str, Any]) -> Dict[str, Any]:
     def item_type_codes(rolls):
         return "|".join(sorted({code for roll in rolls for code in roll.get("item_types", {})}))
 
-    old = entry["old"]
-    new = entry["new"]
-    card = {
-        "title": entry["label"],
-        "summary": entry["status"],
-        "status": entry["status"].lower(),
-        "search_text": entry["search_text"],
-        "card_quality": "magic",
-        "item_type": item_type_codes(old + new),
-    }
+    cards = []
+    for old_roll, new_roll in _affix_roll_pairs(entry["old"], entry["new"]):
+        status = (
+            "Added" if not old_roll else "Removed" if not new_roll
+            else "Unchanged" if _affix_tier_match(old_roll, new_roll) == 100 else "Changed"
+        )
+        rolls = (old_roll, new_roll)
+        cards.append({
+            "title": entry["label"],
+            "summary": status,
+            "status": status.lower(),
+            "search_text": " ".join([
+                entry["label"], status,
+                *(value for roll in rolls for field in ("settings", "properties") for value in roll.get(field, ())),
+            ]),
+            "card_quality": "magic",
+            "item_type": item_type_codes(rolls),
+            "rare_item_types": item_type_codes([new_roll]) if new_roll.get("can_roll_on_rares") else None,
+            "stat_rows": comparison_rows(old_roll, new_roll, "settings"),
+            "property_rows": comparison_rows(old_roll, new_roll, "properties"),
+        })
+    return cards
+
+
+def _affix_roll_pairs(old, new):
     if len(old) <= 1 and len(new) <= 1:
-        old_roll = old[0] if old else {}
-        new_roll = new[0] if new else {}
-        card["stat_rows"] = comparison_rows(old_roll, new_roll, "settings")
-        card["property_rows"] = comparison_rows(old_roll, new_roll, "properties")
-        return card
+        return [(old[0] if old else {}, new[0] if new else {})]
 
     # Match exact copies first, then use the strongest shared tier metadata.
     # Source order only breaks ties between otherwise equivalent candidates.
@@ -114,16 +125,7 @@ def affix_card_context(entry: Dict[str, Any]) -> Dict[str, Any]:
     pairs = [(matches.get(index, {}), roll) for index, roll in enumerate(new)]
     pairs.extend((roll, {}) for index, roll in enumerate(old) if index not in used_old)
 
-    card["comparison_sections"] = [
-        {
-            "title": f"Roll {index}",
-            "affix_types": item_type_codes([old_roll, new_roll]),
-            "stat_rows": comparison_rows(old_roll, new_roll, "settings"),
-            "property_rows": comparison_rows(old_roll, new_roll, "properties"),
-        }
-        for index, (old_roll, new_roll) in enumerate(pairs, 1)
-    ]
-    return card
+    return pairs
 
 
 def item_diff_status(entry: Dict[str, Any], old_entry: Optional[Dict[str, Any]]) -> str:
