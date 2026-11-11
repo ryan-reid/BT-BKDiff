@@ -45,15 +45,14 @@
           </select>
           <p id="affix-item-type-help" class="muted">Matches listed types on either side by default.</p>
         </div>
-        {% if page.slug == "affixes" %}
         <div class="filter-block">
           <h4>Item quality</h4>
           <label class="facet"><input type="checkbox" id="affix-rare-filter"> Can roll on rares in BKDiablo</label>
         </div>
-        {% endif %}
         <div class="filter-block">
           <h4>Comparison</h4>
           <label class="facet"><input type="checkbox" id="affix-changes-filter"> Changes only</label>
+          <label class="facet"><input type="checkbox" id="affix-disabled-filter"> Show disabled rolls</label>
         </div>
       </div>
     </details>

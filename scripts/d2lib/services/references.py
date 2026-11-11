@@ -12,6 +12,7 @@ class AffixTier(NamedTuple):
     settings: Tuple[str, ...]
     identity: Dict[str, Any]
     item_types: Dict[str, str]
+    spawnable: bool
     can_roll_on_rares: bool
 
 
@@ -139,6 +140,7 @@ class ReferenceAnalyzerService:
                 result.append({
                     "properties": tier.properties, "settings": tier.settings, "identity": tier.identity,
                     "item_types": tier.item_types,
+                    "spawnable": tier.spawnable,
                     "can_roll_on_rares": tier.can_roll_on_rares,
                     "changed": remaining[signature] <= 0,
                 })
@@ -205,8 +207,9 @@ class ReferenceAnalyzerService:
             if spawn == "1" and row.get("frequency") in ("", "0"):
                 spawn_label = "Disabled (zero weight)"
             settings.append(spawn_label)
-            can_roll_on_rares = spawn_label == "Spawnable" and row.get("rare") == "1"
-            if spawn_label == "Spawnable":
+            spawnable = spawn_label == "Spawnable"
+            can_roll_on_rares = spawnable and row.get("rare") == "1"
+            if spawnable:
                 settings.append("Can roll on rares" if can_roll_on_rares else "No rare rolls")
             for field, label in (
                 ("level", "Affix level"), ("maxlevel", "Max affix level"), ("levelreq", "Required level"),
@@ -216,7 +219,7 @@ class ReferenceAnalyzerService:
                 if row.get(field):
                     settings.append(f"{label} {row[field]}")
             _, tiers = groups.setdefault(name.casefold(), (self.repo.get_string(name) or name, []))
-            tiers.append(AffixTier(properties, tuple(settings), identity, type_labels, can_roll_on_rares))
+            tiers.append(AffixTier(properties, tuple(settings), identity, type_labels, spawnable, can_roll_on_rares))
         return groups
 
     def build_coverage(
