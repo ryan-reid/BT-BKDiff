@@ -13,7 +13,7 @@ if SCRIPT_DIR not in sys.path:
 from cli.generate_wiki import run as generate_wiki
 from d2lib.services.recipes import RecipePresentationBuilder
 from d2lib.wiki import AreaFarmingDataBuilder, ItemIconExporter, MediaWikiPublisher, WikiContentBuilder, WikiGenerator, WikiOutputWriter, WikiRoutes
-from d2lib.wiki.comparison import affix_card_context
+from d2lib.wiki.comparison import affix_card_contexts
 from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 
 
@@ -1565,13 +1565,13 @@ class TestWikiGenerator(unittest.TestCase):
         bt_data = os.path.join(self.root, "bt")
         fields = [
             "Name", "spawnable", "level", "itype1", "itype7", "etype5", "group", "version", "mod1code", "mod1param", "mod1min", "mod1max",
-            "mod2code", "mod2min", "mod2max",
+            "mod2code", "mod2min", "mod2max", "frequency", "rare",
         ]
 
         def tier(name, damage, *, param="", duration="", level="5"):
             return {
                 "Name": name, "spawnable": "1", "level": level, "itype7": "test", "etype5": "amul",
-                "group": "333", "version": "100", "mod1code": "dmg-pois",
+                "group": "333", "version": "100", "frequency": "2", "mod1code": "dmg-pois",
                 "mod1param": param, "mod1min": damage, "mod1max": damage,
                 "mod2code": "pois-len" if duration else "", "mod2min": duration, "mod2max": duration,
             }
@@ -1595,8 +1595,14 @@ class TestWikiGenerator(unittest.TestCase):
             ])
             if root != self.game_data:
                 rows[1]["itype1"] = "old"
+                if root == self.retail_data:
+                    rows[-1]["rare"] = "1"
+            else:
+                rows[0]["rare"] = "1"
             self._write_tsv(excel, "magicsuffix.txt", fields, rows)
-            self._write_tsv(excel, "magicprefix.txt", fields, [tier("Test Prefix", "10", param="75")])
+            self._write_tsv(excel, "magicprefix.txt", fields, [
+                dict(tier("Test Prefix", "10", param="75"), frequency="0", rare="1"),
+            ])
             automatic = next(row for row in rows if row["level"] == "15")
             self._write_tsv(excel, "automagic.txt", fields, [dict(automatic, Name="Test Automatic Roll")])
             self._write_tsv(excel, "properties.txt", ["code", "func1"], [
@@ -1617,21 +1623,23 @@ class TestWikiGenerator(unittest.TestCase):
             self.assertIn(f'<div class="sp-sub"><span>{baseline}</span><span>BKDiablo</span></div>', html)
             self.assertIn(f'href="{counterpart}" data-comparison-link', html)
             self.assertIn('id="affix-changes-filter"', html)
+            self.assertIn('id="affix-rare-filter"', html)
             self.assertIn('class="family-items-grid"', html)
             self.assertIn('class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="magicsuffix"', html)
-            self.assertIn('<div class="sp-sep">Roll 1</div>', html)
-            venom_card = html.split(">of Test Venom</span>", 1)[1].split('<div class="base-item-card', 1)[0]
-            for index in range(1, 4):
-                roll = venom_card.split(f">Roll {index}</div>", 1)[1].split('<div class="sp-sep">Roll', 1)[0]
+            venom_cards = [
+                card for card in html.split('<div class="base-item-card') if ">of Test Venom</span>" in card
+            ]
+            self.assertEqual(3, len(venom_cards))
+            for roll, status in zip(venom_cards, ("changed", "unchanged", "added")):
+                self.assertIn(f'data-status="{status}"', roll)
+                roll = roll.split(">of Test Venom</span>", 1)[1]
                 stats, properties = roll.split('<div class="sp-sep">Properties</div>', 1)
                 self.assertIn("Affix level", stats)
-                self.assertNotIn("Group 333", stats)
                 self.assertIn("Poison Damage", properties)
                 self.assertNotIn("Source details", roll)
                 self.assertNotIn("Group 333", roll)
                 self.assertNotIn("Version 100", roll)
-            self.assertNotIn(f'<div class="sp-sep">{baseline} roll', html)
-            self.assertNotIn('<div class="sp-sep">BKDiablo roll', html)
+            self.assertNotIn('<div class="sp-sep">Roll ', html)
             self.assertEqual(1, html.count('<option value="test">Test type (test)</option>'))
             self.assertIn('<option value="old">Old type (old)</option>', html)
             self.assertNotIn('<option value="amul">', html)
@@ -1641,14 +1649,20 @@ class TestWikiGenerator(unittest.TestCase):
             with open(os.path.join(root, "data", "references-affixes.json"), encoding="utf-8") as handle:
                 prefix, suffix, *_ = json.load(handle)["sections"]
             self.assertEqual("Unchanged", prefix["comparison_rows"][0]["status"])
+            settings = prefix["comparison_rows"][0]["new"][0]["settings"]
+            self.assertIn("Disabled (zero weight)", settings)
+            self.assertNotIn("Can roll on rares", settings)
             affixes = {row["label"]: row for row in suffix["comparison_rows"]}
             self.assertEqual("Added", affixes["of New Venom"]["status"])
             self.assertEqual("Changed", affixes["of Test Venom"]["status"])
             self.assertEqual([True, False, True], [tier["changed"] for tier in affixes["of Test Venom"]["new"]])
             self.assertEqual({"test": "Test type (test)"}, affixes["of Test Venom"]["new"][0]["item_types"])
-            changed, shared, added = affix_card_context(affixes["of Test Venom"])["comparison_sections"]
-            self.assertEqual("old|test", changed["affix_types"])
-            self.assertEqual("test", shared["affix_types"])
+            changed, shared, added = affix_card_contexts(affixes["of Test Venom"])
+            self.assertEqual("old|test", changed["item_type"])
+            self.assertEqual("test", changed["rare_item_types"])
+            self.assertEqual("test", shared["item_type"])
+            self.assertIsNone(shared["rare_item_types"])
+            self.assertNotIn("Old type", shared["search_text"])
             self.assertIn({
                 "old": f"Adds {damage} Poison Damage Over 2 Seconds",
                 "new": "Adds 30 Poison Damage",
@@ -1659,11 +1673,13 @@ class TestWikiGenerator(unittest.TestCase):
             self.assertTrue(all(row["status"] == "added" for row in added["stat_rows"] + added["property_rows"]))
             if baseline == "Retail":
                 self.assertEqual("Removed", affixes["of Old Venom"]["status"])
+                removed, = affix_card_contexts(affixes["of Old Venom"])
+                self.assertIsNone(removed["rare_item_types"])
 
             with open(os.path.join(root, "references", "automagic", "index.html"), encoding="utf-8") as handle:
                 automagic_html = handle.read()
             self.assertIn('<h1>Automagic</h1>', automagic_html)
-            self.assertIn('data-affix-index="modifiers"', automagic_html)
+            self.assertIn('data-affix-index="automagic rolls"', automagic_html)
             self.assertIn('data-family="automagic"', automagic_html)
             self.assertIn('<option value="test">Test type (test)</option>', automagic_html)
             self.assertIn('<option value="old">Old type (old)</option>', automagic_html)
@@ -1676,7 +1692,7 @@ class TestWikiGenerator(unittest.TestCase):
                 "old": f"Adds {damage} Poison Damage Over 2 Seconds",
                 "new": "Adds 30 Poison Damage",
                 "status": "changed",
-            }, affix_card_context(automatic)["property_rows"])
+            }, affix_card_contexts(automatic)[0]["property_rows"])
 
     def test_stale_files_are_removed(self):
         os.makedirs(self.output, exist_ok=True)

@@ -696,6 +696,7 @@ async function wireItemIndex() {
   const familyCheckboxes = Array.from(document.querySelectorAll("input[data-filter-family]"));
   const groupSelect = document.querySelector("#item-group-filter");
   const typeSelect = document.querySelector(affixIndex ? "#affix-item-type-filter" : "#item-type-filter");
+  const rareOnly = document.querySelector("#affix-rare-filter");
   const dropLevelSelect = document.querySelector("#item-drop-level-filter");
   const cards = Array.from(document.querySelectorAll(".base-item-card[data-family]"));
   const familySections = Array.from(document.querySelectorAll("[data-section-family]"));
@@ -710,6 +711,7 @@ async function wireItemIndex() {
     familyCheckboxes.forEach((control) => { control.checked = selected.includes(control.dataset.filterFamily); });
   }
   if (changesOnly) changesOnly.checked = params.get("changes") === "1";
+  if (rareOnly) rareOnly.checked = params.get("rare") === "1";
   if (affixIndex && typeSelect && params.has("type")
       && Array.from(typeSelect.options).some((option) => option.value === params.get("type"))) {
     typeSelect.value = params.get("type");
@@ -735,7 +737,7 @@ async function wireItemIndex() {
     cards.forEach((card) => {
       const family = card.dataset.family || "";
       const itemGroup = card.dataset.itemGroup || "";
-      const itemType = card.dataset.itemType || "";
+      const itemType = rareOnly?.checked ? card.dataset.affixRareTypes : card.dataset.itemType;
       const dropLevel = Number(card.dataset.dropLevel || 0);
       const haystack = normalizeText(card.dataset.search);
       const familyOk = !familyCheckboxes.length || activeFamilies.has(family)
@@ -745,13 +747,8 @@ async function wireItemIndex() {
       const dropLevelOk = !activeDropLevel || dropLevel >= activeDropLevel;
       const searchOk = !query || haystack.includes(query);
       const changeOk = !changesOnly?.checked || card.dataset.status !== "unchanged";
-      card.hidden = !(familyOk && groupOk && typeOk && dropLevelOk && searchOk && changeOk);
-      if (affixIndex && !card.hidden) {
-        card.querySelectorAll("[data-affix-roll-types]").forEach((roll) => {
-          roll.hidden = activeType !== "all"
-            && !normalizeText(roll.dataset.affixRollTypes).split("|").includes(normalizeText(activeType));
-        });
-      }
+      const rareOk = !rareOnly?.checked || card.dataset.affixRareTypes !== undefined;
+      card.hidden = !(familyOk && groupOk && typeOk && dropLevelOk && searchOk && changeOk && rareOk);
       if (!card.hidden) visibleCount += 1;
     });
     familySections.forEach((section) => {
@@ -770,6 +767,8 @@ async function wireItemIndex() {
     else url.searchParams.delete("q");
     if (changesOnly.checked) url.searchParams.set("changes", "1");
     else url.searchParams.delete("changes");
+    if (rareOnly?.checked) url.searchParams.set("rare", "1");
+    else url.searchParams.delete("rare");
     if (activeType !== "all") url.searchParams.set("type", activeType);
     else url.searchParams.delete("type");
     const selected = getActiveFamilies();
@@ -790,12 +789,14 @@ async function wireItemIndex() {
   }
   familyCheckboxes.forEach((cb) => cb.addEventListener("change", updateFilters));
   changesOnly?.addEventListener("change", updateFilters);
+  rareOnly?.addEventListener("change", updateFilters);
   resetButton?.addEventListener("click", () => {
     searchInput.value = "";
     const mastSearch = document.querySelector("#mast-search-input");
     if (mastSearch) mastSearch.value = "";
     familyCheckboxes.forEach((control) => { control.checked = true; });
     changesOnly.checked = false;
+    if (rareOnly) rareOnly.checked = false;
     if (affixIndex && typeSelect) {
       typeSelect.value = "all";
       activeType = "all";

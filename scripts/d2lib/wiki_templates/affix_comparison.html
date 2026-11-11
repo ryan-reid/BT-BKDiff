@@ -1,6 +1,6 @@
 {% set sections = page.sections | selectattr("comparison_rows", "defined") | list %}
 {% set reference_sections = page.sections | rejectattr("comparison_rows", "defined") | list %}
-{% set result_noun = "modifiers" if page.slug == "automagic" else "affixes" %}
+{% set result_noun = "automagic rolls" if page.slug == "automagic" else "affix rolls" %}
 
 <section class="hero">
   <span class="hero-eyebrow">Item Database</span>
@@ -13,7 +13,7 @@
     <input id="page-search" class="search-input" type="search" aria-label="Search {{ result_noun }}" placeholder="Search names, properties, or item types…" />
   </div>
   <div class="results-bar">
-    <span class="count" id="item-result-count" role="status" aria-live="polite">{{ sections | map(attribute="comparison_rows") | map("length") | sum }} {{ result_noun }}</span>
+    <span class="count" id="item-result-count" role="status" aria-live="polite">{{ affix_cards.values() | map("length") | sum }} {{ result_noun }}</span>
     <button type="button" class="filter-button" id="item-reset-filters">Reset filters</button>
   </div>
 </section>
@@ -30,7 +30,7 @@
           <label class="facet">
             <input type="checkbox" checked data-filter-family="{{ section.table }}">
             {{ "Prefixes" if section.table == "magicprefix" else "Suffixes" }}
-            <span class="tally">{{ section.comparison_rows|length }}</span>
+            <span class="tally">{{ affix_cards[section.table]|length }}</span>
           </label>
           {% endfor %}
         </div>
@@ -43,8 +43,14 @@
             <option value="{{ code }}">{{ label }}</option>
             {% endfor %}
           </select>
-          <p id="affix-item-type-help" class="muted">Matches the Item types listed on either side of each roll.</p>
+          <p id="affix-item-type-help" class="muted">Matches listed types on either side by default.</p>
         </div>
+        {% if page.slug == "affixes" %}
+        <div class="filter-block">
+          <h4>Item quality</h4>
+          <label class="facet"><input type="checkbox" id="affix-rare-filter"> Can roll on rares in BKDiablo</label>
+        </div>
+        {% endif %}
         <div class="filter-block">
           <h4>Comparison</h4>
           <label class="facet"><input type="checkbox" id="affix-changes-filter"> Changes only</label>
