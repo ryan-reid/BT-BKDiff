@@ -153,8 +153,8 @@ class ReferenceAnalyzerService:
             for row in repo.get_excel_table("itemtypes")
             if row.get("Code") and row.get("ItemType")
         }
-        current = self._affix_groups(table, item_types)
-        old = baseline._affix_groups(table, item_types)
+        current = self.affix_groups(table, item_types)
+        old = baseline.affix_groups(table, item_types)
         rows = []
         for key in sorted(old.keys() | current.keys()):
             label, new_tiers = current.get(key, ("", []))
@@ -180,7 +180,15 @@ class ReferenceAnalyzerService:
             })
         return sorted(rows, key=lambda row: row["label"].casefold())
 
-    def _affix_groups(self, table: str, item_types: Dict[str, str]) -> Dict[str, Tuple[str, List[AffixTier]]]:
+    def affix_groups(
+        self, table: str, item_types: Optional[Dict[str, str]] = None,
+    ) -> Dict[str, Tuple[str, List[AffixTier]]]:
+        if item_types is None:
+            item_types = {
+                row["Code"]: row["ItemType"]
+                for row in self.repo.get_excel_table("itemtypes")
+                if row.get("Code") and row.get("ItemType")
+            }
         groups: Dict[str, Tuple[str, List[AffixTier]]] = {}
         for row in self.repo.get_excel_table(table):
             name = row.get("Name", "")
