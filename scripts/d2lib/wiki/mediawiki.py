@@ -93,6 +93,28 @@ class MediaWikiRenderer:
     def _render_recipes_crafting(self, payload: Dict[str, Any], _site: WikiSiteDTO) -> List[str]:
         return self._render_recipe_sections(payload.get("page", {}).get("sections", []))
 
+    def _render_affix_functions(self, payload: Dict[str, Any], _site: WikiSiteDTO) -> List[str]:
+        page = payload["page"]
+        lines = [self._text(page["description"]), ""]
+        for group in page["sections"]:
+            lines.append(f"== {self._text(group['title'])} ==")
+            rows = [
+                [
+                    row["level"] or "—",
+                    " · ".join(row["roll_ranges"]),
+                    f"{row['name']} · {row['kind']}",
+                    " · ".join(part for part in (
+                        ", ".join(row["item_types"].values()),
+                        "Magic and Rare items" if row["can_roll_on_rares"] else "Magic items only",
+                        row["excludes"],
+                    ) if part),
+                ]
+                for row in group["rows"]
+            ]
+            lines.extend(self._table(["Affix level", "Roll range", "Affix", "Item types"], rows))
+            lines.append("")
+        return lines
+
     def _render_recipes_corruptions(self, payload: Dict[str, Any], _site: WikiSiteDTO) -> List[str]:
         page = payload.get("page", {})
         lines = []

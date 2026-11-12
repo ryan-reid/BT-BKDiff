@@ -86,6 +86,7 @@
 
 <div class="site-shell">
   <main class="site-main">
+    {% block comparison_bar %}
     {% if comparison_switch %}
     <div class="comparison-bar">
       <span class="comparison-caption">{{ new_label }} <span class="muted">compared against</span></span>
@@ -95,6 +96,7 @@
       </nav>
     </div>
     {% endif %}
+    {% endblock %}
     {% block content %}{% endblock %}
   </main>
   <footer class="site-footer">

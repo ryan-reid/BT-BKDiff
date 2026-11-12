@@ -189,14 +189,24 @@ function wireStaticSearch() {
   const tableRows = Array.from(document.querySelectorAll("tbody tr[data-search]"));
   const sections = Array.from(document.querySelectorAll(".recipe-group, .recipe-group-section, .misc-group-section, .family-container, .set-block"));
   const filterButtons = Array.from(document.querySelectorAll("[data-recipe-filter], [data-search-filter]"));
-  let activeRecipeFilter = "all";
+  const filterControls = Array.from(document.querySelectorAll("[data-search-filter-control]"));
+  let activeFilter = "all";
   let emptyMessage = null;
   
   if (!searchInput || document.querySelector("[data-item-index-url], [data-affix-index]") || document.querySelector("[data-base-filters]") || document.querySelector("[data-runeword-filters]")) {
     return;
   }
 
-  const initialQuery = new URLSearchParams(window.location.search).get("q");
+  const params = new URLSearchParams(window.location.search);
+  const initialQuery = params.get("q");
+  filterControls.forEach((control) => {
+    const value = params.get(control.dataset.searchFilterParam);
+    if (control.type === "checkbox") {
+      control.checked = value === "1";
+    } else if (Array.from(control.options).some((option) => option.value === value)) {
+      control.value = value;
+    }
+  });
   if (initialQuery) {
     searchInput.value = initialQuery;
     const mastSearch = document.querySelector("#mast-search-input");
@@ -210,18 +220,14 @@ function wireStaticSearch() {
     emptyMessage.className = "search-empty";
     emptyMessage.hidden = true;
     emptyMessage.textContent = "No matching entries.";
-    pageSearch.insertAdjacentElement("afterend", emptyMessage);
+    (filterControls[0]?.closest(".filter-row") || pageSearch).insertAdjacentElement("afterend", emptyMessage);
   }
 
-  function filterTags(element) {
-    return normalizeText(element && element.dataset ? element.dataset.filterTags : "")
+  function filterTags(element, key) {
+    return normalizeText(element?.dataset?.[key])
       .split("|")
       .map((tag) => tag.trim())
       .filter(Boolean);
-  }
-
-  function matchesFilter(element) {
-    return activeRecipeFilter === "all" || filterTags(element).includes(activeRecipeFilter);
   }
 
   function matchesSearch(element, query) {
@@ -236,6 +242,13 @@ function wireStaticSearch() {
 
   function applySearch() {
     const query = normalizeText(searchInput.value);
+    const activeControls = filterControls.filter((control) =>
+      control.type === "checkbox" ? control.checked : control.value && control.value !== "all");
+    function matchesFilter(element) {
+      return (activeFilter === "all" || filterTags(element, "filterTags").includes(activeFilter))
+        && activeControls.every((control) =>
+          filterTags(element, control.dataset.searchFilterControl).includes(normalizeText(control.value)));
+    }
 
     // Hide/show table rows
     tableRows.forEach((row) => {
@@ -270,13 +283,13 @@ function wireStaticSearch() {
     if (emptyMessage) {
       const topLevel = sections.length ? sections : (cards.length ? cards : tableRows);
       const hasResults = topLevel.some((element) => !element.hidden && element.style.display !== "none");
-      emptyMessage.hidden = (!query && activeRecipeFilter === "all") || hasResults;
+      emptyMessage.hidden = (!query && activeFilter === "all" && !activeControls.length) || hasResults;
     }
   }
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      activeRecipeFilter = normalizeText(button.dataset.searchFilter || button.dataset.recipeFilter || "all") || "all";
+      activeFilter = normalizeText(button.dataset.searchFilter || button.dataset.recipeFilter || "all") || "all";
       filterButtons.forEach((candidate) => {
         candidate.classList.toggle("is-active", candidate === button);
         candidate.setAttribute("aria-pressed", String(candidate === button));
@@ -285,7 +298,25 @@ function wireStaticSearch() {
     });
   });
 
-  searchInput.addEventListener("input", applySearch);
+  function updateSearch() {
+    applySearch();
+    if (!filterControls.length) return;
+
+    const url = new URL(window.location.href);
+    const query = searchInput.value.trim();
+    if (query) url.searchParams.set("q", query);
+    else url.searchParams.delete("q");
+    filterControls.forEach((control) => {
+      const key = control.dataset.searchFilterParam;
+      const value = control.type === "checkbox" ? (control.checked ? "1" : "") : control.value;
+      if (value && value !== "all") url.searchParams.set(key, value);
+      else url.searchParams.delete(key);
+    });
+    if (url.href !== window.location.href) window.history.replaceState(null, "", url.href);
+  }
+
+  filterControls.forEach((control) => control.addEventListener("change", updateSearch));
+  searchInput.addEventListener("input", updateSearch);
   applySearch();
 }
 
