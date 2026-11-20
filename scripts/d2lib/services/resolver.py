@@ -1,6 +1,6 @@
 from __future__ import annotations
 import re
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Tuple
 from d2lib.repository import D2RepositoryProtocol
 from d2lib.models import PropertyDTO
 
@@ -122,9 +122,9 @@ class PropertyResolverService:
         fmt_string = self.repo.get_string(str_pos if v_min >= 0 else str_neg)
         if not fmt_string: return None
         sign = "+" if v_min >= 0 else ""
+        display_range = range_str
         if "%+d" in fmt_string:
             # Avoid double signs if range_str already has one
-            display_range = range_str
             if range_str.startswith('+') or range_str.startswith('-'):
                 fmt_string = fmt_string.replace("%+d", display_range)
             else:
@@ -186,6 +186,13 @@ class PropertyResolverService:
         if code_lower in {"cold-len", "pois-len"}:
             element = "Cold" if code_lower == "cold-len" else "Poison"
             return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"{element} Duration: {self._format_frame_duration(actual_min, actual_max)}"}
+
+        if code_lower == "dmg-cold":
+            text = f"Adds {actual_min}-{actual_max} Cold Damage"
+            duration = self.cold_duration(code_lower, param, actual_min, actual_max)
+            if duration:
+                text += f" · Cold Duration: {self._format_frame_duration(str(duration[0]), str(duration[1]))}"
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": text}
 
         if code_lower == "dmg-pois":
             try:
@@ -291,6 +298,30 @@ class PropertyResolverService:
 
         return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": f"Unknown property: {code_orig} ({range_str})"}
 
+    def cold_duration(
+        self, code: str, param: str, min_val: str, max_val: str,
+    ) -> Optional[Tuple[int, int, bool]]:
+        """Return the duration bounds and set/add flag for a cold modifier."""
+        if code not in {"dmg-cold", "cold-len"}:
+            return None
+        definition = self.properties.get(code, {})
+        default_slot = 3 if code == "dmg-cold" else 1
+        slot = next(
+            (index for index in range(1, 8) if definition.get(f"stat{index}") == "coldlength"),
+            default_slot,
+        )
+        function = definition.get(f"func{slot}") or ("17" if code == "dmg-cold" else "1")
+        try:
+            if function == "17" and int(param or "0"):
+                low = high = int(param)
+            else:
+                low, high = sorted((int(min_val or "0"), int(max_val or min_val or "0")))
+        except ValueError:
+            return None
+        if low == high == 0:
+            return None
+        return low, high, definition.get(f"set{slot}") == "1"
+
     def _format_frame_duration(self, min_val: str, max_val: str) -> str:
         def parse_frames(raw: str) -> Optional[int]:
             try:
@@ -309,7 +340,7 @@ class PropertyResolverService:
 
         def seconds_text(frames: int) -> str:
             seconds = frames / 25
-            return str(int(seconds)) if seconds.is_integer() else f"{seconds:.1f}".rstrip("0").rstrip(".")
+            return str(int(seconds)) if seconds.is_integer() else f"{seconds:.2f}".rstrip("0").rstrip(".")
 
         if min_frames == max_frames:
             unit = "second" if min_frames == 25 else "seconds"
