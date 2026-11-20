@@ -340,7 +340,7 @@ class WikiContentBuilder:
         pages.insert(pages.index(affixes) + 1, {
             "slug": AFFIX_FUNCTIONS_SLUG,
             "title": "Affixes by Function",
-            "description": "Browse spawnable prefixes and suffixes by effect and affix level.",
+            "description": "Browse spawnable prefixes and suffixes by effect, sorted by roll range.",
             "sections": groups,
             "row_count": sum(len(group["rows"]) for group in groups),
             "source_tables": affixes["source_tables"],

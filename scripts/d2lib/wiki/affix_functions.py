@@ -98,9 +98,9 @@ def affix_function_groups(service: ReferenceAnalyzerService):
 
     def sort_key(row):
         level = row["level"]
-        return (not level.isdecimal(), int(level) if level.isdecimal() else 0,
-                row["name"].casefold(), row["kind"],
-                tuple(_property_sort_key(prop) for prop in row["roll_ranges"]), tuple(row["item_types"]))
+        return (tuple(_property_sort_key(prop)[1] for prop in row["roll_ranges"]),
+                not level.isdecimal(), int(level) if level.isdecimal() else 0,
+                row["name"].casefold(), row["kind"], tuple(row["item_types"]))
 
     return [
         {"title": title, "rows": sorted(rows, key=sort_key)}
