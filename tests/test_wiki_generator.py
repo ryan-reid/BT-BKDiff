@@ -1622,6 +1622,33 @@ class TestWikiGenerator(unittest.TestCase):
                 html = handle.read()
             self.assertIn(f'<div class="sp-sub"><span>{baseline}</span><span>BKDiablo</span></div>', html)
             self.assertIn(f'href="{counterpart}" data-comparison-link', html)
+            self.assertIn('references/affixes-by-function/">Browse affixes by function', html)
+            with open(os.path.join(root, "references", "affixes-by-function", "index.html"), encoding="utf-8") as handle:
+                function_page = handle.read()
+            self.assertNotIn("data-comparison-link", function_page)
+            self.assertIn(">Poison Damage</h2>", function_page)
+            self.assertIn(">Suffix</small>", function_page)
+            self.assertNotIn("of Old Venom", function_page)
+            self.assertNotIn("Old type (old)", function_page)
+            self.assertIn("Excludes · Amulet (amul)", function_page)
+            self.assertIn('<option value="test">Test type (test)</option>', function_page)
+            self.assertNotIn('<option value="amul">', function_page)
+            self.assertIn('data-filter-tags="test"', function_page)
+            self.assertIn('<option value="prefix">Prefixes</option>', function_page)
+            self.assertIn('<option value="suffix">Suffixes</option>', function_page)
+            self.assertIn('data-affix-kind="suffix"', function_page)
+            self.assertIn('id="affix-rare-filter" type="checkbox"', function_page)
+            self.assertEqual(1, function_page.count('data-roll-quality="rare"'))
+            self.assertIn('class="affix-eligibility-rare" title="Magic and Rare items">Test type (test)</span>', function_page)
+            self.assertIn('class="affix-eligibility-magic" title="Magic items only">Test type (test)</span>', function_page)
+            with open(os.path.join(root, "data", "references-affixes-by-function.json"), encoding="utf-8") as handle:
+                poison, = json.load(handle)["sections"]
+            self.assertEqual("Poison Damage", poison["title"])
+            self.assertEqual(
+                [5, 5, 5, 15],
+                [int(row["level"]) for row in poison["rows"]],
+            )
+            self.assertNotIn("Test Prefix", function_page)
             self.assertIn('id="affix-changes-filter"', html)
             self.assertIn('id="affix-rare-filter"', html)
             self.assertIn('id="affix-disabled-filter"', html)

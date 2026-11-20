@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ new_label }} Wiki{% endblock %}
+{% block nav_references %} class="is-active"{% endblock %}
+{% block comparison_bar %}{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1>{{ page.title }}</h1>
+  <p class="hero-copy">{{ page.description }}</p>
+  <p><a class="link-card-cta" href="{{ site_root }}references/affixes/">Back to affix cards</a></p>
+</section>
+
+<section class="content-section affix-functions" aria-label="Affix functions">
+  <p class="muted">
+    <span class="affix-eligibility-rare">Yellow</span> means Magic and Rare items.
+    <span class="affix-eligibility-magic">Blue</span> means Magic items only.
+  </p>
+  <div class="toolbar filter-row">
+    <label class="filter-wide">
+      <span>Search</span>
+      <input id="page-search" type="search" placeholder="Search effects, affixes, or item types…" />
+    </label>
+    <label class="filter-select-wrap">
+      <span>Item Type</span>
+      <select id="affix-item-type-filter" class="filter-select" data-search-filter-control="filterTags" data-search-filter-param="type">
+        <option value="all">All Item Types</option>
+        {% for code, label in affix_item_types %}
+        <option value="{{ code }}">{{ label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="filter-select-wrap">
+      <span>Affix Type</span>
+      <select id="affix-kind-filter" class="filter-select" data-search-filter-control="affixKind" data-search-filter-param="affix">
+        <option value="all">Prefixes and Suffixes</option>
+        <option value="prefix">Prefixes</option>
+        <option value="suffix">Suffixes</option>
+      </select>
+    </label>
+    <label class="facet">
+      <input id="affix-rare-filter" type="checkbox" value="rare" data-search-filter-control="rollQuality" data-search-filter-param="rare">
+      Can roll on Rare items
+    </label>
+  </div>
+  {% for group in page.sections %}
+  {% set heading_id = "affix-function-" ~ loop.index %}
+  <section class="family-container" data-search="{{ group.title }}">
+    <div class="family-header-bar">
+      <h2 id="{{ heading_id }}">{{ group.title }}</h2>
+    </div>
+    <div class="table-wrap">
+      <table class="monster-table" aria-labelledby="{{ heading_id }}">
+        <thead>
+          <tr>
+            <th scope="col">Affix level</th>
+            <th scope="col">Roll range</th>
+            <th scope="col">Affix</th>
+            <th scope="col">Item types</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in group.rows %}
+          <tr data-filter-tags="{{ row.item_types|join('|') }}" data-affix-kind="{{ row.kind|lower }}"{% if row.can_roll_on_rares %} data-roll-quality="rare"{% endif %} data-search="{{ row.level }} {{ row.roll_ranges|join(' ') }} {{ row.kind }} {{ row.name }} {{ row.item_types.values()|join(' ') }} {{ row.excludes }}">
+            <td>{{ row.level or "—" }}</td>
+            <td>{{ row.roll_ranges|join(' · ') }}</td>
+            <td><strong>{{ row.name }}</strong><br><small class="muted">{{ row.kind }}</small></td>
+            <td>
+              {% set eligibility = "Magic and Rare items" if row.can_roll_on_rares else "Magic items only" %}
+              <span class="affix-eligibility-{{ 'rare' if row.can_roll_on_rares else 'magic' }}" title="{{ eligibility }}">{{ row.item_types.values()|join(', ') or "—" }}</span>
+              <span class="visually-hidden">({{ eligibility }})</span>
+              {% if row.excludes %}<br><small class="muted">{{ row.excludes }}</small>{% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {% else %}
+  <p class="muted">No spawnable affixes found.</p>
+  {% endfor %}
+</section>
+{% endblock %}

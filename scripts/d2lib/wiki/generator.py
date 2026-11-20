@@ -39,6 +39,7 @@ from d2lib.wiki.history_comparison import write_history_comparisons
 from pathlib import Path
 from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 from d2lib.wiki.builders import AreaFarmingDataBuilder, ItemIconExporter
+from d2lib.wiki.affix_functions import AFFIX_FUNCTIONS_SLUG, affix_function_groups
 from d2lib.wiki.comparison import (
     affix_card_contexts,
     skill_card_context,
@@ -331,8 +332,20 @@ class WikiContentBuilder:
     def _load_reference_pages(self) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
         table_names = self._available_excel_tables()
         service = ReferenceAnalyzerService(self._repo, PropertyResolverService(self._repo))
-        pages = service.build_pages(table_names, baseline=ReferenceAnalyzerService(self._retail_repo))
+        baseline = ReferenceAnalyzerService(self._retail_repo)
+        pages = service.build_pages(table_names, baseline=baseline)
         coverage = service.build_coverage(pages, table_names, self._core_raw_table_coverage())
+        affixes = next(page for page in pages if page["slug"] == "affixes")
+        groups = affix_function_groups(service)
+        pages.insert(pages.index(affixes) + 1, {
+            "slug": AFFIX_FUNCTIONS_SLUG,
+            "title": "Affixes by Function",
+            "description": "Browse spawnable prefixes and suffixes by effect and affix level.",
+            "sections": groups,
+            "row_count": sum(len(group["rows"]) for group in groups),
+            "source_tables": affixes["source_tables"],
+            "search_text": "Affixes by Function effect prefix suffix affix level magicprefix magicsuffix",
+        })
         return pages, coverage
 
     @staticmethod
@@ -624,6 +637,27 @@ class WikiContentBuilder:
 
         for page in pages:
             self.writer.write_text(f"data/references-{page['slug']}.json", json.dumps(page, indent=2))
+            source_files = [
+                os.path.join(self.game_data_dir, "data", "global", "excel", f"{table}.txt")
+                for table in page["source_tables"]
+            ]
+            if page["slug"] == AFFIX_FUNCTIONS_SLUG:
+                item_types = {
+                    code: label
+                    for group in page["sections"]
+                    for row in group["rows"]
+                    for code, label in row["item_types"].items()
+                }
+                self._write_page(
+                    title=f"{page['title']} | {self.new_label} Wiki",
+                    output_path=WikiRoutes.reference_output_path(page["slug"]),
+                    template_name="affix_functions.html",
+                    category="index",
+                    source_files=source_files,
+                    page=page,
+                    affix_item_types=sorted(item_types.items(), key=lambda item: item[1].casefold()),
+                )
+                continue
             comparison_sections = [section for section in page["sections"] if "comparison_rows" in section]
             affix_cards = {
                 section["table"]: [
@@ -645,10 +679,7 @@ class WikiContentBuilder:
                 output_path=WikiRoutes.reference_output_path(page["slug"]),
                 template_name="reference_table.html",
                 category="index",
-                source_files=[
-                    os.path.join(self.game_data_dir, "data", "global", "excel", f"{table}.txt")
-                    for table in page["source_tables"]
-                ],
+                source_files=source_files,
                 page=page,
                 affix_cards=affix_cards,
                 affix_item_types=sorted(affix_item_types.items(), key=lambda item: item[1].casefold()),
