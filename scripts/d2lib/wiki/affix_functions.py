@@ -30,6 +30,7 @@ def _function_title(properties: tuple[str, ...]) -> str:
 
 def _property_sort_key(text: str):
     effect = " ".join(re.findall(r"[^\W\d_]+", text.casefold()))
+    effect = re.sub(r"^(?:to|adds)\s+", "", effect)
     values = tuple(float(value) for value in re.findall(r"\d+(?:\.\d+)?", text))
     return effect, values, text.casefold()
 
