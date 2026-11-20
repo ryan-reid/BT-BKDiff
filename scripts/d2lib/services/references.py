@@ -14,6 +14,7 @@ class AffixTier(NamedTuple):
     item_types: Dict[str, str]
     spawnable: bool
     can_roll_on_rares: bool
+    property_details: Tuple[Dict[str, str], ...] = ()
 
 
 REFERENCE_GROUPS = [
@@ -182,6 +183,7 @@ class ReferenceAnalyzerService:
             if row.get("Code") and row.get("ItemType")
         }
         base_names: Dict[str, Set[str]] = {}
+        unresolved_types: Set[str] = set()
         for table in ("misc", "armor", "weapons"):
             for row in self.repo.get_excel_table(table):
                 if row.get("quest") not in (None, "", "0"):
@@ -189,11 +191,15 @@ class ReferenceAnalyzerService:
                 code = row.get("type", "")
                 key = row.get("namestr", "")
                 display_name = self.repo.get_string(key)
-                if code and key and display_name and display_name != key:
+                if not code:
+                    continue
+                if not key or not display_name or display_name == key:
+                    unresolved_types.add(code)
+                else:
                     base_names.setdefault(code, set()).add(display_name)
         # Broad categories contain several base items and retain their type label.
         for code, display_names in base_names.items():
-            if len(display_names) == 1:
+            if len(display_names) == 1 and code not in unresolved_types:
                 names[code] = next(iter(display_names))
         return names
 
@@ -205,7 +211,8 @@ class ReferenceAnalyzerService:
         groups: Dict[str, Tuple[str, List[AffixTier]]] = {}
         for row in self.repo.get_excel_table(table):
             name = row.get("Name", "")
-            properties = tuple(sorted(prop["text"] for prop in self._properties(row, "mod")))
+            property_details = self._properties(row, "mod")
+            properties = tuple(sorted(prop["text"] for prop in property_details))
             if not name or not properties:
                 continue
 
@@ -240,7 +247,10 @@ class ReferenceAnalyzerService:
                 if row.get(field):
                     settings.append(f"{label} {row[field]}")
             _, tiers = groups.setdefault(name.casefold(), (self.repo.get_string(name) or name, []))
-            tiers.append(AffixTier(properties, tuple(settings), identity, type_labels, spawnable, can_roll_on_rares))
+            tiers.append(AffixTier(
+                properties, tuple(settings), identity, type_labels, spawnable, can_roll_on_rares,
+                tuple(property_details),
+            ))
         return groups
 
     def build_coverage(
@@ -380,6 +390,7 @@ class ReferenceAnalyzerService:
         count: int,
     ) -> List[Dict[str, str]]:
         properties: List[Dict[str, str]] = []
+        cold_duration = None
         for index in range(1, count + 1):
             code_key = f"{prefix}{index}{code_suffix}"
             code = str(row.get(code_key, "")).strip()
@@ -389,5 +400,24 @@ class ReferenceAnalyzerService:
             min_val = str(row.get(f"{prefix}{index}{min_suffix}", "")).strip()
             max_val = str(row.get(f"{prefix}{index}{max_suffix}", "")).strip()
             text = self.resolver.resolve_property(code, param, min_val, max_val).get("resolved_text", "")
-            properties.append({"code": code, "text": text or code})
+            normalized_code = self.resolver.aliases.get(code.lower(), code.lower())
+            duration = self.resolver.cold_duration(normalized_code, param, min_val, max_val)
+            if duration:
+                low, high, replaces = duration
+                if cold_duration is None or replaces:
+                    cold_duration = (low, high)
+                else:
+                    cold_duration = (cold_duration[0] + low, cold_duration[1] + high)
+            if normalized_code == "cold-len" and duration:
+                continue
+            if normalized_code == "dmg-cold":
+                text = text.split(" · Cold Duration", 1)[0]
+            properties.append({
+                "code": code, "text": text or code,
+                "param": param,
+            })
+        if cold_duration is not None:
+            low, high = (str(value) for value in cold_duration)
+            duration = self.resolver.resolve_property("cold-len", "", low, high)["resolved_text"]
+            properties.append({"code": "cold-len", "text": duration, "param": ""})
         return properties

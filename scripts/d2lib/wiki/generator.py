@@ -331,8 +331,12 @@ class WikiContentBuilder:
 
     def _load_reference_pages(self) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
         table_names = self._available_excel_tables()
-        service = ReferenceAnalyzerService(self._repo, PropertyResolverService(self._repo))
-        baseline = ReferenceAnalyzerService(self._retail_repo)
+        group_path = os.path.join(REPO_ROOT, "data", "propertygroups.txt")
+        property_groups = self._repo.load_tsv(group_path)
+        service = ReferenceAnalyzerService(self._repo, PropertyResolverService(self._repo, property_groups))
+        baseline = ReferenceAnalyzerService(
+            self._retail_repo, PropertyResolverService(self._retail_repo, property_groups),
+        )
         pages = service.build_pages(table_names, baseline=baseline)
         coverage = service.build_coverage(pages, table_names, self._core_raw_table_coverage())
         affixes = next(page for page in pages if page["slug"] == "affixes")
