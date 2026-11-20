@@ -147,12 +147,7 @@ class ReferenceAnalyzerService:
                 remaining[signature] -= 1
             return result
 
-        item_types = {
-            row["Code"]: row["ItemType"]
-            for repo in (baseline.repo, self.repo)
-            for row in repo.get_excel_table("itemtypes")
-            if row.get("Code") and row.get("ItemType")
-        }
+        item_types = {**baseline._item_type_names(), **self._item_type_names()}
         current = self.affix_groups(table, item_types)
         old = baseline.affix_groups(table, item_types)
         rows = []
@@ -180,15 +175,33 @@ class ReferenceAnalyzerService:
             })
         return sorted(rows, key=lambda row: row["label"].casefold())
 
+    def _item_type_names(self) -> Dict[str, str]:
+        names = {
+            row["Code"]: self.repo.get_string(row["ItemType"]) or row["ItemType"]
+            for row in self.repo.get_excel_table("itemtypes")
+            if row.get("Code") and row.get("ItemType")
+        }
+        base_names: Dict[str, Set[str]] = {}
+        for table in ("misc", "armor", "weapons"):
+            for row in self.repo.get_excel_table(table):
+                if row.get("quest") not in (None, "", "0"):
+                    continue
+                code = row.get("type", "")
+                key = row.get("namestr", "")
+                display_name = self.repo.get_string(key)
+                if code and key and display_name and display_name != key:
+                    base_names.setdefault(code, set()).add(display_name)
+        # Broad categories contain several base items and retain their type label.
+        for code, display_names in base_names.items():
+            if len(display_names) == 1:
+                names[code] = next(iter(display_names))
+        return names
+
     def affix_groups(
         self, table: str, item_types: Optional[Dict[str, str]] = None,
     ) -> Dict[str, Tuple[str, List[AffixTier]]]:
         if item_types is None:
-            item_types = {
-                row["Code"]: row["ItemType"]
-                for row in self.repo.get_excel_table("itemtypes")
-                if row.get("Code") and row.get("ItemType")
-            }
+            item_types = self._item_type_names()
         groups: Dict[str, Tuple[str, List[AffixTier]]] = {}
         for row in self.repo.get_excel_table(table):
             name = row.get("Name", "")
