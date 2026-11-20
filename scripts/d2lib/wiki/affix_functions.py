@@ -71,6 +71,12 @@ def _function_title(codes: list[str], resolver: PropertyResolverService) -> str:
     return " + ".join(sorted({_function_label(code, resolver) for code in codes}, key=str.casefold))
 
 
+def _property_sort_key(text: str):
+    effect = " ".join(re.findall(r"[^\W\d_]+", text.casefold()))
+    values = tuple(float(value) for value in re.findall(r"\d+(?:\.\d+)?", text))
+    return effect, values, text.casefold()
+
+
 def affix_function_groups(service: ReferenceAnalyzerService):
     groups = defaultdict(list)
     for table, kind in (("magicprefix", "Prefix"), ("magicsuffix", "Suffix")):
@@ -82,7 +88,7 @@ def affix_function_groups(service: ReferenceAnalyzerService):
                 excludes = next((setting for setting in tier.settings if setting.startswith("Excludes · ")), "")
                 groups[title].append({
                     "level": tier.identity["level"],
-                    "roll_ranges": tier.properties,
+                    "roll_ranges": tuple(sorted(tier.properties, key=_property_sort_key)),
                     "kind": kind,
                     "name": name,
                     "item_types": tier.item_types,
@@ -93,7 +99,8 @@ def affix_function_groups(service: ReferenceAnalyzerService):
     def sort_key(row):
         level = row["level"]
         return (not level.isdecimal(), int(level) if level.isdecimal() else 0,
-                row["name"].casefold(), row["kind"], row["roll_ranges"], tuple(row["item_types"]))
+                row["name"].casefold(), row["kind"],
+                tuple(_property_sort_key(prop) for prop in row["roll_ranges"]), tuple(row["item_types"]))
 
     return [
         {"title": title, "rows": sorted(rows, key=sort_key)}
