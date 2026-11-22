@@ -1,7 +1,12 @@
 from __future__ import annotations
 import re
 from typing import List, Dict, Optional, Any, Tuple
-from d2lib.repository import D2Repository, D2RepositoryProtocol
+from d2lib.repository import (
+    D2Repository,
+    D2RepositoryProtocol,
+    get_class_name_maps,
+    resolve_localized_string,
+)
 from d2lib.models import AnalyzedItemDTO, RunewordDTO, BaseItemDTO, BaseItemFamilyDTO
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.utils import item_category_to_group
@@ -23,8 +28,26 @@ class ItemAnalyzerService:
         self.weapons = {row['code']: row for row in repo.get_excel_table('weapons')}
         self.misc = {row['code']: row for row in repo.get_excel_table('misc')}
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
-        self.sets = {row['name']: row for row in repo.get_excel_table('sets')}
+        self.sets: Dict[str, Dict[str, str]] = {}
+        for row in repo.get_excel_table('sets'):
+            index_key = str(row.get('index', '')).strip()
+            name_key = str(row.get('name', '')).strip()
+            if index_key and index_key not in self.sets:
+                self.sets[index_key] = row
+            if name_key and name_key not in self.sets:
+                self.sets[name_key] = row
         self.gems = {row['code']: row for row in repo.get_excel_table('gems')}
+
+    def _resolve_runeword_name(self, rw_key: str, comment_name: str) -> str:
+        return resolve_localized_string(self.repo, rw_key) or comment_name or rw_key or "Unknown"
+
+    def get_set_display_name(self, set_id: str) -> str:
+        clean_id = str(set_id or '').strip()
+        if not clean_id:
+            return ''
+        set_info = self.sets.get(clean_id, {})
+        name_key = str(set_info.get('name') or clean_id).strip()
+        return resolve_localized_string(self.repo, name_key) or name_key or clean_id
 
     def get_item_name(self, code: str) -> str:
         item = self.armor.get(code) or self.weapons.get(code) or self.misc.get(code)
@@ -71,7 +94,9 @@ class ItemAnalyzerService:
         }
 
     def analyze_runeword(self, row: Dict[str, str]) -> RunewordDTO:
-        name = row.get('*Rune Name', row.get('Name', 'Unknown')).strip()
+        rw_key = str(row.get('Name', '')).strip()
+        comment_name = str(row.get('*Rune Name', '')).strip()
+        name = self._resolve_runeword_name(rw_key, comment_name)
         runes = []
         rune_levels = []
         for i in range(1, 7):
@@ -99,6 +124,7 @@ class ItemAnalyzerService:
         rune_properties = self._resolve_runeword_rune_properties(row, itype)
 
         return {
+            "id": rw_key or name,
             "name": name, "runes": runes, "base_items": base_items,
             "required_level": str(max(rune_levels)) if rune_levels else "",
             "properties": props, "rune_properties": rune_properties, "raw_row": row
@@ -208,8 +234,8 @@ class ItemAnalyzerService:
                     "properties": piece_properties
                 })
 
-        set_name = row.get('set', '').strip()
-        set_info = self.sets.get(set_name, {})
+        set_id = row.get('set', '').strip()
+        set_info = self.sets.get(set_id, {})
         is_expansion = set_info.get('version', '0') != '0'
 
         item_code = row.get('item', '').strip()
@@ -218,6 +244,7 @@ class ItemAnalyzerService:
             "item_type": self.get_item_category(item_code), "lvl_req": row.get('lvl req', '0'),
             "properties": props,
             "partial_set_properties": partial_props if partial_props else None,
+            "set_name": self.get_set_display_name(set_id),
             "is_expansion": is_expansion,
             "raw_row": row,
         }
@@ -232,10 +259,7 @@ class BaseItemAnalyzerService:
         self.taxonomy = ItemTypeTaxonomy(repo)
         self.automagic = repo.get_excel_table('automagic')
         self.quality_items = repo.get_excel_table('qualityitems')
-        self.class_names = {
-            'ama': 'Amazon', 'sor': 'Sorceress', 'nec': 'Necromancer', 'pal': 'Paladin',
-            'bar': 'Barbarian', 'dru': 'Druid', 'ass': 'Assassin', 'war': 'Warlock'
-        }
+        _, self.class_names = get_class_name_maps(repo)
 
     def analyze_base_items(self) -> List[BaseItemFamilyDTO]:
         families: List[BaseItemFamilyDTO] = []
@@ -606,12 +630,12 @@ class BaseItemAnalyzerService:
         for code in item_type_chain:
             class_code = self.item_types.get(code, {}).get('Class', '').strip()
             if class_code:
-                return self.class_names.get(class_code, class_code)
+                return self.class_names.get(class_code.casefold(), class_code)
         return ""
 
     def _staffmod_class_for_item_type(self, item_type_chain: List[str]) -> str:
         for code in item_type_chain:
             staffmod_code = self.item_types.get(code, {}).get('StaffMods', '').strip()
             if staffmod_code:
-                return self.class_names.get(staffmod_code, staffmod_code)
+                return self.class_names.get(staffmod_code.casefold(), staffmod_code)
         return ""

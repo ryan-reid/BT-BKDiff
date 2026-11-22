@@ -20,9 +20,11 @@ class AnalyzedItemDTO(TypedDict):
     lvl_req: str
     properties: List[PropertyDTO]
     partial_set_properties: Optional[List[PartialSetBonusDTO]]
+    set_name: Optional[str]
     raw_row: Dict[str, str]
 
 class RunewordDTO(TypedDict):
+    id: str
     name: str
     runes: List[str]
     base_items: List[str]
@@ -184,6 +186,8 @@ class MiscGroupDTO(TypedDict):
     members: List[MiscItemDTO]
 
 class SetFamilyDTO(TypedDict):
+    id: str
+    anchor: str
     name: str
     summary: str
     set_bonuses: List[Dict[str, Any]] # Aligned diff

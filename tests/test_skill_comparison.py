@@ -189,6 +189,75 @@ class TestSkillComparison(unittest.TestCase):
             service = SkillComparisonService(repo, repo)
             self.assertEqual(str(source).replace("\\", "/"), service.current.sources["skills"])
 
+    def test_class_pages_and_references_use_localized_charstats_with_stable_slugs(self):
+        tables = copy.deepcopy(self.tables)
+        tables["charstats"] = [
+            {"class": "Sorceress"},
+            {"class": "Expansion"},
+            {"class": "Paladin"},
+            {"class": "Cleric"},
+        ]
+        tables["skills"].extend([
+            {"skill": "Fire Ball", "charclass": "sor", "skilldesc": "fire ball",
+             "EDmgSymPerCalc": "skill('Sanctuary Light'.blvl)*10"},
+            {"skill": "Sanctuary Light", "charclass": "cle"},
+        ])
+        tables["skilldesc"].append({"skilldesc": "fire ball", "str name": "fire_name"})
+        strings = dict(self.strings, sorceress="원소술사", paladin="성기사", cleric="Kleriker", fire_name="Fire Ball")
+        repo = Repository(tables, strings)
+        pages = SkillComparisonService(repo, repo).class_pages()
+
+        self.assertEqual(["sor", "pal", "cle"], [page["class_id"] for page in pages])
+        self.assertEqual(["원소술사", "성기사", "Kleriker"], [page["class_name"] for page in pages])
+        self.assertEqual(["sorceress", "paladin", "cleric"], [page["class_slug"] for page in pages])
+        fire_ball = pages[0]["skills"][0]
+        self.assertEqual("classes/cleric/#sanctuary-light", fire_ball["references"][0]["href"])
+
+    def test_skill_titles_and_references_resolve_from_skilldesc_with_stable_anchors(self):
+        tables = {
+            "charstats": [{"class": "Necromancer"}],
+            "skills": [
+                {"skill": "Poison Dagger", "*Id": "73", "charclass": "nec", "skilldesc": "poison dagger"},
+                {"skill": "Poison Explosion", "*Id": "83", "charclass": "nec", "skilldesc": "poison explosion",
+                 "reqskill1": "Poison Dagger", "EDmgSymPerCalc": "skill('Poison Dagger'.blvl)*15"},
+                {"skill": "Missing Loc Skill", "*Id": "99", "charclass": "nec", "skilldesc": "missing loc"},
+            ],
+            "skilldesc": [
+                {"skilldesc": "poison dagger", "str name": "skillname73"},
+                {"skilldesc": "poison explosion", "str name": "skillname83"},
+                {"skilldesc": "missing loc", "str name": "skillname_missing"},
+            ],
+        }
+        baseline_repo = Repository(tables, {"skillname73": "Poison Dagger", "skillname83": "Poison Explosion"})
+        current_repo = Repository(tables, {"skillname73": "Poison Strike", "skillname83": "Poison Explosion"})
+
+        service = SkillComparisonService(current_repo, baseline_repo)
+        dagger = service.compare("poison dagger")
+        self.assertEqual("Poison Strike", dagger["name"])
+        self.assertEqual("Poison Dagger", dagger["id"])
+        self.assertEqual("poison-dagger", dagger["slug"])
+        self.assertIn("Poison Strike", dagger["search_text"])
+        self.assertIn("Poison Dagger", dagger["search_text"])
+
+        explosion = service.compare("poison explosion")
+        self.assertEqual([
+            {"name": "Poison Strike", "field": "reqskill1", "from": "skills:poison explosion",
+             "href": "classes/necromancer/#poison-dagger"},
+            {"name": "Poison Strike", "field": "EDmgSymPerCalc", "from": "skills:poison explosion",
+             "href": "classes/necromancer/#poison-dagger"},
+        ], explosion["references"])
+        req_fact = next(f for f in explosion["facts"] if f["label"] == "Prerequisite 1")
+        self.assertEqual(("Poison Dagger", "Poison Strike"), (req_fact["old"], req_fact["new"]))
+
+        missing_loc = service.compare("missing loc skill")
+        self.assertEqual("Missing Loc Skill", missing_loc["name"])
+        self.assertEqual("missing-loc-skill", missing_loc["slug"])
+
+        ko_repo = Repository(tables, {"skillname73": "독 일격", "skillname83": "맹독 폭발"})
+        ko_dagger = SkillComparisonService(ko_repo, baseline_repo).compare("poison dagger")
+        self.assertEqual("독 일격", ko_dagger["name"])
+        self.assertEqual("poison-dagger", ko_dagger["slug"])
+
 
 if __name__ == "__main__":
     unittest.main()

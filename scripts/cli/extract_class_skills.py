@@ -12,7 +12,13 @@ def run(mpq_path: str, out_dir: str, repo: Optional[D2Repository] = None):
     service = SkillAnalyzerService(repo)
     exporter = MarkdownExporter()
 
-    classes = ["nec", "bar", "ama", "sor", "pal", "dru", "ass", "war"]
+    classes = list(service.class_map.keys())
+    if not classes:
+        classes = list(dict.fromkeys(
+            row.get("charclass", "").strip().lower()
+            for row in service.skills.values()
+            if row.get("charclass", "").strip()
+        ))
     
     summary = "# Skill Trees\n\n"
 

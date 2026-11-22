@@ -323,6 +323,30 @@ class TestAffixFunctions(unittest.TestCase):
             [row["roll_ranges"] for row in groups[0]["rows"]],
         )
 
+    def test_affix_groups_localize_class_restriction_from_charstats(self):
+        prefix_rows = [
+            dict(affix("Sorceress Only", ("str", 1, 2, "")), **{"class": "sor"}),
+            dict(affix("Cleric Only", ("str", 3, 4, "")), **{"class": "cle"}),
+            dict(affix("Unknown Class", ("str", 5, 6, "")), **{"class": "xyz"}),
+        ]
+        repo = Repository(
+            {
+                "charstats": [
+                    {"class": "Sorceress"},
+                    {"class": "Expansion"},
+                    {"class": "Cleric"},
+                ],
+                "properties": [{"code": "str", "stat1": "strength", "*Tooltip": "+# to Strength"}],
+                "magicprefix": prefix_rows,
+            },
+            {"Sorceress": "원소술사", "Cleric": "Kleriker"},
+        )
+        groups = ReferenceAnalyzerService(repo).affix_groups("magicprefix")
+        self.assertIn("Class 원소술사", groups["sorceress only"][1][0].settings)
+        self.assertEqual("sor", groups["sorceress only"][1][0].identity["class"])
+        self.assertIn("Class Kleriker", groups["cleric only"][1][0].settings)
+        self.assertIn("Class xyz", groups["unknown class"][1][0].settings)
+
 
 if __name__ == "__main__":
     unittest.main()

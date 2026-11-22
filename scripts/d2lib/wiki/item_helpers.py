@@ -81,6 +81,7 @@ def item_search_text(entry: Dict[str, Any], family: str) -> str:
         f"{entry.get('display_name', '')} "
         f"{entry.get('base_item', '')} "
         f"{entry.get('item_type', '')} "
+        f"{entry.get('set_name', '')} "
         f"{entry.get('raw_row', {}).get('set', '')} "
         f"{drop_info.get('drop_level', '')} {drop_info.get('label', '')} "
         f"{props}"

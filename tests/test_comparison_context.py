@@ -9,6 +9,7 @@ if SCRIPT_DIR not in sys.path:
 from d2lib.wiki.comparison import (
     item_comparison_context,
     comparison_summary_context,
+    comparison_stat_rows,
     entries_match,
     property_occurrence_map,
     rune_property_occurrence_map,
@@ -362,6 +363,23 @@ class TestGemRuneComparisonContext(unittest.TestCase):
         self.assertEqual("modified", result["state"])
         weapon_row = next(r for r in result["property_rows"] if r["label"] == "Weapon")
         self.assertEqual("changed", weapon_row["status"])
+
+    def test_set_stat_rows_prefer_localized_set_name_over_raw_set_key(self):
+        entry = {
+            "base_item": "Heavy Boots",
+            "item_type": "Boots",
+            "lvl_req": "20",
+            "set_name": "Sander's Folly",
+            "raw_row": {"set": "McAuley's Folly"},
+        }
+        old_entry = {
+            "base_item": "Heavy Boots",
+            "item_type": "Boots",
+            "lvl_req": "20",
+            "raw_row": {"set": "Fallback Set"},
+        }
+        rows = dict((label, (old_v, new_v)) for label, old_v, new_v in comparison_stat_rows(entry, "set", old_entry))
+        self.assertEqual(("Fallback Set", "Sander's Folly"), rows["Set"])
 
 
 if __name__ == "__main__":

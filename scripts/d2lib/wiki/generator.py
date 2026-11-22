@@ -7,7 +7,7 @@ import re
 from typing import Any, Dict, List, Optional, Tuple
 from urllib.parse import urlencode
 
-from d2lib.repository import D2Repository
+from d2lib.repository import D2Repository, D2RepositoryProtocol, resolve_localized_string
 from d2lib.services import (
     PropertyResolverService,
     BaseItemAnalyzerService,
@@ -322,8 +322,8 @@ class WikiContentBuilder:
     def _load_drop_weight_groups(self) -> List[Dict[str, Any]]:
         base_names = self._drop_base_name_lookup(self._repo)
         groups: List[Dict[str, Any]] = []
-        groups.extend(self._quality_drop_weight_groups(self._repo.get_excel_table("setitems"), "set", "item", base_names))
-        groups.extend(self._quality_drop_weight_groups(self._repo.get_excel_table("uniqueitems"), "unique", "code", base_names))
+        groups.extend(self._quality_drop_weight_groups(self._repo.get_excel_table("setitems"), "set", "item", base_names, repo=self._repo))
+        groups.extend(self._quality_drop_weight_groups(self._repo.get_excel_table("uniqueitems"), "unique", "code", base_names, repo=self._repo))
         return sorted(groups, key=lambda row: (row["base_name"].lower(), row["quality"], -row["max_chance"]))
 
     def _load_drop_source_data(self) -> Dict[str, Any]:
@@ -744,16 +744,25 @@ class WikiContentBuilder:
         page_entries: Dict[str, List[Dict[str, str]]] = {family: [] for family in ITEM_FAMILIES}
         icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
         drop_base_lookup = self._drop_base_lookup(self._repo)
+        bk_sets = self._sets_lookup(self._repo)
+        retail_sets = self._sets_lookup(self._retail_repo)
 
         for family, entries in items.items():
             for entry in sorted(entries, key=item_sort_key):
                 title = item_title(entry, family)
-                old_entry = old_item_index.get(family, {}).get(item_identity(entry, family))
+                identity = item_identity(entry, family)
+                old_entry = old_item_index.get(family, {}).get(identity)
                 status = item_diff_status(entry, old_entry)
                 if family == "set":
-                    set_name = str(entry.get("raw_row", {}).get("set") or "").strip()
+                    set_id = str(entry.get("raw_row", {}).get("set") or "").strip()
+                    if set_id and not entry.get("set_name"):
+                        entry["set_name"] = self._set_display_name(self._repo, bk_sets, set_id)
+                    if old_entry and not old_entry.get("set_name"):
+                        old_set_id = str(old_entry.get("raw_row", {}).get("set") or "").strip()
+                        if old_set_id:
+                            old_entry = {**old_entry, "set_name": self._set_display_name(self._retail_repo, retail_sets, old_set_id)}
                     entry["set_anchor"] = set_item_anchor(entry)
-                    href = f"sets/#{slugify(set_name)}" if set_name else "sets/"
+                    href = f"sets/#{slugify(set_id)}" if set_id else "sets/"
                 else:
                     href = "items/"
                 entry["href"] = href
@@ -788,6 +797,7 @@ class WikiContentBuilder:
                 if not categories:
                     categories = [item_filter_type(entry, family)]
                 page_entries[family].append({
+                    "identity": identity,
                     "title": title,
                     "href": href,
                     "summary": item_summary(entry, family),
@@ -816,7 +826,7 @@ class WikiContentBuilder:
         entries: List[Dict[str, str]] = []
         for page in class_pages:
             title = page["class_name"]
-            output_path = WikiRoutes.class_output_path(slugify(title))
+            output_path = WikiRoutes.class_output_path(page.get("class_slug") or slugify(title))
             href = WikiRoutes.route_from_output_path(output_path)
             self._write_page(
                 title=f"{title} | Class Skills",
@@ -828,11 +838,16 @@ class WikiContentBuilder:
                 item_entries={"skill": [skill_card_context(skill) for skill in page["skills"]]},
                 item_section_titles={"skill": "Skills"},
             )
+            skill_terms = []
+            for skill in page["skills"]:
+                skill_terms.append(skill["name"])
+                if skill.get("id") and skill["id"].casefold() != skill["name"].casefold():
+                    skill_terms.append(skill["id"])
             entries.append({
                 "title": title,
                 "href": href,
                 "summary": f"{len(page['skills'])} skills",
-                "search_text": f"{title} {' '.join(skill['name'] for skill in page['skills'])}",
+                "search_text": f"{title} {' '.join(skill_terms)}",
             })
         return entries
 
@@ -842,6 +857,7 @@ class WikiContentBuilder:
         page_entries: List[Dict[str, str]],
         old_item_index: Optional[Dict] = None,
     ) -> None:
+        entry_by_identity = {entry["identity"]: entry for entry in page_entries if entry.get("identity")}
         href_by_title = {entry["title"]: entry for entry in page_entries}
         icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
         old_runewords = (old_item_index or {}).get("runeword", {})
@@ -851,7 +867,8 @@ class WikiContentBuilder:
 
         for entry in sorted(runewords, key=item_sort_key):
             title = item_title(entry, "runeword")
-            page_entry = href_by_title.get(title, {})
+            identity = item_identity(entry, "runeword")
+            page_entry = entry_by_identity.get(identity) or href_by_title.get(title, {})
             rune_requirements = entry.get("rune_requirements") or self._runeword_rune_requirements(entry, icon_exporter)
             base_items = entry.get("base_items", [])
             base_filter_terms = (self._taxonomy.runeword_terms(entry.get("raw_row", {})) or self._runeword_base_filter_terms(base_items))
@@ -987,6 +1004,27 @@ class WikiContentBuilder:
                 add("All Weapons")
         return terms
 
+    @staticmethod
+    def _sets_lookup(repo: D2RepositoryProtocol) -> Dict[str, Dict[str, str]]:
+        lookup: Dict[str, Dict[str, str]] = {}
+        for row in repo.get_excel_table("sets"):
+            index_key = str(row.get("index", "")).strip()
+            name_key = str(row.get("name", "")).strip()
+            if index_key and index_key not in lookup:
+                lookup[index_key] = row
+            if name_key and name_key not in lookup:
+                lookup[name_key] = row
+        return lookup
+
+    @staticmethod
+    def _set_display_name(repo: D2RepositoryProtocol, sets_lookup: Dict[str, Dict[str, str]], set_id: str) -> str:
+        clean_id = str(set_id or "").strip()
+        if not clean_id:
+            return ""
+        set_row = sets_lookup.get(clean_id, {})
+        name_key = str(set_row.get("name") or clean_id).strip()
+        return resolve_localized_string(repo, name_key) or name_key or clean_id
+
     def _write_set_index_page(
         self,
         sets: List[Dict[str, Any]],
@@ -996,8 +1034,8 @@ class WikiContentBuilder:
     ) -> None:
         set_families: Dict[str, List[Dict[str, Any]]] = {}
         for item in sets:
-            set_name = item.get("raw_row", {}).get("set", "Unknown Set")
-            set_families.setdefault(set_name, []).append(item)
+            set_id = item.get("raw_row", {}).get("set", "Unknown Set")
+            set_families.setdefault(set_id, []).append(item)
 
         prop_groups_path = os.path.join(REPO_ROOT, "data", "propertygroups.txt")
         prop_groups = self._repo.load_tsv(prop_groups_path)
@@ -1005,16 +1043,23 @@ class WikiContentBuilder:
         resolver_bk = PropertyResolverService(self._repo, prop_groups)
         resolver_rt = PropertyResolverService(self._retail_repo, prop_groups)
 
-        retail_sets = {row["name"]: row for row in self._retail_repo.get_excel_table("sets")}
-        bk_sets = {row["name"]: row for row in self._repo.get_excel_table("sets")}
+        retail_sets = self._sets_lookup(self._retail_repo)
+        bk_sets = self._sets_lookup(self._repo)
 
         results: List[SetFamilyDTO] = []
-        for name, members in sorted(set_families.items()):
-            bk_set_row = bk_sets.get(name, {})
-            rt_set_row = retail_sets.get(name, {})
+        for set_id, members in set_families.items():
+            bk_set_row = bk_sets.get(set_id, {})
+            rt_set_row = retail_sets.get(set_id, {})
+            display_name = self._set_display_name(self._repo, bk_sets, set_id)
 
             for item in members:
+                if not item.get("set_name"):
+                    item["set_name"] = display_name
                 old_item = old_item_index.get(item_identity(item, "set"))
+                if old_item and not old_item.get("set_name"):
+                    old_set_id = str(old_item.get("raw_row", {}).get("set") or "").strip()
+                    if old_set_id:
+                        old_item = {**old_item, "set_name": self._set_display_name(self._retail_repo, retail_sets, old_set_id)}
                 item["comparison"] = item_comparison_context(item, "set", old_item)
                 item["summary"] = item_summary(item, "set")
                 base_code = item.get("raw_row", {}).get("item", "")
@@ -1022,20 +1067,28 @@ class WikiContentBuilder:
                     base_item_lookup.get(base_code), retail_base_items.get(base_code)
                 )
 
-            bonus_diffs = set_bonus_comparison(name, bk_set_row, rt_set_row, resolver_bk, resolver_rt)
+            bonus_diffs = set_bonus_comparison(set_id, bk_set_row, rt_set_row, resolver_bk, resolver_rt)
             status = (
                 "added" if not rt_set_row
                 else "modified" if any(b["status"] != "same" for b in bonus_diffs) or any(m["comparison"]["state"] == "modified" for m in members)
                 else "unchanged"
             )
+            search_terms = [display_name]
+            if set_id and set_id.casefold() != display_name.casefold():
+                search_terms.append(set_id)
+            search_terms.extend(m["display_name"] for m in members)
             results.append({
-                "name": name,
+                "id": set_id,
+                "anchor": slugify(set_id),
+                "name": display_name,
                 "summary": f"A {len(members)}-piece set.",
                 "set_bonuses": bonus_diffs,
                 "members": members,
                 "status": status,
-                "search_text": f"{name} " + " ".join(m["display_name"] for m in members),
+                "search_text": " ".join(search_terms),
             })
+
+        results.sort(key=lambda row: (row["name"].casefold(), row["id"].casefold()))
 
         self._write_page(
             title=f"Set Items | {self.new_label} Wiki",
@@ -1317,15 +1370,22 @@ class WikiContentBuilder:
     # ── Drop weight helpers ───────────────────────────────────────────────────
 
     @staticmethod
-    def _drop_base_name_lookup(repo: D2Repository) -> Dict[str, str]:
+    def _drop_base_name_lookup(repo: D2RepositoryProtocol) -> Dict[str, str]:
         base_names: Dict[str, str] = {}
         for table_name in ("weapons", "armor", "misc"):
             for row in repo.get_excel_table(table_name):
                 code = str(row.get("code", "")).strip()
                 if not code:
                     continue
-                name = str(row.get("name") or row.get("namestr") or code).strip()
-                base_names[code] = repo.get_string(name) if name else code
+                namestr = str(row.get("namestr") or "").strip()
+                raw_name = str(row.get("name") or "").strip()
+                base_names[code] = (
+                    resolve_localized_string(repo, namestr)
+                    or resolve_localized_string(repo, raw_name)
+                    or raw_name
+                    or namestr
+                    or code
+                )
         return base_names
 
     @staticmethod
@@ -1334,6 +1394,7 @@ class WikiContentBuilder:
         quality: str,
         code_column: str,
         base_names: Dict[str, str],
+        repo: Optional[D2RepositoryProtocol] = None,
     ) -> List[Dict[str, Any]]:
         grouped: Dict[str, List[Dict[str, Any]]] = {}
         for row in rows:
@@ -1350,8 +1411,15 @@ class WikiContentBuilder:
                 weight = 0
             if weight <= 0:
                 continue
+            raw_id = str(row.get("index") or "").strip()
+            fallback_name = raw_id or str(row.get("*ItemName") or code).strip()
+            display_name = (
+                (resolve_localized_string(repo, raw_id) if repo is not None and raw_id else "")
+                or fallback_name
+            )
             grouped.setdefault(code, []).append({
-                "name": str(row.get("index") or row.get("*ItemName") or code).strip(),
+                "id": raw_id or code,
+                "name": display_name,
                 "weight": weight,
                 "level": str(row.get("lvl", "")).strip(),
                 "level_req": str(row.get("lvl req", "")).strip(),
@@ -1368,6 +1436,11 @@ class WikiContentBuilder:
                 {**c, "chance": c["weight"] / total_weight * 100, "chance_display": f"{c['weight'] / total_weight * 100:.1f}%"}
                 for c in sorted(candidates, key=lambda r: (-r["weight"], r["name"].lower()))
             ]
+            candidate_terms: List[str] = []
+            for candidate in enriched:
+                candidate_terms.append(candidate["name"])
+                if candidate["id"] and candidate["id"].casefold() != candidate["name"].casefold():
+                    candidate_terms.append(candidate["id"])
             result.append({
                 "id": f"{quality}-{slugify(code)}",
                 "quality": quality,
@@ -1378,7 +1451,7 @@ class WikiContentBuilder:
                 "total_weight": total_weight,
                 "max_chance": max(c["chance"] for c in enriched),
                 "candidates": enriched,
-                "search_text": " ".join([quality, code, base_names.get(code, code)] + [c["name"] for c in enriched]),
+                "search_text": " ".join([quality, code, base_names.get(code, code), *candidate_terms]),
             })
         return result
 

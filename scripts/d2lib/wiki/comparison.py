@@ -222,7 +222,9 @@ def comparison_stat_rows(
         ("Level Requirement", get_val(old_entry, "lvl_req"), get_val(entry, "lvl_req")),
     ]
     if family == "set":
-        fields.append(("Set", get_val(old_entry, "raw_row", "set"), get_val(entry, "raw_row", "set")))
+        old_set = get_val(old_entry, "set_name") or get_val(old_entry, "raw_row", "set")
+        new_set = get_val(entry, "set_name") or get_val(entry, "raw_row", "set")
+        fields.append(("Set", old_set, new_set))
     return fields
 
 

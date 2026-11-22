@@ -8,12 +8,10 @@ from __future__ import annotations
 import re
 from collections import deque
 
+from d2lib.repository import get_class_name_maps, get_class_slug_map, resolve_localized_string
 from d2lib.utils import slugify
 
 
-CLASSES = {"ama": "Amazon", "sor": "Sorceress", "nec": "Necromancer",
-           "pal": "Paladin", "bar": "Barbarian", "dru": "Druid",
-           "ass": "Assassin", "war": "Warlock"}
 TABLE_KEYS = {"skills": "skill", "skilldesc": "skilldesc", "missiles": "Missile",
               "states": "state", "itemstatcost": "Stat", "monstats": "Id",
               "monstats2": "Id", "monprop": "Id", "pettype": "pet type",
@@ -134,8 +132,10 @@ def parameter_note(row, field):
 
 
 class SkillSource:
-    def __init__(self, repo):
+    def __init__(self, repo, class_slugs=None):
         self.repo = repo
+        _, self.classes = get_class_name_maps(repo)
+        self.class_slugs = dict(class_slugs) if class_slugs is not None else get_class_slug_map(repo)
         self.tables = {}
         self.aliases = {}
         self.sources = {}
@@ -153,6 +153,17 @@ class SkillSource:
         if key not in self.tables[table]:
             key = self.aliases[table].get(key, key)
         return key, self.tables[table].get(key)
+
+    def display_name(self, skill_row, fallback=""):
+        skill_id = value(skill_row, "skill") or fallback
+        desc_key = value(skill_row, "skilldesc")
+        if desc_key:
+            _, desc_row = self.lookup("skilldesc", desc_key)
+            name_key = value(desc_row, "str name")
+            resolved = resolve_localized_string(self.repo, name_key)
+            if resolved:
+                return resolved
+        return skill_id
 
     def snapshot(self, root):
         records, edges, references, missing = {}, [], [], []
@@ -177,7 +188,7 @@ class SkillSource:
                     queue.append((target, name, record_id, via))
 
             def localized(text, via):
-                resolved = self.repo.get_string(text) if text.lower() in self.repo.strings else ""
+                resolved = resolve_localized_string(self.repo, text)
                 if resolved:
                     string_id = "strings:" + text.lower()
                     records[string_id] = {"table": "strings", "key": text,
@@ -188,10 +199,12 @@ class SkillSource:
 
             def skill_reference(name, via):
                 _, ref = self.lookup("skills", name)
-                cc = value(ref, "charclass")
-                references.append({"name": value(ref, "skill") or name, "field": via,
+                cc = value(ref, "charclass").casefold()
+                ref_skill_id = value(ref, "skill")
+                class_slug = self.class_slugs.get(cc) or (slugify(cc) if cc else "")
+                references.append({"name": self.display_name(ref, fallback=name) if ref else name, "field": via,
                                    "from": record_id,
-                                   "href": f"classes/{slugify(CLASSES[cc])}/#{slugify(value(ref, 'skill'))}" if cc in CLASSES else ""})
+                                   "href": f"classes/{class_slug}/#{slugify(ref_skill_id)}" if class_slug and ref_skill_id else ""})
 
             for f, raw in row.items():
                 text = str(raw or "").strip()
@@ -245,17 +258,31 @@ class SkillSource:
 
 class SkillComparisonService:
     def __init__(self, current_repo, baseline_repo):
-        self.current = SkillSource(current_repo)
-        self.baseline = SkillSource(baseline_repo)
+        _, current_classes = get_class_name_maps(current_repo)
+        _, baseline_classes = get_class_name_maps(baseline_repo)
+        self.classes = dict(current_classes)
+        for cc, label in baseline_classes.items():
+            self.classes.setdefault(cc, label)
+        self.class_slugs = dict(get_class_slug_map(current_repo))
+        for cc, slug in get_class_slug_map(baseline_repo).items():
+            self.class_slugs.setdefault(cc, slug)
+        self.current = SkillSource(current_repo, class_slugs=self.class_slugs)
+        self.baseline = SkillSource(baseline_repo, class_slugs=self.class_slugs)
 
     @staticmethod
-    def _facts(snapshot, root):
+    def _facts(snapshot, root, source=None):
         facts = {}
         root_row = snapshot["records"].get("skills:" + root, {}).get("row", {})
         for field, label in BASE_FIELDS:
             raw = value(root_row, field)
             if raw:
-                display = {"mag": "Magic", "fire": "Fire", "ltng": "Lightning", "cold": "Cold", "pois": "Poison", "phys": "Physical"}.get(raw, raw) if field == "EType" else raw
+                if field == "EType":
+                    display = {"mag": "Magic", "fire": "Fire", "ltng": "Lightning", "cold": "Cold", "pois": "Poison", "phys": "Physical"}.get(raw, raw)
+                elif field in {"reqskill1", "reqskill2", "reqskill3"} and source is not None:
+                    _, ref_row = source.lookup("skills", raw)
+                    display = source.display_name(ref_row, fallback=raw) if ref_row else raw
+                else:
+                    display = raw
                 facts[("skill", field)] = {"label": label, "value": display, "evidence": f"skills:{root} · {field}"}
         # These parameter meanings belong to this specific function pair.
         # Never apply them to arbitrary missile hit functions.
@@ -276,10 +303,22 @@ class SkillComparisonService:
     def compare(self, key):
         old = self.baseline.snapshot(key)
         new = self.current.snapshot(key)
-        source_row = new["records"].get("skills:" + key, old["records"].get("skills:" + key, {})).get("row", {})
-        name = value(source_row, "skill")
+        root_old = old["records"].get("skills:" + key)
+        root_new = new["records"].get("skills:" + key)
+        source_row = (root_new or root_old or {}).get("row", {})
+        skill_id = value(source_row, "skill")
+        name = (
+            self.current.display_name(root_new["row"], fallback=skill_id)
+            if root_new
+            else (
+                self.baseline.display_name(root_old["row"], fallback=skill_id)
+                if root_old
+                else skill_id
+            )
+        )
         facts = []
-        before, after = self._facts(old, key), self._facts(new, key)
+        before = self._facts(old, key, source=self.baseline)
+        after = self._facts(new, key, source=self.current)
         for identity in dict.fromkeys(list(after) + list(before)):
             a, b = before.get(identity, {}), after.get(identity, {})
             facts.append({"label": (b or a)["label"], "old": a.get("value", ""), "new": b.get("value", ""),
@@ -299,8 +338,6 @@ class SkillComparisonService:
             records.append({"id": rid, "table": r["table"], "key": r["key"], "rows": rows,
                             "changed": changed, "status": "added" if not a else "removed" if not b else "modified" if changed else "unchanged",
                             "old_source": a["source"] if a else "", "new_source": b["source"] if b else ""})
-        root_old = old["records"].get("skills:" + key)
-        root_new = new["records"].get("skills:" + key)
         status = "added" if not root_old else "removed" if not root_new else "modified" if any(r["status"] != "unchanged" for r in records) else "unchanged"
         warnings = []
         for side, snap in (("old", old), ("new", new)):
@@ -311,9 +348,13 @@ class SkillComparisonService:
             if disabled and re.search(r"heals? allies", tooltip, re.I):
                 warnings.append({"side": side, "kind": "tooltip", "text": "Tooltip mentions ally healing, but a linked missile's server settings disable it."})
         refs = []
+        seen_refs = set()
         for snap in (new, old):
             for ref in snap["references"]:
-                if ref not in refs: refs.append(ref)
+                ref_key = (ref["from"], ref["field"], ref["href"] or ref["name"].casefold())
+                if ref_key not in seen_refs:
+                    seen_refs.add(ref_key)
+                    refs.append(ref)
         formula_labels = {"EDmgSymPerCalc": "Elemental damage bonus formula", "DmgSymPerCalc": "Physical damage bonus formula",
                           "ELenSymPerCalc": "Duration bonus formula", "petmax": "Summon limit formula",
                           "aurarangecalc": "Aura range formula", "auralencalc": "Aura duration formula",
@@ -358,8 +399,11 @@ class SkillComparisonService:
         display_status = status if status in {"added", "removed"} else (
             "modified" if any(row["status"] == "changed" for row in visible_rows) else "unchanged"
         )
-        text = " ".join([name, *(f"{r['label']} {r['old']} {r['new']}" for r in visible_rows)])
-        return {"name": name, "slug": slugify(name), "status": status, "facts": facts,
+        search_terms = [name]
+        if skill_id and skill_id.casefold() != name.casefold():
+            search_terms.append(skill_id)
+        text = " ".join([*search_terms, *(f"{r['label']} {r['old']} {r['new']}" for r in visible_rows)])
+        return {"id": skill_id, "name": name, "slug": slugify(skill_id or name), "status": status, "facts": facts,
                 "display_status": display_status, "formula_rows": formula_rows, "tooltip": tooltip_row,
                 "synergy_rows": synergy_rows,
                 "records": records, "references": refs, "warnings": warnings,
@@ -368,14 +412,17 @@ class SkillComparisonService:
                 "changed_fields": sum(r["changed"] for r in records), "search_text": text}
 
     def class_pages(self):
-        classes = {cc: [] for cc in CLASSES}
+        classes = {cc: [] for cc in self.classes}
         keys = dict.fromkeys(list(self.current.tables["skills"]) + list(self.baseline.tables["skills"]))
         for key in keys:
             row = self.current.tables["skills"].get(key, self.baseline.tables["skills"].get(key))
-            cc = value(row, "charclass")
-            if cc in classes:
-                classes[cc].append(self.compare(key))
-        return [{"class_name": CLASSES[cc], "skills": skills,
+            cc = value(row, "charclass").casefold()
+            if cc:
+                classes.setdefault(cc, []).append(self.compare(key))
+        return [{"class_id": cc,
+                 "class_slug": self.class_slugs.get(cc) or slugify(cc),
+                 "class_name": self.classes.get(cc) or self.current.repo.get_string(cc) or cc,
+                 "skills": skills,
                  "source_files": list(dict.fromkeys(p for source in (self.current, self.baseline)
                                                      for p in source.sources.values() if p))}
                 for cc, skills in classes.items() if skills]
