@@ -1,7 +1,11 @@
 from __future__ import annotations
 import re
 from typing import List, Dict, Optional, Any, Tuple
-from d2lib.repository import D2RepositoryProtocol
+from d2lib.repository import (
+    D2RepositoryProtocol,
+    get_charstats_class_rows,
+    get_class_name_maps,
+)
 from d2lib.models import PropertyDTO
 
 class PropertyResolverService:
@@ -31,18 +35,8 @@ class PropertyResolverService:
             if s_id: self.skills_by_id[str(s_id).strip()] = row
 
         self.skill_desc = {row.get('skilldesc', '').strip().lower(): row for row in repo.get_excel_table('skilldesc')}
-        class_rows = [
-            row for row in repo.get_excel_table("charstats")
-            if row.get("class") and row["class"].casefold() != "expansion"
-        ]
-        self.class_names = {
-            str(index): repo.get_string(row["class"]) or row["class"]
-            for index, row in enumerate(class_rows)
-        }
-        self.class_abbr_map = {
-            row["class"][:3].casefold(): self.class_names[str(index)]
-            for index, row in enumerate(class_rows)
-        }
+        class_rows = get_charstats_class_rows(repo)
+        self.class_names, self.class_abbr_map = get_class_name_maps(repo)
 
         self.skill_to_class = {}
         for row in skills_data:

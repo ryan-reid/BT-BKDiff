@@ -5,6 +5,7 @@ import sys
 import re
 from typing import List, Dict, Tuple, Optional, Any
 from typing import Protocol, runtime_checkable
+from d2lib.utils import slugify
 
 # Increase CSV field size limit for large D2 fields
 csv.field_size_limit(1000000)
@@ -167,3 +168,50 @@ class D2Repository:
         raw = self.strings.get(key.lower(), key)
         # Strip D2 color codes like ÿc0, ÿc;, etc.
         return re.sub(r'ÿc[0-9:;<=>?@A-Z]', '', raw)
+
+
+def resolve_localized_string(repo: D2RepositoryProtocol, key: str) -> str:
+    """Resolves a string key only when a non-empty localization entry exists."""
+    clean_key = str(key or "").strip()
+    if not clean_key:
+        return ""
+    localized = str(repo.get_string(clean_key) or "").strip()
+    if not localized:
+        return ""
+    strings_map = getattr(repo, "strings", None)
+    if isinstance(strings_map, dict):
+        if clean_key.lower() in strings_map or clean_key in strings_map:
+            return localized
+        if localized.casefold() != clean_key.casefold():
+            return localized
+        return ""
+    return localized if localized.casefold() != clean_key.casefold() else ""
+
+
+def get_charstats_class_rows(repo: D2RepositoryProtocol) -> List[Dict[str, str]]:
+    """Returns non-separator class rows from charstats.txt in table order."""
+    return [
+        row for row in repo.get_excel_table("charstats")
+        if str(row.get("class", "")).strip()
+        and str(row.get("class", "")).strip().casefold() != "expansion"
+    ]
+
+
+def get_class_name_maps(repo: D2RepositoryProtocol) -> Tuple[Dict[str, str], Dict[str, str]]:
+    """Maps canonical class indices and 3-letter codes from charstats.txt to localized names."""
+    by_index: Dict[str, str] = {}
+    by_abbr: Dict[str, str] = {}
+    for index, row in enumerate(get_charstats_class_rows(repo)):
+        raw_class = str(row.get("class", "")).strip()
+        localized = str(repo.get_string(raw_class) or "").strip() or raw_class
+        by_index[str(index)] = localized
+        by_abbr[raw_class[:3].casefold()] = localized
+    return by_index, by_abbr
+
+
+def get_class_slug_map(repo: D2RepositoryProtocol) -> Dict[str, str]:
+    """Maps 3-letter class codes from charstats.txt to locale-stable URL slugs."""
+    return {
+        str(row.get("class", "")).strip()[:3].casefold(): slugify(str(row.get("class", "")).strip())
+        for row in get_charstats_class_rows(repo)
+    }

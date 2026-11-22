@@ -816,7 +816,7 @@ class WikiContentBuilder:
         entries: List[Dict[str, str]] = []
         for page in class_pages:
             title = page["class_name"]
-            output_path = WikiRoutes.class_output_path(slugify(title))
+            output_path = WikiRoutes.class_output_path(page.get("class_slug") or slugify(title))
             href = WikiRoutes.route_from_output_path(output_path)
             self._write_page(
                 title=f"{title} | Class Skills",

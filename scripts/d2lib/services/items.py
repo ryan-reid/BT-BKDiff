@@ -1,7 +1,7 @@
 from __future__ import annotations
 import re
 from typing import List, Dict, Optional, Any, Tuple
-from d2lib.repository import D2Repository, D2RepositoryProtocol
+from d2lib.repository import D2Repository, D2RepositoryProtocol, get_class_name_maps
 from d2lib.models import AnalyzedItemDTO, RunewordDTO, BaseItemDTO, BaseItemFamilyDTO
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.utils import item_category_to_group
@@ -232,10 +232,7 @@ class BaseItemAnalyzerService:
         self.taxonomy = ItemTypeTaxonomy(repo)
         self.automagic = repo.get_excel_table('automagic')
         self.quality_items = repo.get_excel_table('qualityitems')
-        self.class_names = {
-            'ama': 'Amazon', 'sor': 'Sorceress', 'nec': 'Necromancer', 'pal': 'Paladin',
-            'bar': 'Barbarian', 'dru': 'Druid', 'ass': 'Assassin', 'war': 'Warlock'
-        }
+        _, self.class_names = get_class_name_maps(repo)
 
     def analyze_base_items(self) -> List[BaseItemFamilyDTO]:
         families: List[BaseItemFamilyDTO] = []
@@ -606,12 +603,12 @@ class BaseItemAnalyzerService:
         for code in item_type_chain:
             class_code = self.item_types.get(code, {}).get('Class', '').strip()
             if class_code:
-                return self.class_names.get(class_code, class_code)
+                return self.class_names.get(class_code.casefold(), class_code)
         return ""
 
     def _staffmod_class_for_item_type(self, item_type_chain: List[str]) -> str:
         for code in item_type_chain:
             staffmod_code = self.item_types.get(code, {}).get('StaffMods', '').strip()
             if staffmod_code:
-                return self.class_names.get(staffmod_code, staffmod_code)
+                return self.class_names.get(staffmod_code.casefold(), staffmod_code)
         return ""

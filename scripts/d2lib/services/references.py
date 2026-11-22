@@ -3,7 +3,7 @@ from __future__ import annotations
 from collections import Counter
 from typing import Any, Dict, Iterable, List, NamedTuple, Optional, Set, Tuple
 
-from d2lib.repository import D2RepositoryProtocol
+from d2lib.repository import D2RepositoryProtocol, get_class_name_maps
 from d2lib.services.resolver import PropertyResolverService
 
 
@@ -99,6 +99,7 @@ class ReferenceAnalyzerService:
     def __init__(self, repo: D2RepositoryProtocol, resolver: Optional[PropertyResolverService] = None):
         self.repo = repo
         self.resolver = resolver or PropertyResolverService(repo)
+        _, self.class_names = get_class_name_maps(repo)
 
     def build_pages(
         self,
@@ -149,8 +150,9 @@ class ReferenceAnalyzerService:
             return result
 
         item_types = {**baseline._item_type_names(), **self._item_type_names()}
-        current = self.affix_groups(table, item_types)
-        old = baseline.affix_groups(table, item_types)
+        class_names = {**baseline.class_names, **self.class_names}
+        current = self.affix_groups(table, item_types, class_names=class_names)
+        old = baseline.affix_groups(table, item_types, class_names=class_names)
         rows = []
         for key in sorted(old.keys() | current.keys()):
             label, new_tiers = current.get(key, ("", []))
@@ -204,10 +206,14 @@ class ReferenceAnalyzerService:
         return names
 
     def affix_groups(
-        self, table: str, item_types: Optional[Dict[str, str]] = None,
+        self,
+        table: str,
+        item_types: Optional[Dict[str, str]] = None,
+        class_names: Optional[Dict[str, str]] = None,
     ) -> Dict[str, Tuple[str, List[AffixTier]]]:
         if item_types is None:
             item_types = self._item_type_names()
+        resolved_classes = self.class_names if class_names is None else class_names
         groups: Dict[str, Tuple[str, List[AffixTier]]] = {}
         for row in self.repo.get_excel_table(table):
             name = row.get("Name", "")
@@ -245,7 +251,11 @@ class ReferenceAnalyzerService:
                 ("group", "Group"), ("version", "Version"),
             ):
                 if row.get(field):
-                    settings.append(f"{label} {row[field]}")
+                    display_value = (
+                        resolved_classes.get(row[field].strip().casefold(), row[field])
+                        if field == "class" else row[field]
+                    )
+                    settings.append(f"{label} {display_value}")
             _, tiers = groups.setdefault(name.casefold(), (self.repo.get_string(name) or name, []))
             tiers.append(AffixTier(
                 properties, tuple(settings), identity, type_labels, spawnable, can_roll_on_rares,

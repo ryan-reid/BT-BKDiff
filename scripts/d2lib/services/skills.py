@@ -1,7 +1,7 @@
 from __future__ import annotations
 import re
 from typing import List, Dict, Optional, Any, Tuple
-from d2lib.repository import D2Repository, D2RepositoryProtocol
+from d2lib.repository import D2Repository, D2RepositoryProtocol, get_class_name_maps
 from d2lib.models import SkillTreeDTO, SkillDTO, SkillEffectDTO, SkillSynergyDTO
 from d2lib.utils import slugify, strip_markdown
 
@@ -11,7 +11,7 @@ class SkillAnalyzerService:
         self.skills = {row.get('skill', '').strip().lower(): row for row in repo.get_excel_table('skills')}
         self.missiles = {row.get('Missile', '').strip().lower(): row for row in repo.get_excel_table('missiles')}
         self.skilldesc = {row.get('skilldesc', '').strip().lower(): row for row in repo.get_excel_table('skilldesc')}
-        self.class_map = {"nec":"Necromancer", "bar":"Barbarian", "ama":"Amazon", "sor":"Sorceress", "pal":"Paladin", "dru":"Druid", "ass":"Assassin", "war":"Warlock"}
+        _, self.class_map = get_class_name_maps(repo)
 
     def get_dam_generic(self, s, lvl, prefix):
         try:

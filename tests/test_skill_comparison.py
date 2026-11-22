@@ -189,6 +189,30 @@ class TestSkillComparison(unittest.TestCase):
             service = SkillComparisonService(repo, repo)
             self.assertEqual(str(source).replace("\\", "/"), service.current.sources["skills"])
 
+    def test_class_pages_and_references_use_localized_charstats_with_stable_slugs(self):
+        tables = copy.deepcopy(self.tables)
+        tables["charstats"] = [
+            {"class": "Sorceress"},
+            {"class": "Expansion"},
+            {"class": "Paladin"},
+            {"class": "Cleric"},
+        ]
+        tables["skills"].extend([
+            {"skill": "Fire Ball", "charclass": "sor", "skilldesc": "fire ball",
+             "EDmgSymPerCalc": "skill('Sanctuary Light'.blvl)*10"},
+            {"skill": "Sanctuary Light", "charclass": "cle"},
+        ])
+        tables["skilldesc"].append({"skilldesc": "fire ball", "str name": "fire_name"})
+        strings = dict(self.strings, sorceress="원소술사", paladin="성기사", cleric="Kleriker", fire_name="Fire Ball")
+        repo = Repository(tables, strings)
+        pages = SkillComparisonService(repo, repo).class_pages()
+
+        self.assertEqual(["sor", "pal", "cle"], [page["class_id"] for page in pages])
+        self.assertEqual(["원소술사", "성기사", "Kleriker"], [page["class_name"] for page in pages])
+        self.assertEqual(["sorceress", "paladin", "cleric"], [page["class_slug"] for page in pages])
+        fire_ball = pages[0]["skills"][0]
+        self.assertEqual("classes/cleric/#sanctuary-light", fire_ball["references"][0]["href"])
+
 
 if __name__ == "__main__":
     unittest.main()

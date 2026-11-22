@@ -8,12 +8,10 @@ from __future__ import annotations
 import re
 from collections import deque
 
+from d2lib.repository import get_class_name_maps, get_class_slug_map
 from d2lib.utils import slugify
 
 
-CLASSES = {"ama": "Amazon", "sor": "Sorceress", "nec": "Necromancer",
-           "pal": "Paladin", "bar": "Barbarian", "dru": "Druid",
-           "ass": "Assassin", "war": "Warlock"}
 TABLE_KEYS = {"skills": "skill", "skilldesc": "skilldesc", "missiles": "Missile",
               "states": "state", "itemstatcost": "Stat", "monstats": "Id",
               "monstats2": "Id", "monprop": "Id", "pettype": "pet type",
@@ -134,8 +132,10 @@ def parameter_note(row, field):
 
 
 class SkillSource:
-    def __init__(self, repo):
+    def __init__(self, repo, class_slugs=None):
         self.repo = repo
+        _, self.classes = get_class_name_maps(repo)
+        self.class_slugs = dict(class_slugs) if class_slugs is not None else get_class_slug_map(repo)
         self.tables = {}
         self.aliases = {}
         self.sources = {}
@@ -188,10 +188,12 @@ class SkillSource:
 
             def skill_reference(name, via):
                 _, ref = self.lookup("skills", name)
-                cc = value(ref, "charclass")
-                references.append({"name": value(ref, "skill") or name, "field": via,
+                cc = value(ref, "charclass").casefold()
+                ref_skill_id = value(ref, "skill")
+                class_slug = self.class_slugs.get(cc) or (slugify(cc) if cc else "")
+                references.append({"name": ref_skill_id or name, "field": via,
                                    "from": record_id,
-                                   "href": f"classes/{slugify(CLASSES[cc])}/#{slugify(value(ref, 'skill'))}" if cc in CLASSES else ""})
+                                   "href": f"classes/{class_slug}/#{slugify(ref_skill_id)}" if class_slug and ref_skill_id else ""})
 
             for f, raw in row.items():
                 text = str(raw or "").strip()
@@ -245,8 +247,16 @@ class SkillSource:
 
 class SkillComparisonService:
     def __init__(self, current_repo, baseline_repo):
-        self.current = SkillSource(current_repo)
-        self.baseline = SkillSource(baseline_repo)
+        _, current_classes = get_class_name_maps(current_repo)
+        _, baseline_classes = get_class_name_maps(baseline_repo)
+        self.classes = dict(current_classes)
+        for cc, label in baseline_classes.items():
+            self.classes.setdefault(cc, label)
+        self.class_slugs = dict(get_class_slug_map(current_repo))
+        for cc, slug in get_class_slug_map(baseline_repo).items():
+            self.class_slugs.setdefault(cc, slug)
+        self.current = SkillSource(current_repo, class_slugs=self.class_slugs)
+        self.baseline = SkillSource(baseline_repo, class_slugs=self.class_slugs)
 
     @staticmethod
     def _facts(snapshot, root):
@@ -368,14 +378,17 @@ class SkillComparisonService:
                 "changed_fields": sum(r["changed"] for r in records), "search_text": text}
 
     def class_pages(self):
-        classes = {cc: [] for cc in CLASSES}
+        classes = {cc: [] for cc in self.classes}
         keys = dict.fromkeys(list(self.current.tables["skills"]) + list(self.baseline.tables["skills"]))
         for key in keys:
             row = self.current.tables["skills"].get(key, self.baseline.tables["skills"].get(key))
-            cc = value(row, "charclass")
-            if cc in classes:
-                classes[cc].append(self.compare(key))
-        return [{"class_name": CLASSES[cc], "skills": skills,
+            cc = value(row, "charclass").casefold()
+            if cc:
+                classes.setdefault(cc, []).append(self.compare(key))
+        return [{"class_id": cc,
+                 "class_slug": self.class_slugs.get(cc) or slugify(cc),
+                 "class_name": self.classes.get(cc) or self.current.repo.get_string(cc) or cc,
+                 "skills": skills,
                  "source_files": list(dict.fromkeys(p for source in (self.current, self.baseline)
                                                      for p in source.sources.values() if p))}
                 for cc, skills in classes.items() if skills]
