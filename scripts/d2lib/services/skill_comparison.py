@@ -8,6 +8,8 @@ from __future__ import annotations
 import re
 from collections import deque
 
+from d2lib.repository import normalize_d2_value
+from d2lib.services.skill_damage import skill_damage_preview
 from d2lib.utils import slugify
 
 
@@ -22,6 +24,8 @@ SKILL_REF = re.compile(r"\b(?:skill|sklvl)\('([^']+)'\.", re.I)
 STAT_REF = re.compile(r"\bstat\('([^']+)'\.", re.I)
 MISSILE_REF = re.compile(r"\bmiss\('([^']+)'\.", re.I)
 PARAM_REF = re.compile(r"\bpar(\d+)\b", re.I)
+FORMULA_SYMBOL = re.compile(r"'[^']*'|(?<![\w.])(?:ln(?:12|34|56|78)|par\d+)\b", re.I)
+INTEGER_LITERAL = re.compile(r"[+-]?\d+")
 TOOLTIP_NUMBER = re.compile(r"%\+?d")
 BASE_FIELDS = (
     ("reqlevel", "Required character level"),
@@ -45,6 +49,55 @@ BASE_FIELDS = (
 def comparison_row(label, before, after):
     return {"label": label, "old": before, "new": after,
             "status": "unchanged" if before == after else "changed"}
+
+
+def literal_formula_cap(expression):
+    """Read a literal bound from an outer min() call without evaluating it."""
+    call = re.fullmatch(r"min\s*\((.*)\)", expression, re.I)
+    if not call:
+        return ""
+    body = call[1]
+    depth, separator = 0, None
+    for token in re.finditer(r"'[^']*'|[(),]", body):
+        if token[0] == "(":
+            depth += 1
+        elif token[0] == ")":
+            depth -= 1
+            if depth < 0:
+                return ""
+        elif token[0] == "," and depth == 0:
+            if separator is not None:
+                return ""
+            separator = token.start()
+    if depth or separator is None:
+        return ""
+    left, right = body[:separator].strip(), body[separator + 1:].strip()
+    literals = [argument for argument in (left, right) if INTEGER_LITERAL.fullmatch(argument)]
+    return literals[0] if left and right and len(literals) == 1 else ""
+
+
+def formula_details(expression, source):
+    details = {}
+    for match in FORMULA_SYMBOL.finditer(expression):
+        symbol = match[0].lower()
+        if symbol.startswith("ln"):
+            base, increment = symbol[2:]
+            details[symbol] = (f"par{base} + (lvl - 1) * par{increment}",
+                               "lvl is the skill level including bonuses.")
+            parameters = (base, increment)
+        elif symbol.startswith("par"):
+            parameters = (symbol[3:],)
+        else:
+            continue
+        for number in parameters:
+            field = "Param" + number
+            raw = value(source, field)
+            if raw:
+                details["par" + number] = (raw, parameter_note(source, field))
+    cap = literal_formula_cap(expression)
+    if cap:
+        details["Formula cap"] = (cap, "Literal limit in min().")
+    return details
 
 
 def skill_description(snapshot, root):
@@ -324,23 +377,19 @@ class SkillComparisonService:
         if root_record:
             for row in root_record["rows"]:
                 if row["label"] in formula_labels or re.fullmatch(r"(?:(?:prg|passive|aurastat)?calc\d+|sumsk\d+calc)", row["label"]):
-                    formula = dict(row, label=formula_labels.get(row["label"], row["label"]))
+                    formula = dict(row, **comparison_row(formula_labels.get(row["label"], row["label"]),
+                                                         normalize_d2_value(row["old"]), normalize_d2_value(row["new"])))
                     if formula["old_note"] != formula["new_note"]:
                         formula["status"] = "changed"
                     formula_rows.append(formula)
-                    parameters = {}
+                    sides = {}
                     for side, root in (("old", root_old), ("new", root_new)):
-                        source = root["row"] if root else {}
-                        for number in dict.fromkeys(PARAM_REF.findall(row[side])):
-                            field = "Param" + number
-                            raw = value(source, field)
-                            if raw:
-                                parameters.setdefault("par" + number, {})[side] = (raw, parameter_note(source, field))
-                    for parameter_name, sides in parameters.items():
-                        old_value, old_note = sides.get("old", ("", ""))
-                        new_value, new_note = sides.get("new", ("", ""))
-                        parameter = comparison_row(parameter_name, old_value, new_value)
-                        formula_rows.append(dict(parameter, old_note=old_note, new_note=new_note))
+                        sides[side] = formula_details(formula[side], root["row"] if root else {})
+                    for label in dict.fromkeys([*sides["old"], *sides["new"]]):
+                        old_value, old_note = sides["old"].get(label, ("", ""))
+                        new_value, new_note = sides["new"].get(label, ("", ""))
+                        detail = comparison_row(label, old_value, new_value)
+                        formula_rows.append(dict(detail, old_note=old_note, new_note=new_note))
         def tooltip(snap):
             _, desc = skill_description(snap, key)
             text_key = value(desc, "str long") or value(desc, "str short")
@@ -359,7 +408,12 @@ class SkillComparisonService:
             "modified" if any(row["status"] == "changed" for row in visible_rows) else "unchanged"
         )
         text = " ".join([name, *(f"{r['label']} {r['old']} {r['new']}" for r in visible_rows)])
+        damage = {
+            side: skill_damage_preview(root["row"] if root else None, source.tables["skills"])
+            for side, root, source in (("old", root_old, self.baseline), ("new", root_new, self.current))
+        }
         return {"name": name, "slug": slugify(name), "status": status, "facts": facts,
+                "damage": damage if any(damage.values()) else None,
                 "display_status": display_status, "formula_rows": formula_rows, "tooltip": tooltip_row,
                 "synergy_rows": synergy_rows,
                 "records": records, "references": refs, "warnings": warnings,

@@ -7,6 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), "scripts"))
 from d2lib.services.skill_comparison import SkillComparisonService
+from d2lib.services.skill_damage import skill_damage_preview
 from d2lib.wiki.comparison import skill_card_context
 from d2lib.wiki.renderers import WikiRenderer
 from d2lib.wiki.generator import WikiContentBuilder
@@ -154,6 +155,22 @@ class TestSkillComparison(unittest.TestCase):
         removed = self.service(current).compare("holy bolt")["synergy_rows"][0]
         self.assertEqual((removed["old"], removed["new"]), ("+50% Magic Damage per Level", ""))
 
+    def test_formula_explains_linear_terms_and_literal_cap(self):
+        self.tables["skills"][0].update(calc1='"min(24,ln12)"', Param1="3", Param2="1")
+        current = copy.deepcopy(self.tables)
+        current["skills"][0].update(calc1="min(ln12,24)", Param1="5", Param2="0",
+                                    calc2="2 * min(24,skill('Other Skill'.ln34))", Param3="9")
+        rows = self.service(current).compare("holy bolt")["formula_rows"]
+        index = next(i for i, row in enumerate(rows) if row["label"] == "calc1")
+        self.assertEqual("min(24,ln12)", rows[index]["old"])
+        self.assertEqual(
+            [("ln12", "par1 + (lvl - 1) * par2", "par1 + (lvl - 1) * par2"),
+             ("par1", "3", "5"), ("par2", "1", "0"), ("Formula cap", "24", "24")],
+            [(row["label"], row["old"], row["new"]) for row in rows[index + 1:index + 5]],
+        )
+        self.assertEqual(1, sum(row["label"] == "Formula cap" for row in rows))
+        self.assertFalse(any(row["label"] in {"ln34", "par3"} for row in rows))
+
     def test_notes_preserve_different_parameter_meanings_on_each_side(self):
         self.tables["skills"][0].update(calc1="ln12", **{"*calc1 desc": "Healing"})
         current = copy.deepcopy(self.tables)
@@ -163,6 +180,32 @@ class TestSkillComparison(unittest.TestCase):
         self.assertEqual("Healing", row["old_note"])
         self.assertEqual("Projectile count", row["new_note"])
         self.assertEqual("min(5,1+blvl/5", row["new"])
+
+    def test_damage_uses_level_bands_fixed_point_and_each_synergy_cap(self):
+        skill = {
+            "skill": "Test Bolt", "charclass": "sor", "maxlvl": "17", "EType": "ltng", "HitShift": "7",
+            "EMin": "6", "EMax": "12", "EMinLev1": "2", "EMinLev2": "4", "EMinLev3": "6",
+            "EMaxLev1": "4", "EMaxLev2": "8", "EMaxLev3": "12",
+            "EDmgSymPerCalc": "skill('Other Skill'.blvl)*par8", "Param8": "5",
+        }
+        skills = {"other skill": {"charclass": "sor", "maxlvl": "10"}}
+        result = skill_damage_preview(skill, skills)
+        values = result["components"][0]["presets"]
+        self.assertEqual([3, 6], values["none"][0])
+        self.assertEqual([4, 9], values["max"][0])
+        self.assertEqual([26, 52], values["none"][15])
+        self.assertEqual([29, 58], values["none"][16])
+        self.assertEqual([43, 87], values["max"][16])
+        self.assertEqual([], skill_damage_preview(skill, {})["components"])
+
+    def test_damage_surfaces_an_unsupported_expression_instead_of_using_zero(self):
+        skill = {
+            "skill": "Test Bolt", "charclass": "sor", "maxlvl": "20", "EType": "ltng",
+            "HitShift": "8", "EMin": "8", "EMax": "16", "EDmgSymPerCalc": "rand(1,10)",
+        }
+        result = skill_damage_preview(skill, {})
+        self.assertEqual([], result["components"])
+        self.assertEqual(["Lightning"], result["omitted"])
 
     def test_numeric_links_use_ids_and_legacy_markdown_is_not_read(self):
         self.tables["skills"][0]["srvmissile"] = "55"

@@ -42,6 +42,15 @@
       </div>
       {% if item.history is defined %}{{ item_history(item.history) }}{% endif %}
       <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
+      {% if item.damage %}
+      <div data-skill-damage="{{ item.damage|tojson|forceescape }}" hidden>
+        <div class="sp-sep">Skill table damage</div>
+        <div class="sp-row">
+          <output class="sp-cell" data-damage-side="old" aria-label="{{ old_label }} skill damage"></output>
+          <output class="sp-cell" data-damage-side="new" aria-label="{{ new_label }} skill damage"></output>
+        </div>
+      </div>
+      {% endif %}
       {{ comparison_rows(item.stat_rows) }}
       {% if item.base_stats %}
       <div class="sp-sep">Base Stats</div>

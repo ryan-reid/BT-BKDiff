@@ -16,6 +16,41 @@
   search.value = params.get('q') || '';
   const selected = params.get('status');
   if ([...status.options].some(option => option.value === selected)) status.value = selected;
+  const damageControls = root.querySelector('[data-damage-controls]');
+  const damagePoints = root.querySelector('#skill-damage-points');
+  const maxSynergies = root.querySelector('#skill-max-synergies');
+  const damageRows = [...root.querySelectorAll('[data-skill-damage]')].map(row => ({
+    row, data: JSON.parse(row.dataset.skillDamage)
+  }));
+  if (damageControls) {
+    damageControls.hidden = false;
+    const savedPoints = params.get('points');
+    if (/^[1-9]\d?$/.test(savedPoints || '')) damagePoints.value = savedPoints;
+    maxSynergies.checked = params.get('synergies') !== 'none';
+  }
+  function updateDamage() {
+    if (!damageControls) return;
+    const points = damagePoints.valueAsNumber;
+    const preset = maxSynergies.checked ? 'max' : 'none';
+    for (const {row, data} of damageRows) {
+      for (const output of row.querySelectorAll('[data-damage-side]')) {
+        const skill = data[output.dataset.damageSide];
+        if (!skill) {
+          output.textContent = '—';
+          continue;
+        }
+        const level = Number.isFinite(points) ? Math.min(skill.cap, Math.max(1, Math.trunc(points))) : skill.cap;
+        const lines = [`${level} hard points`];
+        for (const component of skill.components) {
+          const [min, max] = component.presets[preset][level - 1];
+          lines.push(`${component.label} ${min}–${max}`);
+        }
+        if (skill.omitted.length) lines.push(`Unavailable here: ${skill.omitted.join(', ')}`);
+        output.textContent = lines.join('\n');
+      }
+      row.hidden = false;
+    }
+  }
   function apply() {
     const mastSearch = document.querySelector('#mast-search-input');
     if (mastSearch) mastSearch.value = search.value;
@@ -35,13 +70,28 @@
       if (val === fallback) url.searchParams.delete(name);
       else url.searchParams.set(name, val);
     }
+    if (damageControls) {
+      if (damagePoints.value && damagePoints.validity.valid) url.searchParams.set('points', damagePoints.value);
+      else url.searchParams.delete('points');
+      if (maxSynergies.checked) url.searchParams.delete('synergies');
+      else url.searchParams.set('synergies', 'none');
+    }
     if (url.href !== location.href) history.replaceState(null, '', url);
   }
   search.addEventListener('input', apply);
   status.addEventListener('change', apply);
+  damageControls?.addEventListener('input', () => {
+    updateDamage();
+    apply();
+  });
   root.querySelector('#skill-reset-filters').addEventListener('click', () => {
     search.value = '';
     status.value = 'all';
+    if (damageControls) {
+      damagePoints.value = '';
+      maxSynergies.checked = true;
+      updateDamage();
+    }
     apply();
   });
   function revealHash() {
@@ -56,6 +106,7 @@
     target.scrollIntoView({block: 'start'});
   }
   window.addEventListener('hashchange', revealHash);
+  updateDamage();
   apply();
   if (location.hash) revealHash();
 })();

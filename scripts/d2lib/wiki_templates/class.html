@@ -34,6 +34,14 @@
               <option value="unchanged">Unchanged</option>
             </select>
           </div>
+          {% if page.skills|selectattr("damage")|list %}
+          <div class="filter-block" data-damage-controls hidden>
+            <h4>Damage preview</h4>
+            <label class="facet">Hard points <input id="skill-damage-points" type="number" min="1" max="99" placeholder="Max" style="width:6em;height:auto"></label>
+            <label class="facet"><input id="skill-max-synergies" type="checkbox" checked> Max synergy hard points</label>
+            <p class="skill-help">A blank input uses each skill’s cap. Max synergies uses each referenced skill’s cap independently. Values show damage from the skill table before resistances, with gear and mastery set to zero.</p>
+          </div>
+          {% endif %}
         </div>
       </details>
     </aside>
@@ -43,5 +51,5 @@
     </section>
   </div>
 </div>
-<script src="{{ site_root }}assets/skills.js?v=20261109-item-cards"></script>
+<script src="{{ site_root }}assets/skills.js?v=20261110-damage"></script>
 {% endblock %}

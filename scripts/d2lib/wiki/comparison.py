@@ -21,6 +21,7 @@ def skill_card_context(skill: Dict[str, Any]) -> Dict[str, Any]:
         "summary": skill["display_status"].title(),
         "status": skill["display_status"],
         "search_text": skill["search_text"],
+        "damage": skill.get("damage"),
         "card_quality": "magic",
         "comparison_sections": [
             {"title": title, "stat_rows": [

@@ -6,7 +6,7 @@ The wiki no longer reads generated skill-tree Markdown. Its L1/L10/L20/L20+10 es
 
 Skills use the same two-column comparison and token highlighting as items. Each class page supports text search and modified, added, removed, and unchanged filters based on the displayed fields. Filters are stored in the URL and carried through the Retail and BTDiablo baseline switch. Skill anchors remain shareable. Cards are rendered in HTML so comparisons remain available without JavaScript.
 
-Each card groups base skill information, source formulas, and synergies. Base damage and mana fields use their source values. Directly referenced parameters have separate comparison rows beneath the original expression. Synergy rows use the dedicated tooltip section, with literal values and direct parameter references displayed as the game supplies them. More complex tooltip expressions are shown as source inputs. A tooltip conflict is shown when supported server settings contradict it.
+Each card groups base skill information, source formulas, and synergies. Base damage and mana fields use their source values. Formula details show parameters on separate rows, expand the linear shorthands defined in `skillcalc.txt`, and identify literal caps in outer `min()` expressions. Synergy rows use the dedicated tooltip section, with literal values and direct parameter references displayed as the game supplies them. More complex tooltip expressions are shown as source inputs. A tooltip conflict is shown when supported server settings contradict it.
 
 ## Join map
 
@@ -48,9 +48,9 @@ The local Holy Bolt data provides a regression example: BK expands full-damage t
 | Diff only `skills.txt` | Insufficient: misses Holy Bolt's target change and secondary missile behavior |
 | Rebuild tooltip tables from `skilldesc` | Useful for reproducing game text, but text can be stale and description codes are not execution logic |
 | Join and compare source graphs | Implemented foundation; exposes real dependencies without manufacturing values |
-| Interactive level/synergy calculator | Requires a separate validated evaluator and explicit build inputs; not supplied by the legacy estimates |
+| Damage preview | Uses the hard point input and each version’s synergy skill caps to compare supported damage components from `skills.txt` |
 
-A future calculator needs exact integer division and rounding, fixed-point shifts, hard versus effective levels, segmented damage increments, expression precedence/ternaries, function-specific parameters, mastery and character stats, weapon inputs, summon scaling and difficulty, projectile damage ownership, and unsupported-operation reporting. It must keep raw damage, tooltip display, and post-resistance damage distinct. Start with independently verified families and label the supported scope per result.
+The preview uses the damage level bands, fixed-point shift, and supported synergy arithmetic. It assumes no gear, mastery investment, or target resistance. Max synergy is an independent cap for each referenced skill. The preview models the components defined in the skill table. Unsupported formulas and damage types are marked unavailable, and missile-owned damage, weapon damage, summons, and total damage per cast require separate calculations.
 
 Further graph coverage includes summon AI parameter interpretation, monlevel/difficulty scaling, equipment and proc consumers, animation breakpoints, overlay assets, aura filter decoding, and generic description/engine function registries. The snapshot lacks a pettype table; those references are shown as unresolved rather than invented. Localization uses the repository's existing mod/base/retail precedence and reports resolved keys; it does not yet provide file-level localization provenance. A change to a shared stat or inherited source record can affect multiple cards.
 
