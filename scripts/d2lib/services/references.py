@@ -21,7 +21,7 @@ REFERENCE_GROUPS = [
     {
         "slug": "affixes",
         "title": "Affixes",
-        "description": "Compare magic prefixes and suffixes, their roll ranges, and the items they can appear on.",
+        "description": "Browse prefixes and suffixes by function or compare individual affix rolls.",
         "tables": [
             {"name": "magicprefix", "title": "Magic Prefixes", "fields": ["group", "level", "maxlevel", "frequency", "spawnable", "itype1", "itype2", "etype1", "etype2"], "properties": "mod"},
             {"name": "magicsuffix", "title": "Magic Suffixes", "fields": ["group", "level", "maxlevel", "frequency", "spawnable", "itype1", "itype2", "etype1", "etype2"], "properties": "mod"},

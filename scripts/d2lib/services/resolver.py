@@ -31,8 +31,18 @@ class PropertyResolverService:
             if s_id: self.skills_by_id[str(s_id).strip()] = row
 
         self.skill_desc = {row.get('skilldesc', '').strip().lower(): row for row in repo.get_excel_table('skilldesc')}
-        self.class_names = {'0': 'Amazon', '1': 'Sorceress', '2': 'Necromancer', '3': 'Paladin', '4': 'Barbarian', '5': 'Druid', '6': 'Assassin', '7': 'Warlock'}
-        self.class_abbr_map = {'ama': 'Amazon', 'sor': 'Sorceress', 'nec': 'Necromancer', 'pal': 'Paladin', 'bar': 'Barbarian', 'dru': 'Druid', 'ass': 'Assassin', 'war': 'Warlock'}
+        class_rows = [
+            row for row in repo.get_excel_table("charstats")
+            if row.get("class") and row["class"].casefold() != "expansion"
+        ]
+        self.class_names = {
+            str(index): repo.get_string(row["class"]) or row["class"]
+            for index, row in enumerate(class_rows)
+        }
+        self.class_abbr_map = {
+            row["class"][:3].casefold(): self.class_names[str(index)]
+            for index, row in enumerate(class_rows)
+        }
 
         self.skill_to_class = {}
         for row in skills_data:
@@ -43,14 +53,25 @@ class PropertyResolverService:
                 if s_name: self.skill_to_class[s_name] = charclass
                 if s_id: self.skill_to_class[str(s_id).strip()] = charclass
 
-        self.skill_tab_names = {
-            '0': 'Bow and Crossbow', '1': 'Passive and Magic', '2': 'Javelin and Spear',
-            '3': 'Fire', '4': 'Lightning', '5': 'Cold', '6': 'Curses', '7': 'Poison and Bone',
-            '8': 'Summoning', '9': 'Combat', '10': 'Offensive Auras', '11': 'Defensive Auras',
-            '12': 'Combat', '13': 'Combat Masteries', '14': 'Warcries', '15': 'Summoning',
-            '16': 'Shape Shifting', '17': 'Elemental', '18': 'Traps', '19': 'Shadow Disciplines',
-            '20': 'Martial Arts', '21': 'Warlock'
-        }
+        self.class_skill_templates = {}
+        self.skill_tab_templates = {}
+        self.skill_tab_classes = {}
+        for class_index, row in enumerate(class_rows):
+            key = row.get("StrAllSkills", "")
+            text = repo.get_string(key)
+            if key and text and text != key:
+                self.class_skill_templates[str(class_index)] = text
+            class_key = row.get("StrClassOnly", "")
+            qualifier = repo.get_string(class_key)
+            if not qualifier or qualifier == class_key:
+                qualifier = f"({repo.get_string(row.get('class', ''))})"
+            for tab in range(3):
+                key = row.get(f"StrSkillTab{tab + 1}", "")
+                text = repo.get_string(key)
+                tab_id = str(class_index * 3 + tab)
+                if key and text and text != key:
+                    self.skill_tab_templates[tab_id] = text
+                    self.skill_tab_classes[tab_id] = qualifier
 
         self.manual_overrides = {
             'bloody': 'Extra Blood',
@@ -176,12 +197,23 @@ class PropertyResolverService:
 
         func1 = prop.get('func1', '0').strip()
 
-        # Use param if min_val is empty and it's a per-level stat (func 17) or dmg-ac
+        # Sockets and some scaling properties can store their value in param.
         actual_min, actual_max = min_val, max_val
-        if (func1 == '17' or code_lower == 'dmg-ac') and not actual_min and param:
+        if (func1 in {'14', '17'} or code_lower == 'dmg-ac') and not actual_min and param:
             actual_min, actual_max = param, param
 
         range_str = f"{actual_min}" if actual_min == actual_max else f"{actual_min}-{actual_max}"
+
+        skill_template = None
+        if code_lower == "skilltab":
+            skill_template = self.skill_tab_templates.get(str(param))
+        elif prop.get("stat1") == "item_addclassskills" and func1 == "21":
+            skill_template = self.class_skill_templates.get(prop.get("val1", ""))
+        if skill_template:
+            signed_range = range_str if range_str.startswith(("+", "-")) else f"+{range_str}"
+            text = re.sub(r"%\+d|\+%d", lambda match: signed_range, skill_template)
+            text = text.replace("%d", range_str).replace("%%", "%")
+            return {"code": code_orig, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": text}
 
         if code_lower in {"cold-len", "pois-len"}:
             element = "Cold" if code_lower == "cold-len" else "Poison"
@@ -233,7 +265,7 @@ class PropertyResolverService:
                 except ValueError:
                     display_range = range_str
             # Correct D2 placeholder logic: Handle multiple '#' symbols
-            if func in ['36', '14']:
+            if func == '36':
                 res_text = res_text.replace('#', val1)
             else:
                 if res_text.count('#') > 1 and '-' in display_range:
@@ -246,7 +278,7 @@ class PropertyResolverService:
             if code_lower == "pierce" and "#" not in tooltip and display_range:
                 res_text = f"{display_range}% {res_text}"
 
-            if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', self.skill_tab_names.get(str(param), f"Tab {param}"))
+            if '[Class Skill Tab]' in res_text: res_text = res_text.replace('[Class Skill Tab]', f"Tab {param}")
             if '[Class]' in res_text:
                 if func == '36': cls = 'Random Class' if actual_min != actual_max else self.class_names.get(actual_min, f"Class {actual_min}")
                 else:

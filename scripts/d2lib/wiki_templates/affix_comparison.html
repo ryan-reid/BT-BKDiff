@@ -7,7 +7,7 @@
   <h1>{{ page.title }}</h1>
   <p class="hero-copy">{{ page.description }}</p>
   {% if page.slug == "affixes" %}
-  <p><a class="link-card-cta" href="{{ site_root }}references/affixes-by-function/">Browse affixes by function</a></p>
+  {% include "affix_view_toggle.html" %}
   {% endif %}
 </section>
 

@@ -91,6 +91,8 @@ def affix_function_groups(service: ReferenceAnalyzerService):
                     tooltip = definition.get("*Tooltip", "")
                     if prop["param"] and ("[Skill]" in tooltip or "%s" in tooltip):
                         protected_names.append(service.resolver.resolve_skill_name(prop["param"]))
+                    if prop["code"].lower() == "skilltab":
+                        protected_names.append(f"Tab {prop['param']}")
                 title = _function_title(roll_ranges, protected_names)
                 identity = _property_identity(tier, service.resolver)
                 excludes = next((setting for setting in tier.settings if setting.startswith("Excludes · ")), "")
@@ -111,11 +113,23 @@ def affix_function_groups(service: ReferenceAnalyzerService):
                 row["name"].casefold(), row["kind"], tuple(row["item_types"]))
 
     title_counts = Counter(title for title, _ in groups)
+    contexts = {
+        identity: " / ".join(dict.fromkeys(
+            service.resolver.skill_tab_classes[param]
+            for code, param in identity[1]
+            if code == "skilltab" and param in service.resolver.skill_tab_classes
+        ))
+        for _, identity in groups
+    }
+    unqualified_counts = Counter(title for title, identity in groups if not contexts[identity])
     result = []
     for (title, identity), rows in groups.items():
         if title_counts[title] > 1:
-            stats, parameters = identity
-            detail = ", ".join([*stats, *(f"{code} {param}" for code, param in parameters)])
-            title = f"{title} ({detail})"
+            if contexts[identity]:
+                title = f"{title} {contexts[identity]}"
+            elif unqualified_counts[title] > 1:
+                stats, parameters = identity
+                detail = ", ".join([*stats, *(f"{code} {param}" for code, param in parameters)])
+                title = f"{title} ({detail})"
         result.append({"title": title, "rows": sorted(rows, key=sort_key)})
     return sorted(result, key=lambda group: group["title"].casefold())
