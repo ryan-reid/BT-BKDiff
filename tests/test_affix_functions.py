@@ -243,6 +243,86 @@ class TestAffixFunctions(unittest.TestCase):
         self.assertIn("2 seconds (50 frames)", rows["Replace"])
         self.assertIn("3 seconds (75 frames)", rows["Add After Replace"])
 
+    def test_skill_tab_names_use_localized_class_data_and_skip_separator_rows(self):
+        repo = Repository({
+            "charstats": [
+                {
+                    "class": "Sorceress", "StrAllSkills": "sor_all", "StrClassOnly": "sor_only",
+                    "StrSkillTab1": "sor_fire", "StrSkillTab2": "sor_lightning", "StrSkillTab3": "sor_cold",
+                },
+                {"class": "Expansion"},
+                {
+                    "class": "Warlock", "StrAllSkills": "war_all", "StrClassOnly": "war_only",
+                    "StrSkillTab1": "war_demon", "StrSkillTab2": "war_eldritch", "StrSkillTab3": "war_chaos",
+                },
+            ],
+            "properties": [
+                {"code": "skilltab", "stat1": "item_addskill_tab", "*Tooltip": "+# to [Class Skill Tab] Skills"},
+                {"code": "war", "stat1": "item_addclassskills", "func1": "21", "val1": "1", "*Tooltip": "+# to Outdated Name"},
+            ],
+            "magicprefix": [
+                affix("Fiendish", ("skilltab", 1, 1, "3")),
+                affix("Sullied", ("skilltab", 1, 1, "4")),
+                affix("Chaotic", ("skilltab", 1, 1, "5")),
+                affix("Devil", ("war", 1, 1, "")),
+            ],
+        }, {
+            "sor_all": "%+d to Sorceress Skill Levels", "sor_only": "(Sorceress Only)",
+            "sor_fire": "%+d to Fire Skills", "sor_lightning": "%+d to Lightning Skills",
+            "sor_cold": "%+d to Cold Skills", "war_all": "+%d to Warlock Skills",
+            "war_only": "(Warlock Only)", "war_demon": "+%d to Demon Skills",
+            "war_eldritch": "+%d to Eldritch Skills", "war_chaos": "+%d to Chaos Skills",
+        })
+        groups = affix_function_groups(ReferenceAnalyzerService(repo))
+        self.assertEqual(
+            ["Chaos Skills", "Demon Skills", "Eldritch Skills", "Warlock Skills"],
+            [group["title"] for group in groups],
+        )
+        self.assertEqual(("+1 to Warlock Skills",), groups[-1]["rows"][0]["roll_ranges"])
+        repo.strings["war_demon"] = "+%d to Renamed Demon Skills"
+        updated = affix_function_groups(ReferenceAnalyzerService(repo))
+        self.assertIn("Renamed Demon Skills", [group["title"] for group in updated])
+
+    def test_shared_tab_names_use_localized_class_qualifiers(self):
+        repo = Repository({
+            "charstats": [
+                {"class": "Necromancer", "StrAllSkills": "nec_all", "StrClassOnly": "nec_only", "StrSkillTab1": "summon"},
+                {"class": "Druid", "StrAllSkills": "dru_all", "StrClassOnly": "dru_only", "StrSkillTab1": "summon"},
+            ],
+            "properties": [{"code": "skilltab", "stat1": "item_addskill_tab", "*Tooltip": "+# to [Class Skill Tab] Skills"}],
+            "magicprefix": [affix("Graverobber", ("skilltab", 1, 1, "0")), affix("Trainer", ("skilltab", 1, 1, "3"))],
+        }, {
+            "summon": "%+d to Summoning Skills",
+            "nec_only": "(Necromancer Only)", "dru_only": "(Druid Only)",
+        })
+        groups = affix_function_groups(ReferenceAnalyzerService(repo))
+        self.assertEqual(
+            ["Summoning Skills (Druid Only)", "Summoning Skills (Necromancer Only)"],
+            [group["title"] for group in groups],
+        )
+
+    def test_unknown_tab_preserves_its_number(self):
+        groups = groups_for(
+            [affix("Future Tab", ("skilltab", 1, 1, "99"))],
+            [{"code": "skilltab", "stat1": "item_addskill_tab", "*Tooltip": "+# to [Class Skill Tab] Skills"}],
+        )
+        self.assertEqual("Tab 99 Skills", groups[0]["title"])
+
+    def test_socket_counts_use_affix_ranges_and_fixed_parameters(self):
+        groups = groups_for(
+            [
+                affix("Mechanist", ("sock", 1, 2, "")),
+                affix("Artificer", ("sock", "", "", "3")),
+                affix("Jeweler", ("sock", "", "", "4")),
+            ],
+            [{"code": "sock", "func1": "14", "stat1": "item_numsockets", "*Tooltip": "Socketed (#)", "val1": ""}],
+        )
+        self.assertEqual(["Socketed"], [group["title"] for group in groups])
+        self.assertEqual(
+            [("Socketed (1-2)",), ("Socketed (3)",), ("Socketed (4)",)],
+            [row["roll_ranges"] for row in groups[0]["rows"]],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
