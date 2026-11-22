@@ -828,11 +828,16 @@ class WikiContentBuilder:
                 item_entries={"skill": [skill_card_context(skill) for skill in page["skills"]]},
                 item_section_titles={"skill": "Skills"},
             )
+            skill_terms = []
+            for skill in page["skills"]:
+                skill_terms.append(skill["name"])
+                if skill.get("id") and skill["id"].casefold() != skill["name"].casefold():
+                    skill_terms.append(skill["id"])
             entries.append({
                 "title": title,
                 "href": href,
                 "summary": f"{len(page['skills'])} skills",
-                "search_text": f"{title} {' '.join(skill['name'] for skill in page['skills'])}",
+                "search_text": f"{title} {' '.join(skill_terms)}",
             })
         return entries
 
