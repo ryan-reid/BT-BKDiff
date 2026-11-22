@@ -875,7 +875,63 @@ async function wireItemIndex() {
   applyFilters();
 }
 
+function wireAffixView() {
+  const toggle = document.querySelector("[data-affix-view]");
+  if (!toggle) return false;
+
+  const links = Array.from(toggle.querySelectorAll("[data-affix-view-link]"));
+  const activeView = toggle.dataset.affixView;
+  const requestedView = new URL(window.location.href).searchParams.get("view");
+  const storageKey = "wiki.affixView";
+  const validView = (view) => view === "function" || view === "cards";
+  let selectedView = activeView;
+
+  if (validView(requestedView)) {
+    selectedView = requestedView;
+  } else if (toggle.hasAttribute("data-affix-default-entry")) {
+    selectedView = "function";
+    try {
+      const savedView = window.localStorage.getItem(storageKey);
+      if (validView(savedView)) selectedView = savedView;
+    } catch {
+      // The function view remains usable when browser storage is unavailable.
+    }
+  }
+
+  function saveView(view) {
+    try {
+      window.localStorage.setItem(storageKey, view);
+    } catch {
+      // Explicit view links also work without persistent browser storage.
+    }
+  }
+
+  function viewUrl(link) {
+    const target = new URL(link.href, window.location.href);
+    target.search = window.location.search;
+    target.hash = window.location.hash;
+    target.searchParams.set("view", link.dataset.affixViewLink);
+    return target;
+  }
+
+  links.forEach((link) => {
+    link.href = viewUrl(link).href;
+    link.addEventListener("click", () => {
+      saveView(link.dataset.affixViewLink);
+      link.href = viewUrl(link).href;
+    });
+  });
+  saveView(selectedView);
+  if (selectedView !== activeView) {
+    const link = links.find((link) => link.dataset.affixViewLink === selectedView);
+    window.location.replace(viewUrl(link).href);
+    return true;
+  }
+  return false;
+}
+
 function initWiki() {
+  if (wireAffixView()) return;
   wireMastSearch();
   wireRunewordFilters();
   wireStaticSearch();

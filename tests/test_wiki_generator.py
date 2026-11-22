@@ -1146,6 +1146,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("drops/sources/", manifest_paths)
         self.assertIn("references/", manifest_paths)
         self.assertIn("references/affixes/", manifest_paths)
+        self.assertIn("references/affixes/cards/", manifest_paths)
         self.assertIn("references/automagic/", manifest_paths)
         self.assertIn("references/raw-coverage/", manifest_paths)
         self.assertIn("reports/", manifest_paths)
@@ -1618,13 +1619,24 @@ class TestWikiGenerator(unittest.TestCase):
             (self.output, "Retail", 15, "../../compare-bt/references/affixes/index.html"),
             (os.path.join(self.output, "compare-bt"), "BTDiablo", 20, "../../../references/affixes/index.html"),
         ):
-            with open(os.path.join(root, "references", "affixes", "index.html"), encoding="utf-8") as handle:
+            with open(os.path.join(root, "references", "affixes", "cards", "index.html"), encoding="utf-8") as handle:
                 html = handle.read()
             self.assertIn(f'<div class="sp-sub"><span>{baseline}</span><span>BKDiablo</span></div>', html)
-            self.assertIn(f'href="{counterpart}" data-comparison-link', html)
-            self.assertIn('references/affixes-by-function/">Browse affixes by function', html)
+            card_counterpart = "../" + counterpart.replace("/affixes/", "/affixes/cards/")
+            self.assertIn(f'href="{card_counterpart}" data-comparison-link', html)
+            self.assertIn('data-affix-view="cards"', html)
+            self.assertIn("<h1>Affix Cards</h1>", html)
+            self.assertIn('references/affixes/?view=function', html)
+            with open(os.path.join(root, "references", "affixes", "index.html"), encoding="utf-8") as handle:
+                default_page = handle.read()
+            self.assertIn('data-affix-view="function" data-affix-default-entry', default_page)
+            self.assertIn('data-search-filter-control="affixKind"', default_page)
+            self.assertIn('references/affixes/cards/?view=cards', default_page)
+            self.assertNotIn('data-affix-index=', default_page)
+            self.assertNotIn("data-comparison-link", default_page)
             with open(os.path.join(root, "references", "affixes-by-function", "index.html"), encoding="utf-8") as handle:
                 function_page = handle.read()
+            self.assertIn("<h1>Affixes by Function</h1>", function_page)
             self.assertNotIn("data-comparison-link", function_page)
             self.assertIn(">Poison Damage</h2>", function_page)
             self.assertIn(">Suffix</small>", function_page)

@@ -628,6 +628,7 @@ class WikiContentBuilder:
                 "search_text": page["search_text"],
             }
             for page in pages
+            if page["slug"] != AFFIX_FUNCTIONS_SLUG
         ]
         self._write_page(
             title=f"References | {self.new_label} Wiki",
@@ -652,15 +653,19 @@ class WikiContentBuilder:
                     for row in group["rows"]
                     for code, label in row["item_types"].items()
                 }
-                self._write_page(
-                    title=f"{page['title']} | {self.new_label} Wiki",
-                    output_path=WikiRoutes.reference_output_path(page["slug"]),
-                    template_name="affix_functions.html",
-                    category="index",
-                    source_files=source_files,
-                    page=page,
-                    affix_item_types=sorted(item_types.items(), key=lambda item: item[1].casefold()),
-                )
+                for slug in ("affixes", AFFIX_FUNCTIONS_SLUG):
+                    function_page = dict(page, title="Affixes") if slug == "affixes" else page
+                    self._write_page(
+                        title=f"{function_page['title']} | {self.new_label} Wiki",
+                        output_path=WikiRoutes.reference_output_path(slug),
+                        template_name="affix_functions.html",
+                        category="index",
+                        source_files=source_files,
+                        page=function_page,
+                        affix_item_types=sorted(item_types.items(), key=lambda item: item[1].casefold()),
+                        affix_view="function",
+                        affix_default_entry=slug == "affixes",
+                    )
                 continue
             comparison_sections = [section for section in page["sections"] if "comparison_rows" in section]
             affix_cards = {
@@ -678,16 +683,20 @@ class WikiContentBuilder:
                 for roll in row["old"] + row["new"]
                 for code, label in roll["item_types"].items()
             }
+            is_affix_page = page["slug"] == "affixes"
+            display_page = dict(page, title="Affix Cards") if is_affix_page else page
+            output_slug = "affixes/cards" if is_affix_page else page["slug"]
             self._write_page(
-                title=f"{page['title']} | {self.new_label} Wiki",
-                output_path=WikiRoutes.reference_output_path(page["slug"]),
+                title=f"{display_page['title']} | {self.new_label} Wiki",
+                output_path=WikiRoutes.reference_output_path(output_slug),
                 template_name="reference_table.html",
                 category="index",
                 source_files=source_files,
-                page=page,
+                page=display_page,
                 affix_cards=affix_cards,
                 affix_item_types=sorted(affix_item_types.items(), key=lambda item: item[1].casefold()),
                 item_section_titles={section["table"]: section["title"] for section in comparison_sections},
+                affix_view="cards" if is_affix_page else None,
             )
 
         coverage_page = {
@@ -1066,7 +1075,7 @@ class WikiContentBuilder:
             misc_count=sum(len(g["members"]) for g in misc_groups),
             gem_rune_count=sum(len(g["members"]) for g in gem_rune_groups),
             drop_weight_count=len(drop_weight_groups),
-            reference_count=len(reference_pages) + 1,
+            reference_count=sum(page["slug"] != AFFIX_FUNCTIONS_SLUG for page in reference_pages) + 1,
             total_items=sum(len(entries) for entries in item_entries.values()),
             reports=report_entries,
         )
