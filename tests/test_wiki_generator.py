@@ -1,3 +1,4 @@
+import html
 import json
 import os
 import struct
@@ -1747,6 +1748,145 @@ class TestWikiGenerator(unittest.TestCase):
             f.write("stale")
         self._generate()
         self.assertFalse(os.path.exists(stale_path))
+
+    def test_runewords_sets_and_drop_weights_localize_names_with_stable_ids(self):
+        self._write_json(
+            self.game_data,
+            "data/local/lng/strings/item-names.json",
+            [
+                {"Key": "7gm", "enUS": "Localized Thunder Maul"},
+                {"Key": "McAuley's Folly", "enUS": "Sander's Folly"},
+                {"Key": "Mindrend", "enUS": "Skull Splitter"},
+                {"Key": "Thunder One", "enUS": "천둥 망치"},
+                {"Key": "Aldur's Gauntlet", "enUS": "Aldur's Rhythm"},
+            ],
+        )
+        excel_root = os.path.join(self.game_data, "data", "global", "excel")
+        retail_excel = os.path.join(self.retail_data, "global", "excel")
+        sets_row = [{"index": "McAuley's Folly", "name": "McAuley's Folly", "version": "0"}]
+        self._write_tsv(excel_root, "sets.txt", ["index", "name", "version"], sets_row)
+        self._write_tsv(retail_excel, "sets.txt", ["index", "name", "version"], sets_row)
+        self._write_tsv(
+            excel_root,
+            "uniqueitems.txt",
+            ["index", "code", "*ItemName", "rarity", "lvl", "lvl req", "spawnable"],
+            [
+                {"index": "Mindrend", "code": "7gm", "*ItemName": "Thunder Maul", "rarity": "3", "lvl": "85", "lvl req": "70", "spawnable": "1"},
+                {"index": "Thunder One", "code": "7gm", "*ItemName": "Thunder Maul", "rarity": "1", "lvl": "90", "lvl req": "80", "spawnable": "1"},
+            ],
+        )
+        self._write_tsv(
+            excel_root,
+            "setitems.txt",
+            ["index", "set", "item", "*ItemName", "rarity", "lvl", "lvl req", "spawnable"],
+            [
+                {"index": "Aldur's Gauntlet", "set": "McAuley's Folly", "item": "ci3", "*ItemName": "Diadem", "rarity": "20", "lvl": "40", "lvl req": "30", "spawnable": "1"},
+                {"index": "Dim Circlet", "set": "McAuley's Folly", "item": "ci3", "*ItemName": "Diadem", "rarity": "1", "lvl": "80", "lvl req": "65", "spawnable": "1"},
+            ],
+        )
+        self._write_json(
+            self.item_db,
+            "sets/normal/swords.json",
+            [
+                {
+                    "id": "McAuley's Boots",
+                    "display_name": "Sander's Riprap",
+                    "base_item": "Diadem",
+                    "item_type": "Helm",
+                    "lvl_req": "20",
+                    "raw_row": {"set": "McAuley's Folly", "item": "ci3", "lvl": "20"},
+                    "properties": [{"code": "dex", "param": "", "resolved_text": "+10 to Dexterity"}],
+                }
+            ],
+        )
+        self._write_json(
+            self.item_db,
+            "runewords/weapons.json",
+            [
+                {
+                    "id": "Runeword56",
+                    "name": "Revenge",
+                    "runes": ["Tal Rune", "Eth Rune"],
+                    "base_items": ["Helm"],
+                    "raw_row": {"Rune1": "r07", "Rune2": "r05"},
+                    "properties": [{"code": "dmg", "param": "", "resolved_text": "+10% Enhanced Damage"}],
+                    "rune_properties": [],
+                },
+                {
+                    "id": "Runeword185",
+                    "name": "Revenge",
+                    "runes": ["Tal Rune", "Eth Rune"],
+                    "base_items": ["Helm"],
+                    "raw_row": {"Rune1": "r07", "Rune2": "r05"},
+                    "properties": [{"code": "dmg", "param": "", "resolved_text": "+20% Enhanced Damage"}],
+                    "rune_properties": [],
+                },
+            ],
+        )
+        self._write_json(
+            self.old_item_db,
+            "runewords/weapons.json",
+            [
+                {
+                    "id": "Runeword185",
+                    "name": "Revenge",
+                    "runes": ["Tal Rune", "Eth Rune"],
+                    "base_items": ["Helm"],
+                    "raw_row": {"Rune1": "r07", "Rune2": "r05"},
+                    "properties": [{"code": "dmg", "param": "", "resolved_text": "+20% Enhanced Damage"}],
+                    "rune_properties": [],
+                }
+            ],
+        )
+
+        generator = WikiGenerator(
+            self.item_db,
+            self.skill_trees,
+            self.output,
+            old_item_db_dir=self.old_item_db,
+            old_label="Retail",
+            new_label="BKDiablo",
+            game_data_dir=self.game_data,
+            retail_data_dir=self.retail_data,
+        )
+        site = generator.build_site()
+        generator.generate()
+
+        pages_by_kind = {page["kind"]: page for page in site["pages"]}
+        runeword_rows = pages_by_kind["runewords_index"]["payload"]["runewords"]
+        self.assertEqual(["added", "unchanged"], sorted(row["status"] for row in runeword_rows))
+
+        with open(os.path.join(self.output, "data", "items-index.json"), "r", encoding="utf-8") as f:
+            items_index = json.load(f)
+        set_entry = next(entry for entry in items_index if entry["title"] == "Sander's Riprap")
+        self.assertEqual("sets/#mcauleys-folly", set_entry["href"])
+        self.assertIn("Sander's Folly", set_entry["search_text"])
+        self.assertEqual("Sander's Folly", next(r["new"] for r in set_entry["stat_rows"] if r["label"] == "Set"))
+
+        with open(os.path.join(self.output, "sets", "index.html"), "r", encoding="utf-8") as f:
+            sets_html = html.unescape(f.read())
+        self.assertIn('id="mcauleys-folly"', sets_html)
+        self.assertIn('id="mcauleys-folly-sanders-riprap"', sets_html)
+        self.assertIn('<h2 class="set-name">Sander\'s Folly</h2>', sets_html)
+        self.assertIn("McAuley's Folly", sets_html)
+
+        with open(os.path.join(self.output, "data", "drop-weights.json"), "r", encoding="utf-8") as f:
+            drop_groups = {group["id"]: group for group in json.load(f)}
+        unique_group = drop_groups["unique-7gm"]
+        set_group = drop_groups["set-ci3"]
+        self.assertEqual("Localized Thunder Maul", unique_group["base_name"])
+        self.assertEqual("Diadem", set_group["base_name"])
+        self.assertEqual(
+            [("Mindrend", "Skull Splitter"), ("Thunder One", "천둥 망치")],
+            [(cand["id"], cand["name"]) for cand in unique_group["candidates"]],
+        )
+        self.assertEqual(
+            [("Aldur's Gauntlet", "Aldur's Rhythm"), ("Dim Circlet", "Dim Circlet")],
+            [(cand["id"], cand["name"]) for cand in set_group["candidates"]],
+        )
+        self.assertIn("Skull Splitter", unique_group["search_text"])
+        self.assertIn("Mindrend", unique_group["search_text"])
+        self.assertIn("천둥 망치", unique_group["search_text"])
 
 
 if __name__ == "__main__":

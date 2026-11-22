@@ -180,6 +180,57 @@ class TestItemAnalyzerService(unittest.TestCase):
         self.assertEqual("XYZ", skill_service.generate_skill_tree("xyz")["class_name"])
         self.assertNotIn("exp", skill_service.class_map)
 
+    def test_runeword_and_set_names_resolve_from_strings_with_stable_ids(self):
+        repo = FakeRepo()
+        repo.tables["armor"] = [{"code": "uap", "name": "Light Plate", "namestr": "uap", "type": "tors"}]
+        repo.tables["itemtypes"].append({"Code": "tors", "ItemType": "Armor"})
+        repo.tables["sets"] = [
+            {"index": "McAuley's Folly", "name": "McAuley's Folly", "version": "0"},
+            {"index": "Fallback Set", "name": "Fallback Set", "version": "100"},
+        ]
+        repo.strings.update({
+            "runeword64": "Judgement",
+            "runeword171": "Hysteria",
+            "runeword172": "Mania",
+            "runeword56": "Revenge",
+            "runeword185": "Revenge",
+            "mcauley's folly": "Sander's Folly",
+            "mcauley's boots": "Sander's Riprap",
+            "uap": "Light Plate",
+            "armor": "Armor",
+        })
+
+        analyzer = ItemAnalyzerService(repo, FakeResolver())
+
+        hysteria = analyzer.analyze_runeword({"Name": "Runeword171", "*Rune Name": "Hustle (armor)", "Rune1": "r03", "itype1": "helm"})
+        mania = analyzer.analyze_runeword({"Name": "Runeword172", "*Rune Name": "Hustle (weapon)", "Rune1": "r03", "itype1": "mele"})
+        judgement = analyzer.analyze_runeword({"Name": "Runeword64", "*Rune Name": "Judgment", "Rune1": "r03", "itype1": "mele"})
+        missing_str = analyzer.analyze_runeword({"Name": "Runeword999", "*Rune Name": "Future Word", "Rune1": "r03", "itype1": "mele"})
+        no_comment = analyzer.analyze_runeword({"Name": "Runeword998", "Rune1": "r03", "itype1": "mele"})
+        dup_a = analyzer.analyze_runeword({"Name": "Runeword56", "*Rune Name": "Revenge", "Rune1": "r03"})
+        dup_b = analyzer.analyze_runeword({"Name": "Runeword185", "*Rune Name": "Revenge", "Rune1": "r03", "itype1": "mele"})
+
+        self.assertEqual(("Runeword171", "Hysteria"), (hysteria["id"], hysteria["name"]))
+        self.assertEqual(("Runeword172", "Mania"), (mania["id"], mania["name"]))
+        self.assertEqual(("Runeword64", "Judgement"), (judgement["id"], judgement["name"]))
+        self.assertEqual(("Runeword999", "Future Word"), (missing_str["id"], missing_str["name"]))
+        self.assertEqual(("Runeword998", "Runeword998"), (no_comment["id"], no_comment["name"]))
+        self.assertNotEqual(dup_a["id"], dup_b["id"])
+        self.assertEqual(("Revenge", "Revenge"), (dup_a["name"], dup_b["name"]))
+
+        ko_repo = FakeRepo()
+        ko_repo.strings["runeword171"] = "광기"
+        ko_hysteria = ItemAnalyzerService(ko_repo, FakeResolver()).analyze_runeword(
+            {"Name": "Runeword171", "*Rune Name": "Hustle (armor)", "Rune1": "r03"}
+        )
+        self.assertEqual(("Runeword171", "광기"), (ko_hysteria["id"], ko_hysteria["name"]))
+
+        set_item = analyzer.analyze_set_item({"index": "McAuley's Boots", "set": "McAuley's Folly", "item": "uap", "lvl req": "20"})
+        fallback_set_item = analyzer.analyze_set_item({"index": "Missing Item", "set": "Fallback Set", "item": "uap", "lvl req": "10"})
+        self.assertEqual("Sander's Folly", set_item["set_name"])
+        self.assertEqual("Sander's Riprap", set_item["display_name"])
+        self.assertEqual("Fallback Set", fallback_set_item["set_name"])
+
 
 if __name__ == "__main__":
     unittest.main()
