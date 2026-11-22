@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, TypedDict
 
+from d2lib.repository import locale_to_html_lang
 from d2lib.wiki.presentation import sanitize_display_text
 
 
@@ -36,16 +37,21 @@ class WikiManifestEntryDTO(TypedDict):
 class WikiSiteDTO(TypedDict):
     old_label: str
     new_label: str
+    locale: str
+    html_lang: str
     pages: List[WikiPageDTO]
     assets: List[WikiAssetDTO]
     data_files: List[WikiDataFileDTO]
     manifest: List[WikiManifestEntryDTO]
 
 
-def empty_wiki_site(old_label: str, new_label: str) -> WikiSiteDTO:
+def empty_wiki_site(old_label: str, new_label: str, locale: str = "enUS") -> WikiSiteDTO:
+    clean_locale = str(locale or "enUS").strip() or "enUS"
     return {
         "old_label": old_label,
         "new_label": new_label,
+        "locale": clean_locale,
+        "html_lang": locale_to_html_lang(clean_locale),
         "pages": [],
         "assets": [],
         "data_files": [],

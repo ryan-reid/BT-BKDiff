@@ -7,7 +7,12 @@ import re
 from typing import Any, Dict, List, Optional, Tuple
 from urllib.parse import urlencode
 
-from d2lib.repository import D2Repository, D2RepositoryProtocol, resolve_localized_string
+from d2lib.repository import (
+    D2Repository,
+    D2RepositoryProtocol,
+    resolve_difficulty_name,
+    resolve_localized_string,
+)
 from d2lib.services import (
     PropertyResolverService,
     BaseItemAnalyzerService,
@@ -80,6 +85,7 @@ class WikiContentBuilder:
         game_data_dir: Optional[str] = None,
         retail_data_dir: Optional[str] = None,
         layout_data_dir: Optional[str] = None,
+        locale: str = "enUS",
     ):
         self.item_db_dir = item_db_dir
         self.skill_tree_dir = skill_tree_dir
@@ -90,21 +96,22 @@ class WikiContentBuilder:
         self.game_data_dir = game_data_dir or os.path.join(REPO_ROOT, "mods", "BKDiablo", "bkdiablo.mpq")
         self.retail_data_dir = retail_data_dir or os.path.join(REPO_ROOT, "data", "retail")
         self.layout_data_dir = layout_data_dir
-        self.site: WikiSiteDTO = empty_wiki_site(old_label, new_label)
+        self.locale = str(locale or "enUS").strip() or "enUS"
+        self.site: WikiSiteDTO = empty_wiki_site(old_label, new_label, locale=self.locale)
         self.writer = WikiSiteRecordingWriter(self.site)
         self.manifest = self.site["manifest"]
         self._repo: Optional[D2Repository] = None
         self._retail_repo: Optional[D2Repository] = None
 
     def build(self) -> WikiSiteDTO:
-        self.site = empty_wiki_site(self.old_label, self.new_label)
+        self.site = empty_wiki_site(self.old_label, self.new_label, locale=self.locale)
         self.writer = WikiSiteRecordingWriter(self.site)
         self.manifest = self.site["manifest"]
 
         # Cached repos — all _load_* and _write_* methods share these instances.
-        self._repo = D2Repository(self.game_data_dir)
+        self._repo = D2Repository(self.game_data_dir, locale=self.locale)
         self._taxonomy = ItemTypeTaxonomy(self._repo)
-        self._retail_repo = D2Repository(self.retail_data_dir)
+        self._retail_repo = D2Repository(self.retail_data_dir, locale=self.locale)
 
         history_config = json.loads(Path(REPO_ROOT, "data", "item-history.json").read_text(encoding="utf-8"))
         history_collector = HistoryCollector(self.game_data_dir, Path(REPO_ROOT, ".cache", "item-history"), history_config)
@@ -199,6 +206,108 @@ class WikiContentBuilder:
     def _load_mechanics_summary(self) -> MechanicsSummaryDTO:
         return MechanicsAnalyzerService(self._repo, self._retail_repo).analyze_mechanics()
 
+    @staticmethod
+    def _safe_excel_table(repo: Any, table_name: str) -> List[Dict[str, str]]:
+        getter = getattr(repo, "get_excel_table", None)
+        if not callable(getter):
+            return []
+        try:
+            rows = getter(table_name)
+        except Exception:
+            return []
+        return rows if isinstance(rows, list) else []
+
+    @classmethod
+    def _mercenary_repo_context(cls, repo: Any) -> Tuple[Dict[str, str], Optional[PropertyResolverService]]:
+        monstats_by_idx: Dict[str, str] = {}
+        for row in cls._safe_excel_table(repo, "monstats"):
+            idx = str(row.get("*hcIdx", "")).strip()
+            namestr = str(row.get("NameStr", "")).strip()
+            if idx and namestr and idx not in monstats_by_idx:
+                monstats_by_idx[idx] = namestr
+        resolver: Optional[PropertyResolverService] = None
+        if callable(getattr(repo, "get_excel_table", None)):
+            try:
+                skills_rows = repo.get_excel_table("skills")
+                if isinstance(skills_rows, list):
+                    resolver = PropertyResolverService(repo)
+            except Exception:
+                resolver = None
+        return monstats_by_idx, resolver
+
+    @staticmethod
+    def _mercenary_row_meta(
+        row: Dict[str, str],
+        repo: Any,
+        monstats_by_idx: Dict[str, str],
+        resolver: Optional[PropertyResolverService],
+    ) -> Dict[str, Any]:
+        act_raw = str(row.get("Act", "")).strip()
+        act = int(act_raw) if act_raw.isdigit() else 99
+        class_id = str(row.get("Class", "")).strip()
+        diff_raw = str(row.get("Difficulty", "")).strip()
+        raw_sub = str(row.get("*SubType", "")).strip()
+        sub_part, sep, diff_part = raw_sub.rpartition("-")
+        legacy_diff_map = {"normal": "1", "nightmare": "2", "hell": "3"}
+        if not diff_raw and sep:
+            diff_raw = legacy_diff_map.get(diff_part.strip().casefold(), "")
+        difficulty_id = diff_raw if diff_raw in {"1", "2", "3"} else ""
+        difficulty_slug = {
+            "1": "normal",
+            "2": "nightmare",
+            "3": "hell",
+        }.get(difficulty_id, slugify(diff_part or diff_raw) if (diff_part or diff_raw) else "")
+        difficulty = resolve_difficulty_name(repo, difficulty_id or diff_raw)
+
+        namestr = monstats_by_idx.get(class_id, "")
+        hireling_raw = str(row.get("Hireling", "")).strip()
+        canonical_group = namestr or hireling_raw
+        group_name = (
+            resolve_localized_string(repo, namestr)
+            or resolve_localized_string(repo, hireling_raw)
+            or canonical_group
+        )
+
+        def skill_display(skill_code: str) -> str:
+            if not skill_code:
+                return ""
+            if resolver is not None:
+                resolved = resolver.resolve_skill_name(skill_code)
+                if resolved:
+                    return resolved
+            return resolve_localized_string(repo, skill_code) or skill_code
+
+        hire_desc = str(row.get("HireDesc", "")).strip()
+        skill1 = str(row.get("Skill1", "")).strip()
+        if hire_desc:
+            variant_key = hire_desc.casefold()
+            variant = resolve_localized_string(repo, hire_desc) or hire_desc
+        elif skill1:
+            variant_key = skill1.casefold()
+            variant = skill_display(skill1)
+        else:
+            legacy_sub = sub_part.strip() if sep else raw_sub
+            variant_key = legacy_sub.casefold()
+            variant = resolve_localized_string(repo, legacy_sub) or legacy_sub
+
+        skills_map = {
+            f"Skill{i}": skill_display(str(row.get(f"Skill{i}", "")).strip())
+            for i in range(1, 7)
+            if str(row.get(f"Skill{i}", "")).strip()
+        }
+        return {
+            "act": act,
+            "class_id": class_id,
+            "canonical_group": canonical_group,
+            "name": group_name,
+            "variant_key": variant_key,
+            "variant": variant,
+            "difficulty_id": difficulty_id,
+            "difficulty_slug": difficulty_slug,
+            "difficulty": difficulty,
+            "skills_map": skills_map,
+        }
+
     def _load_mercenary_data(self) -> Dict[str, Any]:
         fields = ("HP", "HP/Lvl", "Defense", "Def/Lvl", "Str", "Str/Lvl", "Dex", "Dex/Lvl",
                   "AR", "AR/Lvl", "Dmg-Min", "Dmg-Max", "Dmg/Lvl", "DefaultChance",
@@ -208,21 +317,58 @@ class WikiContentBuilder:
             f"{field}{i}" for i in range(1, 7)
             for field in ("Skill", "Mode", "Chance", "ChancePerLvl", "Level", "LvlPerLvl")
         )
+
         def load(repo):
-            candidates = (
-                os.path.join(repo.mpq_path, "data", "global", "excel", "hireling.txt"),
-                os.path.join(repo.mpq_path, "global", "excel", "hireling.txt"),
-            )
-            rows = repo.load_tsv(next((path for path in candidates if os.path.exists(path)), candidates[0]))
-            return {(r.get("*SubType", ""), r.get("Level", "")): r for r in rows
-                    if r.get("Version") == "100" and r.get("Hireling") and r.get("Level", "").isdigit()}
+            monstats_by_idx, resolver = self._mercenary_repo_context(repo)
+            result: Dict[Tuple[int, str, str, str, str], Tuple[Dict[str, str], Dict[str, Any]]] = {}
+            for row in self._safe_excel_table(repo, "hireling"):
+                if row.get("Version") != "100":
+                    continue
+                if not (row.get("Class") or row.get("Hireling")):
+                    continue
+                level = str(row.get("Level", "")).strip()
+                if not level.isdigit():
+                    continue
+                meta = self._mercenary_row_meta(row, repo, monstats_by_idx, resolver)
+                group_key = meta["class_id"] or meta["canonical_group"].casefold()
+                key = (meta["act"], group_key, meta["variant_key"], meta["difficulty_id"], level)
+                result.setdefault(key, (row, meta))
+            return result
+
         current, retail = load(self._repo), load(self._retail_repo)
         entries = []
-        for key in sorted(set(current) | set(retail)):
-            row, old = current.get(key), retail.get(key)
-            source = row or old or {}
+
+        def key_sort(item_key: Tuple[int, str, str, str, str]) -> Tuple[int, str, str, int, int]:
+            act_num, group_id, variant_k, diff_id, lvl = item_key
+            return (act_num, group_id, variant_k, int(diff_id) if diff_id.isdigit() else 99, int(lvl))
+
+        for key in sorted(set(current) | set(retail), key=key_sort):
+            cur_pair = current.get(key)
+            ret_pair = retail.get(key)
+            row = cur_pair[0] if cur_pair else None
+            old = ret_pair[0] if ret_pair else None
+            meta = (cur_pair or ret_pair)[1]
+            cur_skills = cur_pair[1]["skills_map"] if cur_pair else {}
+            ret_skills = ret_pair[1]["skills_map"] if ret_pair else {}
             changed = [field for field in fields + skill_fields if row and old and row.get(field, "") != old.get(field, "")]
-            entries.append({"name": source.get("Hireling", ""), "variant": key[0], "level": key[1], "status": "added" if row and not old else "removed" if old and not row else "changed" if changed else "unchanged", "current": row or {}, "retail": old or {}, "changed_fields": changed})
+            entries.append({
+                "act": meta["act"],
+                "class_id": meta["class_id"],
+                "canonical_group": meta["canonical_group"],
+                "name": meta["name"],
+                "variant_key": meta["variant_key"],
+                "variant": meta["variant"],
+                "difficulty_id": meta["difficulty_id"],
+                "difficulty_slug": meta["difficulty_slug"],
+                "difficulty": meta["difficulty"],
+                "level": key[4],
+                "status": "added" if row and not old else "removed" if old and not row else "changed" if changed else "unchanged",
+                "current": row or {},
+                "retail": old or {},
+                "current_skills": cur_skills,
+                "retail_skills": ret_skills,
+                "changed_fields": changed,
+            })
         return {"rows": entries, "summary": {"total": len(entries), "changed": sum(r["status"] != "unchanged" for r in entries), "added": sum(r["status"] == "added" for r in entries), "removed": sum(r["status"] == "removed" for r in entries)}}
 
     @staticmethod
@@ -254,70 +400,163 @@ class WikiContentBuilder:
         return result
 
     def _write_mercenary_pages(self, data: Dict[str, Any]) -> None:
-        groups = {}
+        by_type: Dict[Tuple[int, str, str], List[Dict[str, Any]]] = {}
         for row in data["rows"]:
-            groups.setdefault((row["name"], row["variant"]), []).append(row)
-        entries = []
-        def variant_order(group):
-            name, variant = group[0]
-            subtype, _, difficulty = variant.rpartition("-")
-            difficulty_order = {"normal": 0, "nightmare": 1, "hell": 2}
-            return (name, subtype.strip().casefold(), difficulty_order.get(difficulty.strip().casefold(), 3), variant)
-
-        for (name, variant), rows in sorted(groups.items(), key=variant_order):
-            rows.sort(key=lambda row: int(row["level"] or 0))
-            slug = slugify(f"{name}-{variant}")
-            changed = any(row["status"] != "unchanged" for row in rows)
-            entries.append({"name": name, "variant": variant, "slug": slug, "levels": len(rows), "rows": rows, "status": "changed" if changed else "unchanged"})
-            self._write_page(title=f"{name} ({variant}) | {self.new_label} Wiki", output_path=WikiRoutes.mercenary_output_path(slug), template_name="mercenary.html", category="detail", source_files=[], mercenary={"name": name, "variant": variant, "rows": rows})
-        # Keep existing difficulty URLs, but present one index card per subtype.
-        combined = {}
-        for entry in entries:
-            subtype, _, difficulty = entry["variant"].rpartition("-")
-            subtype = subtype.strip() or entry["variant"]
-            difficulty = difficulty.strip()
-            key = (entry["name"], subtype)
-            group = combined.setdefault(key, {
-                "name": entry["name"], "variant": subtype,
-                "slug": slugify(f"{entry['name']}-{subtype}"),
-                "rows": [], "offers": [], "status": "unchanged",
-            })
-            skills = list(dict.fromkeys(
-                row["current"].get(f"Skill{i}", "")
-                for row in entry["rows"] for i in range(1, 7)
-                if row["current"].get(f"Skill{i}", "")
-            ))
-            group["offers"].append({
-                "difficulty": difficulty, "skills": skills,
-                "available": any(row["current"] for row in entry["rows"]),
-            })
-            group["rows"].extend(dict(row, difficulty=difficulty) for row in entry["rows"])
-            if entry["status"] == "changed":
-                group["status"] = "changed"
-        entries = list(combined.values())
-        for entry in entries:
-            entry["levels"] = len(entry["rows"])
-            difficulty = min(
-                (row["difficulty"] for row in entry["rows"] if row["current"]),
-                key=lambda value: {"Hell": 0, "Nightmare": 1, "Normal": 2}.get(value, 3),
-                default=entry["rows"][0]["difficulty"],
+            type_key = (
+                int(row.get("act", 99)),
+                str(row.get("class_id") or row.get("canonical_group") or row["name"]).casefold(),
+                str(row.get("variant_key") or row["variant"]).casefold(),
             )
-            preview = {"level": "80", "difficulty": difficulty}
+            by_type.setdefault(type_key, []).append(row)
+
+        entries = []
+        used_slugs: set[str] = set()
+
+        def type_order(item: Tuple[Tuple[int, str, str], List[Dict[str, Any]]]) -> Tuple[int, str, str, str]:
+            (act_num, class_key, _), rows = item
+            first = rows[0]
+            return (act_num, first["name"].casefold(), first["variant"].casefold(), class_key)
+
+        for (act_num, class_key, _), type_rows in sorted(by_type.items(), key=type_order):
+            type_rows.sort(
+                key=lambda r: (
+                    int(r["difficulty_id"]) if str(r.get("difficulty_id", "")).isdigit() else 99,
+                    int(r["level"] or 0),
+                )
+            )
+            first = type_rows[0]
+            canonical_group = first.get("canonical_group") or first["name"]
+            variant_key = first.get("variant_key") or first["variant"]
+            base_slug = slugify(f"{canonical_group}-{variant_key}")
+            slug = base_slug
+            if slug in used_slugs:
+                suffix = slugify(class_key) if class_key else str(len(used_slugs) + 1)
+                slug = f"{base_slug}-{suffix}"
+            used_slugs.add(slug)
+
+            offers = []
+            by_difficulty: Dict[Tuple[str, str, str], List[Dict[str, Any]]] = {}
+            for row in type_rows:
+                diff_key = (
+                    str(row.get("difficulty_id", "")),
+                    str(row.get("difficulty_slug", "")),
+                    str(row.get("difficulty", "")),
+                )
+                by_difficulty.setdefault(diff_key, []).append(row)
+
+            def diff_sort(item: Tuple[Tuple[str, str, str], List[Dict[str, Any]]]) -> Tuple[int, str]:
+                diff_id, diff_slug, _ = item[0]
+                return (int(diff_id) if diff_id.isdigit() else 99, diff_slug)
+
+            for (diff_id, diff_slug, diff_label), diff_rows in sorted(by_difficulty.items(), key=diff_sort):
+                if diff_slug:
+                    diff_page_slug = slugify(f"{slug}-{diff_slug}")
+                    self._write_page(
+                        title=f"{first['name']} ({first['variant']} - {diff_label}) | {self.new_label} Wiki",
+                        output_path=WikiRoutes.mercenary_output_path(diff_page_slug),
+                        template_name="mercenary.html",
+                        category="detail",
+                        source_files=[],
+                        mercenary={
+                            "name": first["name"],
+                            "variant": f"{first['variant']} - {diff_label}" if diff_label else first["variant"],
+                            "rows": diff_rows,
+                        },
+                    )
+                skills = list(dict.fromkeys(
+                    r.get("current_skills", {}).get(f"Skill{i}") or r["current"].get(f"Skill{i}", "")
+                    for r in diff_rows for i in range(1, 7)
+                    if r["current"].get(f"Skill{i}", "")
+                ))
+                raw_skills = list(dict.fromkeys(
+                    r["current"].get(f"Skill{i}", "")
+                    for r in diff_rows for i in range(1, 7)
+                    if r["current"].get(f"Skill{i}", "")
+                ))
+                offers.append({
+                    "difficulty": diff_label,
+                    "difficulty_id": diff_id,
+                    "skills": skills,
+                    "raw_skills": raw_skills,
+                    "available": any(r["current"] for r in diff_rows),
+                })
+
+            chosen_row = min(
+                (r for r in type_rows if r["current"]),
+                key=lambda r: {"3": 0, "2": 1, "1": 2}.get(str(r.get("difficulty_id", "")), 3),
+                default=type_rows[0],
+            )
+            chosen_diff_id = str(chosen_row.get("difficulty_id", ""))
+            chosen_diff_label = chosen_row.get("difficulty", "")
+            preview: Dict[str, Any] = {
+                "level": "80",
+                "difficulty": chosen_diff_label,
+                "difficulty_id": chosen_diff_id,
+                "current_skills": {},
+                "retail_skills": {},
+            }
             for side in ("current", "retail"):
-                candidates = [row[side] for row in entry["rows"]
-                              if row["difficulty"] == difficulty and row[side]
-                              and int(row[side]["Level"]) <= 80]
-                source = max(candidates, key=lambda row: int(row["Level"]), default={})
-                preview[side] = self._mercenary_stats_at_level(source, 80)
-            entry["preview"] = preview
+                candidates = [
+                    r for r in type_rows
+                    if str(r.get("difficulty_id", "")) == chosen_diff_id
+                    and r[side]
+                    and int(r[side]["Level"]) <= 80
+                ]
+                source_entry = max(candidates, key=lambda r: int(r[side]["Level"]), default=None)
+                if source_entry:
+                    preview[side] = self._mercenary_stats_at_level(source_entry[side], 80)
+                    preview[f"{side}_skills"] = dict(source_entry.get(f"{side}_skills", {}))
+                else:
+                    preview[side] = {}
+
+            changed = any(r["status"] != "unchanged" for r in type_rows)
+            entry = {
+                "act": act_num,
+                "class_id": first.get("class_id", ""),
+                "name": first["name"],
+                "variant": first["variant"],
+                "slug": slug,
+                "levels": len(type_rows),
+                "rows": type_rows,
+                "offers": offers,
+                "status": "changed" if changed else "unchanged",
+                "preview": preview,
+            }
+            entries.append(entry)
             self._write_page(
                 title=f"{entry['name']} ({entry['variant']}) | {self.new_label} Wiki",
                 output_path=WikiRoutes.mercenary_output_path(entry["slug"]),
-                template_name="mercenary.html", category="detail", source_files=[],
+                template_name="mercenary.html",
+                category="detail",
+                source_files=[],
                 mercenary=entry,
             )
+
+        grouped_map: Dict[Tuple[int, str], List[Dict[str, Any]]] = {}
+        for entry in entries:
+            grouped_map.setdefault((entry["act"], entry["name"]), []).append(entry)
+        groups = [
+            {"act": act_num, "name": group_name, "entries": group_entries}
+            for (act_num, group_name), group_entries in sorted(
+                grouped_map.items(),
+                key=lambda item: (item[0][0], item[0][1].casefold()),
+            )
+        ]
+
         self.writer.write_text("data/mercenaries.json", json.dumps(data, indent=2))
-        self._write_page(title=f"Mercenaries | {self.new_label} Wiki", output_path=WikiRoutes.mercenaries_index_output_path(), template_name="mercenaries_index.html", category="index", source_files=[os.path.join(self.game_data_dir, "data", "global", "excel", "hireling.txt"), os.path.join(self.retail_data_dir, "global", "excel", "hireling.txt")], data=data, entries=entries)
+        self._write_page(
+            title=f"Mercenaries | {self.new_label} Wiki",
+            output_path=WikiRoutes.mercenaries_index_output_path(),
+            template_name="mercenaries_index.html",
+            category="index",
+            source_files=[
+                os.path.join(self.game_data_dir, "data", "global", "excel", "hireling.txt"),
+                os.path.join(self.retail_data_dir, "global", "excel", "hireling.txt"),
+            ],
+            data=data,
+            entries=entries,
+            groups=groups,
+        )
 
     def _load_drop_weight_groups(self) -> List[Dict[str, Any]]:
         base_names = self._drop_base_name_lookup(self._repo)
@@ -1527,6 +1766,7 @@ class WikiGenerator:
         game_data_dir: Optional[str] = None,
         retail_data_dir: Optional[str] = None,
         layout_data_dir: Optional[str] = None,
+        locale: str = "enUS",
     ):
         self.item_db_dir = item_db_dir
         self.skill_tree_dir = skill_tree_dir
@@ -1537,6 +1777,7 @@ class WikiGenerator:
         self.game_data_dir = game_data_dir
         self.retail_data_dir = retail_data_dir
         self.layout_data_dir = layout_data_dir
+        self.locale = locale
 
     def build_site(self) -> WikiSiteDTO:
         return WikiContentBuilder(
@@ -1549,6 +1790,7 @@ class WikiGenerator:
             game_data_dir=self.game_data_dir,
             retail_data_dir=self.retail_data_dir,
             layout_data_dir=self.layout_data_dir,
+            locale=self.locale,
         ).build()
 
     def generate(self) -> WikiSiteDTO:

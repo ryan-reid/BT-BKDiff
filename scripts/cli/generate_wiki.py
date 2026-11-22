@@ -20,6 +20,7 @@ def run(
     mediawiki_output_dir: Optional[str] = None,
     bt_item_db_dir: Optional[str] = None,
     bt_data_dir: Optional[str] = None,
+    locale: str = "enUS",
 ):
     generator = WikiGenerator(
         item_db_dir,
@@ -31,6 +32,7 @@ def run(
         game_data_dir=game_data_dir,
         retail_data_dir=retail_data_dir,
         layout_data_dir=layout_data_dir,
+        locale=locale,
     )
     if bool(bt_item_db_dir) != bool(bt_data_dir):
         raise ValueError("Both BT item database and BT data paths are required")
@@ -46,7 +48,7 @@ def run(
             item_db_dir, skill_tree_dir, output_dir,
             old_item_db_dir=bt_item_db_dir, old_label="BTDiablo", new_label=new_label,
             game_data_dir=game_data_dir, retail_data_dir=bt_data_dir,
-            layout_data_dir=layout_data_dir,
+            layout_data_dir=layout_data_dir, locale=locale,
         ).build_site()
         add_comparison_links(site, bt_site)
         WikiPublisher(output_dir).publish(site, HtmlWikiRenderer())
@@ -88,6 +90,7 @@ def main() -> None:
     parser.add_argument("--compare-bt", action="store_true", help="Build Retail and BTDiablo comparisons with a site-wide switch")
     parser.add_argument("--bt-item-db", default="../exports/item_db_bt")
     parser.add_argument("--bt-data", default="../mods/BTDiablo/btdiablo.mpq")
+    parser.add_argument("--locale", default="enUS", help="Target string locale code (e.g. enUS, deDE, koKR)")
     args = parser.parse_args()
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -114,6 +117,7 @@ def main() -> None:
         mediawiki_output_dir=mediawiki_output_dir,
         bt_item_db_dir=os.path.normpath(os.path.join(scripts_root, args.bt_item_db)) if args.compare_bt else None,
         bt_data_dir=os.path.normpath(os.path.join(scripts_root, args.bt_data)) if args.compare_bt else None,
+        locale=args.locale,
     )
 
 

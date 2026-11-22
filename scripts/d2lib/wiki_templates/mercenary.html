@@ -15,7 +15,7 @@
 <div class="results-bar"><span class="count"><b>{{ mercenary.rows|length }}</b> configured levels &middot; Values from hireling data, before equipment bonuses</span></div>
 <div class="family-items-grid mercenary-levels">
   {% for row in mercenary.rows %}
-  <article class="base-item-card mercenary-card" id="{% if row.difficulty %}{{ row.difficulty|slugify }}-{% endif %}level-{{ row.level }}" data-search="{{ row.difficulty|default('') }} level {{ row.level }} {{ row.status }} {% for i in range(1, 7) %}{{ row.current.get('Skill' ~ i, '') }} {{ row.retail.get('Skill' ~ i, '') }} {% endfor %}">
+  <article class="base-item-card mercenary-card" id="{% if row.difficulty_slug %}{{ row.difficulty_slug }}-{% elif row.difficulty %}{{ row.difficulty|slugify }}-{% endif %}level-{{ row.level }}" data-search="{{ row.difficulty|default('') }} {{ row.difficulty_slug|default('') }} level {{ row.level }} {{ row.status }} {% for i in range(1, 7) %}{{ row.current.get('Skill' ~ i, '') }} {{ (row.current_skills or {}).get('Skill' ~ i, '') }} {{ row.retail.get('Skill' ~ i, '') }} {{ (row.retail_skills or {}).get('Skill' ~ i, '') }} {% endfor %}">
     <div class="sp-head mercenary-level-head">
       <h2 class="set-th-name mercenary-name">{% if row.difficulty %}{{ row.difficulty }} &middot; {% endif %}Level {{ row.level }}</h2>
       <span class="item-card-status is-{{ 'modified' if row.status == 'changed' else row.status }}">{{ row.status|title }}</span>

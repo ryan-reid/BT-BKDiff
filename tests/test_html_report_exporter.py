@@ -8,7 +8,7 @@ SCRIPT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
-from d2lib.exporters import HtmlReportExporter
+from d2lib.exporters import HtmlReportExporter, MarkdownExporter
 
 
 class TestHtmlReportExporter(unittest.TestCase):
@@ -129,6 +129,31 @@ class TestHtmlReportExporter(unittest.TestCase):
             with open(os.path.join(temp_dir, "index.html"), "r", encoding="utf-8") as f:
                 index_html = f.read()
             self.assertIn('href="gems.html"', index_html)
+
+    def test_strips_d2_color_and_grammar_tags_and_highlights_unicode_words(self):
+        exporter = HtmlReportExporter()
+        self.assertEqual(exporter.escape("ÿc8[fs]Jah-Runeÿc0"), "Jah-Rune")
+        self.assertEqual(
+            exporter._stat_key("ÿc3+150% Verbesserte Verteidigung"),
+            "% verbesserte verteidigung",
+        )
+        old_html, new_html = exporter._diff_pair(
+            "Erhöht maximale Haltbarkeit",
+            "Erhöht maximales Mana",
+        )
+        self.assertIn('<span class="diff-old">maximale</span>', old_html)
+        self.assertIn('<span class="diff-old">Haltbarkeit</span>', old_html)
+        self.assertIn('<span class="diff-new">maximales</span>', new_html)
+        self.assertIn('<span class="diff-new">Mana</span>', new_html)
+        self.assertNotIn('<span class="diff-old">ö</span>', old_html)
+
+        self.assertIn('<html lang="de">', exporter._page("Titel", "<p>Body</p>", lang="de"))
+
+        md_exporter = MarkdownExporter()
+        self.assertEqual(md_exporter.escape_table_cell("ÿc;[fs]Io-Rune | Test"), "Io-Rune \\| Test")
+        md_old, md_new = md_exporter.get_styled_diffs("화염 피해 +10", "화염 피해 +25")
+        self.assertIn(r"\color{gray}", md_old)
+        self.assertIn(r"\color{blue}", md_new)
 
 
 if __name__ == "__main__":

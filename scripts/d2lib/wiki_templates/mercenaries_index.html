@@ -13,16 +13,16 @@
 </div>
 <div class="results-bar"><span class="count"><b>{{ entries|length }}</b> types &middot; {{ data.summary.changed }} of {{ data.summary.total }} configured level rows changed</span></div>
 <div class="set-list">
-  {% for group in entries|groupby('name') %}
-  <section class="set-block" data-search="{{ group.grouper }}">
+  {% for group in groups %}
+  <section class="set-block" data-search="{{ group.name }}">
     <div class="set-header">
-      <h2 class="set-name mercenary-name">{{ group.grouper }}</h2>
-      <p class="set-summary muted">{{ group.list|length }} types &middot; Level 80 stats before equipment bonuses</p>
+      <h2 class="set-name mercenary-name">{{ group.name }}</h2>
+      <p class="set-summary muted">{% if group.act and group.act < 99 %}Act {{ group.act }} &middot; {% endif %}{{ group.entries|length }} types &middot; Level 80 stats before equipment bonuses</p>
     </div>
     <div class="family-items-grid">
-      {% for entry in group.list %}
+      {% for entry in group.entries %}
       {% set row = entry.preview %}
-      <a class="base-item-card item-index-card mercenary-card" href="{{ entry.slug }}/" data-search="{{ entry.name }} {{ entry.variant }} {% for offer in entry.offers %}{{ offer.difficulty }} {% endfor %}{% for level in entry.rows %}{% for i in range(1, 7) %}{{ level.current.get('Skill' ~ i, '') }} {{ level.retail.get('Skill' ~ i, '') }} {% endfor %}{% endfor %}">
+      <a class="base-item-card item-index-card mercenary-card" href="{{ entry.slug }}/" data-search="{{ entry.name }} {{ entry.variant }} {% for offer in entry.offers %}{{ offer.difficulty }} {{ offer.skills|join(' ') }} {{ offer.raw_skills|join(' ') }} {% endfor %}{% for level in entry.rows %}{% for i in range(1, 7) %}{{ level.current.get('Skill' ~ i, '') }} {{ (level.current_skills or {}).get('Skill' ~ i, '') }} {{ level.retail.get('Skill' ~ i, '') }} {{ (level.retail_skills or {}).get('Skill' ~ i, '') }} {% endfor %}{% endfor %}">
         <div class="sp-head">
           <div class="sp-head-text">
             <span class="set-th-name mercenary-name">{{ entry.variant }}</span>

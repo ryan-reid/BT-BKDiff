@@ -6,7 +6,7 @@ import html
 from abc import ABC, abstractmethod
 from typing import List, Dict, Any, Tuple
 from d2lib.models import AnalyzedItemDTO, RunewordDTO, ExcelDiffDTO, CubeRecipeDTO, ItemDiffDTO, SkillTreeDTO
-from d2lib.utils import normalize_d2_text, slugify
+from d2lib.utils import normalize_d2_text, slugify, strip_d2_formatting
 
 class BaseExporter(ABC):
     @abstractmethod
@@ -58,7 +58,7 @@ class MarkdownExporter(BaseExporter):
         """Escapes plain-text content for safe Markdown table rendering."""
         if s is None:
             return ""
-        text = re.sub(r'ÃƒÆ’(?:Ã†â€™Ãƒâ€š)?Ã‚Â¿c.', '', str(s))
+        text = strip_d2_formatting(str(s))
         text = text.replace('\r', ' ').replace('\n', ' ').strip()
         return text.replace('|', '\\|')
 
@@ -89,7 +89,7 @@ class MarkdownExporter(BaseExporter):
             return fmt("", old_s), fmt("", new_s)
 
         def tokenize(text: str) -> List[str]:
-            return re.findall(r'[+-]?\d+(?:-\d+)?%?|[a-zA-Z]+|[^\w\s]|\s+', text)
+            return re.findall(r'[+-]?\d+(?:-\d+)?%?|[^\W\d_]+|[^\w\s]|\s+', text, re.UNICODE)
 
         old_toks, new_toks = tokenize(old_s), tokenize(new_s)
         matcher = difflib.SequenceMatcher(None, old_toks, new_toks)
@@ -256,7 +256,7 @@ class MarkdownExporter(BaseExporter):
                             new_props = item['bk_props']
                             
                             def get_stat_key(s):
-                                s = re.sub(r'\s+', ' ', re.sub(r'ÃƒÂ¿c.', '', s)).strip()
+                                s = re.sub(r'\s+', ' ', strip_d2_formatting(s)).strip()
                                 return re.sub(r'[+-]?\d+(?:-\d+)?', '', s).strip().lower()
 
                             aligned = []
@@ -426,7 +426,7 @@ class HtmlReportExporter(BaseExporter):
     def escape(value: Any) -> str:
         if value is None:
             return ""
-        text = re.sub(r'ÃƒÆ’Ã‚Â¿c.', '', str(value))
+        text = strip_d2_formatting(str(value))
         return html.escape(text, quote=True)
 
     @staticmethod
@@ -437,7 +437,7 @@ class HtmlReportExporter(BaseExporter):
 
     @staticmethod
     def _stat_key(text: str) -> str:
-        text = re.sub(r'\s+', ' ', re.sub(r'ÃƒÆ’Ã‚Â¿c.', '', text or '')).strip()
+        text = re.sub(r'\s+', ' ', strip_d2_formatting(text or '')).strip()
         return re.sub(r'[+-]?\d+(?:-\d+)?', '', text).strip().lower()
 
     def _ensure_assets(self, output_dir: str) -> None:
@@ -446,10 +446,10 @@ class HtmlReportExporter(BaseExporter):
         with open(os.path.join(assets_dir, "report.css"), "w", encoding="utf-8") as f:
             f.write(self.REPORT_CSS.strip() + "\n")
 
-    def _page(self, title: str, body: str, subtitle: str = "", css_href: str = "assets/report.css") -> str:
+    def _page(self, title: str, body: str, subtitle: str = "", css_href: str = "assets/report.css", lang: str = "en") -> str:
         subtitle_html = f'<p class="muted">{self.escape(subtitle)}</p>' if subtitle else ""
         return f"""<!doctype html>
-<html lang="en">
+<html lang="{self.escape(lang or 'en')}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -468,10 +468,10 @@ class HtmlReportExporter(BaseExporter):
 </html>
 """
 
-    def _write_page(self, path: str, title: str, body: str, subtitle: str = "", css_href: str = "assets/report.css") -> None:
+    def _write_page(self, path: str, title: str, body: str, subtitle: str = "", css_href: str = "assets/report.css", lang: str = "en") -> None:
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "w", encoding="utf-8") as f:
-            f.write(self._page(title, body, subtitle, css_href))
+            f.write(self._page(title, body, subtitle, css_href, lang=lang))
 
     def _diff_pair(self, old_s: Any, new_s: Any) -> Tuple[str, str]:
         old_text = "" if old_s is None else str(old_s)
@@ -484,15 +484,15 @@ class HtmlReportExporter(BaseExporter):
             return f'<span class="diff-old">{self.escape(old_text)}</span>', '<span class="diff-new">(removed)</span>'
 
         def normalize(text: str) -> str:
-            return re.sub(r'\s+', ' ', re.sub(r'ÃƒÆ’Ã‚Â¿c.', '', text)).strip()
+            return re.sub(r'\s+', ' ', strip_d2_formatting(text)).strip()
 
         if normalize(old_text) == normalize(new_text):
             escaped = self.escape(old_text)
             return escaped, escaped
 
-        token_pattern = r'[+-]?\d+(?:-\d+)?%?|[a-zA-Z]+|[^\w\s]|\s+'
-        old_tokens = re.findall(token_pattern, old_text)
-        new_tokens = re.findall(token_pattern, new_text)
+        token_pattern = r'[+-]?\d+(?:-\d+)?%?|[^\W\d_]+|[^\w\s]|\s+'
+        old_tokens = re.findall(token_pattern, old_text, re.UNICODE)
+        new_tokens = re.findall(token_pattern, new_text, re.UNICODE)
         matcher = difflib.SequenceMatcher(None, old_tokens, new_tokens)
 
         def render(tokens: List[str], is_old: bool) -> str:

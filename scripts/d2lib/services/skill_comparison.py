@@ -192,7 +192,7 @@ class SkillSource:
                 if resolved:
                     string_id = "strings:" + text.lower()
                     records[string_id] = {"table": "strings", "key": text,
-                                          "row": {"enUS": resolved}, "source": "Resolved localization: " + text}
+                                          "row": {"text": resolved}, "source": "Resolved localization: " + text}
                     edges.append({"from": record_id, "field": via, "to": string_id})
                 else:
                     missing.append(f"{record_id} → {via} → strings:{text}")
@@ -343,7 +343,7 @@ class SkillComparisonService:
         for side, snap in (("old", old), ("new", new)):
             if snap["missing"]:
                 warnings.append({"side": side, "text": f"{len(snap['missing'])} unresolved source links; inspect linked records for details."})
-            tooltip = " ".join(r["row"].get("enUS", "") for r in snap["records"].values() if r["table"] == "strings")
+            tooltip = " ".join(r["row"].get("text", "") for r in snap["records"].values() if r["table"] == "strings")
             disabled = any(f["value"] == "Disabled" for k, f in self._facts(snap, key).items() if k[1] == "healing")
             if disabled and re.search(r"heals? allies", tooltip, re.I):
                 warnings.append({"side": side, "kind": "tooltip", "text": "Tooltip mentions ally healing, but a linked missile's server settings disable it."})
@@ -385,7 +385,7 @@ class SkillComparisonService:
         def tooltip(snap):
             _, desc = skill_description(snap, key)
             text_key = value(desc, "str long") or value(desc, "str short")
-            return snap["records"].get("strings:" + text_key.lower(), {}).get("row", {}).get("enUS", "")
+            return snap["records"].get("strings:" + text_key.lower(), {}).get("row", {}).get("text", "")
         old_text, new_text = tooltip(old), tooltip(new)
         tooltip_row = comparison_row("In-game description", old_text, new_text)
         before = synergy_entries(old, key, self.baseline.repo)
