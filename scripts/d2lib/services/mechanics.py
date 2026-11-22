@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import List, Dict, Optional, Any
-from d2lib.repository import D2Repository, D2RepositoryProtocol
+from d2lib.repository import D2Repository, D2RepositoryProtocol, resolve_difficulty_name
 from d2lib.models import MechanicsSummaryDTO
 from d2lib.services.comparison import ExcelComparisonService
 from d2lib.services.base import _summarize_excel_diff
@@ -30,8 +30,15 @@ class MechanicsAnalyzerService:
 
             dl_diff = ExcelComparisonService.compare_tables(dl_bk, dl_rt, 'Name', 'difficultylevels.txt')
             for name, row in dl_diff['modified_rows'].items():
+                display_difficulty = resolve_difficulty_name(self.repo, name)
                 for col, vals in row.items():
-                    diff_changes.append({"difficulty": name, "property": col, "retail": vals['bt_old'], "bk": vals['bk_new']})
+                    diff_changes.append({
+                        "difficulty": display_difficulty,
+                        "difficulty_id": name,
+                        "property": col,
+                        "retail": vals['bt_old'],
+                        "bk": vals['bk_new'],
+                    })
 
         return {
             "experience_changes": exp_changes,

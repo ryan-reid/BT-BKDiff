@@ -3,7 +3,12 @@ from __future__ import annotations
 from collections import Counter
 from typing import Any, Dict, Iterable, List, NamedTuple, Optional, Set, Tuple
 
-from d2lib.repository import D2RepositoryProtocol, get_class_name_maps
+from d2lib.repository import (
+    D2RepositoryProtocol,
+    get_class_name_maps,
+    resolve_difficulty_name,
+    resolve_localized_string,
+)
 from d2lib.services.resolver import PropertyResolverService
 
 
@@ -44,7 +49,7 @@ REFERENCE_GROUPS = [
             {"name": "monprop", "title": "Monster Properties", "fields": ["Id", "prop1", "par1", "min1", "max1", "prop2", "par2", "min2", "max2"], "properties": "prop"},
             {"name": "monai", "title": "Monster AI Parameters", "fields": ["AI", "*aip1", "*aip2", "*aip3", "*aip4", "*aip5", "*aip6", "*aip7", "*aip8"]},
             {"name": "monumod", "title": "Unique Monster Modifiers", "fields": ["uniquemod", "id", "enabled", "version", "xfer"]},
-            {"name": "monlvl", "title": "Monster Levels", "fields": ["Level", "L-AC", "L-TH", "L-HP", "H-AC", "H-TH", "H-HP"]},
+            {"name": "monlvl", "title": "Monster Levels", "fields": ["Level", "L-AC", "L-TH", "L-HP", "AC(H)", "TH(H)", "HP(H)"]},
             {"name": "monstats2", "title": "Monster Animation Data", "fields": ["Id", "Height", "OverlayHeight", "mDT", "mNU", "mWL", "mA1", "mA2", "mS1", "mS2", "mS3"]},
         ],
     },
@@ -53,9 +58,9 @@ REFERENCE_GROUPS = [
         "title": "Mercs, Vendors & Economy",
         "description": "Hirelings, vendor inventory flags, gambling rows, and inventory layout data.",
         "tables": [
-            {"name": "hireling", "title": "Hirelings", "fields": ["Hireling", "SubType", "Version", "Id", "Class", "Level", "Gold", "Skill1", "Skill2", "Skill3", "Skill4"]},
-            {"name": "npc", "title": "NPC Vendors", "fields": ["npc", "sellmult", "buymult", "questflag A", "questbuymult A", "questsellmult A"]},
-            {"name": "gamble", "title": "Gambling", "fields": ["name", "code", "rarity", "level"]},
+            {"name": "hireling", "title": "Hirelings", "fields": ["Hireling", "Act", "Difficulty", "HireDesc", "Version", "Id", "Class", "Level", "Gold", "Skill1", "Skill2", "Skill3", "Skill4"]},
+            {"name": "npc", "title": "NPC Vendors", "fields": ["npc", "buy mult", "sell mult", "rep mult", "questflag A", "questbuymult A", "questsellmult A"]},
+            {"name": "gamble", "title": "Gambling", "fields": ["name", "code"]},
             {"name": "inventory", "title": "Inventory Layout", "fields": ["class", "invLeft", "invRight", "invTop", "invBottom", "gridX", "gridY", "gridLeft", "gridRight", "gridTop", "gridBottom"]},
         ],
     },
@@ -64,9 +69,9 @@ REFERENCE_GROUPS = [
         "title": "States & Shrines",
         "description": "State flags, shrine effects, and overlays used by skills, monsters, and temporary buffs.",
         "tables": [
-            {"name": "states", "title": "States", "fields": ["state", "id", "group", "remhit", "nosend", "aura", "hide", "pgsv", "overlay1", "overlay2", "stat", "setfunc", "remfunc"]},
-            {"name": "shrines", "title": "Shrines", "fields": ["Shrine Type", "Name", "Effect", "Code", "Arg0", "Arg1", "duration in frames", "reset time in minutes"]},
-            {"name": "overlay", "title": "Overlays", "fields": ["overlay", "Filename", "Version", "Frames", "Character", "PreDraw", "1ofN"]},
+            {"name": "states", "title": "States", "fields": ["state", "*ID", "group", "remhit", "nosend", "aura", "hide", "pgsv", "overlay1", "overlay2", "stat", "setfunc", "remfunc"]},
+            {"name": "shrines", "title": "Shrines", "fields": ["StringName", "StringPhrase", "*Shrine Type", "*Effect", "Code", "Arg0", "Arg1", "Duration in frames", "reset time in minutes", "rarity", "LevelMin"]},
+            {"name": "overlay", "title": "Overlays", "fields": ["overlay", "Filename", "version", "*Frames", "Character", "PreDraw", "1ofN"]},
         ],
     },
     {
@@ -77,8 +82,8 @@ REFERENCE_GROUPS = [
             {"name": "lvlmaze", "title": "Maze Levels", "fields": ["Name", "Level", "Rooms", "Rooms(N)", "Rooms(H)", "SizeX", "SizeY", "Merge"]},
             {"name": "lvlprest", "title": "Level Presets", "fields": ["Name", "Def", "LevelId", "Populate", "Logicals", "Outdoors", "Animate", "KillEdge"]},
             {"name": "lvlwarp", "title": "Level Warps", "fields": ["Name", "Id", "SelectX", "SelectY", "SelectDX", "SelectDY", "ExitWalkX", "ExitWalkY"]},
-            {"name": "monpreset", "title": "Monster Presets", "fields": ["Act", "Place", "Mon1", "Mon2", "Mon3", "Mon4", "Mon5"]},
-            {"name": "objects", "title": "Objects", "fields": ["Name", "Id", "Token", "Selectable0", "TrapProb", "SizeX", "SizeY", "FrameCnt0", "FrameCnt1"]},
+            {"name": "monpreset", "title": "Monster Presets", "fields": ["Act", "Place"]},
+            {"name": "objects", "title": "Objects", "fields": ["Name", "*ID", "Class", "Token", "Selectable0", "SizeX", "SizeY", "FrameCnt0", "FrameCnt1"]},
         ],
     },
     {
@@ -88,8 +93,8 @@ REFERENCE_GROUPS = [
         "tables": [
             {"name": "skills", "title": "Skills", "fields": ["skill", "charclass", "skilldesc", "srvstfunc", "srvdofunc", "cltstfunc", "cltdofunc", "aurastate", "passivestate", "Param1", "calc1"]},
             {"name": "skilldesc", "title": "Skill Descriptions", "fields": ["skilldesc", "str name", "desctexta1", "desccalca1", "desctexta2", "desccalca2"]},
-            {"name": "missiles", "title": "Missiles", "fields": ["Missile", "Id", "pCltDoFunc", "pSrvDoFunc", "Vel", "MaxVel", "Range", "Skill", "HitClass"]},
-            {"name": "monseq", "title": "Monster Sequences", "fields": ["Sequence", "Mode", "Frame1", "Frame2", "Frame3", "Dir", "Event"]},
+            {"name": "missiles", "title": "Missiles", "fields": ["Missile", "*ID", "pCltDoFunc", "pSrvDoFunc", "Vel", "MaxVel", "Range", "Skill", "HitClass"]},
+            {"name": "monseq", "title": "Monster Sequences", "fields": ["sequence", "mode", "frame", "dir", "event"]},
         ],
     },
 ]
@@ -100,6 +105,47 @@ class ReferenceAnalyzerService:
         self.repo = repo
         self.resolver = resolver or PropertyResolverService(repo)
         _, self.class_names = get_class_name_maps(repo)
+        self._monstats_by_hcidx: Dict[str, str] = {}
+        self._monstats_by_id: Dict[str, str] = {}
+        self._monstats_by_ex: Dict[str, str] = {}
+        self._monstats_by_prop: Dict[str, str] = {}
+        self._base_item_by_code: Dict[str, str] = {}
+        self._build_reference_lookups()
+
+    def _build_reference_lookups(self) -> None:
+        for row in self.repo.get_excel_table("monstats"):
+            namestr = str(row.get("NameStr", "")).strip()
+            localized = resolve_localized_string(self.repo, namestr) or namestr
+            if not localized:
+                continue
+            hcidx = str(row.get("*hcIdx", "")).strip()
+            mon_id = str(row.get("Id", "")).strip().casefold()
+            mon_ex = str(row.get("MonStatsEx", "")).strip().casefold()
+            mon_prop = str(row.get("MonProp", "")).strip().casefold()
+            if hcidx and hcidx not in self._monstats_by_hcidx:
+                self._monstats_by_hcidx[hcidx] = localized
+            if mon_id and mon_id not in self._monstats_by_id:
+                self._monstats_by_id[mon_id] = localized
+            if mon_ex and mon_ex not in self._monstats_by_ex:
+                self._monstats_by_ex[mon_ex] = localized
+            if mon_prop and mon_prop not in self._monstats_by_prop:
+                self._monstats_by_prop[mon_prop] = localized
+
+        for table in ("weapons", "armor", "misc"):
+            for row in self.repo.get_excel_table(table):
+                code = str(row.get("code", "")).strip().casefold()
+                if not code or code in self._base_item_by_code:
+                    continue
+                namestr = str(row.get("namestr", "")).strip()
+                raw_name = str(row.get("name", "")).strip()
+                localized = (
+                    resolve_localized_string(self.repo, namestr)
+                    or resolve_localized_string(self.repo, raw_name)
+                    or raw_name
+                    or namestr
+                )
+                if localized:
+                    self._base_item_by_code[code] = localized
 
     def build_pages(
         self,
@@ -310,12 +356,25 @@ class ReferenceAnalyzerService:
         }
 
     def _row(self, table_name: str, raw: Dict[str, str], config: Dict[str, Any]) -> Dict[str, Any]:
-        label = self._label(raw, config)
-        fields = self._fields(raw, config.get("fields", []))
+        field_names = config.get("fields", [])
+        label = self._label(table_name, raw, config)
+        fields = self._fields(table_name, raw, field_names)
         properties = self._properties(raw, config.get("properties", ""))
         search_parts = [label, table_name]
         search_parts.extend(field["value"] for field in fields)
         search_parts.extend(prop["text"] for prop in properties)
+        # Preserve raw identifiers alongside localized values for searchability.
+        raw_candidates = [raw.get(name, "") for name in field_names]
+        raw_candidates.extend(
+            raw.get(key, "")
+            for key in ("StringName", "Name", "name", "skill", "skilldesc", "HireDesc", "Skill1", "Id", "Class", "code")
+        )
+        seen_terms = {part.casefold() for part in search_parts if part}
+        for candidate in raw_candidates:
+            clean = str(candidate or "").strip()
+            if clean and clean != "0" and clean.casefold() not in seen_terms:
+                seen_terms.add(clean.casefold())
+                search_parts.append(clean)
         return {
             "label": label,
             "fields": fields,
@@ -333,10 +392,78 @@ class ReferenceAnalyzerService:
                 return True
         return False
 
-    def _label(self, row: Dict[str, str], config: Dict[str, Any]) -> str:
+    def _resolve_monster_name(self, key: str) -> str:
+        clean = str(key or "").strip()
+        if not clean:
+            return ""
+        cf = clean.casefold()
+        return (
+            self._monstats_by_id.get(cf)
+            or self._monstats_by_ex.get(cf)
+            or self._monstats_by_prop.get(cf)
+            or resolve_localized_string(self.repo, clean)
+            or clean
+        )
+
+    def _label(self, table_name: str, row: Dict[str, str], config: Dict[str, Any]) -> str:
+        if table_name == "shrines":
+            for key in ("StringName", "Name", "*Shrine Type"):
+                value = str(row.get(key, "")).strip()
+                if value:
+                    return resolve_localized_string(self.repo, value) or value
+        elif table_name == "hireling":
+            class_id = str(row.get("Class", "")).strip()
+            group_name = self._monstats_by_hcidx.get(class_id) or str(row.get("Hireling", "")).strip()
+            group_name = resolve_localized_string(self.repo, group_name) or group_name
+            hire_desc = str(row.get("HireDesc", "")).strip()
+            skill1 = str(row.get("Skill1", "")).strip()
+            variant = (
+                (resolve_localized_string(self.repo, hire_desc) or hire_desc)
+                if hire_desc
+                else ((self.resolver.resolve_skill_name(skill1) or skill1) if skill1 else "")
+            )
+            diff = resolve_difficulty_name(self.repo, row.get("Difficulty", ""))
+            parts = [part for part in (group_name, variant, diff) if part]
+            if parts:
+                return " · ".join(parts)
+        elif table_name == "skills":
+            raw_skill = str(row.get("skill", "")).strip()
+            if raw_skill:
+                return self.resolver.resolve_skill_name(raw_skill) or raw_skill
+        elif table_name == "skilldesc":
+            str_name = str(row.get("str name", "")).strip()
+            if str_name:
+                resolved = resolve_localized_string(self.repo, str_name)
+                if resolved:
+                    return resolved
+        elif table_name == "superuniques":
+            raw_name = str(row.get("Name", "")).strip()
+            if raw_name:
+                return resolve_localized_string(self.repo, raw_name) or raw_name
+        elif table_name == "gamble":
+            code = str(row.get("code", "")).strip().casefold()
+            raw_name = str(row.get("name", "")).strip()
+            localized = self._base_item_by_code.get(code) or resolve_localized_string(self.repo, raw_name) or raw_name
+            if localized:
+                return localized
+        elif table_name in {"monstats2", "monprop"}:
+            mon_id = str(row.get("Id", "")).strip()
+            if mon_id:
+                return self._resolve_monster_name(mon_id)
+        elif table_name == "monpreset":
+            act = str(row.get("Act", "")).strip()
+            place = str(row.get("Place", "")).strip()
+            if act and place:
+                return f"Act {act} · {self._resolve_monster_name(place)}"
+        elif table_name == "inventory":
+            cls = str(row.get("class", "")).strip()
+            if cls:
+                return resolve_localized_string(self.repo, cls) or cls
+
         for key in (
             "Name",
             "name",
+            "StringName",
             "skill",
             "skilldesc",
             "state",
@@ -345,19 +472,54 @@ class ReferenceAnalyzerService:
             "id",
             "Missile",
             "Sequence",
+            "sequence",
             "Hireling",
             "npc",
             "overlay",
             "Class",
+            "class",
             "Level",
         ):
             value = str(row.get(key, "")).strip()
             if value:
-                return self.repo.get_string(value) or value
+                return resolve_localized_string(self.repo, value) or value
         return config["title"]
 
-    @staticmethod
-    def _fields(row: Dict[str, str], field_names: List[str]) -> List[Dict[str, str]]:
+    def _format_field_value(self, table_name: str, field_name: str, value: str, row: Dict[str, str]) -> str:
+        if table_name == "shrines" and field_name in {"StringName", "StringPhrase"}:
+            return resolve_localized_string(self.repo, value) or value
+        if table_name == "hireling":
+            if field_name == "Hireling":
+                class_id = str(row.get("Class", "")).strip()
+                return self._monstats_by_hcidx.get(class_id) or resolve_localized_string(self.repo, value) or value
+            if field_name == "Difficulty":
+                return resolve_difficulty_name(self.repo, value)
+            if field_name == "HireDesc":
+                return resolve_localized_string(self.repo, value) or value
+            if field_name.startswith("Skill"):
+                return self.resolver.resolve_skill_name(value) or value
+        if table_name == "skills":
+            if field_name == "skill":
+                return self.resolver.resolve_skill_name(value) or value
+            if field_name == "charclass":
+                return self.class_names.get(value.casefold(), value)
+        if table_name == "skilldesc" and field_name in {"str name", "desctexta1", "desctexta2"}:
+            return resolve_localized_string(self.repo, value) or value
+        if table_name == "missiles" and field_name == "Skill":
+            return self.resolver.resolve_skill_name(value) or value
+        if table_name == "superuniques":
+            if field_name == "Name":
+                return resolve_localized_string(self.repo, value) or value
+            if field_name == "Class":
+                return self._monstats_by_id.get(value.casefold(), value)
+        if table_name == "gamble" and field_name == "name":
+            code = str(row.get("code", "")).strip().casefold()
+            return self._base_item_by_code.get(code) or resolve_localized_string(self.repo, value) or value
+        if table_name == "inventory" and field_name == "class":
+            return resolve_localized_string(self.repo, value) or value
+        return value
+
+    def _fields(self, table_name: str, row: Dict[str, str], field_names: List[str]) -> List[Dict[str, str]]:
         fields: List[Dict[str, str]] = []
         seen: Set[str] = set()
         for name in field_names:
@@ -366,7 +528,7 @@ class ReferenceAnalyzerService:
             seen.add(name)
             value = str(row.get(name, "")).strip()
             if value and value != "0":
-                fields.append({"label": name, "value": value})
+                fields.append({"label": name, "value": self._format_field_value(table_name, name, value, row)})
         return fields
 
     def _properties(self, row: Dict[str, str], mode: str) -> List[Dict[str, str]]:
