@@ -24,6 +24,7 @@ from d2lib.services import (
     ReferenceAnalyzerService,
 )
 from d2lib.services.items import normalize_runeword_base_item_label
+from d2lib.services.resolver import load_property_groups
 from d2lib.services.skill_comparison import SkillComparisonService
 from d2lib.services.recipes import RecipePresentationBuilder
 from d2lib.models import (
@@ -571,10 +572,11 @@ class WikiContentBuilder:
     def _load_reference_pages(self) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
         table_names = self._available_excel_tables()
         group_path = os.path.join(REPO_ROOT, "data", "propertygroups.txt")
-        property_groups = self._repo.load_tsv(group_path)
+        property_groups = load_property_groups(self._repo, group_path)
+        retail_property_groups = load_property_groups(self._retail_repo, group_path) or property_groups
         service = ReferenceAnalyzerService(self._repo, PropertyResolverService(self._repo, property_groups))
         baseline = ReferenceAnalyzerService(
-            self._retail_repo, PropertyResolverService(self._retail_repo, property_groups),
+            self._retail_repo, PropertyResolverService(self._retail_repo, retail_property_groups),
         )
         pages = service.build_pages(table_names, baseline=baseline)
         coverage = service.build_coverage(pages, table_names, self._core_raw_table_coverage())
@@ -1277,10 +1279,11 @@ class WikiContentBuilder:
             set_families.setdefault(set_id, []).append(item)
 
         prop_groups_path = os.path.join(REPO_ROOT, "data", "propertygroups.txt")
-        prop_groups = self._repo.load_tsv(prop_groups_path)
+        prop_groups = load_property_groups(self._repo, prop_groups_path)
+        retail_prop_groups = load_property_groups(self._retail_repo, prop_groups_path) or prop_groups
 
         resolver_bk = PropertyResolverService(self._repo, prop_groups)
-        resolver_rt = PropertyResolverService(self._retail_repo, prop_groups)
+        resolver_rt = PropertyResolverService(self._retail_repo, retail_prop_groups)
 
         retail_sets = self._sets_lookup(self._retail_repo)
         bk_sets = self._sets_lookup(self._repo)

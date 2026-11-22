@@ -19,7 +19,9 @@ class AffixTier(NamedTuple):
     item_types: Dict[str, str]
     spawnable: bool
     can_roll_on_rares: bool
-    property_details: Tuple[Dict[str, str], ...] = ()
+    property_details: Tuple[Dict[str, Any], ...] = ()
+    excludes: Optional[Dict[str, str]] = None
+    setting_entries: Tuple[Tuple[str, str], ...] = ()
 
 
 REFERENCE_GROUPS = [
@@ -188,6 +190,8 @@ class ReferenceAnalyzerService:
                 result.append({
                     "properties": tier.properties, "settings": tier.settings, "identity": tier.identity,
                     "item_types": tier.item_types,
+                    "excludes": dict(tier.excludes or {}),
+                    "setting_entries": list(tier.setting_entries),
                     "spawnable": tier.spawnable,
                     "can_roll_on_rares": tier.can_roll_on_rares,
                     "changed": remaining[signature] <= 0,
@@ -268,29 +272,38 @@ class ReferenceAnalyzerService:
             if not name or not properties:
                 continue
 
-            settings = []
+            settings: List[str] = []
+            setting_entries: List[Tuple[str, str]] = []
+
+            def add_setting(entry_key: str, text_value: str) -> None:
+                settings.append(text_value)
+                setting_entries.append((entry_key, text_value))
+
             identity = {field: row.get(field, "") for field in (
                 "version", "group", "level", "levelreq", "class", "spawnable",
             )}
             identity["properties"] = sorted({row.get(f"mod{i}code", "") for i in range(1, 4)} - {""})
-            type_labels = {}
+            type_labels: Dict[str, str] = {}
+            excludes_labels: Dict[str, str] = {}
             for prefix, count, label in (("itype", 7, "Item types"), ("etype", 5, "Excludes")):
                 codes = sorted({row.get(f"{prefix}{i}", "") for i in range(1, count + 1)} - {""})
                 identity[prefix] = codes
                 names = {code: f"{item_types[code]} ({code})" if code in item_types else code for code in codes}
                 if prefix == "itype":
                     type_labels = names
+                else:
+                    excludes_labels = names
                 if names:
-                    settings.append(f"{label} · {', '.join(names.values())}")
+                    add_setting(prefix, f"{label} · {', '.join(names.values())}")
             spawn = row.get("spawnable", "")
             spawn_label = {"1": "Spawnable", "0": "Disabled", "": "Disabled"}.get(spawn, f"Spawn flag {spawn}")
             if spawn == "1" and row.get("frequency") in ("", "0"):
                 spawn_label = "Disabled (zero weight)"
-            settings.append(spawn_label)
+            add_setting("spawnable", spawn_label)
             spawnable = spawn_label == "Spawnable"
             can_roll_on_rares = spawnable and row.get("rare") == "1"
             if spawnable:
-                settings.append("Can roll on rares" if can_roll_on_rares else "No rare rolls")
+                add_setting("rare", "Can roll on rares" if can_roll_on_rares else "No rare rolls")
             for field, label in (
                 ("level", "Affix level"), ("maxlevel", "Max affix level"), ("levelreq", "Required level"),
                 ("class", "Class"), ("classlevelreq", "Class required level"), ("frequency", "Weight"),
@@ -301,11 +314,11 @@ class ReferenceAnalyzerService:
                         resolved_classes.get(row[field].strip().casefold(), row[field])
                         if field == "class" else row[field]
                     )
-                    settings.append(f"{label} {display_value}")
+                    add_setting(field, f"{label} {display_value}")
             _, tiers = groups.setdefault(name.casefold(), (self.repo.get_string(name) or name, []))
             tiers.append(AffixTier(
                 properties, tuple(settings), identity, type_labels, spawnable, can_roll_on_rares,
-                tuple(property_details),
+                tuple(property_details), excludes_labels, tuple(setting_entries),
             ))
         return groups
 
@@ -560,8 +573,8 @@ class ReferenceAnalyzerService:
         min_suffix: str,
         max_suffix: str,
         count: int,
-    ) -> List[Dict[str, str]]:
-        properties: List[Dict[str, str]] = []
+    ) -> List[Dict[str, Any]]:
+        properties: List[Dict[str, Any]] = []
         cold_duration = None
         for index in range(1, count + 1):
             code_key = f"{prefix}{index}{code_suffix}"
@@ -571,8 +584,9 @@ class ReferenceAnalyzerService:
             param = str(row.get(f"{prefix}{index}{param_suffix}", "")).strip()
             min_val = str(row.get(f"{prefix}{index}{min_suffix}", "")).strip()
             max_val = str(row.get(f"{prefix}{index}{max_suffix}", "")).strip()
-            text = self.resolver.resolve_property(code, param, min_val, max_val).get("resolved_text", "")
-            normalized_code = self.resolver.aliases.get(code.lower(), code.lower())
+            prop_dto = self.resolver.resolve_property(code, param, min_val, max_val)
+            text = prop_dto.get("resolved_text", "")
+            normalized_code = prop_dto.get("canonical_code") or self.resolver.aliases.get(code.lower(), code.lower())
             duration = self.resolver.cold_duration(normalized_code, param, min_val, max_val)
             if duration:
                 low, high, replaces = duration
@@ -583,13 +597,34 @@ class ReferenceAnalyzerService:
             if normalized_code == "cold-len" and duration:
                 continue
             if normalized_code == "dmg-cold":
-                text = text.split(" · Cold Duration", 1)[0]
+                text = prop_dto.get("base_text") or text
             properties.append({
-                "code": code, "text": text or code,
+                "code": code,
+                "canonical_code": normalized_code,
+                "text": text or code,
                 "param": param,
+                "min_val": min_val,
+                "max_val": max_val,
+                "stats": tuple(prop_dto.get("stats") or ()),
+                "label": prop_dto.get("label") or "",
+                "numeric_values": tuple(prop_dto.get("numeric_values") or ()),
+                "parameter_key": prop_dto.get("parameter_key") or "",
+                "is_unknown": bool(prop_dto.get("is_unknown", False)),
             })
         if cold_duration is not None:
             low, high = (str(value) for value in cold_duration)
-            duration = self.resolver.resolve_property("cold-len", "", low, high)["resolved_text"]
-            properties.append({"code": "cold-len", "text": duration, "param": ""})
+            cold_dto = self.resolver.resolve_property("cold-len", "", low, high)
+            properties.append({
+                "code": "cold-len",
+                "canonical_code": "cold-len",
+                "text": cold_dto.get("resolved_text", ""),
+                "param": "",
+                "min_val": low,
+                "max_val": high,
+                "stats": tuple(cold_dto.get("stats") or ("coldlength",)),
+                "label": cold_dto.get("label") or "",
+                "numeric_values": tuple(cold_dto.get("numeric_values") or ()),
+                "parameter_key": cold_dto.get("parameter_key") or "",
+                "is_unknown": bool(cold_dto.get("is_unknown", False)),
+            })
         return properties

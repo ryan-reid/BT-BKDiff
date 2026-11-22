@@ -1,6 +1,7 @@
 import html
 import json
 import os
+import re
 import struct
 import sys
 import tempfile
@@ -1676,7 +1677,7 @@ class TestWikiGenerator(unittest.TestCase):
                 roll = roll.split(">of Test Venom</span>", 1)[1]
                 stats, properties = roll.split('<div class="sp-sep">Properties</div>', 1)
                 self.assertIn("Affix level", stats)
-                self.assertIn("Poison Damage", properties)
+                self.assertIn("poison damage", re.sub(r"<[^>]+>", "", properties).lower())
                 self.assertNotIn("Source details", roll)
                 self.assertNotIn("Group 333", roll)
                 self.assertNotIn("Version 100", roll)
@@ -1708,8 +1709,8 @@ class TestWikiGenerator(unittest.TestCase):
             self.assertIsNone(shared["rare_item_types"])
             self.assertNotIn("Old type", shared["search_text"])
             self.assertIn({
-                "old": f"Adds {damage} Poison Damage Over 2 Seconds",
-                "new": "Adds 30 Poison Damage",
+                "old": f"+{damage} poison damage over 2 seconds",
+                "new": "Poison Damage: 30",
                 "status": "changed",
             }, changed["property_rows"])
             self.assertIn({"old": "Affix level 15", "new": "Affix level 15", "status": "same"}, changed["stat_rows"])
@@ -1736,8 +1737,8 @@ class TestWikiGenerator(unittest.TestCase):
             with open(os.path.join(root, "data", "references-automagic.json"), encoding="utf-8") as handle:
                 automatic = json.load(handle)["sections"][0]["comparison_rows"][0]
             self.assertIn({
-                "old": f"Adds {damage} Poison Damage Over 2 Seconds",
-                "new": "Adds 30 Poison Damage",
+                "old": f"+{damage} poison damage over 2 seconds",
+                "new": "Poison Damage: 30",
                 "status": "changed",
             }, affix_card_contexts(automatic)[0]["property_rows"])
 

@@ -14,6 +14,7 @@ if SCRIPTS_ROOT not in sys.path:
     sys.path.append(SCRIPTS_ROOT)
 
 from d2lib.repository import D2Repository
+from d2lib.services.resolver import load_property_groups
 from cli import (
     d2_item_analyzer,
     compare_item_db,
@@ -75,26 +76,28 @@ def main() -> None:
     repo_bt = orch.get_repo(bt_mpq)
     repo_retail = orch.get_repo(retail_data)
 
-    # Pre-load property groups
+    # Pre-load property groups per repository with fallback to shared data/propertygroups.txt
     prop_groups_path = os.path.join(SCRIPTS_ROOT, "../data/propertygroups.txt")
-    prop_groups = repo_bk.load_tsv(prop_groups_path)
+    prop_groups_bk = load_property_groups(repo_bk, prop_groups_path)
+    prop_groups_bt = load_property_groups(repo_bt, prop_groups_path)
+    prop_groups_retail = load_property_groups(repo_retail, prop_groups_path)
 
     # 1. Export BK Item Database
-    if not orch.run_task("Exporting BK Item Database (Markdown)", d2_item_analyzer.run, bk_mpq, bk_out, "markdown", repo=repo_bk, property_groups=prop_groups):
+    if not orch.run_task("Exporting BK Item Database (Markdown)", d2_item_analyzer.run, bk_mpq, bk_out, "markdown", repo=repo_bk, property_groups=prop_groups_bk):
         failures.append("Exporting BK Item Database (Markdown)")
-    if not orch.run_task("Exporting BK Item Database (JSON)", d2_item_analyzer.run, bk_mpq, bk_out, "json", repo=repo_bk, property_groups=prop_groups):
+    if not orch.run_task("Exporting BK Item Database (JSON)", d2_item_analyzer.run, bk_mpq, bk_out, "json", repo=repo_bk, property_groups=prop_groups_bk):
         failures.append("Exporting BK Item Database (JSON)")
 
     # 2. Export BT Item Database
-    if not orch.run_task("Exporting BT Item Database (Markdown)", d2_item_analyzer.run, bt_mpq, bt_out, "markdown", repo=repo_bt, property_groups=prop_groups):
+    if not orch.run_task("Exporting BT Item Database (Markdown)", d2_item_analyzer.run, bt_mpq, bt_out, "markdown", repo=repo_bt, property_groups=prop_groups_bt):
         failures.append("Exporting BT Item Database (Markdown)")
-    if not orch.run_task("Exporting BT Item Database (JSON)", d2_item_analyzer.run, bt_mpq, bt_out, "json", repo=repo_bt, property_groups=prop_groups):
+    if not orch.run_task("Exporting BT Item Database (JSON)", d2_item_analyzer.run, bt_mpq, bt_out, "json", repo=repo_bt, property_groups=prop_groups_bt):
         failures.append("Exporting BT Item Database (JSON)")
 
     # 3. Export Retail Item Database
-    if not orch.run_task("Exporting Retail Item Database (Markdown)", d2_item_analyzer.run, retail_data, retail_out, "markdown", repo=repo_retail, property_groups=prop_groups):
+    if not orch.run_task("Exporting Retail Item Database (Markdown)", d2_item_analyzer.run, retail_data, retail_out, "markdown", repo=repo_retail, property_groups=prop_groups_retail):
         failures.append("Exporting Retail Item Database (Markdown)")
-    if not orch.run_task("Exporting Retail Item Database (JSON)", d2_item_analyzer.run, retail_data, retail_out, "json", repo=repo_retail, property_groups=prop_groups):
+    if not orch.run_task("Exporting Retail Item Database (JSON)", d2_item_analyzer.run, retail_data, retail_out, "json", repo=repo_retail, property_groups=prop_groups_retail):
         failures.append("Exporting Retail Item Database (JSON)")
 
     # 4. Compare BK vs BT Item Databases

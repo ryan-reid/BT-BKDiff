@@ -5,6 +5,7 @@ import json
 from typing import List, Dict, Optional
 from d2lib.repository import D2Repository
 from d2lib.services import PropertyResolverService, ItemAnalyzerService
+from d2lib.services.resolver import load_property_groups
 from d2lib.exporters import MarkdownExporter, JsonExporter
 
 class ExportOrchestrator:
@@ -96,7 +97,7 @@ def run(mpq_path: str, output_dir: str, export_format: str, repo: Optional[D2Rep
     if property_groups is None:
         scripts_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         prop_groups_path = os.path.join(os.path.dirname(scripts_dir), "data", "propertygroups.txt")
-        property_groups = repo.load_tsv(prop_groups_path)
+        property_groups = load_property_groups(repo, prop_groups_path)
     
     resolver = PropertyResolverService(repo, property_groups)
     analyzer = ItemAnalyzerService(repo, resolver)
@@ -120,7 +121,7 @@ def main() -> None:
         repo = D2Repository(args.mpq)
         scripts_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         prop_groups_path = os.path.join(os.path.dirname(scripts_dir), "data", "propertygroups.txt")
-        resolver = PropertyResolverService(repo, repo.load_tsv(prop_groups_path))
+        resolver = PropertyResolverService(repo, load_property_groups(repo, prop_groups_path))
         analyzer = ItemAnalyzerService(repo, resolver)
         for row in repo.get_excel_table('uniqueitems'):
             if args.name.lower() in row.get('index', '').lower():

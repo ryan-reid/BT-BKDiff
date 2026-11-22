@@ -7,7 +7,7 @@ import os
 from d2lib.repository import D2Repository
 from d2lib.services.items import ItemAnalyzerService, BaseItemAnalyzerService
 from d2lib.services.misc import MiscAnalyzerService
-from d2lib.services.resolver import PropertyResolverService
+from d2lib.services.resolver import PropertyResolverService, load_property_groups
 from d2lib.wiki.comparison import item_comparison_context, base_item_comparison_context, gem_rune_comparison_context, runeword_compare_rows
 from d2lib.wiki.history import PRIMARY, TABLES, VERSION, Snapshot, digest, parse_table, item_history
 from d2lib.wiki.item_helpers import item_identity, item_title
@@ -140,10 +140,12 @@ def analyze_revision(tables, strings, identity, canonical, context=None, propert
 def write_history_comparisons(collector, artifact, repo, items, old_index, bases, old_bases, misc_groups, retail_misc, writer, old_label, baseline_repo):
     if not artifact.get('items'):
         return
-    property_groups = repo.load_tsv(os.path.join(repo.repo_root, "data", "propertygroups.txt"))
+    fallback_group_path = os.path.join(repo.repo_root, "data", "propertygroups.txt")
+    property_groups = load_property_groups(repo, fallback_group_path)
+    baseline_property_groups = load_property_groups(baseline_repo, fallback_group_path) or property_groups
     targets = {}
     baseline_sets = {row['name']: row for row in baseline_repo.get_excel_table('sets')}
-    baseline_resolver = PropertyResolverService(baseline_repo, property_groups)
+    baseline_resolver = PropertyResolverService(baseline_repo, baseline_property_groups)
     baseline_base_service = BaseItemAnalyzerService(baseline_repo, baseline_resolver)
     baseline_base_rows = {row['code']: row for table in ('weapons', 'armor', 'misc')
                           for row in baseline_repo.get_excel_table(table) if row.get('code')}

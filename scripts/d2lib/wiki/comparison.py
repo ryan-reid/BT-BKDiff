@@ -65,11 +65,16 @@ def affix_card_contexts(entry: Dict[str, Any]) -> List[Dict[str, Any]]:
     def comparison_rows(old_roll, new_roll, field):
         old_values, new_values = old_roll.get(field, ()), new_roll.get(field, ())
         if field == "settings":
-            old_values, new_values = (
-                [setting for setting in roll.get("settings", ())
-                 if not setting.startswith(("Group ", "Version "))]
-                for roll in (old_roll, new_roll)
-            )
+            def visible_settings(roll):
+                entries = roll.get("setting_entries")
+                if entries:
+                    return [text for key, text in entries if key not in {"group", "version"}]
+                return [
+                    setting for setting in roll.get("settings", ())
+                    if not setting.startswith(("Group ", "Version "))
+                ]
+
+            old_values, new_values = visible_settings(old_roll), visible_settings(new_roll)
         rows = []
         for _, old_start, old_end, new_start, new_end in SequenceMatcher(None, old_values, new_values).get_opcodes():
             for old, new in zip_longest(old_values[old_start:old_end], new_values[new_start:new_end], fillvalue=""):
