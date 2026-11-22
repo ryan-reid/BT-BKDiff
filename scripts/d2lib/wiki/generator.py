@@ -80,6 +80,7 @@ class WikiContentBuilder:
         game_data_dir: Optional[str] = None,
         retail_data_dir: Optional[str] = None,
         layout_data_dir: Optional[str] = None,
+        locale: str = "enUS",
     ):
         self.item_db_dir = item_db_dir
         self.skill_tree_dir = skill_tree_dir
@@ -90,21 +91,22 @@ class WikiContentBuilder:
         self.game_data_dir = game_data_dir or os.path.join(REPO_ROOT, "mods", "BKDiablo", "bkdiablo.mpq")
         self.retail_data_dir = retail_data_dir or os.path.join(REPO_ROOT, "data", "retail")
         self.layout_data_dir = layout_data_dir
-        self.site: WikiSiteDTO = empty_wiki_site(old_label, new_label)
+        self.locale = str(locale or "enUS").strip() or "enUS"
+        self.site: WikiSiteDTO = empty_wiki_site(old_label, new_label, locale=self.locale)
         self.writer = WikiSiteRecordingWriter(self.site)
         self.manifest = self.site["manifest"]
         self._repo: Optional[D2Repository] = None
         self._retail_repo: Optional[D2Repository] = None
 
     def build(self) -> WikiSiteDTO:
-        self.site = empty_wiki_site(self.old_label, self.new_label)
+        self.site = empty_wiki_site(self.old_label, self.new_label, locale=self.locale)
         self.writer = WikiSiteRecordingWriter(self.site)
         self.manifest = self.site["manifest"]
 
         # Cached repos — all _load_* and _write_* methods share these instances.
-        self._repo = D2Repository(self.game_data_dir)
+        self._repo = D2Repository(self.game_data_dir, locale=self.locale)
         self._taxonomy = ItemTypeTaxonomy(self._repo)
-        self._retail_repo = D2Repository(self.retail_data_dir)
+        self._retail_repo = D2Repository(self.retail_data_dir, locale=self.locale)
 
         history_config = json.loads(Path(REPO_ROOT, "data", "item-history.json").read_text(encoding="utf-8"))
         history_collector = HistoryCollector(self.game_data_dir, Path(REPO_ROOT, ".cache", "item-history"), history_config)
@@ -1527,6 +1529,7 @@ class WikiGenerator:
         game_data_dir: Optional[str] = None,
         retail_data_dir: Optional[str] = None,
         layout_data_dir: Optional[str] = None,
+        locale: str = "enUS",
     ):
         self.item_db_dir = item_db_dir
         self.skill_tree_dir = skill_tree_dir
@@ -1537,6 +1540,7 @@ class WikiGenerator:
         self.game_data_dir = game_data_dir
         self.retail_data_dir = retail_data_dir
         self.layout_data_dir = layout_data_dir
+        self.locale = locale
 
     def build_site(self) -> WikiSiteDTO:
         return WikiContentBuilder(
@@ -1549,6 +1553,7 @@ class WikiGenerator:
             game_data_dir=self.game_data_dir,
             retail_data_dir=self.retail_data_dir,
             layout_data_dir=self.layout_data_dir,
+            locale=self.locale,
         ).build()
 
     def generate(self) -> WikiSiteDTO:

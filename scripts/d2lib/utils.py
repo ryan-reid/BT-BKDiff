@@ -46,11 +46,39 @@ def item_category_to_group(category: str) -> str:
     if 'boot' in cat: return 'Boots'
     return 'Others'
 
+_GRAMMAR_TAG_RE = re.compile(r"\[(?:ms|fs|ns|mp|fp|pl|nl|p)\]")
+_COLOR_CODE_RE = re.compile(r"ÿc.")
+
+
+def strip_d2_formatting(text: Any) -> str:
+    """Strips D2 color codes and gender/plurality grammar tags without concatenating inflected forms."""
+    if text is None or text == "":
+        return ""
+    cleaned = _COLOR_CODE_RE.sub("", str(text))
+    if "[" not in cleaned:
+        return cleaned
+    lines: list[str] = []
+    for line in cleaned.splitlines():
+        parts = _GRAMMAR_TAG_RE.split(line)
+        if len(parts) == 1:
+            lines.append(line)
+        elif len(parts) == 2:
+            lines.append(f"{parts[0]}{parts[1]}")
+        else:
+            chosen = next((part for part in parts[1:] if part), "")
+            lines.append(f"{parts[0]}{chosen}")
+    result = "\n".join(lines)
+    if cleaned.endswith("\n") and not result.endswith("\n"):
+        result += "\n"
+    return result
+
+
 def normalize_d2_text(s: str) -> str:
     """Normalizes Diablo II specific characters and encoding artifacts."""
-    if not s: return ""
-    # Remove color codes
-    s = re.sub(r'ÿc.', '', s)
+    if not s:
+        return ""
+    # Remove color codes and grammar tags
+    s = strip_d2_formatting(s)
     # Normalize bullet points and markup
     s = s.replace('•', '').replace('**', '')
     # Normalize common phrases

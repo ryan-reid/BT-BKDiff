@@ -5,10 +5,45 @@ import sys
 import re
 from typing import List, Dict, Tuple, Optional, Any
 from typing import Protocol, runtime_checkable
-from d2lib.utils import slugify
+from d2lib.utils import slugify, strip_d2_formatting
 
 # Increase CSV field size limit for large D2 fields
 csv.field_size_limit(1000000)
+
+LOCALE_TO_BCP47: Dict[str, str] = {
+    "enUS": "en",
+    "deDE": "de",
+    "esES": "es",
+    "esMX": "es-MX",
+    "frFR": "fr",
+    "itIT": "it",
+    "jaJP": "ja",
+    "koKR": "ko",
+    "plPL": "pl",
+    "ptBR": "pt-BR",
+    "ruRU": "ru",
+    "zhCN": "zh-Hans",
+    "zhTW": "zh-Hant",
+}
+
+_DIFFICULTY_STRING_KEYS: Dict[str, Tuple[str, str]] = {
+    "1": ("strCreateGameNormalText", "Normal"),
+    "normal": ("strCreateGameNormalText", "Normal"),
+    "2": ("strCreateGameNightmareText", "Nightmare"),
+    "nightmare": ("strCreateGameNightmareText", "Nightmare"),
+    "3": ("strCreateGameHellText", "Hell"),
+    "hell": ("strCreateGameHellText", "Hell"),
+}
+
+
+def locale_to_html_lang(locale: str) -> str:
+    """Converts a D2R locale code (e.g. koKR, deDE) into a BCP-47 HTML lang attribute."""
+    clean = str(locale or "").strip()
+    if clean in LOCALE_TO_BCP47:
+        return LOCALE_TO_BCP47[clean]
+    if len(clean) >= 2 and clean[:2].isalpha():
+        return clean[:2].lower()
+    return "en"
 
 
 @runtime_checkable
@@ -39,8 +74,9 @@ def strip_json_comments(text: str) -> str:
     return text
 
 class D2Repository:
-    def __init__(self, mpq_path: str):
+    def __init__(self, mpq_path: str, locale: str = "enUS"):
         self.mpq_path: str = os.path.abspath(mpq_path)
+        self.locale: str = str(locale or "enUS").strip() or "enUS"
         self.repo_root: str = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
         # Supplemental files should be placed in data/retail/ within the repo
         self.supplemental_path: str = os.path.join(self.repo_root, "data", "retail")
@@ -65,7 +101,7 @@ class D2Repository:
         ]
 
     def _load_strings(self) -> None:
-        """Loads string JSON files with strict directory-level precedence (Mod > Base > Retail)."""
+        """Loads string JSON files with strict precedence (Mod > Retail) and per-key enUS fallback."""
         ordered_dirs = []
 
         # 1. Highest Priority: Mod strings (from MPQ path)
@@ -73,12 +109,7 @@ class D2Repository:
             if os.path.exists(mod_string_dir):
                 ordered_dirs.append(mod_string_dir)
 
-        # 2. Medium Priority: Base strings (from data/base/strings)
-        base_string_dir = os.path.join(self.repo_root, "data", "base", "strings")
-        if os.path.exists(base_string_dir):
-            ordered_dirs.append(base_string_dir)
-
-        # 3. Lowest Priority: Retail strings
+        # 2. Supplemental Fallback: Retail strings
         retail_string_dirs = [
             os.path.join(self.supplemental_path, "local", "lng", "strings"),
             os.path.join(self.supplemental_path, "strings"),
@@ -101,10 +132,17 @@ class D2Repository:
                         clean_content = strip_json_comments(content)
                         data = json.loads(clean_content)
                         for entry in data:
-                            if "Key" in entry and "enUS" in entry:
-                                key_lower = entry["Key"].lower()
-                                if key_lower not in self.strings:
-                                    self.strings[key_lower] = entry["enUS"]
+                            if not isinstance(entry, dict) or "Key" not in entry:
+                                continue
+                            key_lower = str(entry["Key"]).lower()
+                            if key_lower in self.strings:
+                                continue
+                            locale_val = entry.get(self.locale)
+                            en_val = entry.get("enUS")
+                            if isinstance(locale_val, str) and locale_val.strip():
+                                self.strings[key_lower] = locale_val
+                            elif isinstance(en_val, str):
+                                self.strings[key_lower] = en_val
                 except Exception as e:
                     print(f"Error loading strings from {filename}: {e}", file=sys.stderr)
 
@@ -163,11 +201,11 @@ class D2Repository:
         return data
 
     def get_string(self, key: str) -> str:
-        """Resolves a D2 string key to its localized value and strips color codes."""
-        if not key: return ""
+        """Resolves a D2 string key to its localized value and strips formatting codes."""
+        if not key:
+            return ""
         raw = self.strings.get(key.lower(), key)
-        # Strip D2 color codes like ÿc0, ÿc;, etc.
-        return re.sub(r'ÿc[0-9:;<=>?@A-Z]', '', raw)
+        return strip_d2_formatting(raw)
 
 
 def resolve_localized_string(repo: D2RepositoryProtocol, key: str) -> str:
@@ -186,6 +224,18 @@ def resolve_localized_string(repo: D2RepositoryProtocol, key: str) -> str:
             return localized
         return ""
     return localized if localized.casefold() != clean_key.casefold() else ""
+
+
+def resolve_difficulty_name(repo: D2RepositoryProtocol, difficulty: Any) -> str:
+    """Resolves a numeric or canonical D2 difficulty key using strCreateGame*Text localization."""
+    raw = str(difficulty or "").strip()
+    if not raw:
+        return ""
+    entry = _DIFFICULTY_STRING_KEYS.get(raw.casefold())
+    if entry is None:
+        return resolve_localized_string(repo, raw) or raw
+    string_key, fallback = entry
+    return resolve_localized_string(repo, string_key) or fallback
 
 
 def get_charstats_class_rows(repo: D2RepositoryProtocol) -> List[Dict[str, str]]:

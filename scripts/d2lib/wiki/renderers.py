@@ -19,7 +19,7 @@ from d2lib.wiki.presentation import sanitize_display_text
 from d2lib.wiki.publication import WikiPageDTO, WikiSiteDTO
 from d2lib.wiki.routes import WikiRoutes
 
-_TOKEN_RE = re.compile(r"\d+(?:[.\-]\d+)*%?|[A-Za-z]+|\s+|.")
+_TOKEN_RE = re.compile(r"\d+(?:[.\-]\d+)*%?|[^\W\d_]+|\s+|.", re.UNICODE)
 _HIGHLIGHT_CACHE: dict[tuple[str, str, str], Markup] = {}
 
 
@@ -74,6 +74,8 @@ class HtmlWikiRenderer:
             site_root=WikiRoutes.site_root_for_output_path(output_path),
             old_label=site["old_label"],
             new_label=site["new_label"],
+            locale=site.get("locale", "enUS"),
+            html_lang=site.get("html_lang", "en"),
             **page["payload"],
         )
 
