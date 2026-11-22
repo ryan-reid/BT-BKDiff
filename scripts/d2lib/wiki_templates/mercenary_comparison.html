@@ -18,8 +18,10 @@
 {% endfor %}
 <div class="sp-sep">Skills</div>
 {% for i in range(1, 7) %}
-  {% set old = row.retail.get('Skill' ~ i, '') %}
-  {% set new = row.current.get('Skill' ~ i, '') %}
+  {% set old_raw = row.retail.get('Skill' ~ i, '') %}
+  {% set new_raw = row.current.get('Skill' ~ i, '') %}
+  {% set old = (row.retail_skills or {}).get('Skill' ~ i, old_raw) if old_raw else '' %}
+  {% set new = (row.current_skills or {}).get('Skill' ~ i, new_raw) if new_raw else '' %}
   {% set status = 'same' if old == new else 'changed' if old and new else 'added' if new else 'removed' %}
   {% if old or new %}
 <div class="sp-row">
