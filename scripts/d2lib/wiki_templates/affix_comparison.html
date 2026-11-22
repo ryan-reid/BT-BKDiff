@@ -61,7 +61,7 @@
     </details>
   </aside>
 
-  <section class="affix-results" aria-label="{{ page.title }} results">
+  <section aria-label="{{ page.title }} results">
     <p id="item-empty-message" class="muted" hidden>No {{ result_noun }} match the current filters. Try a different search or reset the filters.</p>
     <div id="item-index-root" style="display:grid;gap:32px">
       {% with item_entries = affix_cards %}
@@ -72,7 +72,7 @@
 </div>
 
 {% if reference_sections %}
-<section class="content-section affix-reference" aria-label="Other modifiers">
+<section class="content-section" aria-label="Other modifiers">
   {% for section in reference_sections %}
     {{ reference_section(section) }}
   {% endfor %}

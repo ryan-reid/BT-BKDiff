@@ -8,9 +8,21 @@
   <p class="hero-copy">Unique items, set pieces, and runewords in one searchable index. Set pieces open inside their full set view.</p>
 </section>
 
+<section class="item-index-toolbar" aria-label="Search items">
+  <div class="toolbar" data-item-index-url="{{ site_root }}data/items-index.json">
+    <input id="page-search" class="search-input" type="search" aria-label="Search items" placeholder="Search items, runewords, runes, base types, or categories..." />
+  </div>
+  <div class="results-bar">
+    <span class="count" id="item-result-count" role="status" aria-live="polite">{{ family_counts.unique + family_counts.set + family_counts.runeword }} items</span>
+    <button type="button" class="filter-button" id="item-reset-filters">Reset filters</button>
+  </div>
+</section>
 <div class="index-layout">
   <!-- filter rail -->
   <aside class="filters" aria-label="Item filters">
+    <details class="item-filter-panel" open>
+      <summary>Filter items</summary>
+      <div class="item-filter-controls">
     <div class="filter-block">
       <h4>Quality</h4>
       <label class="facet" style="color:var(--q-unique)">
@@ -27,8 +39,8 @@
       </label>
     </div>
     <div class="filter-block">
-      <h4>Item Group</h4>
-      <select id="item-group-filter" class="filter-select" style="width:100%">
+      <h4 id="item-group-label">Item Group</h4>
+      <select id="item-group-filter" aria-labelledby="item-group-label" class="filter-select" style="width:100%">
         <option value="all">All Groups</option>
         {% for group in item_groups %}
         <option value="{{ group.name }}">{{ group.name }}</option>
@@ -36,8 +48,8 @@
       </select>
     </div>
     <div class="filter-block">
-      <h4>Item Type</h4>
-      <select id="item-type-filter" class="filter-select" style="width:100%">
+      <h4 id="item-type-label">Item Type</h4>
+      <select id="item-type-filter" aria-labelledby="item-type-label" class="filter-select" style="width:100%">
         <option value="all">All Types</option>
         {% for group in item_groups %}
         <optgroup label="{{ group.name }}">
@@ -49,8 +61,8 @@
       </select>
     </div>
     <div class="filter-block">
-      <h4>Drop Level</h4>
-      <select id="item-drop-level-filter" class="filter-select" style="width:100%">
+      <h4 id="item-drop-level-label">Drop Level</h4>
+      <select id="item-drop-level-filter" aria-labelledby="item-drop-level-label" class="filter-select" style="width:100%">
         <option value="0">Any Drop Level</option>
         <option value="60">60+</option>
         <option value="75">75+</option>
@@ -60,19 +72,16 @@
         {% endfor %}
       </select>
     </div>
+      </div>
+    </details>
   </aside>
 
   <!-- results -->
-  <main>
-    <div class="toolbar" data-item-index-url="{{ site_root }}data/items-index.json" style="margin-bottom:16px">
-      <input id="page-search" class="search-input" type="search" placeholder="Search items, runewords, runes, base types, or categories..." />
-    </div>
-    <div class="results-bar">
-      <span class="count"><b>{{ family_counts.unique + family_counts.set + family_counts.runeword }}</b> item pages</span>
-    </div>
+  <section aria-label="Item results">
+    <p id="item-empty-message" class="muted" hidden>No items match the current filters. Try a different search or reset the filters.</p>
     <div id="item-index-root" style="display:grid;gap:32px">
       {% include "item_index_cards.html" %}
     </div>
-  </main>
+  </section>
 </div>
 {% endblock %}

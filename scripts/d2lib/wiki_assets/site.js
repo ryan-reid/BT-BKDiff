@@ -185,7 +185,7 @@ function wireStaticSearch() {
   const pageSearch = document.querySelector("#page-search");
   const hasLandingCards = Boolean(document.querySelector(".guide-card"));
   const searchInput = pageSearch || (hasLandingCards ? document.querySelector("#mast-search-input") : null);
-  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece, .corruption-summary-card, .portal[data-skill-class]"));
+  const cards = Array.from(document.querySelectorAll(".item-card, .base-item-card, .recipe-card, .guide-card, .set-piece, .corruption-summary-card, .portal[data-search]"));
   const tableRows = Array.from(document.querySelectorAll("tbody tr[data-search]"));
   const sections = Array.from(document.querySelectorAll(".recipe-group, .recipe-group-section, .misc-group-section, .family-container, .set-block"));
   const filterButtons = Array.from(document.querySelectorAll("[data-recipe-filter], [data-search-filter]"));
@@ -197,16 +197,7 @@ function wireStaticSearch() {
     return;
   }
 
-  const params = new URLSearchParams(window.location.search);
-  const initialQuery = params.get("q");
-  filterControls.forEach((control) => {
-    const value = params.get(control.dataset.searchFilterParam);
-    if (control.type === "checkbox") {
-      control.checked = value === "1";
-    } else if (Array.from(control.options).some((option) => option.value === value)) {
-      control.value = value;
-    }
-  });
+  const initialQuery = new URLSearchParams(window.location.search).get("q");
   if (initialQuery) {
     searchInput.value = initialQuery;
     const mastSearch = document.querySelector("#mast-search-input");
@@ -298,25 +289,8 @@ function wireStaticSearch() {
     });
   });
 
-  function updateSearch() {
-    applySearch();
-    if (!filterControls.length) return;
-
-    const url = new URL(window.location.href);
-    const query = searchInput.value.trim();
-    if (query) url.searchParams.set("q", query);
-    else url.searchParams.delete("q");
-    filterControls.forEach((control) => {
-      const key = control.dataset.searchFilterParam;
-      const value = control.type === "checkbox" ? (control.checked ? "1" : "") : control.value;
-      if (value && value !== "all") url.searchParams.set(key, value);
-      else url.searchParams.delete(key);
-    });
-    if (url.href !== window.location.href) window.history.replaceState(null, "", url.href);
-  }
-
-  filterControls.forEach((control) => control.addEventListener("change", updateSearch));
-  searchInput.addEventListener("input", updateSearch);
+  filterControls.forEach((control) => control.addEventListener("change", applySearch));
+  searchInput.addEventListener("input", applySearch);
   applySearch();
 }
 
@@ -463,7 +437,7 @@ function wireMastSearch() {
   }
 
   function pageSearchInput() {
-    return document.querySelector("#page-search, #area-search") || document.querySelector("#skill-search");
+    return document.querySelector("#page-search, #area-search, #skill-search");
   }
 
   const initialTarget = pageSearchInput();
@@ -730,37 +704,28 @@ async function wireItemIndex() {
   const rareOnly = document.querySelector("#affix-rare-filter");
   const showDisabled = document.querySelector("#affix-disabled-filter");
   const dropLevelSelect = document.querySelector("#item-drop-level-filter");
+  const changesOnly = document.querySelector("#affix-changes-filter");
   const cards = Array.from(document.querySelectorAll(".base-item-card[data-family]"));
   const familySections = Array.from(document.querySelectorAll("[data-section-family]"));
-  const params = new URLSearchParams(window.location.search);
-  const initialQuery = params.get("q");
-  const changesOnly = document.querySelector("#affix-changes-filter");
+  const initialQuery = new URLSearchParams(window.location.search).get("q");
   const resultCount = document.querySelector("#item-result-count");
   const emptyMessage = document.querySelector("#item-empty-message");
   const resetButton = document.querySelector("#item-reset-filters");
-  if (affixIndex && params.has("qualities")) {
-    const selected = params.get("qualities").split(",");
-    familyCheckboxes.forEach((control) => { control.checked = selected.includes(control.dataset.filterFamily); });
-  }
-  if (changesOnly) changesOnly.checked = params.get("changes") === "1";
-  if (rareOnly) rareOnly.checked = params.get("rare") === "1";
-  if (showDisabled) showDisabled.checked = params.get("disabled") === "1";
-  if (affixIndex && typeSelect && params.has("type")
-      && Array.from(typeSelect.options).some((option) => option.value === params.get("type"))) {
-    typeSelect.value = params.get("type");
+  const filterPanel = document.querySelector(".item-filter-panel");
+  if (filterPanel && !affixIndex && window.matchMedia) {
+    const mobile = window.matchMedia("(max-width: 1020px)");
+    const setPanelLayout = () => { filterPanel.open = !mobile.matches; };
+    setPanelLayout();
+    mobile.addEventListener("change", setPanelLayout);
   }
 
-  let activeGroup = "all";
-  let activeType = affixIndex && typeSelect ? typeSelect.value : "all";
-  let activeDropLevel = 0;
+  let activeGroup = groupSelect ? groupSelect.value : "all";
+  let activeType = typeSelect ? typeSelect.value : "all";
+  let activeDropLevel = Number(dropLevelSelect ? dropLevelSelect.value : 0);
 
   function getActiveFamilies() {
     const checked = familyCheckboxes.filter((cb) => cb.checked).map((cb) => cb.dataset.filterFamily);
-    if (affixIndex) return new Set(checked);
-    // All checked (or none) → show everything
-    return checked.length === 0 || checked.length === familyCheckboxes.length
-      ? new Set()
-      : new Set(checked);
+    return new Set(checked);
   }
 
   function applyFilters() {
@@ -773,8 +738,7 @@ async function wireItemIndex() {
       const itemType = rareOnly?.checked ? card.dataset.affixRareTypes : card.dataset.itemType;
       const dropLevel = Number(card.dataset.dropLevel || 0);
       const haystack = normalizeText(card.dataset.search);
-      const familyOk = !familyCheckboxes.length || activeFamilies.has(family)
-        || (!affixIndex && activeFamilies.size === 0);
+      const familyOk = !familyCheckboxes.length || activeFamilies.has(family);
       const groupOk = activeGroup === "all" || normalizeText(itemGroup).split("|").includes(normalizeText(activeGroup));
       const typeOk = activeType === "all" || normalizeText(itemType).split("|").includes(normalizeText(activeType));
       const dropLevelOk = !activeDropLevel || dropLevel >= activeDropLevel;
@@ -788,29 +752,8 @@ async function wireItemIndex() {
     familySections.forEach((section) => {
       section.hidden = section.querySelectorAll(".base-item-card[data-family]:not([hidden])").length === 0;
     });
-    if (affixIndex && resultCount) resultCount.textContent = `${visibleCount} of ${cards.length} ${affixIndex.dataset.affixIndex}`;
+    if (resultCount) resultCount.textContent = `${visibleCount} of ${cards.length} ${affixIndex?.dataset.affixIndex || "items"}`;
     if (emptyMessage) emptyMessage.hidden = visibleCount > 0;
-  }
-
-  function updateFilters() {
-    applyFilters();
-    if (!affixIndex) return;
-
-    const url = new URL(window.location.href);
-    if (searchInput.value.trim()) url.searchParams.set("q", searchInput.value.trim());
-    else url.searchParams.delete("q");
-    if (changesOnly.checked) url.searchParams.set("changes", "1");
-    else url.searchParams.delete("changes");
-    if (rareOnly?.checked) url.searchParams.set("rare", "1");
-    else url.searchParams.delete("rare");
-    if (showDisabled?.checked) url.searchParams.set("disabled", "1");
-    else url.searchParams.delete("disabled");
-    if (activeType !== "all") url.searchParams.set("type", activeType);
-    else url.searchParams.delete("type");
-    const selected = getActiveFamilies();
-    if (selected.size !== familyCheckboxes.length) url.searchParams.set("qualities", Array.from(selected).join(","));
-    else url.searchParams.delete("qualities");
-    if (url.href !== window.location.href) window.history.replaceState(null, "", url.href);
   }
 
   if (searchInput) {
@@ -821,26 +764,12 @@ async function wireItemIndex() {
         mastSearch.value = initialQuery;
       }
     }
-    searchInput.addEventListener("input", updateFilters);
+    searchInput.addEventListener("input", applyFilters);
   }
-  familyCheckboxes.forEach((cb) => cb.addEventListener("change", updateFilters));
-  changesOnly?.addEventListener("change", updateFilters);
-  rareOnly?.addEventListener("change", updateFilters);
-  showDisabled?.addEventListener("change", updateFilters);
-  resetButton?.addEventListener("click", () => {
-    searchInput.value = "";
-    const mastSearch = document.querySelector("#mast-search-input");
-    if (mastSearch) mastSearch.value = "";
-    familyCheckboxes.forEach((control) => { control.checked = true; });
-    changesOnly.checked = false;
-    if (rareOnly) rareOnly.checked = false;
-    if (showDisabled) showDisabled.checked = false;
-    if (affixIndex && typeSelect) {
-      typeSelect.value = "all";
-      activeType = "all";
-    }
-    updateFilters();
-  });
+  familyCheckboxes.forEach((cb) => cb.addEventListener("change", applyFilters));
+  changesOnly?.addEventListener("change", applyFilters);
+  rareOnly?.addEventListener("change", applyFilters);
+  showDisabled?.addEventListener("change", applyFilters);
   if (groupSelect) {
     groupSelect.addEventListener("change", () => {
       activeGroup = groupSelect.value || "all";
@@ -863,7 +792,7 @@ async function wireItemIndex() {
   if (typeSelect) {
     typeSelect.addEventListener("change", () => {
       activeType = typeSelect.value || "all";
-      updateFilters();
+      applyFilters();
     });
   }
   if (dropLevelSelect) {
@@ -872,7 +801,110 @@ async function wireItemIndex() {
       applyFilters();
     });
   }
+  if (resetButton) {
+    resetButton.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      const mastSearch = document.querySelector("#mast-search-input");
+      if (mastSearch) mastSearch.value = "";
+      familyCheckboxes.forEach((checkbox) => { checkbox.checked = true; });
+      if (groupSelect) groupSelect.value = "all";
+      if (typeSelect) typeSelect.value = "all";
+      if (dropLevelSelect) dropLevelSelect.value = "0";
+      if (changesOnly) changesOnly.checked = false;
+      if (rareOnly) rareOnly.checked = false;
+      if (showDisabled) showDisabled.checked = false;
+      activeGroup = "all";
+      activeType = "all";
+      activeDropLevel = 0;
+      applyFilters();
+    });
+  }
   applyFilters();
+}
+
+// Keep filter choices in shareable URLs so reloads and comparison switches
+// restore the same view. Existing deep-link aliases are read by page filters.
+function wireFilterState() {
+  const fields = [
+    ["#page-search, #area-search", "q", ""],
+    ["#runeword-prefix-filter", "prefix", ""],
+    ["#runeword-base-filter", "base", "all"],
+    ["#item-group-filter, #base-group-filter", "group", "all"],
+    ["#item-type-filter", "type", "all"],
+    ["#affix-item-type-filter", "type", "all"],
+    ["#affix-kind-filter", "affix", "all"],
+    ["#affix-rare-filter", "rare", "0"],
+    ["#affix-disabled-filter", "disabled", "0"],
+    ["#item-drop-level-filter", "dropLevel", "0"],
+    ["#affix-changes-filter", "changes", "0"],
+    ["#base-category-filter", "category", "all"],
+    ["#base-loot-filter", "loot", "all"],
+    ["#base-class-filter", "class", "all"],
+    ["#base-tier-filter", "tier", "all"],
+    ["#base-speed-filter", "speed", "all"],
+    ["#base-min-sockets-filter", "minSockets", "0"],
+    ["#base-roll-filter", "roll", ""],
+    ["#base-two-handed-filter", "twoHanded", "0"],
+    ["#area-act-filter", "act", "all"],
+    ["#area-min-level-filter", "minLevel", "0"],
+    ["#area-sort-filter", "sort", "density"],
+  ].map(([selector, key, defaultValue]) => ({control: document.querySelector(selector), key, defaultValue}))
+    .filter((field) => field.control);
+  const params = new URLSearchParams(window.location.search);
+  fields.forEach(({control, key}) => {
+    if (!params.has(key)) return;
+    const value = params.get(key);
+    if (control.type === "checkbox") {
+      control.checked = value === "1";
+    } else if (control.tagName === "SELECT") {
+      const option = Array.from(control.options).find((option) =>
+        normalizeText(option.value) === normalizeText(value)
+        || normalizeText(option.textContent) === normalizeText(value));
+      if (option) control.value = option.value;
+    } else {
+      control.value = value;
+    }
+  });
+  const families = Array.from(document.querySelectorAll("[data-filter-family]"));
+  const avoid = Array.from(document.querySelectorAll("[data-avoid-immunity]"));
+  const runes = Array.from(document.querySelectorAll("[data-rune-option]"));
+  if (params.has("qualities")) {
+    const selected = params.get("qualities").split(",");
+    families.forEach((control) => { control.checked = selected.includes(control.dataset.filterFamily); });
+  }
+  if (params.has("avoid")) {
+    const selected = params.get("avoid").split(",");
+    avoid.forEach((control) => { control.checked = selected.includes(control.dataset.avoidImmunity); });
+  }
+
+  function saveState() {
+    const url = new URL(window.location.href);
+    function setParam(key, value, defaultValue = "") {
+      if (value === defaultValue) url.searchParams.delete(key);
+      else url.searchParams.set(key, value);
+    }
+    // Canonical keys replace legacy aliases, including when clearing a filter.
+    ["search", "namePrefix", "baseItem", "rune", "have", "baseGroup", "baseCategory", "baseClass", "sockets"]
+      .forEach((key) => url.searchParams.delete(key));
+    fields.forEach(({control, key, defaultValue}) => {
+      setParam(key, control.type === "checkbox" ? (control.checked ? "1" : "0") : control.value, defaultValue);
+    });
+    if (families.length) {
+      const selected = families.filter((control) => control.checked).map((control) => control.dataset.filterFamily);
+      setParam("qualities", selected.join(","), families.map((control) => control.dataset.filterFamily).join(","));
+    }
+    if (avoid.length) setParam("avoid", avoid.filter((control) => control.checked).map((control) => control.dataset.avoidImmunity).join(","));
+    if (runes.length) setParam("runes", runes.filter((control) => control.getAttribute("aria-pressed") === "true").map((control) => control.dataset.runeCode).join(","));
+    if (url.href !== window.location.href) window.history.replaceState(null, "", url.href);
+  }
+  // Bubble after the page's control handlers have updated dependent selections.
+  const controls = new Set([...fields.map((field) => field.control), ...families, ...avoid]);
+  ["input", "change"].forEach((event) => document.addEventListener(event, (event) => {
+    if (controls.has(event.target)) saveState();
+  }));
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("[data-rune-option], #runeword-clear-runes, #item-reset-filters")) saveState();
+  });
 }
 
 function wireAffixView() {
@@ -932,6 +964,7 @@ function wireAffixView() {
 
 function initWiki() {
   if (wireAffixView()) return;
+  wireFilterState();
   wireMastSearch();
   wireRunewordFilters();
   wireStaticSearch();
@@ -961,7 +994,7 @@ document.querySelectorAll("[data-comparison-link]").forEach((link) => {
     const target = new URL(link.href);
     target.search = window.location.search;
     target.hash = window.location.hash;
-    const search = document.querySelector("#page-search, #area-search") || document.querySelector("#skill-search");
+    const search = document.querySelector("#page-search, #area-search, #skill-search");
     if (search) {
       if (search.value.trim()) target.searchParams.set("q", search.value.trim());
       else target.searchParams.delete("q");
