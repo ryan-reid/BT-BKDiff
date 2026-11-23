@@ -1,12 +1,22 @@
 from __future__ import annotations
 from typing import List, Dict, TypedDict, Optional, Any
 
-class PropertyDTO(TypedDict):
+class _PropertyDTORequired(TypedDict):
     code: str
     param: str
     min_val: str
     max_val: str
     resolved_text: str
+
+
+class PropertyDTO(_PropertyDTORequired, total=False):
+    canonical_code: str
+    stats: List[str]
+    label: str
+    numeric_values: List[float]
+    parameter_key: str
+    base_text: str
+    is_unknown: bool
 
 class PartialSetBonusDTO(TypedDict):
     count: int

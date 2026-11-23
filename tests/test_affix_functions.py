@@ -6,9 +6,11 @@ from unittest.mock import patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), "scripts"))
 
+from d2lib.repository import strip_d2_formatting
 from d2lib.services.references import ReferenceAnalyzerService
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.wiki.affix_functions import affix_function_groups
+from d2lib.wiki.comparison import affix_card_contexts
 from d2lib.wiki.generator import WikiContentBuilder
 
 
@@ -23,7 +25,7 @@ class Repository:
         return self.tables.get(name, [])
 
     def get_string(self, key):
-        return self.strings.get(key, key)
+        return strip_d2_formatting(self.strings.get(key, key))
 
     def load_tsv(self, path):
         self.loaded_paths.append(path)
@@ -346,6 +348,92 @@ class TestAffixFunctions(unittest.TestCase):
         self.assertEqual("sor", groups["sorceress only"][1][0].identity["class"])
         self.assertIn("Class Kleriker", groups["cleric only"][1][0].settings)
         self.assertIn("Class xyz", groups["unknown class"][1][0].settings)
+
+    def test_structured_affix_grouping_and_cards_work_across_non_english_locales(self):
+        tables = {
+            "itemtypes": [
+                {"Code": "swor", "ItemType": "TypeSword"},
+                {"Code": "amul", "ItemType": "TypeAmulet"},
+            ],
+            "properties": [
+                {"code": "fire-min", "func1": "1", "stat1": "firemindam"},
+                {"code": "fire-max", "func1": "1", "stat1": "firemaxdam"},
+                {"code": "dmg-cold", "func1": "15", "stat1": "coldmindam", "stat2": "coldmaxdam", "stat3": "coldlength"},
+                {"code": "cold-len", "func1": "1", "stat1": "coldlength"},
+                {"code": "ac/lvl", "func1": "17", "stat1": "item_armor_perlevel"},
+            ],
+            "itemstatcost": [
+                {"Stat": "firemindam", "descfunc": "19", "descstrpos": "ModStr1p"},
+                {"Stat": "firemaxdam", "descfunc": "19", "descstrpos": "ModStr1o"},
+                {"Stat": "item_armor_perlevel", "descfunc": "19", "op": "2", "op param": "3", "op base": "level", "descstrpos": "ModStr1i", "descstr2": "ModStre9c"},
+            ],
+            "magicprefix": [
+                dict(affix("FieryMin", ("fire-min", 2, 4, ""), level="1"), etype1="amul", group="7", version="100"),
+                dict(affix("FieryMax", ("fire-max", 8, 12, ""), level="3"), itype1="swor", etype1="amul"),
+                dict(affix("FieryBoth", ("fire-min", 1, 3, ""), ("fire-max", 5, 10, ""), level="5"), itype1="swor"),
+                dict(affix("Frost", ("dmg-cold", 1, 4, "25"), ("cold-len", 50, 50, ""), level="7"), itype1="swor"),
+                dict(affix("FoolDef", ("ac/lvl", 8, 16, ""), level="9"), itype1="swor"),
+            ],
+        }
+        strings_by_locale = {
+            "deDE": {
+                "TypeSword": "Schwerter",
+                "TypeAmulet": "Amulett",
+                "ModStr1p": "%+d zu min. Feuerschaden",
+                "ModStr1o": "%+d zu max. Feuerschaden",
+                "strModFireDamage": "%+d Feuerschaden",
+                "strModColdDamageRange": "Fügt %d-%d Kälteschaden hinzu",
+                "strModColdDamage": "%+d Kälteschaden",
+                "strskill13": "Dauer der Kälte: %d Sek.",
+                "ModStr1i": "%+d Verteidigung",
+                "ModStre9c": "(Basierend auf Charakterstufe)",
+                "FieryMin": "Feuriger Minimal",
+                "FieryMax": "Feuriger Maximal",
+                "FieryBoth": "Feuriger",
+                "Frost": "Frostiger",
+                "FoolDef": "Robuster",
+            },
+            "koKR": {
+                "TypeSword": "검",
+                "TypeAmulet": "목걸이",
+                "ModStr1p": "최소 화염 피해 %+d",
+                "ModStr1o": "최대 화염 피해 %+d",
+                "strModFireDamage": "화염 피해 %+d",
+                "strModColdDamageRange": "냉기 피해 %d - %d 추가",
+                "strModColdDamage": "냉기 피해 %+d",
+                "strskill13": "냉기 지속시간: %d초",
+                "ModStr1i": "방어력 %+d",
+                "ModStre9c": "(캐릭터 레벨에 비례)",
+                "FieryMin": "타오르는 최소",
+                "FieryMax": "타오르는 최대",
+                "FieryBoth": "타오르는",
+                "Frost": "서리의",
+                "FoolDef": "견고한",
+            },
+        }
+        expected_titles = {
+            "deDE": ["Feuerschaden", "Kälteschaden", "Max. Feuerschaden", "Min. Feuerschaden", "Verteidigung (Basierend auf Charakterstufe)"],
+            "koKR": ["냉기 피해", "방어력 (캐릭터 레벨에 비례)", "최대 화염 피해", "최소 화염 피해", "화염 피해"],
+        }
+
+        for locale, strings in strings_by_locale.items():
+            repo = Repository(tables, strings)
+            svc = ReferenceAnalyzerService(repo)
+            groups = affix_function_groups(svc)
+            self.assertEqual([g["title"] for g in groups], expected_titles[locale], locale)
+            fire_min_row = next(g for g in groups if "Min" in g["title"] or "최소" in g["title"])["rows"][0]
+            self.assertEqual(fire_min_row["excludes"], f"Excludes · {strings['TypeAmulet']} (amul)")
+            # Structured dmg-cold split + cold-len accumulation still merges into a single cold duration entry
+            cold_row = next(g for g in groups if g["title"] in {"Kälteschaden", "냉기 피해"})["rows"][0]
+            self.assertEqual(len(cold_row["roll_ranges"]), 2)
+            self.assertTrue(any("3" in part for part in cold_row["roll_ranges"]))
+
+            # Affix card settings exclude group & version via structured setting_entries (no English prefix match)
+            comparison = svc.build_pages(["magicprefix"], baseline=svc)[0]["sections"][0]["comparison_rows"]
+            entry = next(r for r in comparison if r["label"] == strings["FieryMin"])
+            entry["old"][0]["settings"] = tuple(f"Gruppe 7" if s.startswith("Group") else f"Version 100" for s in entry["old"][0]["settings"])
+            card, = affix_card_contexts(entry)
+            self.assertFalse(any("Gruppe 7" in r["old"] or "Version 100" in r["old"] for r in card["stat_rows"]))
 
 
 if __name__ == "__main__":
