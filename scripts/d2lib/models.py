@@ -172,7 +172,7 @@ class MonsterActGroupDTO(TypedDict):
     act: str
     monsters: List[MonsterDTO]
 
-class MiscItemDTO(TypedDict):
+class _MiscItemDTORequired(TypedDict):
     code: str
     name: str
     icon_key: str
@@ -188,12 +188,23 @@ class MiscItemDTO(TypedDict):
     status: str
     socket_effects: Dict[str, List[str]]
 
-class MiscGroupDTO(TypedDict):
+
+class MiscItemDTO(_MiscItemDTORequired, total=False):
+    category_key: str
+    socket_effects_by_slot: Dict[str, List[str]]
+    socket_slot_labels: Dict[str, str]
+
+
+class _MiscGroupDTORequired(TypedDict):
     category: str
     summary: str
     order: int
     source_categories: List[str]
     members: List[MiscItemDTO]
+
+
+class MiscGroupDTO(_MiscGroupDTORequired, total=False):
+    category_key: str
 
 class SetFamilyDTO(TypedDict):
     id: str

@@ -1,5 +1,5 @@
 from __future__ import annotations
-from d2lib.services.item_types import ItemTypeTaxonomy, LOOT_GROUPS
+from d2lib.services.item_types import ItemTypeTaxonomy
 import json
 import html
 import os
@@ -23,7 +23,6 @@ from d2lib.services import (
     DropSourceAnalyzerService,
     ReferenceAnalyzerService,
 )
-from d2lib.services.items import normalize_runeword_base_item_label
 from d2lib.services.resolver import load_property_groups
 from d2lib.services.skill_comparison import SkillComparisonService
 from d2lib.services.recipes import RecipePresentationBuilder
@@ -43,7 +42,6 @@ from d2lib.wiki.publication import WikiSiteDTO, WikiSiteRecordingWriter, empty_w
 from d2lib.wiki.history import HistoryCollector, item_history
 from d2lib.wiki.history_comparison import write_history_comparisons
 from pathlib import Path
-from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 from d2lib.wiki.builders import AreaFarmingDataBuilder, ItemIconExporter
 from d2lib.wiki.affix_functions import AFFIX_FUNCTIONS_SLUG, affix_function_groups
 from d2lib.wiki.comparison import (
@@ -199,9 +197,9 @@ class WikiContentBuilder:
         for group in groups:
             for member in group["members"]:
                 member["history"] = item_history(self._history, "base", member, self._history_aliases)
-        gem_rune_categories = {"Runes", "Gems & Skulls"}
-        gem_rune_groups = [g for g in groups if g["category"] in gem_rune_categories]
-        material_groups = [g for g in groups if g["category"] not in gem_rune_categories]
+        gem_rune_keys = {"runes", "gems"}
+        gem_rune_groups = [g for g in groups if g.get("category_key") in gem_rune_keys]
+        material_groups = [g for g in groups if g.get("category_key") not in gem_rune_keys]
         return material_groups, gem_rune_groups
 
     def _load_mechanics_summary(self) -> MechanicsSummaryDTO:
@@ -679,11 +677,6 @@ class WikiContentBuilder:
                 for entry in payload:
                     record = dict(entry)
                     record["_source_rel_path"] = rel_path
-                    if family == "runeword":
-                        record["base_items"] = [
-                            normalize_runeword_base_item_label(base_item)
-                            for base_item in record.get("base_items", [])
-                        ]
                     if should_include_item(record, family):
                         items[family].append(record)
 
@@ -739,7 +732,7 @@ class WikiContentBuilder:
                 os.path.join(self.game_data_dir, "data", "global", "excel", "qualityitems.txt"),
             ],
             families=families,
-            loot_groups=LOOT_GROUPS,
+            loot_groups=self._taxonomy.loot_groups(include_accessories=False),
             base_groups=sorted({family["group"] for family in families}),
             base_classes=sorted({cn for family in families for cn in family["class_tags"]}),
             base_type_categories=sorted({
@@ -1135,9 +1128,12 @@ class WikiContentBuilder:
             for rune in rune_requirements:
                 rune_name = str(rune.get("name", "")).strip()
                 rune_code = str(rune.get("code", "")).strip()
-                short_rune_name = re.sub(r"\s+rune$", "", rune_name, flags=re.IGNORECASE).strip()
+                short_rune_name = resolve_localized_string(self._repo, f"{rune_code}L") if rune_code else ""
+                full_rune_name = resolve_localized_string(self._repo, rune_code) if rune_code else ""
+                if not short_rune_name:
+                    short_rune_name = rune_name
                 rune_terms = []
-                for term in (rune_name, short_rune_name, rune_code):
+                for term in (rune_name, full_rune_name, short_rune_name, rune_code):
                     if term and term not in rune_filter_terms:
                         rune_filter_terms.append(term)
                     if term and term not in rune_terms:
@@ -1179,14 +1175,11 @@ class WikiContentBuilder:
             match = re.search(r"\d+", option.get("code", ""))
             return (int(match.group(0)) if match else 999, option.get("name", ""))
 
-        base_sort_order = {
-            "Body Armour": 0,
-            "OffHand": 1,
-            "Melee": 2,
-            "Missile": 3,
-            "Weapons": 4,
-            "Helm": 5,
-        }
+        base_sort_order: Dict[str, int] = {}
+        for idx, code in enumerate(("tors", "shld", "mele", "miss", "weap", "helm")):
+            lbl = self._taxonomy.label(code)
+            if lbl and lbl not in base_sort_order:
+                base_sort_order[lbl] = idx
 
         def base_option_sort(label: str) -> Tuple[int, str]:
             return (base_sort_order.get(label, 20), label)
@@ -1204,45 +1197,11 @@ class WikiContentBuilder:
 
     @staticmethod
     def _runeword_base_filter_terms(base_items: List[str]) -> List[str]:
-        shield_labels = {
-            "any shield",
-            "shield",
-            "voodoo heads",
-            "auric shields",
-            "grimoire",
-            "paladin item",
-        }
-        weapon_labels = {
-            "weapon",
-            "melee weapon",
-            "missile weapon",
-            "swords",
-            "axe",
-            "club",
-            "hammer",
-            "hand to hand",
-            "knife",
-            "mace",
-            "polearm",
-            "scepter",
-            "spears",
-            "staff",
-            "wand",
-        }
         terms: List[str] = []
-
-        def add(term: str) -> None:
-            if term and term not in terms:
-                terms.append(term)
-
         for base_item in base_items:
-            base_label = normalize_runeword_base_item_label(str(base_item).strip())
-            normalized = base_label.lower()
-            add(base_label)
-            if normalized in shield_labels:
-                add("All Shields")
-            if normalized in weapon_labels:
-                add("All Weapons")
+            base_label = str(base_item).strip()
+            if base_label and base_label not in terms:
+                terms.append(base_label)
         return terms
 
     @staticmethod
@@ -1375,7 +1334,8 @@ class WikiContentBuilder:
             reports=report_entries,
         )
 
-        group_to_types = {group: set(categories) for group, categories in LOOT_GROUPS.items()}
+        loot_groups = self._taxonomy.loot_groups()
+        group_to_types = {group: set(categories) for group, categories in loot_groups.items()}
         drop_level_breakpoints = sorted({
             int(entry.get("drop_level") or 0)
             for family in ("unique", "set")
@@ -1385,7 +1345,7 @@ class WikiContentBuilder:
         for entries in item_entries.values():
             for entry in entries:
                 for group in entry["item_group"].split("|"):
-                    if group not in group_to_types:
+                    if group and group not in group_to_types:
                         group_to_types[group] = set()
 
         self._write_page(
@@ -1396,7 +1356,7 @@ class WikiContentBuilder:
             source_files=[],
             item_entries=item_entries,
             family_counts={family: len(item_entries[family]) for family in ITEM_FAMILIES},
-            item_groups=[{"name": g, "types": LOOT_GROUPS.get(g, sorted(group_to_types[g]))} for g in group_to_types],
+            item_groups=[{"name": g, "types": loot_groups.get(g, sorted(group_to_types[g]))} for g in group_to_types],
             drop_level_breakpoints=drop_level_breakpoints,
         )
 
@@ -1530,12 +1490,12 @@ class WikiContentBuilder:
         normalized = output_path.replace("\\", "/")
         self.site["pages"].append({
             "kind": os.path.splitext(template_name)[0],
-            "title": sanitize_display_text(title),
+            "title": title,
             "output_path": normalized,
             "template_name": template_name,
             "category": category,
             "source_files": source_files,
-            "payload": sanitize_display_payload(context),
+            "payload": context,
         })
         self.writer.generated_paths.add(normalized)
         self.manifest.append({"title": title, "path": WikiRoutes.route_from_output_path(output_path), "category": category, "sources": source_files})

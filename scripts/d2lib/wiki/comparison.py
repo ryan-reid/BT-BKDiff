@@ -399,14 +399,32 @@ def gem_rune_comparison_context(
         status = "added" if new_val and not old_val else "same" if old_val == new_val else "changed"
         stat_rows.append({"label": label, "old": old_val, "new": new_val, "status": status})
 
-    old_effects = old_item.get("socket_effects", {}) if old_item else {}
-    new_effects = item.get("socket_effects", {})
+    has_canonical_slots = "socket_effects_by_slot" in item or (old_item is not None and "socket_effects_by_slot" in old_item)
     socket_rows = []
-    for slot in ["Weapon", "Armor/Helm", "Shield"]:
-        old_eff = "; ".join(old_effects.get(slot, []))
-        new_eff = "; ".join(new_effects.get(slot, []))
-        status = "added" if new_eff and not old_eff else "same" if old_eff == new_eff else "changed"
-        socket_rows.append({"label": slot, "old": old_eff, "new": new_eff, "status": status})
+    if has_canonical_slots:
+        old_slots = (old_item or {}).get("socket_effects_by_slot", {})
+        new_slots = item.get("socket_effects_by_slot", {})
+        slot_labels = item.get("socket_slot_labels") or (old_item or {}).get("socket_slot_labels") or {}
+        default_labels = {"weapon": "Weapons", "helm": "Armor/Helms", "shield": "Shields"}
+        for slot_key in ("weapon", "helm", "shield"):
+            old_eff = "; ".join(old_slots.get(slot_key, []))
+            new_eff = "; ".join(new_slots.get(slot_key, []))
+            status = "added" if new_eff and not old_eff else "same" if old_eff == new_eff else "changed"
+            socket_rows.append({
+                "key": slot_key,
+                "label": slot_labels.get(slot_key, default_labels[slot_key]),
+                "old": old_eff,
+                "new": new_eff,
+                "status": status,
+            })
+    else:
+        old_effects = old_item.get("socket_effects", {}) if old_item else {}
+        new_effects = item.get("socket_effects", {})
+        for slot in ["Weapon", "Armor/Helm", "Shield"]:
+            old_eff = "; ".join(old_effects.get(slot, []))
+            new_eff = "; ".join(new_effects.get(slot, []))
+            status = "added" if new_eff and not old_eff else "same" if old_eff == new_eff else "changed"
+            socket_rows.append({"label": slot, "old": old_eff, "new": new_eff, "status": status})
 
     has_changes = any(r["status"] != "same" for r in stat_rows + socket_rows)
     return {

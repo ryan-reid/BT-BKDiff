@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import glob
+import shutil
 import argparse
 from typing import Dict, Any
 from d2lib.services import ItemComparisonService
@@ -15,6 +16,15 @@ def remove_stale_markdown_reports(report_dir: str) -> None:
         for filename in files:
             if filename.lower().endswith(".md"):
                 os.remove(os.path.join(root, filename))
+
+
+def remove_stale_html_reports(report_dir: str) -> None:
+    if not os.path.isdir(report_dir):
+        return
+    for sub in ("added", "modified", "removed"):
+        sub_path = os.path.join(report_dir, sub)
+        if os.path.isdir(sub_path):
+            shutil.rmtree(sub_path)
 
 def load_json_db(db_dir: str) -> Dict[str, Dict[str, Any]]:
     # type -> id -> item
@@ -45,6 +55,7 @@ def load_json_db(db_dir: str) -> Dict[str, Dict[str, Any]]:
 
 def run(new_db_dir: str, old_db_dir: str, out_dir: str):
     remove_stale_markdown_reports(out_dir)
+    remove_stale_html_reports(out_dir)
 
     print("Loading Item Databases...")
     bk_db = load_json_db(new_db_dir)

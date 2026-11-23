@@ -323,7 +323,7 @@ function wireStaticSearch() {
 function parseRuneQueries(value) {
   return normalizeText(value)
     .split(/[,\s/]+/)
-    .map((query) => query.replace(/\brune\b/g, "").trim())
+    .map((query) => query.trim())
     .filter(Boolean);
 }
 

@@ -3,7 +3,6 @@ from __future__ import annotations
 from typing import Any, Dict, List, TypedDict
 
 from d2lib.repository import locale_to_html_lang
-from d2lib.wiki.presentation import sanitize_display_text
 
 
 class WikiPageDTO(TypedDict):
@@ -68,7 +67,7 @@ class WikiSiteRecordingWriter:
 
     def write_text(self, relative_path: str, content: str) -> None:
         normalized = relative_path.replace("\\", "/")
-        self.site["data_files"].append({"relative_path": normalized, "content": sanitize_display_text(content)})
+        self.site["data_files"].append({"relative_path": normalized, "content": content})
         self.generated_paths.add(normalized)
 
     def write_bytes(self, relative_path: str, content: bytes) -> None:

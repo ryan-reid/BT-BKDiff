@@ -6,6 +6,7 @@ from d2lib.models import CubeRecipeDTO, CubeRecipeGroupDTO
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.utils import slugify
 from d2lib.services.base import _status_for_row
+from d2lib.services.item_types import ItemTypeTaxonomy
 
 class CubeAnalyzerService:
     GROUP_META = {
@@ -115,6 +116,7 @@ class CubeAnalyzerService:
         self.weapons = {row['code']: row for row in repo.get_excel_table('weapons')}
         self.misc = {row['code']: row for row in repo.get_excel_table('misc')}
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
+        self.taxonomy = ItemTypeTaxonomy(repo)
         self.retail_recipe_rows = {
             row.get('description', '').strip().lower(): row
             for row in retail_repo.get_excel_table('cubemain')
@@ -142,9 +144,8 @@ class CubeAnalyzerService:
             return name or code
 
         # Check item types
-        it = self.item_types.get(code)
-        if it:
-            return self.repo.get_string(it.get('ItemType', '').strip()) or code
+        if code in self.item_types:
+            return self.taxonomy.label(code) or code
 
         return code
 
@@ -658,7 +659,6 @@ class CubeAnalyzerService:
         replacements = {
             "Any Armor": "Armor",
             "Any Shield": "Shield",
-            "Merc Equip": "Helm",
         }
         return [replacements.get(name, name) for name in names]
 
@@ -1474,9 +1474,6 @@ class RecipePresentationBuilder:
             add("charms")
         if "any item" in normalized:
             add("any-item")
-        if "merc equip" in normalized:
-            add("merc-equip")
-            add("wearables")
         if any(marker in normalized for marker in ("weapon", "2handed", "bow", "crossbow")):
             add("weapons")
         if any(marker in normalized for marker in ("armor", "helm", "helmet")):
@@ -1510,7 +1507,8 @@ class RecipePresentationBuilder:
             "bow",
             "crossbow",
             "gloves",
-            "merc equip",
+            "helm",
+            "helmet",
             "ring",
             "weapon",
         )
