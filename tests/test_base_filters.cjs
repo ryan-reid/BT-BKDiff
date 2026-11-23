@@ -29,3 +29,56 @@ test('runeword base links match every allowed type, exclusions and sockets', () 
   listeners.change();
   assert.deepEqual(items.map(item => item.hidden), [false, true, true, true]);
 });
+
+test('base filters match canonical tier and speed keys with localized option labels and query params', () => {
+  const makeItem = (tier, speed, speedLabel) => ({
+    dataset: {typeCodes: 'swor|mele|weap', maxSockets: '4', lootCategory: 'Swords', tier, speed, speedLabel},
+    style: {},
+  });
+  const items = [
+    makeItem('normal', 'fast', '빠른 공격 속도'),
+    makeItem('elite', 'very_fast', '매우 빠른 공격 속도'),
+    makeItem('elite', 'slow', '느린 공격 속도'),
+  ];
+  const family = {dataset: {baseGroup: 'Weapons'}, style: {}, querySelectorAll: () => items};
+  const listeners = {};
+  const tierSelect = {
+    value: 'all',
+    options: [
+      {value: 'all', textContent: 'All tiers'},
+      {value: 'normal', textContent: '보통'},
+      {value: 'exceptional', textContent: '특급'},
+      {value: 'elite', textContent: '정예'},
+    ],
+    addEventListener(event, handler) { listeners[`tier:${event}`] = handler; },
+  };
+  const speedSelect = {
+    value: 'all',
+    options: [
+      {value: 'all', textContent: 'All speeds'},
+      {value: 'very_fast', textContent: '매우 빠른 공격 속도'},
+      {value: 'fast', textContent: '빠른 공격 속도'},
+    ],
+    addEventListener(event, handler) { listeners[`speed:${event}`] = handler; },
+  };
+  const elements = {'[data-base-filters]': {}, '#base-tier-filter': tierSelect, '#base-speed-filter': speedSelect};
+  const document = {
+    readyState: 'loading',
+    addEventListener() {},
+    querySelector: selector => elements[selector] || null,
+    querySelectorAll: selector => selector === '.family-container' ? [family] : [],
+  };
+  const context = {
+    document,
+    window: {location: {search: '?tier=%EC%A0%95%EC%98%88&speed=very_fast'}},
+    URLSearchParams,
+  };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../scripts/d2lib/wiki_assets/site.js'), 'utf8') + '\nwireBaseFilters();', context);
+  assert.equal(tierSelect.value, 'elite');
+  assert.equal(speedSelect.value, 'very_fast');
+  assert.deepEqual(items.map(item => item.hidden), [true, false, true]);
+
+  speedSelect.value = 'all';
+  listeners['speed:change']();
+  assert.deepEqual(items.map(item => item.hidden), [true, false, false]);
+});

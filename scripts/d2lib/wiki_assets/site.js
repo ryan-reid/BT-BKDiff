@@ -604,8 +604,9 @@ function wireBaseFilters() {
           && !excludedTypes.some(code => codes.includes(code));
         const lootOk = !lootSelect || lootSelect.value === "all" || item.dataset.lootCategory === lootSelect.value;
         const categoryOk = activeCategory === "all" || itemCategories.includes(normalizeText(activeCategory));
-        const tierOk = activeTier === "all" || item.dataset.tier === activeTier;
-        const speedOk = activeSpeed === "all" || item.dataset.speedLabel === activeSpeed;
+        const tierOk = activeTier === "all" || normalizeText(item.dataset.tier || "") === normalizeText(activeTier);
+        const speedOk = activeSpeed === "all"
+          || normalizeText(item.dataset.speed || item.dataset.speedLabel || "") === normalizeText(activeSpeed);
         const socketsOk = !minSockets || Number(item.dataset.maxSockets || 0) >= minSockets;
         const rollOk = !rollQuery || normalizeText(item.dataset.rollSearch || "").includes(rollQuery);
         const twoHandedOk = !twoHandedOnly || item.dataset.twoHanded === "1";

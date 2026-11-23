@@ -487,6 +487,101 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
             )
         )
 
+    def test_base_item_analyzer_localizes_tiers_speeds_and_undead_bonus(self):
+        from d2lib.services.items import BaseItemAnalyzerService
+
+        class RecordingResolver:
+            def __init__(self, strings):
+                self.strings = {k.lower(): v for k, v in strings.items()}
+                self.calls = []
+
+            def resolve_property(self, code, param="", min_val="", max_val=""):
+                self.calls.append((code, param, min_val, max_val))
+                if code == "dmg-undead":
+                    tmpl = self.strings.get("modstr4f", "%+d%% Damage to Undead")
+                    return {
+                        "code": code,
+                        "param": param,
+                        "min_val": min_val,
+                        "max_val": max_val,
+                        "resolved_text": tmpl.replace("%+d", f"+{min_val}").replace("%%", "%"),
+                    }
+                return {"code": code, "param": param, "min_val": min_val, "max_val": max_val, "resolved_text": ""}
+
+        tables = {
+            "itemtypes": [
+                {"ItemType": "Weapon", "Code": "weap", "Equiv1": "", "Equiv2": "", "StorePage": "weap", "UICategory": "", "RunewordCategory1": "r_mis", "RunewordCategory2": "r_mel"},
+                {"ItemType": "Melee Weapon", "Code": "mele", "Equiv1": "weap", "Equiv2": "", "StorePage": "weap", "UICategory": "", "RunewordCategory1": "r_mel"},
+                {"ItemType": "Blunt", "Code": "blun", "Equiv1": "mele", "Equiv2": "", "StorePage": "weap", "UICategory": "", "RunewordCategory1": "r_mel"},
+                {"ItemType": "Mace", "Code": "mace", "Equiv1": "blun", "Equiv2": "", "StorePage": "weap", "UICategory": "maces", "RunewordCategory1": ""},
+            ],
+            "armor": [],
+            "weapons": [
+                {"name": "Mace", "namestr": "mac", "code": "mac", "type": "mace", "normcode": "mac", "ubercode": "9ma", "ultracode": "7ma", "mindam": "3", "maxdam": "10", "speed": "-20", "gemsockets": "2"},
+                {"name": "Flanged Mace", "namestr": "9ma", "code": "9ma", "type": "mace", "normcode": "mac", "ubercode": "9ma", "ultracode": "7ma", "mindam": "15", "maxdam": "23", "speed": "-10", "gemsockets": "3"},
+                {"name": "Reinforced Mace", "namestr": "7ma", "code": "7ma", "type": "mace", "normcode": "mac", "ubercode": "9ma", "ultracode": "7ma", "mindam": "41", "maxdam": "49", "speed": "20", "gemsockets": "4"},
+            ],
+            "automagic": [],
+            "qualityitems": [],
+            "charstats": [],
+        }
+        locales = {
+            "enUS": {
+                "LootFilterNormalQuality": "Normal",
+                "LootFilterExceptionalQuality": "Exceptional",
+                "LootFilterEliteQuality": "Elite",
+                "WeaponAttackVeryFast": "Very Fast Attack Speed",
+                "WeaponAttackFast": "Fast Attack Speed",
+                "WeaponAttackVerySlow": "Very Slow Attack Speed",
+                "ModStr4f": "%+d%% Damage to Undead",
+                "StrGemX3": "Weapons:",
+                "maces": "Maces",
+            },
+            "deDE": {
+                "LootFilterNormalQuality": "Normal",
+                "LootFilterExceptionalQuality": "Außergewöhnlich",
+                "LootFilterEliteQuality": "Elite",
+                "WeaponAttackVeryFast": "Sehr schnelle Angriffsgeschwindigkeit",
+                "WeaponAttackFast": "Schnelle Angriffsgeschwindigkeit",
+                "WeaponAttackVerySlow": "Sehr langsame Angriffsgeschwindigkeit",
+                "ModStr4f": "%+d%% Schaden gegen Untote",
+                "StrGemX3": "Waffen:",
+                "maces": "Streitkolben",
+            },
+            "koKR": {
+                "LootFilterNormalQuality": "보통",
+                "LootFilterExceptionalQuality": "특급",
+                "LootFilterEliteQuality": "정예",
+                "WeaponAttackVeryFast": "매우 빠른 공격 속도",
+                "WeaponAttackFast": "빠른 공격 속도",
+                "WeaponAttackVerySlow": "매우 느린 공격 속도",
+                "ModStr4f": "언데드에게 주는 피해 %+d%%",
+                "StrGemX3": "무기:",
+                "maces": "철퇴",
+            },
+        }
+
+        for locale, strings in locales.items():
+            with self.subTest(locale=locale):
+                repo = self._StubRepo(tables, strings)
+                resolver = RecordingResolver(strings)
+                families = BaseItemAnalyzerService(repo, resolver).analyze_base_items()
+                members = families[0]["members"]
+
+                self.assertEqual(["normal", "exceptional", "elite"], [m["tier_key"] for m in members])
+                self.assertEqual(
+                    [strings["LootFilterNormalQuality"], strings["LootFilterExceptionalQuality"], strings["LootFilterEliteQuality"]],
+                    [m["tier"] for m in members],
+                )
+                self.assertEqual(["very_fast", "fast", "very_slow"], [m["speed_key"] for m in members])
+                self.assertEqual(
+                    [strings["WeaponAttackVeryFast"], strings["WeaponAttackFast"], strings["WeaponAttackVerySlow"]],
+                    [m["speed_label"] for m in members],
+                )
+                expected_undead = strings["ModStr4f"].replace("%+d", "+50").replace("%%", "%")
+                self.assertEqual([expected_undead], members[0]["inherent_stats"])
+                self.assertIn(("dmg-undead", "", "50", "50"), resolver.calls)
+
 
 if __name__ == "__main__":
     unittest.main()
