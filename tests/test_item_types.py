@@ -230,3 +230,18 @@ class TestItemTypeTaxonomyLocalization(unittest.TestCase):
         taxonomy = ItemTypeTaxonomy(self._FakeRepo(rows, {}))
         self.assertEqual("Helm", taxonomy.label("helm"))
         self.assertNotEqual("Merc Equip", taxonomy.label("helm"))
+
+    def test_duplicate_itemtype_code_preserves_metadata_columns(self):
+        from d2lib.services.item_types import ItemTypeTaxonomy
+
+        rows = [
+            {"ItemType": "Armor", "Code": "armo", "Equiv1": "", "Equiv2": "", "UICategory": "", "RunewordCategory1": ""},
+            {"ItemType": "Helm", "Code": "helm", "Equiv1": "armo", "Equiv2": "", "UICategory": "helms", "RunewordCategory1": "r_hel"},
+            {"ItemType": "Merc Equip", "Code": "helm", "Equiv1": "armo", "Equiv2": "merc", "UICategory": "", "RunewordCategory1": ""},
+        ]
+        repo = self._FakeRepo(rows, {"helms": "Helms", "r_hel": "Helmet"})
+        repo.tables["runes"] = [{"complete": "1", "itype1": "helm"}]
+        taxonomy = ItemTypeTaxonomy(repo)
+        self.assertEqual("Helmet", taxonomy.label("helm"))
+        self.assertNotEqual("Merc Equip", taxonomy.label("helm"))
+        self.assertEqual("Helms", taxonomy.category({"type": "helm"}))

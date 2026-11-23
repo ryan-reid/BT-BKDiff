@@ -13,7 +13,19 @@ _ROOT_TYPE_CODES: frozenset[str] = frozenset({"armo", "weap", "misc"})
 class ItemTypeTaxonomy:
     def __init__(self, repo):
         self.repo = repo
-        self.types = {row['Code']: row for row in repo.get_excel_table('itemtypes') if row.get('Code')}
+        self.types: Dict[str, Dict[str, str]] = {}
+        for row in repo.get_excel_table('itemtypes'):
+            code = row.get('Code', '').strip()
+            if not code:
+                continue
+            if code in self.types:
+                merged = dict(self.types[code])
+                for key, value in row.items():
+                    if str(value or '').strip():
+                        merged[key] = value
+                self.types[code] = merged
+            else:
+                self.types[code] = row
         self.bases = {
             row['code']: row
             for table in ('weapons', 'armor', 'misc')
