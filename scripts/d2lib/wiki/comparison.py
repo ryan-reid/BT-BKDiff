@@ -10,10 +10,6 @@ def skill_card_context(skill: Dict[str, Any]) -> Dict[str, Any]:
     tooltip = skill["tooltip"]
     base_rows = [tooltip] if tooltip["old"] or tooltip["new"] else []
     base_rows.extend(skill["facts"])
-    notes = {warning["side"]: warning["text"] for warning in skill["warnings"] if warning.get("kind") == "tooltip"}
-    if notes:
-        base_rows.append({"label": "Tooltip note", "old": notes.get("old", ""), "new": notes.get("new", ""),
-                          "status": "same" if notes.get("old") == notes.get("new") else "changed"})
 
     return {
         "title": skill["name"],
