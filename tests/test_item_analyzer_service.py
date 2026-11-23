@@ -510,12 +510,17 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
 
         tables = {
             "itemtypes": [
+                {"ItemType": "Armor", "Code": "armo", "Equiv1": "", "Equiv2": "", "StorePage": "armo", "UICategory": "", "RunewordCategory1": ""},
+                {"ItemType": "Helm", "Code": "helm", "Equiv1": "armo", "Equiv2": "", "StorePage": "armo", "UICategory": "helms", "RunewordCategory1": ""},
                 {"ItemType": "Weapon", "Code": "weap", "Equiv1": "", "Equiv2": "", "StorePage": "weap", "UICategory": "", "RunewordCategory1": "r_mis", "RunewordCategory2": "r_mel"},
                 {"ItemType": "Melee Weapon", "Code": "mele", "Equiv1": "weap", "Equiv2": "", "StorePage": "weap", "UICategory": "", "RunewordCategory1": "r_mel"},
                 {"ItemType": "Blunt", "Code": "blun", "Equiv1": "mele", "Equiv2": "", "StorePage": "weap", "UICategory": "", "RunewordCategory1": "r_mel"},
                 {"ItemType": "Mace", "Code": "mace", "Equiv1": "blun", "Equiv2": "", "StorePage": "weap", "UICategory": "maces", "RunewordCategory1": ""},
             ],
-            "armor": [],
+            "armor": [
+                {"name": "Cap", "namestr": "cap", "code": "cap", "type": "helm", "normcode": "cap", "ubercode": "", "ultracode": "", "minac": "3", "maxac": "5", "mindam": "0", "maxdam": "0", "speed": "0", "gemsockets": "2"},
+                {"name": "Buckler", "namestr": "buc", "code": "shd", "type": "helm", "normcode": "shd", "ubercode": "", "ultracode": "", "minac": "10", "maxac": "20", "mindam": "4", "maxdam": "10", "speed": "0", "gemsockets": "1"},
+            ],
             "weapons": [
                 {"name": "Mace", "namestr": "mac", "code": "mac", "type": "mace", "normcode": "mac", "ubercode": "9ma", "ultracode": "7ma", "mindam": "3", "maxdam": "10", "speed": "-20", "gemsockets": "2"},
                 {"name": "Flanged Mace", "namestr": "9ma", "code": "9ma", "type": "mace", "normcode": "mac", "ubercode": "9ma", "ultracode": "7ma", "mindam": "15", "maxdam": "23", "speed": "-10", "gemsockets": "3"},
@@ -527,37 +532,37 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
         }
         locales = {
             "enUS": {
+                "Armor": "Armor",
+                "Weapon": "Weapon",
                 "LootFilterNormalQuality": "Normal",
                 "LootFilterExceptionalQuality": "Exceptional",
                 "LootFilterEliteQuality": "Elite",
-                "WeaponAttackVeryFast": "Very Fast Attack Speed",
-                "WeaponAttackFast": "Fast Attack Speed",
-                "WeaponAttackVerySlow": "Very Slow Attack Speed",
                 "ModStr4f": "%+d%% Damage to Undead",
                 "StrGemX3": "Weapons:",
                 "maces": "Maces",
+                "helms": "Helms",
             },
             "deDE": {
+                "Armor": "Rüstung",
+                "Weapon": "Waffe",
                 "LootFilterNormalQuality": "Normal",
                 "LootFilterExceptionalQuality": "Außergewöhnlich",
                 "LootFilterEliteQuality": "Elite",
-                "WeaponAttackVeryFast": "Sehr schnelle Angriffsgeschwindigkeit",
-                "WeaponAttackFast": "Schnelle Angriffsgeschwindigkeit",
-                "WeaponAttackVerySlow": "Sehr langsame Angriffsgeschwindigkeit",
                 "ModStr4f": "%+d%% Schaden gegen Untote",
                 "StrGemX3": "Waffen:",
                 "maces": "Streitkolben",
+                "helms": "Helme",
             },
             "koKR": {
+                "Armor": "방어구",
+                "Weapon": "무기",
                 "LootFilterNormalQuality": "보통",
                 "LootFilterExceptionalQuality": "특급",
                 "LootFilterEliteQuality": "정예",
-                "WeaponAttackVeryFast": "매우 빠른 공격 속도",
-                "WeaponAttackFast": "빠른 공격 속도",
-                "WeaponAttackVerySlow": "매우 느린 공격 속도",
                 "ModStr4f": "언데드에게 주는 피해 %+d%%",
                 "StrGemX3": "무기:",
                 "maces": "철퇴",
+                "helms": "투구",
             },
         }
 
@@ -566,17 +571,34 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 repo = self._StubRepo(tables, strings)
                 resolver = RecordingResolver(strings)
                 families = BaseItemAnalyzerService(repo, resolver).analyze_base_items()
-                members = families[0]["members"]
+                mace_family = next(fam for fam in families if fam["members"][0]["code"] == "mac")
+                members = mace_family["members"]
 
                 self.assertEqual(["normal", "exceptional", "elite"], [m["tier_key"] for m in members])
                 self.assertEqual(
                     [strings["LootFilterNormalQuality"], strings["LootFilterExceptionalQuality"], strings["LootFilterEliteQuality"]],
                     [m["tier"] for m in members],
                 )
-                self.assertEqual(["very_fast", "fast", "very_slow"], [m["speed_key"] for m in members])
+                self.assertEqual([-20, -10, 20], [m["speed"] for m in members])
+                for m in members:
+                    self.assertNotIn("speed_label", m)
+                    self.assertNotIn("speed_key", m)
                 self.assertEqual(
-                    [strings["WeaponAttackVeryFast"], strings["WeaponAttackFast"], strings["WeaponAttackVerySlow"]],
-                    [m["speed_label"] for m in members],
+                    [
+                        {"key": "normal", "label": strings["LootFilterNormalQuality"]},
+                        {"key": "exceptional", "label": strings["LootFilterExceptionalQuality"]},
+                        {"key": "elite", "label": strings["LootFilterEliteQuality"]},
+                    ],
+                    BaseItemAnalyzerService.tier_options(families),
+                )
+                cap_family = next(fam for fam in families if fam["members"][0]["code"] == "cap")
+                self.assertEqual(
+                    [{"key": "normal", "label": strings["LootFilterNormalQuality"]}],
+                    BaseItemAnalyzerService.tier_options([cap_family]),
+                )
+                self.assertEqual(
+                    [{"key": "-20", "label": "-20"}, {"key": "-10", "label": "-10"}, {"key": "20", "label": "20"}],
+                    BaseItemAnalyzerService.speed_options(families),
                 )
                 expected_undead = strings["ModStr4f"].replace("%+d", "+50").replace("%%", "%")
                 self.assertEqual([expected_undead], members[0]["inherent_stats"])

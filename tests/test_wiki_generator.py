@@ -1585,16 +1585,18 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Used when determining which random prefixes and suffixes", bases_page)
         self.assertIn("<strong>Base Lvl:</strong> 85", bases_page)
         self.assertIn("<strong>Req Lvl:</strong> 65", bases_page)
-        self.assertIn("<strong>WSM:</strong> 20 (Very Slow Attack Speed)", bases_page)
+        self.assertIn("<strong>WSM:</strong> 20</span>", bases_page)
+        self.assertNotIn("Very Slow", bases_page)
         self.assertIn('<option value="normal">Normal</option>', bases_page)
         self.assertIn('<option value="exceptional">Exceptional</option>', bases_page)
         self.assertIn('<option value="elite">Elite</option>', bases_page)
-        self.assertIn('<option value="very_fast">Very Fast Attack Speed</option>', bases_page)
-        self.assertIn('<option value="very_slow">Very Slow Attack Speed</option>', bases_page)
+        self.assertIn('<option value="20">20</option>', bases_page)
+        self.assertNotIn('<option value="0">0</option>', bases_page)
         self.assertIn('<option value="6">6 sockets</option>', bases_page)
         self.assertNotIn('<option value="7">', bases_page)
         self.assertIn('data-tier="normal"', bases_page)
-        self.assertIn('data-speed="very_slow"', bases_page)
+        self.assertIn('data-speed="20"', bases_page)
+        self.assertIn('data-speed=""', bases_page)
         self.assertIn('class="badge badge-normal"', bases_page)
         self.assertNotIn("<th>Speed/Block</th>", bases_page)
 
@@ -2035,11 +2037,6 @@ class TestWikiGenerator(unittest.TestCase):
             {"Key": "StrGemX3", "koKR": "무기:"},
         ])
         self._write_json(strings_dir, "item-modifiers.json", [
-            {"Key": "WeaponAttackVeryFast", "koKR": "매우 빠른 공격 속도"},
-            {"Key": "WeaponAttackFast", "koKR": "빠른 공격 속도"},
-            {"Key": "WeaponAttackNormal", "koKR": "보통 공격 속도"},
-            {"Key": "WeaponAttackSlow", "koKR": "느린 공격 속도"},
-            {"Key": "WeaponAttackVerySlow", "koKR": "매우 느린 공격 속도"},
             {"Key": "ModStr4f", "koKR": "언데드에게 주는 피해 %+d%%"},
         ])
         self._write_json(strings_dir, "ui.json", [
@@ -2076,11 +2073,13 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('<option value="normal">보통</option>', ko_bases)
         self.assertIn('<option value="exceptional">특급</option>', ko_bases)
         self.assertIn('<option value="elite">정예</option>', ko_bases)
-        self.assertIn('<option value="very_fast">매우 빠른 공격 속도</option>', ko_bases)
+        self.assertIn('<option value="-25">-25</option>', ko_bases)
+        self.assertIn('<option value="0">0</option>', ko_bases)
+        self.assertIn('<option value="15">15</option>', ko_bases)
         self.assertIn('<option value="8">8 sockets</option>', ko_bases)
         self.assertIn("tier-exceptional", ko_bases)
         self.assertIn("badge-elite", ko_bases)
-        self.assertIn('data-speed="very_fast"', ko_bases)
+        self.assertIn('data-speed="-25"', ko_bases)
         self.assertIn("언데드에게 주는 피해 +50%", ko_bases)
 
 

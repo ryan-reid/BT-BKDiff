@@ -64,11 +64,11 @@ class MediaWikiRenderer:
                     item.get("tier", ""),
                     item.get("level_req", ""),
                     item.get("sockets", ""),
-                    item.get("speed_label", ""),
+                    item.get("speed", "") if item.get("defense_min") is None else "",
                 ]
                 for item in family.get("members", [])
             ]
-            lines.extend(self._table(["Item", "Type", "Tier", "Req Lvl", "Sockets", "Speed"], rows))
+            lines.extend(self._table(["Item", "Type", "Tier", "Req Lvl", "Sockets", "WSM"], rows))
             lines.append("")
         return lines
 

@@ -740,8 +740,8 @@ class WikiContentBuilder:
             loot_groups=self._taxonomy.loot_groups(include_accessories=False),
             base_groups=sorted({family["group"] for family in families}),
             base_classes=sorted({cn for family in families for cn in family["class_tags"]}),
-            base_tier_options=BaseItemAnalyzerService.tier_options(self._repo),
-            base_speed_options=BaseItemAnalyzerService.speed_options(self._repo),
+            base_tier_options=BaseItemAnalyzerService.tier_options(families),
+            base_speed_options=BaseItemAnalyzerService.speed_options(families),
             base_socket_options=list(range(1, max_base_sockets + 1)),
             base_type_categories=sorted({
                 cat

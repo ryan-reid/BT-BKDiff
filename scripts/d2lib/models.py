@@ -138,13 +138,11 @@ class _BaseItemDTORequired(TypedDict):
     quality_bonus_stats: List[str]
     quality_bonus_summary: List[str]
     speed: int
-    speed_label: str
     durability: int
     tier: str # Localized tier label (Normal, Exceptional, Elite)
 
 class BaseItemDTO(_BaseItemDTORequired, total=False):
     tier_key: str # Canonical tier key: normal, exceptional, elite
-    speed_key: str # Canonical speed bucket: very_fast, fast, normal, slow, very_slow
 
 class BaseItemFamilyDTO(TypedDict):
     name: str

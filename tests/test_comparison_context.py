@@ -310,13 +310,13 @@ class TestShouldIncludeItem(unittest.TestCase):
 
 class TestBaseItemComparisonContext(unittest.TestCase):
     def _item(self, level=10, level_req=5, str_req=20, dex_req=10, sockets=2,
-               defense_min=10, defense_max=30, block=0, speed=0, speed_label="Normal",
+               defense_min=10, defense_max=30, block=0, speed=0,
                damage_min=None, damage_max=None, two_handed_only=False,
                inherent_stats=None, auto_prefix_summary=None, quality_bonus_summary=None):
         return {
             "level": level, "level_req": level_req, "str_req": str_req, "dex_req": dex_req,
             "sockets": sockets, "defense_min": defense_min, "defense_max": defense_max,
-            "block": block, "speed": speed, "speed_label": speed_label,
+            "block": block, "speed": speed,
             "damage_min": damage_min, "damage_max": damage_max,
             "two_hand_damage_min": None, "two_hand_damage_max": None,
             "two_handed_only": two_handed_only,
@@ -324,6 +324,25 @@ class TestBaseItemComparisonContext(unittest.TestCase):
             "auto_prefix_summary": auto_prefix_summary or [],
             "quality_bonus_summary": quality_bonus_summary or [],
         }
+
+    def test_weapon_wsm_row_uses_raw_integer_and_armor_omits_it(self):
+        old_wep = self._item(defense_min=None, defense_max=None, damage_min=10, damage_max=20, speed=-15)
+        new_wep = self._item(defense_min=None, defense_max=None, damage_min=10, damage_max=20, speed=20)
+        wep_rows = {r["label"]: r for r in base_item_comparison_context(new_wep, old_wep)["stat_rows"]}
+        self.assertEqual("-15", wep_rows["WSM"]["old"])
+        self.assertEqual("20", wep_rows["WSM"]["new"])
+        self.assertEqual("changed", wep_rows["WSM"]["status"])
+
+        armor_rows = {r["label"]: r for r in base_item_comparison_context(self._item(speed=0), None)["stat_rows"]}
+        self.assertNotIn("WSM", armor_rows)
+        shield_rows = {
+            r["label"]: r
+            for r in base_item_comparison_context(
+                self._item(defense_min=10, defense_max=20, damage_min=4, damage_max=10, speed=0),
+                None,
+            )["stat_rows"]
+        }
+        self.assertNotIn("WSM", shield_rows)
 
     def test_added_when_no_old(self):
         result = base_item_comparison_context(self._item(), None)

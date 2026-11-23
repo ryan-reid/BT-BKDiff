@@ -30,15 +30,16 @@ test('runeword base links match every allowed type, exclusions and sockets', () 
   assert.deepEqual(items.map(item => item.hidden), [false, true, true, true]);
 });
 
-test('base filters match canonical tier and speed keys with localized option labels and query params', () => {
-  const makeItem = (tier, speed, speedLabel) => ({
-    dataset: {typeCodes: 'swor|mele|weap', maxSockets: '4', lootCategory: 'Swords', tier, speed, speedLabel},
+test('base filters match canonical tier keys with localized labels and numeric WSM speeds', () => {
+  const makeItem = (tier, speed, codes = 'swor|mele|weap', lootCategory = 'Swords') => ({
+    dataset: {typeCodes: codes, maxSockets: '4', lootCategory, tier, speed},
     style: {},
   });
   const items = [
-    makeItem('normal', 'fast', '빠른 공격 속도'),
-    makeItem('elite', 'very_fast', '매우 빠른 공격 속도'),
-    makeItem('elite', 'slow', '느린 공격 속도'),
+    makeItem('normal', '0'),
+    makeItem('elite', '-30'),
+    makeItem('elite', '20'),
+    makeItem('elite', '', 'helm|armo', 'Helms'),
   ];
   const family = {dataset: {baseGroup: 'Weapons'}, style: {}, querySelectorAll: () => items};
   const listeners = {};
@@ -56,8 +57,9 @@ test('base filters match canonical tier and speed keys with localized option lab
     value: 'all',
     options: [
       {value: 'all', textContent: 'All speeds'},
-      {value: 'very_fast', textContent: '매우 빠른 공격 속도'},
-      {value: 'fast', textContent: '빠른 공격 속도'},
+      {value: '-30', textContent: '-30'},
+      {value: '0', textContent: '0'},
+      {value: '20', textContent: '20'},
     ],
     addEventListener(event, handler) { listeners[`speed:${event}`] = handler; },
   };
@@ -70,15 +72,21 @@ test('base filters match canonical tier and speed keys with localized option lab
   };
   const context = {
     document,
-    window: {location: {search: '?tier=%EC%A0%95%EC%98%88&speed=very_fast'}},
+    window: {location: {search: '?tier=%EC%A0%95%EC%98%88&speed=-30'}},
     URLSearchParams,
   };
   vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../scripts/d2lib/wiki_assets/site.js'), 'utf8') + '\nwireBaseFilters();', context);
   assert.equal(tierSelect.value, 'elite');
-  assert.equal(speedSelect.value, 'very_fast');
-  assert.deepEqual(items.map(item => item.hidden), [true, false, true]);
+  assert.equal(speedSelect.value, '-30');
+  assert.deepEqual(items.map(item => item.hidden), [true, false, true, true]);
+
+  tierSelect.value = 'all';
+  speedSelect.value = '0';
+  listeners['speed:change']();
+  assert.deepEqual(items.map(item => item.hidden), [false, true, true, true]);
 
   speedSelect.value = 'all';
-  listeners['speed:change']();
-  assert.deepEqual(items.map(item => item.hidden), [true, false, false]);
+  tierSelect.value = 'elite';
+  listeners['tier:change']();
+  assert.deepEqual(items.map(item => item.hidden), [true, false, false, false]);
 });

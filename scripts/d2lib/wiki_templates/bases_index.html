@@ -63,7 +63,7 @@
         </select>
       </label>
       <label>
-        <span>Speed</span>
+        <span>Speed (WSM)</span>
         <select id="base-speed-filter">
           <option value="all">All speeds</option>
           {% for option in base_speed_options %}
@@ -108,15 +108,14 @@
         {% for item in family.members %}
         {% set comp = item.comparison %}
         <div class="base-item-card tier-{{ item.tier_key or item.tier|lower }}"
-             data-search="{{ item.name }} {{ item.type }} {{ item.tier }} {{ item.tier_key }} {{ item.class_restriction }} {{ item.staffmod_class }} {{ item.magic_level }} {{ item.speed }} {{ item.speed_key }} {{ item.speed_label }} {{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}"
+             data-search="{{ item.name }} {{ item.type }} {{ item.tier }} {{ item.tier_key }} {{ item.class_restriction }} {{ item.staffmod_class }} {{ item.magic_level }} {{ item.speed }} {{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}"
              data-loot-category="{{ item.loot_category }}"
              data-type-codes="{{ item.type_codes|join('|') }}"
              data-type-categories="{{ item.type_categories|join('|') }}"
              data-tier="{{ item.tier_key or item.tier|lower }}"
              data-max-sockets="{{ item.sockets }}"
              data-two-handed="{{ '1' if item.two_handed_only else '0' }}"
-             data-speed="{{ item.speed_key or item.speed_label }}"
-             data-speed-label="{{ item.speed_label }}"
+             data-speed="{{ item.speed if item.defense_min is none else '' }}"
              data-roll-search="{{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}">
           
           <div class="sp-head">

@@ -241,18 +241,11 @@ class ItemAnalyzerService:
         }
 
 class BaseItemAnalyzerService:
-    TIER_SPECS: Tuple[Tuple[str, str, str], ...] = (
-        ("normal", "LootFilterNormalQuality", "Normal"),
-        ("exceptional", "LootFilterExceptionalQuality", "Exceptional"),
-        ("elite", "LootFilterEliteQuality", "Elite"),
-    )
-    SPEED_SPECS: Tuple[Tuple[str, str, str], ...] = (
-        ("very_fast", "WeaponAttackVeryFast", "Very Fast Attack Speed"),
-        ("fast", "WeaponAttackFast", "Fast Attack Speed"),
-        ("normal", "WeaponAttackNormal", "Normal Attack Speed"),
-        ("slow", "WeaponAttackSlow", "Slow Attack Speed"),
-        ("very_slow", "WeaponAttackVerySlow", "Very Slow Attack Speed"),
-    )
+    TIER_STRING_KEYS: Dict[str, str] = {
+        "normal": "LootFilterNormalQuality",
+        "exceptional": "LootFilterExceptionalQuality",
+        "elite": "LootFilterEliteQuality",
+    }
 
     def __init__(self, repo: D2RepositoryProtocol, resolver: PropertyResolverService):
         self.repo = repo
@@ -377,8 +370,6 @@ class BaseItemAnalyzerService:
         two_handed_only = row.get('2handed') == '1' and row.get('1or2handed') != '1'
         tier_key = str(tier or "normal").strip().lower()
         tier_label = self.tier_label(self.repo, tier_key)
-        speed_key = self.weapon_speed_key(speed)
-        speed_label = self.speed_label(self.repo, speed_key)
 
         return {
             "code": code,
@@ -415,8 +406,6 @@ class BaseItemAnalyzerService:
             "quality_bonus_stats": quality_bonus_stats,
             "quality_bonus_summary": quality_bonus_summary,
             "speed": speed,
-            "speed_key": speed_key,
-            "speed_label": speed_label,
             "durability": to_int(row.get('nodurability')) if row.get('nodurability') == '1' else to_int(row.get('durability')),
             "tier_key": tier_key,
             "tier": tier_label,
@@ -473,44 +462,48 @@ class BaseItemAnalyzerService:
             value = f"{sign}{value}"
         return f"{prefix}{value}{suffix}"
 
+    @staticmethod
+    def is_weapon_item(item: BaseItemDTO) -> bool:
+        return item.get("defense_min") is None
+
     @classmethod
     def tier_label(cls, repo: D2RepositoryProtocol, tier_key: str) -> str:
         clean = str(tier_key or "normal").strip().lower()
-        for key, str_key, fallback in cls.TIER_SPECS:
-            if key == clean:
-                return resolve_localized_string(repo, str_key) or fallback
-        return str(tier_key or clean).strip()
+        str_key = cls.TIER_STRING_KEYS.get(clean)
+        if str_key:
+            resolved = resolve_localized_string(repo, str_key)
+            if resolved:
+                return resolved
+        return clean.title() if clean else ""
 
     @classmethod
-    def tier_options(cls, repo: D2RepositoryProtocol) -> List[Dict[str, str]]:
-        return [{"key": key, "label": cls.tier_label(repo, key)} for key, _, _ in cls.TIER_SPECS]
-
-    @staticmethod
-    def weapon_speed_key(speed: int) -> str:
-        if speed <= -20:
-            return "very_fast"
-        if speed <= -10:
-            return "fast"
-        if speed < 10:
-            return "normal"
-        if speed < 20:
-            return "slow"
-        return "very_slow"
-
-    @classmethod
-    def speed_label(cls, repo: D2RepositoryProtocol, speed_key: str) -> str:
-        clean = str(speed_key or "normal").strip().lower()
-        for key, str_key, fallback in cls.SPEED_SPECS:
-            if key == clean:
-                return resolve_localized_string(repo, str_key) or fallback
-        return str(speed_key or clean).strip()
+    def tier_options(cls, families: List[BaseItemFamilyDTO]) -> List[Dict[str, str]]:
+        present: Dict[str, str] = {}
+        for family in families:
+            for item in family["members"]:
+                key = str(item.get("tier_key") or item.get("tier") or "").strip().lower()
+                if not key:
+                    continue
+                label = str(item.get("tier") or key).strip()
+                if key not in present or label:
+                    present[key] = label or key
+        order = {key: idx for idx, key in enumerate(cls.TIER_STRING_KEYS)}
+        return [
+            {"key": key, "label": present[key]}
+            for key in sorted(present, key=lambda k: (order.get(k, len(order)), k))
+        ]
 
     @classmethod
-    def speed_options(cls, repo: D2RepositoryProtocol) -> List[Dict[str, str]]:
-        return [{"key": key, "label": cls.speed_label(repo, key)} for key, _, _ in cls.SPEED_SPECS]
-
-    def _weapon_speed_label(self, speed: int) -> str:
-        return self.speed_label(self.repo, self.weapon_speed_key(speed))
+    def speed_options(cls, families: List[BaseItemFamilyDTO]) -> List[Dict[str, str]]:
+        speeds = sorted(
+            {
+                int(item["speed"])
+                for family in families
+                for item in family["members"]
+                if cls.is_weapon_item(item)
+            }
+        )
+        return [{"key": str(speed), "label": str(speed)} for speed in speeds]
 
     def _family_group(self, items: List[BaseItemDTO]) -> str:
         if any(item["defense_min"] is not None for item in items):
@@ -562,7 +555,6 @@ class BaseItemAnalyzerService:
                     str(item["level_req"]),
                     str(item["sockets"]),
                     str(item["speed"]),
-                    item["speed_label"],
                     " ".join(item["inherent_stats"]),
                     " ".join(item["auto_prefix_summary"]),
                     " ".join(item["quality_bonus_summary"]),
