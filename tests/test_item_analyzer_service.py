@@ -263,6 +263,8 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 {"ItemType": "Mercenary", "Code": "merc", "Equiv1": "armo", "Equiv2": "", "UICategory": "", "RunewordCategory1": "r_hel"},
                 {"ItemType": "Merc Equip", "Code": "helm", "Equiv1": "armo", "Equiv2": "merc", "UICategory": "helms", "RunewordCategory1": ""},
                 {"ItemType": "Sword", "Code": "swor", "Equiv1": "weap", "Equiv2": "", "UICategory": "sword", "RunewordCategory1": "r_mel"},
+                {"ItemType": "Belt", "Code": "belt", "Equiv1": "armo", "Equiv2": "", "UICategory": "belts", "RunewordCategory1": "r_blt"},
+                {"ItemType": "Custom Relic Type", "Code": "xrel", "Equiv1": "", "Equiv2": "", "UICategory": "xrelic", "RunewordCategory1": ""},
                 {"ItemType": "Rune", "Code": "rune", "Equiv1": "", "Equiv2": "", "UICategory": "", "RunewordCategory1": ""},
                 {"ItemType": "Gem", "Code": "gem", "Equiv1": "", "Equiv2": "", "UICategory": "", "RunewordCategory1": ""},
                 {"ItemType": "Potion", "Code": "poti", "Equiv1": "", "Equiv2": "", "UICategory": "potis", "RunewordCategory1": ""},
@@ -287,6 +289,7 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 {"name": "(B)Crafting Tablet", "code": "bct", "type": "spot", "quest": "", "useable": "0", "spawnable": "1", "UICatOverride": ""},
                 {"name": "Stamina Potion", "code": "vps", "type": "spot", "quest": "", "useable": "1", "spawnable": "1", "UICatOverride": ""},
                 {"name": "Pandemonium Key", "code": "pk1", "type": "spot", "quest": "", "useable": "0", "spawnable": "1", "UICatOverride": "uberm"},
+                {"name": "Relic Coin", "code": "xrc", "type": "xrel", "quest": "", "spawnable": "1", "UICatOverride": ""},
             ],
             "gems": [
                 {
@@ -321,9 +324,12 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 "Armor": "Armor",
                 "Weapon": "Weapon",
                 "helms": "Helms",
+                "belts": "Belts",
+                "Belt": "Belt",
                 "sword": "Swords",
                 "r_hel": "Helmet",
                 "r_mel": "Melee",
+                "r_blt": "Waist",
                 "r01": "El Rune",
                 "r01L": "El",
                 "gpr": "Perfect Ruby",
@@ -333,6 +339,7 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 "absol": "Essence / Token of Absolution",
                 "uberm": "Uber Materials",
                 "xcust": "Custom Misc",
+                "xrelic": "Relics",
                 "StrGemX1": "Helms:",
                 "StrGemX2": "Shields:",
                 "StrGemX3": "Weapons:",
@@ -342,9 +349,12 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 "Armor": "Rüstung",
                 "Weapon": "Waffe",
                 "helms": "Helme",
+                "belts": "Gürtel",
+                "Belt": "Gürtel",
                 "sword": "Schwerter",
                 "r_hel": "Helm",
                 "r_mel": "Nahkampf",
+                "r_blt": "Gurt",
                 "r01": "El-Rune",
                 "r01L": "El",
                 "gpr": "Perfekter Rubin",
@@ -354,6 +364,7 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 "absol": "Essenz / Zeichen der Absolution",
                 "uberm": "Über-Materialien",
                 "xcust": "Benutzerdefiniert",
+                "xrelic": "Relikte",
                 "StrGemX1": "Helme:",
                 "StrGemX2": "Schilde:",
                 "StrGemX3": "Waffen:",
@@ -363,9 +374,12 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 "Armor": "방어구",
                 "Weapon": "무기",
                 "helms": "투구",
+                "belts": "허리띠",
+                "Belt": "허리띠",
                 "sword": "검",
                 "r_hel": "투구",
                 "r_mel": "근접",
+                "r_blt": "벨트",
                 "r01": "엘 룬",
                 "r01L": "엘",
                 "gpr": "완벽한 루비",
@@ -375,6 +389,7 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 "absol": "정수 / 면죄의 징표",
                 "uberm": "우버 재료",
                 "xcust": "사용자 지정",
+                "xrelic": "유물",
                 "StrGemX1": "투구:",
                 "StrGemX2": "방패:",
                 "StrGemX3": "무기:",
@@ -390,13 +405,15 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 analyzer = ItemAnalyzerService(repo, resolver)
 
                 self.assertEqual(strings["r_hel"], analyzer.get_item_category("cap"))
-                self.assertEqual(("Others", "helms", strings["helms"]), analyzer.get_unique_export_groups({"code": "cap"}))
+                self.assertEqual(("armor", "helms", strings["helms"]), analyzer.get_unique_export_groups({"code": "cap"}))
                 base_families = BaseItemAnalyzerService(repo, resolver).analyze_base_items()
                 cap_family = next(f for f in base_families if f["members"][0]["code"] == "cap")
                 self.assertEqual(strings["Armor"], cap_family["group"])
                 self.assertEqual(strings["helms"], cap_family["members"][0]["loot_category"])
                 rw_group = analyzer.get_runeword_export_group({"Name": "Runeword99", "itype1": "helm"})
-                self.assertEqual(("helms", "helm", strings["r_hel"]), rw_group)
+                self.assertEqual(("r_hel", "helm", strings["r_hel"]), rw_group)
+                custom_rw_group = analyzer.get_runeword_export_group({"Name": "RunewordBelt", "itype1": "belt"})
+                self.assertEqual(("r_blt", "belt", strings["Belt"]), custom_rw_group)
                 rw_dto = analyzer.analyze_runeword({"Name": "Runeword99", "Rune1": "r01", "itype1": "helm", "T1Code1": "ac"})
                 self.assertEqual([strings["r_hel"]], rw_dto["base_items"])
 
@@ -408,6 +425,8 @@ class TestTaxonomyAndMiscLocalization(unittest.TestCase):
                 self.assertEqual(strings["terrt"], by_key["terrt"]["category"])
                 self.assertEqual(strings["absol"], by_key["absol"]["category"])
                 self.assertEqual(strings["xcust"], by_key["xcust"]["category"])
+                self.assertEqual(strings["xrelic"], by_key["xrelic"]["category"])
+                self.assertIn("xrc", [m["code"] for m in by_key["xrelic"]["members"]])
                 self.assertEqual("Crafting Materials", by_key["crafting"]["category"])
                 self.assertIn("bct", [m["code"] for m in by_key["crafting"]["members"]])
                 potis_codes = [m["code"] for m in by_key["potis"]["members"]]

@@ -57,34 +57,23 @@ class ItemAnalyzerService:
         return self.taxonomy.label(type_code) or "Miscellaneous"
 
     def get_unique_export_groups(self, raw_row: Dict[str, str]) -> Tuple[str, str, str]:
-        """Returns (top_group, granular_code, granular_label) using itemtypes.txt codes."""
+        """Returns (group_code, granular_code, granular_label) using itemtypes.txt codes."""
         item_code = str(raw_row.get('code', '') or '').strip()
         base = self.armor.get(item_code) or self.weapons.get(item_code) or self.misc.get(item_code) or {}
         if not base:
-            return "Others", "other", "Other"
+            return "other", "other", "Other"
         ui_code = self.taxonomy.ui_category_code(base)
         group_code = self.taxonomy.group_code(base)
-        top_group = "Weapons" if group_code == "weapons" else "Others"
         granular_code = ui_code or base.get('type', '').strip() or "other"
         granular_label = self.taxonomy.category_label(ui_code) if ui_code else self.get_item_category(item_code)
-        return top_group, granular_code, granular_label
+        return group_code, granular_code, granular_label
 
     def get_runeword_export_group(self, raw_row: Dict[str, str]) -> Tuple[str, str, str]:
-        """Returns (group_key, base_code, base_label) from itype1/itemtypes.txt hierarchy."""
+        """Returns (bucket_key, base_code, base_label) dynamically from itemtypes.txt RunewordCategory1/Equiv."""
         itype1 = str(raw_row.get('itype1', '') or '').strip()
         if not itype1 or itype1 == 'xxx':
-            return "weapons", "other", "Other"
-        chain = set(self.taxonomy.chain(itype1))
-        rw_cats = self.taxonomy.runeword_category_codes(itype1)
-        if 'r_hel' in rw_cats or 'helm' in chain or 'merc' in chain:
-            group = "helms"
-        elif 'r_off' in rw_cats or 'shld' in chain or 'seco' in chain:
-            group = "shields"
-        elif 'r_arm' in rw_cats or 'tors' in chain:
-            group = "chests"
-        else:
-            group = "weapons"
-        return group, itype1.lower(), self.taxonomy.label(itype1)
+            return "other", "other", "Other"
+        return self.taxonomy.runeword_export_bucket(itype1), itype1.lower(), self.taxonomy.label(itype1)
 
     def analyze_unique(self, row: Dict[str, str]) -> AnalyzedItemDTO:
         idx = row.get('index', '').strip()

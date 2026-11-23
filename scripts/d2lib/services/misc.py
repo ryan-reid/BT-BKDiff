@@ -210,7 +210,7 @@ class MiscAnalyzerService:
             return "crafting", "Crafting Materials"
 
         itemtype_ui = self.taxonomy.ui_category_code({"type": type_code})
-        if itemtype_ui and itemtype_ui in {"scrlt", "potis", "ammo", "charm", "jewel", "rings", "amule", "keysr"}:
+        if itemtype_ui and itemtype_ui.lower() not in _SENTINEL_UI_CATEGORIES:
             return itemtype_ui, self.taxonomy.category_label(itemtype_ui)
 
         if type_lower in ("book", "scro"):
