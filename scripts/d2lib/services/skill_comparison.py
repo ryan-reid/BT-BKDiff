@@ -8,7 +8,12 @@ from __future__ import annotations
 import re
 from collections import deque
 
-from d2lib.repository import get_class_name_maps, get_class_slug_map, resolve_localized_string
+from d2lib.repository import (
+    get_class_name_maps,
+    get_class_slug_map,
+    resolve_element_name,
+    resolve_localized_string,
+)
 from d2lib.utils import slugify
 
 
@@ -277,13 +282,16 @@ class SkillComparisonService:
             raw = value(root_row, field)
             if raw:
                 if field == "EType":
-                    display = {"mag": "Magic", "fire": "Fire", "ltng": "Lightning", "cold": "Cold", "pois": "Poison", "phys": "Physical"}.get(raw, raw)
+                    display = resolve_element_name(source.repo if source is not None else None, raw)
                 elif field in {"reqskill1", "reqskill2", "reqskill3"} and source is not None:
                     _, ref_row = source.lookup("skills", raw)
                     display = source.display_name(ref_row, fallback=raw) if ref_row else raw
                 else:
                     display = raw
-                facts[("skill", field)] = {"label": label, "value": display, "evidence": f"skills:{root} · {field}"}
+                fact = {"label": label, "value": display, "evidence": f"skills:{root} · {field}"}
+                if field == "EType":
+                    fact["code"] = raw
+                facts[("skill", field)] = fact
         # These parameter meanings belong to this specific function pair.
         # Never apply them to arbitrary missile hit functions.
         for rid, record in snapshot["records"].items():
@@ -299,6 +307,12 @@ class SkillComparisonService:
                 facts[(rid, "healing")] = {"label": f"{record['key']} · Ally healing", "value": healing,
                                             "evidence": f"{rid} · pSrvHitFunc=7, sHitPar1={value(row, 'sHitPar1')}"}
         return facts
+
+    @staticmethod
+    def _tooltip_text(snapshot, key):
+        _, desc = skill_description(snapshot, key)
+        text_key = value(desc, "str long") or value(desc, "str short")
+        return snapshot["records"].get("strings:" + text_key.lower(), {}).get("row", {}).get("text", "")
 
     def compare(self, key):
         old = self.baseline.snapshot(key)
@@ -321,9 +335,14 @@ class SkillComparisonService:
         after = self._facts(new, key, source=self.current)
         for identity in dict.fromkeys(list(after) + list(before)):
             a, b = before.get(identity, {}), after.get(identity, {})
-            facts.append({"label": (b or a)["label"], "old": a.get("value", ""), "new": b.get("value", ""),
-                          "status": "unchanged" if a.get("value") == b.get("value") else "changed",
-                          "evidence": " | ".join(dict.fromkeys(x["evidence"] for x in (a, b) if x))})
+            fact_entry = {
+                "label": (b or a)["label"], "old": a.get("value", ""), "new": b.get("value", ""),
+                "status": "unchanged" if a.get("value") == b.get("value") else "changed",
+                "evidence": " | ".join(dict.fromkeys(x["evidence"] for x in (a, b) if x)),
+            }
+            if "code" in (b or a):
+                fact_entry["code"] = (b or a)["code"]
+            facts.append(fact_entry)
         records = []
         for rid in dict.fromkeys(list(new["records"]) + list(old["records"])):
             a, b = old["records"].get(rid), new["records"].get(rid)
@@ -343,10 +362,6 @@ class SkillComparisonService:
         for side, snap in (("old", old), ("new", new)):
             if snap["missing"]:
                 warnings.append({"side": side, "text": f"{len(snap['missing'])} unresolved source links; inspect linked records for details."})
-            tooltip = " ".join(r["row"].get("text", "") for r in snap["records"].values() if r["table"] == "strings")
-            disabled = any(f["value"] == "Disabled" for k, f in self._facts(snap, key).items() if k[1] == "healing")
-            if disabled and re.search(r"heals? allies", tooltip, re.I):
-                warnings.append({"side": side, "kind": "tooltip", "text": "Tooltip mentions ally healing, but a linked missile's server settings disable it."})
         refs = []
         seen_refs = set()
         for snap in (new, old):
@@ -382,11 +397,7 @@ class SkillComparisonService:
                         new_value, new_note = sides.get("new", ("", ""))
                         parameter = comparison_row(parameter_name, old_value, new_value)
                         formula_rows.append(dict(parameter, old_note=old_note, new_note=new_note))
-        def tooltip(snap):
-            _, desc = skill_description(snap, key)
-            text_key = value(desc, "str long") or value(desc, "str short")
-            return snap["records"].get("strings:" + text_key.lower(), {}).get("row", {}).get("text", "")
-        old_text, new_text = tooltip(old), tooltip(new)
+        old_text, new_text = self._tooltip_text(old, key), self._tooltip_text(new, key)
         tooltip_row = comparison_row("In-game description", old_text, new_text)
         before = synergy_entries(old, key, self.baseline.repo)
         after = synergy_entries(new, key, self.current.repo)

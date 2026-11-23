@@ -51,9 +51,11 @@ class TestSkillComparison(unittest.TestCase):
         current["missiles"][0].update(sHitPar1="0", sHitPar2="0")
         card = self.service(current).compare("holy bolt")
         target = next(f for f in card["facts"] if "targets" in f["label"])
+        healing = next(f for f in card["facts"] if "Ally healing" in f["label"])
         self.assertEqual(("Demons and undead", "All enemy monster types"), (target["old"], target["new"]))
+        self.assertEqual(("Enabled", "Disabled"), (healing["old"], healing["new"]))
         self.assertEqual("modified", card["status"])
-        self.assertTrue(any("healing" in w["text"] for w in card["warnings"]))
+        self.assertEqual([], [w for w in card["warnings"] if w.get("kind") == "tooltip"])
 
     def test_recursive_missile_diff_and_cycle_termination(self):
         current = copy.deepcopy(self.tables)
@@ -257,6 +259,75 @@ class TestSkillComparison(unittest.TestCase):
         ko_dagger = SkillComparisonService(ko_repo, baseline_repo).compare("poison dagger")
         self.assertEqual("독 일격", ko_dagger["name"])
         self.assertEqual("poison-dagger", ko_dagger["slug"])
+
+    def test_etype_resolution_across_locales_preserves_canonical_code(self):
+        element_strings = {
+            "enUS": {
+                "strskltree25": "Fire", "strskltree23": "Cold", "strskltree24": "Lightning",
+                "strskltree17": "Poison", "strbsmagic": "Magic", "skillname139": "Stun",
+                "burn": "Burn", "physical": "Physical",
+            },
+            "deDE": {
+                "strskltree25": "Feuer", "strskltree23": "Kälte", "strskltree24": "Blitz",
+                "strskltree17": "Gift", "strbsmagic": "Magie", "skillname139": "Betäuben",
+                "burn": "Brand", "physical": "Physisch",
+            },
+            "koKR": {
+                "strskltree25": "화염", "strskltree23": "냉기", "strskltree24": "번개",
+                "strskltree17": "독", "strbsmagic": "마법", "skillname139": "기절",
+                "burn": "작열", "physical": "물리",
+            },
+        }
+        codes = ["fire", "cold", "ltng", "pois", "mag", "stun", "burn", "phys"]
+        skills = [{"skill": f"Skill_{c}", "charclass": "sor", "EType": c} for c in codes]
+
+        for locale, strs in element_strings.items():
+            repo = Repository({"skills": skills}, strs)
+            repo.locale = locale
+            svc = SkillComparisonService(repo, repo)
+            for code, expected in zip(codes, strs.values()):
+                card = svc.compare(f"skill_{code}")
+                etype_fact = next(f for f in card["facts"] if f["label"] == "Skill damage element")
+                self.assertEqual(expected, etype_fact["new"], f"{locale} {code}")
+                self.assertEqual(code, etype_fact["code"], f"{locale} {code}")
+
+    def test_disabled_ally_healing_reports_data_fact_without_editorial_tooltip_notes(self):
+        def make_tables(shitpar1, include_heal_descline=False):
+            desc_row = {"skilldesc": "holy bolt", "str long": "holy_desc", "str name": "holy_name"}
+            if include_heal_descline:
+                desc_row.update({"descline2": "75", "desctexta2": "StrSkill50"})
+            return {
+                "skills": [{"skill": "Holy Bolt", "charclass": "pal", "skilldesc": "holy bolt", "srvmissile": "holybolt"}],
+                "skilldesc": [desc_row],
+                "missiles": [{"Missile": "holybolt", "pSrvHitFunc": "7", "pSrvDmgFunc": "15", "sHitPar1": shitpar1, "sHitPar2": "0"}],
+            }
+
+        strs_by_locale = {
+            "enUS": {"holy_name": "Holy Bolt", "holy_desc": "a bolt that damages enemies or heals allies", "strskill50": "Heals: %d-%d"},
+            "deDE": {"holy_name": "Heiliger Blitz", "holy_desc": "Schadet Gegnern oder heilt Verbündete", "strskill50": "Heilt: %d-%d"},
+            "koKR": {"holy_name": "신성한 화살", "holy_desc": "적에게 피해를 주거나 아군을 치유합니다.", "strskill50": "치유: %d-%d"},
+        }
+
+        for locale, strs in strs_by_locale.items():
+            old_repo = Repository(make_tables("1", include_heal_descline=True), strs)
+            old_repo.locale = locale
+            new_repo = Repository(make_tables("0", include_heal_descline=True), strs)
+            new_repo.locale = locale
+            card = SkillComparisonService(new_repo, old_repo).compare("holy bolt")
+            healing = next(f for f in card["facts"] if "Ally healing" in f["label"])
+            self.assertEqual(("Enabled", "Disabled"), (healing["old"], healing["new"]), locale)
+            self.assertEqual([], [w for w in card["warnings"] if w.get("kind") == "tooltip"], locale)
+
+            both_repo = Repository(make_tables("0", include_heal_descline=True), strs)
+            both_repo.locale = locale
+            both_card = SkillComparisonService(both_repo, both_repo).compare("holy bolt")
+            both_healing = next(f for f in both_card["facts"] if "Ally healing" in f["label"])
+            self.assertEqual(("Disabled", "Disabled"), (both_healing["old"], both_healing["new"]), locale)
+            self.assertEqual([], [w for w in both_card["warnings"] if w.get("kind") == "tooltip"], locale)
+
+            ctx = skill_card_context(card)
+            base_labels = {row["label"] for sec in ctx["comparison_sections"] for row in sec["stat_rows"]}
+            self.assertNotIn("Tooltip note", base_labels, locale)
 
 
 if __name__ == "__main__":

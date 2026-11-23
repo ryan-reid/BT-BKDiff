@@ -132,6 +132,222 @@ class TestAmazonSkillTreeService(unittest.TestCase):
                             else:
                                 self.fail(f"Mismatched value shape for {skill_name} {ui_key}: expected {expected_raw}, actual {actual_raw}")
 
+    def _clone_snapshot_tables(self):
+        return {
+            table: [dict(row) for row in self.repo.get_excel_table(table)]
+            for table in ("skills", "skilldesc", "missiles", "monstats", "monlvl", "charstats")
+        }
+
+    def test_immolation_arrow_uses_skills_txt_calc_columns_dynamically(self):
+        tables = self._clone_snapshot_tables()
+        imm = next(r for r in tables["skills"] if r.get("skill") == "Immolation Arrow")
+        imm["Param8"] = "10"
+        repo = _MutableSnapshotRepo(tables, self.repo.strings)
+        svc = SkillAnalyzerService(repo)
+
+        synergies = {normalize_skill_key("Fire Arrow"): 20, normalize_skill_key("Exploding Arrow"): 20, "immolationarrow": 20}
+        effects = svc.get_skill_display_effects("Immolation Arrow", 24, 20, synergies)
+        by_label_raw = {e["label"]: e["value"] for e in effects}
+        # Base explosion at lvl 24 (Param8=5 was 390-396 at 3x mult -> 130-132 base -> 5x mult with Param8=10 = 650-660)
+        self.assertEqual("650.00-660.00", by_label_raw["Fire Explosion Damage"])
+        # Burn dps scaled dynamically via mael formula using (20+20)*10=400% -> 5x vs baseline 3x
+        base_dps = [float(x) for x in self.match_effect_value(
+            self.render_skill_effects("Immolation Arrow", 24, 20, {"Fire Arrow": 20, "Exploding Arrow": 20}),
+            "Fire Damage per Second",
+        ).replace(" dmg/s", "").split("-")]
+        scaled_dps = [float(x) for x in by_label_raw["Average Fire Damage"].replace(" dmg/s", "").split("-")]
+        self.assertAlmostEqual(base_dps[0] * (5.0 / 3.0), scaled_dps[0], delta=1.5)
+        self.assertAlmostEqual(base_dps[1] * (5.0 / 3.0), scaled_dps[1], delta=1.5)
+
+        # Remove Exploding Arrow from EDmgSymPerCalc and confirm mael drops from 5x to 3x
+        imm["EDmgSymPerCalc"] = "skill('Fire Arrow'.blvl) * par8"
+        svc2 = SkillAnalyzerService(_MutableSnapshotRepo(tables, self.repo.strings))
+        eff2 = svc2.get_skill_display_effects("Immolation Arrow", 24, 20, synergies)
+        by_label2_raw = {e["label"]: e["value"] for e in eff2}
+        self.assertEqual("390.00-396.00", by_label2_raw["Fire Explosion Damage"])
+        scaled_dps2 = [float(x) for x in by_label2_raw["Average Fire Damage"].replace(" dmg/s", "").split("-")]
+        self.assertAlmostEqual(base_dps[0], scaled_dps2[0], delta=1.5)
+
+    def test_descline_13_summon_life_reads_from_monstats_and_skills(self):
+        tables = self._clone_snapshot_tables()
+        valk_mon = next(r for r in tables["monstats"] if r.get("Id", "").lower() == "valkyrie")
+        valk_mon["minHP"] = "500"
+        valk_mon["maxHP"] = "700"  # average 600
+        svc = SkillAnalyzerService(_MutableSnapshotRepo(tables, self.repo.strings))
+
+        for decoy_lvl, expected_hp in ((0, 600.0), (10, 1800.0), (20, 3000.0)):
+            eff = svc.get_skill_display_effects("Valkyrie", 1, 1, {"valkyrie": 1, "decoy": decoy_lvl})
+            life = next(normalize_val(e["value"]) for e in eff if e["label"] == "Life")
+            self.assertAlmostEqual(expected_hp, life, delta=0.5, msg=f"decoy_lvl={decoy_lvl}")
+
+    def test_multi_locale_parity_and_skill_tree_synergies(self):
+        tables = self._clone_snapshot_tables()
+        # Add charstats & a synergy row with a missing string key to guard against NameError
+        tables["charstats"] = [{"class": "Amazon"}]
+        de_strings = {
+            "amazon": "Amazone",
+            "strskill3": "Manakosten: %d",
+            "strskill5": "Feuerschaden: %d-%d",
+            "strskill6": "Kälteschaden: %d-%d",
+            "strskill8": "Giftschaden: %d-%d",
+            "strskill13": "Dauer der Kälte: %d Sek.",
+            "strskill18": "Radius: %d Meter",
+            "strskill20": "Dauer: %d Sek.",
+            "strskill21": "Verteidigung: %+d%%",
+            "strskill22": "Angriffswert: %+d%%",
+            "strskill42": "Leben: %d",
+            "strskill63": "über %d Sek.",
+            "strskill82": "Dauer des Feuers: %d Sek.",
+            "strskill83": "Feuerexplosionsschaden: %d-%d",
+            "strskilldamagepercent": "Schaden: %+d%%",
+            "strskillfiredamageaveragepersecond": "Durchschnittlicher Feuerschaden: %d-%d pro Sekunde",
+            "strskillcoldlengthsingular": "Dauer der Kälte: %d Sekunde",
+            "strskillpoisonlengthsingular": "über %d Sekunde",
+            "strskillfiredurationsingular": "Dauer des Feuers: %d Sekunde",
+            "strskilldurationsingular": "Dauer: %d Sekunde",
+            "strskillradiussingular": "Radius: %d Meter",
+            "strskillcastingdelaysingular": "Einsatzverzögerung: %d Sek.",
+            "strskillenemydefenseflatbonus": "Gegnerische Verteidigung: %+d",
+            "convphy2magalt": "Wandelt %d%% physischen Schaden in Elementarschaden um",
+            "firedplev": "%s: %+d%% Feuerschaden pro Level",
+            "afdimm": "%s: %+d%% Durchschnittlicher Feuerschaden pro Sekunde pro Level",
+            "poisdplev": "%s: %+d%% Giftschaden pro Level",
+            "hpplev": "%s: %+d%% Leben pro Level",
+            "attrateplev": "%s: %+d%% Angriffswert pro Level",
+            "colddplev": "%s: %+d%% Kälteschaden pro Level",
+            "frezlenplev": "%s: %+d%% Einfrierdauer pro Level",
+            "skillname7": "Feuerpfeil",
+            "skillname16": "Explodierender Pfeil",
+            "skillname23": "Durchschlagen",
+            "skillname27": "Feuerbrandpfeil",
+            "skillname28": "Lockvogel",
+            "skillname32": "Walküre",
+            "strskltree17": "Gift",
+            "strskltree23": "Kälte",
+            "strskltree25": "Feuer",
+        }
+        ko_strings = {
+            "amazon": "아마존",
+            "strskill3": "마나 소모: %d",
+            "strskill5": "화염 피해: %d-%d",
+            "strskill6": "냉기 피해: %d-%d",
+            "strskill8": "독 피해: %d-%d",
+            "strskill13": "냉기 지속시간: %d초",
+            "strskill18": "반경: %d미터",
+            "strskill20": "지속시간: %d초",
+            "strskill21": "방어력: %+d%%",
+            "strskill22": "명중률: %+d%%",
+            "strskill42": "생명력: %d",
+            "strskill63": "%d초에 걸쳐",
+            "strskill82": "화염 지속시간: %d초",
+            "strskill83": "화염 폭발 피해: %d-%d",
+            "strskilldamagepercent": "공격력: %+d%%",
+            "strskillfiredamageaveragepersecond": "평균 화염 피해: 초당 %d-%d",
+            "strskillcoldlengthsingular": "냉기 지속시간: %d초",
+            "strskillpoisonlengthsingular": "%d초에 걸쳐",
+            "strskillfiredurationsingular": "화염 지속시간: %d초",
+            "strskilldurationsingular": "지속시간: %d초",
+            "strskillradiussingular": "반경: %d미터",
+            "strskillcastingdelaysingular": "시전 지연 시간: %d초",
+            "strskillenemydefenseflatbonus": "적 방어력: %+d",
+            "convphy2magalt": "물리 피해의 %d%%를 원소 피해로 전환",
+            "firedplev": "%s: 레벨당 화염 피해 %+d%%",
+            "afdimm": "%s: 레벨당 초당 평균 화염 피해 %+d%%",
+            "poisdplev": "%s: 레벨당 독 피해 %+d%%",
+            "hpplev": "%s: 레벨당 생명력 %+d%%",
+            "attrateplev": "%s: 레벨당 명중률 %+d%%",
+            "colddplev": "%s: 레벨당 냉기 피해 %+d%%",
+            "frezlenplev": "%s: 레벨당 빙결 시간 %+d%%",
+            "skillname7": "화염 화살",
+            "skillname16": "폭발 화살",
+            "skillname23": "간파",
+            "skillname27": "제물 화살",
+            "skillname28": "미끼",
+            "skillname32": "발키리",
+            "strskltree17": "독",
+            "strskltree23": "냉기",
+            "strskltree25": "화염",
+        }
+
+        def unit_of(val_str: str) -> str:
+            for suffix in (" dmg/s", "%", "s", "y"):
+                if val_str.endswith(suffix):
+                    return suffix
+            return ""
+
+        en_svc = self.service
+        de_svc = SkillAnalyzerService(_MutableSnapshotRepo(tables, de_strings, self.repo.strings, locale="deDE"))
+        ko_svc = SkillAnalyzerService(_MutableSnapshotRepo(tables, ko_strings, self.repo.strings, locale="koKR"))
+
+        test_cases = [
+            ("Immolation Arrow", 24, 20, {"firearrow": 20, "explodingarrow": 20}),
+            ("Cold Arrow", 20, 20, {"icearrow": 20, "freezingarrow": 20}),
+            ("Poison Javelin", 20, 20, {"plaguejavelin": 20}),
+            ("Inner Sight", 20, 20, {}),
+            ("Valkyrie", 20, 20, {"decoy": 20, "penetrate": 5}),
+        ]
+        for sname, lvl, blvl, syn in test_cases:
+            en_eff = en_svc.get_skill_display_effects(sname, lvl, blvl, syn)
+            de_eff = de_svc.get_skill_display_effects(sname, lvl, blvl, syn)
+            ko_eff = ko_svc.get_skill_display_effects(sname, lvl, blvl, syn)
+            self.assertEqual(
+                [(normalize_val(e["value"]), unit_of(e["value"])) for e in en_eff],
+                [(normalize_val(e["value"]), unit_of(e["value"])) for e in de_eff],
+                f"deDE value/unit mismatch for {sname}",
+            )
+            self.assertEqual(
+                [(normalize_val(e["value"]), unit_of(e["value"])) for e in en_eff],
+                [(normalize_val(e["value"]), unit_of(e["value"])) for e in ko_eff],
+                f"koKR value/unit mismatch for {sname}",
+            )
+
+        de_tree = de_svc.generate_skill_tree("ama")
+        ko_tree = ko_svc.generate_skill_tree("ama")
+        self.assertEqual("Amazone", de_tree["class_name"])
+        self.assertEqual("아마존", ko_tree["class_name"])
+
+        de_by_id = {sk["id"]: sk for sk in de_tree["skills"]}
+        ko_by_id = {sk["id"]: sk for sk in ko_tree["skills"]}
+        self.assertEqual("immolation-arrow", de_by_id["Immolation Arrow"]["slug"])
+        self.assertEqual("immolation-arrow", ko_by_id["Immolation Arrow"]["slug"])
+        self.assertEqual("Feuerbrandpfeil", de_by_id["Immolation Arrow"]["name"])
+        self.assertEqual("제물 화살", ko_by_id["Immolation Arrow"]["name"])
+        self.assertTrue(
+            any("Feuerschaden pro Level" in s["effect"] and "per Level" not in s["effect"]
+                for s in de_by_id["Immolation Arrow"]["synergies"])
+        )
+        self.assertTrue(
+            any("레벨당 화염 피해" in s["effect"] and "per Level" not in s["effect"]
+                for s in ko_by_id["Immolation Arrow"]["synergies"])
+        )
+
+        # Ensure missing synergy string key does not raise NameError
+        tables_missing = self._clone_snapshot_tables()
+        sd_row = next(r for r in tables_missing["skilldesc"] if r.get("skilldesc") == "fire arrow")
+        sd_row["dsc3textb2"] = "missing_synergy_skill_key"
+        missing_tree = SkillAnalyzerService(_MutableSnapshotRepo(tables_missing, de_strings, locale="deDE")).generate_skill_tree("ama")
+        self.assertIn("Fire Arrow", {s["id"] for s in missing_tree["skills"]})
+
+
+class _MutableSnapshotRepo:
+    def __init__(self, tables, strings, canonical_strings=None, locale="enUS"):
+        self.tables = tables
+        self.strings = {k.lower(): v for k, v in strings.items()}
+        self.canonical_strings = {k.lower(): v for k, v in (canonical_strings or {}).items()}
+        self.locale = locale
+
+    def get_excel_table(self, table_name: str):
+        return self.tables.get(table_name, [])
+
+    def get_string(self, key: str) -> str:
+        return self.strings.get(key.lower(), key) if key else ""
+
+    def get_canonical_string(self, key: str) -> str:
+        return self.canonical_strings.get(key.lower(), "") if key else ""
+
+    def load_tsv(self, file_path: str):
+        return []
+
 
 class FrozenSnapshotRepository(D2Repository):
     def __init__(self, snapshot_mod_path: str):

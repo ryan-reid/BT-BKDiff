@@ -448,6 +448,37 @@ class TestPropertyResolverLocalization(unittest.TestCase):
         self.assertEqual(dto["resolved_text"], "+5-10 Custom Bonus")
         self.assertEqual(dto["label"], "Custom Bonus")
 
+    def test_unrecognized_typo_property_codes_report_unknown_without_aliasing(self):
+        tables = _base_tables()
+        tables["properties"].append({"code": "unmapped-prop", "func1": "1"})
+        resolver = PropertyResolverService(_FakeResolverRepo(tables, _STRINGS_BY_LOCALE["enUS"], locale="enUS"))
+
+        typo_cases = [
+            ("attskill", "poison nova", "20", "10"),
+            ("hitskill", "Fire Ball", "15", "10"),
+            ("ern%", "", "5", "10"),
+            ("ar%", "", "200", "200"),
+            ("cast", "", "15", "15"),
+            ("balance", "", "10", "10"),
+            ("cold-res", "", "10", "10"),
+            ("res-poi-len", "", "100", "100"),
+            ("get-hit-skill", "Fire Ball", "33", "60"),
+            ("level-skill", "Fire Ball", "10", "5"),
+            ("unmapped-prop", "", "1", "2"),
+        ]
+        for code, param, min_v, max_v in typo_cases:
+            dto = resolver.resolve_property(code, param, min_v, max_v)
+            self.assertTrue(dto["is_unknown"], f"Expected {code} to be marked unknown")
+            self.assertEqual(dto["resolved_text"], f"Unknown property ({code})")
+            self.assertEqual(dto["label"], f"Unknown property ({code})")
+
+        valid_hit = resolver.resolve_property("hit-skill", "Fire Ball", "15", "10")
+        self.assertFalse(valid_hit["is_unknown"])
+        self.assertEqual(valid_hit["resolved_text"], "15% Chance to cast level 10 Fire Ball on striking")
+        valid_res = resolver.resolve_property("res-all", "", "20", "20")
+        self.assertFalse(valid_res["is_unknown"])
+        self.assertEqual(valid_res["resolved_text"], "All Resistances +20")
+
 
 if __name__ == "__main__":
     unittest.main()
