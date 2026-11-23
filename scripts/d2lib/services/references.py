@@ -229,10 +229,13 @@ class ReferenceAnalyzerService:
         return sorted(rows, key=lambda row: row["label"].casefold())
 
     def _item_type_names(self) -> Dict[str, str]:
+        from d2lib.services.item_types import ItemTypeTaxonomy
+
+        taxonomy = ItemTypeTaxonomy(self.repo)
         names = {
-            row["Code"]: self.repo.get_string(row["ItemType"]) or row["ItemType"]
+            row["Code"]: taxonomy.label(row["Code"])
             for row in self.repo.get_excel_table("itemtypes")
-            if row.get("Code") and row.get("ItemType")
+            if row.get("Code")
         }
         base_names: Dict[str, Set[str]] = {}
         unresolved_types: Set[str] = set()

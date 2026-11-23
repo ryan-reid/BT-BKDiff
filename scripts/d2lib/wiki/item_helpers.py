@@ -27,10 +27,15 @@ def should_include_item(entry: Dict[str, Any], family: str) -> bool:
     title = str(entry.get("display_name") or entry.get("id") or entry.get("name") or "").strip()
     base_item = str(entry.get("base_item", "")).strip()
     item_type = str(entry.get("item_type", "")).strip()
+    raw_row = entry.get("raw_row") or {}
     if not properties:
         if title.lower() == "blank charm":
             return False
-        if base_item.lower() == "expansion" and item_type.lower() == "expansion":
+        if base_item.lower() == "expansion" and item_type.lower() in {"expansion", "miscellaneous"}:
+            return False
+        if ("code" in raw_row and not str(raw_row.get("code", "")).strip()) or (
+            "item" in raw_row and not str(raw_row.get("item", "")).strip()
+        ):
             return False
     return True
 

@@ -16,7 +16,6 @@ from cli.generate_wiki import run as generate_wiki
 from d2lib.services.recipes import RecipePresentationBuilder
 from d2lib.wiki import AreaFarmingDataBuilder, ItemIconExporter, MediaWikiPublisher, WikiContentBuilder, WikiGenerator, WikiOutputWriter, WikiRoutes
 from d2lib.wiki.comparison import affix_card_contexts
-from d2lib.wiki.presentation import sanitize_display_payload, sanitize_display_text
 
 
 class TestWikiGenerator(unittest.TestCase):
@@ -149,22 +148,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("charms", RecipePresentationBuilder._corruption_filter_tags({"inputs": ["Annihilus"]}))
         self.assertIn("jewelry", RecipePresentationBuilder._corruption_filter_tags({"inputs": ["Ring (Unique)"]}))
 
-    def test_display_payload_normalizes_merc_equip_to_helm(self):
-        payload = {
-            "recipe": "Helm Merc Equip (Normal, nos)",
-            "inputs": ["Merc Equip", "Merc Equip (Set)"],
-            "nested": [{"search_text": "Black Merc Equip dye"}],
-        }
-
-        normalized = sanitize_display_payload(payload)
-
-        self.assertEqual("Helm (Normal, nos)", normalized["recipe"])
-        self.assertEqual(["Helm", "Helm (Set)"], normalized["inputs"])
-        self.assertEqual("Black Helm dye", normalized["nested"][0]["search_text"])
-        self.assertEqual("Helm Eth Sup (hiq, eth, nos)", sanitize_display_text("Helm Eth Sup Merc Equip (hiq, eth, nos)"))
-        self.assertEqual("Helm", sanitize_display_text("merc equip"))
-
-    def test_wiki_output_writer_sanitizes_display_text(self):
+    def test_wiki_output_writer_preserves_data_without_global_merc_equip_rewrite(self):
         source_dir = os.path.join(self.root, "report_source")
         os.makedirs(source_dir, exist_ok=True)
         source_path = os.path.join(source_dir, "merc_equip.html")
@@ -179,14 +163,51 @@ class TestWikiGenerator(unittest.TestCase):
             data_file = f.read()
         with open(os.path.join(self.output, "reports", "items", "merc_equip.html"), "r", encoding="utf-8") as f:
             copied_report = f.read()
-        with open(source_path, "r", encoding="utf-8") as f:
-            original_report = f.read()
 
-        self.assertNotIn("Merc Equip", data_file)
-        self.assertIn('"label": "Helm"', data_file)
-        self.assertNotIn("Merc Equip", copied_report)
-        self.assertIn("Added Helm Runewords", copied_report)
-        self.assertIn("Merc Equip", original_report)
+        self.assertEqual('{"label": "Merc Equip"}', data_file)
+        self.assertEqual("<h1>Added Merc Equip Runewords</h1><p>Base Item: Merc Equip</p>", copied_report)
+
+    def test_item_taxonomy_and_analyzer_resolve_merc_equip_helm_from_itemtypes(self):
+        from d2lib.repository import D2Repository
+        from d2lib.services.item_types import ItemTypeTaxonomy
+        from d2lib.services.items import ItemAnalyzerService
+
+        game_data = os.path.join(self.root, "taxonomy_data")
+        excel_dir = os.path.join(game_data, "global", "excel")
+        str_dir = os.path.join(game_data, "local", "lng", "strings")
+        os.makedirs(excel_dir, exist_ok=True)
+        os.makedirs(str_dir, exist_ok=True)
+        with open(os.path.join(excel_dir, "itemtypes.txt"), "w", encoding="utf-8", newline="") as f:
+            f.write("ItemType\tCode\tEquiv1\tEquiv2\tUICategory\tRunewordCategory1\n")
+            f.write("Armor\tarmo\t\t\t\t\n")
+            f.write("Mercenary\tmerc\tarmo\t\t\tr_hel\n")
+            f.write("Merc Equip\thelm\tarmo\tmerc\thelms\t\n")
+        with open(os.path.join(str_dir, "item-names.json"), "w", encoding="utf-8") as f:
+            f.write('[{"Key":"helms","enUS":"Helms","deDE":"Helme"},{"Key":"r_hel","enUS":"Helmet","deDE":"Helm"}]')
+
+        repo = D2Repository(game_data)
+        taxonomy = ItemTypeTaxonomy(repo)
+        stub_resolver = type(
+            "StubResolver",
+            (),
+            {
+                "resolve_properties": lambda *a, **k: [],
+                "resolve_property": lambda self, code, param="", min_v="", max_v="": {
+                    "code": code,
+                    "param": param,
+                    "min_val": min_v,
+                    "max_val": max_v,
+                    "resolved_text": "",
+                },
+            },
+        )()
+        analyzer = ItemAnalyzerService(repo, stub_resolver)
+        runeword = analyzer.analyze_runeword({"Name": "Runeword51", "Rune1": "r09", "itype1": "helm"})
+
+        self.assertEqual("Helmet", taxonomy.label("helm"))
+        self.assertEqual("Helms", taxonomy.category({"type": "helm"}))
+        self.assertEqual(["Helmet"], runeword["base_items"])
+        self.assertNotIn("Merc Equip", runeword["base_items"])
 
     def _write_json(self, root, relative_path, payload):
         full_path = os.path.join(root, relative_path)
@@ -313,7 +334,7 @@ class TestWikiGenerator(unittest.TestCase):
             {
                 "name": "Practice",
                 "runes": ["Tal Rune", "Eth Rune"],
-                "base_items": ["Merc Equip"],
+                "base_items": ["Helm"],
                 "raw_row": {"Rune1": "r07", "Rune2": "r05"},
                 "properties": [
                     {"code": "dmg", "param": "", "resolved_text": "+25% Enhanced Damage"},
@@ -380,13 +401,13 @@ class TestWikiGenerator(unittest.TestCase):
         self._write_tsv(
             excel_root,
             "itemtypes.txt",
-            ["ItemType", "Code", "Equiv1", "Equiv2", "MaxSockets1", "MaxSockets2", "MaxSockets3", "StaffMods", "Class"],
+            ["ItemType", "Code", "Equiv1", "Equiv2", "RunewordCategory1", "MaxSockets1", "MaxSockets2", "MaxSockets3", "StaffMods", "Class"],
             [
                 {"ItemType": "Weapon", "Code": "weap"},
                 {"ItemType": "Any Armor", "Code": "armo"},
                 {"ItemType": "Helm", "Code": "helm", "Equiv1": "armo"},
                 {"ItemType": "Belt", "Code": "belt", "Equiv1": "armo"},
-                {"ItemType": "Melee Weapon", "Code": "mele", "Equiv1": "weap"},
+                {"ItemType": "Melee Weapon", "Code": "mele", "Equiv1": "weap", "RunewordCategory1": "r_mel"},
                 {"ItemType": "Blunt", "Code": "blun", "Equiv1": "mele"},
                 {"ItemType": "Hammer", "Code": "hamm", "Equiv1": "blun", "MaxSockets1": "3", "MaxSockets2": "4", "MaxSockets3": "6"},
                 {"ItemType": "Circlet", "Code": "circ", "Equiv1": "helm"},
@@ -1303,9 +1324,9 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('id="runeword-prefix-filter"', runewords_index_page)
         self.assertIn('id="runeword-base-filter"', runewords_index_page)
         self.assertIn('<option value="Helm">Helm</option>', runewords_index_page)
-        self.assertIn("All Shields", WikiContentBuilder._runeword_base_filter_terms(["Grimoire", "Any Shield", "Voodoo Heads", "Auric Shields"]))
-        self.assertIn("All Shields", WikiContentBuilder._runeword_base_filter_terms(["Paladin Item"]))
-        self.assertIn("All Weapons", WikiContentBuilder._runeword_base_filter_terms(["Swords", "Wand"]))
+        self.assertEqual(["Helm", "Sword"], WikiContentBuilder._runeword_base_filter_terms(["Helm", "Helm", "Sword"]))
+        self.assertNotIn("All Shields", WikiContentBuilder._runeword_base_filter_terms(["Shield", "Voodoo Heads"]))
+        self.assertNotIn("All Weapons", WikiContentBuilder._runeword_base_filter_terms(["Swords", "Wand"]))
         self.assertIn("data-rune-selector", runewords_index_page)
         self.assertIn('data-rune-option data-rune-code="r07"', runewords_index_page)
         self.assertIn('id="runeword-selected-count"', runewords_index_page)
@@ -1386,7 +1407,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Classic", crafting_page)
         self.assertIn("Tablet", crafting_page)
         self.assertIn("Ascended", crafting_page)
-        self.assertIn("<strong>Weapon</strong>", crafting_page)
+        self.assertIn("<strong>Weapons</strong>", crafting_page)
         self.assertIn("<strong>Belt</strong>", crafting_page)
         self.assertNotIn("<strong>1 Magic Axe + Blood Crafting Tablet -&gt; Blood Weapon</strong>", crafting_page)
 
@@ -1396,7 +1417,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("30%", corruptions_page)
         self.assertIn("70%", corruptions_page)
         self.assertIn("Add 1 socket", corruptions_page)
-        self.assertIn("Weapon (Set) + Standard of Heroes", corruptions_page)
+        self.assertIn("Weapons (Set) + Standard of Heroes", corruptions_page)
         self.assertIn("28%", corruptions_page)
         self.assertIn("42%", corruptions_page)
         self.assertNotIn("Any Item (Set) + Standard of Heroes", corruptions_page)
@@ -1422,14 +1443,16 @@ class TestWikiGenerator(unittest.TestCase):
         with open(os.path.join(self.output, "misc", "index.html"), "r", encoding="utf-8") as f:
             misc_page = f.read()
         self.assertIn("Crafting Tablet", misc_page)
-        self.assertIn("Crafting Tablets &amp; Materials", misc_page)
+        self.assertIn('<h2 class="group-title">Crafting</h2>', misc_page)
+        self.assertIn('<h2 class="group-title">Uber Materials</h2>', misc_page)
         self.assertNotIn("Gems &amp; Skulls", misc_page)
+        self.assertNotIn('<h2 class="group-title">Gems</h2>', misc_page)
 
         with open(os.path.join(self.output, "gems-runes", "index.html"), "r", encoding="utf-8") as f:
             gems_runes_page = f.read()
-        self.assertIn("Gems &amp; Skulls", gems_runes_page)
+        self.assertIn('<h2 class="group-title">Gems</h2>', gems_runes_page)
         self.assertIn("Amethyst", gems_runes_page)
-        self.assertIn("Weapon", gems_runes_page)
+        self.assertIn("Weapons", gems_runes_page)
         self.assertIn("+3% Faster Cast Rate", gems_runes_page)
 
         with open(os.path.join(self.output, "bestiary", "index.html"), "r", encoding="utf-8") as f:

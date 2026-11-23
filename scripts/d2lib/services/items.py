@@ -9,15 +9,7 @@ from d2lib.repository import (
 )
 from d2lib.models import AnalyzedItemDTO, RunewordDTO, BaseItemDTO, BaseItemFamilyDTO
 from d2lib.services.resolver import PropertyResolverService
-from d2lib.utils import item_category_to_group
 from d2lib.services.item_types import ItemTypeTaxonomy
-
-
-def normalize_runeword_base_item_label(value: str) -> str:
-    label = str(value).strip()
-    if label.lower() in {"helm", "merc equip"}:
-        return "Helm"
-    return label
 
 
 class ItemAnalyzerService:
@@ -28,6 +20,7 @@ class ItemAnalyzerService:
         self.weapons = {row['code']: row for row in repo.get_excel_table('weapons')}
         self.misc = {row['code']: row for row in repo.get_excel_table('misc')}
         self.item_types = {row['Code']: row for row in repo.get_excel_table('itemtypes')}
+        self.taxonomy = ItemTypeTaxonomy(repo)
         self.sets: Dict[str, Dict[str, str]] = {}
         for row in repo.get_excel_table('sets'):
             index_key = str(row.get('index', '')).strip()
@@ -56,30 +49,42 @@ class ItemAnalyzerService:
 
     def get_item_category(self, code: str) -> str:
         item = self.armor.get(code) or self.weapons.get(code) or self.misc.get(code)
-        if not item: return "Miscellaneous"
+        if not item:
+            return "Miscellaneous"
         type_code = item.get('type', '').strip()
-        
-        # Swapped types in mods: often 'helm' is renamed to 'Merc Equip' 
-        # and a new 'merc' type is added for player 'Helms'.
-        if type_code == "helm":
-            return "Helm"
-            
-        item_type = self.item_types.get(type_code)
-        if not item_type: return "Miscellaneous"
-        
-        name = self.repo.get_string(item_type.get('ItemType', 'Unknown').strip())
-        if name.lower().strip() == "merc equip":
-            return "Helm"
-        return name
+        if not type_code or type_code not in self.item_types:
+            return "Miscellaneous"
+        return self.taxonomy.label(type_code) or "Miscellaneous"
 
-    def get_granular_group(self, category: str) -> str:
-        return item_category_to_group(category)
+    def get_unique_export_groups(self, raw_row: Dict[str, str]) -> Tuple[str, str, str]:
+        """Returns (top_group, granular_code, granular_label) using itemtypes.txt codes."""
+        item_code = str(raw_row.get('code', '') or '').strip()
+        base = self.armor.get(item_code) or self.weapons.get(item_code) or self.misc.get(item_code) or {}
+        if not base:
+            return "Others", "other", "Other"
+        ui_code = self.taxonomy.ui_category_code(base)
+        group_code = self.taxonomy.group_code(base)
+        top_group = "Weapons" if group_code == "weapons" else "Others"
+        granular_code = ui_code or base.get('type', '').strip() or "other"
+        granular_label = self.taxonomy.category_label(ui_code) if ui_code else self.get_item_category(item_code)
+        return top_group, granular_code, granular_label
 
-    def get_top_level_group(self, granular_group: str) -> str:
-        weapons = ['Class Weapons', 'Axes', 'Bows', 'Crossbows', 'Daggers', 'Javelins', 'Maces', 'Polearms', 'Scepters', 'Spears', 'Staves', 'Swords', 'Throwing', 'Wands']
-        if granular_group in weapons:
-            return "Weapons"
-        return "Others"
+    def get_runeword_export_group(self, raw_row: Dict[str, str]) -> Tuple[str, str, str]:
+        """Returns (group_key, base_code, base_label) from itype1/itemtypes.txt hierarchy."""
+        itype1 = str(raw_row.get('itype1', '') or '').strip()
+        if not itype1 or itype1 == 'xxx':
+            return "weapons", "other", "Other"
+        chain = set(self.taxonomy.chain(itype1))
+        rw_cats = self.taxonomy.runeword_category_codes(itype1)
+        if 'r_hel' in rw_cats or 'helm' in chain or 'merc' in chain:
+            group = "helms"
+        elif 'r_off' in rw_cats or 'shld' in chain or 'seco' in chain:
+            group = "shields"
+        elif 'r_arm' in rw_cats or 'tors' in chain:
+            group = "chests"
+        else:
+            group = "weapons"
+        return group, itype1.lower(), self.taxonomy.label(itype1)
 
     def analyze_unique(self, row: Dict[str, str]) -> AnalyzedItemDTO:
         idx = row.get('index', '').strip()
@@ -131,10 +136,7 @@ class ItemAnalyzerService:
         }
 
     def _runeword_base_item_label(self, type_code: str) -> str:
-        if type_code == "helm":
-            return "Helm"
-        label = self.repo.get_string(self.item_types.get(type_code, {}).get('ItemType', '')) or type_code
-        return normalize_runeword_base_item_label(label)
+        return self.taxonomy.label(type_code)
 
     def _resolve_runeword_rune_properties(self, row: Dict[str, str], item_type_code: str) -> List[Dict[str, Any]]:
         socket_group = self._runeword_socket_group(item_type_code)
@@ -312,7 +314,7 @@ class BaseItemAnalyzerService:
 
         type_code = row.get('type', '')
         item_type = self.item_types.get(type_code, {})
-        type_name = self.repo.get_string(item_type.get('ItemType', '')) or type_code
+        type_name = self.taxonomy.label(type_code) if type_code else ''
         item_type_chain = self.taxonomy.chain(type_code, row.get('type2', ''))
         type_categories = self._type_categories_for_item_type_chain(item_type_chain)
         class_restriction = self._class_restriction_for_item_type(item_type_chain)
@@ -476,8 +478,8 @@ class BaseItemAnalyzerService:
 
     def _family_group(self, items: List[BaseItemDTO]) -> str:
         if any(item["defense_min"] is not None for item in items):
-            return "Armor"
-        return "Weapons"
+            return self.taxonomy.group_label("armor")
+        return self.taxonomy.group_label("weapons")
 
     @staticmethod
     def _family_class_tags(items: List[BaseItemDTO]) -> List[str]:

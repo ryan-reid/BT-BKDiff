@@ -29,45 +29,39 @@ class ExportOrchestrator:
         for row in self.repo.get_excel_table('uniqueitems'):
             if row.get('disabled') == '1': continue
             item = self.analyzer.analyze_unique(row)
-            granular_group = self.analyzer.get_granular_group(item['item_type'])
-            top_group = self.analyzer.get_top_level_group(granular_group)
-            
+            top_group, granular_code, granular_label = self.analyzer.get_unique_export_groups(row)
+
             if top_group not in unique_data: top_group = "Others"
-            
-            if granular_group not in unique_data[top_group]:
-                unique_data[top_group][granular_group] = []
-            unique_data[top_group][granular_group].append(item)
+
+            if granular_code not in unique_data[top_group]:
+                unique_data[top_group][granular_code] = (granular_label, [])
+            unique_data[top_group][granular_code][1].append(item)
 
         for top in unique_data:
-            for granular, items in unique_data[top].items():
-                safe_name = granular.lower().replace(" ", "_").replace("/", "_")
+            for granular_code, (granular_label, items) in unique_data[top].items():
+                safe_name = granular_code.lower().replace(" ", "_").replace("/", "_")
                 path = os.path.join(output_dir, "uniques", top.lower(), f"{safe_name}.{'md' if export_format == 'markdown' else 'json'}")
-                if export_format == "markdown": self.exporter.export_item_db(items, f"Unique {granular}", path) 
+                if export_format == "markdown": self.exporter.export_item_db(items, f"Unique {granular_label}", path)
                 else: self.json_exporter.export(items, path)
 
         # 2. Runewords
-        rw_groups = {"helms": "Helms", "weapons": "Weapons", "chests": "Chests", "shields": "Shields"}
+        rw_groups = {"helms", "weapons", "chests", "shields"}
         rw_data = {g: {} for g in rw_groups}
         for row in self.repo.get_excel_table('runes'):
             if row.get('complete') != '1': continue
             rw = self.analyzer.analyze_runeword(row)
-            base_cat = rw['base_items'][0] if rw['base_items'] else "Other"
-            
-            # Map to one of the 4 major categories
-            cat_lower = base_cat.lower()
-            if any(h in cat_lower for h in ['helm', 'circlet', 'pelt', 'primal', 'merc']): group = "helms"
-            elif any(s in cat_lower for s in ['shield', 'auric', 'voodoo']): group = "shields"
-            elif any(c in cat_lower for c in ['armor', 'tors']): group = "chests"
-            else: group = "weapons"
-            
-            if base_cat not in rw_data[group]: rw_data[group][base_cat] = []
-            rw_data[group][base_cat].append(rw)
+            group, base_code, base_label = self.analyzer.get_runeword_export_group(row)
+            if group not in rw_data:
+                group = "weapons"
+            if base_code not in rw_data[group]:
+                rw_data[group][base_code] = (base_label, [])
+            rw_data[group][base_code][1].append(rw)
 
-        for group, label in rw_groups.items():
-            for cat, rws in rw_data[group].items():
-                filename = cat.lower().replace(" ", "_").replace("/", "_")
+        for group in rw_groups:
+            for base_code, (base_label, rws) in rw_data[group].items():
+                filename = base_code.lower().replace(" ", "_").replace("/", "_")
                 path = os.path.join(output_dir, "runewords", group, f"{filename}.{'md' if export_format == 'markdown' else 'json'}")
-                if export_format == "markdown": self.exporter.export_runewords(rws, f"{cat} Runewords", path)
+                if export_format == "markdown": self.exporter.export_runewords(rws, f"{base_label} Runewords", path)
                 else: self.json_exporter.export(rws, path)
 
         # 3. Sets
