@@ -218,3 +218,15 @@ class TestItemTypeTaxonomyLocalization(unittest.TestCase):
                 base_only = taxonomy.loot_groups(include_accessories=False)
                 for cats in base_only.values():
                     self.assertNotIn(strings["rings"], cats)
+
+    def test_legacy_merc_equip_delegates_via_equiv2_body_loc_without_hardcoding(self):
+        from d2lib.services.item_types import ItemTypeTaxonomy
+
+        rows = [
+            {"ItemType": "Any Armor", "Code": "armo", "Equiv1": "", "Equiv2": "", "BodyLoc1": "", "StorePage": ""},
+            {"ItemType": "Helm", "Code": "merc", "Equiv1": "", "Equiv2": "", "BodyLoc1": "head", "StorePage": "armo"},
+            {"ItemType": "Merc Equip", "Code": "helm", "Equiv1": "armo", "Equiv2": "merc", "BodyLoc1": "head", "StorePage": "armo"},
+        ]
+        taxonomy = ItemTypeTaxonomy(self._FakeRepo(rows, {}))
+        self.assertEqual("Helm", taxonomy.label("helm"))
+        self.assertNotEqual("Merc Equip", taxonomy.label("helm"))

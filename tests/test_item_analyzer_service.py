@@ -49,6 +49,7 @@ class FakeRepo:
             "r03l": "Tir",
             "melee weapon": "Melee Weapon",
             "merc equip": "Merc Equip",
+            "r_hel": "Helm",
         }
 
     def get_excel_table(self, table_name):

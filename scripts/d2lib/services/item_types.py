@@ -6,38 +6,8 @@ from typing import Dict, List, Optional, Sequence, Set, Union
 
 from d2lib.repository import resolve_localized_string
 
-# Legacy mapping used only when an older itemtypes.txt omits UICategory columns.
-_LEGACY_TYPE_TO_UI_CATEGORY: Dict[str, str] = {
-    "helm": "helms", "merc": "helms", "circ": "circl", "tors": "armor", "shie": "shlds",
-    "glov": "glove", "boot": "boots", "belt": "belts", "phlm": "barbh", "pelt": "druid",
-    "ashd": "palad", "head": "necro", "grim": "warlo", "axe": "axes", "bow": "bows",
-    "xbow": "xbows", "knif": "daggs", "jave": "javel", "mace": "maces", "club": "maces",
-    "hamm": "maces", "pole": "poles", "scep": "scept", "spea": "spear", "staf": "stave",
-    "swor": "sword", "tkni": "throw", "taxe": "throw", "tpot": "throw", "wand": "wands",
-    "abow": "amazo", "aspe": "amazo", "ajav": "amazo", "h2h": "assas", "h2h2": "assas",
-    "orb": "sorce", "char": "charm", "scha": "charm", "mcha": "charm", "lcha": "charm",
-    "amul": "amule", "ring": "rings", "jewl": "jewel", "cjwl": "jewel",
-}
-
-_RUNEWORD_CATEGORY_FALLBACKS: Dict[str, str] = {
-    "r_arm": "Body Armor",
-    "r_hel": "Helm",
-    "r_mel": "Melee",
-    "r_mis": "Missile",
-    "r_off": "Offhand",
-}
-
-_GROUP_FALLBACKS: Dict[str, str] = {
-    "armor": "Armor",
-    "weapons": "Weapons",
-    "accessories": "Accessories",
-    "other": "Other",
-}
-
+# Built-in Diablo II root type codes corresponding to armor.txt, weapons.txt, and misc.txt.
 _ROOT_TYPE_CODES: frozenset[str] = frozenset({"armo", "weap", "misc"})
-_CONSUMABLE_UI_CATEGORIES: frozenset[str] = frozenset({
-    "scrlt", "potis", "ammo", "runes", "gems", "keysr",
-})
 
 
 class ItemTypeTaxonomy:
@@ -51,10 +21,12 @@ class ItemTypeTaxonomy:
             if row.get('code')
         }
         self._chain_cache: dict[tuple, list] = {}
-        self._has_ui_category_col: bool = any('UICategory' in row for row in self.types.values())
-        self._has_magic_rare_cols: bool = any(
-            'Magic' in row or 'Rare' in row for row in self.types.values()
-        )
+        self._runeword_itype_codes: Set[str] = {
+            code
+            for rw in repo.get_excel_table('runes')
+            if rw.get('complete') == '1'
+            for code in self.rules(rw, 'itype')
+        }
         self._ui_cat_code_counts = Counter(
             row.get('UICategory', '').strip()
             for row in self.types.values()
@@ -70,15 +42,6 @@ class ItemTypeTaxonomy:
         }
         self._build_taxonomy_maps()
 
-    def _row_ui_category(self, row: Dict[str, str]) -> str:
-        ui_code = row.get('UICategory', '').strip()
-        if ui_code:
-            return ui_code
-        if not self._has_ui_category_col:
-            code = row.get('Code', '').strip()
-            return _LEGACY_TYPE_TO_UI_CATEGORY.get(code, '')
-        return ''
-
     def _group_code_for_type_row(self, row: Dict[str, str]) -> str:
         code = row.get('Code', '').strip()
         if not code:
@@ -91,28 +54,23 @@ class ItemTypeTaxonomy:
             return 'armor'
         if row.get('Magic', '').strip() == '1' or row.get('Rare', '').strip() == '1':
             return 'accessories'
-        if not self._has_magic_rare_cols and (chain & {'char', 'amul', 'ring', 'jewl'}):
-            return 'accessories'
         return 'other'
 
     def _build_taxonomy_maps(self) -> None:
         seen_by_group: Dict[str, Set[str]] = {g: set() for g in self._group_ui_codes}
         for row in self.types.values():
-            ui_code = self._row_ui_category(row)
+            ui_code = row.get('UICategory', '').strip()
             if not ui_code:
                 continue
             raw_item_type = row.get('ItemType', '').strip()
-            if raw_item_type and raw_item_type.casefold() != 'merc equip':
-                self._ui_to_fallback_label.setdefault(ui_code, raw_item_type)
-            else:
-                self._ui_to_fallback_label.setdefault(ui_code, ui_code)
+            self._ui_to_fallback_label.setdefault(ui_code, raw_item_type or ui_code)
             if row.get('Class', '').strip():
                 self._class_ui_categories.add(ui_code)
             g_code = self._group_code_for_type_row(row)
             prev_group = self._ui_to_group.get(ui_code, 'other')
             if prev_group == 'other' or g_code != 'other':
                 self._ui_to_group[ui_code] = g_code
-            if g_code in self._group_ui_codes and ui_code not in _CONSUMABLE_UI_CATEGORIES:
+            if g_code in self._group_ui_codes:
                 if ui_code not in seen_by_group[g_code]:
                     seen_by_group[g_code].add(ui_code)
                     self._group_ui_codes[g_code].append(ui_code)
@@ -153,14 +111,12 @@ class ItemTypeTaxonomy:
             ui_cat = self.types.get(code, {}).get('UICategory', '').strip()
             if ui_cat:
                 return ui_cat
-            if not self._has_ui_category_col and code in _LEGACY_TYPE_TO_UI_CATEGORY:
-                return _LEGACY_TYPE_TO_UI_CATEGORY[code]
         return ''
 
     def category_label(self, ui_code: str) -> str:
         clean = (ui_code or '').strip()
         if not clean:
-            return _GROUP_FALLBACKS["other"]
+            return "Other"
         localized = resolve_localized_string(self.repo, clean)
         if localized:
             return localized
@@ -168,7 +124,7 @@ class ItemTypeTaxonomy:
 
     def category(self, row: Dict[str, str]) -> str:
         ui_code = self.ui_category_code(row)
-        return self.category_label(ui_code) if ui_code else _GROUP_FALLBACKS["other"]
+        return self.category_label(ui_code) if ui_code else "Other"
 
     def group_code_for_ui_code(self, ui_code: str, type_chain: Sequence[str] = ()) -> str:
         clean = (ui_code or '').strip()
@@ -197,13 +153,14 @@ class ItemTypeTaxonomy:
     def group_label(self, group_code: str) -> str:
         clean = (group_code or 'other').strip().lower()
         if clean == 'armor':
-            return resolve_localized_string(self.repo, 'armor') or _GROUP_FALLBACKS['armor']
+            return resolve_localized_string(self.repo, 'armor') or 'Armor'
         if clean == 'weapons':
-            weapons_lbl = resolve_localized_string(self.repo, 'StrGemX3').rstrip(': ').strip()
-            return weapons_lbl or _GROUP_FALLBACKS['weapons']
+            return resolve_localized_string(self.repo, 'StrGemX3').rstrip(': ').strip() or 'Weapons'
         if clean == 'accessories':
-            return resolve_localized_string(self.repo, 'accessories') or _GROUP_FALLBACKS['accessories']
-        return _GROUP_FALLBACKS.get(clean, clean)
+            return resolve_localized_string(self.repo, 'accessories') or 'Accessories'
+        if clean == 'other':
+            return 'Other'
+        return clean
 
     def group(self, category_or_code: Union[str, Dict[str, str]]) -> str:
         if isinstance(category_or_code, dict):
@@ -248,50 +205,52 @@ class ItemTypeTaxonomy:
             return ''
         row = self.types.get(clean, {})
         raw_item_type = row.get('ItemType', '').strip()
-
-        if clean == 'weap':
-            weapons_lbl = resolve_localized_string(self.repo, 'StrGemX3').rstrip(': ').strip()
-            return weapons_lbl or resolve_localized_string(self.repo, raw_item_type) or 'Weapons'
-
-        if clean in {'tors', 'shld', 'seco', 'mele', 'miss', 'armo', 'merc'}:
-            rw1 = row.get('RunewordCategory1', '').strip()
-            if rw1:
-                resolved = resolve_localized_string(self.repo, rw1)
-                if resolved:
-                    return resolved
-                if rw1 in _RUNEWORD_CATEGORY_FALLBACKS:
-                    return _RUNEWORD_CATEGORY_FALLBACKS[rw1]
-            return resolve_localized_string(self.repo, raw_item_type) or raw_item_type or clean
-
-        equiv2 = row.get('Equiv2', '').strip()
+        rw1 = row.get('RunewordCategory1', '').strip()
+        rw2 = row.get('RunewordCategory2', '').strip()
+        eq1 = row.get('Equiv1', '').strip()
+        eq2 = row.get('Equiv2', '').strip()
         ui_cat = row.get('UICategory', '').strip()
-        if clean == 'helm' or (equiv2 == 'merc' and ui_cat == 'helms'):
-            equiv2_row = self.types.get(equiv2, {}) if equiv2 else {}
-            rw1 = row.get('RunewordCategory1', '').strip() or equiv2_row.get('RunewordCategory1', '').strip()
-            if rw1:
-                resolved = resolve_localized_string(self.repo, rw1)
-                if resolved:
-                    return resolved
-                if rw1 in _RUNEWORD_CATEGORY_FALLBACKS:
-                    return _RUNEWORD_CATEGORY_FALLBACKS[rw1]
-            if ui_cat:
-                resolved_ui = resolve_localized_string(self.repo, ui_cat)
-                if resolved_ui:
-                    return resolved_ui
-            equiv2_item_type = equiv2_row.get('ItemType', '').strip()
-            if equiv2_item_type:
-                resolved_eq2 = resolve_localized_string(self.repo, equiv2_item_type)
-                if resolved_eq2:
-                    return resolved_eq2
-                if equiv2_item_type.casefold() != 'merc equip':
-                    return equiv2_item_type
-            return _RUNEWORD_CATEGORY_FALLBACKS['r_hel']
 
+        # 1. Multi-category weapon root (e.g. 'weap' = r_mis + r_mel)
+        if rw1 and rw2:
+            weapons_lbl = resolve_localized_string(self.repo, 'StrGemX3').rstrip(': ').strip()
+            return weapons_lbl or resolve_localized_string(self.repo, raw_item_type) or raw_item_type or clean
+
+        # 2. Root or top-level runeword grouping type with a single RunewordCategory1
+        if rw1 and (not eq1 or (eq1 in _ROOT_TYPE_CODES and clean in self._runeword_itype_codes)):
+            return resolve_localized_string(self.repo, rw1) or resolve_localized_string(self.repo, raw_item_type) or raw_item_type or rw1
+
+        # 3. Delegated category via Equiv2 when own ItemType is not localized
+        #    (handles BKDiablo helm->merc->r_hel and BTDiablo helm->merc->Helm cleanly from table structure)
+        if not rw1 and eq2:
+            eq2_row = self.types.get(eq2, {})
+            resolved_own = resolve_localized_string(self.repo, raw_item_type) if raw_item_type else ''
+            if not resolved_own:
+                eq2_rw1 = eq2_row.get('RunewordCategory1', '').strip()
+                eq2_rw2 = eq2_row.get('RunewordCategory2', '').strip()
+                if eq2_rw1 and not eq2_rw2:
+                    resolved_eq2_rw = resolve_localized_string(self.repo, eq2_rw1)
+                    if resolved_eq2_rw:
+                        return resolved_eq2_rw
+                loc1 = row.get('BodyLoc1', '').strip()
+                store = row.get('StorePage', '').strip()
+                if (
+                    loc1 and store
+                    and not eq2_row.get('Equiv1', '').strip()
+                    and eq2_row.get('BodyLoc1', '').strip() == loc1
+                    and eq2_row.get('StorePage', '').strip() == store
+                ):
+                    eq2_item_type = eq2_row.get('ItemType', '').strip()
+                    if eq2_item_type:
+                        return resolve_localized_string(self.repo, eq2_item_type) or eq2_item_type
+
+        # 4. Localized ItemType
         if raw_item_type:
             resolved_type = resolve_localized_string(self.repo, raw_item_type)
             if resolved_type:
                 return resolved_type
 
+        # 5. Unique non-class UICategory
         if ui_cat and ui_cat not in self._class_ui_categories and self._ui_cat_code_counts.get(ui_cat, 0) == 1:
             resolved_ui = resolve_localized_string(self.repo, ui_cat)
             if resolved_ui:
@@ -387,7 +346,7 @@ class ItemTypeTaxonomy:
             terms.update(
                 self.label(code)
                 for code in chain
-                if code in ('tors', 'shld', 'mele', 'miss', 'weap', 'helm') and self.label(code)
+                if code in self._runeword_itype_codes and self.label(code)
             )
             base_type_lbl = self.label(base.get('type', ''))
             if base_type_lbl:

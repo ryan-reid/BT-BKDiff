@@ -401,17 +401,18 @@ class TestWikiGenerator(unittest.TestCase):
         self._write_tsv(
             excel_root,
             "itemtypes.txt",
-            ["ItemType", "Code", "Equiv1", "Equiv2", "RunewordCategory1", "MaxSockets1", "MaxSockets2", "MaxSockets3", "StaffMods", "Class"],
+            ["ItemType", "Code", "Equiv1", "Equiv2", "UICategory", "RunewordCategory1", "RunewordCategory2", "MaxSockets1", "MaxSockets2", "MaxSockets3", "StaffMods", "Class"],
             [
-                {"ItemType": "Weapon", "Code": "weap"},
-                {"ItemType": "Any Armor", "Code": "armo"},
-                {"ItemType": "Helm", "Code": "helm", "Equiv1": "armo"},
-                {"ItemType": "Belt", "Code": "belt", "Equiv1": "armo"},
+                {"ItemType": "Weapon", "Code": "weap", "RunewordCategory1": "r_mis", "RunewordCategory2": "r_mel"},
+                {"ItemType": "Any Armor", "Code": "armo", "RunewordCategory1": "r_arm"},
+                {"ItemType": "Helm", "Code": "helm", "Equiv1": "armo", "UICategory": "helms", "RunewordCategory1": "r_hel"},
+                {"ItemType": "Belt", "Code": "belt", "Equiv1": "armo", "UICategory": "belts"},
                 {"ItemType": "Melee Weapon", "Code": "mele", "Equiv1": "weap", "RunewordCategory1": "r_mel"},
                 {"ItemType": "Blunt", "Code": "blun", "Equiv1": "mele"},
-                {"ItemType": "Hammer", "Code": "hamm", "Equiv1": "blun", "MaxSockets1": "3", "MaxSockets2": "4", "MaxSockets3": "6"},
-                {"ItemType": "Circlet", "Code": "circ", "Equiv1": "helm"},
-                {"ItemType": "Pelt", "Code": "pelt", "Equiv1": "armo", "StaffMods": "dru", "Class": "dru"},
+                {"ItemType": "Mace", "Code": "mace", "Equiv1": "blun", "UICategory": "maces"},
+                {"ItemType": "Hammer", "Code": "hamm", "Equiv1": "blun", "UICategory": "maces", "MaxSockets1": "3", "MaxSockets2": "4", "MaxSockets3": "6"},
+                {"ItemType": "Circlet", "Code": "circ", "Equiv1": "helm", "UICategory": "circl"},
+                {"ItemType": "Pelt", "Code": "pelt", "Equiv1": "armo", "UICategory": "druid", "StaffMods": "dru", "Class": "dru"},
             ],
         )
         self._write_tsv(
@@ -1408,7 +1409,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Tablet", crafting_page)
         self.assertIn("Ascended", crafting_page)
         self.assertIn("<strong>Weapons</strong>", crafting_page)
-        self.assertIn("<strong>Belt</strong>", crafting_page)
+        self.assertIn("<strong>Belts</strong>", crafting_page)
         self.assertNotIn("<strong>1 Magic Axe + Blood Crafting Tablet -&gt; Blood Weapon</strong>", crafting_page)
 
         with open(os.path.join(self.output, "recipes", "corruptions", "index.html"), "r", encoding="utf-8") as f:
