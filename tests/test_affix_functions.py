@@ -83,7 +83,7 @@ class TestAffixFunctions(unittest.TestCase):
             affix("Second", ("new-stat2", 2, 5, "")),
         ])
         self.assertEqual(
-            ["Unknown property: new-stat1", "Unknown property: new-stat2"],
+            ["Unknown property (new-stat1)", "Unknown property (new-stat2)"],
             [group["title"] for group in groups],
         )
 

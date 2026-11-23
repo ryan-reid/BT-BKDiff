@@ -35,6 +35,17 @@ _DIFFICULTY_STRING_KEYS: Dict[str, Tuple[str, str]] = {
     "hell": ("strCreateGameHellText", "Hell"),
 }
 
+_ELEMENT_STRING_KEYS: Dict[str, Tuple[Tuple[str, ...], str]] = {
+    "fire": (("strskltree25", "ecfra"), "Fire"),
+    "cold": (("strskltree23", "strhirespecial6"), "Cold"),
+    "ltng": (("strskltree24", "skillname49"), "Lightning"),
+    "pois": (("strskltree17", "poison"), "Poison"),
+    "mag": (("strbsmagic",), "Magic"),
+    "burn": (("burn",), "Burn"),
+    "stun": (("skillname139",), "Stun"),
+    "phys": (("physical",), "Physical"),
+}
+
 
 def locale_to_html_lang(locale: str) -> str:
     """Converts a D2R locale code (e.g. koKR, deDE) into a BCP-47 HTML lang attribute."""
@@ -81,6 +92,7 @@ class D2Repository:
         # Supplemental files should be placed in data/retail/ within the repo
         self.supplemental_path: str = os.path.join(self.repo_root, "data", "retail")
         self.strings: Dict[str, str] = {}
+        self.canonical_strings: Dict[str, str] = {}
         self.excel_cache: Dict[str, List[Dict[str, str]]] = {}
         self.excel_sources: Dict[str, str] = {}
         self._load_strings()
@@ -102,6 +114,8 @@ class D2Repository:
 
     def _load_strings(self) -> None:
         """Loads string JSON files with strict precedence (Mod > Retail) and per-key enUS fallback."""
+        if not hasattr(self, "canonical_strings"):
+            self.canonical_strings = {}
         ordered_dirs = []
 
         # 1. Highest Priority: Mod strings (from MPQ path)
@@ -135,10 +149,12 @@ class D2Repository:
                             if not isinstance(entry, dict) or "Key" not in entry:
                                 continue
                             key_lower = str(entry["Key"]).lower()
-                            if key_lower in self.strings:
-                                continue
                             locale_val = entry.get(self.locale)
                             en_val = entry.get("enUS")
+                            if key_lower not in self.canonical_strings and isinstance(en_val, str) and en_val.strip():
+                                self.canonical_strings[key_lower] = en_val
+                            if key_lower in self.strings:
+                                continue
                             if isinstance(locale_val, str) and locale_val.strip():
                                 self.strings[key_lower] = locale_val
                             elif isinstance(en_val, str):
@@ -207,6 +223,13 @@ class D2Repository:
         raw = self.strings.get(key.lower(), key)
         return strip_d2_formatting(raw)
 
+    def get_canonical_string(self, key: str) -> str:
+        """Resolves a D2 string key to its canonical enUS text with formatting stripped."""
+        if not key:
+            return ""
+        raw = getattr(self, "canonical_strings", {}).get(key.lower(), "")
+        return strip_d2_formatting(raw) if raw else ""
+
 
 def resolve_localized_string(repo: D2RepositoryProtocol, key: str) -> str:
     """Resolves a string key only when a non-empty localization entry exists."""
@@ -236,6 +259,35 @@ def resolve_difficulty_name(repo: D2RepositoryProtocol, difficulty: Any) -> str:
         return resolve_localized_string(repo, raw) or raw
     string_key, fallback = entry
     return resolve_localized_string(repo, string_key) or fallback
+
+
+def resolve_canonical_string(repo: D2RepositoryProtocol, key: str) -> str:
+    """Resolves a string key to canonical enUS text when available, else falls back to localized text."""
+    clean_key = str(key or "").strip()
+    if not clean_key:
+        return ""
+    if hasattr(repo, "get_canonical_string"):
+        canonical = str(repo.get_canonical_string(clean_key) or "").strip()
+        if canonical:
+            return canonical
+    return resolve_localized_string(repo, clean_key)
+
+
+def resolve_element_name(repo: Optional[D2RepositoryProtocol], etype: Any) -> str:
+    """Resolves a canonical D2 EType code (e.g. 'fire', 'pois') to a localized element name."""
+    raw = str(etype or "").strip()
+    if not raw:
+        return ""
+    entry = _ELEMENT_STRING_KEYS.get(raw.casefold())
+    if entry is None:
+        return (resolve_localized_string(repo, raw) if repo is not None else "") or raw
+    string_keys, fallback = entry
+    if repo is not None:
+        for string_key in string_keys:
+            localized = resolve_localized_string(repo, string_key)
+            if localized:
+                return localized
+    return fallback
 
 
 def get_charstats_class_rows(repo: D2RepositoryProtocol) -> List[Dict[str, str]]:

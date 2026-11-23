@@ -586,7 +586,7 @@ class ReferenceAnalyzerService:
             max_val = str(row.get(f"{prefix}{index}{max_suffix}", "")).strip()
             prop_dto = self.resolver.resolve_property(code, param, min_val, max_val)
             text = prop_dto.get("resolved_text", "")
-            normalized_code = prop_dto.get("canonical_code") or self.resolver.aliases.get(code.lower(), code.lower())
+            normalized_code = prop_dto.get("canonical_code") or code.lower()
             duration = self.resolver.cold_duration(normalized_code, param, min_val, max_val)
             if duration:
                 low, high, replaces = duration

@@ -1,9 +1,63 @@
 from __future__ import annotations
 import re
 from typing import List, Dict, Optional, Any, Tuple
-from d2lib.repository import D2Repository, D2RepositoryProtocol, get_class_name_maps
+from d2lib.repository import (
+    D2Repository,
+    D2RepositoryProtocol,
+    get_class_name_maps,
+    resolve_canonical_string,
+    resolve_element_name,
+    resolve_localized_string,
+)
 from d2lib.models import SkillTreeDTO, SkillDTO, SkillEffectDTO, SkillSynergyDTO
 from d2lib.utils import slugify, strip_markdown
+
+_MANA_SYMBOLS = frozenset({"usmc", "mps", "manc", "manv"})
+_DURATION_DESCLINES = frozenset({"12", "31"})
+_RANGE_DESCLINES = frozenset({"34", "41", "75"})
+_PER_SECOND_DAMAGE_KEYS = frozenset({
+    "strskillfiredamageaveragepersecond",
+    "strskillcolddamageaveragepersecond",
+    "strskillmagicdamageaveragepersecond",
+})
+_DURATION_TEXT_KEYS = frozenset({
+    "strskill13",
+    "strskill20",
+    "strskill29",
+    "strskill62",
+    "strskill63",
+    "strskill82",
+    "strskillcoldlengthsingular",
+    "strskillfreezelengthsingular",
+    "strskillpoisonlengthsingular",
+    "strskillfiredurationsingular",
+    "strskilldurationsingular",
+    "strskilldurationsingular2",
+    "strskilldurationrange",
+    "strskillcastingdelaysingular",
+    "strskillcastingdelayplural",
+    "strskillblazeduration",
+    "strskilleffectlengthsingular",
+    "strskilleffectlength",
+    "hexenemyduration",
+    "shadowmasterymiasmadurationincrease",
+})
+_DISTANCE_TEXT_KEYS = frozenset({
+    "strskill18",
+    "strskill56",
+    "strskill58",
+    "strskillradiussingular",
+    "strskillrangesingular",
+    "eskillbladesofice2",
+    "eskillfistsoffire2",
+    "shadowmasteryabyssrangeincrease",
+    "shadowmasterymiasmarangeincrease",
+})
+_POISON_DURATION_KEYS = frozenset({"strskillpoisonlengthsingular", "strskill63"})
+_COLD_DURATION_KEYS = frozenset({"strskillcoldlengthsingular", "strskill13"})
+_PRINTF_TOKEN_RE = re.compile(r"%\+?d")
+_PLACEHOLDER_STRIP_RE = re.compile(r"%\+?d\s*[-~]\s*%\+?d|-%\+?d|%\+?d(?:%%|%)?|%s")
+
 
 class SkillAnalyzerService:
     def __init__(self, repo: D2RepositoryProtocol):
@@ -11,6 +65,8 @@ class SkillAnalyzerService:
         self.skills = {row.get('skill', '').strip().lower(): row for row in repo.get_excel_table('skills')}
         self.missiles = {row.get('Missile', '').strip().lower(): row for row in repo.get_excel_table('missiles')}
         self.skilldesc = {row.get('skilldesc', '').strip().lower(): row for row in repo.get_excel_table('skilldesc')}
+        self.monstats = {row.get('Id', '').strip().lower(): row for row in repo.get_excel_table('monstats') if row.get('Id')}
+        self.monlvl = {row.get('Level', '').strip(): row for row in repo.get_excel_table('monlvl') if row.get('Level')}
         _, self.class_map = get_class_name_maps(repo)
 
     def get_dam_generic(self, s, lvl, prefix):
@@ -190,42 +246,70 @@ class SkillAnalyzerService:
             return f"{res:.2f}" if isinstance(res, float) else str(res)
         except: return calc
 
-    def format_generic_label(self, s):
-        if not s: return ""
-        for c in ["%+d%%", "%d%%", "%+d", "%d", "%s"]: s = s.replace(c, "")
-        return re.sub(r"\s+", " ", s.replace("-%d", "").replace("-%+d", "").replace("per second", "").replace("second", "").replace("yard", "")).strip(": -").strip()
+    def format_generic_label(self, s: str) -> str:
+        if not s:
+            return ""
+        text = str(s).strip()
+        colon_idx = text.find(":")
+        pct_idx = text.find("%")
+        if colon_idx != -1 and (pct_idx == -1 or colon_idx < pct_idx):
+            return re.sub(r"\s+", " ", text[:colon_idx]).strip(" :-").strip()
+        cleaned = _PLACEHOLDER_STRIP_RE.sub("", text.replace("%%", "%"))
+        return re.sub(r"\s+", " ", cleaned).strip(": -").strip()
 
-    def build_effect_label(self, desc_row, line_index, raw_text, block="desc"):
-        label = self.format_generic_label(raw_text)
-        if label == "Cold Length":
-            return "Cold Duration"
-        if label != "over":
-            return label
+    def build_effect_label(
+        self,
+        desc_row: Dict[str, str],
+        line_index: int,
+        raw_text: str,
+        block: str = "desc",
+        skill: Optional[Dict[str, str]] = None,
+    ) -> str:
+        text_col = f"{block}texta{line_index}" if block != "desc" else f"desctexta{line_index}"
+        text_key_lower = str(desc_row.get(text_col, "") or "").strip().lower()
+        target_skill = skill
+        if target_skill is None:
+            desc_name = str(desc_row.get("skilldesc", "") or "").strip().lower()
+            if desc_name:
+                target_skill = next(
+                    (row for row in self.skills.values() if str(row.get("skilldesc", "") or "").strip().lower() == desc_name),
+                    None,
+                )
 
-        neighboring_labels = []
-        for i in range(1, 7):
-            if i == line_index:
-                continue
-            text_col = f"{block}texta{i}" if block != "desc" else f"desctexta{i}"
-            text_key = desc_row.get(text_col, "").lower()
-            text = self.repo.get_string(text_key) or desc_row.get(text_col, "")
-            formatted = self.format_generic_label(text)
-            if formatted:
-                neighboring_labels.append(formatted.lower())
+        if text_key_lower in _POISON_DURATION_KEYS:
+            etype = str((target_skill or {}).get("EType", "") or "").strip().lower()
+            duration_label = self.format_generic_label(resolve_localized_string(self.repo, "strskill20") or "Duration")
+            if etype:
+                return f"{resolve_element_name(self.repo, etype)} {duration_label}".strip()
+            return duration_label
 
-        if any("poison damage" in item for item in neighboring_labels):
-            return "Poison Duration"
-        if any("fire damage" in item for item in neighboring_labels):
-            return "Fire Duration"
-        if any("cold damage" in item for item in neighboring_labels):
-            return "Cold Duration"
-        return "Duration"
+        if text_key_lower in _COLD_DURATION_KEYS:
+            duration_label = self.format_generic_label(resolve_localized_string(self.repo, "strskill20") or "Duration")
+            return f"{resolve_element_name(self.repo, 'cold')} {duration_label}".strip()
+
+        return self.format_generic_label(raw_text)
 
     def get_display_skill_level(self, skill_name: str, scenario_skill_levels: Optional[Dict[str, int]], fallback: int) -> int:
         if not scenario_skill_levels:
             return fallback
-        key = re.sub(r"[\s']", "", skill_name.strip().lower())
-        return int(scenario_skill_levels.get(key, fallback))
+        key = re.sub(r"[\s']", "", str(skill_name or "").strip().lower())
+        if key in scenario_skill_levels:
+            return int(scenario_skill_levels[key])
+
+        skill_row = self.skills.get(str(skill_name or "").strip().lower())
+        if skill_row:
+            desc_row = self.skilldesc.get(str(skill_row.get("skilldesc", "") or "").strip().lower(), {})
+            name_key = str(desc_row.get("str name", "") or "").strip()
+            if name_key:
+                for candidate in (
+                    resolve_localized_string(self.repo, name_key),
+                    resolve_canonical_string(self.repo, name_key),
+                ):
+                    if candidate:
+                        alias_key = re.sub(r"[\s']", "", candidate.strip().lower())
+                        if alias_key in scenario_skill_levels:
+                            return int(scenario_skill_levels[alias_key])
+        return fallback
 
     def get_display_synergy_bonus_mult(self, skill, scenario_skill_levels: Optional[Dict[str, int]]) -> float:
         syn_calc = skill.get('EDmgSymPerCalc') or skill.get('DmgSymPerCalc')
@@ -330,12 +414,25 @@ class SkillAnalyzerService:
                 shift = int(s.get('manashift', '8') or '8')
                 return max(float(s.get('minmana', '0') or '0'), m + lm * (lvl - 1)) / (2.0 ** (8 - shift))
             if var == 'mael':
-                if 'Immolation Arrow' in s.get('skill', ''):
-                    return (self.get_display_skill_level('fire arrow', scenario_skill_levels, 0) + self.get_display_skill_level('exploding arrow', scenario_skill_levels, 0)) * 5.0
                 syn_calc = s.get('EDmgSymPerCalc') or s.get('DmgSymPerCalc')
+                eval_row = s
+                if not syn_calc and desc_row:
+                    m_name = desc_row.get('descmissile1', '')
+                    m_row = self.missiles.get(m_name.lower()) if m_name else None
+                    if m_row:
+                        syn_calc = m_row.get('EDmgSymPerCalc') or m_row.get('DmgSymPerCalc')
+                        eval_row = m_row
+                bonus = 0.0
                 if syn_calc:
-                    return float(self.evaluate_display_formula(syn_calc, skill, 1, 1, desc_row, scenario_skill_levels, use_synergy=True))
-                return 0.0
+                    bonus += float(self.evaluate_display_formula(syn_calc, eval_row, 1, 1, desc_row, scenario_skill_levels, use_synergy=True))
+                etype = s.get('EType', '').strip().lower()
+                if etype:
+                    mastery = self.skills.get(f'passive_{etype}_mastery')
+                    if mastery:
+                        m_lvl = self.get_display_skill_level(mastery.get('skill', ''), scenario_skill_levels, 0)
+                        if m_lvl > 0:
+                            bonus += float(self.resolve_display_symbol('ln12', mastery, m_lvl, m_lvl, None, scenario_skill_levels, use_synergy=False))
+                return bonus
             if var == 'toht':
                 th = float(s.get('ToHit', '0') or '0')
                 lth = float(s.get('LevToHit', '0') or '0')
@@ -445,45 +542,133 @@ class SkillAnalyzerService:
         except:
             return 0.0
 
+    def _calculate_summon_life(
+        self,
+        skill: Dict[str, str],
+        desc_row: Dict[str, str],
+        pct_bonus: float,
+        flat_bonus_calc: str,
+        lvl: int,
+        blvl: int,
+        scenario_skill_levels: Optional[Dict[str, int]] = None,
+    ) -> float:
+        summon_id = str(skill.get("summon", "") or "").strip().lower()
+        mon = self.monstats.get(summon_id) if summon_id else None
+        if not mon:
+            return pct_bonus
+        try:
+            min_hp = float(mon.get("minHP", "0") or "0")
+        except ValueError:
+            min_hp = 0.0
+        try:
+            max_hp = float(mon.get("maxHP", "0") or "0")
+        except ValueError:
+            max_hp = 0.0
+        if max_hp <= 0 and min_hp > 0:
+            max_hp = min_hp
+        base_hp = (min_hp + max_hp) / 2.0
+
+        mon_lvl = str(mon.get("Level", "") or "").strip()
+        if str(mon.get("noRatio", "") or "").strip() != "1" and mon_lvl in self.monlvl:
+            try:
+                lvl_mult = float(self.monlvl[mon_lvl].get("HP", "100") or "100") / 100.0
+                base_hp *= lvl_mult
+            except ValueError:
+                pass
+
+        if flat_bonus_calc:
+            base_hp += float(self.evaluate_display_formula(flat_bonus_calc, skill, lvl, blvl, desc_row, scenario_skill_levels, use_synergy=True))
+        return base_hp * (1.0 + pct_bonus / 100.0)
+
+    def _classify_effect_unit(
+        self,
+        desc_row: Dict[str, str],
+        line_idx: int,
+        raw_template: str,
+        block: str = "desc",
+    ) -> str:
+        line_prefix = f"{block}line" if block != "desc" else "descline"
+        text_prefix = f"{block}texta" if block != "desc" else "desctexta"
+        calc_a_prefix = f"{block}calca" if block != "desc" else "desccalca"
+        calc_b_prefix = f"{block}calcb" if block != "desc" else "desccalcb"
+
+        line_id = str(desc_row.get(f"{line_prefix}{line_idx}", "") or "").strip()
+        text_key_lower = str(desc_row.get(f"{text_prefix}{line_idx}", "") or "").strip().lower()
+        ca_norm = str(desc_row.get(f"{calc_a_prefix}{line_idx}", "") or "").lower().replace(" ", "")
+        cb_str = str(desc_row.get(f"{calc_b_prefix}{line_idx}", "") or "").strip()
+        try:
+            cb_num: Optional[float] = float(cb_str) if cb_str else None
+        except ValueError:
+            cb_num = None
+
+        if "%%" in raw_template or re.search(r"%\+?d%", raw_template):
+            return "%"
+        if line_id == "75" and (
+            text_key_lower in _PER_SECOND_DAMAGE_KEYS
+            or ("*25" in ca_norm and any(tok in ca_norm for tok in ("m1", "miss(", "enms", "exms")))
+            or "*12/256" in ca_norm
+        ):
+            return " dmg/s"
+        if (
+            line_id in _DURATION_DESCLINES
+            or (line_id == "36" and (cb_num in (25.0, 17.5) or text_key_lower in _DURATION_TEXT_KEYS))
+            or (line_id in {"74", "75"} and ("/25" in ca_norm or text_key_lower in _DURATION_TEXT_KEYS))
+        ):
+            return "s"
+        if (
+            (line_id == "36" and (cb_num == 3.0 or text_key_lower in _DISTANCE_TEXT_KEYS))
+            or (line_id == "74" and (".rad" in ca_norm or ca_norm == "rng" or text_key_lower in _DISTANCE_TEXT_KEYS))
+        ):
+            return "y"
+        return ""
+
     def calculate_display_effect_value(self, skill, desc_row, line_idx, lvl, blvl, block="", scenario_skill_levels: Optional[Dict[str, int]] = None) -> str:
         text_prefix = f"{block}texta" if block else "desctexta"
         line_prefix = f"{block}line" if block else "descline"
         calc_a_prefix = f"{block}calca" if block else "desccalca"
         calc_b_prefix = f"{block}calcb" if block else "desccalcb"
 
-        text_raw = (self.repo.get_string(desc_row.get(text_prefix + str(line_idx), "").lower()) or "").replace('%d', '').replace('%+d', '').replace('%%', '%').strip(': ')
-        c1, c2 = desc_row.get(calc_a_prefix + str(line_idx)), desc_row.get(calc_b_prefix + str(line_idx))
-        is_range = ('-' in text_raw or '%d-%d' in text_raw)
+        text_key = str(desc_row.get(text_prefix + str(line_idx), "") or "").strip().lower()
+        raw_template = self.repo.get_string(text_key) or ""
+        line_id = str(desc_row.get(line_prefix + str(line_idx), "") or "").strip()
+        c1, c2 = desc_row.get(calc_a_prefix + str(line_idx), ""), desc_row.get(calc_b_prefix + str(line_idx), "")
+        is_range = bool(re.search(r"%\+?d\s*[-~]\s*%\+?d", raw_template)) or (line_id in _RANGE_DESCLINES and bool(c2))
 
-        def get_val(calc):
+        def get_val(calc, apply_divisor: bool = True):
             if not calc or calc == '':
                 return 0.0
             val = self.evaluate_display_formula(calc, skill, lvl, blvl, desc_row, scenario_skill_levels, use_synergy=True)
             calc_str = str(calc).replace(' ', '')
-            if '/256' not in calc_str and abs(val) > 100 and any(x in str(calc) for x in ['enma', 'exma', 'edmn', 'edmx', 'm1eo', 'm1ey', 'pnma', 'pxma', 'enms', 'exms']):
+            calc_lower = calc_str.lower()
+            if '/256' not in calc_str and abs(val) > 100 and any(x in calc_str for x in ['enma', 'exma', 'edmn', 'edmx', 'm1eo', 'm1ey', 'pnma', 'pxma', 'enms', 'exms']):
                 val /= 256.0
-            if 'poison damage' in text_raw.lower():
+            if line_id in _RANGE_DESCLINES and 'edln' not in calc_lower and 'len' not in calc_lower:
+                etype = str(skill.get('EType', '') or '').strip().lower()
                 elen = self.get_display_raw_value(skill, lvl, 'ELen')
-                if 'm1' in str(calc):
-                    m_name = desc_row.get('descmissile1')
-                    m = self.missiles.get(m_name.lower()) if m_name else None
-                    if m:
-                        elen = self.get_display_raw_value(m, lvl, 'ELen')
-                if 'edln' not in str(calc).lower() and 'len' not in str(calc).lower():
+                if 'm1' in calc_lower or 'miss(' in calc_lower:
+                    m_name = desc_row.get('descmissile1', '')
+                    m_row = self.missiles.get(m_name.lower()) if m_name else None
+                    if m_row:
+                        etype = str(m_row.get('EType', '') or etype).strip().lower()
+                        elen = self.get_display_raw_value(m_row, lvl, 'ELen')
+                if etype == 'pois' and elen > 0:
                     val *= (elen / 256.0)
-            if desc_row.get(line_prefix + str(line_idx)) in ['12', '31'] or ('second' in text_raw.lower() and 'per second' not in text_raw.lower()):
-                if val > 15:
-                    val /= 25.0
-            if desc_row.get(line_prefix + str(line_idx)) == '36' and 'radius' in text_raw.lower():
-                if c2 == '3':
-                    val /= 3.0
-            if 'life' in text_raw.lower() and desc_row.get(line_prefix + str(line_idx)) == '13':
-                val = 440.0 * (1.0 + (val + 400.0) / 100.0)
+            if line_id == '12':
+                val /= 25.0
+            elif line_id in {'31', '36'} and apply_divisor and c2:
+                try:
+                    divisor = float(c2)
+                except ValueError:
+                    divisor = 0.0
+                if divisor > 0 and not (abs(divisor - 256.0) < 1e-9 and any(sym in calc_lower for sym in _MANA_SYMBOLS)):
+                    val /= divisor
+            if line_id == '13':
+                val = self._calculate_summon_life(skill, desc_row, val, str(c2 or ""), lvl, blvl, scenario_skill_levels)
             return val
 
-        v_min = get_val(c1)
         if is_range and c2:
-            return f"{v_min:.2f}-{get_val(c2):.2f}"
+            return f"{get_val(c1, apply_divisor=False):.2f}-{get_val(c2, apply_divisor=False):.2f}"
+        v_min = get_val(c1)
         return f"{v_min:.2f}"
 
     def get_skill_display_effects(self, skill_name: str, lvl: int, blvl: int, scenario_skill_levels: Optional[Dict[str, int]] = None) -> List[Dict[str, str]]:
@@ -493,23 +678,22 @@ class SkillAnalyzerService:
         for block in ["", "dsc2", "dsc3"]:
             text_prefix = f"{block}texta" if block else "desctexta"
             line_prefix = f"{block}line" if block else "descline"
+            eff_block = block or "desc"
             for i in range(1, 10):
                 if not desc_row.get(f"{line_prefix}{i}") or desc_row.get(f"{line_prefix}{i}") == '0':
                     continue
                 text_label = self.repo.get_string(desc_row.get(f"{text_prefix}{i}", "").lower()) or desc_row.get(f"{text_prefix}{i}", "")
                 if not text_label:
                     continue
-                label = self.build_effect_label(desc_row, i, text_label, "desc" if not block else block)
+                label = self.build_effect_label(desc_row, i, text_label, eff_block, skill=skill)
                 value = self.calculate_display_effect_value(skill, desc_row, i, lvl, blvl, block, scenario_skill_levels)
-                unit = "%" if "%%" in text_label or "percent" in text_label.lower() else ("s" if "second" in text_label.lower() else ("y" if "yard" in text_label.lower() else ""))
-                if "per second" in text_label.lower():
-                    unit = " dmg/s"
+                unit = self._classify_effect_unit(desc_row, i, text_label, eff_block)
                 prefix = "+" if "%+" in text_label and not str(value).startswith("-") else ""
-                if "%d-%d" in text_label or '-' in value[1:]:
+                if re.search(r"%\+?d\s*[-~]\s*%\+?d", text_label) or '-' in value[1:]:
                     formatted_value = f"{value}{unit}"
                 else:
                     formatted_value = f"{prefix}{value}{unit}"
-                effects.append({"label": label, "value": formatted_value, "block": block or "desc"})
+                effects.append({"label": label, "value": formatted_value, "block": eff_block})
         return effects
 
     def analyze_scaling(self, calc, s, unit, desc_row):
@@ -547,6 +731,59 @@ class SkillAnalyzerService:
             return f"{prefix}{value}{unit}"
         return f"{expanded} = {prefix}{value}{unit}"
 
+    def _format_synergy_effect(self, dr: Dict[str, str], dsc: str, i: int, s: Dict[str, str]) -> Optional[Dict[str, str]]:
+        line_id = str(dr.get(f"{dsc}line{i}", "") or "").strip()
+        if line_id not in {"76", "77", "79"}:
+            return None
+        t_key = str(dr.get(f"{dsc}texta{i}", "") or "").strip()
+        template = resolve_localized_string(self.repo, t_key) or t_key
+        sid_key = str(dr.get(f"{dsc}textb{i}", "") or "").strip()
+        sid_name = resolve_localized_string(self.repo, sid_key) or sid_key
+        if not sid_name:
+            return None
+
+        ca = str(dr.get(f"{dsc}calca{i}", "") or "").strip()
+        cb = str(dr.get(f"{dsc}calcb{i}", "") or "").strip()
+        v_a = str(self.resolve_calc(ca, s, 1, 1, dr) or "").strip() if ca else ""
+        v_b = str(self.resolve_calc(cb, s, 1, 1, dr) or "").strip() if cb else ""
+
+        def _fmt_num(raw_num: str, include_plus: bool) -> str:
+            try:
+                num = float(raw_num)
+            except ValueError:
+                return raw_num
+            if abs(num - round(num)) < 1e-6:
+                txt = str(int(round(num)))
+            else:
+                txt = f"{num:.2f}".rstrip("0").rstrip(".")
+            if include_plus and not txt.startswith(("+", "-")):
+                return f"+{txt}"
+            return txt
+
+        if line_id == "79" and v_a and v_b:
+            try:
+                ratio = float(v_a) / float(v_b)
+                values: List[str] = [_fmt_num(str(ratio), False)]
+            except (ValueError, ZeroDivisionError):
+                values = [v for v in (v_a, v_b) if v]
+        else:
+            values = [v for v in ((v_a, v_b) if line_id == "77" else (v_a,)) if v]
+
+        clean_tpl = re.sub(r"^%s\s*:?\s*", "", template)
+        slots = _PRINTF_TOKEN_RE.findall(clean_tpl)
+        if slots and len(values) >= len(slots):
+            vals_iter = iter(values)
+            effect_text = _PRINTF_TOKEN_RE.sub(
+                lambda m: _fmt_num(next(vals_iter), "+" in m.group(0)),
+                clean_tpl,
+            ).replace("%%", "%")
+        else:
+            rendered_tpl = clean_tpl.replace("%%", "%")
+            clean_vals = [_fmt_num(v, False) for v in values]
+            effect_text = f"{rendered_tpl} ({', '.join(clean_vals)})" if rendered_tpl and clean_vals else (rendered_tpl or ", ".join(clean_vals))
+
+        return {"name": sid_name, "effect": effect_text.strip()}
+
     def generate_skill_tree(self, char_class_abbr: str) -> SkillTreeDTO:
         cc = char_class_abbr.lower()
         cs = [s for s in self.skills.values() if s.get("charclass") == cc]
@@ -558,7 +795,7 @@ class SkillAnalyzerService:
 
             skill_id = s.get("skill", "")
             skill_name_key = dr.get("str name", "").lower()
-            skill_name = self.repo.get_string(skill_name_key) or self.repo.get_string(s['skill']) or s['skill']
+            skill_name = resolve_localized_string(self.repo, skill_name_key) or resolve_localized_string(self.repo, skill_id) or skill_id
 
             effects = []
             for i in range(1, 7):
@@ -566,13 +803,16 @@ class SkillAnalyzerService:
                 text_key = dr.get(f"desctexta{i}", "").lower()
                 tl = self.repo.get_string(text_key) or dr.get(f"desctexta{i}", "")
 
-                unit = "%" if "%%" in tl or "percent" in tl.lower() else ("s" if "second" in tl.lower() else ("y" if "yard" in tl.lower() else ""))
-                if "per second" in tl.lower(): unit = " dmg/s"
+                unit = self._classify_effect_unit(dr, i, tl, "desc")
 
                 c1, c2 = dr.get(f"desccalca{i}", ""), dr.get(f"desccalcb{i}", "")
-                label = self.build_effect_label(dr, i, tl)
+                label = self.build_effect_label(dr, i, tl, "desc", skill=s)
+                line_id = str(dr.get(f"descline{i}", "") or "").strip()
+                is_range = bool(re.search(r"%\+?d\s*[-~]\s*%\+?d", tl)) and bool(c2)
+                if not is_range and line_id in _RANGE_DESCLINES and bool(c1) and bool(c2):
+                    is_range = True
 
-                if "%d-%d" in tl:
+                if is_range:
                     sc, cap = self.analyze_range_scaling(c1, c2, s, unit, dr)
                     show_formula = sc == "Complex"
                     v = [self.format_effect_value(c, s, l, bl, dr, "", show_formula=show_formula) for c in [c1, c2] for l, bl in [(1,1),(10,10),(20,20),(30,20)]]
@@ -594,22 +834,14 @@ class SkillAnalyzerService:
             synergies = []
             for dsc in ["dsc2", "dsc3"]:
                 for i in range(1, 8):
-                    if dr.get(f"{dsc}line{i}") in ["76", "77"]:
-                        t_key = dr.get(f"{dsc}texta{i}", "").lower()
-                        t = self.repo.get_string(t_key) or ""
-                        sid_key = dr.get(f"{dsc}textb{i}", "").lower()
-                        sid_name = self.repo.get_string(sid_key) or sid_name_key # Wait, sid_name_key?
-                        # Re-reading original code: sid_name = self.repo.get_string(sid_key) or sid_key
-                        sid_name = self.repo.get_string(sid_key) or sid_key
-
-                        val = self.resolve_calc(dr.get(f"{dsc}calca{i}", ""), s, 1, 1, dr)
-                        ut = f"+{val}% Magic Damage" if "Magic" in t else (f"+{val}% Poison Damage" if "Poison" in t else (f"+{val}% HP" if "HP" in t else f"+{val}% Damage"))
-                        synergies.append({"name": sid_name, "effect": f"{ut} per Level"})
+                    syn_entry = self._format_synergy_effect(dr, dsc, i, s)
+                    if syn_entry:
+                        synergies.append(syn_entry)
 
             skills_dto.append({
                 "id": skill_id,
                 "name": skill_name,
-                "slug": slugify(skill_name),
+                "slug": slugify(skill_id or skill_name),
                 "effects": effects,
                 "synergies": synergies,
                 "raw_row": s

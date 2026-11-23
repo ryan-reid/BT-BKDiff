@@ -8,8 +8,17 @@ from __future__ import annotations
 import re
 from collections import deque
 
-from d2lib.repository import get_class_name_maps, get_class_slug_map, resolve_localized_string
+from d2lib.repository import (
+    get_class_name_maps,
+    get_class_slug_map,
+    resolve_canonical_string,
+    resolve_element_name,
+    resolve_localized_string,
+)
 from d2lib.utils import slugify
+
+HEALING_DESC_KEYS = frozenset({"strskill50", "healplev", "healplev2"})
+CANONICAL_ALLY_HEALING_RE = re.compile(r"\bheals?\s+allies\b", re.I)
 
 
 TABLE_KEYS = {"skills": "skill", "skilldesc": "skilldesc", "missiles": "Missile",
@@ -277,13 +286,16 @@ class SkillComparisonService:
             raw = value(root_row, field)
             if raw:
                 if field == "EType":
-                    display = {"mag": "Magic", "fire": "Fire", "ltng": "Lightning", "cold": "Cold", "pois": "Poison", "phys": "Physical"}.get(raw, raw)
+                    display = resolve_element_name(source.repo if source is not None else None, raw)
                 elif field in {"reqskill1", "reqskill2", "reqskill3"} and source is not None:
                     _, ref_row = source.lookup("skills", raw)
                     display = source.display_name(ref_row, fallback=raw) if ref_row else raw
                 else:
                     display = raw
-                facts[("skill", field)] = {"label": label, "value": display, "evidence": f"skills:{root} · {field}"}
+                fact = {"label": label, "value": display, "evidence": f"skills:{root} · {field}"}
+                if field == "EType":
+                    fact["code"] = raw
+                facts[("skill", field)] = fact
         # These parameter meanings belong to this specific function pair.
         # Never apply them to arbitrary missile hit functions.
         for rid, record in snapshot["records"].items():
@@ -299,6 +311,35 @@ class SkillComparisonService:
                 facts[(rid, "healing")] = {"label": f"{record['key']} · Ally healing", "value": healing,
                                             "evidence": f"{rid} · pSrvHitFunc=7, sHitPar1={value(row, 'sHitPar1')}"}
         return facts
+
+    @staticmethod
+    def _tooltip_text(snapshot, key):
+        _, desc = skill_description(snapshot, key)
+        text_key = value(desc, "str long") or value(desc, "str short")
+        return snapshot["records"].get("strings:" + text_key.lower(), {}).get("row", {}).get("text", "")
+
+    @staticmethod
+    def _tooltip_implies_ally_healing(snapshot, root, source, opposite_snapshot=None, opposite_enabled=False):
+        _, desc = skill_description(snapshot, root)
+        for prefix in ("desctexta", "dsc2texta", "dsc3texta"):
+            for index in range(1, 10):
+                text_key = value(desc, f"{prefix}{index}").lower()
+                if text_key in HEALING_DESC_KEYS:
+                    return True
+
+        this_tooltip = SkillComparisonService._tooltip_text(snapshot, root)
+        opp_tooltip = SkillComparisonService._tooltip_text(opposite_snapshot, root) if opposite_snapshot is not None else ""
+        if opposite_enabled and this_tooltip and this_tooltip == opp_tooltip:
+            return True
+
+        text_key = value(desc, "str long") or value(desc, "str short")
+        if text_key and source is not None and (
+            hasattr(source.repo, "get_canonical_string") or getattr(source.repo, "locale", "enUS") == "enUS"
+        ):
+            canonical_text = resolve_canonical_string(source.repo, text_key)
+            if canonical_text and CANONICAL_ALLY_HEALING_RE.search(canonical_text):
+                return True
+        return False
 
     def compare(self, key):
         old = self.baseline.snapshot(key)
@@ -321,9 +362,14 @@ class SkillComparisonService:
         after = self._facts(new, key, source=self.current)
         for identity in dict.fromkeys(list(after) + list(before)):
             a, b = before.get(identity, {}), after.get(identity, {})
-            facts.append({"label": (b or a)["label"], "old": a.get("value", ""), "new": b.get("value", ""),
-                          "status": "unchanged" if a.get("value") == b.get("value") else "changed",
-                          "evidence": " | ".join(dict.fromkeys(x["evidence"] for x in (a, b) if x))})
+            fact_entry = {
+                "label": (b or a)["label"], "old": a.get("value", ""), "new": b.get("value", ""),
+                "status": "unchanged" if a.get("value") == b.get("value") else "changed",
+                "evidence": " | ".join(dict.fromkeys(x["evidence"] for x in (a, b) if x)),
+            }
+            if "code" in (b or a):
+                fact_entry["code"] = (b or a)["code"]
+            facts.append(fact_entry)
         records = []
         for rid in dict.fromkeys(list(new["records"]) + list(old["records"])):
             a, b = old["records"].get(rid), new["records"].get(rid)
@@ -340,12 +386,17 @@ class SkillComparisonService:
                             "old_source": a["source"] if a else "", "new_source": b["source"] if b else ""})
         status = "added" if not root_old else "removed" if not root_new else "modified" if any(r["status"] != "unchanged" for r in records) else "unchanged"
         warnings = []
-        for side, snap in (("old", old), ("new", new)):
+        old_enabled = any(f["value"] == "Enabled" for k, f in before.items() if k[1] == "healing")
+        new_enabled = any(f["value"] == "Enabled" for k, f in after.items() if k[1] == "healing")
+        old_disabled = any(f["value"] == "Disabled" for k, f in before.items() if k[1] == "healing")
+        new_disabled = any(f["value"] == "Disabled" for k, f in after.items() if k[1] == "healing")
+        for side, snap, source, side_disabled, opp_snap, opp_enabled in (
+            ("old", old, self.baseline, old_disabled, new, new_enabled),
+            ("new", new, self.current, new_disabled, old, old_enabled),
+        ):
             if snap["missing"]:
                 warnings.append({"side": side, "text": f"{len(snap['missing'])} unresolved source links; inspect linked records for details."})
-            tooltip = " ".join(r["row"].get("text", "") for r in snap["records"].values() if r["table"] == "strings")
-            disabled = any(f["value"] == "Disabled" for k, f in self._facts(snap, key).items() if k[1] == "healing")
-            if disabled and re.search(r"heals? allies", tooltip, re.I):
+            if side_disabled and self._tooltip_implies_ally_healing(snap, key, source, opp_snap, opp_enabled):
                 warnings.append({"side": side, "kind": "tooltip", "text": "Tooltip mentions ally healing, but a linked missile's server settings disable it."})
         refs = []
         seen_refs = set()
@@ -382,11 +433,7 @@ class SkillComparisonService:
                         new_value, new_note = sides.get("new", ("", ""))
                         parameter = comparison_row(parameter_name, old_value, new_value)
                         formula_rows.append(dict(parameter, old_note=old_note, new_note=new_note))
-        def tooltip(snap):
-            _, desc = skill_description(snap, key)
-            text_key = value(desc, "str long") or value(desc, "str short")
-            return snap["records"].get("strings:" + text_key.lower(), {}).get("row", {}).get("text", "")
-        old_text, new_text = tooltip(old), tooltip(new)
+        old_text, new_text = self._tooltip_text(old, key), self._tooltip_text(new, key)
         tooltip_row = comparison_row("In-game description", old_text, new_text)
         before = synergy_entries(old, key, self.baseline.repo)
         after = synergy_entries(new, key, self.current.repo)

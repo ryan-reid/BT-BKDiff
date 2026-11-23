@@ -21,7 +21,7 @@ def _prop_stats(prop: Dict[str, Any], resolver) -> frozenset[str]:
     stats = prop.get("stats") or ()
     if stats:
         return frozenset(str(st) for st in stats if st)
-    code = resolver.aliases.get(str(prop.get("code", "")).lower(), str(prop.get("code", "")).lower())
+    code = str(prop.get("code", "")).lower()
     definition = resolver.properties.get(code, {})
     return frozenset({definition.get(f"stat{i}", "") for i in range(1, 8)} - {""}) or frozenset({code})
 
@@ -82,11 +82,11 @@ def _property_identity(tier, resolver) -> Tuple[Tuple[str, ...], Tuple[Tuple[str
     stats: set[str] = set()
     parameters: set[Tuple[str, str]] = set()
     codes = {
-        str(prop.get("canonical_code") or resolver.aliases.get(str(prop["code"]).lower(), str(prop["code"]).lower()))
+        str(prop.get("canonical_code") or str(prop["code"]).lower())
         for prop in tier.property_details
     }
     for prop in tier.property_details:
-        code = str(prop.get("canonical_code") or resolver.aliases.get(str(prop["code"]).lower(), str(prop["code"]).lower()))
+        code = str(prop.get("canonical_code") or str(prop["code"]).lower())
         if code == "pois-len" and "dmg-pois" in codes:
             continue
         if code == "cold-len" and ("dmg-cold" in codes or {"cold-min", "cold-max"} <= codes):

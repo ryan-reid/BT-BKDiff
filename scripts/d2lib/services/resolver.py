@@ -60,25 +60,6 @@ class PropertyResolverService:
             if row.get("code", "").strip()
         }
 
-        self.aliases: Dict[str, str] = {
-            "cast": "cast1",
-            "balance": "balance1",
-            "move": "move1",
-            "swing": "swing1",
-            "cold-res": "res-cold",
-            "fire-res": "res-fire",
-            "ltng-res": "res-ltng",
-            "pois-res": "res-pois",
-            "all-res": "res-all",
-            "ern%": "enr%",
-            "res-poi-len": "res-pois-len",
-            "get-hit-skill": "gethit-skill",
-            "ar%": "att%",
-            "attskill": "att-skill",
-            "hitskill": "hit-skill",
-            "level-skill": "levelup-skill",
-        }
-
         self.properties: Dict[str, Dict[str, str]] = {
             row.get("code", "").strip().lower(): row
             for row in repo.get_excel_table("properties")
@@ -1055,9 +1036,6 @@ class PropertyResolverService:
         if not code_lower or code_lower == "xxx" or code_lower.startswith("*"):
             return self._make_dto(code, param, min_val, max_val, "", canonical_code=code_lower)
 
-        if code_lower in self.aliases:
-            code_lower = self.aliases[code_lower]
-
         # 1. Property Groups (with per-repo data support)
         if code_lower in self.property_groups:
             group = self.property_groups[code_lower]
@@ -1103,11 +1081,10 @@ class PropertyResolverService:
                     canonical_code=code_lower, stats=[code_lower],
                     label=fb_text, numeric_values=self._parse_numeric_values(min_val, max_val),
                 )
-            range_str = self._range_text(min_val, max_val)
             return self._make_dto(
-                code_orig, param, min_val, max_val, f"Unknown property: {code_orig} ({range_str})",
+                code_orig, param, min_val, max_val, f"Unknown property ({code_orig})",
                 canonical_code=code_lower, stats=[code_lower],
-                label=f"Unknown property: {code_orig}",
+                label=f"Unknown property ({code_orig})",
                 numeric_values=self._parse_numeric_values(min_val, max_val),
                 is_unknown=True,
             )
@@ -1174,7 +1151,7 @@ class PropertyResolverService:
         # 6. Skill code fallback when skills.txt is missing or itemstatcost wasn't localized
         skill_codes = {
             "oskill", "skill", "att-skill", "hit-skill", "gethit-skill",
-            "kill-skill", "death-skill", "level-skill", "levelup-skill", "aura",
+            "kill-skill", "death-skill", "levelup-skill", "aura",
         }
         if code_lower in skill_codes:
             skill_name = self.resolve_skill_name(param)
@@ -1187,7 +1164,6 @@ class PropertyResolverService:
                 "gethit-skill": f"{min_val}% Chance to cast Level {max_val} {skill_name} when struck",
                 "kill-skill": f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Kill an Enemy",
                 "death-skill": f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Die",
-                "level-skill": f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Level-Up",
                 "levelup-skill": f"{min_val}% Chance to cast Level {max_val} {skill_name} when you Level-Up",
             }
             text = templates[code_lower]
@@ -1210,9 +1186,9 @@ class PropertyResolverService:
             )
 
         return self._make_dto(
-            code_orig, param, min_val, max_val, f"Unknown property: {code_orig} ({range_str})",
+            code_orig, param, min_val, max_val, f"Unknown property ({code_orig})",
             canonical_code=code_lower, stats=stats or [code_lower],
-            label=f"Unknown property: {code_orig}",
+            label=f"Unknown property ({code_orig})",
             numeric_values=self._parse_numeric_values(actual_min, actual_max),
             is_unknown=True,
         )

@@ -258,6 +258,91 @@ class TestSkillComparison(unittest.TestCase):
         self.assertEqual("독 일격", ko_dagger["name"])
         self.assertEqual("poison-dagger", ko_dagger["slug"])
 
+    def test_etype_resolution_across_locales_preserves_canonical_code(self):
+        element_strings = {
+            "enUS": {
+                "strskltree25": "Fire", "strskltree23": "Cold", "strskltree24": "Lightning",
+                "strskltree17": "Poison", "strbsmagic": "Magic", "skillname139": "Stun",
+                "burn": "Burn", "physical": "Physical",
+            },
+            "deDE": {
+                "strskltree25": "Feuer", "strskltree23": "Kälte", "strskltree24": "Blitz",
+                "strskltree17": "Gift", "strbsmagic": "Magie", "skillname139": "Betäuben",
+                "burn": "Brand", "physical": "Physisch",
+            },
+            "koKR": {
+                "strskltree25": "화염", "strskltree23": "냉기", "strskltree24": "번개",
+                "strskltree17": "독", "strbsmagic": "마법", "skillname139": "기절",
+                "burn": "작열", "physical": "물리",
+            },
+        }
+        codes = ["fire", "cold", "ltng", "pois", "mag", "stun", "burn", "phys"]
+        skills = [{"skill": f"Skill_{c}", "charclass": "sor", "EType": c} for c in codes]
+
+        for locale, strs in element_strings.items():
+            repo = Repository({"skills": skills}, strs)
+            repo.locale = locale
+            svc = SkillComparisonService(repo, repo)
+            for code, expected in zip(codes, strs.values()):
+                card = svc.compare(f"skill_{code}")
+                etype_fact = next(f for f in card["facts"] if f["label"] == "Skill damage element")
+                self.assertEqual(expected, etype_fact["new"], f"{locale} {code}")
+                self.assertEqual(code, etype_fact["code"], f"{locale} {code}")
+
+    def test_healing_tooltip_contradiction_works_without_english_regex(self):
+        def make_tables(shitpar1, include_heal_descline=False):
+            desc_row = {"skilldesc": "holy bolt", "str long": "holy_desc", "str name": "holy_name"}
+            if include_heal_descline:
+                desc_row.update({"descline2": "75", "desctexta2": "StrSkill50"})
+            return {
+                "skills": [{"skill": "Holy Bolt", "charclass": "pal", "skilldesc": "holy bolt", "srvmissile": "holybolt"}],
+                "skilldesc": [desc_row],
+                "missiles": [{"Missile": "holybolt", "pSrvHitFunc": "7", "pSrvDmgFunc": "15", "sHitPar1": shitpar1, "sHitPar2": "0"}],
+            }
+
+        de_strs = {"holy_name": "Heiliger Blitz", "holy_desc": "Schadet Gegnern oder heilt Verbündete", "strskill50": "Heilt: %d-%d"}
+        ko_strs = {"holy_name": "신성한 화살", "holy_desc": "적에게 피해를 주거나 아군을 치유합니다.", "strskill50": "치유: %d-%d"}
+
+        # 1. German/Korean-only repo where sHitPar1 flips 1 -> 0 with unchanged tooltip & no StrSkill50 -> warning on new
+        for locale, strs in (("deDE", de_strs), ("koKR", ko_strs)):
+            old_repo = Repository(make_tables("1"), strs)
+            old_repo.locale = locale
+            new_repo = Repository(make_tables("0"), strs)
+            new_repo.locale = locale
+            card = SkillComparisonService(new_repo, old_repo).compare("holy bolt")
+            self.assertEqual(["new"], [w["side"] for w in card["warnings"] if w.get("kind") == "tooltip"])
+
+            # 2. Same flip, but localized tooltip WAS updated -> no warning
+            updated_desc = "Schadet Gegnern" if locale == "deDE" else "적에게 피해를 줍니다."
+            updated_repo = Repository(make_tables("0"), dict(strs, holy_desc=updated_desc))
+            updated_repo.locale = locale
+            clean_card = SkillComparisonService(updated_repo, old_repo).compare("holy bolt")
+            self.assertEqual([], [w for w in clean_card["warnings"] if w.get("kind") == "tooltip"])
+
+            # 3. Both sides have sHitPar1="0" AND skilldesc has StrSkill50 -> warning on both sides
+            both_old = Repository(make_tables("0", include_heal_descline=True), strs)
+            both_old.locale = locale
+            both_new = Repository(make_tables("0", include_heal_descline=True), strs)
+            both_new.locale = locale
+            both_card = SkillComparisonService(both_new, both_old).compare("holy bolt")
+            self.assertEqual(["old", "new"], [w["side"] for w in both_card["warnings"] if w.get("kind") == "tooltip"])
+
+        # 4. D2Repository-style get_canonical_string on deDE repo with sHitPar1="0" on both sides (no StrSkill50)
+        class CanonicalRepo(Repository):
+            def __init__(self, tables, strings, canonical, locale="deDE"):
+                super().__init__(tables, strings)
+                self.canonical = {k.lower(): v for k, v in canonical.items()}
+                self.locale = locale
+
+            def get_canonical_string(self, key):
+                return self.canonical.get(key.lower(), "")
+
+        canon_en = {"holy_desc": "a bolt that damages enemies or heals allies"}
+        c_old = CanonicalRepo(make_tables("0"), de_strs, canon_en, locale="deDE")
+        c_new = CanonicalRepo(make_tables("0"), de_strs, canon_en, locale="deDE")
+        c_card = SkillComparisonService(c_new, c_old).compare("holy bolt")
+        self.assertEqual(["old", "new"], [w["side"] for w in c_card["warnings"] if w.get("kind") == "tooltip"])
+
 
 if __name__ == "__main__":
     unittest.main()
