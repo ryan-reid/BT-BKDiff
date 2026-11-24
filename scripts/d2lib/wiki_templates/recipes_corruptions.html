@@ -15,20 +15,24 @@
   <button class="filter-button" type="button" data-recipe-filter="{{ filter.value }}">{{ filter.label }} <span class="filter-count">{{ filter.count }}</span></button>
   {% endfor %}
 </div>
-{% set sections = [("either-standard-corruptions", "Standard of Heroes or The Divine Standard", page.combined_summaries), ("standard-corruptions", "Standard of Heroes only", page.standard_summaries), ("divine-corruptions", "The Divine Standard only", page.divine_summaries)] %}
+{% set sections = page.sections if page.sections is defined else [
+  {"id": "either-standard-corruptions", "title": "Standard of Heroes or The Divine Standard", "summaries": page.combined_summaries},
+  {"id": "standard-corruptions", "title": "Standard of Heroes only", "summaries": page.standard_summaries},
+  {"id": "divine-corruptions", "title": "The Divine Standard only", "summaries": page.divine_summaries},
+] %}
 <div class="recipe-groups">
-  {% for id, title, summaries in sections %}
-  {% if summaries %}
-  <section id="{{ id }}" class="recipe-group" data-filter-tags="{{ id }}" data-search="{{ title }}">
+  {% for section in sections %}
+  {% if section.summaries %}
+  <section id="{{ section.id }}" class="recipe-group" data-filter-tags="{{ section.id }}" data-search="{{ section.title }}">
     <div class="recipe-group-head">
       <div>
-        <h2>{{ title }}</h2>
+        <h2>{{ section.title }}</h2>
         <p class="recipe-group-desc">Grouped chance tables for this corruption material.</p>
       </div>
-      <span class="recipe-group-count">{{ summaries|length }} cards</span>
+      <span class="recipe-group-count">{{ section.summaries|length }} cards</span>
     </div>
     <div class="corruption-summary-grid">
-      {% for summary in summaries %}
+      {% for summary in section.summaries %}
       <article class="corruption-summary-card" data-filter-tags="{{ summary.filter_tags }}" data-search="{{ summary.search_text }}">
         <div class="corruption-summary-head">
           <h3>{{ summary.title }}</h3>
