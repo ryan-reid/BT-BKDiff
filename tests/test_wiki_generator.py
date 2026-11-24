@@ -1585,7 +1585,19 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Used when determining which random prefixes and suffixes", bases_page)
         self.assertIn("<strong>Base Lvl:</strong> 85", bases_page)
         self.assertIn("<strong>Req Lvl:</strong> 65", bases_page)
-        self.assertIn("<strong>WSM:</strong> 20 (Very Slow)", bases_page)
+        self.assertIn("<strong>WSM:</strong> 20</span>", bases_page)
+        self.assertNotIn("Very Slow", bases_page)
+        self.assertIn('<option value="normal">Normal</option>', bases_page)
+        self.assertIn('<option value="exceptional">Exceptional</option>', bases_page)
+        self.assertIn('<option value="elite">Elite</option>', bases_page)
+        self.assertIn('<option value="20">20</option>', bases_page)
+        self.assertNotIn('<option value="0">0</option>', bases_page)
+        self.assertIn('<option value="6">6 sockets</option>', bases_page)
+        self.assertNotIn('<option value="7">', bases_page)
+        self.assertIn('data-tier="normal"', bases_page)
+        self.assertIn('data-speed="20"', bases_page)
+        self.assertIn('data-speed=""', bases_page)
+        self.assertIn('class="badge badge-normal"', bases_page)
         self.assertNotIn("<th>Speed/Block</th>", bases_page)
 
     def test_affixes_compare_both_baselines_and_keep_duplicate_tiers(self):
@@ -1912,6 +1924,163 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Skull Splitter", unique_group["search_text"])
         self.assertIn("Mindrend", unique_group["search_text"])
         self.assertIn("천둥 망치", unique_group["search_text"])
+
+    def test_item_icon_exporter_derives_hd_sprite_tier_from_excel_tables(self):
+        root = os.path.join(self.root, "sprite_tier_test")
+        game_data = os.path.join(root, "game")
+        excel_dir = os.path.join(game_data, "data", "global", "excel")
+        out_dir = os.path.join(root, "out")
+        os.makedirs(excel_dir, exist_ok=True)
+        self._write_tsv(
+            excel_dir,
+            "weapons.txt",
+            ["name", "code", "normcode", "ubercode", "ultracode"],
+            [
+                {"name": "Alpha Sword", "code": "a01", "normcode": "a01", "ubercode": "b02", "ultracode": "c03"},
+                {"name": "Beta Sword", "code": "b02", "normcode": "a01", "ubercode": "b02", "ultracode": "c03"},
+                {"name": "Gamma Sword", "code": "c03", "normcode": "a01", "ubercode": "b02", "ultracode": "c03"},
+                {"name": "Short Staff", "code": "sst", "normcode": "sst", "ubercode": "8ss", "ultracode": "6ss"},
+                {"name": "Jo Staff", "code": "8ss", "normcode": "sst", "ubercode": "8ss", "ultracode": "6ss"},
+                {"name": "Walking Stick", "code": "6ss", "normcode": "sst", "ubercode": "8ss", "ultracode": "6ss"},
+            ],
+        )
+        self._write_json(
+            game_data,
+            "data/hd/items/uniques.json",
+            [{"Test Sprite Blade": {"normal": "weapon/norm_blade", "uber": "weapon/uber_blade", "ultra": "weapon/ultra_blade"}}],
+        )
+
+        def write_colored_sprite(rel_path: str, rgba: bytes):
+            full = os.path.join(game_data, rel_path)
+            os.makedirs(os.path.dirname(full), exist_ok=True)
+            header = bytearray(40)
+            header[:4] = b"SpA1"
+            header[6:8] = (2).to_bytes(2, "little")
+            header[8:10] = (2).to_bytes(2, "little")
+            header[12:16] = (2).to_bytes(4, "little")
+            with open(full, "wb") as f:
+                f.write(bytes(header) + (rgba * 4))
+
+        write_colored_sprite("data/hd/global/ui/items/weapon/weapon/norm_blade.sprite", b"\xff\x00\x00\xff")
+        write_colored_sprite("data/hd/global/ui/items/weapon/weapon/uber_blade.sprite", b"\x00\xff\x00\xff")
+        write_colored_sprite("data/hd/global/ui/items/weapon/weapon/ultra_blade.sprite", b"\x00\x00\xff\xff")
+
+        exporter = ItemIconExporter(
+            WikiOutputWriter(out_dir),
+            game_data_dir=game_data,
+            retail_data_dir=os.path.join(root, "missing_retail"),
+        )
+        self.assertEqual("normal", exporter._item_code_tier("a01"))
+        self.assertEqual("uber", exporter._item_code_tier("b02"))
+        self.assertEqual("ultra", exporter._item_code_tier("c03"))
+        self.assertEqual("normal", exporter._item_code_tier("sst"))
+        self.assertEqual("uber", exporter._item_code_tier("8ss"))
+        self.assertEqual("ultra", exporter._item_code_tier("6ss"))
+
+        norm_icon = exporter.export_entry_icon({"raw_row": {"code": "a01", "index": "Test Sprite Blade"}}, "unique")
+        uber_icon = exporter.export_entry_icon({"raw_row": {"code": "b02", "index": "Test Sprite Blade"}}, "unique")
+        # Separate quality keys verify distinct PNG payloads are chosen by base tier rather than cached output_key.
+        norm_bytes_path = os.path.join(out_dir, norm_icon)
+        uber_Direct = exporter.export_icon("test-sprite-uber-b02", item_code="b02", quality_family="unique", quality_key="Test Sprite Blade")
+        ultra_Direct = exporter.export_icon("test-sprite-ultra-c03", item_code="c03", quality_family="unique", quality_key="Test Sprite Blade")
+        with open(norm_bytes_path, "rb") as f1, open(os.path.join(out_dir, uber_Direct), "rb") as f2, open(os.path.join(out_dir, ultra_Direct), "rb") as f3:
+            b_norm, b_uber, b_ultra = f1.read(), f2.read(), f3.read()
+        self.assertNotEqual(b_norm, b_uber)
+        self.assertNotEqual(b_norm, b_ultra)
+        self.assertNotEqual(b_uber, b_ultra)
+        self.assertTrue(uber_icon)
+
+    def test_bases_page_dynamic_sockets_and_localization_in_kokr(self):
+        root = os.path.join(self.root, "kokr_bases")
+        game_data = os.path.join(root, "game")
+        retail_data = os.path.join(root, "retail")
+        excel_dir = os.path.join(game_data, "data", "global", "excel")
+        strings_dir = os.path.join(game_data, "data", "local", "lng", "strings")
+        os.makedirs(excel_dir, exist_ok=True)
+        os.makedirs(strings_dir, exist_ok=True)
+        os.makedirs(os.path.join(retail_data, "global", "excel"), exist_ok=True)
+
+        self._write_tsv(
+            excel_dir,
+            "itemtypes.txt",
+            ["ItemType", "Code", "Equiv1", "Equiv2", "StorePage", "UICategory", "RunewordCategory1", "RunewordCategory2", "MaxSockets1", "MaxSockets2", "MaxSockets3"],
+            [
+                {"ItemType": "Weapon", "Code": "weap", "StorePage": "weap", "RunewordCategory1": "r_mis", "RunewordCategory2": "r_mel"},
+                {"ItemType": "Melee Weapon", "Code": "mele", "Equiv1": "weap", "StorePage": "weap", "RunewordCategory1": "r_mel"},
+                {"ItemType": "Blunt", "Code": "blun", "Equiv1": "mele", "StorePage": "weap", "RunewordCategory1": "r_mel"},
+                {"ItemType": "Mace", "Code": "mace", "Equiv1": "blun", "StorePage": "weap", "UICategory": "maces", "MaxSockets1": "8", "MaxSockets2": "8", "MaxSockets3": "8"},
+            ],
+        )
+        self._write_tsv(
+            excel_dir,
+            "weapons.txt",
+            ["name", "namestr", "code", "type", "level", "levelreq", "mindam", "maxdam", "reqstr", "reqdex", "gemsockets", "normcode", "ubercode", "ultracode", "speed", "durability"],
+            [
+                {"name": "Mace", "namestr": "mac", "code": "mac", "type": "mace", "level": "8", "levelreq": "1", "mindam": "3", "maxdam": "10", "gemsockets": "2", "normcode": "mac", "ubercode": "9ma", "ultracode": "7ma", "speed": "-25", "durability": "60"},
+                {"name": "Flanged Mace", "namestr": "9ma", "code": "9ma", "type": "mace", "level": "30", "levelreq": "25", "mindam": "15", "maxdam": "23", "gemsockets": "4", "normcode": "mac", "ubercode": "9ma", "ultracode": "7ma", "speed": "0", "durability": "60"},
+                {"name": "Reinforced Mace", "namestr": "7ma", "code": "7ma", "type": "mace", "level": "60", "levelreq": "47", "mindam": "41", "maxdam": "49", "gemsockets": "8", "normcode": "mac", "ubercode": "9ma", "ultracode": "7ma", "speed": "15", "durability": "60"},
+            ],
+        )
+        self._write_tsv(excel_dir, "armor.txt", ["name", "code", "type"], [])
+        self._write_tsv(excel_dir, "automagic.txt", ["Name", "group"], [])
+        self._write_tsv(excel_dir, "qualityitems.txt", ["mod1code"], [])
+        self._write_tsv(excel_dir, "properties.txt", ["code", "func1", "stat1"], [{"code": "dmg-undead", "func1": "1", "stat1": "item_undeaddamage_percent"}])
+        self._write_tsv(excel_dir, "itemstatcost.txt", ["Stat", "descpriority", "descfunc", "descval", "descstrpos", "descstrneg"], [
+            {"Stat": "item_undeaddamage_percent", "descpriority": "108", "descfunc": "19", "descval": "", "descstrpos": "ModStr4f", "descstrneg": "ModStr4f"},
+        ])
+        self._write_json(strings_dir, "item-names.json", [
+            {"Key": "mac", "koKR": "철퇴"},
+            {"Key": "9ma", "koKR": "플랜지드 메이스"},
+            {"Key": "7ma", "koKR": "레인포스드 메이스"},
+            {"Key": "maces", "koKR": "철퇴"},
+            {"Key": "r_mel", "koKR": "근접"},
+            {"Key": "StrGemX3", "koKR": "무기:"},
+        ])
+        self._write_json(strings_dir, "item-modifiers.json", [
+            {"Key": "ModStr4f", "koKR": "언데드에게 주는 피해 %+d%%"},
+        ])
+        self._write_json(strings_dir, "ui.json", [
+            {"Key": "LootFilterNormalQuality", "koKR": "보통"},
+            {"Key": "LootFilterExceptionalQuality", "koKR": "특급"},
+            {"Key": "LootFilterEliteQuality", "koKR": "정예"},
+        ])
+
+        from d2lib.repository import D2Repository
+        from d2lib.services.items import BaseItemAnalyzerService
+        from d2lib.services.resolver import PropertyResolverService
+        from d2lib.wiki.comparison import base_item_comparison_context
+
+        repo = D2Repository(game_data, locale="koKR")
+        families = BaseItemAnalyzerService(repo, PropertyResolverService(repo)).analyze_base_items()
+        for fam in families:
+            for item in fam["members"]:
+                item["comparison"] = base_item_comparison_context(item, None)
+                item["href"] = ""
+                item["history"] = {"available": False}
+
+        out_dir = os.path.join(root, "out")
+        builder = WikiContentBuilder("", "", out_dir, game_data_dir=game_data, retail_data_dir=retail_data, locale="koKR")
+        builder._repo = repo
+        builder._retail_repo = D2Repository(retail_data, locale="koKR")
+        from d2lib.services.item_types import ItemTypeTaxonomy
+        from d2lib.wiki.renderers import HtmlWikiRenderer
+        builder._taxonomy = ItemTypeTaxonomy(repo)
+        builder._history = {"items": {}}
+        builder._history_aliases = {}
+        builder._write_base_item_pages(families, {})
+        bases_page_dto = next(p for p in builder.site["pages"] if p["output_path"] == "bases/index.html")
+        ko_bases = HtmlWikiRenderer().render_page(bases_page_dto, builder.site)
+        self.assertIn('<option value="normal">보통</option>', ko_bases)
+        self.assertIn('<option value="exceptional">특급</option>', ko_bases)
+        self.assertIn('<option value="elite">정예</option>', ko_bases)
+        self.assertIn('<option value="-25">-25</option>', ko_bases)
+        self.assertIn('<option value="0">0</option>', ko_bases)
+        self.assertIn('<option value="15">15</option>', ko_bases)
+        self.assertIn('<option value="8">8 sockets</option>', ko_bases)
+        self.assertIn("tier-exceptional", ko_bases)
+        self.assertIn("badge-elite", ko_bases)
+        self.assertIn('data-speed="-25"', ko_bases)
+        self.assertIn("언데드에게 주는 피해 +50%", ko_bases)
 
 
 if __name__ == "__main__":

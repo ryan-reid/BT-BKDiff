@@ -241,6 +241,12 @@ class ItemAnalyzerService:
         }
 
 class BaseItemAnalyzerService:
+    TIER_STRING_KEYS: Dict[str, str] = {
+        "normal": "LootFilterNormalQuality",
+        "exceptional": "LootFilterExceptionalQuality",
+        "elite": "LootFilterEliteQuality",
+    }
+
     def __init__(self, repo: D2RepositoryProtocol, resolver: PropertyResolverService):
         self.repo = repo
         self.resolver = resolver
@@ -278,7 +284,8 @@ class BaseItemAnalyzerService:
             items_dto = []
             for i, m_code in enumerate(family_members):
                 seen_codes.add(m_code)
-                items_dto.append(self._analyze_item(code_to_item[m_code], ["Normal", "Exceptional", "Elite"][i] if i < 3 else "Unknown"))
+                tier_key = ("normal", "exceptional", "elite")[i] if i < 3 else "unknown"
+                items_dto.append(self._analyze_item(code_to_item[m_code], tier_key))
 
             if items_dto:
                 group = self._family_group(items_dto)
@@ -361,6 +368,8 @@ class BaseItemAnalyzerService:
 
         speed = to_int(row.get('speed'))
         two_handed_only = row.get('2handed') == '1' and row.get('1or2handed') != '1'
+        tier_key = str(tier or "normal").strip().lower()
+        tier_label = self.tier_label(self.repo, tier_key)
 
         return {
             "code": code,
@@ -397,9 +406,9 @@ class BaseItemAnalyzerService:
             "quality_bonus_stats": quality_bonus_stats,
             "quality_bonus_summary": quality_bonus_summary,
             "speed": speed,
-            "speed_label": self._weapon_speed_label(speed),
             "durability": to_int(row.get('nodurability')) if row.get('nodurability') == '1' else to_int(row.get('durability')),
-            "tier": tier
+            "tier_key": tier_key,
+            "tier": tier_label,
         }
 
     def _collapse_stat_ranges(self, stats: List[str]) -> List[str]:
@@ -454,16 +463,47 @@ class BaseItemAnalyzerService:
         return f"{prefix}{value}{suffix}"
 
     @staticmethod
-    def _weapon_speed_label(speed: int) -> str:
-        if speed <= -20:
-            return "Very Fast"
-        if speed <= -10:
-            return "Fast"
-        if speed < 10:
-            return "Normal"
-        if speed < 20:
-            return "Slow"
-        return "Very Slow"
+    def is_weapon_item(item: BaseItemDTO) -> bool:
+        return item.get("defense_min") is None
+
+    @classmethod
+    def tier_label(cls, repo: D2RepositoryProtocol, tier_key: str) -> str:
+        clean = str(tier_key or "normal").strip().lower()
+        str_key = cls.TIER_STRING_KEYS.get(clean)
+        if str_key:
+            resolved = resolve_localized_string(repo, str_key)
+            if resolved:
+                return resolved
+        return clean.title() if clean else ""
+
+    @classmethod
+    def tier_options(cls, families: List[BaseItemFamilyDTO]) -> List[Dict[str, str]]:
+        present: Dict[str, str] = {}
+        for family in families:
+            for item in family["members"]:
+                key = str(item.get("tier_key") or item.get("tier") or "").strip().lower()
+                if not key:
+                    continue
+                label = str(item.get("tier") or key).strip()
+                if key not in present or label:
+                    present[key] = label or key
+        order = {key: idx for idx, key in enumerate(cls.TIER_STRING_KEYS)}
+        return [
+            {"key": key, "label": present[key]}
+            for key in sorted(present, key=lambda k: (order.get(k, len(order)), k))
+        ]
+
+    @classmethod
+    def speed_options(cls, families: List[BaseItemFamilyDTO]) -> List[Dict[str, str]]:
+        speeds = sorted(
+            {
+                int(item["speed"])
+                for family in families
+                for item in family["members"]
+                if cls.is_weapon_item(item)
+            }
+        )
+        return [{"key": str(speed), "label": str(speed)} for speed in speeds]
 
     def _family_group(self, items: List[BaseItemDTO]) -> str:
         if any(item["defense_min"] is not None for item in items):
@@ -515,7 +555,6 @@ class BaseItemAnalyzerService:
                     str(item["level_req"]),
                     str(item["sockets"]),
                     str(item["speed"]),
-                    item["speed_label"],
                     " ".join(item["inherent_stats"]),
                     " ".join(item["auto_prefix_summary"]),
                     " ".join(item["quality_bonus_summary"]),
@@ -560,9 +599,19 @@ class BaseItemAnalyzerService:
         return self.repo.get_string(label_key) or label_key or type_code
 
     def _inherent_stats_for_item_type(self, item_type_chain: List[str]) -> List[str]:
-        stats = []
+        stats: List[str] = []
         if 'blun' in item_type_chain:
-            stats.append("+50% Damage to Undead")
+            undead_text = ""
+            if self.resolver is not None:
+                res = self.resolver.resolve_property("dmg-undead", "", "50", "50")
+                candidate = str(res.get("resolved_text", "") or "").strip()
+                if candidate and not candidate.startswith("Unknown property"):
+                    undead_text = candidate
+            if not undead_text:
+                mod_str = resolve_localized_string(self.repo, "ModStr4f")
+                if mod_str:
+                    undead_text = mod_str.replace("%+d", "+50").replace("%d", "50").replace("%%", "%")
+            stats.append(undead_text or "+50% Damage to Undead")
         return stats
 
     def _quality_bonus_stats_for_item_type(self, item_type_chain: List[str]) -> List[str]:

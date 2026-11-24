@@ -709,7 +709,7 @@ class WikiContentBuilder:
                 self.writer.copy_asset(source_path, f"assets/{filename}")
 
     def _write_base_item_pages(self, families: List[BaseItemFamilyDTO], retail_items: Dict[str, Any]) -> None:
-        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
+        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir, repository=self._repo)
         icon_exporter.attach_base_item_icons(families)
 
         for family in families:
@@ -718,6 +718,11 @@ class WikiContentBuilder:
                 item["comparison"] = base_item_comparison_context(item, old_item)
                 item["href"] = ""
                 item["history"] = item_history(self._history, "base", item, self._history_aliases)
+
+        max_base_sockets = max(
+            (int(item.get("sockets") or 0) for family in families for item in family["members"]),
+            default=0,
+        )
 
         self._write_page(
             title=f"Base Items | {self.new_label} Wiki",
@@ -735,6 +740,9 @@ class WikiContentBuilder:
             loot_groups=self._taxonomy.loot_groups(include_accessories=False),
             base_groups=sorted({family["group"] for family in families}),
             base_classes=sorted({cn for family in families for cn in family["class_tags"]}),
+            base_tier_options=BaseItemAnalyzerService.tier_options(families),
+            base_speed_options=BaseItemAnalyzerService.speed_options(families),
+            base_socket_options=list(range(1, max_base_sockets + 1)),
             base_type_categories=sorted({
                 cat
                 for family in families
@@ -773,7 +781,7 @@ class WikiContentBuilder:
         )
 
     def _write_misc_pages(self, groups: List[MiscGroupDTO]) -> None:
-        ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir).attach_misc_item_icons(groups)
+        ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir, repository=self._repo).attach_misc_item_icons(groups)
         self._write_page(
             title=f"Materials | {self.new_label} Wiki",
             output_path=WikiRoutes.misc_index_output_path(),
@@ -784,7 +792,7 @@ class WikiContentBuilder:
         )
 
     def _write_gems_runes_pages(self, groups: List[MiscGroupDTO], retail_items: Dict[str, Any]) -> None:
-        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
+        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir, repository=self._repo)
         icon_exporter.attach_misc_item_icons(groups)
 
         for group in groups:
@@ -976,7 +984,7 @@ class WikiContentBuilder:
         retail_base_items: Dict[str, Any],
     ) -> Dict[str, List[Dict[str, str]]]:
         page_entries: Dict[str, List[Dict[str, str]]] = {family: [] for family in ITEM_FAMILIES}
-        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
+        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir, repository=self._repo)
         drop_base_lookup = self._drop_base_lookup(self._repo)
         bk_sets = self._sets_lookup(self._repo)
         retail_sets = self._sets_lookup(self._retail_repo)
@@ -1093,7 +1101,7 @@ class WikiContentBuilder:
     ) -> None:
         entry_by_identity = {entry["identity"]: entry for entry in page_entries if entry.get("identity")}
         href_by_title = {entry["title"]: entry for entry in page_entries}
-        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir)
+        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir, repository=self._repo)
         old_runewords = (old_item_index or {}).get("runeword", {})
         records = []
         rune_options_by_code: Dict[str, Dict[str, str]] = {}

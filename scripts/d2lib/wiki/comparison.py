@@ -363,9 +363,9 @@ def base_item_comparison_context(
     if old_block or new_block:
         add_stat("Block", str(old_block) if old_item else "", str(new_block))
 
-    if has_damage:
-        old_speed = f"{old_item.get('speed', '')} ({old_item.get('speed_label', '')})" if old_item else ""
-        add_stat("WSM", old_speed, f"{item.get('speed', '')} ({item.get('speed_label', '')})")
+    if has_damage and item.get("defense_min") is None:
+        old_speed = str(old_item.get("speed", "")) if old_item else ""
+        add_stat("WSM", old_speed, str(item.get("speed", "")))
 
     property_rows: List[Dict[str, Any]] = []
 

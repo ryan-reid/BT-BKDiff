@@ -1,5 +1,6 @@
 from __future__ import annotations
 import binascii
+import csv
 import json
 import os
 import re
@@ -489,6 +490,7 @@ class ItemIconExporter:
         game_data_dir: str,
         retail_data_dir: str,
         output_prefix: str = "assets/item-icons",
+        repository: Optional[D2RepositoryProtocol] = None,
     ):
         self.writer = writer
         self.game_data_dir = game_data_dir
@@ -498,6 +500,7 @@ class ItemIconExporter:
         self._item_asset_maps = [self._load_item_asset_map(path) for path in self._hd_item_manifest_paths()]
         self._unique_asset_maps = [self._load_quality_asset_map(path) for path in self._hd_quality_manifest_paths("uniques.json")]
         self._set_asset_maps = [self._load_quality_asset_map(path) for path in self._hd_quality_manifest_paths("sets.json")]
+        self._item_tiers = self._load_item_tiers(repository)
 
     def attach_base_item_icons(self, families: List[BaseItemFamilyDTO]) -> None:
         for family in families:
@@ -802,15 +805,66 @@ class ItemIconExporter:
         return re.sub(r"[^a-z0-9]+", "_", value.lower()).strip("_")
 
     @staticmethod
-    def _item_code_tier(item_code: str) -> str:
+    def _read_excel_rows(path: str) -> List[Dict[str, str]]:
+        csv.field_size_limit(1000000)
+        try:
+            with open(path, "r", encoding="utf-8-sig", errors="replace", newline="") as f:
+                return list(csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE))
+        except OSError:
+            return []
+
+    def _load_item_table_rows(self, table_name: str, repository: Optional[D2RepositoryProtocol]) -> List[Dict[str, str]]:
+        if repository is not None:
+            return list(repository.get_excel_table(table_name))
+        candidates = [
+            os.path.join(self.game_data_dir, "data", "global", "excel", f"{table_name}.txt"),
+            os.path.join(self.retail_data_dir, "global", "excel", f"{table_name}.txt"),
+            os.path.join(DEFAULT_RETAIL_DATA_DIR, "global", "excel", f"{table_name}.txt"),
+        ]
+        for path in candidates:
+            if os.path.isfile(path):
+                return self._read_excel_rows(path)
+        return []
+
+    def _load_item_tiers(self, repository: Optional[D2RepositoryProtocol]) -> Dict[str, str]:
+        rows: List[Dict[str, str]] = []
+        for table_name in ("weapons", "armor"):
+            rows.extend(self._load_item_table_rows(table_name, repository))
+
+        tiers: Dict[str, str] = {}
+        # Pass 1: infer tier from normcode / ubercode / ultracode relationships.
+        for row in rows:
+            norm = str(row.get("normcode") or "").strip().lower()
+            uber = str(row.get("ubercode") or "").strip().lower()
+            ultra = str(row.get("ultracode") or "").strip().lower()
+            if norm:
+                tiers.setdefault(norm, "normal")
+            if uber and uber != norm:
+                tiers[uber] = "uber"
+            if ultra and ultra != norm and ultra != uber:
+                tiers[ultra] = "ultra"
+
+        # Pass 2: each row's own code takes precedence for standalone items (norm == uber == ultra).
+        for row in rows:
+            code = str(row.get("code") or "").strip().lower()
+            if not code:
+                continue
+            norm = str(row.get("normcode") or "").strip().lower()
+            uber = str(row.get("ubercode") or "").strip().lower()
+            ultra = str(row.get("ultracode") or "").strip().lower()
+            if norm and code == norm:
+                tiers[code] = "normal"
+            elif ultra and code == ultra:
+                tiers[code] = "ultra"
+            elif uber and code == uber:
+                tiers[code] = "uber"
+        return tiers
+
+    def _item_code_tier(self, item_code: str) -> str:
         code = item_code.strip().lower()
         if not code:
             return "normal"
-        if code[:1] in {"7", "u", "z"}:
-            return "ultra"
-        if code[:1] in {"9", "x"}:
-            return "uber"
-        return "normal"
+        return self._item_tiers.get(code, "normal")
 
     def _find_dc6(self, icon_key: str) -> Optional[str]:
         filename = f"{icon_key.lower()}.dc6"

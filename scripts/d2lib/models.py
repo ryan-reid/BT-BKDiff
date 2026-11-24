@@ -104,7 +104,7 @@ class SkillTreeDTO(TypedDict):
     class_name: str
     skills: List[SkillDTO]
 
-class BaseItemDTO(TypedDict):
+class _BaseItemDTORequired(TypedDict):
     code: str
     name: str
     icon_key: str
@@ -138,9 +138,11 @@ class BaseItemDTO(TypedDict):
     quality_bonus_stats: List[str]
     quality_bonus_summary: List[str]
     speed: int
-    speed_label: str
     durability: int
-    tier: str # Normal, Exceptional, Elite
+    tier: str # Localized tier label (Normal, Exceptional, Elite)
+
+class BaseItemDTO(_BaseItemDTORequired, total=False):
+    tier_key: str # Canonical tier key: normal, exceptional, elite
 
 class BaseItemFamilyDTO(TypedDict):
     name: str
