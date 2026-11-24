@@ -685,6 +685,7 @@ class TestWikiGenerator(unittest.TestCase):
             "*StringName",
             "Id",
             "Act",
+            "DrlgType",
             "MonLvl(H)",
             "MonLvlEx(H)",
             "MonDen(H)",
@@ -707,6 +708,7 @@ class TestWikiGenerator(unittest.TestCase):
                     "*StringName": "Cold Cave",
                     "Id": "10",
                     "Act": "0",
+                    "DrlgType": "1",
                     "MonLvl(H)": "82",
                     "MonLvlEx(H)": "87",
                     "MonDen(H)": "5000",
@@ -724,6 +726,7 @@ class TestWikiGenerator(unittest.TestCase):
                     "*StringName": "Fallback Field",
                     "Id": "11",
                     "Act": "1",
+                    "DrlgType": "2",
                     "MonLvl(H)": "82",
                     "MonDen(H)": "1000",
                     "MonUMin(H)": "2",
@@ -739,6 +742,7 @@ class TestWikiGenerator(unittest.TestCase):
                     "*StringName": "Abaddon",
                     "Id": "12",
                     "Act": "4",
+                    "DrlgType": "1",
                     "MonLvl(H)": "87",
                     "MonDen(H)": "900",
                     "MonUMin(H)": "4",
@@ -754,6 +758,7 @@ class TestWikiGenerator(unittest.TestCase):
                     "*StringName": "Lower Kurast",
                     "Id": "79",
                     "Act": "2",
+                    "DrlgType": "3",
                     "MonLvl(H)": "80",
                     "MonDen(H)": "1200",
                     "MonUMin(H)": "2",
@@ -769,6 +774,7 @@ class TestWikiGenerator(unittest.TestCase):
                     "*StringName": "Cave Level 2",
                     "Id": "13",
                     "Act": "0",
+                    "DrlgType": "1",
                     "MonLvl(H)": "80",
                     "MonDen(H)": "900",
                     "MonUMin(H)": "1",
@@ -884,10 +890,24 @@ class TestWikiGenerator(unittest.TestCase):
             [
                 {
                     "Class": "SpecialChest100",
-                    "Name": "specialchest",
+                    "Name": "chest",
                     "*Description": "Super Chest",
                     "*ID": "455",
                     "InitFn": "57",
+                },
+                {
+                    "Class": "ConsolationChest",
+                    "Name": "chest",
+                    "*Description": "sparklychest",
+                    "*ID": "397",
+                    "InitFn": "57",
+                },
+                {
+                    "Class": "PlaceUniqueChest",
+                    "Name": "chest",
+                    "*Description": "Places a Unique Chest",
+                    "*ID": "584",
+                    "InitFn": "79",
                 },
                 {
                     "Class": "PlainChest",
@@ -896,6 +916,15 @@ class TestWikiGenerator(unittest.TestCase):
                     "*ID": "100",
                     "InitFn": "0",
                 },
+            ],
+        )
+        self._write_tsv(
+            excel_root,
+            "objpreset.txt",
+            ["Index", "Act", "ObjectClass"],
+            [
+                {"Index": "111", "Act": "1", "ObjectClass": "ConsolationChest"},
+                {"Index": "2", "Act": "3", "ObjectClass": "PlaceUniqueChest"},
             ],
         )
         lvlprest_fields = ["Name", "Def", "LevelId", "File1", "File2", "File3", "File4", "File5", "File6"]
@@ -943,12 +972,12 @@ class TestWikiGenerator(unittest.TestCase):
         self._write_ds1_with_objects(
             os.path.join(self.game_data, "data", "global", "tiles"),
             os.path.join("Act3", "Kurast", "SlumsCamp.ds1"),
-            [5],
+            [2],
         )
         self._write_ds1_with_objects(
             os.path.join(self.game_data, "data", "global", "tiles"),
             os.path.join("Act1", "Caves", "CaveRoom2.ds1"),
-            [1],
+            [111],
         )
         self._write_json(
             self.game_data,
@@ -1188,6 +1217,7 @@ class TestWikiGenerator(unittest.TestCase):
                 "display_name",
                 "internal_name",
                 "level_id",
+                "act_id",
                 "act",
                 "area_level",
                 "champion_level",
@@ -1205,6 +1235,8 @@ class TestWikiGenerator(unittest.TestCase):
                 "elite_avg",
                 "possible_immunities",
                 "immunity_counts",
+                "immunity_labels",
+                "immunity_descriptions",
                 "has_super_chest",
                 "super_chest_count",
                 "super_chest_sources",
@@ -1214,6 +1246,10 @@ class TestWikiGenerator(unittest.TestCase):
             },
             set(cold_cave.keys()),
         )
+        self.assertEqual(0, cold_cave["act_id"])
+        self.assertEqual("Act 1", cold_cave["act"])
+        self.assertEqual(2, lower_kurast["act_id"])
+        self.assertEqual("Act 3", lower_kurast["act"])
         self.assertEqual(87, cold_cave["area_level"])
         self.assertEqual(89, cold_cave["champion_level"])
         self.assertEqual(90, cold_cave["unique_level"])
@@ -1228,14 +1264,22 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertEqual("levels", fallback["maze_source"])
         self.assertEqual(11, cold_cave["elite_avg"])
         self.assertEqual(["cold", "fire"], cold_cave["possible_immunities"])
+        self.assertEqual({"cold": "Cold", "fire": "Fire"}, cold_cave["immunity_labels"])
+        self.assertEqual(
+            {"cold": "Immune to Cold", "fire": "Immune to Fire"},
+            cold_cave["immunity_descriptions"],
+        )
         self.assertTrue(cold_cave["has_super_chest"])
         self.assertEqual(1, cold_cave["super_chest_count"])
         self.assertEqual("SpecialChest100", cold_cave["super_chest_sources"][0]["object_class"])
+        self.assertEqual("super", cold_cave["super_chest_sources"][0]["chest_kind"])
         self.assertFalse(fallback["has_super_chest"])
         self.assertTrue(lower_kurast["has_super_chest"])
-        self.assertEqual("Kurast Super Chest Right", lower_kurast["super_chest_sources"][0]["object_class"])
+        self.assertEqual("PlaceUniqueChest", lower_kurast["super_chest_sources"][0]["object_class"])
+        self.assertEqual("super", lower_kurast["super_chest_sources"][0]["chest_kind"])
         self.assertTrue(cave_level_2["has_super_chest"])
-        self.assertEqual("Act 1 Treasure Room Super Chest", cave_level_2["super_chest_sources"][0]["object_class"])
+        self.assertEqual("ConsolationChest", cave_level_2["super_chest_sources"][0]["object_class"])
+        self.assertEqual("sparkly", cave_level_2["super_chest_sources"][0]["chest_kind"])
         self.assertEqual(82, fallback["area_level"])
         self.assertIn("physical", fallback["possible_immunities"])
         self.assertIn("Abaddon", [row["display_name"] for row in rows])
@@ -1309,6 +1353,8 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('id="item-drop-level-filter"', items_page)
         self.assertIn('<option value="85">85+</option>', items_page)
         self.assertIn('<option value="90">90+</option>', items_page)
+        self.assertNotIn('<option value="60">60+</option>', items_page)
+        self.assertNotIn('<option value="75">75+</option>', items_page)
         self.assertIn('data-filter-family="runeword"', items_page)
         self.assertIn("Search items, runewords, runes", items_page)
         self.assertIn('style="color:var(--q-runeword)"', items_page)
@@ -1364,6 +1410,10 @@ class TestWikiGenerator(unittest.TestCase):
         with open(os.path.join(self.output, "areas", "index.html"), "r", encoding="utf-8") as f:
             areas_page = f.read()
         self.assertIn('data-area-index-url="../data/areas-index.json"', areas_page)
+        self.assertIn('data-immunity-meta="', areas_page)
+        self.assertIn('<option value="0">Act 1</option>', areas_page)
+        self.assertIn('<option value="87">87+</option>', areas_page)
+        self.assertIn('data-avoid-immunity="fire"', areas_page)
         self.assertIn('id="area-card-root"', areas_page)
         self.assertIn("Area Farming Guide", areas_page)
         self.assertIn("Monster Density", areas_page)

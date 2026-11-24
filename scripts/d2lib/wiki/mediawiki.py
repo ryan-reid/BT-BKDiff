@@ -421,7 +421,7 @@ class MediaWikiRenderer:
         lines = []
         for group in payload.get("groups", []):
             lines.extend([f"== {self._text(group.get('act'))} ==", ""])
-            rows = [[monster.get("name", ""), monster.get("level_hell", ""), ", ".join(monster.get("immunities_hell", [])), monster.get("status", "")] for monster in group.get("monsters", [])]
+            rows = [[monster.get("name", ""), monster.get("level_hell", ""), ", ".join(monster.get("immunity_labels_hell") or monster.get("immunities_hell", [])), monster.get("status", "")] for monster in group.get("monsters", [])]
             lines.extend(self._table(["Monster", "Hell Level", "Hell Immunities", "Status"], rows))
             lines.append("")
         return lines

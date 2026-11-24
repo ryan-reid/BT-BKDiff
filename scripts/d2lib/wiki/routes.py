@@ -2,15 +2,10 @@ from __future__ import annotations
 import os
 import re
 
+from d2lib.repository import DAMAGE_TYPES
+from d2lib.utils import slugify, strip_markdown
+
 ITEM_FAMILIES = ("unique", "set", "runeword")
-DAMAGE_TYPES = (
-    ("physical", "ResDm(H)"),
-    ("magic", "ResMa(H)"),
-    ("fire", "ResFi(H)"),
-    ("lightning", "ResLi(H)"),
-    ("cold", "ResCo(H)"),
-    ("poison", "ResPo(H)"),
-)
 REPORT_SOURCES = (
     {
         "title": "Item Diff: BKDiablo vs Retail",
@@ -48,8 +43,6 @@ REPORT_SOURCES = (
         "source_kind": "excel_diff",
     },
 )
-
-from d2lib.utils import slugify, strip_markdown
 
 class WikiRoutes:
     @staticmethod

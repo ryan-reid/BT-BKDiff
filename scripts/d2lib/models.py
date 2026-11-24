@@ -153,7 +153,7 @@ class BaseItemFamilyDTO(TypedDict):
     search_text: str
     members: List[BaseItemDTO]
 
-class MonsterDTO(TypedDict):
+class _MonsterDTORequired(TypedDict):
     id: str
     name: str
     level_norm: int
@@ -169,6 +169,11 @@ class MonsterDTO(TypedDict):
     is_unique: bool
     status: str
     changed_fields: List[str]
+
+
+class MonsterDTO(_MonsterDTORequired, total=False):
+    immunity_labels_hell: List[str]
+    immunity_details_hell: List[Dict[str, str]]
 
 class MonsterActGroupDTO(TypedDict):
     act: str

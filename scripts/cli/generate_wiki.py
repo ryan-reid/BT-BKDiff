@@ -82,7 +82,11 @@ def main() -> None:
     parser.add_argument("--skill-trees", default="../output/skill_trees", help="Legacy compatibility argument; skills now come directly from game data")
     parser.add_argument("--game-data", default="../mods/BKDiablo/bkdiablo.mpq", help="Path to the BK game data root")
     parser.add_argument("--retail-data", default="../data/retail", help="Path to the Retail game data root")
-    parser.add_argument("--layout-data", default="", help="Optional path to a data root or global/tiles folder for DS1 layout files")
+    parser.add_argument(
+        "--layout-data",
+        default="",
+        help="Optional path to a data root or global/tiles folder for DS1 layout files (defaults to D2R_LAYOUT_DATA_DIR or D2R_DATA_DIR env var if set)",
+    )
     parser.add_argument("--out", default="../output/wiki", help="Output directory for generated wiki pages")
     parser.add_argument("--mediawiki-out", default="", help="Optional output directory for generated MediaWiki wikitext files")
     parser.add_argument("--old-label", default="Retail", help="Display label for the comparison source")
@@ -100,7 +104,12 @@ def main() -> None:
     skill_tree_dir = os.path.normpath(os.path.join(scripts_root, args.skill_trees))
     game_data_dir = os.path.normpath(os.path.join(scripts_root, args.game_data))
     retail_data_dir = os.path.normpath(os.path.join(scripts_root, args.retail_data))
-    layout_data_dir = os.path.normpath(os.path.join(scripts_root, args.layout_data)) if args.layout_data else None
+    env_layout_data = os.environ.get("D2R_LAYOUT_DATA_DIR", "").strip() or os.environ.get("D2R_DATA_DIR", "").strip()
+    layout_data_dir = (
+        os.path.normpath(os.path.join(scripts_root, args.layout_data))
+        if args.layout_data
+        else (os.path.normpath(env_layout_data) if env_layout_data else None)
+    )
     output_dir = os.path.normpath(os.path.join(scripts_root, args.out))
     mediawiki_output_dir = os.path.normpath(os.path.join(scripts_root, args.mediawiki_out)) if args.mediawiki_out else None
 

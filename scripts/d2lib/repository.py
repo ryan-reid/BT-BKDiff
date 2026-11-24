@@ -39,12 +39,87 @@ _ELEMENT_STRING_KEYS: Dict[str, Tuple[Tuple[str, ...], str]] = {
     "fire": (("strskltree25", "ecfra"), "Fire"),
     "cold": (("strskltree23", "strhirespecial6"), "Cold"),
     "ltng": (("strskltree24", "skillname49"), "Lightning"),
+    "lightning": (("strskltree24", "skillname49"), "Lightning"),
     "pois": (("strskltree17", "poison"), "Poison"),
+    "poison": (("strskltree17", "poison"), "Poison"),
     "mag": (("strbsmagic",), "Magic"),
+    "magic": (("strbsmagic",), "Magic"),
     "burn": (("burn",), "Burn"),
     "stun": (("skillname139",), "Stun"),
     "phys": (("physical",), "Physical"),
+    "physical": (("physical",), "Physical"),
 }
+
+DAMAGE_TYPES: Tuple[Tuple[str, str], ...] = (
+    ("physical", "ResDm(H)"),
+    ("magic", "ResMa(H)"),
+    ("fire", "ResFi(H)"),
+    ("lightning", "ResLi(H)"),
+    ("cold", "ResCo(H)"),
+    ("poison", "ResPo(H)"),
+)
+
+_IMMUNITY_SPECS: Tuple[Dict[str, str], ...] = (
+    {
+        "code": "fire",
+        "element_code": "fire",
+        "scary_key": "strScaryMonDesc1",
+        "fallback_element": "Fire",
+        "fallback_immunity": "Immune to Fire",
+        "toggle_class": "t-fire",
+        "chip_class": "im-fire",
+    },
+    {
+        "code": "cold",
+        "element_code": "cold",
+        "scary_key": "strScaryMonDesc2",
+        "fallback_element": "Cold",
+        "fallback_immunity": "Immune to Cold",
+        "toggle_class": "t-cold",
+        "chip_class": "im-cold",
+    },
+    {
+        "code": "lightning",
+        "element_code": "ltng",
+        "scary_key": "strScaryMonDesc3",
+        "fallback_element": "Lightning",
+        "fallback_immunity": "Immune to Lightning",
+        "toggle_class": "t-ltng",
+        "chip_class": "im-lightning",
+    },
+    {
+        "code": "poison",
+        "element_code": "pois",
+        "scary_key": "strScaryMonDesc4",
+        "fallback_element": "Poison",
+        "fallback_immunity": "Immune to Poison",
+        "toggle_class": "t-pois",
+        "chip_class": "im-poison",
+    },
+    {
+        "code": "physical",
+        "element_code": "phys",
+        "scary_key": "strScaryMonDesc5",
+        "fallback_element": "Physical",
+        "fallback_immunity": "Immune to Physical",
+        "toggle_class": "t-phys",
+        "chip_class": "im-physical",
+    },
+    {
+        "code": "magic",
+        "element_code": "mag",
+        "scary_key": "strScaryMonDesc6",
+        "fallback_element": "Magic",
+        "fallback_immunity": "Immune to Magic",
+        "toggle_class": "t-magic",
+        "chip_class": "im-magic",
+    },
+)
+
+_IMMUNITY_SPEC_BY_KEY: Dict[str, Dict[str, str]] = {}
+for _spec in _IMMUNITY_SPECS:
+    _IMMUNITY_SPEC_BY_KEY[_spec["code"]] = _spec
+    _IMMUNITY_SPEC_BY_KEY[_spec["element_code"]] = _spec
 
 
 def locale_to_html_lang(locale: str) -> str:
@@ -273,12 +348,28 @@ def resolve_canonical_string(repo: D2RepositoryProtocol, key: str) -> str:
     return resolve_localized_string(repo, clean_key)
 
 
+def _extract_physical_name_from_immunity_strings(repo: D2RepositoryProtocol) -> str:
+    """Derives the localized 'Physical' word by stripping the shared immunity phrase."""
+    descs = [resolve_localized_string(repo, spec["scary_key"]) for spec in _IMMUNITY_SPECS]
+    phys_desc = descs[4]
+    non_empty = [text for text in descs if text]
+    if not phys_desc or len(non_empty) < 2:
+        return ""
+    prefix = os.path.commonprefix(non_empty)
+    suffix = os.path.commonprefix([text[::-1] for text in non_empty])[::-1]
+    end = len(phys_desc) - len(suffix) if suffix else len(phys_desc)
+    if end < len(prefix):
+        return ""
+    return phys_desc[len(prefix):end].strip()
+
+
 def resolve_element_name(repo: Optional[D2RepositoryProtocol], etype: Any) -> str:
-    """Resolves a canonical D2 EType code (e.g. 'fire', 'pois') to a localized element name."""
+    """Resolves a canonical D2 EType or damage code to a localized element name."""
     raw = str(etype or "").strip()
     if not raw:
         return ""
-    entry = _ELEMENT_STRING_KEYS.get(raw.casefold())
+    normalized = raw.casefold()
+    entry = _ELEMENT_STRING_KEYS.get(normalized)
     if entry is None:
         return (resolve_localized_string(repo, raw) if repo is not None else "") or raw
     string_keys, fallback = entry
@@ -287,7 +378,59 @@ def resolve_element_name(repo: Optional[D2RepositoryProtocol], etype: Any) -> st
             localized = resolve_localized_string(repo, string_key)
             if localized:
                 return localized
+        if normalized in {"phys", "physical"}:
+            derived = _extract_physical_name_from_immunity_strings(repo)
+            if derived:
+                return derived
     return fallback
+
+
+def resolve_immunity_label(repo: Optional[D2RepositoryProtocol], damage_type: Any) -> str:
+    """Resolves a canonical damage type or EType code to localized strScaryMonDesc* text."""
+    raw = str(damage_type or "").strip()
+    if not raw:
+        return ""
+    spec = _IMMUNITY_SPEC_BY_KEY.get(raw.casefold())
+    if spec is None:
+        return (resolve_localized_string(repo, raw) if repo is not None else "") or raw
+    if repo is not None:
+        localized = resolve_localized_string(repo, spec["scary_key"])
+        if localized:
+            return localized
+    return spec["fallback_immunity"]
+
+
+def resolve_act_name(repo: Optional[D2RepositoryProtocol], act_id: Any) -> str:
+    """Resolves a 0-based D2 Act integer (0..4) using Act1..Act5 localization keys."""
+    if act_id is None or isinstance(act_id, bool):
+        return "Unknown"
+    try:
+        act_index = int(str(act_id).strip())
+    except ValueError:
+        return "Unknown"
+    if act_index < 0:
+        return "Unknown"
+    act_num = act_index + 1
+    if repo is not None:
+        for key in (f"Act{act_num}", f"strAct{act_num}"):
+            localized = resolve_localized_string(repo, key)
+            if localized:
+                return localized
+    return f"Act {act_num}"
+
+
+def damage_type_options(repo: Optional[D2RepositoryProtocol]) -> List[Dict[str, str]]:
+    """Returns canonical immunity filter options with localized element and immunity labels."""
+    return [
+        {
+            "code": spec["code"],
+            "label": resolve_element_name(repo, spec["element_code"]) or spec["fallback_element"],
+            "immunity_label": resolve_immunity_label(repo, spec["code"]),
+            "toggle_class": spec["toggle_class"],
+            "chip_class": spec["chip_class"],
+        }
+        for spec in _IMMUNITY_SPECS
+    ]
 
 
 def get_charstats_class_rows(repo: D2RepositoryProtocol) -> List[Dict[str, str]]:
