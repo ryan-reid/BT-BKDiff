@@ -5,6 +5,7 @@ from d2lib.models import MiscItemDTO, MiscGroupDTO
 from d2lib.services.item_types import ItemTypeTaxonomy
 from d2lib.services.resolver import PropertyResolverService
 from d2lib.services.base import _status_for_row
+from d2lib.utils import slugify
 
 _SENTINEL_UI_CATEGORIES = frozenset({"", "null", "dns", "quest", "misc"})
 
@@ -122,6 +123,7 @@ class MiscAnalyzerService:
         return [
             {
                 "category_key": cat_key,
+                "anchor": slugify(cat_key),
                 "category": category_labels[cat_key],
                 "summary": self.CATEGORY_META.get(cat_key, self.CATEGORY_META["other"])["summary"],
                 "order": self.CATEGORY_META.get(cat_key, {"order": 150})["order"],

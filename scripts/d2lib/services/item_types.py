@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from collections import Counter
-from typing import Dict, List, Optional, Sequence, Set, Union
+from typing import Any, Dict, List, Optional, Sequence, Set, Union
 
 from d2lib.repository import resolve_localized_string
 
@@ -211,6 +211,32 @@ class ItemTypeTaxonomy:
             result[self.group_label(g_code)] = labels
         return result
 
+    def loot_group_options(self, include_accessories: bool = True) -> List[Dict[str, Any]]:
+        group_codes = ('armor', 'weapons', 'accessories') if include_accessories else ('armor', 'weapons')
+        result: List[Dict[str, Any]] = []
+        for g_code in group_codes:
+            ui_codes = sorted(
+                self._group_ui_codes.get(g_code, ()),
+                key=lambda ui: (
+                    ui in self._class_ui_categories,
+                    self.category_label(ui).casefold(),
+                    ui,
+                ),
+            )
+            types: List[Dict[str, str]] = []
+            seen_codes: Set[str] = set()
+            for ui_code in ui_codes:
+                if ui_code in seen_codes:
+                    continue
+                seen_codes.add(ui_code)
+                types.append({"code": ui_code, "label": self.category_label(ui_code)})
+            result.append({
+                "code": g_code,
+                "label": self.group_label(g_code),
+                "types": types,
+            })
+        return result
+
     def label(self, code: str) -> str:
         clean = (code or '').strip()
         if not clean:
@@ -364,3 +390,36 @@ class ItemTypeTaxonomy:
             if base_type_lbl:
                 terms.add(base_type_lbl)
         return sorted(terms)
+
+    def runeword_term_codes(self, row: Dict[str, str]) -> List[str]:
+        codes = set(self.rules(row, 'itype'))
+        terms: Set[str] = {code.lower() for code in codes if code}
+        for base in self.matching_bases(row):
+            chain = self.chain(base.get('type'), base.get('type2'))
+            terms.update(
+                code.lower()
+                for code in chain
+                if code in self._runeword_itype_codes and code
+            )
+            base_type = (base.get('type') or '').strip().lower()
+            if base_type:
+                terms.add(base_type)
+        return sorted(terms)
+
+    def redundant_root_type_codes(self) -> Set[str]:
+        active_categories: Set[str] = set()
+        for code in self._runeword_itype_codes:
+            primary = self.primary_runeword_category_code(code)
+            if primary:
+                active_categories.add(primary)
+        redundant: Set[str] = set()
+        for code, row in self.types.items():
+            if code in self._runeword_itype_codes:
+                continue
+            if row.get('Equiv1', '').strip() or row.get('Equiv2', '').strip():
+                continue
+            rw1 = row.get('RunewordCategory1', '').strip()
+            rw2 = row.get('RunewordCategory2', '').strip()
+            if rw1 and not rw2 and rw1 in active_categories:
+                redundant.add(code)
+        return redundant

@@ -196,10 +196,20 @@ class MediaWikiRenderer:
     def _entry_page(self, entry: Dict[str, Any], family: str) -> Dict[str, Any]:
         stat_rows = entry.get("stat_rows", [])
         property_rows = entry.get("property_rows", [])
-        stats = [{"label": row.get("label", ""), "value": row.get("new", "")} for row in stat_rows]
+        stats = [
+            {"key": row.get("key", ""), "label": row.get("label", ""), "value": row.get("new", "")}
+            for row in stat_rows
+        ]
         if family == "runeword":
-            base_row = next((row for row in stat_rows if row.get("label") == "Base Items"), {})
-            stats.append({"label": "Base", "value": base_row.get("new", "")})
+            base_row = next(
+                (
+                    row
+                    for row in stat_rows
+                    if (row.get("key") == "base_items") or (not row.get("key") and row.get("label") == "Base Items")
+                ),
+                {},
+            )
+            stats.append({"key": "base_item", "label": "Base", "value": base_row.get("new", "")})
         return {
             "title": entry.get("title", ""),
             "stats": stats,
@@ -295,10 +305,10 @@ class MediaWikiRenderer:
                     "title": title,
                     "summary": f"{title} from {set_family.get('name', 'Unknown Set')}.",
                     "stats": [
-                        {"label": "Base Item", "value": member.get("base_item", "")},
-                        {"label": "Item Type", "value": member.get("item_type", "")},
-                        {"label": "Level Requirement", "value": member.get("lvl_req", "")},
-                        {"label": "Set", "value": set_family.get("name", "")},
+                        {"key": "base_item", "label": "Base Item", "value": member.get("base_item", "")},
+                        {"key": "item_type", "label": "Item Type", "value": member.get("item_type", "")},
+                        {"key": "level_req", "label": "Level Requirement", "value": member.get("lvl_req", "")},
+                        {"key": "set", "label": "Set", "value": set_family.get("name", "")},
                     ],
                     "properties": properties,
                     "comparison": comparison,
@@ -352,9 +362,16 @@ class MediaWikiRenderer:
         return "".join(old_parts), "".join(new_parts), self._dominant_status([identity["status"], stats_status])
 
     def _identity_compare_row(self, title: str, page: Dict[str, Any], comparison: Dict[str, Any]) -> Dict[str, str]:
-        base_row = self._comparison_stat_row(comparison, "Base Item") or self._comparison_stat_row(comparison, "Base")
+        base_row = (
+            self._comparison_stat_row(comparison, "Base Item", key="base_item")
+            or self._comparison_stat_row(comparison, "Base", key="base_items")
+        )
         old_base = self._text(base_row.get("old", "") if base_row else "")
-        new_base = self._text(base_row.get("new", "") if base_row else self._stat_value(page, "Base Item") or self._stat_value(page, "Base"))
+        new_base = self._text(
+            base_row.get("new", "")
+            if base_row
+            else self._stat_value(page, "Base Item", key="base_item") or self._stat_value(page, "Base", key="base_items")
+        )
         status = self._status_from_values(old_base, new_base, base_row.get("status", "") if base_row else "")
         return {
             "old": f"<b> {title} </b><br />Base Type: {old_base}<br />" if old_base else "",
@@ -367,10 +384,13 @@ class MediaWikiRenderer:
         new_lines = ["<b>Stats</b>"]
         statuses = []
         for stat in page.get("stats", []):
+            key = str(stat.get("key", "")).strip()
             label = str(stat.get("label", "")).strip()
-            if label in {"Base Item", "Base", "Runes"}:
+            if (key and key in {"base_item", "base_items", "runes"}) or (
+                not key and label in {"Base Item", "Base", "Runes"}
+            ):
                 continue
-            compare_row = self._comparison_stat_row(comparison, label)
+            compare_row = self._comparison_stat_row(comparison, label, key=key or None)
             old_value = self._text(compare_row.get("old", "") if compare_row else "")
             new_value = self._text(compare_row.get("new", "") if compare_row else stat.get("value", ""))
             if old_value:
@@ -382,11 +402,21 @@ class MediaWikiRenderer:
         new_block = "<br />".join(new_lines) + "<br />" if len(new_lines) > 1 else ""
         return old_block, new_block, self._dominant_status(statuses)
 
-    def _comparison_stat_row(self, comparison: Dict[str, Any], label: str) -> Dict[str, Any]:
-        return next((row for row in comparison.get("stat_rows", []) if row.get("label") == label), {})
+    def _comparison_stat_row(self, comparison: Dict[str, Any], label: str, key: str | None = None) -> Dict[str, Any]:
+        rows = comparison.get("stat_rows", [])
+        if key:
+            matched = next((row for row in rows if row.get("key") == key), None)
+            if matched is not None:
+                return matched
+        return next((row for row in rows if row.get("label") == label), {})
 
-    def _stat_value(self, page: Dict[str, Any], label: str) -> str:
-        row = next((stat for stat in page.get("stats", []) if stat.get("label") == label), {})
+    def _stat_value(self, page: Dict[str, Any], label: str, key: str | None = None) -> str:
+        stats = page.get("stats", [])
+        if key:
+            matched = next((stat for stat in stats if stat.get("key") == key), None)
+            if matched is not None:
+                return self._text(matched.get("value", ""))
+        row = next((stat for stat in stats if stat.get("label") == label), {})
         return self._text(row.get("value", ""))
 
     def _compare_row(self, old: str, new: str, status: str) -> List[str]:

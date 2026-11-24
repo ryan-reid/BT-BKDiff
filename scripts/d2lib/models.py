@@ -143,8 +143,12 @@ class _BaseItemDTORequired(TypedDict):
 
 class BaseItemDTO(_BaseItemDTORequired, total=False):
     tier_key: str # Canonical tier key: normal, exceptional, elite
+    loot_category_key: str
+    class_restriction_code: str
+    staffmod_class_code: str
 
-class BaseItemFamilyDTO(TypedDict):
+
+class _BaseItemFamilyDTORequired(TypedDict):
     name: str
     group: str
     summary: str
@@ -152,6 +156,11 @@ class BaseItemFamilyDTO(TypedDict):
     max_sockets: int
     search_text: str
     members: List[BaseItemDTO]
+
+
+class BaseItemFamilyDTO(_BaseItemFamilyDTORequired, total=False):
+    group_key: str
+    class_codes: List[str]
 
 class _MonsterDTORequired(TypedDict):
     id: str
@@ -212,6 +221,7 @@ class _MiscGroupDTORequired(TypedDict):
 
 class MiscGroupDTO(_MiscGroupDTORequired, total=False):
     category_key: str
+    anchor: str
 
 class SetFamilyDTO(TypedDict):
     id: str

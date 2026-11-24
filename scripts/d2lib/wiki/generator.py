@@ -63,7 +63,6 @@ from d2lib.wiki.comparison import (
     set_bonus_comparison,
 )
 from d2lib.wiki.item_helpers import (
-    item_filter_group,
     item_filter_type,
     should_include_item,
     item_sort_key,
@@ -735,6 +734,34 @@ class WikiContentBuilder:
             (int(item.get("sockets") or 0) for family in families for item in family["members"]),
             default=0,
         )
+        base_group_labels: Dict[str, str] = {}
+        base_class_labels: Dict[str, str] = {}
+        for family in families:
+            g_key = str(family.get("group_key") or slugify(family["group"])).strip().lower()
+            base_group_labels.setdefault(g_key, str(family["group"]))
+            for item in family["members"]:
+                if item.get("class_restriction_code"):
+                    code = str(item["class_restriction_code"]).strip().lower()
+                    base_class_labels.setdefault(code, str(item.get("class_restriction") or code))
+                if item.get("staffmod_class_code"):
+                    code = str(item["staffmod_class_code"]).strip().lower()
+                    base_class_labels.setdefault(code, str(item.get("staffmod_class") or code))
+            if not family.get("class_codes"):
+                for tag in family["class_tags"]:
+                    base_class_labels.setdefault(slugify(tag), tag)
+
+        hidden_type_codes = {"ac5", "clas"} | self._taxonomy.redundant_root_type_codes()
+        base_type_labels: Dict[str, str] = {}
+        for family in families:
+            for item in family["members"]:
+                for code in item["type_codes"]:
+                    clean_code = str(code).strip()
+                    if not clean_code or clean_code in hidden_type_codes:
+                        continue
+                    base_type_labels.setdefault(
+                        clean_code,
+                        self._taxonomy.label(clean_code) or clean_code,
+                    )
 
         self._write_page(
             title=f"Base Items | {self.new_label} Wiki",
@@ -749,18 +776,22 @@ class WikiContentBuilder:
                 os.path.join(self.game_data_dir, "data", "global", "excel", "qualityitems.txt"),
             ],
             families=families,
-            loot_groups=self._taxonomy.loot_groups(include_accessories=False),
-            base_groups=sorted({family["group"] for family in families}),
-            base_classes=sorted({cn for family in families for cn in family["class_tags"]}),
+            loot_groups=self._taxonomy.loot_group_options(include_accessories=False),
+            base_groups=[
+                {"key": key, "label": base_group_labels[key]}
+                for key in sorted(base_group_labels)
+            ],
+            base_classes=[
+                {"code": code, "label": label}
+                for code, label in sorted(base_class_labels.items(), key=lambda pair: (pair[1].casefold(), pair[0]))
+            ],
             base_tier_options=BaseItemAnalyzerService.tier_options(families),
             base_speed_options=BaseItemAnalyzerService.speed_options(families),
             base_socket_options=list(range(1, max_base_sockets + 1)),
-            base_type_categories=sorted({
-                cat
-                for family in families
-                for item in family["members"]
-                for cat in item["type_categories"]
-            }),
+            base_type_categories=[
+                {"code": code, "label": label}
+                for code, label in sorted(base_type_labels.items(), key=lambda pair: (pair[1].casefold(), pair[0]))
+            ],
         )
 
     def _write_recipe_pages(self, groups: List[CubeRecipeGroupDTO], recipe_pages: Dict[str, Any]) -> None:
@@ -1043,13 +1074,31 @@ class WikiContentBuilder:
                 ]
                 taxonomy = self._taxonomy
                 if family == "runeword":
-                    categories = sorted({taxonomy.category(base) for base in taxonomy.matching_bases(entry.get("raw_row", {}))})
+                    matching = taxonomy.matching_bases(entry.get("raw_row", {}))
+                    category_codes = sorted({taxonomy.ui_category_code(base) for base in matching if taxonomy.ui_category_code(base)})
+                    group_codes = sorted({taxonomy.group_code(base) for base in matching if taxonomy.group_code(base)})
+                    if not category_codes:
+                        itypes = taxonomy.rules(entry.get("raw_row", {}), "itype")
+                        if itypes:
+                            category_codes = sorted({code.lower() for code in itypes})
+                            group_codes = sorted({taxonomy.group_code({"type": code}) for code in itypes})
+                        else:
+                            fallback_type = item_filter_type(entry, family)
+                            category_codes = [slugify(fallback_type)]
+                            group_codes = [taxonomy.group_code_for_ui_code(category_codes[0])]
                 else:
                     raw = entry.get("raw_row", {})
                     base = taxonomy.bases.get(raw.get("code") or raw.get("item", ""), {})
-                    categories = [taxonomy.category(base)]
-                if not categories:
-                    categories = [item_filter_type(entry, family)]
+                    if base:
+                        ui_code = taxonomy.ui_category_code(base)
+                        category_codes = [ui_code or base.get("type", "").strip().lower() or "other"]
+                        group_codes = [taxonomy.group_code(base)]
+                    else:
+                        fallback_type = item_filter_type(entry, family)
+                        category_codes = [slugify(fallback_type)]
+                        group_codes = ["other"]
+                if not group_codes:
+                    group_codes = sorted({taxonomy.group_code_for_ui_code(code) for code in category_codes})
                 page_entries[family].append({
                     "identity": identity,
                     "title": title,
@@ -1058,8 +1107,8 @@ class WikiContentBuilder:
                     "search_text": item_search_text(entry, family),
                     "status": status,
                     "history": entry["history"],
-                    "item_group": "|".join(sorted({taxonomy.group(category) for category in categories})),
-                    "item_type": "|".join(categories),
+                    "item_group": "|".join(group_codes),
+                    "item_type": "|".join(category_codes),
                     "icon_src": icon_src,
                     "drop_level": entry["drop_info"].get("drop_level", 0),
                     "drop_level_label": entry["drop_info"].get("label", ""),
@@ -1080,7 +1129,7 @@ class WikiContentBuilder:
         entries: List[Dict[str, str]] = []
         for page in class_pages:
             title = page["class_name"]
-            output_path = WikiRoutes.class_output_path(page.get("class_slug") or slugify(title))
+            output_path = WikiRoutes.class_output_path(page.get("class_slug") or slugify(page.get("class_id") or title))
             href = WikiRoutes.route_from_output_path(output_path)
             self._write_page(
                 title=f"{title} | Class Skills",
@@ -1117,7 +1166,7 @@ class WikiContentBuilder:
         old_runewords = (old_item_index or {}).get("runeword", {})
         records = []
         rune_options_by_code: Dict[str, Dict[str, str]] = {}
-        base_options: Dict[str, str] = {}
+        base_options: Dict[str, Dict[str, str]] = {}
 
         for entry in sorted(runewords, key=item_sort_key):
             title = item_title(entry, "runeword")
@@ -1125,9 +1174,19 @@ class WikiContentBuilder:
             page_entry = entry_by_identity.get(identity) or href_by_title.get(title, {})
             rune_requirements = entry.get("rune_requirements") or self._runeword_rune_requirements(entry, icon_exporter)
             base_items = entry.get("base_items", [])
-            base_filter_terms = (self._taxonomy.runeword_terms(entry.get("raw_row", {})) or self._runeword_base_filter_terms(base_items))
-            for base_term in base_filter_terms:
-                base_options[base_term] = base_term
+            base_filter_codes = self._taxonomy.runeword_term_codes(entry.get("raw_row", {}))
+            if base_filter_codes:
+                for base_code in base_filter_codes:
+                    base_options.setdefault(
+                        base_code,
+                        {"code": base_code, "label": self._taxonomy.label(base_code) or base_code},
+                    )
+            else:
+                for base_term in self._runeword_base_filter_terms(base_items):
+                    base_code = slugify(base_term)
+                    if base_code not in base_filter_codes:
+                        base_filter_codes.append(base_code)
+                    base_options.setdefault(base_code, {"code": base_code, "label": base_term})
 
             property_preview = [
                 str(prop.get("resolved_text", ""))
@@ -1175,7 +1234,8 @@ class WikiContentBuilder:
                 "summary": item_summary(entry, "runeword"),
                 "history": entry.get("history"),
                 "base_items": base_items,
-                "base_filter_terms": "|".join(base_filter_terms),
+                "base_filter_codes": "|".join(base_filter_codes),
+                "base_filter_terms": "|".join(base_filter_codes),
                 "runes": rune_requirements,
                 "rune_filter_terms": "|".join(rune_filter_terms),
                 "rune_requirement_codes": "|".join(rune_requirement_codes),
@@ -1195,14 +1255,12 @@ class WikiContentBuilder:
             match = re.search(r"\d+", option.get("code", ""))
             return (int(match.group(0)) if match else 999, option.get("name", ""))
 
-        base_sort_order: Dict[str, int] = {}
-        for idx, code in enumerate(("tors", "shld", "mele", "miss", "weap", "helm")):
-            lbl = self._taxonomy.label(code)
-            if lbl and lbl not in base_sort_order:
-                base_sort_order[lbl] = idx
+        base_sort_order: Dict[str, int] = {
+            code: idx for idx, code in enumerate(("tors", "shld", "mele", "miss", "weap", "helm"))
+        }
 
-        def base_option_sort(label: str) -> Tuple[int, str]:
-            return (base_sort_order.get(label, 20), label)
+        def base_option_sort(option: Dict[str, str]) -> Tuple[int, str, str]:
+            return (base_sort_order.get(option["code"], 20), option["label"].casefold(), option["code"])
 
         self._write_page(
             title=f"Runewords | {self.new_label} Wiki",
@@ -1354,8 +1412,15 @@ class WikiContentBuilder:
             reports=report_entries,
         )
 
-        loot_groups = self._taxonomy.loot_groups()
-        group_to_types = {group: set(categories) for group, categories in loot_groups.items()}
+        loot_group_options = self._taxonomy.loot_group_options(include_accessories=True)
+        groups_by_code: Dict[str, Dict[str, Any]] = {
+            g["code"]: {"code": g["code"], "name": g["label"], "types": list(g["types"])}
+            for g in loot_group_options
+        }
+        seen_types_by_group: Dict[str, set[str]] = {
+            g["code"]: {t["code"] for t in g["types"]}
+            for g in loot_group_options
+        }
         drop_level_breakpoints = derive_item_drop_level_breakpoints(
             int(entry.get("drop_level") or 0)
             for family in ("unique", "set")
@@ -1363,9 +1428,30 @@ class WikiContentBuilder:
         )
         for entries in item_entries.values():
             for entry in entries:
-                for group in entry["item_group"].split("|"):
-                    if group and group not in group_to_types:
-                        group_to_types[group] = set()
+                entry_groups = [g for g in entry["item_group"].split("|") if g]
+                entry_types = [t for t in entry["item_type"].split("|") if t]
+                for group in entry_groups:
+                    if group not in groups_by_code:
+                        groups_by_code[group] = {
+                            "code": group,
+                            "name": self._taxonomy.group_label(group),
+                            "types": [],
+                        }
+                        seen_types_by_group[group] = set()
+                if len(entry_groups) == 1:
+                    target_group = entry_groups[0]
+                    for type_code in entry_types:
+                        if type_code not in seen_types_by_group[target_group]:
+                            seen_types_by_group[target_group].add(type_code)
+                            if type_code in self._taxonomy._ui_to_group:
+                                type_label = self._taxonomy.category_label(type_code)
+                            elif type_code in self._taxonomy.types:
+                                type_label = self._taxonomy.label(type_code)
+                            else:
+                                type_label = type_code.replace("-", " ").title()
+                            groups_by_code[target_group]["types"].append(
+                                {"code": type_code, "label": type_label}
+                            )
 
         self._write_page(
             title=f"All Items | {self.new_label} Data Wiki",
@@ -1375,7 +1461,7 @@ class WikiContentBuilder:
             source_files=[],
             item_entries=item_entries,
             family_counts={family: len(item_entries[family]) for family in ITEM_FAMILIES},
-            item_groups=[{"name": g, "types": loot_groups.get(g, sorted(group_to_types[g]))} for g in group_to_types],
+            item_groups=list(groups_by_code.values()),
             drop_level_breakpoints=drop_level_breakpoints,
         )
 
@@ -1554,18 +1640,18 @@ class WikiContentBuilder:
         bk_base: Dict[str, Any],
         retail_base: Optional[Dict[str, Any]],
     ) -> List[Dict[str, str]]:
-        labels = {
-            "Def": "Def",
-            "One-Hand Damage": "One-Hand Damage",
-            "Two-Hand Damage": "Two-Hand Damage",
-            "Throwing Damage": "Throw Damage",
-            "Max Sockets": "Max Sockets",
+        labels_by_key = {
+            "defense": "Def",
+            "one_hand_damage": "One-Hand Damage",
+            "two_hand_damage": "Two-Hand Damage",
+            "throw_damage": "Throw Damage",
+            "max_sockets": "Max Sockets",
         }
         comparison = base_item_comparison_context(bk_base or {}, retail_base or {})
         return [
-            {**row, "label": labels[row["label"]]}
+            {**row, "label": labels_by_key[row["key"]]}
             for row in comparison["stat_rows"]
-            if row["label"] in labels
+            if row.get("key") in labels_by_key
         ]
 
     def _rune_property_rows(

@@ -595,6 +595,7 @@ function wireBaseFilters() {
   function applyInitialQueryFilters() {
     const params = new URLSearchParams(window.location.search);
     setSelectValue(groupSelect, queryValue(params, ["group", "baseGroup"]));
+    setSelectValue(lootSelect, queryValue(params, ["loot", "lootCategory"]));
     setSelectValue(categorySelect, queryValue(params, ["category", "baseCategory"]));
     setSelectValue(classSelect, queryValue(params, ["class", "baseClass"]));
     setSelectValue(tierSelect, queryValue(params, ["tier"]));
@@ -631,7 +632,7 @@ function wireBaseFilters() {
       const familyGroup = family.dataset.baseGroup || "";
       const familyClasses = normalizeText(family.dataset.baseClasses || "");
       const familySearch = normalizeText(family.dataset.search || "");
-      const groupOk = activeGroup === "all" || familyGroup === activeGroup;
+      const groupOk = activeGroup === "all" || normalizeText(familyGroup) === normalizeText(activeGroup);
       const classOk = activeClass === "all" || familyClasses.split(/\s+/).includes(normalizeText(activeClass));
       const familySearchOk = !query || familySearch.includes(query);
       
@@ -643,10 +644,15 @@ function wireBaseFilters() {
         const itemCategories = normalizeText(item.dataset.typeCategories || "").split("|").filter(Boolean);
         const searchOk = !query || familySearchOk || itemSearch.includes(query);
         const codes = (item.dataset.typeCodes || "").split("|");
+        const normalizedCodes = codes.map(normalizeText).filter(Boolean);
+        const normalizedCategory = normalizeText(activeCategory);
         const rulesOk = (!includedTypes.length || includedTypes.some(code => codes.includes(code)))
           && !excludedTypes.some(code => codes.includes(code));
-        const lootOk = !lootSelect || lootSelect.value === "all" || item.dataset.lootCategory === lootSelect.value;
-        const categoryOk = activeCategory === "all" || itemCategories.includes(normalizeText(activeCategory));
+        const lootOk = !lootSelect || lootSelect.value === "all"
+          || normalizeText(item.dataset.lootCategory || "") === normalizeText(lootSelect.value);
+        const categoryOk = activeCategory === "all"
+          || normalizedCodes.includes(normalizedCategory)
+          || itemCategories.includes(normalizedCategory);
         const tierOk = activeTier === "all" || normalizeText(item.dataset.tier || "") === normalizeText(activeTier);
         const speedOk = activeSpeed === "all"
           || normalizeText(item.dataset.speed || "") === normalizeText(activeSpeed);
@@ -893,12 +899,13 @@ async function wireItemIndex() {
       activeGroup = groupSelect.value || "all";
       if (typeSelect && activeGroup !== "all") {
         const currentType = typeSelect.value;
-        const allowed = Array.from(typeSelect.options).some((option) =>
-          option.value === currentType
-          && option.parentElement
-          && option.parentElement.tagName === "OPTGROUP"
-          && option.parentElement.label === activeGroup
-        );
+        const allowed = Array.from(typeSelect.options).some((option) => {
+          const optgroupKey = option.parentElement?.dataset?.groupCode || option.parentElement?.label;
+          return option.value === currentType
+            && option.parentElement
+            && option.parentElement.tagName === "OPTGROUP"
+            && normalizeText(optgroupKey) === normalizeText(activeGroup);
+        });
         if (!allowed && currentType !== "all") {
           typeSelect.value = "all";
           activeType = "all";

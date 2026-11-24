@@ -1,5 +1,6 @@
 from __future__ import annotations
 import re
+from typing import Any
 
 def slugify(value: str) -> str:
     """Converts a string to a URL-friendly slug."""
@@ -81,9 +82,6 @@ def normalize_d2_text(s: str) -> str:
     s = strip_d2_formatting(s)
     # Normalize bullet points and markup
     s = s.replace('•', '').replace('**', '')
-    # Normalize common phrases
-    s = s.replace("Physical Damage Received Reduced by", "Damage Reduced by")
-    s = re.sub(r'(Original|Random) Class', 'Random Class', s, flags=re.IGNORECASE)
     # Collapse whitespace
     s = re.sub(r'\s+', ' ', s)
     return s.strip()

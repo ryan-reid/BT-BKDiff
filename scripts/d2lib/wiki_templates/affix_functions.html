@@ -45,7 +45,7 @@
     </label>
   </div>
   {% for group in page.sections %}
-  {% set heading_id = "affix-function-" ~ loop.index %}
+  {% set heading_id = group.anchor|default("affix-function-" ~ loop.index) %}
   <section class="family-container" data-search="{{ group.title }}">
     <div class="family-header-bar">
       <h2 id="{{ heading_id }}">{{ group.title }}</h2>
