@@ -10,6 +10,8 @@ from urllib.parse import urlencode
 from d2lib.repository import (
     D2Repository,
     D2RepositoryProtocol,
+    damage_type_options,
+    resolve_act_name,
     resolve_difficulty_name,
     resolve_localized_string,
 )
@@ -42,7 +44,12 @@ from d2lib.wiki.publication import WikiSiteDTO, WikiSiteRecordingWriter, empty_w
 from d2lib.wiki.history import HistoryCollector, item_history
 from d2lib.wiki.history_comparison import write_history_comparisons
 from pathlib import Path
-from d2lib.wiki.builders import AreaFarmingDataBuilder, ItemIconExporter
+from d2lib.wiki.builders import (
+    AreaFarmingDataBuilder,
+    ItemIconExporter,
+    derive_area_level_breakpoints,
+    derive_item_drop_level_breakpoints,
+)
 from d2lib.wiki.affix_functions import AFFIX_FUNCTIONS_SLUG, affix_function_groups
 from d2lib.wiki.comparison import (
     affix_card_contexts,
@@ -695,7 +702,12 @@ class WikiContentBuilder:
     def _load_area_entries(self) -> List[Dict[str, Any]]:
         if not os.path.isdir(self.game_data_dir):
             return []
-        return AreaFarmingDataBuilder(self.game_data_dir, layout_data_dir=self.layout_data_dir, repository=self._repo).build()
+        return AreaFarmingDataBuilder(
+            self.game_data_dir,
+            layout_data_dir=self.layout_data_dir,
+            repository=self._repo,
+            retail_data_dir=self.retail_data_dir,
+        ).build()
 
     # ── Writers ─────────────────────────────────────────────────────────────
 
@@ -1344,12 +1356,11 @@ class WikiContentBuilder:
 
         loot_groups = self._taxonomy.loot_groups()
         group_to_types = {group: set(categories) for group, categories in loot_groups.items()}
-        drop_level_breakpoints = sorted({
+        drop_level_breakpoints = derive_item_drop_level_breakpoints(
             int(entry.get("drop_level") or 0)
             for family in ("unique", "set")
             for entry in item_entries[family]
-            if 85 < int(entry.get("drop_level") or 0) < 99
-        })
+        )
         for entries in item_entries.values():
             for entry in entries:
                 for group in entry["item_group"].split("|"):
@@ -1369,6 +1380,30 @@ class WikiContentBuilder:
         )
 
         self._write_page(title=f"Classes | {self.new_label} Data Wiki", output_path=WikiRoutes.classes_index_output_path(), template_name="classes_index.html", category="index", source_files=[], classes=class_entries)
+        area_act_ids = sorted({
+            area["act_id"]
+            for area in area_entries
+            if area.get("act_id") is not None and area["act_id"] >= 0
+        })
+        area_act_options = [
+            {"id": act_id, "label": resolve_act_name(self._repo, act_id)}
+            for act_id in area_act_ids
+        ]
+        area_level_breakpoints = derive_area_level_breakpoints(
+            int(area.get("area_level") or 0) for area in area_entries
+        )
+        area_immunity_options = damage_type_options(self._repo)
+        area_immunity_meta_json = json.dumps(
+            {
+                opt["code"]: {
+                    "label": opt["label"],
+                    "immunity_label": opt["immunity_label"],
+                    "chip_class": opt["chip_class"],
+                }
+                for opt in area_immunity_options
+            },
+            ensure_ascii=False,
+        )
         self._write_page(
             title=f"Areas | {self.new_label} Data Wiki",
             output_path=WikiRoutes.areas_index_output_path(),
@@ -1380,6 +1415,10 @@ class WikiContentBuilder:
                 os.path.join(REPO_ROOT, "docs", "Diablo_II_Data_File_Guide", "levels.md"),
             ],
             area_count=len(area_entries),
+            area_act_options=area_act_options,
+            area_level_breakpoints=area_level_breakpoints,
+            area_immunity_options=area_immunity_options,
+            area_immunity_meta_json=area_immunity_meta_json,
         )
         self._write_page(title=f"Reports | {self.new_label} Data Wiki", output_path=WikiRoutes.reports_index_output_path(), template_name="reports_index.html", category="index", source_files=[], reports=report_entries)
 

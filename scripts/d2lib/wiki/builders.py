@@ -6,31 +6,96 @@ import os
 import re
 import struct
 import zlib
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 from urllib.parse import urlencode
 
-from d2lib.repository import D2Repository, D2RepositoryProtocol
+from d2lib.repository import (
+    DAMAGE_TYPES,
+    D2Repository,
+    D2RepositoryProtocol,
+    resolve_act_name,
+    resolve_element_name,
+    resolve_immunity_label,
+    resolve_localized_string,
+)
 from d2lib.models import BaseItemFamilyDTO, MiscGroupDTO
-from d2lib.wiki.routes import DAMAGE_TYPES, WikiRoutes
 
-DEFAULT_RETAIL_DATA_DIR = r"E:\Games\Diablo II Resurrected\Data"
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 
+
+def _configured_data_dirs(*env_vars: str) -> List[str]:
+    """Returns deduplicated D2R data directories explicitly configured via environment variables."""
+    dirs: List[str] = []
+    seen = set()
+    for var in env_vars:
+        value = os.environ.get(var, "").strip()
+        if not value:
+            continue
+        norm = os.path.normcase(os.path.abspath(value))
+        if norm not in seen:
+            seen.add(norm)
+            dirs.append(value)
+    return dirs
+
+
+def _nearest_breakpoint_value(target: int, distinct: List[int]) -> int:
+    multiples = [value for value in distinct if value % 5 == 0]
+    snap = min(multiples, key=lambda value: (abs(value - target), value), default=None)
+    if snap is not None and abs(snap - target) <= 5:
+        return snap
+    return min(distinct, key=lambda value: (abs(value - target), value))
+
+
+def derive_area_level_breakpoints(area_levels: Iterable[int], *, max_options: int = 8) -> List[int]:
+    """Derives dynamic area minimum-level filter breakpoints from levels.txt."""
+    distinct = sorted({int(value) for value in area_levels if int(value) > 0})
+    if not distinct or len(distinct) <= max_options:
+        return distinct
+
+    multiples5 = [value for value in distinct if value % 5 == 0]
+    if distinct[-1] not in multiples5:
+        multiples5.append(distinct[-1])
+    if 2 <= len(multiples5) <= max_options:
+        return sorted(multiples5)
+
+    multiples10 = [value for value in distinct if value % 10 == 0]
+    if distinct[-1] not in multiples10:
+        multiples10.append(distinct[-1])
+    if 2 <= len(multiples10) <= max_options:
+        return sorted(multiples10)
+
+    step = max(1, (len(distinct) - 1) // max(1, max_options - 1))
+    return sorted({distinct[index] for index in range(0, len(distinct), step)} | {distinct[-1]})
+
+
+def derive_item_drop_level_breakpoints(drop_levels: Iterable[int], *, max_dense_options: int = 8) -> List[int]:
+    """Derives dynamic item drop-level filter breakpoints from analyzed unique and set items."""
+    values = sorted(int(value) for value in drop_levels if int(value) > 0)
+    distinct = sorted(set(values))
+    if not distinct or len(distinct) <= max_dense_options:
+        return distinct
+
+    count = len(values)
+    p50 = values[int((count - 1) * 0.50)]
+    p75 = values[int((count - 1) * 0.75)]
+    p90 = values[int((count - 1) * 0.90)]
+    p75_tail = [value for value in distinct if value >= p75]
+    tail_start = p75 if len(p75_tail) <= max_dense_options else p90
+    tail = [value for value in distinct if value >= tail_start]
+    anchor_targets = [p50, (p50 + tail_start) // 2] if tail_start == p75 else [p50, p75]
+    anchors = [
+        candidate
+        for candidate in (_nearest_breakpoint_value(target, distinct) for target in anchor_targets)
+        if candidate < tail_start - 4
+    ]
+    return sorted(set(anchors + tail))
+
+
 class AreaFarmingDataBuilder:
-    SUPER_CHEST_TOKENS = (
-        "sparklychest",
-        "specialchest",
-        "arcanechest",
-        "travincalchest",
-        "sewerchestlarge",
-        "sewerchesttall",
-        "tombchest",
-        "forgottentowerchest",
-    )
-    KURAST_PRESET_LEVEL_IDS = (
-        ("act3/kurast/slums", 79),
-        ("act3/kurast/burbs", 80),
-        ("act3/kurast/metro", 81),
+    _KURAST_PRESET_PATHS = (
+        ("1", "act3/kurast/slums"),
+        ("2", "act3/kurast/burbs"),
+        ("3", "act3/kurast/metro"),
     )
 
     def __init__(
@@ -38,9 +103,11 @@ class AreaFarmingDataBuilder:
         game_data_dir: str,
         layout_data_dir: Optional[str] = None,
         repository: Optional[D2RepositoryProtocol] = None,
+        retail_data_dir: Optional[str] = None,
     ):
         self.game_data_dir = game_data_dir
         self.layout_data_dir = layout_data_dir
+        self.retail_data_dir = retail_data_dir
         self.repository: D2RepositoryProtocol = repository or D2Repository(game_data_dir)
         self.layout_roots = self._layout_roots()
 
@@ -57,20 +124,49 @@ class AreaFarmingDataBuilder:
             if self._to_int(row.get("Level"))
         }
 
-        super_chests_by_level_id = self._super_chests_by_level_id()
-        records = [self._area_record(row, monsters, super_chests_by_level_id, maze_by_level_id) for row in levels]
+        immunity_element_labels = {
+            damage_type: resolve_element_name(self.repository, damage_type)
+            for damage_type, _ in DAMAGE_TYPES
+        }
+        immunity_descriptions = {
+            damage_type: resolve_immunity_label(self.repository, damage_type)
+            for damage_type, _ in DAMAGE_TYPES
+        }
+        super_chests_by_level_id = self._super_chests_by_level_id(levels)
+        records = [
+            self._area_record(
+                row,
+                monsters,
+                super_chests_by_level_id,
+                maze_by_level_id,
+                immunity_element_labels,
+                immunity_descriptions,
+            )
+            for row in levels
+        ]
         records = [record for record in records if self._is_farmable_area(record)]
 
         if not records:
             return []
 
+        min_area_level = min(record["area_level"] for record in records)
+        max_area_level = max(record["area_level"] for record in records)
+        max_unique_level = max(record["unique_level"] for record in records)
+        top_tier_level = self._derive_top_tier_level(max_unique_level)
         max_density = max([record["monster_density"] for record in records] or [1])
         max_elite_avg = max([record["elite_avg"] for record in records] or [1])
         max_density = max(max_density, 1)
         max_elite_avg = max(max_elite_avg, 1)
 
         for record in records:
-            record["farm_score"] = self._farm_score(record, max_density, max_elite_avg)
+            record["can_drop_top_tier"] = bool(record["unique_level"] >= top_tier_level) if top_tier_level else False
+            record["farm_score"] = self._farm_score(
+                record,
+                min_area_level,
+                max_area_level,
+                max_density,
+                max_elite_avg,
+            )
 
         return sorted(
             records,
@@ -88,6 +184,8 @@ class AreaFarmingDataBuilder:
         monsters: Dict[str, Dict[str, str]],
         super_chests_by_level_id: Dict[int, List[Dict[str, Any]]],
         maze_by_level_id: Dict[int, Dict[str, str]],
+        immunity_element_labels: Dict[str, str],
+        immunity_descriptions: Dict[str, str],
     ) -> Dict[str, Any]:
         monster_pool = [
             self._monster_record(monsters[monster_id])
@@ -99,9 +197,22 @@ class AreaFarmingDataBuilder:
             for immunity in monster["immunities"]:
                 immunity_counts[immunity] += 1
         immunity_counts = {key: value for key, value in immunity_counts.items() if value}
+        possible_immunities = sorted(immunity_counts)
+        area_immunity_labels = {
+            code: immunity_element_labels[code]
+            for code in possible_immunities
+            if code in immunity_element_labels
+        }
+        area_immunity_descriptions = {
+            code: immunity_descriptions[code]
+            for code in possible_immunities
+            if code in immunity_descriptions
+        }
 
         area_level = self._area_level(row)
         level_id = self._to_int(row.get("Id"))
+        act_id = self._parse_act_id(row.get("Act"))
+        act_label = self._act_label(act_id)
         elite_min = self._to_int(row.get("MonUMin(H)"))
         elite_max = self._to_int(row.get("MonUMax(H)"))
         elite_avg = (elite_min + elite_max) / 2
@@ -113,11 +224,12 @@ class AreaFarmingDataBuilder:
             "display_name": display_name,
             "internal_name": str(row.get("Name", "")).strip(),
             "level_id": level_id,
-            "act": self._act_label(row.get("Act")),
+            "act_id": act_id,
+            "act": act_label,
             "area_level": area_level,
             "champion_level": area_level + 2 if area_level else 0,
             "unique_level": area_level + 3 if area_level else 0,
-            "can_drop_top_tier": area_level + 3 >= 90 if area_level else False,
+            "can_drop_top_tier": False,
             "monster_density": self._to_int(row.get("MonDen(H)")),
             "maze_rooms": maze_info["rooms"],
             "maze_chunk_width": maze_info["chunk_width"],
@@ -128,14 +240,25 @@ class AreaFarmingDataBuilder:
             "elite_min": elite_min,
             "elite_max": elite_max,
             "elite_avg": elite_avg,
-            "possible_immunities": sorted(immunity_counts),
+            "possible_immunities": possible_immunities,
             "immunity_counts": immunity_counts,
+            "immunity_labels": area_immunity_labels,
+            "immunity_descriptions": area_immunity_descriptions,
             "has_super_chest": len(super_chests) > 0,
             "super_chest_count": len(super_chests),
             "super_chest_sources": super_chests,
             "monster_pool": monster_pool,
             "farm_score": 0,
-            "search_text": self._search_text(display_name, row, monster_pool, super_chests, maze_info),
+            "search_text": self._search_text(
+                display_name,
+                act_label,
+                row,
+                monster_pool,
+                area_immunity_labels,
+                area_immunity_descriptions,
+                super_chests,
+                maze_info,
+            ),
         }
 
     def _monster_record(self, row: Dict[str, str]) -> Dict[str, Any]:
@@ -211,8 +334,11 @@ class AreaFarmingDataBuilder:
     def _search_text(
         self,
         display_name: str,
+        act_label: str,
         row: Dict[str, str],
         monster_pool: List[Dict[str, Any]],
+        immunity_labels: Dict[str, str],
+        immunity_descriptions: Dict[str, str],
         super_chests: List[Dict[str, Any]],
         maze_info: Dict[str, Any],
     ) -> str:
@@ -220,8 +346,9 @@ class AreaFarmingDataBuilder:
             f"{monster['id']} {monster['name']} {' '.join(monster['immunities'])}"
             for monster in monster_pool
         )
+        immunity_terms = " ".join([*immunity_labels.values(), *immunity_descriptions.values()])
         chest_text = " ".join(
-            f"super chest {source.get('object_class', '')} {source.get('description', '')} {source.get('file', '')}"
+            f"super chest {source.get('object_name', '')} {source.get('object_class', '')} {source.get('description', '')} {source.get('file', '')}"
             for source in super_chests
         )
         maze_text = (
@@ -229,17 +356,23 @@ class AreaFarmingDataBuilder:
             f"chunk {maze_info.get('chunk_width')}x{maze_info.get('chunk_height')} "
             f"tiles {maze_info.get('estimated_area_tiles')}"
         )
-        return f"{display_name} {row.get('Name', '')} {row.get('*StringName', '')} {row.get('LevelName', '')} {monsters} {chest_text} {maze_text}"
+        return (
+            f"{display_name} {act_label} {row.get('Name', '')} {row.get('*StringName', '')} "
+            f"{row.get('LevelName', '')} {monsters} {immunity_terms} {chest_text} {maze_text}"
+        )
 
     def _layout_roots(self) -> List[str]:
         roots = []
-        for candidate in (
+        candidates = [
             os.path.join(self.game_data_dir, "data", "global", "tiles"),
             os.path.join(self.game_data_dir, "global", "tiles"),
             self._tiles_root(self.layout_data_dir),
-            self._tiles_root(DEFAULT_RETAIL_DATA_DIR),
-            os.path.join(REPO_ROOT, "data", "retail", "global", "tiles"),
-        ):
+            *[self._tiles_root(path) for path in _configured_data_dirs("D2R_LAYOUT_DATA_DIR", "D2R_DATA_DIR")],
+            self._tiles_root(self.retail_data_dir)
+            if self.retail_data_dir
+            else os.path.join(REPO_ROOT, "data", "retail", "global", "tiles"),
+        ]
+        for candidate in candidates:
             if candidate and os.path.isdir(candidate):
                 normalized = os.path.normcase(os.path.abspath(candidate))
                 if normalized not in {os.path.normcase(os.path.abspath(root)) for root in roots}:
@@ -254,47 +387,56 @@ class AreaFarmingDataBuilder:
             return path
         return os.path.join(path, "global", "tiles")
 
-    def _super_chests_by_level_id(self) -> Dict[int, List[Dict[str, Any]]]:
+    def _super_chests_by_level_id(self, levels: List[Dict[str, str]]) -> Dict[int, List[Dict[str, Any]]]:
         if not self.layout_roots:
             return {}
 
-        objects_by_id = self._super_chest_objects()
-        if not objects_by_id:
+        objects_by_class, objects_by_id = self._super_chest_objects()
+        if not objects_by_class and not objects_by_id:
             return {}
+
+        preset_map = self._objpreset_map()
+        kurast_preset_ids = self._dynamic_kurast_preset_level_ids(levels)
+        level_act_by_id: Dict[int, int] = {}
+        for level_row in levels:
+            level_id = self._to_int(level_row.get("Id"))
+            act_id = self._parse_act_id(level_row.get("Act"))
+            if level_id > 0 and act_id is not None:
+                level_act_by_id[level_id] = act_id
 
         chests_by_level_id: Dict[int, List[Dict[str, Any]]] = {}
         seen = set()
         for row in self.repository.get_excel_table("lvlprest"):
-            level_ids = self._preset_level_ids(row)
+            level_ids = self._preset_level_ids(row, kurast_preset_ids)
             if not level_ids:
                 continue
 
             for ds1_file in self._preset_files(row):
-                contextual_source = self._contextual_preset_super_chest(row, ds1_file)
-                if contextual_source:
-                    for level_id in level_ids:
-                        source_key = (level_id, contextual_source["object_class"], ds1_file)
-                        if source_key in seen:
-                            continue
-                        seen.add(source_key)
-                        chests_by_level_id.setdefault(level_id, []).append(contextual_source)
-
                 ds1_path = self._resolve_ds1_path(ds1_file)
                 if not ds1_path:
                     continue
-                for object_id in self._read_ds1_object_ids(ds1_path):
-                    source = objects_by_id.get(object_id) or self._contextual_super_chest_object(object_id, ds1_file)
-                    if not source:
+                for object_type, ds1_object_id in self._read_ds1_typed_objects(ds1_path):
+                    if object_type != 2:
                         continue
                     for level_id in level_ids:
-                        source_key = (level_id, object_id, ds1_file)
+                        source = self._resolve_preset_super_chest_object(
+                            ds1_object_id,
+                            level_act_by_id.get(level_id),
+                            preset_map,
+                            objects_by_class,
+                            objects_by_id,
+                        )
+                        if not source:
+                            continue
+                        source_key = (level_id, source["object_id"], ds1_file)
                         if source_key in seen:
                             continue
                         seen.add(source_key)
                         chests_by_level_id.setdefault(level_id, []).append(
                             {
-                                "object_id": object_id,
+                                "object_id": source["object_id"],
                                 "object_class": source["object_class"],
+                                "object_name": source["object_name"],
                                 "description": source["description"],
                                 "file": ds1_file.replace("\\", "/"),
                             }
@@ -304,59 +446,81 @@ class AreaFarmingDataBuilder:
             sources.sort(key=lambda source: (source["object_class"], source["file"]))
         return chests_by_level_id
 
-    def _super_chest_objects(self) -> Dict[int, Dict[str, str]]:
-        objects: Dict[int, Dict[str, str]] = {}
+    def _objpreset_map(self) -> Dict[Tuple[int, int], str]:
+        mapping: Dict[Tuple[int, int], str] = {}
+        for row in self.repository.get_excel_table("objpreset"):
+            act = self._to_int(row.get("Act"))
+            index_raw = str(row.get("Index", "")).strip()
+            object_class = str(row.get("ObjectClass", "")).strip().lower()
+            if act <= 0 or not index_raw.isdigit() or not object_class:
+                continue
+            mapping[(act, int(index_raw))] = object_class
+        return mapping
+
+    def _dynamic_kurast_preset_level_ids(self, levels: List[Dict[str, str]]) -> List[Tuple[str, int]]:
+        """Derives Act 3 outdoor Kurast preset level IDs dynamically from levels.txt."""
+        by_slot: Dict[str, int] = {}
+        for row in levels:
+            if str(row.get("Act", "")).strip() != "2":
+                continue
+            drlg_type = str(row.get("DrlgType", "")).strip()
+            if drlg_type and drlg_type != "3":
+                continue
+            match = re.search(r"\bkurast\s+([123])\b", str(row.get("Name", "")).strip(), re.IGNORECASE)
+            if not match:
+                continue
+            level_id = self._to_int(row.get("Id"))
+            if level_id > 0:
+                by_slot.setdefault(match.group(1), level_id)
+        return [(path, by_slot[slot]) for slot, path in self._KURAST_PRESET_PATHS if slot in by_slot]
+
+    def _super_chest_objects(self) -> Tuple[Dict[str, Dict[str, Any]], Dict[int, Dict[str, Any]]]:
+        """Identifies engine-true sparkly/special chests from objects.txt via InitFn=57 or PlaceUniqueChest."""
+        by_class: Dict[str, Dict[str, Any]] = {}
+        by_id: Dict[int, Dict[str, Any]] = {}
         for row in self.repository.get_excel_table("objects"):
-            object_id = self._to_int(row.get("*ID"))
             object_class = str(row.get("Class", "")).strip()
-            description = str(row.get("*Description", "")).strip()
-            haystack = " ".join(
-                [
-                    object_class,
-                    description,
-                    str(row.get("Name", "")).strip(),
-                    str(row.get("PopulateFn", "")).strip(),
-                ]
-            ).lower()
-            if str(row.get("InitFn", "")).strip() == "57" or any(token in haystack for token in self.SUPER_CHEST_TOKENS):
-                objects[object_id] = {
-                    "object_class": object_class or f"Object {object_id}",
-                    "description": description,
-                }
-        return objects
+            init_fn = str(row.get("InitFn", "")).strip()
+            if init_fn != "57" and object_class.lower() != "placeuniquechest":
+                continue
+            object_id = self._to_int(row.get("*ID"))
+            class_label = object_class or f"Object {object_id}"
+            raw_name = str(row.get("Name", "")).strip()
+            object_name = (resolve_localized_string(self.repository, raw_name) if raw_name else "") or class_label
+            entry: Dict[str, Any] = {
+                "object_id": object_id,
+                "object_class": class_label,
+                "object_name": object_name,
+                "description": str(row.get("*Description", "")).strip().strip('"'),
+            }
+            if object_class:
+                by_class[object_class.lower()] = entry
+            if object_id > 0:
+                by_id[object_id] = entry
+        return by_class, by_id
 
-    def _contextual_preset_super_chest(self, row: Dict[str, str], ds1_file: str) -> Optional[Dict[str, Any]]:
-        name = str(row.get("Name", "")).strip().lower()
-        normalized_file = ds1_file.replace("\\", "/").lower()
-        if "act 1 - cave treasure" not in name or not normalized_file.startswith("act1/caves/caveroom"):
-            return None
-        return {
-            "object_id": None,
-            "object_class": "Act 1 Treasure Room Super Chest",
-            "description": "Fixed cave treasure-room chest",
-            "file": ds1_file.replace("\\", "/"),
-        }
+    @staticmethod
+    def _resolve_preset_super_chest_object(
+        ds1_object_id: int,
+        act_id: Optional[int],
+        preset_map: Dict[Tuple[int, int], str],
+        objects_by_class: Dict[str, Dict[str, Any]],
+        objects_by_id: Dict[int, Dict[str, Any]],
+    ) -> Optional[Dict[str, Any]]:
+        if act_id is not None and preset_map:
+            key = (act_id + 1, ds1_object_id)
+            if key in preset_map:
+                return objects_by_class.get(preset_map[key])
+        return objects_by_id.get(ds1_object_id)
 
-    def _contextual_super_chest_object(self, object_id: int, ds1_file: str) -> Optional[Dict[str, str]]:
-        normalized_file = ds1_file.replace("\\", "/").lower()
-        if object_id not in (5, 6):
-            return None
-        if not any(token in normalized_file for token, _ in self.KURAST_PRESET_LEVEL_IDS):
-            return None
-        side = "Right" if object_id == 5 else "Left"
-        return {
-            "object_class": f"Kurast Super Chest {side}",
-            "description": "Kurast camp preset large chest",
-        }
-
-    def _preset_level_ids(self, row: Dict[str, str]) -> List[int]:
+    def _preset_level_ids(self, row: Dict[str, str], kurast_preset_ids: List[Tuple[str, int]]) -> List[int]:
         level_ids = []
         direct_level_id = self._to_int(row.get("LevelId"))
         if direct_level_id:
             level_ids.append(direct_level_id)
 
         preset_text = " ".join(self._preset_files(row)).replace("\\", "/").lower()
-        for token, level_id in self.KURAST_PRESET_LEVEL_IDS:
+        for token, level_id in kurast_preset_ids:
             if token in preset_text and level_id not in level_ids:
                 level_ids.append(level_id)
         return level_ids
@@ -380,11 +544,15 @@ class AreaFarmingDataBuilder:
 
     @classmethod
     def _read_ds1_object_ids(cls, ds1_path: str) -> List[int]:
+        return [object_id for _, object_id in cls._read_ds1_typed_objects(ds1_path)]
+
+    @classmethod
+    def _read_ds1_typed_objects(cls, ds1_path: str) -> List[Tuple[int, int]]:
         try:
             with open(ds1_path, "rb") as f:
                 data = f.read()
             objects = cls._read_ds1_objects(data)
-            return [object_id for _, object_id, _, _, _ in objects]
+            return [(object_type, object_id) for object_type, object_id, _, _, _ in objects]
         except (OSError, ValueError, struct.error):
             return []
 
@@ -443,13 +611,40 @@ class AreaFarmingDataBuilder:
                 objects.append((object_type, object_id, x, y, flags))
         return objects
 
-    def _farm_score(self, record: Dict[str, Any], max_density: int, max_elite_avg: float) -> int:
-        if record["unique_level"] >= 90:
-            area_level_score = 40
-        elif record["area_level"] >= 87:
-            area_level_score = 30
+    def _derive_top_tier_level(self, max_unique_level: int) -> int:
+        if max_unique_level <= 0:
+            return 0
+        candidates: List[int] = []
+        for table_name in ("weapons", "armor"):
+            for row in self.repository.get_excel_table(table_name):
+                level = self._to_int(row.get("level"))
+                if 0 < level <= max_unique_level:
+                    candidates.append(level)
+        for table_name in ("uniqueitems", "setitems"):
+            for row in self.repository.get_excel_table(table_name):
+                if str(row.get("disabled", "")).strip() in {"1", "true", "TRUE"}:
+                    continue
+                if str(row.get("spawnable", "1")).strip() == "0":
+                    continue
+                if str(row.get("enabled", "1")).strip() == "0":
+                    continue
+                level = self._to_int(row.get("lvl"))
+                if 0 < level <= max_unique_level:
+                    candidates.append(level)
+        return max(candidates) if candidates else max_unique_level
+
+    def _farm_score(
+        self,
+        record: Dict[str, Any],
+        min_area_level: int,
+        max_area_level: int,
+        max_density: int,
+        max_elite_avg: float,
+    ) -> int:
+        if max_area_level > min_area_level:
+            area_level_score = 40.0 * (record["area_level"] - min_area_level) / (max_area_level - min_area_level)
         else:
-            area_level_score = max(0, (record["area_level"] - 75) * 2)
+            area_level_score = 40.0
         density_score = 35 * record["monster_density"] / max_density
         elite_score = 25 * record["elite_avg"] / max_elite_avg
         immunity_penalty = 3 * len(record["possible_immunities"])
@@ -468,12 +663,20 @@ class AreaFarmingDataBuilder:
         )
 
     @staticmethod
-    def _act_label(value: Optional[str]) -> str:
+    def _parse_act_id(value: Optional[str]) -> Optional[int]:
         text = str(value or "").strip()
         if not text:
+            return None
+        try:
+            act = int(text)
+        except ValueError:
+            return None
+        return act if act >= 0 else None
+
+    def _act_label(self, act_id: Optional[int]) -> str:
+        if act_id is None or act_id < 0:
             return "Unknown"
-        act = AreaFarmingDataBuilder._to_int(text)
-        return f"Act {act + 1}" if act >= 0 else "Unknown"
+        return resolve_act_name(self.repository, act_id)
 
     @staticmethod
     def _to_int(value: Optional[str]) -> int:
@@ -731,7 +934,10 @@ class ItemIconExporter:
         candidates = [
             os.path.join(self.game_data_dir, "data", "hd", "items", "items.json"),
             os.path.join(self.retail_data_dir, "hd", "items", "items.json"),
-            os.path.join(DEFAULT_RETAIL_DATA_DIR, "hd", "items", "items.json"),
+            *[
+                os.path.join(data_dir, "hd", "items", "items.json")
+                for data_dir in _configured_data_dirs("D2R_RETAIL_DATA_DIR", "D2R_DATA_DIR")
+            ],
         ]
         return [path for path in candidates if os.path.isfile(path)]
 
@@ -739,7 +945,10 @@ class ItemIconExporter:
         candidates = [
             os.path.join(self.game_data_dir, "data", "hd", "items", filename),
             os.path.join(self.retail_data_dir, "hd", "items", filename),
-            os.path.join(DEFAULT_RETAIL_DATA_DIR, "hd", "items", filename),
+            *[
+                os.path.join(data_dir, "hd", "items", filename)
+                for data_dir in _configured_data_dirs("D2R_RETAIL_DATA_DIR", "D2R_DATA_DIR")
+            ],
         ]
         return [path for path in candidates if os.path.isfile(path)]
 
@@ -747,7 +956,10 @@ class ItemIconExporter:
         candidates = [
             os.path.join(self.game_data_dir, "data", "hd", "global", "ui", "items"),
             os.path.join(self.retail_data_dir, "hd", "global", "ui", "items"),
-            os.path.join(DEFAULT_RETAIL_DATA_DIR, "hd", "global", "ui", "items"),
+            *[
+                os.path.join(data_dir, "hd", "global", "ui", "items")
+                for data_dir in _configured_data_dirs("D2R_RETAIL_DATA_DIR", "D2R_DATA_DIR")
+            ],
         ]
         return [path for path in candidates if os.path.isdir(path)]
 
@@ -819,7 +1031,10 @@ class ItemIconExporter:
         candidates = [
             os.path.join(self.game_data_dir, "data", "global", "excel", f"{table_name}.txt"),
             os.path.join(self.retail_data_dir, "global", "excel", f"{table_name}.txt"),
-            os.path.join(DEFAULT_RETAIL_DATA_DIR, "global", "excel", f"{table_name}.txt"),
+            *[
+                os.path.join(data_dir, "global", "excel", f"{table_name}.txt")
+                for data_dir in _configured_data_dirs("D2R_RETAIL_DATA_DIR", "D2R_DATA_DIR")
+            ],
         ]
         for path in candidates:
             if os.path.isfile(path):
@@ -878,7 +1093,10 @@ class ItemIconExporter:
         candidates = [
             os.path.join(self.game_data_dir, "data", "global", "items"),
             os.path.join(self.retail_data_dir, "global", "items"),
-            os.path.join(DEFAULT_RETAIL_DATA_DIR, "global", "items"),
+            *[
+                os.path.join(data_dir, "global", "items")
+                for data_dir in _configured_data_dirs("D2R_RETAIL_DATA_DIR", "D2R_DATA_DIR")
+            ],
         ]
         return [path for path in candidates if os.path.isdir(path)]
 
@@ -956,8 +1174,11 @@ class ItemIconExporter:
     def _palette_bytes(self, dc6_path: str) -> Optional[bytes]:
         item_dir = os.path.dirname(dc6_path)
         candidates = [
-            os.path.join(DEFAULT_RETAIL_DATA_DIR, "global", "palette", "act1", "pal.dat"),
             os.path.join(self.retail_data_dir, "global", "palette", "act1", "pal.dat"),
+            *[
+                os.path.join(data_dir, "global", "palette", "act1", "pal.dat")
+                for data_dir in _configured_data_dirs("D2R_RETAIL_DATA_DIR", "D2R_DATA_DIR")
+            ],
             os.path.join(item_dir, "..", "palette", "grey.dat"),
         ]
         for candidate in candidates:

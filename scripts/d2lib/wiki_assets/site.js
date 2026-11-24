@@ -34,7 +34,32 @@ const IMMUNITY_CLASS = {
   magic: "im-magic",
 };
 
-function areaImmunityMarkup(area) {
+function parseImmunityMeta(toolbar) {
+  const raw = toolbar && toolbar.dataset ? toolbar.dataset.immunityMeta : "";
+  if (!raw) {
+    return {};
+  }
+  try {
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function immunityShortLabel(code, area, immunityMeta) {
+  return (area && area.immunity_labels && area.immunity_labels[code])
+    || (immunityMeta && immunityMeta[code] && immunityMeta[code].label)
+    || code;
+}
+
+function immunityFullLabel(code, area, immunityMeta) {
+  return (area && area.immunity_descriptions && area.immunity_descriptions[code])
+    || (immunityMeta && immunityMeta[code] && immunityMeta[code].immunity_label)
+    || immunityShortLabel(code, area, immunityMeta);
+}
+
+function areaImmunityMarkup(area, immunityMeta) {
   const immunities = areaMonsterImmunities(area);
   if (immunities.length === 0) {
     return '<span class="muted">—</span>';
@@ -44,8 +69,11 @@ function areaImmunityMarkup(area) {
       const count = area.immunity_counts && area.immunity_counts[immunity]
         ? ` (${area.immunity_counts[immunity]})`
         : "";
-      const cls = IMMUNITY_CLASS[immunity.toLowerCase()] || "";
-      return `<span class="immunity-chip ${cls}">${escapeHtml(immunity)}${escapeHtml(count)}</span>`;
+      const metaEntry = immunityMeta && immunityMeta[immunity];
+      const cls = (metaEntry && metaEntry.chip_class) || IMMUNITY_CLASS[String(immunity).toLowerCase()] || "";
+      const shortLabel = immunityShortLabel(immunity, area, immunityMeta);
+      const fullLabel = immunityFullLabel(immunity, area, immunityMeta);
+      return `<span class="immunity-chip ${cls}" title="${escapeHtml(fullLabel)}">${escapeHtml(shortLabel)}${escapeHtml(count)}</span>`;
     })
     .join("");
 }
@@ -58,16 +86,17 @@ function areaMonsterImmunities(area) {
   return Array.from(found).sort();
 }
 
-function areaMonsterPoolMarkup(area) {
+function areaMonsterPoolMarkup(area, immunityMeta) {
   const monsters = area.monster_pool || [];
   if (monsters.length === 0) {
     return '<span class="muted">No monster pool</span>';
   }
+  const formatImmunities = (codes) => codes.map((code) => immunityFullLabel(code, area, immunityMeta)).join(", ");
   const preview = monsters
     .slice(0, 8)
     .map((monster) => {
       const immunities = monster.immunities && monster.immunities.length
-        ? `: ${monster.immunities.join(", ")} immune`
+        ? `: ${formatImmunities(monster.immunities)}`
         : "";
       return `${escapeHtml(monster.name || monster.id)}${escapeHtml(immunities)}`;
     })
@@ -82,7 +111,7 @@ function areaMonsterPoolMarkup(area) {
       <summary>+${hiddenMonsters.length} more</summary>
       ${hiddenMonsters.map((monster) => {
         const immunities = monster.immunities && monster.immunities.length
-          ? `: ${monster.immunities.join(", ")} immune`
+          ? `: ${formatImmunities(monster.immunities)}`
           : "";
         return `<span>${escapeHtml(monster.name || monster.id)}${escapeHtml(immunities)}</span>`;
       }).join("")}
@@ -90,7 +119,7 @@ function areaMonsterPoolMarkup(area) {
   `;
 }
 
-function areaMonsterListMarkup(area) {
+function areaMonsterListMarkup(area, immunityMeta) {
   const monsters = area.monster_pool || [];
   if (monsters.length === 0) {
     return '<p class="muted">No monster pool data.</p>';
@@ -99,7 +128,7 @@ function areaMonsterListMarkup(area) {
     <ul class="area-monster-list">
       ${monsters.map((monster) => {
         const immunities = monster.immunities && monster.immunities.length
-          ? `<span>${escapeHtml(monster.immunities.join(", "))} immune</span>`
+          ? `<span>${escapeHtml(monster.immunities.map((code) => immunityFullLabel(code, area, immunityMeta)).join(", "))}</span>`
           : "";
         return `<li><strong>${escapeHtml(monster.name || monster.id)}</strong>${immunities}</li>`;
       }).join("")}
@@ -136,7 +165,7 @@ function areaMazeMarkup(area) {
   `;
 }
 
-function areaRowMarkup(area) {
+function areaRowMarkup(area, immunityMeta) {
   return `
     <tr>
       <th>
@@ -148,13 +177,13 @@ function areaRowMarkup(area) {
       <td>${areaMazeMarkup(area)}</td>
       <td>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)}<br><span class="muted">Avg ${escapeHtml(area.elite_avg)}</span></td>
       <td>${areaSuperChestMarkup(area)}</td>
-      <td><span class="immunity-list">${areaImmunityMarkup(area)}</span></td>
-      <td>${areaMonsterPoolMarkup(area)}</td>
+      <td><span class="immunity-list">${areaImmunityMarkup(area, immunityMeta)}</span></td>
+      <td>${areaMonsterPoolMarkup(area, immunityMeta)}</td>
     </tr>
   `;
 }
 
-function areaCardMarkup(area) {
+function areaCardMarkup(area, immunityMeta) {
   return `
     <article class="area-card" data-search="${escapeHtml(area.search_text)}">
       <div class="area-card-head">
@@ -171,11 +200,11 @@ function areaCardMarkup(area) {
       </dl>
       <div class="area-card-section">
         <span class="area-card-label">Possible Immunities</span>
-        <div class="immunity-list">${areaImmunityMarkup(area)}</div>
+        <div class="immunity-list">${areaImmunityMarkup(area, immunityMeta)}</div>
       </div>
       <details class="area-card-details">
         <summary>Monster pool</summary>
-        ${areaMonsterListMarkup(area)}
+        ${areaMonsterListMarkup(area, immunityMeta)}
       </details>
     </article>
   `;
@@ -652,6 +681,7 @@ async function wireAreaIndex() {
     return;
   }
 
+  const immunityMeta = parseImmunityMeta(toolbar);
   const response = await fetch(toolbar.dataset.areaIndexUrl, { cache: "no-store" });
   const areas = await response.json();
   const searchInput = document.querySelector("#area-search");
@@ -689,16 +719,18 @@ async function wireAreaIndex() {
     const filtered = areas.filter((area) => {
       const immunities = areaMonsterImmunities(area);
       const searchOk = !query || normalizeText(area.search_text).includes(query);
-      const actOk = act === "all" || area.act === act;
+      const actOk = act === "all"
+        || (area.act_id !== undefined && area.act_id !== null && String(area.act_id) === String(act))
+        || String(area.act || "") === String(act);
       const levelOk = area.area_level >= minLevel;
       const immunityOk = avoidImmunities.every((immunity) => !immunities.includes(immunity));
       return searchOk && actOk && levelOk && immunityOk;
     });
 
     const sorted = sortedAreas(filtered);
-    root.innerHTML = sorted.map(areaRowMarkup).join("")
+    root.innerHTML = sorted.map((area) => areaRowMarkup(area, immunityMeta)).join("")
       || '<tr><td colspan="7" class="muted">No areas match the current filters.</td></tr>';
-    cardRoot.innerHTML = sorted.map(areaCardMarkup).join("")
+    cardRoot.innerHTML = sorted.map((area) => areaCardMarkup(area, immunityMeta)).join("")
       || '<p class="muted">No areas match the current filters.</p>';
     if (resultCount) {
       resultCount.textContent = String(filtered.length);

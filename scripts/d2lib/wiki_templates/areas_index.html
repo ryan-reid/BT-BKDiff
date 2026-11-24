@@ -9,7 +9,7 @@
 </section>
 
 <section class="content-section">
-  <div class="toolbar" data-area-index-url="{{ site_root }}data/areas-index.json">
+  <div class="toolbar" data-area-index-url="{{ site_root }}data/areas-index.json" data-immunity-meta="{{ area_immunity_meta_json|default('{}')|e }}">
     <input id="area-search" class="search-input" type="search" placeholder="Search areas or monsters" />
 
     <div class="area-toolbar">
@@ -17,21 +17,18 @@
         <span class="filter-label">Act</span>
         <select id="area-act-filter" class="filter-select">
           <option value="all">All Acts</option>
-          <option value="Act 1">Act 1</option>
-          <option value="Act 2">Act 2</option>
-          <option value="Act 3">Act 3</option>
-          <option value="Act 4">Act 4</option>
-          <option value="Act 5">Act 5</option>
+          {% for act in area_act_options %}
+          <option value="{{ act.id }}">{{ act.label }}</option>
+          {% endfor %}
         </select>
       </label>
       <label>
         <span class="filter-label">Minimum Area Level</span>
         <select id="area-min-level-filter" class="filter-select">
           <option value="0">Any Level</option>
-          <option value="80">80+</option>
-          <option value="85">85+</option>
-          <option value="87">87+</option>
-          <option value="90">90+</option>
+          {% for level in area_level_breakpoints %}
+          <option value="{{ level }}">{{ level }}+</option>
+          {% endfor %}
         </select>
       </label>
       <label>
@@ -45,24 +42,11 @@
       <div class="dmg-filter-group">
         <span class="filter-label">My build deals — hide areas with these immunities</span>
         <div class="dmg-toggles">
-          <label class="dmg-toggle t-fire">
-            <input type="checkbox" data-avoid-immunity="fire"><span class="dot"></span>Fire
+          {% for immunity in area_immunity_options %}
+          <label class="dmg-toggle {{ immunity.toggle_class }}" title="{{ immunity.immunity_label }}">
+            <input type="checkbox" data-avoid-immunity="{{ immunity.code }}"><span class="dot"></span>{{ immunity.label }}
           </label>
-          <label class="dmg-toggle t-cold">
-            <input type="checkbox" data-avoid-immunity="cold"><span class="dot"></span>Cold
-          </label>
-          <label class="dmg-toggle t-ltng">
-            <input type="checkbox" data-avoid-immunity="lightning"><span class="dot"></span>Lightning
-          </label>
-          <label class="dmg-toggle t-pois">
-            <input type="checkbox" data-avoid-immunity="poison"><span class="dot"></span>Poison
-          </label>
-          <label class="dmg-toggle t-phys">
-            <input type="checkbox" data-avoid-immunity="physical"><span class="dot"></span>Physical
-          </label>
-          <label class="dmg-toggle t-magic">
-            <input type="checkbox" data-avoid-immunity="magic"><span class="dot"></span>Magic
-          </label>
+          {% endfor %}
         </div>
       </div>
     </div>

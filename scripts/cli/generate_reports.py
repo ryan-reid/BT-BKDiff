@@ -124,7 +124,8 @@ def main() -> None:
         failures.append("Generating BK vs Retail Override File Comparison Report")
 
     # 9. Generate the static wiki, including skills joined directly from source tables.
-    if not orch.run_task("Generating Wiki Pages", generate_wiki.run, bk_out, skill_trees_out, wiki_out, old_item_db_dir=retail_out, game_data_dir=bk_mpq, retail_data_dir=retail_data, old_label="Retail", new_label="BKDiablo", bt_item_db_dir=bt_out, bt_data_dir=bt_mpq):
+    layout_data = os.environ.get("D2R_LAYOUT_DATA_DIR", "").strip() or os.environ.get("D2R_DATA_DIR", "").strip() or None
+    if not orch.run_task("Generating Wiki Pages", generate_wiki.run, bk_out, skill_trees_out, wiki_out, old_item_db_dir=retail_out, game_data_dir=bk_mpq, retail_data_dir=retail_data, layout_data_dir=layout_data, old_label="Retail", new_label="BKDiablo", bt_item_db_dir=bt_out, bt_data_dir=bt_mpq):
         failures.append("Generating Wiki Pages")
 
     if failures:
