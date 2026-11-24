@@ -599,6 +599,7 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
 .area-badge-drop { color: var(--added); background: rgba(79,193,46,0.1); border-color: rgba(79,193,46,0.2); }
 .area-badge-density { color: #70a8e0; background: rgba(60,130,200,0.1); border-color: rgba(60,130,200,0.18); }
 .area-badge-super { color: var(--added); background: rgba(79,193,46,0.1); border-color: rgba(79,193,46,0.2); }
+.area-badge-sparkly { color: var(--gold-bright); background: rgba(227,179,65,0.12); border-color: rgba(227,179,65,0.28); }
 .area-badge-accent{ background: rgba(79,193,46,0.1); color: var(--added); }
 .area-card-list { display: none; }
 .area-card {

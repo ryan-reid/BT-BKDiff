@@ -136,16 +136,30 @@ function areaMonsterListMarkup(area, immunityMeta) {
   `;
 }
 
+function areaChestKinds(area) {
+  const kinds = new Set();
+  (area.super_chest_sources || []).forEach((source) => {
+    const kind = source.chest_kind
+      || (source.object_id === 397 || String(source.object_class || "").toLowerCase() === "consolationchest" ? "sparkly" : "super");
+    kinds.add(kind);
+  });
+  if (kinds.size === 0 && area.has_super_chest) {
+    kinds.add("super");
+  }
+  return Array.from(kinds);
+}
+
 function areaSuperChestMarkup(area) {
   if (!area.has_super_chest) {
     return '<span class="muted">No</span>';
   }
-
-  const sources = area.super_chest_sources || [];
-  const names = Array.from(new Set(sources.map((source) => source.object_class).filter(Boolean)));
-  const label = area.super_chest_count > 1 ? `Yes (${area.super_chest_count})` : "Yes";
-  const detail = names.length ? `<br><span class="muted">${escapeHtml(names.slice(0, 3).join(", "))}</span>` : "";
-  return `<span class="area-badge area-badge-super">Super chest</span><br><strong>${escapeHtml(label)}</strong>${detail}`;
+  return areaChestKinds(area)
+    .map((kind) => (
+      kind === "sparkly"
+        ? '<span class="area-badge area-badge-sparkly" title="Sparkly golden chest — can roll Unique, Set, Rare, or Magic drops">Sparkly Chest</span>'
+        : '<span class="area-badge area-badge-super" title="Super chest — multi-drop Magic/Rare burst (5% Rare / 95% Magic)">Super Chest</span>'
+    ))
+    .join(" ");
 }
 
 function areaMazeMarkup(area) {
@@ -196,7 +210,7 @@ function areaCardMarkup(area, immunityMeta) {
       <dl class="area-card-stats">
         <div><dt>Density</dt><dd>${escapeHtml(area.monster_density)}</dd></div>
         <div><dt>Elite Packs</dt><dd>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)} <span>Avg ${escapeHtml(area.elite_avg)}</span></dd></div>
-        <div><dt>Super Chest</dt><dd>${area.has_super_chest ? escapeHtml(area.super_chest_count || 1) : "No"}</dd></div>
+        <div><dt>Special Chest</dt><dd>${areaSuperChestMarkup(area)}</dd></div>
       </dl>
       <div class="area-card-section">
         <span class="area-card-label">Possible Immunities</span>

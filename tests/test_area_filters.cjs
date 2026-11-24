@@ -40,7 +40,7 @@ test('area filters use integer act_id, canonical immunity codes, and localized l
       maze_source: 'lvlmaze',
       has_super_chest: true,
       super_chest_count: 1,
-      super_chest_sources: [{object_class: 'ConsolationChest'}],
+      super_chest_sources: [{object_class: 'ConsolationChest', chest_kind: 'sparkly'}],
       possible_immunities: ['cold', 'fire'],
       immunity_counts: {cold: 1, fire: 2},
       immunity_labels: {cold: 'Kälte', fire: 'Feuer'},
@@ -65,7 +65,7 @@ test('area filters use integer act_id, canonical immunity codes, and localized l
       maze_source: 'levels',
       has_super_chest: true,
       super_chest_count: 2,
-      super_chest_sources: [{object_class: 'PlaceUniqueChest'}],
+      super_chest_sources: [{object_class: 'PlaceUniqueChest', chest_kind: 'super'}],
       possible_immunities: ['physical'],
       immunity_counts: {physical: 1},
       immunity_labels: {physical: 'Körperschäden'},
@@ -123,6 +123,14 @@ test('area filters use integer act_id, canonical immunity codes, and localized l
   assert.ok(root.innerHTML.includes('Feuer (2)'));
   assert.ok(root.innerHTML.includes('Immun gegen Kälte'));
   assert.ok(!root.innerHTML.includes(' immune'));
+  assert.ok(root.innerHTML.includes('area-badge-sparkly'));
+  assert.ok(root.innerHTML.includes('Sparkly Chest'));
+  assert.ok(root.innerHTML.includes('area-badge-super'));
+  assert.ok(root.innerHTML.includes('Super Chest'));
+  assert.ok(!root.innerHTML.includes('ConsolationChest'));
+  assert.ok(!root.innerHTML.includes('PlaceUniqueChest'));
+  assert.ok(cardRoot.innerHTML.includes('Sparkly Chest'));
+  assert.ok(cardRoot.innerHTML.includes('Super Chest'));
   assert.ok(cardRoot.innerHTML.includes('Immun gegen Körperschäden'));
 
   // Act 1 uses integer act_id = 0 (must not treat 0 as falsy) even with localized act label 'Akt 1'

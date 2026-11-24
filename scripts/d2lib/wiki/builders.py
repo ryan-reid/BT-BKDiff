@@ -349,7 +349,7 @@ class AreaFarmingDataBuilder:
         )
         immunity_terms = " ".join([*immunity_labels.values(), *immunity_descriptions.values()])
         chest_text = " ".join(
-            f"super chest {source.get('object_name', '')} {source.get('object_class', '')} {source.get('description', '')} {source.get('file', '')}"
+            f"{'sparkly chest' if source.get('chest_kind') == 'sparkly' else 'super chest'} {source.get('object_name', '')} {source.get('object_class', '')} {source.get('description', '')} {source.get('file', '')}"
             for source in super_chests
         )
         maze_text = (
@@ -438,6 +438,7 @@ class AreaFarmingDataBuilder:
                                 "object_id": source["object_id"],
                                 "object_class": source["object_class"],
                                 "object_name": source["object_name"],
+                                "chest_kind": source["chest_kind"],
                                 "description": source["description"],
                                 "file": ds1_file.replace("\\", "/"),
                             }
@@ -492,6 +493,7 @@ class AreaFarmingDataBuilder:
                 "object_id": object_id,
                 "object_class": class_label,
                 "object_name": object_name,
+                "chest_kind": "sparkly" if (object_id == 397 or object_class.lower() == "consolationchest") else "super",
                 "description": str(row.get("*Description", "")).strip().strip('"'),
             }
             if object_class:
