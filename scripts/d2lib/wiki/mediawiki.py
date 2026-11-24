@@ -117,16 +117,20 @@ class MediaWikiRenderer:
 
     def _render_recipes_corruptions(self, payload: Dict[str, Any], _site: WikiSiteDTO) -> List[str]:
         page = payload.get("page", {})
+        sections = page.get("sections") or [
+            {"title": title, "summaries": page.get(key, [])}
+            for title, key in (
+                ("Shared Corruptions", "combined_summaries"),
+                ("Standard of Heroes", "standard_summaries"),
+                ("The Divine Standard", "divine_summaries"),
+            )
+        ]
         lines = []
-        for title, key in (
-            ("Shared Corruptions", "combined_summaries"),
-            ("Standard of Heroes", "standard_summaries"),
-            ("The Divine Standard", "divine_summaries"),
-        ):
-            summaries = page.get(key, [])
+        for section in sections:
+            summaries = section.get("summaries", [])
             if not summaries:
                 continue
-            lines.extend([f"== {title} ==", ""])
+            lines.extend([f"== {section.get('title', '')} ==", ""])
             rows = []
             for summary in summaries:
                 outcomes = "; ".join(

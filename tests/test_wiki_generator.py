@@ -617,7 +617,7 @@ class TestWikiGenerator(unittest.TestCase):
             excel_root,
             "cubemain.txt",
             [
-                "description", "enabled", "input 1", "input 2", "output", "output b",
+                "description", "enabled", "input 1", "input 2", "input 3", "input 4", "output", "output b",
                 "mod 1", "mod 1 param", "mod 1 min", "mod 1 max",
                 "mod 2", "mod 2 min", "mod 2 max", "value"
             ],
@@ -1417,7 +1417,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn("Corruptions", corruptions_page)
         self.assertIn("30%", corruptions_page)
         self.assertIn("70%", corruptions_page)
-        self.assertIn("Add 1 socket", corruptions_page)
+        self.assertIn("Socketed (1)", corruptions_page)
         self.assertIn("Weapons (Set) + Standard of Heroes", corruptions_page)
         self.assertIn("28%", corruptions_page)
         self.assertIn("42%", corruptions_page)
@@ -1429,11 +1429,12 @@ class TestWikiGenerator(unittest.TestCase):
         with open(os.path.join(self.output, "recipes", "materials", "index.html"), "r", encoding="utf-8") as f:
             materials_page = f.read()
         self.assertIn("Runes and Materials", materials_page)
-        self.assertIn("1 amn + standard gem -&gt; thul rune", materials_page)
+        self.assertIn("Amn Rune + Amethyst \u2192 Thul Rune", materials_page)
 
         with open(os.path.join(self.output, "recipes", "raw", "index.html"), "r", encoding="utf-8") as f:
             raw_recipes_page = f.read()
         self.assertIn("Raw Cube Rows", raw_recipes_page)
+        self.assertIn("1 amn + standard gem -&gt; thul rune", raw_recipes_page)
         self.assertIn("1 Magic Axe + Blood Crafting Tablet -&gt; Blood Weapon", raw_recipes_page)
 
         with open(os.path.join(self.output, "data", "recipes-crafting.json"), "r", encoding="utf-8") as f:
