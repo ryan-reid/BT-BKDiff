@@ -110,6 +110,7 @@ class AreaFarmingDataBuilder:
         self.retail_data_dir = retail_data_dir
         self.repository: D2RepositoryProtocol = repository or D2Repository(game_data_dir)
         self.layout_roots = self._layout_roots()
+        self._ds1_index: Optional[Dict[str, str]] = None
 
     def build(self) -> List[Dict[str, Any]]:
         levels = self.repository.get_excel_table("levels")
@@ -534,13 +535,23 @@ class AreaFarmingDataBuilder:
                 files.append(filename)
         return files
 
-    def _resolve_ds1_path(self, ds1_file: str) -> Optional[str]:
-        rel_path = ds1_file.replace("/", os.sep).replace("\\", os.sep)
+    def _build_ds1_index(self) -> Dict[str, str]:
+        index: Dict[str, str] = {}
         for root in self.layout_roots:
-            candidate = os.path.join(root, rel_path)
-            if os.path.exists(candidate):
-                return candidate
-        return None
+            for current_root, _, files in os.walk(root):
+                for filename in files:
+                    if not filename.lower().endswith(".ds1"):
+                        continue
+                    full_path = os.path.join(current_root, filename)
+                    rel_path = os.path.relpath(full_path, root).replace("\\", "/").lower()
+                    index.setdefault(rel_path, full_path)
+        return index
+
+    def _resolve_ds1_path(self, ds1_file: str) -> Optional[str]:
+        if self._ds1_index is None:
+            self._ds1_index = self._build_ds1_index()
+        key = ds1_file.replace("\\", "/").lstrip("/").lower()
+        return self._ds1_index.get(key)
 
     @classmethod
     def _read_ds1_object_ids(cls, ds1_path: str) -> List[int]:

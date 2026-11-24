@@ -281,10 +281,15 @@ class TestAreasAndBestiaryLocalization(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             game_dir = root / "mod"
-            _write_ds1(game_dir / "data" / "global" / "tiles" / "Act3" / "Kurast" / "Slums16x16_1.ds1", [(2, 2)])
+            _write_ds1(game_dir / "data" / "global" / "tiles" / "act3" / "kurast" / "slums16x16_1.ds1", [(2, 2)])
             repo_de = _FrozenRepo(_frozen_tables(), _locale_strings("deDE"))
 
-            areas = AreaFarmingDataBuilder(str(game_dir), repository=repo_de).build()
+            builder = AreaFarmingDataBuilder(str(game_dir), repository=repo_de, retail_data_dir=str(root / "missing_retail"))
+            resolved_path = builder._resolve_ds1_path("Act3/Kurast/Slums16x16_1.ds1")
+            self.assertIsNotNone(resolved_path)
+            self.assertTrue(resolved_path.lower().endswith("slums16x16_1.ds1"))
+
+            areas = builder.build()
             by_id = {a["level_id"]: a for a in areas}
             self.assertEqual(0, by_id[10]["act_id"])
             self.assertEqual("Akt 1", by_id[10]["act"])
