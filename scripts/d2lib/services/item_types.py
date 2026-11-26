@@ -10,6 +10,18 @@ from d2lib.repository import resolve_localized_string
 _ROOT_TYPE_CODES: frozenset[str] = frozenset({"armo", "weap", "misc"})
 
 
+def is_loot_filter_shorthand(display_name: str) -> bool:
+    """Return True for short ASCII loot-filter abbreviations (e.g. 'A', 'B', 'G') or bullet decorations."""
+    cleaned = (display_name or "").strip()
+    if not cleaned:
+        return True
+    if cleaned.isascii() and len(cleaned) <= 2:
+        return True
+    if "•" in cleaned or "·" in cleaned:
+        return True
+    return False
+
+
 class ItemTypeTaxonomy:
     def __init__(self, repo):
         self.repo = repo
@@ -53,6 +65,44 @@ class ItemTypeTaxonomy:
             "accessories": [],
         }
         self._build_taxonomy_maps()
+        self._single_base_names: Dict[str, str] = self._build_single_base_names()
+
+    def _build_single_base_names(self) -> Dict[str, str]:
+        candidates: Dict[str, Set[str]] = {}
+        ineligible: Set[str] = set()
+        for row in self.repo.get_excel_table('misc'):
+            if row.get('quest') not in (None, '', '0'):
+                continue
+            type_code = (row.get('type') or '').strip()
+            if not type_code:
+                continue
+            type_row = self.types.get(type_code, {})
+            chain_set = set(self.chain(type_code))
+            if (
+                type_row.get('Normal', '').strip() == '1'
+                or 'weap' in chain_set
+                or 'armo' in chain_set
+            ):
+                ineligible.add(type_code)
+                continue
+            item_code = (row.get('code') or '').strip()
+            key = (row.get('namestr') or '').strip()
+            disp = resolve_localized_string(self.repo, key) if key else ''
+            if (
+                not key
+                or not disp
+                or not item_code
+                or key.lower() != item_code.lower()
+                or is_loot_filter_shorthand(disp)
+            ):
+                ineligible.add(type_code)
+            else:
+                candidates.setdefault(type_code, set()).add(disp)
+        return {
+            code: next(iter(names))
+            for code, names in candidates.items()
+            if len(names) == 1 and code not in ineligible
+        }
 
     def _group_code_for_type_row(self, row: Dict[str, str]) -> str:
         code = row.get('Code', '').strip()
@@ -254,6 +304,16 @@ class ItemTypeTaxonomy:
             weapons_lbl = resolve_localized_string(self.repo, 'StrGemX3').rstrip(': ').strip()
             return weapons_lbl or resolve_localized_string(self.repo, raw_item_type) or raw_item_type or clean
 
+        # 1b. Root armor type ('armo' = Any Armor across helms/shields/boots/gloves/belts/body armor,
+        #     distinct from 'tors' = Body Armor)
+        if clean == 'armo':
+            return (
+                resolve_localized_string(self.repo, 'armor')
+                or resolve_localized_string(self.repo, raw_item_type)
+                or raw_item_type
+                or clean
+            )
+
         # 2. Root or top-level runeword grouping type with a single RunewordCategory1
         if rw1 and (not eq1 or (eq1 in _ROOT_TYPE_CODES and clean in self._runeword_itype_codes)):
             return resolve_localized_string(self.repo, rw1) or resolve_localized_string(self.repo, raw_item_type) or raw_item_type or rw1
@@ -308,6 +368,12 @@ class ItemTypeTaxonomy:
             resolved_ui = resolve_localized_string(self.repo, ui_cat)
             if resolved_ui:
                 return resolved_ui
+
+        # 6. Single non-quest rollable base item with its own localized namestr
+        #    (fixes Blizzard's internal mcha='Medium Charm' -> 'Large Charm' and lcha='Large Charm' -> 'Grand Charm')
+        single_base = self._single_base_names.get(clean)
+        if single_base:
+            return single_base
 
         return raw_item_type or clean
 

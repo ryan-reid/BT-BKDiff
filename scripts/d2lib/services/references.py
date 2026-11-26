@@ -229,7 +229,7 @@ class ReferenceAnalyzerService:
         return sorted(rows, key=lambda row: row["label"].casefold())
 
     def _item_type_names(self) -> Dict[str, str]:
-        from d2lib.services.item_types import ItemTypeTaxonomy
+        from d2lib.services.item_types import ItemTypeTaxonomy, is_loot_filter_shorthand
 
         taxonomy = ItemTypeTaxonomy(self.repo)
         names = {
@@ -255,7 +255,9 @@ class ReferenceAnalyzerService:
         # Broad categories contain several base items and retain their type label.
         for code, display_names in base_names.items():
             if len(display_names) == 1 and code not in unresolved_types:
-                names[code] = next(iter(display_names))
+                candidate = next(iter(display_names))
+                if not is_loot_filter_shorthand(candidate):
+                    names[code] = candidate
         return names
 
     def affix_groups(
