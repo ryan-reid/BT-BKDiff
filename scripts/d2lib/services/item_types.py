@@ -264,19 +264,34 @@ class ItemTypeTaxonomy:
             eq2_row = self.types.get(eq2, {})
             resolved_own = resolve_localized_string(self.repo, raw_item_type) if raw_item_type else ''
             if not resolved_own:
+                loc1 = row.get('BodyLoc1', '').strip()
+                eq2_loc1 = eq2_row.get('BodyLoc1', '').strip()
+                store = row.get('StorePage', '').strip()
+                eq2_store = eq2_row.get('StorePage', '').strip()
+                eq2_ui = eq2_row.get('UICategory', '').strip()
+                eq2_eq1 = eq2_row.get('Equiv1', '').strip()
                 eq2_rw1 = eq2_row.get('RunewordCategory1', '').strip()
                 eq2_rw2 = eq2_row.get('RunewordCategory2', '').strip()
-                if eq2_rw1 and not eq2_rw2:
+                loc_compatible = loc1 == eq2_loc1
+                store_compatible = store == eq2_store
+                ui_compatible = not ui_cat or not eq2_ui or ui_cat == eq2_ui
+                eq1_compatible = not eq1 or not eq2_eq1 or eq1 == eq2_eq1
+                if (
+                    eq2_rw1
+                    and not eq2_rw2
+                    and loc_compatible
+                    and store_compatible
+                    and ui_compatible
+                    and eq1_compatible
+                ):
                     resolved_eq2_rw = resolve_localized_string(self.repo, eq2_rw1)
                     if resolved_eq2_rw:
                         return resolved_eq2_rw
-                loc1 = row.get('BodyLoc1', '').strip()
-                store = row.get('StorePage', '').strip()
                 if (
                     loc1 and store
-                    and not eq2_row.get('Equiv1', '').strip()
-                    and eq2_row.get('BodyLoc1', '').strip() == loc1
-                    and eq2_row.get('StorePage', '').strip() == store
+                    and not eq2_eq1
+                    and eq2_loc1 == loc1
+                    and eq2_store == store
                 ):
                     eq2_item_type = eq2_row.get('ItemType', '').strip()
                     if eq2_item_type:

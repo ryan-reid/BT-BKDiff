@@ -245,3 +245,63 @@ class TestItemTypeTaxonomyLocalization(unittest.TestCase):
         self.assertEqual("Helmet", taxonomy.label("helm"))
         self.assertNotEqual("Merc Equip", taxonomy.label("helm"))
         self.assertEqual("Helms", taxonomy.category({"type": "helm"}))
+
+    def test_equiv2_runeword_delegation_requires_matching_slot_and_store_page(self):
+        from d2lib.services.item_types import ItemTypeTaxonomy
+
+        rows = [
+            {"ItemType": "Any Armor", "Code": "armo", "Equiv1": "", "Equiv2": "", "BodyLoc1": "", "StorePage": "", "UICategory": "", "RunewordCategory1": "r_arm", "RunewordCategory2": ""},
+            {"ItemType": "Weapon", "Code": "weap", "Equiv1": "", "Equiv2": "", "BodyLoc1": "", "StorePage": "", "UICategory": "", "RunewordCategory1": "r_mis", "RunewordCategory2": "r_mel"},
+            {"ItemType": "Misc", "Code": "misc", "Equiv1": "", "Equiv2": "", "BodyLoc1": "", "StorePage": "", "UICategory": "", "RunewordCategory1": "", "RunewordCategory2": ""},
+            {"ItemType": "Melee Weapon", "Code": "mele", "Equiv1": "weap", "Equiv2": "", "BodyLoc1": "", "StorePage": "", "UICategory": "", "RunewordCategory1": "r_mel", "RunewordCategory2": ""},
+            {"ItemType": "Missile Weapon", "Code": "miss", "Equiv1": "weap", "Equiv2": "", "BodyLoc1": "", "StorePage": "", "UICategory": "", "RunewordCategory1": "r_mis", "RunewordCategory2": ""},
+            {"ItemType": "Helm", "Code": "merc", "Equiv1": "", "Equiv2": "", "BodyLoc1": "head", "StorePage": "armo", "UICategory": "helms", "RunewordCategory1": "r_hel", "RunewordCategory2": ""},
+            {"ItemType": "Merc Equip", "Code": "helm", "Equiv1": "armo", "Equiv2": "merc", "BodyLoc1": "head", "StorePage": "armo", "UICategory": "helms", "RunewordCategory1": "", "RunewordCategory2": ""},
+            {"ItemType": "Ring", "Code": "ring", "Equiv1": "misc", "Equiv2": "merc", "BodyLoc1": "rrin", "StorePage": "misc", "UICategory": "rings", "RunewordCategory1": "", "RunewordCategory2": ""},
+            {"ItemType": "Amulet", "Code": "amul", "Equiv1": "misc", "Equiv2": "merc", "BodyLoc1": "neck", "StorePage": "misc", "UICategory": "amule", "RunewordCategory1": "", "RunewordCategory2": ""},
+            {"ItemType": "Second Hand", "Code": "seco", "Equiv1": "", "Equiv2": "", "BodyLoc1": "", "StorePage": "", "UICategory": "", "RunewordCategory1": "r_off", "RunewordCategory2": ""},
+            {"ItemType": "Bow Quiver", "Code": "bowq", "Equiv1": "misl", "Equiv2": "seco", "BodyLoc1": "rarm", "StorePage": "misc", "UICategory": "ammo", "RunewordCategory1": "", "RunewordCategory2": ""},
+            {"ItemType": "Crossbow Quiver", "Code": "xboq", "Equiv1": "misl", "Equiv2": "seco", "BodyLoc1": "rarm", "StorePage": "misc", "UICategory": "ammo", "RunewordCategory1": "", "RunewordCategory2": ""},
+            {"ItemType": "Sword", "Code": "swor", "Equiv1": "weap", "Equiv2": "mele", "BodyLoc1": "rarm", "StorePage": "weap", "UICategory": "sword", "RunewordCategory1": "", "RunewordCategory2": ""},
+            {"ItemType": "Bow", "Code": "bow", "Equiv1": "weap", "Equiv2": "miss", "BodyLoc1": "rarm", "StorePage": "weap", "UICategory": "bows", "RunewordCategory1": "", "RunewordCategory2": ""},
+        ]
+        locales = {
+            "enUS": {
+                "r_hel": "Helmet",
+                "r_off": "Offhand",
+                "rings": "Rings",
+                "amule": "Amulets",
+                "sword": "Swords",
+                "bows": "Bows",
+            },
+            "deDE": {
+                "r_hel": "Helm",
+                "r_off": "Zweithand",
+                "rings": "Ringe",
+                "amule": "Amulette",
+                "sword": "Schwerter",
+                "bows": "Bögen",
+            },
+            "koKR": {
+                "r_hel": "투구",
+                "r_off": "보조 장비",
+                "rings": "반지",
+                "amule": "아뮬렛",
+                "sword": "검",
+                "bows": "활",
+            },
+        }
+        for locale, strings in locales.items():
+            with self.subTest(locale=locale):
+                taxonomy = ItemTypeTaxonomy(self._FakeRepo(rows, strings))
+                self.assertEqual(strings["r_hel"], taxonomy.label("helm"))
+                self.assertEqual(strings["rings"], taxonomy.label("ring"))
+                self.assertNotEqual(strings["r_hel"], taxonomy.label("ring"))
+                self.assertEqual(strings["amule"], taxonomy.label("amul"))
+                self.assertNotEqual(strings["r_hel"], taxonomy.label("amul"))
+                self.assertEqual("Bow Quiver", taxonomy.label("bowq"))
+                self.assertNotEqual(strings["r_off"], taxonomy.label("bowq"))
+                self.assertEqual("Crossbow Quiver", taxonomy.label("xboq"))
+                self.assertNotEqual(strings["r_off"], taxonomy.label("xboq"))
+                self.assertEqual(strings["sword"], taxonomy.label("swor"))
+                self.assertEqual(strings["bows"], taxonomy.label("bow"))

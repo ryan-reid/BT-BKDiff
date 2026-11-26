@@ -374,7 +374,7 @@ class CubeAnalyzerService:
             type_row = self.item_types[type_code]
             ui_cat = type_row.get("UICategory", "").strip()
             raw_item_type = type_row.get("ItemType", "").strip()
-            # ItemTypeTaxonomy.label('amul'/'ring') traverses Equiv2='merc'; resolve misc UICategory directly.
+            # Prefer localized misc UICategory (e.g. poti -> Potions) for recipe type labels.
             if type_row.get("Equiv1", "").strip() == "misc" and ui_cat:
                 resolved = (
                     resolve_localized_string(self.repo, ui_cat)
