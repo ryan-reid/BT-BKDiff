@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %}Materials | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("misc.page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_misc %} class="is-active"{% endblock %}
 
 {% block content %}
 <section class="hero">
-  <p class="hero-eyebrow">Vault Inventory</p>
-  <h1>Materials</h1>
-  <p class="hero-copy">Crafting tablets, shards, essences, keys, uber materials, and utility items. Gems and runes live on their own page.</p>
+  <p class="hero-eyebrow">{{ t("misc.eyebrow") }}</p>
+  <h1>{{ t("misc.heading") }}</h1>
+  <p class="hero-copy">{{ t("misc.subtitle") }}</p>
 </section>
 
 <section class="content-section">
-  <input id="page-search" class="search-input" type="search" placeholder="Search items (e.g. Tablet, Southern, Sol)" />
+  <input id="page-search" class="search-input" type="search" placeholder="{{ t('misc.search_placeholder') }}" />
 
   <div class="guide-card-grid">
     {% for group in groups %}
     {% set group_anchor = group.anchor|default((group.category_key|default(group.category))|slugify) %}
     <a class="guide-card" href="#{{ group_anchor }}" data-search="{{ group.category }} {{ group.summary }} {{ group.source_categories|join(' ') }}">
-      <span class="guide-card-kicker">{{ group.members|length }} entries</span>
+      <span class="guide-card-kicker">{{ t("common.entries_count", count=group.members|length) }}</span>
       <h2>{{ group.category }}</h2>
       <p>{{ group.summary }}</p>
     </a>
@@ -30,13 +30,13 @@
     <div id="{{ group_anchor }}" class="misc-group-section" data-search="{{ group.category }} {{ group.summary }} {{ group.source_categories|join(' ') }}">
       <div class="group-heading">
         <div>
-          <p class="group-kicker">{{ group.members|length }} items</p>
+          <p class="group-kicker">{{ t("common.items_count", count=group.members|length) }}</p>
           <h2 class="group-title">{{ group.category }}</h2>
           <p class="group-summary">{{ group.summary }}</p>
         </div>
         <div class="group-counts">
           <strong>{{ group.members|length }}</strong>
-          <span>entries</span>
+          <span>{{ t("common.entries_word") }}</span>
         </div>
       </div>
       
@@ -44,10 +44,10 @@
         <table class="misc-table">
           <thead>
             <tr>
-              <th>Item</th>
-              <th>Details</th>
-              <th>Stack</th>
-              <th>Description</th>
+              <th>{{ t("misc.th_item") }}</th>
+              <th>{{ t("misc.th_details") }}</th>
+              <th>{{ t("misc.th_stack") }}</th>
+              <th>{{ t("misc.th_description") }}</th>
             </tr>
           </thead>
           <tbody>
@@ -55,24 +55,24 @@
             <tr data-search="{{ item.name }} {{ item.code }} {{ item.description }} {{ item.status }} {% for slot, effects in item.socket_effects.items() %}{{ slot }} {{ effects|join(' ') }} {% endfor %}">
               <td class="misc-name-cell">
                 {% if item.icon_src %}
-                <img class="wiki-item-icon misc-item-icon" src="{{ asset_root|default(site_root) }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
+                <img class="wiki-item-icon misc-item-icon" src="{{ asset_root|default(site_root) }}{{ item.icon_src }}" alt="{{ item.name }}" />
                 {% endif %}
                 <strong>{{ item.name }}</strong><br/>
                 <small class="code-text">{{ item.code }}</small>
                 {% if item.status == "added" %}
-                <span class="item-card-status is-added">BK Only</span>
+                <span class="item-card-status is-added">{{ t("status.mod_only", new_label=new_label) }}</span>
                 {% elif item.status == "modified" %}
-                <span class="item-card-status is-modified">Changed</span>
+                <span class="item-card-status is-modified">{{ t("status.changed") }}</span>
                 {% endif %}
               </td>
               <td>
-                Level: {{ item.level }}<br/>
-                Required: {{ item.level_req }}<br/>
-                Gold: {{ item.cost }}
+                {{ t("misc.level_line", level=item.level) }}<br/>
+                {{ t("misc.required_line", level=item.level_req) }}<br/>
+                {{ t("misc.gold_line", cost=item.cost) }}
               </td>
               <td>
                 {% if item.stackable %}
-                  Max: {{ item.max_stack }}
+                  {{ t("misc.max_line", max_stack=item.max_stack) }}
                 {% else %}
                   <span class="text-muted">—</span>
                 {% endif %}

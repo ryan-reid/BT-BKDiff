@@ -19,14 +19,14 @@ def skill_card_context(skill: Dict[str, Any]) -> Dict[str, Any]:
         "search_text": skill["search_text"],
         "card_quality": "magic",
         "comparison_sections": [
-            {"title": title, "stat_rows": [
+            {"key": section_key, "title": title, "stat_rows": [
                 dict(row, status="same" if row["status"] == "unchanged" else row["status"])
                 for row in rows
             ]}
-            for title, rows in (
-                ("Base skill information", base_rows),
-                ("Formulas", skill["formula_rows"]),
-                ("Synergies", skill["synergy_rows"]),
+            for section_key, title, rows in (
+                ("base_info", "Base skill information", base_rows),
+                ("formulas", "Formulas", skill["formula_rows"]),
+                ("synergies", "Synergies", skill["synergy_rows"]),
             )
             if rows
         ],
@@ -641,19 +641,31 @@ def set_bonus_comparison(
     def _status(o: str, n: str) -> str:
         return "same" if o == n else "added" if n and not o else "removed" if o and not n else "changed"
 
-    def _append(label: str, o_val: str, n_val: str, is_sep: bool) -> None:
+    def _append(
+        label: str,
+        o_val: str,
+        n_val: str,
+        is_sep: bool,
+        bonus_count: Optional[int] = None,
+        is_full_set: bool = False,
+    ) -> None:
         if o_val or n_val:
-            bonus_rows.append({"label": label, "old": o_val, "new": n_val, "status": _status(o_val, n_val), "is_separator": is_sep})
+            entry: Dict[str, Any] = {"label": label, "old": o_val, "new": n_val, "status": _status(o_val, n_val), "is_separator": is_sep}
+            if bonus_count is not None:
+                entry["bonus_count"] = bonus_count
+            if is_full_set:
+                entry["is_full_set"] = True
+            bonus_rows.append(entry)
 
     for count in range(2, 6):
         for suffix in ["a", "b"]:
             o = _resolve(resolver_rt, rt_row, f"PCode{count}{suffix}", f"PParam{count}{suffix}", f"PMin{count}{suffix}", f"PMax{count}{suffix}")
             n = _resolve(resolver_bk, bk_row, f"PCode{count}{suffix}", f"PParam{count}{suffix}", f"PMin{count}{suffix}", f"PMax{count}{suffix}")
-            _append(f"{count} Pieces" if suffix == "a" else "", o, n, suffix == "a")
+            _append(f"{count} Pieces" if suffix == "a" else "", o, n, suffix == "a", bonus_count=count if suffix == "a" else None)
 
     for i in range(1, 9):
         o = _resolve(resolver_rt, rt_row, f"FCode{i}", f"FParam{i}", f"FMin{i}", f"FMax{i}")
         n = _resolve(resolver_bk, bk_row, f"FCode{i}", f"FParam{i}", f"FMin{i}", f"FMax{i}")
-        _append("Full Set" if i == 1 else "", o, n, i == 1)
+        _append("Full Set" if i == 1 else "", o, n, i == 1, is_full_set=(i == 1))
 
     return bonus_rows

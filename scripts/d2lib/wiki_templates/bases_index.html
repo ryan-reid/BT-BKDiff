@@ -1,33 +1,33 @@
 {% extends "base.html" %}
-{% from "history.html" import item_history %}
+{% from "history.html" import item_history with context %}
 
-{% block title %}Base Items | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("bases.page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_bases %} class="is-active"{% endblock %}
 
 {% block content %}
 <section class="hero">
-  <p class="hero-eyebrow">Item Repository</p>
-  <h1>Base Items</h1>
-  <p class="hero-copy">Browse Armor and Weapons across Normal, Exceptional, and Elite tiers, with stat comparisons against {{ old_label }}.</p>
+  <p class="hero-eyebrow">{{ t("bases.eyebrow") }}</p>
+  <h1>{{ t("bases.heading") }}</h1>
+  <p class="hero-copy">{{ t("bases.subtitle", old_label=old_label) }}</p>
 </section>
 
 <section class="content-section">
   <div class="base-filter-toolbar" data-base-filters>
-    <input id="page-search" class="search-input" type="search" placeholder="Search base items (e.g. Mage Plate)" />
+    <input id="page-search" class="search-input" type="search" placeholder="{{ t('bases.search_placeholder') }}" />
     <div class="filter-row">
       <label>
-        <span>Group</span>
+        <span>{{ t("bases.group") }}</span>
         <select id="base-group-filter">
-          <option value="all">All groups</option>
+          <option value="all">{{ t("bases.all_groups") }}</option>
           {% for group in base_groups %}
           <option value="{{ group.key }}">{{ group.label }}</option>
           {% endfor %}
         </select>
       </label>
       <label>
-        <span>Item category</span>
+        <span>{{ t("bases.item_category") }}</span>
         <select id="base-loot-filter">
-          <option value="all">All categories</option>
+          <option value="all">{{ t("bases.all_categories") }}</option>
           {% for group in loot_groups %}
           <optgroup label="{{ group.label }}" data-group-code="{{ group.code }}">
             {% for category in group.types %}<option value="{{ category.code }}">{{ category.label }}</option>{% endfor %}
@@ -36,63 +36,67 @@
         </select>
       </label>
       <label>
-        <span>Runeword class</span>
+        <span>{{ t("bases.runeword_class") }}</span>
         <select id="base-category-filter">
-          <option value="all">All categories</option>
+          <option value="all">{{ t("bases.all_categories") }}</option>
           {% for category in base_type_categories %}
           <option value="{{ category.code }}">{{ category.label }}</option>
           {% endfor %}
         </select>
       </label>
       <label>
-        <span>Class</span>
+        <span>{{ t("common.class") }}</span>
         <select id="base-class-filter">
-          <option value="all">All classes</option>
+          <option value="all">{{ t("bases.all_classes") }}</option>
           {% for cls in base_classes %}
           <option value="{{ cls.code }}">{{ cls.label }}</option>
           {% endfor %}
         </select>
       </label>
       <label>
-        <span>Tier</span>
+        <span>{{ t("bases.tier") }}</span>
         <select id="base-tier-filter">
-          <option value="all">All tiers</option>
+          <option value="all">{{ t("bases.all_tiers") }}</option>
           {% for option in base_tier_options %}
           <option value="{{ option.key }}">{{ option.label }}</option>
           {% endfor %}
         </select>
       </label>
       <label>
-        <span>Speed (WSM)</span>
+        <span>{{ t("bases.speed_wsm") }}</span>
         <select id="base-speed-filter">
-          <option value="all">All speeds</option>
+          <option value="all">{{ t("bases.all_speeds") }}</option>
           {% for option in base_speed_options %}
           <option value="{{ option.key }}">{{ option.label }}</option>
           {% endfor %}
         </select>
       </label>
       <label>
-        <span>Min sockets</span>
+        <span>{{ t("bases.min_sockets") }}</span>
         <select id="base-min-sockets-filter">
-          <option value="0">Any sockets</option>
+          <option value="0">{{ t("bases.any_sockets") }}</option>
           {% for count in base_socket_options %}
-          <option value="{{ count }}">{% if loop.last %}{{ count }} socket{% if count != 1 %}s{% endif %}{% else %}{{ count }}+ socket{% if count != 1 %}s{% endif %}{% endif %}</option>
+          {% if loop.last %}
+          <option value="{{ count }}">{{ t("bases.sockets_exact_singular" if count == 1 else "bases.sockets_exact_plural", count=count) }}</option>
+          {% else %}
+          <option value="{{ count }}">{{ t("bases.sockets_min_singular" if count == 1 else "bases.sockets_min_plural", count=count) }}</option>
+          {% endif %}
           {% endfor %}
         </select>
       </label>
       <label class="filter-wide">
-        <span>Roll contains</span>
-        <input id="base-roll-filter" type="search" placeholder="Faster Cast Rate, res, pierce" />
+        <span>{{ t("bases.roll_contains") }}</span>
+        <input id="base-roll-filter" type="search" placeholder="{{ t('bases.roll_placeholder') }}" />
       </label>
     </div>
     <div class="filter-check-row">
-      <label><input id="base-two-handed-filter" type="checkbox" /> Two handed</label>
-      <span class="muted"><strong id="base-result-count">{{ families|length }}</strong> families</span>
+      <label><input id="base-two-handed-filter" type="checkbox" /> {{ t("bases.two_handed") }}</label>
+      <span class="muted"><strong id="base-result-count">{{ families|length }}</strong> {{ t("bases.families_word") }}</span>
     </div>
   </div>
   
-  <p class="muted">Loot categories group similar gear. Runeword classes use the game type hierarchy: Mace, Club, and Hammer are separate. A runeword needs the exact socket count on a nonmagical base; capacity alone is not enough.</p>
-  <p id="base-runeword-notice" class="muted" hidden>Showing bases matching the selected runeword's allowed types, exclusions, and socket capacity. <a href="{{ site_root }}bases/">Clear runeword filter</a></p>
+  <p class="muted">{{ t("bases.note") }}</p>
+  <p id="base-runeword-notice" class="muted" hidden>{{ t("bases.runeword_notice") }} <a href="{{ site_root }}bases/">{{ t("bases.clear_runeword_filter") }}</a></p>
   <div class="family-list">
     {% for family in families %}
     <div class="family-container" 
@@ -119,25 +123,25 @@
           
           <div class="sp-head">
             {% if item.icon_src %}
-            <img class="set-th-icon" src="{{ asset_root|default(site_root) }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
+            <img class="set-th-icon" src="{{ asset_root|default(site_root) }}{{ item.icon_src }}" alt="{{ item.name }}" />
             {% endif %}
             <div style="min-width:0;flex:1">
               <span class="set-th-name">{{ item.name }}</span>
-              <span class="set-th-meta">{{ item.type }}{% if item.sockets %} - {{ item.sockets }} sockets{% endif %}</span>
-              <p class="set-th-meta">Category: {{ item.loot_category }}<br>Runeword classes: {{ item.type_categories|join(', ') }}</p>
+              <span class="set-th-meta">{{ item.type }}{% if item.sockets %} - {{ t("bases.sockets_exact_singular" if item.sockets == 1 else "bases.sockets_exact_plural", count=item.sockets) }}{% endif %}</span>
+              <p class="set-th-meta">{{ t("bases.category_line", category=item.loot_category) }}<br>{{ t("bases.runeword_classes_line", classes=item.type_categories|join(', ')) }}</p>
               <div class="base-tag-list">
               <span class="badge badge-{{ item.tier_key or item.tier|lower }}">{{ item.tier }}</span>
               {% if item.class_restriction %}
-              <span class="base-tag">{{ item.class_restriction }} only</span>
+              <span class="base-tag">{{ t("bases.class_only", cls=item.class_restriction) }}</span>
               {% endif %}
               {% if item.two_handed_only %}
-              <span class="base-tag">Two Handed</span>
+              <span class="base-tag">{{ t("bases.two_handed_tag") }}</span>
               {% endif %}
               {% if item.staffmod_class %}
-              <span class="base-tag">{{ item.staffmod_class }} skills</span>
+              <span class="base-tag">{{ t("bases.class_skills", cls=item.staffmod_class) }}</span>
               {% endif %}
               {% if item.magic_level %}
-              <span class="base-tag" title="Used when determining which random prefixes and suffixes this base can roll. Does not grant skill levels, spell damage, or Magic Find, and does not improve runeword stats.">Affix level bonus: +{{ item.magic_level }}</span>
+              <span class="base-tag" title="{{ t('bases.affix_level_bonus_title') }}">{{ t("bases.affix_level_bonus", level=item.magic_level) }}</span>
               {% endif %}
               </div>
             </div>
@@ -147,18 +151,20 @@
           <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
 
           {% for row in comp.stat_rows %}
+          {% set label = t_stat(row) %}
           <div class="sp-row">
-            <span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.old | comparison_highlight(row.new, "old") }}</span>
-            <span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.new | comparison_highlight(row.old, "new") }}</span>
+            <span class="sp-cell is-{{ row.status }}"><strong>{{ label }}:</strong> {{ row.old | comparison_highlight(row.new, "old") }}</span>
+            <span class="sp-cell is-{{ row.status }}"><strong>{{ label }}:</strong> {{ row.new | comparison_highlight(row.old, "new") }}</span>
           </div>
           {% endfor %}
 
           {% if comp.property_rows %}
-          <div class="sp-sep">Properties</div>
+          <div class="sp-sep">{{ t("common.properties") }}</div>
           {% for row in comp.property_rows %}
+          {% set label = t_stat(row) %}
           <div class="sp-row">
-            <span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old | comparison_highlight(row.new, "old") }}</span>
-            <span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new | comparison_highlight(row.old, "new") }}</span>
+            <span class="sp-cell is-{{ row.status }}">{% if label %}<strong>{{ label }}:</strong> {% endif %}{{ row.old | comparison_highlight(row.new, "old") }}</span>
+            <span class="sp-cell is-{{ row.status }}">{% if label %}<strong>{{ label }}:</strong> {% endif %}{{ row.new | comparison_highlight(row.old, "new") }}</span>
           </div>
           {% endfor %}
           {% endif %}

@@ -39,6 +39,7 @@ class WikiSiteDTO(TypedDict):
     locale: str
     html_lang: str
     asset_root_prefix: str
+    ui_strings: Dict[str, str]
     pages: List[WikiPageDTO]
     assets: List[WikiAssetDTO]
     data_files: List[WikiDataFileDTO]
@@ -61,6 +62,7 @@ def empty_wiki_site(
         "locale": clean_locale,
         "html_lang": locale_to_html_lang(clean_locale),
         "asset_root_prefix": clean_prefix,
+        "ui_strings": {},
         "pages": [],
         "assets": [],
         "data_files": [],

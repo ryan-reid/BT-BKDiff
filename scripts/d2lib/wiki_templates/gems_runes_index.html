@@ -1,24 +1,24 @@
 {% extends "base.html" %}
-{% from "history.html" import item_history %}
+{% from "history.html" import item_history with context %}
 
-{% block title %}Gems & Runes | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("gems.page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_gems %} class="is-active"{% endblock %}
 
 {% block content %}
 <section class="hero">
-  <p class="hero-eyebrow">Socketables</p>
-  <h1>Gems & Runes</h1>
-  <p class="hero-copy">Socket effects for weapons, armor, and shields — including ascended gem tiers, rune progression, and changes versus {{ old_label }}.</p>
+  <p class="hero-eyebrow">{{ t("gems.eyebrow") }}</p>
+  <h1>{{ t("gems.heading") }}</h1>
+  <p class="hero-copy">{{ t("gems.subtitle", old_label=old_label) }}</p>
 </section>
 
 <section class="content-section">
-  <input id="page-search" class="search-input" type="search" placeholder="Search gems or runes (e.g. Amethyst, El, Faster Cast)" />
+  <input id="page-search" class="search-input" type="search" placeholder="{{ t('gems.search_placeholder') }}" />
 
   <div class="guide-card-grid">
     {% for group in groups %}
     {% set group_anchor = group.anchor|default((group.category_key|default(group.category))|slugify) %}
     <a class="guide-card" href="#{{ group_anchor }}" data-search="{{ group.category }} {{ group.summary }}">
-      <span class="guide-card-kicker">{{ group.members|length }} entries</span>
+      <span class="guide-card-kicker">{{ t("common.entries_count", count=group.members|length) }}</span>
       <h2>{{ group.category }}</h2>
       <p>{{ group.summary }}</p>
     </a>
@@ -31,13 +31,13 @@
     <div id="{{ group_anchor }}" class="misc-group-section" data-search="{{ group.category }} {{ group.summary }}">
       <div class="group-heading">
         <div>
-          <p class="group-kicker">{{ group.members|length }} items</p>
+          <p class="group-kicker">{{ t("common.items_count", count=group.members|length) }}</p>
           <h2 class="group-title">{{ group.category }}</h2>
           <p class="group-summary">{{ group.summary }}</p>
         </div>
         <div class="group-counts">
           <strong>{{ group.members|length }}</strong>
-          <span>entries</span>
+          <span>{{ t("common.entries_word") }}</span>
         </div>
       </div>
 
@@ -47,7 +47,7 @@
         <div class="base-item-card" data-search="{{ item.name }} {{ item.code }} {{ item.description }} {{ item.status }} {% for row in comp.property_rows %}{{ row.label }} {{ row.old }} {{ row.new }} {% endfor %}">
           <div class="sp-head">
             {% if item.icon_src %}
-            <img class="set-th-icon" src="{{ asset_root|default(site_root) }}{{ item.icon_src }}" alt="{{ item.name }} icon" />
+            <img class="set-th-icon" src="{{ asset_root|default(site_root) }}{{ item.icon_src }}" alt="{{ item.name }}" />
             {% endif %}
             <div style="min-width:0;flex:1">
               <span class="set-th-name">{{ item.name }}</span>
@@ -59,13 +59,14 @@
           <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
 
           {% for row in comp.stat_rows %}
+          {% set label = t_stat(row) %}
           <div class="sp-row">
-            <span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.old | comparison_highlight(row.new, "old") }}</span>
-            <span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.new | comparison_highlight(row.old, "new") }}</span>
+            <span class="sp-cell is-{{ row.status }}"><strong>{{ label }}:</strong> {{ row.old | comparison_highlight(row.new, "old") }}</span>
+            <span class="sp-cell is-{{ row.status }}"><strong>{{ label }}:</strong> {{ row.new | comparison_highlight(row.old, "new") }}</span>
           </div>
           {% endfor %}
 
-          <div class="sp-sep">Socket Effects</div>
+          <div class="sp-sep">{{ t("gems.socket_effects") }}</div>
           {% for row in comp.property_rows %}
           <div class="sp-row">
             <span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.old | comparison_highlight(row.new, "old") }}</span>

@@ -1,5 +1,29 @@
 /* Progressive enhancement: source comparisons remain readable without JS. */
 (() => {
+  const i18n = (() => {
+    try {
+      const el = typeof document !== 'undefined' && typeof document.querySelector === 'function'
+        ? document.querySelector('#wiki-i18n')
+        : null;
+      if (el && el.textContent) {
+        const parsed = JSON.parse(el.textContent);
+        return parsed && typeof parsed === 'object' ? parsed : {};
+      }
+    } catch {}
+    return {};
+  })();
+  function tUi(key, fallback, vars) {
+    let template = Object.prototype.hasOwnProperty.call(i18n, key) && i18n[key]
+      ? String(i18n[key])
+      : String(fallback);
+    if (vars) {
+      Object.keys(vars).forEach(name => {
+        template = template.replaceAll(`{${name}}`, String(vars[name] ?? ''));
+      });
+    }
+    return template;
+  }
+
   const root = document.querySelector('[data-skill-explorer]');
   if (!root) return;
   const search = root.querySelector('#skill-search');
@@ -27,7 +51,10 @@
         (status.value !== 'all' && status.value !== card.dataset.status);
       if (!card.hidden) visible++;
     }
-    root.querySelector('#skill-results').textContent = `${visible} of ${cards.length} skills`;
+    root.querySelector('#skill-results').textContent = tUi('skills.visible_count', '{visible} of {total} skills', {
+      visible,
+      total: cards.length,
+    });
     root.querySelector('#skill-empty').hidden = visible !== 0;
     root.querySelector('.item-family-section').hidden = visible === 0;
     const url = new URL(location.href);

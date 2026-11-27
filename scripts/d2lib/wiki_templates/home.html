@@ -1,110 +1,111 @@
 {% extends "base.html" %}
+{% block title %}{{ t("home.heading", new_label=new_label) }}{% endblock %}
 {% block nav_home %} class="is-active"{% endblock %}
 {% block content %}
 <section class="hero">
-  <span class="hero-eyebrow">Mod by Baron &amp; Kex &middot; D2R Ascension</span>
-  <h1>{{ new_label }} Wiki</h1>
-  <p class="hero-copy">Reference for {{ new_label }} — uniques, runewords, cube recipes, the bestiary, skill changes, and endgame farming routes.</p>
+  <span class="hero-eyebrow">{{ t("home.hero_eyebrow") }}</span>
+  <h1>{{ t("home.heading", new_label=new_label) }}</h1>
+  <p class="hero-copy">{{ t("home.subtitle", new_label=new_label) }}</p>
 </section>
 
 <div class="stat-strip">
-  <div class="stat-cell"><strong>{{ item_counts.unique }}</strong><span>Unique Items</span></div>
-  <div class="stat-cell"><strong>{{ item_counts.set }}</strong><span>Set Items</span></div>
-  <div class="stat-cell"><strong>{{ item_counts.runeword }}</strong><span>Runewords</span></div>
-  <div class="stat-cell"><strong>{{ recipe_count }}</strong><span>Cube Recipes</span></div>
-  <div class="stat-cell"><strong>{{ area_count }}</strong><span>Farming Areas</span></div>
+  <div class="stat-cell"><strong>{{ item_counts.unique }}</strong><span>{{ t("home.stat.unique") }}</span></div>
+  <div class="stat-cell"><strong>{{ item_counts.set }}</strong><span>{{ t("home.stat.set") }}</span></div>
+  <div class="stat-cell"><strong>{{ item_counts.runeword }}</strong><span>{{ t("home.stat.runeword") }}</span></div>
+  <div class="stat-cell"><strong>{{ recipe_count }}</strong><span>{{ t("home.stat.recipes") }}</span></div>
+  <div class="stat-cell"><strong>{{ area_count }}</strong><span>{{ t("home.stat.areas") }}</span></div>
 </div>
 
 <div class="portal-grid">
   <a class="portal" href="{{ site_root }}items/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-armor"/></svg></span>
-    <h3>Items</h3>
-    <p>Unique and set items with stats and properties.</p>
-    <span class="portal-count">{{ item_counts.unique + item_counts.set }} pages</span>
+    <h3>{{ t("nav.items") }}</h3>
+    <p>{{ t("home.portal.items_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.items_count", count=item_counts.unique + item_counts.set) }}</span>
   </a>
   <a class="portal" href="{{ site_root }}runewords/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-rune"/></svg></span>
-    <h3>Runewords</h3>
-    <p>Rune order, required bases, and generated properties.</p>
-    <span class="portal-count">{{ item_counts.runeword }} runewords</span>
+    <h3>{{ t("nav.runewords") }}</h3>
+    <p>{{ t("home.portal.runewords_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.runewords_count", count=item_counts.runeword) }}</span>
   </a>
   <a class="portal" href="{{ site_root }}sets/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-ring"/></svg></span>
-    <h3>Sets</h3>
-    <p>Complete set listings with piece stats and set bonuses.</p>
-    <span class="portal-count">{{ item_counts.set }} set items</span>
+    <h3>{{ t("nav.sets") }}</h3>
+    <p>{{ t("home.portal.sets_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.sets_count", count=item_counts.set) }}</span>
   </a>
   <a class="portal" href="{{ site_root }}bases/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-helm"/></svg></span>
-    <h3>Base Items</h3>
-    <p>Armor and weapons across Normal, Exceptional, and Elite tiers.</p>
-    <span class="portal-count">{{ base_family_count }} families</span>
+    <h3>{{ t("bases.heading") }}</h3>
+    <p>{{ t("home.portal.bases_desc", old_label=old_label) }}</p>
+    <span class="portal-count">{{ t("home.portal.bases_count", count=base_family_count) }}</span>
   </a>
   <a class="portal" href="{{ site_root }}recipes/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
-    <h3>Cube Recipes</h3>
-    <p>Crafting, corruptions, upgrades, and rune transmutations.</p>
-    <span class="portal-count">{{ recipe_count }} recipes</span>
+    <h3>{{ t("recipes.heading") }}</h3>
+    <p>{{ t("home.portal.recipes_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.recipes_count", count=recipe_count) }}</span>
   </a>
   <a class="portal" href="{{ site_root }}areas/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-map"/></svg></span>
-    <h3>Farming Areas</h3>
-    <p>Density, area level, elites, and super-chest routes ranked by score.</p>
-    <span class="portal-count">{{ area_count }} areas</span>
+    <h3>{{ t("areas.page_title") }}</h3>
+    <p>{{ t("home.portal.areas_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.areas_count", count=area_count) }}</span>
   </a>
   <a class="portal" href="{{ site_root }}classes/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-class"/></svg></span>
-    <h3>Skills</h3>
-    <p>Side-by-side comparisons of base skill information, formulas, and synergies.</p>
-    <span class="portal-count">Browse class skills</span>
+    <h3>{{ t("nav.skills") }}</h3>
+    <p>{{ t("home.portal.skills_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.skills_cta") }}</span>
   </a>
   <a class="portal" href="{{ site_root }}gems-runes/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-gem"/></svg></span>
-    <h3>Gems &amp; Runes</h3>
-    <p>Socketable effects, ascended gem tiers, and rune progression.</p>
-    <span class="portal-count">{{ gem_rune_count }} items</span>
+    <h3>{{ t("nav.gems_runes") }}</h3>
+    <p>{{ t("home.portal.gems_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.gems_count", count=gem_rune_count) }}</span>
   </a>
   <a class="portal" href="{{ site_root }}misc/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-book"/></svg></span>
-    <h3>Materials</h3>
-    <p>Crafting tablets, shards, essences, keys, and uber materials.</p>
-    <span class="portal-count">{{ misc_count }} items</span>
+    <h3>{{ t("nav.misc") }}</h3>
+    <p>{{ t("home.portal.misc_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.misc_count", count=misc_count) }}</span>
   </a>
   <a class="portal" href="{{ site_root }}mechanics/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
-    <h3>Mechanics</h3>
-    <p>Experience, difficulty scaling, and core game system changes.</p>
-    <span class="portal-count">Game systems</span>
+    <h3>{{ t("nav.mechanics") }}</h3>
+    <p>{{ t("home.portal.mechanics_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.mechanics_cta") }}</span>
   </a>
   <a class="portal" href="{{ site_root }}mercenaries/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-sword"/></svg></span>
-    <h3>Mercenaries</h3>
-    <p>Hireling stats, damage, resistances, and skills compared with {{ old_label }}.</p>
-    <span class="portal-count">Browse hirelings</span>
+    <h3>{{ t("nav.mercenaries") }}</h3>
+    <p>{{ t("home.portal.mercenaries_desc", old_label=old_label) }}</p>
+    <span class="portal-count">{{ t("home.portal.mercenaries_cta") }}</span>
   </a>
   <a class="portal" href="{{ site_root }}drops/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-drop"/></svg></span>
-    <h3>Drops</h3>
-    <p>Base-item weighting plus treasure-class source exploration.</p>
-    <span class="portal-count">{{ drop_weight_count }} base pools</span>
+    <h3>{{ t("nav.drops") }}</h3>
+    <p>{{ t("home.portal.drops_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.drops_count", count=drop_weight_count) }}</span>
   </a>
   <a class="portal" href="{{ site_root }}references/">
     <span class="portal-icon"><svg aria-hidden="true"><use href="#i-info"/></svg></span>
-    <h3>References</h3>
-    <p>Affixes, monster specials, economy, states, areas, and raw coverage.</p>
-    <span class="portal-count">{{ reference_count }} references</span>
+    <h3>{{ t("references.heading") }}</h3>
+    <p>{{ t("home.portal.references_desc") }}</p>
+    <span class="portal-count">{{ t("home.portal.references_count", count=reference_count) }}</span>
   </a>
 </div>
 
 {% if reports %}
 <section class="content-section">
-  <div class="section-head"><h2>Diff Reports</h2></div>
+  <div class="section-head"><h2>{{ t("home.reports_heading") }}</h2></div>
   <div class="card-grid two-up">
     {% for report in reports %}
     <a class="link-card" href="{{ report.href }}">
       <h3>{{ report.title }}</h3>
       <p>{{ report.summary }}</p>
-      <span class="link-card-cta">Open report →</span>
+      <span class="link-card-cta">{{ t("home.open_report") }}</span>
     </a>
     {% endfor %}
   </div>

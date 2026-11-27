@@ -1,13 +1,41 @@
+const _WIKI_I18N = (() => {
+  try {
+    const el = typeof document !== "undefined" && typeof document.querySelector === "function"
+      ? document.querySelector("#wiki-i18n")
+      : null;
+    if (el && el.textContent) {
+      const parsed = JSON.parse(el.textContent);
+      return parsed && typeof parsed === "object" ? parsed : {};
+    }
+  } catch {
+    // Fall back to default English strings when catalog JSON is absent or malformed.
+  }
+  return {};
+})();
+
+function tUi(key, fallback, vars) {
+  let template = Object.prototype.hasOwnProperty.call(_WIKI_I18N, key) && _WIKI_I18N[key]
+    ? String(_WIKI_I18N[key])
+    : String(fallback);
+  if (vars) {
+    Object.keys(vars).forEach((name) => {
+      template = template.replaceAll(`{${name}}`, String(vars[name] ?? ""));
+    });
+  }
+  return template;
+}
+
 function normalizeText(value) {
   return (value || "").toLowerCase().trim();
 }
 
 function statusLabel(status) {
   if (status === "modified") {
-    return '<span class="item-card-status is-modified">Modified</span>';
+    return `<span class="item-card-status is-modified">${escapeHtml(tUi("status.modified", "Modified"))}</span>`;
   }
   if (status === "added") {
-    return '<span class="item-card-status is-added">BK Only</span>';
+    const modLabel = (typeof document !== "undefined" && document.body && document.body.dataset && document.body.dataset.newLabel) || "BKDiablo";
+    return `<span class="item-card-status is-added">${escapeHtml(tUi("status.mod_only", "{new_label} Only", { new_label: modLabel }))}</span>`;
   }
   return "";
 }
@@ -22,7 +50,7 @@ function escapeHtml(value) {
 }
 
 function areaBadgeMarkup(area) {
-  return `<span class="area-badge area-badge-level">Lvl ${escapeHtml(area.area_level)}</span>`;
+  return `<span class="area-badge area-badge-level">${escapeHtml(tUi("areas.lvl_short", "Lvl"))} ${escapeHtml(area.area_level)}</span>`;
 }
 
 const IMMUNITY_CLASS = {
@@ -89,7 +117,7 @@ function areaMonsterImmunities(area) {
 function areaMonsterPoolMarkup(area, immunityMeta) {
   const monsters = area.monster_pool || [];
   if (monsters.length === 0) {
-    return '<span class="muted">No monster pool</span>';
+    return `<span class="muted">${escapeHtml(tUi("areas.no_monster_pool", "No monster pool"))}</span>`;
   }
   const formatImmunities = (codes) => codes.map((code) => immunityFullLabel(code, area, immunityMeta)).join(", ");
   const preview = monsters
@@ -108,7 +136,7 @@ function areaMonsterPoolMarkup(area, immunityMeta) {
   return `
     ${preview}
     <details class="area-monster-more">
-      <summary>+${hiddenMonsters.length} more</summary>
+      <summary>${escapeHtml(tUi("areas.more_monsters", "+{count} more", { count: hiddenMonsters.length }))}</summary>
       ${hiddenMonsters.map((monster) => {
         const immunities = monster.immunities && monster.immunities.length
           ? `: ${formatImmunities(monster.immunities)}`
@@ -122,7 +150,7 @@ function areaMonsterPoolMarkup(area, immunityMeta) {
 function areaMonsterListMarkup(area, immunityMeta) {
   const monsters = area.monster_pool || [];
   if (monsters.length === 0) {
-    return '<p class="muted">No monster pool data.</p>';
+    return `<p class="muted">${escapeHtml(tUi("areas.no_monster_pool_data", "No monster pool data."))}</p>`;
   }
   return `
     <ul class="area-monster-list">
@@ -151,35 +179,45 @@ function areaChestKinds(area) {
 
 function areaSuperChestMarkup(area) {
   if (!area.has_super_chest) {
-    return '<span class="muted">No</span>';
+    return `<span class="muted">${escapeHtml(tUi("common.no", "No"))}</span>`;
   }
+  const sparklyLabel = escapeHtml(tUi("areas.sparkly_chest", "Sparkly Chest"));
+  const sparklyTitle = escapeHtml(tUi("areas.sparkly_chest_title", "Sparkly golden chest — can roll Unique, Set, Rare, or Magic drops"));
+  const superLabel = escapeHtml(tUi("areas.super_chest", "Super Chest"));
+  const superTitle = escapeHtml(tUi("areas.super_chest_title", "Super chest — multi-drop Magic/Rare burst (5% Rare / 95% Magic)"));
   return areaChestKinds(area)
     .map((kind) => (
       kind === "sparkly"
-        ? '<span class="area-badge area-badge-sparkly" title="Sparkly golden chest — can roll Unique, Set, Rare, or Magic drops">Sparkly Chest</span>'
-        : '<span class="area-badge area-badge-super" title="Super chest — multi-drop Magic/Rare burst (5% Rare / 95% Magic)">Super Chest</span>'
+        ? `<span class="area-badge area-badge-sparkly" title="${sparklyTitle}">${sparklyLabel}</span>`
+        : `<span class="area-badge area-badge-super" title="${superTitle}">${superLabel}</span>`
     ))
     .join(" ");
 }
 
 function areaMazeMarkup(area) {
   if (!area.estimated_area_tiles) {
-    return '<span class="muted">Unknown</span>';
+    return `<span class="muted">${escapeHtml(tUi("common.unknown", "Unknown"))}</span>`;
   }
 
   const chunk = area.maze_chunk_width && area.maze_chunk_height
     ? `${area.maze_chunk_width}x${area.maze_chunk_height}`
-    : "Unknown";
-  const rooms = area.maze_rooms ? `${area.maze_rooms} room${area.maze_rooms === 1 ? "" : "s"}` : "Unknown rooms";
+    : tUi("common.unknown", "Unknown");
+  const rooms = area.maze_rooms
+    ? (area.maze_rooms === 1
+      ? tUi("areas.room_singular", "{count} room", { count: area.maze_rooms })
+      : tUi("areas.room_plural", "{count} rooms", { count: area.maze_rooms }))
+    : tUi("areas.unknown_rooms", "Unknown rooms");
   const source = area.maze_source === "lvlmaze" ? "LvlMaze" : "Levels";
+  const tilesLabel = tUi("areas.tiles_count", "{tiles} tiles", { tiles: area.estimated_area_tiles });
   return `
     <strong>${escapeHtml(chunk)}</strong><br>
     <span class="muted">${escapeHtml(rooms)}</span><br>
-    <span class="muted">${escapeHtml(area.estimated_area_tiles)} tiles &middot; ${escapeHtml(source)}</span>
+    <span class="muted">${escapeHtml(tilesLabel)} &middot; ${escapeHtml(source)}</span>
   `;
 }
 
 function areaRowMarkup(area, immunityMeta) {
+  const avgLabel = escapeHtml(tUi("areas.avg_short", "Avg {avg}", { avg: area.elite_avg }));
   return `
     <tr>
       <th>
@@ -189,7 +227,7 @@ function areaRowMarkup(area, immunityMeta) {
       </th>
       <td>${escapeHtml(area.monster_density)}</td>
       <td>${areaMazeMarkup(area)}</td>
-      <td>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)}<br><span class="muted">Avg ${escapeHtml(area.elite_avg)}</span></td>
+      <td>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)}<br><span class="muted">${avgLabel}</span></td>
       <td>${areaSuperChestMarkup(area)}</td>
       <td><span class="immunity-list">${areaImmunityMarkup(area, immunityMeta)}</span></td>
       <td>${areaMonsterPoolMarkup(area, immunityMeta)}</td>
@@ -198,6 +236,7 @@ function areaRowMarkup(area, immunityMeta) {
 }
 
 function areaCardMarkup(area, immunityMeta) {
+  const avgLabel = escapeHtml(tUi("areas.avg_short", "Avg {avg}", { avg: area.elite_avg }));
   return `
     <article class="area-card" data-search="${escapeHtml(area.search_text)}">
       <div class="area-card-head">
@@ -205,19 +244,19 @@ function areaCardMarkup(area, immunityMeta) {
           <h3>${escapeHtml(area.display_name)}</h3>
           <span>${escapeHtml(area.act)}</span>
         </div>
-        <span class="area-level-pill">Lvl ${escapeHtml(area.area_level)}</span>
+        <span class="area-level-pill">${escapeHtml(tUi("areas.lvl_short", "Lvl"))} ${escapeHtml(area.area_level)}</span>
       </div>
       <dl class="area-card-stats">
-        <div><dt>Density</dt><dd>${escapeHtml(area.monster_density)}</dd></div>
-        <div><dt>Elite Packs</dt><dd>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)} <span>Avg ${escapeHtml(area.elite_avg)}</span></dd></div>
-        <div><dt>Special Chest</dt><dd>${areaSuperChestMarkup(area)}</dd></div>
+        <div><dt>${escapeHtml(tUi("areas.density", "Density"))}</dt><dd>${escapeHtml(area.monster_density)}</dd></div>
+        <div><dt>${escapeHtml(tUi("areas.elite_packs", "Elite Packs"))}</dt><dd>${escapeHtml(area.elite_min)}-${escapeHtml(area.elite_max)} <span>${avgLabel}</span></dd></div>
+        <div><dt>${escapeHtml(tUi("areas.special_chest", "Special Chest"))}</dt><dd>${areaSuperChestMarkup(area)}</dd></div>
       </dl>
       <div class="area-card-section">
-        <span class="area-card-label">Possible Immunities</span>
+        <span class="area-card-label">${escapeHtml(tUi("areas.possible_immunities", "Possible Immunities"))}</span>
         <div class="immunity-list">${areaImmunityMarkup(area, immunityMeta)}</div>
       </div>
       <details class="area-card-details">
-        <summary>Monster pool</summary>
+        <summary>${escapeHtml(tUi("areas.monster_pool", "Monster Pool"))}</summary>
         ${areaMonsterListMarkup(area, immunityMeta)}
       </details>
     </article>
@@ -262,7 +301,7 @@ function wireStaticSearch() {
     emptyMessage = document.createElement("p");
     emptyMessage.className = "search-empty";
     emptyMessage.hidden = true;
-    emptyMessage.textContent = "No matching entries.";
+    emptyMessage.textContent = tUi("search.no_matching_entries", "No matching entries.");
     (filterControls[0]?.closest(".filter-row") || pageSearch).insertAdjacentElement("afterend", emptyMessage);
   }
 
@@ -388,7 +427,7 @@ function wireRunewordFilters() {
   const emptyMessage = document.createElement("p");
   emptyMessage.className = "search-empty";
   emptyMessage.hidden = true;
-  emptyMessage.textContent = "No runewords match the current filters.";
+  emptyMessage.textContent = tUi("runewords.no_matches", "No runewords match the current filters.");
   toolbar.insertAdjacentElement("afterend", emptyMessage);
 
   const params = new URLSearchParams(window.location.search);
@@ -748,10 +787,11 @@ async function wireAreaIndex() {
     });
 
     const sorted = sortedAreas(filtered);
+    const noMatches = escapeHtml(tUi("areas.no_matches", "No areas match the current filters."));
     root.innerHTML = sorted.map((area) => areaRowMarkup(area, immunityMeta)).join("")
-      || '<tr><td colspan="7" class="muted">No areas match the current filters.</td></tr>';
+      || `<tr><td colspan="7" class="muted">${noMatches}</td></tr>`;
     cardRoot.innerHTML = sorted.map((area) => areaCardMarkup(area, immunityMeta)).join("")
-      || '<p class="muted">No areas match the current filters.</p>';
+      || `<p class="muted">${noMatches}</p>`;
     if (resultCount) {
       resultCount.textContent = String(filtered.length);
     }
@@ -841,7 +881,13 @@ async function wireItemIndex() {
     familySections.forEach((section) => {
       section.hidden = section.querySelectorAll(".base-item-card[data-family]:not([hidden])").length === 0;
     });
-    if (affixIndex && resultCount) resultCount.textContent = `${visibleCount} of ${cards.length} ${affixIndex.dataset.affixIndex}`;
+    if (affixIndex && resultCount) {
+      resultCount.textContent = tUi("common.count_of_total", "{visible} of {total} {noun}", {
+        visible: visibleCount,
+        total: cards.length,
+        noun: affixIndex.dataset.affixIndex,
+      });
+    }
     if (emptyMessage) emptyMessage.hidden = visibleCount > 0;
   }
 
@@ -993,7 +1039,7 @@ function initWiki() {
   wireAreaIndex().catch((error) => {
     const root = document.querySelector("#area-index-root");
     if (root) {
-      root.innerHTML = '<tr><td colspan="7" class="muted">Unable to load the area index.</td></tr>';
+      root.innerHTML = `<tr><td colspan="7" class="muted">${escapeHtml(tUi("areas.load_error", "Unable to load the area index."))}</td></tr>`;
     }
     console.error(error);
   });
@@ -1009,8 +1055,8 @@ if (document.readyState === "loading") {
   initWiki();
 }
 
-// Keep search and anchor context when changing comparison baselines.
-document.querySelectorAll("[data-comparison-link]").forEach((link) => {
+// Keep search and anchor context when changing comparison baselines or locales.
+document.querySelectorAll("[data-comparison-link], [data-locale-link]").forEach((link) => {
   function updateComparisonTarget() {
     const target = new URL(link.href);
     target.search = window.location.search;

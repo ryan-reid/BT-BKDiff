@@ -957,10 +957,11 @@ tbody tr:hover td      { background: rgba(227,179,65,0.03); }
   background: var(--surface);
 }
 .comparison-caption { font-size: .85rem; color: var(--gold); font-weight: 600; }
-.comparison-toggle { display: flex; padding: 3px; gap: 3px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.comparison-toggle { display: flex; flex-wrap: wrap; padding: 3px; gap: 3px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); }
 .comparison-toggle a { padding: 7px 18px; border-radius: 4px; color: var(--muted); font-size: .8rem; font-weight: 600; }
 .comparison-toggle a:hover { color: var(--gold-bright); }
 .comparison-toggle a.is-active { background: var(--raised); color: var(--gold-bright); box-shadow: inset 0 0 0 1px var(--line-strong); }
+.locale-toggle a { padding: 6px 12px; }
 .affix-view-toggle { width: fit-content; flex-wrap: wrap; margin-top: 16px; }
 
 /* Source history remains usable without JavaScript. */

@@ -11,6 +11,7 @@ from d2lib.services.resolver import PropertyResolverService, load_property_group
 from d2lib.utils import slugify
 from d2lib.wiki.comparison import item_comparison_context, base_item_comparison_context, gem_rune_comparison_context, runeword_compare_rows
 from d2lib.wiki.history import PRIMARY, TABLES, VERSION, Snapshot, digest, parse_table, item_history
+from d2lib.wiki.i18n import WikiTranslator
 from d2lib.wiki.item_helpers import item_identity, item_title
 from d2lib.wiki.renderers import WikiRenderer
 
@@ -44,18 +45,33 @@ def with_shared_set_bonuses(entry, sets, resolver):
     return dict(entry, properties=props)
 
 
-def availability_rows(current, baseline, current_present=True, baseline_present=True):
+def availability_rows(current, baseline, current_present=True, baseline_present=True, t=None):
     rows = []
+    def tr(key, fallback):
+        return t(key) if t is not None else fallback
     def add(label, old, new):
         rows.append(dict(label=label, old=old, new=new,
                          status='same' if old == new else 'changed' if old and new else 'added' if new else 'removed'))
-    add('Source record', 'Present' if baseline_present else 'Not present', 'Present' if current_present else 'Not present')
-    fields = [('enabled', 'Enabled'), ('disabled', 'Disabled'), ('spawnable', 'Spawnable'),
-              ('complete', 'Runeword active'), ('rarity', 'Drop selection weight'),
-              ('firstLadderSeason', 'First ladder season'), ('lastLadderSeason', 'Last ladder season'),
-              ('disallowCraftingInLadder', 'Crafting blocked in ladder'),
-              ('disallowCraftingInNonLadder', 'Crafting blocked outside ladder')]
-    for field, label in fields:
+    add(
+        tr('history.avail.source_record', 'Source record'),
+        tr('history.avail.present', 'Present') if baseline_present else tr('history.avail.not_present', 'Not present'),
+        tr('history.avail.present', 'Present') if current_present else tr('history.avail.not_present', 'Not present'),
+    )
+    fields = [
+        ('enabled', 'history.avail.enabled', 'Enabled'),
+        ('disabled', 'history.avail.disabled', 'Disabled'),
+        ('spawnable', 'history.avail.spawnable', 'Spawnable'),
+        ('complete', 'history.avail.runeword_active', 'Runeword active'),
+        ('rarity', 'history.avail.drop_weight', 'Drop selection weight'),
+        ('firstLadderSeason', 'history.avail.first_ladder', 'First ladder season'),
+        ('lastLadderSeason', 'history.avail.last_ladder', 'Last ladder season'),
+        ('disallowCraftingInLadder', 'history.avail.craft_blocked_ladder', 'Crafting blocked in ladder'),
+        ('disallowCraftingInNonLadder', 'history.avail.craft_blocked_non_ladder', 'Crafting blocked outside ladder'),
+    ]
+    yes_label = tr('common.yes', 'Yes')
+    no_label = tr('common.no', 'No')
+    not_specified_label = tr('history.avail.not_specified', 'Not specified')
+    for field, i18n_key, fallback_label in fields:
         if not current.get(field, '') and not baseline.get(field, ''):
             continue
         def value(row, present):
@@ -63,11 +79,11 @@ def availability_rows(current, baseline, current_present=True, baseline_present=
                 return '—'
             raw = row.get(field, '')
             if not raw:
-                return 'Not specified'
+                return not_specified_label
             if field in ('enabled', 'disabled', 'spawnable', 'complete', 'disallowCraftingInLadder', 'disallowCraftingInNonLadder'):
-                return {'1': 'Yes', '0': 'No'}.get(raw, raw)
+                return {'1': yes_label, '0': no_label}.get(raw, raw)
             return raw
-        add(label, value(baseline, baseline_present), value(current, current_present))
+        add(tr(i18n_key, fallback_label), value(baseline, baseline_present), value(current, current_present))
     return rows
 
 
@@ -141,7 +157,7 @@ def analyze_revision(tables, strings, identity, canonical, context=None, propert
         return {'status': 'unavailable', 'reason': f'Stats cannot be reconstructed for this revision: {exc}'}
 
 
-def write_history_comparisons(collector, artifact, repo, items, old_index, bases, old_bases, misc_groups, retail_misc, writer, old_label, baseline_repo):
+def write_history_comparisons(collector, artifact, repo, items, old_index, bases, old_bases, misc_groups, retail_misc, writer, old_label, baseline_repo, new_label="BKDiablo"):
     if not artifact.get('items'):
         return
     fallback_group_path = os.path.join(repo.repo_root, "data", "propertygroups.txt")
@@ -205,6 +221,7 @@ def write_history_comparisons(collector, artifact, repo, items, old_index, bases
     strings_version = digest([locale, repo.strings, canonical_strings])
     rendered = defaultdict(list)
     renderer = WikiRenderer()
+    translator = WikiTranslator(locale, repo=repo)
     # Analyze every requested commit first so consecutive revisions can be diffed.
     analyzed_by_sha = {}
     for sha in order:
@@ -255,7 +272,7 @@ def write_history_comparisons(collector, artifact, repo, items, old_index, bases
                     comparison = compare_entries(entry, prev_entry, family)
                     if entry.get('history_base') and prev_entry.get('history_base'):
                         base_comparison = base_item_comparison_context(entry['history_base'], prev_entry['history_base'])
-                    availability = availability_rows(result['source_row'], prev_available['source_row'], current_present=True, baseline_present=True)
+                    availability = availability_rows(result['source_row'], prev_available['source_row'], current_present=True, baseline_present=True, t=translator.t)
                     if not comparison_has_changes(comparison, base_comparison, availability):
                         continue
                 prev_available = result
@@ -263,7 +280,8 @@ def write_history_comparisons(collector, artifact, repo, items, old_index, bases
             point = dict(revisions[identity][sha])
             point['html'] = renderer.render('history_revision.html', comparison=comparison,
                 base_comparison=base_comparison, availability=availability,
-                reason=result.get('reason'), is_first=is_first, this_date=this_date, prev_date=prev_date)
+                reason=result.get('reason'), is_first=is_first, this_date=this_date, prev_date=prev_date,
+                t=translator.t, t_stat=translator.stat_label, new_label=new_label, old_label=old_label, locale=locale)
             point['status'] = result['status']
             points.append(point)
         rendered[identity] = points  # oldest → newest

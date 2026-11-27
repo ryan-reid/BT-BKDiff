@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset_root|default(site_root) }}assets/site.css?v=20261122-affix-views" />
+  <link rel="stylesheet" href="{{ asset_root|default(site_root) }}assets/site.css?v=20261127-i18n" />
 </head>
 <body data-site-root="{{ site_root }}" data-asset-root="{{ asset_root|default(site_root) }}" data-new-label="{{ new_label }}" data-old-label="{{ old_label }}" data-locale="{{ locale|default('enUS') }}">
 
@@ -39,59 +39,69 @@
       <span class="brand-sigil"><svg aria-hidden="true"><use href="#i-sigil"/></svg></span>
       <span>
         <span class="brand-name">{{ new_label }}</span><br>
-        <span class="brand-sub">Ascension Wiki</span>
+        <span class="brand-sub">{{ t("site.brand_sub") }}</span>
       </span>
     </a>
-    <nav class="mast-nav" aria-label="Primary navigation">
-      <a href="{{ site_root }}"{% block nav_home %}{% endblock %}>Home</a>
-      <a href="{{ site_root }}items/"{% block nav_items %}{% endblock %}>Items</a>
-      <a href="{{ site_root }}runewords/"{% block nav_runewords %}{% endblock %}>Runewords</a>
-      <a href="{{ site_root }}sets/"{% block nav_sets %}{% endblock %}>Sets</a>
-      <a href="{{ site_root }}bases/"{% block nav_bases %}{% endblock %}>Bases</a>
-      <a href="{{ site_root }}references/affixes/"{% block nav_affixes %}{% endblock %}>Affixes</a>
-      <a href="{{ site_root }}references/automagic/"{% block nav_automagic %}{% endblock %}>Automagic</a>
-      <a href="{{ site_root }}recipes/"{% block nav_recipes %}{% endblock %}>Recipes</a>
-      <a href="{{ site_root }}classes/"{% block nav_classes %}{% endblock %}>Skills</a>
-      <a href="{{ site_root }}areas/"{% block nav_areas %}{% endblock %}>Areas</a>
-      <a href="{{ site_root }}gems-runes/"{% block nav_gems %}{% endblock %}>Gems &amp; Runes</a>
-      <a href="{{ site_root }}misc/"{% block nav_misc %}{% endblock %}>Materials</a>
-      <a href="{{ site_root }}mechanics/"{% block nav_mechanics %}{% endblock %}>Mechanics</a>
-      <a href="{{ site_root }}mercenaries/"{% block nav_mercenaries %}{% endblock %}>Mercenaries</a>
-      <a href="{{ site_root }}drops/"{% block nav_drops %}{% endblock %}>Drops</a>
-      <a href="{{ site_root }}reports/"{% block nav_reports %}{% endblock %}>Reports</a>
+    <nav class="mast-nav" aria-label="{{ t('nav.aria_label') }}">
+      <a href="{{ site_root }}"{% block nav_home %}{% endblock %}>{{ t("nav.home") }}</a>
+      <a href="{{ site_root }}items/"{% block nav_items %}{% endblock %}>{{ t("nav.items") }}</a>
+      <a href="{{ site_root }}runewords/"{% block nav_runewords %}{% endblock %}>{{ t("nav.runewords") }}</a>
+      <a href="{{ site_root }}sets/"{% block nav_sets %}{% endblock %}>{{ t("nav.sets") }}</a>
+      <a href="{{ site_root }}bases/"{% block nav_bases %}{% endblock %}>{{ t("nav.bases") }}</a>
+      <a href="{{ site_root }}references/affixes/"{% block nav_affixes %}{% endblock %}>{{ t("nav.affixes") }}</a>
+      <a href="{{ site_root }}references/automagic/"{% block nav_automagic %}{% endblock %}>{{ t("nav.automagic") }}</a>
+      <a href="{{ site_root }}recipes/"{% block nav_recipes %}{% endblock %}>{{ t("nav.recipes") }}</a>
+      <a href="{{ site_root }}classes/"{% block nav_classes %}{% endblock %}>{{ t("nav.skills") }}</a>
+      <a href="{{ site_root }}areas/"{% block nav_areas %}{% endblock %}>{{ t("nav.areas") }}</a>
+      <a href="{{ site_root }}gems-runes/"{% block nav_gems %}{% endblock %}>{{ t("nav.gems_runes") }}</a>
+      <a href="{{ site_root }}misc/"{% block nav_misc %}{% endblock %}>{{ t("nav.misc") }}</a>
+      <a href="{{ site_root }}mechanics/"{% block nav_mechanics %}{% endblock %}>{{ t("nav.mechanics") }}</a>
+      <a href="{{ site_root }}mercenaries/"{% block nav_mercenaries %}{% endblock %}>{{ t("nav.mercenaries") }}</a>
+      <a href="{{ site_root }}drops/"{% block nav_drops %}{% endblock %}>{{ t("nav.drops") }}</a>
+      <a href="{{ site_root }}reports/"{% block nav_reports %}{% endblock %}>{{ t("nav.reports") }}</a>
     </nav>
     <label class="mast-search">
       <svg aria-hidden="true"><use href="#i-search"/></svg>
-      <input id="mast-search-input" type="search" placeholder="Search…" aria-label="Search the wiki">
+      <input id="mast-search-input" type="search" placeholder="{{ t('masthead.search_placeholder') }}" aria-label="{{ t('masthead.search_aria') }}">
     </label>
   </div>
 </header>
 
 <div class="feedback-bar">
-    <nav class="feedback-actions" aria-label="Wiki feedback" aria-describedby="feedback-note">
-      <a href="https://github.com/ryan-reid/BT-BKDiff/issues/new?template=report_issue.yml" target="_blank" rel="noopener noreferrer">Report Issue</a>
-      <a href="https://github.com/ryan-reid/BT-BKDiff/issues/new?template=request_feature.yml" target="_blank" rel="noopener noreferrer">Request Feature</a>
+    <nav class="feedback-actions" aria-label="{{ t('feedback.aria_label') }}" aria-describedby="feedback-note">
+      <a href="https://github.com/ryan-reid/BT-BKDiff/issues/new?template=report_issue.yml" target="_blank" rel="noopener noreferrer">{{ t("feedback.report_issue") }}</a>
+      <a href="https://github.com/ryan-reid/BT-BKDiff/issues/new?template=request_feature.yml" target="_blank" rel="noopener noreferrer">{{ t("feedback.request_feature") }}</a>
     </nav>
-    <p id="feedback-note" class="feedback-note">Opens a GitHub form in a new tab. GitHub account required. Screenshots welcome.</p>
+    <p id="feedback-note" class="feedback-note">{{ t("feedback.note") }}</p>
 </div>
 
-<div class="legend" role="note" aria-label="Item quality colour key">
-  <span style="color:var(--q-unique)"><i></i>Unique</span>
-  <span style="color:var(--q-set)"><i></i>Set</span>
-  <span style="color:var(--q-runeword)"><i></i>Runeword</span>
-  <span style="color:var(--q-magic)"><i></i>Magic</span>
-  <span style="color:var(--q-rare)"><i></i>Rare</span>
-  <span style="color:var(--q-crafted)"><i></i>Crafted</span>
+<div class="legend" role="note" aria-label="{{ t('legend.aria_label') }}">
+  <span style="color:var(--q-unique)"><i></i>{{ t("quality.unique") }}</span>
+  <span style="color:var(--q-set)"><i></i>{{ t("quality.set") }}</span>
+  <span style="color:var(--q-runeword)"><i></i>{{ t("quality.runeword") }}</span>
+  <span style="color:var(--q-magic)"><i></i>{{ t("quality.magic") }}</span>
+  <span style="color:var(--q-rare)"><i></i>{{ t("quality.rare") }}</span>
+  <span style="color:var(--q-crafted)"><i></i>{{ t("quality.crafted") }}</span>
 </div>
 
 <div class="site-shell">
   <main class="site-main">
+    {% if locale_switch and locale_switch.options|length > 1 %}
+    <div class="comparison-bar locale-bar">
+      <span class="comparison-caption">{{ t("nav.language") }}</span>
+      <nav class="comparison-toggle locale-toggle" aria-label="{{ t('nav.language_switcher') }}">
+        {% for option in locale_switch.options %}
+        <a href="{{ option.href }}" data-locale-link lang="{{ option.html_lang }}" hreflang="{{ option.html_lang }}"{% if option.active %} class="is-active" aria-current="true"{% endif %}>{{ option.label }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+    {% endif %}
     {% block comparison_bar %}
     {% if comparison_switch %}
     <div class="comparison-bar">
-      <span class="comparison-caption">{{ new_label }} <span class="muted">compared against</span></span>
-      <nav class="comparison-toggle" aria-label="Comparison baseline">
-        <a href="{{ comparison_switch.retail }}" data-comparison-link{% if comparison_switch.active == 'retail' %} class="is-active" aria-current="true"{% endif %}>Retail</a>
+      <span class="comparison-caption">{{ new_label }} <span class="muted">{{ t("comparison.compared_against") }}</span></span>
+      <nav class="comparison-toggle" aria-label="{{ t('comparison.aria_label') }}">
+        <a href="{{ comparison_switch.retail }}" data-comparison-link{% if comparison_switch.active == 'retail' %} class="is-active" aria-current="true"{% endif %}>{{ t("comparison.retail_label") }}</a>
         <a href="{{ comparison_switch.bt }}" data-comparison-link{% if comparison_switch.active == 'bt' %} class="is-active" aria-current="true"{% endif %}>BTDiablo</a>
       </nav>
     </div>
@@ -101,22 +111,23 @@
   </main>
   <footer class="site-footer">
 
-    <p>{{ new_label }} Wiki &middot; generated from mod data &middot; not affiliated with Blizzard &middot; <a href="{{ site_root }}reports/">Reports</a> &middot; <a href="{{ site_root }}patch-notes/full-patch-notes-draft/">Patch Notes</a></p>
+    <p>{{ t("footer.text", new_label=new_label) }} &middot; <a href="{{ site_root }}reports/">{{ t("nav.reports") }}</a> &middot; <a href="{{ site_root }}patch-notes/full-patch-notes-draft/">{{ t("footer.patch_notes") }}</a></p>
   </footer>
 </div>
 
 <dialog id="item-revisions-dialog" class="item-revisions-dialog" aria-labelledby="item-revisions-title">
-  <div class="revision-dialog-head"><h2 id="item-revisions-title">Item revisions</h2><button type="button" data-close-revisions aria-label="Close item revisions">Close</button></div>
-  <p class="history-help">Explore BK source revisions over time. Dates are source commit dates. Localization uses current wording.</p>
+  <div class="revision-dialog-head"><h2 id="item-revisions-title">{{ t("history.dialog_title") }}</h2><button type="button" data-close-revisions aria-label="{{ t('history.close_aria') }}">{{ t("common.close") }}</button></div>
+  <p class="history-help">{{ t("history.dialog_help", new_label=new_label) }}</p>
   <div class="revision-nav">
-    <button type="button" class="revision-nav-btn" id="item-revision-prev" disabled>Previous</button>
-    <select id="item-revision-select" aria-label="BK revision"></select>
-    <button type="button" class="revision-nav-btn" id="item-revision-next" disabled>Next</button>
+    <button type="button" class="revision-nav-btn" id="item-revision-prev" disabled>{{ t("history.prev") }}</button>
+    <select id="item-revision-select" aria-label="{{ t('history.select_aria', new_label=new_label) }}"></select>
+    <button type="button" class="revision-nav-btn" id="item-revision-next" disabled>{{ t("history.next") }}</button>
   </div>
   <p id="item-revision-meta"></p>
   <div id="item-revision-content" aria-live="polite"></div>
 </dialog>
-<script src="{{ asset_root|default(site_root) }}assets/site.js?v=20261122-affix-views"></script>
-<script src="{{ asset_root|default(site_root) }}assets/history.js?v=20261011-items"></script>
+<script id="wiki-i18n" type="application/json">{{ wiki_i18n_json|safe }}</script>
+<script src="{{ asset_root|default(site_root) }}assets/site.js?v=20261127-i18n"></script>
+<script src="{{ asset_root|default(site_root) }}assets/history.js?v=20261127-i18n"></script>
 </body>
 </html>

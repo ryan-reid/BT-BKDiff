@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %}Bestiary | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("bestiary.page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_bestiary %} class="is-active"{% endblock %}
 
 {% block content %}
 <section class="hero">
-  <p class="hero-eyebrow">Monster Manual</p>
-  <h1>Monster Bestiary</h1>
-  <p class="hero-copy">Browse monsters, their stats across difficulties, and Hell immunities.</p>
+  <p class="hero-eyebrow">{{ t("bestiary.eyebrow") }}</p>
+  <h1>{{ t("bestiary.heading") }}</h1>
+  <p class="hero-copy">{{ t("bestiary.subtitle") }}</p>
 </section>
 
 <section class="content-section">
-  <input id="page-search" class="search-input" type="search" placeholder="Search monsters (e.g. Fallen, Baal)" />
+  <input id="page-search" class="search-input" type="search" placeholder="{{ t('bestiary.search_placeholder') }}" />
   
   <div class="monster-list">
     {% for group in groups %}
@@ -19,12 +19,12 @@
       <table class="monster-table">
         <thead>
           <tr>
-            <th>Monster</th>
-            <th title="Normal / Nightmare / Hell">Level (N/NM/H)</th>
-            <th>HP (Hell)</th>
-            <th>Hell Immunities</th>
-            <th>Spawn Areas</th>
-            <th>Changes</th>
+            <th>{{ t("bestiary.th_monster") }}</th>
+            <th title="{{ t('bestiary.th_level_title') }}">{{ t("bestiary.th_level") }}</th>
+            <th>{{ t("bestiary.th_hp_hell") }}</th>
+            <th>{{ t("bestiary.th_hell_immunities") }}</th>
+            <th>{{ t("bestiary.th_spawn_areas") }}</th>
+            <th>{{ t("bestiary.th_changes") }}</th>
           </tr>
         </thead>
         <tbody>
@@ -33,7 +33,7 @@
             <td class="monster-name-cell">
               <strong>{{ monster.name }}</strong>
               {% if monster.is_boss %}
-              <span class="badge badge-elite">Boss</span>
+              <span class="badge badge-elite">{{ t("bestiary.boss") }}</span>
               {% endif %}
             </td>
             <td>{{ monster.level_norm }} / {{ monster.level_nm }} / {{ monster.level_hell }}</td>
@@ -58,9 +58,9 @@
             </td>
             <td>
               {% if monster.status == "added" %}
-              <span class="item-card-status is-added">BK Only</span>
+              <span class="item-card-status is-added">{{ t("status.mod_only", new_label=new_label) }}</span>
               {% elif monster.status == "modified" %}
-              <span class="item-card-status is-modified">Changed</span>
+              <span class="item-card-status is-modified">{{ t("status.changed") }}</span>
               {% else %}
               <span class="text-muted">-</span>
               {% endif %}

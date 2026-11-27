@@ -1404,7 +1404,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertNotIn("prepend(setBlock)", site_js)
         self.assertIn("function areaMonsterImmunities(area)", site_js)
         self.assertIn("const immunities = areaMonsterImmunities(area);", site_js)
-        self.assertIn("<summary>+${hiddenMonsters.length} more</summary>", site_js)
+        self.assertIn('<summary>${escapeHtml(tUi("areas.more_monsters", "+{count} more", { count: hiddenMonsters.length }))}</summary>', site_js)
         self.assertIn(".area-monster-more", site_css)
 
         with open(os.path.join(self.output, "areas", "index.html"), "r", encoding="utf-8") as f:
@@ -1432,7 +1432,7 @@ class TestWikiGenerator(unittest.TestCase):
 
         with open(os.path.join(self.output, "reports", "index.html"), "r", encoding="utf-8") as f:
             reports_page = f.read()
-        self.assertIn("<h2>BK vs Retail</h2>", reports_page)
+        self.assertIn("<h2>BKDiablo vs Retail</h2>", reports_page)
         self.assertIn("<h3>Item Diff</h3>", reports_page)
         self.assertIn("reports/items/retail-bk/", reports_page)
 
@@ -1510,7 +1510,7 @@ class TestWikiGenerator(unittest.TestCase):
         with open(os.path.join(self.output, "bestiary", "index.html"), "r", encoding="utf-8") as f:
             bestiary_page = f.read()
         self.assertIn("Changed", bestiary_page)
-        self.assertIn("BK Only", bestiary_page)
+        self.assertIn("BKDiablo Only", bestiary_page)
 
         with open(os.path.join(self.output, "mechanics", "index.html"), "r", encoding="utf-8") as f:
             mechanics_page = f.read()
@@ -2129,7 +2129,7 @@ class TestWikiGenerator(unittest.TestCase):
         self.assertIn('<option value="-25">-25</option>', ko_bases)
         self.assertIn('<option value="0">0</option>', ko_bases)
         self.assertIn('<option value="15">15</option>', ko_bases)
-        self.assertIn('<option value="8">8 sockets</option>', ko_bases)
+        self.assertIn('<option value="8">8 홈</option>', ko_bases)
         self.assertIn("tier-exceptional", ko_bases)
         self.assertIn("badge-elite", ko_bases)
         self.assertIn('data-speed="-25"', ko_bases)

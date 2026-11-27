@@ -56,7 +56,9 @@ class HistoryComparisonTests(unittest.TestCase):
         html = WikiRenderer().render('history_revision.html', comparison=comparison, is_first=False, prev_date='2026-01-01', this_date='2026-02-02')
         self.assertNotIn('<script>', html)
         self.assertIn('Previous Revision · 2026-01-01', html)
-        self.assertIn('BK At · 2026-02-02', html)
+        self.assertIn('BKDiablo At · 2026-02-02', html)
+        custom = WikiRenderer().render('history_revision.html', comparison=comparison, is_first=False, prev_date='2026-01-01', this_date='2026-02-02', new_label='CustomMod')
+        self.assertIn('CustomMod At · 2026-02-02', custom)
 
     def test_shared_set_bonuses_preserve_slots_and_input(self):
         class Resolver:

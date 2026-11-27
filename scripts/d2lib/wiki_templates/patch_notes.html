@@ -1,45 +1,46 @@
 {% extends "base.html" %}
-{% from "components.html" import hero %}
+{% from "components.html" import hero with context %}
+{% block title %}{{ t("patch_notes.title") }} | {{ new_label }}{% endblock %}
 {% block content %}
 {{ hero(
-  "Changes",
-  "Patch Notes",
-  "Track what has changed in " ~ new_label ~ " compared to " ~ old_label ~ " — items, skills, cube recipes, and game systems.",
+  t("patch_notes.eyebrow"),
+  t("patch_notes.title"),
+  t("patch_notes.subtitle", new_label=new_label, old_label=old_label),
   [{"label": new_label, "tone": "accent"}]
 ) }}
 <section class="content-section">
-  <h2>What Changed</h2>
-  <p>This wiki documents <strong>{{ total_items }}</strong> items and <strong>{{ class_count }}</strong> class skill trees. Use the sections below to explore changes by category.</p>
+  <h2>{{ t("patch_notes.what_changed") }}</h2>
+  <p>{{ t("patch_notes.intro", total_items=total_items, class_count=class_count) }}</p>
   <div class="card-grid three-up" style="margin-top:20px">
     <a class="link-card" href="{{ site_root }}items/">
-      <h3>Items</h3>
-      <p>Browse unique and set items, filtered by what is new or changed versus {{ old_label }}.</p>
-      <span class="link-card-cta">View items →</span>
+      <h3>{{ t("nav.items") }}</h3>
+      <p>{{ t("patch_notes.items_desc", old_label=old_label) }}</p>
+      <span class="link-card-cta">{{ t("patch_notes.view_items") }}</span>
     </a>
     <a class="link-card" href="{{ site_root }}recipes/">
-      <h3>Cube Recipes</h3>
-      <p>Crafting, corruption, rune, and upgrade recipes including new additions.</p>
-      <span class="link-card-cta">View recipes →</span>
+      <h3>{{ t("recipes.heading") }}</h3>
+      <p>{{ t("patch_notes.recipes_desc") }}</p>
+      <span class="link-card-cta">{{ t("patch_notes.view_recipes") }}</span>
     </a>
     <a class="link-card" href="{{ site_root }}mechanics/">
-      <h3>Mechanics</h3>
-      <p>Experience curve, difficulty scaling, and core game system changes.</p>
-      <span class="link-card-cta">View mechanics →</span>
+      <h3>{{ t("nav.mechanics") }}</h3>
+      <p>{{ t("patch_notes.mechanics_desc") }}</p>
+      <span class="link-card-cta">{{ t("patch_notes.view_mechanics") }}</span>
     </a>
     <a class="link-card" href="{{ site_root }}classes/">
-      <h3>Classes</h3>
-      <p>Skill trees with updated effects and synergy values.</p>
-      <span class="link-card-cta">View classes →</span>
+      <h3>{{ t("patch_notes.classes_heading") }}</h3>
+      <p>{{ t("patch_notes.classes_desc") }}</p>
+      <span class="link-card-cta">{{ t("patch_notes.view_classes") }}</span>
     </a>
     <a class="link-card" href="{{ site_root }}bestiary/">
-      <h3>Bestiary</h3>
-      <p>Monster stats, resistances, and Hell immunities — highlights new and changed monsters.</p>
-      <span class="link-card-cta">View bestiary →</span>
+      <h3>{{ t("patch_notes.bestiary_heading") }}</h3>
+      <p>{{ t("patch_notes.bestiary_desc") }}</p>
+      <span class="link-card-cta">{{ t("patch_notes.view_bestiary") }}</span>
     </a>
     <a class="link-card" href="{{ site_root }}reports/">
-      <h3>Detailed Reports</h3>
-      <p>Full field-level diff tables for items, Excel tables, and override files.</p>
-      <span class="link-card-cta">View reports →</span>
+      <h3>{{ t("patch_notes.reports_heading") }}</h3>
+      <p>{{ t("patch_notes.reports_desc") }}</p>
+      <span class="link-card-cta">{{ t("patch_notes.view_reports") }}</span>
     </a>
   </div>
 </section>

@@ -1,48 +1,49 @@
 {% extends "base.html" %}
 
-{% block title %}Drops | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("drops.page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_drops %} class="is-active"{% endblock %}
 
 {% block content %}
 <section class="hero">
-  <p class="hero-eyebrow">Drop Weighting</p>
-  <h1>Drops</h1>
-  <p class="hero-copy">Compare weighted unique and set candidates that share the same base item. These odds are conditional on the game already selecting that base item and item quality.</p>
+  <p class="hero-eyebrow">{{ t("drops.eyebrow") }}</p>
+  <h1>{{ t("drops.heading") }}</h1>
+  <p class="hero-copy">{{ t("drops.subtitle") }}</p>
 </section>
 
 <section class="metric-grid">
-  <article class="metric-card"><span>Set Base Pools</span><strong>{{ set_group_count }}</strong></article>
-  <article class="metric-card"><span>Unique Base Pools</span><strong>{{ unique_group_count }}</strong></article>
-  <article class="metric-card"><span>Total Weighted Pools</span><strong>{{ groups|length }}</strong></article>
+  <article class="metric-card"><span>{{ t("drops.metric_set_pools") }}</span><strong>{{ set_group_count }}</strong></article>
+  <article class="metric-card"><span>{{ t("drops.metric_unique_pools") }}</span><strong>{{ unique_group_count }}</strong></article>
+  <article class="metric-card"><span>{{ t("drops.metric_total_pools") }}</span><strong>{{ groups|length }}</strong></article>
 </section>
 
 <section class="content-section">
-  <input id="page-search" class="search-input" type="search" placeholder="Search base items or item names" />
-  <div class="filter-row" role="group" aria-label="Item quality">
-    <button class="filter-button is-active" type="button" data-search-filter="all" aria-pressed="true">All</button>
-    <button class="filter-button" type="button" data-search-filter="set" aria-pressed="false">Sets</button>
-    <button class="filter-button" type="button" data-search-filter="unique" aria-pressed="false">Uniques</button>
+  <input id="page-search" class="search-input" type="search" placeholder="{{ t('drops.search_placeholder') }}" />
+  <div class="filter-row" role="group" aria-label="{{ t('drops.quality_aria') }}">
+    <button class="filter-button is-active" type="button" data-search-filter="all" aria-pressed="true">{{ t("common.all") }}</button>
+    <button class="filter-button" type="button" data-search-filter="set" aria-pressed="false">{{ t("drops.sets") }}</button>
+    <button class="filter-button" type="button" data-search-filter="unique" aria-pressed="false">{{ t("drops.uniques") }}</button>
   </div>
-  <p class="muted">These odds show relative weighting among items that share the same base item, calculated after the game selects a unique or set quality.</p>
+  <p class="muted">{{ t("drops.note") }}</p>
 
   <div class="family-list">
     {% for group in groups %}
+    {% set quality_text = t("quality." ~ group.quality) %}
     <div class="family-container" id="{{ group.id }}" data-search="{{ group.search_text }}" data-filter-tags="{{ group.quality }}">
       <div class="family-header-bar">
         <div>
           <h2>{{ group.base_name }}</h2>
-          <p class="muted">{{ group.quality_label }} candidates for <code>{{ group.base_code }}</code>. Total rarity weight {{ group.total_weight }}.</p>
+          <p class="muted">{{ t("drops.candidates_summary", quality=quality_text) }} <code>{{ group.base_code }}</code>. {{ t("drops.total_weight", weight=group.total_weight) }}</p>
         </div>
-        <span class="item-card-status is-{{ 'added' if group.quality == 'set' else 'modified' }}">{{ group.quality_label }}</span>
+        <span class="item-card-status is-{{ 'added' if group.quality == 'set' else 'modified' }}">{{ quality_text }}</span>
       </div>
       <div class="table-wrap">
         <table class="monster-table">
           <thead>
             <tr>
-              <th>Candidate</th>
-              <th>Weight</th>
-              <th>Conditional Odds</th>
-              <th>Levels</th>
+              <th>{{ t("drops.th_candidate") }}</th>
+              <th>{{ t("drops.th_weight") }}</th>
+              <th>{{ t("drops.th_odds") }}</th>
+              <th>{{ t("drops.th_levels") }}</th>
             </tr>
           </thead>
           <tbody>
@@ -52,8 +53,8 @@
               <td>{{ candidate.weight }}</td>
               <td>{{ candidate.chance_display }}</td>
               <td>
-                {% if candidate.level %}Lvl {{ candidate.level }}{% endif %}
-                {% if candidate.level_req %}<br/><small>Req {{ candidate.level_req }}</small>{% endif %}
+                {% if candidate.level %}{{ t("drops.lvl_prefix", level=candidate.level) }}{% endif %}
+                {% if candidate.level_req %}<br/><small>{{ t("drops.req_prefix", level=candidate.level_req) }}</small>{% endif %}
               </td>
             </tr>
             {% endfor %}

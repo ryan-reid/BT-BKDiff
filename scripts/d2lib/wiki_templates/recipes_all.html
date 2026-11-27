@@ -1,16 +1,16 @@
 {% extends "base.html" %}
-{% block title %}All Cube Recipes | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("recipes.all_page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_recipes %} class="is-active"{% endblock %}
 {% block content %}
 <section class="hero">
-  <span class="hero-eyebrow"><a href="../">Cube Recipes</a></span>
-  <h1>All Recipes</h1>
-  <p class="hero-copy">Every player-facing cube recipe in one searchable list.</p>
+  <span class="hero-eyebrow"><a href="../">{{ t("recipes.heading") }}</a></span>
+  <h1>{{ t("recipes.all_heading") }}</h1>
+  <p class="hero-copy">{{ t("recipes.all_subtitle") }}</p>
 </section>
 
-<input id="page-search" class="search-input" type="search" placeholder="Search all recipes, ingredients, outcomes, or systems" style="margin-bottom:20px" />
-<div class="recipe-filter-bar" aria-label="All recipe filters">
-  <button class="filter-button is-active" type="button" data-recipe-filter="all">All</button>
+<input id="page-search" class="search-input" type="search" placeholder="{{ t('recipes.all_search_placeholder') }}" style="margin-bottom:20px" />
+<div class="recipe-filter-bar" aria-label="{{ t('recipes.all_filters_aria') }}">
+  <button class="filter-button is-active" type="button" data-recipe-filter="all">{{ t("common.all") }}</button>
   {% for filter in page.filters %}
   <button class="filter-button" type="button" data-recipe-filter="{{ filter.value }}">{{ filter.label }} <span class="filter-count">{{ filter.count }}</span></button>
   {% endfor %}
@@ -19,23 +19,23 @@
 <section class="recipe-group" data-search="All recipes">
   <div class="recipe-group-head">
     <div>
-      <h2>Searchable Recipes</h2>
-      <p class="recipe-group-desc">Flattened from the player recipe pages. Use Raw Cube Rows only when you need exact cubemain row detail.</p>
+      <h2>{{ t("recipes.all_group_heading") }}</h2>
+      <p class="recipe-group-desc">{{ t("recipes.all_group_desc") }}</p>
     </div>
-    <span class="recipe-group-count">{{ page.rows|length }} entries</span>
+    <span class="recipe-group-count">{{ t("common.entries_count", count=page.rows|length) }}</span>
   </div>
   <div class="table-wrap">
     <table class="recipe-table">
-      <thead><tr><th>System</th><th>Category</th><th>Recipe</th><th>Inputs</th><th>Outputs</th><th>Notes</th></tr></thead>
+      <thead><tr><th>{{ t("recipes.th_system") }}</th><th>{{ t("recipes.th_category") }}</th><th>{{ t("recipes.th_recipe") }}</th><th>{{ t("recipes.th_inputs") }}</th><th>{{ t("recipes.th_outputs") }}</th><th>{{ t("recipes.th_notes") }}</th></tr></thead>
       <tbody>
         {% for row in page.rows %}
         <tr data-filter-tags="{{ row.filter_tags }}" data-search="{{ row.search_text }}">
-          <td data-label="System"><strong>{{ row.system }}</strong></td>
-          <td data-label="Category">{{ row.category }}</td>
-          <td data-label="Recipe"><strong>{{ row.recipe }}</strong></td>
-          <td data-label="Inputs"><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
-          <td data-label="Outputs"><ul class="result-list">{% for item in row.results %}<li>{{ item }}</li>{% endfor %}</ul></td>
-          <td data-label="Notes"><ul class="result-list">{% for item in row.details %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td data-label="{{ t('recipes.th_system') }}"><strong>{{ row.system }}</strong></td>
+          <td data-label="{{ t('recipes.th_category') }}">{{ row.category }}</td>
+          <td data-label="{{ t('recipes.th_recipe') }}"><strong>{{ row.recipe }}</strong></td>
+          <td data-label="{{ t('recipes.th_inputs') }}"><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td data-label="{{ t('recipes.th_outputs') }}"><ul class="result-list">{% for item in row.results %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td data-label="{{ t('recipes.th_notes') }}"><ul class="result-list">{% for item in row.details %}<li>{{ item }}</li>{% endfor %}</ul></td>
         </tr>
         {% endfor %}
       </tbody>

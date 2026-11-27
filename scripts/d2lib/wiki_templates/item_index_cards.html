@@ -1,30 +1,30 @@
-{% from "history.html" import item_history %}
+{% from "history.html" import item_history with context %}
 {% macro comparison_cell(label, value, other, note, other_note, status, side) %}
 <span class="sp-cell is-{{ status }}">{% if label %}<strong>{{ label }}:</strong> {% endif %}{{ value|comparison_highlight(other, side) }}{% if note %}<small class="comparison-note">{{ note|comparison_highlight(other_note, side) }}</small>{% endif %}</span>
 {% endmacro %}
 
 {% macro comparison_rows(rows, show_labels=true) %}
   {% for row in rows %}
-  {% set label = row.label if show_labels else "" %}
+  {% set label = t_stat(row) if show_labels else "" %}
   <div class="sp-row">{{ comparison_cell(label, row.old, row.new, row.old_note, row.new_note, row.status, "old") }}{{ comparison_cell(label, row.new, row.old, row.new_note, row.old_note, row.status, "new") }}</div>
   {% endfor %}
 {% endmacro %}
 
 {% macro properties(rows) %}
   {% if rows %}
-  <div class="sp-sep">Properties</div>
+  <div class="sp-sep">{{ t("common.properties") }}</div>
   {{ comparison_rows(rows, false) }}
   {% endif %}
 {% endmacro %}
 
 {% for family, entries in item_entries.items() %}
 <section class="item-family-section" data-section-family="{{ family }}" style="display:grid;gap:12px">
-  <div class="section-head"><h2>{{ item_section_titles[family] if item_section_titles is defined else family|title ~ ' Items' }}</h2></div>
+  <div class="section-head"><h2>{{ item_section_titles[family] if item_section_titles is defined and family in item_section_titles else t("items.family_heading." ~ family) }}</h2></div>
   <div class="family-items-grid">
     {% for item in entries %}
     <div class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="{{ family }}" data-status="{{ item.status }}" data-item-group="{{ item.item_group }}" data-item-type="{{ item.item_type }}" data-drop-level="{{ item.drop_level }}" data-search="{{ item.search_text }}"{% if item.affix_spawnable is defined %} data-affix-spawnable="{{ '1' if item.affix_spawnable else '0' }}"{% endif %}{% if item.rare_item_types is defined and item.rare_item_types is not none %} data-affix-rare-types="{{ item.rare_item_types }}"{% endif %}{% if item.anchor %} id="{{ item.anchor }}"{% endif %}{% if family == "skill" %} data-skill-card{% endif %}>
       <div class="sp-head">
-        {% if item.icon_src %}<img class="set-th-icon" src="{{ asset_root|default(site_root) }}{{ item.icon_src }}" alt="{{ item.title }} icon">{% endif %}
+        {% if item.icon_src %}<img class="set-th-icon" src="{{ asset_root|default(site_root) }}{{ item.icon_src }}" alt="{{ item.title }}">{% endif %}
         <div style="min-width:0;flex:1">
           {% if item.anchor %}
           <a class="set-th-name" style="color:var(--q-{{ item.card_quality|default(family) }})" href="#{{ item.anchor }}">{{ item.title }}</a>
@@ -37,19 +37,19 @@
             {% for rune in item.runes %}<span class="rune-chip" style="min-width:44px" title="{{ rune.name }}">{% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ asset_root|default(site_root) }}{{ rune.icon_src }}" alt="{{ rune.name }}">{% endif %}<span>{{ rune.name or rune.code }}</span></span>{% endfor %}
           </div>
           {% endif %}
-          {% if item.drop_level_label %}<span class="item-drop-level">Drop {{ item.drop_level_label }}</span>{% endif %}
+          {% if item.drop_level_label %}<span class="item-drop-level">{{ t("items.drop_label", label=item.drop_level_label) }}</span>{% endif %}
         </div>
       </div>
       {% if item.history is defined %}{{ item_history(item.history) }}{% endif %}
       <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
       {{ comparison_rows(item.stat_rows) }}
       {% if item.base_stats %}
-      <div class="sp-sep">Base Stats</div>
+      <div class="sp-sep">{{ t("common.base_stats") }}</div>
       {{ comparison_rows(item.base_stats) }}
       {% endif %}
       {{ properties(item.property_rows) }}
       {% for section in item.comparison_sections %}
-      <div class="sp-sep">{{ section.title }}</div>
+      <div class="sp-sep">{{ t("skills.section." ~ section.key) if section.key is defined else section.title }}</div>
       {{ comparison_rows(section.stat_rows) }}
       {{ properties(section.property_rows) }}
       {% endfor %}
