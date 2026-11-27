@@ -25,6 +25,7 @@ from d2lib.services import (
     DropSourceAnalyzerService,
     ReferenceAnalyzerService,
 )
+from d2lib.services.items import ItemAnalyzerService
 from d2lib.services.resolver import load_property_groups
 from d2lib.services.skill_comparison import SkillComparisonService
 from d2lib.services.recipes import RecipePresentationBuilder
@@ -81,9 +82,9 @@ REPO_ROOT = os.path.abspath(os.path.join(D2LIB_DIR, "..", ".."))
 class WikiContentBuilder:
     def __init__(
         self,
-        item_db_dir: str,
-        skill_tree_dir: str,
-        output_dir: str,
+        item_db_dir: Optional[str] = None,
+        skill_tree_dir: str = "",
+        output_dir: str = "",
         old_item_db_dir: Optional[str] = None,
         old_label: str = "Retail",
         new_label: str = "BKDiablo",
@@ -91,6 +92,10 @@ class WikiContentBuilder:
         retail_data_dir: Optional[str] = None,
         layout_data_dir: Optional[str] = None,
         locale: str = "enUS",
+        repo: Optional[D2Repository] = None,
+        retail_repo: Optional[D2Repository] = None,
+        asset_root_prefix: str = "",
+        emit_shared_assets: bool = True,
     ):
         self.item_db_dir = item_db_dir
         self.skill_tree_dir = skill_tree_dir
@@ -102,36 +107,60 @@ class WikiContentBuilder:
         self.retail_data_dir = retail_data_dir or os.path.join(REPO_ROOT, "data", "retail")
         self.layout_data_dir = layout_data_dir
         self.locale = str(locale or "enUS").strip() or "enUS"
-        self.site: WikiSiteDTO = empty_wiki_site(old_label, new_label, locale=self.locale)
+        self.asset_root_prefix = str(asset_root_prefix or "").strip()
+        self.emit_shared_assets = bool(emit_shared_assets)
+        self._provided_repo = repo
+        self._provided_retail_repo = retail_repo
+        self._icon_exporter: Optional[ItemIconExporter] = None
+        self.site: WikiSiteDTO = empty_wiki_site(
+            old_label,
+            new_label,
+            locale=self.locale,
+            asset_root_prefix=self.asset_root_prefix,
+        )
         self.writer = WikiSiteRecordingWriter(self.site)
         self.manifest = self.site["manifest"]
-        self._repo: Optional[D2Repository] = None
-        self._retail_repo: Optional[D2Repository] = None
+        self._repo: Optional[D2Repository] = repo
+        self._retail_repo: Optional[D2Repository] = retail_repo
 
     def build(self) -> WikiSiteDTO:
-        self.site = empty_wiki_site(self.old_label, self.new_label, locale=self.locale)
+        self.site = empty_wiki_site(
+            self.old_label,
+            self.new_label,
+            locale=self.locale,
+            asset_root_prefix=self.asset_root_prefix,
+        )
         self.writer = WikiSiteRecordingWriter(self.site)
         self.manifest = self.site["manifest"]
+        self._icon_exporter = None
 
         # Cached repos — all _load_* and _write_* methods share these instances.
-        self._repo = D2Repository(self.game_data_dir, locale=self.locale)
+        if self._provided_repo is not None and getattr(self._provided_repo, "locale", self.locale) == self.locale:
+            self._repo = self._provided_repo
+        else:
+            self._repo = D2Repository(self.game_data_dir, locale=self.locale)
         self._taxonomy = ItemTypeTaxonomy(self._repo)
-        self._retail_repo = D2Repository(self.retail_data_dir, locale=self.locale)
+        if self._provided_retail_repo is not None and getattr(self._provided_retail_repo, "locale", self.locale) == self.locale:
+            self._retail_repo = self._provided_retail_repo
+        else:
+            self._retail_repo = D2Repository(self.retail_data_dir, locale=self.locale)
 
         history_config = json.loads(Path(REPO_ROOT, "data", "item-history.json").read_text(encoding="utf-8"))
         history_collector = HistoryCollector(self.game_data_dir, Path(REPO_ROOT, ".cache", "item-history"), history_config)
         self._history = history_collector.collect()
         self._history_aliases = history_config.get("aliases", {})
         self.writer.write_text("data/item-history.json", json.dumps(self._history, ensure_ascii=True))
-        items = self._load_items()
+        use_item_db = self._has_item_db_json(self.item_db_dir)
+        items = self._load_items(self.item_db_dir) if use_item_db else self._analyze_items_from_repo(self._repo)
         for family, entries in items.items():
             for entry in entries:
                 entry["history"] = item_history(self._history, family, entry.get("raw_row", {}), self._history_aliases)
-        old_items = (
-            self._load_items(self.old_item_db_dir)
-            if self.old_item_db_dir
-            else {family: [] for family in ITEM_FAMILIES}
-        )
+        if self._has_item_db_json(self.old_item_db_dir):
+            old_items = self._load_items(self.old_item_db_dir)
+        elif not use_item_db and not self.old_item_db_dir:
+            old_items = self._analyze_items_from_repo(self._retail_repo)
+        else:
+            old_items = {family: [] for family in ITEM_FAMILIES}
         old_item_index = self._index_items(old_items)
         class_pages = self._load_class_pages()
         area_entries = self._load_area_entries()
@@ -656,6 +685,50 @@ class WikiContentBuilder:
             if filename.lower().endswith(".txt")
         )
 
+    @staticmethod
+    def _has_item_db_json(item_db_dir: Optional[str]) -> bool:
+        if not item_db_dir or not os.path.isdir(item_db_dir):
+            return False
+        for subdir in ("uniques", "sets", "runewords"):
+            target = os.path.join(item_db_dir, subdir)
+            if not os.path.isdir(target):
+                continue
+            for _, _, files in os.walk(target):
+                if any(filename.endswith(".json") for filename in files):
+                    return True
+        return False
+
+    def _analyze_items_from_repo(self, repo: Optional[D2RepositoryProtocol]) -> Dict[str, List[Dict[str, Any]]]:
+        items: Dict[str, List[Dict[str, Any]]] = {family: [] for family in ITEM_FAMILIES}
+        if repo is None:
+            return items
+
+        fallback_group_path = os.path.join(REPO_ROOT, "data", "propertygroups.txt")
+        property_groups = load_property_groups(repo, fallback_group_path)
+        resolver = PropertyResolverService(repo, property_groups)
+        analyzer = ItemAnalyzerService(repo, resolver)
+
+        for row in repo.get_excel_table("uniqueitems"):
+            if row.get("disabled") == "1":
+                continue
+            record = dict(analyzer.analyze_unique(row))
+            if should_include_item(record, "unique"):
+                items["unique"].append(record)
+
+        for row in repo.get_excel_table("runes"):
+            if row.get("complete") != "1":
+                continue
+            record = dict(analyzer.analyze_runeword(row))
+            if should_include_item(record, "runeword"):
+                items["runeword"].append(record)
+
+        for row in repo.get_excel_table("setitems"):
+            record = dict(analyzer.analyze_set_item(row))
+            if should_include_item(record, "set"):
+                items["set"].append(record)
+
+        return items
+
     def _load_items(self, item_db_dir: Optional[str] = None) -> Dict[str, List[Dict[str, Any]]]:
         items: Dict[str, List[Dict[str, Any]]] = {family: [] for family in ITEM_FAMILIES}
         source_dir = item_db_dir or self.item_db_dir
@@ -710,7 +783,20 @@ class WikiContentBuilder:
 
     # ── Writers ─────────────────────────────────────────────────────────────
 
+    def _get_icon_exporter(self) -> ItemIconExporter:
+        if self._icon_exporter is None:
+            self._icon_exporter = ItemIconExporter(
+                self.writer,
+                self.game_data_dir,
+                self.retail_data_dir,
+                repository=self._repo,
+                emit_assets=self.emit_shared_assets,
+            )
+        return self._icon_exporter
+
     def _write_assets(self) -> None:
+        if not self.emit_shared_assets:
+            return
         ASSET_SOURCE_DIR = os.path.join(MODULE_DIR, "..", "wiki_assets")
         if not os.path.isdir(ASSET_SOURCE_DIR):
             ASSET_SOURCE_DIR = os.path.join(D2LIB_DIR, "wiki_assets")
@@ -720,7 +806,7 @@ class WikiContentBuilder:
                 self.writer.copy_asset(source_path, f"assets/{filename}")
 
     def _write_base_item_pages(self, families: List[BaseItemFamilyDTO], retail_items: Dict[str, Any]) -> None:
-        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir, repository=self._repo)
+        icon_exporter = self._get_icon_exporter()
         icon_exporter.attach_base_item_icons(families)
 
         for family in families:
@@ -824,7 +910,7 @@ class WikiContentBuilder:
         )
 
     def _write_misc_pages(self, groups: List[MiscGroupDTO]) -> None:
-        ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir, repository=self._repo).attach_misc_item_icons(groups)
+        self._get_icon_exporter().attach_misc_item_icons(groups)
         self._write_page(
             title=f"Materials | {self.new_label} Wiki",
             output_path=WikiRoutes.misc_index_output_path(),
@@ -835,7 +921,7 @@ class WikiContentBuilder:
         )
 
     def _write_gems_runes_pages(self, groups: List[MiscGroupDTO], retail_items: Dict[str, Any]) -> None:
-        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir, repository=self._repo)
+        icon_exporter = self._get_icon_exporter()
         icon_exporter.attach_misc_item_icons(groups)
 
         for group in groups:
@@ -1027,7 +1113,7 @@ class WikiContentBuilder:
         retail_base_items: Dict[str, Any],
     ) -> Dict[str, List[Dict[str, str]]]:
         page_entries: Dict[str, List[Dict[str, str]]] = {family: [] for family in ITEM_FAMILIES}
-        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir, repository=self._repo)
+        icon_exporter = self._get_icon_exporter()
         drop_base_lookup = self._drop_base_lookup(self._repo)
         bk_sets = self._sets_lookup(self._repo)
         retail_sets = self._sets_lookup(self._retail_repo)
@@ -1162,7 +1248,7 @@ class WikiContentBuilder:
     ) -> None:
         entry_by_identity = {entry["identity"]: entry for entry in page_entries if entry.get("identity")}
         href_by_title = {entry["title"]: entry for entry in page_entries}
-        icon_exporter = ItemIconExporter(self.writer, self.game_data_dir, self.retail_data_dir, repository=self._repo)
+        icon_exporter = self._get_icon_exporter()
         old_runewords = (old_item_index or {}).get("runeword", {})
         records = []
         rune_options_by_code: Dict[str, Dict[str, str]] = {}
@@ -1853,9 +1939,9 @@ class WikiGenerator:
 
     def __init__(
         self,
-        item_db_dir: str,
-        skill_tree_dir: str,
-        output_dir: str,
+        item_db_dir: Optional[str] = None,
+        skill_tree_dir: str = "",
+        output_dir: str = "",
         old_item_db_dir: Optional[str] = None,
         old_label: str = "Retail",
         new_label: str = "BKDiablo",
@@ -1863,6 +1949,10 @@ class WikiGenerator:
         retail_data_dir: Optional[str] = None,
         layout_data_dir: Optional[str] = None,
         locale: str = "enUS",
+        repo: Optional[D2Repository] = None,
+        retail_repo: Optional[D2Repository] = None,
+        asset_root_prefix: str = "",
+        emit_shared_assets: bool = True,
     ):
         self.item_db_dir = item_db_dir
         self.skill_tree_dir = skill_tree_dir
@@ -1874,6 +1964,10 @@ class WikiGenerator:
         self.retail_data_dir = retail_data_dir
         self.layout_data_dir = layout_data_dir
         self.locale = locale
+        self.repo = repo
+        self.retail_repo = retail_repo
+        self.asset_root_prefix = asset_root_prefix
+        self.emit_shared_assets = emit_shared_assets
 
     def build_site(self) -> WikiSiteDTO:
         return WikiContentBuilder(
@@ -1887,6 +1981,10 @@ class WikiGenerator:
             retail_data_dir=self.retail_data_dir,
             layout_data_dir=self.layout_data_dir,
             locale=self.locale,
+            repo=self.repo,
+            retail_repo=self.retail_repo,
+            asset_root_prefix=self.asset_root_prefix,
+            emit_shared_assets=self.emit_shared_assets,
         ).build()
 
     def generate(self) -> WikiSiteDTO:

@@ -707,11 +707,13 @@ class ItemIconExporter:
         retail_data_dir: str,
         output_prefix: str = "assets/item-icons",
         repository: Optional[D2RepositoryProtocol] = None,
+        emit_assets: bool = True,
     ):
         self.writer = writer
         self.game_data_dir = game_data_dir
         self.retail_data_dir = retail_data_dir
         self.output_prefix = output_prefix
+        self.emit_assets = emit_assets
         self._written: set[str] = set()
         self._item_asset_maps = [self._load_item_asset_map(path) for path in self._hd_item_manifest_paths()]
         self._unique_asset_maps = [self._load_quality_asset_map(path) for path in self._hd_quality_manifest_paths("uniques.json")]
@@ -772,7 +774,8 @@ class ItemIconExporter:
             png_bytes = self._icon_png_bytes(item_code, icon_key, quality_family, quality_key, output_key=output_key)
             if not png_bytes:
                 return ""
-            self.writer.write_bytes(relative_path, png_bytes)
+            if self.emit_assets:
+                self.writer.write_bytes(relative_path, png_bytes)
             self._written.add(relative_path)
 
         return relative_path

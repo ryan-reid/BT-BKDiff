@@ -4,7 +4,7 @@ import difflib
 import re
 from markupsafe import Markup, escape
 import shutil
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Sequence
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 MODULE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -67,10 +67,16 @@ class HtmlWikiRenderer:
 
     def render_page(self, page: WikiPageDTO, site: WikiSiteDTO) -> str:
         output_path = page["output_path"]
+        site_root = WikiRoutes.site_root_for_output_path(output_path)
+        asset_prefix = str(site.get("asset_root_prefix", "") or "").strip().replace("\\", "/")
+        if asset_prefix and not asset_prefix.endswith("/"):
+            asset_prefix = f"{asset_prefix}/"
+        asset_root = f"{site_root}{asset_prefix}"
         return self.renderer.render(
             page["template_name"],
             title=page["title"],
-            site_root=WikiRoutes.site_root_for_output_path(output_path),
+            site_root=site_root,
+            asset_root=asset_root,
             old_label=site["old_label"],
             new_label=site["new_label"],
             locale=site.get("locale", "enUS"),
@@ -107,12 +113,17 @@ class WikiOutputWriter:
         shutil.copyfile(source_path, full_path)
         self.generated_paths.add(normalized)
 
-    def remove_stale_files(self) -> None:
+    def remove_stale_files(self, preserved_prefixes: Optional[Sequence[str]] = None) -> None:
+        prefixes = tuple(
+            prefix.replace("\\", "/").strip("/") + "/"
+            for prefix in (preserved_prefixes or ())
+            if str(prefix).strip("/")
+        )
         for root, dirs, files in os.walk(self.output_dir, topdown=False):
             for filename in files:
                 full_path = os.path.join(root, filename)
                 rel_path = os.path.relpath(full_path, self.output_dir).replace("\\", "/")
-                if rel_path in self.generated_paths:
+                if rel_path in self.generated_paths or (prefixes and rel_path.startswith(prefixes)):
                     continue
                 try:
                     os.remove(full_path)
@@ -134,7 +145,12 @@ class WikiPublisher:
         self.output_dir = output_dir
         self.writer = WikiOutputWriter(output_dir)
 
-    def publish(self, site: WikiSiteDTO, renderer: HtmlWikiRenderer) -> None:
+    def publish(
+        self,
+        site: WikiSiteDTO,
+        renderer: HtmlWikiRenderer,
+        preserved_prefixes: Optional[Sequence[str]] = None,
+    ) -> None:
         os.makedirs(self.output_dir, exist_ok=True)
         self.writer.generated_paths = set()
 
@@ -150,4 +166,4 @@ class WikiPublisher:
         for page in site["pages"]:
             self.writer.write_text(page["output_path"], renderer.render_page(page, site))
 
-        self.writer.remove_stale_files()
+        self.writer.remove_stale_files(preserved_prefixes=preserved_prefixes)

@@ -1,3 +1,4 @@
+import argparse
 import os
 import sys
 import csv
@@ -49,6 +50,16 @@ class Orchestrator:
             return False
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Regenerate all comparison reports and static wiki outputs.")
+    parser.add_argument("--locale", default="enUS", help="Target wiki locale code (e.g. enUS, deDE, koKR)")
+    parser.add_argument(
+        "--locales",
+        default="",
+        help="Comma-separated wiki locale codes to build (first is primary at root; others under <wiki_out>/<locale>/). Overrides --locale when set.",
+    )
+    args = parser.parse_args()
+    target_locales = generate_wiki.parse_locales(args.locale, args.locales)
+
     failures = []
     orch = Orchestrator()
 
@@ -123,9 +134,28 @@ def main() -> None:
     if not orch.run_task("Generating BK vs Retail Override File Comparison Report", compare_override_files.run, bk_mpq, retail_data, file_diff_retail_bk):
         failures.append("Generating BK vs Retail Override File Comparison Report")
 
-    # 9. Generate the static wiki, including skills joined directly from source tables.
+    # 9. Generate the static wiki directly from game data repositories.
     layout_data = os.environ.get("D2R_LAYOUT_DATA_DIR", "").strip() or os.environ.get("D2R_DATA_DIR", "").strip() or None
-    if not orch.run_task("Generating Wiki Pages", generate_wiki.run, bk_out, skill_trees_out, wiki_out, old_item_db_dir=retail_out, game_data_dir=bk_mpq, retail_data_dir=retail_data, layout_data_dir=layout_data, old_label="Retail", new_label="BKDiablo", bt_item_db_dir=bt_out, bt_data_dir=bt_mpq):
+    if not orch.run_task(
+        "Generating Wiki Pages",
+        generate_wiki.run,
+        None,
+        skill_trees_out,
+        wiki_out,
+        old_item_db_dir=None,
+        game_data_dir=bk_mpq,
+        retail_data_dir=retail_data,
+        layout_data_dir=layout_data,
+        old_label="Retail",
+        new_label="BKDiablo",
+        bt_item_db_dir=None,
+        bt_data_dir=bt_mpq,
+        locale=target_locales[0],
+        locales=target_locales,
+        repo=repo_bk,
+        retail_repo=repo_retail,
+        bt_repo=repo_bt,
+    ):
         failures.append("Generating Wiki Pages")
 
     if failures:

@@ -8,6 +8,7 @@ from d2lib.repository import D2Repository
 from d2lib.services.items import ItemAnalyzerService, BaseItemAnalyzerService
 from d2lib.services.misc import MiscAnalyzerService
 from d2lib.services.resolver import PropertyResolverService, load_property_groups
+from d2lib.utils import slugify
 from d2lib.wiki.comparison import item_comparison_context, base_item_comparison_context, gem_rune_comparison_context, runeword_compare_rows
 from d2lib.wiki.history import PRIMARY, TABLES, VERSION, Snapshot, digest, parse_table, item_history
 from d2lib.wiki.item_helpers import item_identity, item_title
@@ -15,15 +16,18 @@ from d2lib.wiki.renderers import WikiRenderer
 
 
 class HistoricalRepository:
-    def __init__(self, tables, strings):
+    def __init__(self, tables, strings, locale="enUS", canonical_strings=None):
         self.tables = tables
         self.strings = strings
+        self.locale = str(locale or "enUS").strip() or "enUS"
+        self.canonical_strings = canonical_strings if canonical_strings is not None else {}
 
     def get_excel_table(self, name):
         return self.tables.get(name, [])
 
     # Current localization is presentation only; never read current gameplay data.
     get_string = D2Repository.get_string
+    get_canonical_string = D2Repository.get_canonical_string
 
 
 def with_shared_set_bonuses(entry, sets, resolver):
@@ -92,7 +96,7 @@ def comparison_has_changes(comparison, base_comparison=None, availability=None):
     return False
 
 
-def analyze_revision(tables, strings, identity, canonical, context=None, property_groups=None):
+def analyze_revision(tables, strings, identity, canonical, context=None, property_groups=None, locale="enUS", canonical_strings=None):
     matches = [(table, row) for table, (family, key) in PRIMARY.items()
                for row in tables.get(table, [])
                if row.get(key) and canonical(f'{family}:{row[key]}') == identity]
@@ -103,7 +107,7 @@ def analyze_revision(tables, strings, identity, canonical, context=None, propert
     table, row = matches[0]
     try:
         if context is None:
-            repo = HistoricalRepository(tables, strings)
+            repo = HistoricalRepository(tables, strings, locale=locale, canonical_strings=canonical_strings)
             resolver = PropertyResolverService(repo, property_groups)
             context = (Snapshot(tables), ItemAnalyzerService(repo, resolver), BaseItemAnalyzerService(repo, resolver), MiscAnalyzerService(repo, resolver))
         snapshot, service, base_service, misc_service = context
@@ -194,7 +198,11 @@ def write_history_comparisons(collector, artifact, repo, items, old_index, bases
     source_files = [Path(__file__), Path(__file__).with_name('history.py')]
     source_files += list(Path(__file__).parents[1].joinpath('services').glob('*.py'))
     analyzer_version = digest([p.read_text(encoding='utf-8') for p in sorted(source_files)])
-    strings_version = digest(repo.strings)
+    locale = str(getattr(repo, 'locale', None) or 'enUS').strip() or 'enUS'
+    locale_slug = slugify(locale) or 'enus'
+    canonical_strings = getattr(repo, 'canonical_strings', None) or {}
+    property_groups_version = digest(property_groups)
+    strings_version = digest([locale, repo.strings, canonical_strings])
     rendered = defaultdict(list)
     renderer = WikiRenderer()
     # Analyze every requested commit first so consecutive revisions can be diffed.
@@ -203,7 +211,7 @@ def write_history_comparisons(collector, artifact, repo, items, old_index, bases
         if sha not in requests:
             continue
         identities = sorted(requests[sha])
-        cache_key = digest([sha, identities, analyzer_version, strings_version, collector.config])
+        cache_key = digest([sha, identities, analyzer_version, strings_version, property_groups_version, locale, collector.config])
         def build():
             tables = {}
             for line in collector.git('ls-tree', '-r', sha, '--', collector.excel_path).splitlines():
@@ -212,13 +220,13 @@ def write_history_comparisons(collector, artifact, repo, items, old_index, bases
                     blob = line.split()[2]
                     tables[name] = collector.cached(f'table-{VERSION}-{blob}.json',
                         lambda b=blob: parse_table(collector.git('cat-file', 'blob', b, binary=True)))
-            historical_repo = HistoricalRepository(tables, repo.strings)
+            historical_repo = HistoricalRepository(tables, repo.strings, locale=locale, canonical_strings=canonical_strings)
             resolver = PropertyResolverService(historical_repo, property_groups)
             context = (Snapshot(tables), ItemAnalyzerService(historical_repo, resolver),
                        BaseItemAnalyzerService(historical_repo, resolver), MiscAnalyzerService(historical_repo, resolver))
-            return {identity: analyze_revision(tables, repo.strings, identity, collector.canonical, context) for identity in identities}
+            return {identity: analyze_revision(tables, repo.strings, identity, collector.canonical, context, locale=locale, canonical_strings=canonical_strings) for identity in identities}
         try:
-            analyzed_by_sha[sha] = collector.cached(f'presentation-{cache_key}.json', build)
+            analyzed_by_sha[sha] = collector.cached(f'presentation-{locale_slug}-{cache_key}.json', build)
         except (ValueError, UnicodeError) as exc:
             analyzed_by_sha[sha] = {identity: {'status': 'unavailable', 'reason': str(exc)} for identity in identities}
 
@@ -261,7 +269,7 @@ def write_history_comparisons(collector, artifact, repo, items, old_index, bases
         rendered[identity] = points  # oldest → newest
 
     for identity, (record, family, title, _) in targets.items():
-        path = f'data/item-revisions/{digest(identity)[:24]}.json'
+        path = f'data/item-revisions/{locale_slug}/{digest(identity)[:24]}.json'
         record['revisions_path'] = path
         writer.write_text(path, json.dumps(dict(title=title, family=family, old_label=old_label,
-            revisions=rendered[identity]), ensure_ascii=True))
+            revisions=rendered[identity]), ensure_ascii=False))
