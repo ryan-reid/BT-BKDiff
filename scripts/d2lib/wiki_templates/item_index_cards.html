@@ -24,7 +24,7 @@
     {% for item in entries %}
     <div class="base-item-card item-index-card" style="padding:0;overflow:hidden" data-family="{{ family }}" data-status="{{ item.status }}" data-item-group="{{ item.item_group }}" data-item-type="{{ item.item_type }}" data-drop-level="{{ item.drop_level }}" data-search="{{ item.search_text }}"{% if item.affix_spawnable is defined %} data-affix-spawnable="{{ '1' if item.affix_spawnable else '0' }}"{% endif %}{% if item.rare_item_types is defined and item.rare_item_types is not none %} data-affix-rare-types="{{ item.rare_item_types }}"{% endif %}{% if item.anchor %} id="{{ item.anchor }}"{% endif %}{% if family == "skill" %} data-skill-card{% endif %}>
       <div class="sp-head">
-        {% if item.icon_src %}<img class="set-th-icon" src="{{ site_root }}{{ item.icon_src }}" alt="{{ item.title }} icon">{% endif %}
+        {% if item.icon_src %}<img class="set-th-icon" src="{{ asset_root|default(site_root) }}{{ item.icon_src }}" alt="{{ item.title }} icon">{% endif %}
         <div style="min-width:0;flex:1">
           {% if item.anchor %}
           <a class="set-th-name" style="color:var(--q-{{ item.card_quality|default(family) }})" href="#{{ item.anchor }}">{{ item.title }}</a>
@@ -34,7 +34,7 @@
           <span class="set-th-meta">{{ item.summary }}</span>
           {% if item.runes %}
           <div class="rune-sequence" style="margin-top:6px;justify-content:flex-start;flex-wrap:wrap;gap:4px">
-            {% for rune in item.runes %}<span class="rune-chip" style="min-width:44px" title="{{ rune.name }}">{% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }}">{% endif %}<span>{{ rune.name or rune.code }}</span></span>{% endfor %}
+            {% for rune in item.runes %}<span class="rune-chip" style="min-width:44px" title="{{ rune.name }}">{% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ asset_root|default(site_root) }}{{ rune.icon_src }}" alt="{{ rune.name }}">{% endif %}<span>{{ rune.name or rune.code }}</span></span>{% endfor %}
           </div>
           {% endif %}
           {% if item.drop_level_label %}<span class="item-drop-level">Drop {{ item.drop_level_label }}</span>{% endif %}

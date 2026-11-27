@@ -38,19 +38,29 @@ class WikiSiteDTO(TypedDict):
     new_label: str
     locale: str
     html_lang: str
+    asset_root_prefix: str
     pages: List[WikiPageDTO]
     assets: List[WikiAssetDTO]
     data_files: List[WikiDataFileDTO]
     manifest: List[WikiManifestEntryDTO]
 
 
-def empty_wiki_site(old_label: str, new_label: str, locale: str = "enUS") -> WikiSiteDTO:
+def empty_wiki_site(
+    old_label: str,
+    new_label: str,
+    locale: str = "enUS",
+    asset_root_prefix: str = "",
+) -> WikiSiteDTO:
     clean_locale = str(locale or "enUS").strip() or "enUS"
+    clean_prefix = str(asset_root_prefix or "").strip().replace("\\", "/")
+    if clean_prefix and not clean_prefix.endswith("/"):
+        clean_prefix = f"{clean_prefix}/"
     return {
         "old_label": old_label,
         "new_label": new_label,
         "locale": clean_locale,
         "html_lang": locale_to_html_lang(clean_locale),
+        "asset_root_prefix": clean_prefix,
         "pages": [],
         "assets": [],
         "data_files": [],

@@ -38,7 +38,7 @@
     <div class="runeword-rune-selector" data-rune-selector aria-label="Runes I Have">
       {% for rune in rune_options %}
       <button class="rune-chip rune-option" type="button" data-rune-option data-rune-code="{{ rune.code }}" data-rune-terms="{{ rune.filter_terms }}" aria-pressed="false" title="{{ rune.name }}">
-        {% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }}" />{% endif %}
+        {% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ asset_root|default(site_root) }}{{ rune.icon_src }}" alt="{{ rune.name }}" />{% endif %}
         <span>{{ rune.name }}</span>
       </button>
       {% endfor %}
@@ -60,7 +60,7 @@
         <div class="rune-sequence" style="margin-top:6px;justify-content:flex-start;flex-wrap:wrap;gap:4px">
           {% for rune in runeword.runes %}
           <span class="rune-chip" style="min-width:44px" title="{{ rune.name }}">
-            {% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ site_root }}{{ rune.icon_src }}" alt="{{ rune.name }}" />{% endif %}
+            {% if rune.icon_src %}<img class="wiki-item-icon rune-chip-icon" src="{{ asset_root|default(site_root) }}{{ rune.icon_src }}" alt="{{ rune.name }}" />{% endif %}
             <span>{{ rune.name }}</span>
           </span>
           {% endfor %}
