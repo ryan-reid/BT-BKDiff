@@ -200,6 +200,45 @@ class TestAffixFunctions(unittest.TestCase):
         }, {"cm2": "Large Charm", "quest": "Quest Charm"})
         self.assertEqual("Large Charm", ReferenceAnalyzerService(repo)._item_type_names()["mcha"])
 
+    def test_item_type_names_skips_loot_filter_shorthand_and_distinguishes_armo_from_tors(self):
+        repo = Repository({
+            "itemtypes": [
+                {"Code": "armo", "ItemType": "Any Armor", "RunewordCategory1": "r_arm"},
+                {"Code": "tors", "ItemType": "Armor", "Equiv1": "armo", "UICategory": "armor", "RunewordCategory1": "r_arm"},
+                {"Code": "bowq", "ItemType": "Bow Quiver", "Normal": "1", "UICategory": "ammo"},
+                {"Code": "xboq", "ItemType": "Crossbow Quiver", "Normal": "1", "UICategory": "ammo"},
+                {"Code": "jewl", "ItemType": "Jewel", "Normal": "0", "UICategory": "jewel"},
+                {"Code": "bow", "ItemType": "Bow", "UICategory": "bows"},
+            ],
+            "misc": [
+                {"type": "bowq", "namestr": "aqv", "code": "aqv"},
+                {"type": "xboq", "namestr": "cqv", "code": "cqv"},
+                {"type": "jewl", "namestr": "jew", "code": "jew"},
+            ],
+            "weapons": [
+                {"type": "bow", "namestr": "bow", "code": "bow"},
+            ],
+            "runes": [
+                {"complete": "1", "itype1": "tors"},
+            ],
+        }, {
+            "armor": "Armor",
+            "r_arm": "Body Armor",
+            "aqv": "A",
+            "cqv": "B",
+            "jew": "•• Jewel ••",
+            "Jewel": "Jewels",
+            "jewel": "Jewels",
+            "bow": "활",
+        })
+        names = ReferenceAnalyzerService(repo)._item_type_names()
+        self.assertEqual("Armor", names["armo"])
+        self.assertEqual("Body Armor", names["tors"])
+        self.assertEqual("Bow Quiver", names["bowq"])
+        self.assertEqual("Crossbow Quiver", names["xboq"])
+        self.assertEqual("Jewels", names["jewl"])
+        self.assertEqual("활", names["bow"])
+
     def test_cold_duration_is_present_for_both_encodings_without_duplicates(self):
         groups = groups_for(
             [

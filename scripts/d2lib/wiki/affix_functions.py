@@ -3,6 +3,7 @@ from typing import Any, Dict, Iterable, List, Tuple
 
 from d2lib.repository import resolve_localized_string
 from d2lib.services.references import ReferenceAnalyzerService
+from d2lib.utils import slugify
 
 
 AFFIX_FUNCTIONS_SLUG = "affixes-by-function"
@@ -149,6 +150,21 @@ def affix_function_groups(service: ReferenceAnalyzerService):
         for _, identity in groups
     }
     unqualified_counts = Counter(title for title, identity in groups if not contexts[identity])
+    def _anchor_for_identity(identity_key: Tuple[Tuple[str, ...], Tuple[Tuple[str, str], ...]]) -> str:
+        stats_tuple, params_tuple = identity_key
+        parts = [*stats_tuple, *(f"{code}-{param}" for code, param in params_tuple)]
+        return f"affix-function-{slugify(' '.join(parts))}"
+
+    anchors_by_identity: Dict[Tuple[Tuple[str, ...], Tuple[Tuple[str, str], ...]], str] = {}
+    used_anchors: Dict[str, int] = {}
+    for _, identity in sorted(groups.keys(), key=lambda pair: pair[1]):
+        if identity in anchors_by_identity:
+            continue
+        base_anchor = _anchor_for_identity(identity)
+        count = used_anchors.get(base_anchor, 0) + 1
+        used_anchors[base_anchor] = count
+        anchors_by_identity[identity] = base_anchor if count == 1 else f"{base_anchor}-{count}"
+
     result = []
     for (title, identity), rows in groups.items():
         if title_counts[title] > 1:
@@ -162,5 +178,5 @@ def affix_function_groups(service: ReferenceAnalyzerService):
             {k: v for k, v in row.items() if k != "_roll_numbers"}
             for row in sorted(rows, key=sort_key)
         ]
-        result.append({"title": title, "rows": sorted_rows})
+        result.append({"title": title, "anchor": anchors_by_identity[identity], "rows": sorted_rows})
     return sorted(result, key=lambda group: group["title"].casefold())

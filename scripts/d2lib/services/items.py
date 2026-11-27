@@ -288,14 +288,18 @@ class BaseItemAnalyzerService:
                 items_dto.append(self._analyze_item(code_to_item[m_code], tier_key))
 
             if items_dto:
-                group = self._family_group(items_dto)
+                group_key = self._family_group_key(items_dto)
+                group = self.taxonomy.group_label(group_key)
+                class_codes = self._family_class_codes(items_dto)
                 class_tags = self._family_class_tags(items_dto)
                 max_sockets = max(item["sockets"] for item in items_dto)
                 families.append({
                     "name": items_dto[0]["name"],
                     "group": group,
+                    "group_key": group_key,
                     "summary": self._family_summary(items_dto, group, class_tags, max_sockets),
                     "class_tags": class_tags,
+                    "class_codes": class_codes,
                     "max_sockets": max_sockets,
                     "search_text": self._family_search_text(items_dto, group, class_tags),
                     "members": items_dto
@@ -313,8 +317,11 @@ class BaseItemAnalyzerService:
         type_name = self.taxonomy.label(type_code) if type_code else ''
         item_type_chain = self.taxonomy.chain(type_code, row.get('type2', ''))
         type_categories = self._type_categories_for_item_type_chain(item_type_chain)
-        class_restriction = self._class_restriction_for_item_type(item_type_chain)
-        staffmod_class = self._staffmod_class_for_item_type(item_type_chain)
+        loot_category_key = self.taxonomy.ui_category_code(row) or "other"
+        class_restriction_code = self._class_restriction_code_for_item_type(item_type_chain)
+        class_restriction = self.class_names.get(class_restriction_code, class_restriction_code) if class_restriction_code else ""
+        staffmod_class_code = self._staffmod_class_code_for_item_type(item_type_chain)
+        staffmod_class = self.class_names.get(staffmod_class_code, staffmod_class_code) if staffmod_class_code else ""
 
         # Sockets
         base_sockets = int(row.get('gemsockets', '0') or '0')
@@ -377,6 +384,7 @@ class BaseItemAnalyzerService:
             "icon_key": row.get('invfile', '').strip(),
             "icon_src": "",
             "type": type_name,
+            "loot_category_key": loot_category_key,
             "loot_category": self.taxonomy.category(row),
             "type_codes": item_type_chain,
             "type_categories": type_categories,
@@ -397,7 +405,9 @@ class BaseItemAnalyzerService:
             "block": to_int(row.get('block')),
             "sockets": max(max_sockets_by_ilvl.values()),
             "max_sockets_by_ilvl": max_sockets_by_ilvl,
+            "class_restriction_code": class_restriction_code,
             "class_restriction": class_restriction,
+            "staffmod_class_code": staffmod_class_code,
             "staffmod_class": staffmod_class,
             "magic_level": to_int(row.get('magic lvl')),
             "inherent_stats": inherent_stats,
@@ -505,10 +515,24 @@ class BaseItemAnalyzerService:
         )
         return [{"key": str(speed), "label": str(speed)} for speed in speeds]
 
-    def _family_group(self, items: List[BaseItemDTO]) -> str:
+    @staticmethod
+    def _family_group_key(items: List[BaseItemDTO]) -> str:
         if any(item["defense_min"] is not None for item in items):
-            return self.taxonomy.group_label("armor")
-        return self.taxonomy.group_label("weapons")
+            return "armor"
+        return "weapons"
+
+    def _family_group(self, items: List[BaseItemDTO]) -> str:
+        return self.taxonomy.group_label(self._family_group_key(items))
+
+    @staticmethod
+    def _family_class_codes(items: List[BaseItemDTO]) -> List[str]:
+        codes = {
+            code
+            for item in items
+            for code in (item.get("class_restriction_code", ""), item.get("staffmod_class_code", ""))
+            if code
+        }
+        return sorted(codes)
 
     @staticmethod
     def _family_class_tags(items: List[BaseItemDTO]) -> List[str]:
@@ -666,16 +690,24 @@ class BaseItemAnalyzerService:
         }
         return {column for code, column in column_map.items() if code in item_type_chain}
 
-    def _class_restriction_for_item_type(self, item_type_chain: List[str]) -> str:
+    def _class_restriction_code_for_item_type(self, item_type_chain: List[str]) -> str:
         for code in item_type_chain:
             class_code = self.item_types.get(code, {}).get('Class', '').strip()
             if class_code:
-                return self.class_names.get(class_code.casefold(), class_code)
+                return class_code.casefold()
         return ""
 
-    def _staffmod_class_for_item_type(self, item_type_chain: List[str]) -> str:
+    def _class_restriction_for_item_type(self, item_type_chain: List[str]) -> str:
+        class_code = self._class_restriction_code_for_item_type(item_type_chain)
+        return self.class_names.get(class_code, class_code) if class_code else ""
+
+    def _staffmod_class_code_for_item_type(self, item_type_chain: List[str]) -> str:
         for code in item_type_chain:
             staffmod_code = self.item_types.get(code, {}).get('StaffMods', '').strip()
             if staffmod_code:
-                return self.class_names.get(staffmod_code.casefold(), staffmod_code)
+                return staffmod_code.casefold()
         return ""
+
+    def _staffmod_class_for_item_type(self, item_type_chain: List[str]) -> str:
+        staffmod_code = self._staffmod_class_code_for_item_type(item_type_chain)
+        return self.class_names.get(staffmod_code, staffmod_code) if staffmod_code else ""

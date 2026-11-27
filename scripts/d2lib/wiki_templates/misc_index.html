@@ -15,7 +15,8 @@
 
   <div class="guide-card-grid">
     {% for group in groups %}
-    <a class="guide-card" href="#{{ group.category|lower|replace('&', 'and')|replace(' ', '-') }}" data-search="{{ group.category }} {{ group.summary }} {{ group.source_categories|join(' ') }}">
+    {% set group_anchor = group.anchor|default((group.category_key|default(group.category))|slugify) %}
+    <a class="guide-card" href="#{{ group_anchor }}" data-search="{{ group.category }} {{ group.summary }} {{ group.source_categories|join(' ') }}">
       <span class="guide-card-kicker">{{ group.members|length }} entries</span>
       <h2>{{ group.category }}</h2>
       <p>{{ group.summary }}</p>
@@ -25,7 +26,8 @@
   
   <div class="misc-groups">
     {% for group in groups %}
-    <div id="{{ group.category|lower|replace('&', 'and')|replace(' ', '-') }}" class="misc-group-section" data-search="{{ group.category }} {{ group.summary }} {{ group.source_categories|join(' ') }}">
+    {% set group_anchor = group.anchor|default((group.category_key|default(group.category))|slugify) %}
+    <div id="{{ group_anchor }}" class="misc-group-section" data-search="{{ group.category }} {{ group.summary }} {{ group.source_categories|join(' ') }}">
       <div class="group-heading">
         <div>
           <p class="group-kicker">{{ group.members|length }} items</p>

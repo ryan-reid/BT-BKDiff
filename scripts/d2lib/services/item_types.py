@@ -2,12 +2,24 @@
 from __future__ import annotations
 
 from collections import Counter
-from typing import Dict, List, Optional, Sequence, Set, Union
+from typing import Any, Dict, List, Optional, Sequence, Set, Union
 
 from d2lib.repository import resolve_localized_string
 
 # Built-in Diablo II root type codes corresponding to armor.txt, weapons.txt, and misc.txt.
 _ROOT_TYPE_CODES: frozenset[str] = frozenset({"armo", "weap", "misc"})
+
+
+def is_loot_filter_shorthand(display_name: str) -> bool:
+    """Return True for short ASCII loot-filter abbreviations (e.g. 'A', 'B', 'G') or bullet decorations."""
+    cleaned = (display_name or "").strip()
+    if not cleaned:
+        return True
+    if cleaned.isascii() and len(cleaned) <= 2:
+        return True
+    if "•" in cleaned or "·" in cleaned:
+        return True
+    return False
 
 
 class ItemTypeTaxonomy:
@@ -53,6 +65,44 @@ class ItemTypeTaxonomy:
             "accessories": [],
         }
         self._build_taxonomy_maps()
+        self._single_base_names: Dict[str, str] = self._build_single_base_names()
+
+    def _build_single_base_names(self) -> Dict[str, str]:
+        candidates: Dict[str, Set[str]] = {}
+        ineligible: Set[str] = set()
+        for row in self.repo.get_excel_table('misc'):
+            if row.get('quest') not in (None, '', '0'):
+                continue
+            type_code = (row.get('type') or '').strip()
+            if not type_code:
+                continue
+            type_row = self.types.get(type_code, {})
+            chain_set = set(self.chain(type_code))
+            if (
+                type_row.get('Normal', '').strip() == '1'
+                or 'weap' in chain_set
+                or 'armo' in chain_set
+            ):
+                ineligible.add(type_code)
+                continue
+            item_code = (row.get('code') or '').strip()
+            key = (row.get('namestr') or '').strip()
+            disp = resolve_localized_string(self.repo, key) if key else ''
+            if (
+                not key
+                or not disp
+                or not item_code
+                or key.lower() != item_code.lower()
+                or is_loot_filter_shorthand(disp)
+            ):
+                ineligible.add(type_code)
+            else:
+                candidates.setdefault(type_code, set()).add(disp)
+        return {
+            code: next(iter(names))
+            for code, names in candidates.items()
+            if len(names) == 1 and code not in ineligible
+        }
 
     def _group_code_for_type_row(self, row: Dict[str, str]) -> str:
         code = row.get('Code', '').strip()
@@ -211,6 +261,32 @@ class ItemTypeTaxonomy:
             result[self.group_label(g_code)] = labels
         return result
 
+    def loot_group_options(self, include_accessories: bool = True) -> List[Dict[str, Any]]:
+        group_codes = ('armor', 'weapons', 'accessories') if include_accessories else ('armor', 'weapons')
+        result: List[Dict[str, Any]] = []
+        for g_code in group_codes:
+            ui_codes = sorted(
+                self._group_ui_codes.get(g_code, ()),
+                key=lambda ui: (
+                    ui in self._class_ui_categories,
+                    self.category_label(ui).casefold(),
+                    ui,
+                ),
+            )
+            types: List[Dict[str, str]] = []
+            seen_codes: Set[str] = set()
+            for ui_code in ui_codes:
+                if ui_code in seen_codes:
+                    continue
+                seen_codes.add(ui_code)
+                types.append({"code": ui_code, "label": self.category_label(ui_code)})
+            result.append({
+                "code": g_code,
+                "label": self.group_label(g_code),
+                "types": types,
+            })
+        return result
+
     def label(self, code: str) -> str:
         clean = (code or '').strip()
         if not clean:
@@ -228,6 +304,16 @@ class ItemTypeTaxonomy:
             weapons_lbl = resolve_localized_string(self.repo, 'StrGemX3').rstrip(': ').strip()
             return weapons_lbl or resolve_localized_string(self.repo, raw_item_type) or raw_item_type or clean
 
+        # 1b. Root armor type ('armo' = Any Armor across helms/shields/boots/gloves/belts/body armor,
+        #     distinct from 'tors' = Body Armor)
+        if clean == 'armo':
+            return (
+                resolve_localized_string(self.repo, 'armor')
+                or resolve_localized_string(self.repo, raw_item_type)
+                or raw_item_type
+                or clean
+            )
+
         # 2. Root or top-level runeword grouping type with a single RunewordCategory1
         if rw1 and (not eq1 or (eq1 in _ROOT_TYPE_CODES and clean in self._runeword_itype_codes)):
             return resolve_localized_string(self.repo, rw1) or resolve_localized_string(self.repo, raw_item_type) or raw_item_type or rw1
@@ -238,19 +324,34 @@ class ItemTypeTaxonomy:
             eq2_row = self.types.get(eq2, {})
             resolved_own = resolve_localized_string(self.repo, raw_item_type) if raw_item_type else ''
             if not resolved_own:
+                loc1 = row.get('BodyLoc1', '').strip()
+                eq2_loc1 = eq2_row.get('BodyLoc1', '').strip()
+                store = row.get('StorePage', '').strip()
+                eq2_store = eq2_row.get('StorePage', '').strip()
+                eq2_ui = eq2_row.get('UICategory', '').strip()
+                eq2_eq1 = eq2_row.get('Equiv1', '').strip()
                 eq2_rw1 = eq2_row.get('RunewordCategory1', '').strip()
                 eq2_rw2 = eq2_row.get('RunewordCategory2', '').strip()
-                if eq2_rw1 and not eq2_rw2:
+                loc_compatible = loc1 == eq2_loc1
+                store_compatible = store == eq2_store
+                ui_compatible = not ui_cat or not eq2_ui or ui_cat == eq2_ui
+                eq1_compatible = not eq1 or not eq2_eq1 or eq1 == eq2_eq1
+                if (
+                    eq2_rw1
+                    and not eq2_rw2
+                    and loc_compatible
+                    and store_compatible
+                    and ui_compatible
+                    and eq1_compatible
+                ):
                     resolved_eq2_rw = resolve_localized_string(self.repo, eq2_rw1)
                     if resolved_eq2_rw:
                         return resolved_eq2_rw
-                loc1 = row.get('BodyLoc1', '').strip()
-                store = row.get('StorePage', '').strip()
                 if (
                     loc1 and store
-                    and not eq2_row.get('Equiv1', '').strip()
-                    and eq2_row.get('BodyLoc1', '').strip() == loc1
-                    and eq2_row.get('StorePage', '').strip() == store
+                    and not eq2_eq1
+                    and eq2_loc1 == loc1
+                    and eq2_store == store
                 ):
                     eq2_item_type = eq2_row.get('ItemType', '').strip()
                     if eq2_item_type:
@@ -267,6 +368,12 @@ class ItemTypeTaxonomy:
             resolved_ui = resolve_localized_string(self.repo, ui_cat)
             if resolved_ui:
                 return resolved_ui
+
+        # 6. Single non-quest rollable base item with its own localized namestr
+        #    (fixes Blizzard's internal mcha='Medium Charm' -> 'Large Charm' and lcha='Large Charm' -> 'Grand Charm')
+        single_base = self._single_base_names.get(clean)
+        if single_base:
+            return single_base
 
         return raw_item_type or clean
 
@@ -364,3 +471,36 @@ class ItemTypeTaxonomy:
             if base_type_lbl:
                 terms.add(base_type_lbl)
         return sorted(terms)
+
+    def runeword_term_codes(self, row: Dict[str, str]) -> List[str]:
+        codes = set(self.rules(row, 'itype'))
+        terms: Set[str] = {code.lower() for code in codes if code}
+        for base in self.matching_bases(row):
+            chain = self.chain(base.get('type'), base.get('type2'))
+            terms.update(
+                code.lower()
+                for code in chain
+                if code in self._runeword_itype_codes and code
+            )
+            base_type = (base.get('type') or '').strip().lower()
+            if base_type:
+                terms.add(base_type)
+        return sorted(terms)
+
+    def redundant_root_type_codes(self) -> Set[str]:
+        active_categories: Set[str] = set()
+        for code in self._runeword_itype_codes:
+            primary = self.primary_runeword_category_code(code)
+            if primary:
+                active_categories.add(primary)
+        redundant: Set[str] = set()
+        for code, row in self.types.items():
+            if code in self._runeword_itype_codes:
+                continue
+            if row.get('Equiv1', '').strip() or row.get('Equiv2', '').strip():
+                continue
+            rw1 = row.get('RunewordCategory1', '').strip()
+            rw2 = row.get('RunewordCategory2', '').strip()
+            if rw1 and not rw2 and rw1 in active_categories:
+                redundant.add(code)
+        return redundant

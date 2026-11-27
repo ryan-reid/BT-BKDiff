@@ -41,6 +41,27 @@ class ItemComparisonService:
             if j not in new_used: aligned.append(("", np))
         return aligned
 
+    @staticmethod
+    def _property_signature(prop: Dict[str, Any]) -> Tuple[Any, ...]:
+        code = str(prop.get("canonical_code") or prop.get("code") or "").strip().lower()
+        param_raw = prop.get("parameter_key")
+        if param_raw in (None, ""):
+            param_raw = prop.get("param", "")
+        param = str(param_raw).strip().lower()
+        min_v = str(prop.get("min_val", "")).strip()
+        max_v = str(prop.get("max_val", "")).strip()
+        return (code, param, min_v, max_v)
+
+    @staticmethod
+    def _raw_sequence(raw_row: Dict[str, Any], prefix: str, count: int) -> Tuple[bool, List[str]]:
+        has_cols = any(f"{prefix}{i}" in raw_row for i in range(1, count + 1))
+        values = [
+            str(raw_row.get(f"{prefix}{i}", "")).strip().lower()
+            for i in range(1, count + 1)
+            if str(raw_row.get(f"{prefix}{i}", "")).strip() not in ("", "xxx")
+        ]
+        return has_cols, values
+
     def compare_item_lists(self, bk_items: Dict[str, Any], bt_items: Dict[str, Any]) -> ItemDiffDTO:
         added_ids = [k for k in bk_items if k not in bt_items]
         removed_ids = [k for k in bt_items if k not in bk_items]
@@ -54,11 +75,39 @@ class ItemComparisonService:
             bk_lvl = bk.get('lvl_req', '0')
             bt_lvl = bt.get('lvl_req', '0')
 
-            header_diff = (self.normalize_text(bk_base) != self.normalize_text(bt_base) or
-                           self.normalize_text(bk_lvl) != self.normalize_text(bt_lvl))
+            raw_bk = bk.get('raw_row') or {}
+            raw_bt = bt.get('raw_row') or {}
+            bk_code = str(raw_bk.get('code') or raw_bk.get('item') or '').strip().lower()
+            bt_code = str(raw_bt.get('code') or raw_bt.get('item') or '').strip().lower()
+            if bk_code and bt_code:
+                base_diff = bk_code != bt_code
+            else:
+                bk_has_it, bk_it = self._raw_sequence(raw_bk, 'itype', 6)
+                bt_has_it, bt_it = self._raw_sequence(raw_bt, 'itype', 6)
+                bk_has_rn, bk_rn = self._raw_sequence(raw_bk, 'Rune', 6)
+                bt_has_rn, bt_rn = self._raw_sequence(raw_bt, 'Rune', 6)
+                if (bk_has_it and bt_has_it) or (bk_has_rn and bt_has_rn):
+                    base_diff = (bk_it != bt_it if (bk_has_it and bt_has_it) else False) or (
+                        bk_rn != bt_rn if (bk_has_rn and bt_has_rn) else False
+                    )
+                else:
+                    base_diff = self.normalize_text(bk_base) != self.normalize_text(bt_base)
 
-            bk_norm = sorted([self.normalize_text(p['resolved_text']) for p in bk['properties']])
-            bt_norm = sorted([self.normalize_text(p['resolved_text']) for p in bt['properties']])
+            header_diff = base_diff or (self.normalize_text(bk_lvl) != self.normalize_text(bt_lvl))
+
+            bk_props = bk.get('properties', [])
+            bt_props = bt.get('properties', [])
+            all_structured = all(
+                any(field in p for field in ('min_val', 'max_val', 'numeric_values', 'parameter_key'))
+                for p in (*bk_props, *bt_props)
+            )
+            if all_structured and (bk_props or bt_props):
+                bk_norm = sorted([self._property_signature(p) for p in bk_props])
+                bt_norm = sorted([self._property_signature(p) for p in bt_props])
+            else:
+                bk_norm = sorted([self.normalize_text(p['resolved_text']) for p in bk_props])
+                bt_norm = sorted([self.normalize_text(p['resolved_text']) for p in bt_props])
+
             if header_diff or bk_norm != bt_norm:
                 modified[k] = {
                     'name': bk.get('display_name') or bk.get('name'),

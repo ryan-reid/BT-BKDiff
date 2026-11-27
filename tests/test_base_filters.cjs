@@ -90,3 +90,82 @@ test('base filters match canonical tier keys with localized labels and numeric W
   listeners['tier:change']();
   assert.deepEqual(items.map(item => item.hidden), [true, false, false, false]);
 });
+
+test('base filters match canonical group, category, loot, and class codes across localized labels', () => {
+  const makeItem = (codes, lootCategory) => ({
+    dataset: {typeCodes: codes, maxSockets: '4', lootCategory, tier: 'normal', speed: '0'},
+    style: {},
+  });
+  const families = [
+    {
+      dataset: {baseGroup: 'weapons', baseClasses: 'dru'},
+      style: {},
+      querySelectorAll: () => [makeItem('hamm|blun|mele|weap', 'mace')],
+    },
+    {
+      dataset: {baseGroup: 'armor', baseClasses: 'bar'},
+      style: {},
+      querySelectorAll: () => [makeItem('phlm|helm|armo', 'hlms')],
+    },
+  ];
+  const listeners = {};
+  const makeSelect = (name, options) => ({
+    value: 'all',
+    options,
+    addEventListener(event, handler) { listeners[`${name}:${event}`] = handler; },
+  });
+  const groupSelect = makeSelect('group', [
+    {value: 'all', textContent: 'All groups'},
+    {value: 'armor', textContent: '갑옷'},
+    {value: 'weapons', textContent: '무기'},
+  ]);
+  const categorySelect = makeSelect('category', [
+    {value: 'all', textContent: 'All categories'},
+    {value: 'blun', textContent: '둔기류'},
+    {value: 'phlm', textContent: '야만용사 투구'},
+  ]);
+  const lootSelect = makeSelect('loot', [
+    {value: 'all', textContent: 'All categories'},
+    {value: 'mace', textContent: '철퇴'},
+    {value: 'hlms', textContent: '투구'},
+  ]);
+  const classSelect = makeSelect('class', [
+    {value: 'all', textContent: 'All classes'},
+    {value: 'dru', textContent: '드루이드'},
+    {value: 'bar', textContent: '야만용사'},
+  ]);
+  const elements = {
+    '[data-base-filters]': {},
+    '#base-group-filter': groupSelect,
+    '#base-category-filter': categorySelect,
+    '#base-loot-filter': lootSelect,
+    '#base-class-filter': classSelect,
+  };
+  const document = {
+    readyState: 'loading',
+    addEventListener() {},
+    querySelector: selector => elements[selector] || null,
+    querySelectorAll: selector => selector === '.family-container' ? families : [],
+  };
+  const context = {
+    document,
+    window: {location: {search: '?group=weapons&category=blun&class=dru&loot=mace'}},
+    URLSearchParams,
+  };
+  vm.runInNewContext(
+    fs.readFileSync(path.join(__dirname, '../scripts/d2lib/wiki_assets/site.js'), 'utf8') + '\nwireBaseFilters();',
+    context
+  );
+  assert.equal(groupSelect.value, 'weapons');
+  assert.equal(categorySelect.value, 'blun');
+  assert.equal(classSelect.value, 'dru');
+  assert.equal(lootSelect.value, 'mace');
+  assert.deepEqual(families.map(f => f.hidden), [false, true]);
+
+  groupSelect.value = 'armor';
+  categorySelect.value = 'phlm';
+  classSelect.value = 'bar';
+  lootSelect.value = 'hlms';
+  listeners['class:change']();
+  assert.deepEqual(families.map(f => f.hidden), [true, false]);
+});

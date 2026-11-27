@@ -31,7 +31,7 @@
       <select id="item-group-filter" class="filter-select" style="width:100%">
         <option value="all">All Groups</option>
         {% for group in item_groups %}
-        <option value="{{ group.name }}">{{ group.name }}</option>
+        <option value="{{ group.code }}">{{ group.name }}</option>
         {% endfor %}
       </select>
     </div>
@@ -40,9 +40,9 @@
       <select id="item-type-filter" class="filter-select" style="width:100%">
         <option value="all">All Types</option>
         {% for group in item_groups %}
-        <optgroup label="{{ group.name }}">
+        <optgroup label="{{ group.name }}" data-group-code="{{ group.code }}">
           {% for item_type in group.types %}
-          <option value="{{ item_type }}">{{ item_type }}</option>
+          <option value="{{ item_type.code }}">{{ item_type.label }}</option>
           {% endfor %}
         </optgroup>
         {% endfor %}

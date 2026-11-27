@@ -20,7 +20,7 @@
         <select id="base-group-filter">
           <option value="all">All groups</option>
           {% for group in base_groups %}
-          <option value="{{ group }}">{{ group }}</option>
+          <option value="{{ group.key }}">{{ group.label }}</option>
           {% endfor %}
         </select>
       </label>
@@ -28,9 +28,9 @@
         <span>Item category</span>
         <select id="base-loot-filter">
           <option value="all">All categories</option>
-          {% for group, categories in loot_groups.items() %}
-          <optgroup label="{{ group }}">
-            {% for category in categories %}<option value="{{ category }}">{{ category }}</option>{% endfor %}
+          {% for group in loot_groups %}
+          <optgroup label="{{ group.label }}" data-group-code="{{ group.code }}">
+            {% for category in group.types %}<option value="{{ category.code }}">{{ category.label }}</option>{% endfor %}
           </optgroup>
           {% endfor %}
         </select>
@@ -40,7 +40,7 @@
         <select id="base-category-filter">
           <option value="all">All categories</option>
           {% for category in base_type_categories %}
-          <option value="{{ category }}">{{ category }}</option>
+          <option value="{{ category.code }}">{{ category.label }}</option>
           {% endfor %}
         </select>
       </label>
@@ -48,8 +48,8 @@
         <span>Class</span>
         <select id="base-class-filter">
           <option value="all">All classes</option>
-          {% for class_name in base_classes %}
-          <option value="{{ class_name }}">{{ class_name }}</option>
+          {% for cls in base_classes %}
+          <option value="{{ cls.code }}">{{ cls.label }}</option>
           {% endfor %}
         </select>
       </label>
@@ -97,8 +97,8 @@
     {% for family in families %}
     <div class="family-container" 
          data-search="{{ family.search_text }}"
-         data-base-group="{{ family.group }}"
-         data-base-classes="{{ family.class_tags|join(' ') }}">
+         data-base-group="{{ family.group_key or family.group|lower }}"
+         data-base-classes="{{ (family.class_codes or family.class_tags)|join(' ') }}">
       <div class="family-header-bar">
         <h2>{{ family.name }}</h2>
         <p class="muted">{{ family.summary }}</p>
@@ -109,9 +109,8 @@
         {% set comp = item.comparison %}
         <div class="base-item-card tier-{{ item.tier_key or item.tier|lower }}"
              data-search="{{ item.name }} {{ item.type }} {{ item.tier }} {{ item.tier_key }} {{ item.class_restriction }} {{ item.staffmod_class }} {{ item.magic_level }} {{ item.speed }} {{ item.inherent_stats|join(' ') }} {{ item.auto_prefix_summary|join(' ') }} {{ item.quality_bonus_summary|join(' ') }}"
-             data-loot-category="{{ item.loot_category }}"
+             data-loot-category="{{ item.loot_category_key or item.loot_category }}"
              data-type-codes="{{ item.type_codes|join('|') }}"
-             data-type-categories="{{ item.type_categories|join('|') }}"
              data-tier="{{ item.tier_key or item.tier|lower }}"
              data-max-sockets="{{ item.sockets }}"
              data-two-handed="{{ '1' if item.two_handed_only else '0' }}"

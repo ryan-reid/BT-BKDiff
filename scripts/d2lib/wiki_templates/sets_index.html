@@ -15,7 +15,7 @@
 
 <div class="set-list">
   {% for set in sets %}
-  {% set set_slug = set.anchor|default(set.name|slugify) %}
+  {% set set_slug = set.anchor|default((set.id|default(set.name))|slugify) %}
 
   <div id="{{ set_slug }}" class="set-block"
        data-search="{{ set.search_text }}" data-status="{{ set.status }}">

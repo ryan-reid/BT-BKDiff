@@ -24,7 +24,7 @@
       <select id="runeword-base-filter" class="filter-select">
         <option value="all">All Bases</option>
         {% for base in base_options %}
-        <option value="{{ base }}">{{ base }}</option>
+        <option value="{{ base.code }}">{{ base.label }}</option>
         {% endfor %}
       </select>
     </label>
@@ -50,7 +50,7 @@
 <div class="family-items-grid">
   {% for runeword in runewords %}
   {% set comp = runeword.comparison %}
-  <div class="base-item-card" style="padding:0;overflow:hidden;display:block;text-decoration:none;color:inherit" data-runeword-card data-runeword-title="{{ runeword.title }}" data-base-items="{{ runeword.base_filter_terms }}" data-runes="{{ runeword.rune_filter_terms }}" data-rune-codes="{{ runeword.rune_requirement_codes }}" data-search="{{ runeword.search_text }}">
+  <div class="base-item-card" style="padding:0;overflow:hidden;display:block;text-decoration:none;color:inherit" data-runeword-card data-runeword-title="{{ runeword.title }}" data-base-items="{{ runeword.base_filter_codes|default(runeword.base_filter_terms) }}" data-runes="{{ runeword.rune_filter_terms }}" data-rune-codes="{{ runeword.rune_requirement_codes }}" data-search="{{ runeword.search_text }}">
 
     <div class="sp-head">
       <div style="min-width:0;flex:1">
