@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ page.title }} | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ page.title }} | {{ new_label }}{% endblock %}
 {% block nav_references %} class="is-active"{% endblock %}
 {% block nav_affixes %}{% if page.slug == "affixes" %} class="is-active" aria-current="page"{% endif %}{% endblock %}
 {% block nav_automagic %}{% if page.slug == "automagic" %} class="is-active" aria-current="page"{% endif %}{% endblock %}
@@ -10,16 +10,16 @@
     <div class="family-header-bar">
       <div>
         <h2>{{ section.title }}</h2>
-        <p class="muted"><code>{{ section.table }}.txt</code> &middot; {{ section.row_count }} rows</p>
+        <p class="muted"><code>{{ section.table }}.txt</code> &middot; {{ t("common.rows_count", count=section.row_count) }}</p>
       </div>
     </div>
     <div class="table-wrap">
       <table class="monster-table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Fields</th>
-            <th>Resolved Properties</th>
+            <th>{{ t("references.th_name") }}</th>
+            <th>{{ t("references.th_fields") }}</th>
+            <th>{{ t("references.th_resolved_properties") }}</th>
           </tr>
         </thead>
         <tbody>
@@ -33,9 +33,9 @@
                 <li><strong>{{ field.label }}</strong><small>{{ field.value }}</small></li>
                 {% endfor %}
               </ul>
-              {% if row.fields|length > 10 %}<small class="muted">+{{ row.fields|length - 10 }} more fields</small>{% endif %}
+              {% if row.fields|length > 10 %}<small class="muted">{{ t("references.more_fields", count=row.fields|length - 10) }}</small>{% endif %}
               {% else %}
-              <span class="muted">No selected fields</span>
+              <span class="muted">{{ t("references.no_fields") }}</span>
               {% endif %}
             </td>
             <td>
@@ -46,7 +46,7 @@
                 {% endfor %}
               </ul>
               {% else %}
-              <span class="muted">No resolved properties</span>
+              <span class="muted">{{ t("references.no_properties") }}</span>
               {% endif %}
             </td>
           </tr>
@@ -62,7 +62,7 @@
 {% include "affix_comparison.html" %}
 {% else %}
 <section class="hero">
-  <p class="hero-eyebrow">Reference</p>
+  <p class="hero-eyebrow">{{ t("references.detail_eyebrow") }}</p>
   <h1>{{ page.title }}</h1>
   <p class="hero-copy">{{ page.description }}</p>
 </section>
@@ -70,12 +70,12 @@
 <section class="content-section">
   <div class="section-head">
     <div>
-      <h2>Tables</h2>
-      <p class="muted">Search within this generated reference. Values are shown only when present in the raw row.</p>
+      <h2>{{ t("references.detail_heading") }}</h2>
+      <p class="muted">{{ t("references.detail_subtitle") }}</p>
     </div>
-    <a class="link-card-cta" href="{{ site_root }}references/">Back to references</a>
+    <a class="link-card-cta" href="{{ site_root }}references/">{{ t("references.back_cta") }}</a>
   </div>
-  <input id="page-search" class="search-input" type="search" aria-label="Search this reference" placeholder="Search rows, properties, and raw values" />
+  <input id="page-search" class="search-input" type="search" aria-label="{{ t('references.search_aria') }}" placeholder="{{ t('references.detail_search_placeholder') }}" />
   {% for section in page.sections %}
     {{ reference_section(section) }}
   {% endfor %}

@@ -1,10 +1,34 @@
 (() => {
+  const i18n = (() => {
+    try {
+      const el = typeof document !== 'undefined' && typeof document.querySelector === 'function'
+        ? document.querySelector('#wiki-i18n')
+        : null;
+      if (el && el.textContent) {
+        const parsed = JSON.parse(el.textContent);
+        return parsed && typeof parsed === 'object' ? parsed : {};
+      }
+    } catch {}
+    return {};
+  })();
+  function tUi(key, fallback) {
+    return Object.prototype.hasOwnProperty.call(i18n, key) && i18n[key] ? String(i18n[key]) : String(fallback);
+  }
+
   const dialog = document.querySelector('#item-revisions-dialog');
   if (!dialog || typeof dialog.showModal !== 'function') return;
   document.documentElement.classList.add('has-item-revisions');
-  const labels = {current: 'Current build', changed: 'Updated', added: 'Added', first_recorded: 'First recorded',
-    activation_changed: 'Availability changed', removed: 'Removed', reappeared: 'Reappeared',
-    recorded_after_gap: 'Source data available', source_gap: 'Source data missing'};
+  const labels = {
+    current: tUi('history.event.current', 'Current build'),
+    changed: tUi('history.event.changed', 'Updated'),
+    added: tUi('history.event.added', 'Added'),
+    first_recorded: tUi('history.event.first_recorded', 'First recorded'),
+    activation_changed: tUi('history.event.activation_changed', 'Availability changed'),
+    removed: tUi('history.event.removed', 'Removed'),
+    reappeared: tUi('history.event.reappeared', 'Reappeared'),
+    recorded_after_gap: tUi('history.event.recorded_after_gap', 'Source data available'),
+    source_gap: tUi('history.event.source_gap', 'Source data missing'),
+  };
   const select = dialog.querySelector('#item-revision-select');
   const content = dialog.querySelector('#item-revision-content');
   const meta = dialog.querySelector('#item-revision-meta');
@@ -62,8 +86,8 @@
     select.replaceChildren();
     select.disabled = true;
     meta.replaceChildren();
-    dialog.querySelector('h2').textContent = 'Item revisions';
-    content.textContent = 'Loading revisions…';
+    dialog.querySelector('h2').textContent = tUi('history.dialog_title', 'Item revisions');
+    content.textContent = tUi('history.loading', 'Loading revisions…');
     if (!dialog.open) dialog.showModal();
     try {
       const url = new URL((document.body.dataset.siteRoot || './') + trigger.dataset.revisionsPath, location.href).href;
@@ -85,9 +109,9 @@
       });
       select.disabled = !data.revisions.length;
       if (data.revisions.length) { select.value = String(data.revisions.length - 1); renderRevision(); }
-      else content.textContent = 'No source revisions are available for this item.';
+      else content.textContent = tUi('history.no_revisions', 'No source revisions are available for this item.');
     } catch (error) {
-      if (token === request) content.textContent = 'Unable to load revisions. Close this popup and try again.';
+      if (token === request) content.textContent = tUi('history.load_error', 'Unable to load revisions. Close this popup and try again.');
     }
   });
 })();

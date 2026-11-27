@@ -1,27 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}Mechanics & Progression | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("mechanics.page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_mechanics %} class="is-active"{% endblock %}
 
 {% block content %}
 <section class="hero">
-  <p class="hero-eyebrow">Game Systems</p>
-  <h1>Mechanics & Progression</h1>
-  <p class="hero-copy">Overview of fundamental changes to experience gain and difficulty scaling.</p>
+  <p class="hero-eyebrow">{{ t("mechanics.eyebrow") }}</p>
+  <h1>{{ t("mechanics.heading") }}</h1>
+  <p class="hero-copy">{{ t("mechanics.subtitle") }}</p>
 </section>
 
 <section class="content-section">
-  <h2>Difficulty Scaling</h2>
-  <p class="muted">Modifications to monster power and player penalties across difficulty levels.</p>
+  <h2>{{ t("mechanics.difficulty_heading") }}</h2>
+  <p class="muted">{{ t("mechanics.difficulty_desc") }}</p>
 
   <div class="table-wrap">
     <table class="mechanics-table">
       <thead>
         <tr>
-          <th>Difficulty</th>
-          <th>Property</th>
-          <th>{{ old_label }} Value</th>
-          <th>{{ new_label }} Value</th>
+          <th>{{ t("mechanics.th_difficulty") }}</th>
+          <th>{{ t("mechanics.th_property") }}</th>
+          <th>{{ t("mechanics.th_value_col", label=old_label) }}</th>
+          <th>{{ t("mechanics.th_value_col", label=new_label) }}</th>
         </tr>
       </thead>
       <tbody>
@@ -34,7 +34,7 @@
         </tr>
         {% endfor %}
         {% if not summary.difficulty_changes %}
-        <tr><td colspan="4" class="text-center text-muted">No significant difficulty changes found.</td></tr>
+        <tr><td colspan="4" class="text-center text-muted">{{ t("mechanics.no_difficulty_changes") }}</td></tr>
         {% endif %}
       </tbody>
     </table>
@@ -42,30 +42,30 @@
 </section>
 
 <section class="content-section">
-  <h2>Experience Curve Changes</h2>
-  <p class="muted">Summary of changes to level-based experience requirements compared to {{ old_label }}.</p>
+  <h2>{{ t("mechanics.experience_heading") }}</h2>
+  <p class="muted">{{ t("mechanics.experience_desc", old_label=old_label) }}</p>
 
   <div class="table-wrap">
     <table class="mechanics-table">
       <thead>
         <tr>
-          <th>Level</th>
-          <th>Property</th>
-          <th>{{ old_label }} Value</th>
-          <th>{{ new_label }} Value</th>
+          <th>{{ t("common.level") }}</th>
+          <th>{{ t("mechanics.th_property") }}</th>
+          <th>{{ t("mechanics.th_value_col", label=old_label) }}</th>
+          <th>{{ t("mechanics.th_value_col", label=new_label) }}</th>
         </tr>
       </thead>
       <tbody>
         {% for change in summary.experience_changes %}
         <tr>
-          <td><strong>Level {{ change.level }}</strong></td>
+          <td><strong>{{ t("mechanics.level_row", level=change.level) }}</strong></td>
           <td>{{ change.property }}</td>
           <td><span class="comparison-value is-old">{{ change.retail }}</span></td>
           <td><span class="comparison-value is-new">{{ change.bk }}</span></td>
         </tr>
         {% endfor %}
         {% if not summary.experience_changes %}
-        <tr><td colspan="4" class="text-center text-muted">No significant experience changes found.</td></tr>
+        <tr><td colspan="4" class="text-center text-muted">{{ t("mechanics.no_experience_changes") }}</td></tr>
         {% endif %}
       </tbody>
     </table>

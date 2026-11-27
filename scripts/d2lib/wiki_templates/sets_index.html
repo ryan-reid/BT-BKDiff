@@ -1,17 +1,17 @@
 {% extends "base.html" %}
-{% from "history.html" import item_history %}
+{% from "history.html" import item_history with context %}
 
-{% block title %}Set Items | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("sets.page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_sets %} class="is-active"{% endblock %}
 
 {% block content %}
 <section class="hero">
-  <span class="hero-eyebrow">Set Items</span>
-  <h1>Sets</h1>
-  <p class="hero-copy">Complete sets with individual pieces and set bonuses.</p>
+  <span class="hero-eyebrow">{{ t("sets.eyebrow") }}</span>
+  <h1>{{ t("sets.heading") }}</h1>
+  <p class="hero-copy">{{ t("sets.subtitle") }}</p>
 </section>
 
-<input id="page-search" class="search-input" type="search" placeholder="Search sets or pieces" style="margin-bottom:22px" />
+<input id="page-search" class="search-input" type="search" placeholder="{{ t('sets.search_placeholder') }}" style="margin-bottom:22px" />
 
 <div class="set-list">
   {% for set in sets %}
@@ -38,7 +38,7 @@
           <div style="min-width:0;flex:1">
             <span class="set-th-name">{{ item.display_name }}</span>
             <span class="set-th-meta">{{ item.summary }}</span>
-            {% if item.drop_info and item.drop_info.label %}<span class="item-drop-level">Drop {{ item.drop_info.label }}</span>{% endif %}
+            {% if item.drop_info and item.drop_info.label %}<span class="item-drop-level">{{ t("items.drop_label", label=item.drop_info.label) }}</span>{% endif %}
           </div>
         </div>
 
@@ -46,24 +46,26 @@
         <div class="sp-sub"><span>{{ old_label }}</span><span>{{ new_label }}</span></div>
 
         {% for r in comp.stat_rows %}
+        {% set label = t_stat(r) %}
         <div class="sp-row">
-          <span class="sp-cell is-{{ r.status }}">{% if r.label %}<strong>{{ r.label }}:</strong> {% endif %}{{ r.old | comparison_highlight(r.new, "old") }}</span>
-          <span class="sp-cell is-{{ r.status }}">{% if r.label %}<strong>{{ r.label }}:</strong> {% endif %}{{ r.new | comparison_highlight(r.old, "new") }}</span>
+          <span class="sp-cell is-{{ r.status }}">{% if label %}<strong>{{ label }}:</strong> {% endif %}{{ r.old | comparison_highlight(r.new, "old") }}</span>
+          <span class="sp-cell is-{{ r.status }}">{% if label %}<strong>{{ label }}:</strong> {% endif %}{{ r.new | comparison_highlight(r.old, "new") }}</span>
         </div>
         {% endfor %}
 
         {% if item.base_stats %}
-        <div class="sp-sep">Base Stats</div>
+        <div class="sp-sep">{{ t("common.base_stats") }}</div>
         {% for r in item.base_stats %}
+        {% set label = t_stat(r) %}
         <div class="sp-row">
-          <span class="sp-cell is-{{ r.status }}">{% if r.label %}<strong>{{ r.label }}:</strong> {% endif %}{{ r.old | comparison_highlight(r.new, "old") }}</span>
-          <span class="sp-cell is-{{ r.status }}">{% if r.label %}<strong>{{ r.label }}:</strong> {% endif %}{{ r.new | comparison_highlight(r.old, "new") }}</span>
+          <span class="sp-cell is-{{ r.status }}">{% if label %}<strong>{{ label }}:</strong> {% endif %}{{ r.old | comparison_highlight(r.new, "old") }}</span>
+          <span class="sp-cell is-{{ r.status }}">{% if label %}<strong>{{ label }}:</strong> {% endif %}{{ r.new | comparison_highlight(r.old, "new") }}</span>
         </div>
         {% endfor %}
         {% endif %}
 
         {% if comp.property_rows %}
-        <div class="sp-sep">Properties</div>
+        <div class="sp-sep">{{ t("common.properties") }}</div>
         {% for r in comp.property_rows %}
         <div class="sp-row">
           <span class="sp-cell is-{{ r.status }}">{{ r.old | comparison_highlight(r.new, "old") }}</span>
@@ -78,7 +80,7 @@
 
     {% if set.set_bonuses %}
     <div class="set-bonuses">
-      <span class="set-bonuses-label">Set Bonuses</span>
+      <span class="set-bonuses-label">{{ t("sets.bonuses") }}</span>
       <div class="table-wrap">
         <table class="set-bonus-table">
           <thead>
@@ -87,7 +89,13 @@
           <tbody>
             {% for row in set.set_bonuses %}
             {% if row.is_separator %}
+            {% if row.is_full_set %}
+            <tr class="set-sep-row"><td colspan="2">{{ t("sets.full_set") }}</td></tr>
+            {% elif row.bonus_count %}
+            <tr class="set-sep-row"><td colspan="2">{{ t("sets.n_pieces", count=row.bonus_count) }}</td></tr>
+            {% else %}
             <tr class="set-sep-row"><td colspan="2">{{ row.label }}</td></tr>
+            {% endif %}
             {% else %}
             <tr>
               <td class="set-cell is-{{ row.status }}">{{ row.old | comparison_highlight(row.new, "old") }}</td>

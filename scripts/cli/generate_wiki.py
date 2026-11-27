@@ -1,9 +1,11 @@
 import argparse
 import os
-from typing import List, Optional
+import posixpath
+from typing import Any, Dict, List, Optional, Tuple
 
-from d2lib.repository import D2Repository
+from d2lib.repository import D2Repository, locale_to_html_lang
 from d2lib.wiki import MediaWikiPublisher, WikiGenerator
+from d2lib.wiki.i18n import locale_display_name
 from d2lib.wiki.renderers import WikiPublisher, HtmlWikiRenderer
 from d2lib.wiki.routes import WikiRoutes
 
@@ -54,6 +56,7 @@ def run(
     target_locales = parse_locales(locale, ",".join(locales)) if locales is not None else parse_locales(locale)
     secondary_locales = target_locales[1:]
     primary_site = None
+    built_jobs: List[Dict[str, Any]] = []
 
     for index, loc in enumerate(target_locales):
         is_primary = index == 0
@@ -89,6 +92,8 @@ def run(
         if is_primary:
             preserved.extend(secondary_locales)
 
+        bt_output: Optional[str] = None
+        bt_site = None
         if bt_compare:
             bt_output = os.path.join(loc_output_dir, "compare-bt")
             bt_asset_prefix = "../" if is_primary else "../../"
@@ -104,10 +109,28 @@ def run(
                 emit_shared_assets=False,
             ).build_site()
             add_comparison_links(site, bt_site)
-            WikiPublisher(loc_output_dir).publish(site, HtmlWikiRenderer(), preserved_prefixes=preserved)
-            WikiPublisher(bt_output).publish(bt_site, HtmlWikiRenderer())
+
+        built_jobs.append({
+            "locale": loc,
+            "is_primary": is_primary,
+            "loc_output_dir": loc_output_dir,
+            "preserved": preserved,
+            "site": site,
+            "bt_output": bt_output,
+            "bt_site": bt_site,
+        })
+
+    if len(built_jobs) > 1:
+        add_locale_links([(job["locale"], job["is_primary"], False, job["site"]) for job in built_jobs])
+        if bt_compare:
+            add_locale_links([(job["locale"], job["is_primary"], True, job["bt_site"]) for job in built_jobs])
+
+    for job in built_jobs:
+        if bt_compare and job["bt_site"] is not None and job["bt_output"] is not None:
+            WikiPublisher(job["loc_output_dir"]).publish(job["site"], HtmlWikiRenderer(), preserved_prefixes=job["preserved"])
+            WikiPublisher(job["bt_output"]).publish(job["bt_site"], HtmlWikiRenderer())
         else:
-            WikiPublisher(loc_output_dir).publish(site, HtmlWikiRenderer(), preserved_prefixes=preserved)
+            WikiPublisher(job["loc_output_dir"]).publish(job["site"], HtmlWikiRenderer(), preserved_prefixes=job["preserved"])
 
     print(f"Generated wiki pages in {output_dir} (locales: {', '.join(target_locales)})")
     if mediawiki_output_dir and primary_site is not None:
@@ -126,6 +149,42 @@ def add_comparison_links(retail_site, bt_site):
                 "active": "bt" if is_bt else "retail",
                 "retail": root + ("../" + target if is_bt else path),
                 "bt": root + (path if is_bt else "compare-bt/" + target),
+            }
+
+
+def add_locale_links(locale_sites: List[Tuple[str, bool, bool, Dict[str, Any]]]) -> None:
+    """Attach relative language switcher links across built locale subtrees."""
+    if len(locale_sites) <= 1:
+        return
+
+    def _subtree_prefix(is_primary: bool, is_bt: bool, loc: str) -> str:
+        base = "" if is_primary else f"{loc}/"
+        return f"{base}compare-bt/" if is_bt else base
+
+    paths_by_locale = {
+        loc: {page["output_path"] for page in site.get("pages", [])}
+        for loc, _, _, site in locale_sites
+    }
+    for loc, is_primary, is_bt, site in locale_sites:
+        cur_prefix = _subtree_prefix(is_primary, is_bt, loc)
+        for page in site.get("pages", []):
+            cur_path = page["output_path"]
+            cur_full = f"{cur_prefix}{cur_path}"
+            cur_dir = posixpath.dirname(cur_full) or "."
+            options = []
+            for target_loc, target_primary, target_bt, _ in locale_sites:
+                target_page = cur_path if cur_path in paths_by_locale[target_loc] else "index.html"
+                target_full = f"{_subtree_prefix(target_primary, target_bt, target_loc)}{target_page}"
+                options.append({
+                    "locale": target_loc,
+                    "html_lang": locale_to_html_lang(target_loc),
+                    "label": locale_display_name(target_loc),
+                    "href": posixpath.relpath(target_full, cur_dir),
+                    "active": target_loc == loc,
+                })
+            page.setdefault("payload", {})["locale_switch"] = {
+                "active": loc,
+                "options": options,
             }
 
 

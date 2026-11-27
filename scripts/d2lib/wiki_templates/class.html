@@ -1,47 +1,47 @@
 {% extends "base.html" %}
-{% block title %}{{ page.class_name }} Skills | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ page.class_name }} {{ t("skills.page_title_suffix") }} | {{ new_label }}{% endblock %}
 {% block nav_classes %} class="is-active"{% endblock %}
 {% block content %}
-<p class="breadcrumb"><a href="{{ site_root }}">Home</a><span class="sep">/</span><a href="{{ site_root }}classes/">Skills</a><span class="sep">/</span>{{ page.class_name }}</p>
+<p class="breadcrumb"><a href="{{ site_root }}">{{ t("nav.home") }}</a><span class="sep">/</span><a href="{{ site_root }}classes/">{{ t("nav.skills") }}</a><span class="sep">/</span>{{ page.class_name }}</p>
 <section class="hero">
-  <span class="hero-eyebrow">Class Skills</span>
+  <span class="hero-eyebrow">{{ t("skills.eyebrow") }}</span>
   <h1>{{ page.class_name }}</h1>
-  <p class="hero-copy">Compare base skill information, source formulas, and synergies.</p>
-  <p class="skill-help">Formulas and base damage values come from the game data. Synergies show the in-game tooltip entries.</p>
+  <p class="hero-copy">{{ t("skills.subtitle") }}</p>
+  <p class="skill-help">{{ t("skills.help") }}</p>
 </section>
 <div data-skill-explorer>
-  <section class="item-index-toolbar" aria-label="Search skills">
+  <section class="item-index-toolbar" aria-label="{{ t('skills.search_aria') }}">
     <div class="toolbar">
-      <input id="skill-search" class="search-input" type="search" aria-label="Search skills" placeholder="Skill name, mana, synergy…" />
+      <input id="skill-search" class="search-input" type="search" aria-label="{{ t('skills.search_aria') }}" placeholder="{{ t('skills.search_placeholder') }}" />
     </div>
     <div class="results-bar">
-      <span class="count" id="skill-results" role="status" aria-live="polite">{{ page.skills|length }} skills</span>
-      <button type="button" class="filter-button" id="skill-reset-filters">Reset filters</button>
+      <span class="count" id="skill-results" role="status" aria-live="polite">{{ t("skills.visible_count", visible=page.skills|length, total=page.skills|length) }}</span>
+      <button type="button" class="filter-button" id="skill-reset-filters">{{ t("common.reset_filters") }}</button>
     </div>
   </section>
   <div class="index-layout">
-    <aside class="filters" aria-label="Skill filters">
+    <aside class="filters" aria-label="{{ t('skills.filters_aria') }}">
       <details class="item-filter-panel" open>
-        <summary>Filter skills</summary>
+        <summary>{{ t("skills.filter_heading") }}</summary>
         <div class="item-filter-controls">
           <div class="filter-block">
-            <h4 id="skill-status-label">Comparison</h4>
+            <h4 id="skill-status-label">{{ t("affixes.comparison") }}</h4>
             <select id="skill-status" class="filter-select" aria-labelledby="skill-status-label">
-              <option value="all">All skills</option>
-              <option value="modified">Modified</option>
-              <option value="added">Added</option>
-              <option value="removed">Removed</option>
-              <option value="unchanged">Unchanged</option>
+              <option value="all">{{ t("skills.all_skills") }}</option>
+              <option value="modified">{{ t("status.modified") }}</option>
+              <option value="added">{{ t("status.added") }}</option>
+              <option value="removed">{{ t("status.removed") }}</option>
+              <option value="unchanged">{{ t("status.unchanged") }}</option>
             </select>
           </div>
         </div>
       </details>
     </aside>
-    <section aria-label="Skill results">
-      <p id="skill-empty" class="muted" hidden>No skills match these filters.</p>
+    <section aria-label="{{ t('skills.results_aria') }}">
+      <p id="skill-empty" class="muted" hidden>{{ t("skills.empty") }}</p>
       {% include "item_index_cards.html" %}
     </section>
   </div>
 </div>
-<script src="{{ asset_root|default(site_root) }}assets/skills.js?v=20261109-item-cards"></script>
+<script src="{{ asset_root|default(site_root) }}assets/skills.js?v=20261127-i18n"></script>
 {% endblock %}

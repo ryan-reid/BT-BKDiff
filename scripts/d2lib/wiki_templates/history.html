@@ -3,28 +3,29 @@
 {%- endmacro %}
 {% macro item_history(history) -%}
 <div class="item-history">
-  <span class="history-heading">BK history</span>
+  <span class="history-heading">{{ t("history.heading", new_label=new_label) }}</span>
   {% if not history or history.coverage == 'unavailable' %}
-  <span class="history-coverage">History unavailable</span>
+  <span class="history-coverage">{{ t("history.unavailable") }}</span>
   {% else %}
   {% set latest = history.last_change or history.first %}
   {% if latest %}
-  <div{% if not history.last_change %} title="No later change recorded; this is the first-known source date."{% endif %}><strong>Last changed:</strong> {{ event_link(latest) }}</div>
+  <div{% if not history.last_change %} title="{{ t('history.first_known_title') }}"{% endif %}><strong>{{ t("history.last_changed") }}</strong> {{ event_link(latest) }}</div>
   {% endif %}
   {% if history.events or history.gaps %}
-  {% if history.revisions_path %}<button type="button" class="history-open" data-revisions-path="{{ history.revisions_path }}">View item revisions</button><noscript>{% endif %}
+  {% if history.revisions_path %}<button type="button" class="history-open" data-revisions-path="{{ history.revisions_path }}">{{ t("history.view_revisions") }}</button><noscript>{% endif %}
   <details>
-    <summary>History ({{ history.events|length }})</summary>
-    <p class="history-help">Source commit dates, not release dates. Recorded in source does not necessarily mean obtainable in-game.</p>
+    <summary>{{ t("history.summary_count", count=history.events|length) }}</summary>
+    <p class="history-help">{{ t("history.help") }}</p>
     {% if history.gaps %}
     <ul class="history-coverage">
-      {% for gap in history.gaps %}<li>Coverage gap: {{ event_link(gap) }} — {{ gap.reason }}</li>{% endfor %}
+      {% for gap in history.gaps %}<li>{{ t("history.coverage_gap") }} {{ event_link(gap) }} — {{ gap.reason }}</li>{% endfor %}
     </ul>
     {% endif %}
     <ol>
       {% for event in history.events|reverse %}
       <li>
-        <strong>{{ event.kind|replace('_', ' ')|capitalize }}</strong> — {{ event_link(event) }}
+        {% set event_label = t("history.event." ~ event.kind) %}
+        <strong>{{ event.kind|replace('_', ' ')|capitalize if event_label == "history.event." ~ event.kind else event_label }}</strong> — {{ event_link(event) }}
         {% if event.causes %}<div>{{ event.causes|join('; ') }}</div>{% endif %}
         {% if event.changes %}
         <ul class="history-changes">

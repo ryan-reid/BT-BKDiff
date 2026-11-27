@@ -1,9 +1,9 @@
 {% set sections = page.sections | selectattr("comparison_rows", "defined") | list %}
 {% set reference_sections = page.sections | rejectattr("comparison_rows", "defined") | list %}
-{% set result_noun = "automagic rolls" if page.slug == "automagic" else "affix rolls" %}
+{% set result_noun = t("affixes.noun_automagic" if page.slug == "automagic" else "affixes.noun_affixes") %}
 
 <section class="hero">
-  <span class="hero-eyebrow">Item Database</span>
+  <span class="hero-eyebrow">{{ t("items.eyebrow") }}</span>
   <h1>{{ page.title }}</h1>
   <p class="hero-copy">{{ page.description }}</p>
   {% if page.slug == "affixes" %}
@@ -11,58 +11,58 @@
   {% endif %}
 </section>
 
-<section class="item-index-toolbar" aria-label="Search {{ result_noun }}">
+<section class="item-index-toolbar" aria-label="{{ t('affixes.search_aria', noun=result_noun) }}">
   <div class="toolbar" data-affix-index="{{ result_noun }}">
-    <input id="page-search" class="search-input" type="search" aria-label="Search {{ result_noun }}" placeholder="Search names, properties, or item types…" />
+    <input id="page-search" class="search-input" type="search" aria-label="{{ t('affixes.search_aria', noun=result_noun) }}" placeholder="{{ t('affixes.search_placeholder') }}" />
   </div>
   <div class="results-bar">
-    <span class="count" id="item-result-count" role="status" aria-live="polite">{{ affix_cards.values() | map("length") | sum }} {{ result_noun }}</span>
-    <button type="button" class="filter-button" id="item-reset-filters">Reset filters</button>
+    <span class="count" id="item-result-count" role="status" aria-live="polite">{{ t("common.count_of_total", visible=affix_cards.values() | map("length") | sum, total=affix_cards.values() | map("length") | sum, noun=result_noun) }}</span>
+    <button type="button" class="filter-button" id="item-reset-filters">{{ t("common.reset_filters") }}</button>
   </div>
 </section>
 
 <div class="index-layout">
-  <aside class="filters" aria-label="{{ page.title }} filters">
+  <aside class="filters" aria-label="{{ t('affixes.filters_aria', title=page.title) }}">
     <details class="item-filter-panel" open>
-      <summary>Filter {{ result_noun }}</summary>
+      <summary>{{ t("affixes.filter_heading", noun=result_noun) }}</summary>
       <div class="item-filter-controls">
         {% if sections|length > 1 %}
         <div class="filter-block">
-          <h4>Affix type</h4>
+          <h4>{{ t("affixes.affix_type") }}</h4>
           {% for section in sections %}
           <label class="facet">
             <input type="checkbox" checked data-filter-family="{{ section.table }}">
-            {{ "Prefixes" if section.table == "magicprefix" else "Suffixes" }}
+            {{ t("affixes.prefixes") if section.table == "magicprefix" else t("affixes.suffixes") }}
             <span class="tally">{{ affix_cards[section.table]|length }}</span>
           </label>
           {% endfor %}
         </div>
         {% endif %}
         <div class="filter-block">
-          <h4 id="affix-item-type-label">Item Type</h4>
+          <h4 id="affix-item-type-label">{{ t("items.item_type") }}</h4>
           <select id="affix-item-type-filter" class="filter-select" aria-labelledby="affix-item-type-label" aria-describedby="affix-item-type-help">
-            <option value="all">All Item Types</option>
+            <option value="all">{{ t("affixes.all_item_types") }}</option>
             {% for code, label in affix_item_types %}
             <option value="{{ code }}">{{ label }}</option>
             {% endfor %}
           </select>
-          <p id="affix-item-type-help" class="muted">Matches listed types on either side by default.</p>
+          <p id="affix-item-type-help" class="muted">{{ t("affixes.item_type_help") }}</p>
         </div>
         <div class="filter-block">
-          <h4>Item quality</h4>
-          <label class="facet"><input type="checkbox" id="affix-rare-filter"> Can roll on rares in BKDiablo</label>
+          <h4>{{ t("affixes.item_quality") }}</h4>
+          <label class="facet"><input type="checkbox" id="affix-rare-filter"> {{ t("affixes.can_roll_rares_in", new_label=new_label) }}</label>
         </div>
         <div class="filter-block">
-          <h4>Comparison</h4>
-          <label class="facet"><input type="checkbox" id="affix-changes-filter"> Changes only</label>
-          <label class="facet"><input type="checkbox" id="affix-disabled-filter"> Show disabled rolls</label>
+          <h4>{{ t("affixes.comparison") }}</h4>
+          <label class="facet"><input type="checkbox" id="affix-changes-filter"> {{ t("affixes.changes_only") }}</label>
+          <label class="facet"><input type="checkbox" id="affix-disabled-filter"> {{ t("affixes.show_disabled") }}</label>
         </div>
       </div>
     </details>
   </aside>
 
-  <section class="affix-results" aria-label="{{ page.title }} results">
-    <p id="item-empty-message" class="muted" hidden>No {{ result_noun }} match the current filters. Try a different search or reset the filters.</p>
+  <section class="affix-results" aria-label="{{ t('affixes.results_aria', title=page.title) }}">
+    <p id="item-empty-message" class="muted" hidden>{{ t("affixes.empty", noun=result_noun) }}</p>
     <div id="item-index-root" style="display:grid;gap:32px">
       {% with item_entries = affix_cards %}
       {% include "item_index_cards.html" %}
@@ -72,7 +72,7 @@
 </div>
 
 {% if reference_sections %}
-<section class="content-section affix-reference" aria-label="Other modifiers">
+<section class="content-section affix-reference" aria-label="{{ t('affixes.other_modifiers_aria') }}">
   {% for section in reference_sections %}
     {{ reference_section(section) }}
   {% endfor %}

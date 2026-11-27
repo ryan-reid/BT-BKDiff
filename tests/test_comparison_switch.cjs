@@ -32,3 +32,29 @@ test('baseline switch keeps live search, query parameters and anchors', () => {
   handlers.auxclick();
   assert.equal(new URL(link.href).searchParams.has('q'), false);
 });
+
+test('locale switcher keeps live search, query parameters and anchors', () => {
+  const handlers = {};
+  const link = {
+    href: 'https://example.com/wiki/koKR/items/index.html',
+    addEventListener: (event, handler) => { handlers[event] = handler; },
+  };
+  const search = {value: 'Runes'};
+  const location = {search: '?tier=elite', hash: '#enigma'};
+  const document = {
+    readyState: 'loading',
+    addEventListener() {},
+    querySelectorAll: (selector) => (selector.includes('[data-locale-link]') ? [link] : []),
+    querySelector: (selector) => (selector.includes('#page-search') ? search : null),
+  };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../scripts/d2lib/wiki_assets/site.js'), 'utf8'),
+    {document, window: {location}, URL});
+  search.value = '수수께끼';
+  location.hash = '#runeword-enigma';
+  handlers.click();
+  const target = new URL(link.href);
+  assert.equal(target.pathname, '/wiki/koKR/items/index.html');
+  assert.equal(target.searchParams.get('tier'), 'elite');
+  assert.equal(target.searchParams.get('q'), '수수께끼');
+  assert.equal(target.hash, '#runeword-enigma');
+});

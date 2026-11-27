@@ -1,18 +1,18 @@
 {% extends "base.html" %}
-{% block title %}Cube Recipes | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("recipes.page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_recipes %} class="is-active"{% endblock %}
 {% block content %}
 <section class="hero">
-  <span class="hero-eyebrow">Horadric Archive</span>
-  <h1>Cube Recipes</h1>
-  <p class="hero-copy">Player-facing cube systems grouped by what the recipe does, with exact raw cubemain rows kept for technical drilldown.</p>
+  <span class="hero-eyebrow">{{ t("recipes.eyebrow") }}</span>
+  <h1>{{ t("recipes.heading") }}</h1>
+  <p class="hero-copy">{{ t("recipes.subtitle") }}</p>
 </section>
 
 <div class="stat-grid">
-  <div class="stat-cell"><strong>{{ overview.counts.raw_enabled_rows }}</strong><span>total recipes</span></div>
-  <div class="stat-cell"><strong>{{ overview.counts.craft_rows }}</strong><span>craft recipes</span></div>
-  <div class="stat-cell"><strong>{{ overview.counts.corruption_cards }}</strong><span>corruption cards</span></div>
-  <div class="stat-cell"><strong>{{ overview.counts.display_groups }}</strong><span>recipe groups</span></div>
+  <div class="stat-cell"><strong>{{ overview.counts.raw_enabled_rows }}</strong><span>{{ t("recipes.metric_total") }}</span></div>
+  <div class="stat-cell"><strong>{{ overview.counts.craft_rows }}</strong><span>{{ t("recipes.metric_craft") }}</span></div>
+  <div class="stat-cell"><strong>{{ overview.counts.corruption_cards }}</strong><span>{{ t("recipes.metric_corruption") }}</span></div>
+  <div class="stat-cell"><strong>{{ overview.counts.display_groups }}</strong><span>{{ t("recipes.metric_groups") }}</span></div>
 </div>
 
 <div class="guide-card-grid">
@@ -21,7 +21,7 @@
     <span class="guide-card-kicker">{{ card.action }}</span>
     <h2>{{ card.title }}</h2>
     <p>{{ card.summary }}</p>
-    <span class="guide-card-action">{{ card.count }} entries</span>
+    <span class="guide-card-action">{{ t("common.entries_count", count=card.count) }}</span>
   </a>
   {% endfor %}
 </div>

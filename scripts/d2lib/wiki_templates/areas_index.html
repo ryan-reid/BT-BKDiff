@@ -1,46 +1,46 @@
 {% extends "base.html" %}
-{% block title %}Farming Areas | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("areas.page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_areas %} class="is-active"{% endblock %}
 {% block content %}
 <section class="hero">
-  <span class="hero-eyebrow">Farming Guide</span>
-  <h1>Areas</h1>
-  <p class="hero-copy">{{ area_count }} Hell areas ranked by density, elite packs, area level, and super-chest access.</p>
+  <span class="hero-eyebrow">{{ t("areas.eyebrow") }}</span>
+  <h1>{{ t("areas.heading") }}</h1>
+  <p class="hero-copy">{{ t("areas.subtitle", count=area_count) }}</p>
 </section>
 
 <section class="content-section">
   <div class="toolbar" data-area-index-url="{{ site_root }}data/areas-index.json" data-immunity-meta="{{ area_immunity_meta_json|default('{}')|e }}">
-    <input id="area-search" class="search-input" type="search" placeholder="Search areas or monsters" />
+    <input id="area-search" class="search-input" type="search" placeholder="{{ t('areas.search_placeholder') }}" />
 
     <div class="area-toolbar">
       <label>
-        <span class="filter-label">Act</span>
+        <span class="filter-label">{{ t("areas.act") }}</span>
         <select id="area-act-filter" class="filter-select">
-          <option value="all">All Acts</option>
+          <option value="all">{{ t("areas.all_acts") }}</option>
           {% for act in area_act_options %}
           <option value="{{ act.id }}">{{ act.label }}</option>
           {% endfor %}
         </select>
       </label>
       <label>
-        <span class="filter-label">Minimum Area Level</span>
+        <span class="filter-label">{{ t("areas.min_level") }}</span>
         <select id="area-min-level-filter" class="filter-select">
-          <option value="0">Any Level</option>
+          <option value="0">{{ t("areas.any_level") }}</option>
           {% for level in area_level_breakpoints %}
           <option value="{{ level }}">{{ level }}+</option>
           {% endfor %}
         </select>
       </label>
       <label>
-        <span class="filter-label">Sort</span>
+        <span class="filter-label">{{ t("areas.sort") }}</span>
         <select id="area-sort-filter" class="filter-select">
-          <option value="density">Monster Density</option>
-          <option value="level">Area Level</option>
-          <option value="elite">Average Elite Packs</option>
+          <option value="density">{{ t("areas.sort_density") }}</option>
+          <option value="level">{{ t("areas.sort_level") }}</option>
+          <option value="elite">{{ t("areas.sort_elite") }}</option>
         </select>
       </label>
       <div class="dmg-filter-group">
-        <span class="filter-label">My build deals — hide areas with these immunities</span>
+        <span class="filter-label">{{ t("areas.hide_immunities") }}</span>
         <div class="dmg-toggles">
           {% for immunity in area_immunity_options %}
           <label class="dmg-toggle {{ immunity.toggle_class }}" title="{{ immunity.immunity_label }}">
@@ -53,34 +53,34 @@
   </div>
 
   <div class="section-head area-results-head">
-    <h2>Area Farming Guide</h2>
-    <p><span id="area-result-count">{{ area_count }}</span> areas</p>
+    <h2>{{ t("areas.guide_heading") }}</h2>
+    <p><span id="area-result-count">{{ area_count }}</span> {{ t("areas.areas_word") }}</p>
   </div>
   <div class="table-wrap area-table-wrap">
     <table class="area-table">
       <thead>
         <tr>
-          <th>Area</th>
-          <th>Density</th>
-          <th title="Map chunk size and estimated total tiles">Map Size</th>
-          <th>Elite Packs</th>
-          <th>Special Chest</th>
-          <th>Immunities</th>
-          <th>Monster Pool</th>
+          <th>{{ t("areas.th_area") }}</th>
+          <th>{{ t("areas.density") }}</th>
+          <th title="{{ t('areas.th_map_size_title') }}">{{ t("areas.th_map_size") }}</th>
+          <th>{{ t("areas.elite_packs") }}</th>
+          <th>{{ t("areas.special_chest") }}</th>
+          <th>{{ t("areas.th_immunities") }}</th>
+          <th>{{ t("areas.monster_pool") }}</th>
         </tr>
       </thead>
       <tbody id="area-index-root">
-        <tr><td colspan="7" class="muted">Loading area index...</td></tr>
+        <tr><td colspan="7" class="muted">{{ t("areas.loading") }}</td></tr>
       </tbody>
     </table>
   </div>
   <div id="area-card-root" class="area-card-list">
-    <p class="muted">Loading area index...</p>
+    <p class="muted">{{ t("areas.loading") }}</p>
   </div>
 </section>
 
 <section class="content-section">
-  <h2>How This Is Calculated</h2>
-  <p class="muted">Area levels are Hell difficulty values. Champions spawn at area level +2 and uniques at +3. Density is a relative signal derived from monster spawn weights — higher is denser, but it is not an exact monster count. Map size is estimated from layout data when available. Super chest presence is detected from object and layout files; actual super chest loot depends on the game's treasure class routing.</p>
+  <h2>{{ t("areas.how_calculated") }}</h2>
+  <p class="muted">{{ t("areas.how_calculated_body") }}</p>
 </section>
 {% endblock %}

@@ -1,24 +1,26 @@
 {% extends "base.html" %}
-{% from "components.html" import hero %}
+{% from "components.html" import hero with context %}
+{% block title %}{{ t("reports.title") }} | {{ new_label }}{% endblock %}
 {% block nav_reports %} class="is-active"{% endblock %}
 {% block content %}
 {{ hero(
-  "Reports",
-  "Diff Reports",
-  "Field-level comparisons between " ~ new_label ~ " and the Retail or BT baseline — items, raw data tables, and override files.",
+  t("reports.eyebrow"),
+  t("reports.title"),
+  t("reports.subtitle", new_label=new_label),
   [{"label": new_label, "tone": "accent"}]
 ) }}
 {% for comparison in ["BK vs Retail", "BK vs BT"] %}
 {% set group = reports | selectattr("comparison", "equalto", comparison) | list %}
 {% if group %}
+{% set baseline_label = t("comparison.retail_label") if comparison == "BK vs Retail" else "BT" %}
 <section class="content-section">
-  <h2>{{ comparison }}</h2>
+  <h2>{{ t("reports.group_comparison", new_label=new_label, baseline=baseline_label) }}</h2>
   <div class="card-grid two-up">
   {% for report in group %}
     <a class="link-card" href="{{ site_root }}{{ report.href }}">
       <h3>{{ report.title.split(":")[0] }}</h3>
       <p>{{ report.summary }}</p>
-      <span class="link-card-cta">Open report</span>
+      <span class="link-card-cta">{{ t("reports.open_report") }}</span>
     </a>
   {% endfor %}
   </div>
@@ -26,6 +28,6 @@
 {% endif %}
 {% endfor %}
 {% if not reports %}
-<article class="content-section"><h2>No Reports Available</h2><p class="muted">Reports are not currently available. Please check back soon.</p></article>
+<article class="content-section"><h2>{{ t("reports.none_heading") }}</h2><p class="muted">{{ t("reports.none_body") }}</p></article>
 {% endif %}
 {% endblock %}

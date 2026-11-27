@@ -1,16 +1,16 @@
 {% extends "base.html" %}
-{% block title %}Corruption Recipes | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("recipes.corruptions_page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_recipes %} class="is-active"{% endblock %}
 {% block content %}
 <section class="hero">
-  <span class="hero-eyebrow"><a href="../">Cube Recipes</a></span>
-  <h1>Corruptions</h1>
-  <p class="hero-copy">Risk and reward outcomes grouped into chance cards. Exact implementation rows remain in the raw recipe table.</p>
+  <span class="hero-eyebrow"><a href="../">{{ t("recipes.heading") }}</a></span>
+  <h1>{{ t("recipes.corruptions_heading") }}</h1>
+  <p class="hero-copy">{{ t("recipes.corruptions_subtitle") }}</p>
 </section>
 
-<input id="page-search" class="search-input" type="search" placeholder="Search corruption material, item type, socket count, or outcome" style="margin-bottom:20px" />
-<div class="recipe-filter-bar" aria-label="Corruption filters">
-  <button class="filter-button is-active" type="button" data-recipe-filter="all">All</button>
+<input id="page-search" class="search-input" type="search" placeholder="{{ t('recipes.corruptions_search_placeholder') }}" style="margin-bottom:20px" />
+<div class="recipe-filter-bar" aria-label="{{ t('recipes.corruptions_filters_aria') }}">
+  <button class="filter-button is-active" type="button" data-recipe-filter="all">{{ t("common.all") }}</button>
   {% for filter in page.filters %}
   <button class="filter-button" type="button" data-recipe-filter="{{ filter.value }}">{{ filter.label }} <span class="filter-count">{{ filter.count }}</span></button>
   {% endfor %}
@@ -27,20 +27,20 @@
     <div class="recipe-group-head">
       <div>
         <h2>{{ section.title }}</h2>
-        <p class="recipe-group-desc">Grouped chance tables for this corruption material.</p>
+        <p class="recipe-group-desc">{{ t("recipes.corruptions_group_desc") }}</p>
       </div>
-      <span class="recipe-group-count">{{ section.summaries|length }} cards</span>
+      <span class="recipe-group-count">{{ t("recipes.cards_count", count=section.summaries|length) }}</span>
     </div>
     <div class="corruption-summary-grid">
       {% for summary in section.summaries %}
       <article class="corruption-summary-card" data-filter-tags="{{ summary.filter_tags }}" data-search="{{ summary.search_text }}">
         <div class="corruption-summary-head">
           <h3>{{ summary.title }}</h3>
-          <span>{{ summary.outcomes|length }} outcomes</span>
+          <span>{{ t("recipes.outcomes_count", count=summary.outcomes|length) }}</span>
         </div>
         <div class="table-wrap">
           <table class="corruption-summary-table">
-            <thead><tr><th>Chance</th><th>Outcome</th><th>Roll</th></tr></thead>
+            <thead><tr><th>{{ t("recipes.th_chance") }}</th><th>{{ t("recipes.th_outcome") }}</th><th>{{ t("recipes.th_roll") }}</th></tr></thead>
             <tbody>
               {% for outcome in summary.outcomes %}
               <tr data-filter-tags="{{ summary.filter_tags }}" data-search="{{ summary.title }} {{ outcome.label }} {{ outcome.detail }} {{ outcome.chance }}">

@@ -44,6 +44,7 @@ from d2lib.wiki.renderers import HtmlWikiRenderer, WikiPublisher, highlight_comp
 from d2lib.wiki.publication import WikiSiteDTO, WikiSiteRecordingWriter, empty_wiki_site
 from d2lib.wiki.history import HistoryCollector, item_history
 from d2lib.wiki.history_comparison import write_history_comparisons
+from d2lib.wiki.i18n import WikiTranslator
 from pathlib import Path
 from d2lib.wiki.builders import (
     AreaFarmingDataBuilder,
@@ -144,6 +145,8 @@ class WikiContentBuilder:
             self._retail_repo = self._provided_retail_repo
         else:
             self._retail_repo = D2Repository(self.retail_data_dir, locale=self.locale)
+        self._translator = WikiTranslator(self.locale, repo=self._repo)
+        self.site["ui_strings"] = dict(self._translator.strings)
 
         history_config = json.loads(Path(REPO_ROOT, "data", "item-history.json").read_text(encoding="utf-8"))
         history_collector = HistoryCollector(self.game_data_dir, Path(REPO_ROOT, ".cache", "item-history"), history_config)
@@ -171,7 +174,7 @@ class WikiContentBuilder:
         retail_misc_items = self._load_retail_misc_items()
         write_history_comparisons(history_collector, self._history, self._repo, items, old_item_index,
                                   base_item_families, retail_base_items, gem_rune_groups, retail_misc_items,
-                                  self.writer, self.old_label, self._retail_repo)
+                                  self.writer, self.old_label, self._retail_repo, new_label=self.new_label)
 
         # Single CubeAnalyzerService for both group summary and raw recipes.
         recipe_service = CubeAnalyzerService(self._repo, self._retail_repo)
@@ -1225,7 +1228,7 @@ class WikiContentBuilder:
                 source_files=page["source_files"],
                 page=page,
                 item_entries={"skill": [skill_card_context(skill) for skill in page["skills"]]},
-                item_section_titles={"skill": "Skills"},
+                item_section_titles={"skill": self._translator.t("nav.skills") if getattr(self, "_translator", None) else "Skills"},
             )
             skill_terms = []
             for skill in page["skills"]:

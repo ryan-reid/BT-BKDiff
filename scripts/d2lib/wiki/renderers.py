@@ -15,6 +15,7 @@ TEMPLATE_DIR = os.path.join(D2LIB_DIR, "wiki_templates")
 ASSET_SOURCE_DIR = os.path.join(D2LIB_DIR, "wiki_assets")
 
 from d2lib.utils import slugify
+from d2lib.wiki.i18n import WikiTranslator
 from d2lib.wiki.publication import WikiPageDTO, WikiSiteDTO
 from d2lib.wiki.routes import WikiRoutes
 
@@ -54,6 +55,14 @@ class WikiRenderer:
         )
         self.environment.filters["slugify"] = slugify
         self.environment.filters["comparison_highlight"] = highlight_comparison
+        default_translator = WikiTranslator("enUS")
+        self.environment.globals["t"] = default_translator.t
+        self.environment.globals["t_stat"] = default_translator.stat_label
+        self.environment.globals["new_label"] = "BKDiablo"
+        self.environment.globals["old_label"] = "Retail"
+        self.environment.globals["locale"] = "enUS"
+        self.environment.globals["html_lang"] = "en"
+        self.environment.globals["wiki_i18n_json"] = default_translator.js_json("BKDiablo", "Retail")
 
     def render(self, template_name: str, **context: Any) -> str:
         return self.environment.get_template(template_name).render(**context)
@@ -72,6 +81,11 @@ class HtmlWikiRenderer:
         if asset_prefix and not asset_prefix.endswith("/"):
             asset_prefix = f"{asset_prefix}/"
         asset_root = f"{site_root}{asset_prefix}"
+        locale = site.get("locale", "enUS")
+        translator = WikiTranslator(
+            locale,
+            resolved_strings=site.get("ui_strings") or None,
+        )
         return self.renderer.render(
             page["template_name"],
             title=page["title"],
@@ -79,8 +93,11 @@ class HtmlWikiRenderer:
             asset_root=asset_root,
             old_label=site["old_label"],
             new_label=site["new_label"],
-            locale=site.get("locale", "enUS"),
+            locale=locale,
             html_lang=site.get("html_lang", "en"),
+            t=translator.t,
+            t_stat=translator.stat_label,
+            wiki_i18n_json=translator.js_json(site["new_label"], site["old_label"]),
             **page["payload"],
         )
 

@@ -1,26 +1,28 @@
-{% if reason %}<p class="history-revision-notice">{{ reason }} No current BK stats have been substituted.</p>{% endif %}
+{% if reason %}<p class="history-revision-notice">{{ reason }} {{ t("history.no_current_substituted", new_label=new_label) }}</p>{% endif %}
 {% if comparison %}
-<div class="sp-sub"><span>{% if not is_first %}Previous Revision · {{ prev_date }}{% endif %}</span><span>BK At · {{ this_date }}</span></div>
+<div class="sp-sub"><span>{% if not is_first %}{{ t("history.previous_revision", date=prev_date) }}{% endif %}</span><span>{{ t("history.at_date", new_label=new_label, date=this_date) }}</span></div>
 {% for group in ['stat_rows', 'property_rows'] %}
-{% if group == 'property_rows' and comparison[group] %}<div class="sp-sep">Properties</div>{% endif %}
+{% if group == 'property_rows' and comparison[group] %}<div class="sp-sep">{{ t("common.properties") }}</div>{% endif %}
 {% for row in comparison[group] %}
-{% if row.status == 'separator' %}<div class="sp-sep">Properties from Runes</div>{% else %}
-<div class="sp-row"><span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}">{% if row.label %}<strong>{{ row.label }}:</strong> {% endif %}{{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
+{% if row.status == 'separator' %}<div class="sp-sep">{{ t("runewords.properties_from_runes") }}</div>{% else %}
+{% set label = t_stat(row) %}
+<div class="sp-row"><span class="sp-cell is-{{ row.status }}">{% if label %}<strong>{{ label }}:</strong> {% endif %}{{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}">{% if label %}<strong>{{ label }}:</strong> {% endif %}{{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
 {% endif %}
 {% endfor %}
 {% endfor %}
 {% endif %}
 {% if base_comparison %}
-<div class="sp-sep">Base stats</div>
-<p class="history-help">Underlying base values, before this item's bonuses. Max sockets is the base capacity, not guaranteed sockets on the unique or set item.</p>
+<div class="sp-sep">{{ t("common.base_stats_lower") }}</div>
+<p class="history-help">{{ t("history.base_stats_help") }}</p>
 {% for row in base_comparison.stat_rows %}
-<div class="sp-row"><span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
+{% set label = t_stat(row) %}
+<div class="sp-row"><span class="sp-cell is-{{ row.status }}"><strong>{{ label }}:</strong> {{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}"><strong>{{ label }}:</strong> {{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
 {% endfor %}
 {% endif %}
 {% if availability %}
-<div class="sp-sep">Availability</div>
-<p class="history-help">Source settings do not guarantee an in-game drop. Drop selection weight is relative, not a drop percentage.</p>
-<div class="sp-sub"><span>Previous Revision · {{ prev_date }}</span><span>BK At · {{ this_date }}</span></div>
+<div class="sp-sep">{{ t("history.availability") }}</div>
+<p class="history-help">{{ t("history.availability_help") }}</p>
+<div class="sp-sub"><span>{{ t("history.previous_revision", date=prev_date) }}</span><span>{{ t("history.at_date", new_label=new_label, date=this_date) }}</span></div>
 {% for row in availability %}
 <div class="sp-row"><span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.old|comparison_highlight(row.new, 'old') }}</span><span class="sp-cell is-{{ row.status }}"><strong>{{ row.label }}:</strong> {{ row.new|comparison_highlight(row.old, 'new') }}</span></div>
 {% endfor %}

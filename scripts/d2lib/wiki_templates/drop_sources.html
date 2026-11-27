@@ -1,40 +1,40 @@
 {% extends "base.html" %}
 
-{% block title %}Drop Sources | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("drop_sources.page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_drops %} class="is-active"{% endblock %}
 
 {% block content %}
 <section class="hero">
-  <p class="hero-eyebrow">Treasure Classes</p>
-  <h1>Drop Sources</h1>
-  <p class="hero-copy">Browse Hell treasure classes, nested drop pools, direct item entries, and monster or superunique records that point at them. This shows source structure, not final simulated drop odds.</p>
+  <p class="hero-eyebrow">{{ t("drop_sources.eyebrow") }}</p>
+  <h1>{{ t("drop_sources.heading") }}</h1>
+  <p class="hero-copy">{{ t("drop_sources.subtitle") }}</p>
 </section>
 
 <section class="metric-grid">
-  <article class="metric-card"><span>Treasure Classes</span><strong>{{ summary.total_treasure_classes }}</strong></article>
-  <article class="metric-card"><span>Nested TC Links</span><strong>{{ summary.nested_tc_refs }}</strong></article>
-  <article class="metric-card"><span>Direct Item Refs</span><strong>{{ summary.direct_item_refs }}</strong></article>
-  <article class="metric-card"><span>Monster Sources</span><strong>{{ summary.monster_source_refs + summary.superunique_source_refs }}</strong></article>
+  <article class="metric-card"><span>{{ t("drop_sources.metric_tc") }}</span><strong>{{ summary.total_treasure_classes }}</strong></article>
+  <article class="metric-card"><span>{{ t("drop_sources.metric_nested") }}</span><strong>{{ summary.nested_tc_refs }}</strong></article>
+  <article class="metric-card"><span>{{ t("drop_sources.metric_direct") }}</span><strong>{{ summary.direct_item_refs }}</strong></article>
+  <article class="metric-card"><span>{{ t("drop_sources.metric_monsters") }}</span><strong>{{ summary.monster_source_refs + summary.superunique_source_refs }}</strong></article>
 </section>
 
 <section class="content-section">
   <div class="section-head">
     <div>
-      <h2>Treasure Class Explorer</h2>
-      <p class="muted">Search by treasure class, direct item, nested pool, monster, or superunique name.</p>
+      <h2>{{ t("drop_sources.explorer_heading") }}</h2>
+      <p class="muted">{{ t("drop_sources.explorer_desc") }}</p>
     </div>
-    <a class="link-card-cta" href="{{ site_root }}drops/">Back to drop weighting</a>
+    <a class="link-card-cta" href="{{ site_root }}drops/">{{ t("drop_sources.back_cta") }}</a>
   </div>
-  <input id="page-search" class="search-input" type="search" placeholder="Search treasure classes, items, monsters, or nested pools" />
+  <input id="page-search" class="search-input" type="search" placeholder="{{ t('drop_sources.search_placeholder') }}" />
 
   <div class="table-wrap">
     <table class="monster-table">
       <thead>
         <tr>
-          <th>Treasure Class</th>
-          <th>Rules</th>
-          <th>Entries</th>
-          <th>Known Sources</th>
+          <th>{{ t("drop_sources.th_tc") }}</th>
+          <th>{{ t("drop_sources.th_rules") }}</th>
+          <th>{{ t("drop_sources.th_entries") }}</th>
+          <th>{{ t("drop_sources.th_sources") }}</th>
         </tr>
       </thead>
       <tbody>
@@ -43,12 +43,12 @@
           <td>
             <strong>{{ row.name }}</strong>
             {% if row.group or row.level %}
-            <br><small>{% if row.group %}Group {{ row.group }}{% endif %}{% if row.group and row.level %} &middot; {% endif %}{% if row.level %}Level {{ row.level }}{% endif %}</small>
+            <br><small>{% if row.group %}{{ t("drop_sources.group_prefix", group=row.group) }}{% endif %}{% if row.group and row.level %} &middot; {% endif %}{% if row.level %}{{ t("drop_sources.level_prefix", level=row.level) }}{% endif %}</small>
             {% endif %}
           </td>
           <td>
-            {% if row.picks %}<span class="chip">Picks {{ row.picks }}</span>{% endif %}
-            {% if row.no_drop %}<span class="chip">NoDrop {{ row.no_drop }}</span>{% endif %}
+            {% if row.picks %}<span class="chip">{{ t("drop_sources.picks_prefix", picks=row.picks) }}</span>{% endif %}
+            {% if row.no_drop %}<span class="chip">{{ t("drop_sources.nodrop_prefix", no_drop=row.no_drop) }}</span>{% endif %}
             {% for weight in row.quality_weights %}
             <span class="chip">{{ weight.label }} {{ weight.value }}</span>
             {% endfor %}
@@ -59,13 +59,13 @@
               {% for entry in row.entries[:5] %}
               <li>
                 <strong>{{ entry.label }}</strong>
-                <small>{{ entry.source or entry.kind }}{% if entry.prob %}, weight {{ entry.prob }}{% endif %}{% if entry.modifiers %}, {{ entry.modifiers }}{% endif %}</small>
+                <small>{{ entry.source or entry.kind }}{% if entry.prob %}{{ t("drop_sources.weight_inline", prob=entry.prob) }}{% endif %}{% if entry.modifiers %}, {{ entry.modifiers }}{% endif %}</small>
               </li>
               {% endfor %}
             </ul>
-            {% if row.entries|length > 5 %}<small class="muted">+{{ row.entries|length - 5 }} more entries</small>{% endif %}
+            {% if row.entries|length > 5 %}<small class="muted">{{ t("drop_sources.more_entries", count=row.entries|length - 5) }}</small>{% endif %}
             {% else %}
-            <span class="muted">No item entries</span>
+            <span class="muted">{{ t("drop_sources.no_entries") }}</span>
             {% endif %}
           </td>
           <td>
@@ -75,9 +75,9 @@
               <li><strong>{{ source.name }}</strong> <small>{{ source.label }}</small></li>
               {% endfor %}
             </ul>
-            {% if row.sources|length > 5 %}<small class="muted">+{{ row.sources|length - 5 }} more sources</small>{% endif %}
+            {% if row.sources|length > 5 %}<small class="muted">{{ t("drop_sources.more_sources", count=row.sources|length - 5) }}</small>{% endif %}
             {% else %}
-            <span class="muted">No direct monster or parent source found</span>
+            <span class="muted">{{ t("drop_sources.no_sources") }}</span>
             {% endif %}
           </td>
         </tr>

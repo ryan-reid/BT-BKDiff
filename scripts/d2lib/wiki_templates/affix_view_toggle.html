@@ -1,4 +1,4 @@
-<nav class="comparison-toggle affix-view-toggle" aria-label="Affix view" data-affix-view="{{ affix_view }}"{% if affix_default_entry %} data-affix-default-entry{% endif %}>
-  <a href="{{ site_root }}references/affixes/?view=function" data-affix-view-link="function"{% if affix_view == "function" %} class="is-active" aria-current="page"{% endif %}>By function</a>
-  <a href="{{ site_root }}references/affixes/cards/?view=cards" data-affix-view-link="cards"{% if affix_view == "cards" %} class="is-active" aria-current="page"{% endif %}>Item cards</a>
+<nav class="comparison-toggle affix-view-toggle" aria-label="{{ t('affixes.view_aria') }}" data-affix-view="{{ affix_view }}"{% if affix_default_entry %} data-affix-default-entry{% endif %}>
+  <a href="{{ site_root }}references/affixes/?view=function" data-affix-view-link="function"{% if affix_view == "function" %} class="is-active" aria-current="page"{% endif %}>{{ t("affixes.view_function") }}</a>
+  <a href="{{ site_root }}references/affixes/cards/?view=cards" data-affix-view-link="cards"{% if affix_view == "cards" %} class="is-active" aria-current="page"{% endif %}>{{ t("affixes.view_cards") }}</a>
 </nav>

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ page.title }} | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ page.title }} | {{ new_label }}{% endblock %}
 {% block nav_references %} class="is-active"{% endblock %}
 {% block nav_affixes %} class="is-active" aria-current="page"{% endblock %}
 {% block comparison_bar %}{% endblock %}
@@ -12,36 +12,36 @@
   {% include "affix_view_toggle.html" %}
 </section>
 
-<section class="content-section affix-functions" aria-label="Affix functions">
+<section class="content-section affix-functions" aria-label="{{ t('affixes.functions_aria') }}">
   <p class="muted">
-    <span class="affix-eligibility-rare">Yellow</span> means Magic and Rare items.
-    <span class="affix-eligibility-magic">Blue</span> means Magic items only.
+    <span class="affix-eligibility-rare">{{ t("affixes.yellow_label") }}</span> {{ t("affixes.means_magic_rare") }}
+    <span class="affix-eligibility-magic">{{ t("affixes.blue_label") }}</span> {{ t("affixes.means_magic_only") }}
   </p>
   <div class="toolbar filter-row">
     <label class="filter-wide">
-      <span>Search</span>
-      <input id="page-search" type="search" placeholder="Search effects, affixes, or item types…" />
+      <span>{{ t("common.search") }}</span>
+      <input id="page-search" type="search" placeholder="{{ t('affixes.functions_search_placeholder') }}" />
     </label>
     <label class="filter-select-wrap">
-      <span>Item Type</span>
+      <span>{{ t("items.item_type") }}</span>
       <select id="affix-item-type-filter" class="filter-select" data-search-filter-control="filterTags" data-search-filter-param="type">
-        <option value="all">All Item Types</option>
+        <option value="all">{{ t("affixes.all_item_types") }}</option>
         {% for code, label in affix_item_types %}
         <option value="{{ code }}">{{ label }}</option>
         {% endfor %}
       </select>
     </label>
     <label class="filter-select-wrap">
-      <span>Affix Type</span>
+      <span>{{ t("affixes.affix_type") }}</span>
       <select id="affix-kind-filter" class="filter-select" data-search-filter-control="affixKind" data-search-filter-param="affix">
-        <option value="all">Prefixes and Suffixes</option>
-        <option value="prefix">Prefixes</option>
-        <option value="suffix">Suffixes</option>
+        <option value="all">{{ t("affixes.prefixes_and_suffixes") }}</option>
+        <option value="prefix">{{ t("affixes.prefixes") }}</option>
+        <option value="suffix">{{ t("affixes.suffixes") }}</option>
       </select>
     </label>
     <label class="facet">
       <input id="affix-rare-filter" type="checkbox" value="rare" data-search-filter-control="rollQuality" data-search-filter-param="rare">
-      Can roll on Rare items
+      {{ t("affixes.can_roll_rare_items") }}
     </label>
   </div>
   {% for group in page.sections %}
@@ -54,10 +54,10 @@
       <table class="monster-table" aria-labelledby="{{ heading_id }}">
         <thead>
           <tr>
-            <th scope="col">Affix level</th>
-            <th scope="col">Roll range</th>
-            <th scope="col">Affix</th>
-            <th scope="col">Item types</th>
+            <th scope="col">{{ t("affixes.th_level") }}</th>
+            <th scope="col">{{ t("affixes.th_roll_range") }}</th>
+            <th scope="col">{{ t("affixes.th_affix") }}</th>
+            <th scope="col">{{ t("affixes.th_item_types") }}</th>
           </tr>
         </thead>
         <tbody>
@@ -67,7 +67,7 @@
             <td>{{ row.roll_ranges|join(' · ') }}</td>
             <td><strong>{{ row.name }}</strong><br><small class="muted">{{ row.kind }}</small></td>
             <td>
-              {% set eligibility = "Magic and Rare items" if row.can_roll_on_rares else "Magic items only" %}
+              {% set eligibility = t("affixes.eligibility_rare") if row.can_roll_on_rares else t("affixes.eligibility_magic") %}
               <span class="affix-eligibility-{{ 'rare' if row.can_roll_on_rares else 'magic' }}" title="{{ eligibility }}">{{ row.item_types.values()|join(', ') or "—" }}</span>
               <span class="visually-hidden">({{ eligibility }})</span>
               {% if row.excludes %}<br><small class="muted">{{ row.excludes }}</small>{% endif %}
@@ -79,7 +79,7 @@
     </div>
   </section>
   {% else %}
-  <p class="muted">No spawnable affixes found.</p>
+  <p class="muted">{{ t("affixes.none_spawnable") }}</p>
   {% endfor %}
 </section>
 {% endblock %}

@@ -1,16 +1,16 @@
 {% extends "base.html" %}
-{% block title %}Pierce Recipes | {{ new_label }} Wiki{% endblock %}
+{% block title %}{{ t("recipes.pierce_page_title") }} | {{ new_label }}{% endblock %}
 {% block nav_recipes %} class="is-active"{% endblock %}
 {% block content %}
 <section class="hero">
-  <span class="hero-eyebrow"><a href="../">Cube Recipes</a></span>
-  <h1>Pierce Crafts</h1>
-  <p class="hero-copy">Pierce families grouped by element/property, ingredients, and eligible item types.</p>
+  <span class="hero-eyebrow"><a href="../">{{ t("recipes.heading") }}</a></span>
+  <h1>{{ t("recipes.pierce_heading") }}</h1>
+  <p class="hero-copy">{{ t("recipes.pierce_subtitle") }}</p>
 </section>
 
-<input id="page-search" class="search-input" type="search" placeholder="Search pierce family, item type, ingredient, or property" style="margin-bottom:20px" />
-<div class="recipe-filter-bar" aria-label="Pierce filters">
-  <button class="filter-button is-active" type="button" data-recipe-filter="all">All</button>
+<input id="page-search" class="search-input" type="search" placeholder="{{ t('recipes.pierce_search_placeholder') }}" style="margin-bottom:20px" />
+<div class="recipe-filter-bar" aria-label="{{ t('recipes.pierce_filters_aria') }}">
+  <button class="filter-button is-active" type="button" data-recipe-filter="all">{{ t("common.all") }}</button>
   {% for filter in page.filters %}
   <button class="filter-button" type="button" data-recipe-filter="{{ filter.value }}">{{ filter.label }} <span class="filter-count">{{ filter.count }}</span></button>
   {% endfor %}
@@ -18,22 +18,22 @@
 <section class="recipe-group">
   <div class="recipe-group-head">
     <div>
-      <h2>Pierce Matrix</h2>
-      <p class="recipe-group-desc">One row per pierce family and ingredient pattern.</p>
+      <h2>{{ t("recipes.pierce_matrix_heading") }}</h2>
+      <p class="recipe-group-desc">{{ t("recipes.pierce_matrix_desc") }}</p>
     </div>
-    <span class="recipe-group-count">{{ page.families|length }} rows</span>
+    <span class="recipe-group-count">{{ t("common.rows_count", count=page.families|length) }}</span>
   </div>
   <div class="table-wrap">
     <table class="recipe-table">
-      <thead><tr><th>Family</th><th>Ingredients</th><th>Eligible item types</th><th>Result</th><th>Property</th></tr></thead>
+      <thead><tr><th>{{ t("recipes.th_family") }}</th><th>{{ t("recipes.th_ingredients") }}</th><th>{{ t("recipes.th_eligible_types") }}</th><th>{{ t("recipes.th_result") }}</th><th>{{ t("mechanics.th_property") }}</th></tr></thead>
       <tbody>
         {% for row in page.families %}
         <tr data-filter-tags="{{ row.filter_tags }}" data-search="{{ row.search_text }}">
-          <td data-label="Family"><strong>{{ row.family }}</strong></td>
-          <td data-label="Ingredients"><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
-          <td data-label="Eligible types">{{ row.item_types|join(", ") }}</td>
-          <td data-label="Result">{{ row.result }}</td>
-          <td data-label="Property">{{ row.property }}</td>
+          <td data-label="{{ t('recipes.th_family') }}"><strong>{{ row.family }}</strong></td>
+          <td data-label="{{ t('recipes.th_ingredients') }}"><ul class="input-list">{% for item in row.ingredients %}<li>{{ item }}</li>{% endfor %}</ul></td>
+          <td data-label="{{ t('recipes.th_eligible_types_short') }}">{{ row.item_types|join(", ") }}</td>
+          <td data-label="{{ t('recipes.th_result') }}">{{ row.result }}</td>
+          <td data-label="{{ t('mechanics.th_property') }}">{{ row.property }}</td>
         </tr>
         {% endfor %}
       </tbody>
